@@ -2,6 +2,16 @@
   "name": "watch-tower",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/__mocks__/",
+      "!src/registerServiceWorker.js",
+      "!src/**/index.js",
+      "!src/redux/store/"
+    ]
+  },
   "dependencies": {
     "enzyme": "^3.6.0",
     "lodash.mapvalues": "^4.6.0",

@@ -1,0 +1,12 @@
+version: "2"
+exclude_patterns:
+- "config/"
+- "**/node_modules/"
+- "**/spec/"
+- "**/__mocks__/"
+- "**/__tests__/"
+- "**/*.spec.jsx"
+- "**/*.spec.js"
+- "src/**/index.js"
+- "src/registerServiceWorker.js"
+- "src/redux/store/"
