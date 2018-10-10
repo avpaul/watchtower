@@ -28,7 +28,7 @@ ShallowWrapper {
         "entries": Array [
           Object {
             "hash": "",
-            "key": "q1b2y2",
+            "key": "ugginx",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -42,7 +42,7 @@ ShallowWrapper {
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "q1b2y2",
+          "key": "ugginx",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -78,7 +78,7 @@ ShallowWrapper {
           "entries": Array [
             Object {
               "hash": "",
-              "key": "q1b2y2",
+              "key": "ugginx",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -92,7 +92,7 @@ ShallowWrapper {
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "q1b2y2",
+            "key": "ugginx",
             "pathname": "/",
             "search": "",
             "state": undefined,

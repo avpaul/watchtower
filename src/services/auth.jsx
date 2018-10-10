@@ -20,14 +20,15 @@ const saveTokenToLocalStorage = () => {
 
 const loadUserFromToken = () => {
   const token = localStorage.getItem('jwt-token');
-  const user = jwtDecode(token);
+  const info = jwtDecode(token);
+  const { user } = info;
   return token ? user : null;
 };
 
-function logout() {
+const logout = () => {
   localStorage.removeItem('jwt-token');
   Cookie.remove('jwt-token', { path: '/' });
-}
+};
 
 const authService = {
   isAuthenticated,
