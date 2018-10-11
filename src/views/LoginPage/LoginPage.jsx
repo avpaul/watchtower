@@ -23,12 +23,66 @@ class LoginPage extends Component {
       authUrl: `${authHostUrl}/login?redirect_url=${authRedirectUrl}`,
     };
     this.handleLogin = this.handleLogin.bind(this);
+    this.renderPageHeader = this.renderPageHeader.bind(this);
+    this.renderPageTagLine = this.renderPageTagLine.bind(this);
+    this.renderPageLoginButton = this.renderPageLoginButton.bind(this);
   }
 
   handleLogin(event) {
     event.preventDefault();
     const { authUrl } = this.state;
     window.location.replace(authUrl);
+  }
+
+  /* eslint class-methods-use-this: 0 */
+  renderPageHeader() {
+    return (
+      <div className="login-page__header">
+        <img
+          src={watchTowerLogo}
+          alt="watch-tower-logo"
+          className="login-page__logo"
+        />
+        <span className="login-page__text-by">by</span>
+        <img
+          src={andelaLogo}
+          alt="andela-logo"
+          className="login-page__logo"
+        />
+      </div>
+    );
+  }
+
+  renderPageTagLine() {
+    return (
+      <div className="login-page__tagline text-center">
+        <p className="m-0">Tracking</p>
+        <p>DevPulse Ratings & LMS Scores</p>
+      </div>
+    );
+  }
+
+  renderPageLoginButton(authUrl) {
+    return (
+      <div style={{ marginTop: '40px' }} title="Login with google">
+        <a
+          href={authUrl}
+          onClick={this.handleLogin}
+          className="login-page__btn"
+          tabIndex={0}
+        >
+          <img
+            src={googleLogo}
+            alt="google-icon"
+            className="login-page__btn-logo"
+          />
+          <span className="login-page__line" />
+          <span className="login-page__btn-text">
+            LOGIN WITH GOOGLE
+          </span>
+        </a>
+      </div>
+    );
   }
 
   render() {
@@ -40,30 +94,9 @@ class LoginPage extends Component {
     }
     return (
       <main className=".container-fluid text-center login-page">
-        <div className="login-page__header">
-          <img
-            src={watchTowerLogo}
-            alt="watch-tower-logo"
-            className="login-page__logo"
-          />
-          <span className="login-page__text-by">by</span>
-          <img
-            src={andelaLogo}
-            alt="andela-logo"
-            className="login-page__logo"
-          />
-        </div>
-        <div className="login-page__tagline text-center">
-          <p className="m-0">Tracking</p>
-          <p>DevPulse Ratings & LMS Scores</p>
-        </div>
-        <div style={{ marginTop: '40px' }} title="Login with google">
-          <a href={authUrl} onClick={this.handleLogin} className="login-page__btn" tabIndex={0}>
-            <img src={googleLogo} alt="google-icon" className="login-page__btn-logo" />
-            <span className="login-page__line" />
-            <span className="login-page__btn-text">LOGIN WITH GOOGLE</span>
-          </a>
-        </div>
+        {this.renderPageHeader()}
+        {this.renderPageTagLine()}
+        {this.renderPageLoginButton(authUrl)}
       </main>
     );
   }
