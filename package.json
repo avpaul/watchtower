@@ -9,6 +9,7 @@
       "!src/__mocks__/",
       "!src/registerServiceWorker.js",
       "!src/**/index.js",
+      "!src/**/navlinks.js",
       "!src/redux/store/"
     ]
   },

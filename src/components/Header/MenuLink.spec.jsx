@@ -27,11 +27,28 @@ describe('Menu link Component Test Suite', () => {
   });
 
   it('shows default icon if isActive is false', () => {
-    expect(wrapper.find('.navicon').childAt(0).getElement()).toEqual(link.icon);
+    expect(wrapper.find('.navicon').childAt(0).getElement())
+      .toEqual(<img className={`${link.key}__icon`} src={link.icon} alt={`${link.key}Icon`} />);
   });
 
   it('shows active icon if isActive is True', () => {
     wrapper.setProps({ isActive: true });
-    expect(wrapper.find('.navicon').childAt(0).getElement()).toEqual(link.activeIcon);
+    expect(wrapper.find('.navicon').childAt(0).getElement())
+      .toEqual(<img className={`${link.key}__icon`} src={link.activeIcon} alt={`${link.key}Icon`} />);
+  });
+
+  it('shows default icon if isActive is true but active icon is not provided', () => {
+    wrapper.setProps({
+      link: {
+        key: 'fellows',
+        name: 'Fellows',
+        path: '#',
+        icon: <div className="default-icon" />,
+        activeIcon: null,
+      },
+      isActive: true,
+    });
+    expect(wrapper.find('.navicon').childAt(0).getElement())
+      .toEqual(<img className={`${link.key}__icon`} src={link.icon} alt={`${link.key}Icon`} />);
   });
 });

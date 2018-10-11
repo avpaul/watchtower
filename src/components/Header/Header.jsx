@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import mapValues from 'lodash.mapvalues';
 import './Header.css';
 import Menu from './Menu';
+import items from './navlinks';
 import watchTowerLogo from '../../static/Logo.svg';
 import defaultUserPic from '../../static/Upic.svg';
 import notificationIcon from '../../static/Notification.svg';
 import searchIcon from '../../static/Loupe.svg';
-import userIcon from '../../static/User.svg';
-import userIconFill from '../../static/User-fill.svg';
-import cogIcon from '../../static/Settings.svg';
-import cogIconFill from '../../static/Settings-fill.svg';
 
 /**
  * Header UI Component
@@ -40,22 +37,6 @@ class Header extends Component {
   }
 
   render() {
-    const items = [
-      {
-        key: 'fellows',
-        name: 'Fellows',
-        path: '#',
-        icon: <img className="user__icon" src={userIcon} alt="userIcon" />,
-        activeIcon: <img className="user__icon" src={userIconFill} alt="userIcon" />,
-      },
-      {
-        key: 'settings',
-        name: 'Settings',
-        path: '#',
-        icon: <img className="cog__icon" src={cogIcon} alt="cogIcon" />,
-        activeIcon: <img className="cog__icon" src={cogIconFill} alt="cogIcon" />,
-      },
-    ];
     const { activeItems } = this.state;
     return (
       <div className="header">

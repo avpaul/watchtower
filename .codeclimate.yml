@@ -8,5 +8,6 @@ exclude_patterns:
 - "**/*.spec.jsx"
 - "**/*.spec.js"
 - "src/**/index.js"
+- "src/**/navlinks.js"
 - "src/registerServiceWorker.js"
 - "src/redux/store/"

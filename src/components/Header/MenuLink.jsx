@@ -27,7 +27,7 @@ const MenuLink = ({ link, handleMenuClick, isActive }) => {
         onKeyPress={handleMenuClick}
         tabIndex="0"
       >
-        <span className="navicon">{iconImg}</span>
+        <span className="navicon"><img className={`${link.key}__icon`} src={iconImg} alt={`${link.key}Icon`} /></span>
         {link.name}
       </div>
     </div>
