@@ -11,7 +11,7 @@ class Filters extends Component {
     super(props);
     this.state = {
       activeClass: 'card active-card',
-      cardId: '',
+      cardId: null,
     };
     this.divClicked = this.divClicked.bind(this);
   }
@@ -29,41 +29,21 @@ class Filters extends Component {
   render() {
     const { cardId, activeClass } = this.state;
     return (
-      <div>
-        <div className="contain">
-          <div className="row">
-            <div className={cardId === 'one' ? activeClass : 'card'} id="one" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
-
-              <p className="title">
-                Fellows Off Track
-              </p>
-              <p className="sub">
-                Post week 5
-              </p>
-              <p className="number">45</p>
-            </div>
-
-            <div className={cardId === 'two' ? activeClass : 'card'} id="two" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
-              <p className="title">
-                  Fellows Off Track
-              </p>
-              <p className="pull-left sub">
-                Pre week 5
-              </p>
-              <p className="numbers">534</p>
-            </div>
-
-            <div className={cardId === 'three' ? activeClass : 'card'} id="three" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
-              <p className="title2">
-              Fellows On Track
-              </p>
-              <p className="numb">6723</p>
-            </div>
-
-
-          </div>
+      <div className="contain row">
+        <div className={cardId === 'one' ? activeClass : 'card'} id="one" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
+          <p className="title">Fellows Off Track</p>
+          <p className="sub">Post week 5</p>
+          <p className="number">45</p>
         </div>
-
+        <div className={cardId === 'two' ? activeClass : 'card'} id="two" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
+          <p className="title">Fellows Off Track</p>
+          <p className="pull-left sub">Pre week 5</p>
+          <p className="numbers">534</p>
+        </div>
+        <div className={cardId === 'three' ? activeClass : 'card'} id="three" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
+          <p className="title2">Fellows On Track</p>
+          <p className="numb">6723</p>
+        </div>
       </div>
     );
   }

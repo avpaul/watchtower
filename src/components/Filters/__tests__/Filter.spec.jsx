@@ -16,7 +16,7 @@ describe('Tests Filter component', () => {
     expect(wrapper).toHaveLength(1);
   });
 
-  it('renders with  state', () => {
+  it('changes state on click', () => {
     const shallowWrapper = wrapper.instance();
     shallowWrapper.setState({
       activeClass: 'card active-card',
@@ -25,10 +25,28 @@ describe('Tests Filter component', () => {
     expect(wrapper.find('div.active-card').exists()).toBe(true);
   });
 
-  it('renders it changes on click', () => {
+  it('divClicked is called', () => {
     const shallowWrapper = wrapper.instance();
     const spy = jest.spyOn(shallowWrapper, 'divClicked');
     shallowWrapper.divClicked();
     expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it('card one changes state', () => {
+    const card = wrapper.find('div').at(3);
+    card.simulate('click', { target: { id: 'one' } });
+    expect(wrapper.state('cardId')).toEqual('one');
+  });
+
+  it('click two changes state', () => {
+    const card = wrapper.find('div').at(3);
+    card.simulate('click', { target: { id: 'two' } });
+    expect(wrapper.state('cardId')).toEqual('two');
+  });
+
+  it('card three changes state', () => {
+    const card = wrapper.find('div').at(3);
+    card.simulate('click', { target: { id: 'three' } });
+    expect(wrapper.state('cardId')).toEqual('three');
   });
 });
