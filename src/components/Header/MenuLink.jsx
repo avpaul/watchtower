@@ -40,7 +40,7 @@ MenuLink.propTypes = {
     name: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
     icon: PropTypes.node.isRequired,
-    activeIcon: PropTypes.node.isRequired,
+    activeIcon: PropTypes.node,
   }).isRequired,
   handleMenuClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool.isRequired,
