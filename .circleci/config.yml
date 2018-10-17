@@ -31,7 +31,80 @@ persist_to_workspace: &persist_to_workspace
     root: .
     paths: .
 
+build_and_push_image: &build_and_push_image
+  run:
+    name: build image
+    command: |
+      export IMG_TAG=$(echo $CIRCLE_SHA1 | cut -c -7)
+      echo $IMG_TAG
+      docker login -u _json_key -p "$(echo $GCLOUD_SERVICE_KEY)" https://gcr.io
+      docker build -f docker/prod/Dockerfile -t gcr.io/$GCP_PROJECT_ID/$PROJECT_NAME:$IMG_TAG .
+      docker push gcr.io/$GCP_PROJECT_ID/$PROJECT_NAME:$IMG_TAG
+
+configure_gcloud: &configure_gcloud
+  run:
+    name: configure gcloud default settings
+    command: |
+      gcloud auth activate-service-account --key-file ~/watch-tower/auth_key.json
+      gcloud container clusters get-credentials watch-tower-staging-apprenticeship --zone us-central1-a --project $GCP_PROJECT_ID
+
+generate_env_file: &generate_env_file
+  run:
+   name: Generate a .env
+   command: |
+     echo REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$REACT_APP_GOOGLE_AUTH_REDIRECT_URL > .env
+     echo REACT_APP_ANDELA_AUTH_HOST=$REACT_APP_ANDELA_AUTH_HOST > .env
+
+
+deploy_to_kubernetes: &deploy_to_kubernetes
+  run:
+    name: Run ansible playbook to configure kubernetes
+    command: |
+      export IMG_TAG=$(echo $CIRCLE_SHA1 | cut -c -7)
+      cd watchtower-deployment-scripts
+      ansible-playbook ansible/frontend/main.yml --extra-var "IMG_TAG=$IMG_TAG PROJECT_ID=$GCP_PROJECT_ID RESERVED_IP_NAME=$RESERVED_IP_NAME DOMAIN=$DOMAIN PROJECT_NAME=$PROJECT_NAME namespace=$namespace" -vvv
+
 jobs:
+  build:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - *install_npm_packages
+      - *generate_env_file
+      - run:
+          name: build static files
+          command: yarn build
+      - *persist_to_workspace
+
+  deploy_to_staging:
+    docker:
+      - image: gcr.io/$GCP_PROJECT_ID/watchtower-frontend-base
+        auth:
+          username: _json_key
+          password: $GCLOUD_SERVICE_KEY
+        environment:
+          GOOGLE_APPLICATION_CREDENTIALS: /root/watch-tower/auth_key.json
+          DEPLOYMENT_SCRIPTS_REPO: git@github.com:andela/watchtower-deployment-scripts.git
+          IMAGE_TAG: $(echo $CIRCLE_SHA1 | cut -c -7)
+          namespace: staging
+
+    working_directory: ~/watch-tower
+    steps:
+      - checkout
+      - setup_remote_docker
+      - *attach_workspace
+      - run: 
+          name: Add gcloud key to json file
+          command: echo $GCLOUD_SERVICE_KEY > ~/watch-tower/auth_key.json
+      - *configure_gcloud
+      - *build_and_push_image
+      - run:
+          name: Clone the deployment scripts repo
+          command: |
+            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            git clone -b master ${DEPLOYMENT_SCRIPTS_REPO}
+      - *deploy_to_kubernetes
+
   checkout:
     <<: *defaults
     steps:
@@ -97,6 +170,17 @@ workflows:
       - lint:
           requires:
             - checkout
+      - build:
+          requires:
+            - checkout
+          <<: *filters
       - test_and_report:
           requires:
             - checkout
+      - deploy_to_staging:
+          requires:
+            - build
+            - test_and_report
+          filters:
+            branches:
+              only: develop
