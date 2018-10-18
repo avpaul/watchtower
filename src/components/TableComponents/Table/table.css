@@ -1,5 +1,5 @@
 .dashboard-table__container {
-  overflow-X: auto;
+  overflow-x: scroll;
 }
 
 .dashboard-table {
@@ -12,4 +12,11 @@
   background-color: transparent;
   border-collapse: separate;
   border-spacing: 0px 8px;
+  overflow-x: scroll;
+}
+
+@media screen and (max-width: 868px) {
+  .dashboard-table {
+    width: 900px;
+  }
 }

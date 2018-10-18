@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Header from './Header';
 
 describe('Header Component Test Suite', () => {
   let wrapper;
 
   beforeAll(() => {
-    wrapper = shallow(<Header />);
+    wrapper = mount(<Header />);
   });
 
   it('renders without crashing', () => {

@@ -29,7 +29,7 @@ class Filters extends Component {
   render() {
     const { cardId, activeClass } = this.state;
     return (
-      <div className="contain row">
+      <div className="owl-carousel owl-theme contain row">
         <div className={cardId === 'one' ? activeClass : 'card'} id="one" onClick={this.divClicked} onKeyDown={null} role="button" tabIndex="-1">
           <p className="title">Fellows Off Track</p>
           <p className="sub">Post week 5</p>

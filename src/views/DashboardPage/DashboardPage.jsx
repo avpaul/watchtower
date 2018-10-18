@@ -5,7 +5,7 @@ import fellows from '../../__mocks__/fellows';
 import Filters from '../../components/Filters/Filters';
 
 const DashboardPage = () => (
-  <div style={{ backgroundColor: '#F4F8F9' }}>
+  <div>
     <Header />
     <Filters />
     <DashboardTable fellows={fellows} />

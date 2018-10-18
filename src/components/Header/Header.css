@@ -1,22 +1,21 @@
 .header {
-    font-family: 'DIN Pro';
-    width: 1440px;
-    height: 138px;
+    font-family: 'DIN Pro Light';
+    width: 100%;
     background-color: #FFFFFF;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
-    padding: 0 10px;
+    padding: 0px;
     font-weight: lighter;
 }
 
-.header--top {
-    margin: 0 50px;
-    padding-top: 18px;
+.menu-right {
+    margin-left: 30%;
 }
 
 .logo {
     text-decoration: none;
     text-align: left;
     padding-left: 0;
+    font-weight: 500;
 }
 
 .logo:hover {
@@ -49,7 +48,7 @@
 
 .user {
     display: inline-block;
-    margin-right: 20px;
+    font-weight: 100;
 }
 
 .user__image {
@@ -59,6 +58,7 @@
     border: 1px solid #FFFFFF;
     border-radius: 50%;
     margin-right: 9px;
+    cursor: pointer;
 }
 
 .user__text {
@@ -66,7 +66,10 @@
 	width: 101px;
 	color: #838383;
 	font-size: 18px;
-	line-height: 23px;
+    line-height: 23px;
+    margin-right: 20px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .header__dropdown {
@@ -74,12 +77,14 @@
     font-size: 14px;
     color: #838383;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 /* Notification */
 .notification {
     display: inline-block;
-    margin-right: 2.5%;
+    margin: 0 33.5px;
+    cursor: pointer;
 }
 
 .notification__icon {
@@ -113,8 +118,7 @@
     box-sizing: border-box;
     height: 2px;
     border-color: #D4D4D4;
-    margin-top: 17px;
-    margin-bottom: 15px;
+    margin: 0px;
 }
 
 /* enable absolute positioning */
@@ -123,14 +127,14 @@
     display: inline-block;
     margin-right: 2.5%;
     margin-left: 5%;
-  }
-  
-  .inner-addon .search__icon {
+}
+
+.inner-addon .search__icon {
     position: absolute;
     padding: 8px;
     pointer-events: none;
     padding-right: 15px;
-  }
+}
 
 .right-addon .search__icon { 
     right: 0px;
@@ -141,6 +145,7 @@
 
 .header--bottom {
     font-weight: 500;
+    padding:22px 0px 0px 0px;
 }
 
 .header__menu {
@@ -164,11 +169,46 @@
     text-decoration: none;
     color: #BCBCBC;
     font-size: 18px;
-    padding-bottom: 21px;
+    padding-bottom: 13px;
     cursor: pointer;
 }
 
-.menulink .navlink.active {
+.menulink .navlink.active, .menulink .navlink:active {
     color: #0459E4;
     border-bottom: 3px solid;
+    outline: 0;
+}
+
+/* Mobile and Tablet screen */
+@media screen and (max-width: 767px){
+    #nav > .navbar {
+        padding: 0.5em 2em!important;
+    }
+    .search__open {
+        height: 48px;
+    }
+    .search__icon {
+        margin-top: 5px;
+        height: 20px;
+    }
+    .inner-addon {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .notification {
+        margin: 0 20.5px;
+    }
+    .navlink {
+        outline: 0;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .navlink > .navicon {
+        margin: 0 auto;
+        padding: 0 0.8em;
+    }
+    #profile-menu > div:first-child  {
+        padding: 0px!important;
+    }
 }

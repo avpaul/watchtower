@@ -10,7 +10,7 @@ import MenuLink from './MenuLink';
  * @returns {JSX} React JSX
  */
 const Menu = ({ items, handleMenuClick, activeItems }) => (
-  <div className="header__menu">
+  <div className="header--bottom d-flex justify-content-center">
     {items.map(
       item => (
         <MenuLink

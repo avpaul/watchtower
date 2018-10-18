@@ -1,4 +1,5 @@
-div.card {
+.card {
+    display: block;
     height: 130px;
     width: 290px;
     border-radius: 4px;
@@ -18,7 +19,6 @@ div.card {
 
 .sub{
     height:21px;
-    width: 223px;
     color: #232F49;
     font-family: "DIN Pro";
     font-size: 16px;
@@ -86,9 +86,42 @@ div.card {
     padding-right:20px;
 }
 
-div.contain{
+.contain{
     width: 100%;
     padding-right: 15px;
     padding-left: 60px;
     margin-right: auto;
+}
+
+.owl-item{
+    transition: all 150ms ease-out;
+    transform: translate3d(0px, 0px, 0px) scale(1);
+}
+
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot.owl-nav {
+    position: absolute;
+    left: 10px;
+    top: 40%;
+    background-color: #0459E4 !important;
+    display: block;
+    padding: 0 .3em !important;
+    font-size: 1.5em;
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
+}
+.owl-nav button.owl-next, .owl-nav button.owl-prev {
+    border-radius: 50%;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    right: -23px;
+    top: 40%;
+    background-color: #0459E4 !important;
+    display: block ;
+    padding: 0 .3em !important;
+    font-size: 1.5em;
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
 }

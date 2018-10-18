@@ -31,4 +31,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "DIN Pro", sans-serif;
+  min-height: 100%;
+  background-color: rgb(244, 248, 249);
+}
+
+#root {
+  overflow-x:hidden;
 }

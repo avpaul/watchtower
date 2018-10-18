@@ -6,6 +6,17 @@
     font-size: 15px;
     line-height: 20px;
   }
+
+  .dashboard-table__row > .dashboard-table__cell:nth-child(1),
+  .dashboard-table__row > .dashboard-table__cell:nth-child(2){
+    background-color: #fff;
+  }
+
+  .dashboard-table__header > .dashboard-table__cell:nth-child(1),
+  .dashboard-table__header > .dashboard-table__cell:nth-child(2){
+    background-color: rgb(244, 248, 249);
+  }
+  
   
   .dashboard-table__row:hover {
     box-shadow: 0 4px 6px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.05);
@@ -19,5 +30,5 @@
     line-height: 18px;
     background: transparent;
     height: 40px;
+    
   }
-  
