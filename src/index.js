@@ -5,8 +5,9 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './redux/store/configureStore';
 import Routes from './routes';
+import initialState from './redux/reducers/initialState';
 
-const store = configureStore();
+const store = configureStore(initialState);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -14,4 +15,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
+
 registerServiceWorker();

@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests Filter component matches snapshot 1`] = `
+exports[`matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Filters />,
+  Symbol(enzyme.__unrendered__): <Filters
+    filter="onTrack"
+    getFellows={[Function]}
+    page={1}
+    perPage={10}
+    setFilter={[Function]}
+    summary={
+        Object {
+            "gteWk5OffTrack": 2,
+            "ltWk5OffTrack": 2,
+            "onTrack": 2,
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -20,7 +33,7 @@ ShallowWrapper {
       "children": Array [
         <div
           className="card"
-          id="one"
+          id="gteWk5OffTrack"
           onClick={[Function]}
           onKeyDown={null}
           role="button"
@@ -39,12 +52,12 @@ ShallowWrapper {
           <p
                     className="number"
           >
-                    45
+                    2
           </p>
 </div>,
         <div
           className="card"
-          id="two"
+          id="ltWk5OffTrack"
           onClick={[Function]}
           onKeyDown={null}
           role="button"
@@ -63,12 +76,12 @@ ShallowWrapper {
           <p
                     className="numbers"
           >
-                    534
+                    2
           </p>
 </div>,
         <div
-          className="card"
-          id="three"
+          className="card active-card"
+          id="onTrack"
           onClick={[Function]}
           onKeyDown={null}
           role="button"
@@ -82,11 +95,11 @@ ShallowWrapper {
           <p
                     className="numb"
           >
-                    6723
+                    2
           </p>
 </div>,
       ],
-      "className": "owl-carousel owl-theme contain row",
+      "className": " owl-carousel owl-theme contain row",
     },
     "ref": null,
     "rendered": Array [
@@ -109,11 +122,11 @@ ShallowWrapper {
             <p
               className="number"
 >
-              45
+              2
 </p>,
           ],
           "className": "card",
-          "id": "one",
+          "id": "gteWk5OffTrack",
           "onClick": [Function],
           "onKeyDown": null,
           "role": "button",
@@ -150,11 +163,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "45",
+              "children": 2,
               "className": "number",
             },
             "ref": null,
-            "rendered": "45",
+            "rendered": 2,
             "type": "p",
           },
         ],
@@ -179,11 +192,11 @@ ShallowWrapper {
             <p
               className="numbers"
 >
-              534
+              2
 </p>,
           ],
           "className": "card",
-          "id": "two",
+          "id": "ltWk5OffTrack",
           "onClick": [Function],
           "onKeyDown": null,
           "role": "button",
@@ -220,11 +233,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "534",
+              "children": 2,
               "className": "numbers",
             },
             "ref": null,
-            "rendered": "534",
+            "rendered": 2,
             "type": "p",
           },
         ],
@@ -244,11 +257,11 @@ ShallowWrapper {
             <p
               className="numb"
 >
-              6723
+              2
 </p>,
           ],
-          "className": "card",
-          "id": "three",
+          "className": "card active-card",
+          "id": "onTrack",
           "onClick": [Function],
           "onKeyDown": null,
           "role": "button",
@@ -273,11 +286,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "6723",
+              "children": 2,
               "className": "numb",
             },
             "ref": null,
-            "rendered": "6723",
+            "rendered": 2,
             "type": "p",
           },
         ],
@@ -295,7 +308,7 @@ ShallowWrapper {
         "children": Array [
           <div
             className="card"
-            id="one"
+            id="gteWk5OffTrack"
             onClick={[Function]}
             onKeyDown={null}
             role="button"
@@ -314,12 +327,12 @@ ShallowWrapper {
             <p
                         className="number"
             >
-                        45
+                        2
             </p>
 </div>,
           <div
             className="card"
-            id="two"
+            id="ltWk5OffTrack"
             onClick={[Function]}
             onKeyDown={null}
             role="button"
@@ -338,12 +351,12 @@ ShallowWrapper {
             <p
                         className="numbers"
             >
-                        534
+                        2
             </p>
 </div>,
           <div
-            className="card"
-            id="three"
+            className="card active-card"
+            id="onTrack"
             onClick={[Function]}
             onKeyDown={null}
             role="button"
@@ -357,11 +370,11 @@ ShallowWrapper {
             <p
                         className="numb"
             >
-                        6723
+                        2
             </p>
 </div>,
         ],
-        "className": "owl-carousel owl-theme contain row",
+        "className": " owl-carousel owl-theme contain row",
       },
       "ref": null,
       "rendered": Array [
@@ -384,11 +397,11 @@ ShallowWrapper {
               <p
                 className="number"
 >
-                45
+                2
 </p>,
             ],
             "className": "card",
-            "id": "one",
+            "id": "gteWk5OffTrack",
             "onClick": [Function],
             "onKeyDown": null,
             "role": "button",
@@ -425,11 +438,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "45",
+                "children": 2,
                 "className": "number",
               },
               "ref": null,
-              "rendered": "45",
+              "rendered": 2,
               "type": "p",
             },
           ],
@@ -454,11 +467,11 @@ ShallowWrapper {
               <p
                 className="numbers"
 >
-                534
+                2
 </p>,
             ],
             "className": "card",
-            "id": "two",
+            "id": "ltWk5OffTrack",
             "onClick": [Function],
             "onKeyDown": null,
             "role": "button",
@@ -495,11 +508,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "534",
+                "children": 2,
                 "className": "numbers",
               },
               "ref": null,
-              "rendered": "534",
+              "rendered": 2,
               "type": "p",
             },
           ],
@@ -519,11 +532,11 @@ ShallowWrapper {
               <p
                 className="numb"
 >
-                6723
+                2
 </p>,
             ],
-            "className": "card",
-            "id": "three",
+            "className": "card active-card",
+            "id": "onTrack",
             "onClick": [Function],
             "onKeyDown": null,
             "role": "button",
@@ -548,11 +561,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "6723",
+                "children": 2,
                 "className": "numb",
               },
               "ref": null,
-              "rendered": "6723",
+              "rendered": 2,
               "type": "p",
             },
           ],
@@ -578,8 +591,6 @@ ShallowWrapper {
         },
       },
     },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
   },
 }
 `;

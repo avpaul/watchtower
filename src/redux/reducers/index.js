@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import test from './testReducer';
 
-// Import your reducers and add to the combineReducers to compose
-// rootReducer e.g combineReducers({ reducer });
-const rootReducer = combineReducers({ test });
+import fellowReducer from './fellowReducer';
+import visibilityFilter from './visibilityFilter';
 
+const rootReducer = combineReducers({
+  fellows: fellowReducer,
+  visibilityFilter,
+});
 export default rootReducer;

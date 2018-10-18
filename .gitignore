@@ -29,3 +29,6 @@ yarn-error.log*
 galen
 # galen reports
 galen/reports
+
+# prettier
+.prettierignore

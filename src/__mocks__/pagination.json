@@ -1,0 +1,9 @@
+{
+  "perPage": 10,
+  "page": 1,
+  "pages": 3,
+  "firstPageURL": "http://localhost:8000/api/fellows?page=1",
+  "nextPageURL": "http://localhost:8000/api/fellows?page=2",
+  "prevPageURL": "http://localhost:8000/api/fellows?page=1",
+  "finalPageURL": "http://localhost:8000/api/fellows?page=3"
+}

@@ -35,7 +35,7 @@ const DashboardRow = ({ fellow }) => (
 
 DashboardRow.propTypes = {
   fellow: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     level: PropTypes.string.isRequired,
     quantity: PropTypes.number.isRequired,
     quality: PropTypes.number.isRequired,

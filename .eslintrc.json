@@ -1,13 +1,13 @@
 {
-    "root": true,
-    "env": {
-        "node": true,
-        "browser": true,
-        "jest": true
-    },
-    "extends": ["airbnb"],
-    "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "import/no-extraneous-dependencies": 0
-    }
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": ["airbnb"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": 0
+  }
 }

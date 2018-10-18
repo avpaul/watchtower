@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should map state to props 1`] = `
+Object {
+  "error": "",
+  "fellows": Array [],
+  "filter": "onTrack",
+  "pagination": Object {
+    "finalPageURL": "",
+    "firstPageURL": "",
+    "nextPageURL": "",
+    "page": 1,
+    "pages": 1,
+    "perPage": 10,
+    "prevPageURL": "",
+  },
+  "summary": undefined,
+}
+`;
