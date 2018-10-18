@@ -27,3 +27,5 @@ yarn-error.log*
 
 # galen
 galen
+# galen reports
+galen/reports

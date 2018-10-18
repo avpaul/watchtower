@@ -31,9 +31,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test -u --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**' -c .eslintrc.json --cache"
+    "lint": "eslint 'src/**' -c .eslintrc.json --cache",
+    "galen": "galen",
+    "pretest:galen": "pm2 start -n watch-tower ./node_modules/react-scripts/scripts/start.js",
+    "posttest:galen": "pm2 stop watch-tower",
+    "test:galen": "galen test ./galen/tests/ --htmlreport ./galen/reports/"
   },
   "devDependencies": {
+    "chromedriver": "^2.42.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "enzyme-to-json": "^3.3.4",
@@ -45,6 +50,9 @@
     "react-test-renderer": "^16.5.2",
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
-    "redux-mock-store": "^1.5.3"
+    "redux-mock-store": "^1.5.3",
+    "galenframework": "^2.3.7",
+    "geckodriver": "^1.12.2",
+    "pm2": "^3.2.2"
   }
 }

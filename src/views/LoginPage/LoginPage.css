@@ -7,21 +7,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
+    background-position: 70% 0;
 }
 
 .login-page__header {
     padding-top: 60px;
     height: 159px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 124px;
+    margin: 30px auto 90px auto;
 }
 
 .login-page__logo {
-    margin-bottom: .5rem;
+    margin-bottom: 0;
 }
 
 .login-page__text-by {
+    display: block;
     height: 33px;
     width: 26px;
     color: #FFFFFF;
@@ -29,10 +29,11 @@
     font-size: 1.625rem;
     line-height: 33px;
     text-align: center;
-    margin: 2rem;
-    margin-left: 29px;
-    margin-right: 40px;
-    margin-bottom: 0;
+    margin: 1rem auto;
+}
+
+.login-page__text-and {
+    display: block;
 }
 
 .login-page__tagline {
@@ -45,7 +46,12 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 11px;
+    margin-bottom: 140px;
     letter-spacing: .5px;
+}
+
+.login-page__btn-container {
+    margin-top: 40px;
 }
 
 .login-page__btn {
@@ -83,4 +89,57 @@
     border-radius: 0 4px 4px 0;
     padding-left: 26px;
     padding-right: 26px;
+}
+
+@media screen and (min-width: 768px) {
+    .login-page {
+        background-position: 75% 0;
+    }
+
+    .login-page__logo {
+        margin-bottom: .5rem;
+    }
+
+    .login-page__header {
+        padding-top: 60px;
+        height: 159px;
+        margin: 90px auto 45px auto;
+    }
+
+    .login-page__text-by {
+        display: inline-block;
+        height: 33px;
+        width: 26px;
+        color: #FFFFFF;
+        line-height: 33px;
+        text-align: center;
+        margin: 2rem;
+        margin-left: 29px;
+        margin-bottom: 0;
+    }
+
+    .login-page__text-and {
+        display: inline-block;
+        margin: 0 .5rem;
+    }
+
+    .login-page__tagline {
+        height: 88px;
+        color: #FFFFFF;
+        font-family: "DIN Pro Light";
+        font-size: 2.25rem;
+        line-height: 44px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 11px;
+        margin-bottom: 0;
+        letter-spacing: .5px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .login-page {
+        background-position: none;
+    }
 }

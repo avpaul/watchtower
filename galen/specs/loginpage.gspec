@@ -1,0 +1,60 @@
+@objects
+  login_page    css    .login-page
+  login_page_header    css    .login-page__header
+  login_page_tagline    css    .login-page__tagline
+  login_page_btn-container    css    .login-page__btn-container
+  login_page_btn    css    .login-page__btn
+  login_page_text_by    css    .login-page__text-by
+  login_page_text_and    css    .login-page__text-and
+  login_page_logo    id    watch-tower-logo
+  andela_logo    id    andela-logo
+  login_page_btn_text    css    .login-page__btn-text
+
+
+@groups
+  login_page    login_page_header, login_page_tagline, login_page_btn-container
+
+= login_page =
+  @on desktop, tablet
+    &login_page:
+      centered horizontally inside login_page
+
+    login_page_header:
+      height 159px
+
+    login_page_text_by:
+      right-of login_page_logo 29px
+
+    login_page_tagline:
+      height 88px
+
+    login_page_btn-container:
+      below login_page_tagline 40px
+      height 54px
+
+    login_page_btn:
+      width >= 272px
+      width <= 278px
+      height 49px
+
+    login_page_btn_text:
+      text is "LOGIN WITH GOOGLE"
+
+  @on mobile
+    &login_page:
+      centered horizontally inside login_page
+
+    login_page_text_by:
+      centered horizontally inside login_page
+
+    login_page_logo:
+      centered horizontally inside login_page
+
+    andela_logo:
+      centered horizontally inside login_page
+
+    login_page_text_and:
+      centered horizontally inside login_page
+
+    login_page_btn-container:
+      below login_page_tagline 140px

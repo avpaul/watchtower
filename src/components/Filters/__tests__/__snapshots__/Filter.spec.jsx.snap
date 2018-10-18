@@ -86,7 +86,7 @@ ShallowWrapper {
           </p>
 </div>,
       ],
-      "className": "contain row",
+      "className": "owl-carousel owl-theme contain row",
     },
     "ref": null,
     "rendered": Array [
@@ -361,7 +361,7 @@ ShallowWrapper {
             </p>
 </div>,
         ],
-        "className": "contain row",
+        "className": "owl-carousel owl-theme contain row",
       },
       "ref": null,
       "rendered": Array [

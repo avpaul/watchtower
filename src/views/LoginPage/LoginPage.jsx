@@ -42,12 +42,14 @@ class LoginPage extends Component {
           src={watchTowerLogo}
           alt="watch-tower-logo"
           className="login-page__logo"
+          id="watch-tower-logo"
         />
         <span className="login-page__text-by">by</span>
         <img
           src={andelaLogo}
           alt="andela-logo"
           className="login-page__logo"
+          id="andela-logo"
         />
       </div>
     );
@@ -57,14 +59,18 @@ class LoginPage extends Component {
     return (
       <div className="login-page__tagline text-center">
         <p className="m-0">Tracking</p>
-        <p>DevPulse Ratings & LMS Scores</p>
+        <p>
+          DevPulse Ratings
+          <span className="login-page__text-and">&</span>
+          LMS Scores
+        </p>
       </div>
     );
   }
 
   renderPageLoginButton(authUrl) {
     return (
-      <div style={{ marginTop: '40px' }} title="Login with google">
+      <div className="login-page__btn-container" title="Login with google">
         <a
           href={authUrl}
           onClick={this.handleLogin}

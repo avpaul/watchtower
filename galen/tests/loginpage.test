@@ -1,0 +1,13 @@
+@@ parameterized
+    | browser  |
+    | firefox  |
+    | chrome   |
+@@ parameterized
+    | deviceName | tags      | size      |
+    | Desktop    | desktop   | 1500x1200 |
+    | Tablet     | tablet    | 768x1024  |
+    | Mobile     | mobile    | 450x700   |
+
+Login page on ${deviceName} device in ${browser} browser
+    selenium ${browser} http://localhost:3000/ ${size}
+        check ./galen/specs/loginpage.gspec --include "${tags}"

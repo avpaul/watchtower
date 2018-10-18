@@ -27,6 +27,7 @@ ShallowWrapper {
           <img
                     alt="watch-tower-logo"
                     className="login-page__logo"
+                    id="watch-tower-logo"
                     src="Logo-watchTower.svg"
           />
           <span
@@ -37,6 +38,7 @@ ShallowWrapper {
           <img
                     alt="andela-logo"
                     className="login-page__logo"
+                    id="andela-logo"
                     src="Logo-andela.png"
           />
 </div>,
@@ -49,15 +51,17 @@ ShallowWrapper {
                     Tracking
           </p>
           <p>
-                    DevPulse Ratings & LMS Scores
+                    DevPulse Ratings
+                    <span
+                              className="login-page__text-and"
+                    >
+                              &
+                    </span>
+                    LMS Scores
           </p>
 </div>,
         <div
-          style={
-                    Object {
-                              "marginTop": "40px",
-                            }
-          }
+          className="login-page__btn-container"
           title="Login with google"
 >
           <a
@@ -95,6 +99,7 @@ ShallowWrapper {
             <img
               alt="watch-tower-logo"
               className="login-page__logo"
+              id="watch-tower-logo"
               src="Logo-watchTower.svg"
 />,
             <span
@@ -105,6 +110,7 @@ ShallowWrapper {
             <img
               alt="andela-logo"
               className="login-page__logo"
+              id="andela-logo"
               src="Logo-andela.png"
 />,
           ],
@@ -119,6 +125,7 @@ ShallowWrapper {
             "props": Object {
               "alt": "watch-tower-logo",
               "className": "login-page__logo",
+              "id": "watch-tower-logo",
               "src": "Logo-watchTower.svg",
             },
             "ref": null,
@@ -144,6 +151,7 @@ ShallowWrapper {
             "props": Object {
               "alt": "andela-logo",
               "className": "login-page__logo",
+              "id": "andela-logo",
               "src": "Logo-andela.png",
             },
             "ref": null,
@@ -165,7 +173,13 @@ ShallowWrapper {
               Tracking
 </p>,
             <p>
-              DevPulse Ratings & LMS Scores
+              DevPulse Ratings
+              <span
+                            className="login-page__text-and"
+              >
+                            &
+              </span>
+              LMS Scores
 </p>,
           ],
           "className": "login-page__tagline text-center",
@@ -189,10 +203,33 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "DevPulse Ratings & LMS Scores",
+              "children": Array [
+                "DevPulse Ratings",
+                <span
+                  className="login-page__text-and"
+>
+                  &
+</span>,
+                "LMS Scores",
+              ],
             },
             "ref": null,
-            "rendered": "DevPulse Ratings & LMS Scores",
+            "rendered": Array [
+              "DevPulse Ratings",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "&",
+                  "className": "login-page__text-and",
+                },
+                "ref": null,
+                "rendered": "&",
+                "type": "span",
+              },
+              "LMS Scores",
+            ],
             "type": "p",
           },
         ],
@@ -223,9 +260,7 @@ ShallowWrapper {
                         LOGIN WITH GOOGLE
             </span>
 </a>,
-          "style": Object {
-            "marginTop": "40px",
-          },
+          "className": "login-page__btn-container",
           "title": "Login with google",
         },
         "ref": null,
@@ -313,6 +348,7 @@ ShallowWrapper {
             <img
                         alt="watch-tower-logo"
                         className="login-page__logo"
+                        id="watch-tower-logo"
                         src="Logo-watchTower.svg"
             />
             <span
@@ -323,6 +359,7 @@ ShallowWrapper {
             <img
                         alt="andela-logo"
                         className="login-page__logo"
+                        id="andela-logo"
                         src="Logo-andela.png"
             />
 </div>,
@@ -335,15 +372,17 @@ ShallowWrapper {
                         Tracking
             </p>
             <p>
-                        DevPulse Ratings & LMS Scores
+                        DevPulse Ratings
+                        <span
+                                    className="login-page__text-and"
+                        >
+                                    &
+                        </span>
+                        LMS Scores
             </p>
 </div>,
           <div
-            style={
-                        Object {
-                                    "marginTop": "40px",
-                                  }
-            }
+            className="login-page__btn-container"
             title="Login with google"
 >
             <a
@@ -381,6 +420,7 @@ ShallowWrapper {
               <img
                 alt="watch-tower-logo"
                 className="login-page__logo"
+                id="watch-tower-logo"
                 src="Logo-watchTower.svg"
 />,
               <span
@@ -391,6 +431,7 @@ ShallowWrapper {
               <img
                 alt="andela-logo"
                 className="login-page__logo"
+                id="andela-logo"
                 src="Logo-andela.png"
 />,
             ],
@@ -405,6 +446,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": "watch-tower-logo",
                 "className": "login-page__logo",
+                "id": "watch-tower-logo",
                 "src": "Logo-watchTower.svg",
               },
               "ref": null,
@@ -430,6 +472,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": "andela-logo",
                 "className": "login-page__logo",
+                "id": "andela-logo",
                 "src": "Logo-andela.png",
               },
               "ref": null,
@@ -451,7 +494,13 @@ ShallowWrapper {
                 Tracking
 </p>,
               <p>
-                DevPulse Ratings & LMS Scores
+                DevPulse Ratings
+                <span
+                                className="login-page__text-and"
+                >
+                                &
+                </span>
+                LMS Scores
 </p>,
             ],
             "className": "login-page__tagline text-center",
@@ -475,10 +524,33 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "DevPulse Ratings & LMS Scores",
+                "children": Array [
+                  "DevPulse Ratings",
+                  <span
+                    className="login-page__text-and"
+>
+                    &
+</span>,
+                  "LMS Scores",
+                ],
               },
               "ref": null,
-              "rendered": "DevPulse Ratings & LMS Scores",
+              "rendered": Array [
+                "DevPulse Ratings",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "&",
+                    "className": "login-page__text-and",
+                  },
+                  "ref": null,
+                  "rendered": "&",
+                  "type": "span",
+                },
+                "LMS Scores",
+              ],
               "type": "p",
             },
           ],
@@ -509,9 +581,7 @@ ShallowWrapper {
                             LOGIN WITH GOOGLE
               </span>
 </a>,
-            "style": Object {
-              "marginTop": "40px",
-            },
+            "className": "login-page__btn-container",
             "title": "Login with google",
           },
           "ref": null,
