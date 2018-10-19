@@ -54,6 +54,7 @@ generate_env_file: &generate_env_file
    command: |
      echo REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$REACT_APP_GOOGLE_AUTH_REDIRECT_URL > .env
      echo REACT_APP_ANDELA_AUTH_HOST=$REACT_APP_ANDELA_AUTH_HOST > .env
+     echo REACT_APP_WATCHTOWER_SERVER=$REACT_APP_WATCHTOWER_SERVER > .env
 
 
 deploy_to_kubernetes: &deploy_to_kubernetes
