@@ -1,0 +1,46 @@
+#pagination-container {
+    display: flex;
+    justify-content: center;
+}
+
+#pagination {
+    display: flex;
+    color: #505050;
+}
+
+.first {
+    height: 36px;
+	width: 55px;
+	border: 0.5px solid rgba(0,0,0,0.2);
+	border-radius: 2px;
+	background-color: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(221,221,221,0.5);
+    color: #000000;
+    font-family: "DIN Pro";
+    
+}
+
+.second {
+    height: 36px;
+	width: 55px;
+	border: 0.5px solid rgba(0,0,0,0.2);
+	border-radius: 2px;
+	background-color: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(221,221,221,0.5);
+    color: #3359DB;
+	font-family: "DIN Pro";
+}
+
+.per-page-label{
+    padding: 0px;
+}
+
+.showing {	
+    height: 20px;
+    width: 145px;	
+    color: #637381;	
+    font-family: "DIN Pro";	
+    font-size: 14px;	
+    line-height: 20px;	
+    text-align: center;
+}

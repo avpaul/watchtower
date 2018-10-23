@@ -1,0 +1,1080 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests Pagination component renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DashboardPage
+    error=""
+    fellows={[Function]}
+    filter=""
+    getFellows={[Function]}
+    pagination={
+        Object {
+            "page": 1,
+            "perPage": 10,
+          }
+    }
+    setVisibilityFilter={[Function]}
+    summary={
+        Object {
+            "gteWk5OffTrack": 0,
+            "ltWk5OffTrack": 0,
+            "onTrack": 0,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Header />,
+        undefined,
+        <ErrorBoundary>
+          <Unknown>
+                    <Filters
+                              filter=""
+                              getFellows={[Function]}
+                              loading={undefined}
+                              page={1}
+                              perPage={10}
+                              setFilter={[Function]}
+                              summary={
+                                        Object {
+                                                  "gteWk5OffTrack": 0,
+                                                  "ltWk5OffTrack": 0,
+                                                  "onTrack": 0,
+                                                }
+                              }
+                    />
+                    <DashboardTable
+                              fellows={[Function]}
+                              loading={undefined}
+                    />
+          </Unknown>
+</ErrorBoundary>,
+        <p
+          className="text-center"
+>
+          showing
+           
+          1
+           
+          of
+           
+           
+          results
+</p>,
+        <div
+          className="row d-flex justify-content-center"
+>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-md-7 text-center"
+                    >
+                              <p
+                                        className="text-center"
+                              >
+                                        Per page
+                              </p>
+                    </div>
+                    <div
+                              className="col-md-5"
+                    >
+                              <select
+                                        className="form-control"
+                                        defaultValue="10"
+                                        id="inputState"
+                                        onChange={[Function]}
+                              >
+                                        <option
+                                                  value="10"
+                                        >
+                                                  10
+                                        </option>
+                                        <option
+                                                  value="20"
+                                        >
+                                                  20
+                                        </option>
+                                        <option
+                                                  value="25"
+                                        >
+                                                  25
+                                        </option>
+                              </select>
+                    </div>
+          </div>
+           
+          <Pagination
+                    currentPage={1}
+                    filter=""
+                    finalPageUrl={undefined}
+                    firstPage={undefined}
+                    firstPageUrl={undefined}
+                    handlePageChange={[Function]}
+                    handleValueChange={[Function]}
+                    nextPage={undefined}
+                    perPage="10"
+                    prevPageUrl={undefined}
+                    totalPages={10}
+          />
+</div>,
+      ],
+      "style": Object {
+        "backgroundColor": "#F4F8F9",
+        "minHeight": "85vh",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Unknown>
+            <Filters
+                        filter=""
+                        getFellows={[Function]}
+                        loading={undefined}
+                        page={1}
+                        perPage={10}
+                        setFilter={[Function]}
+                        summary={
+                                    Object {
+                                                "gteWk5OffTrack": 0,
+                                                "ltWk5OffTrack": 0,
+                                                "onTrack": 0,
+                                              }
+                        }
+            />
+            <DashboardTable
+                        fellows={[Function]}
+                        loading={undefined}
+            />
+</Unknown>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Filters
+                filter=""
+                getFellows={[Function]}
+                loading={undefined}
+                page={1}
+                perPage={10}
+                setFilter={[Function]}
+                summary={
+                                Object {
+                                                "gteWk5OffTrack": 0,
+                                                "ltWk5OffTrack": 0,
+                                                "onTrack": 0,
+                                              }
+                }
+/>,
+              <DashboardTable
+                fellows={[Function]}
+                loading={undefined}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "filter": "",
+                "getFellows": [Function],
+                "loading": undefined,
+                "page": 1,
+                "perPage": 10,
+                "setFilter": [Function],
+                "summary": Object {
+                  "gteWk5OffTrack": 0,
+                  "ltWk5OffTrack": 0,
+                  "onTrack": 0,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "fellows": [Function],
+                "loading": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "showing",
+            " ",
+            1,
+            " ",
+            "of",
+            " ",
+            undefined,
+            " ",
+            "results",
+          ],
+          "className": "text-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          "showing",
+          " ",
+          1,
+          " ",
+          "of",
+          " ",
+          undefined,
+          " ",
+          "results",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="row"
+>
+              <div
+                            className="col-md-7 text-center"
+              >
+                            <p
+                                          className="text-center"
+                            >
+                                          Per page
+                            </p>
+              </div>
+              <div
+                            className="col-md-5"
+              >
+                            <select
+                                          className="form-control"
+                                          defaultValue="10"
+                                          id="inputState"
+                                          onChange={[Function]}
+                            >
+                                          <option
+                                                        value="10"
+                                          >
+                                                        10
+                                          </option>
+                                          <option
+                                                        value="20"
+                                          >
+                                                        20
+                                          </option>
+                                          <option
+                                                        value="25"
+                                          >
+                                                        25
+                                          </option>
+                            </select>
+              </div>
+</div>,
+            " ",
+            <Pagination
+              currentPage={1}
+              filter=""
+              finalPageUrl={undefined}
+              firstPage={undefined}
+              firstPageUrl={undefined}
+              handlePageChange={[Function]}
+              handleValueChange={[Function]}
+              nextPage={undefined}
+              perPage="10"
+              prevPageUrl={undefined}
+              totalPages={10}
+/>,
+          ],
+          "className": "row d-flex justify-content-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-md-7 text-center"
+>
+                  <p
+                                    className="text-center"
+                  >
+                                    Per page
+                  </p>
+</div>,
+                <div
+                  className="col-md-5"
+>
+                  <select
+                                    className="form-control"
+                                    defaultValue="10"
+                                    id="inputState"
+                                    onChange={[Function]}
+                  >
+                                    <option
+                                                      value="10"
+                                    >
+                                                      10
+                                    </option>
+                                    <option
+                                                      value="20"
+                                    >
+                                                      20
+                                    </option>
+                                    <option
+                                                      value="25"
+                                    >
+                                                      25
+                                    </option>
+                  </select>
+</div>,
+              ],
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="text-center"
+>
+                    Per page
+</p>,
+                  "className": "col-md-7 text-center",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Per page",
+                    "className": "text-center",
+                  },
+                  "ref": null,
+                  "rendered": "Per page",
+                  "type": "p",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <select
+                    className="form-control"
+                    defaultValue="10"
+                    id="inputState"
+                    onChange={[Function]}
+>
+                    <option
+                                        value="10"
+                    >
+                                        10
+                    </option>
+                    <option
+                                        value="20"
+                    >
+                                        20
+                    </option>
+                    <option
+                                        value="25"
+                    >
+                                        25
+                    </option>
+</select>,
+                  "className": "col-md-5",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <option
+                        value="10"
+>
+                        10
+</option>,
+                      <option
+                        value="20"
+>
+                        20
+</option>,
+                      <option
+                        value="25"
+>
+                        25
+</option>,
+                    ],
+                    "className": "form-control",
+                    "defaultValue": "10",
+                    "id": "inputState",
+                    "onChange": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "10",
+                        "value": "10",
+                      },
+                      "ref": null,
+                      "rendered": "10",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "20",
+                        "value": "20",
+                      },
+                      "ref": null,
+                      "rendered": "20",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "25",
+                        "value": "25",
+                      },
+                      "ref": null,
+                      "rendered": "25",
+                      "type": "option",
+                    },
+                  ],
+                  "type": "select",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "currentPage": 1,
+              "filter": "",
+              "finalPageUrl": undefined,
+              "firstPage": undefined,
+              "firstPageUrl": undefined,
+              "handlePageChange": [Function],
+              "handleValueChange": [Function],
+              "nextPage": undefined,
+              "perPage": "10",
+              "prevPageUrl": undefined,
+              "totalPages": 10,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Header />,
+          undefined,
+          <ErrorBoundary>
+            <Unknown>
+                        <Filters
+                                    filter=""
+                                    getFellows={[Function]}
+                                    loading={undefined}
+                                    page={1}
+                                    perPage={10}
+                                    setFilter={[Function]}
+                                    summary={
+                                                Object {
+                                                            "gteWk5OffTrack": 0,
+                                                            "ltWk5OffTrack": 0,
+                                                            "onTrack": 0,
+                                                          }
+                                    }
+                        />
+                        <DashboardTable
+                                    fellows={[Function]}
+                                    loading={undefined}
+                        />
+            </Unknown>
+</ErrorBoundary>,
+          <p
+            className="text-center"
+>
+            showing
+             
+            1
+             
+            of
+             
+             
+            results
+</p>,
+          <div
+            className="row d-flex justify-content-center"
+>
+            <div
+                        className="row"
+            >
+                        <div
+                                    className="col-md-7 text-center"
+                        >
+                                    <p
+                                                className="text-center"
+                                    >
+                                                Per page
+                                    </p>
+                        </div>
+                        <div
+                                    className="col-md-5"
+                        >
+                                    <select
+                                                className="form-control"
+                                                defaultValue="10"
+                                                id="inputState"
+                                                onChange={[Function]}
+                                    >
+                                                <option
+                                                            value="10"
+                                                >
+                                                            10
+                                                </option>
+                                                <option
+                                                            value="20"
+                                                >
+                                                            20
+                                                </option>
+                                                <option
+                                                            value="25"
+                                                >
+                                                            25
+                                                </option>
+                                    </select>
+                        </div>
+            </div>
+             
+            <Pagination
+                        currentPage={1}
+                        filter=""
+                        finalPageUrl={undefined}
+                        firstPage={undefined}
+                        firstPageUrl={undefined}
+                        handlePageChange={[Function]}
+                        handleValueChange={[Function]}
+                        nextPage={undefined}
+                        perPage="10"
+                        prevPageUrl={undefined}
+                        totalPages={10}
+            />
+</div>,
+        ],
+        "style": Object {
+          "backgroundColor": "#F4F8F9",
+          "minHeight": "85vh",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Unknown>
+              <Filters
+                            filter=""
+                            getFellows={[Function]}
+                            loading={undefined}
+                            page={1}
+                            perPage={10}
+                            setFilter={[Function]}
+                            summary={
+                                          Object {
+                                                        "gteWk5OffTrack": 0,
+                                                        "ltWk5OffTrack": 0,
+                                                        "onTrack": 0,
+                                                      }
+                            }
+              />
+              <DashboardTable
+                            fellows={[Function]}
+                            loading={undefined}
+              />
+</Unknown>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Filters
+                  filter=""
+                  getFellows={[Function]}
+                  loading={undefined}
+                  page={1}
+                  perPage={10}
+                  setFilter={[Function]}
+                  summary={
+                                    Object {
+                                                      "gteWk5OffTrack": 0,
+                                                      "ltWk5OffTrack": 0,
+                                                      "onTrack": 0,
+                                                    }
+                  }
+/>,
+                <DashboardTable
+                  fellows={[Function]}
+                  loading={undefined}
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "filter": "",
+                  "getFellows": [Function],
+                  "loading": undefined,
+                  "page": 1,
+                  "perPage": 10,
+                  "setFilter": [Function],
+                  "summary": Object {
+                    "gteWk5OffTrack": 0,
+                    "ltWk5OffTrack": 0,
+                    "onTrack": 0,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "fellows": [Function],
+                  "loading": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "showing",
+              " ",
+              1,
+              " ",
+              "of",
+              " ",
+              undefined,
+              " ",
+              "results",
+            ],
+            "className": "text-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            "showing",
+            " ",
+            1,
+            " ",
+            "of",
+            " ",
+            undefined,
+            " ",
+            "results",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="row"
+>
+                <div
+                                className="col-md-7 text-center"
+                >
+                                <p
+                                                className="text-center"
+                                >
+                                                Per page
+                                </p>
+                </div>
+                <div
+                                className="col-md-5"
+                >
+                                <select
+                                                className="form-control"
+                                                defaultValue="10"
+                                                id="inputState"
+                                                onChange={[Function]}
+                                >
+                                                <option
+                                                                value="10"
+                                                >
+                                                                10
+                                                </option>
+                                                <option
+                                                                value="20"
+                                                >
+                                                                20
+                                                </option>
+                                                <option
+                                                                value="25"
+                                                >
+                                                                25
+                                                </option>
+                                </select>
+                </div>
+</div>,
+              " ",
+              <Pagination
+                currentPage={1}
+                filter=""
+                finalPageUrl={undefined}
+                firstPage={undefined}
+                firstPageUrl={undefined}
+                handlePageChange={[Function]}
+                handleValueChange={[Function]}
+                nextPage={undefined}
+                perPage="10"
+                prevPageUrl={undefined}
+                totalPages={10}
+/>,
+            ],
+            "className": "row d-flex justify-content-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="col-md-7 text-center"
+>
+                    <p
+                                        className="text-center"
+                    >
+                                        Per page
+                    </p>
+</div>,
+                  <div
+                    className="col-md-5"
+>
+                    <select
+                                        className="form-control"
+                                        defaultValue="10"
+                                        id="inputState"
+                                        onChange={[Function]}
+                    >
+                                        <option
+                                                            value="10"
+                                        >
+                                                            10
+                                        </option>
+                                        <option
+                                                            value="20"
+                                        >
+                                                            20
+                                        </option>
+                                        <option
+                                                            value="25"
+                                        >
+                                                            25
+                                        </option>
+                    </select>
+</div>,
+                ],
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="text-center"
+>
+                      Per page
+</p>,
+                    "className": "col-md-7 text-center",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Per page",
+                      "className": "text-center",
+                    },
+                    "ref": null,
+                    "rendered": "Per page",
+                    "type": "p",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <select
+                      className="form-control"
+                      defaultValue="10"
+                      id="inputState"
+                      onChange={[Function]}
+>
+                      <option
+                                            value="10"
+                      >
+                                            10
+                      </option>
+                      <option
+                                            value="20"
+                      >
+                                            20
+                      </option>
+                      <option
+                                            value="25"
+                      >
+                                            25
+                      </option>
+</select>,
+                    "className": "col-md-5",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <option
+                          value="10"
+>
+                          10
+</option>,
+                        <option
+                          value="20"
+>
+                          20
+</option>,
+                        <option
+                          value="25"
+>
+                          25
+</option>,
+                      ],
+                      "className": "form-control",
+                      "defaultValue": "10",
+                      "id": "inputState",
+                      "onChange": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "10",
+                          "value": "10",
+                        },
+                        "ref": null,
+                        "rendered": "10",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "20",
+                          "value": "20",
+                        },
+                        "ref": null,
+                        "rendered": "20",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "25",
+                          "value": "25",
+                        },
+                        "ref": null,
+                        "rendered": "25",
+                        "type": "option",
+                      },
+                    ],
+                    "type": "select",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "currentPage": 1,
+                "filter": "",
+                "finalPageUrl": undefined,
+                "firstPage": undefined,
+                "firstPageUrl": undefined,
+                "handlePageChange": [Function],
+                "handleValueChange": [Function],
+                "nextPage": undefined,
+                "perPage": "10",
+                "prevPageUrl": undefined,
+                "totalPages": 10,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
