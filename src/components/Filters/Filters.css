@@ -124,3 +124,19 @@
     cursor: pointer;
     color: #fff;
 }
+
+@media screen and (min-width: 1800px) {
+    .contain {
+      width: 85%;
+      margin: 0 auto;
+    }
+    .title {
+        font-size: 1.313em;
+    }
+    .sub {
+        font-size: 1.188em;
+    }
+    .number {
+        font-size: 1.6em;
+    }
+  }

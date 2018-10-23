@@ -212,3 +212,9 @@
         padding: 0px!important;
     }
 }
+
+@media screen and (min-width: 1800px) {
+    .menulink {
+        font-size: 1.3em;
+    }
+}

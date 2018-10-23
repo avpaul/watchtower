@@ -20,3 +20,11 @@
     width: 900px;
   }
 }
+
+@media screen and (min-width: 1800px) {
+  .dashboard-table {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
