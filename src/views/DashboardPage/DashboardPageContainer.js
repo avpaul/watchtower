@@ -10,6 +10,7 @@ export const mapStateToProps = ({ fellows, visibilityFilter }) => ({
   pagination: fellows.pagination,
   summary: fellows.summary,
   filter: visibilityFilter,
+
 });
 
 export default connect(

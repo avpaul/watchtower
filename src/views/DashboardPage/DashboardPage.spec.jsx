@@ -7,9 +7,10 @@ import DashboardTable from '../../components/DashboardTable';
 import fellows from '../../__mocks__/fellows';
 import pagination from '../../__mocks__/pagination';
 import Header from '../../components/Header';
+import Error from '../../components/Error';
 import { ONTRACK, OFFTRACK_WK4_MINUS } from '../../redux/constants/fellowFilters';
 
-const error = { message: 'Data could not be fetched' };
+const error = 'Data could not be fetched';
 
 const props = {
   fellows,
@@ -27,10 +28,28 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('renders the dashboard table', () => {
+it('renders the dashboard table when there\'s no', () => {
   const wrapper = shallow(<DashboardPage {...props} />);
   expect(wrapper.contains(<Header />)).toEqual(true);
-  expect(wrapper.contains(<DashboardTable fellows={fellows} />)).toEqual(true);
+  expect(wrapper
+    .contains(<DashboardTable
+      fellows={fellows}
+      loading={props.loading}
+    />))
+    .toEqual(true);
+});
+
+it('renders the ErrorPage when there\'s an error', () => {
+  const { ErrorPage } = Error;
+  const wrapper = shallow(<DashboardPage {
+    ...{
+      ...props,
+      ...{ error },
+    }}
+  />);
+  expect(wrapper
+    .contains(<ErrorPage />))
+    .toEqual(true);
 });
 
 it('makes an API call when the filter prop is changed', () => {

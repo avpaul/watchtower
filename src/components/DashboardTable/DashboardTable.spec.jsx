@@ -5,15 +5,28 @@ import { shallow, mount } from 'enzyme';
 import DashboardTable from './DashboardTable';
 import Cell from '../TableComponents/Cell';
 import fellows from '../../__mocks__/fellows';
+import ErrorMessage from '../Error/ErrorMessage';
 
 const props = {
   fellows,
+  loading: false,
 };
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<DashboardTable {...props} />, div);
   ReactDOM.unmountComponentAtNode(div);
+});
+
+it('renders ErrorMessage when no fellows and is not fetching fellows', () => {
+  const wrapper = shallow(<DashboardTable {
+    ...{ ...props, ...{ fellows: [] } }}
+  />);
+
+  expect(wrapper.contains(<ErrorMessage
+    message="There's currently no fellows to display."
+  />))
+    .toEqual(true);
 });
 
 it('renders table cells in the correct order', () => {

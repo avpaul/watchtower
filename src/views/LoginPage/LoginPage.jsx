@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Error from '../../components/Error';
 import authService from '../../services/auth';
 import andelaLogo from '../../static/Logo-andela.png';
 import googleLogo from '../../static/icons8-google-48.png';
@@ -93,17 +94,21 @@ class LoginPage extends Component {
 
   render() {
     const { loggedIn, authUrl } = this.state;
+    const { ErrorBoundary } = Error;
+
     if (loggedIn) {
       return (
         <Redirect to="/dashboard" />
       );
     }
     return (
-      <main className=".container-fluid text-center login-page">
-        {this.renderPageHeader()}
-        {this.renderPageTagLine()}
-        {this.renderPageLoginButton(authUrl)}
-      </main>
+      <ErrorBoundary>
+        <main className=".container-fluid text-center login-page">
+          {this.renderPageHeader()}
+          {this.renderPageTagLine()}
+          {this.renderPageLoginButton(authUrl)}
+        </main>
+      </ErrorBoundary>
     );
   }
 }
