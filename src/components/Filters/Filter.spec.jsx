@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Filter from './Filters';
 import {
   ONTRACK,
@@ -34,7 +34,7 @@ it('renders correctly', () => {
 });
 
 it('handleCardClick is called when card is clicked', () => {
-  const card = wrapper.find(`div#${ONTRACK}`);
+  const card = wrapper.find(`FilterCard[filterId="${ONTRACK}"]`);
   card.simulate('click', { currentTarget: { id: ONTRACK } });
 
   expect(handleCardClickSpy).toHaveBeenCalledTimes(1);
@@ -50,32 +50,28 @@ describe('Test Filter Cards', () => {
     getFellowsSpy = jest.fn();
     setFilterSpy = jest.fn();
     propsWithSpy = { ...props, getFellows: getFellowsSpy, setFilter: setFilterSpy };
-    wrapperWithSpy = shallow(<Filter {...propsWithSpy} />);
+    wrapperWithSpy = mount(<Filter {...propsWithSpy} />);
   });
   it('setFilter is called when ONTRACK card is clicked', () => {
-    const card = wrapperWithSpy.find(`div#${ONTRACK}`);
-    card.simulate('click', { currentTarget: { id: ONTRACK } });
+    const card = wrapperWithSpy.find(`FilterCard[filterId="${ONTRACK}"]`);
+    card.simulate('click', { currentTarget: { filterId: ONTRACK } });
 
     expect(getFellowsSpy).toHaveBeenCalledWith({ filter: ONTRACK, page: 1, perPage: 10 });
     expect(setFilterSpy).toHaveBeenCalledWith(ONTRACK);
   });
 
   it('setFilter is called when OFFTRACK_WK4_MINUS card is clicked', () => {
-    const card = wrapperWithSpy.find(`div#${OFFTRACK_WK4_MINUS}`);
-    card.simulate('click', { currentTarget: { id: OFFTRACK_WK4_MINUS } });
-
-    expect(getFellowsSpy).toHaveBeenCalledWith({
-      filter: OFFTRACK_WK4_MINUS,
-      page: 1,
-      perPage: 10,
-    });
+    const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK4_MINUS}"]`);
+    card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
+    expect(getFellowsSpy)
+      .toHaveBeenCalledWith({ filter: OFFTRACK_WK4_MINUS, page: 1, perPage: 10 });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK4_MINUS);
+    card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
   });
 
   it('setFilter is called when OFFTRACK_WK5_PLUS card is clicked', () => {
-    const card = wrapperWithSpy.find(`div#${OFFTRACK_WK5_PLUS}`);
-    card.simulate('click', { currentTarget: { id: OFFTRACK_WK5_PLUS } });
-
+    const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK5_PLUS}"]`);
+    card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK5_PLUS } });
     expect(getFellowsSpy).toHaveBeenCalledWith({ filter: OFFTRACK_WK5_PLUS, page: 1, perPage: 10 });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK5_PLUS);
   });

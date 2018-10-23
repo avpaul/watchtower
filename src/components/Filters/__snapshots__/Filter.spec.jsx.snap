@@ -31,73 +31,41 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
+        <FilterCard
+          cardDetails={
+                    Object {
+                              "subTitle": "Post week 5",
+                              "title": "Fellows Off Track",
+                              "totalFellows": 2,
+                            }
+          }
           className="card"
-          id="gteWk5OffTrack"
+          filterId="gteWk5OffTrack"
           onClick={[Function]}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
->
-          <p
-                    className="title"
-          >
-                    Fellows Off Track
-          </p>
-          <p
-                    className="sub"
-          >
-                    Post week 5
-          </p>
-          <p
-                    className="number"
-          >
-                    2
-          </p>
-</div>,
-        <div
+/>,
+        <FilterCard
+          cardDetails={
+                    Object {
+                              "subTitle": "Pre week 5",
+                              "title": "Fellows Off Track",
+                              "totalFellows": 2,
+                            }
+          }
           className="card"
-          id="ltWk5OffTrack"
+          filterId="ltWk5OffTrack"
           onClick={[Function]}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
->
-          <p
-                    className="title"
-          >
-                    Fellows Off Track
-          </p>
-          <p
-                    className="pull-left sub"
-          >
-                    Pre week 5
-          </p>
-          <p
-                    className="numbers"
-          >
-                    2
-          </p>
-</div>,
-        <div
+/>,
+        <FilterCard
+          cardDetails={
+                    Object {
+                              "title": "Fellows On Track",
+                              "totalFellows": 2,
+                            }
+          }
           className="card active-card"
-          id="onTrack"
+          filterId="onTrack"
           onClick={[Function]}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
->
-          <p
-                    className="title2"
-          >
-                    Fellows On Track
-          </p>
-          <p
-                    className="numb"
-          >
-                    2
-          </p>
-</div>,
+/>,
       ],
       "className": " owl-carousel owl-theme contain row",
     },
@@ -105,196 +73,56 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "host",
+        "key": "gteWk5OffTrack",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <p
-              className="title"
->
-              Fellows Off Track
-</p>,
-            <p
-              className="sub"
->
-              Post week 5
-</p>,
-            <p
-              className="number"
->
-              2
-</p>,
-          ],
+          "cardDetails": Object {
+            "subTitle": "Post week 5",
+            "title": "Fellows Off Track",
+            "totalFellows": 2,
+          },
           "className": "card",
-          "id": "gteWk5OffTrack",
+          "filterId": "gteWk5OffTrack",
           "onClick": [Function],
-          "onKeyDown": null,
-          "role": "button",
-          "tabIndex": "-1",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Fellows Off Track",
-              "className": "title",
-            },
-            "ref": null,
-            "rendered": "Fellows Off Track",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Post week 5",
-              "className": "sub",
-            },
-            "ref": null,
-            "rendered": "Post week 5",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": 2,
-              "className": "number",
-            },
-            "ref": null,
-            "rendered": 2,
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "host",
+        "key": "ltWk5OffTrack",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <p
-              className="title"
->
-              Fellows Off Track
-</p>,
-            <p
-              className="pull-left sub"
->
-              Pre week 5
-</p>,
-            <p
-              className="numbers"
->
-              2
-</p>,
-          ],
+          "cardDetails": Object {
+            "subTitle": "Pre week 5",
+            "title": "Fellows Off Track",
+            "totalFellows": 2,
+          },
           "className": "card",
-          "id": "ltWk5OffTrack",
+          "filterId": "ltWk5OffTrack",
           "onClick": [Function],
-          "onKeyDown": null,
-          "role": "button",
-          "tabIndex": "-1",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Fellows Off Track",
-              "className": "title",
-            },
-            "ref": null,
-            "rendered": "Fellows Off Track",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Pre week 5",
-              "className": "pull-left sub",
-            },
-            "ref": null,
-            "rendered": "Pre week 5",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": 2,
-              "className": "numbers",
-            },
-            "ref": null,
-            "rendered": 2,
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "host",
+        "key": "onTrack",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <p
-              className="title2"
->
-              Fellows On Track
-</p>,
-            <p
-              className="numb"
->
-              2
-</p>,
-          ],
+          "cardDetails": Object {
+            "title": "Fellows On Track",
+            "totalFellows": 2,
+          },
           "className": "card active-card",
-          "id": "onTrack",
+          "filterId": "onTrack",
           "onClick": [Function],
-          "onKeyDown": null,
-          "role": "button",
-          "tabIndex": "-1",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Fellows On Track",
-              "className": "title2",
-            },
-            "ref": null,
-            "rendered": "Fellows On Track",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": 2,
-              "className": "numb",
-            },
-            "ref": null,
-            "rendered": 2,
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -306,73 +134,41 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
+          <FilterCard
+            cardDetails={
+                        Object {
+                                    "subTitle": "Post week 5",
+                                    "title": "Fellows Off Track",
+                                    "totalFellows": 2,
+                                  }
+            }
             className="card"
-            id="gteWk5OffTrack"
+            filterId="gteWk5OffTrack"
             onClick={[Function]}
-            onKeyDown={null}
-            role="button"
-            tabIndex="-1"
->
-            <p
-                        className="title"
-            >
-                        Fellows Off Track
-            </p>
-            <p
-                        className="sub"
-            >
-                        Post week 5
-            </p>
-            <p
-                        className="number"
-            >
-                        2
-            </p>
-</div>,
-          <div
+/>,
+          <FilterCard
+            cardDetails={
+                        Object {
+                                    "subTitle": "Pre week 5",
+                                    "title": "Fellows Off Track",
+                                    "totalFellows": 2,
+                                  }
+            }
             className="card"
-            id="ltWk5OffTrack"
+            filterId="ltWk5OffTrack"
             onClick={[Function]}
-            onKeyDown={null}
-            role="button"
-            tabIndex="-1"
->
-            <p
-                        className="title"
-            >
-                        Fellows Off Track
-            </p>
-            <p
-                        className="pull-left sub"
-            >
-                        Pre week 5
-            </p>
-            <p
-                        className="numbers"
-            >
-                        2
-            </p>
-</div>,
-          <div
+/>,
+          <FilterCard
+            cardDetails={
+                        Object {
+                                    "title": "Fellows On Track",
+                                    "totalFellows": 2,
+                                  }
+            }
             className="card active-card"
-            id="onTrack"
+            filterId="onTrack"
             onClick={[Function]}
-            onKeyDown={null}
-            role="button"
-            tabIndex="-1"
->
-            <p
-                        className="title2"
-            >
-                        Fellows On Track
-            </p>
-            <p
-                        className="numb"
-            >
-                        2
-            </p>
-</div>,
+/>,
         ],
         "className": " owl-carousel owl-theme contain row",
       },
@@ -380,196 +176,56 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
+          "key": "gteWk5OffTrack",
+          "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <p
-                className="title"
->
-                Fellows Off Track
-</p>,
-              <p
-                className="sub"
->
-                Post week 5
-</p>,
-              <p
-                className="number"
->
-                2
-</p>,
-            ],
+            "cardDetails": Object {
+              "subTitle": "Post week 5",
+              "title": "Fellows Off Track",
+              "totalFellows": 2,
+            },
             "className": "card",
-            "id": "gteWk5OffTrack",
+            "filterId": "gteWk5OffTrack",
             "onClick": [Function],
-            "onKeyDown": null,
-            "role": "button",
-            "tabIndex": "-1",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Fellows Off Track",
-                "className": "title",
-              },
-              "ref": null,
-              "rendered": "Fellows Off Track",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Post week 5",
-                "className": "sub",
-              },
-              "ref": null,
-              "rendered": "Post week 5",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": 2,
-                "className": "number",
-              },
-              "ref": null,
-              "rendered": 2,
-              "type": "p",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
+          "key": "ltWk5OffTrack",
+          "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <p
-                className="title"
->
-                Fellows Off Track
-</p>,
-              <p
-                className="pull-left sub"
->
-                Pre week 5
-</p>,
-              <p
-                className="numbers"
->
-                2
-</p>,
-            ],
+            "cardDetails": Object {
+              "subTitle": "Pre week 5",
+              "title": "Fellows Off Track",
+              "totalFellows": 2,
+            },
             "className": "card",
-            "id": "ltWk5OffTrack",
+            "filterId": "ltWk5OffTrack",
             "onClick": [Function],
-            "onKeyDown": null,
-            "role": "button",
-            "tabIndex": "-1",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Fellows Off Track",
-                "className": "title",
-              },
-              "ref": null,
-              "rendered": "Fellows Off Track",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Pre week 5",
-                "className": "pull-left sub",
-              },
-              "ref": null,
-              "rendered": "Pre week 5",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": 2,
-                "className": "numbers",
-              },
-              "ref": null,
-              "rendered": 2,
-              "type": "p",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
+          "key": "onTrack",
+          "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <p
-                className="title2"
->
-                Fellows On Track
-</p>,
-              <p
-                className="numb"
->
-                2
-</p>,
-            ],
+            "cardDetails": Object {
+              "title": "Fellows On Track",
+              "totalFellows": 2,
+            },
             "className": "card active-card",
-            "id": "onTrack",
+            "filterId": "onTrack",
             "onClick": [Function],
-            "onKeyDown": null,
-            "role": "button",
-            "tabIndex": "-1",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Fellows On Track",
-                "className": "title2",
-              },
-              "ref": null,
-              "rendered": "Fellows On Track",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": 2,
-                "className": "numb",
-              },
-              "ref": null,
-              "rendered": 2,
-              "type": "p",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

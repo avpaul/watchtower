@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import * as filterTypes from '../../redux/constants/fellowFilters';
 
 import './Filters.css';
+import FilterCard from './FilterCard';
 
 /**
  * Class representing Filters for the table
@@ -13,6 +14,7 @@ class Filters extends Component {
   constructor(props) {
     super(props);
     this.handleCardClick = this.handleCardClick.bind(this);
+    this.cardArray = this.cardArray.bind(this);
   }
 
   /**
@@ -28,50 +30,47 @@ class Filters extends Component {
     setFilter(e.currentTarget.id);
   }
 
-  render() {
-    const activeClass = 'card active-card';
-
+  cardArray() {
     const {
-      filter,
       summary: { onTrack, gteWk5OffTrack, ltWk5OffTrack },
     } = this.props;
+
+    const cardArray = [
+      {
+        filterId: filterTypes.OFFTRACK_WK5_PLUS,
+        cardDetails: {
+          title: 'Fellows Off Track', subTitle: 'Post week 5', totalFellows: gteWk5OffTrack,
+        },
+      },
+      {
+        filterId: filterTypes.OFFTRACK_WK4_MINUS,
+        cardDetails: {
+          title: 'Fellows Off Track', subTitle: 'Pre week 5', totalFellows: ltWk5OffTrack,
+        },
+      },
+      {
+        filterId: filterTypes.ONTRACK,
+        cardDetails: { title: 'Fellows On Track', totalFellows: onTrack },
+      },
+    ];
+    return cardArray;
+  }
+
+  render() {
+    const activeClass = 'card active-card';
+    const { filter } = this.props;
+    const cardArray = this.cardArray();
     return (
       <div className=" owl-carousel owl-theme contain row">
-        <div
-          className={filter === filterTypes.OFFTRACK_WK5_PLUS ? activeClass : 'card'}
-          id={filterTypes.OFFTRACK_WK5_PLUS}
-          onClick={this.handleCardClick}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
-        >
-          <p className="title">Fellows Off Track</p>
-          <p className="sub">Post week 5</p>
-          <p className="number">{gteWk5OffTrack}</p>
-        </div>
-        <div
-          className={filter === filterTypes.OFFTRACK_WK4_MINUS ? activeClass : 'card'}
-          id={filterTypes.OFFTRACK_WK4_MINUS}
-          onClick={this.handleCardClick}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
-        >
-          <p className="title">Fellows Off Track</p>
-          <p className="pull-left sub">Pre week 5</p>
-          <p className="numbers">{ltWk5OffTrack}</p>
-        </div>
-        <div
-          className={filter === filterTypes.ONTRACK ? activeClass : 'card'}
-          id={filterTypes.ONTRACK}
-          onClick={this.handleCardClick}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
-        >
-          <p className="title2">Fellows On Track</p>
-          <p className="numb">{onTrack}</p>
-        </div>
+        {cardArray.map(({ filterId, cardDetails }) => (
+          <FilterCard
+            key={filterId}
+            filterId={filterId}
+            cardDetails={cardDetails}
+            className={filter === filterId ? activeClass : 'card'}
+            onClick={this.handleCardClick}
+          />
+        ))}
       </div>
     );
   }
