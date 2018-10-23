@@ -5,6 +5,7 @@ Object {
   "error": "",
   "fellows": Array [],
   "filter": "onTrack",
+  "loading": false,
   "pagination": Object {
     "finalPageURL": "",
     "firstPageURL": "",

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../../components/Header';
 import DashboardTable from '../../components/DashboardTable';
 import Filters from '../../components/Filters/Filters';
+import Loader from '../../components/Loader/Loader';
 
 class DashboardPage extends Component {
   componentDidMount() {
@@ -21,6 +22,7 @@ class DashboardPage extends Component {
       setVisibilityFilter,
       pagination: { page, perPage },
       getFellows,
+      loading,
     } = this.props;
     return (
       <div style={{ backgroundColor: '#F4F8F9', minHeight: '85vh' }}>
@@ -34,6 +36,7 @@ class DashboardPage extends Component {
           perPage={perPage}
         />
         <DashboardTable fellows={fellows} />
+        {loading && <Loader /> }
       </div>
     );
   }
@@ -50,6 +53,7 @@ DashboardPage.defaultProps = {
 DashboardPage.propTypes = {
   setVisibilityFilter: PropTypes.func.isRequired,
   getFellows: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   summary: PropTypes.shape({
     onTrack: PropTypes.number.isRequired,
   }),

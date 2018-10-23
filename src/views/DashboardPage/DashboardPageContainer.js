@@ -5,6 +5,7 @@ import { getFellows, setVisibilityFilter } from '../../redux/actionCreators/fell
 
 export const mapStateToProps = ({ fellows, visibilityFilter }) => ({
   fellows: fellows.fellows,
+  loading: fellows.loading,
   error: fellows.error,
   pagination: fellows.pagination,
   summary: fellows.summary,

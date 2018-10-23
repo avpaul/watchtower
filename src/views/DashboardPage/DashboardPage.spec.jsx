@@ -13,6 +13,7 @@ const error = { message: 'Data could not be fetched' };
 
 const props = {
   fellows,
+  loading: false,
   pagination,
   error: '',
   filter: ONTRACK,

@@ -10,6 +10,7 @@ const fellowReducer = (state = initialState.fellows, action) => {
     case LOAD_FELLOW_REQUEST:
       return {
         ...state,
+        fellows: [],
         loading: true,
         error: null,
       };
