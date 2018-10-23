@@ -20,7 +20,7 @@ const fellowReducer = (state = initialState.fellows, action) => {
         ...state,
         loading: false,
         fellows: action.fellows,
-        summary: action.summary,
+        summary: { ...state.summary, ...action.summary },
         pagination: action.pagination,
       };
 

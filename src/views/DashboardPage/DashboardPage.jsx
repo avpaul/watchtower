@@ -25,7 +25,7 @@ class DashboardPage extends Component {
       loading,
     } = this.props;
     return (
-      <div style={{ backgroundColor: '#F4F8F9', minHeight: '85vh' }}>
+      <div>
         <Header />
         <Filters
           filter={filter}
@@ -34,6 +34,7 @@ class DashboardPage extends Component {
           summary={summary}
           page={page}
           perPage={perPage}
+          loading={loading}
         />
         <DashboardTable fellows={fellows} />
         {loading && <Loader /> }
@@ -65,7 +66,7 @@ DashboardPage.propTypes = {
   ).isRequired,
   pagination: PropTypes.shape({
     page: PropTypes.number,
-    perPage: PropTypes.number,
+    perPage: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
   }).isRequired,
   filter: PropTypes.string.isRequired,
 };

@@ -24,10 +24,12 @@ class Filters extends Component {
 
   handleCardClick(e) {
     const {
-      getFellows, page, perPage, setFilter,
+      getFellows, page, perPage, setFilter, loading, filter,
     } = this.props;
-    getFellows({ perPage, page, filter: e.currentTarget.id });
-    setFilter(e.currentTarget.id);
+    if (!loading && (e.currentTarget.id !== filter)) {
+      getFellows({ perPage, page, filter: e.currentTarget.id });
+      setFilter(e.currentTarget.id);
+    }
   }
 
   cardArray() {
@@ -80,8 +82,10 @@ Filters.propTypes = {
   getFellows: PropTypes.func.isRequired,
   setFilter: PropTypes.func.isRequired,
   page: PropTypes.number.isRequired,
-  perPage: PropTypes.number.isRequired,
+  perPage: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired])
+    .isRequired,
   filter: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
   summary: PropTypes.shape({
     onTrack: PropTypes.number.isRequired,
     ltWk5OffTrack: PropTypes.number.isRequired,

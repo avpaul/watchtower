@@ -21,6 +21,7 @@ const props = {
   setFilter: jest.fn(),
   page: 1,
   perPage: 10,
+  loading: false,
 };
 
 const wrapper = shallow(<Filter {...props} />);
@@ -56,8 +57,8 @@ describe('Test Filter Cards', () => {
     const card = wrapperWithSpy.find(`FilterCard[filterId="${ONTRACK}"]`);
     card.simulate('click', { currentTarget: { filterId: ONTRACK } });
 
-    expect(getFellowsSpy).toHaveBeenCalledWith({ filter: ONTRACK, page: 1, perPage: 10 });
-    expect(setFilterSpy).toHaveBeenCalledWith(ONTRACK);
+    expect(getFellowsSpy).not.toHaveBeenCalled();
+    expect(setFilterSpy).not.toHaveBeenCalled();
   });
 
   it('setFilter is called when OFFTRACK_WK4_MINUS card is clicked', () => {
