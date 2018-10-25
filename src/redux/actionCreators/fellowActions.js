@@ -10,7 +10,7 @@ export const getFellows = ({
 } = {}) => (dispatch) => {
   dispatch({ type: types.LOAD_FELLOW_REQUEST });
 
-  const getUrl = url || `${serverURL}?perPage=${perPage}&page=${page}&filter=${filter}`;
+  const getUrl = url || `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`;
   return axios.get(getUrl).then(
     response => dispatch({
       type: types.LOAD_FELLOW_SUCCESS,

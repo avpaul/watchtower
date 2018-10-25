@@ -34,7 +34,7 @@ describe('Fellow Actions', () => {
         summary,
         ...pagination,
       };
-      moxios.stubRequest(`${serverURL}?perPage=${perPage}&page=${page}&filter=${filter}`, {
+      moxios.stubRequest(`${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`, {
         status: 200,
         response: data,
       });
@@ -54,7 +54,7 @@ describe('Fellow Actions', () => {
     });
 
     it('dispatches FELLOW_REQUEST and FELLOW_FAILURE on failing fetch fellows', () => {
-      moxios.stubRequest(`${serverURL}?perPage=${perPage}&page=${page}&filter=${filter}`, {
+      moxios.stubRequest(`${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`, {
         status: 400,
         response: 'problem',
       });
