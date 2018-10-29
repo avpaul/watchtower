@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-
+import { MemoryRouter } from 'react-router-dom';
 import DashboardPage from './DashboardPage';
 import DashboardTable from '../../components/DashboardTable';
 import fellows from '../../__mocks__/fellows';
@@ -24,7 +24,7 @@ const props = {
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<DashboardPage {...props} />, div);
+  ReactDOM.render(<MemoryRouter><DashboardPage {...props} /></MemoryRouter>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 

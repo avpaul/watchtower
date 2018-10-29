@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import mapValues from 'lodash.mapvalues';
 import './Header.css';
 import Menu from './Menu';
@@ -43,10 +44,10 @@ class Header extends Component {
       <div id="nav" className="header">
         <LogOutModal />
         <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
-          <a href="#default" className="logo">
+          <Link to="/dashboard" className="logo">
             <img className="watch-tower__logo" src={watchTowerLogo} alt="watch tower logo" />
             <span className="watch-tower d-none d-sm-inline-block d-md-inline-block d-lg-inline-block">WatchTower</span>
-          </a>
+          </Link>
           <div className="d-flex flex-row">
             <div id="search-icon" data-toggle="collapse" data-target="#search_form">
               <img className="search__icon d-inline-block d-md-none d-xl-none" src={searchIcon} alt="searchIcon" />

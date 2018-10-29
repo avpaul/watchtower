@@ -1,12 +1,12 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Header from './Header';
 
 describe('Header Component Test Suite', () => {
   let wrapper;
 
   beforeAll(() => {
-    wrapper = mount(<Header />);
+    wrapper = shallow(<Header />);
   });
 
   it('renders without crashing', () => {
@@ -16,7 +16,7 @@ describe('Header Component Test Suite', () => {
   it('renders header top properly', () => {
     expect(wrapper.find('.watch-tower').text()).toEqual('WatchTower');
     expect(wrapper.find('.user__text').text()).toEqual('Silm Momoh');
-    expect(wrapper.find('.header--bottom').length).toEqual(1);
+    expect(wrapper.find('Menu').length).toEqual(1);
   });
 
   it('should update state when handleMenuClick is called on the inactive element', () => {
