@@ -25,85 +25,78 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        id="pagination"
+        id="form-group col-md-4 row"
 >
-        <div>
-                <div
-                        id="form-group col-md-4 row"
+        <button
+                className="btn btn-default first"
+                disabled={true}
+                name="first"
+                onClick={[Function]}
+                type="button"
+                value=""
+        >
+                Prev
+        </button>
+        <div
+                aria-label="First group"
+                className="btn-group mr-2 ml-2"
+                role="group"
+        >
+                <button
+                        className="btn btn-default first"
+                        disabled={false}
+                        name="previous"
+                        onClick={[Function]}
+                        type="button"
+                        value={undefined}
+                />
+                <button
+                        className="btn btn-default second"
+                        disabled={false}
+                        name="previous"
+                        onClick={[Function]}
+                        type="button"
+                        value={NaN}
+                />
+                <button
+                        className="btn btn-default second"
+                        type="button"
+                        value=""
                 >
-                        <button
-                                className="btn btn-default first"
-                                disable={true}
-                                name="first"
-                                onClick={[Function]}
-                                type="button"
-                                value=""
-                        >
-                                Prev
-                        </button>
-                        <div
-                                aria-label="First group"
-                                className="btn-group mr-2 ml-2"
-                                role="group"
-                        >
-                                <button
-                                        className="btn btn-default first"
-                                        disable={false}
-                                        name="previous"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value={undefined}
-                                />
-                                <button
-                                        className="btn btn-default second"
-                                        disable={false}
-                                        name="previous"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value={NaN}
-                                />
-                                <button
-                                        className="btn btn-default second"
-                                        type="button"
-                                        value=""
-                                >
-                                        ...
-                                </button>
-                                <button
-                                        className="btn btn-default second"
-                                        disable={false}
-                                        name="next"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value={9}
-                                >
-                                        9
-                                </button>
-                                <button
-                                        className="btn btn-default second"
-                                        disable={false}
-                                        name="next"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value="10"
-                                >
-                                        10
-                                </button>
-                        </div>
-                        <button
-                                className="btn btn-default first"
-                                disable={false}
-                                name="next"
-                                onClick={[Function]}
-                                type="button"
-                                value="2"
-                        >
-                                Next
-                        </button>
-                </div>
+                        ...
+                </button>
+                <button
+                        className="btn btn-default second"
+                        disabled={false}
+                        name="next"
+                        onClick={[Function]}
+                        type="button"
+                        value={9}
+                >
+                        9
+                </button>
+                <button
+                        className="btn btn-default second"
+                        disabled={false}
+                        name="next"
+                        onClick={[Function]}
+                        type="button"
+                        value="10"
+                >
+                        10
+                </button>
         </div>
+        <button
+                className="btn btn-default first"
+                disabled={false}
+                name="next"
+                onClick={[Function]}
+                type="button"
+                value="2"
+        >
+                Next
+        </button>
 </div>,
-      "id": "pagination-container",
     },
     "ref": null,
     "rendered": Object {
@@ -111,241 +104,151 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <div>
+        "children": Array [
+          <button
+            className="btn btn-default first"
+            disabled={true}
+            name="first"
+            onClick={[Function]}
+            type="button"
+            value=""
+>
+            Prev
+</button>,
           <div
-                    id="form-group col-md-4 row"
-          >
-                    <button
-                              className="btn btn-default first"
-                              disable={true}
-                              name="first"
-                              onClick={[Function]}
-                              type="button"
-                              value=""
-                    >
-                              Prev
-                    </button>
-                    <div
-                              aria-label="First group"
-                              className="btn-group mr-2 ml-2"
-                              role="group"
-                    >
-                              <button
-                                        className="btn btn-default first"
-                                        disable={false}
-                                        name="previous"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value={undefined}
-                              />
-                              <button
-                                        className="btn btn-default second"
-                                        disable={false}
-                                        name="previous"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value={NaN}
-                              />
-                              <button
-                                        className="btn btn-default second"
-                                        type="button"
-                                        value=""
-                              >
-                                        ...
-                              </button>
-                              <button
-                                        className="btn btn-default second"
-                                        disable={false}
-                                        name="next"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value={9}
-                              >
-                                        9
-                              </button>
-                              <button
-                                        className="btn btn-default second"
-                                        disable={false}
-                                        name="next"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value="10"
-                              >
-                                        10
-                              </button>
-                    </div>
-                    <button
-                              className="btn btn-default first"
-                              disable={false}
-                              name="next"
-                              onClick={[Function]}
-                              type="button"
-                              value="2"
-                    >
-                              Next
-                    </button>
-          </div>
-</div>,
-        "id": "pagination",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            id="form-group col-md-4 row"
+            aria-label="First group"
+            className="btn-group mr-2 ml-2"
+            role="group"
 >
             <button
                         className="btn btn-default first"
-                        disable={true}
-                        name="first"
+                        disabled={false}
+                        name="previous"
                         onClick={[Function]}
+                        type="button"
+                        value={undefined}
+            />
+            <button
+                        className="btn btn-default second"
+                        disabled={false}
+                        name="previous"
+                        onClick={[Function]}
+                        type="button"
+                        value={NaN}
+            />
+            <button
+                        className="btn btn-default second"
                         type="button"
                         value=""
             >
-                        Prev
+                        ...
             </button>
-            <div
-                        aria-label="First group"
-                        className="btn-group mr-2 ml-2"
-                        role="group"
-            >
-                        <button
-                                    className="btn btn-default first"
-                                    disable={false}
-                                    name="previous"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value={undefined}
-                        />
-                        <button
-                                    className="btn btn-default second"
-                                    disable={false}
-                                    name="previous"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value={NaN}
-                        />
-                        <button
-                                    className="btn btn-default second"
-                                    type="button"
-                                    value=""
-                        >
-                                    ...
-                        </button>
-                        <button
-                                    className="btn btn-default second"
-                                    disable={false}
-                                    name="next"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value={9}
-                        >
-                                    9
-                        </button>
-                        <button
-                                    className="btn btn-default second"
-                                    disable={false}
-                                    name="next"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value="10"
-                        >
-                                    10
-                        </button>
-            </div>
             <button
-                        className="btn btn-default first"
-                        disable={false}
+                        className="btn btn-default second"
+                        disabled={false}
                         name="next"
                         onClick={[Function]}
                         type="button"
-                        value="2"
+                        value={9}
             >
-                        Next
+                        9
+            </button>
+            <button
+                        className="btn btn-default second"
+                        disabled={false}
+                        name="next"
+                        onClick={[Function]}
+                        type="button"
+                        value="10"
+            >
+                        10
             </button>
 </div>,
+          <button
+            className="btn btn-default first"
+            disabled={false}
+            name="next"
+            onClick={[Function]}
+            type="button"
+            value="2"
+>
+            Next
+</button>,
+        ],
+        "id": "form-group col-md-4 row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Prev",
+            "className": "btn btn-default first",
+            "disabled": true,
+            "name": "first",
+            "onClick": [Function],
+            "type": "button",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": "Prev",
+          "type": "button",
         },
-        "ref": null,
-        "rendered": Object {
+        Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "aria-label": "First group",
             "children": Array [
               <button
                 className="btn btn-default first"
-                disable={true}
-                name="first"
+                disabled={false}
+                name="previous"
                 onClick={[Function]}
+                type="button"
+                value={undefined}
+/>,
+              <button
+                className="btn btn-default second"
+                disabled={false}
+                name="previous"
+                onClick={[Function]}
+                type="button"
+                value={NaN}
+/>,
+              <button
+                className="btn btn-default second"
                 type="button"
                 value=""
 >
-                Prev
+                ...
 </button>,
-              <div
-                aria-label="First group"
-                className="btn-group mr-2 ml-2"
-                role="group"
->
-                <button
-                                className="btn btn-default first"
-                                disable={false}
-                                name="previous"
-                                onClick={[Function]}
-                                type="button"
-                                value={undefined}
-                />
-                <button
-                                className="btn btn-default second"
-                                disable={false}
-                                name="previous"
-                                onClick={[Function]}
-                                type="button"
-                                value={NaN}
-                />
-                <button
-                                className="btn btn-default second"
-                                type="button"
-                                value=""
-                >
-                                ...
-                </button>
-                <button
-                                className="btn btn-default second"
-                                disable={false}
-                                name="next"
-                                onClick={[Function]}
-                                type="button"
-                                value={9}
-                >
-                                9
-                </button>
-                <button
-                                className="btn btn-default second"
-                                disable={false}
-                                name="next"
-                                onClick={[Function]}
-                                type="button"
-                                value="10"
-                >
-                                10
-                </button>
-</div>,
               <button
-                className="btn btn-default first"
-                disable={false}
+                className="btn btn-default second"
+                disabled={false}
                 name="next"
                 onClick={[Function]}
                 type="button"
-                value="2"
+                value={9}
 >
-                Next
+                9
+</button>,
+              <button
+                className="btn btn-default second"
+                disabled={false}
+                name="next"
+                onClick={[Function]}
+                type="button"
+                value="10"
+>
+                10
 </button>,
             ],
-            "id": "form-group col-md-4 row",
+            "className": "btn-group mr-2 ml-2",
+            "role": "group",
           },
           "ref": null,
           "rendered": Array [
@@ -354,16 +257,33 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Prev",
+                "children": undefined,
                 "className": "btn btn-default first",
-                "disable": true,
-                "name": "first",
+                "disabled": false,
+                "name": "previous",
                 "onClick": [Function],
                 "type": "button",
-                "value": "",
+                "value": undefined,
               },
               "ref": null,
-              "rendered": "Prev",
+              "rendered": null,
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": "NaN",
+              "nodeType": "host",
+              "props": Object {
+                "children": NaN,
+                "className": "btn btn-default second",
+                "disabled": false,
+                "name": "previous",
+                "onClick": [Function],
+                "type": "button",
+                "value": NaN,
+              },
+              "ref": null,
+              "rendered": NaN,
               "type": "button",
             },
             Object {
@@ -371,164 +291,70 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "aria-label": "First group",
-                "children": Array [
-                  <button
-                    className="btn btn-default first"
-                    disable={false}
-                    name="previous"
-                    onClick={[Function]}
-                    type="button"
-                    value={undefined}
-/>,
-                  <button
-                    className="btn btn-default second"
-                    disable={false}
-                    name="previous"
-                    onClick={[Function]}
-                    type="button"
-                    value={NaN}
-/>,
-                  <button
-                    className="btn btn-default second"
-                    type="button"
-                    value=""
->
-                    ...
-</button>,
-                  <button
-                    className="btn btn-default second"
-                    disable={false}
-                    name="next"
-                    onClick={[Function]}
-                    type="button"
-                    value={9}
->
-                    9
-</button>,
-                  <button
-                    className="btn btn-default second"
-                    disable={false}
-                    name="next"
-                    onClick={[Function]}
-                    type="button"
-                    value="10"
->
-                    10
-</button>,
-                ],
-                "className": "btn-group mr-2 ml-2",
-                "role": "group",
+                "children": "...",
+                "className": "btn btn-default second",
+                "type": "button",
+                "value": "",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "btn btn-default first",
-                    "disable": false,
-                    "name": "previous",
-                    "onClick": [Function],
-                    "type": "button",
-                    "value": undefined,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": NaN,
-                    "className": "btn btn-default second",
-                    "disable": false,
-                    "name": "previous",
-                    "onClick": [Function],
-                    "type": "button",
-                    "value": NaN,
-                  },
-                  "ref": null,
-                  "rendered": NaN,
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "...",
-                    "className": "btn btn-default second",
-                    "type": "button",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": "...",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": 9,
-                    "className": "btn btn-default second",
-                    "disable": false,
-                    "name": "next",
-                    "onClick": [Function],
-                    "type": "button",
-                    "value": 9,
-                  },
-                  "ref": null,
-                  "rendered": 9,
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "10",
-                    "className": "btn btn-default second",
-                    "disable": false,
-                    "name": "next",
-                    "onClick": [Function],
-                    "type": "button",
-                    "value": "10",
-                  },
-                  "ref": null,
-                  "rendered": "10",
-                  "type": "button",
-                },
-              ],
-              "type": "div",
+              "rendered": "...",
+              "type": "button",
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "9",
               "nodeType": "host",
               "props": Object {
-                "children": "Next",
-                "className": "btn btn-default first",
-                "disable": false,
+                "children": 9,
+                "className": "btn btn-default second",
+                "disabled": false,
                 "name": "next",
                 "onClick": [Function],
                 "type": "button",
-                "value": "2",
+                "value": 9,
               },
               "ref": null,
-              "rendered": "Next",
+              "rendered": 9,
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": "10",
+              "nodeType": "host",
+              "props": Object {
+                "children": "10",
+                "className": "btn btn-default second",
+                "disabled": false,
+                "name": "next",
+                "onClick": [Function],
+                "type": "button",
+                "value": "10",
+              },
+              "ref": null,
+              "rendered": "10",
               "type": "button",
             },
           ],
           "type": "div",
         },
-        "type": "div",
-      },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Next",
+            "className": "btn btn-default first",
+            "disabled": false,
+            "name": "next",
+            "onClick": [Function],
+            "type": "button",
+            "value": "2",
+          },
+          "ref": null,
+          "rendered": "Next",
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
     "type": "div",
@@ -540,85 +366,78 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          id="pagination"
+          id="form-group col-md-4 row"
 >
-          <div>
-                    <div
-                              id="form-group col-md-4 row"
+          <button
+                    className="btn btn-default first"
+                    disabled={true}
+                    name="first"
+                    onClick={[Function]}
+                    type="button"
+                    value=""
+          >
+                    Prev
+          </button>
+          <div
+                    aria-label="First group"
+                    className="btn-group mr-2 ml-2"
+                    role="group"
+          >
+                    <button
+                              className="btn btn-default first"
+                              disabled={false}
+                              name="previous"
+                              onClick={[Function]}
+                              type="button"
+                              value={undefined}
+                    />
+                    <button
+                              className="btn btn-default second"
+                              disabled={false}
+                              name="previous"
+                              onClick={[Function]}
+                              type="button"
+                              value={NaN}
+                    />
+                    <button
+                              className="btn btn-default second"
+                              type="button"
+                              value=""
                     >
-                              <button
-                                        className="btn btn-default first"
-                                        disable={true}
-                                        name="first"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value=""
-                              >
-                                        Prev
-                              </button>
-                              <div
-                                        aria-label="First group"
-                                        className="btn-group mr-2 ml-2"
-                                        role="group"
-                              >
-                                        <button
-                                                  className="btn btn-default first"
-                                                  disable={false}
-                                                  name="previous"
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                  value={undefined}
-                                        />
-                                        <button
-                                                  className="btn btn-default second"
-                                                  disable={false}
-                                                  name="previous"
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                  value={NaN}
-                                        />
-                                        <button
-                                                  className="btn btn-default second"
-                                                  type="button"
-                                                  value=""
-                                        >
-                                                  ...
-                                        </button>
-                                        <button
-                                                  className="btn btn-default second"
-                                                  disable={false}
-                                                  name="next"
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                  value={9}
-                                        >
-                                                  9
-                                        </button>
-                                        <button
-                                                  className="btn btn-default second"
-                                                  disable={false}
-                                                  name="next"
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                  value="10"
-                                        >
-                                                  10
-                                        </button>
-                              </div>
-                              <button
-                                        className="btn btn-default first"
-                                        disable={false}
-                                        name="next"
-                                        onClick={[Function]}
-                                        type="button"
-                                        value="2"
-                              >
-                                        Next
-                              </button>
-                    </div>
+                              ...
+                    </button>
+                    <button
+                              className="btn btn-default second"
+                              disabled={false}
+                              name="next"
+                              onClick={[Function]}
+                              type="button"
+                              value={9}
+                    >
+                              9
+                    </button>
+                    <button
+                              className="btn btn-default second"
+                              disabled={false}
+                              name="next"
+                              onClick={[Function]}
+                              type="button"
+                              value="10"
+                    >
+                              10
+                    </button>
           </div>
+          <button
+                    className="btn btn-default first"
+                    disabled={false}
+                    name="next"
+                    onClick={[Function]}
+                    type="button"
+                    value="2"
+          >
+                    Next
+          </button>
 </div>,
-        "id": "pagination-container",
       },
       "ref": null,
       "rendered": Object {
@@ -626,241 +445,151 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div>
+          "children": Array [
+            <button
+              className="btn btn-default first"
+              disabled={true}
+              name="first"
+              onClick={[Function]}
+              type="button"
+              value=""
+>
+              Prev
+</button>,
             <div
-                        id="form-group col-md-4 row"
-            >
-                        <button
-                                    className="btn btn-default first"
-                                    disable={true}
-                                    name="first"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value=""
-                        >
-                                    Prev
-                        </button>
-                        <div
-                                    aria-label="First group"
-                                    className="btn-group mr-2 ml-2"
-                                    role="group"
-                        >
-                                    <button
-                                                className="btn btn-default first"
-                                                disable={false}
-                                                name="previous"
-                                                onClick={[Function]}
-                                                type="button"
-                                                value={undefined}
-                                    />
-                                    <button
-                                                className="btn btn-default second"
-                                                disable={false}
-                                                name="previous"
-                                                onClick={[Function]}
-                                                type="button"
-                                                value={NaN}
-                                    />
-                                    <button
-                                                className="btn btn-default second"
-                                                type="button"
-                                                value=""
-                                    >
-                                                ...
-                                    </button>
-                                    <button
-                                                className="btn btn-default second"
-                                                disable={false}
-                                                name="next"
-                                                onClick={[Function]}
-                                                type="button"
-                                                value={9}
-                                    >
-                                                9
-                                    </button>
-                                    <button
-                                                className="btn btn-default second"
-                                                disable={false}
-                                                name="next"
-                                                onClick={[Function]}
-                                                type="button"
-                                                value="10"
-                                    >
-                                                10
-                                    </button>
-                        </div>
-                        <button
-                                    className="btn btn-default first"
-                                    disable={false}
-                                    name="next"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value="2"
-                        >
-                                    Next
-                        </button>
-            </div>
-</div>,
-          "id": "pagination",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <div
-              id="form-group col-md-4 row"
+              aria-label="First group"
+              className="btn-group mr-2 ml-2"
+              role="group"
 >
               <button
                             className="btn btn-default first"
-                            disable={true}
-                            name="first"
+                            disabled={false}
+                            name="previous"
                             onClick={[Function]}
+                            type="button"
+                            value={undefined}
+              />
+              <button
+                            className="btn btn-default second"
+                            disabled={false}
+                            name="previous"
+                            onClick={[Function]}
+                            type="button"
+                            value={NaN}
+              />
+              <button
+                            className="btn btn-default second"
                             type="button"
                             value=""
               >
-                            Prev
+                            ...
               </button>
-              <div
-                            aria-label="First group"
-                            className="btn-group mr-2 ml-2"
-                            role="group"
-              >
-                            <button
-                                          className="btn btn-default first"
-                                          disable={false}
-                                          name="previous"
-                                          onClick={[Function]}
-                                          type="button"
-                                          value={undefined}
-                            />
-                            <button
-                                          className="btn btn-default second"
-                                          disable={false}
-                                          name="previous"
-                                          onClick={[Function]}
-                                          type="button"
-                                          value={NaN}
-                            />
-                            <button
-                                          className="btn btn-default second"
-                                          type="button"
-                                          value=""
-                            >
-                                          ...
-                            </button>
-                            <button
-                                          className="btn btn-default second"
-                                          disable={false}
-                                          name="next"
-                                          onClick={[Function]}
-                                          type="button"
-                                          value={9}
-                            >
-                                          9
-                            </button>
-                            <button
-                                          className="btn btn-default second"
-                                          disable={false}
-                                          name="next"
-                                          onClick={[Function]}
-                                          type="button"
-                                          value="10"
-                            >
-                                          10
-                            </button>
-              </div>
               <button
-                            className="btn btn-default first"
-                            disable={false}
+                            className="btn btn-default second"
+                            disabled={false}
                             name="next"
                             onClick={[Function]}
                             type="button"
-                            value="2"
+                            value={9}
               >
-                            Next
+                            9
+              </button>
+              <button
+                            className="btn btn-default second"
+                            disabled={false}
+                            name="next"
+                            onClick={[Function]}
+                            type="button"
+                            value="10"
+              >
+                            10
               </button>
 </div>,
+            <button
+              className="btn btn-default first"
+              disabled={false}
+              name="next"
+              onClick={[Function]}
+              type="button"
+              value="2"
+>
+              Next
+</button>,
+          ],
+          "id": "form-group col-md-4 row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Prev",
+              "className": "btn btn-default first",
+              "disabled": true,
+              "name": "first",
+              "onClick": [Function],
+              "type": "button",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": "Prev",
+            "type": "button",
           },
-          "ref": null,
-          "rendered": Object {
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "aria-label": "First group",
               "children": Array [
                 <button
                   className="btn btn-default first"
-                  disable={true}
-                  name="first"
+                  disabled={false}
+                  name="previous"
                   onClick={[Function]}
+                  type="button"
+                  value={undefined}
+/>,
+                <button
+                  className="btn btn-default second"
+                  disabled={false}
+                  name="previous"
+                  onClick={[Function]}
+                  type="button"
+                  value={NaN}
+/>,
+                <button
+                  className="btn btn-default second"
                   type="button"
                   value=""
 >
-                  Prev
+                  ...
 </button>,
-                <div
-                  aria-label="First group"
-                  className="btn-group mr-2 ml-2"
-                  role="group"
->
-                  <button
-                                    className="btn btn-default first"
-                                    disable={false}
-                                    name="previous"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value={undefined}
-                  />
-                  <button
-                                    className="btn btn-default second"
-                                    disable={false}
-                                    name="previous"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value={NaN}
-                  />
-                  <button
-                                    className="btn btn-default second"
-                                    type="button"
-                                    value=""
-                  >
-                                    ...
-                  </button>
-                  <button
-                                    className="btn btn-default second"
-                                    disable={false}
-                                    name="next"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value={9}
-                  >
-                                    9
-                  </button>
-                  <button
-                                    className="btn btn-default second"
-                                    disable={false}
-                                    name="next"
-                                    onClick={[Function]}
-                                    type="button"
-                                    value="10"
-                  >
-                                    10
-                  </button>
-</div>,
                 <button
-                  className="btn btn-default first"
-                  disable={false}
+                  className="btn btn-default second"
+                  disabled={false}
                   name="next"
                   onClick={[Function]}
                   type="button"
-                  value="2"
+                  value={9}
 >
-                  Next
+                  9
+</button>,
+                <button
+                  className="btn btn-default second"
+                  disabled={false}
+                  name="next"
+                  onClick={[Function]}
+                  type="button"
+                  value="10"
+>
+                  10
 </button>,
               ],
-              "id": "form-group col-md-4 row",
+              "className": "btn-group mr-2 ml-2",
+              "role": "group",
             },
             "ref": null,
             "rendered": Array [
@@ -869,16 +598,33 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Prev",
+                  "children": undefined,
                   "className": "btn btn-default first",
-                  "disable": true,
-                  "name": "first",
+                  "disabled": false,
+                  "name": "previous",
                   "onClick": [Function],
                   "type": "button",
-                  "value": "",
+                  "value": undefined,
                 },
                 "ref": null,
-                "rendered": "Prev",
+                "rendered": null,
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": "NaN",
+                "nodeType": "host",
+                "props": Object {
+                  "children": NaN,
+                  "className": "btn btn-default second",
+                  "disabled": false,
+                  "name": "previous",
+                  "onClick": [Function],
+                  "type": "button",
+                  "value": NaN,
+                },
+                "ref": null,
+                "rendered": NaN,
                 "type": "button",
               },
               Object {
@@ -886,164 +632,70 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "aria-label": "First group",
-                  "children": Array [
-                    <button
-                      className="btn btn-default first"
-                      disable={false}
-                      name="previous"
-                      onClick={[Function]}
-                      type="button"
-                      value={undefined}
-/>,
-                    <button
-                      className="btn btn-default second"
-                      disable={false}
-                      name="previous"
-                      onClick={[Function]}
-                      type="button"
-                      value={NaN}
-/>,
-                    <button
-                      className="btn btn-default second"
-                      type="button"
-                      value=""
->
-                      ...
-</button>,
-                    <button
-                      className="btn btn-default second"
-                      disable={false}
-                      name="next"
-                      onClick={[Function]}
-                      type="button"
-                      value={9}
->
-                      9
-</button>,
-                    <button
-                      className="btn btn-default second"
-                      disable={false}
-                      name="next"
-                      onClick={[Function]}
-                      type="button"
-                      value="10"
->
-                      10
-</button>,
-                  ],
-                  "className": "btn-group mr-2 ml-2",
-                  "role": "group",
+                  "children": "...",
+                  "className": "btn btn-default second",
+                  "type": "button",
+                  "value": "",
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": undefined,
-                      "className": "btn btn-default first",
-                      "disable": false,
-                      "name": "previous",
-                      "onClick": [Function],
-                      "type": "button",
-                      "value": undefined,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "button",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": NaN,
-                      "className": "btn btn-default second",
-                      "disable": false,
-                      "name": "previous",
-                      "onClick": [Function],
-                      "type": "button",
-                      "value": NaN,
-                    },
-                    "ref": null,
-                    "rendered": NaN,
-                    "type": "button",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "...",
-                      "className": "btn btn-default second",
-                      "type": "button",
-                      "value": "",
-                    },
-                    "ref": null,
-                    "rendered": "...",
-                    "type": "button",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": 9,
-                      "className": "btn btn-default second",
-                      "disable": false,
-                      "name": "next",
-                      "onClick": [Function],
-                      "type": "button",
-                      "value": 9,
-                    },
-                    "ref": null,
-                    "rendered": 9,
-                    "type": "button",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "10",
-                      "className": "btn btn-default second",
-                      "disable": false,
-                      "name": "next",
-                      "onClick": [Function],
-                      "type": "button",
-                      "value": "10",
-                    },
-                    "ref": null,
-                    "rendered": "10",
-                    "type": "button",
-                  },
-                ],
-                "type": "div",
+                "rendered": "...",
+                "type": "button",
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "9",
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Next",
-                  "className": "btn btn-default first",
-                  "disable": false,
+                  "children": 9,
+                  "className": "btn btn-default second",
+                  "disabled": false,
                   "name": "next",
                   "onClick": [Function],
                   "type": "button",
-                  "value": "2",
+                  "value": 9,
                 },
                 "ref": null,
-                "rendered": "Next",
+                "rendered": 9,
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": "10",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "10",
+                  "className": "btn btn-default second",
+                  "disabled": false,
+                  "name": "next",
+                  "onClick": [Function],
+                  "type": "button",
+                  "value": "10",
+                },
+                "ref": null,
+                "rendered": "10",
                 "type": "button",
               },
             ],
             "type": "div",
           },
-          "type": "div",
-        },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Next",
+              "className": "btn btn-default first",
+              "disabled": false,
+              "name": "next",
+              "onClick": [Function],
+              "type": "button",
+              "value": "2",
+            },
+            "ref": null,
+            "rendered": "Next",
+            "type": "button",
+          },
+        ],
         "type": "div",
       },
       "type": "div",

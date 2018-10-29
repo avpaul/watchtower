@@ -19,7 +19,6 @@ const props = {
   summary,
   filter: ONTRACK,
   setFilter: jest.fn(),
-  page: 1,
   perPage: 10,
   loading: false,
 };
@@ -65,7 +64,7 @@ describe('Test Filter Cards', () => {
     const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK4_MINUS}"]`);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
     expect(getFellowsSpy)
-      .toHaveBeenCalledWith({ filter: OFFTRACK_WK4_MINUS, page: 1, perPage: 10 });
+      .toHaveBeenCalledWith({ filter: OFFTRACK_WK4_MINUS, perPage: 10 });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK4_MINUS);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
   });
@@ -73,7 +72,7 @@ describe('Test Filter Cards', () => {
   it('setFilter is called when OFFTRACK_WK5_PLUS card is clicked', () => {
     const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK5_PLUS}"]`);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK5_PLUS } });
-    expect(getFellowsSpy).toHaveBeenCalledWith({ filter: OFFTRACK_WK5_PLUS, page: 1, perPage: 10 });
+    expect(getFellowsSpy).toHaveBeenCalledWith({ filter: OFFTRACK_WK5_PLUS, perPage: 10 });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK5_PLUS);
   });
 });

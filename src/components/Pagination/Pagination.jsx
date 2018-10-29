@@ -93,7 +93,7 @@ class Pagination extends Component {
   }
 
   renderPaginationButtons = (className, name, value, onClick, buttonText, disableBool = false) => (
-    <button type="button" className={className} value={value} name={name} onClick={onClick} disable={disableBool}>{buttonText}</button>
+    <button type="button" className={className} value={value} name={name} onClick={onClick} disabled={disableBool} key={value}>{buttonText}</button>
   );
 
   renderButton = () => {
@@ -106,12 +106,8 @@ class Pagination extends Component {
 
   render() {
     return (
-      <div id="pagination-container">
-        <div id="pagination">
-          <div>
-            {this.renderButton()}
-          </div>
-        </div>
+      <div>
+        {this.renderButton()}
       </div>
     );
   }

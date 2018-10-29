@@ -6,6 +6,7 @@ import Filters from '../../components/Filters/Filters';
 import Loader from '../../components/Loader/Loader';
 import Error from '../../components/Error';
 import Pagination from '../../components/Pagination/Pagination';
+import '../../components/Pagination/Pagination.css';
 
 /**
  * Class representing Dashboard Page
@@ -68,20 +69,19 @@ class DashboardPage extends Component {
         {' '}
         {pagination.pages}
         {' '}
-        results
+        pages
       </p>
     );
   };
 
   renderPerPageSelector = () => (
-    <div className="row">
-      <div className="col-md-7 text-center">
-        <p className="text-center">Per page</p>
+    <div className="row d-flex justify-content-center">
+      <div className="per-page">
+        Per page
       </div>
-      <div className="col-md-5">
+      <div className="select">
         <select
-          id="inputState"
-          className="form-control"
+          className="form-control d-flex justify-content-center"
           defaultValue="10"
           onChange={this.onChange}
         >
@@ -90,7 +90,9 @@ class DashboardPage extends Component {
           <option value="25">25</option>
         </select>
       </div>
+      {this.renderPagination()}
     </div>
+
   );
 
   handlePageChange = (url) => {
@@ -111,7 +113,7 @@ class DashboardPage extends Component {
       filter,
       loading,
       setVisibilityFilter,
-      pagination: { page, perPage },
+      pagination: { perPage },
       getFellows,
     } = this.props;
 
@@ -121,7 +123,6 @@ class DashboardPage extends Component {
         setFilter={setVisibilityFilter}
         getFellows={getFellows}
         summary={summary}
-        page={page}
         perPage={perPage}
         loading={loading}
       />
@@ -153,9 +154,9 @@ class DashboardPage extends Component {
         {loading && <Loader />}
         {error ? <ErrorPage /> : this.renderPageBody()}
         {this.returnShowing()}
-        <div className="row d-flex justify-content-center">
+        <div>
           {this.renderPerPageSelector()}&nbsp;
-          {this.renderPagination()}
+
         </div>
       </div>
     );
@@ -174,7 +175,7 @@ DashboardPage.defaultProps = {
 
 DashboardPage.propTypes = {
   setVisibilityFilter: PropTypes.func.isRequired,
-  fellows: PropTypes.objectOf.isRequired,
+  fellows: PropTypes.arrayOf(PropTypes.object).isRequired,
   getFellows: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   summary: PropTypes.shape({

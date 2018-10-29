@@ -44,3 +44,11 @@
     line-height: 20px;	
     text-align: center;
 }
+
+.per-page{
+    padding: 0px 20px 5px 10px !important;
+}
+
+.select{
+    padding: 0px 20px 5px 10px !important;
+}
