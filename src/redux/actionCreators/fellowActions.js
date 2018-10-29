@@ -20,7 +20,7 @@ export const getFellows = ({
     }),
     error => dispatch({
       type: types.LOAD_FELLOW_FAILURE,
-      error: errorHandler(error.response.data),
+      error: errorHandler(error),
     }),
   );
 };

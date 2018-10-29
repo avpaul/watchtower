@@ -87,7 +87,7 @@
         displayLevel = (value, index, array) => {
             const cellContent = $(value).text().split(" ");
             if (cellContent.length < 2){
-              const level = cellContent[0] == "D0A" ? "D0A Simulations" : "D0B Apprenticeships";
+              const level = cellContent[0] == "D0A" ? "D0A Simulations" : "D0B Apprenticeship";
               $(value).text(level);
             }
           }

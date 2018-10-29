@@ -34,10 +34,13 @@ describe('Fellow Actions', () => {
         summary,
         ...pagination,
       };
-      moxios.stubRequest(`${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`, {
-        status: 200,
-        response: data,
-      });
+      moxios.stubRequest(
+        `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`,
+        {
+          status: 200,
+          response: data,
+        },
+      );
       const expectedActions = [
         { type: types.LOAD_FELLOW_REQUEST },
         {
@@ -54,17 +57,19 @@ describe('Fellow Actions', () => {
     });
 
     it('dispatches FELLOW_REQUEST and FELLOW_FAILURE on failing fetch fellows', () => {
-      moxios.stubRequest(`${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`, {
-        status: 400,
-        response: 'problem',
-      });
+      moxios.stubRequest(
+        `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`,
+        {
+          status: 400,
+          response: { message: 'Request was not sent' },
+        },
+      );
       const expectedActions = [
         { type: types.LOAD_FELLOW_REQUEST },
         {
           type: types.LOAD_FELLOW_FAILURE,
           error: 'Request was not sent',
         },
-
       ];
       return store.dispatch(fellowActions.getFellows()).then(() => {
         const dispatchedActions = store.getActions();
