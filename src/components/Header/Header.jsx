@@ -7,6 +7,7 @@ import watchTowerLogo from '../../static/Logo.svg';
 import defaultUserPic from '../../static/Upic.svg';
 import notificationIcon from '../../static/Notification.svg';
 import searchIcon from '../../static/Loupe.svg';
+import LogOutModal from '../LogOutModal/LogOutModal';
 
 /**
  * Header UI Component
@@ -40,6 +41,7 @@ class Header extends Component {
     const { activeItems } = this.state;
     return (
       <div id="nav" className="header">
+        <LogOutModal />
         <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
           <a href="#default" className="logo">
             <img className="watch-tower__logo" src={watchTowerLogo} alt="watch tower logo" />
@@ -66,7 +68,7 @@ class Header extends Component {
               <div className="dropdown-menu dropdown-menu-right">
                 <a className="dropdown-item" href="/">Profile</a>
                 <div className="dropdown-divider" />
-                <a className="dropdown-item" href="/">Log out</a>
+                <a className="dropdown-item" data-toggle="modal" data-target="#logout-modal" href="/">Log out</a>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ const loadUserFromToken = () => {
 
 const logout = () => {
   localStorage.removeItem('jwt-token');
-  Cookie.remove('jwt-token', { path: '/' });
+  document.cookie = 'jwt-token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;domain=.andela.com;';
 };
 
 const authService = {

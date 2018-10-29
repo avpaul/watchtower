@@ -15,6 +15,7 @@ describe('Authentication Service', () => {
 
   beforeAll(() => {
     localStorage.setItem('jwt-token', token);
+    Cookie.set('jwt-token', token, { domain: '.andela.com' });
     Cookie.get = jest.fn(() => token);
     Cookie.remove = jest.fn();
   });
@@ -36,5 +37,6 @@ describe('Authentication Service', () => {
   it('logs out successfully', () => {
     authService.logout();
     expect(localStorage.getItem('jwt-token')).toBe(null);
+    expect(document.cookie).toBe('');
   });
 });
