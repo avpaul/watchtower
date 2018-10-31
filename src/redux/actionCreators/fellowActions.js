@@ -1,17 +1,26 @@
 import axios from 'axios';
 import errorHandler from '../../services/errorHandler';
 import * as types from '../constants/fellowActionTypes';
+import { OFFTRACK_WK5_PLUS } from '../constants/fellowFilters';
 import paginationExtract from '../../services/paginationExtract';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 export const getFellows = ({
-  url, perPage = 10, page = 1, filter = 'onTrack',
+  perPage = 10,
+  page = 1,
+  filter = OFFTRACK_WK5_PLUS,
+  search,
+  url,
 } = {}) => (dispatch) => {
   dispatch({ type: types.LOAD_FELLOW_REQUEST });
+  let requestURL = url;
+  if (!requestURL) {
+    requestURL = `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`;
+    requestURL = search ? `${requestURL}&search=${search}` : requestURL;
+  }
 
-  const getUrl = url || `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`;
-  return axios.get(getUrl).then(
+  return axios.get(requestURL).then(
     response => dispatch({
       type: types.LOAD_FELLOW_SUCCESS,
       fellows: response.data.payload,
@@ -25,5 +34,4 @@ export const getFellows = ({
   );
 };
 
-export const setVisibilityFilter = filter => (
-  { type: types.SET_VISIBILITY_FILTER, filter });
+export const setVisibilityFilter = filter => ({ type: types.SET_VISIBILITY_FILTER, filter });

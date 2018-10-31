@@ -7,6 +7,7 @@ import Loader from '../../components/Loader/Loader';
 import Error from '../../components/Error';
 import Pagination from '../../components/Pagination/Pagination';
 import '../../components/Pagination/Pagination.css';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 /**
  * Class representing Dashboard Page
@@ -18,23 +19,26 @@ class DashboardPage extends Component {
     this.state = {
       perPage: '10',
       page: '1',
+      search: '',
     };
   }
 
-  componentWillMount() {
-    const { page, perPage } = this.state;
+  componentDidMount() {
     const { getFellows, filter } = this.props;
-    getFellows(perPage, page, filter);
+    getFellows({ filter, ...this.state });
   }
 
   onChange = (event) => {
     const { filter, getFellows } = this.props;
     const newState = event.target.value;
     this.setState({ perPage: newState }, () => {
-      const { perPage, page } = this.state;
-      getFellows({ perPage, page, filter });
+      getFellows({ filter, ...this.state });
     });
     this.setState({ perPage: newState });
+  };
+
+  handleSearchChange = (event) => {
+    this.setState({ search: event.target.value });
   };
 
   renderPagination = () => {
@@ -65,7 +69,7 @@ class DashboardPage extends Component {
         {' '}
         {pagination.page}
         {' '}
-        of
+of
         {' '}
         {pagination.pages}
         {' '}
@@ -116,6 +120,7 @@ class DashboardPage extends Component {
       pagination: { perPage },
       getFellows,
     } = this.props;
+    const { search } = this.state;
 
     return (
       <Filters
@@ -123,6 +128,7 @@ class DashboardPage extends Component {
         setFilter={setVisibilityFilter}
         getFellows={getFellows}
         summary={summary}
+        search={search}
         perPage={perPage}
         loading={loading}
       />
@@ -130,28 +136,40 @@ class DashboardPage extends Component {
   }
 
   renderPageBody() {
-    const { fellows, loading } = this.props;
+    const {
+      fellows,
+      loading,
+      getFellows,
+      filter,
+      pagination: { perPage },
+    } = this.props;
+    const { search } = this.state;
 
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
         <Fragment>
           {this.renderFilter()}
+          <SearchBar
+            getFellows={getFellows}
+            perPage={perPage}
+            filter={filter}
+            search={search}
+            handleSearchChange={this.handleSearchChange}
+          />
           <DashboardTable fellows={fellows} loading={loading} />
+          {loading && <Loader />}
         </Fragment>
       </ErrorBoundary>
     );
   }
 
   render() {
-    const {
-      loading, error,
-    } = this.props;
+    const { error } = this.props;
     const { ErrorPage } = Error;
     return (
-      <div style={{ backgroundColor: '#F4F8F9', minHeight: '85vh' }}>
+      <div>
         <Header />
-        {loading && <Loader />}
         {error ? <ErrorPage /> : this.renderPageBody()}
         {this.returnShowing()}
         <div>
@@ -175,7 +193,12 @@ DashboardPage.defaultProps = {
 
 DashboardPage.propTypes = {
   setVisibilityFilter: PropTypes.func.isRequired,
-  fellows: PropTypes.arrayOf(PropTypes.object).isRequired,
+  fellows: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      firstName: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   getFellows: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   summary: PropTypes.shape({
@@ -183,7 +206,7 @@ DashboardPage.propTypes = {
   }),
   pagination: PropTypes.shape({
     page: PropTypes.number,
-    perPage: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
+    perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }).isRequired,
   filter: PropTypes.string.isRequired,
   error: PropTypes.string,

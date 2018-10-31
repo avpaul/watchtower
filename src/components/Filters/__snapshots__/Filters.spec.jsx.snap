@@ -8,6 +8,7 @@ ShallowWrapper {
     getFellows={[Function]}
     loading={false}
     perPage={10}
+    search=""
     setFilter={[Function]}
     summary={
         Object {

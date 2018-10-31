@@ -13,7 +13,7 @@ const DashboardTable = ({
   if (fellows.length < 1 && !loading) {
     return (
       <ErrorMessage
-        message="There's currently no fellows to display."
+        message="There's currently no fellows matching the filter and/or search."
       />
     );
   }

@@ -10,13 +10,14 @@ describe('Tests Pagination component', () => {
   const mock = new MockAdapter(axios);
   const props = {
     setVisibilityFilter: () => {},
-    fellows: () => {},
+    fellows,
     pagination: {
       page: 1,
       perPage: 10,
     },
     getFellows: jest.fn(),
     filter: '',
+    loading: false,
   };
   beforeEach(() => {
     mock.onGet('http://localhost:8000/api/v1/fellows?page=1&perPage=10').reply(200, { fellows });
@@ -31,10 +32,10 @@ describe('Tests Pagination component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('calls componentWillMount', () => {
+  it('calls componentDidMount', () => {
     const shallowWrapper = wrapper.instance();
-    const spy = jest.spyOn(shallowWrapper, 'componentWillMount');
-    shallowWrapper.componentWillMount();
+    const spy = jest.spyOn(shallowWrapper, 'componentDidMount');
+    shallowWrapper.componentDidMount();
     expect(spy).toHaveBeenCalled();
   });
 

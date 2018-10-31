@@ -37,15 +37,6 @@
     vertical-align: middle;
 }
 
-.fellow-search {
-	height: 32px;
-	width: 224px;
-	border: 1px solid #BCBCBC;
-	opacity: 0.4;
-    border-radius: 50px;
-    margin-right: 2%;
-}
-
 .user {
     display: inline-block;
     font-weight: 100;
@@ -121,25 +112,6 @@
     margin: 0px;
 }
 
-/* enable absolute positioning */
-.inner-addon {
-    position: relative;
-    display: inline-block;
-    margin-right: 2.5%;
-    margin-left: 5%;
-}
-
-.inner-addon .search__icon {
-    position: absolute;
-    padding: 8px;
-    pointer-events: none;
-    padding-right: 15px;
-}
-
-.right-addon .search__icon { 
-    right: 0px;
-    top: 0;
-}
 
 /* Header bottom */
 
@@ -183,17 +155,6 @@
 @media screen and (max-width: 767px){
     #nav > .navbar {
         padding: 0.5em 2em!important;
-    }
-    .search__open {
-        height: 48px;
-    }
-    .search__icon {
-        margin-top: 5px;
-        height: 20px;
-    }
-    .inner-addon {
-        margin-left: 1%;
-        margin-right: 1%;
     }
     .notification {
         margin: 0 20.5px;

@@ -14,25 +14,9 @@ class Filters extends Component {
   constructor(props) {
     super(props);
     this.handleCardClick = this.handleCardClick.bind(this);
-    this.cardArray = this.cardArray.bind(this);
   }
 
-  /**
-   * Fetch new data based on filter
-   * @param { Object } - The event that happens.
-   */
-
-  handleCardClick(e) {
-    const {
-      getFellows, perPage, setFilter, loading, filter,
-    } = this.props;
-    if (!loading && (e.currentTarget.id !== filter)) {
-      getFellows({ perPage, filter: e.currentTarget.id });
-      setFilter(e.currentTarget.id);
-    }
-  }
-
-  cardArray() {
+  cardArray = () => {
     const {
       summary: { onTrack, gteWk5OffTrack, ltWk5OffTrack },
     } = this.props;
@@ -41,13 +25,17 @@ class Filters extends Component {
       {
         filterId: filterTypes.OFFTRACK_WK5_PLUS,
         cardDetails: {
-          title: 'Fellows Off Track', subTitle: 'Post week 5', totalFellows: gteWk5OffTrack,
+          title: 'Fellows Off Track',
+          subTitle: 'Post week 5',
+          totalFellows: gteWk5OffTrack,
         },
       },
       {
         filterId: filterTypes.OFFTRACK_WK4_MINUS,
         cardDetails: {
-          title: 'Fellows Off Track', subTitle: 'Pre week 5', totalFellows: ltWk5OffTrack,
+          title: 'Fellows Off Track',
+          subTitle: 'Pre week 5',
+          totalFellows: ltWk5OffTrack,
         },
       },
       {
@@ -56,6 +44,23 @@ class Filters extends Component {
       },
     ];
     return cardArray;
+  };
+
+  /**
+   * Fetch new data based on filter
+   * @param { Object } - The event that happens.
+   */
+
+  handleCardClick(e) {
+    const {
+      getFellows, perPage, setFilter, loading, filter, search,
+    } = this.props;
+    if (!loading && e.currentTarget.id !== filter) {
+      getFellows({
+        perPage, search, filter: e.currentTarget.id,
+      });
+      setFilter(e.currentTarget.id);
+    }
   }
 
   render() {
@@ -84,6 +89,7 @@ Filters.propTypes = {
   perPage: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired])
     .isRequired,
   filter: PropTypes.string.isRequired,
+  search: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   summary: PropTypes.shape({
     onTrack: PropTypes.number.isRequired,

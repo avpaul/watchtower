@@ -7,7 +7,6 @@ import items from './navlinks';
 import watchTowerLogo from '../../static/Logo.svg';
 import defaultUserPic from '../../static/Upic.svg';
 import notificationIcon from '../../static/Notification.svg';
-import searchIcon from '../../static/Loupe.svg';
 import LogOutModal from '../LogOutModal/LogOutModal';
 
 /**
@@ -49,25 +48,25 @@ class Header extends Component {
             <span className="watch-tower d-none d-sm-inline-block d-md-inline-block d-lg-inline-block">WatchTower</span>
           </Link>
           <div className="d-flex flex-row">
-            <div id="search-icon" data-toggle="collapse" data-target="#search_form">
-              <img className="search__icon d-inline-block d-md-none d-xl-none" src={searchIcon} alt="searchIcon" />
-            </div>
-            <div id="search_form" className="inner-addon collapse show">
-              <img className="search__icon d-none d-md-inline-block d-xl-inline-block" src={searchIcon} alt="searchIcon" />
-              <input type="search" className="form-control fellow-search" name="fellow_search_query" />
-            </div>
             <div className="notification">
               <img className="notification__icon" src={notificationIcon} alt="notificationIcon" />
               <i className="notification__icon" />
             </div>
             <div id="profile-menu" className="dropdown">
-              <div className="d-flex flex-row align-items-center pr-5 .dropdown-toggle" data-toggle="dropdown">
+              <div
+                className="d-flex flex-row align-items-center pr-3 .dropdown-toggle"
+                data-toggle="dropdown"
+              >
                 <img className="user__image" src={defaultUserPic} alt="defaultUserPic" />
-                <span className="user__text d-none d-sm-inline-block d-md-inline-block d-lg-inline-block">Silm Momoh</span>
+                <span className="user__text d-none d-sm-inline-block d-md-inline-block d-lg-inline-block">
+                  Silm Momoh
+                </span>
                 <i className="fas fa-caret-down header__dropdown" />
               </div>
               <div className="dropdown-menu dropdown-menu-right">
-                <a className="dropdown-item" href="/">Profile</a>
+                <a className="dropdown-item" href="/">
+                  Profile
+                </a>
                 <div className="dropdown-divider" />
                 <a className="dropdown-item" data-toggle="modal" data-target="#logout-modal" href="/">Log out</a>
               </div>

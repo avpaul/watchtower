@@ -28,28 +28,21 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('renders the dashboard table when there\'s no', () => {
+it("renders the dashboard table when there's no error", () => {
   const wrapper = shallow(<DashboardPage {...props} />);
   expect(wrapper.contains(<Header />)).toEqual(true);
-  expect(wrapper
-    .contains(<DashboardTable
-      fellows={fellows}
-      loading={props.loading}
-    />))
-    .toEqual(true);
+  expect(wrapper.contains(<DashboardTable fellows={fellows} loading={props.loading} />)).toEqual(
+    true,
+  );
+  expect(wrapper).toMatchSnapshot();
+  const wrapperWhenLoading = shallow(<DashboardPage {...props} loading />);
+  expect(wrapperWhenLoading).toMatchSnapshot();
 });
 
-it('renders the ErrorPage when there\'s an error', () => {
+it("renders the ErrorPage when there's an error", () => {
   const { ErrorPage } = Error;
-  const wrapper = shallow(<DashboardPage {
-    ...{
-      ...props,
-      ...{ error },
-    }}
-  />);
-  expect(wrapper
-    .contains(<ErrorPage />))
-    .toEqual(true);
+  const wrapper = shallow(<DashboardPage {...props} error={error} />);
+  expect(wrapper.contains(<ErrorPage />)).toEqual(true);
 });
 
 it('makes an API call when the filter prop is changed', () => {
@@ -68,4 +61,11 @@ it('does not make an API call when the filter prop has not changed', () => {
   const wrapper = shallow(<DashboardPage {...propsWithSpy} />);
   wrapper.setProps({ error });
   expect(getFellowsSpy).toHaveBeenCalled();
+});
+
+it("renders the dashboard table when there's no error", () => {
+  const wrapper = shallow(<DashboardPage {...props} />);
+  const handleSearchChangeSpy = jest.spyOn(wrapper.instance(), 'handleSearchChange');
+  wrapper.instance().handleSearchChange({ target: { value: 'search' } });
+  expect(handleSearchChangeSpy).toHaveBeenCalled();
 });

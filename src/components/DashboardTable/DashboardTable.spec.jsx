@@ -24,7 +24,7 @@ it('renders ErrorMessage when no fellows and is not fetching fellows', () => {
   />);
 
   expect(wrapper.contains(<ErrorMessage
-    message="There's currently no fellows to display."
+    message="There's currently no fellows matching the filter and/or search."
   />))
     .toEqual(true);
 });

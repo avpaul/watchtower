@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Filter from './Filters';
+import Filters from './Filters';
 import {
   ONTRACK,
   OFFTRACK_WK4_MINUS,
@@ -12,9 +12,10 @@ const summary = {
   gteWk5OffTrack: 2,
   ltWk5OffTrack: 2,
 };
-const handleCardClickSpy = jest.spyOn(Filter.prototype, 'handleCardClick');
+const handleCardClickSpy = jest.spyOn(Filters.prototype, 'handleCardClick');
 
 const props = {
+  search: '',
   getFellows: jest.fn(),
   summary,
   filter: ONTRACK,
@@ -23,7 +24,7 @@ const props = {
   loading: false,
 };
 
-const wrapper = shallow(<Filter {...props} />);
+const wrapper = shallow(<Filters {...props} />);
 
 it('matches snapshot', () => {
   expect(wrapper).toMatchSnapshot();
@@ -50,7 +51,7 @@ describe('Test Filter Cards', () => {
     getFellowsSpy = jest.fn();
     setFilterSpy = jest.fn();
     propsWithSpy = { ...props, getFellows: getFellowsSpy, setFilter: setFilterSpy };
-    wrapperWithSpy = mount(<Filter {...propsWithSpy} />);
+    wrapperWithSpy = mount(<Filters {...propsWithSpy} />);
   });
   it('setFilter is called when ONTRACK card is clicked', () => {
     const card = wrapperWithSpy.find(`FilterCard[filterId="${ONTRACK}"]`);
@@ -63,8 +64,11 @@ describe('Test Filter Cards', () => {
   it('setFilter is called when OFFTRACK_WK4_MINUS card is clicked', () => {
     const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK4_MINUS}"]`);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
-    expect(getFellowsSpy)
-      .toHaveBeenCalledWith({ filter: OFFTRACK_WK4_MINUS, perPage: 10 });
+    expect(getFellowsSpy).toHaveBeenCalledWith({
+      filter: OFFTRACK_WK4_MINUS,
+      perPage: 10,
+      search: '',
+    });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK4_MINUS);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
   });
@@ -72,7 +76,11 @@ describe('Test Filter Cards', () => {
   it('setFilter is called when OFFTRACK_WK5_PLUS card is clicked', () => {
     const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK5_PLUS}"]`);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK5_PLUS } });
-    expect(getFellowsSpy).toHaveBeenCalledWith({ filter: OFFTRACK_WK5_PLUS, perPage: 10 });
+    expect(getFellowsSpy).toHaveBeenCalledWith({
+      filter: OFFTRACK_WK5_PLUS,
+      perPage: 10,
+      search: '',
+    });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK5_PLUS);
   });
 });
