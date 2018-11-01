@@ -3,7 +3,7 @@ import userIconFill from '../../static/User-fill.svg';
 import cogIcon from '../../static/Settings.svg';
 import cogIconFill from '../../static/Settings-fill.svg';
 
-const items = [
+export const items = [
   {
     key: 'fellows',
     name: 'Fellows',
@@ -20,4 +20,11 @@ const items = [
   },
 ];
 
-export default items;
+export const getMenuItems = (role) => {
+  switch (role) {
+    case 'Technology':
+      return items;
+    default:
+      return items;
+  }
+};

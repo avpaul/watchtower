@@ -138,12 +138,19 @@ ShallowWrapper {
             "perPage": 10,
           }
     }
+    role="Technology"
     setVisibilityFilter={[Function]}
     summary={
         Object {
             "gteWk5OffTrack": 0,
             "ltWk5OffTrack": 0,
             "onTrack": 0,
+          }
+    }
+    user={
+        Object {
+            "name": "Test user",
+            "picture": "http://",
           }
     }
 />,
@@ -161,7 +168,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Header
+          role="Technology"
+          user={
+                    Object {
+                              "name": "Test user",
+                              "picture": "http://",
+                            }
+          }
+/>,
         <ErrorBoundary>
           <Unknown>
                     <Filters
@@ -385,7 +400,13 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "role": "Technology",
+          "user": Object {
+            "name": "Test user",
+            "picture": "http://",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -703,7 +724,6 @@ ShallowWrapper {
                 }
                 loading={false}
 />,
-              false,
             ],
           },
           "ref": null,
@@ -877,7 +897,6 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            false,
           ],
           "type": Symbol(react.fragment),
         },
@@ -1175,7 +1194,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Header
+            role="Technology"
+            user={
+                        Object {
+                                    "name": "Test user",
+                                    "picture": "http://",
+                                  }
+            }
+/>,
           <ErrorBoundary>
             <Unknown>
                         <Filters
@@ -1399,7 +1426,13 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "role": "Technology",
+            "user": Object {
+              "name": "Test user",
+              "picture": "http://",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -1717,7 +1750,6 @@ ShallowWrapper {
                   }
                   loading={false}
 />,
-                false,
               ],
             },
             "ref": null,
@@ -1891,7 +1923,6 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              false,
             ],
             "type": Symbol(react.fragment),
           },

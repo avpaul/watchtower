@@ -20,6 +20,11 @@ const props = {
   filter: ONTRACK,
   setVisibilityFilter: jest.fn(),
   getFellows: jest.fn(),
+  user: {
+    name: 'Test user',
+    picture: 'http://',
+  },
+  role: 'Technology',
 };
 
 it('renders without crashing', () => {
@@ -30,13 +35,20 @@ it('renders without crashing', () => {
 
 it("renders the dashboard table when there's no error", () => {
   const wrapper = shallow(<DashboardPage {...props} />);
-  expect(wrapper.contains(<Header />)).toEqual(true);
+  expect(wrapper.contains(<Header user={props.user} role={props.role} />)).toEqual(true);
   expect(wrapper.contains(<DashboardTable fellows={fellows} loading={props.loading} />)).toEqual(
     true,
   );
   expect(wrapper).toMatchSnapshot();
   const wrapperWhenLoading = shallow(<DashboardPage {...props} loading />);
   expect(wrapperWhenLoading).toMatchSnapshot();
+  expect(wrapper.contains(<Header user={props.user} role={props.role} />)).toEqual(true);
+  expect(wrapper
+    .contains(<DashboardTable
+      fellows={fellows}
+      loading={props.loading}
+    />))
+    .toEqual(true);
 });
 
 it("renders the ErrorPage when there's an error", () => {

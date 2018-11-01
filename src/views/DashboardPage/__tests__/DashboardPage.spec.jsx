@@ -18,6 +18,11 @@ describe('Tests Pagination component', () => {
     getFellows: jest.fn(),
     filter: '',
     loading: false,
+    user: {
+      name: 'Test user',
+      picture: 'http://',
+    },
+    role: 'Technology',
   };
   beforeEach(() => {
     mock.onGet('http://localhost:8000/api/v1/fellows?page=1&perPage=10').reply(200, { fellows });

@@ -5,6 +5,7 @@ import Cell from '../TableComponents/Cell';
 import Row from '../TableComponents/Row';
 import DashboardRow from './DashboardRow';
 import Error from '../Error';
+import Loader from '../Loader/Loader';
 
 const DashboardTable = ({
   fellows, loading,
@@ -40,6 +41,7 @@ const DashboardTable = ({
         ))
         }
       </Table>
+      { loading && <Loader />}
     </Fragment>
   );
 };

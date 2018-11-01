@@ -4,9 +4,13 @@ import Header from './Header';
 
 describe('Header Component Test Suite', () => {
   let wrapper;
-
   beforeAll(() => {
-    wrapper = shallow(<Header />);
+    const user = {
+      name: 'Test User',
+      picture: 'http://',
+    };
+    const role = 'Technology';
+    wrapper = shallow(<Header user={user} role={role} />);
   });
 
   it('renders without crashing', () => {
@@ -15,8 +19,8 @@ describe('Header Component Test Suite', () => {
 
   it('renders header top properly', () => {
     expect(wrapper.find('.watch-tower').text()).toEqual('WatchTower');
-    expect(wrapper.find('.user__text').text()).toEqual('Silm Momoh');
     expect(wrapper.find('Menu').length).toEqual(1);
+    expect(wrapper.find('.user__text').text()).toEqual('Test User');
   });
 
   it('should update state when handleMenuClick is called on the inactive element', () => {

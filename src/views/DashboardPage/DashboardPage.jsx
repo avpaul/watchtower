@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Header from '../../components/Header';
 import DashboardTable from '../../components/DashboardTable';
 import Filters from '../../components/Filters/Filters';
-import Loader from '../../components/Loader/Loader';
 import Error from '../../components/Error';
 import Pagination from '../../components/Pagination/Pagination';
 import '../../components/Pagination/Pagination.css';
@@ -158,18 +157,17 @@ of
             handleSearchChange={this.handleSearchChange}
           />
           <DashboardTable fellows={fellows} loading={loading} />
-          {loading && <Loader />}
         </Fragment>
       </ErrorBoundary>
     );
   }
 
   render() {
-    const { error } = this.props;
+    const { error, user, role } = this.props;
     const { ErrorPage } = Error;
     return (
       <div>
-        <Header />
+        <Header user={user} role={role} />
         {error ? <ErrorPage /> : this.renderPageBody()}
         {this.returnShowing()}
         <div>
@@ -201,6 +199,11 @@ DashboardPage.propTypes = {
   ).isRequired,
   getFellows: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
+  role: PropTypes.string.isRequired,
   summary: PropTypes.shape({
     onTrack: PropTypes.number.isRequired,
   }),

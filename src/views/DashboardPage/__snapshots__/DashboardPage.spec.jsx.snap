@@ -143,12 +143,19 @@ ShallowWrapper {
             "prevPageURL": "http://localhost:8000/api/fellows?page=1",
           }
     }
+    role="Technology"
     setVisibilityFilter={[Function]}
     summary={
         Object {
             "gteWk5OffTrack": 0,
             "ltWk5OffTrack": 0,
             "onTrack": 0,
+          }
+    }
+    user={
+        Object {
+            "name": "Test user",
+            "picture": "http://",
           }
     }
 />,
@@ -166,7 +173,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Header
+          role="Technology"
+          user={
+                    Object {
+                              "name": "Test user",
+                              "picture": "http://",
+                            }
+          }
+/>,
         <ErrorBoundary>
           <Unknown>
                     <Filters
@@ -391,7 +406,13 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "role": "Technology",
+          "user": Object {
+            "name": "Test user",
+            "picture": "http://",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -709,7 +730,6 @@ ShallowWrapper {
                 }
                 loading={false}
 />,
-              false,
             ],
           },
           "ref": null,
@@ -883,7 +903,6 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            false,
           ],
           "type": Symbol(react.fragment),
         },
@@ -1181,7 +1200,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Header
+            role="Technology"
+            user={
+                        Object {
+                                    "name": "Test user",
+                                    "picture": "http://",
+                                  }
+            }
+/>,
           <ErrorBoundary>
             <Unknown>
                         <Filters
@@ -1406,7 +1433,13 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "role": "Technology",
+            "user": Object {
+              "name": "Test user",
+              "picture": "http://",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -1724,7 +1757,6 @@ ShallowWrapper {
                   }
                   loading={false}
 />,
-                false,
               ],
             },
             "ref": null,
@@ -1898,7 +1930,6 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              false,
             ],
             "type": Symbol(react.fragment),
           },
@@ -2353,12 +2384,19 @@ ShallowWrapper {
             "prevPageURL": "http://localhost:8000/api/fellows?page=1",
           }
     }
+    role="Technology"
     setVisibilityFilter={[Function]}
     summary={
         Object {
             "gteWk5OffTrack": 0,
             "ltWk5OffTrack": 0,
             "onTrack": 0,
+          }
+    }
+    user={
+        Object {
+            "name": "Test user",
+            "picture": "http://",
           }
     }
 />,
@@ -2376,7 +2414,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Header
+          role="Technology"
+          user={
+                    Object {
+                              "name": "Test user",
+                              "picture": "http://",
+                            }
+          }
+/>,
         <ErrorBoundary>
           <Unknown>
                     <Filters
@@ -2528,7 +2574,6 @@ ShallowWrapper {
                               }
                               loading={true}
                     />
-                    <Loader />
           </Unknown>
 </ErrorBoundary>,
         <p
@@ -2602,7 +2647,13 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "role": "Technology",
+          "user": Object {
+            "name": "Test user",
+            "picture": "http://",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -2762,7 +2813,6 @@ ShallowWrapper {
                         }
                         loading={true}
             />
-            <Loader />
 </Unknown>,
         },
         "ref": null,
@@ -2921,7 +2971,6 @@ ShallowWrapper {
                 }
                 loading={true}
 />,
-              <Loader />,
             ],
           },
           "ref": null,
@@ -3091,15 +3140,6 @@ ShallowWrapper {
                 ],
                 "loading": true,
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -3401,7 +3441,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Header
+            role="Technology"
+            user={
+                        Object {
+                                    "name": "Test user",
+                                    "picture": "http://",
+                                  }
+            }
+/>,
           <ErrorBoundary>
             <Unknown>
                         <Filters
@@ -3553,7 +3601,6 @@ ShallowWrapper {
                                     }
                                     loading={true}
                         />
-                        <Loader />
             </Unknown>
 </ErrorBoundary>,
           <p
@@ -3627,7 +3674,13 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "role": "Technology",
+            "user": Object {
+              "name": "Test user",
+              "picture": "http://",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -3787,7 +3840,6 @@ ShallowWrapper {
                             }
                             loading={true}
               />
-              <Loader />
 </Unknown>,
           },
           "ref": null,
@@ -3946,7 +3998,6 @@ ShallowWrapper {
                   }
                   loading={true}
 />,
-                <Loader />,
               ],
             },
             "ref": null,
@@ -4116,15 +4167,6 @@ ShallowWrapper {
                   ],
                   "loading": true,
                 },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {},
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
