@@ -1,21 +1,21 @@
 .fellow-search {
-	height: 32px;
-	width: 380px;
-	border: 1px solid #BCBCBC;
-	opacity: 0.4;
-    border-radius: 50px;
-    background: url(../../static/Loupe.svg) no-repeat  95% 7px;
-    padding-right:40px;
+  height: 32px;
+  width: 380px;
+  border: 1px solid #bcbcbc;
+  opacity: 0.4;
+  border-radius: 50px;
+  background: url(../../static/Loupe.svg) no-repeat 95% 7px;
+  padding-right: 40px;
 }
 
 /* enable absolute positioning */
 .inner-addon {
-    margin-left: 60px;  
+  margin-left: 60px;
 }
 
 /* Mobile and Tablet screen */
-@media screen and (max-width: 767px){
-    .fellow-search {
-	    width: 200px;
-    }    
+@media screen and (max-width: 767px) {
+  .fellow-search {
+    width: 200px;
+  }
 }

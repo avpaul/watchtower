@@ -1,142 +1,144 @@
 .card {
-    display: block;
-    height: 130px;
-    width: 290px;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    margin: 60px 10px 50px 10px;
+  display: block;
+  height: 130px;
+  width: 290px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin: 60px 10px 50px 10px;
 }
 
-.active-card{
-    border: 1px solid #0459E4;
+.active-card {
+  border: 1px solid #0459e4;
 }
 
-.card:hover{
-    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.05);
-    cursor:pointer;
+.card:hover {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
-.sub{
-    height:21px;
-    color: #232F49;
-    font-family: "DIN Pro";
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 21px;
-    margin: 0px 42px 10px 25px;
-    text-align: left;
+.sub {
+  height: 21px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 21px;
+  margin: 0px 42px 10px 25px;
+  text-align: left;
 }
 
-
-
-.title{
-    height: 23px;
-    width: 223px;
-    color: #232F49;
-    font-family: "DIN Pro";
-    font-size: 18px;
-    line-height: 23px;
-    margin: 15px 42px 10px 25px;
-    text-align: left;
+.title {
+  height: 23px;
+  width: 223px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 18px;
+  line-height: 23px;
+  margin: 15px 42px 10px 25px;
+  text-align: left;
 }
 
-.title2{
-    height: 23px;
-    width: 223px;
-    color: #232F49;
-    font-family: "DIN Pro";
-    font-size: 18px;
-    line-height: 23px;
-    margin: 15px 42px 34px 25px;
-    text-align: left;
+.title2 {
+  height: 23px;
+  width: 223px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 18px;
+  line-height: 23px;
+  margin: 15px 42px 34px 25px;
+  text-align: left;
 }
 
-.number{
-    height: 36px;
-    width: 30.6px;
-    color: #232F49;
-    font-family: "DIN Pro";
-    font-size: 28px;
-    line-height: 36px;
-    text-align: right;
-    margin: 3px 32px 22px 227.4px;
+.number {
+  height: 36px;
+  width: 30.6px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  margin: 3px 32px 22px 227.4px;
 }
 
-.numbers{
-    height: 36px;
-    width: 57.3px;
-    color: #232F49;
-    font-family: "DIN Pro";
-    font-size: 28px;
-    line-height: 36px;
-    text-align: right;
-    margin: 3px 32px 22px 220.7px;
+.numbers {
+  height: 36px;
+  width: 57.3px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  margin: 3px 32px 22px 220.7px;
 }
 
-.numb{
-    height: 36px;
-    width: 80.3px;
-    color: #232F49;
-    font-family: "DIN Pro";
-    font-size: 28px;
-    line-height: 36px;
-    text-align: right;
-    margin: 3px 40px 22px 220.7px;
-    padding-right:20px;
+.numb {
+  height: 36px;
+  width: 80.3px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  margin: 3px 40px 22px 220.7px;
+  padding-right: 20px;
 }
 
-.contain{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 60px;
-    margin-right: auto;
+.contain {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 60px;
+  margin-right: auto;
 }
 
-.owl-item{
-    transition: all 150ms ease-out;
-    transform: translate3d(0px, 0px, 0px) scale(1);
+.owl-item {
+  transition: all 150ms ease-out;
+  transform: translate3d(0px, 0px, 0px) scale(1);
 }
 
-.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot.owl-nav {
-    position: absolute;
-    left: 10px;
-    top: 40%;
-    background-color: #0459E4 !important;
-    display: block;
-    padding: 0 .3em !important;
-    font-size: 1.5em;
-    margin: 0;
-    cursor: pointer;
-    color: #fff;
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot.owl-nav {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  background-color: #0459e4 !important;
+  display: block;
+  padding: 0 0.3em !important;
+  font-size: 1.5em;
+  margin: 0;
+  cursor: pointer;
+  color: #fff;
 }
-.owl-nav button.owl-next, .owl-nav button.owl-prev {
-    border-radius: 50%;
+.owl-nav button.owl-next,
+.owl-nav button.owl-prev {
+  border-radius: 50%;
 }
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-next {
-    position: absolute;
-    right: -23px;
-    top: 40%;
-    background-color: #0459E4 !important;
-    display: block ;
-    padding: 0 .3em !important;
-    font-size: 1.5em;
-    margin: 0;
-    cursor: pointer;
-    color: #fff;
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  right: -23px;
+  top: 40%;
+  background-color: #0459e4 !important;
+  display: block;
+  padding: 0 0.3em !important;
+  font-size: 1.5em;
+  margin: 0;
+  cursor: pointer;
+  color: #fff;
 }
 
 @media screen and (min-width: 1800px) {
-    .contain {
-      width: 85%;
-      margin: 0 auto;
-    }
-    .title {
-        font-size: 1.313em;
-    }
-    .sub {
-        font-size: 1.188em;
-    }
-    .number {
-        font-size: 1.6em;
-    }
+  .contain {
+    width: 85%;
+    margin: 0 auto;
   }
+  .title {
+    font-size: 1.313em;
+  }
+  .sub {
+    font-size: 1.188em;
+  }
+  .number {
+    font-size: 1.6em;
+  }
+}

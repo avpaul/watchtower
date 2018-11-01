@@ -1,40 +1,40 @@
 @font-face {
-  font-family: "DIN Pro Black";
-  src: url("static/fonts/FontFont - DINPro-Black.otf");
+  font-family: 'DIN Pro Black';
+  src: url('static/fonts/FontFont - DINPro-Black.otf');
 }
 @font-face {
-  font-family: "DIN Pro Bold";
-  src: url("static/fonts/FontFont - DINPro-Bold.otf");
+  font-family: 'DIN Pro Bold';
+  src: url('static/fonts/FontFont - DINPro-Bold.otf');
 }
 @font-face {
-  font-family: "DIN Pro Extlight";
-  src: url("static/fonts/FontFont - DINPro-Extlight.otf");
+  font-family: 'DIN Pro Extlight';
+  src: url('static/fonts/FontFont - DINPro-Extlight.otf');
 }
 @font-face {
-  font-family: "DIN Pro Light";
-  src: url("static/fonts/FontFont\ -\ DINPro-Light.otf");
+  font-family: 'DIN Pro Light';
+  src: url('static/fonts/FontFont\ -\ DINPro-Light.otf');
 }
 @font-face {
-  font-family: "DIN Pro Light Italic";
-  src: url("static/fonts/FontFont - DINPro-LightItalic.otf");
+  font-family: 'DIN Pro Light Italic';
+  src: url('static/fonts/FontFont - DINPro-LightItalic.otf');
 }
 @font-face {
-  font-family: "DIN Pro Medium";
-  src: url("static/fonts/FontFont - DINPro-Medium.otf");
+  font-family: 'DIN Pro Medium';
+  src: url('static/fonts/FontFont - DINPro-Medium.otf');
 }
 @font-face {
-  font-family: "DIN Pro";
-  src: url("static/fonts/FontFont - DINPro.otf");
+  font-family: 'DIN Pro';
+  src: url('static/fonts/FontFont - DINPro.otf');
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "DIN Pro", sans-serif;
+  font-family: 'DIN Pro', sans-serif;
   min-height: 100%;
   background-color: rgb(244, 248, 249);
 }
 
 #root {
-  overflow-x:hidden;
+  overflow-x: hidden;
 }

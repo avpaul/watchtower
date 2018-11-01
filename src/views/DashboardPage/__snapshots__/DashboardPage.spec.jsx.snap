@@ -338,15 +338,11 @@ ShallowWrapper {
         <p
           className="text-center"
 >
-          showing
-           
+          showing 
           1
-           
-          of
-           
+           of 
           3
-           
-          pages
+           pages
 </p>,
         <div>
           <div
@@ -914,29 +910,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "showing",
-            " ",
+            "showing ",
             1,
-            " ",
-            "of",
-            " ",
+            " of ",
             3,
-            " ",
-            "pages",
+            " pages",
           ],
           "className": "text-center",
         },
         "ref": null,
         "rendered": Array [
-          "showing",
-          " ",
+          "showing ",
           1,
-          " ",
-          "of",
-          " ",
+          " of ",
           3,
-          " ",
-          "pages",
+          " pages",
         ],
         "type": "p",
       },
@@ -1365,15 +1353,11 @@ ShallowWrapper {
           <p
             className="text-center"
 >
-            showing
-             
+            showing 
             1
-             
-            of
-             
+             of 
             3
-             
-            pages
+             pages
 </p>,
           <div>
             <div
@@ -1941,29 +1925,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "showing",
-              " ",
+              "showing ",
               1,
-              " ",
-              "of",
-              " ",
+              " of ",
               3,
-              " ",
-              "pages",
+              " pages",
             ],
             "className": "text-center",
           },
           "ref": null,
           "rendered": Array [
-            "showing",
-            " ",
+            "showing ",
             1,
-            " ",
-            "of",
-            " ",
+            " of ",
             3,
-            " ",
-            "pages",
+            " pages",
           ],
           "type": "p",
         },
@@ -2579,15 +2555,11 @@ ShallowWrapper {
         <p
           className="text-center"
 >
-          showing
-           
+          showing 
           1
-           
-          of
-           
+           of 
           3
-           
-          pages
+           pages
 </p>,
         <div>
           <div
@@ -3155,29 +3127,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "showing",
-            " ",
+            "showing ",
             1,
-            " ",
-            "of",
-            " ",
+            " of ",
             3,
-            " ",
-            "pages",
+            " pages",
           ],
           "className": "text-center",
         },
         "ref": null,
         "rendered": Array [
-          "showing",
-          " ",
+          "showing ",
           1,
-          " ",
-          "of",
-          " ",
+          " of ",
           3,
-          " ",
-          "pages",
+          " pages",
         ],
         "type": "p",
       },
@@ -3606,15 +3570,11 @@ ShallowWrapper {
           <p
             className="text-center"
 >
-            showing
-             
+            showing 
             1
-             
-            of
-             
+             of 
             3
-             
-            pages
+             pages
 </p>,
           <div>
             <div
@@ -4182,29 +4142,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "showing",
-              " ",
+              "showing ",
               1,
-              " ",
-              "of",
-              " ",
+              " of ",
               3,
-              " ",
-              "pages",
+              " pages",
             ],
             "className": "text-center",
           },
           "ref": null,
           "rendered": Array [
-            "showing",
-            " ",
+            "showing ",
             1,
-            " ",
-            "of",
-            " ",
+            " of ",
             3,
-            " ",
-            "pages",
+            " pages",
           ],
           "type": "p",
         },

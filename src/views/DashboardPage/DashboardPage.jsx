@@ -18,7 +18,7 @@ class DashboardPage extends Component {
     this.state = {
       perPage: '10',
       page: '1',
-      search: '',
+      search: ''
     };
   }
 
@@ -27,7 +27,7 @@ class DashboardPage extends Component {
     getFellows({ filter, ...this.state });
   }
 
-  onChange = (event) => {
+  onChange = event => {
     const { filter, getFellows } = this.props;
     const newState = event.target.value;
     this.setState({ perPage: newState }, () => {
@@ -36,7 +36,7 @@ class DashboardPage extends Component {
     this.setState({ perPage: newState });
   };
 
-  handleSearchChange = (event) => {
+  handleSearchChange = event => {
     this.setState({ search: event.target.value });
   };
 
@@ -64,24 +64,14 @@ class DashboardPage extends Component {
     const { pagination } = this.props;
     return (
       <p className="text-center">
-        showing
-        {' '}
-        {pagination.page}
-        {' '}
-of
-        {' '}
-        {pagination.pages}
-        {' '}
-        pages
+        showing {pagination.page} of {pagination.pages} pages
       </p>
     );
   };
 
   renderPerPageSelector = () => (
     <div className="row d-flex justify-content-center">
-      <div className="per-page">
-        Per page
-      </div>
+      <div className="per-page">Per page</div>
       <div className="select">
         <select
           className="form-control d-flex justify-content-center"
@@ -95,15 +85,14 @@ of
       </div>
       {this.renderPagination()}
     </div>
-
   );
 
-  handlePageChange = (url) => {
+  handlePageChange = url => {
     const { getFellows } = this.props;
     getFellows({ url });
   };
 
-  handleValueChange = (value) => {
+  handleValueChange = value => {
     const { perPage } = this.state;
     const { filter, getFellows } = this.props;
     const page = value;
@@ -117,7 +106,7 @@ of
       loading,
       setVisibilityFilter,
       pagination: { perPage },
-      getFellows,
+      getFellows
     } = this.props;
     const { search } = this.state;
 
@@ -140,7 +129,7 @@ of
       loading,
       getFellows,
       filter,
-      pagination: { perPage },
+      pagination: { perPage }
     } = this.props;
     const { search } = this.state;
 
@@ -171,8 +160,8 @@ of
         {error ? <ErrorPage /> : this.renderPageBody()}
         {this.returnShowing()}
         <div>
-          {this.renderPerPageSelector()}&nbsp;
-
+          {this.renderPerPageSelector()}
+          &nbsp;
         </div>
       </div>
     );
@@ -184,9 +173,9 @@ DashboardPage.defaultProps = {
   summary: {
     onTrack: 0,
     gteWk5OffTrack: 0,
-    ltWk5OffTrack: 0,
+    ltWk5OffTrack: 0
   },
-  error: '',
+  error: ''
 };
 
 DashboardPage.propTypes = {
@@ -194,8 +183,8 @@ DashboardPage.propTypes = {
   fellows: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      firstName: PropTypes.string.isRequired,
-    }),
+      firstName: PropTypes.string.isRequired
+    })
   ).isRequired,
   getFellows: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
@@ -205,12 +194,12 @@ DashboardPage.propTypes = {
   }).isRequired,
   role: PropTypes.string.isRequired,
   summary: PropTypes.shape({
-    onTrack: PropTypes.number.isRequired,
+    onTrack: PropTypes.number.isRequired
   }),
   pagination: PropTypes.shape({
     page: PropTypes.number,
-    perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   }).isRequired,
   filter: PropTypes.string.isRequired,
-  error: PropTypes.string,
+  error: PropTypes.string
 };

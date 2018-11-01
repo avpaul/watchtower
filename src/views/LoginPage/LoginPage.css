@@ -1,145 +1,149 @@
 .login-page {
-    width: 100%;
-    padding: 1rem;
-    background-position: center;
-    background: linear-gradient(135deg, #3359DB 0%, rgba(100,135,255,0.6) 100%);
-    background-image: url(../../static/BG.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    background-position: 70% 0;
+  width: 100%;
+  padding: 1rem;
+  background-position: center;
+  background: linear-gradient(
+    135deg,
+    #3359db 0%,
+    rgba(100, 135, 255, 0.6) 100%
+  );
+  background-image: url(../../static/BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: 70% 0;
 }
 
 .login-page__header {
-    padding-top: 60px;
-    height: 159px;
-    margin: 30px auto 90px auto;
+  padding-top: 60px;
+  height: 159px;
+  margin: 30px auto 90px auto;
 }
 
 .login-page__logo {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .login-page__text-by {
-    display: block;
-    height: 33px;
-    width: 26px;
-    color: #FFFFFF;
-    font-family: "DIN Pro Light";
-    font-size: 1.625rem;
-    line-height: 33px;
-    text-align: center;
-    margin: 1rem auto;
+  display: block;
+  height: 33px;
+  width: 26px;
+  color: #ffffff;
+  font-family: 'DIN Pro Light';
+  font-size: 1.625rem;
+  line-height: 33px;
+  text-align: center;
+  margin: 1rem auto;
 }
 
 .login-page__text-and {
-    display: block;
+  display: block;
 }
 
 .login-page__tagline {
+  height: 88px;
+  color: #ffffff;
+  font-family: 'DIN Pro Light';
+  font-size: 2.25rem;
+  line-height: 44px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 11px;
+  margin-bottom: 140px;
+  letter-spacing: 0.5px;
+}
+
+.login-page__btn-container {
+  margin-top: 40px;
+}
+
+.login-page__btn {
+  height: 50px;
+  width: 224px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #3359db;
+  font-family: 'DIN Pro';
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.login-page__btn:hover {
+  text-decoration: none;
+}
+
+.login-page__btn-logo {
+  width: 50px;
+  padding: 13px 13px;
+  border-radius: 4px 0 0 4px;
+  border-right: 1px solid #415ad7;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.login-page__btn-text {
+  width: 50px;
+  color: #3359db;
+  border-radius: 0 4px 4px 0;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-page {
+    background-position: 75% 0;
+  }
+
+  .login-page__logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .login-page__header {
+    padding-top: 60px;
+    height: 159px;
+    margin: 90px auto 45px auto;
+  }
+
+  .login-page__text-by {
+    display: inline-block;
+    height: 33px;
+    width: 26px;
+    color: #ffffff;
+    line-height: 33px;
+    text-align: center;
+    margin: 2rem;
+    margin-left: 29px;
+    margin-bottom: 0;
+  }
+
+  .login-page__text-and {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+
+  .login-page__tagline {
     height: 88px;
-    color: #FFFFFF;
-    font-family: "DIN Pro Light";
+    color: #ffffff;
+    font-family: 'DIN Pro Light';
     font-size: 2.25rem;
     line-height: 44px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 11px;
-    margin-bottom: 140px;
-    letter-spacing: .5px;
-}
-
-.login-page__btn-container {
-    margin-top: 40px;
-}
-
-.login-page__btn {
-    height: 50px;	
-    width: 224px;	
-	border-radius: 4px;
-    background-color: #FFFFFF;
-    color: #3359DB;
-    font-family: "DIN Pro";
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 40px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-
-.login-page__btn:hover {
-    text-decoration: none;
-}
-
-.login-page__btn-logo {
-    width: 50px;
-    padding: 13px 13px;
-    border-radius: 4px 0 0 4px;
-    border-right: 1px solid #415AD7;
-    background-color: #FFFFFF;
-    margin-bottom: 5px;
-}
-
-.login-page__btn-text {
-    width: 50px;
-    color: #3359DB;
-    border-radius: 0 4px 4px 0;
-    padding-left: 26px;
-    padding-right: 26px;
-}
-
-@media screen and (min-width: 768px) {
-    .login-page {
-        background-position: 75% 0;
-    }
-
-    .login-page__logo {
-        margin-bottom: .5rem;
-    }
-
-    .login-page__header {
-        padding-top: 60px;
-        height: 159px;
-        margin: 90px auto 45px auto;
-    }
-
-    .login-page__text-by {
-        display: inline-block;
-        height: 33px;
-        width: 26px;
-        color: #FFFFFF;
-        line-height: 33px;
-        text-align: center;
-        margin: 2rem;
-        margin-left: 29px;
-        margin-bottom: 0;
-    }
-
-    .login-page__text-and {
-        display: inline-block;
-        margin: 0 .5rem;
-    }
-
-    .login-page__tagline {
-        height: 88px;
-        color: #FFFFFF;
-        font-family: "DIN Pro Light";
-        font-size: 2.25rem;
-        line-height: 44px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 11px;
-        margin-bottom: 0;
-        letter-spacing: .5px;
-    }
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .login-page {
-        background-position: none;
-    }
+  .login-page {
+    background-position: none;
+  }
 }

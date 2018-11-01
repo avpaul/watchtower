@@ -333,14 +333,10 @@ ShallowWrapper {
         <p
           className="text-center"
 >
-          showing
-           
+          showing 
           1
-           
-          of
-           
-           
-          pages
+           of 
+           pages
 </p>,
         <div>
           <div
@@ -908,29 +904,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "showing",
-            " ",
+            "showing ",
             1,
-            " ",
-            "of",
-            " ",
+            " of ",
             undefined,
-            " ",
-            "pages",
+            " pages",
           ],
           "className": "text-center",
         },
         "ref": null,
         "rendered": Array [
-          "showing",
-          " ",
+          "showing ",
           1,
-          " ",
-          "of",
-          " ",
+          " of ",
           undefined,
-          " ",
-          "pages",
+          " pages",
         ],
         "type": "p",
       },
@@ -1359,14 +1347,10 @@ ShallowWrapper {
           <p
             className="text-center"
 >
-            showing
-             
+            showing 
             1
-             
-            of
-             
-             
-            pages
+             of 
+             pages
 </p>,
           <div>
             <div
@@ -1934,29 +1918,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "showing",
-              " ",
+              "showing ",
               1,
-              " ",
-              "of",
-              " ",
+              " of ",
               undefined,
-              " ",
-              "pages",
+              " pages",
             ],
             "className": "text-center",
           },
           "ref": null,
           "rendered": Array [
-            "showing",
-            " ",
+            "showing ",
             1,
-            " ",
-            "of",
-            " ",
+            " of ",
             undefined,
-            " ",
-            "pages",
+            " pages",
           ],
           "type": "p",
         },

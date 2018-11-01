@@ -1,37 +1,33 @@
-
 .dashboard-table__row {
   display: table-row;
   background-color: #fff;
-  color: #333E44;
+  color: #333e44;
   font-size: 15px;
   line-height: 20px;
 }
 .dashboard-table__row > .dashboard-table__cell:nth-child(1),
-.dashboard-table__row > .dashboard-table__cell:nth-child(2){
+.dashboard-table__row > .dashboard-table__cell:nth-child(2) {
   background-color: #fff;
 }
 
 .dashboard-table__header > .dashboard-table__cell:nth-child(1),
-.dashboard-table__header > .dashboard-table__cell:nth-child(2){
+.dashboard-table__header > .dashboard-table__cell:nth-child(2) {
   background-color: rgb(244, 248, 249);
 }
-@media screen and (max-width: 1024px){
-.dashboard-table__header > .dashboard-table__cell:nth-child(n + 3)
- {
-  background-color: rgba(0,0,0,0.03)!important;
-}
+@media screen and (max-width: 1024px) {
+  .dashboard-table__header > .dashboard-table__cell:nth-child(n + 3) {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+  }
 }
 .dashboard-table__row:hover {
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-
 .dashboard-table__header {
-  display: table-row;  
+  display: table-row;
   color: #606060;
   font-size: 14px;
   line-height: 18px;
   background: transparent;
   height: 40px;
-  
 }
