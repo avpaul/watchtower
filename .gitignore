@@ -30,3 +30,5 @@ galen
 # galen reports
 galen/reports
 
+#vscode
+.vscode/launch.json

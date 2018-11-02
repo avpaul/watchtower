@@ -11,6 +11,7 @@ import Dashboards from '../views/DashboardPage/DashBoards';
 import Authorization from '../components/AuthorizationHOC';
 
 
+
 /**
  * Defines application routes
  * @function

@@ -179,3 +179,74 @@
     font-size: 1.3em;
   }
 }
+
+.modal-text{
+    background: rgb(255, 255, 255) !important;
+    border-radius:4px !important;
+    margin: 2px 2px 9px 20px;
+    padding: 4px 3px 3px 9px;
+}
+
+.text-sizing{
+    height: 95x;
+    
+}
+
+.modal-text {
+    background: rgb(255, 255, 255) !important;
+    border-radius:4px !important;
+    margin: 4px 2px 9px 20px;
+    padding: 7px 7px 5px 9px;
+    color: #444444;
+}
+
+.text-sizing {
+    height: 95x;
+    font-size: 15px;
+    margin-top: 7px;
+
+}
+
+.handle-close b {
+    margin-left: 20px;
+    font-size: 90%;
+    font-weight: 900;
+}
+
+.handle-close button{
+    float: left;
+}
+div.modal-notification{
+    padding-bottom: 20px;
+}
+span.clear {
+    float: right;
+    margin-right: 4px;
+    font-size: 80%;
+    color: #757575;
+    padding-top: 4px;
+}
+div.clear{
+    padding: 0px 0px 0px 10px !important;
+    margin: -22px 0px 0px 180px !important;
+    text-align: left;
+}
+
+.bellnumbers {
+    font-size:12px;
+    background-color:blue;
+    width:16px;
+    line-height: 16px;
+    text-align: center;
+    color:#fff;
+    z-index: 2;
+    border-radius: 3px;
+    /* position: relative; */
+    left: 28px;
+}
+
+.message-date{
+    font-size: 85%;
+    color: #757575;
+    padding: 2px;
+}

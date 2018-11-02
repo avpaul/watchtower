@@ -6,7 +6,7 @@
   padding-right: 15px;
   padding-left: 12px;
 }
-.close span {
+.modal-header .close span {
   font-size: 190% !important;
 }
 .modal-title {

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>0915152D-1287-4DAD-9D27-91816B1B0F6B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Notifications" transform="translate(-1202.000000, -98.000000)" fill="#E40404">
+            <g id="notification-toggle" transform="translate(1176.000000, 0.000000)">
+                <g id="notification-cards" transform="translate(16.000000, 63.000000)">
+                    <g id="Today">
+                        <g id="Message" transform="translate(0.000000, 25.000000)">
+                            <g id="Group-3" transform="translate(10.000000, 10.000000)">
+                                <path d="M10,0 C4.48583333,0 0,4.48583333 0,10 C0,15.5133333 4.48583333,19.9991667 10,19.9991667 C15.5141667,19.9991667 20,15.5133333 20,10 C20,4.48583333 15.5141667,0 10,0 L10,0 Z" id="Fill-151" fill-opacity="0.1"></path>
+                                <text id="!" font-family="DINPro-Medium, DIN Pro" font-size="12" font-weight="400">
+                                    <tspan x="8" y="14">!</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

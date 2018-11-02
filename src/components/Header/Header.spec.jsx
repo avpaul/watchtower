@@ -66,4 +66,16 @@ describe('Header Component Test Suite', () => {
     expect(wrapper.state('activeItems').settings).toEqual(false);
     expect(wrapper.state('activeItems').fellows).toEqual(true);
   });
+
+  it('calls render notification', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'renderNotification');
+    wrapper.instance().renderNotification();
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('calls hide modal', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'hideModal');
+    wrapper.instance().hideModal();
+    expect(mounted).toHaveBeenCalled();
+  });
 });
