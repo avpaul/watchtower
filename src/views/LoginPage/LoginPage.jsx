@@ -59,11 +59,11 @@ class LoginPage extends Component {
   renderPageTagLine() {
     return (
       <div className="login-page__tagline text-center">
-        <p className="m-0">Tracking</p>
+        {/* <p className="m-0">Overseeing</p> */}
         <p>
-          DevPulse Ratings
+        Overseeing Talent Development
           <span className="login-page__text-and">&</span>
-          LMS Scores
+          Growth
         </p>
       </div>
     );

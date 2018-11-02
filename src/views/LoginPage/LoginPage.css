@@ -57,7 +57,11 @@
 .login-page__btn-container {
   margin-top: 40px;
 }
-
+@media screen {
+    .login-page__tagline {
+        font-size: 2rem;
+    }
+}
 .login-page__btn {
   height: 50px;
   width: 224px;

@@ -47,19 +47,14 @@ ShallowWrapper {
         <div
                 className="login-page__tagline text-center"
         >
-                <p
-                        className="m-0"
-                >
-                        Tracking
-                </p>
                 <p>
-                        DevPulse Ratings
+                        Overseeing Talent Development
                         <span
                                 className="login-page__text-and"
                         >
                                 &
                         </span>
-                        LMS Scores
+                        Growth
                 </p>
         </div>
         <div
@@ -120,19 +115,14 @@ ShallowWrapper {
           <div
             className="login-page__tagline text-center"
 >
-            <p
-                        className="m-0"
-            >
-                        Tracking
-            </p>
             <p>
-                        DevPulse Ratings
+                        Overseeing Talent Development
                         <span
                                     className="login-page__text-and"
                         >
                                     &
                         </span>
-                        LMS Scores
+                        Growth
             </p>
 </div>,
           <div
@@ -241,73 +231,52 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <p
-                className="m-0"
->
-                Tracking
+            "children": <p>
+              Overseeing Talent Development
+              <span
+                            className="login-page__text-and"
+              >
+                            &
+              </span>
+              Growth
 </p>,
-              <p>
-                DevPulse Ratings
-                <span
-                                className="login-page__text-and"
-                >
-                                &
-                </span>
-                LMS Scores
-</p>,
-            ],
             "className": "login-page__tagline text-center",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Tracking",
-                "className": "m-0",
-              },
-              "ref": null,
-              "rendered": "Tracking",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "DevPulse Ratings",
-                  <span
-                    className="login-page__text-and"
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Overseeing Talent Development",
+                <span
+                  className="login-page__text-and"
 >
-                    &
+                  &
 </span>,
-                  "LMS Scores",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "DevPulse Ratings",
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "&",
-                    "className": "login-page__text-and",
-                  },
-                  "ref": null,
-                  "rendered": "&",
-                  "type": "span",
-                },
-                "LMS Scores",
+                "Growth",
               ],
-              "type": "p",
             },
-          ],
+            "ref": null,
+            "rendered": Array [
+              "Overseeing Talent Development",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "&",
+                  "className": "login-page__text-and",
+                },
+                "ref": null,
+                "rendered": "&",
+                "type": "span",
+              },
+              "Growth",
+            ],
+            "type": "p",
+          },
           "type": "div",
         },
         Object {
@@ -445,19 +414,14 @@ ShallowWrapper {
           <div
                     className="login-page__tagline text-center"
           >
-                    <p
-                              className="m-0"
-                    >
-                              Tracking
-                    </p>
                     <p>
-                              DevPulse Ratings
+                              Overseeing Talent Development
                               <span
                                         className="login-page__text-and"
                               >
                                         &
                               </span>
-                              LMS Scores
+                              Growth
                     </p>
           </div>
           <div
@@ -518,19 +482,14 @@ ShallowWrapper {
             <div
               className="login-page__tagline text-center"
 >
-              <p
-                            className="m-0"
-              >
-                            Tracking
-              </p>
               <p>
-                            DevPulse Ratings
+                            Overseeing Talent Development
                             <span
                                           className="login-page__text-and"
                             >
                                           &
                             </span>
-                            LMS Scores
+                            Growth
               </p>
 </div>,
             <div
@@ -639,73 +598,52 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <p
-                  className="m-0"
->
-                  Tracking
+              "children": <p>
+                Overseeing Talent Development
+                <span
+                                className="login-page__text-and"
+                >
+                                &
+                </span>
+                Growth
 </p>,
-                <p>
-                  DevPulse Ratings
-                  <span
-                                    className="login-page__text-and"
-                  >
-                                    &
-                  </span>
-                  LMS Scores
-</p>,
-              ],
               "className": "login-page__tagline text-center",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Tracking",
-                  "className": "m-0",
-                },
-                "ref": null,
-                "rendered": "Tracking",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "DevPulse Ratings",
-                    <span
-                      className="login-page__text-and"
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Overseeing Talent Development",
+                  <span
+                    className="login-page__text-and"
 >
-                      &
+                    &
 </span>,
-                    "LMS Scores",
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "DevPulse Ratings",
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "&",
-                      "className": "login-page__text-and",
-                    },
-                    "ref": null,
-                    "rendered": "&",
-                    "type": "span",
-                  },
-                  "LMS Scores",
+                  "Growth",
                 ],
-                "type": "p",
               },
-            ],
+              "ref": null,
+              "rendered": Array [
+                "Overseeing Talent Development",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "&",
+                    "className": "login-page__text-and",
+                  },
+                  "ref": null,
+                  "rendered": "&",
+                  "type": "span",
+                },
+                "Growth",
+              ],
+              "type": "p",
+            },
             "type": "div",
           },
           Object {
