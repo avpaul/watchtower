@@ -8,16 +8,18 @@ import PropTypes from 'prop-types';
  *
  * @returns {JSX} React JSX
  */
-const MenuLink = ({ link, handleMenuClick, isActive }) => {
+const MenuLink = ({
+  link, handleMenuClick, isActive, role,
+}) => {
   let active = '';
-  let iconImg = link.icon;
   // if the link state is active, change icon
+
   if (isActive) {
     active = 'active';
-    iconImg = link.activeIcon || link.icon;
   }
-  return (
-    <div className="menulink">
+
+  function renderHeader() {
+    return (
       <div
         className={`navlink ${active}`}
         data-link-key={link.key}
@@ -27,13 +29,43 @@ const MenuLink = ({ link, handleMenuClick, isActive }) => {
         onKeyPress={handleMenuClick}
         tabIndex="0"
       >
-        <span className="navicon">
-          <img className={`${link.key}__icon`} src={iconImg} alt={`${link.key}Icon`} />
-        </span>
         {link.name}
       </div>
-    </div>
-  );
+    );
+  }
+
+  if (role === 'Fellow') {
+    return (
+      <div className="menulink">
+        {(renderHeader())}
+      </div>
+    );
+  }
+
+
+  if (role === 'WATCH_TOWER_OPS' || 'WATCH_TOWER_EM' || 'WATCH_TOWER_TTL' || 'WATCH_TOWER_LF') {
+    return (
+      <div className="menulink">
+        {(renderHeader())}
+        {link.dropdown !== undefined
+          && (
+          <div>
+            <a className="nav-link dropdown-toggle" href="/" data-toggle="dropdown">
+              <div className="dropdown-menu dropdown-menu-right">
+                {link.dropdown.map(
+                  item => (
+                    <a className="dropdown-item" href="/">{item}</a>
+                  ),
+                )}
+              </div>
+            </a>
+          </div>
+          )
+          }
+      </div>
+    );
+  }
+  return null;
 };
 
 MenuLink.propTypes = {
@@ -46,6 +78,7 @@ MenuLink.propTypes = {
   }).isRequired,
   handleMenuClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool.isRequired,
+  role: PropTypes.string.isRequired,
 };
 
 export default MenuLink;

@@ -127,8 +127,8 @@
 /* NavLink */
 
 .menulink {
-  display: inline-block;
-  margin-right: 50px;
+    display: flex;
+    margin-right: 50px;
 }
 
 .navicon {

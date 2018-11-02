@@ -38,4 +38,27 @@ describe('<Authorization />', () => {
     );
     expect(wrapper.find(Redirect)).toHaveLength(1);
   });
+
+
+  it('renders Redirect when role NOT authenticated', () => {
+    const user = {
+      UserInfo: {
+        firstName: 'Test',
+        lastName: 'User',
+        email: 'test.user@andela.com',
+        name: 'Test User',
+        roles: ['Andelan', 'Technology'],
+      },
+    };
+    authService.isAuthenticated = jest.fn(() => true);
+    const token = jsonwebtoken.sign(user, 'shhhhh');
+    Cookie.set = jest.fn(() => token);
+    Cookie.set('jwt-token', token);
+    Cookie.get = jest.fn(() => token);
+    const WithAuth = Authorization(Dashboards, ['TTL']);
+    const wrapper = shallow(
+      <WithAuth />,
+    );
+    expect(wrapper.find(Redirect)).toHaveLength(1);
+  });
 });

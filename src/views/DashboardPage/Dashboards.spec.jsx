@@ -35,7 +35,7 @@ describe('<Dashboards />', () => {
       user: {
         name: 'Test User',
         picture: 'http://',
-        roles: { Andelan: 'key', Technology: 'key' },
+        roles: { Andelan: 'key', WATCH_TOWER_OPS: 'key' },
       },
       role: 'Technology',
     });

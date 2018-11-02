@@ -70,6 +70,8 @@ class Header extends Component {
         </div>
         <hr className="header__divider" />
         <Menu
+          user={user}
+          role={role}
           items={getMenuItems(role)}
           handleMenuClick={this.handleMenuClick}
           activeItems={activeItems}
