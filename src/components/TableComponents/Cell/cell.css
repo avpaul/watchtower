@@ -1,12 +1,12 @@
-.dashboard-table__header .dashboard-table__cell {
-  padding: 9px 10px 11px;
-}
-
 .dashboard-table__cell {
   box-sizing: border-box;
   display: table-cell;
   min-width: 100px;
   padding: 13px 10px 17px;
+}
+
+.dashboard-table__header .dashboard-table__cell {
+  padding: 9px 10px 11px;
 }
 
 .dashboard-table__cell:first-child {

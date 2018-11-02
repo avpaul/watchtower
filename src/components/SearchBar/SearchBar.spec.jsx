@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import SearchBar from './SearchBar';
 import { perPage, page } from '../../__mocks__/pagination';
-import { ONTRACK, OFFTRACK_WK4_MINUS } from '../../redux/constants/fellowFilters';
+import {
+  ONTRACK,
+  OFFTRACK_WK4_MINUS
+} from '../../redux/constants/fellowFilters';
 
 const props = {
   search: '',
   perPage,
   page,
+  results: 15,
   filter: ONTRACK,
   getFellows: jest.fn(),
-  handleSearchChange: jest.fn(),
+  handleSearchChange: jest.fn()
 };
 
 it('renders without crashing', () => {

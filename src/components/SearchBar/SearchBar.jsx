@@ -5,20 +5,17 @@ import './SearchBar.css';
 
 class SearchBar extends Component {
   componentDidUpdate(prevProps) {
-    const {
-      getFellows, perPage, filter, search,
-    } = this.props;
+    const { getFellows, perPage, filter, search } = this.props;
     if (prevProps.search !== search) {
       getFellows({ perPage, filter, search });
     }
   }
 
   render() {
-    const { search, handleSearchChange } = this.props;
+    const { search, handleSearchChange, results } = this.props;
+    const resultTerm = results > 1 ? 'results' : 'result';
     return (
-
-      <div id="table_search_form" className="inner-addon">
-
+      <div id="table_search_form" className="inner-addon d-md-flex">
         <DebounceInput
           minLength={2}
           debounceTimeout={300}
@@ -29,7 +26,9 @@ class SearchBar extends Component {
           onChange={handleSearchChange}
           placeholder="Search the Table"
         />
-
+        {search && (
+          <div className="result-count">{`${results} ${resultTerm} found`}</div>
+        )}
       </div>
     );
   }
@@ -41,6 +40,7 @@ SearchBar.propTypes = {
   perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   filter: PropTypes.string.isRequired,
   search: PropTypes.string.isRequired,
+  results: PropTypes.number.isRequired
 };
 
 export default SearchBar;

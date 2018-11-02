@@ -15,6 +15,7 @@ Object {
     "perPage": 10,
     "prevPageURL": "",
   },
+  "results": undefined,
   "summary": Object {
     "gteWk5OffTrack": 0,
     "ltWk5OffTrack": 0,

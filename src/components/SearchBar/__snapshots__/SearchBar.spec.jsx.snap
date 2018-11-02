@@ -9,6 +9,7 @@ ShallowWrapper {
     handleSearchChange={[Function]}
     page={1}
     perPage={10}
+    results={15}
     search=""
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -24,59 +25,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <DebounceInput
-        className="form-control fellow-search"
-        debounceTimeout={300}
-        element="input"
-        forceNotifyByEnter={true}
-        forceNotifyOnBlur={true}
-        inputRef={undefined}
-        minLength={2}
-        name="fellow_search"
-        onBlur={undefined}
-        onChange={[Function]}
-        onKeyDown={undefined}
-        placeholder="Search the Table"
-        type="search"
-        value=""
-/>,
-      "className": "inner-addon",
-      "id": "table_search_form",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "className": "form-control fellow-search",
-        "debounceTimeout": 300,
-        "element": "input",
-        "forceNotifyByEnter": true,
-        "forceNotifyOnBlur": true,
-        "inputRef": undefined,
-        "minLength": 2,
-        "name": "fellow_search",
-        "onBlur": undefined,
-        "onChange": [Function],
-        "onKeyDown": undefined,
-        "placeholder": "Search the Table",
-        "type": "search",
-        "value": "",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <DebounceInput
+      "children": Array [
+        <DebounceInput
           className="form-control fellow-search"
           debounceTimeout={300}
           element="input"
@@ -92,11 +42,14 @@ ShallowWrapper {
           type="search"
           value=""
 />,
-        "className": "inner-addon",
-        "id": "table_search_form",
-      },
-      "ref": null,
-      "rendered": Object {
+        "",
+      ],
+      "className": "inner-addon d-md-flex",
+      "id": "table_search_form",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
@@ -120,6 +73,66 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <DebounceInput
+            className="form-control fellow-search"
+            debounceTimeout={300}
+            element="input"
+            forceNotifyByEnter={true}
+            forceNotifyOnBlur={true}
+            inputRef={undefined}
+            minLength={2}
+            name="fellow_search"
+            onBlur={undefined}
+            onChange={[Function]}
+            onKeyDown={undefined}
+            placeholder="Search the Table"
+            type="search"
+            value=""
+/>,
+          "",
+        ],
+        "className": "inner-addon d-md-flex",
+        "id": "table_search_form",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "form-control fellow-search",
+            "debounceTimeout": 300,
+            "element": "input",
+            "forceNotifyByEnter": true,
+            "forceNotifyOnBlur": true,
+            "inputRef": undefined,
+            "minLength": 2,
+            "name": "fellow_search",
+            "onBlur": undefined,
+            "onChange": [Function],
+            "onKeyDown": undefined,
+            "placeholder": "Search the Table",
+            "type": "search",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "",
+      ],
       "type": "div",
     },
   ],

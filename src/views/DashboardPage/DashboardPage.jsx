@@ -123,28 +123,33 @@ class DashboardPage extends Component {
     );
   }
 
-  renderPageBody() {
+  renderSearch = () => {
     const {
-      fellows,
-      loading,
       getFellows,
       filter,
-      pagination: { perPage }
+      pagination: { perPage, results }
     } = this.props;
     const { search } = this.state;
+    return (
+      <SearchBar
+        results={results}
+        getFellows={getFellows}
+        perPage={perPage}
+        filter={filter}
+        search={search}
+        handleSearchChange={this.handleSearchChange}
+      />
+    );
+  };
 
+  renderPageBody() {
+    const { fellows, loading } = this.props;
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
         <Fragment>
           {this.renderFilter()}
-          <SearchBar
-            getFellows={getFellows}
-            perPage={perPage}
-            filter={filter}
-            search={search}
-            handleSearchChange={this.handleSearchChange}
-          />
+          {this.renderSearch()}
           <DashboardTable fellows={fellows} loading={loading} />
         </Fragment>
       </ErrorBoundary>
@@ -152,15 +157,16 @@ class DashboardPage extends Component {
   }
 
   render() {
-    const { error, user, role } = this.props;
+    const { error, user, role, fellows } = this.props;
     const { ErrorPage } = Error;
+    const hasFellows = fellows.length > 0;
     return (
       <div>
         <Header user={user} role={role} />
         {error ? <ErrorPage /> : this.renderPageBody()}
-        {this.returnShowing()}
+        {hasFellows && this.returnShowing()}
         <div>
-          {this.renderPerPageSelector()}
+          {hasFellows && this.renderPerPageSelector()}
           &nbsp;
         </div>
       </div>
@@ -190,7 +196,7 @@ DashboardPage.propTypes = {
   loading: PropTypes.bool.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
   }).isRequired,
   role: PropTypes.string.isRequired,
   summary: PropTypes.shape({

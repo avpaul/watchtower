@@ -10,7 +10,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Mathilda",
-              "id": 1,
+              "id": "AND/F/001",
               "initiative": 0.3,
               "integration": 0,
               "lastName": "West",
@@ -22,7 +22,7 @@ ShallowWrapper {
             Object {
               "communication": 0.1,
               "firstName": "Mittie",
-              "id": 2,
+              "id": "AND/F/002",
               "initiative": 0.4,
               "integration": 0,
               "lastName": "Bowers",
@@ -34,7 +34,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Adekunle",
-              "id": 3,
+              "id": "AND/F/003",
               "initiative": 0.8,
               "integration": 1,
               "lastName": "Gold",
@@ -46,7 +46,7 @@ ShallowWrapper {
             Object {
               "communication": 0.4,
               "firstName": "Hallie",
-              "id": 4,
+              "id": "AND/F/004",
               "initiative": 1,
               "integration": 0,
               "lastName": "James",
@@ -58,7 +58,7 @@ ShallowWrapper {
             Object {
               "communication": 0.9,
               "firstName": "Estella",
-              "id": 5,
+              "id": "AND/F/005",
               "initiative": 1,
               "integration": 1,
               "lastName": "Graves",
@@ -70,7 +70,7 @@ ShallowWrapper {
             Object {
               "communication": 0.4,
               "firstName": "Genevieve",
-              "id": 6,
+              "id": "AND/F/006",
               "initiative": 0.3,
               "integration": 0,
               "lastName": "Black",
@@ -82,7 +82,7 @@ ShallowWrapper {
             Object {
               "communication": 1,
               "firstName": "Gavin",
-              "id": 7,
+              "id": "AND/F/007",
               "initiative": 0.4,
               "integration": 1,
               "lastName": "Berry",
@@ -94,7 +94,7 @@ ShallowWrapper {
             Object {
               "communication": 0.3,
               "firstName": "Tonny",
-              "id": 8,
+              "id": "AND/F/008",
               "initiative": 1,
               "integration": 1,
               "lastName": "Gibbs",
@@ -106,7 +106,7 @@ ShallowWrapper {
             Object {
               "communication": 1,
               "firstName": "Chase",
-              "id": 9,
+              "id": "AND/F/009",
               "initiative": 0.4,
               "integration": 1,
               "lastName": "Wright",
@@ -118,7 +118,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 10,
+              "id": "AND/F/010",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -130,7 +130,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 11,
+              "id": "AND/F/011",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -142,7 +142,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 12,
+              "id": "AND/F/012",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -154,7 +154,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 13,
+              "id": "AND/F/013",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -166,7 +166,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 14,
+              "id": "AND/F/014",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -178,7 +178,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 15,
+              "id": "AND/F/015",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -264,6 +264,7 @@ ShallowWrapper {
                               getFellows={[Function]}
                               handleSearchChange={[Function]}
                               perPage={10}
+                              results={undefined}
                               search=""
                     />
                     <DashboardTable
@@ -272,7 +273,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Mathilda",
-                                                    "id": 1,
+                                                    "id": "AND/F/001",
                                                     "initiative": 0.3,
                                                     "integration": 0,
                                                     "lastName": "West",
@@ -284,7 +285,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.1,
                                                     "firstName": "Mittie",
-                                                    "id": 2,
+                                                    "id": "AND/F/002",
                                                     "initiative": 0.4,
                                                     "integration": 0,
                                                     "lastName": "Bowers",
@@ -296,7 +297,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Adekunle",
-                                                    "id": 3,
+                                                    "id": "AND/F/003",
                                                     "initiative": 0.8,
                                                     "integration": 1,
                                                     "lastName": "Gold",
@@ -308,7 +309,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.4,
                                                     "firstName": "Hallie",
-                                                    "id": 4,
+                                                    "id": "AND/F/004",
                                                     "initiative": 1,
                                                     "integration": 0,
                                                     "lastName": "James",
@@ -320,7 +321,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.9,
                                                     "firstName": "Estella",
-                                                    "id": 5,
+                                                    "id": "AND/F/005",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Graves",
@@ -332,7 +333,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.4,
                                                     "firstName": "Genevieve",
-                                                    "id": 6,
+                                                    "id": "AND/F/006",
                                                     "initiative": 0.3,
                                                     "integration": 0,
                                                     "lastName": "Black",
@@ -344,7 +345,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 1,
                                                     "firstName": "Gavin",
-                                                    "id": 7,
+                                                    "id": "AND/F/007",
                                                     "initiative": 0.4,
                                                     "integration": 1,
                                                     "lastName": "Berry",
@@ -356,7 +357,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.3,
                                                     "firstName": "Tonny",
-                                                    "id": 8,
+                                                    "id": "AND/F/008",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Gibbs",
@@ -368,7 +369,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 1,
                                                     "firstName": "Chase",
-                                                    "id": 9,
+                                                    "id": "AND/F/009",
                                                     "initiative": 0.4,
                                                     "integration": 1,
                                                     "lastName": "Wright",
@@ -380,7 +381,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 10,
+                                                    "id": "AND/F/010",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -392,7 +393,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 11,
+                                                    "id": "AND/F/011",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -404,7 +405,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 12,
+                                                    "id": "AND/F/012",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -416,7 +417,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 13,
+                                                    "id": "AND/F/013",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -428,7 +429,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 14,
+                                                    "id": "AND/F/014",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -440,7 +441,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 15,
+                                                    "id": "AND/F/015",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -559,6 +560,7 @@ ShallowWrapper {
                         getFellows={[Function]}
                         handleSearchChange={[Function]}
                         perPage={10}
+                        results={undefined}
                         search=""
             />
             <DashboardTable
@@ -567,7 +569,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Mathilda",
-                                                  "id": 1,
+                                                  "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
@@ -579,7 +581,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.1,
                                                   "firstName": "Mittie",
-                                                  "id": 2,
+                                                  "id": "AND/F/002",
                                                   "initiative": 0.4,
                                                   "integration": 0,
                                                   "lastName": "Bowers",
@@ -591,7 +593,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Adekunle",
-                                                  "id": 3,
+                                                  "id": "AND/F/003",
                                                   "initiative": 0.8,
                                                   "integration": 1,
                                                   "lastName": "Gold",
@@ -603,7 +605,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Hallie",
-                                                  "id": 4,
+                                                  "id": "AND/F/004",
                                                   "initiative": 1,
                                                   "integration": 0,
                                                   "lastName": "James",
@@ -615,7 +617,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.9,
                                                   "firstName": "Estella",
-                                                  "id": 5,
+                                                  "id": "AND/F/005",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Graves",
@@ -627,7 +629,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Genevieve",
-                                                  "id": 6,
+                                                  "id": "AND/F/006",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "Black",
@@ -639,7 +641,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Gavin",
-                                                  "id": 7,
+                                                  "id": "AND/F/007",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Berry",
@@ -651,7 +653,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.3,
                                                   "firstName": "Tonny",
-                                                  "id": 8,
+                                                  "id": "AND/F/008",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Gibbs",
@@ -663,7 +665,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Chase",
-                                                  "id": 9,
+                                                  "id": "AND/F/009",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Wright",
@@ -675,7 +677,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 10,
+                                                  "id": "AND/F/010",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -687,7 +689,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 11,
+                                                  "id": "AND/F/011",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -699,7 +701,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 12,
+                                                  "id": "AND/F/012",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -711,7 +713,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 13,
+                                                  "id": "AND/F/013",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -723,7 +725,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 14,
+                                                  "id": "AND/F/014",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -735,7 +737,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 15,
+                                                  "id": "AND/F/015",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -777,6 +779,7 @@ ShallowWrapper {
                 getFellows={[Function]}
                 handleSearchChange={[Function]}
                 perPage={10}
+                results={undefined}
                 search=""
 />,
               <DashboardTable
@@ -785,7 +788,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Mathilda",
-                                                  "id": 1,
+                                                  "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
@@ -797,7 +800,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.1,
                                                   "firstName": "Mittie",
-                                                  "id": 2,
+                                                  "id": "AND/F/002",
                                                   "initiative": 0.4,
                                                   "integration": 0,
                                                   "lastName": "Bowers",
@@ -809,7 +812,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Adekunle",
-                                                  "id": 3,
+                                                  "id": "AND/F/003",
                                                   "initiative": 0.8,
                                                   "integration": 1,
                                                   "lastName": "Gold",
@@ -821,7 +824,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Hallie",
-                                                  "id": 4,
+                                                  "id": "AND/F/004",
                                                   "initiative": 1,
                                                   "integration": 0,
                                                   "lastName": "James",
@@ -833,7 +836,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.9,
                                                   "firstName": "Estella",
-                                                  "id": 5,
+                                                  "id": "AND/F/005",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Graves",
@@ -845,7 +848,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Genevieve",
-                                                  "id": 6,
+                                                  "id": "AND/F/006",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "Black",
@@ -857,7 +860,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Gavin",
-                                                  "id": 7,
+                                                  "id": "AND/F/007",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Berry",
@@ -869,7 +872,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.3,
                                                   "firstName": "Tonny",
-                                                  "id": 8,
+                                                  "id": "AND/F/008",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Gibbs",
@@ -881,7 +884,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Chase",
-                                                  "id": 9,
+                                                  "id": "AND/F/009",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Wright",
@@ -893,7 +896,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 10,
+                                                  "id": "AND/F/010",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -905,7 +908,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 11,
+                                                  "id": "AND/F/011",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -917,7 +920,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 12,
+                                                  "id": "AND/F/012",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -929,7 +932,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 13,
+                                                  "id": "AND/F/013",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -941,7 +944,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 14,
+                                                  "id": "AND/F/014",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -953,7 +956,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 15,
+                                                  "id": "AND/F/015",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -1000,6 +1003,7 @@ ShallowWrapper {
                 "getFellows": [Function],
                 "handleSearchChange": [Function],
                 "perPage": 10,
+                "results": undefined,
                 "search": "",
               },
               "ref": null,
@@ -1015,7 +1019,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Mathilda",
-                    "id": 1,
+                    "id": "AND/F/001",
                     "initiative": 0.3,
                     "integration": 0,
                     "lastName": "West",
@@ -1027,7 +1031,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.1,
                     "firstName": "Mittie",
-                    "id": 2,
+                    "id": "AND/F/002",
                     "initiative": 0.4,
                     "integration": 0,
                     "lastName": "Bowers",
@@ -1039,7 +1043,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Adekunle",
-                    "id": 3,
+                    "id": "AND/F/003",
                     "initiative": 0.8,
                     "integration": 1,
                     "lastName": "Gold",
@@ -1051,7 +1055,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.4,
                     "firstName": "Hallie",
-                    "id": 4,
+                    "id": "AND/F/004",
                     "initiative": 1,
                     "integration": 0,
                     "lastName": "James",
@@ -1063,7 +1067,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.9,
                     "firstName": "Estella",
-                    "id": 5,
+                    "id": "AND/F/005",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Graves",
@@ -1075,7 +1079,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.4,
                     "firstName": "Genevieve",
-                    "id": 6,
+                    "id": "AND/F/006",
                     "initiative": 0.3,
                     "integration": 0,
                     "lastName": "Black",
@@ -1087,7 +1091,7 @@ ShallowWrapper {
                   Object {
                     "communication": 1,
                     "firstName": "Gavin",
-                    "id": 7,
+                    "id": "AND/F/007",
                     "initiative": 0.4,
                     "integration": 1,
                     "lastName": "Berry",
@@ -1099,7 +1103,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.3,
                     "firstName": "Tonny",
-                    "id": 8,
+                    "id": "AND/F/008",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Gibbs",
@@ -1111,7 +1115,7 @@ ShallowWrapper {
                   Object {
                     "communication": 1,
                     "firstName": "Chase",
-                    "id": 9,
+                    "id": "AND/F/009",
                     "initiative": 0.4,
                     "integration": 1,
                     "lastName": "Wright",
@@ -1123,7 +1127,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 10,
+                    "id": "AND/F/010",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -1135,7 +1139,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 11,
+                    "id": "AND/F/011",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -1147,7 +1151,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 12,
+                    "id": "AND/F/012",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -1159,7 +1163,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 13,
+                    "id": "AND/F/013",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -1171,7 +1175,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 14,
+                    "id": "AND/F/014",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -1183,7 +1187,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 15,
+                    "id": "AND/F/015",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -1519,6 +1523,7 @@ ShallowWrapper {
                                     getFellows={[Function]}
                                     handleSearchChange={[Function]}
                                     perPage={10}
+                                    results={undefined}
                                     search=""
                         />
                         <DashboardTable
@@ -1527,7 +1532,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Mathilda",
-                                                              "id": 1,
+                                                              "id": "AND/F/001",
                                                               "initiative": 0.3,
                                                               "integration": 0,
                                                               "lastName": "West",
@@ -1539,7 +1544,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.1,
                                                               "firstName": "Mittie",
-                                                              "id": 2,
+                                                              "id": "AND/F/002",
                                                               "initiative": 0.4,
                                                               "integration": 0,
                                                               "lastName": "Bowers",
@@ -1551,7 +1556,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Adekunle",
-                                                              "id": 3,
+                                                              "id": "AND/F/003",
                                                               "initiative": 0.8,
                                                               "integration": 1,
                                                               "lastName": "Gold",
@@ -1563,7 +1568,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.4,
                                                               "firstName": "Hallie",
-                                                              "id": 4,
+                                                              "id": "AND/F/004",
                                                               "initiative": 1,
                                                               "integration": 0,
                                                               "lastName": "James",
@@ -1575,7 +1580,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.9,
                                                               "firstName": "Estella",
-                                                              "id": 5,
+                                                              "id": "AND/F/005",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Graves",
@@ -1587,7 +1592,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.4,
                                                               "firstName": "Genevieve",
-                                                              "id": 6,
+                                                              "id": "AND/F/006",
                                                               "initiative": 0.3,
                                                               "integration": 0,
                                                               "lastName": "Black",
@@ -1599,7 +1604,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 1,
                                                               "firstName": "Gavin",
-                                                              "id": 7,
+                                                              "id": "AND/F/007",
                                                               "initiative": 0.4,
                                                               "integration": 1,
                                                               "lastName": "Berry",
@@ -1611,7 +1616,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.3,
                                                               "firstName": "Tonny",
-                                                              "id": 8,
+                                                              "id": "AND/F/008",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Gibbs",
@@ -1623,7 +1628,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 1,
                                                               "firstName": "Chase",
-                                                              "id": 9,
+                                                              "id": "AND/F/009",
                                                               "initiative": 0.4,
                                                               "integration": 1,
                                                               "lastName": "Wright",
@@ -1635,7 +1640,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 10,
+                                                              "id": "AND/F/010",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -1647,7 +1652,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 11,
+                                                              "id": "AND/F/011",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -1659,7 +1664,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 12,
+                                                              "id": "AND/F/012",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -1671,7 +1676,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 13,
+                                                              "id": "AND/F/013",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -1683,7 +1688,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 14,
+                                                              "id": "AND/F/014",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -1695,7 +1700,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 15,
+                                                              "id": "AND/F/015",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -1814,6 +1819,7 @@ ShallowWrapper {
                             getFellows={[Function]}
                             handleSearchChange={[Function]}
                             perPage={10}
+                            results={undefined}
                             search=""
               />
               <DashboardTable
@@ -1822,7 +1828,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Mathilda",
-                                                          "id": 1,
+                                                          "id": "AND/F/001",
                                                           "initiative": 0.3,
                                                           "integration": 0,
                                                           "lastName": "West",
@@ -1834,7 +1840,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.1,
                                                           "firstName": "Mittie",
-                                                          "id": 2,
+                                                          "id": "AND/F/002",
                                                           "initiative": 0.4,
                                                           "integration": 0,
                                                           "lastName": "Bowers",
@@ -1846,7 +1852,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Adekunle",
-                                                          "id": 3,
+                                                          "id": "AND/F/003",
                                                           "initiative": 0.8,
                                                           "integration": 1,
                                                           "lastName": "Gold",
@@ -1858,7 +1864,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.4,
                                                           "firstName": "Hallie",
-                                                          "id": 4,
+                                                          "id": "AND/F/004",
                                                           "initiative": 1,
                                                           "integration": 0,
                                                           "lastName": "James",
@@ -1870,7 +1876,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.9,
                                                           "firstName": "Estella",
-                                                          "id": 5,
+                                                          "id": "AND/F/005",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Graves",
@@ -1882,7 +1888,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.4,
                                                           "firstName": "Genevieve",
-                                                          "id": 6,
+                                                          "id": "AND/F/006",
                                                           "initiative": 0.3,
                                                           "integration": 0,
                                                           "lastName": "Black",
@@ -1894,7 +1900,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 1,
                                                           "firstName": "Gavin",
-                                                          "id": 7,
+                                                          "id": "AND/F/007",
                                                           "initiative": 0.4,
                                                           "integration": 1,
                                                           "lastName": "Berry",
@@ -1906,7 +1912,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.3,
                                                           "firstName": "Tonny",
-                                                          "id": 8,
+                                                          "id": "AND/F/008",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Gibbs",
@@ -1918,7 +1924,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 1,
                                                           "firstName": "Chase",
-                                                          "id": 9,
+                                                          "id": "AND/F/009",
                                                           "initiative": 0.4,
                                                           "integration": 1,
                                                           "lastName": "Wright",
@@ -1930,7 +1936,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 10,
+                                                          "id": "AND/F/010",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -1942,7 +1948,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 11,
+                                                          "id": "AND/F/011",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -1954,7 +1960,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 12,
+                                                          "id": "AND/F/012",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -1966,7 +1972,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 13,
+                                                          "id": "AND/F/013",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -1978,7 +1984,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 14,
+                                                          "id": "AND/F/014",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -1990,7 +1996,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 15,
+                                                          "id": "AND/F/015",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -2032,6 +2038,7 @@ ShallowWrapper {
                   getFellows={[Function]}
                   handleSearchChange={[Function]}
                   perPage={10}
+                  results={undefined}
                   search=""
 />,
                 <DashboardTable
@@ -2040,7 +2047,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Mathilda",
-                                                        "id": 1,
+                                                        "id": "AND/F/001",
                                                         "initiative": 0.3,
                                                         "integration": 0,
                                                         "lastName": "West",
@@ -2052,7 +2059,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.1,
                                                         "firstName": "Mittie",
-                                                        "id": 2,
+                                                        "id": "AND/F/002",
                                                         "initiative": 0.4,
                                                         "integration": 0,
                                                         "lastName": "Bowers",
@@ -2064,7 +2071,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Adekunle",
-                                                        "id": 3,
+                                                        "id": "AND/F/003",
                                                         "initiative": 0.8,
                                                         "integration": 1,
                                                         "lastName": "Gold",
@@ -2076,7 +2083,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.4,
                                                         "firstName": "Hallie",
-                                                        "id": 4,
+                                                        "id": "AND/F/004",
                                                         "initiative": 1,
                                                         "integration": 0,
                                                         "lastName": "James",
@@ -2088,7 +2095,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.9,
                                                         "firstName": "Estella",
-                                                        "id": 5,
+                                                        "id": "AND/F/005",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Graves",
@@ -2100,7 +2107,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.4,
                                                         "firstName": "Genevieve",
-                                                        "id": 6,
+                                                        "id": "AND/F/006",
                                                         "initiative": 0.3,
                                                         "integration": 0,
                                                         "lastName": "Black",
@@ -2112,7 +2119,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 1,
                                                         "firstName": "Gavin",
-                                                        "id": 7,
+                                                        "id": "AND/F/007",
                                                         "initiative": 0.4,
                                                         "integration": 1,
                                                         "lastName": "Berry",
@@ -2124,7 +2131,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.3,
                                                         "firstName": "Tonny",
-                                                        "id": 8,
+                                                        "id": "AND/F/008",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Gibbs",
@@ -2136,7 +2143,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 1,
                                                         "firstName": "Chase",
-                                                        "id": 9,
+                                                        "id": "AND/F/009",
                                                         "initiative": 0.4,
                                                         "integration": 1,
                                                         "lastName": "Wright",
@@ -2148,7 +2155,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 10,
+                                                        "id": "AND/F/010",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -2160,7 +2167,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 11,
+                                                        "id": "AND/F/011",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -2172,7 +2179,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 12,
+                                                        "id": "AND/F/012",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -2184,7 +2191,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 13,
+                                                        "id": "AND/F/013",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -2196,7 +2203,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 14,
+                                                        "id": "AND/F/014",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -2208,7 +2215,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 15,
+                                                        "id": "AND/F/015",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -2255,6 +2262,7 @@ ShallowWrapper {
                   "getFellows": [Function],
                   "handleSearchChange": [Function],
                   "perPage": 10,
+                  "results": undefined,
                   "search": "",
                 },
                 "ref": null,
@@ -2270,7 +2278,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Mathilda",
-                      "id": 1,
+                      "id": "AND/F/001",
                       "initiative": 0.3,
                       "integration": 0,
                       "lastName": "West",
@@ -2282,7 +2290,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.1,
                       "firstName": "Mittie",
-                      "id": 2,
+                      "id": "AND/F/002",
                       "initiative": 0.4,
                       "integration": 0,
                       "lastName": "Bowers",
@@ -2294,7 +2302,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Adekunle",
-                      "id": 3,
+                      "id": "AND/F/003",
                       "initiative": 0.8,
                       "integration": 1,
                       "lastName": "Gold",
@@ -2306,7 +2314,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.4,
                       "firstName": "Hallie",
-                      "id": 4,
+                      "id": "AND/F/004",
                       "initiative": 1,
                       "integration": 0,
                       "lastName": "James",
@@ -2318,7 +2326,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.9,
                       "firstName": "Estella",
-                      "id": 5,
+                      "id": "AND/F/005",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Graves",
@@ -2330,7 +2338,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.4,
                       "firstName": "Genevieve",
-                      "id": 6,
+                      "id": "AND/F/006",
                       "initiative": 0.3,
                       "integration": 0,
                       "lastName": "Black",
@@ -2342,7 +2350,7 @@ ShallowWrapper {
                     Object {
                       "communication": 1,
                       "firstName": "Gavin",
-                      "id": 7,
+                      "id": "AND/F/007",
                       "initiative": 0.4,
                       "integration": 1,
                       "lastName": "Berry",
@@ -2354,7 +2362,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.3,
                       "firstName": "Tonny",
-                      "id": 8,
+                      "id": "AND/F/008",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Gibbs",
@@ -2366,7 +2374,7 @@ ShallowWrapper {
                     Object {
                       "communication": 1,
                       "firstName": "Chase",
-                      "id": 9,
+                      "id": "AND/F/009",
                       "initiative": 0.4,
                       "integration": 1,
                       "lastName": "Wright",
@@ -2378,7 +2386,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 10,
+                      "id": "AND/F/010",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -2390,7 +2398,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 11,
+                      "id": "AND/F/011",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -2402,7 +2410,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 12,
+                      "id": "AND/F/012",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -2414,7 +2422,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 13,
+                      "id": "AND/F/013",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -2426,7 +2434,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 14,
+                      "id": "AND/F/014",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -2438,7 +2446,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 15,
+                      "id": "AND/F/015",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -2767,7 +2775,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Mathilda",
-              "id": 1,
+              "id": "AND/F/001",
               "initiative": 0.3,
               "integration": 0,
               "lastName": "West",
@@ -2779,7 +2787,7 @@ ShallowWrapper {
             Object {
               "communication": 0.1,
               "firstName": "Mittie",
-              "id": 2,
+              "id": "AND/F/002",
               "initiative": 0.4,
               "integration": 0,
               "lastName": "Bowers",
@@ -2791,7 +2799,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Adekunle",
-              "id": 3,
+              "id": "AND/F/003",
               "initiative": 0.8,
               "integration": 1,
               "lastName": "Gold",
@@ -2803,7 +2811,7 @@ ShallowWrapper {
             Object {
               "communication": 0.4,
               "firstName": "Hallie",
-              "id": 4,
+              "id": "AND/F/004",
               "initiative": 1,
               "integration": 0,
               "lastName": "James",
@@ -2815,7 +2823,7 @@ ShallowWrapper {
             Object {
               "communication": 0.9,
               "firstName": "Estella",
-              "id": 5,
+              "id": "AND/F/005",
               "initiative": 1,
               "integration": 1,
               "lastName": "Graves",
@@ -2827,7 +2835,7 @@ ShallowWrapper {
             Object {
               "communication": 0.4,
               "firstName": "Genevieve",
-              "id": 6,
+              "id": "AND/F/006",
               "initiative": 0.3,
               "integration": 0,
               "lastName": "Black",
@@ -2839,7 +2847,7 @@ ShallowWrapper {
             Object {
               "communication": 1,
               "firstName": "Gavin",
-              "id": 7,
+              "id": "AND/F/007",
               "initiative": 0.4,
               "integration": 1,
               "lastName": "Berry",
@@ -2851,7 +2859,7 @@ ShallowWrapper {
             Object {
               "communication": 0.3,
               "firstName": "Tonny",
-              "id": 8,
+              "id": "AND/F/008",
               "initiative": 1,
               "integration": 1,
               "lastName": "Gibbs",
@@ -2863,7 +2871,7 @@ ShallowWrapper {
             Object {
               "communication": 1,
               "firstName": "Chase",
-              "id": 9,
+              "id": "AND/F/009",
               "initiative": 0.4,
               "integration": 1,
               "lastName": "Wright",
@@ -2875,7 +2883,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 10,
+              "id": "AND/F/010",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -2887,7 +2895,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 11,
+              "id": "AND/F/011",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -2899,7 +2907,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 12,
+              "id": "AND/F/012",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -2911,7 +2919,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 13,
+              "id": "AND/F/013",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -2923,7 +2931,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 14,
+              "id": "AND/F/014",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -2935,7 +2943,7 @@ ShallowWrapper {
             Object {
               "communication": 0,
               "firstName": "Hallie",
-              "id": 15,
+              "id": "AND/F/015",
               "initiative": 1,
               "integration": 1,
               "lastName": "Sullivan",
@@ -3021,6 +3029,7 @@ ShallowWrapper {
                               getFellows={[Function]}
                               handleSearchChange={[Function]}
                               perPage={10}
+                              results={undefined}
                               search=""
                     />
                     <DashboardTable
@@ -3029,7 +3038,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Mathilda",
-                                                    "id": 1,
+                                                    "id": "AND/F/001",
                                                     "initiative": 0.3,
                                                     "integration": 0,
                                                     "lastName": "West",
@@ -3041,7 +3050,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.1,
                                                     "firstName": "Mittie",
-                                                    "id": 2,
+                                                    "id": "AND/F/002",
                                                     "initiative": 0.4,
                                                     "integration": 0,
                                                     "lastName": "Bowers",
@@ -3053,7 +3062,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Adekunle",
-                                                    "id": 3,
+                                                    "id": "AND/F/003",
                                                     "initiative": 0.8,
                                                     "integration": 1,
                                                     "lastName": "Gold",
@@ -3065,7 +3074,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.4,
                                                     "firstName": "Hallie",
-                                                    "id": 4,
+                                                    "id": "AND/F/004",
                                                     "initiative": 1,
                                                     "integration": 0,
                                                     "lastName": "James",
@@ -3077,7 +3086,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.9,
                                                     "firstName": "Estella",
-                                                    "id": 5,
+                                                    "id": "AND/F/005",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Graves",
@@ -3089,7 +3098,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.4,
                                                     "firstName": "Genevieve",
-                                                    "id": 6,
+                                                    "id": "AND/F/006",
                                                     "initiative": 0.3,
                                                     "integration": 0,
                                                     "lastName": "Black",
@@ -3101,7 +3110,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 1,
                                                     "firstName": "Gavin",
-                                                    "id": 7,
+                                                    "id": "AND/F/007",
                                                     "initiative": 0.4,
                                                     "integration": 1,
                                                     "lastName": "Berry",
@@ -3113,7 +3122,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0.3,
                                                     "firstName": "Tonny",
-                                                    "id": 8,
+                                                    "id": "AND/F/008",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Gibbs",
@@ -3125,7 +3134,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 1,
                                                     "firstName": "Chase",
-                                                    "id": 9,
+                                                    "id": "AND/F/009",
                                                     "initiative": 0.4,
                                                     "integration": 1,
                                                     "lastName": "Wright",
@@ -3137,7 +3146,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 10,
+                                                    "id": "AND/F/010",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -3149,7 +3158,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 11,
+                                                    "id": "AND/F/011",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -3161,7 +3170,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 12,
+                                                    "id": "AND/F/012",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -3173,7 +3182,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 13,
+                                                    "id": "AND/F/013",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -3185,7 +3194,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 14,
+                                                    "id": "AND/F/014",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -3197,7 +3206,7 @@ ShallowWrapper {
                                                   Object {
                                                     "communication": 0,
                                                     "firstName": "Hallie",
-                                                    "id": 15,
+                                                    "id": "AND/F/015",
                                                     "initiative": 1,
                                                     "integration": 1,
                                                     "lastName": "Sullivan",
@@ -3316,6 +3325,7 @@ ShallowWrapper {
                         getFellows={[Function]}
                         handleSearchChange={[Function]}
                         perPage={10}
+                        results={undefined}
                         search=""
             />
             <DashboardTable
@@ -3324,7 +3334,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Mathilda",
-                                                  "id": 1,
+                                                  "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
@@ -3336,7 +3346,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.1,
                                                   "firstName": "Mittie",
-                                                  "id": 2,
+                                                  "id": "AND/F/002",
                                                   "initiative": 0.4,
                                                   "integration": 0,
                                                   "lastName": "Bowers",
@@ -3348,7 +3358,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Adekunle",
-                                                  "id": 3,
+                                                  "id": "AND/F/003",
                                                   "initiative": 0.8,
                                                   "integration": 1,
                                                   "lastName": "Gold",
@@ -3360,7 +3370,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Hallie",
-                                                  "id": 4,
+                                                  "id": "AND/F/004",
                                                   "initiative": 1,
                                                   "integration": 0,
                                                   "lastName": "James",
@@ -3372,7 +3382,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.9,
                                                   "firstName": "Estella",
-                                                  "id": 5,
+                                                  "id": "AND/F/005",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Graves",
@@ -3384,7 +3394,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Genevieve",
-                                                  "id": 6,
+                                                  "id": "AND/F/006",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "Black",
@@ -3396,7 +3406,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Gavin",
-                                                  "id": 7,
+                                                  "id": "AND/F/007",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Berry",
@@ -3408,7 +3418,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.3,
                                                   "firstName": "Tonny",
-                                                  "id": 8,
+                                                  "id": "AND/F/008",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Gibbs",
@@ -3420,7 +3430,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Chase",
-                                                  "id": 9,
+                                                  "id": "AND/F/009",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Wright",
@@ -3432,7 +3442,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 10,
+                                                  "id": "AND/F/010",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3444,7 +3454,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 11,
+                                                  "id": "AND/F/011",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3456,7 +3466,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 12,
+                                                  "id": "AND/F/012",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3468,7 +3478,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 13,
+                                                  "id": "AND/F/013",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3480,7 +3490,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 14,
+                                                  "id": "AND/F/014",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3492,7 +3502,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 15,
+                                                  "id": "AND/F/015",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3534,6 +3544,7 @@ ShallowWrapper {
                 getFellows={[Function]}
                 handleSearchChange={[Function]}
                 perPage={10}
+                results={undefined}
                 search=""
 />,
               <DashboardTable
@@ -3542,7 +3553,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Mathilda",
-                                                  "id": 1,
+                                                  "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
@@ -3554,7 +3565,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.1,
                                                   "firstName": "Mittie",
-                                                  "id": 2,
+                                                  "id": "AND/F/002",
                                                   "initiative": 0.4,
                                                   "integration": 0,
                                                   "lastName": "Bowers",
@@ -3566,7 +3577,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Adekunle",
-                                                  "id": 3,
+                                                  "id": "AND/F/003",
                                                   "initiative": 0.8,
                                                   "integration": 1,
                                                   "lastName": "Gold",
@@ -3578,7 +3589,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Hallie",
-                                                  "id": 4,
+                                                  "id": "AND/F/004",
                                                   "initiative": 1,
                                                   "integration": 0,
                                                   "lastName": "James",
@@ -3590,7 +3601,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.9,
                                                   "firstName": "Estella",
-                                                  "id": 5,
+                                                  "id": "AND/F/005",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Graves",
@@ -3602,7 +3613,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.4,
                                                   "firstName": "Genevieve",
-                                                  "id": 6,
+                                                  "id": "AND/F/006",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "Black",
@@ -3614,7 +3625,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Gavin",
-                                                  "id": 7,
+                                                  "id": "AND/F/007",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Berry",
@@ -3626,7 +3637,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0.3,
                                                   "firstName": "Tonny",
-                                                  "id": 8,
+                                                  "id": "AND/F/008",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Gibbs",
@@ -3638,7 +3649,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 1,
                                                   "firstName": "Chase",
-                                                  "id": 9,
+                                                  "id": "AND/F/009",
                                                   "initiative": 0.4,
                                                   "integration": 1,
                                                   "lastName": "Wright",
@@ -3650,7 +3661,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 10,
+                                                  "id": "AND/F/010",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3662,7 +3673,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 11,
+                                                  "id": "AND/F/011",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3674,7 +3685,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 12,
+                                                  "id": "AND/F/012",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3686,7 +3697,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 13,
+                                                  "id": "AND/F/013",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3698,7 +3709,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 14,
+                                                  "id": "AND/F/014",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3710,7 +3721,7 @@ ShallowWrapper {
                                                 Object {
                                                   "communication": 0,
                                                   "firstName": "Hallie",
-                                                  "id": 15,
+                                                  "id": "AND/F/015",
                                                   "initiative": 1,
                                                   "integration": 1,
                                                   "lastName": "Sullivan",
@@ -3757,6 +3768,7 @@ ShallowWrapper {
                 "getFellows": [Function],
                 "handleSearchChange": [Function],
                 "perPage": 10,
+                "results": undefined,
                 "search": "",
               },
               "ref": null,
@@ -3772,7 +3784,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Mathilda",
-                    "id": 1,
+                    "id": "AND/F/001",
                     "initiative": 0.3,
                     "integration": 0,
                     "lastName": "West",
@@ -3784,7 +3796,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.1,
                     "firstName": "Mittie",
-                    "id": 2,
+                    "id": "AND/F/002",
                     "initiative": 0.4,
                     "integration": 0,
                     "lastName": "Bowers",
@@ -3796,7 +3808,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Adekunle",
-                    "id": 3,
+                    "id": "AND/F/003",
                     "initiative": 0.8,
                     "integration": 1,
                     "lastName": "Gold",
@@ -3808,7 +3820,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.4,
                     "firstName": "Hallie",
-                    "id": 4,
+                    "id": "AND/F/004",
                     "initiative": 1,
                     "integration": 0,
                     "lastName": "James",
@@ -3820,7 +3832,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.9,
                     "firstName": "Estella",
-                    "id": 5,
+                    "id": "AND/F/005",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Graves",
@@ -3832,7 +3844,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.4,
                     "firstName": "Genevieve",
-                    "id": 6,
+                    "id": "AND/F/006",
                     "initiative": 0.3,
                     "integration": 0,
                     "lastName": "Black",
@@ -3844,7 +3856,7 @@ ShallowWrapper {
                   Object {
                     "communication": 1,
                     "firstName": "Gavin",
-                    "id": 7,
+                    "id": "AND/F/007",
                     "initiative": 0.4,
                     "integration": 1,
                     "lastName": "Berry",
@@ -3856,7 +3868,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0.3,
                     "firstName": "Tonny",
-                    "id": 8,
+                    "id": "AND/F/008",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Gibbs",
@@ -3868,7 +3880,7 @@ ShallowWrapper {
                   Object {
                     "communication": 1,
                     "firstName": "Chase",
-                    "id": 9,
+                    "id": "AND/F/009",
                     "initiative": 0.4,
                     "integration": 1,
                     "lastName": "Wright",
@@ -3880,7 +3892,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 10,
+                    "id": "AND/F/010",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -3892,7 +3904,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 11,
+                    "id": "AND/F/011",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -3904,7 +3916,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 12,
+                    "id": "AND/F/012",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -3916,7 +3928,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 13,
+                    "id": "AND/F/013",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -3928,7 +3940,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 14,
+                    "id": "AND/F/014",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -3940,7 +3952,7 @@ ShallowWrapper {
                   Object {
                     "communication": 0,
                     "firstName": "Hallie",
-                    "id": 15,
+                    "id": "AND/F/015",
                     "initiative": 1,
                     "integration": 1,
                     "lastName": "Sullivan",
@@ -4276,6 +4288,7 @@ ShallowWrapper {
                                     getFellows={[Function]}
                                     handleSearchChange={[Function]}
                                     perPage={10}
+                                    results={undefined}
                                     search=""
                         />
                         <DashboardTable
@@ -4284,7 +4297,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Mathilda",
-                                                              "id": 1,
+                                                              "id": "AND/F/001",
                                                               "initiative": 0.3,
                                                               "integration": 0,
                                                               "lastName": "West",
@@ -4296,7 +4309,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.1,
                                                               "firstName": "Mittie",
-                                                              "id": 2,
+                                                              "id": "AND/F/002",
                                                               "initiative": 0.4,
                                                               "integration": 0,
                                                               "lastName": "Bowers",
@@ -4308,7 +4321,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Adekunle",
-                                                              "id": 3,
+                                                              "id": "AND/F/003",
                                                               "initiative": 0.8,
                                                               "integration": 1,
                                                               "lastName": "Gold",
@@ -4320,7 +4333,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.4,
                                                               "firstName": "Hallie",
-                                                              "id": 4,
+                                                              "id": "AND/F/004",
                                                               "initiative": 1,
                                                               "integration": 0,
                                                               "lastName": "James",
@@ -4332,7 +4345,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.9,
                                                               "firstName": "Estella",
-                                                              "id": 5,
+                                                              "id": "AND/F/005",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Graves",
@@ -4344,7 +4357,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.4,
                                                               "firstName": "Genevieve",
-                                                              "id": 6,
+                                                              "id": "AND/F/006",
                                                               "initiative": 0.3,
                                                               "integration": 0,
                                                               "lastName": "Black",
@@ -4356,7 +4369,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 1,
                                                               "firstName": "Gavin",
-                                                              "id": 7,
+                                                              "id": "AND/F/007",
                                                               "initiative": 0.4,
                                                               "integration": 1,
                                                               "lastName": "Berry",
@@ -4368,7 +4381,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0.3,
                                                               "firstName": "Tonny",
-                                                              "id": 8,
+                                                              "id": "AND/F/008",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Gibbs",
@@ -4380,7 +4393,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 1,
                                                               "firstName": "Chase",
-                                                              "id": 9,
+                                                              "id": "AND/F/009",
                                                               "initiative": 0.4,
                                                               "integration": 1,
                                                               "lastName": "Wright",
@@ -4392,7 +4405,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 10,
+                                                              "id": "AND/F/010",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -4404,7 +4417,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 11,
+                                                              "id": "AND/F/011",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -4416,7 +4429,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 12,
+                                                              "id": "AND/F/012",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -4428,7 +4441,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 13,
+                                                              "id": "AND/F/013",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -4440,7 +4453,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 14,
+                                                              "id": "AND/F/014",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -4452,7 +4465,7 @@ ShallowWrapper {
                                                             Object {
                                                               "communication": 0,
                                                               "firstName": "Hallie",
-                                                              "id": 15,
+                                                              "id": "AND/F/015",
                                                               "initiative": 1,
                                                               "integration": 1,
                                                               "lastName": "Sullivan",
@@ -4571,6 +4584,7 @@ ShallowWrapper {
                             getFellows={[Function]}
                             handleSearchChange={[Function]}
                             perPage={10}
+                            results={undefined}
                             search=""
               />
               <DashboardTable
@@ -4579,7 +4593,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Mathilda",
-                                                          "id": 1,
+                                                          "id": "AND/F/001",
                                                           "initiative": 0.3,
                                                           "integration": 0,
                                                           "lastName": "West",
@@ -4591,7 +4605,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.1,
                                                           "firstName": "Mittie",
-                                                          "id": 2,
+                                                          "id": "AND/F/002",
                                                           "initiative": 0.4,
                                                           "integration": 0,
                                                           "lastName": "Bowers",
@@ -4603,7 +4617,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Adekunle",
-                                                          "id": 3,
+                                                          "id": "AND/F/003",
                                                           "initiative": 0.8,
                                                           "integration": 1,
                                                           "lastName": "Gold",
@@ -4615,7 +4629,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.4,
                                                           "firstName": "Hallie",
-                                                          "id": 4,
+                                                          "id": "AND/F/004",
                                                           "initiative": 1,
                                                           "integration": 0,
                                                           "lastName": "James",
@@ -4627,7 +4641,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.9,
                                                           "firstName": "Estella",
-                                                          "id": 5,
+                                                          "id": "AND/F/005",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Graves",
@@ -4639,7 +4653,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.4,
                                                           "firstName": "Genevieve",
-                                                          "id": 6,
+                                                          "id": "AND/F/006",
                                                           "initiative": 0.3,
                                                           "integration": 0,
                                                           "lastName": "Black",
@@ -4651,7 +4665,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 1,
                                                           "firstName": "Gavin",
-                                                          "id": 7,
+                                                          "id": "AND/F/007",
                                                           "initiative": 0.4,
                                                           "integration": 1,
                                                           "lastName": "Berry",
@@ -4663,7 +4677,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0.3,
                                                           "firstName": "Tonny",
-                                                          "id": 8,
+                                                          "id": "AND/F/008",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Gibbs",
@@ -4675,7 +4689,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 1,
                                                           "firstName": "Chase",
-                                                          "id": 9,
+                                                          "id": "AND/F/009",
                                                           "initiative": 0.4,
                                                           "integration": 1,
                                                           "lastName": "Wright",
@@ -4687,7 +4701,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 10,
+                                                          "id": "AND/F/010",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -4699,7 +4713,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 11,
+                                                          "id": "AND/F/011",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -4711,7 +4725,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 12,
+                                                          "id": "AND/F/012",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -4723,7 +4737,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 13,
+                                                          "id": "AND/F/013",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -4735,7 +4749,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 14,
+                                                          "id": "AND/F/014",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -4747,7 +4761,7 @@ ShallowWrapper {
                                                         Object {
                                                           "communication": 0,
                                                           "firstName": "Hallie",
-                                                          "id": 15,
+                                                          "id": "AND/F/015",
                                                           "initiative": 1,
                                                           "integration": 1,
                                                           "lastName": "Sullivan",
@@ -4789,6 +4803,7 @@ ShallowWrapper {
                   getFellows={[Function]}
                   handleSearchChange={[Function]}
                   perPage={10}
+                  results={undefined}
                   search=""
 />,
                 <DashboardTable
@@ -4797,7 +4812,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Mathilda",
-                                                        "id": 1,
+                                                        "id": "AND/F/001",
                                                         "initiative": 0.3,
                                                         "integration": 0,
                                                         "lastName": "West",
@@ -4809,7 +4824,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.1,
                                                         "firstName": "Mittie",
-                                                        "id": 2,
+                                                        "id": "AND/F/002",
                                                         "initiative": 0.4,
                                                         "integration": 0,
                                                         "lastName": "Bowers",
@@ -4821,7 +4836,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Adekunle",
-                                                        "id": 3,
+                                                        "id": "AND/F/003",
                                                         "initiative": 0.8,
                                                         "integration": 1,
                                                         "lastName": "Gold",
@@ -4833,7 +4848,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.4,
                                                         "firstName": "Hallie",
-                                                        "id": 4,
+                                                        "id": "AND/F/004",
                                                         "initiative": 1,
                                                         "integration": 0,
                                                         "lastName": "James",
@@ -4845,7 +4860,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.9,
                                                         "firstName": "Estella",
-                                                        "id": 5,
+                                                        "id": "AND/F/005",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Graves",
@@ -4857,7 +4872,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.4,
                                                         "firstName": "Genevieve",
-                                                        "id": 6,
+                                                        "id": "AND/F/006",
                                                         "initiative": 0.3,
                                                         "integration": 0,
                                                         "lastName": "Black",
@@ -4869,7 +4884,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 1,
                                                         "firstName": "Gavin",
-                                                        "id": 7,
+                                                        "id": "AND/F/007",
                                                         "initiative": 0.4,
                                                         "integration": 1,
                                                         "lastName": "Berry",
@@ -4881,7 +4896,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0.3,
                                                         "firstName": "Tonny",
-                                                        "id": 8,
+                                                        "id": "AND/F/008",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Gibbs",
@@ -4893,7 +4908,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 1,
                                                         "firstName": "Chase",
-                                                        "id": 9,
+                                                        "id": "AND/F/009",
                                                         "initiative": 0.4,
                                                         "integration": 1,
                                                         "lastName": "Wright",
@@ -4905,7 +4920,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 10,
+                                                        "id": "AND/F/010",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -4917,7 +4932,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 11,
+                                                        "id": "AND/F/011",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -4929,7 +4944,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 12,
+                                                        "id": "AND/F/012",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -4941,7 +4956,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 13,
+                                                        "id": "AND/F/013",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -4953,7 +4968,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 14,
+                                                        "id": "AND/F/014",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -4965,7 +4980,7 @@ ShallowWrapper {
                                                       Object {
                                                         "communication": 0,
                                                         "firstName": "Hallie",
-                                                        "id": 15,
+                                                        "id": "AND/F/015",
                                                         "initiative": 1,
                                                         "integration": 1,
                                                         "lastName": "Sullivan",
@@ -5012,6 +5027,7 @@ ShallowWrapper {
                   "getFellows": [Function],
                   "handleSearchChange": [Function],
                   "perPage": 10,
+                  "results": undefined,
                   "search": "",
                 },
                 "ref": null,
@@ -5027,7 +5043,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Mathilda",
-                      "id": 1,
+                      "id": "AND/F/001",
                       "initiative": 0.3,
                       "integration": 0,
                       "lastName": "West",
@@ -5039,7 +5055,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.1,
                       "firstName": "Mittie",
-                      "id": 2,
+                      "id": "AND/F/002",
                       "initiative": 0.4,
                       "integration": 0,
                       "lastName": "Bowers",
@@ -5051,7 +5067,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Adekunle",
-                      "id": 3,
+                      "id": "AND/F/003",
                       "initiative": 0.8,
                       "integration": 1,
                       "lastName": "Gold",
@@ -5063,7 +5079,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.4,
                       "firstName": "Hallie",
-                      "id": 4,
+                      "id": "AND/F/004",
                       "initiative": 1,
                       "integration": 0,
                       "lastName": "James",
@@ -5075,7 +5091,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.9,
                       "firstName": "Estella",
-                      "id": 5,
+                      "id": "AND/F/005",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Graves",
@@ -5087,7 +5103,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.4,
                       "firstName": "Genevieve",
-                      "id": 6,
+                      "id": "AND/F/006",
                       "initiative": 0.3,
                       "integration": 0,
                       "lastName": "Black",
@@ -5099,7 +5115,7 @@ ShallowWrapper {
                     Object {
                       "communication": 1,
                       "firstName": "Gavin",
-                      "id": 7,
+                      "id": "AND/F/007",
                       "initiative": 0.4,
                       "integration": 1,
                       "lastName": "Berry",
@@ -5111,7 +5127,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0.3,
                       "firstName": "Tonny",
-                      "id": 8,
+                      "id": "AND/F/008",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Gibbs",
@@ -5123,7 +5139,7 @@ ShallowWrapper {
                     Object {
                       "communication": 1,
                       "firstName": "Chase",
-                      "id": 9,
+                      "id": "AND/F/009",
                       "initiative": 0.4,
                       "integration": 1,
                       "lastName": "Wright",
@@ -5135,7 +5151,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 10,
+                      "id": "AND/F/010",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -5147,7 +5163,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 11,
+                      "id": "AND/F/011",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -5159,7 +5175,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 12,
+                      "id": "AND/F/012",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -5171,7 +5187,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 13,
+                      "id": "AND/F/013",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -5183,7 +5199,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 14,
+                      "id": "AND/F/014",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
@@ -5195,7 +5211,7 @@ ShallowWrapper {
                     Object {
                       "communication": 0,
                       "firstName": "Hallie",
-                      "id": 15,
+                      "id": "AND/F/015",
                       "initiative": 1,
                       "integration": 1,
                       "lastName": "Sullivan",
