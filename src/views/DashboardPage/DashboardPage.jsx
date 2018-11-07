@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../../components/Header';
 import DashboardTable from '../../components/DashboardTable';
 import Filters from '../../components/Filters/Filters';
 import Error from '../../components/Error';
@@ -157,12 +156,11 @@ class DashboardPage extends Component {
   }
 
   render() {
-    const { error, user, role, fellows } = this.props;
+    const { error, fellows } = this.props;
     const { ErrorPage } = Error;
     const hasFellows = fellows.length > 0;
     return (
       <div>
-        <Header user={user} role={role} />
         {error ? <ErrorPage /> : this.renderPageBody()}
         {hasFellows && this.returnShowing()}
         <div>
@@ -198,7 +196,6 @@ DashboardPage.propTypes = {
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired
   }).isRequired,
-  role: PropTypes.string.isRequired,
   summary: PropTypes.shape({
     onTrack: PropTypes.number.isRequired
   }),

@@ -68,7 +68,7 @@ ShallowWrapper {
           onClick={[Function]}
 />,
       ],
-      "className": " owl-carousel owl-theme contain row",
+      "className": "owl-theme contain row",
     },
     "ref": null,
     "rendered": Array [
@@ -171,7 +171,7 @@ ShallowWrapper {
             onClick={[Function]}
 />,
         ],
-        "className": " owl-carousel owl-theme contain row",
+        "className": "owl-theme contain row",
       },
       "ref": null,
       "rendered": Array [

@@ -68,7 +68,7 @@ class Filters extends Component {
     const { filter } = this.props;
     const cardArray = this.cardArray();
     return (
-      <div className=" owl-carousel owl-theme contain row">
+      <div className="owl-theme contain row">
         {cardArray.map(({ filterId, cardDetails }) => (
           <FilterCard
             key={filterId}

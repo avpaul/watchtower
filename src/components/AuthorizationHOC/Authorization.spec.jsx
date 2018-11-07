@@ -4,8 +4,8 @@ import { shallow } from 'enzyme';
 import jsonwebtoken from 'jsonwebtoken';
 import Cookie from 'js-cookie';
 import Authorization from './Authorization';
-import Dashboards from '../../views/DashboardPage/DashBoards';
 import authService from '../../services/auth';
+import Dashboards from '../../routes/DashboardRoutes';
 
 describe('<Authorization />', () => {
   it('should render Without crashing', () => {

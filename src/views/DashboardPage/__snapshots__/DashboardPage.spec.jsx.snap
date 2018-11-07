@@ -203,6 +203,7 @@ ShallowWrapper {
             "prevPageURL": "http://localhost:8000/api/fellows?page=1",
           }
     }
+    results={Array []}
     role="Technology"
     setVisibilityFilter={[Function]}
     summary={
@@ -233,15 +234,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header
-          role="Technology"
-          user={
-                    Object {
-                              "name": "Test user",
-                              "picture": "http://",
-                            }
-          }
-/>,
         <ErrorBoundary>
           <Unknown>
                     <Filters
@@ -519,21 +511,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "role": "Technology",
-          "user": Object {
-            "name": "Test user",
-            "picture": "http://",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -1492,15 +1469,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header
-            role="Technology"
-            user={
-                        Object {
-                                    "name": "Test user",
-                                    "picture": "http://",
-                                  }
-            }
-/>,
           <ErrorBoundary>
             <Unknown>
                         <Filters
@@ -1778,21 +1746,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "role": "Technology",
-            "user": Object {
-              "name": "Test user",
-              "picture": "http://",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -2968,6 +2921,7 @@ ShallowWrapper {
             "prevPageURL": "http://localhost:8000/api/fellows?page=1",
           }
     }
+    results={Array []}
     role="Technology"
     setVisibilityFilter={[Function]}
     summary={
@@ -2998,15 +2952,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header
-          role="Technology"
-          user={
-                    Object {
-                              "name": "Test user",
-                              "picture": "http://",
-                            }
-          }
-/>,
         <ErrorBoundary>
           <Unknown>
                     <Filters
@@ -3284,21 +3229,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "role": "Technology",
-          "user": Object {
-            "name": "Test user",
-            "picture": "http://",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -4257,15 +4187,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header
-            role="Technology"
-            user={
-                        Object {
-                                    "name": "Test user",
-                                    "picture": "http://",
-                                  }
-            }
-/>,
           <ErrorBoundary>
             <Unknown>
                         <Filters
@@ -4543,21 +4464,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "role": "Technology",
-            "user": Object {
-              "name": "Test user",
-              "picture": "http://",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,

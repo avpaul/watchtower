@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 /**
@@ -13,24 +14,29 @@ const MenuLink = ({
 }) => {
   let active = '';
   // if the link state is active, change icon
-
+  let iconImg = link.icon;
   if (isActive) {
     active = 'active';
+    iconImg = link.activeIcon || link.icon;
   }
 
   function renderHeader() {
+    const path = link.path ? link.path: ''; 
     return (
-      <div
+      <Link
         className={`navlink ${active}`}
         data-link-key={link.key}
         onClick={handleMenuClick}
-        to={link.path}
+        to={path}
         role="link"
         onKeyPress={handleMenuClick}
         tabIndex="0"
       >
+       <span className="navicon">
+          <img className={`${link.key}__icon`} src={iconImg} alt={`${link.key}Icon`} />
+        </span>
         {link.name}
-      </div>
+      </Link>
     );
   }
 

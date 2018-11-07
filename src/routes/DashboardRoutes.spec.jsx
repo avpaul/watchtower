@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
+import NotFoundPage from '../views/NotFoundPage';
+import Dashboards from './DashboardRoutes';
 
-import fellows from '../../__mocks__/fellows';
-import Dashboards from './DashBoards';
-import NotFoundPage from '../NotFoundPage';
+import fellows from '../__mocks__/fellows';
 
 describe('<Dashboards />', () => {
   it('should render appropriate dashboards', () => {
@@ -43,8 +43,9 @@ describe('<Dashboards />', () => {
     const item = shallow(
       <Dashboards {...store.getState()} store={store} />,
     );
-    expect(item.name()).toEqual('Connect(DashboardPage)');
+    expect(item.name()).toEqual('OpsDashboard');
   });
+  
   it('should render appropriate dashboards', () => {
     const mockStore = configureStore();
     const store = mockStore({

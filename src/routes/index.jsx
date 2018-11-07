@@ -7,8 +7,8 @@ import {
 import LoginPage from '../views/LoginPage';
 import NotFoundPage from '../views/NotFoundPage';
 import ConnectedTest from '../components/Test/Test';
-import Dashboards from '../views/DashboardPage/DashBoards';
 import Authorization from '../components/AuthorizationHOC';
+import Dashboards from './DashboardRoutes';
 
 
 
@@ -22,7 +22,7 @@ const Routes = () => (
       <Route exact path="/" component={LoginPage} />
       <Route path="/login" component={LoginPage} />
       <Route path="/test" component={ConnectedTest} />
-      <Route exact path="/dashboard" component={Authorization(Dashboards)} />
+      <Route path="/dashboard" component={Authorization(Dashboards)} />
       <Route component={NotFoundPage} />
     </Switch>
   </Router>

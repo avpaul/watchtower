@@ -29,6 +29,7 @@ class Header extends Component {
     this.state = {
       activeItems: {
         fellows: true,
+        dashboard: true,
         settings: false
       },
       show: false
@@ -44,7 +45,6 @@ class Header extends Component {
   };
 
   handleMenuClick = e => {
-    e.preventDefault();
     const key = e.target.dataset.linkKey;
     const { activeItems } = this.state;
     if (!activeItems[key]) {
