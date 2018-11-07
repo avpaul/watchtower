@@ -185,11 +185,6 @@ class Header extends Component {
               />
             </div>
             <div id="search_form" className="inner-addon collapse show">
-              <img
-                className="search__icon d-none d-md-inline-block d-xl-inline-block"
-                src={searchIcon}
-                alt="searchIcon"
-              />
               <input
                 type="search"
                 className="form-control fellow-search"
@@ -202,7 +197,6 @@ class Header extends Component {
               onKeyDown=""
               role="presentation"
             >
-              {/* <span className="bellnumbers">10</span> */}
               <img
                 className="notification__icon"
                 src={notificationIcon}
