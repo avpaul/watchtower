@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OpsMainDashboard component renders correctly 1`] = `
+exports[`renders to match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <OpsDashboardMain />,
+  Symbol(enzyme.__unrendered__): <FellowsSummaryChart
+    getFellowCountHistory={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,25 +19,26 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        "",
-        <Connect(FellowsSummaryChart) />,
-      ],
-      "className": "container-fluid",
+      "children": <FellowChartContainer
+        countSummary={Object {}}
+        filter="ALL"
+        handleChartClose={[Function]}
+/>,
     },
     "ref": null,
-    "rendered": Array [
-      "",
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "countSummary": Object {},
+        "filter": "ALL",
+        "handleChartClose": [Function],
       },
-    ],
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -44,25 +47,26 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          "",
-          <Connect(FellowsSummaryChart) />,
-        ],
-        "className": "container-fluid",
+        "children": <FellowChartContainer
+          countSummary={Object {}}
+          filter="ALL"
+          handleChartClose={[Function]}
+/>,
       },
       "ref": null,
-      "rendered": Array [
-        "",
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "countSummary": Object {},
+          "filter": "ALL",
+          "handleChartClose": [Function],
         },
-      ],
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       "type": "div",
     },
   ],

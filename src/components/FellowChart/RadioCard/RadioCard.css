@@ -1,0 +1,50 @@
+.radio-card__input .icon::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type='radio'].radio-card__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.radio-card__input:after {
+  width: 20px;
+  height: 20px;
+  color: rgba(4, 89, 228, 0.7);
+  font-family: 'Font Awesome 5 Free';
+  font-size: 20px;
+  font-weight: 500;
+  content: '\f111';
+}
+
+.radio-card__input:checked:after {
+  width: 20px;
+  height: 20px;
+  color: rgba(4, 89, 228, 0.7);
+  font-family: 'Font Awesome 5 Free';
+  font-size: 20px;
+  font-weight: 500;
+  content: '\f192';
+}
+.radio-card__input:focus {
+  outline: none;
+}
+
+.radio-card {
+  background-color: #fff;
+  border-radius: 4px;
+  width: max-content;
+  height: 55px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding-right: 29px;
+}
+
+.radio-card__input.form-check-input {
+  margin: 17.5px 22px;
+}

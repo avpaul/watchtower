@@ -9,12 +9,17 @@ export default {
       firstPageURL: '',
       nextPageURL: '',
       prevPageURL: '',
-      finalPageURL: '',
+      finalPageURL: ''
     },
     fellows: [],
     summary: { ltWk5OffTrack: 0, gteWk5OffTrack: 0, onTrack: 0 },
     loading: false,
-    error: '',
+    error: ''
   },
   visibilityFilter: OFFTRACK_WK5_PLUS,
+  fellowCountHistory: {
+    countSummary: {},
+    loading: false,
+    error: null
+  }
 };

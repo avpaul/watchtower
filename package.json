@@ -28,6 +28,8 @@
     "jsonwebtoken": "^8.3.0",
     "jwt-decode": "^2.2.0",
     "lodash.mapvalues": "^4.6.0",
+    "lodash.mergewith": "^4.6.1",
+    "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-burger-menu": "^2.5.4",

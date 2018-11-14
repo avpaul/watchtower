@@ -1,0 +1,106 @@
+{
+  "D0A Simulations": {
+    "Week 1": {
+      "onPip": 0,
+      "onTrack": 33,
+      "offTrack": 12
+    },
+    "Week 2": {
+      "onPip": 0,
+      "onTrack": 29,
+      "offTrack": 16
+    },
+    "Week 3": {
+      "onPip": 0,
+      "onTrack": 40,
+      "offTrack": 5
+    },
+    "Week 4": {
+      "onPip": 0,
+      "onTrack": 38,
+      "offTrack": 7
+    },
+    "Week 5": {
+      "onPip": 0,
+      "onTrack": 38,
+      "offTrack": 7
+    },
+    "Week 6": {
+      "onPip": 0,
+      "onTrack": 35,
+      "offTrack": 10
+    },
+    "Week 7": {
+      "onPip": 0,
+      "onTrack": 34,
+      "offTrack": 11
+    },
+    "Week 8": {
+      "onPip": 0,
+      "onTrack": 31,
+      "offTrack": 14
+    }
+  },
+  "D0B Apprenticeship": {
+    "Week 1": {
+      "onPip": 0,
+      "onTrack": 31,
+      "offTrack": 9
+    },
+    "Week 2": {
+      "onPip": 0,
+      "onTrack": 28,
+      "offTrack": 12
+    },
+    "Week 3": {
+      "onPip": 0,
+      "onTrack": 27,
+      "offTrack": 13
+    },
+    "Week 4": {
+      "onPip": 0,
+      "onTrack": 26,
+      "offTrack": 9
+    },
+    "Week 5": {
+      "onPip": 0,
+      "onTrack": 19,
+      "offTrack": 11
+    },
+    "Week 6": {
+      "onPip": 0,
+      "onTrack": 16,
+      "offTrack": 9
+    },
+    "Week 7": {
+      "onPip": 0,
+      "onTrack": 15,
+      "offTrack": 5
+    },
+    "Week 8": {
+      "onPip": 0,
+      "onTrack": 10,
+      "offTrack": 5
+    },
+    "Week 9": {
+      "onPip": 0,
+      "onTrack": 13,
+      "offTrack": 2
+    },
+    "Week 10": {
+      "onPip": 0,
+      "onTrack": 10,
+      "offTrack": 0
+    },
+    "Week 11": {
+      "onPip": 0,
+      "onTrack": 5,
+      "offTrack": 0
+    },
+    "Week 12": {
+      "onPip": 0,
+      "onTrack": 1,
+      "offTrack": 4
+    }
+  }
+}

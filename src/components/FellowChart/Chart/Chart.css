@@ -1,0 +1,22 @@
+.line-chart-card {
+  font-weight: 500;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: auto;
+}
+.line-chart-card__header {
+  height: 61px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  padding-left: 40px;
+  min-width: 400px;
+}
+.lineA {
+  box-shadow: 0 0 4px 0 #5a7efc;
+}
+.lineB {
+  box-shadow: 0 0 4px 0 #ffb746;
+}
+.lineC {
+  box-shadow: 0 0 4px 0 #ff5b5b;
+}
