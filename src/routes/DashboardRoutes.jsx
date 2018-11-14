@@ -7,7 +7,7 @@ import FellowDashboardPage from '../views/DashboardPage/FellowDashboardPage';
  * Defines wrapper function that switch users dashboard context
  * @function
  */
-const Dashboards = (props) => {
+const Dashboards = props => {
   const { user } = props;
   delete user.roles.Andelan;
   delete user.roles.Technology;
@@ -16,7 +16,6 @@ const Dashboards = (props) => {
   if (!role) {
     [role] = roles;
   }
-
   switch (role) {
     case 'WATCH_TOWER_EM':
     case 'WATCH_TOWER_TTL':

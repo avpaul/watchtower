@@ -4,11 +4,12 @@
   width: 290px;
   border-radius: 4px;
   background-color: #ffffff;
-  margin: 60px 10px 50px 10px;
+  margin: 60px 1em 50px 1em;
 }
 
 .active-card {
   border: 1px solid #0459e4;
+  outline: none !important;
 }
 
 .card:hover {
@@ -90,47 +91,73 @@
   margin-right: auto;
 }
 
-.owl-item {
-  transition: all 150ms ease-out;
-  transform: translate3d(0px, 0px, 0px) scale(1);
+.slick-prev,
+.slick-next {
+  font-size: 15px !important;
+  z-index: 1000;
 }
 
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel button.owl-dot.owl-nav {
-  position: absolute;
-  left: 10px;
-  top: 40%;
-  background-color: #0459e4 !important;
-  display: block;
-  padding: 0 0.3em !important;
-  font-size: 1.5em;
-  margin: 0;
-  cursor: pointer;
-  color: #fff;
+.slick-prev:before,
+.slick-next:before {
+  content: '' !important;
 }
-.owl-nav button.owl-next,
-.owl-nav button.owl-prev {
-  border-radius: 50%;
-}
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-next {
-  position: absolute;
-  right: -23px;
+.slick-arrow {
+  background: none !important;
+  padding: 0.1em 0.3em !important;
+  font-size: 1.2em !important;
   top: 40%;
-  background-color: #0459e4 !important;
-  display: block;
-  padding: 0 0.3em !important;
-  font-size: 1.5em;
-  margin: 0;
   cursor: pointer;
+  position: absolute;
+  z-index: 10000;
+}
+
+.slick-prev {
+  background-color: #0459e4 !important;
   color: #fff;
+  display: inline;
+  left: 15px;
+}
+
+.slick-next {
+  background-color: #0459e4 !important;
+  color: #fff;
+  display: inline;
+  right: -15px;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    margin-left: 1em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .card {
+    margin-left: 1em;
+    margin-right: 2em !important;
+  }
+
+  .slick-track {
+    width: 1200px !important;
+  }
+  .slick-slide {
+    width: initial !important;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .slick-track {
+    width: 1100px !important;
+  }
+  .slick-slide {
+    width: initial !important;
+  }
 }
 
 @media screen and (min-width: 1800px) {
   .contain {
     width: 85%;
-    margin: 0 auto;
   }
   .title {
     font-size: 1.313em;

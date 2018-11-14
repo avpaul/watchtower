@@ -29,7 +29,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
       "children": Array [
         <FilterCard
@@ -68,7 +68,42 @@ ShallowWrapper {
           onClick={[Function]}
 />,
       ],
-      "className": "owl-theme contain row",
+      "className": "contain row",
+      "focusOnSelect": true,
+      "infinite": false,
+      "nextArrow": <NavArrow
+        buttonClass="slick-next"
+        iconClass="fa-angle-right"
+/>,
+      "prevArrow": <NavArrow
+        buttonClass="slick-prev"
+        iconClass="fa-angle-left"
+/>,
+      "responsive": Array [
+        Object {
+          "breakpoint": 900,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 600,
+          "settings": Object {
+            "slidesToScroll": 2,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 480,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ],
+      "slidesToShow": 3,
+      "swipeToSlide": true,
     },
     "ref": null,
     "rendered": Array [
@@ -126,13 +161,13 @@ ShallowWrapper {
         "type": [Function],
       },
     ],
-    "type": "div",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <FilterCard
@@ -171,7 +206,42 @@ ShallowWrapper {
             onClick={[Function]}
 />,
         ],
-        "className": "owl-theme contain row",
+        "className": "contain row",
+        "focusOnSelect": true,
+        "infinite": false,
+        "nextArrow": <NavArrow
+          buttonClass="slick-next"
+          iconClass="fa-angle-right"
+/>,
+        "prevArrow": <NavArrow
+          buttonClass="slick-prev"
+          iconClass="fa-angle-left"
+/>,
+        "responsive": Array [
+          Object {
+            "breakpoint": 900,
+            "settings": Object {
+              "slidesToScroll": 1,
+              "slidesToShow": 2,
+            },
+          },
+          Object {
+            "breakpoint": 600,
+            "settings": Object {
+              "slidesToScroll": 2,
+              "slidesToShow": 2,
+            },
+          },
+          Object {
+            "breakpoint": 480,
+            "settings": Object {
+              "slidesToScroll": 1,
+              "slidesToShow": 1,
+            },
+          },
+        ],
+        "slidesToShow": 3,
+        "swipeToSlide": true,
       },
       "ref": null,
       "rendered": Array [
@@ -229,7 +299,7 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

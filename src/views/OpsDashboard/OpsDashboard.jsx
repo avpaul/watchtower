@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+/**
+ * Class representing Ops Dashboard Page
+ * @class
+ */
 class OpsDashboardMain extends Component {
   constructor(props) {
     super(props);
