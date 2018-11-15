@@ -3,36 +3,70 @@ import PropTypes from 'prop-types';
 import FellowsSummaryChart from '../../components/FellowsSummaryChart';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
 import { FellowsProgressConnected } from './FellowsProgress';
+import DisplayCard from '../../components/Filters/DisplayCard';
 
 /**
  * Class representing Ops Dashboard Page
  * @class
  */
-export class OpsDashboardMain extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      ttls: [],
-      lfs: [],
-      show: true,
-      displayManagers: 'LF',
-      managerFellowSortRatio: 'HIGH_TO_LOW'
-    };
-  }
+export class OpsDashboardMain extends Component {
+  state = {
+    ttls: [],
+    lfs: [],
+    show: false,
+    displayManagers: 'LF',
+    averageFellowsPerLf: '0',
+    averageFellowsPerTtl: '0',
+    managerFellowSortRatio: 'HIGH_TO_LOW'
+  };
 
   componentDidMount() {
-    const { getManagers, ttls, lfs } = this.props;
+    const {
+      getManagers,
+      ttls,
+      lfs,
+      averageFellowsPerLf,
+      averageFellowsPerTtl
+    } = this.props;
 
     // checks store for ttl/lfs before API call
-    if (ttls[0]) this.setState({ lfs, ttls });
+    if (ttls[0])
+      this.setState({ lfs, ttls, averageFellowsPerLf, averageFellowsPerTtl });
     else
       getManagers().then(data => {
         if (!data.error) {
-          this.setState({ lfs: data.managers.lfs, ttls: data.managers.ttls });
+          this.setState({
+            lfs: data.managers.lfs,
+            ttls: data.managers.ttls,
+            averageFellowsPerLf: data.managers.averageFellowsPerLf,
+            averageFellowsPerTtl: data.managers.averageFellowsPerTtl
+          });
         }
       });
   }
+
+  mapDisplayContent = () => {
+    const { averageFellowsPerLf, averageFellowsPerTtl } = this.state;
+    return [
+      {
+        title: 'LF to FELLOW Map',
+        text: 'Average TTL to Fellow ratio',
+        averageValue: averageFellowsPerLf
+      },
+      {
+        title: 'TTL to FELLOW Map',
+        text: 'Average LF to Fellow ratio',
+        averageValue: averageFellowsPerTtl
+      }
+    ];
+  };
+
+  fellowMapOnClick = event => {
+    if (event.currentTarget.id === '0')
+      this.setState({ displayManagers: 'LF', show: true });
+    else this.setState(this.setState({ displayManagers: 'TTL', show: true }));
+  };
 
   onSelectManagerFellowRatio = event => {
     this.setState({ managerFellowSortRatio: event.target.value });
@@ -43,20 +77,19 @@ export class OpsDashboardMain extends Component {
   };
 
   render() {
-    const {
-      lfs,
-      ttls,
-      displayManagers,
-      show,
-      managerFellowSortRatio
-    } = this.state;
+    const { lfs, ttls, displayManagers, show, managerFellowSortRatio } = this.state;
     const [managers, style] =
       displayManagers === 'TTL'
-        ? [ttls, { '--arrow-left-margin-style': '25%' }]
+        ? [ttls, { '--arrow-left-margin-style': '40%' }]
         : [lfs, { '--arrow-left-margin-style': '8%' }];
     return (
       <div className="container">
         <FellowsSummaryChart />
+        <div className="row">
+          {this.mapDisplayContent().map((displayContent, index) => (
+            <DisplayCard id={index} onClick={this.fellowMapOnClick} displayContent={displayContent} />
+          ))}
+        </div>
         {show && (
           <ManagerFellowMap
             arrowStyle={style}
@@ -80,12 +113,7 @@ const managerPropTypes = {
   roleId: PropTypes.number.isRequired,
   staffId: PropTypes.string.isRequired,
   fellows: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      firstName: PropTypes.string.isRequired,
-      lastName: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired
-    })
+    PropTypes.objectOf(PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]))
   )
 };
 
@@ -104,6 +132,8 @@ OpsDashboardMain.propTypes = {
       })
     )
   ).isRequired,
+  averageFellowsPerTtl: PropTypes.number.isRequired,
+  averageFellowsPerLf: PropTypes.number.isRequired,
   getManagers: PropTypes.func.isRequired
 };
 

@@ -96,4 +96,18 @@ describe('OpsDashboard component', () => {
     wrapper.instance().componentDidMount();
     expect(spyResolve.called).toBe(true);
   });
+
+  it('should change map to display base on the map card clicked', () => {
+    const { wrapper } = setup();
+    wrapper
+      .find('DisplayCard')
+      .first()
+      .simulate('click', { currentTarget: { id: '0' } });
+    expect(wrapper.state('displayManagers')).toBe('LF');
+    wrapper
+      .find('DisplayCard')
+      .first()
+      .simulate('click', { currentTarget: { id: '1' } });
+    expect(wrapper.state('displayManagers')).toBe('TTL');
+  });
 });

@@ -169,3 +169,25 @@
     font-size: 1.6em;
   }
 }
+@media screen and (max-width: 425px) {
+  .map-card-wrapper {
+    margin: 0 auto;
+  }
+}
+.map-card-wrapper h5 {
+  color: #0459e4;
+  font-weight: bolder;
+  margin-top: 40px;
+  margin-left: 10px;
+  line-height: 23px;
+}
+.map-card {
+  margin: 5px 10px 10px 10px;
+  outline: none;
+}
+.map-card .number {
+  padding: 0 2rem 1.375rem 0;
+  border: none;
+  width: 100%;
+  margin: 0;
+}

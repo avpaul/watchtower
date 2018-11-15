@@ -411,197 +411,33 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(FellowsSummaryChart) />,
-        <ManagerFellowMap
-          arrowStyle={
-                    Object {
-                              "--arrow-left-margin-style": "8%",
-                            }
-          }
-          handleMapClose={[Function]}
-          managers={
-                    Array [
+        <div
+          className="row"
+>
+          <DisplayCard
+                    displayContent={
                               Object {
-                                "createdAt": "2018-11-13 07:46:48",
-                                "fellows": Array [
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Pearl.Lopez@andela.com",
-                                    "firstName": "Pearl",
-                                    "id": "AND/F/001",
-                                    "lastName": "Lopez",
-                                    "managerId": "LOS/TTL/1010",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Jesus.Rowe@andela.com",
-                                    "firstName": "Jesus",
-                                    "id": "AND/F/002",
-                                    "lastName": "Rowe",
-                                    "managerId": "LOS/TTL/1010",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Sadie.Tucker@andela.com",
-                                    "firstName": "Sadie",
-                                    "id": "AND/F/003",
-                                    "lastName": "Tucker",
-                                    "managerId": "LOS/TTL/1010",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Stella.Perez@andela.com",
-                                    "firstName": "Stella",
-                                    "id": "AND/F/004",
-                                    "lastName": "Perez",
-                                    "managerId": "LOS/TTL/1010",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Addie.Meyer@andela.com",
-                                    "firstName": "Addie",
-                                    "id": "AND/F/005",
-                                    "lastName": "Meyer",
-                                    "managerId": "LOS/TTL/1010",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                ],
-                                "firstName": "Abel",
-                                "id": "3",
-                                "lastName": "Nunez",
-                                "staffId": "LOS/TTL/1010",
-                                "updatedAt": "2018-11-13 07:46:48",
-                              },
+                                        "averageValue": undefined,
+                                        "text": "Average TTL to Fellow ratio",
+                                        "title": "LF to FELLOW Map",
+                                      }
+                    }
+                    id={0}
+                    onClick={[Function]}
+          />
+          <DisplayCard
+                    displayContent={
                               Object {
-                                "createdAt": "2018-11-13 07:46:48",
-                                "fellows": Array [
-                                  Object {
-                                    "communication": 0.4,
-                                    "firstName": "Warren",
-                                    "id": "AND/F/006",
-                                    "initiative": 1,
-                                    "integration": 0,
-                                    "lastName": "Wilkerson",
-                                    "level": "D0A Simulations",
-                                    "professionalism": 0,
-                                    "quality": 0,
-                                    "quantity": 0,
-                                  },
-                                  Object {
-                                    "communication": 0.9,
-                                    "firstName": "Leon",
-                                    "id": "AND/F/007",
-                                    "initiative": 1,
-                                    "integration": 1,
-                                    "lastName": "Clayton",
-                                    "level": "D0A Simulations",
-                                    "professionalism": 0,
-                                    "quality": 0,
-                                    "quantity": 1,
-                                  },
-                                  Object {
-                                    "communication": 0.4,
-                                    "firstName": "Sue",
-                                    "id": "AND/F/008",
-                                    "initiative": 0.3,
-                                    "integration": 0,
-                                    "lastName": "Buchanan",
-                                    "level": "D0A Simulations",
-                                    "professionalism": 1,
-                                    "quality": 1,
-                                    "quantity": 1,
-                                  },
-                                  Object {
-                                    "communication": 1,
-                                    "firstName": "Bernard",
-                                    "id": "AND/F/009",
-                                    "initiative": 0.4,
-                                    "integration": 1,
-                                    "lastName": "McKenzie",
-                                    "level": "D0A Simulations",
-                                    "professionalism": 0,
-                                    "quality": 0,
-                                    "quantity": 0.4,
-                                  },
-                                ],
-                                "firstName": "Lela",
-                                "id": "4",
-                                "lastName": "McBride",
-                                "staffId": "LOS/TTL/1009",
-                                "updatedAt": "2018-11-13 07:46:48",
-                              },
-                              Object {
-                                "createdAt": "2018-11-13 07:46:48",
-                                "fellows": Array [
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Erik.Wood@andela.com",
-                                    "firstName": "Erik",
-                                    "id": "AND/F/010",
-                                    "lastName": "Wood",
-                                    "managerId": "LOS/TTL/1008",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Julia.Tyler@andela.com",
-                                    "firstName": "Julia",
-                                    "id": "AND/F/011",
-                                    "lastName": "Tyler",
-                                    "managerId": "LOS/TTL/1008",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Luella.Santiago@andela.com",
-                                    "firstName": "Luella",
-                                    "id": "AND/F/012",
-                                    "lastName": "Santiago",
-                                    "managerId": "LOS/TTL/1008",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Katherine.Ramsey@andela.com",
-                                    "firstName": "Katherine",
-                                    "id": "AND/F/013",
-                                    "lastName": "Ramsey",
-                                    "managerId": "LOS/TTL/1008",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Jenny.Howard@andela.com",
-                                    "firstName": "Jenny",
-                                    "id": "AND/F/014",
-                                    "lastName": "Howard",
-                                    "managerId": "LOS/TTL/1008",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                  Object {
-                                    "createdAt": "2018-11-13 07:48:51",
-                                    "email": "Mabelle.Hale@andela.com",
-                                    "firstName": "Mabelle",
-                                    "id": "AND/F/015",
-                                    "lastName": "Hale",
-                                    "managerId": "LOS/TTL/1008",
-                                    "updatedAt": "2018-11-13 07:48:51",
-                                  },
-                                ],
-                                "firstName": "Daniel",
-                                "id": "5",
-                                "lastName": "Craig",
-                                "staffId": "LOS/TTL/1008",
-                                "updatedAt": "2018-11-13 07:46:48",
-                              },
-                            ]
-          }
-          onSortManagers={[Function]}
-          sortRatio="HIGH_TO_LOW"
-/>,
+                                        "averageValue": undefined,
+                                        "text": "Average LF to Fellow ratio",
+                                        "title": "TTL to FELLOW Map",
+                                      }
+                    }
+                    id={1}
+                    onClick={[Function]}
+          />
+</div>,
+        false,
         <Connect(FellowsProgress) />,
       ],
       "className": "container",
@@ -620,198 +456,74 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "arrowStyle": Object {
-            "--arrow-left-margin-style": "8%",
-          },
-          "handleMapClose": [Function],
-          "managers": Array [
-            Object {
-              "createdAt": "2018-11-13 07:46:48",
-              "fellows": Array [
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Pearl.Lopez@andela.com",
-                  "firstName": "Pearl",
-                  "id": "AND/F/001",
-                  "lastName": "Lopez",
-                  "managerId": "LOS/TTL/1010",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Jesus.Rowe@andela.com",
-                  "firstName": "Jesus",
-                  "id": "AND/F/002",
-                  "lastName": "Rowe",
-                  "managerId": "LOS/TTL/1010",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Sadie.Tucker@andela.com",
-                  "firstName": "Sadie",
-                  "id": "AND/F/003",
-                  "lastName": "Tucker",
-                  "managerId": "LOS/TTL/1010",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Stella.Perez@andela.com",
-                  "firstName": "Stella",
-                  "id": "AND/F/004",
-                  "lastName": "Perez",
-                  "managerId": "LOS/TTL/1010",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Addie.Meyer@andela.com",
-                  "firstName": "Addie",
-                  "id": "AND/F/005",
-                  "lastName": "Meyer",
-                  "managerId": "LOS/TTL/1010",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-              ],
-              "firstName": "Abel",
-              "id": "3",
-              "lastName": "Nunez",
-              "staffId": "LOS/TTL/1010",
-              "updatedAt": "2018-11-13 07:46:48",
-            },
-            Object {
-              "createdAt": "2018-11-13 07:46:48",
-              "fellows": Array [
-                Object {
-                  "communication": 0.4,
-                  "firstName": "Warren",
-                  "id": "AND/F/006",
-                  "initiative": 1,
-                  "integration": 0,
-                  "lastName": "Wilkerson",
-                  "level": "D0A Simulations",
-                  "professionalism": 0,
-                  "quality": 0,
-                  "quantity": 0,
-                },
-                Object {
-                  "communication": 0.9,
-                  "firstName": "Leon",
-                  "id": "AND/F/007",
-                  "initiative": 1,
-                  "integration": 1,
-                  "lastName": "Clayton",
-                  "level": "D0A Simulations",
-                  "professionalism": 0,
-                  "quality": 0,
-                  "quantity": 1,
-                },
-                Object {
-                  "communication": 0.4,
-                  "firstName": "Sue",
-                  "id": "AND/F/008",
-                  "initiative": 0.3,
-                  "integration": 0,
-                  "lastName": "Buchanan",
-                  "level": "D0A Simulations",
-                  "professionalism": 1,
-                  "quality": 1,
-                  "quantity": 1,
-                },
-                Object {
-                  "communication": 1,
-                  "firstName": "Bernard",
-                  "id": "AND/F/009",
-                  "initiative": 0.4,
-                  "integration": 1,
-                  "lastName": "McKenzie",
-                  "level": "D0A Simulations",
-                  "professionalism": 0,
-                  "quality": 0,
-                  "quantity": 0.4,
-                },
-              ],
-              "firstName": "Lela",
-              "id": "4",
-              "lastName": "McBride",
-              "staffId": "LOS/TTL/1009",
-              "updatedAt": "2018-11-13 07:46:48",
-            },
-            Object {
-              "createdAt": "2018-11-13 07:46:48",
-              "fellows": Array [
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Erik.Wood@andela.com",
-                  "firstName": "Erik",
-                  "id": "AND/F/010",
-                  "lastName": "Wood",
-                  "managerId": "LOS/TTL/1008",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Julia.Tyler@andela.com",
-                  "firstName": "Julia",
-                  "id": "AND/F/011",
-                  "lastName": "Tyler",
-                  "managerId": "LOS/TTL/1008",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Luella.Santiago@andela.com",
-                  "firstName": "Luella",
-                  "id": "AND/F/012",
-                  "lastName": "Santiago",
-                  "managerId": "LOS/TTL/1008",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Katherine.Ramsey@andela.com",
-                  "firstName": "Katherine",
-                  "id": "AND/F/013",
-                  "lastName": "Ramsey",
-                  "managerId": "LOS/TTL/1008",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Jenny.Howard@andela.com",
-                  "firstName": "Jenny",
-                  "id": "AND/F/014",
-                  "lastName": "Howard",
-                  "managerId": "LOS/TTL/1008",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-                Object {
-                  "createdAt": "2018-11-13 07:48:51",
-                  "email": "Mabelle.Hale@andela.com",
-                  "firstName": "Mabelle",
-                  "id": "AND/F/015",
-                  "lastName": "Hale",
-                  "managerId": "LOS/TTL/1008",
-                  "updatedAt": "2018-11-13 07:48:51",
-                },
-              ],
-              "firstName": "Daniel",
-              "id": "5",
-              "lastName": "Craig",
-              "staffId": "LOS/TTL/1008",
-              "updatedAt": "2018-11-13 07:46:48",
-            },
+          "children": Array [
+            <DisplayCard
+              displayContent={
+                            Object {
+                                          "averageValue": undefined,
+                                          "text": "Average TTL to Fellow ratio",
+                                          "title": "LF to FELLOW Map",
+                                        }
+              }
+              id={0}
+              onClick={[Function]}
+/>,
+            <DisplayCard
+              displayContent={
+                            Object {
+                                          "averageValue": undefined,
+                                          "text": "Average LF to Fellow ratio",
+                                          "title": "TTL to FELLOW Map",
+                                        }
+              }
+              id={1}
+              onClick={[Function]}
+/>,
           ],
-          "onSortManagers": [Function],
-          "sortRatio": "HIGH_TO_LOW",
+          "className": "row",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "displayContent": Object {
+                "averageValue": undefined,
+                "text": "Average TTL to Fellow ratio",
+                "title": "LF to FELLOW Map",
+              },
+              "id": 0,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "displayContent": Object {
+                "averageValue": undefined,
+                "text": "Average LF to Fellow ratio",
+                "title": "TTL to FELLOW Map",
+              },
+              "id": 1,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -832,197 +544,33 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(FellowsSummaryChart) />,
-          <ManagerFellowMap
-            arrowStyle={
-                        Object {
-                                    "--arrow-left-margin-style": "8%",
-                                  }
-            }
-            handleMapClose={[Function]}
-            managers={
-                        Array [
+          <div
+            className="row"
+>
+            <DisplayCard
+                        displayContent={
                                     Object {
-                                      "createdAt": "2018-11-13 07:46:48",
-                                      "fellows": Array [
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Pearl.Lopez@andela.com",
-                                          "firstName": "Pearl",
-                                          "id": "AND/F/001",
-                                          "lastName": "Lopez",
-                                          "managerId": "LOS/TTL/1010",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Jesus.Rowe@andela.com",
-                                          "firstName": "Jesus",
-                                          "id": "AND/F/002",
-                                          "lastName": "Rowe",
-                                          "managerId": "LOS/TTL/1010",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Sadie.Tucker@andela.com",
-                                          "firstName": "Sadie",
-                                          "id": "AND/F/003",
-                                          "lastName": "Tucker",
-                                          "managerId": "LOS/TTL/1010",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Stella.Perez@andela.com",
-                                          "firstName": "Stella",
-                                          "id": "AND/F/004",
-                                          "lastName": "Perez",
-                                          "managerId": "LOS/TTL/1010",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Addie.Meyer@andela.com",
-                                          "firstName": "Addie",
-                                          "id": "AND/F/005",
-                                          "lastName": "Meyer",
-                                          "managerId": "LOS/TTL/1010",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                      ],
-                                      "firstName": "Abel",
-                                      "id": "3",
-                                      "lastName": "Nunez",
-                                      "staffId": "LOS/TTL/1010",
-                                      "updatedAt": "2018-11-13 07:46:48",
-                                    },
+                                                "averageValue": undefined,
+                                                "text": "Average TTL to Fellow ratio",
+                                                "title": "LF to FELLOW Map",
+                                              }
+                        }
+                        id={0}
+                        onClick={[Function]}
+            />
+            <DisplayCard
+                        displayContent={
                                     Object {
-                                      "createdAt": "2018-11-13 07:46:48",
-                                      "fellows": Array [
-                                        Object {
-                                          "communication": 0.4,
-                                          "firstName": "Warren",
-                                          "id": "AND/F/006",
-                                          "initiative": 1,
-                                          "integration": 0,
-                                          "lastName": "Wilkerson",
-                                          "level": "D0A Simulations",
-                                          "professionalism": 0,
-                                          "quality": 0,
-                                          "quantity": 0,
-                                        },
-                                        Object {
-                                          "communication": 0.9,
-                                          "firstName": "Leon",
-                                          "id": "AND/F/007",
-                                          "initiative": 1,
-                                          "integration": 1,
-                                          "lastName": "Clayton",
-                                          "level": "D0A Simulations",
-                                          "professionalism": 0,
-                                          "quality": 0,
-                                          "quantity": 1,
-                                        },
-                                        Object {
-                                          "communication": 0.4,
-                                          "firstName": "Sue",
-                                          "id": "AND/F/008",
-                                          "initiative": 0.3,
-                                          "integration": 0,
-                                          "lastName": "Buchanan",
-                                          "level": "D0A Simulations",
-                                          "professionalism": 1,
-                                          "quality": 1,
-                                          "quantity": 1,
-                                        },
-                                        Object {
-                                          "communication": 1,
-                                          "firstName": "Bernard",
-                                          "id": "AND/F/009",
-                                          "initiative": 0.4,
-                                          "integration": 1,
-                                          "lastName": "McKenzie",
-                                          "level": "D0A Simulations",
-                                          "professionalism": 0,
-                                          "quality": 0,
-                                          "quantity": 0.4,
-                                        },
-                                      ],
-                                      "firstName": "Lela",
-                                      "id": "4",
-                                      "lastName": "McBride",
-                                      "staffId": "LOS/TTL/1009",
-                                      "updatedAt": "2018-11-13 07:46:48",
-                                    },
-                                    Object {
-                                      "createdAt": "2018-11-13 07:46:48",
-                                      "fellows": Array [
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Erik.Wood@andela.com",
-                                          "firstName": "Erik",
-                                          "id": "AND/F/010",
-                                          "lastName": "Wood",
-                                          "managerId": "LOS/TTL/1008",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Julia.Tyler@andela.com",
-                                          "firstName": "Julia",
-                                          "id": "AND/F/011",
-                                          "lastName": "Tyler",
-                                          "managerId": "LOS/TTL/1008",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Luella.Santiago@andela.com",
-                                          "firstName": "Luella",
-                                          "id": "AND/F/012",
-                                          "lastName": "Santiago",
-                                          "managerId": "LOS/TTL/1008",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Katherine.Ramsey@andela.com",
-                                          "firstName": "Katherine",
-                                          "id": "AND/F/013",
-                                          "lastName": "Ramsey",
-                                          "managerId": "LOS/TTL/1008",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Jenny.Howard@andela.com",
-                                          "firstName": "Jenny",
-                                          "id": "AND/F/014",
-                                          "lastName": "Howard",
-                                          "managerId": "LOS/TTL/1008",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                        Object {
-                                          "createdAt": "2018-11-13 07:48:51",
-                                          "email": "Mabelle.Hale@andela.com",
-                                          "firstName": "Mabelle",
-                                          "id": "AND/F/015",
-                                          "lastName": "Hale",
-                                          "managerId": "LOS/TTL/1008",
-                                          "updatedAt": "2018-11-13 07:48:51",
-                                        },
-                                      ],
-                                      "firstName": "Daniel",
-                                      "id": "5",
-                                      "lastName": "Craig",
-                                      "staffId": "LOS/TTL/1008",
-                                      "updatedAt": "2018-11-13 07:46:48",
-                                    },
-                                  ]
-            }
-            onSortManagers={[Function]}
-            sortRatio="HIGH_TO_LOW"
-/>,
+                                                "averageValue": undefined,
+                                                "text": "Average LF to Fellow ratio",
+                                                "title": "TTL to FELLOW Map",
+                                              }
+                        }
+                        id={1}
+                        onClick={[Function]}
+            />
+</div>,
+          false,
           <Connect(FellowsProgress) />,
         ],
         "className": "container",
@@ -1041,198 +589,74 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "arrowStyle": Object {
-              "--arrow-left-margin-style": "8%",
-            },
-            "handleMapClose": [Function],
-            "managers": Array [
-              Object {
-                "createdAt": "2018-11-13 07:46:48",
-                "fellows": Array [
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Pearl.Lopez@andela.com",
-                    "firstName": "Pearl",
-                    "id": "AND/F/001",
-                    "lastName": "Lopez",
-                    "managerId": "LOS/TTL/1010",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Jesus.Rowe@andela.com",
-                    "firstName": "Jesus",
-                    "id": "AND/F/002",
-                    "lastName": "Rowe",
-                    "managerId": "LOS/TTL/1010",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Sadie.Tucker@andela.com",
-                    "firstName": "Sadie",
-                    "id": "AND/F/003",
-                    "lastName": "Tucker",
-                    "managerId": "LOS/TTL/1010",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Stella.Perez@andela.com",
-                    "firstName": "Stella",
-                    "id": "AND/F/004",
-                    "lastName": "Perez",
-                    "managerId": "LOS/TTL/1010",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Addie.Meyer@andela.com",
-                    "firstName": "Addie",
-                    "id": "AND/F/005",
-                    "lastName": "Meyer",
-                    "managerId": "LOS/TTL/1010",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                ],
-                "firstName": "Abel",
-                "id": "3",
-                "lastName": "Nunez",
-                "staffId": "LOS/TTL/1010",
-                "updatedAt": "2018-11-13 07:46:48",
-              },
-              Object {
-                "createdAt": "2018-11-13 07:46:48",
-                "fellows": Array [
-                  Object {
-                    "communication": 0.4,
-                    "firstName": "Warren",
-                    "id": "AND/F/006",
-                    "initiative": 1,
-                    "integration": 0,
-                    "lastName": "Wilkerson",
-                    "level": "D0A Simulations",
-                    "professionalism": 0,
-                    "quality": 0,
-                    "quantity": 0,
-                  },
-                  Object {
-                    "communication": 0.9,
-                    "firstName": "Leon",
-                    "id": "AND/F/007",
-                    "initiative": 1,
-                    "integration": 1,
-                    "lastName": "Clayton",
-                    "level": "D0A Simulations",
-                    "professionalism": 0,
-                    "quality": 0,
-                    "quantity": 1,
-                  },
-                  Object {
-                    "communication": 0.4,
-                    "firstName": "Sue",
-                    "id": "AND/F/008",
-                    "initiative": 0.3,
-                    "integration": 0,
-                    "lastName": "Buchanan",
-                    "level": "D0A Simulations",
-                    "professionalism": 1,
-                    "quality": 1,
-                    "quantity": 1,
-                  },
-                  Object {
-                    "communication": 1,
-                    "firstName": "Bernard",
-                    "id": "AND/F/009",
-                    "initiative": 0.4,
-                    "integration": 1,
-                    "lastName": "McKenzie",
-                    "level": "D0A Simulations",
-                    "professionalism": 0,
-                    "quality": 0,
-                    "quantity": 0.4,
-                  },
-                ],
-                "firstName": "Lela",
-                "id": "4",
-                "lastName": "McBride",
-                "staffId": "LOS/TTL/1009",
-                "updatedAt": "2018-11-13 07:46:48",
-              },
-              Object {
-                "createdAt": "2018-11-13 07:46:48",
-                "fellows": Array [
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Erik.Wood@andela.com",
-                    "firstName": "Erik",
-                    "id": "AND/F/010",
-                    "lastName": "Wood",
-                    "managerId": "LOS/TTL/1008",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Julia.Tyler@andela.com",
-                    "firstName": "Julia",
-                    "id": "AND/F/011",
-                    "lastName": "Tyler",
-                    "managerId": "LOS/TTL/1008",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Luella.Santiago@andela.com",
-                    "firstName": "Luella",
-                    "id": "AND/F/012",
-                    "lastName": "Santiago",
-                    "managerId": "LOS/TTL/1008",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Katherine.Ramsey@andela.com",
-                    "firstName": "Katherine",
-                    "id": "AND/F/013",
-                    "lastName": "Ramsey",
-                    "managerId": "LOS/TTL/1008",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Jenny.Howard@andela.com",
-                    "firstName": "Jenny",
-                    "id": "AND/F/014",
-                    "lastName": "Howard",
-                    "managerId": "LOS/TTL/1008",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                  Object {
-                    "createdAt": "2018-11-13 07:48:51",
-                    "email": "Mabelle.Hale@andela.com",
-                    "firstName": "Mabelle",
-                    "id": "AND/F/015",
-                    "lastName": "Hale",
-                    "managerId": "LOS/TTL/1008",
-                    "updatedAt": "2018-11-13 07:48:51",
-                  },
-                ],
-                "firstName": "Daniel",
-                "id": "5",
-                "lastName": "Craig",
-                "staffId": "LOS/TTL/1008",
-                "updatedAt": "2018-11-13 07:46:48",
-              },
+            "children": Array [
+              <DisplayCard
+                displayContent={
+                                Object {
+                                                "averageValue": undefined,
+                                                "text": "Average TTL to Fellow ratio",
+                                                "title": "LF to FELLOW Map",
+                                              }
+                }
+                id={0}
+                onClick={[Function]}
+/>,
+              <DisplayCard
+                displayContent={
+                                Object {
+                                                "averageValue": undefined,
+                                                "text": "Average LF to Fellow ratio",
+                                                "title": "TTL to FELLOW Map",
+                                              }
+                }
+                id={1}
+                onClick={[Function]}
+/>,
             ],
-            "onSortManagers": [Function],
-            "sortRatio": "HIGH_TO_LOW",
+            "className": "row",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "displayContent": Object {
+                  "averageValue": undefined,
+                  "text": "Average TTL to Fellow ratio",
+                  "title": "LF to FELLOW Map",
+                },
+                "id": 0,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "displayContent": Object {
+                  "averageValue": undefined,
+                  "text": "Average LF to Fellow ratio",
+                  "title": "TTL to FELLOW Map",
+                },
+                "id": 1,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
+        false,
         Object {
           "instance": null,
           "key": undefined,
