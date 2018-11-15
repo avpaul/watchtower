@@ -21,5 +21,13 @@ export default {
     countSummary: {},
     loading: false,
     error: null
+  },
+  managers: {
+    ttls: [],
+    lfs: [],
+    averageFellowsPerTtl: 0,
+    averageFellowsPerLf: 0,
+    loading: false,
+    error: ''
   }
 };

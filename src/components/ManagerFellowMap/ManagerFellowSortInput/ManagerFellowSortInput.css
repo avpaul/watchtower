@@ -1,0 +1,43 @@
+.sort-managers {
+  margin-top: 40px;
+  margin-left: 1%;
+  position: relative;
+}
+
+.sort-managers__select {
+  padding: 12px;
+  width: 209px;
+  height: 45px;
+  border: none;
+  color: #323c47;
+  font-size: 12px;
+  line-height: 26px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.sort-managers::before {
+  content: '\f078';
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 0.75em;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  text-align: center;
+  line-height: 45px;
+  color: #808fa3;
+  pointer-events: none;
+  height: 45px;
+  width: 45px;
+  border-radius: 0 4px 4px 0;
+  background-color: rgba(211, 238, 255, 0.8);
+  opacity: 100%;
+}
+
+.sort-managers__option {
+  padding: 9px 58px 10px 15px;
+}

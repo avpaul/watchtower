@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
 import MenuLink from './MenuLink';
 
 describe('Menu link Component Test Suite', () => {
@@ -10,7 +10,7 @@ describe('Menu link Component Test Suite', () => {
     path: '#',
     icon: <div className="default-icon" />,
     activeIcon: <div className="active-icon" />,
-    dropdown: ['All Developers', 'Developers under PIP'],
+    dropdown: ['All Developers', 'Developers under PIP']
   };
 
   let wrapper;
@@ -19,7 +19,7 @@ describe('Menu link Component Test Suite', () => {
     const props = {
       link,
       handleMenuClick: jest.fn(),
-      isActive: true,
+      isActive: true
     };
     wrapper = shallow(<MenuLink {...props} />);
   });
@@ -32,7 +32,7 @@ describe('Menu link Component Test Suite', () => {
     const props = {
       link,
       handleMenuClick: jest.fn(),
-      isActive: true,
+      isActive: true
     };
     wrapper = shallow(<MenuLink {...props} isActive />);
     expect(wrapper).toBeDefined();
@@ -43,7 +43,7 @@ describe('Menu link Component Test Suite', () => {
       link,
       handleMenuClick: jest.fn(),
       isActive: true,
-      role: 'WATCH_TOWER_TTL',
+      role: 'WATCH_TOWER_TTL'
     };
     wrapper = shallow(<MenuLink {...props} isActive />);
     expect(wrapper).toBeDefined();
@@ -54,7 +54,7 @@ describe('Menu link Component Test Suite', () => {
       link,
       handleMenuClick: jest.fn(),
       isActive: true,
-      role: 'WATCH_TOWER_LF',
+      role: 'WATCH_TOWER_LF'
     };
     wrapper = shallow(<MenuLink {...props} isActive />);
     expect(wrapper).toBeDefined();
@@ -65,9 +65,24 @@ describe('Menu link Component Test Suite', () => {
       link,
       handleMenuClick: jest.fn(),
       isActive: true,
-      role: 'Fellow',
+      role: 'Fellow'
     };
     wrapper = shallow(<MenuLink {...props} isActive />);
+    expect(wrapper).toBeDefined();
+  });
+
+  it('returns null with bad role', () => {
+    const props = {
+      link: '',
+      handleMenuClick: jest.fn(),
+      isActive: false,
+      role: 'bad_role'
+    };
+    wrapper = mount(
+      <MemoryRouter>
+        <MenuLink {...props} />
+      </MemoryRouter>
+    );
     expect(wrapper).toBeDefined();
   });
 });

@@ -44,6 +44,7 @@
     "redux-burger-menu": "^0.2.8",
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0",
+    "sinon": "^7.1.1",
     "source-map-explorer": "^1.6.0"
   },
   "scripts": {

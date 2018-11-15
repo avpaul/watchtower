@@ -37,7 +37,7 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', WATCH_TOWER_OPS: 'key' },
       },
-      role: 'Technology',
+      role: 'WATCH_TOWER_OPS',
     });
 
     const item = shallow(

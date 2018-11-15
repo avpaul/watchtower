@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import DashboardPage from '../DashboardPage';
 import Header from '../../components/Header';
-import OpsDashboardMain from './OpsDashboard';
+import OpsDashboardContainer from './OpsDashboardContainer';
 
 /**
  * Defines routes for the opsdashboard
@@ -16,7 +16,7 @@ const OpsDashboard = props => (
         <Route
           exact
           path="/dashboard"
-          component={() => <OpsDashboardMain {...props} />}
+          component={() => <OpsDashboardContainer {...props} />}
         />
         <Route
           exact

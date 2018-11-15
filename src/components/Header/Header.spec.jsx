@@ -7,9 +7,9 @@ describe('Header Component Test Suite', () => {
   beforeAll(() => {
     const user = {
       name: 'Test User',
-      picture: 'http://',
+      picture: 'http://'
     };
-    const role = 'Technology';
+    const role = 'WATCH_TOWER_OPS';
     wrapper = shallow(<Header user={user} role={role} />);
   });
 
@@ -27,18 +27,21 @@ describe('Header Component Test Suite', () => {
     wrapper.setState({
       activeItems: {
         fellows: true,
-        settings: false,
-      },
+        settings: false
+      }
     });
     const event = {
       preventDefault: jest.fn(),
       target: {
         dataset: {
-          linkKey: 'settings',
-        },
-      },
+          linkKey: 'settings'
+        }
+      }
     };
-    const handleMenuClickSpy = jest.spyOn(wrapper.instance(), 'handleMenuClick');
+    const handleMenuClickSpy = jest.spyOn(
+      wrapper.instance(),
+      'handleMenuClick'
+    );
     wrapper.instance().handleMenuClick(event);
     expect(handleMenuClickSpy).toHaveBeenCalled();
     expect(wrapper.state('activeItems').settings).toEqual(true);
@@ -49,18 +52,21 @@ describe('Header Component Test Suite', () => {
     wrapper.setState({
       activeItems: {
         fellows: true,
-        settings: false,
-      },
+        settings: false
+      }
     });
     const event = {
       preventDefault: jest.fn(),
       target: {
         dataset: {
-          linkKey: 'fellows',
-        },
-      },
+          linkKey: 'fellows'
+        }
+      }
     };
-    const handleMenuClickSpy = jest.spyOn(wrapper.instance(), 'handleMenuClick');
+    const handleMenuClickSpy = jest.spyOn(
+      wrapper.instance(),
+      'handleMenuClick'
+    );
     wrapper.instance().handleMenuClick(event);
     expect(handleMenuClickSpy).toHaveBeenCalled();
     expect(wrapper.state('activeItems').settings).toEqual(false);
@@ -76,6 +82,12 @@ describe('Header Component Test Suite', () => {
   it('calls hide modal', () => {
     const mounted = jest.spyOn(wrapper.instance(), 'hideModal');
     wrapper.instance().hideModal();
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('calls show modal', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'showModal');
+    wrapper.instance().showModal();
     expect(mounted).toHaveBeenCalled();
   });
 });

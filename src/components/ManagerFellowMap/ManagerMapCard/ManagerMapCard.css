@@ -1,0 +1,41 @@
+.manager_card {
+  /* margin-right: 30px; */
+  width: 290px;
+  margin-top: 30px;
+  height: 336px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.manager_card > .card-header {
+  background-color: inherit;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05) !important;
+  border-bottom: none;
+}
+
+.manager_card__fellows--number {
+  font-weight: 300;
+  color: #303030;
+}
+
+.manager_card > ul.list-group {
+  max-height: 275px;
+  overflow: scroll;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.03) !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.manager_card .list-group-item {
+  font-weight: 300;
+  color: #303030;
+  line-height: 23px;
+}
+
+.manager_card .list-group-item {
+  border: none !important;
+}
+
+.manager_card__name {
+  color: #0459e4 !important;
+  font-weight: 500;
+}
