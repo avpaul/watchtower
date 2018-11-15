@@ -602,8 +602,9 @@ ShallowWrapper {
           onSortManagers={[Function]}
           sortRatio="HIGH_TO_LOW"
 />,
+        <Connect(FellowsProgress) />,
       ],
-      "className": "container-fluid",
+      "className": "container",
     },
     "ref": null,
     "rendered": Array [
@@ -811,6 +812,15 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -1013,8 +1023,9 @@ ShallowWrapper {
             onSortManagers={[Function]}
             sortRatio="HIGH_TO_LOW"
 />,
+          <Connect(FellowsProgress) />,
         ],
-        "className": "container-fluid",
+        "className": "container",
       },
       "ref": null,
       "rendered": Array [
@@ -1218,6 +1229,15 @@ ShallowWrapper {
             "onSortManagers": [Function],
             "sortRatio": "HIGH_TO_LOW",
           },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],

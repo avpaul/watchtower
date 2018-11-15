@@ -20,6 +20,21 @@ export default {
   fellowCountHistory: {
     countSummary: {},
     loading: false,
+  },
+  fellowsProgress: {
+    loading: false,
+    fellowsProgressD0A: [],
+    fellowsProgressD0B: [],
+    error: null
+  },
+  ttls: {
+    loading: false,
+    ttls: [],
+    error: null
+  },
+  locations: {
+    loading: false,
+    locations: [],
     error: null
   },
   managers: {

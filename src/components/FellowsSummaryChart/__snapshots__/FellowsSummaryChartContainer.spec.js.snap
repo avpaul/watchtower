@@ -4,7 +4,6 @@ exports[`should map state to props 1`] = `
 Object {
   "fellowCountHistory": Object {
     "countSummary": Object {},
-    "error": null,
     "loading": false,
   },
 }

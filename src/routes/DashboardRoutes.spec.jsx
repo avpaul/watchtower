@@ -11,12 +11,10 @@ describe('<Dashboards />', () => {
     const props = {
       user: {
         name: 'Test User',
-        roles: { Andelan: 'jey' },
-      },
+        roles: { Andelan: 'jey' }
+      }
     };
-    const item = shallow(
-      <Dashboards {...props} />,
-    );
+    const item = shallow(<Dashboards {...props} />);
     expect(item.contains(<NotFoundPage />)).toEqual(true);
   });
 
@@ -27,7 +25,7 @@ describe('<Dashboards />', () => {
       fellows,
       pagination: {
         page: 1,
-        perPage: 10,
+        perPage: 10
       },
       loading: false,
       getFellows: () => {},
@@ -35,17 +33,15 @@ describe('<Dashboards />', () => {
       user: {
         name: 'Test User',
         picture: 'http://',
-        roles: { Andelan: 'key', WATCH_TOWER_OPS: 'key' },
+        roles: { Andelan: 'key', WATCH_TOWER_OPS: 'key' }
       },
-      role: 'WATCH_TOWER_OPS',
+      role: 'WATCH_TOWER_OPS'
     });
 
-    const item = shallow(
-      <Dashboards {...store.getState()} store={store} />,
-    );
+    const item = shallow(<Dashboards {...store.getState()} store={store} />);
     expect(item.name()).toEqual('OpsDashboard');
   });
-  
+
   it('should render appropriate dashboards', () => {
     const mockStore = configureStore();
     const store = mockStore({
@@ -53,7 +49,7 @@ describe('<Dashboards />', () => {
       fellows,
       pagination: {
         page: 1,
-        perPage: 10,
+        perPage: 10
       },
       loading: false,
       getFellows: () => {},
@@ -61,14 +57,12 @@ describe('<Dashboards />', () => {
       user: {
         name: 'Test User',
         picture: 'http://',
-        roles: { Andelan: 'key', Fellow: 'key' },
+        roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow',
+      role: 'Fellow'
     });
 
-    const item = shallow(
-      <Dashboards {...store.getState()} store={store} />,
-    );
+    const item = shallow(<Dashboards {...store.getState()} store={store} />);
     expect(item.name()).toEqual('FellowDashboardPage');
   });
 });

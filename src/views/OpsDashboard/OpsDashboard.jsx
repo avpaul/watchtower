@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FellowsSummaryChart from '../../components/FellowsSummaryChart';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
+import { FellowsProgressConnected } from './FellowsProgress';
 
 /**
  * Class representing Ops Dashboard Page
@@ -54,7 +55,7 @@ export class OpsDashboardMain extends Component {
         ? [ttls, { '--arrow-left-margin-style': '25%' }]
         : [lfs, { '--arrow-left-margin-style': '8%' }];
     return (
-      <div className="container-fluid">
+      <div className="container">
         <FellowsSummaryChart />
         {show && (
           <ManagerFellowMap
@@ -65,6 +66,7 @@ export class OpsDashboardMain extends Component {
             managers={managers}
           />
         )}
+        <FellowsProgressConnected />
       </div>
     );
   }

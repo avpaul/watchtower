@@ -14,7 +14,7 @@ ShallowWrapper {
             },
             Object {
               "Off Track": 12,
-              "On Track": 20,
+              "On Track": 19,
               "PIP": 2,
               "name": "Week 2",
             },
@@ -125,7 +125,7 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "Off Track": 12,
-                                          "On Track": 20,
+                                          "On Track": 19,
                                           "PIP": 2,
                                           "name": "Week 2",
                                         },
@@ -461,7 +461,7 @@ ShallowWrapper {
                                     },
                                     Object {
                                       "Off Track": 12,
-                                      "On Track": 20,
+                                      "On Track": 19,
                                       "PIP": 2,
                                       "name": "Week 2",
                                     },
@@ -960,7 +960,7 @@ ShallowWrapper {
               },
               Object {
                 "Off Track": 12,
-                "On Track": 20,
+                "On Track": 19,
                 "PIP": 2,
                 "name": "Week 2",
               },
@@ -1349,7 +1349,7 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "Off Track": 12,
-                                                  "On Track": 20,
+                                                  "On Track": 19,
                                                   "PIP": 2,
                                                   "name": "Week 2",
                                                 },
@@ -1685,7 +1685,7 @@ ShallowWrapper {
                                           },
                                           Object {
                                             "Off Track": 12,
-                                            "On Track": 20,
+                                            "On Track": 19,
                                             "PIP": 2,
                                             "name": "Week 2",
                                           },
@@ -2184,7 +2184,7 @@ ShallowWrapper {
                 },
                 Object {
                   "Off Track": 12,
-                  "On Track": 20,
+                  "On Track": 19,
                   "PIP": 2,
                   "name": "Week 2",
                 },

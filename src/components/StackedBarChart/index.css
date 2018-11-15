@@ -1,0 +1,45 @@
+.chart_card {
+  font-weight: 500;
+  padding: 14px 0px 0px 0px;
+  margin: 22px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.chart_card__header {
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+
+.chart_card__title {
+  padding: 0px 0px 0px 62px;
+}
+
+.chart_loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3359db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  opacity: 1 !important;
+  z-index: 100000;
+  margin-top: 10vh;
+  margin-left: 30vw;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.chart_card__loading {
+  opacity: 0.3;
+}

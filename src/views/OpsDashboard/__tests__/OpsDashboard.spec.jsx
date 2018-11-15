@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import { MemoryRouter } from 'react-router';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
 import fellowManagers from '../../../__mocks__/fellowManagers';
-import OpsDashboard from '..';
+
 import { OpsDashboardMain } from '../OpsDashboard';
+import OpsDashboard from '..';
 
 describe('OpsDashboard component', () => {
   let wrapper;
@@ -36,7 +36,9 @@ describe('OpsDashboard component', () => {
 describe('OpsDashboard component', () => {
   const setup = () => {
     const spyResolve = sinon.spy(() =>
-      Promise.resolve({ data: { error: false } })
+      Promise.resolve({
+        data: { error: false, managers: { lfs: [], ttls: [] } }
+      })
     );
     const props = {
       ttls: fellowManagers.ttls,
