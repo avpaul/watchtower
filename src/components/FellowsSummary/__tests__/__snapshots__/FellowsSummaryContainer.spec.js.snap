@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FellowsSummaryContainer should map state to props 1`] = `
+Object {
+  "fellowsSummary": Array [
+    Object {
+      "id": "allFellowsCount",
+      "title": "Total D0 fellows",
+      "totalFellows": 0,
+    },
+    Object {
+      "id": "D0AFellowsCount",
+      "title": "Total D0A fellows",
+      "totalFellows": 0,
+    },
+    Object {
+      "id": "D0BFellowsCount",
+      "title": "Total D0B fellows",
+      "totalFellows": 0,
+    },
+  ],
+}
+`;

@@ -9,7 +9,8 @@ const props = {
   managers: fellowManagers.lfs,
   onSortManagers: jest.fn(),
   sortRatio: 'HIGH_TO_LOW',
-  arrowStyle: { '--arrow-left-margin-style': '30%' }
+  arrowStyle: { '--arrow-left-margin-style': '30%' },
+  handleMapClose: jest.fn()
 };
 
 it('renders without crashing', () => {

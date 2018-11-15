@@ -8,7 +8,10 @@ const ManagerMapCard = ({ manager }) => (
       <span className="manager_card__name">
         {manager.firstName} {manager.lastName}
       </span>
-      <span className="manager_card__fellows--number float-right"> {manager.fellows.length} fellows</span>
+      <span className="manager_card__fellows--number float-right">
+        {' '}
+        {manager.fellows.length} fellows
+      </span>
     </div>
     <ul className="list-group list-group-flush">
       {manager.fellows.map(fellow => (
@@ -22,7 +25,7 @@ const ManagerMapCard = ({ manager }) => (
 
 ManagerMapCard.propTypes = {
   manager: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     fellows: PropTypes.arrayOf(PropTypes.object).isRequired

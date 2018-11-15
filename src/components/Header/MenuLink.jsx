@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 /**
@@ -9,9 +9,7 @@ import PropTypes from 'prop-types';
  *
  * @returns {JSX} React JSX
  */
-const MenuLink = ({
-  link, handleMenuClick, isActive, role,
-}) => {
+const MenuLink = ({ link, handleMenuClick, isActive, role }) => {
   let active = '';
   // if the link state is active, change icon
   let iconImg = link.icon;
@@ -21,7 +19,7 @@ const MenuLink = ({
   }
 
   function renderHeader() {
-    const path = link.path ? link.path: ''; 
+    const path = link.path ? link.path : '';
     return (
       <Link
         className={`navlink ${active}`}
@@ -32,8 +30,12 @@ const MenuLink = ({
         onKeyPress={handleMenuClick}
         tabIndex="0"
       >
-       <span className="navicon">
-          <img className={`${link.key}__icon`} src={iconImg} alt={`${link.key}Icon`} />
+        <span className="navicon">
+          <img
+            className={`${link.key}__icon`}
+            src={iconImg}
+            alt={`${link.key}Icon`}
+          />
         </span>
         {link.name}
       </Link>
@@ -41,33 +43,35 @@ const MenuLink = ({
   }
 
   if (role === 'Fellow') {
-    return (
-      <div className="menulink">
-        {(renderHeader())}
-      </div>
-    );
+    return <div className="menulink">{renderHeader()}</div>;
   }
 
-
-  if (role === 'WATCH_TOWER_OPS' || 'WATCH_TOWER_EM' || 'WATCH_TOWER_TTL' || 'WATCH_TOWER_LF') {
+  if (
+    role === 'WATCH_TOWER_OPS' ||
+    'WATCH_TOWER_EM' ||
+    'WATCH_TOWER_TTL' ||
+    'WATCH_TOWER_LF'
+  ) {
     return (
       <div className="menulink">
-        {(renderHeader())}
-        {link.dropdown !== undefined
-          && (
+        {renderHeader()}
+        {link.dropdown !== undefined && (
           <div>
-            <a className="nav-link dropdown-toggle" href="/" data-toggle="dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="/"
+              data-toggle="dropdown"
+            >
               <div className="dropdown-menu dropdown-menu-right">
-                {link.dropdown.map(
-                  item => (
-                    <a className="dropdown-item" href="/">{item}</a>
-                  ),
-                )}
+                {link.dropdown.map(item => (
+                  <a key={item.id} className="dropdown-item" href="/">
+                    {item}
+                  </a>
+                ))}
               </div>
             </a>
           </div>
-          )
-          }
+        )}
       </div>
     );
   }
@@ -80,11 +84,11 @@ MenuLink.propTypes = {
     name: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
     icon: PropTypes.node.isRequired,
-    activeIcon: PropTypes.node,
+    activeIcon: PropTypes.node
   }).isRequired,
   handleMenuClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool.isRequired,
-  role: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired
 };
 
 export default MenuLink;

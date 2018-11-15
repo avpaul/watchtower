@@ -65,7 +65,7 @@ class FellowChart extends Component {
   }
 }
 FellowChart.defaultProps = {
-  fellowChartTooltip: { '--fellow-chart-tooltip': '8%' }
+  fellowChartTooltip: { '--fellow-chart-tooltip': '13%' }
 };
 
 FellowChart.propTypes = {

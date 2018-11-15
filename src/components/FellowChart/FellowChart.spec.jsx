@@ -33,7 +33,6 @@ it('renders to match snapshot', () => {
   const { wrapper } = setup();
   expect(wrapper).toMatchSnapshot();
 });
-
 it('changes the display when the radio button is clicked', () => {
   const { wrapper } = setup();
   const handleRadioClickSpy = jest.spyOn(
@@ -45,7 +44,6 @@ it('changes the display when the radio button is clicked', () => {
     .handleRadioClick({ target: { value: radioCardOptions[1].value } });
   expect(handleRadioClickSpy).toHaveBeenCalledTimes(1);
 });
-
 it('shows the correct number of radio cards', () => {
   const { wrapper } = setup();
   expect(wrapper.find(RadioCard)).toHaveLength(radioCardOptions.length);

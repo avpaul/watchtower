@@ -7,6 +7,7 @@ import visibilityFilter from './visibilityFilter';
 import fellowProgressReducer from './fellowProgressReducer';
 import ttlReducer from './ttlReducer';
 import locationReducer from './locationReducer';
+import opsDashboardReducer from './opsDashBoardReducer';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -15,6 +16,8 @@ const rootReducer = combineReducers({
   managers: managerReducer,
   fellowsProgress: fellowProgressReducer,
   ttls: ttlReducer,
-  locations: locationReducer
+  locations: locationReducer,
+  opsDashboard: opsDashboardReducer,
 });
+
 export default rootReducer;

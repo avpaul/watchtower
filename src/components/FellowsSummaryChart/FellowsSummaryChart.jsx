@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FellowChart from '../FellowChart';
+import FellowsSummary from '../FellowsSummary';
 
 class FellowsSummaryChart extends Component {
   state = {
     fellowsSummaryFilter: 'ALL',
-    showChart: true
+    showChart: false
   };
 
   componentDidMount() {
-    const { getFellowCountHistory } = this.props;
+    const { getFellowCountHistory, fetchFellowsSummary } = this.props;
+    fetchFellowsSummary();
     getFellowCountHistory();
   }
 
@@ -17,11 +19,23 @@ class FellowsSummaryChart extends Component {
     this.setState({ showChart: false });
   };
 
+  handleCardClick = event => {
+    const currentCard = event.currentTarget.id;
+    if (currentCard === 'D0AFellowsCount') {
+      this.setState({ showChart: true, fellowsSummaryFilter: 'D0A' });
+    } else if (currentCard === 'D0BFellowsCount') {
+      this.setState({ showChart: true, fellowsSummaryFilter: 'D0B' });
+    } else {
+      this.setState({ showChart: true, fellowsSummaryFilter: 'ALL' });
+    }
+  };
+
   render() {
     const { fellowsSummaryFilter, showChart } = this.state;
     const { fellowCountHistory } = this.props;
     return (
       <div>
+        <FellowsSummary handleCardClick={this.handleCardClick} />
         {showChart && (
           <FellowChart
             filter={fellowsSummaryFilter}
@@ -33,11 +47,12 @@ class FellowsSummaryChart extends Component {
     );
   }
 }
+
 FellowsSummaryChart.propTypes = {
   getFellowCountHistory: PropTypes.func.isRequired,
   fellowCountHistory: PropTypes.shape({
     error: PropTypes.string,
-    countSummary: PropTypes.arrayOf(PropTypes.object),
+    countSummary: PropTypes.object,
     loading: PropTypes.bool
   }).isRequired
 };

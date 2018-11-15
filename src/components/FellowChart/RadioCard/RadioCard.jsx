@@ -17,6 +17,7 @@ const RadioCard = ({ name, count, handleRadioClick, value, current }) => (
     </label>
   </div>
 );
+
 RadioCard.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,

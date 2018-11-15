@@ -19,7 +19,8 @@ describe('Menu link Component Test Suite', () => {
     const props = {
       link,
       handleMenuClick: jest.fn(),
-      isActive: true
+      isActive: true,
+      role: 'test'
     };
     wrapper = shallow(<MenuLink {...props} />);
   });
@@ -32,7 +33,8 @@ describe('Menu link Component Test Suite', () => {
     const props = {
       link,
       handleMenuClick: jest.fn(),
-      isActive: true
+      isActive: true,
+      role: 'test'
     };
     wrapper = shallow(<MenuLink {...props} isActive />);
     expect(wrapper).toBeDefined();

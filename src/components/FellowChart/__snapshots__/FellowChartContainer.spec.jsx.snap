@@ -133,7 +133,7 @@ ShallowWrapper {
       "children": <FellowChart
         fellowChartTooltip={
                 Object {
-                        "--fellow-chart-tooltip": "8%",
+                        "--fellow-chart-tooltip": "13%",
                       }
         }
         fellowsCount={
@@ -246,7 +246,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "fellowChartTooltip": Object {
-          "--fellow-chart-tooltip": "8%",
+          "--fellow-chart-tooltip": "13%",
         },
         "fellowsCount": Array [
           Object {
@@ -361,7 +361,7 @@ ShallowWrapper {
         "children": <FellowChart
           fellowChartTooltip={
                     Object {
-                              "--fellow-chart-tooltip": "8%",
+                              "--fellow-chart-tooltip": "13%",
                             }
           }
           fellowsCount={
@@ -474,7 +474,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "fellowChartTooltip": Object {
-            "--fellow-chart-tooltip": "8%",
+            "--fellow-chart-tooltip": "13%",
           },
           "fellowsCount": Array [
             Object {

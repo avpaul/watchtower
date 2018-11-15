@@ -42,9 +42,9 @@ export const getRadioCardData = fellowsCount => {
 };
 export const getFilterTooltips = filter => {
   const tooltipOptions = {
-    ALL: { '--fellow-chart-tooltip': '8%' },
-    D0A: { '--fellow-chart-tooltip': '30%' },
-    D0B: { '--fellow-chart-tooltip': '52%' }
+    ALL: { '--fellow-chart-tooltip': '13%' },
+    D0A: { '--fellow-chart-tooltip': '34%' },
+    D0B: { '--fellow-chart-tooltip': '55%' }
   };
   return tooltipOptions[filter];
 };

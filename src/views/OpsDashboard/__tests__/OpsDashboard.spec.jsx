@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
-import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
 import fellowManagers from '../../../__mocks__/fellowManagers';
 
 import { OpsDashboardMain } from '../OpsDashboard';
@@ -35,11 +35,16 @@ describe('OpsDashboard component', () => {
 
 describe('OpsDashboard component', () => {
   const setup = () => {
-    const spyResolve = sinon.spy(() =>
+    const spyResolve = jest.fn().mockImplementation(() =>
       Promise.resolve({
-        data: { error: false, managers: { lfs: [], ttls: [] } }
+        error: false,
+        managers: {
+          lfs: fellowManagers.lfs,
+          ttls: fellowManagers.ttls
+        }
       })
     );
+
     const props = {
       ttls: fellowManagers.ttls,
       lfs: fellowManagers.lfs,
@@ -91,10 +96,10 @@ describe('OpsDashboard component', () => {
   });
 
   it('should fetch managers data when data is not in store', () => {
-    const { wrapper, spyResolve } = setup();
-    wrapper.setProps({ ttls: [] });
+    const { wrapper, props } = setup();
+    wrapper.setProps({ ttls: [], lfs: [] });
     wrapper.instance().componentDidMount();
-    expect(spyResolve.called).toBe(true);
+    expect(props.getManagers).toHaveBeenCalled();
   });
 
   it('should change map to display base on the map card clicked', () => {

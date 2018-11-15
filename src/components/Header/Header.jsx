@@ -55,7 +55,7 @@ class Header extends Component {
   };
 
   renderNotification = () => {
-    fellows.map(fellow => <div>{fellow.firstName}</div>);
+    fellows.map(fellow => <div key={fellow.id}>{fellow.firstName}</div>);
   };
 
   renderModalHeader = () => (

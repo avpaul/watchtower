@@ -115,7 +115,8 @@
 /* Header bottom */
 
 .header--bottom {
-  font-weight: 500;
+  font-weight: bold;
+  font-family: 'DIN Pro';
   padding: 22px 0px 0px 0px;
 }
 

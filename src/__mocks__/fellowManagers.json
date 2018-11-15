@@ -1,7 +1,7 @@
 {
   "ttls": [
     {
-      "id": "1",
+      "id": 1,
       "firstName": "Trust",
       "lastName": "Birungi",
       "staffId": "LOS/TTL/1012",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "firstName": "Grace",
       "lastName": "Samuel",
       "staffId": "LOS/TTL/1011",
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": 10,
       "firstName": "Peter",
       "lastName": "White",
       "staffId": "LOS/TTL/1012",
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": 12,
       "firstName": "John",
       "lastName": "Doe",
       "staffId": "LOS/TTL/1011",
@@ -205,7 +205,7 @@
   ],
   "lfs": [
     {
-      "id": "3",
+      "id": 3,
       "firstName": "Abel",
       "lastName": "Nunez",
       "staffId": "LOS/TTL/1010",
@@ -260,7 +260,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "firstName": "Lela",
       "lastName": "McBride",
       "staffId": "LOS/TTL/1009",
@@ -318,7 +318,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "firstName": "Daniel",
       "lastName": "Craig",
       "staffId": "LOS/TTL/1008",

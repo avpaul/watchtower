@@ -5,13 +5,11 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
-
 input[type='radio'].radio-card__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-
 .radio-card__input:after {
   width: 20px;
   height: 20px;
@@ -21,7 +19,6 @@ input[type='radio'].radio-card__input {
   font-weight: 500;
   content: '\f111';
 }
-
 .radio-card__input:checked:after {
   width: 20px;
   height: 20px;
@@ -34,7 +31,6 @@ input[type='radio'].radio-card__input {
 .radio-card__input:focus {
   outline: none;
 }
-
 .radio-card {
   background-color: #fff;
   border-radius: 4px;
@@ -44,7 +40,6 @@ input[type='radio'].radio-card__input {
   margin-bottom: 30px;
   padding-right: 29px;
 }
-
 .radio-card__input.form-check-input {
   margin: 17.5px 22px;
 }

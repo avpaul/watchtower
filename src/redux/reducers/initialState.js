@@ -44,5 +44,16 @@ export default {
     averageFellowsPerLf: 0,
     loading: false,
     error: ''
-  }
+  },
+  opsDashboard: {
+    fellowsSummary: {
+      loading: false,
+      data: {
+        allFellowsCount: 0,
+        D0AFellowsCount: 0,
+        D0BFellowsCount: 0
+      },
+      error: '',
+    },
+  },
 };

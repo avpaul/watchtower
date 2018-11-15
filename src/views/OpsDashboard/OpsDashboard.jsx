@@ -77,17 +77,34 @@ export class OpsDashboardMain extends Component {
   };
 
   render() {
-    const { lfs, ttls, displayManagers, show, managerFellowSortRatio } = this.state;
+    const {
+      lfs,
+      ttls,
+      displayManagers,
+      show,
+      managerFellowSortRatio
+    } = this.state;
     const [managers, style] =
       displayManagers === 'TTL'
-        ? [ttls, { '--arrow-left-margin-style': '40%' }]
-        : [lfs, { '--arrow-left-margin-style': '8%' }];
+        ? [ttls, { '--arrow-left-margin-style': '31%' }]
+        : [lfs, { '--arrow-left-margin-style': '9%' }];
+    const opsDashboardStyle = {
+      paddingLeft: '0',
+      paddingRight: '0',
+      paddingBottom: '49px'
+    };
+
+    // Add components here for opsDashboard
     return (
-      <div className="container">
+      <div className="container-fluid" style={opsDashboardStyle}>
         <FellowsSummaryChart />
-        <div className="row">
+        <div className="row map-card-row">
           {this.mapDisplayContent().map((displayContent, index) => (
-            <DisplayCard id={index} onClick={this.fellowMapOnClick} displayContent={displayContent} />
+            <DisplayCard
+              id={index}
+              onClick={this.fellowMapOnClick}
+              displayContent={displayContent}
+            />
           ))}
         </div>
         {show && (
@@ -113,24 +130,22 @@ const managerPropTypes = {
   roleId: PropTypes.number.isRequired,
   staffId: PropTypes.string.isRequired,
   fellows: PropTypes.arrayOf(
-    PropTypes.objectOf(PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]))
+    PropTypes.objectOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    )
   )
 };
 
 OpsDashboardMain.propTypes = {
   ttls: PropTypes.arrayOf(
-    PropTypes.arrayOf(
-      PropTypes.shape({
-        ...managerPropTypes
-      })
-    )
+    PropTypes.shape({
+      ...managerPropTypes
+    })
   ).isRequired,
   lfs: PropTypes.arrayOf(
-    PropTypes.arrayOf(
-      PropTypes.shape({
-        ...managerPropTypes
-      })
-    )
+    PropTypes.shape({
+      ...managerPropTypes
+    })
   ).isRequired,
   averageFellowsPerTtl: PropTypes.number.isRequired,
   averageFellowsPerLf: PropTypes.number.isRequired,

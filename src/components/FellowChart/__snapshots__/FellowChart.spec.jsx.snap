@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <FellowChart
     fellowChartTooltip={
         Object {
-            "--fellow-chart-tooltip": "8%",
+            "--fellow-chart-tooltip": "13%",
           }
     }
     fellowsCount={
@@ -129,7 +129,7 @@ ShallowWrapper {
           className="base"
           style={
                     Object {
-                              "--fellow-chart-tooltip": "8%",
+                              "--fellow-chart-tooltip": "13%",
                             }
           }
 />,
@@ -267,7 +267,7 @@ ShallowWrapper {
         "props": Object {
           "className": "base",
           "style": Object {
-            "--fellow-chart-tooltip": "8%",
+            "--fellow-chart-tooltip": "13%",
           },
         },
         "ref": null,
@@ -596,7 +596,7 @@ ShallowWrapper {
             className="base"
             style={
                         Object {
-                                    "--fellow-chart-tooltip": "8%",
+                                    "--fellow-chart-tooltip": "13%",
                                   }
             }
 />,
@@ -734,7 +734,7 @@ ShallowWrapper {
           "props": Object {
             "className": "base",
             "style": Object {
-              "--fellow-chart-tooltip": "8%",
+              "--fellow-chart-tooltip": "13%",
             },
           },
           "ref": null,

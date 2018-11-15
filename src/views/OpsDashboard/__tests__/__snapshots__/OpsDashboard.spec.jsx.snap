@@ -58,7 +58,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "Abel",
-              "id": "3",
+              "id": 3,
               "lastName": "Nunez",
               "staffId": "LOS/TTL/1010",
               "updatedAt": "2018-11-13 07:46:48",
@@ -116,7 +116,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "Lela",
-              "id": "4",
+              "id": 4,
               "lastName": "McBride",
               "staffId": "LOS/TTL/1009",
               "updatedAt": "2018-11-13 07:46:48",
@@ -180,7 +180,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "Daniel",
-              "id": "5",
+              "id": 5,
               "lastName": "Craig",
               "staffId": "LOS/TTL/1008",
               "updatedAt": "2018-11-13 07:46:48",
@@ -223,7 +223,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "Trust",
-              "id": "1",
+              "id": 1,
               "lastName": "Birungi",
               "staffId": "LOS/TTL/1012",
               "updatedAt": "2018-11-13 07:46:48",
@@ -287,7 +287,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "Grace",
-              "id": "2",
+              "id": 2,
               "lastName": "Samuel",
               "staffId": "LOS/TTL/1011",
               "updatedAt": "2018-11-13 07:46:48",
@@ -324,7 +324,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "Peter",
-              "id": "10",
+              "id": 10,
               "lastName": "White",
               "staffId": "LOS/TTL/1012",
               "updatedAt": "2018-11-13 07:46:48",
@@ -388,7 +388,7 @@ ShallowWrapper {
                 },
               ],
               "firstName": "John",
-              "id": "12",
+              "id": 12,
               "lastName": "Doe",
               "staffId": "LOS/TTL/1011",
               "updatedAt": "2018-11-13 07:46:48",
@@ -412,7 +412,7 @@ ShallowWrapper {
       "children": Array [
         <Connect(FellowsSummaryChart) />,
         <div
-          className="row"
+          className="row map-card-row"
 >
           <DisplayCard
                     displayContent={
@@ -440,7 +440,12 @@ ShallowWrapper {
         false,
         <Connect(FellowsProgress) />,
       ],
-      "className": "container",
+      "className": "container-fluid",
+      "style": Object {
+        "paddingBottom": "49px",
+        "paddingLeft": "0",
+        "paddingRight": "0",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -482,7 +487,7 @@ ShallowWrapper {
               onClick={[Function]}
 />,
           ],
-          "className": "row",
+          "className": "row map-card-row",
         },
         "ref": null,
         "rendered": Array [
@@ -545,7 +550,7 @@ ShallowWrapper {
         "children": Array [
           <Connect(FellowsSummaryChart) />,
           <div
-            className="row"
+            className="row map-card-row"
 >
             <DisplayCard
                         displayContent={
@@ -573,7 +578,12 @@ ShallowWrapper {
           false,
           <Connect(FellowsProgress) />,
         ],
-        "className": "container",
+        "className": "container-fluid",
+        "style": Object {
+          "paddingBottom": "49px",
+          "paddingLeft": "0",
+          "paddingRight": "0",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -615,7 +625,7 @@ ShallowWrapper {
                 onClick={[Function]}
 />,
             ],
-            "className": "row",
+            "className": "row map-card-row",
           },
           "ref": null,
           "rendered": Array [

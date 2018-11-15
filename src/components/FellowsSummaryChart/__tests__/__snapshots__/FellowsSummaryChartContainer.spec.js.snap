@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should map state to props 1`] = `
+exports[`FellowsSummaryChartContainer should map state to props 1`] = `
 Object {
   "fellowCountHistory": Object {
     "countSummary": Object {},
