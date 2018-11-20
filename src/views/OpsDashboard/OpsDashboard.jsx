@@ -50,13 +50,13 @@ export class OpsDashboardMain extends Component {
     const { averageFellowsPerLf, averageFellowsPerTtl } = this.state;
     return [
       {
-        title: 'LF to FELLOW Map',
-        text: 'Average TTL to Fellow ratio',
+        title: 'LF to FELLOW MAP',
+        text: 'Average LF to Fellow ratio',
         averageValue: averageFellowsPerLf
       },
       {
-        title: 'TTL to FELLOW Map',
-        text: 'Average LF to Fellow ratio',
+        title: 'TTL to FELLOW MAP',
+        text: 'Average TTL to Fellow ratio',
         averageValue: averageFellowsPerTtl
       }
     ];

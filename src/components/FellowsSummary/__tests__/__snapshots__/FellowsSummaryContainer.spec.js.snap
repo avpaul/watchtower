@@ -5,17 +5,17 @@ Object {
   "fellowsSummary": Array [
     Object {
       "id": "allFellowsCount",
-      "title": "Total D0 fellows",
+      "title": "Total D0 Fellows",
       "totalFellows": 0,
     },
     Object {
       "id": "D0AFellowsCount",
-      "title": "Total D0A fellows",
+      "title": "Total D0A Fellows",
       "totalFellows": 0,
     },
     Object {
       "id": "D0BFellowsCount",
-      "title": "Total D0B fellows",
+      "title": "Total D0B Fellows",
       "totalFellows": 0,
     },
   ],

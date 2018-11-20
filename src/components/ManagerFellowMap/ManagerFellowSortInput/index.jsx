@@ -5,8 +5,12 @@ import './ManagerFellowSortInput.css';
 const ManagerFellowSortInput = ({ onChange }) => (
   <div className="sort-managers">
     <select className="sort-managers__select" onChange={onChange}>
-      <option className="sort-managers__option" value="HIGH_TO_LOW">Fellows Ratio, high to low</option>
-      <option className="sort-managers__option" value="LOW_TO_HIGH">Fellows Ratio, low to high</option>
+      <option className="sort-managers__option" value="HIGH_TO_LOW">
+        High to Low
+      </option>
+      <option className="sort-managers__option" value="LOW_TO_HIGH">
+        Low to High
+      </option>
     </select>
   </div>
 );

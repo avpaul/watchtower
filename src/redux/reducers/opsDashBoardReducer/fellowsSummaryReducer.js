@@ -36,14 +36,14 @@ export const getFellowsSummary = state => {
     if (key === 'allFellowsCount') {
       return {
         id: key,
-        title: 'Total D0 fellows',
+        title: 'Total D0 Fellows',
         totalFellows: fellowsSummaryData[key]
       };
     }
 
     return {
       id: key,
-      title: `Total ${key.slice(0, 3)} fellows`,
+      title: `Total ${key.slice(0, 3)} Fellows`,
       totalFellows: fellowsSummaryData[key]
     };
   });
