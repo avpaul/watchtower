@@ -1,0 +1,20 @@
+.ttl_fellow_summary {
+  padding-top: 60px;
+}
+
+.ttl_fellow_summary__title {
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.ttl_fellow_summary__cards {
+  display: flex;
+}
+
+.card {
+  margin-left: 0px !important;
+  margin-top: 30px !important;
+}

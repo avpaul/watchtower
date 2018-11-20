@@ -43,6 +43,10 @@ export default {
     averageFellowsPerTtl: 0,
     averageFellowsPerLf: 0,
     loading: false,
+  },
+  managerFellows: {
+    loading: false,
+    managerFellows: {},
     error: ''
   },
   opsDashboard: {

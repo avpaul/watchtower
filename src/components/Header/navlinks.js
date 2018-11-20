@@ -11,7 +11,6 @@ import perfomanceFillIcon from '../../static/PerfomanceFill.svg';
 import historyIcon from '../../static/History.svg';
 import historyFillIcon from '../../static/HistoryFill.svg';
 
-
 export const items = [
   {
     key: 'fellows',
@@ -19,58 +18,58 @@ export const items = [
     path: '#',
     icon: userIcon,
     activeIcon: userIconFill,
-    dropdown: 'dropdown',
+    dropdown: 'dropdown'
   },
   {
     key: 'dashboard',
     name: 'Dashboard',
     path: '#',
     icon: cogIcon,
-    activeIcon: cogIconFill,
-  },
+    activeIcon: cogIconFill
+  }
 ];
 export const fellowItems = [
   {
     key: 'dashboard',
     name: 'Dashboard',
     icon: dashboardIcon,
-    activeIcon: dashboardIconFill,
+    activeIcon: dashboardIconFill
   },
   {
     key: 'Performance',
     name: 'My Performance',
     icon: perfomanceIcon,
-    activeIcon: perfomanceFillIcon,
+    activeIcon: perfomanceFillIcon
   },
   {
     key: 'History',
     name: 'My History',
     icon: historyIcon,
-    activeIcon: historyFillIcon,
-  },
+    activeIcon: historyFillIcon
+  }
 ];
 
 export const ttlItems = [
   {
     key: 'dashboard',
     name: 'Dashboard',
+    path: '/dashboard',
     icon: dashboardIcon,
-    activeIcon: dashboardIconFill,
+    activeIcon: dashboardIconFill
   },
   {
-    key: 'TTL',
-    name: 'Developer Management',
-    dropdown: ['All Developers', 'Developers under PIP'],
+    key: 'ttl',
+    name: 'Developers',
+    path: '/dashboard/fellows',
     icon: userIcon,
-    activeIcon: userIconFill,
+    activeIcon: userIconFill
   },
   {
-    key: 'Performance',
-    name: 'Performance Manager',
-    dropdown: ['Pre-PIP Feedback', 'Activate PIP', 'PIP Feedback'],
+    key: 'feedback',
+    name: 'Feedback',
     icon: feedbackIcon,
-    activeIcon: feedbackIconFill,
-  },
+    activeIcon: feedbackIconFill
+  }
 ];
 
 export const managerItems = [
@@ -78,22 +77,22 @@ export const managerItems = [
     key: 'Dashboard',
     name: 'Dashboard',
     icon: dashboardIcon,
-    activeIcon: dashboardIconFill,
+    activeIcon: dashboardIconFill
   },
   {
     key: 'Developer',
     name: 'Developer Manager',
     dropdown: ['All Developers', 'Developers under PIP'],
     icon: userIcon,
-    activeIcon: userIconFill,
+    activeIcon: userIconFill
   },
   {
     key: 'Performance',
     name: 'Performance Manager',
     dropdown: ['Pre-PIP Feedback', 'PIP Feedback'],
     icon: feedbackIcon,
-    activeIcon: feedbackIconFill,
-  },
+    activeIcon: feedbackIconFill
+  }
 ];
 
 export const opsItems = [
@@ -102,25 +101,25 @@ export const opsItems = [
     name: 'Dashboard',
     icon: dashboardIcon,
     activeIcon: dashboardIconFill,
-    path:'/dashboard'
+    path: '/dashboard'
   },
   {
     key: 'developer',
     name: 'Developers',
     path: '/dashboard/fellows',
     icon: userIcon,
-    activeIcon: userIconFill,
+    activeIcon: userIconFill
   },
   {
     key: 'feedback',
     name: 'Feedback',
-    path: "/dashboard/feedback",
+    path: '/dashboard/feedback',
     icon: feedbackIcon,
-    activeIcon: feedbackIconFill,
-  },
+    activeIcon: feedbackIconFill
+  }
 ];
 
-export const getMenuItems = (role) => {
+export const getMenuItems = role => {
   switch (role) {
     case 'Fellow':
       return fellowItems;

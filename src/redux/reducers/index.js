@@ -8,6 +8,7 @@ import fellowProgressReducer from './fellowProgressReducer';
 import ttlReducer from './ttlReducer';
 import locationReducer from './locationReducer';
 import opsDashboardReducer from './opsDashBoardReducer';
+import managerFellowReducer from './managerFellows';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   ttls: ttlReducer,
   locations: locationReducer,
   opsDashboard: opsDashboardReducer,
+  managerFellows: managerFellowReducer
 });
 
 export default rootReducer;
