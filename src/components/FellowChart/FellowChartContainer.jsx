@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import FellowChart from './FellowChart';
 import {
   convertHistory,
-  mergeHistory
+  alignD0StatusObjects,
+  mergeD0StatusArrays
 } from '../../services/convertHistoryData';
 import Loader from '../Loader/Loader';
 
@@ -11,21 +12,33 @@ export const getFellowsCount = (countSummary, filter) => {
   const d0a = countSummary['D0A Simulations'];
   const d0b = countSummary['D0B Apprenticeship'];
 
-  const all = mergeHistory(d0a, d0b);
   const d0aArray = convertHistory(d0a);
   const d0bArray = convertHistory(d0b);
-
-  const allArray = convertHistory(all);
+  const alignedArrays = alignD0StatusObjects(d0a, d0b);
+  const allArray = mergeD0StatusArrays(alignedArrays);
   const fellowCountArray = { ALL: allArray, D0A: d0aArray, D0B: d0bArray };
   return fellowCountArray[filter];
 };
-
-export const getRadioCardData = fellowsCount => {
-  const thisWeekData = fellowsCount.find(entry => entry.name === 'Week 12') || {
-    'On Track': 0,
-    'Off Track': 0,
-    PIP: 0
+const calcThisWeekData = (fellowsCount, countSummary, filter) => {
+  const d0aLength = Object.keys(countSummary['D0A Simulations']).length;
+  const d0bLength = Object.keys(countSummary['D0B Apprenticeship']).length;
+  const lengthDict = {
+    D0A: d0aLength,
+    D0B: d0bLength,
+    ALL: Math.max(d0aLength, d0bLength)
   };
+  const lastEntry = lengthDict[filter] - 1;
+  const maxLastEntry = Math.min(lastEntry, 11);
+  return (
+    fellowsCount[maxLastEntry] || {
+      'On Track': 0,
+      'Off Track': 0,
+      PIP: 0
+    }
+  );
+};
+
+export const getRadioCardData = (fellowsCount, filter, thisWeekData) => {
   const countOnTrack = thisWeekData['On Track'];
   const countOffTrack = thisWeekData['Off Track'];
   const countPIP = thisWeekData.PIP;
@@ -52,10 +65,12 @@ export const getFilterTooltips = filter => {
 const FellowChartContainer = props => {
   const { loading, countSummary, filter, handleChartClose } = props;
   let fellowsCount = [];
+  let radioCardData = [];
   if (countSummary['D0A Simulations']) {
     fellowsCount = getFellowsCount(countSummary, filter);
+    const thisWeekData = calcThisWeekData(fellowsCount, countSummary, filter);
+    radioCardData = getRadioCardData(fellowsCount, filter, thisWeekData);
   }
-  const radioCardData = getRadioCardData(fellowsCount);
   const fellowChartTooltip = getFilterTooltips(filter);
   return (
     <Fragment>

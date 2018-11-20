@@ -7,6 +7,29 @@ import FellowChartContainer, {
 } from './FellowChartContainer';
 import countSummary from '../../__mocks__/countSummary';
 
+const countHistory = {
+  'Week 1': {
+    onPip: 0,
+    onTrack: 33,
+    offTrack: 12
+  },
+  'Week 2': {
+    onPip: 0,
+    onTrack: 29,
+    offTrack: 16
+  }
+};
+const filter = 'ALL';
+
+const countSummaryMock = {
+  'D0A Simulations': {
+    ...countHistory
+  },
+  'D0B Apprenticeship': {
+    ...countHistory
+  }
+};
+
 const setup = propOverrides => {
   const props = {
     getFellowCountHistory: jest.fn(),
@@ -36,103 +59,51 @@ it('renders to match snapshot when loading', () => {
 });
 
 it('calculates the fellow count', () => {
-  const countHistory = {
-    'Week 1': {
-      onPip: 0,
-      onTrack: 33,
-      offTrack: 12
-    },
-    'Week 2': {
-      onPip: 0,
-      onTrack: 29,
-      offTrack: 16
-    }
-  };
-
   const totalHistoryArray = [
     {
       name: 'Week 1',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 2',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 3',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 4',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 5',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 6',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 7',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-
-    {
-      name: 'Week 8',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 9',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 10',
-      PIP: 0,
-      'On Track': 0,
-      'Off Track': 0
-    },
-    {
-      name: 'Week 11',
       PIP: 0,
       'On Track': 66,
       'Off Track': 24
     },
     {
-      name: 'Week 12',
+      name: 'Week 2',
       PIP: 0,
       'On Track': 58,
       'Off Track': 32
+    },
+    {
+      name: 'Week 3'
+    },
+    {
+      name: 'Week 4'
+    },
+    {
+      name: 'Week 5'
+    },
+    {
+      name: 'Week 6'
+    },
+    {
+      name: 'Week 7'
+    },
+    {
+      name: 'Week 8'
+    },
+    {
+      name: 'Week 9'
+    },
+    {
+      name: 'Week 10'
+    },
+    {
+      name: 'Week 11'
+    },
+    {
+      name: 'Week 12'
     }
   ];
-  const countSummaryMock = {
-    'D0A Simulations': {
-      ...countHistory
-    },
-    'D0B Apprenticeship': {
-      ...countHistory
-    }
-  };
-  const filter = 'ALL';
+
   expect(getFellowsCount(countSummaryMock, filter)).toEqual(
     expect.arrayContaining(totalHistoryArray)
   );
@@ -153,7 +124,11 @@ it('calculates the radio card data', () => {
       'Off Track': 16
     }
   ];
-
+  const thisWeekData = {
+    'On Track': 29,
+    'Off Track': 16,
+    PIP: 0
+  };
   const radioCardData = [
     {
       value: 'All',
@@ -165,7 +140,7 @@ it('calculates the radio card data', () => {
     { value: 'PIP', name: 'Fellows On PIP', count: 0 }
   ];
 
-  expect(getRadioCardData(countHistoryArray)).toEqual(
+  expect(getRadioCardData(countHistoryArray, filter, thisWeekData)).toEqual(
     expect.arrayContaining(radioCardData)
   );
 });
@@ -178,7 +153,11 @@ it('calculates the radio card data when no week 12', () => {
       'Off Track': 12
     }
   ];
-
+  const thisWeekData = {
+    'On Track': 0,
+    'Off Track': 0,
+    PIP: 0
+  };
   const radioCardData = [
     {
       value: 'All',
@@ -190,7 +169,7 @@ it('calculates the radio card data when no week 12', () => {
     { value: 'PIP', name: 'Fellows On PIP', count: 0 }
   ];
 
-  expect(getRadioCardData(countHistoryArray)).toEqual(
+  expect(getRadioCardData(countHistoryArray, filter, thisWeekData)).toEqual(
     expect.arrayContaining(radioCardData)
   );
 });
