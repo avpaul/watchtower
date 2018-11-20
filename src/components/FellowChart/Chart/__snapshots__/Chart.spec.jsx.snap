@@ -341,6 +341,7 @@ ShallowWrapper {
                                                   "r": 4,
                                                 }
                               }
+                              animateNewValues={true}
                               animationBegin={0}
                               animationDuration={1500}
                               animationEasing="ease"
@@ -362,6 +363,7 @@ ShallowWrapper {
                     />
                     <Line
                               activeDot={true}
+                              animateNewValues={true}
                               animationBegin={0}
                               animationDuration={1500}
                               animationEasing="ease"
@@ -383,6 +385,7 @@ ShallowWrapper {
                     />
                     <Line
                               activeDot={true}
+                              animateNewValues={true}
                               animationBegin={0}
                               animationDuration={1500}
                               animationEasing="ease"
@@ -677,6 +680,7 @@ ShallowWrapper {
                                                 "r": 4,
                                               }
                         }
+                        animateNewValues={true}
                         animationBegin={0}
                         animationDuration={1500}
                         animationEasing="ease"
@@ -698,6 +702,7 @@ ShallowWrapper {
             />
             <Line
                         activeDot={true}
+                        animateNewValues={true}
                         animationBegin={0}
                         animationDuration={1500}
                         animationEasing="ease"
@@ -719,6 +724,7 @@ ShallowWrapper {
             />
             <Line
                         activeDot={true}
+                        animateNewValues={true}
                         animationBegin={0}
                         animationDuration={1500}
                         animationEasing="ease"
@@ -889,6 +895,7 @@ ShallowWrapper {
                                                 "r": 4,
                                               }
                 }
+                animateNewValues={true}
                 animationBegin={0}
                 animationDuration={1500}
                 animationEasing="ease"
@@ -910,6 +917,7 @@ ShallowWrapper {
 />,
               <Line
                 activeDot={true}
+                animateNewValues={true}
                 animationBegin={0}
                 animationDuration={1500}
                 animationEasing="ease"
@@ -931,6 +939,7 @@ ShallowWrapper {
 />,
               <Line
                 activeDot={true}
+                animateNewValues={true}
                 animationBegin={0}
                 animationDuration={1500}
                 animationEasing="ease"
@@ -1224,6 +1233,7 @@ ShallowWrapper {
                 "activeDot": Object {
                   "r": 4,
                 },
+                "animateNewValues": true,
                 "animationBegin": 0,
                 "animationDuration": 1500,
                 "animationEasing": "ease",
@@ -1253,6 +1263,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "activeDot": true,
+                "animateNewValues": true,
                 "animationBegin": 0,
                 "animationDuration": 1500,
                 "animationEasing": "ease",
@@ -1282,6 +1293,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "activeDot": true,
+                "animateNewValues": true,
                 "animationBegin": 0,
                 "animationDuration": 1500,
                 "animationEasing": "ease",
@@ -1565,6 +1577,7 @@ ShallowWrapper {
                                                             "r": 4,
                                                           }
                                     }
+                                    animateNewValues={true}
                                     animationBegin={0}
                                     animationDuration={1500}
                                     animationEasing="ease"
@@ -1586,6 +1599,7 @@ ShallowWrapper {
                         />
                         <Line
                                     activeDot={true}
+                                    animateNewValues={true}
                                     animationBegin={0}
                                     animationDuration={1500}
                                     animationEasing="ease"
@@ -1607,6 +1621,7 @@ ShallowWrapper {
                         />
                         <Line
                                     activeDot={true}
+                                    animateNewValues={true}
                                     animationBegin={0}
                                     animationDuration={1500}
                                     animationEasing="ease"
@@ -1901,6 +1916,7 @@ ShallowWrapper {
                                                         "r": 4,
                                                       }
                             }
+                            animateNewValues={true}
                             animationBegin={0}
                             animationDuration={1500}
                             animationEasing="ease"
@@ -1922,6 +1938,7 @@ ShallowWrapper {
               />
               <Line
                             activeDot={true}
+                            animateNewValues={true}
                             animationBegin={0}
                             animationDuration={1500}
                             animationEasing="ease"
@@ -1943,6 +1960,7 @@ ShallowWrapper {
               />
               <Line
                             activeDot={true}
+                            animateNewValues={true}
                             animationBegin={0}
                             animationDuration={1500}
                             animationEasing="ease"
@@ -2113,6 +2131,7 @@ ShallowWrapper {
                                                       "r": 4,
                                                     }
                   }
+                  animateNewValues={true}
                   animationBegin={0}
                   animationDuration={1500}
                   animationEasing="ease"
@@ -2134,6 +2153,7 @@ ShallowWrapper {
 />,
                 <Line
                   activeDot={true}
+                  animateNewValues={true}
                   animationBegin={0}
                   animationDuration={1500}
                   animationEasing="ease"
@@ -2155,6 +2175,7 @@ ShallowWrapper {
 />,
                 <Line
                   activeDot={true}
+                  animateNewValues={true}
                   animationBegin={0}
                   animationDuration={1500}
                   animationEasing="ease"
@@ -2448,6 +2469,7 @@ ShallowWrapper {
                   "activeDot": Object {
                     "r": 4,
                   },
+                  "animateNewValues": true,
                   "animationBegin": 0,
                   "animationDuration": 1500,
                   "animationEasing": "ease",
@@ -2477,6 +2499,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "activeDot": true,
+                  "animateNewValues": true,
                   "animationBegin": 0,
                   "animationDuration": 1500,
                   "animationEasing": "ease",
@@ -2506,6 +2529,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "activeDot": true,
+                  "animateNewValues": true,
                   "animationBegin": 0,
                   "animationDuration": 1500,
                   "animationEasing": "ease",
