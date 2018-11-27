@@ -33,7 +33,7 @@ const Chart = ({ data, title }) => (
         <YAxis tickLine={false}>
           <Label value="Total Fellows" angle={-90} position="center" dx={-20} />
         </YAxis>
-        <ReferenceLine x="Week 12" dx={-50} offset={25} />
+        <ReferenceLine x="Week 16" dx={-50} offset={25} />
         <CartesianGrid vertical={false} />
         <Tooltip />
 

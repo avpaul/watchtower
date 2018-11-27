@@ -210,6 +210,18 @@ ShallowWrapper {
                           "PIP": 0,
                           "name": "Week 12",
                         },
+                        Object {
+                          "name": "Week 13",
+                        },
+                        Object {
+                          "name": "Week 14",
+                        },
+                        Object {
+                          "name": "Week 15",
+                        },
+                        Object {
+                          "name": "Week 16",
+                        },
                       ]
         }
         handleChartClose={[Function]}
@@ -320,6 +332,18 @@ ShallowWrapper {
             "On Track": 32,
             "PIP": 0,
             "name": "Week 12",
+          },
+          Object {
+            "name": "Week 13",
+          },
+          Object {
+            "name": "Week 14",
+          },
+          Object {
+            "name": "Week 15",
+          },
+          Object {
+            "name": "Week 16",
           },
         ],
         "handleChartClose": [Function],
@@ -438,6 +462,18 @@ ShallowWrapper {
                                 "PIP": 0,
                                 "name": "Week 12",
                               },
+                              Object {
+                                "name": "Week 13",
+                              },
+                              Object {
+                                "name": "Week 14",
+                              },
+                              Object {
+                                "name": "Week 15",
+                              },
+                              Object {
+                                "name": "Week 16",
+                              },
                             ]
           }
           handleChartClose={[Function]}
@@ -548,6 +584,18 @@ ShallowWrapper {
               "On Track": 32,
               "PIP": 0,
               "name": "Week 12",
+            },
+            Object {
+              "name": "Week 13",
+            },
+            Object {
+              "name": "Week 14",
+            },
+            Object {
+              "name": "Week 15",
+            },
+            Object {
+              "name": "Week 16",
             },
           ],
           "handleChartClose": [Function],

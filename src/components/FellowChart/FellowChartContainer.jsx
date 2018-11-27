@@ -28,7 +28,7 @@ const calcThisWeekData = (fellowsCount, countSummary, filter) => {
     ALL: Math.max(d0aLength, d0bLength)
   };
   const lastEntry = lengthDict[filter] - 1;
-  const maxLastEntry = Math.min(lastEntry, 11);
+  const maxLastEntry = Math.min(lastEntry, 15);
   return (
     fellowsCount[maxLastEntry] || {
       'On Track': 0,
