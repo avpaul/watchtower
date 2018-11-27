@@ -93,12 +93,10 @@ export class FellowsProgress extends Component {
   render() {
     const { ttl, location } = this.state;
     const { ttls, fellowsProgress, locations } = this.props;
-    const doa =
-      fellowsProgress.fellowsProgressD0A && fellowsProgress.fellowsProgressD0A;
-    const dob =
-      fellowsProgress.fellowsProgressD0B && fellowsProgress.fellowsProgressD0B;
+    const doa = fellowsProgress.data.fellowsProgressD0A;
+    const dob = fellowsProgress.data.fellowsProgressD0B;
 
-    const ttlsAvilable =
+    const ttlsAvailable =
       ttls.ttls.length !== 0
         ? ttls.ttls.map(ttla => `${ttla.firstName} ${ttla.lastName}`)
         : [];
@@ -111,7 +109,12 @@ export class FellowsProgress extends Component {
       <div className="fellow_progress">
         <h2 className="fellow_progress__title"> FELLOW’S PROGRESS BAR </h2>
         <div className="filters">
-          {this.renderFilters(locationsAll, location, currentTTL, ttlsAvilable)}
+          {this.renderFilters(
+            locationsAll,
+            location,
+            currentTTL,
+            ttlsAvailable
+          )}
         </div>
         {this.renderCharts(dob, doa, fellowDataLoading)}
       </div>
@@ -129,8 +132,7 @@ FellowsProgress.propTypes = {
   getFellowProgress: PropTypes.func.isRequired,
   fellowsProgress: PropTypes.shape({
     loading: PropTypes.bool,
-    fellowsProgressD0A: PropTypes.array,
-    fellowsProgressD0B: PropTypes.array
+    data: PropTypes.objectOf(PropTypes.array)
   }).isRequired,
   getTTLs: PropTypes.func.isRequired,
   getLocations: PropTypes.func.isRequired,

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import FilterCard from '../../components/Filters/FilterCard';
-import './index.css';
+import TTLFellowsProgress from './TtlFellowsProgress';
 import getManagerFellowsAction from '../../redux/actionCreators/managerFellowsAction';
+import './index.css';
 
 export class TTLDashboardMain extends Component {
   componentDidMount() {
@@ -32,14 +33,20 @@ export class TTLDashboardMain extends Component {
       subTitle: 'Click for details',
       totalFellows: fellowCount
     };
+    const ttlDashboardStyle = {
+      paddingLeft: '0',
+      paddingRight: '0',
+      paddingBottom: '49px'
+    };
     return (
-      <div className="container">
+      <div className="container-fluid" style={ttlDashboardStyle}>
         <div className="ttl_fellow_summary">
           <h2 className="ttl_fellow_summary__title"> FELLOWS SUMMARY </h2>
           <div className="ttl_fellow_summary__cards">
             {this.renderFellowTotalCard(cardDetails)}
           </div>
         </div>
+        <TTLFellowsProgress />
       </div>
     );
   }

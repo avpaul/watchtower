@@ -45,7 +45,6 @@ ShallowWrapper {
           <p
                     className="chart_card__title"
           >
-                     
                     DOB Fellows
           </p>
 </div>,
@@ -53,7 +52,8 @@ ShallowWrapper {
         <ResponsiveContainer
           className="undefined"
           debounce={0}
-          height={200}
+          height={260}
+          minWidth={1300}
           width="100%"
 >
           <BarChart
@@ -81,7 +81,7 @@ ShallowWrapper {
                     layout="horizontal"
                     margin={
                               Object {
-                                        "bottom": 5,
+                                        "bottom": 20,
                                         "left": 30,
                                         "right": 30,
                                         "top": 20,
@@ -95,7 +95,7 @@ ShallowWrapper {
                               horizontal={true}
                               horizontalFill={Array []}
                               horizontalPoints={Array []}
-                              stroke="#ccc"
+                              stroke="#ECECEC"
                               vertical={false}
                               verticalFill={Array []}
                               verticalPoints={Array []}
@@ -104,6 +104,11 @@ ShallowWrapper {
                               allowDataOverflow={false}
                               allowDecimals={true}
                               allowDuplicatedCategory={true}
+                              axisLine={
+                                        Object {
+                                                  "stroke": "#ECECEC",
+                                                }
+                              }
                               dataKey="cohort"
                               domain={
                                         Array [
@@ -113,6 +118,14 @@ ShallowWrapper {
                               }
                               height={30}
                               hide={false}
+                              interval={0}
+                              label={
+                                        Object {
+                                                  "fontFamily": "DIN Pro Light",
+                                                  "fontSize": "14px",
+                                                  "position": "insideBottom",
+                                                }
+                              }
                               mirror={false}
                               orientation="bottom"
                               padding={
@@ -123,7 +136,16 @@ ShallowWrapper {
                               }
                               reversed={false}
                               scale="auto"
+                              tick={
+                                        Object {
+                                                  "fontFamily": "DIN Pro Light",
+                                                  "fontSize": "14px",
+                                                }
+                              }
                               tickCount={5}
+                              tickLine={false}
+                              tickMargin={15}
+                              tickSize={0}
                               type="category"
                               width={0}
                               xAxisId={0}
@@ -132,6 +154,11 @@ ShallowWrapper {
                               allowDataOverflow={false}
                               allowDecimals={true}
                               allowDuplicatedCategory={true}
+                              axisLine={
+                                        Object {
+                                                  "stroke": "#ECECEC",
+                                                }
+                              }
                               domain={
                                         Array [
                                                   0,
@@ -143,7 +170,9 @@ ShallowWrapper {
                               label={
                                         Object {
                                                   "angle": -90,
-                                                  "position": "insideBottomLeft",
+                                                  "fontFamily": "DIN Pro Light",
+                                                  "fontSize": "14px",
+                                                  "position": "insideLeft",
                                                   "value": "Total DOB Fellows",
                                                 }
                               }
@@ -157,7 +186,15 @@ ShallowWrapper {
                               }
                               reversed={false}
                               scale="auto"
+                              tick={
+                                        Object {
+                                                  "fontFamily": "DIN Pro Light",
+                                                  "fontSize": "12px",
+                                                }
+                              }
                               tickCount={5}
+                              tickLine={false}
+                              tickMargin={10}
                               type="number"
                               width={60}
                               yAxisId={0}
@@ -177,16 +214,21 @@ ShallowWrapper {
                                         Object {
                                                   "fill": "#fff",
                                                   "fillOpacity": 0.05,
-                                                  "position": "top",
                                                 }
                               }
                               cursorStyle={Object {}}
                               filterNull={true}
                               isAnimationActive={true}
                               itemSorter={[Function]}
-                              itemStyle={Object {}}
+                              itemStyle={
+                                        Object {
+                                                  "padding": "5px 21px",
+                                                  "textAlign": "center",
+                                                  "width": "162px",
+                                                }
+                              }
                               labelStyle={Object {}}
-                              offset={10}
+                              offset={5}
                               separator=" : "
                               useTranslate3d={false}
                               viewBox={
@@ -197,7 +239,12 @@ ShallowWrapper {
                                                   "y2": 0,
                                                 }
                               }
-                              wrapperStyle={Object {}}
+                              wrapperStyle={
+                                        Object {
+                                                  "fontSize": "12px",
+                                                  "textAlign": "center",
+                                                }
+                              }
                     />
                     <Legend
                               align="right"
@@ -215,7 +262,7 @@ ShallowWrapper {
                               animationBegin={0}
                               animationDuration={400}
                               animationEasing="ease"
-                              barSize={30}
+                              barSize={40}
                               data={Array []}
                               dataKey="offTrack"
                               fill="#FFAF30"
@@ -224,6 +271,7 @@ ShallowWrapper {
                               layout="vertical"
                               legendType="rect"
                               minPointSize={0}
+                              name="Off Track"
                               onAnimationEnd={[Function]}
                               onAnimationStart={[Function]}
                               stackId="a"
@@ -234,7 +282,7 @@ ShallowWrapper {
                               animationBegin={0}
                               animationDuration={400}
                               animationEasing="ease"
-                              barSize={30}
+                              barSize={40}
                               data={Array []}
                               dataKey="onTrack"
                               fill="#3359DB"
@@ -243,6 +291,7 @@ ShallowWrapper {
                               layout="vertical"
                               legendType="rect"
                               minPointSize={0}
+                              name="On Track"
                               onAnimationEnd={[Function]}
                               onAnimationStart={[Function]}
                               stackId="a"
@@ -252,7 +301,7 @@ ShallowWrapper {
           </BarChart>
 </ResponsiveContainer>,
       ],
-      "className": "chart_card",
+      "className": "chart_card scroll",
     },
     "ref": null,
     "rendered": Array [
@@ -264,7 +313,6 @@ ShallowWrapper {
           "children": <p
             className="chart_card__title"
 >
-             
             DOB Fellows
 </p>,
           "className": "chart_card__header",
@@ -275,17 +323,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              " ",
-              "DOB Fellows",
-            ],
+            "children": "DOB Fellows",
             "className": "chart_card__title",
           },
           "ref": null,
-          "rendered": Array [
-            " ",
-            "DOB Fellows",
-          ],
+          "rendered": "DOB Fellows",
           "type": "p",
         },
         "type": "div",
@@ -321,7 +363,7 @@ ShallowWrapper {
             layout="horizontal"
             margin={
                         Object {
-                                    "bottom": 5,
+                                    "bottom": 20,
                                     "left": 30,
                                     "right": 30,
                                     "top": 20,
@@ -335,7 +377,7 @@ ShallowWrapper {
                         horizontal={true}
                         horizontalFill={Array []}
                         horizontalPoints={Array []}
-                        stroke="#ccc"
+                        stroke="#ECECEC"
                         vertical={false}
                         verticalFill={Array []}
                         verticalPoints={Array []}
@@ -344,6 +386,11 @@ ShallowWrapper {
                         allowDataOverflow={false}
                         allowDecimals={true}
                         allowDuplicatedCategory={true}
+                        axisLine={
+                                    Object {
+                                                "stroke": "#ECECEC",
+                                              }
+                        }
                         dataKey="cohort"
                         domain={
                                     Array [
@@ -353,6 +400,14 @@ ShallowWrapper {
                         }
                         height={30}
                         hide={false}
+                        interval={0}
+                        label={
+                                    Object {
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "14px",
+                                                "position": "insideBottom",
+                                              }
+                        }
                         mirror={false}
                         orientation="bottom"
                         padding={
@@ -363,7 +418,16 @@ ShallowWrapper {
                         }
                         reversed={false}
                         scale="auto"
+                        tick={
+                                    Object {
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "14px",
+                                              }
+                        }
                         tickCount={5}
+                        tickLine={false}
+                        tickMargin={15}
+                        tickSize={0}
                         type="category"
                         width={0}
                         xAxisId={0}
@@ -372,6 +436,11 @@ ShallowWrapper {
                         allowDataOverflow={false}
                         allowDecimals={true}
                         allowDuplicatedCategory={true}
+                        axisLine={
+                                    Object {
+                                                "stroke": "#ECECEC",
+                                              }
+                        }
                         domain={
                                     Array [
                                                 0,
@@ -383,7 +452,9 @@ ShallowWrapper {
                         label={
                                     Object {
                                                 "angle": -90,
-                                                "position": "insideBottomLeft",
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "14px",
+                                                "position": "insideLeft",
                                                 "value": "Total DOB Fellows",
                                               }
                         }
@@ -397,7 +468,15 @@ ShallowWrapper {
                         }
                         reversed={false}
                         scale="auto"
+                        tick={
+                                    Object {
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "12px",
+                                              }
+                        }
                         tickCount={5}
+                        tickLine={false}
+                        tickMargin={10}
                         type="number"
                         width={60}
                         yAxisId={0}
@@ -417,16 +496,21 @@ ShallowWrapper {
                                     Object {
                                                 "fill": "#fff",
                                                 "fillOpacity": 0.05,
-                                                "position": "top",
                                               }
                         }
                         cursorStyle={Object {}}
                         filterNull={true}
                         isAnimationActive={true}
                         itemSorter={[Function]}
-                        itemStyle={Object {}}
+                        itemStyle={
+                                    Object {
+                                                "padding": "5px 21px",
+                                                "textAlign": "center",
+                                                "width": "162px",
+                                              }
+                        }
                         labelStyle={Object {}}
-                        offset={10}
+                        offset={5}
                         separator=" : "
                         useTranslate3d={false}
                         viewBox={
@@ -437,7 +521,12 @@ ShallowWrapper {
                                                 "y2": 0,
                                               }
                         }
-                        wrapperStyle={Object {}}
+                        wrapperStyle={
+                                    Object {
+                                                "fontSize": "12px",
+                                                "textAlign": "center",
+                                              }
+                        }
             />
             <Legend
                         align="right"
@@ -455,7 +544,7 @@ ShallowWrapper {
                         animationBegin={0}
                         animationDuration={400}
                         animationEasing="ease"
-                        barSize={30}
+                        barSize={40}
                         data={Array []}
                         dataKey="offTrack"
                         fill="#FFAF30"
@@ -464,6 +553,7 @@ ShallowWrapper {
                         layout="vertical"
                         legendType="rect"
                         minPointSize={0}
+                        name="Off Track"
                         onAnimationEnd={[Function]}
                         onAnimationStart={[Function]}
                         stackId="a"
@@ -474,7 +564,7 @@ ShallowWrapper {
                         animationBegin={0}
                         animationDuration={400}
                         animationEasing="ease"
-                        barSize={30}
+                        barSize={40}
                         data={Array []}
                         dataKey="onTrack"
                         fill="#3359DB"
@@ -483,6 +573,7 @@ ShallowWrapper {
                         layout="vertical"
                         legendType="rect"
                         minPointSize={0}
+                        name="On Track"
                         onAnimationEnd={[Function]}
                         onAnimationStart={[Function]}
                         stackId="a"
@@ -492,7 +583,8 @@ ShallowWrapper {
 </BarChart>,
           "className": "undefined",
           "debounce": 0,
-          "height": 200,
+          "height": 260,
+          "minWidth": 1300,
           "width": "100%",
         },
         "ref": null,
@@ -509,7 +601,7 @@ ShallowWrapper {
                 horizontal={true}
                 horizontalFill={Array []}
                 horizontalPoints={Array []}
-                stroke="#ccc"
+                stroke="#ECECEC"
                 vertical={false}
                 verticalFill={Array []}
                 verticalPoints={Array []}
@@ -518,6 +610,11 @@ ShallowWrapper {
                 allowDataOverflow={false}
                 allowDecimals={true}
                 allowDuplicatedCategory={true}
+                axisLine={
+                                Object {
+                                                "stroke": "#ECECEC",
+                                              }
+                }
                 dataKey="cohort"
                 domain={
                                 Array [
@@ -527,6 +624,14 @@ ShallowWrapper {
                 }
                 height={30}
                 hide={false}
+                interval={0}
+                label={
+                                Object {
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "14px",
+                                                "position": "insideBottom",
+                                              }
+                }
                 mirror={false}
                 orientation="bottom"
                 padding={
@@ -537,7 +642,16 @@ ShallowWrapper {
                 }
                 reversed={false}
                 scale="auto"
+                tick={
+                                Object {
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "14px",
+                                              }
+                }
                 tickCount={5}
+                tickLine={false}
+                tickMargin={15}
+                tickSize={0}
                 type="category"
                 width={0}
                 xAxisId={0}
@@ -546,6 +660,11 @@ ShallowWrapper {
                 allowDataOverflow={false}
                 allowDecimals={true}
                 allowDuplicatedCategory={true}
+                axisLine={
+                                Object {
+                                                "stroke": "#ECECEC",
+                                              }
+                }
                 domain={
                                 Array [
                                                 0,
@@ -557,7 +676,9 @@ ShallowWrapper {
                 label={
                                 Object {
                                                 "angle": -90,
-                                                "position": "insideBottomLeft",
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "14px",
+                                                "position": "insideLeft",
                                                 "value": "Total DOB Fellows",
                                               }
                 }
@@ -571,7 +692,15 @@ ShallowWrapper {
                 }
                 reversed={false}
                 scale="auto"
+                tick={
+                                Object {
+                                                "fontFamily": "DIN Pro Light",
+                                                "fontSize": "12px",
+                                              }
+                }
                 tickCount={5}
+                tickLine={false}
+                tickMargin={10}
                 type="number"
                 width={60}
                 yAxisId={0}
@@ -591,16 +720,21 @@ ShallowWrapper {
                                 Object {
                                                 "fill": "#fff",
                                                 "fillOpacity": 0.05,
-                                                "position": "top",
                                               }
                 }
                 cursorStyle={Object {}}
                 filterNull={true}
                 isAnimationActive={true}
                 itemSorter={[Function]}
-                itemStyle={Object {}}
+                itemStyle={
+                                Object {
+                                                "padding": "5px 21px",
+                                                "textAlign": "center",
+                                                "width": "162px",
+                                              }
+                }
                 labelStyle={Object {}}
-                offset={10}
+                offset={5}
                 separator=" : "
                 useTranslate3d={false}
                 viewBox={
@@ -611,7 +745,12 @@ ShallowWrapper {
                                                 "y2": 0,
                                               }
                 }
-                wrapperStyle={Object {}}
+                wrapperStyle={
+                                Object {
+                                                "fontSize": "12px",
+                                                "textAlign": "center",
+                                              }
+                }
 />,
               <Legend
                 align="right"
@@ -629,7 +768,7 @@ ShallowWrapper {
                 animationBegin={0}
                 animationDuration={400}
                 animationEasing="ease"
-                barSize={30}
+                barSize={40}
                 data={Array []}
                 dataKey="offTrack"
                 fill="#FFAF30"
@@ -638,6 +777,7 @@ ShallowWrapper {
                 layout="vertical"
                 legendType="rect"
                 minPointSize={0}
+                name="Off Track"
                 onAnimationEnd={[Function]}
                 onAnimationStart={[Function]}
                 stackId="a"
@@ -648,7 +788,7 @@ ShallowWrapper {
                 animationBegin={0}
                 animationDuration={400}
                 animationEasing="ease"
-                barSize={30}
+                barSize={40}
                 data={Array []}
                 dataKey="onTrack"
                 fill="#3359DB"
@@ -657,6 +797,7 @@ ShallowWrapper {
                 layout="vertical"
                 legendType="rect"
                 minPointSize={0}
+                name="On Track"
                 onAnimationEnd={[Function]}
                 onAnimationStart={[Function]}
                 stackId="a"
@@ -683,7 +824,7 @@ ShallowWrapper {
             ],
             "layout": "horizontal",
             "margin": Object {
-              "bottom": 5,
+              "bottom": 20,
               "left": 30,
               "right": 30,
               "top": 20,
@@ -702,7 +843,7 @@ ShallowWrapper {
                 "horizontal": true,
                 "horizontalFill": Array [],
                 "horizontalPoints": Array [],
-                "stroke": "#ccc",
+                "stroke": "#ECECEC",
                 "vertical": false,
                 "verticalFill": Array [],
                 "verticalPoints": Array [],
@@ -719,6 +860,9 @@ ShallowWrapper {
                 "allowDataOverflow": false,
                 "allowDecimals": true,
                 "allowDuplicatedCategory": true,
+                "axisLine": Object {
+                  "stroke": "#ECECEC",
+                },
                 "dataKey": "cohort",
                 "domain": Array [
                   0,
@@ -726,6 +870,12 @@ ShallowWrapper {
                 ],
                 "height": 30,
                 "hide": false,
+                "interval": 0,
+                "label": Object {
+                  "fontFamily": "DIN Pro Light",
+                  "fontSize": "14px",
+                  "position": "insideBottom",
+                },
                 "mirror": false,
                 "orientation": "bottom",
                 "padding": Object {
@@ -734,7 +884,14 @@ ShallowWrapper {
                 },
                 "reversed": false,
                 "scale": "auto",
+                "tick": Object {
+                  "fontFamily": "DIN Pro Light",
+                  "fontSize": "14px",
+                },
                 "tickCount": 5,
+                "tickLine": false,
+                "tickMargin": 15,
+                "tickSize": 0,
                 "type": "category",
                 "width": 0,
                 "xAxisId": 0,
@@ -751,6 +908,9 @@ ShallowWrapper {
                 "allowDataOverflow": false,
                 "allowDecimals": true,
                 "allowDuplicatedCategory": true,
+                "axisLine": Object {
+                  "stroke": "#ECECEC",
+                },
                 "domain": Array [
                   0,
                   "auto",
@@ -759,7 +919,9 @@ ShallowWrapper {
                 "hide": false,
                 "label": Object {
                   "angle": -90,
-                  "position": "insideBottomLeft",
+                  "fontFamily": "DIN Pro Light",
+                  "fontSize": "14px",
+                  "position": "insideLeft",
                   "value": "Total DOB Fellows",
                 },
                 "mirror": false,
@@ -770,7 +932,13 @@ ShallowWrapper {
                 },
                 "reversed": false,
                 "scale": "auto",
+                "tick": Object {
+                  "fontFamily": "DIN Pro Light",
+                  "fontSize": "12px",
+                },
                 "tickCount": 5,
+                "tickLine": false,
+                "tickMargin": 10,
                 "type": "number",
                 "width": 60,
                 "yAxisId": 0,
@@ -795,15 +963,18 @@ ShallowWrapper {
                 "cursor": Object {
                   "fill": "#fff",
                   "fillOpacity": 0.05,
-                  "position": "top",
                 },
                 "cursorStyle": Object {},
                 "filterNull": true,
                 "isAnimationActive": true,
                 "itemSorter": [Function],
-                "itemStyle": Object {},
+                "itemStyle": Object {
+                  "padding": "5px 21px",
+                  "textAlign": "center",
+                  "width": "162px",
+                },
                 "labelStyle": Object {},
-                "offset": 10,
+                "offset": 5,
                 "separator": " : ",
                 "useTranslate3d": false,
                 "viewBox": Object {
@@ -812,7 +983,10 @@ ShallowWrapper {
                   "y1": 0,
                   "y2": 0,
                 },
-                "wrapperStyle": Object {},
+                "wrapperStyle": Object {
+                  "fontSize": "12px",
+                  "textAlign": "center",
+                },
               },
               "ref": null,
               "rendered": null,
@@ -844,7 +1018,7 @@ ShallowWrapper {
                 "animationBegin": 0,
                 "animationDuration": 400,
                 "animationEasing": "ease",
-                "barSize": 30,
+                "barSize": 40,
                 "data": Array [],
                 "dataKey": "offTrack",
                 "fill": "#FFAF30",
@@ -853,6 +1027,7 @@ ShallowWrapper {
                 "layout": "vertical",
                 "legendType": "rect",
                 "minPointSize": 0,
+                "name": "Off Track",
                 "onAnimationEnd": [Function],
                 "onAnimationStart": [Function],
                 "stackId": "a",
@@ -871,7 +1046,7 @@ ShallowWrapper {
                 "animationBegin": 0,
                 "animationDuration": 400,
                 "animationEasing": "ease",
-                "barSize": 30,
+                "barSize": 40,
                 "data": Array [],
                 "dataKey": "onTrack",
                 "fill": "#3359DB",
@@ -880,6 +1055,7 @@ ShallowWrapper {
                 "layout": "vertical",
                 "legendType": "rect",
                 "minPointSize": 0,
+                "name": "On Track",
                 "onAnimationEnd": [Function],
                 "onAnimationStart": [Function],
                 "stackId": "a",
@@ -911,7 +1087,6 @@ ShallowWrapper {
             <p
                         className="chart_card__title"
             >
-                         
                         DOB Fellows
             </p>
 </div>,
@@ -919,7 +1094,8 @@ ShallowWrapper {
           <ResponsiveContainer
             className="undefined"
             debounce={0}
-            height={200}
+            height={260}
+            minWidth={1300}
             width="100%"
 >
             <BarChart
@@ -947,7 +1123,7 @@ ShallowWrapper {
                         layout="horizontal"
                         margin={
                                     Object {
-                                                "bottom": 5,
+                                                "bottom": 20,
                                                 "left": 30,
                                                 "right": 30,
                                                 "top": 20,
@@ -961,7 +1137,7 @@ ShallowWrapper {
                                     horizontal={true}
                                     horizontalFill={Array []}
                                     horizontalPoints={Array []}
-                                    stroke="#ccc"
+                                    stroke="#ECECEC"
                                     vertical={false}
                                     verticalFill={Array []}
                                     verticalPoints={Array []}
@@ -970,6 +1146,11 @@ ShallowWrapper {
                                     allowDataOverflow={false}
                                     allowDecimals={true}
                                     allowDuplicatedCategory={true}
+                                    axisLine={
+                                                Object {
+                                                            "stroke": "#ECECEC",
+                                                          }
+                                    }
                                     dataKey="cohort"
                                     domain={
                                                 Array [
@@ -979,6 +1160,14 @@ ShallowWrapper {
                                     }
                                     height={30}
                                     hide={false}
+                                    interval={0}
+                                    label={
+                                                Object {
+                                                            "fontFamily": "DIN Pro Light",
+                                                            "fontSize": "14px",
+                                                            "position": "insideBottom",
+                                                          }
+                                    }
                                     mirror={false}
                                     orientation="bottom"
                                     padding={
@@ -989,7 +1178,16 @@ ShallowWrapper {
                                     }
                                     reversed={false}
                                     scale="auto"
+                                    tick={
+                                                Object {
+                                                            "fontFamily": "DIN Pro Light",
+                                                            "fontSize": "14px",
+                                                          }
+                                    }
                                     tickCount={5}
+                                    tickLine={false}
+                                    tickMargin={15}
+                                    tickSize={0}
                                     type="category"
                                     width={0}
                                     xAxisId={0}
@@ -998,6 +1196,11 @@ ShallowWrapper {
                                     allowDataOverflow={false}
                                     allowDecimals={true}
                                     allowDuplicatedCategory={true}
+                                    axisLine={
+                                                Object {
+                                                            "stroke": "#ECECEC",
+                                                          }
+                                    }
                                     domain={
                                                 Array [
                                                             0,
@@ -1009,7 +1212,9 @@ ShallowWrapper {
                                     label={
                                                 Object {
                                                             "angle": -90,
-                                                            "position": "insideBottomLeft",
+                                                            "fontFamily": "DIN Pro Light",
+                                                            "fontSize": "14px",
+                                                            "position": "insideLeft",
                                                             "value": "Total DOB Fellows",
                                                           }
                                     }
@@ -1023,7 +1228,15 @@ ShallowWrapper {
                                     }
                                     reversed={false}
                                     scale="auto"
+                                    tick={
+                                                Object {
+                                                            "fontFamily": "DIN Pro Light",
+                                                            "fontSize": "12px",
+                                                          }
+                                    }
                                     tickCount={5}
+                                    tickLine={false}
+                                    tickMargin={10}
                                     type="number"
                                     width={60}
                                     yAxisId={0}
@@ -1043,16 +1256,21 @@ ShallowWrapper {
                                                 Object {
                                                             "fill": "#fff",
                                                             "fillOpacity": 0.05,
-                                                            "position": "top",
                                                           }
                                     }
                                     cursorStyle={Object {}}
                                     filterNull={true}
                                     isAnimationActive={true}
                                     itemSorter={[Function]}
-                                    itemStyle={Object {}}
+                                    itemStyle={
+                                                Object {
+                                                            "padding": "5px 21px",
+                                                            "textAlign": "center",
+                                                            "width": "162px",
+                                                          }
+                                    }
                                     labelStyle={Object {}}
-                                    offset={10}
+                                    offset={5}
                                     separator=" : "
                                     useTranslate3d={false}
                                     viewBox={
@@ -1063,7 +1281,12 @@ ShallowWrapper {
                                                             "y2": 0,
                                                           }
                                     }
-                                    wrapperStyle={Object {}}
+                                    wrapperStyle={
+                                                Object {
+                                                            "fontSize": "12px",
+                                                            "textAlign": "center",
+                                                          }
+                                    }
                         />
                         <Legend
                                     align="right"
@@ -1081,7 +1304,7 @@ ShallowWrapper {
                                     animationBegin={0}
                                     animationDuration={400}
                                     animationEasing="ease"
-                                    barSize={30}
+                                    barSize={40}
                                     data={Array []}
                                     dataKey="offTrack"
                                     fill="#FFAF30"
@@ -1090,6 +1313,7 @@ ShallowWrapper {
                                     layout="vertical"
                                     legendType="rect"
                                     minPointSize={0}
+                                    name="Off Track"
                                     onAnimationEnd={[Function]}
                                     onAnimationStart={[Function]}
                                     stackId="a"
@@ -1100,7 +1324,7 @@ ShallowWrapper {
                                     animationBegin={0}
                                     animationDuration={400}
                                     animationEasing="ease"
-                                    barSize={30}
+                                    barSize={40}
                                     data={Array []}
                                     dataKey="onTrack"
                                     fill="#3359DB"
@@ -1109,6 +1333,7 @@ ShallowWrapper {
                                     layout="vertical"
                                     legendType="rect"
                                     minPointSize={0}
+                                    name="On Track"
                                     onAnimationEnd={[Function]}
                                     onAnimationStart={[Function]}
                                     stackId="a"
@@ -1118,7 +1343,7 @@ ShallowWrapper {
             </BarChart>
 </ResponsiveContainer>,
         ],
-        "className": "chart_card",
+        "className": "chart_card scroll",
       },
       "ref": null,
       "rendered": Array [
@@ -1130,7 +1355,6 @@ ShallowWrapper {
             "children": <p
               className="chart_card__title"
 >
-               
               DOB Fellows
 </p>,
             "className": "chart_card__header",
@@ -1141,17 +1365,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                " ",
-                "DOB Fellows",
-              ],
+              "children": "DOB Fellows",
               "className": "chart_card__title",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "DOB Fellows",
-            ],
+            "rendered": "DOB Fellows",
             "type": "p",
           },
           "type": "div",
@@ -1187,7 +1405,7 @@ ShallowWrapper {
               layout="horizontal"
               margin={
                             Object {
-                                          "bottom": 5,
+                                          "bottom": 20,
                                           "left": 30,
                                           "right": 30,
                                           "top": 20,
@@ -1201,7 +1419,7 @@ ShallowWrapper {
                             horizontal={true}
                             horizontalFill={Array []}
                             horizontalPoints={Array []}
-                            stroke="#ccc"
+                            stroke="#ECECEC"
                             vertical={false}
                             verticalFill={Array []}
                             verticalPoints={Array []}
@@ -1210,6 +1428,11 @@ ShallowWrapper {
                             allowDataOverflow={false}
                             allowDecimals={true}
                             allowDuplicatedCategory={true}
+                            axisLine={
+                                          Object {
+                                                        "stroke": "#ECECEC",
+                                                      }
+                            }
                             dataKey="cohort"
                             domain={
                                           Array [
@@ -1219,6 +1442,14 @@ ShallowWrapper {
                             }
                             height={30}
                             hide={false}
+                            interval={0}
+                            label={
+                                          Object {
+                                                        "fontFamily": "DIN Pro Light",
+                                                        "fontSize": "14px",
+                                                        "position": "insideBottom",
+                                                      }
+                            }
                             mirror={false}
                             orientation="bottom"
                             padding={
@@ -1229,7 +1460,16 @@ ShallowWrapper {
                             }
                             reversed={false}
                             scale="auto"
+                            tick={
+                                          Object {
+                                                        "fontFamily": "DIN Pro Light",
+                                                        "fontSize": "14px",
+                                                      }
+                            }
                             tickCount={5}
+                            tickLine={false}
+                            tickMargin={15}
+                            tickSize={0}
                             type="category"
                             width={0}
                             xAxisId={0}
@@ -1238,6 +1478,11 @@ ShallowWrapper {
                             allowDataOverflow={false}
                             allowDecimals={true}
                             allowDuplicatedCategory={true}
+                            axisLine={
+                                          Object {
+                                                        "stroke": "#ECECEC",
+                                                      }
+                            }
                             domain={
                                           Array [
                                                         0,
@@ -1249,7 +1494,9 @@ ShallowWrapper {
                             label={
                                           Object {
                                                         "angle": -90,
-                                                        "position": "insideBottomLeft",
+                                                        "fontFamily": "DIN Pro Light",
+                                                        "fontSize": "14px",
+                                                        "position": "insideLeft",
                                                         "value": "Total DOB Fellows",
                                                       }
                             }
@@ -1263,7 +1510,15 @@ ShallowWrapper {
                             }
                             reversed={false}
                             scale="auto"
+                            tick={
+                                          Object {
+                                                        "fontFamily": "DIN Pro Light",
+                                                        "fontSize": "12px",
+                                                      }
+                            }
                             tickCount={5}
+                            tickLine={false}
+                            tickMargin={10}
                             type="number"
                             width={60}
                             yAxisId={0}
@@ -1283,16 +1538,21 @@ ShallowWrapper {
                                           Object {
                                                         "fill": "#fff",
                                                         "fillOpacity": 0.05,
-                                                        "position": "top",
                                                       }
                             }
                             cursorStyle={Object {}}
                             filterNull={true}
                             isAnimationActive={true}
                             itemSorter={[Function]}
-                            itemStyle={Object {}}
+                            itemStyle={
+                                          Object {
+                                                        "padding": "5px 21px",
+                                                        "textAlign": "center",
+                                                        "width": "162px",
+                                                      }
+                            }
                             labelStyle={Object {}}
-                            offset={10}
+                            offset={5}
                             separator=" : "
                             useTranslate3d={false}
                             viewBox={
@@ -1303,7 +1563,12 @@ ShallowWrapper {
                                                         "y2": 0,
                                                       }
                             }
-                            wrapperStyle={Object {}}
+                            wrapperStyle={
+                                          Object {
+                                                        "fontSize": "12px",
+                                                        "textAlign": "center",
+                                                      }
+                            }
               />
               <Legend
                             align="right"
@@ -1321,7 +1586,7 @@ ShallowWrapper {
                             animationBegin={0}
                             animationDuration={400}
                             animationEasing="ease"
-                            barSize={30}
+                            barSize={40}
                             data={Array []}
                             dataKey="offTrack"
                             fill="#FFAF30"
@@ -1330,6 +1595,7 @@ ShallowWrapper {
                             layout="vertical"
                             legendType="rect"
                             minPointSize={0}
+                            name="Off Track"
                             onAnimationEnd={[Function]}
                             onAnimationStart={[Function]}
                             stackId="a"
@@ -1340,7 +1606,7 @@ ShallowWrapper {
                             animationBegin={0}
                             animationDuration={400}
                             animationEasing="ease"
-                            barSize={30}
+                            barSize={40}
                             data={Array []}
                             dataKey="onTrack"
                             fill="#3359DB"
@@ -1349,6 +1615,7 @@ ShallowWrapper {
                             layout="vertical"
                             legendType="rect"
                             minPointSize={0}
+                            name="On Track"
                             onAnimationEnd={[Function]}
                             onAnimationStart={[Function]}
                             stackId="a"
@@ -1358,7 +1625,8 @@ ShallowWrapper {
 </BarChart>,
             "className": "undefined",
             "debounce": 0,
-            "height": 200,
+            "height": 260,
+            "minWidth": 1300,
             "width": "100%",
           },
           "ref": null,
@@ -1375,7 +1643,7 @@ ShallowWrapper {
                   horizontal={true}
                   horizontalFill={Array []}
                   horizontalPoints={Array []}
-                  stroke="#ccc"
+                  stroke="#ECECEC"
                   vertical={false}
                   verticalFill={Array []}
                   verticalPoints={Array []}
@@ -1384,6 +1652,11 @@ ShallowWrapper {
                   allowDataOverflow={false}
                   allowDecimals={true}
                   allowDuplicatedCategory={true}
+                  axisLine={
+                                    Object {
+                                                      "stroke": "#ECECEC",
+                                                    }
+                  }
                   dataKey="cohort"
                   domain={
                                     Array [
@@ -1393,6 +1666,14 @@ ShallowWrapper {
                   }
                   height={30}
                   hide={false}
+                  interval={0}
+                  label={
+                                    Object {
+                                                      "fontFamily": "DIN Pro Light",
+                                                      "fontSize": "14px",
+                                                      "position": "insideBottom",
+                                                    }
+                  }
                   mirror={false}
                   orientation="bottom"
                   padding={
@@ -1403,7 +1684,16 @@ ShallowWrapper {
                   }
                   reversed={false}
                   scale="auto"
+                  tick={
+                                    Object {
+                                                      "fontFamily": "DIN Pro Light",
+                                                      "fontSize": "14px",
+                                                    }
+                  }
                   tickCount={5}
+                  tickLine={false}
+                  tickMargin={15}
+                  tickSize={0}
                   type="category"
                   width={0}
                   xAxisId={0}
@@ -1412,6 +1702,11 @@ ShallowWrapper {
                   allowDataOverflow={false}
                   allowDecimals={true}
                   allowDuplicatedCategory={true}
+                  axisLine={
+                                    Object {
+                                                      "stroke": "#ECECEC",
+                                                    }
+                  }
                   domain={
                                     Array [
                                                       0,
@@ -1423,7 +1718,9 @@ ShallowWrapper {
                   label={
                                     Object {
                                                       "angle": -90,
-                                                      "position": "insideBottomLeft",
+                                                      "fontFamily": "DIN Pro Light",
+                                                      "fontSize": "14px",
+                                                      "position": "insideLeft",
                                                       "value": "Total DOB Fellows",
                                                     }
                   }
@@ -1437,7 +1734,15 @@ ShallowWrapper {
                   }
                   reversed={false}
                   scale="auto"
+                  tick={
+                                    Object {
+                                                      "fontFamily": "DIN Pro Light",
+                                                      "fontSize": "12px",
+                                                    }
+                  }
                   tickCount={5}
+                  tickLine={false}
+                  tickMargin={10}
                   type="number"
                   width={60}
                   yAxisId={0}
@@ -1457,16 +1762,21 @@ ShallowWrapper {
                                     Object {
                                                       "fill": "#fff",
                                                       "fillOpacity": 0.05,
-                                                      "position": "top",
                                                     }
                   }
                   cursorStyle={Object {}}
                   filterNull={true}
                   isAnimationActive={true}
                   itemSorter={[Function]}
-                  itemStyle={Object {}}
+                  itemStyle={
+                                    Object {
+                                                      "padding": "5px 21px",
+                                                      "textAlign": "center",
+                                                      "width": "162px",
+                                                    }
+                  }
                   labelStyle={Object {}}
-                  offset={10}
+                  offset={5}
                   separator=" : "
                   useTranslate3d={false}
                   viewBox={
@@ -1477,7 +1787,12 @@ ShallowWrapper {
                                                       "y2": 0,
                                                     }
                   }
-                  wrapperStyle={Object {}}
+                  wrapperStyle={
+                                    Object {
+                                                      "fontSize": "12px",
+                                                      "textAlign": "center",
+                                                    }
+                  }
 />,
                 <Legend
                   align="right"
@@ -1495,7 +1810,7 @@ ShallowWrapper {
                   animationBegin={0}
                   animationDuration={400}
                   animationEasing="ease"
-                  barSize={30}
+                  barSize={40}
                   data={Array []}
                   dataKey="offTrack"
                   fill="#FFAF30"
@@ -1504,6 +1819,7 @@ ShallowWrapper {
                   layout="vertical"
                   legendType="rect"
                   minPointSize={0}
+                  name="Off Track"
                   onAnimationEnd={[Function]}
                   onAnimationStart={[Function]}
                   stackId="a"
@@ -1514,7 +1830,7 @@ ShallowWrapper {
                   animationBegin={0}
                   animationDuration={400}
                   animationEasing="ease"
-                  barSize={30}
+                  barSize={40}
                   data={Array []}
                   dataKey="onTrack"
                   fill="#3359DB"
@@ -1523,6 +1839,7 @@ ShallowWrapper {
                   layout="vertical"
                   legendType="rect"
                   minPointSize={0}
+                  name="On Track"
                   onAnimationEnd={[Function]}
                   onAnimationStart={[Function]}
                   stackId="a"
@@ -1549,7 +1866,7 @@ ShallowWrapper {
               ],
               "layout": "horizontal",
               "margin": Object {
-                "bottom": 5,
+                "bottom": 20,
                 "left": 30,
                 "right": 30,
                 "top": 20,
@@ -1568,7 +1885,7 @@ ShallowWrapper {
                   "horizontal": true,
                   "horizontalFill": Array [],
                   "horizontalPoints": Array [],
-                  "stroke": "#ccc",
+                  "stroke": "#ECECEC",
                   "vertical": false,
                   "verticalFill": Array [],
                   "verticalPoints": Array [],
@@ -1585,6 +1902,9 @@ ShallowWrapper {
                   "allowDataOverflow": false,
                   "allowDecimals": true,
                   "allowDuplicatedCategory": true,
+                  "axisLine": Object {
+                    "stroke": "#ECECEC",
+                  },
                   "dataKey": "cohort",
                   "domain": Array [
                     0,
@@ -1592,6 +1912,12 @@ ShallowWrapper {
                   ],
                   "height": 30,
                   "hide": false,
+                  "interval": 0,
+                  "label": Object {
+                    "fontFamily": "DIN Pro Light",
+                    "fontSize": "14px",
+                    "position": "insideBottom",
+                  },
                   "mirror": false,
                   "orientation": "bottom",
                   "padding": Object {
@@ -1600,7 +1926,14 @@ ShallowWrapper {
                   },
                   "reversed": false,
                   "scale": "auto",
+                  "tick": Object {
+                    "fontFamily": "DIN Pro Light",
+                    "fontSize": "14px",
+                  },
                   "tickCount": 5,
+                  "tickLine": false,
+                  "tickMargin": 15,
+                  "tickSize": 0,
                   "type": "category",
                   "width": 0,
                   "xAxisId": 0,
@@ -1617,6 +1950,9 @@ ShallowWrapper {
                   "allowDataOverflow": false,
                   "allowDecimals": true,
                   "allowDuplicatedCategory": true,
+                  "axisLine": Object {
+                    "stroke": "#ECECEC",
+                  },
                   "domain": Array [
                     0,
                     "auto",
@@ -1625,7 +1961,9 @@ ShallowWrapper {
                   "hide": false,
                   "label": Object {
                     "angle": -90,
-                    "position": "insideBottomLeft",
+                    "fontFamily": "DIN Pro Light",
+                    "fontSize": "14px",
+                    "position": "insideLeft",
                     "value": "Total DOB Fellows",
                   },
                   "mirror": false,
@@ -1636,7 +1974,13 @@ ShallowWrapper {
                   },
                   "reversed": false,
                   "scale": "auto",
+                  "tick": Object {
+                    "fontFamily": "DIN Pro Light",
+                    "fontSize": "12px",
+                  },
                   "tickCount": 5,
+                  "tickLine": false,
+                  "tickMargin": 10,
                   "type": "number",
                   "width": 60,
                   "yAxisId": 0,
@@ -1661,15 +2005,18 @@ ShallowWrapper {
                   "cursor": Object {
                     "fill": "#fff",
                     "fillOpacity": 0.05,
-                    "position": "top",
                   },
                   "cursorStyle": Object {},
                   "filterNull": true,
                   "isAnimationActive": true,
                   "itemSorter": [Function],
-                  "itemStyle": Object {},
+                  "itemStyle": Object {
+                    "padding": "5px 21px",
+                    "textAlign": "center",
+                    "width": "162px",
+                  },
                   "labelStyle": Object {},
-                  "offset": 10,
+                  "offset": 5,
                   "separator": " : ",
                   "useTranslate3d": false,
                   "viewBox": Object {
@@ -1678,7 +2025,10 @@ ShallowWrapper {
                     "y1": 0,
                     "y2": 0,
                   },
-                  "wrapperStyle": Object {},
+                  "wrapperStyle": Object {
+                    "fontSize": "12px",
+                    "textAlign": "center",
+                  },
                 },
                 "ref": null,
                 "rendered": null,
@@ -1710,7 +2060,7 @@ ShallowWrapper {
                   "animationBegin": 0,
                   "animationDuration": 400,
                   "animationEasing": "ease",
-                  "barSize": 30,
+                  "barSize": 40,
                   "data": Array [],
                   "dataKey": "offTrack",
                   "fill": "#FFAF30",
@@ -1719,6 +2069,7 @@ ShallowWrapper {
                   "layout": "vertical",
                   "legendType": "rect",
                   "minPointSize": 0,
+                  "name": "Off Track",
                   "onAnimationEnd": [Function],
                   "onAnimationStart": [Function],
                   "stackId": "a",
@@ -1737,7 +2088,7 @@ ShallowWrapper {
                   "animationBegin": 0,
                   "animationDuration": 400,
                   "animationEasing": "ease",
-                  "barSize": 30,
+                  "barSize": 40,
                   "data": Array [],
                   "dataKey": "onTrack",
                   "fill": "#3359DB",
@@ -1746,6 +2097,7 @@ ShallowWrapper {
                   "layout": "vertical",
                   "legendType": "rect",
                   "minPointSize": 0,
+                  "name": "On Track",
                   "onAnimationEnd": [Function],
                   "onAnimationStart": [Function],
                   "stackId": "a",

@@ -21,8 +21,7 @@ const fellowProgressReducer = (
       return {
         ...state,
         loading: false,
-        fellowsProgressD0A: action.fellowsProgressD0A,
-        fellowsProgressD0B: action.fellowsProgressD0B
+        data: action.payload
       };
 
     case LOAD_FELLOW_PROGRESS_FAILURE:

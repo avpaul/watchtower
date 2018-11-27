@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FellowsSummaryContainer should map state to props 1`] = `
+Object {
+  "fellowsProgress": Object {
+    "data": Object {
+      "fellowsProgressD0": Array [],
+      "fellowsProgressD0A": Array [],
+      "fellowsProgressD0B": Array [],
+    },
+    "error": null,
+    "loading": false,
+  },
+  "locations": Object {
+    "error": null,
+    "loading": false,
+    "locations": Array [],
+  },
+}
+`;

@@ -85,11 +85,6 @@
 }
 
 .notification__icon::after {
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.notification__icon::after {
   position: absolute;
   border-radius: 50%;
   background: #3498db;
@@ -103,6 +98,8 @@
   background-color: #0459e4;
   right: -3px;
   top: 1px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .header__divider {
@@ -184,24 +181,13 @@
 .modal-text {
   background: rgb(255, 255, 255) !important;
   border-radius: 4px !important;
-  margin: 2px 2px 9px 20px;
-  padding: 4px 3px 3px 9px;
-}
-
-.text-sizing {
-  height: 95x;
-}
-
-.modal-text {
-  background: rgb(255, 255, 255) !important;
-  border-radius: 4px !important;
   margin: 4px 2px 9px 20px;
   padding: 7px 7px 5px 9px;
   color: #444444;
 }
 
 .text-sizing {
-  height: 95x;
+  height: 95px;
   font-size: 15px;
   margin-top: 7px;
 }

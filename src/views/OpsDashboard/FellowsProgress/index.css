@@ -34,7 +34,6 @@
 }
 
 .filter_dropdown > span:last-child {
-  padding: 10px 20px;
   background-color: #d3eeff;
   border-radius: 0 4px 4px 0;
   height: 44px;
@@ -91,7 +90,6 @@
   font-size: 16px;
   padding: 8px 16px;
   padding-right: 1px;
-  border: none;
   width: 157px;
   border: solid 1px rgb(241, 241, 241);
 }
@@ -104,4 +102,9 @@
 .filters {
   display: flex;
   margin-bottom: 30px;
+}
+
+.fellow_progress__filter_title {
+  font-size: 14px;
+  font-family: 'DIN Pro Light';
 }

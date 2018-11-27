@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
@@ -98,6 +97,7 @@ class Filter extends Component {
                   key={item}
                   className="open__list_item"
                   onClick={this.handleSelect}
+                  onKeyPress={this.handleSelect}
                   role="button"
                 >
                   {item}
@@ -121,7 +121,7 @@ class Filter extends Component {
     return (
       <Fragment>
         <div ref={this.setWrapperRef} className="">
-          {title}
+          <p className="fellow_progress__filter_title">{title}</p>
           <button
             type="button"
             className="filter_dropdown"

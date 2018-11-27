@@ -19,12 +19,15 @@ export default {
   visibilityFilter: OFFTRACK_WK5_PLUS,
   fellowCountHistory: {
     countSummary: {},
-    loading: false,
+    loading: false
   },
   fellowsProgress: {
     loading: false,
-    fellowsProgressD0A: [],
-    fellowsProgressD0B: [],
+    data: {
+      fellowsProgressD0A: [],
+      fellowsProgressD0B: [],
+      fellowsProgressD0: []
+    },
     error: null
   },
   ttls: {
@@ -42,7 +45,7 @@ export default {
     lfs: [],
     averageFellowsPerTtl: 0,
     averageFellowsPerLf: 0,
-    loading: false,
+    loading: false
   },
   managerFellows: {
     loading: false,
@@ -57,7 +60,7 @@ export default {
         D0AFellowsCount: 0,
         D0BFellowsCount: 0
       },
-      error: '',
-    },
-  },
+      error: ''
+    }
+  }
 };

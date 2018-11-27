@@ -16,7 +16,13 @@ describe('FellowProgress', () => {
         }
       ]
     },
-    fellowsProgress: {},
+    fellowsProgress: {
+      data: {
+        fellowsProgressD0A: [],
+        fellowsProgressD0B: [],
+        fellowsProgress: []
+      }
+    },
     locations: { locations: [] },
     getTTLs: getTTLSpy,
     getLocations: jest.fn(),

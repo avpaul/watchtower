@@ -10,9 +10,7 @@ const getAuthToken = () => {
   return token;
 };
 
-const isAuthenticated = () => (
-  !!getAuthToken()
-);
+const isAuthenticated = () => !!getAuthToken();
 
 const loadUserFromToken = () => {
   const token = getAuthToken();
@@ -23,7 +21,8 @@ const loadUserFromToken = () => {
 
 const logout = () => {
   localStorage.removeItem('jwt-token');
-  document.cookie = 'jwt-token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;domain=.andela.com;';
+  document.cookie =
+    'jwt-token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;domain=.andela.com;';
   Cookie.remove('jwt-token');
 };
 
@@ -31,7 +30,7 @@ const authService = {
   isAuthenticated,
   getAuthToken,
   loadUserFromToken,
-  logout,
+  logout
 };
 
 export default authService;

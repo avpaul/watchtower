@@ -15,6 +15,8 @@
 
 .chart_card__title {
   padding: 0px 0px 0px 62px;
+  font-size: 18px;
+  color: #303030;
 }
 
 .chart_loader {
@@ -42,4 +44,21 @@
 
 .chart_card__loading {
   opacity: 0.3;
+}
+
+.recharts-legend-item-text {
+  vertical-align: middle;
+  font-size: 18px;
+  font-family: 'DIN Pro Light';
+  margin-left: 6px;
+}
+
+.recharts-default-tooltip {
+  border-radius: 5px;
+  border: none !important;
+  box-shadow: 0 4px 5px 0 rgba(151, 151, 151, 0.2);
+}
+
+.scroll {
+  overflow: scroll;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
-import { TTLDashboardMain, TTLDashboardMainConnected } from '../TTLDasboard';
+import { TTLDashboardMain } from '../TTLDasboard';
 import TTLDashboard from '..';
 
-describe('<TLLDasboard  /> tests', () => {
+describe('<TLLDasboard /> tests', () => {
   it('renders without crashing', () => {
     const props = {
       managerFellows: {
@@ -29,7 +29,7 @@ describe('TTLDashboard component', () => {
   const store = mockStore({ managerFellows: { managerFellows: {} } });
 
   beforeEach(() => {
-    wrapper = mount(
+    wrapper = shallow(
       <MemoryRouter initialEntries={['/dashboard']}>
         <TTLDashboard
           getManagersFellows={jest.fn()}
@@ -42,6 +42,6 @@ describe('TTLDashboard component', () => {
   });
 
   it('matchs correctly', () => {
-    expect(wrapper.find(TTLDashboardMainConnected)).toHaveLength(1);
+    expect(wrapper.find(TTLDashboard)).toHaveLength(1);
   });
 });
