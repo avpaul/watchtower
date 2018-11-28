@@ -35,6 +35,11 @@ export default {
     ttls: [],
     error: null
   },
+  ttlProjects: {
+    loading: false,
+    projects: [],
+    error: null
+  },
   locations: {
     loading: false,
     locations: [],

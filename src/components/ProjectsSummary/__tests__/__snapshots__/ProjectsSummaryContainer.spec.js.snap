@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsSummaryContainer should map state to props 1`] = `
+Object {
+  "ttlProjects": Object {
+    "error": null,
+    "loading": false,
+    "projects": Array [],
+  },
+}
+`;

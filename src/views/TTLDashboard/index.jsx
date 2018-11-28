@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../../components/Header';
-import { TTLDashboardMainConnected } from './TTLDasboard';
+import TTLDashboardContainer from './TTLDashboardContainer';
 
 /**
  * Defines routes for the ttldashboard
@@ -15,7 +15,7 @@ const TTLDashboard = props => (
         <Route
           exact
           path="/dashboard"
-          component={() => <TTLDashboardMainConnected {...props} />}
+          component={() => <TTLDashboardContainer {...props} />}
         />
       </Switch>
     </React.Fragment>

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsSummaryChartContainer should map state to props 1`] = `
+Object {
+  "fellowCountHistory": Object {
+    "countSummary": Object {},
+    "loading": false,
+  },
+}
+`;
