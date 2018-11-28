@@ -37,3 +37,11 @@ it('makes the API call when the search term changes', () => {
   wrapper.setProps({ search: 'foo' });
   expect(getFellowsSpy).toHaveBeenCalledWith(callArgs);
 });
+
+it('calls handleClick when the search button is clicked', () => {
+  const event = { preventDefault: jest.fn };
+  const wrapper = shallow(<SearchBar {...props} search="search" />);
+  const handleClickSpy = jest.spyOn(wrapper.instance(), 'handleClick');
+  wrapper.instance().handleClick(event);
+  expect(handleClickSpy).toHaveBeenCalledWith(event);
+});

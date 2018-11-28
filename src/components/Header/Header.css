@@ -37,6 +37,17 @@
   vertical-align: middle;
 }
 
+.fellow-search {
+  height: 32px;
+  width: 224px;
+  border: 1px solid #bcbcbc;
+  opacity: 0.4;
+  border-radius: 50px;
+  margin-right: 2%;
+  background: url(../../static/Loupe.svg) no-repeat 95% 7px;
+  padding-right: 40px;
+}
+
 .user {
   display: inline-block;
   font-weight: 100;
@@ -102,6 +113,17 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+  display: inline-block;
+  margin: 0 2.5%;
+}
+
+.search__icon {
+  margin-right: 10px;
+}
+
 .header__divider {
   box-sizing: border-box;
   height: 2px;
@@ -160,15 +182,28 @@
   .navlink {
     outline: 0;
   }
+  .fellow-search {
+    background: none;
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 575px) {
-  .navlink > .navicon {
-    margin: 0 auto;
-    padding: 0 0.8em;
+  .navlink {
+    margin: 0 auto !important;
+  }
+  .menulink {
+    margin-right: 25px;
   }
   #profile-menu > div:first-child {
     padding: 0px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navlink {
+    font-size: 0 !important;
+    margin-left: 40px !important;
   }
 }
 

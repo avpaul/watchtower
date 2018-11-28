@@ -4,8 +4,8 @@
 
 .dashboard-table {
   display: table;
-  margin: 0 60px 20px 60px;
-  width: 1320px;
+  margin: 0 3.75em;
+  width: 90%;
   font-family: 'DIN Pro Light' Arial, Helvetica, sans-serif;
   font-weight: 100;
   border: 0 none black;

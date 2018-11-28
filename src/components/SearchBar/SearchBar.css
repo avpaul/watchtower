@@ -1,28 +1,43 @@
-.fellow-search {
-  height: 32px;
-  width: 380px;
-  border: 1px solid #bcbcbc;
-  opacity: 0.4;
-  border-radius: 50px;
-  background: url(../../static/Loupe.svg) no-repeat 95% 7px;
-  padding-right: 40px;
-  margin-right: 20px;
-  margin-bottom: 10px;
+.fellow-table-search {
+  height: 45px;
+  max-width: 209px;
+  border-radius: 4px;
+  margin-bottom: 24px;
 }
 
 /* enable absolute positioning */
-.inner-addon {
+.table_search_div {
   margin-left: 60px;
 }
+
+.table-search-append {
+  width: 45px;
+  background-color: #ffaf30;
+  opacity: 0.62;
+  cursor: default;
+}
 .result-count {
+  margin-left: 60px;
   font-family: 'DIN Pro Light', Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-size: 1.25em;
+  line-height: 1.2em;
   font-weight: 400;
+  margin-bottom: 27px;
 }
 
+.result-count span.border-bottom {
+  border-color: #3359db !important;
+  border-width: 2px !important;
+}
+
+.clear-filters {
+  color: #0459e4;
+  font-size: 16px;
+  line-height: 21px;
+}
 /* Mobile and Tablet screen */
 @media screen and (max-width: 767px) {
-  .fellow-search {
+  .fellow-table-search {
     width: 200px;
   }
 }

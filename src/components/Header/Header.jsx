@@ -168,7 +168,7 @@ class Header extends Component {
               src={watchTowerLogo}
               alt="watch tower logo"
             />
-            <span className="watch-tower d-none d-sm-inline-block d-md-inline-block d-lg-inline-block">
+            <span className="watch-tower d-none d-sm-inline-block">
               WatchTower
             </span>
           </Link>
@@ -179,7 +179,7 @@ class Header extends Component {
               data-target="#search_form"
             >
               <img
-                className="search__icon d-inline-block d-md-none d-xl-none"
+                className="search__icon d-inline-block d-sm-none"
                 src={searchIcon}
                 alt="searchIcon"
               />
