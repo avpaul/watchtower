@@ -57,6 +57,11 @@ export default {
     managerFellows: {},
     error: ''
   },
+  fellow: {
+    loading: false,
+    fellow: {},
+    error: ''
+  },
   opsDashboard: {
     fellowsSummary: {
       loading: false,

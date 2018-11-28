@@ -63,6 +63,6 @@ describe('<Dashboards />', () => {
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
-    expect(item.name()).toEqual('FellowDashboardPage');
+    expect(item.name()).toEqual('FellowDashboard');
   });
 });

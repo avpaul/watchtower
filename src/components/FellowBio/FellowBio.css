@@ -1,0 +1,80 @@
+.card-bio {
+  display: inline-block;
+  height: 240px;
+  width: 620px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin: 60px 20px 60px 60px;
+  padding-top: 0px;
+}
+
+.card-bio:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.card-project {
+  display: inline-block;
+  height: 240px;
+  width: 620px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin: 30px 20px 60px 60px;
+}
+
+.rectangle {
+  height: 30px;
+  width: 4px;
+  background-color: #ffaf30;
+  margin: 25px 15px 30px 40px;
+}
+
+.my-bio {
+  height: 26px;
+  width: 112px;
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 0px 0px 5px 57px;
+  position: absolute;
+}
+
+.my-project {
+  height: 26px;
+  width: 112px;
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  position: static;
+  min-width: 200px;
+  margin: 0px 0px 5px 57px;
+}
+
+.title {
+  height: 26px;
+  width: 461.38px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.content {
+  position: absolute;
+  height: 26px;
+  width: 461.38px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  line-height: 26px;
+  margin: 29px 99.62px 182px 56px !important;
+}
+
+.spacing {
+  margin: 0px 2px 0px 0px;
+}

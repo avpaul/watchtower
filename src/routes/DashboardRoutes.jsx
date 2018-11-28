@@ -1,7 +1,7 @@
 import React from 'react';
 import OpsDashboard from '../views/OpsDashboard';
 import NotFoundPage from '../views/NotFoundPage';
-import FellowDashboardPage from '../views/DashboardPage/FellowDashboardPage';
+import FellowDashboard from '../views/FellowDashboard';
 import TTLDashboard from '../views/TTLDashboard';
 
 /**
@@ -23,7 +23,7 @@ const Dashboards = props => {
       return <TTLDashboard {...props} role={role} />;
     case 'WATCH_TOWER_EM':
     case 'Fellow':
-      return <FellowDashboardPage {...props} role={role} />;
+      return <FellowDashboard {...props} role={role} />;
     case 'WATCH_TOWER_OPS':
       return <OpsDashboard {...props} role={role} />;
     default:

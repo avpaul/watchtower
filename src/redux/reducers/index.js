@@ -10,6 +10,7 @@ import locationReducer from './locationReducer';
 import opsDashboardReducer from './opsDashBoardReducer';
 import managerFellowReducer from './managerFellows';
 import ttlProjectsReducer from './ttlProjectsReducer';
+import fellowBioReducer from './fellowBio';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   opsDashboard: opsDashboardReducer,
   managerFellows: managerFellowReducer,
   ttlProjects: ttlProjectsReducer,
+  fellow: fellowBioReducer
 });
 
 export default rootReducer;
