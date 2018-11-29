@@ -11,8 +11,8 @@ export const getFellows = ({
   page = 1,
   filter = OFFTRACK_WK5_PLUS,
   search,
-  url,
-} = {}) => (dispatch) => {
+  url
+} = {}) => dispatch => {
   dispatch({ type: types.LOAD_FELLOW_REQUEST });
   let requestURL = url;
   if (!requestURL) {
@@ -21,17 +21,22 @@ export const getFellows = ({
   }
 
   return axios.get(requestURL).then(
-    response => dispatch({
-      type: types.LOAD_FELLOW_SUCCESS,
-      fellows: response.data.payload,
-      summary: response.data.summary,
-      pagination: paginationExtract(response.data),
-    }),
-    error => dispatch({
-      type: types.LOAD_FELLOW_FAILURE,
-      error: errorHandler(error),
-    }),
+    response =>
+      dispatch({
+        type: types.LOAD_FELLOW_SUCCESS,
+        fellows: response.data.payload,
+        summary: response.data.summary,
+        pagination: paginationExtract(response.data)
+      }),
+    error =>
+      dispatch({
+        type: types.LOAD_FELLOW_FAILURE,
+        error: errorHandler(error)
+      })
   );
 };
 
-export const setVisibilityFilter = filter => ({ type: types.SET_VISIBILITY_FILTER, filter });
+export const setVisibilityFilter = filter => ({
+  type: types.SET_VISIBILITY_FILTER,
+  filter
+});

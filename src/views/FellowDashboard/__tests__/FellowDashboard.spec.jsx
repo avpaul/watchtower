@@ -6,11 +6,29 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import initialState from '../../../redux/reducers/initialState';
+import jsonwebtoken from 'jsonwebtoken';
+import Cookie from 'js-cookie';
 
 import FellowDashboard from '..';
 
 describe('FellowDashboard component', () => {
   let wrapper;
+
+  beforeAll(() => {
+    const user = {
+      UserInfo: {
+        firstName: 'Test',
+        lastName: 'User',
+        email: 'test.user@andela.com',
+        name: 'Test User'
+      }
+    };
+    const token = jsonwebtoken.sign(user, 'shhhhh');
+    Cookie.set = jest.fn(() => token);
+    Cookie.set('jwt-token', token, { domain: '.andela.com' });
+    Cookie.get = jest.fn(() => token);
+    Cookie.remove = jest.fn();
+  });
 
   beforeEach(() => {
     wrapper = shallow(

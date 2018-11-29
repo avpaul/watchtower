@@ -12,6 +12,7 @@ import opsDashboardReducer from './opsDashBoardReducer';
 import managerFellowReducer from './managerFellows';
 import ttlProjectsReducer from './ttlProjectsReducer';
 import fellowBioReducer from './fellowBio';
+import fellowDevPulseReducer from './fellowDevPulseReducer';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   managerFellows: managerFellowReducer,
   ttlProjects: ttlProjectsReducer,
   fellow: fellowBioReducer,
-  fellowLmsRatings: fellowLmsRatingsReducer
+  fellowLmsRatings: fellowLmsRatingsReducer,
+  fellowDevPulse: fellowDevPulseReducer
 });
 
 export default rootReducer;

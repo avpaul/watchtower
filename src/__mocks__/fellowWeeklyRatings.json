@@ -1,0 +1,47 @@
+[
+  {
+    "quantity": "-1",
+    "quality": "-1",
+    "initiative": "0",
+    "communication": "0",
+    "professionalism": "0",
+    "integration": "1",
+    "week": "7-Jul-2018"
+  },
+  {
+    "quantity": "2",
+    "quality": "2",
+    "initiative": "0",
+    "communication": "2",
+    "professionalism": "2",
+    "integration": "2",
+    "week": "14-Jul-2018"
+  },
+  {
+    "quantity": "1",
+    "quality": "1",
+    "initiative": "2",
+    "communication": "1",
+    "professionalism": "2",
+    "integration": "1",
+    "week": "21-Jul-2018"
+  },
+  {
+    "quantity": "1",
+    "quality": "1",
+    "initiative": "1",
+    "communication": "1",
+    "professionalism": "1",
+    "integration": "1",
+    "week": "28-Jul-2018"
+  },
+  {
+    "quantity": "1",
+    "quality": "1",
+    "initiative": "1",
+    "communication": "1",
+    "professionalism": "1",
+    "integration": "1",
+    "week": "3-Aug-2018"
+  }
+]

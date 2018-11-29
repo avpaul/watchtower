@@ -30,6 +30,19 @@ export default {
     },
     error: null
   },
+  fellowDevPulse: {
+    loading: false,
+    ratings: [],
+    averageRatings: {
+      communication: 'N/A',
+      integration: 'N/A',
+      quantity: 'N/A',
+      quality: 'N/A',
+      professionalism: 'N/A',
+      initiative: 'N/A'
+    },
+    error: null
+  },
   ttls: {
     loading: false,
     ttls: [],

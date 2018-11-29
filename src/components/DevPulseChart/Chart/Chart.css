@@ -1,0 +1,7 @@
+.pulse-chart__legend .recharts-legend-item {
+  margin-right: 50px !important;
+}
+
+.pulse-chart__legend .recharts-legend-item-text {
+  vertical-align: middle;
+}

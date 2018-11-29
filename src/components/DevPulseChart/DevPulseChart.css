@@ -1,0 +1,12 @@
+.pulse-chart {
+  background-color: transparent;
+  padding: 10px 60px 50px;
+  position: relative;
+}
+
+.pulse-chart__title {
+  padding: 50px 60px 10px;
+  color: #0459e4;
+  font-weight: bolder;
+  font-size: 20px;
+}

@@ -19,12 +19,22 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(FellowBio) />,
+        <Connect(DevPulseChart) />,
         <Connect(LMSProgressSummary) />,
       ],
       "className": "container-fluid",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -54,12 +64,22 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(FellowBio) />,
+          <Connect(DevPulseChart) />,
           <Connect(LMSProgressSummary) />,
         ],
         "className": "container-fluid",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
