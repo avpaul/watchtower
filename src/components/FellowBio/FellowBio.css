@@ -1,10 +1,14 @@
+.fellow-bio-container {
+  margin-left: 2em;
+}
+
 .card-bio {
   display: inline-block;
   height: 240px;
-  width: 620px;
+  width: 90%;
   border-radius: 4px;
   background-color: #ffffff;
-  margin: 60px 20px 60px 60px;
+  margin: 60px 20px 60px 0px;
   padding-top: 0px;
 }
 
@@ -17,10 +21,10 @@
 .card-project {
   display: inline-block;
   height: 240px;
-  width: 620px;
+  width: 90%;
   border-radius: 4px;
   background-color: #ffffff;
-  margin: 30px 20px 60px 60px;
+  margin: 30px 20px 60px 0px;
 }
 
 .rectangle {
@@ -38,7 +42,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
-  margin: 0px 0px 5px 57px;
+  margin: 0px 0px 5px 0px;
   position: absolute;
 }
 
@@ -77,4 +81,10 @@
 
 .spacing {
   margin: 0px 2px 0px 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  .fellow-bio-container {
+    margin-left: -13em;
+  }
 }

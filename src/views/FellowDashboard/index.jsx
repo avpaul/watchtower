@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../../components/Header';
-import { FellowDashboardPage } from './FellowDashboardPage';
+import FellowDashboardMain from './FellowDashboardMain';
 
 /**
  * Defines routes for the ttldashboard
@@ -15,7 +15,7 @@ const FellowDashboard = props => (
         <Route
           exact
           path="/dashboard"
-          component={() => <FellowDashboardPage {...props} />}
+          component={() => <FellowDashboardMain {...props} />}
         />
         <Header {...props} />
       </Switch>

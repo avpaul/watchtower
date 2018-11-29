@@ -1,8 +1,8 @@
 import React from 'react';
 import OpsDashboard from '../views/OpsDashboard';
 import NotFoundPage from '../views/NotFoundPage';
-import FellowDashboard from '../views/FellowDashboard';
 import TTLDashboard from '../views/TTLDashboard';
+import FellowDashboard from '../views/FellowDashboard';
 
 /**
  * Defines wrapper function that switch users dashboard context
@@ -17,6 +17,7 @@ const Dashboards = props => {
   if (!role) {
     [role] = roles;
   }
+
   switch (role) {
     case 'WATCH_TOWER_TTL':
     case 'WATCH_TOWER_LF':
