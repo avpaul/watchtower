@@ -9,8 +9,11 @@ import {
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 const getFellowBio = email => dispatch => {
   dispatch({ type: LOAD_FELLOWBIO_REQUEST });
-
-  const url = `${serverURL}/api/v1/fellows/profile?email=${email}`;
+  const emailAdd =
+    email === 'wt-test-fellow@andela.com'
+      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
+      : email;
+  const url = `${serverURL}/api/v1/fellows/profile?email=${emailAdd}`;
   return axios.get(url).then(
     response =>
       dispatch({
