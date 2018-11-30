@@ -22,18 +22,25 @@ const Chart = ({ data, title }) => (
       <p className="my-auto"> {title}</p>
     </div>
 
-    <ResponsiveContainer height={258} width="100%" minWidth={400}>
+    <ResponsiveContainer height={298} width="100%" minWidth={400}>
       <LineChart
-        width={1200}
-        height={300}
+        width={12000}
+        height={440}
         data={data}
-        margin={{ top: 20, right: 50, left: 35, bottom: 20 }}
+        margin={{ top: 20, right: 50, left: 35, bottom: 80 }}
       >
-        <XAxis dataKey="name" padding={{ left: 25 }} tickLine={false} />
-        <YAxis tickLine={false}>
+        <XAxis
+          dataKey="week"
+          padding={{ left: 25 }}
+          tickLine={false}
+          angle={-45}
+          dy={52}
+          interval={0}
+        />
+        <YAxis tickLine={false} allowDecimals={false}>
           <Label value="Total Fellows" angle={-90} position="center" dx={-20} />
         </YAxis>
-        <ReferenceLine x="Week 16" dx={-50} offset={25} />
+        <ReferenceLine x={data.slice(-1)[0].week} />
         <CartesianGrid vertical={false} />
         <Tooltip />
 
@@ -45,12 +52,28 @@ const Chart = ({ data, title }) => (
         />
         <Line
           dataKey="On Track"
-          stroke="#3359db"
-          activeDot={{ r: 4 }}
+          stroke="#3359dbff"
+          strokeWidth={5}
+          type="monotone"
+          activeDot={{ r: 4, strokeWidth: 1 }}
           className="lineA"
         />
-        <Line dataKey="Off Track" stroke="#ffaf30" className="lineB" />
-        <Line dataKey="PIP" stroke="#ff3030" className="lineC" />
+        <Line
+          dataKey="Off Track"
+          stroke="#ffaf30cc"
+          strokeWidth={3}
+          type="monotone"
+          activeDot={{ r: 3 }}
+          className="lineB"
+        />
+        <Line
+          dataKey="PIP"
+          stroke="#ff3030aa"
+          strokeWidth={1}
+          type="monotone"
+          activeDot={{ r: 2.5 }}
+          className="lineC"
+        />
       </LineChart>
     </ResponsiveContainer>
   </div>

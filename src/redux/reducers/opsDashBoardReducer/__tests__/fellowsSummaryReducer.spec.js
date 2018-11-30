@@ -15,6 +15,8 @@ const initialState = {
         D0AFellowsCount: 0,
         D0BFellowsCount: 0
       },
+      fellowsSummaryToday: {},
+      fellowsSummaryTrend: {},
       error: ''
     }
   }

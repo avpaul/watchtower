@@ -112,6 +112,18 @@ ShallowWrapper {
             },
           }
     }
+    data={
+        Array [
+            Object {
+              "Total": 20,
+            },
+          ]
+    }
+    fellowChartTooltipClass={
+        Object {
+            "--fellow-chart-tooltip": "13%",
+          }
+    }
     filter="ALL"
     getFellowCountHistory={[Function]}
     handleChartClose={[Function]}
@@ -138,117 +150,23 @@ ShallowWrapper {
         }
         fellowsCount={
                 Array [
-                        Object {
-                          "Off Track": 9,
-                          "On Track": 31,
-                          "PIP": 0,
-                          "name": "Week 1",
-                        },
-                        Object {
-                          "Off Track": 12,
-                          "On Track": 28,
-                          "PIP": 0,
-                          "name": "Week 2",
-                        },
-                        Object {
-                          "Off Track": 13,
-                          "On Track": 27,
-                          "PIP": 0,
-                          "name": "Week 3",
-                        },
-                        Object {
-                          "Off Track": 9,
-                          "On Track": 26,
-                          "PIP": 0,
-                          "name": "Week 4",
-                        },
-                        Object {
-                          "Off Track": 23,
-                          "On Track": 52,
-                          "PIP": 0,
-                          "name": "Week 5",
-                        },
-                        Object {
-                          "Off Track": 25,
-                          "On Track": 45,
-                          "PIP": 0,
-                          "name": "Week 6",
-                        },
-                        Object {
-                          "Off Track": 10,
-                          "On Track": 55,
-                          "PIP": 0,
-                          "name": "Week 7",
-                        },
-                        Object {
-                          "Off Track": 12,
-                          "On Track": 48,
-                          "PIP": 0,
-                          "name": "Week 8",
-                        },
-                        Object {
-                          "Off Track": 9,
-                          "On Track": 51,
-                          "PIP": 0,
-                          "name": "Week 9",
-                        },
-                        Object {
-                          "Off Track": 10,
-                          "On Track": 45,
-                          "PIP": 0,
-                          "name": "Week 10",
-                        },
-                        Object {
-                          "Off Track": 11,
-                          "On Track": 39,
-                          "PIP": 0,
-                          "name": "Week 11",
-                        },
-                        Object {
-                          "Off Track": 18,
-                          "On Track": 32,
-                          "PIP": 0,
-                          "name": "Week 12",
-                        },
-                        Object {
-                          "name": "Week 13",
-                        },
-                        Object {
-                          "name": "Week 14",
-                        },
-                        Object {
-                          "name": "Week 15",
-                        },
-                        Object {
-                          "name": "Week 16",
-                        },
+                        undefined,
                       ]
         }
         handleChartClose={[Function]}
         radioCardOptions={
                 Array [
                         Object {
-                          "count": 50,
-                          "name": "All",
-                          "value": "All",
+                          "name": "ALL Today",
+                          "value": "Trend",
                         },
                         Object {
-                          "count": 32,
-                          "name": "Fellows On Track",
-                          "value": "On Track",
-                        },
-                        Object {
-                          "count": 18,
-                          "name": "Fellows Off Track",
-                          "value": "Off Track",
-                        },
-                        Object {
-                          "count": 0,
-                          "name": "Fellows On PIP",
-                          "value": "PIP",
+                          "name": "ALL Trend",
+                          "value": "Today",
                         },
                       ]
         }
+        updateSelected={undefined}
 />,
     },
     "ref": null,
@@ -261,114 +179,20 @@ ShallowWrapper {
           "--fellow-chart-tooltip": "13%",
         },
         "fellowsCount": Array [
-          Object {
-            "Off Track": 9,
-            "On Track": 31,
-            "PIP": 0,
-            "name": "Week 1",
-          },
-          Object {
-            "Off Track": 12,
-            "On Track": 28,
-            "PIP": 0,
-            "name": "Week 2",
-          },
-          Object {
-            "Off Track": 13,
-            "On Track": 27,
-            "PIP": 0,
-            "name": "Week 3",
-          },
-          Object {
-            "Off Track": 9,
-            "On Track": 26,
-            "PIP": 0,
-            "name": "Week 4",
-          },
-          Object {
-            "Off Track": 23,
-            "On Track": 52,
-            "PIP": 0,
-            "name": "Week 5",
-          },
-          Object {
-            "Off Track": 25,
-            "On Track": 45,
-            "PIP": 0,
-            "name": "Week 6",
-          },
-          Object {
-            "Off Track": 10,
-            "On Track": 55,
-            "PIP": 0,
-            "name": "Week 7",
-          },
-          Object {
-            "Off Track": 12,
-            "On Track": 48,
-            "PIP": 0,
-            "name": "Week 8",
-          },
-          Object {
-            "Off Track": 9,
-            "On Track": 51,
-            "PIP": 0,
-            "name": "Week 9",
-          },
-          Object {
-            "Off Track": 10,
-            "On Track": 45,
-            "PIP": 0,
-            "name": "Week 10",
-          },
-          Object {
-            "Off Track": 11,
-            "On Track": 39,
-            "PIP": 0,
-            "name": "Week 11",
-          },
-          Object {
-            "Off Track": 18,
-            "On Track": 32,
-            "PIP": 0,
-            "name": "Week 12",
-          },
-          Object {
-            "name": "Week 13",
-          },
-          Object {
-            "name": "Week 14",
-          },
-          Object {
-            "name": "Week 15",
-          },
-          Object {
-            "name": "Week 16",
-          },
+          undefined,
         ],
         "handleChartClose": [Function],
         "radioCardOptions": Array [
           Object {
-            "count": 50,
-            "name": "All",
-            "value": "All",
+            "name": "ALL Today",
+            "value": "Trend",
           },
           Object {
-            "count": 32,
-            "name": "Fellows On Track",
-            "value": "On Track",
-          },
-          Object {
-            "count": 18,
-            "name": "Fellows Off Track",
-            "value": "Off Track",
-          },
-          Object {
-            "count": 0,
-            "name": "Fellows On PIP",
-            "value": "PIP",
+            "name": "ALL Trend",
+            "value": "Today",
           },
         ],
+        "updateSelected": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -390,117 +214,23 @@ ShallowWrapper {
           }
           fellowsCount={
                     Array [
-                              Object {
-                                "Off Track": 9,
-                                "On Track": 31,
-                                "PIP": 0,
-                                "name": "Week 1",
-                              },
-                              Object {
-                                "Off Track": 12,
-                                "On Track": 28,
-                                "PIP": 0,
-                                "name": "Week 2",
-                              },
-                              Object {
-                                "Off Track": 13,
-                                "On Track": 27,
-                                "PIP": 0,
-                                "name": "Week 3",
-                              },
-                              Object {
-                                "Off Track": 9,
-                                "On Track": 26,
-                                "PIP": 0,
-                                "name": "Week 4",
-                              },
-                              Object {
-                                "Off Track": 23,
-                                "On Track": 52,
-                                "PIP": 0,
-                                "name": "Week 5",
-                              },
-                              Object {
-                                "Off Track": 25,
-                                "On Track": 45,
-                                "PIP": 0,
-                                "name": "Week 6",
-                              },
-                              Object {
-                                "Off Track": 10,
-                                "On Track": 55,
-                                "PIP": 0,
-                                "name": "Week 7",
-                              },
-                              Object {
-                                "Off Track": 12,
-                                "On Track": 48,
-                                "PIP": 0,
-                                "name": "Week 8",
-                              },
-                              Object {
-                                "Off Track": 9,
-                                "On Track": 51,
-                                "PIP": 0,
-                                "name": "Week 9",
-                              },
-                              Object {
-                                "Off Track": 10,
-                                "On Track": 45,
-                                "PIP": 0,
-                                "name": "Week 10",
-                              },
-                              Object {
-                                "Off Track": 11,
-                                "On Track": 39,
-                                "PIP": 0,
-                                "name": "Week 11",
-                              },
-                              Object {
-                                "Off Track": 18,
-                                "On Track": 32,
-                                "PIP": 0,
-                                "name": "Week 12",
-                              },
-                              Object {
-                                "name": "Week 13",
-                              },
-                              Object {
-                                "name": "Week 14",
-                              },
-                              Object {
-                                "name": "Week 15",
-                              },
-                              Object {
-                                "name": "Week 16",
-                              },
+                              undefined,
                             ]
           }
           handleChartClose={[Function]}
           radioCardOptions={
                     Array [
                               Object {
-                                "count": 50,
-                                "name": "All",
-                                "value": "All",
+                                "name": "ALL Today",
+                                "value": "Trend",
                               },
                               Object {
-                                "count": 32,
-                                "name": "Fellows On Track",
-                                "value": "On Track",
-                              },
-                              Object {
-                                "count": 18,
-                                "name": "Fellows Off Track",
-                                "value": "Off Track",
-                              },
-                              Object {
-                                "count": 0,
-                                "name": "Fellows On PIP",
-                                "value": "PIP",
+                                "name": "ALL Trend",
+                                "value": "Today",
                               },
                             ]
           }
+          updateSelected={undefined}
 />,
       },
       "ref": null,
@@ -513,114 +243,20 @@ ShallowWrapper {
             "--fellow-chart-tooltip": "13%",
           },
           "fellowsCount": Array [
-            Object {
-              "Off Track": 9,
-              "On Track": 31,
-              "PIP": 0,
-              "name": "Week 1",
-            },
-            Object {
-              "Off Track": 12,
-              "On Track": 28,
-              "PIP": 0,
-              "name": "Week 2",
-            },
-            Object {
-              "Off Track": 13,
-              "On Track": 27,
-              "PIP": 0,
-              "name": "Week 3",
-            },
-            Object {
-              "Off Track": 9,
-              "On Track": 26,
-              "PIP": 0,
-              "name": "Week 4",
-            },
-            Object {
-              "Off Track": 23,
-              "On Track": 52,
-              "PIP": 0,
-              "name": "Week 5",
-            },
-            Object {
-              "Off Track": 25,
-              "On Track": 45,
-              "PIP": 0,
-              "name": "Week 6",
-            },
-            Object {
-              "Off Track": 10,
-              "On Track": 55,
-              "PIP": 0,
-              "name": "Week 7",
-            },
-            Object {
-              "Off Track": 12,
-              "On Track": 48,
-              "PIP": 0,
-              "name": "Week 8",
-            },
-            Object {
-              "Off Track": 9,
-              "On Track": 51,
-              "PIP": 0,
-              "name": "Week 9",
-            },
-            Object {
-              "Off Track": 10,
-              "On Track": 45,
-              "PIP": 0,
-              "name": "Week 10",
-            },
-            Object {
-              "Off Track": 11,
-              "On Track": 39,
-              "PIP": 0,
-              "name": "Week 11",
-            },
-            Object {
-              "Off Track": 18,
-              "On Track": 32,
-              "PIP": 0,
-              "name": "Week 12",
-            },
-            Object {
-              "name": "Week 13",
-            },
-            Object {
-              "name": "Week 14",
-            },
-            Object {
-              "name": "Week 15",
-            },
-            Object {
-              "name": "Week 16",
-            },
+            undefined,
           ],
           "handleChartClose": [Function],
           "radioCardOptions": Array [
             Object {
-              "count": 50,
-              "name": "All",
-              "value": "All",
+              "name": "ALL Today",
+              "value": "Trend",
             },
             Object {
-              "count": 32,
-              "name": "Fellows On Track",
-              "value": "On Track",
-            },
-            Object {
-              "count": 18,
-              "name": "Fellows Off Track",
-              "value": "Off Track",
-            },
-            Object {
-              "count": 0,
-              "name": "Fellows On PIP",
-              "value": "PIP",
+              "name": "ALL Trend",
+              "value": "Today",
             },
           ],
+          "updateSelected": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -654,6 +290,18 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FellowChartContainer
     countSummary={Object {}}
+    data={
+        Array [
+            Object {
+              "Total": 20,
+            },
+          ]
+    }
+    fellowChartTooltipClass={
+        Object {
+            "--fellow-chart-tooltip": "13%",
+          }
+    }
     filter="ALL"
     getFellowCountHistory={[Function]}
     handleChartClose={[Function]}

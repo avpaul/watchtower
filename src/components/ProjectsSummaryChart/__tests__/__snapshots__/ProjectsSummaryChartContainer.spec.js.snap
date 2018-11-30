@@ -6,5 +6,12 @@ Object {
     "countSummary": Object {},
     "loading": false,
   },
+  "fellowsSummary": Object {
+    "data": Object {},
+    "error": "",
+    "fellowsSummaryToday": Object {},
+    "fellowsSummaryTrend": Object {},
+    "loading": false,
+  },
 }
 `;

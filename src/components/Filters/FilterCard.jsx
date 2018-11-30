@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import './Filters.css';
 /**
  *
  * FilterCard Component
@@ -8,9 +8,7 @@ import PropTypes from 'prop-types';
  *
  * @returns {JSX} React JSX
  */
-const FilterCard = ({
-  className, onClick, filterId, cardDetails,
-}) => (
+const FilterCard = ({ className, onClick, filterId, cardDetails }) => (
   <div
     className={className}
     id={filterId}
@@ -26,7 +24,7 @@ const FilterCard = ({
 );
 
 FilterCard.defaultProps = {
-  className: 'filterCard',
+  className: 'filterCard'
 };
 
 FilterCard.propTypes = {
@@ -34,10 +32,10 @@ FilterCard.propTypes = {
   cardDetails: PropTypes.shape({
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string,
-    totalFellows: PropTypes.number.isRequired,
+    totalFellows: PropTypes.number.isRequired
   }).isRequired,
   filterId: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default FilterCard;

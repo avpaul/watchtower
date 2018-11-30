@@ -5,14 +5,20 @@ import FellowsSummary from '../FellowsSummary';
 
 class FellowsSummaryChart extends Component {
   state = {
-    fellowsSummaryFilter: 'ALL',
-    showChart: false
+    fellowsSummaryFilter: 'Total',
+    showChart: false,
+    selected: 'Today'
   };
 
   componentDidMount() {
-    const { getFellowCountHistory, fetchFellowsSummary } = this.props;
+    const {
+      getFellowCountHistory,
+      fetchFellowsSummary,
+      getFellowSummaryOps
+    } = this.props;
     fetchFellowsSummary();
     getFellowCountHistory();
+    getFellowSummaryOps();
   }
 
   handleChartClose = () => {
@@ -26,13 +32,31 @@ class FellowsSummaryChart extends Component {
     } else if (currentCard === 'D0BFellowsCount') {
       this.setState({ showChart: true, fellowsSummaryFilter: 'D0B' });
     } else {
-      this.setState({ showChart: true, fellowsSummaryFilter: 'ALL' });
+      this.setState({ showChart: true, fellowsSummaryFilter: 'Total' });
     }
   };
 
+  updateFellowSummary = selected => {
+    const { fellowsSummary } = this.props;
+    const history = fellowsSummary.fellowsSummaryToday;
+    const treads = fellowsSummary.fellowsSummaryTrend;
+    let datapoint;
+    if (selected === 'Today') {
+      datapoint = history;
+    } else if (selected === 'Trend') {
+      datapoint = treads;
+    }
+    return datapoint;
+  };
+
+  updateSelected = selected => {
+    this.setState({ selected });
+  };
+
   render() {
-    const { fellowsSummaryFilter, showChart } = this.state;
+    const { fellowsSummaryFilter, showChart, selected } = this.state;
     const { fellowCountHistory } = this.props;
+    const { data } = this.updateFellowSummary(selected);
     return (
       <div>
         <FellowsSummary handleCardClick={this.handleCardClick} />
@@ -40,7 +64,9 @@ class FellowsSummaryChart extends Component {
           <FellowChart
             filter={fellowsSummaryFilter}
             handleChartClose={this.handleChartClose}
+            updateSelected={this.updateSelected}
             {...fellowCountHistory}
+            data={data}
           />
         )}
       </div>

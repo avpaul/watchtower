@@ -4,6 +4,11 @@ exports[`<Routes /> should render Routes 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MemoryRouter
+    initialEntries={
+        Array [
+            "/test",
+          ]
+    }
     keyLength={0}
 >
     <Routes
@@ -52,7 +57,7 @@ ShallowWrapper {
         "entries": Array [
           Object {
             "hash": "",
-            "pathname": "/",
+            "pathname": "/test",
             "search": "",
             "state": undefined,
           },
@@ -65,7 +70,7 @@ ShallowWrapper {
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "pathname": "/",
+          "pathname": "/test",
           "search": "",
           "state": undefined,
         },
@@ -120,7 +125,7 @@ ShallowWrapper {
           "entries": Array [
             Object {
               "hash": "",
-              "pathname": "/",
+              "pathname": "/test",
               "search": "",
               "state": undefined,
             },
@@ -133,7 +138,7 @@ ShallowWrapper {
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "pathname": "/",
+            "pathname": "/test",
             "search": "",
             "state": undefined,
           },

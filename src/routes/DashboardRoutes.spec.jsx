@@ -65,4 +65,28 @@ describe('<Dashboards />', () => {
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
     expect(item.name()).toEqual('FellowDashboard');
   });
+
+  it('should render appropriate dashboards LF', () => {
+    const mockStore = configureStore();
+    const store = mockStore({
+      setVisibilityFilter: () => {},
+      fellows,
+      pagination: {
+        page: 1,
+        perPage: 10
+      },
+      loading: false,
+      getFellows: () => {},
+      filter: '',
+      user: {
+        name: 'Test User',
+        picture: 'http://',
+        roles: { Andelan: 'key', WATCH_TOWER_LF: 'key' }
+      },
+      role: 'WATCH_TOWER_LF'
+    });
+
+    const item = shallow(<Dashboards {...store.getState()} store={store} />);
+    expect(item.name()).toEqual('TTLDashboard');
+  });
 });

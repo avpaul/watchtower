@@ -14,9 +14,11 @@ describe('FellowsSummaryChartContainer', () => {
 
   it('should map dispatch to props', () => {
     const state = {
-      OpsDashboard: {
+      opsDashboard: {
         fellowsSummary: {
           loading: false,
+          fellowsSummaryToday: {},
+          fellowsSummaryTrend: {},
           data: {
             allFellowsCount: 0,
             D0AFellowsCount: 0,
@@ -33,7 +35,9 @@ describe('FellowsSummaryChartContainer', () => {
     };
     const mockStore = configureStore();
     const store = mockStore(state);
-    const wrapper = shallow(<FellowsSummaryChartContainer store={store} />);
+    const wrapper = shallow(
+      <FellowsSummaryChartContainer store={store} {...state} />
+    );
     expect(wrapper.props().fetchFellowsSummary).toBeDefined();
   });
 });

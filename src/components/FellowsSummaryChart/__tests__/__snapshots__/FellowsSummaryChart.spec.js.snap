@@ -11,8 +11,22 @@ ShallowWrapper {
             "loading": false,
           }
     }
+    fellowsSummary={
+        Object {
+            "data": Object {
+              "D0AFellowsCount": 0,
+              "D0BFellowsCount": 0,
+              "allFellowsCount": 0,
+            },
+            "error": "",
+            "fellowsSummaryToday": Object {},
+            "fellowsSummaryTrend": Object {},
+            "loading": false,
+          }
+    }
     fetchFellowsSummary={[Function]}
     getFellowCountHistory={[Function]}
+    getFellowSummaryOps={[Function]}
     store={
         Object {
             "dispatch": [Function],

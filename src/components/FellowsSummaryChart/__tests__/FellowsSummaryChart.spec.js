@@ -10,6 +10,8 @@ const setup = propOverrides => {
   const props = {
     fetchFellowsSummary: jest.fn(),
     getFellowCountHistory: jest.fn(),
+    getFellowSummaryOps: jest.fn(),
+    fellowsSummary: initialState.opsDashboard.fellowsSummary,
     fellowCountHistory: {
       countSummary: {},
       loading: false,
@@ -55,7 +57,7 @@ describe('<FellowsSummaryChart />', () => {
   it('handles card Click', () => {
     setupHandleCardClickExpect('D0AFellowsCount', 'D0A');
     setupHandleCardClickExpect('D0BFellowsCount', 'D0B');
-    setupHandleCardClickExpect('allFellowsCount', 'ALL');
+    setupHandleCardClickExpect('allFellowsCount', 'Total');
   });
 
   it('closes the chart when the close button is clicked', () => {
@@ -68,5 +70,14 @@ describe('<FellowsSummaryChart />', () => {
     wrapper.instance().handleChartClose();
     expect(handleChartCloseSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.state().showChart).toBe(false);
+  });
+
+  it('should get data on change selected', () => {
+    const { wrapper } = setup();
+    const spy = jest.spyOn(wrapper.instance(), 'updateFellowSummary');
+    wrapper.setState({ selected: 'Trend' });
+    expect(spy).toHaveBeenCalledTimes(1);
+    wrapper.instance().updateSelected('Trend');
+    expect(wrapper.instance().state.selected).toBe('Trend');
   });
 });

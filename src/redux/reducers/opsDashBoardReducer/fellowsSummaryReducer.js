@@ -15,7 +15,17 @@ const fellowsSummaryReducer = (
     case FETCH_FELLOWS_SUMMARY_ERROR:
       return { ...state, error: action.error };
     case FETCH_FELLOWS_SUMMARY_SUCCESS:
-      return { ...state, data: action.payload };
+      if (action.payload) {
+        return {
+          ...state,
+          data: action.payload
+        };
+      }
+      return {
+        ...state,
+        fellowsSummaryTrend: action.fellowsSummaryTrend,
+        fellowsSummaryToday: action.fellowsSummaryToday
+      };
     default:
       return state;
   }

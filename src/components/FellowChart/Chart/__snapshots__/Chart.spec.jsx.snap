@@ -108,7 +108,7 @@ ShallowWrapper {
 </div>,
         <ResponsiveContainer
           debounce={0}
-          height={258}
+          height={298}
           minWidth={400}
           width="100%"
 >
@@ -191,11 +191,11 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    height={300}
+                    height={440}
                     layout="horizontal"
                     margin={
                               Object {
-                                        "bottom": 20,
+                                        "bottom": 80,
                                         "left": 35,
                                         "right": 50,
                                         "top": 20,
@@ -203,21 +203,24 @@ ShallowWrapper {
                     }
                     reverseStackOrder={false}
                     stackOffset="none"
-                    width={1200}
+                    width={12000}
           >
                     <XAxis
                               allowDataOverflow={false}
                               allowDecimals={true}
                               allowDuplicatedCategory={true}
-                              dataKey="name"
+                              angle={-45}
+                              dataKey="week"
                               domain={
                                         Array [
                                                   0,
                                                   "auto",
                                                 ]
                               }
+                              dy={52}
                               height={30}
                               hide={false}
+                              interval={0}
                               mirror={false}
                               orientation="bottom"
                               padding={
@@ -235,7 +238,7 @@ ShallowWrapper {
                     />
                     <YAxis
                               allowDataOverflow={false}
-                              allowDecimals={true}
+                              allowDecimals={false}
                               allowDuplicatedCategory={true}
                               domain={
                                         Array [
@@ -270,15 +273,13 @@ ShallowWrapper {
                               />
                     </YAxis>
                     <ReferenceLine
-                              dx={-50}
                               fill="none"
                               fillOpacity={1}
                               ifOverflow="discard"
                               isFront={false}
-                              offset={25}
                               stroke="#ccc"
                               strokeWidth={1}
-                              x="Week 16"
+                              x={undefined}
                               xAxisId={0}
                               yAxisId={0}
                     />
@@ -339,6 +340,7 @@ ShallowWrapper {
                               activeDot={
                                         Object {
                                                   "r": 4,
+                                                  "strokeWidth": 1,
                                                 }
                               }
                               animateNewValues={true}
@@ -356,13 +358,18 @@ ShallowWrapper {
                               onAnimationEnd={[Function]}
                               onAnimationStart={[Function]}
                               points={Array []}
-                              stroke="#3359db"
-                              strokeWidth={1}
+                              stroke="#3359dbff"
+                              strokeWidth={5}
+                              type="monotone"
                               xAxisId={0}
                               yAxisId={0}
                     />
                     <Line
-                              activeDot={true}
+                              activeDot={
+                                        Object {
+                                                  "r": 3,
+                                                }
+                              }
                               animateNewValues={true}
                               animationBegin={0}
                               animationDuration={1500}
@@ -378,13 +385,18 @@ ShallowWrapper {
                               onAnimationEnd={[Function]}
                               onAnimationStart={[Function]}
                               points={Array []}
-                              stroke="#ffaf30"
-                              strokeWidth={1}
+                              stroke="#ffaf30cc"
+                              strokeWidth={3}
+                              type="monotone"
                               xAxisId={0}
                               yAxisId={0}
                     />
                     <Line
-                              activeDot={true}
+                              activeDot={
+                                        Object {
+                                                  "r": 2.5,
+                                                }
+                              }
                               animateNewValues={true}
                               animationBegin={0}
                               animationDuration={1500}
@@ -400,8 +412,9 @@ ShallowWrapper {
                               onAnimationEnd={[Function]}
                               onAnimationStart={[Function]}
                               points={Array []}
-                              stroke="#ff3030"
+                              stroke="#ff3030aa"
                               strokeWidth={1}
+                              type="monotone"
                               xAxisId={0}
                               yAxisId={0}
                     />
@@ -530,11 +543,11 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            height={300}
+            height={440}
             layout="horizontal"
             margin={
                         Object {
-                                    "bottom": 20,
+                                    "bottom": 80,
                                     "left": 35,
                                     "right": 50,
                                     "top": 20,
@@ -542,21 +555,24 @@ ShallowWrapper {
             }
             reverseStackOrder={false}
             stackOffset="none"
-            width={1200}
+            width={12000}
 >
             <XAxis
                         allowDataOverflow={false}
                         allowDecimals={true}
                         allowDuplicatedCategory={true}
-                        dataKey="name"
+                        angle={-45}
+                        dataKey="week"
                         domain={
                                     Array [
                                                 0,
                                                 "auto",
                                               ]
                         }
+                        dy={52}
                         height={30}
                         hide={false}
+                        interval={0}
                         mirror={false}
                         orientation="bottom"
                         padding={
@@ -574,7 +590,7 @@ ShallowWrapper {
             />
             <YAxis
                         allowDataOverflow={false}
-                        allowDecimals={true}
+                        allowDecimals={false}
                         allowDuplicatedCategory={true}
                         domain={
                                     Array [
@@ -609,15 +625,13 @@ ShallowWrapper {
                         />
             </YAxis>
             <ReferenceLine
-                        dx={-50}
                         fill="none"
                         fillOpacity={1}
                         ifOverflow="discard"
                         isFront={false}
-                        offset={25}
                         stroke="#ccc"
                         strokeWidth={1}
-                        x="Week 16"
+                        x={undefined}
                         xAxisId={0}
                         yAxisId={0}
             />
@@ -678,6 +692,7 @@ ShallowWrapper {
                         activeDot={
                                     Object {
                                                 "r": 4,
+                                                "strokeWidth": 1,
                                               }
                         }
                         animateNewValues={true}
@@ -695,13 +710,18 @@ ShallowWrapper {
                         onAnimationEnd={[Function]}
                         onAnimationStart={[Function]}
                         points={Array []}
-                        stroke="#3359db"
-                        strokeWidth={1}
+                        stroke="#3359dbff"
+                        strokeWidth={5}
+                        type="monotone"
                         xAxisId={0}
                         yAxisId={0}
             />
             <Line
-                        activeDot={true}
+                        activeDot={
+                                    Object {
+                                                "r": 3,
+                                              }
+                        }
                         animateNewValues={true}
                         animationBegin={0}
                         animationDuration={1500}
@@ -717,13 +737,18 @@ ShallowWrapper {
                         onAnimationEnd={[Function]}
                         onAnimationStart={[Function]}
                         points={Array []}
-                        stroke="#ffaf30"
-                        strokeWidth={1}
+                        stroke="#ffaf30cc"
+                        strokeWidth={3}
+                        type="monotone"
                         xAxisId={0}
                         yAxisId={0}
             />
             <Line
-                        activeDot={true}
+                        activeDot={
+                                    Object {
+                                                "r": 2.5,
+                                              }
+                        }
                         animateNewValues={true}
                         animationBegin={0}
                         animationDuration={1500}
@@ -739,14 +764,15 @@ ShallowWrapper {
                         onAnimationEnd={[Function]}
                         onAnimationStart={[Function]}
                         points={Array []}
-                        stroke="#ff3030"
+                        stroke="#ff3030aa"
                         strokeWidth={1}
+                        type="monotone"
                         xAxisId={0}
                         yAxisId={0}
             />
 </LineChart>,
           "debounce": 0,
-          "height": 258,
+          "height": 298,
           "minWidth": 400,
           "width": "100%",
         },
@@ -763,15 +789,18 @@ ShallowWrapper {
                 allowDataOverflow={false}
                 allowDecimals={true}
                 allowDuplicatedCategory={true}
-                dataKey="name"
+                angle={-45}
+                dataKey="week"
                 domain={
                                 Array [
                                                 0,
                                                 "auto",
                                               ]
                 }
+                dy={52}
                 height={30}
                 hide={false}
+                interval={0}
                 mirror={false}
                 orientation="bottom"
                 padding={
@@ -789,7 +818,7 @@ ShallowWrapper {
 />,
               <YAxis
                 allowDataOverflow={false}
-                allowDecimals={true}
+                allowDecimals={false}
                 allowDuplicatedCategory={true}
                 domain={
                                 Array [
@@ -824,15 +853,13 @@ ShallowWrapper {
                 />
 </YAxis>,
               <ReferenceLine
-                dx={-50}
                 fill="none"
                 fillOpacity={1}
                 ifOverflow="discard"
                 isFront={false}
-                offset={25}
                 stroke="#ccc"
                 strokeWidth={1}
-                x="Week 16"
+                x={undefined}
                 xAxisId={0}
                 yAxisId={0}
 />,
@@ -893,6 +920,7 @@ ShallowWrapper {
                 activeDot={
                                 Object {
                                                 "r": 4,
+                                                "strokeWidth": 1,
                                               }
                 }
                 animateNewValues={true}
@@ -910,13 +938,18 @@ ShallowWrapper {
                 onAnimationEnd={[Function]}
                 onAnimationStart={[Function]}
                 points={Array []}
-                stroke="#3359db"
-                strokeWidth={1}
+                stroke="#3359dbff"
+                strokeWidth={5}
+                type="monotone"
                 xAxisId={0}
                 yAxisId={0}
 />,
               <Line
-                activeDot={true}
+                activeDot={
+                                Object {
+                                                "r": 3,
+                                              }
+                }
                 animateNewValues={true}
                 animationBegin={0}
                 animationDuration={1500}
@@ -932,13 +965,18 @@ ShallowWrapper {
                 onAnimationEnd={[Function]}
                 onAnimationStart={[Function]}
                 points={Array []}
-                stroke="#ffaf30"
-                strokeWidth={1}
+                stroke="#ffaf30cc"
+                strokeWidth={3}
+                type="monotone"
                 xAxisId={0}
                 yAxisId={0}
 />,
               <Line
-                activeDot={true}
+                activeDot={
+                                Object {
+                                                "r": 2.5,
+                                              }
+                }
                 animateNewValues={true}
                 animationBegin={0}
                 animationDuration={1500}
@@ -954,8 +992,9 @@ ShallowWrapper {
                 onAnimationEnd={[Function]}
                 onAnimationStart={[Function]}
                 points={Array []}
-                stroke="#ff3030"
+                stroke="#ff3030aa"
                 strokeWidth={1}
+                type="monotone"
                 xAxisId={0}
                 yAxisId={0}
 />,
@@ -1034,17 +1073,17 @@ ShallowWrapper {
                 "name": "Week 12",
               },
             ],
-            "height": 300,
+            "height": 440,
             "layout": "horizontal",
             "margin": Object {
-              "bottom": 20,
+              "bottom": 80,
               "left": 35,
               "right": 50,
               "top": 20,
             },
             "reverseStackOrder": false,
             "stackOffset": "none",
-            "width": 1200,
+            "width": 12000,
           },
           "ref": null,
           "rendered": Array [
@@ -1056,13 +1095,16 @@ ShallowWrapper {
                 "allowDataOverflow": false,
                 "allowDecimals": true,
                 "allowDuplicatedCategory": true,
-                "dataKey": "name",
+                "angle": -45,
+                "dataKey": "week",
                 "domain": Array [
                   0,
                   "auto",
                 ],
+                "dy": 52,
                 "height": 30,
                 "hide": false,
+                "interval": 0,
                 "mirror": false,
                 "orientation": "bottom",
                 "padding": Object {
@@ -1086,7 +1128,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "allowDataOverflow": false,
-                "allowDecimals": true,
+                "allowDecimals": false,
                 "allowDuplicatedCategory": true,
                 "children": <Label
                   angle={-90}
@@ -1138,15 +1180,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "dx": -50,
                 "fill": "none",
                 "fillOpacity": 1,
                 "ifOverflow": "discard",
                 "isFront": false,
-                "offset": 25,
                 "stroke": "#ccc",
                 "strokeWidth": 1,
-                "x": "Week 16",
+                "x": undefined,
                 "xAxisId": 0,
                 "yAxisId": 0,
               },
@@ -1232,6 +1272,7 @@ ShallowWrapper {
               "props": Object {
                 "activeDot": Object {
                   "r": 4,
+                  "strokeWidth": 1,
                 },
                 "animateNewValues": true,
                 "animationBegin": 0,
@@ -1248,8 +1289,9 @@ ShallowWrapper {
                 "onAnimationEnd": [Function],
                 "onAnimationStart": [Function],
                 "points": Array [],
-                "stroke": "#3359db",
-                "strokeWidth": 1,
+                "stroke": "#3359dbff",
+                "strokeWidth": 5,
+                "type": "monotone",
                 "xAxisId": 0,
                 "yAxisId": 0,
               },
@@ -1262,7 +1304,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "activeDot": true,
+                "activeDot": Object {
+                  "r": 3,
+                },
                 "animateNewValues": true,
                 "animationBegin": 0,
                 "animationDuration": 1500,
@@ -1278,8 +1322,9 @@ ShallowWrapper {
                 "onAnimationEnd": [Function],
                 "onAnimationStart": [Function],
                 "points": Array [],
-                "stroke": "#ffaf30",
-                "strokeWidth": 1,
+                "stroke": "#ffaf30cc",
+                "strokeWidth": 3,
+                "type": "monotone",
                 "xAxisId": 0,
                 "yAxisId": 0,
               },
@@ -1292,7 +1337,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "activeDot": true,
+                "activeDot": Object {
+                  "r": 2.5,
+                },
                 "animateNewValues": true,
                 "animationBegin": 0,
                 "animationDuration": 1500,
@@ -1308,8 +1355,9 @@ ShallowWrapper {
                 "onAnimationEnd": [Function],
                 "onAnimationStart": [Function],
                 "points": Array [],
-                "stroke": "#ff3030",
+                "stroke": "#ff3030aa",
                 "strokeWidth": 1,
+                "type": "monotone",
                 "xAxisId": 0,
                 "yAxisId": 0,
               },
@@ -1344,7 +1392,7 @@ ShallowWrapper {
 </div>,
           <ResponsiveContainer
             debounce={0}
-            height={258}
+            height={298}
             minWidth={400}
             width="100%"
 >
@@ -1427,11 +1475,11 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        height={300}
+                        height={440}
                         layout="horizontal"
                         margin={
                                     Object {
-                                                "bottom": 20,
+                                                "bottom": 80,
                                                 "left": 35,
                                                 "right": 50,
                                                 "top": 20,
@@ -1439,21 +1487,24 @@ ShallowWrapper {
                         }
                         reverseStackOrder={false}
                         stackOffset="none"
-                        width={1200}
+                        width={12000}
             >
                         <XAxis
                                     allowDataOverflow={false}
                                     allowDecimals={true}
                                     allowDuplicatedCategory={true}
-                                    dataKey="name"
+                                    angle={-45}
+                                    dataKey="week"
                                     domain={
                                                 Array [
                                                             0,
                                                             "auto",
                                                           ]
                                     }
+                                    dy={52}
                                     height={30}
                                     hide={false}
+                                    interval={0}
                                     mirror={false}
                                     orientation="bottom"
                                     padding={
@@ -1471,7 +1522,7 @@ ShallowWrapper {
                         />
                         <YAxis
                                     allowDataOverflow={false}
-                                    allowDecimals={true}
+                                    allowDecimals={false}
                                     allowDuplicatedCategory={true}
                                     domain={
                                                 Array [
@@ -1506,15 +1557,13 @@ ShallowWrapper {
                                     />
                         </YAxis>
                         <ReferenceLine
-                                    dx={-50}
                                     fill="none"
                                     fillOpacity={1}
                                     ifOverflow="discard"
                                     isFront={false}
-                                    offset={25}
                                     stroke="#ccc"
                                     strokeWidth={1}
-                                    x="Week 16"
+                                    x={undefined}
                                     xAxisId={0}
                                     yAxisId={0}
                         />
@@ -1575,6 +1624,7 @@ ShallowWrapper {
                                     activeDot={
                                                 Object {
                                                             "r": 4,
+                                                            "strokeWidth": 1,
                                                           }
                                     }
                                     animateNewValues={true}
@@ -1592,13 +1642,18 @@ ShallowWrapper {
                                     onAnimationEnd={[Function]}
                                     onAnimationStart={[Function]}
                                     points={Array []}
-                                    stroke="#3359db"
-                                    strokeWidth={1}
+                                    stroke="#3359dbff"
+                                    strokeWidth={5}
+                                    type="monotone"
                                     xAxisId={0}
                                     yAxisId={0}
                         />
                         <Line
-                                    activeDot={true}
+                                    activeDot={
+                                                Object {
+                                                            "r": 3,
+                                                          }
+                                    }
                                     animateNewValues={true}
                                     animationBegin={0}
                                     animationDuration={1500}
@@ -1614,13 +1669,18 @@ ShallowWrapper {
                                     onAnimationEnd={[Function]}
                                     onAnimationStart={[Function]}
                                     points={Array []}
-                                    stroke="#ffaf30"
-                                    strokeWidth={1}
+                                    stroke="#ffaf30cc"
+                                    strokeWidth={3}
+                                    type="monotone"
                                     xAxisId={0}
                                     yAxisId={0}
                         />
                         <Line
-                                    activeDot={true}
+                                    activeDot={
+                                                Object {
+                                                            "r": 2.5,
+                                                          }
+                                    }
                                     animateNewValues={true}
                                     animationBegin={0}
                                     animationDuration={1500}
@@ -1636,8 +1696,9 @@ ShallowWrapper {
                                     onAnimationEnd={[Function]}
                                     onAnimationStart={[Function]}
                                     points={Array []}
-                                    stroke="#ff3030"
+                                    stroke="#ff3030aa"
                                     strokeWidth={1}
+                                    type="monotone"
                                     xAxisId={0}
                                     yAxisId={0}
                         />
@@ -1766,11 +1827,11 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              height={300}
+              height={440}
               layout="horizontal"
               margin={
                             Object {
-                                          "bottom": 20,
+                                          "bottom": 80,
                                           "left": 35,
                                           "right": 50,
                                           "top": 20,
@@ -1778,21 +1839,24 @@ ShallowWrapper {
               }
               reverseStackOrder={false}
               stackOffset="none"
-              width={1200}
+              width={12000}
 >
               <XAxis
                             allowDataOverflow={false}
                             allowDecimals={true}
                             allowDuplicatedCategory={true}
-                            dataKey="name"
+                            angle={-45}
+                            dataKey="week"
                             domain={
                                           Array [
                                                         0,
                                                         "auto",
                                                       ]
                             }
+                            dy={52}
                             height={30}
                             hide={false}
+                            interval={0}
                             mirror={false}
                             orientation="bottom"
                             padding={
@@ -1810,7 +1874,7 @@ ShallowWrapper {
               />
               <YAxis
                             allowDataOverflow={false}
-                            allowDecimals={true}
+                            allowDecimals={false}
                             allowDuplicatedCategory={true}
                             domain={
                                           Array [
@@ -1845,15 +1909,13 @@ ShallowWrapper {
                             />
               </YAxis>
               <ReferenceLine
-                            dx={-50}
                             fill="none"
                             fillOpacity={1}
                             ifOverflow="discard"
                             isFront={false}
-                            offset={25}
                             stroke="#ccc"
                             strokeWidth={1}
-                            x="Week 16"
+                            x={undefined}
                             xAxisId={0}
                             yAxisId={0}
               />
@@ -1914,6 +1976,7 @@ ShallowWrapper {
                             activeDot={
                                           Object {
                                                         "r": 4,
+                                                        "strokeWidth": 1,
                                                       }
                             }
                             animateNewValues={true}
@@ -1931,13 +1994,18 @@ ShallowWrapper {
                             onAnimationEnd={[Function]}
                             onAnimationStart={[Function]}
                             points={Array []}
-                            stroke="#3359db"
-                            strokeWidth={1}
+                            stroke="#3359dbff"
+                            strokeWidth={5}
+                            type="monotone"
                             xAxisId={0}
                             yAxisId={0}
               />
               <Line
-                            activeDot={true}
+                            activeDot={
+                                          Object {
+                                                        "r": 3,
+                                                      }
+                            }
                             animateNewValues={true}
                             animationBegin={0}
                             animationDuration={1500}
@@ -1953,13 +2021,18 @@ ShallowWrapper {
                             onAnimationEnd={[Function]}
                             onAnimationStart={[Function]}
                             points={Array []}
-                            stroke="#ffaf30"
-                            strokeWidth={1}
+                            stroke="#ffaf30cc"
+                            strokeWidth={3}
+                            type="monotone"
                             xAxisId={0}
                             yAxisId={0}
               />
               <Line
-                            activeDot={true}
+                            activeDot={
+                                          Object {
+                                                        "r": 2.5,
+                                                      }
+                            }
                             animateNewValues={true}
                             animationBegin={0}
                             animationDuration={1500}
@@ -1975,14 +2048,15 @@ ShallowWrapper {
                             onAnimationEnd={[Function]}
                             onAnimationStart={[Function]}
                             points={Array []}
-                            stroke="#ff3030"
+                            stroke="#ff3030aa"
                             strokeWidth={1}
+                            type="monotone"
                             xAxisId={0}
                             yAxisId={0}
               />
 </LineChart>,
             "debounce": 0,
-            "height": 258,
+            "height": 298,
             "minWidth": 400,
             "width": "100%",
           },
@@ -1999,15 +2073,18 @@ ShallowWrapper {
                   allowDataOverflow={false}
                   allowDecimals={true}
                   allowDuplicatedCategory={true}
-                  dataKey="name"
+                  angle={-45}
+                  dataKey="week"
                   domain={
                                     Array [
                                                       0,
                                                       "auto",
                                                     ]
                   }
+                  dy={52}
                   height={30}
                   hide={false}
+                  interval={0}
                   mirror={false}
                   orientation="bottom"
                   padding={
@@ -2025,7 +2102,7 @@ ShallowWrapper {
 />,
                 <YAxis
                   allowDataOverflow={false}
-                  allowDecimals={true}
+                  allowDecimals={false}
                   allowDuplicatedCategory={true}
                   domain={
                                     Array [
@@ -2060,15 +2137,13 @@ ShallowWrapper {
                   />
 </YAxis>,
                 <ReferenceLine
-                  dx={-50}
                   fill="none"
                   fillOpacity={1}
                   ifOverflow="discard"
                   isFront={false}
-                  offset={25}
                   stroke="#ccc"
                   strokeWidth={1}
-                  x="Week 16"
+                  x={undefined}
                   xAxisId={0}
                   yAxisId={0}
 />,
@@ -2129,6 +2204,7 @@ ShallowWrapper {
                   activeDot={
                                     Object {
                                                       "r": 4,
+                                                      "strokeWidth": 1,
                                                     }
                   }
                   animateNewValues={true}
@@ -2146,13 +2222,18 @@ ShallowWrapper {
                   onAnimationEnd={[Function]}
                   onAnimationStart={[Function]}
                   points={Array []}
-                  stroke="#3359db"
-                  strokeWidth={1}
+                  stroke="#3359dbff"
+                  strokeWidth={5}
+                  type="monotone"
                   xAxisId={0}
                   yAxisId={0}
 />,
                 <Line
-                  activeDot={true}
+                  activeDot={
+                                    Object {
+                                                      "r": 3,
+                                                    }
+                  }
                   animateNewValues={true}
                   animationBegin={0}
                   animationDuration={1500}
@@ -2168,13 +2249,18 @@ ShallowWrapper {
                   onAnimationEnd={[Function]}
                   onAnimationStart={[Function]}
                   points={Array []}
-                  stroke="#ffaf30"
-                  strokeWidth={1}
+                  stroke="#ffaf30cc"
+                  strokeWidth={3}
+                  type="monotone"
                   xAxisId={0}
                   yAxisId={0}
 />,
                 <Line
-                  activeDot={true}
+                  activeDot={
+                                    Object {
+                                                      "r": 2.5,
+                                                    }
+                  }
                   animateNewValues={true}
                   animationBegin={0}
                   animationDuration={1500}
@@ -2190,8 +2276,9 @@ ShallowWrapper {
                   onAnimationEnd={[Function]}
                   onAnimationStart={[Function]}
                   points={Array []}
-                  stroke="#ff3030"
+                  stroke="#ff3030aa"
                   strokeWidth={1}
+                  type="monotone"
                   xAxisId={0}
                   yAxisId={0}
 />,
@@ -2270,17 +2357,17 @@ ShallowWrapper {
                   "name": "Week 12",
                 },
               ],
-              "height": 300,
+              "height": 440,
               "layout": "horizontal",
               "margin": Object {
-                "bottom": 20,
+                "bottom": 80,
                 "left": 35,
                 "right": 50,
                 "top": 20,
               },
               "reverseStackOrder": false,
               "stackOffset": "none",
-              "width": 1200,
+              "width": 12000,
             },
             "ref": null,
             "rendered": Array [
@@ -2292,13 +2379,16 @@ ShallowWrapper {
                   "allowDataOverflow": false,
                   "allowDecimals": true,
                   "allowDuplicatedCategory": true,
-                  "dataKey": "name",
+                  "angle": -45,
+                  "dataKey": "week",
                   "domain": Array [
                     0,
                     "auto",
                   ],
+                  "dy": 52,
                   "height": 30,
                   "hide": false,
+                  "interval": 0,
                   "mirror": false,
                   "orientation": "bottom",
                   "padding": Object {
@@ -2322,7 +2412,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "allowDataOverflow": false,
-                  "allowDecimals": true,
+                  "allowDecimals": false,
                   "allowDuplicatedCategory": true,
                   "children": <Label
                     angle={-90}
@@ -2374,15 +2464,13 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "dx": -50,
                   "fill": "none",
                   "fillOpacity": 1,
                   "ifOverflow": "discard",
                   "isFront": false,
-                  "offset": 25,
                   "stroke": "#ccc",
                   "strokeWidth": 1,
-                  "x": "Week 16",
+                  "x": undefined,
                   "xAxisId": 0,
                   "yAxisId": 0,
                 },
@@ -2468,6 +2556,7 @@ ShallowWrapper {
                 "props": Object {
                   "activeDot": Object {
                     "r": 4,
+                    "strokeWidth": 1,
                   },
                   "animateNewValues": true,
                   "animationBegin": 0,
@@ -2484,8 +2573,9 @@ ShallowWrapper {
                   "onAnimationEnd": [Function],
                   "onAnimationStart": [Function],
                   "points": Array [],
-                  "stroke": "#3359db",
-                  "strokeWidth": 1,
+                  "stroke": "#3359dbff",
+                  "strokeWidth": 5,
+                  "type": "monotone",
                   "xAxisId": 0,
                   "yAxisId": 0,
                 },
@@ -2498,7 +2588,9 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "activeDot": true,
+                  "activeDot": Object {
+                    "r": 3,
+                  },
                   "animateNewValues": true,
                   "animationBegin": 0,
                   "animationDuration": 1500,
@@ -2514,8 +2606,9 @@ ShallowWrapper {
                   "onAnimationEnd": [Function],
                   "onAnimationStart": [Function],
                   "points": Array [],
-                  "stroke": "#ffaf30",
-                  "strokeWidth": 1,
+                  "stroke": "#ffaf30cc",
+                  "strokeWidth": 3,
+                  "type": "monotone",
                   "xAxisId": 0,
                   "yAxisId": 0,
                 },
@@ -2528,7 +2621,9 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "activeDot": true,
+                  "activeDot": Object {
+                    "r": 2.5,
+                  },
                   "animateNewValues": true,
                   "animationBegin": 0,
                   "animationDuration": 1500,
@@ -2544,8 +2639,9 @@ ShallowWrapper {
                   "onAnimationEnd": [Function],
                   "onAnimationStart": [Function],
                   "points": Array [],
-                  "stroke": "#ff3030",
+                  "stroke": "#ff3030aa",
                   "strokeWidth": 1,
+                  "type": "monotone",
                   "xAxisId": 0,
                   "yAxisId": 0,
                 },

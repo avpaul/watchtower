@@ -30,7 +30,7 @@
 
 .title {
   height: 23px;
-  width: 223px;
+  width: 223px !important;
   color: #232f49;
   font-family: 'DIN Pro';
   font-size: 18px;

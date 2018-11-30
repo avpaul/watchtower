@@ -75,9 +75,18 @@ export default {
     fellow: {},
     error: ''
   },
+  fellowsSummary: {
+    loading: false,
+    fellowsSummaryToday: {},
+    fellowsSummaryTrend: {},
+    data: {},
+    error: ''
+  },
   opsDashboard: {
     fellowsSummary: {
       loading: false,
+      fellowsSummaryToday: {},
+      fellowsSummaryTrend: {},
       data: {
         allFellowsCount: 0,
         D0AFellowsCount: 0,

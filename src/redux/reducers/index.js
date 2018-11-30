@@ -13,6 +13,7 @@ import managerFellowReducer from './managerFellows';
 import ttlProjectsReducer from './ttlProjectsReducer';
 import fellowBioReducer from './fellowBio';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
+import fellowsSummary from './fellowsummary';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
   ttlProjects: ttlProjectsReducer,
   fellow: fellowBioReducer,
   fellowLmsRatings: fellowLmsRatingsReducer,
-  fellowDevPulse: fellowDevPulseReducer
+  fellowDevPulse: fellowDevPulseReducer,
+  fellowsSummary
 });
 
 export default rootReducer;

@@ -2,9 +2,11 @@ import { connect } from 'react-redux';
 import { fellowsSummary } from '../../redux/actionCreators';
 import FellowsSummaryChart from './FellowsSummaryChart';
 import fellowCountHistoryActions from '../../redux/actionCreators/fellowCountHistoryActions';
+import { fetchFellowsSummaryOps } from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
 
-export const mapStateToProps = ({ fellowCountHistory }) => ({
-  fellowCountHistory
+export const mapStateToProps = ({ fellowCountHistory, opsDashboard }) => ({
+  fellowCountHistory,
+  fellowsSummary: opsDashboard.fellowsSummary
 });
 
 export default connect(
@@ -12,4 +14,6 @@ export default connect(
   {
     getFellowCountHistory: fellowCountHistoryActions,
     fetchFellowsSummary: fellowsSummary.fetchFellowsSummary,
-  })(FellowsSummaryChart);
+    getFellowSummaryOps: fetchFellowsSummaryOps
+  }
+)(FellowsSummaryChart);

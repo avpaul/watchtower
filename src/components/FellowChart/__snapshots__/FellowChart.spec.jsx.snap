@@ -89,27 +89,16 @@ ShallowWrapper {
     radioCardOptions={
         Array [
             Object {
-              "count": 50,
-              "name": "All",
-              "value": "All",
+              "name": " Today",
+              "value": "Trend",
             },
             Object {
-              "count": 40,
-              "name": "Fellows On Track",
-              "value": "On Track",
-            },
-            Object {
-              "count": 8,
-              "name": "Fellows Off Track",
-              "value": "Off Track",
-            },
-            Object {
-              "count": 2,
-              "name": "Fellows On PIP",
-              "value": "PIP",
+              "name": "Trend",
+              "value": "Today",
             },
           ]
     }
+    updateSelected={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -148,32 +137,16 @@ ShallowWrapper {
                     />
           </button>
           <RadioCard
-                    count={50}
-                    current="All"
+                    current="Trend"
                     handleRadioClick={[Function]}
-                    name="All"
-                    value="All"
+                    name=" Today"
+                    value="Trend"
           />
           <RadioCard
-                    count={40}
-                    current="All"
+                    current="Trend"
                     handleRadioClick={[Function]}
-                    name="Fellows On Track"
-                    value="On Track"
-          />
-          <RadioCard
-                    count={8}
-                    current="All"
-                    handleRadioClick={[Function]}
-                    name="Fellows Off Track"
-                    value="Off Track"
-          />
-          <RadioCard
-                    count={2}
-                    current="All"
-                    handleRadioClick={[Function]}
-                    name="Fellows On PIP"
-                    value="PIP"
+                    name="Trend"
+                    value="Today"
           />
           <Chart
                     data={
@@ -252,7 +225,7 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    title="All"
+                    title=" Today"
           />
 </div>,
       ],
@@ -293,32 +266,16 @@ ShallowWrapper {
 </button>,
             Array [
               <RadioCard
-                count={50}
-                current="All"
+                current="Trend"
                 handleRadioClick={[Function]}
-                name="All"
-                value="All"
+                name=" Today"
+                value="Trend"
 />,
               <RadioCard
-                count={40}
-                current="All"
+                current="Trend"
                 handleRadioClick={[Function]}
-                name="Fellows On Track"
-                value="On Track"
-/>,
-              <RadioCard
-                count={8}
-                current="All"
-                handleRadioClick={[Function]}
-                name="Fellows Off Track"
-                value="Off Track"
-/>,
-              <RadioCard
-                count={2}
-                current="All"
-                handleRadioClick={[Function]}
-                name="Fellows On PIP"
-                value="PIP"
+                name="Trend"
+                value="Today"
 />,
             ],
             <Chart
@@ -398,7 +355,7 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              title="All"
+              title=" Today"
 />,
           ],
           "className": "fellow-chart",
@@ -436,14 +393,13 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "All",
+            "key": "Trend",
             "nodeType": "function",
             "props": Object {
-              "count": 50,
-              "current": "All",
+              "current": "Trend",
               "handleRadioClick": [Function],
-              "name": "All",
-              "value": "All",
+              "name": " Today",
+              "value": "Trend",
             },
             "ref": null,
             "rendered": null,
@@ -451,44 +407,13 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "On Track",
+            "key": "Today",
             "nodeType": "function",
             "props": Object {
-              "count": 40,
-              "current": "All",
+              "current": "Trend",
               "handleRadioClick": [Function],
-              "name": "Fellows On Track",
-              "value": "On Track",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Off Track",
-            "nodeType": "function",
-            "props": Object {
-              "count": 8,
-              "current": "All",
-              "handleRadioClick": [Function],
-              "name": "Fellows Off Track",
-              "value": "Off Track",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "PIP",
-            "nodeType": "function",
-            "props": Object {
-              "count": 2,
-              "current": "All",
-              "handleRadioClick": [Function],
-              "name": "Fellows On PIP",
-              "value": "PIP",
+              "name": "Trend",
+              "value": "Today",
             },
             "ref": null,
             "rendered": null,
@@ -573,7 +498,7 @@ ShallowWrapper {
                   "name": "Week 12",
                 },
               ],
-              "title": "All",
+              "title": " Today",
             },
             "ref": null,
             "rendered": null,
@@ -615,32 +540,16 @@ ShallowWrapper {
                         />
             </button>
             <RadioCard
-                        count={50}
-                        current="All"
+                        current="Trend"
                         handleRadioClick={[Function]}
-                        name="All"
-                        value="All"
+                        name=" Today"
+                        value="Trend"
             />
             <RadioCard
-                        count={40}
-                        current="All"
+                        current="Trend"
                         handleRadioClick={[Function]}
-                        name="Fellows On Track"
-                        value="On Track"
-            />
-            <RadioCard
-                        count={8}
-                        current="All"
-                        handleRadioClick={[Function]}
-                        name="Fellows Off Track"
-                        value="Off Track"
-            />
-            <RadioCard
-                        count={2}
-                        current="All"
-                        handleRadioClick={[Function]}
-                        name="Fellows On PIP"
-                        value="PIP"
+                        name="Trend"
+                        value="Today"
             />
             <Chart
                         data={
@@ -719,7 +628,7 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        title="All"
+                        title=" Today"
             />
 </div>,
         ],
@@ -760,32 +669,16 @@ ShallowWrapper {
 </button>,
               Array [
                 <RadioCard
-                  count={50}
-                  current="All"
+                  current="Trend"
                   handleRadioClick={[Function]}
-                  name="All"
-                  value="All"
+                  name=" Today"
+                  value="Trend"
 />,
                 <RadioCard
-                  count={40}
-                  current="All"
+                  current="Trend"
                   handleRadioClick={[Function]}
-                  name="Fellows On Track"
-                  value="On Track"
-/>,
-                <RadioCard
-                  count={8}
-                  current="All"
-                  handleRadioClick={[Function]}
-                  name="Fellows Off Track"
-                  value="Off Track"
-/>,
-                <RadioCard
-                  count={2}
-                  current="All"
-                  handleRadioClick={[Function]}
-                  name="Fellows On PIP"
-                  value="PIP"
+                  name="Trend"
+                  value="Today"
 />,
               ],
               <Chart
@@ -865,7 +758,7 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                title="All"
+                title=" Today"
 />,
             ],
             "className": "fellow-chart",
@@ -903,14 +796,13 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "All",
+              "key": "Trend",
               "nodeType": "function",
               "props": Object {
-                "count": 50,
-                "current": "All",
+                "current": "Trend",
                 "handleRadioClick": [Function],
-                "name": "All",
-                "value": "All",
+                "name": " Today",
+                "value": "Trend",
               },
               "ref": null,
               "rendered": null,
@@ -918,44 +810,13 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "On Track",
+              "key": "Today",
               "nodeType": "function",
               "props": Object {
-                "count": 40,
-                "current": "All",
+                "current": "Trend",
                 "handleRadioClick": [Function],
-                "name": "Fellows On Track",
-                "value": "On Track",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "Off Track",
-              "nodeType": "function",
-              "props": Object {
-                "count": 8,
-                "current": "All",
-                "handleRadioClick": [Function],
-                "name": "Fellows Off Track",
-                "value": "Off Track",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "PIP",
-              "nodeType": "function",
-              "props": Object {
-                "count": 2,
-                "current": "All",
-                "handleRadioClick": [Function],
-                "name": "Fellows On PIP",
-                "value": "PIP",
+                "name": "Trend",
+                "value": "Today",
               },
               "ref": null,
               "rendered": null,
@@ -1040,7 +901,7 @@ ShallowWrapper {
                     "name": "Week 12",
                   },
                 ],
-                "title": "All",
+                "title": " Today",
               },
               "ref": null,
               "rendered": null,

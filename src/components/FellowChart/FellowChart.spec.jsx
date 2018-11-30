@@ -7,16 +7,18 @@ import RadioCard from './RadioCard/RadioCard';
 import FellowChart from './FellowChart';
 
 const radioCardOptions = [
-  { value: 'All', name: 'All', count: 50 },
-  { value: 'On Track', name: 'Fellows On Track', count: 40 },
-  { value: 'Off Track', name: 'Fellows Off Track', count: 8 },
-  { value: 'PIP', name: 'Fellows On PIP', count: 2 }
+  {
+    value: 'Trend',
+    name: ` Today`
+  },
+  { value: 'Today', name: 'Trend' }
 ];
 const handleChartCloseSpy = jest.fn();
 const setup = propOverrides => {
   const props = {
     fellowsCount,
     radioCardOptions,
+    updateSelected: jest.fn(),
     handleChartClose: handleChartCloseSpy,
     ...propOverrides
   };
