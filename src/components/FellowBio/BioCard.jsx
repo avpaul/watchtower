@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RenderItem from './RenderItem';
 
 const BioCard = ({ data, Id }) => (
-  <div>
+  <div className="bio">
     <div className="my-bio">MY PROFILE</div>
     <div className="card-bio" id={Id} role="button" tabIndex="0">
       <RenderItem title="Cohort">{data.cohort}</RenderItem>

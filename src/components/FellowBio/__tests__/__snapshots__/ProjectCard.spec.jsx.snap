@@ -45,6 +45,7 @@ ShallowWrapper {
           </RenderItem>
 </div>,
       ],
+      "className": "project",
     },
     "ref": null,
     "rendered": Array [
@@ -158,6 +159,7 @@ ShallowWrapper {
             </RenderItem>
 </div>,
         ],
+        "className": "project",
       },
       "ref": null,
       "rendered": Array [

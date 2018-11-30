@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RenderItem from './RenderItem';
 
 const ProjectCard = ({ data, Id }) => (
-  <div>
+  <div className="project">
     <div className="my-project row">MY PROJECT</div>
     <div className="card-project" id={Id} role="button" tabIndex="0">
       <RenderItem title="Project Name">
