@@ -7,7 +7,7 @@ import Timeline from './Timeline';
 import './LMSChart.css';
 
 const LMSChart = ({ data }) => {
-  const chartWidth = 1320;
+  const chartWidth = 1480;
 
   // Convert string dates to date objects
   data.outputs.map(output => {

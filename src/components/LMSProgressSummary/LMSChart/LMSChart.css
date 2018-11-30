@@ -1,9 +1,9 @@
 .lms-chart {
   color: #303030;
   height: 250px;
-  width: 1300px;
+  width: 1450px;
   position: relative;
-  margin: 50px auto;
+  margin: 50px 65px;
 }
 
 .lms-chart::before {
@@ -131,9 +131,7 @@
   position: absolute;
   width: 6px;
   height: 6px;
-  border: 1px solid #ff3030;
   border-radius: 10px;
-  background-color: #ff3030;
 }
 
 .item:last-child {
@@ -144,6 +142,8 @@
   display: flex;
   list-style-type: none;
   padding: 0px;
+  margin-top: -20px;
+  padding-top: 19px;
 }
 
 .output-list-item {
@@ -153,7 +153,8 @@
   width: var(--track-interval);
   position: relative;
   bottom: 5px;
-  padding-top: 10px;
+  margin-top: -0.5px;
+  padding-top: 8px;
 }
 
 .output-list-item > .details {
@@ -171,32 +172,10 @@
   z-index: 10000;
 }
 
-.output-list-item .details::before,
-.output-list-item .details::after {
-  content: '';
-  position: absolute;
-  left: 0.3em;
-  bottom: -0.9em;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-}
-
-.output-list-item .details::before {
-  border-top: 9px solid #9a9a9a;
-  margin-top: 15px;
-}
-
-.output-list-item .details::after {
-  border-top: 10px solid white;
-  margin-top: -2px;
-  z-index: 1;
-}
-
 /* ---- Hover effects ---- */
 
 .output-list-item:hover {
   cursor: pointer;
-  color: #28e;
 }
 
 .output-list-item:hover::before {
@@ -246,23 +225,27 @@
 }
 
 .blue {
-  background-color: #3359db !important;
-  border: 1px solid #3359db !important;
+  color: #3359db;
+  background-color: #3359db;
+  border: 1px solid #3359db;
 }
 
 .red {
-  background-color: #ff3030 !important;
-  border: 1px solid #ff3030 !important;
+  color: #ff3030;
+  background-color: #ff3030;
+  border: 1px solid #ff3030;
 }
 
 .orange {
-  background-color: #ffaf30 !important;
-  border: 1px solid #ffaf30 !important;
+  color: #ffaf30;
+  background-color: #ffaf30;
+  border: 1px solid #ffaf30;
 }
 
 .grey {
-  background-color: #9a9a9a !important;
-  border: 1px solid #9a9a9a !important;
+  color: #9a9a9a;
+  background-color: #9a9a9a;
+  border: 1px solid #9a9a9a;
 }
 
 .vl {

@@ -16,11 +16,11 @@ const LMSChartOverview = ({
     <div className="output-score-summary">
       <div className="output-score-summary__progress">
         <div>
-          <strong>Outputs greater than 1 </strong> ={' '}
+          <strong>Outputs with scores 2+ </strong> -{' '}
           {numOfOutputsGreaterThanOne}/{numOfOutputsSuggested}
         </div>
         <div>
-          <strong>Required </strong> = {numOfOutputsSuggested}/
+          <strong>Required </strong> - {numOfOutputsSuggested}/
           {numOfTotalOutputs}
         </div>
       </div>

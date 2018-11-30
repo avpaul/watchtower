@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { getOutputStatus } from '../../../../../utils';
 /**
  *
  * @param {Array, number} props
@@ -20,12 +20,17 @@ const Track = ({ outputs, interval }) => (
           <span className="details">
             <strong>{output.number}</strong> {`: ${output.title}`}
             <br />
-            <strong>Due date:</strong>{' '}
-            {` ${output.dueDate.getDate()}-${output.dueDate.getMonth() +
-              1}-${output.dueDate.getFullYear()}`}
-            <br />
-            <strong>Score:</strong>{' '}
-            {` ${output.score == null ? 'none' : output.score}`}
+            <div
+              className={getOutputStatus(output)}
+              style={{ 'background-color': 'transparent', border: 'none' }}
+            >
+              <strong>Due date:</strong>{' '}
+              {` ${output.dueDate.getDate()}-${output.dueDate.getMonth() +
+                1}-${output.dueDate.getFullYear()}`}
+              <br />
+              <strong>Score:</strong>{' '}
+              {` ${output.score == null ? 'none' : output.score}`}
+            </div>
           </span>
         </li>
       ))}
