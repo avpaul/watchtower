@@ -137,6 +137,16 @@ jobs:
             yarn check --integrity
             npx nsp check
 
+  slack_staging_notification:
+    working_directory: ~/watch-tower
+    docker:
+        - image: circleci/node:latest
+    steps:
+        - checkout
+        - run:
+            name: Slack notification
+            command: .circleci/slack.sh
+
   lint:
     <<: *defaults
     steps:
@@ -186,6 +196,12 @@ workflows:
           requires:
             - build
             - test_and_report
+          filters:
+            branches:
+              only: develop
+      - slack_staging_notification:
+          requires:
+            - deploy_to_staging
           filters:
             branches:
               only: develop
