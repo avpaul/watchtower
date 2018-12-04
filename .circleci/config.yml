@@ -59,6 +59,7 @@ generate_env_file: &generate_env_file
      echo REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL=$REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL > .env
      echo REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME=$REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME > .env
      echo REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL > .env
+     echo REACT_APP_WATCHTOWER_ROLES > .env
 
 
 deploy_to_kubernetes: &deploy_to_kubernetes
