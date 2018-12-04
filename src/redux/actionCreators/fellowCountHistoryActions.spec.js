@@ -9,7 +9,7 @@ import initialState from '../reducers/initialState';
 
 describe('Fellow Count History', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const requestURL = `${serverURL}/api/v1/fellow/summary`;
+  const requestURL = `${serverURL}/api/v1/fellows/summary`;
 
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);

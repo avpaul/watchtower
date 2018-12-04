@@ -10,7 +10,7 @@ const getFellowDevPulse = () => dispatch => {
   let requestURL;
   const { email } = auth.loadUserFromToken();
   if (!requestURL) {
-    requestURL = `${serverURL}/api/v1/fellow/pulse?user=${email}`;
+    requestURL = `${serverURL}/api/v1/fellows/pulse?user=${email}`;
   }
   return axios.get(requestURL).then(
     response =>

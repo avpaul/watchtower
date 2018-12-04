@@ -15,7 +15,7 @@ import getFellowDevPulse from '../fellowDevPulseActions';
 describe('Fellow Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
   const email = 'test.user@andela.com';
-  const baseURL = `${serverURL}/api/v1/fellow/pulse?user=${email}`;
+  const baseURL = `${serverURL}/api/v1/fellows/pulse?user=${email}`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);

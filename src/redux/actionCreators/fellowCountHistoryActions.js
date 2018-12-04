@@ -7,7 +7,7 @@ const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 export default () => dispatch => {
   dispatch({ type: types.LOAD_FELLOW_COUNT_HISTORY_REQUEST });
 
-  const requestURL = `${serverURL}/api/v1/fellow/summary`;
+  const requestURL = `${serverURL}/api/v1/fellows/summary`;
 
   return axios.get(requestURL).then(
     response =>
