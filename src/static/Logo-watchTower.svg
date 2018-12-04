@@ -8,8 +8,7 @@
             <g id="1" transform="translate(510.000000, 140.000000)">
                 <g id="Logo" transform="translate(0.000000, 59.000000)">
                     <text id="WatchTower" font-family="DINPro-Light, DIN Pro Light" font-size="24" font-weight="normal" letter-spacing="-1" fill="#FFFFFF">
-                        <tspan x="50" y="29">WatchTowe</tspan>
-                        <tspan x="160.064" y="29">r</tspan>
+                        <tspan x="40" y="29">WatchTower</tspan>
                     </text>
                     <g id="Shape">
                         <polygon points="0 0 40 0 40 40 0 40"></polygon>
