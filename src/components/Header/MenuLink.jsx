@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  *
@@ -10,11 +11,9 @@ import PropTypes from 'prop-types';
  * @returns {JSX} React JSX
  */
 const MenuLink = ({ link, handleMenuClick, isActive, role }) => {
-  let active = '';
   // if the link state is active, change icon
   let iconImg = link.icon;
   if (isActive) {
-    active = 'active';
     iconImg = link.activeIcon || link.icon;
   }
 
@@ -22,13 +21,16 @@ const MenuLink = ({ link, handleMenuClick, isActive, role }) => {
     const path = link.path ? link.path : '';
     return (
       <Link
-        className={`navlink ${active}`}
+        className={classnames(
+          'navlink',
+          { active: isActive },
+          { 'navlink-clickable': path },
+          { disabled: !path }
+        )}
         data-link-key={link.key}
         onClick={handleMenuClick}
-        to={path}
-        role="link"
+        to={{ pathname: path }}
         onKeyPress={handleMenuClick}
-        tabIndex="0"
       >
         <span className="navicon">
           <img

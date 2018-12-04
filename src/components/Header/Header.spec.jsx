@@ -32,7 +32,7 @@ describe('Header Component Test Suite', () => {
     });
     const event = {
       preventDefault: jest.fn(),
-      target: {
+      currentTarget: {
         dataset: {
           linkKey: 'settings'
         }
@@ -57,7 +57,7 @@ describe('Header Component Test Suite', () => {
     });
     const event = {
       preventDefault: jest.fn(),
-      target: {
+      currentTarget: {
         dataset: {
           linkKey: 'fellows'
         }

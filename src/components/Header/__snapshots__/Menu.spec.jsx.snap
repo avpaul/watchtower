@@ -20,6 +20,7 @@ ShallowWrapper {
               "icon": "Dashboard.svg",
               "key": "dashboard",
               "name": "Dashboard",
+              "path": "/dashboard",
             },
             Object {
               "activeIcon": "PerfomanceFill.svg",
@@ -60,6 +61,7 @@ ShallowWrapper {
                               "icon": "Dashboard.svg",
                               "key": "dashboard",
                               "name": "Dashboard",
+                              "path": "/dashboard",
                             }
           }
           role="Fellow"
@@ -107,6 +109,7 @@ ShallowWrapper {
             "icon": "Dashboard.svg",
             "key": "dashboard",
             "name": "Dashboard",
+            "path": "/dashboard",
           },
           "role": "Fellow",
         },
@@ -171,6 +174,7 @@ ShallowWrapper {
                                     "icon": "Dashboard.svg",
                                     "key": "dashboard",
                                     "name": "Dashboard",
+                                    "path": "/dashboard",
                                   }
             }
             role="Fellow"
@@ -218,6 +222,7 @@ ShallowWrapper {
               "icon": "Dashboard.svg",
               "key": "dashboard",
               "name": "Dashboard",
+              "path": "/dashboard",
             },
             "role": "Fellow",
           },

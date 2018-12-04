@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import classnames from 'classnames';
 import NavArrow from '../Carousel/NavArrow';
 import './Filters.css';
 import FilterCard from './FilterCard';
@@ -94,7 +95,6 @@ class Filters extends Component {
   }
 
   render() {
-    const activeClass = 'card active-card';
     const { filter } = this.props;
     const cardArray = this.cardArray();
     const settings = this.carouselOptions();
@@ -105,7 +105,9 @@ class Filters extends Component {
             key={filterId}
             filterId={filterId}
             cardDetails={cardDetails}
-            className={filter === filterId ? activeClass : 'card'}
+            className={classnames('card', {
+              'active-card': filter === filterId
+            })}
             onClick={this.handleCardClick}
           />
         ))}

@@ -32,6 +32,7 @@ export const fellowItems = [
   {
     key: 'dashboard',
     name: 'Dashboard',
+    path: '/dashboard',
     icon: dashboardIcon,
     activeIcon: dashboardIconFill
   },
@@ -60,7 +61,6 @@ export const ttlItems = [
   {
     key: 'ttl',
     name: 'Developers',
-    path: '/dashboard/fellows',
     icon: userIcon,
     activeIcon: userIconFill
   },
@@ -76,6 +76,7 @@ export const managerItems = [
   {
     key: 'Dashboard',
     name: 'Dashboard',
+    path: '/dashboard',
     icon: dashboardIcon,
     activeIcon: dashboardIconFill
   },
@@ -113,7 +114,6 @@ export const opsItems = [
   {
     key: 'feedback',
     name: 'Feedback',
-    path: '/dashboard/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }

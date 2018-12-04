@@ -157,6 +157,12 @@
   color: #bcbcbc;
   font-size: 18px;
   padding-bottom: 13px;
+}
+.navlink.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.menulink .navlink-clickable {
   cursor: pointer;
 }
 

@@ -43,8 +43,8 @@ class Header extends Component {
     this.setState({ show: false });
   };
 
-  handleMenuClick = e => {
-    const key = e.target.dataset.linkKey;
+  handleMenuClick = event => {
+    const key = event.currentTarget.dataset.linkKey;
     const { activeItems } = this.state;
     if (!activeItems[key]) {
       const newactiveItems = mapValues(activeItems, () => false);
