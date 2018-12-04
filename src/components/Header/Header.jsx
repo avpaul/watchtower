@@ -11,7 +11,6 @@ import LogOutModal from '../LogOutModal/LogOutModal';
 import truncate from '../../utils';
 import OffTrackIcon from '../../static/OffTrack.svg';
 import OnTrackIcon from '../../static/OnTrack.svg';
-import searchIcon from '../../static/Loupe.svg';
 import { Modal } from '../Notifications/Modal';
 import { splitDate, groupedDate } from '../../services/helper';
 
@@ -173,24 +172,6 @@ class Header extends Component {
             </span>
           </Link>
           <div className="d-flex flex-row">
-            <div
-              id="search-icon"
-              data-toggle="collapse"
-              data-target="#search_form"
-            >
-              <img
-                className="search__icon d-inline-block d-sm-none"
-                src={searchIcon}
-                alt="searchIcon"
-              />
-            </div>
-            <div id="search_form" className="inner-addon collapse show">
-              <input
-                type="search"
-                className="form-control fellow-search"
-                name="fellow_search_query"
-              />
-            </div>
             <span
               className="notification"
               onClick={this.showModal}

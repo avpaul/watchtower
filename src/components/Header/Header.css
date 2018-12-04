@@ -120,10 +120,6 @@
   margin: 0 2.5%;
 }
 
-.search__icon {
-  margin-right: 10px;
-}
-
 .header__divider {
   box-sizing: border-box;
   height: 2px;
@@ -261,7 +257,6 @@ div.clear {
   color: #fff;
   z-index: 2;
   border-radius: 3px;
-  /* position: relative; */
   left: 28px;
 }
 

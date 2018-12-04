@@ -65,12 +65,6 @@
     -->
     <script>
       $(document).ready(function() {
-        // $(".item span.point").hover(() => {
-        //     $(".item > .details").css("display","block");
-        // }, () => {
-        //     $(".item > .details").css("display","none");
-        // });
-
         if (matchMedia) {
           const mediaQuery = window.matchMedia('(min-width: 768px)');
           viewPortChange(mediaQuery);
@@ -84,10 +78,8 @@
         );
 
         if (mq.matches) {
-          $('#search_form').collapse('show');
           Array.prototype.forEach.call(levelColumns, displayLevel);
         } else {
-          $('#search_form').collapse('hide');
           Array.prototype.forEach.call(levelColumns, displayLevelCode);
         }
       };
