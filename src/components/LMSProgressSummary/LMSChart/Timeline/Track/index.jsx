@@ -17,6 +17,7 @@ const Track = ({ outputs, interval }) => (
           style={{ '--track-interval': `${interval}px` }}
         >
           <p className="output-name">{output.number}</p>
+          <span className="pseudo" />
           <span className="details">
             <strong>{output.number}</strong> {`: ${output.title}`}
             <br />

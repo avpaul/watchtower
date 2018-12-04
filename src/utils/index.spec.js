@@ -20,7 +20,7 @@ describe('LMS output status utility', () => {
 
   it('returns correct status color for a scored output > 1', () => {
     const statusColor = getOutputStatus(output);
-    expect(statusColor).toEqual('blue');
+    expect(statusColor).toEqual('green');
   });
 
   it('returns correct status color for a scored output < 2', () => {

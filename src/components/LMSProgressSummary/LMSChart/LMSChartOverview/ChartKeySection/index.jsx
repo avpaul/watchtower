@@ -3,7 +3,7 @@ import React from 'react';
 const CharKeySection = () => (
   <div className="chart-keys">
     <div className="chart-keys__item">
-      <div className="chart-keys__item--circle blue" />
+      <div className="chart-keys__item--circle green" />
       <span>Scores 2 or more</span>
     </div>
     <div className="chart-keys__item">
