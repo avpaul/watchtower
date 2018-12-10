@@ -46,21 +46,7 @@ configure_gcloud: &configure_gcloud
     name: configure gcloud default settings
     command: |
       gcloud auth activate-service-account --key-file ~/watch-tower/auth_key.json
-      gcloud container clusters get-credentials watch-tower-staging-apprenticeship --zone us-central1-a --project $GCP_PROJECT_ID
-
-generate_env_file: &generate_env_file
-  run:
-   name: Generate a .env
-   command: |
-     echo REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$REACT_APP_GOOGLE_AUTH_REDIRECT_URL > .env
-     echo REACT_APP_ANDELA_AUTH_HOST=$REACT_APP_ANDELA_AUTH_HOST > .env
-     echo REACT_APP_WATCHTOWER_SERVER=$REACT_APP_WATCHTOWER_SERVER > .env
-     echo REACT_APP_BUGSNAG_API_KEY=$REACT_APP_BUGSNAG_API_KEY > .env
-     echo REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL=$REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL > .env
-     echo REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME=$REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME > .env
-     echo REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL > .env
-     echo REACT_APP_WATCHTOWER_ROLES > .env
-
+      gcloud container clusters get-credentials watch-tower-$namespace-apprenticeship --zone us-central1-a --project $GCP_PROJECT_ID
 
 deploy_to_kubernetes: &deploy_to_kubernetes
   run:
@@ -68,18 +54,45 @@ deploy_to_kubernetes: &deploy_to_kubernetes
     command: |
       export IMG_TAG=$(echo $CIRCLE_SHA1 | cut -c -7)
       cd watchtower-deployment-scripts
-      ansible-playbook ansible/frontend/main.yml --extra-var "IMG_TAG=$IMG_TAG PROJECT_ID=$GCP_PROJECT_ID RESERVED_IP_NAME=$RESERVED_IP_NAME DOMAIN=$DOMAIN PROJECT_NAME=$PROJECT_NAME namespace=$namespace" -vvv
+      ansible-playbook ansible/frontend/main.yml -vvv
 
 jobs:
-  build:
+  build_staging:
     <<: *defaults
     steps:
       - *attach_workspace
       - *install_npm_packages
-      - *generate_env_file
       - run:
           name: build static files
-          command: yarn build
+          command: |
+            export REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$STAGING_REACT_APP_GOOGLE_AUTH_REDIRECT_URL
+            export REACT_APP_ANDELA_AUTH_HOST=$STAGING_REACT_APP_ANDELA_AUTH_HOST
+            export REACT_APP_WATCHTOWER_SERVER=$STAGING_REACT_APP_WATCHTOWER_SERVER
+            export REACT_APP_BUGSNAG_API_KEY=$STAGING_REACT_APP_BUGSNAG_API_KEY
+            export REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL
+            export REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME
+            export REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
+            REACT_APP_WATCHTOWER_ROLES=$STAGING_REACT_APP_WATCHTOWER_ROLES
+            yarn build
+      - *persist_to_workspace
+
+  build_production:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - *install_npm_packages
+      - run:
+          name: build static files
+          command: |
+            export REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$PROD_REACT_APP_GOOGLE_AUTH_REDIRECT_URL
+            export REACT_APP_ANDELA_AUTH_HOST=$PROD_REACT_APP_ANDELA_AUTH_HOST
+            export REACT_APP_WATCHTOWER_SERVER=$PROD_REACT_APP_WATCHTOWER_SERVER
+            export REACT_APP_BUGSNAG_API_KEY=$PROD_REACT_APP_BUGSNAG_API_KEY
+            export REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL
+            export REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME=$PROD_REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME
+            export REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
+            REACT_APP_WATCHTOWER_ROLES=$PROD_REACT_APP_WATCHTOWER_ROLES
+            yarn build
       - *persist_to_workspace
 
   deploy_to_staging:
@@ -108,7 +121,36 @@ jobs:
           name: Clone the deployment scripts repo
           command: |
             mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-            git clone -b master ${DEPLOYMENT_SCRIPTS_REPO}
+            git clone -b develop ${DEPLOYMENT_SCRIPTS_REPO}
+      - *deploy_to_kubernetes
+
+  deploy_to_production:
+    docker:
+      - image: gcr.io/$GCP_PROJECT_ID/watchtower-frontend-base
+        auth:
+          username: _json_key
+          password: $GCLOUD_SERVICE_KEY
+        environment:
+          GOOGLE_APPLICATION_CREDENTIALS: /root/watch-tower/auth_key.json
+          DEPLOYMENT_SCRIPTS_REPO: git@github.com:andela/watchtower-deployment-scripts.git
+          IMAGE_TAG: $(echo $CIRCLE_SHA1 | cut -c -7)
+          namespace: production
+
+    working_directory: ~/watch-tower
+    steps:
+      - checkout
+      - setup_remote_docker
+      - *attach_workspace
+      - run: 
+          name: Add gcloud key to json file
+          command: echo $GCLOUD_SERVICE_KEY > ~/watch-tower/auth_key.json
+      - *configure_gcloud
+      - *build_and_push_image
+      - run:
+          name: Clone the deployment scripts repo
+          command: |
+            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            git clone -b develop ${DEPLOYMENT_SCRIPTS_REPO}
       - *deploy_to_kubernetes
 
   checkout:
@@ -139,6 +181,16 @@ jobs:
             npx nsp check
 
   slack_staging_notification:
+    working_directory: ~/watch-tower
+    docker:
+        - image: circleci/node:latest
+    steps:
+        - checkout
+        - run:
+            name: Slack notification
+            command: .circleci/slack.sh
+
+  slack_production_notification:
     working_directory: ~/watch-tower
     docker:
         - image: circleci/node:latest
@@ -186,16 +238,24 @@ workflows:
       - lint:
           requires:
             - checkout
-      - build:
+      - build_staging:
           requires:
             - checkout
-          <<: *filters
+          filters:
+            branches:
+              only: develop
+      - build_production:
+          requires:
+            - checkout
+          filters:
+            branches:
+              only: master
       - test_and_report:
           requires:
             - checkout
       - deploy_to_staging:
           requires:
-            - build
+            - build_staging
             - test_and_report
           filters:
             branches:
@@ -206,3 +266,16 @@ workflows:
           filters:
             branches:
               only: develop
+      - deploy_to_production:
+          requires:
+            - build_production
+            - test_and_report
+          filters:
+            branches:
+              only: master
+      - slack_production_notification:
+          requires:
+            - deploy_to_production
+          filters:
+            branches:
+              only: master
