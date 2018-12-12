@@ -2,28 +2,32 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import authService from '../../services/auth';
 
-
 const redirectLogin = location => (
-  <Redirect to={{
-    pathname: '/login',
-    state: { from: location },
-  }}
+  <Redirect
+    to={{
+      pathname: '/login',
+      state: { from: location }
+    }}
   />
 );
 
-const checkRole = (user, allowedRoles) => Object.keys(user.roles).some(role => allowedRoles.includes(role)) || allowedRoles[0] === '*';
+const checkRole = (user, allowedRoles) =>
+  Object.keys(user.roles).some(role => allowedRoles.includes(role)) ||
+  allowedRoles[0] === '*';
+
 /**
  * Defines wrapper component for authenticating route
  * @function
  */
 const Authorization = (WrappedComponent, allowedRoles = ['*']) => {
-  const WithAuthorization = (props) => {
+  const WithAuthorization = props => {
     const { location } = props;
-    const user = authService.isAuthenticated() && authService.loadUserFromToken();
+    const user =
+      authService.isAuthenticated() && authService.loadUserFromToken();
     if (!user) {
       return redirectLogin(location);
     }
-    if (checkRole(user, allowedRoles)) {
+    if (checkRole(user, allowedRoles) && authService.isServerTokenSet()) {
       return <WrappedComponent {...props} user={user} />;
     }
 
