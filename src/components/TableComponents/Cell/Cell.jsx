@@ -7,8 +7,8 @@ import './cell.css';
  *
  * @returns {JSX} React JSX
  */
-const Cell = ({ title, children }) => (
-  <div className="dashboard-table__cell" data-title={title}>
+const Cell = ({ title, children, addedClass }) => (
+  <div className={`dashboard-table__cell ${addedClass}`} data-title={title}>
     {children}
   </div>
 );
@@ -16,11 +16,13 @@ const Cell = ({ title, children }) => (
 Cell.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
+  addedClass: PropTypes.string
 };
 
 Cell.defaultProps = {
   title: '',
   children: '',
+  addedClass: ''
 };
 
 export default Cell;

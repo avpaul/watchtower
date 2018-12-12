@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders to match snapshot 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <DashboardRow
+    fellow={
+        Object {
+            "advanceStatus": "Off Track",
+            "communication": 0,
+            "devPulseStatus": "Off Track",
+            "firstName": "Mathilda",
+            "id": "AND/F/001",
+            "initiative": 0.3,
+            "integration": 0,
+            "lastName": "West",
+            "level": "D0A Simulations",
+            "lmsOutputs": "N/A",
+            "lmsOutputsGt2": "N/A",
+            "lmsStatus": "N/A",
+            "professionalism": 0,
+            "quality": 0,
+            "quantity": 1,
+            "submitterFirstName": "Innocent",
+            "submitterLastName": "Asiimwe",
+            "weeksSpent": 12,
+          }
+    }
+    fellowCells={
+        Array [
+            Object {
+              "key": "element",
+              "value": "James",
+            },
+            Object {
+              "color": "off-track",
+              "key": "element",
+              "value": "N/A",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "fellow": Object {
+        "advanceStatus": "Off Track",
+        "communication": 0,
+        "devPulseStatus": "Off Track",
+        "firstName": "Mathilda",
+        "id": "AND/F/001",
+        "initiative": 0.3,
+        "integration": 0,
+        "lastName": "West",
+        "level": "D0A Simulations",
+        "lmsOutputs": "N/A",
+        "lmsOutputsGt2": "N/A",
+        "lmsStatus": "N/A",
+        "professionalism": 0,
+        "quality": 0,
+        "quantity": 1,
+        "submitterFirstName": "Innocent",
+        "submitterLastName": "Asiimwe",
+        "weeksSpent": 12,
+      },
+      "fellowCells": Array [
+        Object {
+          "key": "element",
+          "value": "James",
+        },
+        Object {
+          "color": "off-track",
+          "key": "element",
+          "value": "N/A",
+        },
+      ],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": "AND/F/001",
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Cell
+            addedClass="default"
+            title="element"
+>
+            James
+</Cell>,
+          <Cell
+            addedClass="off-track"
+            title="element"
+>
+            N/A
+</Cell>,
+        ],
+        "header": false,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="dashboard-table__row"
+>
+          <div
+                    class="dashboard-table__cell default"
+                    data-title="element"
+          >
+                    James
+          </div>
+          <div
+                    class="dashboard-table__cell off-track"
+                    data-title="element"
+          >
+                    N/A
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Cell
+              addedClass="default"
+              title="element"
+>
+              James
+</Cell>,
+            <Cell
+              addedClass="off-track"
+              title="element"
+>
+              N/A
+</Cell>,
+          ],
+          "className": "dashboard-table__row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "addedClass": "default",
+              "children": "James",
+              "title": "element",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="dashboard-table__cell default"
+                data-title="element"
+>
+                James
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "James",
+                "className": "dashboard-table__cell default",
+                "data-title": "element",
+              },
+              "ref": null,
+              "rendered": Array [
+                "James",
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "addedClass": "off-track",
+              "children": "N/A",
+              "title": "element",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="dashboard-table__cell off-track"
+                data-title="element"
+>
+                N/A
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "N/A",
+                "className": "dashboard-table__cell off-track",
+                "data-title": "element",
+              },
+              "ref": null,
+              "rendered": Array [
+                "N/A",
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "fellow": Object {
+          "advanceStatus": "Off Track",
+          "communication": 0,
+          "devPulseStatus": "Off Track",
+          "firstName": "Mathilda",
+          "id": "AND/F/001",
+          "initiative": 0.3,
+          "integration": 0,
+          "lastName": "West",
+          "level": "D0A Simulations",
+          "lmsOutputs": "N/A",
+          "lmsOutputsGt2": "N/A",
+          "lmsStatus": "N/A",
+          "professionalism": 0,
+          "quality": 0,
+          "quantity": 1,
+          "submitterFirstName": "Innocent",
+          "submitterLastName": "Asiimwe",
+          "weeksSpent": 12,
+        },
+        "fellowCells": Array [
+          Object {
+            "key": "element",
+            "value": "James",
+          },
+          Object {
+            "color": "off-track",
+            "key": "element",
+            "value": "N/A",
+          },
+        ],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": "AND/F/001",
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Cell
+              addedClass="default"
+              title="element"
+>
+              James
+</Cell>,
+            <Cell
+              addedClass="off-track"
+              title="element"
+>
+              N/A
+</Cell>,
+          ],
+          "header": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": <div
+            class="dashboard-table__row"
+>
+            <div
+                        class="dashboard-table__cell default"
+                        data-title="element"
+            >
+                        James
+            </div>
+            <div
+                        class="dashboard-table__cell off-track"
+                        data-title="element"
+            >
+                        N/A
+            </div>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Cell
+                addedClass="default"
+                title="element"
+>
+                James
+</Cell>,
+              <Cell
+                addedClass="off-track"
+                title="element"
+>
+                N/A
+</Cell>,
+            ],
+            "className": "dashboard-table__row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "addedClass": "default",
+                "children": "James",
+                "title": "element",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": <div
+                  class="dashboard-table__cell default"
+                  data-title="element"
+>
+                  James
+</div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "James",
+                  "className": "dashboard-table__cell default",
+                  "data-title": "element",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "James",
+                ],
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "addedClass": "off-track",
+                "children": "N/A",
+                "title": "element",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": <div
+                  class="dashboard-table__cell off-track"
+                  data-title="element"
+>
+                  N/A
+</div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "N/A",
+                  "className": "dashboard-table__cell off-track",
+                  "data-title": "element",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "N/A",
+                ],
+                "type": "div",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

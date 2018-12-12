@@ -1,4 +1,4 @@
-import { OFFTRACK_WK5_PLUS } from '../constants/fellowFilters';
+import { ALL } from '../constants/fellowFilters';
 
 export default {
   fellows: {
@@ -16,7 +16,7 @@ export default {
     loading: false,
     error: ''
   },
-  visibilityFilter: OFFTRACK_WK5_PLUS,
+  visibilityFilter: ALL,
   fellowCountHistory: {
     countSummary: {},
     loading: false

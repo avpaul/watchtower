@@ -7,7 +7,13 @@
 
 /* enable absolute positioning */
 .table_search_div {
-  margin-left: 60px;
+  margin-left: unset;
+  margin-right: 25px;
+}
+
+.table_search_div > p {
+  font-size: 14px;
+  font-family: 'DIN Pro Light';
 }
 
 .table-search-append {

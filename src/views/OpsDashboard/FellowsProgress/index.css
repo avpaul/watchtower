@@ -34,7 +34,8 @@
 }
 
 .filter_dropdown > span:last-child {
-  background-color: #d3eeff;
+  background-color: #ffaf30;
+  opacity: 0.62;
   border-radius: 0 4px 4px 0;
   height: 44px;
   width: 45px;
@@ -44,12 +45,12 @@
   box-sizing: border-box;
   height: 9.33px;
   width: 5.47px;
-  border: 0.3px solid #808fa3;
+  border: 0.3px solid #ffffff;
   transform: scaleX(-1) rotate(90deg);
 }
 
 .fa-chevron-down {
-  color: #808fa3;
+  color: #ffffff;
 }
 
 .filter_dropdown:focus,
@@ -81,7 +82,8 @@
 }
 
 .open__list_item:hover {
-  background-color: #3359db;
+  background-color: #ffaf30;
+  opacity: 0.62;
   color: white;
   cursor: pointer;
 }

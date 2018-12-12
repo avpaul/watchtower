@@ -1,7 +1,7 @@
 import axios from 'axios';
 import errorHandler from '../../services/errorHandler';
 import * as types from '../constants/fellowActionTypes';
-import { OFFTRACK_WK5_PLUS } from '../constants/fellowFilters';
+import { ALL } from '../constants/fellowFilters';
 import paginationExtract from '../../services/paginationExtract';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
@@ -9,14 +9,17 @@ const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 export const getFellows = ({
   perPage = 10,
   page = 1,
-  filter = OFFTRACK_WK5_PLUS,
+  filter = ALL,
   search,
-  url
+  url,
+  level = 'all',
+  status = 'all',
+  statusType = 'all'
 } = {}) => dispatch => {
   dispatch({ type: types.LOAD_FELLOW_REQUEST });
   let requestURL = url;
   if (!requestURL) {
-    requestURL = `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}`;
+    requestURL = `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}`;
     requestURL = search ? `${requestURL}&search=${search}` : requestURL;
   }
 

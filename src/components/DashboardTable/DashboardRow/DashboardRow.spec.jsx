@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import DashboardRow from './DashboardRow';
-import Cell from '../../TableComponents/Cell';
 import fellows from '../../../__mocks__/fellows';
+import fellowCells from '../../../__mocks__/fellowCells';
 
 const fellow = fellows[0];
 
 const props = {
   fellow,
+  fellowCells,
 };
 
 it('renders without crashing', () => {
@@ -18,16 +19,8 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('renders row cells in the correct order', () => {
-  const wrapper = shallow(<DashboardRow {...props} />);
-  const rowCells = [<Cell title="Communication">{fellow.communication}</Cell>,
-    <Cell title="Professionalism">{fellow.professionalism}</Cell>];
-  expect(wrapper.contains(rowCells)).toEqual(true);
-});
 
-it('renders the mounted row', () => {
+it('renders to match snapshot', () => {
   const wrapper = mount(<DashboardRow {...props} />);
-  const nameCell = <div className="dashboard-table__cell" data-title="Name">{`${fellow.firstName} ${fellow.lastName}`}</div>;
-  const levelCell = <div className="dashboard-table__cell" data-title="Quantity">{fellow.quantity}</div>;
-  expect(wrapper.contains(nameCell, levelCell)).toEqual(true);
+  expect(wrapper).toMatchSnapshot();
 });

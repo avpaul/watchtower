@@ -11,7 +11,7 @@ it('renders without crashing', () => {
 });
 
 it('renders cell contents', () => {
-  const wrapper = shallow(<Cell title="test">1</Cell>);
-  const cell = <div className="dashboard-table__cell" data-title="test">1</div>;
+  const wrapper = shallow(<Cell title="test" addedClass="class">1</Cell>);
+  const cell = <div className="dashboard-table__cell class" data-title="test">1</div>;
   expect(wrapper.contains(cell)).toEqual(true);
 });

@@ -10,6 +10,9 @@
       "!src/registerServiceWorker.js",
       "!src/**/index.js",
       "!src/redux/store/**",
+      "!src/utils/jsonToCsv.js",
+      "!src/utils/jsonToPdf.js",
+      "!src/views/DashboardPage/filterValues.js",
       "!src/setupTests.js"
     ]
   },
@@ -31,9 +34,12 @@
     "fuse.js": "^3.3.0",
     "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.3.0",
+    "jspdf": "^1.4.1",
+    "jspdf-autotable": "^2.3.5",
     "jwt-decode": "^2.2.0",
     "lodash.mapvalues": "^4.6.0",
     "lodash.mergewith": "^4.6.1",
+    "moment": "^2.22.2",
     "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",

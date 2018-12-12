@@ -8,16 +8,24 @@ ShallowWrapper {
     fellows={
         Array [
             Object {
+              "advanceStatus": "Off Track",
               "communication": 0,
+              "devPulseStatus": "Off Track",
               "firstName": "Mathilda",
               "id": "AND/F/001",
               "initiative": 0.3,
               "integration": 0,
               "lastName": "West",
               "level": "D0A Simulations",
+              "lmsOutputs": "N/A",
+              "lmsOutputsGt2": "N/A",
+              "lmsStatus": "N/A",
               "professionalism": 0,
               "quality": 0,
               "quantity": 1,
+              "submitterFirstName": "Innocent",
+              "submitterLastName": "Asiimwe",
+              "weeksSpent": 12,
             },
             Object {
               "communication": 0.1,
@@ -236,43 +244,108 @@ ShallowWrapper {
       "children": Array [
         <ErrorBoundary>
           <Unknown>
-                    <Filters
-                              filter="onTrack"
-                              getFellows={[Function]}
-                              loading={false}
-                              perPage={10}
-                              search=""
-                              setFilter={[Function]}
-                              summary={
-                                        Object {
-                                                  "gteWk5OffTrack": 0,
-                                                  "ltWk5OffTrack": 0,
-                                                  "onTrack": 0,
-                                                }
-                              }
-                    />
-                    <SearchBar
-                              filter="onTrack"
-                              getFellows={[Function]}
-                              handleSearchChange={[Function]}
-                              perPage={10}
-                              results={undefined}
-                              search=""
-                    />
+                    <div
+                              className="filters"
+                    >
+                              <Unknown>
+                                        <Filters
+                                                  criteria="All"
+                                                  getCriteriaFilter={[Function]}
+                                                  getLevelFilter={[Function]}
+                                                  getStatusFilter={[Function]}
+                                                  level="All"
+                                                  status="All"
+                                        />
+                                        <div>
+                                                  <SearchBar
+                                                            filter="onTrack"
+                                                            getFellows={[Function]}
+                                                            handleSearchChange={[Function]}
+                                                            perPage={10}
+                                                            results={undefined}
+                                                            search=""
+                                                  />
+                                        </div>
+                                        <div
+                                                  className="download-button"
+                                                  onClick={[Function]}
+                                                  onKeyPress={[Function]}
+                                                  role="button"
+                                                  tabIndex={-1}
+                                        >
+                                                  <Filter
+                                                            current="Export"
+                                                            getFilter={[Function]}
+                                                            items={
+                                                                      Array [
+                                                                                "as PDF",
+                                                                                "as CSV",
+                                                                              ]
+                                                            }
+                                                            search={false}
+                                                            title=""
+                                                            type="download"
+                                                  />
+                                        </div>
+                              </Unknown>
+                    </div>
+                    <div
+                              className="result-count"
+                    >
+                              <span
+                                        className="border-bottom mr-2 pb-2"
+                              />
+                              <span
+                                        className="mr-3"
+                              >
+                                        Total Fellow (Filtered)
+                              </span>
+                              <button
+                                        className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                        onClick={[Function]}
+                                        style={
+                                                  Object {
+                                                            "textDecoration": "underline",
+                                                          }
+                                        }
+                                        type="button"
+                              >
+                                        Clear Filters
+                              </button>
+                    </div>
                     <DashboardTable
+                              cellValues={
+                                        Array [
+                                                  "name",
+                                                  "level",
+                                                  "weeksSpent",
+                                                  "ttlName",
+                                                  "devPulseStatus",
+                                                  "lmsStatus",
+                                                  "advanceStatus",
+                                                ]
+                              }
                               fellows={
                                         Array [
                                                   Object {
+                                                    "advanceStatus": "Off Track",
                                                     "communication": 0,
+                                                    "devPulseStatus": "Off Track",
                                                     "firstName": "Mathilda",
                                                     "id": "AND/F/001",
                                                     "initiative": 0.3,
                                                     "integration": 0,
                                                     "lastName": "West",
                                                     "level": "D0A Simulations",
+                                                    "lmsOutputs": "N/A",
+                                                    "lmsOutputsGt2": "N/A",
+                                                    "lmsStatus": "N/A",
                                                     "professionalism": 0,
                                                     "quality": 0,
                                                     "quantity": 1,
+                                                    "submitterFirstName": "Innocent",
+                                                    "submitterLastName": "Asiimwe",
+                                                    "weeksSpent": 12,
                                                   },
                                                   Object {
                                                     "communication": 0.1,
@@ -444,6 +517,17 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              headers={
+                                        Array [
+                                                  "Fellow Name",
+                                                  "Level",
+                                                  "Week",
+                                                  "LF/TTL",
+                                                  "DevPulse Status",
+                                                  "LMS Status",
+                                                  "Advancement",
+                                                ]
+                              }
                               loading={false}
                     />
           </Unknown>
@@ -458,6 +542,7 @@ ShallowWrapper {
            pages
 </p>,
         <div>
+           
           <div
                     className="row d-flex justify-content-center"
           >
@@ -505,7 +590,7 @@ ShallowWrapper {
                               totalPages={3}
                     />
           </div>
-           
+             
 </div>,
       ],
     },
@@ -517,43 +602,108 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <Unknown>
-            <Filters
-                        filter="onTrack"
-                        getFellows={[Function]}
-                        loading={false}
-                        perPage={10}
-                        search=""
-                        setFilter={[Function]}
-                        summary={
-                                    Object {
-                                                "gteWk5OffTrack": 0,
-                                                "ltWk5OffTrack": 0,
-                                                "onTrack": 0,
-                                              }
-                        }
-            />
-            <SearchBar
-                        filter="onTrack"
-                        getFellows={[Function]}
-                        handleSearchChange={[Function]}
-                        perPage={10}
-                        results={undefined}
-                        search=""
-            />
+            <div
+                        className="filters"
+            >
+                        <Unknown>
+                                    <Filters
+                                                criteria="All"
+                                                getCriteriaFilter={[Function]}
+                                                getLevelFilter={[Function]}
+                                                getStatusFilter={[Function]}
+                                                level="All"
+                                                status="All"
+                                    />
+                                    <div>
+                                                <SearchBar
+                                                            filter="onTrack"
+                                                            getFellows={[Function]}
+                                                            handleSearchChange={[Function]}
+                                                            perPage={10}
+                                                            results={undefined}
+                                                            search=""
+                                                />
+                                    </div>
+                                    <div
+                                                className="download-button"
+                                                onClick={[Function]}
+                                                onKeyPress={[Function]}
+                                                role="button"
+                                                tabIndex={-1}
+                                    >
+                                                <Filter
+                                                            current="Export"
+                                                            getFilter={[Function]}
+                                                            items={
+                                                                        Array [
+                                                                                    "as PDF",
+                                                                                    "as CSV",
+                                                                                  ]
+                                                            }
+                                                            search={false}
+                                                            title=""
+                                                            type="download"
+                                                />
+                                    </div>
+                        </Unknown>
+            </div>
+            <div
+                        className="result-count"
+            >
+                        <span
+                                    className="border-bottom mr-2 pb-2"
+                        />
+                        <span
+                                    className="mr-3"
+                        >
+                                    Total Fellow (Filtered)
+                        </span>
+                        <button
+                                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                    onClick={[Function]}
+                                    style={
+                                                Object {
+                                                            "textDecoration": "underline",
+                                                          }
+                                    }
+                                    type="button"
+                        >
+                                    Clear Filters
+                        </button>
+            </div>
             <DashboardTable
+                        cellValues={
+                                    Array [
+                                                "name",
+                                                "level",
+                                                "weeksSpent",
+                                                "ttlName",
+                                                "devPulseStatus",
+                                                "lmsStatus",
+                                                "advanceStatus",
+                                              ]
+                        }
                         fellows={
                                     Array [
                                                 Object {
+                                                  "advanceStatus": "Off Track",
                                                   "communication": 0,
+                                                  "devPulseStatus": "Off Track",
                                                   "firstName": "Mathilda",
                                                   "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
                                                   "level": "D0A Simulations",
+                                                  "lmsOutputs": "N/A",
+                                                  "lmsOutputsGt2": "N/A",
+                                                  "lmsStatus": "N/A",
                                                   "professionalism": 0,
                                                   "quality": 0,
                                                   "quantity": 1,
+                                                  "submitterFirstName": "Innocent",
+                                                  "submitterLastName": "Asiimwe",
+                                                  "weeksSpent": 12,
                                                 },
                                                 Object {
                                                   "communication": 0.1,
@@ -723,6 +873,17 @@ ShallowWrapper {
                                                   "quality": 0.1,
                                                   "quantity": 0.2,
                                                 },
+                                              ]
+                        }
+                        headers={
+                                    Array [
+                                                "Fellow Name",
+                                                "Level",
+                                                "Week",
+                                                "LF/TTL",
+                                                "DevPulse Status",
+                                                "LMS Status",
+                                                "Advancement",
                                               ]
                         }
                         loading={false}
@@ -736,43 +897,108 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <Filters
-                filter="onTrack"
-                getFellows={[Function]}
-                loading={false}
-                perPage={10}
-                search=""
-                setFilter={[Function]}
-                summary={
-                                Object {
-                                                "gteWk5OffTrack": 0,
-                                                "ltWk5OffTrack": 0,
-                                                "onTrack": 0,
-                                              }
-                }
-/>,
-              <SearchBar
-                filter="onTrack"
-                getFellows={[Function]}
-                handleSearchChange={[Function]}
-                perPage={10}
-                results={undefined}
-                search=""
-/>,
+              <div
+                className="filters"
+>
+                <Unknown>
+                                <Filters
+                                                criteria="All"
+                                                getCriteriaFilter={[Function]}
+                                                getLevelFilter={[Function]}
+                                                getStatusFilter={[Function]}
+                                                level="All"
+                                                status="All"
+                                />
+                                <div>
+                                                <SearchBar
+                                                                filter="onTrack"
+                                                                getFellows={[Function]}
+                                                                handleSearchChange={[Function]}
+                                                                perPage={10}
+                                                                results={undefined}
+                                                                search=""
+                                                />
+                                </div>
+                                <div
+                                                className="download-button"
+                                                onClick={[Function]}
+                                                onKeyPress={[Function]}
+                                                role="button"
+                                                tabIndex={-1}
+                                >
+                                                <Filter
+                                                                current="Export"
+                                                                getFilter={[Function]}
+                                                                items={
+                                                                                Array [
+                                                                                                "as PDF",
+                                                                                                "as CSV",
+                                                                                              ]
+                                                                }
+                                                                search={false}
+                                                                title=""
+                                                                type="download"
+                                                />
+                                </div>
+                </Unknown>
+</div>,
+              <div
+                className="result-count"
+>
+                <span
+                                className="border-bottom mr-2 pb-2"
+                />
+                <span
+                                className="mr-3"
+                >
+                                Total Fellow (Filtered)
+                </span>
+                <button
+                                className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                onClick={[Function]}
+                                style={
+                                                Object {
+                                                                "textDecoration": "underline",
+                                                              }
+                                }
+                                type="button"
+                >
+                                Clear Filters
+                </button>
+</div>,
               <DashboardTable
+                cellValues={
+                                Array [
+                                                "name",
+                                                "level",
+                                                "weeksSpent",
+                                                "ttlName",
+                                                "devPulseStatus",
+                                                "lmsStatus",
+                                                "advanceStatus",
+                                              ]
+                }
                 fellows={
                                 Array [
                                                 Object {
+                                                  "advanceStatus": "Off Track",
                                                   "communication": 0,
+                                                  "devPulseStatus": "Off Track",
                                                   "firstName": "Mathilda",
                                                   "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
                                                   "level": "D0A Simulations",
+                                                  "lmsOutputs": "N/A",
+                                                  "lmsOutputsGt2": "N/A",
+                                                  "lmsStatus": "N/A",
                                                   "professionalism": 0,
                                                   "quality": 0,
                                                   "quantity": 1,
+                                                  "submitterFirstName": "Innocent",
+                                                  "submitterLastName": "Asiimwe",
+                                                  "weeksSpent": 12,
                                                 },
                                                 Object {
                                                   "communication": 0.1,
@@ -944,6 +1170,17 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                headers={
+                                Array [
+                                                "Fellow Name",
+                                                "Level",
+                                                "Week",
+                                                "LF/TTL",
+                                                "DevPulse Status",
+                                                "LMS Status",
+                                                "Advancement",
+                                              ]
+                }
                 loading={false}
 />,
             ],
@@ -953,57 +1190,310 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "filter": "onTrack",
-                "getFellows": [Function],
-                "loading": false,
-                "perPage": 10,
-                "search": "",
-                "setFilter": [Function],
-                "summary": Object {
-                  "gteWk5OffTrack": 0,
-                  "ltWk5OffTrack": 0,
-                  "onTrack": 0,
-                },
+                "children": <Unknown>
+                  <Filters
+                                    criteria="All"
+                                    getCriteriaFilter={[Function]}
+                                    getLevelFilter={[Function]}
+                                    getStatusFilter={[Function]}
+                                    level="All"
+                                    status="All"
+                  />
+                  <div>
+                                    <SearchBar
+                                                      filter="onTrack"
+                                                      getFellows={[Function]}
+                                                      handleSearchChange={[Function]}
+                                                      perPage={10}
+                                                      results={undefined}
+                                                      search=""
+                                    />
+                  </div>
+                  <div
+                                    className="download-button"
+                                    onClick={[Function]}
+                                    onKeyPress={[Function]}
+                                    role="button"
+                                    tabIndex={-1}
+                  >
+                                    <Filter
+                                                      current="Export"
+                                                      getFilter={[Function]}
+                                                      items={
+                                                                        Array [
+                                                                                          "as PDF",
+                                                                                          "as CSV",
+                                                                                        ]
+                                                      }
+                                                      search={false}
+                                                      title=""
+                                                      type="download"
+                                    />
+                  </div>
+</Unknown>,
+                "className": "filters",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <Filters
+                      criteria="All"
+                      getCriteriaFilter={[Function]}
+                      getLevelFilter={[Function]}
+                      getStatusFilter={[Function]}
+                      level="All"
+                      status="All"
+/>,
+                    <div>
+                      <SearchBar
+                                            filter="onTrack"
+                                            getFellows={[Function]}
+                                            handleSearchChange={[Function]}
+                                            perPage={10}
+                                            results={undefined}
+                                            search=""
+                      />
+</div>,
+                    <div
+                      className="download-button"
+                      onClick={[Function]}
+                      onKeyPress={[Function]}
+                      role="button"
+                      tabIndex={-1}
+>
+                      <Filter
+                                            current="Export"
+                                            getFilter={[Function]}
+                                            items={
+                                                                  Array [
+                                                                                        "as PDF",
+                                                                                        "as CSV",
+                                                                                      ]
+                                            }
+                                            search={false}
+                                            title=""
+                                            type="download"
+                      />
+</div>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "criteria": "All",
+                      "getCriteriaFilter": [Function],
+                      "getLevelFilter": [Function],
+                      "getStatusFilter": [Function],
+                      "level": "All",
+                      "status": "All",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <SearchBar
+                        filter="onTrack"
+                        getFellows={[Function]}
+                        handleSearchChange={[Function]}
+                        perPage={10}
+                        results={undefined}
+                        search=""
+/>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "filter": "onTrack",
+                        "getFellows": [Function],
+                        "handleSearchChange": [Function],
+                        "perPage": 10,
+                        "results": undefined,
+                        "search": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Filter
+                        current="Export"
+                        getFilter={[Function]}
+                        items={
+                                                Array [
+                                                                        "as PDF",
+                                                                        "as CSV",
+                                                                      ]
+                        }
+                        search={false}
+                        title=""
+                        type="download"
+/>,
+                      "className": "download-button",
+                      "onClick": [Function],
+                      "onKeyPress": [Function],
+                      "role": "button",
+                      "tabIndex": -1,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": "4",
+                      "nodeType": "class",
+                      "props": Object {
+                        "current": "Export",
+                        "getFilter": [Function],
+                        "items": Array [
+                          "as PDF",
+                          "as CSV",
+                        ],
+                        "search": false,
+                        "title": "",
+                        "type": "download",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": Symbol(react.fragment),
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "filter": "onTrack",
-                "getFellows": [Function],
-                "handleSearchChange": [Function],
-                "perPage": 10,
-                "results": undefined,
-                "search": "",
+                "children": Array [
+                  <span
+                    className="border-bottom mr-2 pb-2"
+/>,
+                  <span
+                    className="mr-3"
+>
+                    Total Fellow (Filtered)
+</span>,
+                  <button
+                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                    onClick={[Function]}
+                    style={
+                                        Object {
+                                                            "textDecoration": "underline",
+                                                          }
+                    }
+                    type="button"
+>
+                    Clear Filters
+</button>,
+                ],
+                "className": "result-count",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                    "className": "border-bottom mr-2 pb-2",
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Total Fellow (Filtered)",
+                    "className": "mr-3",
+                  },
+                  "ref": null,
+                  "rendered": "Total Fellow (Filtered)",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Clear Filters",
+                    "className": "btn bg-transparent border-0 px-0 clear-filters my-3",
+                    "onClick": [Function],
+                    "style": Object {
+                      "textDecoration": "underline",
+                    },
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": "Clear Filters",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "cellValues": Array [
+                  "name",
+                  "level",
+                  "weeksSpent",
+                  "ttlName",
+                  "devPulseStatus",
+                  "lmsStatus",
+                  "advanceStatus",
+                ],
                 "fellows": Array [
                   Object {
+                    "advanceStatus": "Off Track",
                     "communication": 0,
+                    "devPulseStatus": "Off Track",
                     "firstName": "Mathilda",
                     "id": "AND/F/001",
                     "initiative": 0.3,
                     "integration": 0,
                     "lastName": "West",
                     "level": "D0A Simulations",
+                    "lmsOutputs": "N/A",
+                    "lmsOutputsGt2": "N/A",
+                    "lmsStatus": "N/A",
                     "professionalism": 0,
                     "quality": 0,
                     "quantity": 1,
+                    "submitterFirstName": "Innocent",
+                    "submitterLastName": "Asiimwe",
+                    "weeksSpent": 12,
                   },
                   Object {
                     "communication": 0.1,
@@ -1174,6 +1664,15 @@ ShallowWrapper {
                     "quantity": 0.2,
                   },
                 ],
+                "headers": Array [
+                  "Fellow Name",
+                  "Level",
+                  "Week",
+                  "LF/TTL",
+                  "DevPulse Status",
+                  "LMS Status",
+                  "Advancement",
+                ],
                 "loading": false,
               },
               "ref": null,
@@ -1215,6 +1714,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            " ",
             <div
               className="row d-flex justify-content-center"
 >
@@ -1262,11 +1762,12 @@ ShallowWrapper {
                             totalPages={3}
               />
 </div>,
-            " ",
+            "   ",
           ],
         },
         "ref": null,
         "rendered": Array [
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -1455,7 +1956,7 @@ ShallowWrapper {
             ],
             "type": "div",
           },
-          " ",
+          "   ",
         ],
         "type": "div",
       },
@@ -1471,43 +1972,108 @@ ShallowWrapper {
         "children": Array [
           <ErrorBoundary>
             <Unknown>
-                        <Filters
-                                    filter="onTrack"
-                                    getFellows={[Function]}
-                                    loading={false}
-                                    perPage={10}
-                                    search=""
-                                    setFilter={[Function]}
-                                    summary={
-                                                Object {
-                                                            "gteWk5OffTrack": 0,
-                                                            "ltWk5OffTrack": 0,
-                                                            "onTrack": 0,
-                                                          }
-                                    }
-                        />
-                        <SearchBar
-                                    filter="onTrack"
-                                    getFellows={[Function]}
-                                    handleSearchChange={[Function]}
-                                    perPage={10}
-                                    results={undefined}
-                                    search=""
-                        />
+                        <div
+                                    className="filters"
+                        >
+                                    <Unknown>
+                                                <Filters
+                                                            criteria="All"
+                                                            getCriteriaFilter={[Function]}
+                                                            getLevelFilter={[Function]}
+                                                            getStatusFilter={[Function]}
+                                                            level="All"
+                                                            status="All"
+                                                />
+                                                <div>
+                                                            <SearchBar
+                                                                        filter="onTrack"
+                                                                        getFellows={[Function]}
+                                                                        handleSearchChange={[Function]}
+                                                                        perPage={10}
+                                                                        results={undefined}
+                                                                        search=""
+                                                            />
+                                                </div>
+                                                <div
+                                                            className="download-button"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={-1}
+                                                >
+                                                            <Filter
+                                                                        current="Export"
+                                                                        getFilter={[Function]}
+                                                                        items={
+                                                                                    Array [
+                                                                                                "as PDF",
+                                                                                                "as CSV",
+                                                                                              ]
+                                                                        }
+                                                                        search={false}
+                                                                        title=""
+                                                                        type="download"
+                                                            />
+                                                </div>
+                                    </Unknown>
+                        </div>
+                        <div
+                                    className="result-count"
+                        >
+                                    <span
+                                                className="border-bottom mr-2 pb-2"
+                                    />
+                                    <span
+                                                className="mr-3"
+                                    >
+                                                Total Fellow (Filtered)
+                                    </span>
+                                    <button
+                                                className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                                onClick={[Function]}
+                                                style={
+                                                            Object {
+                                                                        "textDecoration": "underline",
+                                                                      }
+                                                }
+                                                type="button"
+                                    >
+                                                Clear Filters
+                                    </button>
+                        </div>
                         <DashboardTable
+                                    cellValues={
+                                                Array [
+                                                            "name",
+                                                            "level",
+                                                            "weeksSpent",
+                                                            "ttlName",
+                                                            "devPulseStatus",
+                                                            "lmsStatus",
+                                                            "advanceStatus",
+                                                          ]
+                                    }
                                     fellows={
                                                 Array [
                                                             Object {
+                                                              "advanceStatus": "Off Track",
                                                               "communication": 0,
+                                                              "devPulseStatus": "Off Track",
                                                               "firstName": "Mathilda",
                                                               "id": "AND/F/001",
                                                               "initiative": 0.3,
                                                               "integration": 0,
                                                               "lastName": "West",
                                                               "level": "D0A Simulations",
+                                                              "lmsOutputs": "N/A",
+                                                              "lmsOutputsGt2": "N/A",
+                                                              "lmsStatus": "N/A",
                                                               "professionalism": 0,
                                                               "quality": 0,
                                                               "quantity": 1,
+                                                              "submitterFirstName": "Innocent",
+                                                              "submitterLastName": "Asiimwe",
+                                                              "weeksSpent": 12,
                                                             },
                                                             Object {
                                                               "communication": 0.1,
@@ -1679,6 +2245,17 @@ ShallowWrapper {
                                                             },
                                                           ]
                                     }
+                                    headers={
+                                                Array [
+                                                            "Fellow Name",
+                                                            "Level",
+                                                            "Week",
+                                                            "LF/TTL",
+                                                            "DevPulse Status",
+                                                            "LMS Status",
+                                                            "Advancement",
+                                                          ]
+                                    }
                                     loading={false}
                         />
             </Unknown>
@@ -1693,6 +2270,7 @@ ShallowWrapper {
              pages
 </p>,
           <div>
+             
             <div
                         className="row d-flex justify-content-center"
             >
@@ -1740,7 +2318,7 @@ ShallowWrapper {
                                     totalPages={3}
                         />
             </div>
-             
+               
 </div>,
         ],
       },
@@ -1752,43 +2330,108 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <Unknown>
-              <Filters
-                            filter="onTrack"
-                            getFellows={[Function]}
-                            loading={false}
-                            perPage={10}
-                            search=""
-                            setFilter={[Function]}
-                            summary={
-                                          Object {
-                                                        "gteWk5OffTrack": 0,
-                                                        "ltWk5OffTrack": 0,
-                                                        "onTrack": 0,
-                                                      }
-                            }
-              />
-              <SearchBar
-                            filter="onTrack"
-                            getFellows={[Function]}
-                            handleSearchChange={[Function]}
-                            perPage={10}
-                            results={undefined}
-                            search=""
-              />
+              <div
+                            className="filters"
+              >
+                            <Unknown>
+                                          <Filters
+                                                        criteria="All"
+                                                        getCriteriaFilter={[Function]}
+                                                        getLevelFilter={[Function]}
+                                                        getStatusFilter={[Function]}
+                                                        level="All"
+                                                        status="All"
+                                          />
+                                          <div>
+                                                        <SearchBar
+                                                                      filter="onTrack"
+                                                                      getFellows={[Function]}
+                                                                      handleSearchChange={[Function]}
+                                                                      perPage={10}
+                                                                      results={undefined}
+                                                                      search=""
+                                                        />
+                                          </div>
+                                          <div
+                                                        className="download-button"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="button"
+                                                        tabIndex={-1}
+                                          >
+                                                        <Filter
+                                                                      current="Export"
+                                                                      getFilter={[Function]}
+                                                                      items={
+                                                                                    Array [
+                                                                                                  "as PDF",
+                                                                                                  "as CSV",
+                                                                                                ]
+                                                                      }
+                                                                      search={false}
+                                                                      title=""
+                                                                      type="download"
+                                                        />
+                                          </div>
+                            </Unknown>
+              </div>
+              <div
+                            className="result-count"
+              >
+                            <span
+                                          className="border-bottom mr-2 pb-2"
+                            />
+                            <span
+                                          className="mr-3"
+                            >
+                                          Total Fellow (Filtered)
+                            </span>
+                            <button
+                                          className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                          onClick={[Function]}
+                                          style={
+                                                        Object {
+                                                                      "textDecoration": "underline",
+                                                                    }
+                                          }
+                                          type="button"
+                            >
+                                          Clear Filters
+                            </button>
+              </div>
               <DashboardTable
+                            cellValues={
+                                          Array [
+                                                        "name",
+                                                        "level",
+                                                        "weeksSpent",
+                                                        "ttlName",
+                                                        "devPulseStatus",
+                                                        "lmsStatus",
+                                                        "advanceStatus",
+                                                      ]
+                            }
                             fellows={
                                           Array [
                                                         Object {
+                                                          "advanceStatus": "Off Track",
                                                           "communication": 0,
+                                                          "devPulseStatus": "Off Track",
                                                           "firstName": "Mathilda",
                                                           "id": "AND/F/001",
                                                           "initiative": 0.3,
                                                           "integration": 0,
                                                           "lastName": "West",
                                                           "level": "D0A Simulations",
+                                                          "lmsOutputs": "N/A",
+                                                          "lmsOutputsGt2": "N/A",
+                                                          "lmsStatus": "N/A",
                                                           "professionalism": 0,
                                                           "quality": 0,
                                                           "quantity": 1,
+                                                          "submitterFirstName": "Innocent",
+                                                          "submitterLastName": "Asiimwe",
+                                                          "weeksSpent": 12,
                                                         },
                                                         Object {
                                                           "communication": 0.1,
@@ -1960,6 +2603,17 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            headers={
+                                          Array [
+                                                        "Fellow Name",
+                                                        "Level",
+                                                        "Week",
+                                                        "LF/TTL",
+                                                        "DevPulse Status",
+                                                        "LMS Status",
+                                                        "Advancement",
+                                                      ]
+                            }
                             loading={false}
               />
 </Unknown>,
@@ -1971,43 +2625,108 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": Array [
-                <Filters
-                  filter="onTrack"
-                  getFellows={[Function]}
-                  loading={false}
-                  perPage={10}
-                  search=""
-                  setFilter={[Function]}
-                  summary={
-                                    Object {
-                                                      "gteWk5OffTrack": 0,
-                                                      "ltWk5OffTrack": 0,
-                                                      "onTrack": 0,
-                                                    }
-                  }
-/>,
-                <SearchBar
-                  filter="onTrack"
-                  getFellows={[Function]}
-                  handleSearchChange={[Function]}
-                  perPage={10}
-                  results={undefined}
-                  search=""
-/>,
+                <div
+                  className="filters"
+>
+                  <Unknown>
+                                    <Filters
+                                                      criteria="All"
+                                                      getCriteriaFilter={[Function]}
+                                                      getLevelFilter={[Function]}
+                                                      getStatusFilter={[Function]}
+                                                      level="All"
+                                                      status="All"
+                                    />
+                                    <div>
+                                                      <SearchBar
+                                                                        filter="onTrack"
+                                                                        getFellows={[Function]}
+                                                                        handleSearchChange={[Function]}
+                                                                        perPage={10}
+                                                                        results={undefined}
+                                                                        search=""
+                                                      />
+                                    </div>
+                                    <div
+                                                      className="download-button"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={-1}
+                                    >
+                                                      <Filter
+                                                                        current="Export"
+                                                                        getFilter={[Function]}
+                                                                        items={
+                                                                                          Array [
+                                                                                                            "as PDF",
+                                                                                                            "as CSV",
+                                                                                                          ]
+                                                                        }
+                                                                        search={false}
+                                                                        title=""
+                                                                        type="download"
+                                                      />
+                                    </div>
+                  </Unknown>
+</div>,
+                <div
+                  className="result-count"
+>
+                  <span
+                                    className="border-bottom mr-2 pb-2"
+                  />
+                  <span
+                                    className="mr-3"
+                  >
+                                    Total Fellow (Filtered)
+                  </span>
+                  <button
+                                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                    onClick={[Function]}
+                                    style={
+                                                      Object {
+                                                                        "textDecoration": "underline",
+                                                                      }
+                                    }
+                                    type="button"
+                  >
+                                    Clear Filters
+                  </button>
+</div>,
                 <DashboardTable
+                  cellValues={
+                                    Array [
+                                                      "name",
+                                                      "level",
+                                                      "weeksSpent",
+                                                      "ttlName",
+                                                      "devPulseStatus",
+                                                      "lmsStatus",
+                                                      "advanceStatus",
+                                                    ]
+                  }
                   fellows={
                                     Array [
                                                       Object {
+                                                        "advanceStatus": "Off Track",
                                                         "communication": 0,
+                                                        "devPulseStatus": "Off Track",
                                                         "firstName": "Mathilda",
                                                         "id": "AND/F/001",
                                                         "initiative": 0.3,
                                                         "integration": 0,
                                                         "lastName": "West",
                                                         "level": "D0A Simulations",
+                                                        "lmsOutputs": "N/A",
+                                                        "lmsOutputsGt2": "N/A",
+                                                        "lmsStatus": "N/A",
                                                         "professionalism": 0,
                                                         "quality": 0,
                                                         "quantity": 1,
+                                                        "submitterFirstName": "Innocent",
+                                                        "submitterLastName": "Asiimwe",
+                                                        "weeksSpent": 12,
                                                       },
                                                       Object {
                                                         "communication": 0.1,
@@ -2179,6 +2898,17 @@ ShallowWrapper {
                                                       },
                                                     ]
                   }
+                  headers={
+                                    Array [
+                                                      "Fellow Name",
+                                                      "Level",
+                                                      "Week",
+                                                      "LF/TTL",
+                                                      "DevPulse Status",
+                                                      "LMS Status",
+                                                      "Advancement",
+                                                    ]
+                  }
                   loading={false}
 />,
               ],
@@ -2188,57 +2918,310 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
-                  "filter": "onTrack",
-                  "getFellows": [Function],
-                  "loading": false,
-                  "perPage": 10,
-                  "search": "",
-                  "setFilter": [Function],
-                  "summary": Object {
-                    "gteWk5OffTrack": 0,
-                    "ltWk5OffTrack": 0,
-                    "onTrack": 0,
-                  },
+                  "children": <Unknown>
+                    <Filters
+                                        criteria="All"
+                                        getCriteriaFilter={[Function]}
+                                        getLevelFilter={[Function]}
+                                        getStatusFilter={[Function]}
+                                        level="All"
+                                        status="All"
+                    />
+                    <div>
+                                        <SearchBar
+                                                            filter="onTrack"
+                                                            getFellows={[Function]}
+                                                            handleSearchChange={[Function]}
+                                                            perPage={10}
+                                                            results={undefined}
+                                                            search=""
+                                        />
+                    </div>
+                    <div
+                                        className="download-button"
+                                        onClick={[Function]}
+                                        onKeyPress={[Function]}
+                                        role="button"
+                                        tabIndex={-1}
+                    >
+                                        <Filter
+                                                            current="Export"
+                                                            getFilter={[Function]}
+                                                            items={
+                                                                                Array [
+                                                                                                    "as PDF",
+                                                                                                    "as CSV",
+                                                                                                  ]
+                                                            }
+                                                            search={false}
+                                                            title=""
+                                                            type="download"
+                                        />
+                    </div>
+</Unknown>,
+                  "className": "filters",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <Filters
+                        criteria="All"
+                        getCriteriaFilter={[Function]}
+                        getLevelFilter={[Function]}
+                        getStatusFilter={[Function]}
+                        level="All"
+                        status="All"
+/>,
+                      <div>
+                        <SearchBar
+                                                filter="onTrack"
+                                                getFellows={[Function]}
+                                                handleSearchChange={[Function]}
+                                                perPage={10}
+                                                results={undefined}
+                                                search=""
+                        />
+</div>,
+                      <div
+                        className="download-button"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="button"
+                        tabIndex={-1}
+>
+                        <Filter
+                                                current="Export"
+                                                getFilter={[Function]}
+                                                items={
+                                                                        Array [
+                                                                                                "as PDF",
+                                                                                                "as CSV",
+                                                                                              ]
+                                                }
+                                                search={false}
+                                                title=""
+                                                type="download"
+                        />
+</div>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "criteria": "All",
+                        "getCriteriaFilter": [Function],
+                        "getLevelFilter": [Function],
+                        "getStatusFilter": [Function],
+                        "level": "All",
+                        "status": "All",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <SearchBar
+                          filter="onTrack"
+                          getFellows={[Function]}
+                          handleSearchChange={[Function]}
+                          perPage={10}
+                          results={undefined}
+                          search=""
+/>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "filter": "onTrack",
+                          "getFellows": [Function],
+                          "handleSearchChange": [Function],
+                          "perPage": 10,
+                          "results": undefined,
+                          "search": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <Filter
+                          current="Export"
+                          getFilter={[Function]}
+                          items={
+                                                    Array [
+                                                                              "as PDF",
+                                                                              "as CSV",
+                                                                            ]
+                          }
+                          search={false}
+                          title=""
+                          type="download"
+/>,
+                        "className": "download-button",
+                        "onClick": [Function],
+                        "onKeyPress": [Function],
+                        "role": "button",
+                        "tabIndex": -1,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": "4",
+                        "nodeType": "class",
+                        "props": Object {
+                          "current": "Export",
+                          "getFilter": [Function],
+                          "items": Array [
+                            "as PDF",
+                            "as CSV",
+                          ],
+                          "search": false,
+                          "title": "",
+                          "type": "download",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "div",
+                    },
+                  ],
+                  "type": Symbol(react.fragment),
+                },
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
-                  "filter": "onTrack",
-                  "getFellows": [Function],
-                  "handleSearchChange": [Function],
-                  "perPage": 10,
-                  "results": undefined,
-                  "search": "",
+                  "children": Array [
+                    <span
+                      className="border-bottom mr-2 pb-2"
+/>,
+                    <span
+                      className="mr-3"
+>
+                      Total Fellow (Filtered)
+</span>,
+                    <button
+                      className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                      onClick={[Function]}
+                      style={
+                                            Object {
+                                                                  "textDecoration": "underline",
+                                                                }
+                      }
+                      type="button"
+>
+                      Clear Filters
+</button>,
+                  ],
+                  "className": "result-count",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 0,
+                      "className": "border-bottom mr-2 pb-2",
+                    },
+                    "ref": null,
+                    "rendered": 0,
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Total Fellow (Filtered)",
+                      "className": "mr-3",
+                    },
+                    "ref": null,
+                    "rendered": "Total Fellow (Filtered)",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Clear Filters",
+                      "className": "btn bg-transparent border-0 px-0 clear-filters my-3",
+                      "onClick": [Function],
+                      "style": Object {
+                        "textDecoration": "underline",
+                      },
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Clear Filters",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "cellValues": Array [
+                    "name",
+                    "level",
+                    "weeksSpent",
+                    "ttlName",
+                    "devPulseStatus",
+                    "lmsStatus",
+                    "advanceStatus",
+                  ],
                   "fellows": Array [
                     Object {
+                      "advanceStatus": "Off Track",
                       "communication": 0,
+                      "devPulseStatus": "Off Track",
                       "firstName": "Mathilda",
                       "id": "AND/F/001",
                       "initiative": 0.3,
                       "integration": 0,
                       "lastName": "West",
                       "level": "D0A Simulations",
+                      "lmsOutputs": "N/A",
+                      "lmsOutputsGt2": "N/A",
+                      "lmsStatus": "N/A",
                       "professionalism": 0,
                       "quality": 0,
                       "quantity": 1,
+                      "submitterFirstName": "Innocent",
+                      "submitterLastName": "Asiimwe",
+                      "weeksSpent": 12,
                     },
                     Object {
                       "communication": 0.1,
@@ -2409,6 +3392,15 @@ ShallowWrapper {
                       "quantity": 0.2,
                     },
                   ],
+                  "headers": Array [
+                    "Fellow Name",
+                    "Level",
+                    "Week",
+                    "LF/TTL",
+                    "DevPulse Status",
+                    "LMS Status",
+                    "Advancement",
+                  ],
                   "loading": false,
                 },
                 "ref": null,
@@ -2450,6 +3442,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              " ",
               <div
                 className="row d-flex justify-content-center"
 >
@@ -2497,11 +3490,12 @@ ShallowWrapper {
                                 totalPages={3}
                 />
 </div>,
-              " ",
+              "   ",
             ],
           },
           "ref": null,
           "rendered": Array [
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -2690,7 +3684,7 @@ ShallowWrapper {
               ],
               "type": "div",
             },
-            " ",
+            "   ",
           ],
           "type": "div",
         },
@@ -2726,16 +3720,24 @@ ShallowWrapper {
     fellows={
         Array [
             Object {
+              "advanceStatus": "Off Track",
               "communication": 0,
+              "devPulseStatus": "Off Track",
               "firstName": "Mathilda",
               "id": "AND/F/001",
               "initiative": 0.3,
               "integration": 0,
               "lastName": "West",
               "level": "D0A Simulations",
+              "lmsOutputs": "N/A",
+              "lmsOutputsGt2": "N/A",
+              "lmsStatus": "N/A",
               "professionalism": 0,
               "quality": 0,
               "quantity": 1,
+              "submitterFirstName": "Innocent",
+              "submitterLastName": "Asiimwe",
+              "weeksSpent": 12,
             },
             Object {
               "communication": 0.1,
@@ -2954,43 +3956,108 @@ ShallowWrapper {
       "children": Array [
         <ErrorBoundary>
           <Unknown>
-                    <Filters
-                              filter="onTrack"
-                              getFellows={[Function]}
-                              loading={true}
-                              perPage={10}
-                              search=""
-                              setFilter={[Function]}
-                              summary={
-                                        Object {
-                                                  "gteWk5OffTrack": 0,
-                                                  "ltWk5OffTrack": 0,
-                                                  "onTrack": 0,
-                                                }
-                              }
-                    />
-                    <SearchBar
-                              filter="onTrack"
-                              getFellows={[Function]}
-                              handleSearchChange={[Function]}
-                              perPage={10}
-                              results={undefined}
-                              search=""
-                    />
+                    <div
+                              className="filters"
+                    >
+                              <Unknown>
+                                        <Filters
+                                                  criteria="All"
+                                                  getCriteriaFilter={[Function]}
+                                                  getLevelFilter={[Function]}
+                                                  getStatusFilter={[Function]}
+                                                  level="All"
+                                                  status="All"
+                                        />
+                                        <div>
+                                                  <SearchBar
+                                                            filter="onTrack"
+                                                            getFellows={[Function]}
+                                                            handleSearchChange={[Function]}
+                                                            perPage={10}
+                                                            results={undefined}
+                                                            search=""
+                                                  />
+                                        </div>
+                                        <div
+                                                  className="download-button"
+                                                  onClick={[Function]}
+                                                  onKeyPress={[Function]}
+                                                  role="button"
+                                                  tabIndex={-1}
+                                        >
+                                                  <Filter
+                                                            current="Export"
+                                                            getFilter={[Function]}
+                                                            items={
+                                                                      Array [
+                                                                                "as PDF",
+                                                                                "as CSV",
+                                                                              ]
+                                                            }
+                                                            search={false}
+                                                            title=""
+                                                            type="download"
+                                                  />
+                                        </div>
+                              </Unknown>
+                    </div>
+                    <div
+                              className="result-count"
+                    >
+                              <span
+                                        className="border-bottom mr-2 pb-2"
+                              />
+                              <span
+                                        className="mr-3"
+                              >
+                                        Total Fellow (Filtered)
+                              </span>
+                              <button
+                                        className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                        onClick={[Function]}
+                                        style={
+                                                  Object {
+                                                            "textDecoration": "underline",
+                                                          }
+                                        }
+                                        type="button"
+                              >
+                                        Clear Filters
+                              </button>
+                    </div>
                     <DashboardTable
+                              cellValues={
+                                        Array [
+                                                  "name",
+                                                  "level",
+                                                  "weeksSpent",
+                                                  "ttlName",
+                                                  "devPulseStatus",
+                                                  "lmsStatus",
+                                                  "advanceStatus",
+                                                ]
+                              }
                               fellows={
                                         Array [
                                                   Object {
+                                                    "advanceStatus": "Off Track",
                                                     "communication": 0,
+                                                    "devPulseStatus": "Off Track",
                                                     "firstName": "Mathilda",
                                                     "id": "AND/F/001",
                                                     "initiative": 0.3,
                                                     "integration": 0,
                                                     "lastName": "West",
                                                     "level": "D0A Simulations",
+                                                    "lmsOutputs": "N/A",
+                                                    "lmsOutputsGt2": "N/A",
+                                                    "lmsStatus": "N/A",
                                                     "professionalism": 0,
                                                     "quality": 0,
                                                     "quantity": 1,
+                                                    "submitterFirstName": "Innocent",
+                                                    "submitterLastName": "Asiimwe",
+                                                    "weeksSpent": 12,
                                                   },
                                                   Object {
                                                     "communication": 0.1,
@@ -3162,6 +4229,17 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              headers={
+                                        Array [
+                                                  "Fellow Name",
+                                                  "Level",
+                                                  "Week",
+                                                  "LF/TTL",
+                                                  "DevPulse Status",
+                                                  "LMS Status",
+                                                  "Advancement",
+                                                ]
+                              }
                               loading={true}
                     />
           </Unknown>
@@ -3176,6 +4254,7 @@ ShallowWrapper {
            pages
 </p>,
         <div>
+           
           <div
                     className="row d-flex justify-content-center"
           >
@@ -3223,7 +4302,7 @@ ShallowWrapper {
                               totalPages={3}
                     />
           </div>
-           
+             
 </div>,
       ],
     },
@@ -3235,43 +4314,108 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <Unknown>
-            <Filters
-                        filter="onTrack"
-                        getFellows={[Function]}
-                        loading={true}
-                        perPage={10}
-                        search=""
-                        setFilter={[Function]}
-                        summary={
-                                    Object {
-                                                "gteWk5OffTrack": 0,
-                                                "ltWk5OffTrack": 0,
-                                                "onTrack": 0,
-                                              }
-                        }
-            />
-            <SearchBar
-                        filter="onTrack"
-                        getFellows={[Function]}
-                        handleSearchChange={[Function]}
-                        perPage={10}
-                        results={undefined}
-                        search=""
-            />
+            <div
+                        className="filters"
+            >
+                        <Unknown>
+                                    <Filters
+                                                criteria="All"
+                                                getCriteriaFilter={[Function]}
+                                                getLevelFilter={[Function]}
+                                                getStatusFilter={[Function]}
+                                                level="All"
+                                                status="All"
+                                    />
+                                    <div>
+                                                <SearchBar
+                                                            filter="onTrack"
+                                                            getFellows={[Function]}
+                                                            handleSearchChange={[Function]}
+                                                            perPage={10}
+                                                            results={undefined}
+                                                            search=""
+                                                />
+                                    </div>
+                                    <div
+                                                className="download-button"
+                                                onClick={[Function]}
+                                                onKeyPress={[Function]}
+                                                role="button"
+                                                tabIndex={-1}
+                                    >
+                                                <Filter
+                                                            current="Export"
+                                                            getFilter={[Function]}
+                                                            items={
+                                                                        Array [
+                                                                                    "as PDF",
+                                                                                    "as CSV",
+                                                                                  ]
+                                                            }
+                                                            search={false}
+                                                            title=""
+                                                            type="download"
+                                                />
+                                    </div>
+                        </Unknown>
+            </div>
+            <div
+                        className="result-count"
+            >
+                        <span
+                                    className="border-bottom mr-2 pb-2"
+                        />
+                        <span
+                                    className="mr-3"
+                        >
+                                    Total Fellow (Filtered)
+                        </span>
+                        <button
+                                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                    onClick={[Function]}
+                                    style={
+                                                Object {
+                                                            "textDecoration": "underline",
+                                                          }
+                                    }
+                                    type="button"
+                        >
+                                    Clear Filters
+                        </button>
+            </div>
             <DashboardTable
+                        cellValues={
+                                    Array [
+                                                "name",
+                                                "level",
+                                                "weeksSpent",
+                                                "ttlName",
+                                                "devPulseStatus",
+                                                "lmsStatus",
+                                                "advanceStatus",
+                                              ]
+                        }
                         fellows={
                                     Array [
                                                 Object {
+                                                  "advanceStatus": "Off Track",
                                                   "communication": 0,
+                                                  "devPulseStatus": "Off Track",
                                                   "firstName": "Mathilda",
                                                   "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
                                                   "level": "D0A Simulations",
+                                                  "lmsOutputs": "N/A",
+                                                  "lmsOutputsGt2": "N/A",
+                                                  "lmsStatus": "N/A",
                                                   "professionalism": 0,
                                                   "quality": 0,
                                                   "quantity": 1,
+                                                  "submitterFirstName": "Innocent",
+                                                  "submitterLastName": "Asiimwe",
+                                                  "weeksSpent": 12,
                                                 },
                                                 Object {
                                                   "communication": 0.1,
@@ -3441,6 +4585,17 @@ ShallowWrapper {
                                                   "quality": 0.1,
                                                   "quantity": 0.2,
                                                 },
+                                              ]
+                        }
+                        headers={
+                                    Array [
+                                                "Fellow Name",
+                                                "Level",
+                                                "Week",
+                                                "LF/TTL",
+                                                "DevPulse Status",
+                                                "LMS Status",
+                                                "Advancement",
                                               ]
                         }
                         loading={true}
@@ -3454,43 +4609,108 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <Filters
-                filter="onTrack"
-                getFellows={[Function]}
-                loading={true}
-                perPage={10}
-                search=""
-                setFilter={[Function]}
-                summary={
-                                Object {
-                                                "gteWk5OffTrack": 0,
-                                                "ltWk5OffTrack": 0,
-                                                "onTrack": 0,
-                                              }
-                }
-/>,
-              <SearchBar
-                filter="onTrack"
-                getFellows={[Function]}
-                handleSearchChange={[Function]}
-                perPage={10}
-                results={undefined}
-                search=""
-/>,
+              <div
+                className="filters"
+>
+                <Unknown>
+                                <Filters
+                                                criteria="All"
+                                                getCriteriaFilter={[Function]}
+                                                getLevelFilter={[Function]}
+                                                getStatusFilter={[Function]}
+                                                level="All"
+                                                status="All"
+                                />
+                                <div>
+                                                <SearchBar
+                                                                filter="onTrack"
+                                                                getFellows={[Function]}
+                                                                handleSearchChange={[Function]}
+                                                                perPage={10}
+                                                                results={undefined}
+                                                                search=""
+                                                />
+                                </div>
+                                <div
+                                                className="download-button"
+                                                onClick={[Function]}
+                                                onKeyPress={[Function]}
+                                                role="button"
+                                                tabIndex={-1}
+                                >
+                                                <Filter
+                                                                current="Export"
+                                                                getFilter={[Function]}
+                                                                items={
+                                                                                Array [
+                                                                                                "as PDF",
+                                                                                                "as CSV",
+                                                                                              ]
+                                                                }
+                                                                search={false}
+                                                                title=""
+                                                                type="download"
+                                                />
+                                </div>
+                </Unknown>
+</div>,
+              <div
+                className="result-count"
+>
+                <span
+                                className="border-bottom mr-2 pb-2"
+                />
+                <span
+                                className="mr-3"
+                >
+                                Total Fellow (Filtered)
+                </span>
+                <button
+                                className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                onClick={[Function]}
+                                style={
+                                                Object {
+                                                                "textDecoration": "underline",
+                                                              }
+                                }
+                                type="button"
+                >
+                                Clear Filters
+                </button>
+</div>,
               <DashboardTable
+                cellValues={
+                                Array [
+                                                "name",
+                                                "level",
+                                                "weeksSpent",
+                                                "ttlName",
+                                                "devPulseStatus",
+                                                "lmsStatus",
+                                                "advanceStatus",
+                                              ]
+                }
                 fellows={
                                 Array [
                                                 Object {
+                                                  "advanceStatus": "Off Track",
                                                   "communication": 0,
+                                                  "devPulseStatus": "Off Track",
                                                   "firstName": "Mathilda",
                                                   "id": "AND/F/001",
                                                   "initiative": 0.3,
                                                   "integration": 0,
                                                   "lastName": "West",
                                                   "level": "D0A Simulations",
+                                                  "lmsOutputs": "N/A",
+                                                  "lmsOutputsGt2": "N/A",
+                                                  "lmsStatus": "N/A",
                                                   "professionalism": 0,
                                                   "quality": 0,
                                                   "quantity": 1,
+                                                  "submitterFirstName": "Innocent",
+                                                  "submitterLastName": "Asiimwe",
+                                                  "weeksSpent": 12,
                                                 },
                                                 Object {
                                                   "communication": 0.1,
@@ -3662,6 +4882,17 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                headers={
+                                Array [
+                                                "Fellow Name",
+                                                "Level",
+                                                "Week",
+                                                "LF/TTL",
+                                                "DevPulse Status",
+                                                "LMS Status",
+                                                "Advancement",
+                                              ]
+                }
                 loading={true}
 />,
             ],
@@ -3671,57 +4902,310 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "filter": "onTrack",
-                "getFellows": [Function],
-                "loading": true,
-                "perPage": 10,
-                "search": "",
-                "setFilter": [Function],
-                "summary": Object {
-                  "gteWk5OffTrack": 0,
-                  "ltWk5OffTrack": 0,
-                  "onTrack": 0,
-                },
+                "children": <Unknown>
+                  <Filters
+                                    criteria="All"
+                                    getCriteriaFilter={[Function]}
+                                    getLevelFilter={[Function]}
+                                    getStatusFilter={[Function]}
+                                    level="All"
+                                    status="All"
+                  />
+                  <div>
+                                    <SearchBar
+                                                      filter="onTrack"
+                                                      getFellows={[Function]}
+                                                      handleSearchChange={[Function]}
+                                                      perPage={10}
+                                                      results={undefined}
+                                                      search=""
+                                    />
+                  </div>
+                  <div
+                                    className="download-button"
+                                    onClick={[Function]}
+                                    onKeyPress={[Function]}
+                                    role="button"
+                                    tabIndex={-1}
+                  >
+                                    <Filter
+                                                      current="Export"
+                                                      getFilter={[Function]}
+                                                      items={
+                                                                        Array [
+                                                                                          "as PDF",
+                                                                                          "as CSV",
+                                                                                        ]
+                                                      }
+                                                      search={false}
+                                                      title=""
+                                                      type="download"
+                                    />
+                  </div>
+</Unknown>,
+                "className": "filters",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <Filters
+                      criteria="All"
+                      getCriteriaFilter={[Function]}
+                      getLevelFilter={[Function]}
+                      getStatusFilter={[Function]}
+                      level="All"
+                      status="All"
+/>,
+                    <div>
+                      <SearchBar
+                                            filter="onTrack"
+                                            getFellows={[Function]}
+                                            handleSearchChange={[Function]}
+                                            perPage={10}
+                                            results={undefined}
+                                            search=""
+                      />
+</div>,
+                    <div
+                      className="download-button"
+                      onClick={[Function]}
+                      onKeyPress={[Function]}
+                      role="button"
+                      tabIndex={-1}
+>
+                      <Filter
+                                            current="Export"
+                                            getFilter={[Function]}
+                                            items={
+                                                                  Array [
+                                                                                        "as PDF",
+                                                                                        "as CSV",
+                                                                                      ]
+                                            }
+                                            search={false}
+                                            title=""
+                                            type="download"
+                      />
+</div>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "criteria": "All",
+                      "getCriteriaFilter": [Function],
+                      "getLevelFilter": [Function],
+                      "getStatusFilter": [Function],
+                      "level": "All",
+                      "status": "All",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <SearchBar
+                        filter="onTrack"
+                        getFellows={[Function]}
+                        handleSearchChange={[Function]}
+                        perPage={10}
+                        results={undefined}
+                        search=""
+/>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "filter": "onTrack",
+                        "getFellows": [Function],
+                        "handleSearchChange": [Function],
+                        "perPage": 10,
+                        "results": undefined,
+                        "search": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Filter
+                        current="Export"
+                        getFilter={[Function]}
+                        items={
+                                                Array [
+                                                                        "as PDF",
+                                                                        "as CSV",
+                                                                      ]
+                        }
+                        search={false}
+                        title=""
+                        type="download"
+/>,
+                      "className": "download-button",
+                      "onClick": [Function],
+                      "onKeyPress": [Function],
+                      "role": "button",
+                      "tabIndex": -1,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": "4",
+                      "nodeType": "class",
+                      "props": Object {
+                        "current": "Export",
+                        "getFilter": [Function],
+                        "items": Array [
+                          "as PDF",
+                          "as CSV",
+                        ],
+                        "search": false,
+                        "title": "",
+                        "type": "download",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": Symbol(react.fragment),
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "filter": "onTrack",
-                "getFellows": [Function],
-                "handleSearchChange": [Function],
-                "perPage": 10,
-                "results": undefined,
-                "search": "",
+                "children": Array [
+                  <span
+                    className="border-bottom mr-2 pb-2"
+/>,
+                  <span
+                    className="mr-3"
+>
+                    Total Fellow (Filtered)
+</span>,
+                  <button
+                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                    onClick={[Function]}
+                    style={
+                                        Object {
+                                                            "textDecoration": "underline",
+                                                          }
+                    }
+                    type="button"
+>
+                    Clear Filters
+</button>,
+                ],
+                "className": "result-count",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                    "className": "border-bottom mr-2 pb-2",
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Total Fellow (Filtered)",
+                    "className": "mr-3",
+                  },
+                  "ref": null,
+                  "rendered": "Total Fellow (Filtered)",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Clear Filters",
+                    "className": "btn bg-transparent border-0 px-0 clear-filters my-3",
+                    "onClick": [Function],
+                    "style": Object {
+                      "textDecoration": "underline",
+                    },
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": "Clear Filters",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "cellValues": Array [
+                  "name",
+                  "level",
+                  "weeksSpent",
+                  "ttlName",
+                  "devPulseStatus",
+                  "lmsStatus",
+                  "advanceStatus",
+                ],
                 "fellows": Array [
                   Object {
+                    "advanceStatus": "Off Track",
                     "communication": 0,
+                    "devPulseStatus": "Off Track",
                     "firstName": "Mathilda",
                     "id": "AND/F/001",
                     "initiative": 0.3,
                     "integration": 0,
                     "lastName": "West",
                     "level": "D0A Simulations",
+                    "lmsOutputs": "N/A",
+                    "lmsOutputsGt2": "N/A",
+                    "lmsStatus": "N/A",
                     "professionalism": 0,
                     "quality": 0,
                     "quantity": 1,
+                    "submitterFirstName": "Innocent",
+                    "submitterLastName": "Asiimwe",
+                    "weeksSpent": 12,
                   },
                   Object {
                     "communication": 0.1,
@@ -3892,6 +5376,15 @@ ShallowWrapper {
                     "quantity": 0.2,
                   },
                 ],
+                "headers": Array [
+                  "Fellow Name",
+                  "Level",
+                  "Week",
+                  "LF/TTL",
+                  "DevPulse Status",
+                  "LMS Status",
+                  "Advancement",
+                ],
                 "loading": true,
               },
               "ref": null,
@@ -3933,6 +5426,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            " ",
             <div
               className="row d-flex justify-content-center"
 >
@@ -3980,11 +5474,12 @@ ShallowWrapper {
                             totalPages={3}
               />
 </div>,
-            " ",
+            "   ",
           ],
         },
         "ref": null,
         "rendered": Array [
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -4173,7 +5668,7 @@ ShallowWrapper {
             ],
             "type": "div",
           },
-          " ",
+          "   ",
         ],
         "type": "div",
       },
@@ -4189,43 +5684,108 @@ ShallowWrapper {
         "children": Array [
           <ErrorBoundary>
             <Unknown>
-                        <Filters
-                                    filter="onTrack"
-                                    getFellows={[Function]}
-                                    loading={true}
-                                    perPage={10}
-                                    search=""
-                                    setFilter={[Function]}
-                                    summary={
-                                                Object {
-                                                            "gteWk5OffTrack": 0,
-                                                            "ltWk5OffTrack": 0,
-                                                            "onTrack": 0,
-                                                          }
-                                    }
-                        />
-                        <SearchBar
-                                    filter="onTrack"
-                                    getFellows={[Function]}
-                                    handleSearchChange={[Function]}
-                                    perPage={10}
-                                    results={undefined}
-                                    search=""
-                        />
+                        <div
+                                    className="filters"
+                        >
+                                    <Unknown>
+                                                <Filters
+                                                            criteria="All"
+                                                            getCriteriaFilter={[Function]}
+                                                            getLevelFilter={[Function]}
+                                                            getStatusFilter={[Function]}
+                                                            level="All"
+                                                            status="All"
+                                                />
+                                                <div>
+                                                            <SearchBar
+                                                                        filter="onTrack"
+                                                                        getFellows={[Function]}
+                                                                        handleSearchChange={[Function]}
+                                                                        perPage={10}
+                                                                        results={undefined}
+                                                                        search=""
+                                                            />
+                                                </div>
+                                                <div
+                                                            className="download-button"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={-1}
+                                                >
+                                                            <Filter
+                                                                        current="Export"
+                                                                        getFilter={[Function]}
+                                                                        items={
+                                                                                    Array [
+                                                                                                "as PDF",
+                                                                                                "as CSV",
+                                                                                              ]
+                                                                        }
+                                                                        search={false}
+                                                                        title=""
+                                                                        type="download"
+                                                            />
+                                                </div>
+                                    </Unknown>
+                        </div>
+                        <div
+                                    className="result-count"
+                        >
+                                    <span
+                                                className="border-bottom mr-2 pb-2"
+                                    />
+                                    <span
+                                                className="mr-3"
+                                    >
+                                                Total Fellow (Filtered)
+                                    </span>
+                                    <button
+                                                className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                                onClick={[Function]}
+                                                style={
+                                                            Object {
+                                                                        "textDecoration": "underline",
+                                                                      }
+                                                }
+                                                type="button"
+                                    >
+                                                Clear Filters
+                                    </button>
+                        </div>
                         <DashboardTable
+                                    cellValues={
+                                                Array [
+                                                            "name",
+                                                            "level",
+                                                            "weeksSpent",
+                                                            "ttlName",
+                                                            "devPulseStatus",
+                                                            "lmsStatus",
+                                                            "advanceStatus",
+                                                          ]
+                                    }
                                     fellows={
                                                 Array [
                                                             Object {
+                                                              "advanceStatus": "Off Track",
                                                               "communication": 0,
+                                                              "devPulseStatus": "Off Track",
                                                               "firstName": "Mathilda",
                                                               "id": "AND/F/001",
                                                               "initiative": 0.3,
                                                               "integration": 0,
                                                               "lastName": "West",
                                                               "level": "D0A Simulations",
+                                                              "lmsOutputs": "N/A",
+                                                              "lmsOutputsGt2": "N/A",
+                                                              "lmsStatus": "N/A",
                                                               "professionalism": 0,
                                                               "quality": 0,
                                                               "quantity": 1,
+                                                              "submitterFirstName": "Innocent",
+                                                              "submitterLastName": "Asiimwe",
+                                                              "weeksSpent": 12,
                                                             },
                                                             Object {
                                                               "communication": 0.1,
@@ -4397,6 +5957,17 @@ ShallowWrapper {
                                                             },
                                                           ]
                                     }
+                                    headers={
+                                                Array [
+                                                            "Fellow Name",
+                                                            "Level",
+                                                            "Week",
+                                                            "LF/TTL",
+                                                            "DevPulse Status",
+                                                            "LMS Status",
+                                                            "Advancement",
+                                                          ]
+                                    }
                                     loading={true}
                         />
             </Unknown>
@@ -4411,6 +5982,7 @@ ShallowWrapper {
              pages
 </p>,
           <div>
+             
             <div
                         className="row d-flex justify-content-center"
             >
@@ -4458,7 +6030,7 @@ ShallowWrapper {
                                     totalPages={3}
                         />
             </div>
-             
+               
 </div>,
         ],
       },
@@ -4470,43 +6042,108 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <Unknown>
-              <Filters
-                            filter="onTrack"
-                            getFellows={[Function]}
-                            loading={true}
-                            perPage={10}
-                            search=""
-                            setFilter={[Function]}
-                            summary={
-                                          Object {
-                                                        "gteWk5OffTrack": 0,
-                                                        "ltWk5OffTrack": 0,
-                                                        "onTrack": 0,
-                                                      }
-                            }
-              />
-              <SearchBar
-                            filter="onTrack"
-                            getFellows={[Function]}
-                            handleSearchChange={[Function]}
-                            perPage={10}
-                            results={undefined}
-                            search=""
-              />
+              <div
+                            className="filters"
+              >
+                            <Unknown>
+                                          <Filters
+                                                        criteria="All"
+                                                        getCriteriaFilter={[Function]}
+                                                        getLevelFilter={[Function]}
+                                                        getStatusFilter={[Function]}
+                                                        level="All"
+                                                        status="All"
+                                          />
+                                          <div>
+                                                        <SearchBar
+                                                                      filter="onTrack"
+                                                                      getFellows={[Function]}
+                                                                      handleSearchChange={[Function]}
+                                                                      perPage={10}
+                                                                      results={undefined}
+                                                                      search=""
+                                                        />
+                                          </div>
+                                          <div
+                                                        className="download-button"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="button"
+                                                        tabIndex={-1}
+                                          >
+                                                        <Filter
+                                                                      current="Export"
+                                                                      getFilter={[Function]}
+                                                                      items={
+                                                                                    Array [
+                                                                                                  "as PDF",
+                                                                                                  "as CSV",
+                                                                                                ]
+                                                                      }
+                                                                      search={false}
+                                                                      title=""
+                                                                      type="download"
+                                                        />
+                                          </div>
+                            </Unknown>
+              </div>
+              <div
+                            className="result-count"
+              >
+                            <span
+                                          className="border-bottom mr-2 pb-2"
+                            />
+                            <span
+                                          className="mr-3"
+                            >
+                                          Total Fellow (Filtered)
+                            </span>
+                            <button
+                                          className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                          onClick={[Function]}
+                                          style={
+                                                        Object {
+                                                                      "textDecoration": "underline",
+                                                                    }
+                                          }
+                                          type="button"
+                            >
+                                          Clear Filters
+                            </button>
+              </div>
               <DashboardTable
+                            cellValues={
+                                          Array [
+                                                        "name",
+                                                        "level",
+                                                        "weeksSpent",
+                                                        "ttlName",
+                                                        "devPulseStatus",
+                                                        "lmsStatus",
+                                                        "advanceStatus",
+                                                      ]
+                            }
                             fellows={
                                           Array [
                                                         Object {
+                                                          "advanceStatus": "Off Track",
                                                           "communication": 0,
+                                                          "devPulseStatus": "Off Track",
                                                           "firstName": "Mathilda",
                                                           "id": "AND/F/001",
                                                           "initiative": 0.3,
                                                           "integration": 0,
                                                           "lastName": "West",
                                                           "level": "D0A Simulations",
+                                                          "lmsOutputs": "N/A",
+                                                          "lmsOutputsGt2": "N/A",
+                                                          "lmsStatus": "N/A",
                                                           "professionalism": 0,
                                                           "quality": 0,
                                                           "quantity": 1,
+                                                          "submitterFirstName": "Innocent",
+                                                          "submitterLastName": "Asiimwe",
+                                                          "weeksSpent": 12,
                                                         },
                                                         Object {
                                                           "communication": 0.1,
@@ -4678,6 +6315,17 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            headers={
+                                          Array [
+                                                        "Fellow Name",
+                                                        "Level",
+                                                        "Week",
+                                                        "LF/TTL",
+                                                        "DevPulse Status",
+                                                        "LMS Status",
+                                                        "Advancement",
+                                                      ]
+                            }
                             loading={true}
               />
 </Unknown>,
@@ -4689,43 +6337,108 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": Array [
-                <Filters
-                  filter="onTrack"
-                  getFellows={[Function]}
-                  loading={true}
-                  perPage={10}
-                  search=""
-                  setFilter={[Function]}
-                  summary={
-                                    Object {
-                                                      "gteWk5OffTrack": 0,
-                                                      "ltWk5OffTrack": 0,
-                                                      "onTrack": 0,
-                                                    }
-                  }
-/>,
-                <SearchBar
-                  filter="onTrack"
-                  getFellows={[Function]}
-                  handleSearchChange={[Function]}
-                  perPage={10}
-                  results={undefined}
-                  search=""
-/>,
+                <div
+                  className="filters"
+>
+                  <Unknown>
+                                    <Filters
+                                                      criteria="All"
+                                                      getCriteriaFilter={[Function]}
+                                                      getLevelFilter={[Function]}
+                                                      getStatusFilter={[Function]}
+                                                      level="All"
+                                                      status="All"
+                                    />
+                                    <div>
+                                                      <SearchBar
+                                                                        filter="onTrack"
+                                                                        getFellows={[Function]}
+                                                                        handleSearchChange={[Function]}
+                                                                        perPage={10}
+                                                                        results={undefined}
+                                                                        search=""
+                                                      />
+                                    </div>
+                                    <div
+                                                      className="download-button"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={-1}
+                                    >
+                                                      <Filter
+                                                                        current="Export"
+                                                                        getFilter={[Function]}
+                                                                        items={
+                                                                                          Array [
+                                                                                                            "as PDF",
+                                                                                                            "as CSV",
+                                                                                                          ]
+                                                                        }
+                                                                        search={false}
+                                                                        title=""
+                                                                        type="download"
+                                                      />
+                                    </div>
+                  </Unknown>
+</div>,
+                <div
+                  className="result-count"
+>
+                  <span
+                                    className="border-bottom mr-2 pb-2"
+                  />
+                  <span
+                                    className="mr-3"
+                  >
+                                    Total Fellow (Filtered)
+                  </span>
+                  <button
+                                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                                    onClick={[Function]}
+                                    style={
+                                                      Object {
+                                                                        "textDecoration": "underline",
+                                                                      }
+                                    }
+                                    type="button"
+                  >
+                                    Clear Filters
+                  </button>
+</div>,
                 <DashboardTable
+                  cellValues={
+                                    Array [
+                                                      "name",
+                                                      "level",
+                                                      "weeksSpent",
+                                                      "ttlName",
+                                                      "devPulseStatus",
+                                                      "lmsStatus",
+                                                      "advanceStatus",
+                                                    ]
+                  }
                   fellows={
                                     Array [
                                                       Object {
+                                                        "advanceStatus": "Off Track",
                                                         "communication": 0,
+                                                        "devPulseStatus": "Off Track",
                                                         "firstName": "Mathilda",
                                                         "id": "AND/F/001",
                                                         "initiative": 0.3,
                                                         "integration": 0,
                                                         "lastName": "West",
                                                         "level": "D0A Simulations",
+                                                        "lmsOutputs": "N/A",
+                                                        "lmsOutputsGt2": "N/A",
+                                                        "lmsStatus": "N/A",
                                                         "professionalism": 0,
                                                         "quality": 0,
                                                         "quantity": 1,
+                                                        "submitterFirstName": "Innocent",
+                                                        "submitterLastName": "Asiimwe",
+                                                        "weeksSpent": 12,
                                                       },
                                                       Object {
                                                         "communication": 0.1,
@@ -4897,6 +6610,17 @@ ShallowWrapper {
                                                       },
                                                     ]
                   }
+                  headers={
+                                    Array [
+                                                      "Fellow Name",
+                                                      "Level",
+                                                      "Week",
+                                                      "LF/TTL",
+                                                      "DevPulse Status",
+                                                      "LMS Status",
+                                                      "Advancement",
+                                                    ]
+                  }
                   loading={true}
 />,
               ],
@@ -4906,57 +6630,310 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
-                  "filter": "onTrack",
-                  "getFellows": [Function],
-                  "loading": true,
-                  "perPage": 10,
-                  "search": "",
-                  "setFilter": [Function],
-                  "summary": Object {
-                    "gteWk5OffTrack": 0,
-                    "ltWk5OffTrack": 0,
-                    "onTrack": 0,
-                  },
+                  "children": <Unknown>
+                    <Filters
+                                        criteria="All"
+                                        getCriteriaFilter={[Function]}
+                                        getLevelFilter={[Function]}
+                                        getStatusFilter={[Function]}
+                                        level="All"
+                                        status="All"
+                    />
+                    <div>
+                                        <SearchBar
+                                                            filter="onTrack"
+                                                            getFellows={[Function]}
+                                                            handleSearchChange={[Function]}
+                                                            perPage={10}
+                                                            results={undefined}
+                                                            search=""
+                                        />
+                    </div>
+                    <div
+                                        className="download-button"
+                                        onClick={[Function]}
+                                        onKeyPress={[Function]}
+                                        role="button"
+                                        tabIndex={-1}
+                    >
+                                        <Filter
+                                                            current="Export"
+                                                            getFilter={[Function]}
+                                                            items={
+                                                                                Array [
+                                                                                                    "as PDF",
+                                                                                                    "as CSV",
+                                                                                                  ]
+                                                            }
+                                                            search={false}
+                                                            title=""
+                                                            type="download"
+                                        />
+                    </div>
+</Unknown>,
+                  "className": "filters",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <Filters
+                        criteria="All"
+                        getCriteriaFilter={[Function]}
+                        getLevelFilter={[Function]}
+                        getStatusFilter={[Function]}
+                        level="All"
+                        status="All"
+/>,
+                      <div>
+                        <SearchBar
+                                                filter="onTrack"
+                                                getFellows={[Function]}
+                                                handleSearchChange={[Function]}
+                                                perPage={10}
+                                                results={undefined}
+                                                search=""
+                        />
+</div>,
+                      <div
+                        className="download-button"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="button"
+                        tabIndex={-1}
+>
+                        <Filter
+                                                current="Export"
+                                                getFilter={[Function]}
+                                                items={
+                                                                        Array [
+                                                                                                "as PDF",
+                                                                                                "as CSV",
+                                                                                              ]
+                                                }
+                                                search={false}
+                                                title=""
+                                                type="download"
+                        />
+</div>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "criteria": "All",
+                        "getCriteriaFilter": [Function],
+                        "getLevelFilter": [Function],
+                        "getStatusFilter": [Function],
+                        "level": "All",
+                        "status": "All",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <SearchBar
+                          filter="onTrack"
+                          getFellows={[Function]}
+                          handleSearchChange={[Function]}
+                          perPage={10}
+                          results={undefined}
+                          search=""
+/>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "filter": "onTrack",
+                          "getFellows": [Function],
+                          "handleSearchChange": [Function],
+                          "perPage": 10,
+                          "results": undefined,
+                          "search": "",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <Filter
+                          current="Export"
+                          getFilter={[Function]}
+                          items={
+                                                    Array [
+                                                                              "as PDF",
+                                                                              "as CSV",
+                                                                            ]
+                          }
+                          search={false}
+                          title=""
+                          type="download"
+/>,
+                        "className": "download-button",
+                        "onClick": [Function],
+                        "onKeyPress": [Function],
+                        "role": "button",
+                        "tabIndex": -1,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": "4",
+                        "nodeType": "class",
+                        "props": Object {
+                          "current": "Export",
+                          "getFilter": [Function],
+                          "items": Array [
+                            "as PDF",
+                            "as CSV",
+                          ],
+                          "search": false,
+                          "title": "",
+                          "type": "download",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "div",
+                    },
+                  ],
+                  "type": Symbol(react.fragment),
+                },
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
-                  "filter": "onTrack",
-                  "getFellows": [Function],
-                  "handleSearchChange": [Function],
-                  "perPage": 10,
-                  "results": undefined,
-                  "search": "",
+                  "children": Array [
+                    <span
+                      className="border-bottom mr-2 pb-2"
+/>,
+                    <span
+                      className="mr-3"
+>
+                      Total Fellow (Filtered)
+</span>,
+                    <button
+                      className="btn bg-transparent border-0 px-0 clear-filters my-3"
+                      onClick={[Function]}
+                      style={
+                                            Object {
+                                                                  "textDecoration": "underline",
+                                                                }
+                      }
+                      type="button"
+>
+                      Clear Filters
+</button>,
+                  ],
+                  "className": "result-count",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": [Function],
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 0,
+                      "className": "border-bottom mr-2 pb-2",
+                    },
+                    "ref": null,
+                    "rendered": 0,
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Total Fellow (Filtered)",
+                      "className": "mr-3",
+                    },
+                    "ref": null,
+                    "rendered": "Total Fellow (Filtered)",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Clear Filters",
+                      "className": "btn bg-transparent border-0 px-0 clear-filters my-3",
+                      "onClick": [Function],
+                      "style": Object {
+                        "textDecoration": "underline",
+                      },
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Clear Filters",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "cellValues": Array [
+                    "name",
+                    "level",
+                    "weeksSpent",
+                    "ttlName",
+                    "devPulseStatus",
+                    "lmsStatus",
+                    "advanceStatus",
+                  ],
                   "fellows": Array [
                     Object {
+                      "advanceStatus": "Off Track",
                       "communication": 0,
+                      "devPulseStatus": "Off Track",
                       "firstName": "Mathilda",
                       "id": "AND/F/001",
                       "initiative": 0.3,
                       "integration": 0,
                       "lastName": "West",
                       "level": "D0A Simulations",
+                      "lmsOutputs": "N/A",
+                      "lmsOutputsGt2": "N/A",
+                      "lmsStatus": "N/A",
                       "professionalism": 0,
                       "quality": 0,
                       "quantity": 1,
+                      "submitterFirstName": "Innocent",
+                      "submitterLastName": "Asiimwe",
+                      "weeksSpent": 12,
                     },
                     Object {
                       "communication": 0.1,
@@ -5127,6 +7104,15 @@ ShallowWrapper {
                       "quantity": 0.2,
                     },
                   ],
+                  "headers": Array [
+                    "Fellow Name",
+                    "Level",
+                    "Week",
+                    "LF/TTL",
+                    "DevPulse Status",
+                    "LMS Status",
+                    "Advancement",
+                  ],
                   "loading": true,
                 },
                 "ref": null,
@@ -5168,6 +7154,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              " ",
               <div
                 className="row d-flex justify-content-center"
 >
@@ -5215,11 +7202,12 @@ ShallowWrapper {
                                 totalPages={3}
                 />
 </div>,
-              " ",
+              "   ",
             ],
           },
           "ref": null,
           "rendered": Array [
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -5408,7 +7396,7 @@ ShallowWrapper {
               ],
               "type": "div",
             },
-            " ",
+            "   ",
           ],
           "type": "div",
         },

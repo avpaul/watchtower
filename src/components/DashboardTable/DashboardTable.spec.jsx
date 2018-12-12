@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
 import DashboardTable from './DashboardTable';
-import Cell from '../TableComponents/Cell';
 import fellows from '../../__mocks__/fellows';
 import ErrorMessage from '../Error/ErrorMessage';
+import table from '../../views/DashboardPage/tableHeaders';
 
 const props = {
   fellows,
   loading: false,
+  headers: table.default.titles,
+  cellValues: table.default.cells
 };
 
 it('renders without crashing', () => {
@@ -31,14 +33,10 @@ it('renders ErrorMessage when no fellows and is not fetching fellows', () => {
 
 it('renders table cells in the correct order', () => {
   const wrapper = shallow(<DashboardTable {...props} />);
-  const tableCells = [<Cell title="">Level</Cell>,
-    <Cell title="">Quantity</Cell>];
-  expect(wrapper.contains(tableCells)).toEqual(true);
+  expect(wrapper).toMatchSnapshot();
 });
 
-it('renders the table header', () => {
+it('renders to match snapshot', () => {
   const wrapper = mount(<DashboardTable {...props} />);
-  const nameCell = <div className="dashboard-table__cell" data-title="">Fellow Name</div>;
-  const levelCell = <div className="dashboard-table__cell" data-title="">Quantity</div>;
-  expect(wrapper.contains(nameCell, levelCell)).toEqual(true);
+  expect(wrapper).toMatchSnapshot();
 });

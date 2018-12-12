@@ -9,7 +9,15 @@
     "initiative": 0.3,
     "communication": 0,
     "professionalism": 0,
-    "integration": 0
+    "integration": 0,
+    "devPulseStatus": "Off Track",
+    "lmsStatus": "N/A",
+    "lmsOutputs": "N/A",
+    "lmsOutputsGt2": "N/A",
+    "advanceStatus": "Off Track",
+    "submitterFirstName": "Innocent",
+    "submitterLastName": "Asiimwe",
+    "weeksSpent": 12
   },
   {
     "id": "AND/F/002",

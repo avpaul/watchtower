@@ -53,32 +53,8 @@ class SearchBar extends Component {
     );
   };
 
-  renderResultCount = () => {
-    const { results } = this.props;
-    const resultTerm = results > 1 ? 'Fellows' : 'Fellow';
-
-    return (
-      <div className="result-count">
-        <span className="border-bottom mr-2 pb-2">{results || 0}</span>
-        <span className="mr-3">{`Total ${resultTerm} (Filtered)`}</span>
-        <button
-          className="btn bg-transparent border-0 px-0 clear-filters my-3"
-          style={{ textDecoration: 'underline' }}
-          type="button"
-        >
-          Clear Filters
-        </button>
-      </div>
-    );
-  };
-
   render() {
-    return (
-      <Fragment>
-        {this.renderSearchInput()}
-        {this.renderResultCount()}
-      </Fragment>
-    );
+    return <Fragment>{this.renderSearchInput()}</Fragment>;
   }
 }
 
@@ -87,8 +63,7 @@ SearchBar.propTypes = {
   handleSearchChange: PropTypes.func.isRequired,
   perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   filter: PropTypes.string.isRequired,
-  search: PropTypes.string.isRequired,
-  results: PropTypes.number.isRequired
+  search: PropTypes.string.isRequired
 };
 
 export default SearchBar;

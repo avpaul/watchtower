@@ -4,7 +4,7 @@ exports[`should map state to props 1`] = `
 Object {
   "error": "",
   "fellows": Array [],
-  "filter": "gteWk5OffTrack",
+  "filter": "all",
   "loading": false,
   "pagination": Object {
     "finalPageURL": "",

@@ -4,18 +4,21 @@ import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import * as fellowActions from './fellowActions';
 import * as types from '../constants/fellowActionTypes';
-import { OFFTRACK_WK5_PLUS } from '../constants/fellowFilters';
+import { ALL } from '../constants/fellowFilters';
 import fellows from '../../__mocks__/fellows';
 import pagination from '../../__mocks__/pagination';
 import initialState from '../reducers/initialState';
 
-const filter = OFFTRACK_WK5_PLUS;
+const filter = ALL;
 
 describe('Fellow Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
   const baseURL = `${serverURL}/api/v1/fellows`;
   const perPage = 10;
   const page = 1;
+  const level = 'all';
+  const status = 'all';
+  const statusType = 'all';
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
@@ -39,7 +42,7 @@ describe('Fellow Actions', () => {
       ...pagination,
     };
     mock
-      .onGet(`${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}`)
+      .onGet(`${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}`)
       .reply(200, { ...data });
     const expectedActions = [
       { type: types.LOAD_FELLOW_REQUEST },
@@ -62,9 +65,9 @@ describe('Fellow Actions', () => {
       summary,
       ...pagination,
     };
-    const search = 'search';
+    const search = 'West';
     mock
-      .onGet(`${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&search=${search}`)
+      .onGet(`${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}&search=${search}`)
       .reply(200, { ...data });
     const expectedActions = [
       { type: types.LOAD_FELLOW_REQUEST },

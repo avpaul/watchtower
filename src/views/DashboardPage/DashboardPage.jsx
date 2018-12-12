@@ -1,11 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import axios from 'axios';
+import 'jspdf-autotable';
+import jsonToCsv from '../../utils/jsonToCsv';
+import jsonToPdf from '../../utils/jsonToPdf';
 import DashboardTable from '../../components/DashboardTable';
-import Filters from '../../components/Filters/Filters';
 import Error from '../../components/Error';
 import Pagination from '../../components/Pagination/Pagination';
 import '../../components/Pagination/Pagination.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import FilterDropdown from '../OpsDashboard/FellowsProgress/Filter';
+import './index.css';
+import Filters from './Filters/Filters';
+import table from './tableHeaders';
+import { getCriteriaFilterValues, getStatusFilterValues, clearFilters, defaultState, defaultPropTypes } from './filterValues';
 
 /**
  * Class representing Dashboard Page
@@ -14,11 +21,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 class DashboardPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      perPage: '10',
-      page: '1',
-      search: ''
-    };
+    this.state = defaultState(table);
   }
 
   componentDidMount() {
@@ -29,14 +32,8 @@ class DashboardPage extends Component {
   onChange = event => {
     const { filter, getFellows } = this.props;
     const newState = event.target.value;
-    this.setState({ perPage: newState }, () => {
-      getFellows({ filter, ...this.state });
-    });
+    this.setState({ perPage: newState }, () => { getFellows({ filter, ...this.state }); });
     this.setState({ perPage: newState });
-  };
-
-  handleSearchChange = event => {
-    this.setState({ search: event.target.value });
   };
 
   renderPagination = () => {
@@ -94,62 +91,153 @@ class DashboardPage extends Component {
   handleValueChange = value => {
     const { perPage } = this.state;
     const { filter, getFellows } = this.props;
-    const page = value;
-    getFellows({ perPage, page, filter });
+    getFellows({ perPage, value, filter });
   };
 
-  renderFilter() {
-    const {
-      summary,
-      filter,
-      loading,
-      setVisibilityFilter,
-      pagination: { perPage },
-      getFellows
-    } = this.props;
-    const { search } = this.state;
+  handleSearchChange = event => {
+    this.setState({ search: event.target.value });
+  };
 
+  getCriteriaFilter = (type, value) => {
+    const { status } = this.state;
+    this.setState(getCriteriaFilterValues(type, value, table, status));
+  };
+
+  getStatusFilter = (type, value) => {
+    const { loading, pagination: { perPage }, getFellows } = this.props;
+    const { search, level, criteria } = this.state;
+    if (!loading) {
+      getFellows({
+        perPage,
+        search,
+        statusType: criteria,
+        status: value,
+        level
+      });
+    }
+    this.setState(getStatusFilterValues(type, value, table, criteria));
+  };
+
+  getLevelFilter = (type, value) => {
+    const { loading, pagination: { perPage }, getFellows } = this.props;
+    const { search, status, criteria } = this.state;
+    if (!loading) {
+      getFellows({
+        perPage,
+        search,
+        statusType: criteria,
+        status,
+        level: value
+      });
+      this.setState({ level: value });
+    }
+  };
+
+  downloadCsvPdf = (type, value) => {
+    const { headers, cellKeys, criteria } = this.state;
+    const { downloadFellows,status,level } = this.state;
+    const { pagination: { results }, loading } = this.props;
+    if (value === 'as PDF' && !loading) {
+      jsonToPdf(headers, cellKeys, criteria, status, level, downloadFellows, results);
+    } else if (value === 'as CSV' && !loading) {
+      jsonToCsv(true, headers, cellKeys, downloadFellows);
+    }
+  };
+
+  clickDownload = () => {
+    const { status, level } = this.state;
+    const { pagination: { results } } = this.props;
+    const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
+    axios
+      .get(`${serverURL}/api/v1/fellows?perPage=${results}&page=${1}&filter=${'all'}&level=${level}&status=${status}`)
+      .then(res => { this.setState({ downloadFellows: res.data.payload }); });
+  };
+
+  clearFilters = () => {
+    const { loading, getFellows } = this.props;
+    if (!loading) { getFellows({ status: 'All', level: 'All' }); }
+    this.setState(clearFilters());
+  };
+
+  renderDownloadButton() {
     return (
-      <Filters
-        filter={filter}
-        setFilter={setVisibilityFilter}
-        getFellows={getFellows}
-        summary={summary}
-        search={search}
-        perPage={perPage}
-        loading={loading}
-      />
+      <div
+        className="download-button"
+        onClick={this.clickDownload}
+        onKeyPress={this.clickDownload}
+        role="button"
+        tabIndex={-1}
+      >
+        <FilterDropdown
+          key="4"
+          search={false}
+          type="download"
+          title=""
+          items={['as PDF', 'as CSV']}
+          current="Export"
+          getFilter={this.downloadCsvPdf}
+        />
+      </div>
     );
   }
 
-  renderSearch = () => {
-    const {
-      getFellows,
-      filter,
-      pagination: { perPage, results }
-    } = this.props;
-    const { search } = this.state;
+  renderFilter() {
+    const { criteria, status, level, search } = this.state;
+    const { getFellows, filter, pagination: { perPage, results } } = this.props;
     return (
-      <SearchBar
-        results={results}
-        getFellows={getFellows}
-        perPage={perPage}
-        filter={filter}
-        search={search}
-        handleSearchChange={this.handleSearchChange}
-      />
+      <Fragment>
+        <Filters
+          criteria={criteria}
+          status={status}
+          level={level}
+          getCriteriaFilter={this.getCriteriaFilter}
+          getLevelFilter={this.getLevelFilter}
+          getStatusFilter={this.getStatusFilter}
+        />
+        <div>
+          <SearchBar
+            results={results}
+            getFellows={getFellows}
+            perPage={perPage}
+            filter={filter}
+            search={search}
+            handleSearchChange={this.handleSearchChange}
+          />
+        </div>
+        {this.renderDownloadButton()}
+      </Fragment>
+    );
+  }
+
+  renderResultCount = () => {
+    const { pagination: { results } } = this.props;
+    const resultTerm = results > 1 ? 'Fellows' : 'Fellow';
+    return (
+      <div className="result-count">
+        <span className="border-bottom mr-2 pb-2">{results || 0}</span>
+        <span className="mr-3">{`Total ${resultTerm} (Filtered)`}</span>
+        <button
+          className="btn bg-transparent border-0 px-0 clear-filters my-3"
+          style={{ textDecoration: 'underline' }}
+          type="button"
+          onClick={this.clearFilters}
+        >
+          Clear Filters
+        </button>
+      </div>
     );
   };
 
   renderPageBody() {
     const { fellows, loading } = this.props;
+    const { headers, cellKeys } = this.state;
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
         <Fragment>
-          {this.renderFilter()}
-          {this.renderSearch()}
-          <DashboardTable fellows={fellows} loading={loading} />
+          <div className="filters">{this.renderFilter()}</div>
+          {this.renderResultCount()}
+          <DashboardTable headers={headers} fellows={fellows} loading={loading} cellValues={cellKeys} />
         </Fragment>
       </ErrorBoundary>
     );
@@ -163,10 +251,7 @@ class DashboardPage extends Component {
       <div>
         {error ? <ErrorPage /> : this.renderPageBody()}
         {hasFellows && this.returnShowing()}
-        <div>
-          {hasFellows && this.renderPerPageSelector()}
-          &nbsp;
-        </div>
+        <div> {hasFellows && this.renderPerPageSelector()} &nbsp; </div>
       </div>
     );
   }
@@ -174,35 +259,8 @@ class DashboardPage extends Component {
 export default DashboardPage;
 
 DashboardPage.defaultProps = {
-  summary: {
-    onTrack: 0,
-    gteWk5OffTrack: 0,
-    ltWk5OffTrack: 0
-  },
+  summary: { onTrack: 0, gteWk5OffTrack: 0, ltWk5OffTrack: 0 },
   error: ''
 };
 
-DashboardPage.propTypes = {
-  setVisibilityFilter: PropTypes.func.isRequired,
-  fellows: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      firstName: PropTypes.string.isRequired
-    })
-  ).isRequired,
-  getFellows: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired
-  }).isRequired,
-  summary: PropTypes.shape({
-    onTrack: PropTypes.number.isRequired
-  }),
-  pagination: PropTypes.shape({
-    page: PropTypes.number,
-    perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  }).isRequired,
-  filter: PropTypes.string.isRequired,
-  error: PropTypes.string
-};
+DashboardPage.propTypes = defaultPropTypes;
