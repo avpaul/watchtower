@@ -22,7 +22,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="my-project row"
+          className="my-project"
 >
           MY PROJECT
 </div>,
@@ -55,7 +55,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "MY PROJECT",
-          "className": "my-project row",
+          "className": "my-project",
         },
         "ref": null,
         "rendered": "MY PROJECT",
@@ -136,7 +136,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="my-project row"
+            className="my-project"
 >
             MY PROJECT
 </div>,
@@ -169,7 +169,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "MY PROJECT",
-            "className": "my-project row",
+            "className": "my-project",
           },
           "ref": null,
           "rendered": "MY PROJECT",

@@ -1,17 +1,17 @@
 .fellow-bio-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-left: 2em;
 }
 
 .card-bio {
   display: inline-block;
   height: 240px;
-  width: 520px !important;
+  width: 580px !important;
   border-radius: 4px;
   background-color: #ffffff;
-  margin: 60px 150px 60px 0px;
   padding-top: 0px;
-  margin-right: 146px;
-  margin-left: 84px;
   width: 648px;
 }
 
@@ -22,13 +22,12 @@
 }
 
 .card-project {
+  display: flex;
   display: inline-block;
   height: 240px;
-  width: 520px !important;
+  width: 580px !important;
   border-radius: 4px;
   background-color: #ffffff;
-  margin: 30px 0px 60px 10px;
-  margin-left: 211px;
 }
 
 .rectangle {
@@ -39,20 +38,22 @@
 }
 
 .my-bio {
+  display: flex;
   height: 26px;
   width: 112px;
   color: #0459e4;
   font-family: 'DIN Pro';
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bolder;
   line-height: 26px;
-  margin: 0px 0px 5px 270px;
-  position: absolute;
-  margin-left: 89px;
+  margin-bottom: 25px;
 }
 
 .bio {
-  width: 648px;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  width: 576px;
 }
 
 .my-project {
@@ -61,17 +62,17 @@
   color: #0459e4;
   font-family: 'DIN Pro';
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bolder;
   line-height: 26px;
-  position: static;
   min-width: 200px;
-  margin: 0px 0px 5px 57px;
-  margin-left: 211px;
+  margin-bottom: 25px;
 }
 
 .project {
-  width: 610px;
-  height: 109px;
+  display: flex;
+  flex-direction: column;
+  width: 683px;
+  padding: 2em;
 }
 
 .title {
@@ -91,15 +92,10 @@
   font-family: 'DIN Pro';
   font-size: 20px;
   line-height: 26px;
-  margin: 29px 99.62px 182px 56px !important;
+  margin: 29px 99.62px 182px 65px !important;
+  word-spacing: 4px;
 }
 
 .spacing {
-  margin: 0px 2px 0px 0px;
-}
-
-@media screen and (min-width: 1200px) {
-  .fellow-bio-container {
-    margin-left: -13em;
-  }
+  margin: 0px 6px 0px 0px;
 }

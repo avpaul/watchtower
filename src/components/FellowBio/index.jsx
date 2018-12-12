@@ -20,11 +20,9 @@ export class FellowBio extends Component {
     const { fellow } = this.props;
     return (
       <Fragment>
-        <div className="container d-inline">
-          <div className="row fellow-bio-container justify-content-lg-center justify-content-xl-center">
-            <BioCard data={fellow} />
-            <ProjectCard data={fellow} />
-          </div>
+        <div className="row fellow-bio-container justify-content-between">
+          <BioCard data={fellow} />
+          <ProjectCard data={fellow} />
         </div>
       </Fragment>
     );
