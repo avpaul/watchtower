@@ -1,7 +1,6 @@
 .login-page {
   width: 100%;
   padding: 1rem;
-  background-position: center;
   background: linear-gradient(
     135deg,
     #3359db 0%,
@@ -13,7 +12,10 @@
   min-height: 100vh;
   background-position: 70% 0;
 }
-
+.toaster {
+  background-color: #ffa550;
+  color: white;
+}
 .login-page__header {
   padding-top: 60px;
   height: 159px;

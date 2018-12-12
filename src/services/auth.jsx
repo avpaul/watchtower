@@ -15,9 +15,7 @@ const isAuthenticated = () => !!getAuthToken();
 
 const loadUserFromToken = () => {
   const token = getAuthToken();
-  const info = jwtDecode(token);
-  const { UserInfo } = info;
-  return token ? UserInfo : null;
+  return token ? jwtDecode(token).UserInfo : null;
 };
 
 const isServerTokenSet = () => {
@@ -35,7 +33,25 @@ const logout = () => {
   Cookie.remove('jwt-token');
 };
 
+const isAuthorized = () => {
+  const user = loadUserFromToken();
+  const roleEnv = process.env.REACT_APP_WATCHTOWER_ROLES;
+  const allowedRoles = roleEnv
+    ? roleEnv.split(' ')
+    : [
+        'Fellow',
+        'WATCH_TOWER_TTL',
+        'WATCH_TOWER_LF',
+        'WATCH_TOWER_EM',
+        'WATCH_TOWER_OPS'
+      ];
+  return user
+    ? Object.keys(user.roles).some(role => allowedRoles.includes(role))
+    : false;
+};
+
 const authService = {
+  isAuthorized,
   isAuthenticated,
   getAuthToken,
   loadUserFromToken,

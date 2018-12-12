@@ -10,7 +10,8 @@ describe('Authentication Service', () => {
       firstName: 'Test',
       lastName: 'User',
       email: 'test.user@andela.com',
-      name: 'Test User'
+      name: 'Test User',
+      roles: { test: 'string' }
     }
   };
   const token = jsonwebtoken.sign(user, 'shhhhh');
@@ -41,14 +42,31 @@ describe('Authentication Service', () => {
   });
 
   it('returns true if server token is set', () => {
-    localStorage.setItem('server-token', 'token');
     expect(authService.isServerTokenSet()).toBe(true);
   });
 
   it('returns false if server token has not been set', () => {
     Cookie.get = jest.fn(() => null);
 
-    localStorage.removeItem('server-token');
     expect(authService.isServerTokenSet()).toBe(false);
+  });
+
+  it('returns false when token is unavailable', () => {
+    Cookie.get = jest.fn(() => null);
+    expect(authService.isAuthorized()).toBe(false);
+  });
+
+  it('returns false when user role is not in allowed roles ', () => {
+    process.env.REACT_APP_WATCHTOWER_ROLES = 'nottest';
+    expect(authService.isAuthorized()).toBe(false);
+  });
+
+  it('returns true when user role is in allowed roles ', () => {
+    process.env.REACT_APP_WATCHTOWER_ROLES = 'test';
+    expect(authService.isAuthorized()).toBe(true);
+  });
+  it('ruses default roles when allowed roles have not been defined ', () => {
+    delete process.env.REACT_APP_WATCHTOWER_ROLES;
+    expect(authService.isAuthorized()).toBe(false);
   });
 });

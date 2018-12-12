@@ -14,29 +14,23 @@ describe('<Authorization />', () => {
         lastName: 'User',
         email: 'test.user@andela.com',
         name: 'Test User',
-        roles: { Andelan: 'value', Technology: 'value' }
+        roles: ['Andelan', 'Technology']
       }
     };
 
-    authService.loadUserFromToken = jest.fn(() => user.UserInfo);
-    authService.isAuthenticated = jest.fn(() => true);
-    authService.isServerTokenSet = jest.fn(() => true);
+    authService.loadUserFromToken.mockImplementation(() => user);
+    authService.isAuthorized.mockImplementation(() => true);
+
+    authService.isServerTokenSet.mockImplementation(() => true);
     const WithAuth = Authorization(Dashboards);
     const wrapper = shallow(<WithAuth />);
-    expect(wrapper.contains(<Dashboards user={user.UserInfo} />)).toBe(true);
+    expect(wrapper.contains(<Dashboards user={user} />)).toBe(true);
   });
 
   it('renders Redirect when user NOT autheticated', () => {
-    authService.isAuthenticated = jest.fn(() => false);
-    const WithAuth = Authorization(Dashboards);
-    const wrapper = shallow(<WithAuth />);
-    expect(wrapper.find(Redirect)).toHaveLength(1);
-  });
+    authService.isAuthorized.mockImplementation(() => false);
 
-  it('renders Redirect when role NOT authenticated', () => {
-    authService.isAuthenticated = jest.fn(() => true);
-    authService.loadUserFromToken = jest.fn(() => null);
-    const WithAuth = Authorization(Dashboards, ['TTL']);
+    const WithAuth = Authorization(Dashboards);
     const wrapper = shallow(<WithAuth />);
     expect(wrapper.find(Redirect)).toHaveLength(1);
   });

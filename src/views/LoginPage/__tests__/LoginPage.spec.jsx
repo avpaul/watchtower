@@ -1,8 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Redirect } from 'react-router-dom';
-import Cookie from 'js-cookie';
+import { toast } from 'react-toastify';
 import LoginPage from '../LoginPage';
+import authService from '../../../services/auth';
+
+jest.mock('../../../services/auth');
+jest.mock('react-toastify');
 
 describe('<LoginPage />', () => {
   const ANDELA_AUTH_URL = 'TEST_AUTH_URL';
@@ -12,10 +16,9 @@ describe('<LoginPage />', () => {
   let loginButtonSpy;
   beforeAll(() => {
     loginButtonSpy = jest.spyOn(LoginPage.prototype, 'handleLogin');
-    wrapper = shallow(<LoginPage
-      authHostUrl={ANDELA_AUTH_URL}
-      authRedirectUrl={REDIRECT_URL}
-    />);
+    wrapper = shallow(
+      <LoginPage authHostUrl={ANDELA_AUTH_URL} authRedirectUrl={REDIRECT_URL} />
+    );
   });
   it('should render login button with correct text', () => {
     const loginButton = wrapper.find('.login-page__btn');
@@ -27,15 +30,19 @@ describe('<LoginPage />', () => {
     expect(loginButtonSpy).toHaveBeenCalled();
   });
   it('It redirects user to dashboard when logged in', () => {
-    const fakeToken = 'sfdfjnsdfowbefijbmdnkf';
-    Cookie.set('jwt-token', fakeToken, { path: '/' });
-    const instance = shallow(<LoginPage
-      authHostUrl={ANDELA_AUTH_URL}
-      authRedirectUrl={REDIRECT_URL}
-    />);
+    authService.isAuthenticated.mockImplementation(() => true);
+    authService.isAuthorized.mockImplementation(() => true);
+    const instance = shallow(
+      <LoginPage authHostUrl={ANDELA_AUTH_URL} authRedirectUrl={REDIRECT_URL} />
+    );
     expect(instance.find(Redirect).length).toBe(1);
   });
-  it('should match snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+  it('It shows toast message for unauthorized users', () => {
+    authService.isAuthenticated.mockImplementation(() => true);
+    authService.isAuthorized.mockImplementation(() => false);
+    shallow(
+      <LoginPage authHostUrl={ANDELA_AUTH_URL} authRedirectUrl={REDIRECT_URL} />
+    );
+    expect(toast.error).toHaveBeenCalledTimes(1);
   });
 });

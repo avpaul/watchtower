@@ -1,16 +1,10 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginPage from '../views/LoginPage';
 import NotFoundPage from '../views/NotFoundPage';
 import ConnectedTest from '../components/Test/Test';
 import Authorization from '../components/AuthorizationHOC';
 import Dashboards from './DashboardRoutes';
-
-
 
 /**
  * Defines application routes
