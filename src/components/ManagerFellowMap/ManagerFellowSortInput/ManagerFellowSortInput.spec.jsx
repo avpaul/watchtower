@@ -1,22 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import ReactDOM from 'react-dom';
 import ManagerFellowSortInput from '.';
 
+describe('<ManagerFellowSortInput />', () => {
+  const onChange = jest.fn();
 
-describe('SelectInput', () => {
-    const onChange = jest.fn()
-   
-    const component = shallow(<ManagerFellowSortInput
-                        onChange={onChange}/>);
-
-    it('should render input field', () => { 
-        expect(component.find('select').length).toEqual(1)    
-    });
-    it('should handles change of input', () => {
-        component
-            .find('select')
-            .simulate('change');
-
-        expect(onChange).toHaveBeenCalled();
-    })
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<ManagerFellowSortInput onChange={onChange} />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });

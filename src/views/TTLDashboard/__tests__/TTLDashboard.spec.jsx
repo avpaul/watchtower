@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { TTLDashboardMain } from '../TTLDasboard';
 import TTLDasboard from '..';
 
@@ -11,12 +10,10 @@ describe('<TLLDasboard  /> tests', () => {
   beforeEach(() => {
     wrapper = shallow(
       <MemoryRouter initialEntries={['/dashboard']}>
-        <Router>
-          <TTLDasboard
-            user={{ name: 'test', picture: 'http://' }}
-            role="WATCH_TOWER_OPS"
-          />
-        </Router>
+        <TTLDasboard
+          user={{ name: 'test', picture: 'http://' }}
+          role="WATCH_TOWER_OPS"
+        />
       </MemoryRouter>
     );
   });

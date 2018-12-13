@@ -10,16 +10,22 @@ import DisplayCard from '../../components/Filters/DisplayCard';
  * @class
  */
 
-export class OpsDashboardMain extends Component {
-  state = {
-    ttls: [],
-    lfs: [],
-    show: false,
-    displayManagers: 'LF',
-    averageFellowsPerLf: '0',
-    averageFellowsPerTtl: '0',
-    managerFellowSortRatio: 'HIGH_TO_LOW'
-  };
+class OpsDashboardMain extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ttls: [],
+      lfs: [],
+      show: false,
+      displayManagers: 'LF',
+      averageFellowsPerLf: '0',
+      averageFellowsPerTtl: '0',
+      managerFellowSortRatio: 'HIGH_TO_LOW'
+    };
+    this.onSelectManagerFellowRatio = this.onSelectManagerFellowRatio.bind(
+      this
+    );
+  }
 
   componentDidMount() {
     const {
@@ -46,6 +52,14 @@ export class OpsDashboardMain extends Component {
       });
   }
 
+  onSelectManagerFellowRatio(type, value) {
+    const sortRatio = value
+      .slice(-11)
+      .replace(/\s/g, '_')
+      .toUpperCase();
+    this.setState({ managerFellowSortRatio: sortRatio });
+  }
+
   mapDisplayContent = () => {
     const { averageFellowsPerLf, averageFellowsPerTtl } = this.state;
     return [
@@ -68,26 +82,36 @@ export class OpsDashboardMain extends Component {
     else this.setState(this.setState({ displayManagers: 'TTL', show: true }));
   };
 
-  onSelectManagerFellowRatio = event => {
-    this.setState({ managerFellowSortRatio: event.target.value });
-  };
-
   handleMapClose = () => {
     this.setState({ show: false });
   };
 
-  render() {
+  renderManagerFellowMap = () => {
     const {
-      lfs,
-      ttls,
-      displayManagers,
       show,
-      managerFellowSortRatio
+      managerFellowSortRatio,
+      displayManagers,
+      lfs,
+      ttls
     } = this.state;
     const [managers, style] =
       displayManagers === 'TTL'
         ? [ttls, { '--arrow-left-margin-style': '31%' }]
         : [lfs, { '--arrow-left-margin-style': '9%' }];
+    return (
+      show && (
+        <ManagerFellowMap
+          arrowStyle={style}
+          handleMapClose={this.handleMapClose}
+          onSortManagers={this.onSelectManagerFellowRatio}
+          sortRatio={managerFellowSortRatio}
+          managers={managers}
+        />
+      )
+    );
+  };
+
+  render() {
     const opsDashboardStyle = {
       paddingLeft: '0',
       paddingRight: '0',
@@ -101,21 +125,14 @@ export class OpsDashboardMain extends Component {
         <div className="row map-card-row">
           {this.mapDisplayContent().map((displayContent, index) => (
             <DisplayCard
+              key={displayContent.title}
               id={index}
               onClick={this.fellowMapOnClick}
               displayContent={displayContent}
             />
           ))}
         </div>
-        {show && (
-          <ManagerFellowMap
-            arrowStyle={style}
-            handleMapClose={this.handleMapClose}
-            onSortManagers={this.onSelectManagerFellowRatio}
-            sortRatio={managerFellowSortRatio}
-            managers={managers}
-          />
-        )}
+        {this.renderManagerFellowMap()}
         <FellowsProgressConnected />
       </div>
     );
@@ -131,7 +148,11 @@ const managerPropTypes = {
   staffId: PropTypes.string.isRequired,
   fellows: PropTypes.arrayOf(
     PropTypes.objectOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.object
+      ])
     )
   )
 };

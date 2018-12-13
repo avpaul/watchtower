@@ -10,7 +10,6 @@ const Filters = ({
   getLevelFilter,
   getStatusFilter
 }) => {
-
   const FilterValues = [
     {
       key: '1',
@@ -37,7 +36,7 @@ const Filters = ({
       getFilter: getStatusFilter
     }
   ];
-  
+
   const renderFilter = () => (
     <Fragment>
       {FilterValues.map(filter => (
@@ -50,6 +49,7 @@ const Filters = ({
             items={filter.items}
             current={filter.current}
             getFilter={filter.getFilter}
+            dropdownBackgroundColor="#FFAF30"
           />
         </div>
       ))}

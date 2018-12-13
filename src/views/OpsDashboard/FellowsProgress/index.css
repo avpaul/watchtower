@@ -21,23 +21,26 @@
   height: 45px;
   width: 159px;
   border: inherit;
+  border-radius: 4px;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 0 !important;
   margin-right: 50px;
+  font-family: 'DIN Pro Light';
 }
 
 .filter_dropdown > span {
   padding: 10px;
+  height: 45px;
+  line-height: 24px;
 }
 
 .filter_dropdown > span:last-child {
-  background-color: #ffaf30;
+  background-color: #d3eeff;
   opacity: 0.62;
   border-radius: 0 4px 4px 0;
-  height: 44px;
   width: 45px;
 }
 
@@ -73,6 +76,8 @@
   margin: 0;
   padding: 0;
   background-color: #fff;
+  font-size: 15px;
+  font-family: 'DIN Pro Light';
 }
 .open__list_item {
   display: block;

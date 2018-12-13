@@ -32,9 +32,11 @@ FilterCard.propTypes = {
   cardDetails: PropTypes.shape({
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string,
-    totalFellows: PropTypes.number.isRequired
+    totalFellows: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+      .isRequired
   }).isRequired,
-  filterId: PropTypes.string.isRequired,
+  filterId: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    .isRequired,
   onClick: PropTypes.func.isRequired
 };
 

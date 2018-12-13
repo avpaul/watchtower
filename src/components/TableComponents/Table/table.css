@@ -1,5 +1,6 @@
 .dashboard-table__container {
   overflow-x: scroll;
+  margin-bottom: 60px;
 }
 
 .dashboard-table {

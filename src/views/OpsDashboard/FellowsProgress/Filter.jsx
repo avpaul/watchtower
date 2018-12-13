@@ -76,7 +76,7 @@ class Filter extends Component {
     }
   }
 
-  renderItems = (open, search, items, searchItem) => (
+  renderItems = ({ open, search, items, searchItem, width }) => (
     <Fragment>
       {open && (
         <div className="open">
@@ -90,7 +90,7 @@ class Filter extends Component {
               className="filter_search"
             />
           )}
-          <ul className="open__list_items">
+          <ul className="open__list_items" style={{ width }}>
             {items &&
               items.map(item => (
                 <li
@@ -111,8 +111,15 @@ class Filter extends Component {
 
   render() {
     const { open, current, searchItem } = this.state;
-    const { search, title } = this.props;
-
+    const {
+      search,
+      title,
+      width,
+      fontSize,
+      characterLength,
+      chevronColor,
+      dropdownBackgroundColor
+    } = this.props;
     let { items } = this.state;
     if (search) {
       items = items.slice(0, 4);
@@ -126,25 +133,41 @@ class Filter extends Component {
             type="button"
             className="filter_dropdown"
             onClick={() => this.setState({ open: !open })}
+            style={{ width, fontSize }}
           >
-            <span>{current && truncate(current, 9)} </span>
-            <span>
-              <i className="fas fa-chevron-down" />
+            <span>{current && truncate(current, characterLength)}</span>
+            <span style={{ background: dropdownBackgroundColor }}>
+              <i
+                className="fas fa-chevron-down"
+                style={{ color: chevronColor }}
+              />
             </span>
           </button>
-
-          {this.renderItems(open, search, items, searchItem)}
+          {this.renderItems({ open, search, items, searchItem, width })}
         </div>
       </Fragment>
     );
   }
 }
 
+Filter.defaultProps = {
+  width: '',
+  fontSize: '',
+  characterLength: 9,
+  chevronColor: '',
+  dropdownBackgroundColor: ''
+};
+
 Filter.propTypes = {
   search: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
+  width: PropTypes.string,
+  fontSize: PropTypes.string,
   type: PropTypes.string.isRequired,
-  getFilter: PropTypes.func.isRequired
+  getFilter: PropTypes.func.isRequired,
+  characterLength: PropTypes.number,
+  chevronColor: PropTypes.string,
+  dropdownBackgroundColor: PropTypes.string
 };
 
 export default Filter;

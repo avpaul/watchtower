@@ -1,383 +1,1582 @@
 {
   "ttls": [
     {
-      "id": 1,
-      "firstName": "Trust",
-      "lastName": "Birungi",
-      "staffId": "LOS/TTL/1012",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
-      "fellows": [
-        {
-          "id": "AND/F/001",
-          "firstName": "Mathilda",
-          "lastName": "West",
-          "email": "Mathilda.West@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1012"
-        },
-        {
-          "id": "AND/F/002",
-          "firstName": "Mittie",
-          "lastName": "Bowers",
-          "email": "Mittie.Bowers@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1012"
-        },
-        {
-          "id": "AND/F/003",
-          "firstName": "Adekunle",
-          "lastName": "Gold",
-          "email": "Adekunle.Gold@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1012"
-        }
-      ]
-    },
-    {
-      "id": 2,
       "firstName": "Grace",
       "lastName": "Samuel",
-      "staffId": "LOS/TTL/1011",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
-      "fellows": [
-        {
-          "id": "AND/F/004",
-          "firstName": "Hallie",
-          "lastName": "James",
-          "email": "Hallie.James@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
-        },
-        {
-          "id": "AND/F/005",
-          "firstName": "Estella",
-          "lastName": "Graves",
-          "email": "Estella.Graves@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
-        },
-        {
-          "id": "AND/F/006",
-          "firstName": "Genevieve",
-          "lastName": "Black",
-          "email": "Genevieve.Black@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
-        },
-        {
-          "id": "AND/F/007",
-          "firstName": "Gavin",
-          "lastName": "Berry",
-          "email": "Gavin.Berry@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
-        },
-        {
-          "id": "AND/F/008",
-          "firstName": "Tonny",
-          "lastName": "Gibbs",
-          "email": "Tonny.Gibbs@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
-        },
-        {
-          "id": "AND/F/009",
-          "firstName": "Chase",
-          "lastName": "Wright",
-          "email": "Chase.Wright@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "firstName": "Peter",
-      "lastName": "White",
+      "email": "grace.samuel@andela.com",
+      "roleId": 2,
+      "id": 1,
       "staffId": "LOS/TTL/1012",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
+      "createdAt": "2018-12-06 10:13:21",
+      "updatedAt": "2018-12-06 10:13:21",
       "fellows": [
         {
-          "id": "AND/F/001",
-          "firstName": "Mathilda",
-          "lastName": "West",
-          "email": "Mathilda.West@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1012"
+          "email": "Marjorie.Alexander@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 4,
+            "firstName": "Marjorie",
+            "lastName": "Alexander",
+            "email": "Marjorie.Alexander@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/002",
-          "firstName": "Mittie",
-          "lastName": "Bowers",
-          "email": "Mittie.Bowers@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1012"
+          "email": "onyedikachi.okwa@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Tembea",
+          "user": {
+            "id": 5,
+            "firstName": "Onyedikachi",
+            "lastName": "Okwa",
+            "email": "onyedikachi.okwa@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/003",
-          "firstName": "Adekunle",
-          "lastName": "Gold",
-          "email": "Adekunle.Gold@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1012"
+          "email": "Amber.Gill@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 8,
+            "firstName": "Amber",
+            "lastName": "Gill",
+            "email": "Amber.Gill@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Lee.Hampton@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 9,
+            "firstName": "Lee",
+            "lastName": "Hampton",
+            "email": "Lee.Hampton@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Edith.Estrada@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 10,
+            "firstName": "Edith",
+            "lastName": "Estrada",
+            "email": "Edith.Estrada@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Sharon.Kelley@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 14,
+            "firstName": "Sharon",
+            "lastName": "Kelley",
+            "email": "Sharon.Kelley@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Phillip.Johnson@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 15,
+            "firstName": "Phillip",
+            "lastName": "Johnson",
+            "email": "Phillip.Johnson@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Mindy.Ball@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 18,
+            "firstName": "Mindy",
+            "lastName": "Ball",
+            "email": "Mindy.Ball@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Sue.Thornton@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 19,
+            "firstName": "Sue",
+            "lastName": "Thornton",
+            "email": "Sue.Thornton@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jerald.Reese@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 20,
+            "firstName": "Jerald",
+            "lastName": "Reese",
+            "email": "Jerald.Reese@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jake.Harvey@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 24,
+            "firstName": "Jake",
+            "lastName": "Harvey",
+            "email": "Jake.Harvey@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Irvin.Diaz@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 25,
+            "firstName": "Irvin",
+            "lastName": "Diaz",
+            "email": "Irvin.Diaz@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Dan.Griffith@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 28,
+            "firstName": "Dan",
+            "lastName": "Griffith",
+            "email": "Dan.Griffith@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jeffrey.Parsons@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 29,
+            "firstName": "Jeffrey",
+            "lastName": "Parsons",
+            "email": "Jeffrey.Parsons@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Tabitha.Sims@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 30,
+            "firstName": "Tabitha",
+            "lastName": "Sims",
+            "email": "Tabitha.Sims@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Andy.Rodriquez@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 34,
+            "firstName": "Andy",
+            "lastName": "Rodriquez",
+            "email": "Andy.Rodriquez@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Darnell.Hale@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 35,
+            "firstName": "Darnell",
+            "lastName": "Hale",
+            "email": "Darnell.Hale@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Orlando.Sullivan@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 38,
+            "firstName": "Orlando",
+            "lastName": "Sullivan",
+            "email": "Orlando.Sullivan@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Vickie.Daniels@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 39,
+            "firstName": "Vickie",
+            "lastName": "Daniels",
+            "email": "Vickie.Daniels@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Mary.Robinson@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1012",
+          "project": "Undefined",
+          "user": {
+            "id": 40,
+            "firstName": "Mary",
+            "lastName": "Robinson",
+            "email": "Mary.Robinson@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         }
       ]
     },
     {
-      "id": 12,
-      "firstName": "John",
-      "lastName": "Doe",
-      "staffId": "LOS/TTL/1011",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
+      "firstName": "Trust",
+      "lastName": "Birungi",
+      "email": "trust.birungi@andela.com",
+      "roleId": 2,
+      "id": 2,
+      "staffId": "UGD/TTL/2135",
+      "createdAt": "2018-12-06 10:13:21",
+      "updatedAt": "2018-12-06 10:13:21",
       "fellows": [
         {
-          "id": "AND/F/004",
-          "firstName": "Hallie",
-          "lastName": "James",
-          "email": "Hallie.James@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
+          "email": "folajimi.ogunbadejo@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "WatchTower",
+          "user": {
+            "id": 1,
+            "firstName": "Folajimi",
+            "lastName": "Ogunbadejo",
+            "email": "folajimi.ogunbadejo@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/005",
-          "firstName": "Estella",
-          "lastName": "Graves",
-          "email": "Estella.Graves@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
+          "email": "Ricky.Sharp@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 2,
+            "firstName": "Ricky",
+            "lastName": "Sharp",
+            "email": "Ricky.Sharp@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/006",
-          "firstName": "Genevieve",
-          "lastName": "Black",
-          "email": "Genevieve.Black@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
+          "email": "matthew.porter@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 3,
+            "firstName": "Matthew",
+            "lastName": "Potter",
+            "email": "matthew.porter@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/007",
-          "firstName": "Gavin",
-          "lastName": "Berry",
-          "email": "Gavin.Berry@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
+          "email": "tovieye.ozi@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Converge",
+          "user": {
+            "id": 6,
+            "firstName": "Tovieye",
+            "lastName": "Ozi",
+            "email": "tovieye.ozi@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/008",
-          "firstName": "Tonny",
-          "lastName": "Gibbs",
-          "email": "Tonny.Gibbs@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
+          "email": "Gregory.Webster@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 7,
+            "firstName": "Gregory",
+            "lastName": "Webster",
+            "email": "Gregory.Webster@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/009",
-          "firstName": "Chase",
-          "lastName": "Wright",
-          "email": "Chase.Wright@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1011"
+          "email": "James.Katarikawe@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "WatchTower",
+          "user": {
+            "id": 11,
+            "firstName": "James",
+            "lastName": "Katarikawe",
+            "email": "James.Katarikawe@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Percy.Greer@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 12,
+            "firstName": "Percy",
+            "lastName": "Greer",
+            "email": "Percy.Greer@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Wallace.Hughes@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 13,
+            "firstName": "Wallace",
+            "lastName": "Hughes",
+            "email": "Wallace.Hughes@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Manuel.Castillo@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 16,
+            "firstName": "Manuel",
+            "lastName": "Castillo",
+            "email": "Manuel.Castillo@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Faye.Simpson@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 17,
+            "firstName": "Faye",
+            "lastName": "Simpson",
+            "email": "Faye.Simpson@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Innocent.Asiimwe@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 21,
+            "firstName": "Innocent",
+            "lastName": "Asiimwe",
+            "email": "Innocent.Asiimwe@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Bryan.Ruiz@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 22,
+            "firstName": "Bryan",
+            "lastName": "Ruiz",
+            "email": "Bryan.Ruiz@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Kenny.Bishop@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 23,
+            "firstName": "Kenny",
+            "lastName": "Bishop",
+            "email": "Kenny.Bishop@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Ronald.Mutebi@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Activo",
+          "user": {
+            "id": 26,
+            "firstName": "Ronald",
+            "lastName": "Mutebi",
+            "email": "Ronald.Mutebi@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Delores.Norton@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 27,
+            "firstName": "Delores",
+            "lastName": "Norton",
+            "email": "Delores.Norton@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Herbert.Ortega@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 31,
+            "firstName": "Herbert",
+            "lastName": "Ortega",
+            "email": "Herbert.Ortega@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Terry.Waters@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 32,
+            "firstName": "Terry",
+            "lastName": "Waters",
+            "email": "Terry.Waters@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Kristopher.Marshall@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 33,
+            "firstName": "Kristopher",
+            "lastName": "Marshall",
+            "email": "Kristopher.Marshall@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Drew.Newton@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "ltWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 36,
+            "firstName": "Drew",
+            "lastName": "Newton",
+            "email": "Drew.Newton@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Tracy.Erickson@andela.com",
+          "roleId": 1,
+          "level": "D0B Apprenticeship",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2135",
+          "project": "Undefined",
+          "user": {
+            "id": 37,
+            "firstName": "Tracy",
+            "lastName": "Erickson",
+            "email": "Tracy.Erickson@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         }
       ]
     }
   ],
   "lfs": [
     {
-      "id": 3,
-      "firstName": "Abel",
-      "lastName": "Nunez",
-      "staffId": "LOS/TTL/1010",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
+      "id": 1,
+      "firstName": "Duncan",
+      "lastName": "Gitonga",
+      "email": "Duncan.Gitonga@andela.com",
+      "roleId": 3,
+      "staffId": "LOS/TTL/1050",
+      "createdAt": "2018-12-06 10:13:21",
+      "updatedAt": "2018-12-06 10:13:21",
       "fellows": [
         {
-          "id": "AND/F/001",
-          "firstName": "Pearl",
-          "lastName": "Lopez",
-          "email": "Pearl.Lopez@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1010"
+          "email": "Rosalind.Anthony@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 44,
+            "firstName": "Rosalind",
+            "lastName": "Anthony",
+            "email": "Rosalind.Anthony@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/002",
-          "firstName": "Jesus",
-          "lastName": "Rowe",
-          "email": "Jesus.Rowe@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1010"
+          "email": "Orville.Flynn@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 45,
+            "firstName": "Orville",
+            "lastName": "Flynn",
+            "email": "Orville.Flynn@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/003",
-          "firstName": "Sadie",
-          "lastName": "Tucker",
-          "email": "Sadie.Tucker@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1010"
+          "email": "Shawn.Ewing@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 49,
+            "firstName": "Shawn",
+            "lastName": "Ewing",
+            "email": "Shawn.Ewing@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/004",
-          "firstName": "Stella",
-          "lastName": "Perez",
-          "email": "Stella.Perez@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1010"
+          "email": "Latonya.Mathis@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 50,
+            "firstName": "Latonya",
+            "lastName": "Mathis",
+            "email": "Latonya.Mathis@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/005",
-          "firstName": "Addie",
-          "lastName": "Meyer",
-          "email": "Addie.Meyer@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1010"
+          "email": "Wilber.Hobbs@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 54,
+            "firstName": "Wilber",
+            "lastName": "Hobbs",
+            "email": "Wilber.Hobbs@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Rubin.Booth@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 55,
+            "firstName": "Rubin",
+            "lastName": "Booth",
+            "email": "Rubin.Booth@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Bret.Schaefer@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 59,
+            "firstName": "Bret",
+            "lastName": "Schaefer",
+            "email": "Bret.Schaefer@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Teri.Werner@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 60,
+            "firstName": "Teri",
+            "lastName": "Werner",
+            "email": "Teri.Werner@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Melanie.Harrell@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 64,
+            "firstName": "Melanie",
+            "lastName": "Harrell",
+            "email": "Melanie.Harrell@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Elliot.Kemp@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 65,
+            "firstName": "Elliot",
+            "lastName": "Kemp",
+            "email": "Elliot.Kemp@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Earnest.Lloyd@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 69,
+            "firstName": "Earnest",
+            "lastName": "Lloyd",
+            "email": "Earnest.Lloyd@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Casandra.Novak@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 70,
+            "firstName": "Casandra",
+            "lastName": "Novak",
+            "email": "Casandra.Novak@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Zachery.Moody@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 73,
+            "firstName": "Zachery",
+            "lastName": "Moody",
+            "email": "Zachery.Moody@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Kelvin.Cole@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 74,
+            "firstName": "Kelvin",
+            "lastName": "Cole",
+            "email": "Kelvin.Cole@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Katrina.Huang@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 75,
+            "firstName": "Katrina",
+            "lastName": "Huang",
+            "email": "Katrina.Huang@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Hilary.Estes@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 79,
+            "firstName": "Hilary",
+            "lastName": "Estes",
+            "email": "Hilary.Estes@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jana.Henderson@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 80,
+            "firstName": "Jana",
+            "lastName": "Henderson",
+            "email": "Jana.Henderson@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Kristopher.Barnes@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 83,
+            "firstName": "Kristopher",
+            "lastName": "Barnes",
+            "email": "Kristopher.Barnes@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Clifton.Donaldson@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 84,
+            "firstName": "Clifton",
+            "lastName": "Donaldson",
+            "email": "Clifton.Donaldson@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Bernard.Ford@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "LOS/TTL/1050",
+          "project": "Undefined",
+          "user": {
+            "id": 85,
+            "firstName": "Bernard",
+            "lastName": "Ford",
+            "email": "Bernard.Ford@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         }
       ]
     },
     {
-      "id": 4,
-      "firstName": "Lela",
-      "lastName": "McBride",
-      "staffId": "LOS/TTL/1009",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
+      "id": 2,
+      "firstName": "Innocent",
+      "lastName": "Asiimwe",
+      "email": "Innocent.Asiimwe@andela.com",
+      "roleId": 3,
+      "staffId": "UGD/TTL/2115",
+      "createdAt": "2018-12-06 10:13:21",
+      "updatedAt": "2018-12-06 10:13:21",
       "fellows": [
         {
-          "id": "AND/F/006",
-          "firstName": "Warren",
-          "lastName": "Wilkerson",
+          "email": "Sinmiloluwa.Oloyede@andela.com",
+          "roleId": 1,
           "level": "D0A Simulations",
-          "quantity": 0,
-          "quality": 0,
-          "initiative": 1,
-          "communication": 0.4,
-          "professionalism": 0,
-          "integration": 0
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Fargo",
+          "user": {
+            "id": 41,
+            "firstName": "Sinmiloluwa",
+            "lastName": "Oloyede",
+            "email": "Sinmiloluwa.Oloyede@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/007",
-          "firstName": "Leon",
-          "lastName": "Clayton",
+          "email": "Nicole.Hubbard@andela.com",
+          "roleId": 1,
           "level": "D0A Simulations",
-          "quantity": 1,
-          "quality": 0,
-          "initiative": 1,
-          "communication": 0.9,
-          "professionalism": 0,
-          "integration": 1
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 42,
+            "firstName": "Nicole",
+            "lastName": "Hubbard",
+            "email": "Nicole.Hubbard@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/008",
-          "firstName": "Sue",
-          "lastName": "Buchanan",
+          "email": "Bettie.Trujillo@andela.com",
+          "roleId": 1,
           "level": "D0A Simulations",
-          "quantity": 1,
-          "quality": 1,
-          "initiative": 0.3,
-          "communication": 0.4,
-          "professionalism": 1,
-          "integration": 0
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 43,
+            "firstName": "Bettie",
+            "lastName": "Trujillo",
+            "email": "Bettie.Trujillo@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/009",
-          "firstName": "Bernard",
-          "lastName": "McKenzie",
+          "email": "Rosetta.Weeks@andela.com",
+          "roleId": 1,
           "level": "D0A Simulations",
-          "quantity": 0.4,
-          "quality": 0,
-          "initiative": 0.4,
-          "communication": 1,
-          "professionalism": 0,
-          "integration": 1
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "firstName": "Daniel",
-      "lastName": "Craig",
-      "staffId": "LOS/TTL/1008",
-      "createdAt": "2018-11-13 07:46:48",
-      "updatedAt": "2018-11-13 07:46:48",
-      "fellows": [
-        {
-          "id": "AND/F/010",
-          "firstName": "Erik",
-          "lastName": "Wood",
-          "email": "Erik.Wood@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1008"
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 46,
+            "firstName": "Rosetta",
+            "lastName": "Weeks",
+            "email": "Rosetta.Weeks@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/011",
-          "firstName": "Julia",
-          "lastName": "Tyler",
-          "email": "Julia.Tyler@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1008"
+          "email": "Morton.Johns@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 47,
+            "firstName": "Morton",
+            "lastName": "Johns",
+            "email": "Morton.Johns@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/012",
-          "firstName": "Luella",
-          "lastName": "Santiago",
-          "email": "Luella.Santiago@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1008"
+          "email": "Angelique.Ross@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 48,
+            "firstName": "Angelique",
+            "lastName": "Ross",
+            "email": "Angelique.Ross@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/013",
-          "firstName": "Katherine",
-          "lastName": "Ramsey",
-          "email": "Katherine.Ramsey@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1008"
+          "email": "Victor.Fuentes@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 51,
+            "firstName": "Victor",
+            "lastName": "Fuentes",
+            "email": "Victor.Fuentes@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/014",
-          "firstName": "Jenny",
-          "lastName": "Howard",
-          "email": "Jenny.Howard@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1008"
+          "email": "Bo.Mcneil@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 52,
+            "firstName": "Bo",
+            "lastName": "Mcneil",
+            "email": "Bo.Mcneil@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         },
         {
-          "id": "AND/F/015",
-          "firstName": "Mabelle",
-          "lastName": "Hale",
-          "email": "Mabelle.Hale@andela.com",
-          "createdAt": "2018-11-13 07:48:51",
-          "updatedAt": "2018-11-13 07:48:51",
-          "managerId": "LOS/TTL/1008"
+          "email": "Cody.Mayo@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 53,
+            "firstName": "Cody",
+            "lastName": "Mayo",
+            "email": "Cody.Mayo@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Angel.Mack@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 56,
+            "firstName": "Angel",
+            "lastName": "Mack",
+            "email": "Angel.Mack@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jarred.Michael@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 57,
+            "firstName": "Jarred",
+            "lastName": "Michael",
+            "email": "Jarred.Michael@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jamal.Finley@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 58,
+            "firstName": "Jamal",
+            "lastName": "Finley",
+            "email": "Jamal.Finley@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Cleo.Fleming@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 61,
+            "firstName": "Cleo",
+            "lastName": "Fleming",
+            "email": "Cleo.Fleming@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Marla.Burnett@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 62,
+            "firstName": "Marla",
+            "lastName": "Burnett",
+            "email": "Marla.Burnett@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Geraldine.Miranda@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 63,
+            "firstName": "Geraldine",
+            "lastName": "Miranda",
+            "email": "Geraldine.Miranda@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Ashley.Lee@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 66,
+            "firstName": "Ashley",
+            "lastName": "Lee",
+            "email": "Ashley.Lee@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Thanh.Molina@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 67,
+            "firstName": "Thanh",
+            "lastName": "Molina",
+            "email": "Thanh.Molina@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Beatriz.Beasley@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 68,
+            "firstName": "Beatriz",
+            "lastName": "Beasley",
+            "email": "Beatriz.Beasley@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Wilbert.Brady@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 71,
+            "firstName": "Wilbert",
+            "lastName": "Brady",
+            "email": "Wilbert.Brady@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Darren.Waters@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 72,
+            "firstName": "Darren",
+            "lastName": "Waters",
+            "email": "Darren.Waters@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Jayne.Pollard@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 76,
+            "firstName": "Jayne",
+            "lastName": "Pollard",
+            "email": "Jayne.Pollard@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Sebastian.Blanchard@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 77,
+            "firstName": "Sebastian",
+            "lastName": "Blanchard",
+            "email": "Sebastian.Blanchard@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Lavern.Singleton@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "onTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 78,
+            "firstName": "Lavern",
+            "lastName": "Singleton",
+            "email": "Lavern.Singleton@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Bernadette.Koch@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 81,
+            "firstName": "Bernadette",
+            "lastName": "Koch",
+            "email": "Bernadette.Koch@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
+        },
+        {
+          "email": "Darin.Bowen@andela.com",
+          "roleId": 1,
+          "level": "D0A Simulations",
+          "status": "gteWk5OffTrack",
+          "createdAt": "2018-12-06 10:08:51",
+          "updatedAt": "2018-12-06 10:08:51",
+          "managerId": "UGD/TTL/2115",
+          "project": "Undefined",
+          "user": {
+            "id": 82,
+            "firstName": "Darin",
+            "lastName": "Bowen",
+            "email": "Darin.Bowen@andela.com",
+            "createdAt": "2018-12-06 10:08:50",
+            "updatedAt": "2018-12-06 10:08:50"
+          }
         }
       ]
     }

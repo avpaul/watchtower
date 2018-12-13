@@ -1,20 +1,23 @@
 .manager_card {
-  /* margin-right: 30px; */
+  margin-right: 30px;
   width: 290px;
   margin-top: 30px;
   height: 336px;
   border-radius: 6px;
   background-color: #ffffff;
+  font-size: 18px;
+  font-family: 'DIN Pro Light';
+  font-weight: 300;
 }
 
 .manager_card > .card-header {
   background-color: inherit;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05) !important;
   border-bottom: none;
+  padding-left: 30px;
 }
 
 .manager_card__fellows--number {
-  font-weight: 300;
   color: #303030;
 }
 
@@ -23,10 +26,10 @@
   overflow: scroll;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.03) !important;
   -webkit-overflow-scrolling: touch;
+  padding-left: 24px;
 }
 
 .manager_card .list-group-item {
-  font-weight: 300;
   color: #303030;
   line-height: 23px;
 }
@@ -37,5 +40,6 @@
 
 .manager_card__name {
   color: #0459e4 !important;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'DIN Pro';
 }

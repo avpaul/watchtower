@@ -239,7 +239,7 @@ ShallowWrapper {
         <ErrorBoundary>
           <Unknown>
                     <div
-                              className="filters"
+                              className="filters--dev"
                     >
                               <Unknown>
                                         <Filters
@@ -268,7 +268,11 @@ ShallowWrapper {
                                                   tabIndex={-1}
                                         >
                                                   <Filter
+                                                            characterLength={9}
+                                                            chevronColor=""
                                                             current="Export"
+                                                            dropdownBackgroundColor=""
+                                                            fontSize=""
                                                             getFilter={[Function]}
                                                             items={
                                                                       Array [
@@ -279,6 +283,7 @@ ShallowWrapper {
                                                             search={false}
                                                             title=""
                                                             type="download"
+                                                            width=""
                                                   />
                                         </div>
                               </Unknown>
@@ -596,7 +601,7 @@ ShallowWrapper {
         "props": Object {
           "children": <Unknown>
             <div
-                        className="filters"
+                        className="filters--dev"
             >
                         <Unknown>
                                     <Filters
@@ -625,7 +630,11 @@ ShallowWrapper {
                                                 tabIndex={-1}
                                     >
                                                 <Filter
+                                                            characterLength={9}
+                                                            chevronColor=""
                                                             current="Export"
+                                                            dropdownBackgroundColor=""
+                                                            fontSize=""
                                                             getFilter={[Function]}
                                                             items={
                                                                         Array [
@@ -636,6 +645,7 @@ ShallowWrapper {
                                                             search={false}
                                                             title=""
                                                             type="download"
+                                                            width=""
                                                 />
                                     </div>
                         </Unknown>
@@ -891,7 +901,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="filters"
+                className="filters--dev"
 >
                 <Unknown>
                                 <Filters
@@ -920,7 +930,11 @@ ShallowWrapper {
                                                 tabIndex={-1}
                                 >
                                                 <Filter
+                                                                characterLength={9}
+                                                                chevronColor=""
                                                                 current="Export"
+                                                                dropdownBackgroundColor=""
+                                                                fontSize=""
                                                                 getFilter={[Function]}
                                                                 items={
                                                                                 Array [
@@ -931,6 +945,7 @@ ShallowWrapper {
                                                                 search={false}
                                                                 title=""
                                                                 type="download"
+                                                                width=""
                                                 />
                                 </div>
                 </Unknown>
@@ -1212,7 +1227,11 @@ ShallowWrapper {
                                     tabIndex={-1}
                   >
                                     <Filter
+                                                      characterLength={9}
+                                                      chevronColor=""
                                                       current="Export"
+                                                      dropdownBackgroundColor=""
+                                                      fontSize=""
                                                       getFilter={[Function]}
                                                       items={
                                                                         Array [
@@ -1223,10 +1242,11 @@ ShallowWrapper {
                                                       search={false}
                                                       title=""
                                                       type="download"
+                                                      width=""
                                     />
                   </div>
 </Unknown>,
-                "className": "filters",
+                "className": "filters--dev",
               },
               "ref": null,
               "rendered": Object {
@@ -1261,7 +1281,11 @@ ShallowWrapper {
                       tabIndex={-1}
 >
                       <Filter
+                                            characterLength={9}
+                                            chevronColor=""
                                             current="Export"
+                                            dropdownBackgroundColor=""
+                                            fontSize=""
                                             getFilter={[Function]}
                                             items={
                                                                   Array [
@@ -1272,6 +1296,7 @@ ShallowWrapper {
                                             search={false}
                                             title=""
                                             type="download"
+                                            width=""
                       />
 </div>,
                   ],
@@ -1333,7 +1358,11 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <Filter
+                        characterLength={9}
+                        chevronColor=""
                         current="Export"
+                        dropdownBackgroundColor=""
+                        fontSize=""
                         getFilter={[Function]}
                         items={
                                                 Array [
@@ -1344,6 +1373,7 @@ ShallowWrapper {
                         search={false}
                         title=""
                         type="download"
+                        width=""
 />,
                       "className": "download-button",
                       "onClick": [Function],
@@ -1357,7 +1387,11 @@ ShallowWrapper {
                       "key": "4",
                       "nodeType": "class",
                       "props": Object {
+                        "characterLength": 9,
+                        "chevronColor": "",
                         "current": "Export",
+                        "dropdownBackgroundColor": "",
+                        "fontSize": "",
                         "getFilter": [Function],
                         "items": Array [
                           "as PDF",
@@ -1366,6 +1400,7 @@ ShallowWrapper {
                         "search": false,
                         "title": "",
                         "type": "download",
+                        "width": "",
                       },
                       "ref": null,
                       "rendered": null,
@@ -1966,7 +2001,7 @@ ShallowWrapper {
           <ErrorBoundary>
             <Unknown>
                         <div
-                                    className="filters"
+                                    className="filters--dev"
                         >
                                     <Unknown>
                                                 <Filters
@@ -1995,7 +2030,11 @@ ShallowWrapper {
                                                             tabIndex={-1}
                                                 >
                                                             <Filter
+                                                                        characterLength={9}
+                                                                        chevronColor=""
                                                                         current="Export"
+                                                                        dropdownBackgroundColor=""
+                                                                        fontSize=""
                                                                         getFilter={[Function]}
                                                                         items={
                                                                                     Array [
@@ -2006,6 +2045,7 @@ ShallowWrapper {
                                                                         search={false}
                                                                         title=""
                                                                         type="download"
+                                                                        width=""
                                                             />
                                                 </div>
                                     </Unknown>
@@ -2323,7 +2363,7 @@ ShallowWrapper {
           "props": Object {
             "children": <Unknown>
               <div
-                            className="filters"
+                            className="filters--dev"
               >
                             <Unknown>
                                           <Filters
@@ -2352,7 +2392,11 @@ ShallowWrapper {
                                                         tabIndex={-1}
                                           >
                                                         <Filter
+                                                                      characterLength={9}
+                                                                      chevronColor=""
                                                                       current="Export"
+                                                                      dropdownBackgroundColor=""
+                                                                      fontSize=""
                                                                       getFilter={[Function]}
                                                                       items={
                                                                                     Array [
@@ -2363,6 +2407,7 @@ ShallowWrapper {
                                                                       search={false}
                                                                       title=""
                                                                       type="download"
+                                                                      width=""
                                                         />
                                           </div>
                             </Unknown>
@@ -2618,7 +2663,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="filters"
+                  className="filters--dev"
 >
                   <Unknown>
                                     <Filters
@@ -2647,7 +2692,11 @@ ShallowWrapper {
                                                       tabIndex={-1}
                                     >
                                                       <Filter
+                                                                        characterLength={9}
+                                                                        chevronColor=""
                                                                         current="Export"
+                                                                        dropdownBackgroundColor=""
+                                                                        fontSize=""
                                                                         getFilter={[Function]}
                                                                         items={
                                                                                           Array [
@@ -2658,6 +2707,7 @@ ShallowWrapper {
                                                                         search={false}
                                                                         title=""
                                                                         type="download"
+                                                                        width=""
                                                       />
                                     </div>
                   </Unknown>
@@ -2939,7 +2989,11 @@ ShallowWrapper {
                                         tabIndex={-1}
                     >
                                         <Filter
+                                                            characterLength={9}
+                                                            chevronColor=""
                                                             current="Export"
+                                                            dropdownBackgroundColor=""
+                                                            fontSize=""
                                                             getFilter={[Function]}
                                                             items={
                                                                                 Array [
@@ -2950,10 +3004,11 @@ ShallowWrapper {
                                                             search={false}
                                                             title=""
                                                             type="download"
+                                                            width=""
                                         />
                     </div>
 </Unknown>,
-                  "className": "filters",
+                  "className": "filters--dev",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -2988,7 +3043,11 @@ ShallowWrapper {
                         tabIndex={-1}
 >
                         <Filter
+                                                characterLength={9}
+                                                chevronColor=""
                                                 current="Export"
+                                                dropdownBackgroundColor=""
+                                                fontSize=""
                                                 getFilter={[Function]}
                                                 items={
                                                                         Array [
@@ -2999,6 +3058,7 @@ ShallowWrapper {
                                                 search={false}
                                                 title=""
                                                 type="download"
+                                                width=""
                         />
 </div>,
                     ],
@@ -3060,7 +3120,11 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <Filter
+                          characterLength={9}
+                          chevronColor=""
                           current="Export"
+                          dropdownBackgroundColor=""
+                          fontSize=""
                           getFilter={[Function]}
                           items={
                                                     Array [
@@ -3071,6 +3135,7 @@ ShallowWrapper {
                           search={false}
                           title=""
                           type="download"
+                          width=""
 />,
                         "className": "download-button",
                         "onClick": [Function],
@@ -3084,7 +3149,11 @@ ShallowWrapper {
                         "key": "4",
                         "nodeType": "class",
                         "props": Object {
+                          "characterLength": 9,
+                          "chevronColor": "",
                           "current": "Export",
+                          "dropdownBackgroundColor": "",
+                          "fontSize": "",
                           "getFilter": [Function],
                           "items": Array [
                             "as PDF",
@@ -3093,6 +3162,7 @@ ShallowWrapper {
                           "search": false,
                           "title": "",
                           "type": "download",
+                          "width": "",
                         },
                         "ref": null,
                         "rendered": null,

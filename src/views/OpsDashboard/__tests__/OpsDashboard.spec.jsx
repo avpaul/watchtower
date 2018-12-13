@@ -1,24 +1,22 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
+import ManagerFellowMap from '../../../components/ManagerFellowMap';
 import fellowManagers from '../../../__mocks__/fellowManagers';
+import OpsDashboard from '../index';
+import OpsDashboardMain from '../OpsDashboard';
+import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 
-import { OpsDashboardMain } from '../OpsDashboard';
-import OpsDashboard from '..';
-
-describe('OpsDashboard component', () => {
+describe('OpsDashboard', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
       <MemoryRouter initialEntries={['/dashboard']}>
-        <Router>
-          <OpsDashboard
-            user={{ name: 'test', picture: 'http://' }}
-            role="WATCH_TOWER_OPS"
-          />
-        </Router>
+        <OpsDashboard
+          user={{ name: 'test', picture: 'http://' }}
+          role="WATCH_TOWER_OPS"
+        />
       </MemoryRouter>
     );
   });
@@ -33,7 +31,7 @@ describe('OpsDashboard component', () => {
   });
 });
 
-describe('OpsDashboard component', () => {
+describe('OpsDashboardMain component', () => {
   const setup = () => {
     const spyResolve = jest.fn().mockImplementation(() =>
       Promise.resolve({
@@ -51,7 +49,9 @@ describe('OpsDashboard component', () => {
       getManagers: spyResolve,
       show: true,
       displayManagers: 'LF',
-      managerFellowSortRatio: 'HIGH_TO_LOW'
+      managerFellowSortRatio: 'HIGH_TO_LOW',
+      averageFellowsPerLf: 22,
+      averageFellowsPerTtl: 20
     };
 
     const wrapper = shallow(<OpsDashboardMain {...props} />);
@@ -69,19 +69,18 @@ describe('OpsDashboard component', () => {
   });
 
   it('changes manager to fellow ratio when select changed', () => {
-    const mockedEvent = {
-      target: {
-        value: 'LOW_TO_HIGH'
-      }
-    };
     const { wrapper } = setup();
-    wrapper.setState({ managerFellowSortRatio: 'HIGH_TO_LOW' });
-    const onSelectManagerFellowRatioSpy = jest.spyOn(
-      wrapper.instance(),
-      'onSelectManagerFellowRatio'
+    wrapper.setState({ show: true });
+    const managerFellowSortInput = wrapper
+      .find(ManagerFellowMap)
+      .dive()
+      .find(ManagerFellowSortInput);
+
+    managerFellowSortInput.simulate(
+      'change',
+      'lfFellowRatio',
+      'Fellow Ratio, Low to High'
     );
-    wrapper.instance().onSelectManagerFellowRatio(mockedEvent);
-    expect(onSelectManagerFellowRatioSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.state().managerFellowSortRatio).toBe('LOW_TO_HIGH');
   });
 

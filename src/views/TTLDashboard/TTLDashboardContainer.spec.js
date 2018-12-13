@@ -6,7 +6,9 @@ import TTLDashboardContainer, {
   mapStateToProps
 } from './TTLDashboardContainer';
 
-const initialState = {};
+const initialState = {
+  user: {}
+};
 const mockStore = configureStore();
 let store;
 

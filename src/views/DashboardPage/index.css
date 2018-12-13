@@ -1,6 +1,7 @@
-.filters {
+.filters--dev {
   width: 90%;
-  margin: 15vh 3.75em;
+  display: flex;
+  margin: 12vh 3.75em 1em 3.75em;
 }
 
 .download-button {

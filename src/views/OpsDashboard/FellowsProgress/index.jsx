@@ -59,6 +59,7 @@ export class FellowsProgress extends Component {
           items={locationsAll}
           current={location}
           getFilter={this.getFilter}
+          chevronColor="#808FA3"
         />
       </div>
       <div>
@@ -70,6 +71,7 @@ export class FellowsProgress extends Component {
           items={['All', ...ttlsAvilable]}
           getFilter={this.getFilter}
           type="ttl"
+          chevronColor="#808FA3"
         />
       </div>
     </Fragment>

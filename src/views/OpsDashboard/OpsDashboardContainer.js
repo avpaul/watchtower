@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { OpsDashboardMain } from './OpsDashboard';
+import OpsDashboardMain from './OpsDashboard';
 import getManagers from '../../redux/actionCreators/managerActions';
 
 export const mapStateToProps = ({ managers }) => ({

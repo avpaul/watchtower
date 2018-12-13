@@ -36,7 +36,7 @@ const ManagerFellowMap = ({
         </button>
         <ManagerFellowSortInput onChange={onSortManagers} />
       </div>
-      <div className="row">
+      <div className="row" style={{ marginLeft: '1px' }}>
         {sortedManagers.map(manager => (
           <ManagerMapCard key={manager.id.toString()} manager={manager} />
         ))}
