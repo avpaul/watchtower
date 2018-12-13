@@ -7,7 +7,7 @@
   display: table;
   margin: 0 3.75em;
   width: 90%;
-  font-family: 'DIN Pro Light' Arial, Helvetica, sans-serif;
+  font-family: 'DIN Pro Light';
   font-weight: 100;
   border: 0 none black;
   background-color: transparent;
@@ -23,6 +23,20 @@
 }
 
 @media screen and (min-width: 1800px) {
+  .dashboard-table {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .contain {
+    margin: 0 auto;
+  }
+  .inner-addon {
+    margin-left: 10% !important;
+  }
   .dashboard-table {
     width: 80%;
     margin: 0 auto;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import classnames from 'classnames';
-import NavArrow from '../Carousel/NavArrow';
+import { carouselOptions } from '../../utils';
 import './Filters.css';
 import FilterCard from './FilterCard';
 import * as filterTypes from '../../redux/constants/fellowFilters';
@@ -48,28 +48,6 @@ class Filters extends Component {
     return cardArray;
   };
 
-  carouselOptions = () => {
-    const options = {
-      className: 'contain row',
-      focusOnSelect: true,
-      infinite: false,
-      slidesToShow: 3,
-      swipeToSlide: true,
-      nextArrow: (
-        <NavArrow buttonClass="slick-next" iconClass="fa-angle-right" />
-      ),
-      prevArrow: (
-        <NavArrow buttonClass="slick-prev" iconClass="fa-angle-left" />
-      ),
-      responsive: [
-        { breakpoint: 900, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-        { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 2 } },
-        { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
-      ]
-    };
-    return options;
-  };
-
   /**
    * Fetch new data based on filter
    * @param { Object } - The event that happens.
@@ -97,7 +75,7 @@ class Filters extends Component {
   render() {
     const { filter } = this.props;
     const cardArray = this.cardArray();
-    const settings = this.carouselOptions();
+    const settings = carouselOptions(3);
     return (
       <Slider {...settings}>
         {cardArray.map(({ filterId, cardDetails }) => (

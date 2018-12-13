@@ -68,8 +68,7 @@ ShallowWrapper {
           onClick={[Function]}
 />,
       ],
-      "className": "contain row",
-      "focusOnSelect": true,
+      "className": "contain",
       "infinite": false,
       "nextArrow": <NavArrow
         buttonClass="slick-next"
@@ -81,27 +80,21 @@ ShallowWrapper {
 />,
       "responsive": Array [
         Object {
-          "breakpoint": 900,
+          "breakpoint": 1000,
           "settings": Object {
             "slidesToScroll": 1,
             "slidesToShow": 2,
           },
         },
         Object {
-          "breakpoint": 600,
-          "settings": Object {
-            "slidesToScroll": 2,
-            "slidesToShow": 2,
-          },
-        },
-        Object {
-          "breakpoint": 480,
+          "breakpoint": 700,
           "settings": Object {
             "slidesToScroll": 1,
             "slidesToShow": 1,
           },
         },
       ],
+      "rows": 1,
       "slidesToShow": 3,
       "swipeToSlide": true,
     },
@@ -206,8 +199,7 @@ ShallowWrapper {
             onClick={[Function]}
 />,
         ],
-        "className": "contain row",
-        "focusOnSelect": true,
+        "className": "contain",
         "infinite": false,
         "nextArrow": <NavArrow
           buttonClass="slick-next"
@@ -219,27 +211,21 @@ ShallowWrapper {
 />,
         "responsive": Array [
           Object {
-            "breakpoint": 900,
+            "breakpoint": 1000,
             "settings": Object {
               "slidesToScroll": 1,
               "slidesToShow": 2,
             },
           },
           Object {
-            "breakpoint": 600,
-            "settings": Object {
-              "slidesToScroll": 2,
-              "slidesToShow": 2,
-            },
-          },
-          Object {
-            "breakpoint": 480,
+            "breakpoint": 700,
             "settings": Object {
               "slidesToScroll": 1,
               "slidesToShow": 1,
             },
           },
         ],
+        "rows": 1,
         "slidesToShow": 3,
         "swipeToSlide": true,
       },

@@ -1,4 +1,6 @@
-import truncate, { getOutputStatus } from '.';
+import React from 'react';
+import NavArrow from '../components/Carousel/NavArrow';
+import truncate, { getOutputStatus, carouselOptions } from '.';
 
 describe('Truncate string', () => {
   it('trabcates a string', () => {
@@ -40,5 +42,27 @@ describe('LMS output status utility', () => {
     output.submitted = false;
     const statusColor = getOutputStatus(output);
     expect(statusColor).toEqual('orange');
+  });
+
+  it('returns correct carousel settings', () => {
+    const options = {
+      className: 'contain',
+      infinite: false,
+      slidesToShow: 4,
+      swipeToSlide: true,
+      rows: 1,
+      nextArrow: (
+        <NavArrow buttonClass="slick-next" iconClass="fa-angle-right" />
+      ),
+      prevArrow: (
+        <NavArrow buttonClass="slick-prev" iconClass="fa-angle-left" />
+      ),
+      responsive: [
+        { breakpoint: 1000, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 700, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+      ]
+    };
+
+    expect(carouselOptions(4)).toEqual(options);
   });
 });

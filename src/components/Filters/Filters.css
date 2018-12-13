@@ -87,7 +87,7 @@
 .contain {
   width: 100%;
   padding-right: 15px;
-  padding-left: 60px;
+  padding-left: 65px;
   margin-right: auto;
 }
 
@@ -108,30 +108,70 @@
   top: 40%;
   cursor: pointer;
   position: absolute;
-  z-index: 10000;
+  z-index: 1045;
 }
 
 .slick-prev {
   background-color: #0459e4 !important;
   color: #fff;
   display: inline;
-  left: 15px;
+  left: -1%;
 }
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-next {
-  position: absolute;
-  right: -23px;
-  top: 40%;
+
+.slick-next {
   background-color: #0459e4 !important;
   color: #fff;
   display: inline;
   right: -15px;
 }
 
+.map-card-row {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 4.166666%;
+  padding-right: 4.166666%;
+  margin-bottom: 25px;
+}
+
+.map-card-row > .contain {
+  padding-left: 0px;
+}
+
+.map-card-row > .contain > .slick-arrow {
+  top: 50%;
+}
+
+.map-card-wrapper h5 {
+  color: #0459e4;
+  font-weight: bolder;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  line-height: 23px;
+}
+.map-card {
+  margin: 5px 20px 30px 0px;
+  border: 1px solid white;
+}
+
+.map-card .number {
+  padding: 0 2rem 1.375rem 0;
+  border: none;
+  width: 100%;
+  margin: 0;
+}
+
 @media screen and (max-width: 700px) {
   .card {
     margin-left: 1em;
     margin-right: 2em;
+  }
+
+  .slick-slide {
+    padding-right: 1%;
+  }
+  .map-card-row {
+    padding-left: 2.166666%;
   }
 }
 
@@ -142,7 +182,7 @@
   }
 
   .slick-track {
-    width: 1200px !important;
+    width: 1500px !important;
   }
   .slick-slide {
     width: initial !important;
@@ -151,7 +191,7 @@
 
 @media screen and (min-width: 480px) {
   .slick-track {
-    width: 1100px !important;
+    width: 1300px !important;
   }
   .slick-slide {
     width: initial !important;
@@ -176,31 +216,4 @@
   .map-card-wrapper {
     margin: 0 auto;
   }
-}
-
-.map-card-row {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 4.166666%;
-  padding-right: 4.166666%;
-  margin-bottom: 25px;
-}
-
-.map-card-wrapper h5 {
-  color: #0459e4;
-  font-weight: bolder;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  line-height: 23px;
-}
-.map-card {
-  margin: 5px 20px 30px 0px;
-  border: 1px solid white;
-}
-.map-card .number {
-  padding: 0 2rem 1.375rem 0;
-  border: none;
-  width: 100%;
-  margin: 0;
 }

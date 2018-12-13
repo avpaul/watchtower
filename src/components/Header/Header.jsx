@@ -234,12 +234,12 @@ export class Header extends Component {
             </span>
             <div id="profile-menu" className="dropdown">
               <div
-                className="d-flex flex-row align-items-center pr-5 .dropdown-toggle"
+                className="d-flex flex-row align-items-center .dropdown-toggle"
                 data-toggle="dropdown"
               >
                 <div className="d-flex pr-3 align-items-center">
                   <img className="user__image" src={user.picture} alt="User" />
-                  <span className="user__text d-none d-sm-inline-block d-md-inline-block d-lg-inline-block">
+                  <span className="user__text d-none d-sm-inline-block d-md-inline-block d-lg-inline-block text-center">
                     {truncate(user.name, 14)}
                   </span>
                 </div>

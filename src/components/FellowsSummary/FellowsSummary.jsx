@@ -1,23 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
+import { carouselOptions } from '../../utils';
 import FilterCard from '../Filters/FilterCard';
+import FellowSummaryLabel from '../FellowSummaryLabel';
 import './FellowsSummary.css';
 
 const FellowsSummary = ({ fellowsSummary, handleCardClick }) => (
   <div className="ops-dashboard__fellows-summary">
-    <p className="ops-dashboard__fellow-summary-text text-uppercase mb-0">
-      Fellows Summary
-    </p>
+    <FellowSummaryLabel />
     <div className="row ops-dashboard__filter">
-      {fellowsSummary.map(fellowSummary => (
-        <FilterCard
-          key={fellowSummary.id}
-          filterId={fellowSummary.id}
-          cardDetails={fellowSummary}
-          className="card"
-          onClick={handleCardClick}
-        />
-      ))}
+      <Slider {...carouselOptions(3)}>
+        {fellowsSummary.map(fellowSummary => (
+          <FilterCard
+            key={fellowSummary.id}
+            filterId={fellowSummary.id}
+            cardDetails={fellowSummary}
+            className="card"
+            onClick={handleCardClick}
+          />
+        ))}
+      </Slider>
     </div>
   </div>
 );

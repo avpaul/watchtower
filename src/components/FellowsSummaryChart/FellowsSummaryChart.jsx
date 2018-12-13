@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FellowChart from '../FellowChart';
 import FellowsSummary from '../FellowsSummary';
@@ -58,7 +58,7 @@ class FellowsSummaryChart extends Component {
     const { fellowCountHistory } = this.props;
     const { data } = this.updateFellowSummary(selected);
     return (
-      <div>
+      <Fragment>
         <FellowsSummary handleCardClick={this.handleCardClick} />
         {showChart && (
           <FellowChart
@@ -69,7 +69,7 @@ class FellowsSummaryChart extends Component {
             data={data}
           />
         )}
-      </div>
+      </Fragment>
     );
   }
 }

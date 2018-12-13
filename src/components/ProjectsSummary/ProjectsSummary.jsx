@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
+import { carouselOptions } from '../../utils';
 import FilterCard from '../Filters/FilterCard';
+import FellowSummaryLabel from '../FellowSummaryLabel';
 import '../FellowsSummary/FellowsSummary.css';
 
 const formatProjects = projects => {
@@ -22,19 +25,19 @@ const ProjectsSummary = props => {
 
   return (
     <div className="ops-dashboard__fellows-summary">
-      <p className="text-uppercase mb-0 ops-dashboard__fellow-summary-text">
-        FELLOWS SUMMARY
-      </p>
+      <FellowSummaryLabel />
       <div className="row ops-dashboard__filter">
-        {projectsCard.map(projectCard => (
-          <FilterCard
-            key={projectCard.title}
-            filterId={projectCard.title}
-            cardDetails={projectCard}
-            className="card"
-            onClick={handleCardClick}
-          />
-        ))}
+        <Slider {...carouselOptions(4)}>
+          {projectsCard.map(projectCard => (
+            <FilterCard
+              key={projectCard.title}
+              filterId={projectCard.title}
+              cardDetails={projectCard}
+              className="card"
+              onClick={handleCardClick}
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );

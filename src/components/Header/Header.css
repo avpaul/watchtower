@@ -65,11 +65,9 @@
 
 .user__text {
   height: 23px;
-  width: 101px;
   color: #838383;
   font-size: 18px;
   line-height: 23px;
-  margin-right: 20px;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -80,6 +78,19 @@
   color: #838383;
   margin-top: 8px;
   cursor: pointer;
+}
+
+/* Search form */
+.fellow-search {
+  height: 32px;
+  width: 224px;
+  border: 1px solid #bcbcbc;
+  opacity: 0.4;
+  border-radius: 50px;
+  background: url(../../static/Loupe.svg) no-repeat 95% 7px;
+  padding-right: 40px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 /* Notification */
@@ -292,4 +303,55 @@ div.clear {
   font-size: 85%;
   color: #757575;
   padding: 2px;
+}
+
+/* Mobile and Tablet screen */
+@media screen and (max-width: 767px) {
+  #nav > .navbar {
+    padding: 0.5em 2em !important;
+  }
+  .notification {
+    margin: 0 20.5px;
+  }
+  .navlink {
+    outline: 0;
+  }
+  .fellow-search {
+    background: none;
+  }
+  span.watchtower {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .navlink {
+    margin: 0 auto !important;
+  }
+  .menulink {
+    margin-right: 25px;
+  }
+  #profile-menu > div:first-child {
+    padding: 0px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navlink {
+    font-size: 0 !important;
+    margin-left: 40px !important;
+  }
+  .navicon {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .menulink {
+    font-size: 1.3em;
+  }
+  #profile-menu {
+    margin-right: 5em;
+  }
 }

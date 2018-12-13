@@ -72,12 +72,12 @@
         }
       });
 
-      viewPortChange = mq => {
+      viewPortChange = mediaQuery => {
         const levelColumns = $(
           '.dashboard-table__row > .dashboard-table__cell:nth-child(2)'
         );
 
-        if (mq.matches) {
+        if (mediaQuery.matches) {
           Array.prototype.forEach.call(levelColumns, displayLevel);
         } else {
           Array.prototype.forEach.call(levelColumns, displayLevelCode);

@@ -48,7 +48,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         <Connect(FellowsSummary)
@@ -72,13 +72,13 @@ ShallowWrapper {
       },
       false,
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           <Connect(FellowsSummary)
@@ -102,7 +102,7 @@ ShallowWrapper {
         },
         false,
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

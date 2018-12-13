@@ -6,6 +6,11 @@
 .ops-dashboard__filter {
   justify-content: center;
   margin-bottom: 28px;
+  padding-right: 4.166666%;
+}
+
+.ops-dashboard__filter > .contain {
+  padding-left: 0px;
 }
 
 .ops-dashboard__fellow-summary-text {
@@ -15,7 +20,6 @@
   font-weight: bold;
   line-height: 26px;
   margin-top: 3.75rem;
-  text-align: center;
 }
 
 .ops-dashboard__filter .number {
