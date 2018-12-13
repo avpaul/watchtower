@@ -75,6 +75,21 @@ export default {
     fellow: {},
     error: ''
   },
+  notification: {
+    loading: false,
+    notification: {},
+    error: ''
+  },
+  unreadnotification: {
+    loading: false,
+    unreadnotification: {},
+    error: ''
+  },
+  readnotification: {
+    loading: false,
+    readnotification: {},
+    error: ''
+  },
   fellowsSummary: {
     loading: false,
     fellowsSummaryToday: {},

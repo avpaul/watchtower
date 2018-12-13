@@ -14,6 +14,9 @@ import ttlProjectsReducer from './ttlProjectsReducer';
 import fellowBioReducer from './fellowBio';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
 import fellowsSummary from './fellowsummary';
+import fellowNotificationReducer from './fellowNotificationReducer';
+import fellowUnreadNotificationReducer from './fellowUnreadNotificationReducer';
+import fellowReadNotificationReducer from './fellowReadNotificationReducer';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -27,6 +30,9 @@ const rootReducer = combineReducers({
   managerFellows: managerFellowReducer,
   ttlProjects: ttlProjectsReducer,
   fellow: fellowBioReducer,
+  notification: fellowNotificationReducer,
+  unreadnotification: fellowUnreadNotificationReducer,
+  readnotification: fellowReadNotificationReducer,
   fellowLmsRatings: fellowLmsRatingsReducer,
   fellowDevPulse: fellowDevPulseReducer,
   fellowsSummary

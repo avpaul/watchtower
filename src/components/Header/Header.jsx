@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import mapValues from 'lodash.mapvalues';
 import PropTypes from 'prop-types';
 import './Header.css';
+import { connect } from 'react-redux';
+import moment from 'moment';
 import Menu from './Menu';
 import { getMenuItems } from './navlinks';
 import watchTowerLogo from '../../static/Logo.svg';
@@ -13,16 +15,19 @@ import OffTrackIcon from '../../static/OffTrack.svg';
 import OnTrackIcon from '../../static/OnTrack.svg';
 import { Modal } from '../Notifications/Modal';
 import { splitDate, groupedDate } from '../../services/helper';
-
-import fellows from '../../__mocks__/Dummy';
+import getFellowNotification from '../../redux/actionCreators/fellowNotifications';
+import getFellowUnreadNotification from '../../redux/actionCreators/fellowNotificationsUnread';
+import getFellowReadNotification from '../../redux/actionCreators/fellowNotificationsRead';
+import renderArchiveHeader from '../Notifications/ArchiveHeader';
+import renderNotificationHeader from '../Notifications/NotificationHeader';
+import renderMessageHeader from '../Notifications/MessageHeader';
 
 /**
  * Header UI Component
  *
  * @returns {JSX} React component
  */
-
-class Header extends Component {
+export class Header extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -31,8 +36,15 @@ class Header extends Component {
         dashboard: true,
         settings: false
       },
-      show: false
+      show: false,
+      viewNotifications: true
     };
+  }
+
+  componentDidMount() {
+    const { user, getNotification, getUnreadNotification } = this.props;
+    getNotification(user.email);
+    getUnreadNotification(user.email);
   }
 
   showModal = () => {
@@ -41,6 +53,12 @@ class Header extends Component {
 
   hideModal = () => {
     this.setState({ show: false });
+  };
+
+  clearNotification = () => {
+    const { getReadNotification, user, getUnreadNotification } = this.props;
+    getReadNotification(user.email);
+    getUnreadNotification(user.email);
   };
 
   handleMenuClick = event => {
@@ -53,37 +71,33 @@ class Header extends Component {
     }
   };
 
-  renderNotification = () => {
-    fellows.map(fellow => <div key={fellow.id}>{fellow.firstName}</div>);
+  handleClick = () => {
+    this.setState({ viewNotifications: false });
   };
 
-  renderModalHeader = () => (
-    <div className="handle-close">
-      <button
-        type="button"
-        className="close"
-        onClick={this.hideModal}
-        aria-label="Close"
-      >
-        <span aria-hidden="true">
-          <b>&times;</b>
-        </span>
-      </button>
-      <div className="modal-notification">
-        <b>Notifications</b>
-        <span className="clear">View Archives</span>
+  handleBack = () => {
+    this.setState({ viewNotifications: true });
+  };
+
+  renderModalHeader = () => {
+    const { viewNotifications } = this.state;
+    return (
+      <div>
+        {!viewNotifications
+          ? renderArchiveHeader(this.hideModal, this.handleBack)
+          : renderNotificationHeader(this.hideModal, this.handleClick)}
       </div>
-    </div>
-  );
+    );
+  };
 
   /**
    * function to return messages based on the date a message was created
    * @function {@param}
-   * @return
+   * @returns
    */
-  renderOrder = () => {
+  renderOrder = notifications => {
     const results = {};
-    fellows.forEach(datum => {
+    Object.values(notifications).forEach(datum => {
       const ordering = groupedDate(datum.created_at);
       if (!results[ordering]) {
         results[ordering] = [];
@@ -94,72 +108,105 @@ class Header extends Component {
   };
 
   /**
-   * function to return the message header
-   * @function
+   * function to return icon type
+   * @function {@param, @param}
+   * @returns
    */
-  renderMessageHeader = () => (
-    <div>
-      <button type="button" className="close" aria-label="Close">
-        <span aria-hidden="false">&times;</span>
-      </button>
-    </div>
-  );
-
-  renderIcons = notification => {
+  renderIcons = (notification, notifications) => {
+    const { viewNotifications } = this.state;
     const statusImage = {
       src: OffTrackIcon,
-      alt: 'offTrack'
+      alt: 'offTrack' || 'gteWk5OffTrack'
     };
-    if (notification.data.status === 'onTrack') {
+    const status = !Object.keys(notifications).length
+      ? ' '
+      : notification.data.status;
+    if (status === 'onTrack') {
       statusImage.src = OnTrackIcon;
       statusImage.alt = 'onTrack';
     }
+    const message = !Object.keys(notification).length
+      ? 'No new notifications yet'
+      : notification.data.message;
     return (
       <div className="text-sizing">
-        <img src={statusImage.src} alt={statusImage.alt} />
-        {splitDate('2018-10-29 14:34:03')} <br />
-        {notification.data.message}
+        <img
+          src={statusImage.src}
+          alt={statusImage.alt}
+          className="img-padding"
+        />
+        {viewNotifications
+          ? splitDate(notification.created_at)
+          : moment(notification.created_at, 'YYYY-MM-DD hh:mm a').format(
+              'MMM Do,YYYY - hh:mm a'
+            )}
+        <br />
+        {message}
       </div>
     );
   };
 
   /**
-   * function that returns the modal containing the rendered messages.
-   * @function
+   * returns thenotification modal
+   * @function {@param, @param, @param}
+   * @returns
    */
-  renderModal = () => {
-    const { show } = this.state;
-    const ordered = this.renderOrder();
-    return (
-      <Modal show={show} handleClose={this.hideModal} fellows={fellows}>
-        {this.renderModalHeader()}
-        {Object.keys(ordered).map(key => (
-          <div className="message-body">
-            <div className="message-date" key={key}>
-              <span className="left">{key}</span>
-              <span className="right">Clear All </span>
-            </div>
-            {ordered[key].map(notification => (
-              <div key={notification.id} className="modal-text">
-                <div className="message-header">
-                  {this.renderMessageHeader()}
-                </div>
-                <div>{this.renderIcons(notification)}</div>
-              </div>
-            ))}
+  renderNotificationModal = (ordered, show, unreadnotifications) => (
+    <Modal show={show} handleClose={this.hideModal}>
+      {this.renderModalHeader()}
+      {Object.keys(ordered).map(key => (
+        <div className="message-body">
+          <div className="message-date" key={key}>
+            <span className="left">{key}</span>
+            <span
+              className="right clear-cursor"
+              aria-hidden="true"
+              onClick={this.clearNotification}
+            >
+              Clear All{' '}
+            </span>
           </div>
-        ))}
-      </Modal>
+          {ordered[key].map(notification => (
+            <div key={notification.id} className="modal-text">
+              <div className="message-header">{renderMessageHeader()}</div>
+              <div>{this.renderIcons(notification, unreadnotifications)}</div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </Modal>
+  );
+
+  renderArchivesModal = (show, notifications) => (
+    <Modal show={show} handleClose={this.hideModal}>
+      {this.renderModalHeader()}
+      {Object.values(notifications).map(notification => (
+        <div className="modal-text text-sizing">
+          <div>{this.renderIcons(notification, notifications)}</div>
+        </div>
+      ))}
+    </Modal>
+  );
+
+  renderModal = (notifications, unreadnotifications) => {
+    const { show, viewNotifications } = this.state;
+    const ordered = this.renderOrder(unreadnotifications);
+    return (
+      <div>
+        {viewNotifications &&
+          this.renderNotificationModal(ordered, show, unreadnotifications)}
+        {!viewNotifications && this.renderArchivesModal(show, notifications)}
+      </div>
     );
   };
 
   render() {
     const { activeItems } = this.state;
-    const { user, role } = this.props;
+    const { user, role, notifications, unreadnotifications } = this.props;
     return (
       <div id="nav" className="header">
         <LogOutModal />
-        {this.renderModal()}
+        {this.renderModal(notifications, unreadnotifications)}
         <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
           <Link to="/dashboard" className="logo">
             <img
@@ -223,13 +270,29 @@ class Header extends Component {
     );
   }
 }
-
 Header.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired
   }).isRequired,
-  role: PropTypes.string.isRequired
+  role: PropTypes.string.isRequired,
+  getNotification: PropTypes.func.isRequired,
+  getUnreadNotification: PropTypes.func.isRequired,
+  getReadNotification: PropTypes.func.isRequired,
+  notifications: PropTypes.shape({}).isRequired,
+  unreadnotifications: PropTypes.shape({}).isRequired,
+  readnotifications: PropTypes.shape({}).isRequired
 };
-
-export default Header;
+const mapStateToProps = state => ({
+  notifications: state.notification.notification,
+  unreadnotifications: state.unreadnotification.unreadnotification,
+  readnotifications: state.readnotification.readnotification
+});
+export const HeaderConnected = connect(
+  mapStateToProps,
+  {
+    getNotification: getFellowNotification,
+    getUnreadNotification: getFellowUnreadNotification,
+    getReadNotification: getFellowReadNotification
+  }
+)(Header);
