@@ -24,14 +24,12 @@ export class FellowsProgress extends Component {
     const { getFellowProgress, ttls } = this.props;
     const { location, ttl } = this.state;
     if (type === 'ttl') {
-      const result = ttls.ttls.filter(
-        ttlitem => `${ttlitem.firstName} ${ttlitem.lastName}` === value
-      );
+      const result = ttls.ttls.filter(ttlitem => `${ttlitem.name}` === value);
       if (result.length !== 0) {
         this.setState({
           ttl: result[0]
         });
-        getFellowProgress({ ttl: result[0].staffId, location });
+        getFellowProgress({ ttl: result[0].id, location });
       } else {
         this.setState({
           ttl: 'All'
@@ -44,7 +42,7 @@ export class FellowsProgress extends Component {
       this.setState({
         location: value
       });
-      getFellowProgress({ location: value, ttl: ttl.staffId });
+      getFellowProgress({ location: value, ttl: ttl.id });
     }
   };
 
@@ -99,12 +97,9 @@ export class FellowsProgress extends Component {
     const dob = fellowsProgress.data.fellowsProgressD0B;
 
     const ttlsAvailable =
-      ttls.ttls.length !== 0
-        ? ttls.ttls.map(ttla => `${ttla.firstName} ${ttla.lastName}`)
-        : [];
+      ttls.ttls.length !== 0 ? ttls.ttls.map(ttla => `${ttla.name}`) : [];
     const locationsAll = ['All', ...locations.locations];
-    const currentTTL =
-      ttl !== 'All' ? `${ttl.firstName} ${ttl.lastName}` : 'All';
+    const currentTTL = ttl !== 'All' ? `${ttl.name}` : 'All';
 
     const fellowDataLoading = fellowsProgress.loading;
     return (

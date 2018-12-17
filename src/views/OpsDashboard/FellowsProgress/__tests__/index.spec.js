@@ -8,9 +8,8 @@ describe('FellowProgress', () => {
     ttls: {
       ttls: [
         {
-          staffId: 'UGD/TTL/2135',
-          firstName: 'Test',
-          lastName: 'TTL',
+          id: 'UGD/TTL/2135',
+          name: 'Test TTL',
           email: 'test.ttl@andela.com',
           role: 'Technical Team Lead'
         }
