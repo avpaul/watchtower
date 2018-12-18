@@ -20,7 +20,7 @@ export class DevPulseChart extends Component {
       <div className="pulse-chart-container">
         <div className="pulse-chart__title">DEVPULSE</div>
         <div className="pulse-chart">
-          <Chart data={ratings} averageRatings={averageRatings} />
+          <Chart data={ratings.reverse()} averageRatings={averageRatings} />
         </div>
       </div>
     );

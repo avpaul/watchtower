@@ -120,10 +120,7 @@ class Filter extends Component {
       chevronColor,
       dropdownBackgroundColor
     } = this.props;
-    let { items } = this.state;
-    if (search) {
-      items = items.slice(0, 4);
-    }
+    const { items } = this.state;
 
     return (
       <Fragment>
