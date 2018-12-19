@@ -78,13 +78,13 @@ export class FellowsProgress extends Component {
   renderCharts = (dob, doa, fellowDataLoading) => (
     <Fragment>
       <StackedBarChart
-        title="DOB Fellows"
-        data={dob}
+        title="DOA Fellows"
+        data={doa}
         loading={fellowDataLoading}
       />
       <StackedBarChart
-        title="DOA Fellows"
-        data={doa}
+        title="DOB Fellows"
+        data={dob}
         loading={fellowDataLoading}
       />
     </Fragment>
