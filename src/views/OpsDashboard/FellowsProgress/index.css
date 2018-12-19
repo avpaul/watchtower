@@ -78,7 +78,7 @@
   background-color: #fff;
   font-size: 15px;
   font-family: 'DIN Pro Light';
-  height: 200px;
+  max-height: 200px;
   overflow: auto;
 }
 .open__list_item {
