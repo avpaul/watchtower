@@ -66,7 +66,7 @@ export class FellowsProgress extends Component {
           search
           current={currentTTL}
           title="TTL/LF Filter"
-          items={['All', ...ttlsAvilable]}
+          items={['All', ...ttlsAvilable.sort()]}
           getFilter={this.getFilter}
           type="ttl"
           chevronColor="#808FA3"
@@ -98,7 +98,7 @@ export class FellowsProgress extends Component {
 
     const ttlsAvailable =
       ttls.ttls.length !== 0 ? ttls.ttls.map(ttla => `${ttla.name}`) : [];
-    const locationsAll = ['All', ...locations.locations];
+    const locationsAll = ['All', ...locations.locations.sort()];
     const currentTTL = ttl !== 'All' ? `${ttl.name}` : 'All';
 
     const fellowDataLoading = fellowsProgress.loading;

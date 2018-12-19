@@ -44,7 +44,7 @@ class TTLFellowsProgress extends Component {
   render() {
     const { location } = this.state;
     const { fellowsProgress, locations } = this.props;
-    const locationsAll = ['All', ...locations.locations];
+    const locationsAll = ['All', ...locations.locations.sort()];
 
     const fellowDataLoading = fellowsProgress.loading;
     return (
