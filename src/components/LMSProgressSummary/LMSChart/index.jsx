@@ -6,36 +6,71 @@ import LMSChartOverview from './LMSChartOverview';
 import Timeline from './Timeline';
 import './LMSChart.css';
 
-const LMSChart = ({ data }) => {
-  const chartWidth = 1480;
-
-  // Convert string dates to date objects
-  data.outputs.map(output => {
-    output.dueDate = new Date(output.dueDate);
-    return output;
-  });
-
-  // Get Outputs Suggested For Submission
-  const today = new Date();
-  const outputsDue = data.outputs.filter(output => output.dueDate < today);
-
-  // Get Outputs Satisfied
-  const outputsSubmittedGreaterThan1 = outputsDue.filter(
-    output => output.score >= 2
-  );
+const chartOverview = (lmsSummary, allOutputs) => {
+  const numOfOutputsSubmitted = lmsSummary.data
+    ? lmsSummary.data[0].number_of_outputs_submitted
+    : 0;
+  const numOfOutputsGreaterThanOne = lmsSummary.data
+    ? lmsSummary.data[0].number_of_outputs_satisfied
+    : 0;
+  const numOfOutputsSuggested = allOutputs ? allOutputs.length : 0;
   const chartOverviewProps = {
-    numOfOutputsGreaterThanOne: outputsSubmittedGreaterThan1.length,
-    numOfOutputsSuggested: outputsDue.length,
-    numOfTotalOutputs: data.outputs.length
+    numOfOutputsGreaterThanOne,
+    numOfOutputsSuggested,
+    numOfOutputsSubmitted
   };
+  return chartOverviewProps;
+};
+
+const sortOutputs = allSubmissions => {
+  const allOutputs = allSubmissions
+    ? allSubmissions.map(output => {
+        output.due_date = new Date(output.due_date);
+        return output;
+      })
+    : 0;
+  const sortedOutputs = allOutputs
+    ? allOutputs.sort((item1, item2) => item1.due_date - item2.due_date)
+    : '';
+
+  return sortedOutputs;
+};
+
+const formatOutputs = outputs => {
+  const allSubmissionsFormatted = outputs
+    ? outputs.map(item =>
+        //eslint-disable-line
+        ({
+          ...item,
+          title:
+            item.name.slice(-4) === 'Quiz' ? 'Quiz' : item.name.substring(7, 10)
+        })
+      )
+    : '';
+  return allSubmissionsFormatted;
+};
+
+const LMSChart = props => {
+  const { lmsSummary, lmsSubmissions } = props;
+  const chartWidth = 1480;
+  const allSubmissions = lmsSubmissions
+    ? Object.values(lmsSubmissions.outputs)
+    : '';
+  const today = new Date();
+  const allSubmissionsFormatted = formatOutputs(allSubmissions);
+  const allOutputs = sortOutputs(allSubmissionsFormatted);
+  const outputsDue = allSubmissionsFormatted
+    ? allSubmissionsFormatted.filter(output => output.due_date < today)
+    : '';
+  const chartOverviewProps = chartOverview(lmsSummary, allOutputs);
 
   return (
-    <div className="row" style={{ 'overflow-x': 'scroll' }}>
+    <div className="row" style={{ overflowX: 'scroll' }}>
       <div className="lms-chart">
         <LMSChartOverview {...chartOverviewProps} />
         <Timeline
-          allOutputs={data.outputs}
-          outputsSuggested={outputsDue}
+          allOutputs={allOutputs}
+          outputsDue={outputsDue}
           width={chartWidth}
         />
       </div>
@@ -44,7 +79,10 @@ const LMSChart = ({ data }) => {
 };
 
 LMSChart.propTypes = {
-  data: PropTypes.shape(PropTypes.object).isRequired
+  lmsSubmissions: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Object)
+  ]).isRequired
 };
 
 export default LMSChart;

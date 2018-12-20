@@ -11,8 +11,14 @@ export const getScoreStatus = score => (score > 1 ? 'green' : 'red');
 export const getReviewStatus = (isReviewed, score) =>
   isReviewed ? getScoreStatus(score) : 'grey';
 
-export const getOutputStatus = output =>
-  output.submitted ? getReviewStatus(output.reviewed, output.score) : 'orange';
+export const getOutputStatus = output => {
+  const isReviewed = output.workflow_state === 'graded';
+  const outputStatus =
+    output.workflow_state === 'submitted' || output.workflow_state === 'graded'
+      ? getReviewStatus(isReviewed, parseInt(output.score, 10))
+      : 'orange';
+  return outputStatus;
+};
 
 export const carouselOptions = numDefaultSlides => {
   const options = {

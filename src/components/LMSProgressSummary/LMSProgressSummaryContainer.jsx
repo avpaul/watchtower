@@ -1,13 +1,19 @@
 import { connect } from 'react-redux';
 import LMSProgressSummary from './LMSProgressSummary';
-import getFellowLMSRatings from '../../redux/actionCreators/fellowLmsRatingActions';
+import getLmsSummary from '../../redux/actionCreators/fellowLmsSummaryActions';
+import getLmsSubmissions from '../../redux/actionCreators/fellowLmsSubmissionsActions';
 
-export const mapStateToProps = ({ fellowLmsRatings }) => ({
-  loading: fellowLmsRatings.loading,
-  fellowLmsRatings
+export const mapStateToProps = state => ({
+  lmsSummary: state.fellowLmsSummary.lmsSummary,
+  lmsSubmissions: state.fellowLmsSubmissions.lmsSubmissions.data
+});
+
+const mapDispatchToProps = dispatch => ({
+  getLmsSummary: () => dispatch(getLmsSummary()),
+  getLmsSubmissions: () => dispatch(getLmsSubmissions())
 });
 
 export default connect(
   mapStateToProps,
-  { getFellowLMSRatings }
+  mapDispatchToProps
 )(LMSProgressSummary);

@@ -10,18 +10,18 @@ import ChartKeySection from './ChartKeySection';
 const LMSChartOverview = ({
   numOfOutputsGreaterThanOne,
   numOfOutputsSuggested,
-  numOfTotalOutputs
+  numOfOutputsSubmitted
 }) => (
   <div className="lms-chart-overview">
     <div className="output-score-summary">
       <div className="output-score-summary__progress">
         <div>
           <strong>Outputs with scores 2+ </strong> -{' '}
-          {numOfOutputsGreaterThanOne}/{numOfOutputsSuggested}
+          {numOfOutputsGreaterThanOne}/{numOfOutputsSubmitted}
         </div>
         <div>
-          <strong>Required </strong> - {numOfOutputsSuggested}/
-          {numOfTotalOutputs}
+          <strong>Required </strong> - {numOfOutputsSubmitted}/
+          {numOfOutputsSuggested}
         </div>
       </div>
     </div>
@@ -34,8 +34,8 @@ LMSChartOverview.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]).isRequired,
-  numOfTotalOutputs: PropTypes.number.isRequired,
-  numOfOutputsGreaterThanOne: PropTypes.number.isRequired
+  numOfOutputsGreaterThanOne: PropTypes.number.isRequired,
+  numOfOutputsSubmitted: PropTypes.number.isRequired
 };
 
 export default LMSChartOverview;

@@ -1,8 +1,6 @@
 /* eslint no-param-reassign: 0 */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import ratings from '../../__mocks__/lmsRatings';
 
 import LMSProgressSummary from './LMSProgressSummary';
 import LMSChart from './LMSChart';
@@ -11,18 +9,24 @@ describe('LMSChart component', () => {
   let wrapper;
 
   beforeAll(() => {
-    wrapper = shallow(<LMSProgressSummary />);
-    wrapper.setState({ lmsRatings: ratings });
+    const props = {
+      lmsSummary: {
+        data: [
+          {
+            number_of_outputs_submitted: 1,
+            number_of_outputs_satisfied: 1
+          }
+        ]
+      },
+      lmsSubmissions: {},
+      getLmsSummary: jest.fn(),
+      getLmsSubmissions: jest.fn()
+    };
+    wrapper = shallow(<LMSProgressSummary {...props} />);
   });
 
   it('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<LMSProgressSummary />, div);
-    ReactDOM.unmountComponentAtNode(div);
   });
 
   it('renders LMS Progress Summary Chart', () => {

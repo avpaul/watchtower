@@ -10,23 +10,30 @@ import VerticalLine from './VerticalLine';
  *
  * @returns {JSX} React JSX
  */
-const Timeline = ({ allOutputs, outputsSuggested, width }) => {
+const Timeline = ({ outputsDue, width, allOutputs }) => {
   const trackInterval = width / allOutputs.length;
   const progressInterval = 0.92 * trackInterval;
+
   return (
     <div className="timeline">
-      <ProgressLine dueOutputs={outputsSuggested} interval={progressInterval} />
+      <ProgressLine outputsDue={allOutputs} interval={progressInterval} />
       <Track outputs={allOutputs} interval={trackInterval} />
       <VerticalLine
-        numOfIntervals={outputsSuggested.length}
+        numOfIntervals={outputsDue.length}
         leftMargin={trackInterval}
       />
     </div>
   );
 };
 Timeline.propTypes = {
-  allOutputs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allOutputs: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Array)
+  ]).isRequired,
   width: PropTypes.number.isRequired,
-  outputsSuggested: PropTypes.arrayOf(PropTypes.object).isRequired
+  outputsDue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Array)
+  ]).isRequired
 };
 export default Timeline;

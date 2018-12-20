@@ -2,20 +2,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import ratings from '../../../../../__mocks__/lmsRatings';
 
 import Track from '.';
 
 describe('Track component', () => {
-  const { outputs } = ratings;
-
-  outputs.map(output => {
-    output.dueDate = new Date(output.dueDate);
-    return output;
-  });
-
   const props = {
-    outputs,
+    outputs: [
+      {
+        id: 1122,
+        due_date: new Date(),
+        name: 'Output 1.1 Kick off call',
+        score: '',
+        workflow_state: 'submitted'
+      },
+      {
+        id: 1322,
+        due_date: new Date(),
+        name: 'Output 1.2 Estimating risks',
+        score: '2',
+        workflow_state: 'graded'
+      }
+    ],
     interval: 76
   };
 

@@ -10,37 +10,44 @@ import { getOutputStatus } from '../../../../../utils';
 const Track = ({ outputs, interval }) => (
   <div className="track">
     <ul className="output-list">
-      {outputs.map(output => (
-        <li
-          key={output.id}
-          className="output-list-item"
-          style={{ '--track-interval': `${interval}px` }}
-        >
-          <p className="output-name">{output.number}</p>
-          <span className="pseudo" />
-          <span className="details">
-            <strong>{output.number}</strong> {`: ${output.title}`}
-            <br />
-            <div
-              className={getOutputStatus(output)}
-              style={{ 'background-color': 'transparent', border: 'none' }}
+      {outputs
+        ? outputs.map(output => (
+            <li
+              key={output.id}
+              className="output-list-item"
+              style={{ '--track-interval': `${interval}px` }}
             >
-              <strong>Due date:</strong>{' '}
-              {` ${output.dueDate.getDate()}-${output.dueDate.getMonth() +
-                1}-${output.dueDate.getFullYear()}`}
-              <br />
-              <strong>Score:</strong>{' '}
-              {` ${output.score == null ? 'none' : output.score}`}
-            </div>
-          </span>
-        </li>
-      ))}
+              <p className="output-name">{output.title}</p>
+              <span className="pseudo" />
+              <span className="details">
+                <strong>{`${output.name}`}</strong>
+                <br />
+                <div
+                  className={getOutputStatus(output)}
+                  style={{ backgroundColor: 'transparent', border: 'none' }}
+                >
+                  <strong>Due date:</strong>{' '}
+                  {` ${output.due_date.getDate()}-${output.due_date.getMonth() +
+                    1}-${output.due_date.getFullYear()}`}
+                  <br />
+                  <strong>Score:</strong>{' '}
+                  {` ${
+                    output.score == null || output.score === ''
+                      ? 'none'
+                      : output.score
+                  }`}
+                </div>
+              </span>
+            </li>
+          ))
+        : ''}
     </ul>
   </div>
 );
 
 Track.propTypes = {
-  outputs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  outputs: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Array)])
+    .isRequired,
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
 };
 export default Track;

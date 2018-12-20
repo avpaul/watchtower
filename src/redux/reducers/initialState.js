@@ -43,6 +43,16 @@ export default {
     },
     error: null
   },
+  fellowLmsSummary: {
+    loading: false,
+    lmsSummary: [],
+    error: null
+  },
+  fellowLmsSubmissions: {
+    loading: false,
+    lmsSubmissions: [],
+    error: null
+  },
   ttls: {
     loading: false,
     ttls: [],

@@ -7,20 +7,22 @@ import { getOutputStatus } from '../../../../../utils';
  *
  * @returns {JSX} React JSX
  */
-const ProgressLine = ({ dueOutputs, interval }) => (
+const ProgressLine = ({ outputsDue, interval }) => (
   <div className="progress">
     <ol
       className="list"
       style={{
-        '--number-intervals': `${dueOutputs.length - 1}`,
+        '--number-intervals': `${outputsDue.length - 1}`,
         '--item-spacing': `${interval}px`
       }}
     >
-      {dueOutputs.map(output => (
-        <li key={output.id} className="item">
-          <span className={`point ${getOutputStatus(output)}`} />
-        </li>
-      ))}
+      {outputsDue
+        ? outputsDue.map(output => (
+            <li key={output.id} className="item">
+              <span className={`point ${getOutputStatus(output)}`} />
+            </li>
+          ))
+        : 0}
     </ol>
   </div>
 );
@@ -28,6 +30,9 @@ const ProgressLine = ({ dueOutputs, interval }) => (
 ProgressLine.propTypes = {
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired,
-  dueOutputs: PropTypes.oneOf(PropTypes.object).isRequired
+  outputsDue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Object)
+  ]).isRequired
 };
 export default ProgressLine;
