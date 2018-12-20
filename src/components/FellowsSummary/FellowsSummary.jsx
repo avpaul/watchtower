@@ -12,6 +12,7 @@ const FellowsSummary = ({ fellowsSummary, handleCardClick }) => (
     <div className="row ops-dashboard__filter">
       <Slider {...carouselOptions(3)}>
         {fellowsSummary.map(fellowSummary => (
+          <div className="p-1">
           <FilterCard
             key={fellowSummary.id}
             filterId={fellowSummary.id}
@@ -19,6 +20,7 @@ const FellowsSummary = ({ fellowsSummary, handleCardClick }) => (
             className="card"
             onClick={handleCardClick}
           />
+          </div>
         ))}
       </Slider>
     </div>

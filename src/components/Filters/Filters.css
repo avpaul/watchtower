@@ -7,6 +7,10 @@
   margin: 60px 1em 50px 1em;
 }
 
+.card:focus{
+    outline: 1px solid #0459e4 !important;
+}
+
 .active-card {
   border: 1px solid #0459e4;
   outline: none !important;
