@@ -8,15 +8,6 @@ import Error from '../Error';
 import Loader from '../Loader/Loader';
 import cellAttr from './setAttributes';
 
-const sortFellows = (list, name) => {
-  const sortedList = list.sort((a, b) => {
-    if (a[name].toLowerCase() < b[name].toLowerCase()) return -1;
-    if (a[name].toLowerCase() > b[name].toLowerCase()) return 1;
-    return 0;
-  });
-  return sortedList;
-};
-
 const DashboardTable = ({ fellows, loading, headers, cellValues }) => {
   const { ErrorMessage } = Error;
   if (fellows.length < 1 && !loading) {
@@ -26,9 +17,9 @@ const DashboardTable = ({ fellows, loading, headers, cellValues }) => {
   }
 
   const fellowCells = fellow =>
-    cellValues.map(element => cellAttr(element, fellow));
-
-  return (
+    cellValues.map(element => cellAttr(element, fellow) );
+  
+    return (
     <Fragment>
       <Table>
         <Row header>
@@ -36,7 +27,7 @@ const DashboardTable = ({ fellows, loading, headers, cellValues }) => {
             <Cell>{element}</Cell>
           ))}
         </Row>
-        {sortFellows(fellows, 'firstName').map(fellow => (
+        {fellows.map(fellow => (
           <DashboardRow
             key={fellow.id}
             fellow={fellow}
