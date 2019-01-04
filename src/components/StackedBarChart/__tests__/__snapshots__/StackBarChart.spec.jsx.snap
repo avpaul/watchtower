@@ -170,9 +170,10 @@ ShallowWrapper {
                               label={
                                         Object {
                                                   "angle": -90,
+                                                  "dx": -30,
                                                   "fontFamily": "DIN Pro Light",
                                                   "fontSize": "14px",
-                                                  "position": "insideLeft",
+                                                  "position": "center",
                                                   "value": "Total DOB Fellows",
                                                 }
                               }
@@ -452,9 +453,10 @@ ShallowWrapper {
                         label={
                                     Object {
                                                 "angle": -90,
+                                                "dx": -30,
                                                 "fontFamily": "DIN Pro Light",
                                                 "fontSize": "14px",
-                                                "position": "insideLeft",
+                                                "position": "center",
                                                 "value": "Total DOB Fellows",
                                               }
                         }
@@ -676,9 +678,10 @@ ShallowWrapper {
                 label={
                                 Object {
                                                 "angle": -90,
+                                                "dx": -30,
                                                 "fontFamily": "DIN Pro Light",
                                                 "fontSize": "14px",
-                                                "position": "insideLeft",
+                                                "position": "center",
                                                 "value": "Total DOB Fellows",
                                               }
                 }
@@ -919,9 +922,10 @@ ShallowWrapper {
                 "hide": false,
                 "label": Object {
                   "angle": -90,
+                  "dx": -30,
                   "fontFamily": "DIN Pro Light",
                   "fontSize": "14px",
-                  "position": "insideLeft",
+                  "position": "center",
                   "value": "Total DOB Fellows",
                 },
                 "mirror": false,
@@ -1212,9 +1216,10 @@ ShallowWrapper {
                                     label={
                                                 Object {
                                                             "angle": -90,
+                                                            "dx": -30,
                                                             "fontFamily": "DIN Pro Light",
                                                             "fontSize": "14px",
-                                                            "position": "insideLeft",
+                                                            "position": "center",
                                                             "value": "Total DOB Fellows",
                                                           }
                                     }
@@ -1494,9 +1499,10 @@ ShallowWrapper {
                             label={
                                           Object {
                                                         "angle": -90,
+                                                        "dx": -30,
                                                         "fontFamily": "DIN Pro Light",
                                                         "fontSize": "14px",
-                                                        "position": "insideLeft",
+                                                        "position": "center",
                                                         "value": "Total DOB Fellows",
                                                       }
                             }
@@ -1718,9 +1724,10 @@ ShallowWrapper {
                   label={
                                     Object {
                                                       "angle": -90,
+                                                      "dx": -30,
                                                       "fontFamily": "DIN Pro Light",
                                                       "fontSize": "14px",
-                                                      "position": "insideLeft",
+                                                      "position": "center",
                                                       "value": "Total DOB Fellows",
                                                     }
                   }
@@ -1961,9 +1968,10 @@ ShallowWrapper {
                   "hide": false,
                   "label": Object {
                     "angle": -90,
+                    "dx": -30,
                     "fontFamily": "DIN Pro Light",
                     "fontSize": "14px",
-                    "position": "insideLeft",
+                    "position": "center",
                     "value": "Total DOB Fellows",
                   },
                   "mirror": false,

@@ -45,7 +45,8 @@ class StackedBarChart extends React.Component {
         value: `Total ${title}`,
         angle: -90,
         fontFamily: 'DIN Pro Light',
-        position: 'insideLeft',
+        position: 'center',
+        dx: -30,
         fontSize: '14px'
       }}
       tickLine={false}
