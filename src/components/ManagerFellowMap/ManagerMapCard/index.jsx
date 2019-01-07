@@ -26,7 +26,7 @@ const ManagerMapCard = ({ manager }) => {
   return (
     <div className="card manager_card">
       <div className="card-header">
-        <span className="manager_card__name">
+        <span className="manager_card__name float-left" data-toggle="tooltip" data-placement="top" title={ `${manager.firstName}  ${manager.lastName}`}>
           {manager.firstName} {manager.lastName}
         </span>
         <span className="manager_card__fellows--number float-right">
