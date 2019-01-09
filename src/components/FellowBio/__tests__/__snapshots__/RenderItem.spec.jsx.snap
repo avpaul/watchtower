@@ -35,7 +35,7 @@ ShallowWrapper {
           
 </div>,
       ],
-      "className": "row title",
+      "className": "row ml-0 title",
     },
     "ref": null,
     "rendered": Array [
@@ -115,7 +115,7 @@ ShallowWrapper {
             
 </div>,
         ],
-        "className": "row title",
+        "className": "row ml-0 title",
       },
       "ref": null,
       "rendered": Array [

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RenderItem = ({ title, children }) => (
-  <div className="row title">
+  <div className="row ml-0 title">
     <div className="rectangle" />
     <div className="content">
       <b className="spacing">{title}:</b>

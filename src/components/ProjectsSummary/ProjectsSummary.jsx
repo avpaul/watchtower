@@ -29,13 +29,15 @@ const ProjectsSummary = props => {
       <div className="row ops-dashboard__filter">
         <Slider {...carouselOptions(4)}>
           {projectsCard.map(projectCard => (
-            <FilterCard
-              key={projectCard.title}
-              filterId={projectCard.title}
-              cardDetails={projectCard}
-              className="card"
-              onClick={handleCardClick}
-            />
+            <div className="p-1">
+              <FilterCard
+                key={projectCard.title}
+                filterId={projectCard.title}
+                cardDetails={projectCard}
+                className="card"
+                onClick={handleCardClick}
+              />
+            </div>
           ))}
         </Slider>
       </div>

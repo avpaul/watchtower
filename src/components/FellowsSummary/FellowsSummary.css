@@ -32,10 +32,6 @@
   margin: 20px auto 0 auto;
 }
 
-.p-1 {
-  padding: 1px;
-}
-
 @media screen and (min-width: 729px) {
   .ops-dashboard__filter {
     justify-content: left;
