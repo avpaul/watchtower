@@ -10,7 +10,7 @@
 
 .modal-main {
   background: rgb(233, 232, 232);
-  height: 1000%;
+  height: 100%;
   width: 290px;
   position: fixed;
   right: 0px;
@@ -60,7 +60,7 @@ span.left {
   margin-left: 20px;
 }
 span.right {
-  margin-left: 164px;
+  margin-left: 140px;
 }
 .message-body span {
   font-size: 99%;
