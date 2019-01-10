@@ -96,10 +96,10 @@ class DashboardPage extends Component {
     getFellows({ url });
   };
 
-  handleValueChange = value => {
+  handleValueChange = page => {
     const { perPage } = this.state;
     const { filter, getFellows } = this.props;
-    getFellows({ perPage, value, filter });
+    getFellows({ perPage, page, filter });
   };
 
   handleSearchChange = event => {

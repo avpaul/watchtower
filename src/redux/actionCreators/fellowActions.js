@@ -22,7 +22,6 @@ export const getFellows = ({
     requestURL = `${serverURL}/api/v1/fellows?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}`;
     requestURL = search ? `${requestURL}&search=${search}` : requestURL;
   }
-
   return axios.get(requestURL).then(
     response =>
       dispatch({
