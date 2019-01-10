@@ -18,10 +18,12 @@ const formatProjects = projects => {
 
 const ProjectsSummary = props => {
   const {
-    ttlProjects: { projects = {} },
+    fellowsSummary: {
+      fellowsSummaryToday: { latestWeekSummary = {} }
+    },
     handleCardClick
   } = props;
-  const projectsCard = formatProjects(projects);
+  const projectsCard = formatProjects(latestWeekSummary);
 
   return (
     <div className="ops-dashboard__fellows-summary">
@@ -46,7 +48,7 @@ const ProjectsSummary = props => {
 };
 
 ProjectsSummary.propTypes = {
-  ttlProjects: PropTypes.instanceOf(Object).isRequired,
+  fellowsSummary: PropTypes.instanceOf(Object).isRequired,
   handleCardClick: PropTypes.func.isRequired
 };
 

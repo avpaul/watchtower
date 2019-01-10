@@ -6,17 +6,19 @@ import FilterCard from '../../Filters/FilterCard';
 
 const setup = () => {
   const props = {
-    ttlProjects: {
-      projects: {
-        data: {
-          projects: [
-            { id: 'project1', title: 'Test project 1', totalFellows: 1 },
-            { id: 'project2', title: 'Test project 2', totalFellows: 1 }
-          ],
-          totalFellows: 2
+    fellowsSummary: {
+      fellowsSummaryToday: {
+        latestWeekSummary: {
+          Total: 3,
+          WatchTower: 3
         }
       },
-      totalFellows: 2
+      fellowsSummaryTrend: {
+        latestWeekSummary: {
+          Total: 3,
+          WatchTower: 3
+        }
+      }
     },
     handleCardClick: jest.fn()
   };
@@ -40,7 +42,7 @@ describe('<ProjectsSummary />', () => {
 
   it('renders four <FilterCard />', () => {
     const { count } = setup();
-    expect(count).toEqual(1);
+    expect(count).toEqual(2);
   });
 
   it('handles click events on the <FilterCard />', () => {

@@ -2,6 +2,13 @@
 
 exports[`ProjectsSummaryContainer should map state to props 1`] = `
 Object {
+  "fellowsSummary": Object {
+    "data": Object {},
+    "error": "",
+    "fellowsSummaryToday": Object {},
+    "fellowsSummaryTrend": Object {},
+    "loading": false,
+  },
   "ttlProjects": Object {
     "error": null,
     "loading": false,

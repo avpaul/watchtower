@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import ProjectsSummary from './ProjectsSummary';
 
 export const mapStateToProps = state => ({
-  ttlProjects: state.ttlProjects
+  ttlProjects: state.ttlProjects,
+  fellowsSummary: state.fellowsSummary
 });
 
 export default connect(mapStateToProps)(ProjectsSummary);
