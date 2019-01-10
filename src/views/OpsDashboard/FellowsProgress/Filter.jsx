@@ -2,7 +2,7 @@
 
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
-import Fuse from 'fuse.js';
+import { filter } from 'fuzzaldrin';
 import './index.css';
 import truncate from '../../../utils';
 
@@ -42,17 +42,12 @@ class Filter extends Component {
   }
 
   search = e => {
-    const { items } = this.state;
+    const { items } = this.props;
     const query = e.target.value;
-    const options = {
-      keys: []
-    };
-    const fuse = new Fuse(items, options);
-    const fuseArray = fuse.search(query);
-    const results = fuseArray.map(item => items[item]);
+    const data = filter(items, query);
     this.setState({
       searchItem: query,
-      items: results
+      items: data
     });
   };
 
@@ -152,12 +147,14 @@ Filter.defaultProps = {
   fontSize: '',
   characterLength: 9,
   chevronColor: '',
-  dropdownBackgroundColor: ''
+  dropdownBackgroundColor: '',
+  items: []
 };
 
 Filter.propTypes = {
   search: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string),
   width: PropTypes.string,
   fontSize: PropTypes.string,
   type: PropTypes.string.isRequired,
