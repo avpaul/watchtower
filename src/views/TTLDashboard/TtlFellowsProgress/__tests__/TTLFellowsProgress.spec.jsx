@@ -10,7 +10,14 @@ const setup = propOverrides => {
     fellowsProgress: {
       loading: false,
       data: {
-        fellowsProgressD0: []
+        fellowsProgressD0: [
+          {
+            'On Track': 2,
+            'Off Track': 1,
+            PIP: 1,
+            week: '10-Sep-2018'
+          }
+        ]
       }
     },
     fetchTTLFellowsProgress: jest.fn(),

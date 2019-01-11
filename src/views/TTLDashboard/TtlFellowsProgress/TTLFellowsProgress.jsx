@@ -37,9 +37,12 @@ class TTLFellowsProgress extends Component {
     />
   );
 
-  renderCharts = (d0, fellowDataLoading) => (
-    <StackedBarChart title="Fellows" data={d0} loading={fellowDataLoading} />
-  );
+  renderCharts = (d0, fellowDataLoading) =>
+    d0.length === 0 && fellowDataLoading === false ? (
+      <div className="empty_chart">No fellow in this location</div>
+    ) : (
+      <StackedBarChart title="Fellows" data={d0} loading={fellowDataLoading} />
+    );
 
   render() {
     const { location } = this.state;
