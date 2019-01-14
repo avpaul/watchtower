@@ -5,3 +5,7 @@
 .pulse-chart__legend .recharts-legend-item-text {
   vertical-align: middle;
 }
+
+ul.recharts-default-legend {
+  white-space: nowrap !important;
+}
