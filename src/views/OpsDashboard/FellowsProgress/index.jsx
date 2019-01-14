@@ -77,16 +77,25 @@ export class FellowsProgress extends Component {
 
   renderCharts = (dob, doa, fellowDataLoading) => (
     <Fragment>
-      <StackedBarChart
-        title="DOA Fellows"
-        data={doa}
-        loading={fellowDataLoading}
-      />
-      <StackedBarChart
-        title="DOB Fellows"
-        data={dob}
-        loading={fellowDataLoading}
-      />
+      {doa.length === 0 && fellowDataLoading === false ? (
+        <div className="empty_chart">No DOA Fellows found</div>
+      ) : (
+        <StackedBarChart
+          title="DOA Fellows"
+          data={doa}
+          loading={fellowDataLoading}
+        />
+      )}
+
+      {dob.length === 0 && fellowDataLoading === false ? (
+        <div className="empty_chart">No DOB Fellows found</div>
+      ) : (
+        <StackedBarChart
+          title="DOB Fellows"
+          data={dob}
+          loading={fellowDataLoading}
+        />
+      )}
     </Fragment>
   );
 

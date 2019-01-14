@@ -17,7 +17,14 @@ describe('FellowProgress', () => {
     },
     fellowsProgress: {
       data: {
-        fellowsProgressD0A: [],
+        fellowsProgressD0A: [
+          {
+            'On Track': 2,
+            'Off Track': 1,
+            PIP: 1,
+            week: '10-Sep-2018'
+          }
+        ],
         fellowsProgressD0B: [],
         fellowsProgress: []
       }
