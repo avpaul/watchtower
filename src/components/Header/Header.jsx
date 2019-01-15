@@ -230,7 +230,11 @@ export class Header extends Component {
                 src={notificationIcon}
                 alt="notificationIcon"
               />
-              <i className="notification__icon" />
+              <i
+                className={
+                  unreadnotifications.length > 0 ? 'notification__icon' : ''
+                }
+              />
             </span>
             <div id="profile-menu" className="dropdown">
               <div
