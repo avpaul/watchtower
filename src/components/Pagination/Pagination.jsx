@@ -8,42 +8,15 @@ import PropTypes from 'prop-types';
  */
 
 class Pagination extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      disabled: false,
-      disable: true,
-      disabledButton: false,
-      count: 1
-    };
-  }
-
   /**
    * changes page based on next or previous click
    * @param { object } - event that happens
    */
   onPageChange = event => {
-    let { count } = this.state;
-    const { handlePageChange, perPage, totalPages, filter } = this.props;
-    const buttonName = event.target.name;
-    if (buttonName === 'next') {
-      count += 1;
-    } else if (buttonName === 'first') {
-      count -= 1;
-    }
+    const { handlePageChange, perPage, filter } = this.props;
     handlePageChange(
       `${event.target.value}&perPage=${perPage}&filter=${filter}`
     );
-    this.setState({ count });
-    if (count > 1) {
-      this.setState({ disable: false });
-    }
-    if (count === totalPages) {
-      this.setState({ disabled: true });
-    }
-    if (count <= 1) {
-      this.setState({ disable: true, disabled: false });
-    }
   };
 
   /**
@@ -56,7 +29,8 @@ class Pagination extends Component {
   };
 
   renderItems = number => {
-    const { disabledButton } = this.state;
+    const disabledButton = false;
+    const { currentPage } = this.props;
     const elements = [];
     let i = 0;
     while (i < number) {
@@ -65,13 +39,15 @@ class Pagination extends Component {
     }
     return (
       <div id="form-group col-md-4 row">
-        {elements.map(e =>
+        {elements.map(element =>
           this.renderPaginationButtons(
-            'btn btn-default second',
+            element === currentPage
+              ? 'btn btn-default second active-page'
+              : 'btn btn-default second',
             'previous',
-            e,
+            element,
             this.onValueChange,
-            e,
+            element,
             disabledButton
           )
         )}
@@ -82,11 +58,21 @@ class Pagination extends Component {
   renderNormal(
     { currentPage, nextPage, prevPageUrl, totalPages } = this.props
   ) {
-    const { disabled, disable } = this.state;
+    const disableObject = {
+      disabled: false,
+      disable: true
+    };
     const buttonOneEllipsis = currentPage;
     const buttonTwoEllipsis = currentPage + 1;
     const buttonOneAfterEllipse = totalPages - 1;
     const buttonTwoAfterEllipse = totalPages;
+
+    if (currentPage > 1) {
+      disableObject.disable = false;
+    }
+    if (currentPage === totalPages) {
+      disableObject.disabled = true;
+    }
     return (
       <div id="form-group col-md-4 row">
         {this.renderPaginationButtons(
@@ -95,7 +81,7 @@ class Pagination extends Component {
           prevPageUrl,
           this.onPageChange,
           'Prev',
-          disable
+          disableObject.disable
         )}
         <div
           className="btn-group mr-2 ml-2"
@@ -103,7 +89,9 @@ class Pagination extends Component {
           aria-label="First group"
         >
           {this.renderPaginationButtons(
-            'btn btn-default first',
+            currentPage
+              ? 'btn btn-default first active-page'
+              : 'btn btn-default first',
             'previous',
             currentPage,
             this.onValueChange,
@@ -140,7 +128,7 @@ class Pagination extends Component {
           nextPage,
           this.onPageChange,
           'Next',
-          disabled
+          disableObject.disabled
         )}
       </div>
     );
@@ -187,7 +175,8 @@ Pagination.propTypes = {
   handlePageChange: PropTypes.func.isRequired,
   perPage: PropTypes.string,
   handleValueChange: PropTypes.func.isRequired,
-  filter: PropTypes.string.isRequired
+  filter: PropTypes.string.isRequired,
+  currentPage: PropTypes.number.isRequired
 };
 
 Pagination.defaultProps = {

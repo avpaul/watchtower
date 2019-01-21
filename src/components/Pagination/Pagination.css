@@ -51,3 +51,8 @@
 .select {
   padding: 0px 20px 5px 10px !important;
 }
+
+.active-page {
+  background-color: #3359db;
+  color: #ffffff;
+}

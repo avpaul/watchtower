@@ -16,7 +16,7 @@
   border-bottom: none;
   padding-left: 30px;
 }
-.card-header{
+.card-header {
   overflow: hidden;
   white-space: nowrap;
 }
@@ -45,15 +45,15 @@
   color: #0459e4 !important;
   font-weight: 600;
   font-family: 'DIN Pro';
-  max-width:150px;
+  max-width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.manager_card__name:hover{
-  max-width:100%;
-  text-align:center;
+.manager_card__name:hover {
+  max-width: 100%;
+  text-align: center;
 }
-.manager_card__name:hover + .manager_card__fellows--number{
-  display:none;
+.manager_card__name:hover + .manager_card__fellows--number {
+  display: none;
 }

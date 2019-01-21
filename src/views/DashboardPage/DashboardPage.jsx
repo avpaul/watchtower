@@ -73,23 +73,26 @@ class DashboardPage extends Component {
     );
   };
 
-  renderPerPageSelector = () => (
-    <div className="row d-flex justify-content-center">
-      <div className="per-page">Per page</div>
-      <div className="select">
-        <select
-          className="form-control d-flex justify-content-center"
-          defaultValue="10"
-          onChange={this.onChange}
-        >
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="25">25</option>
-        </select>
+  renderPerPageSelector = () => {
+    const { perPage } = this.state;
+    return (
+      <div className="row d-flex justify-content-center">
+        <div className="per-page">Per page</div>
+        <div className="select">
+          <select
+            className="form-control d-flex justify-content-center"
+            value={perPage}
+            onChange={this.onChange}
+          >
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+          </select>
+        </div>
+        {this.renderPagination()}
       </div>
-      {this.renderPagination()}
-    </div>
-  );
+    );
+  };
 
   handlePageChange = url => {
     const { getFellows } = this.props;

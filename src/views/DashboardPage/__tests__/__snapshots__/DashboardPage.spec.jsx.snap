@@ -554,8 +554,8 @@ ShallowWrapper {
                     >
                               <select
                                         className="form-control d-flex justify-content-center"
-                                        defaultValue="10"
                                         onChange={[Function]}
+                                        value="10"
                               >
                                         <option
                                                   value="10"
@@ -1756,8 +1756,8 @@ ShallowWrapper {
               >
                             <select
                                           className="form-control d-flex justify-content-center"
-                                          defaultValue="10"
                                           onChange={[Function]}
+                                          value="10"
                             >
                                           <option
                                                         value="10"
@@ -1812,8 +1812,8 @@ ShallowWrapper {
 >
                   <select
                                     className="form-control d-flex justify-content-center"
-                                    defaultValue="10"
                                     onChange={[Function]}
+                                    value="10"
                   >
                                     <option
                                                       value="10"
@@ -1869,8 +1869,8 @@ ShallowWrapper {
                 "props": Object {
                   "children": <select
                     className="form-control d-flex justify-content-center"
-                    defaultValue="10"
                     onChange={[Function]}
+                    value="10"
 >
                     <option
                                         value="10"
@@ -1914,8 +1914,8 @@ ShallowWrapper {
 </option>,
                     ],
                     "className": "form-control d-flex justify-content-center",
-                    "defaultValue": "10",
                     "onChange": [Function],
+                    "value": "10",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -2316,8 +2316,8 @@ ShallowWrapper {
                         >
                                     <select
                                                 className="form-control d-flex justify-content-center"
-                                                defaultValue="10"
                                                 onChange={[Function]}
+                                                value="10"
                                     >
                                                 <option
                                                             value="10"
@@ -3518,8 +3518,8 @@ ShallowWrapper {
                 >
                                 <select
                                                 className="form-control d-flex justify-content-center"
-                                                defaultValue="10"
                                                 onChange={[Function]}
+                                                value="10"
                                 >
                                                 <option
                                                                 value="10"
@@ -3574,8 +3574,8 @@ ShallowWrapper {
 >
                     <select
                                         className="form-control d-flex justify-content-center"
-                                        defaultValue="10"
                                         onChange={[Function]}
+                                        value="10"
                     >
                                         <option
                                                             value="10"
@@ -3631,8 +3631,8 @@ ShallowWrapper {
                   "props": Object {
                     "children": <select
                       className="form-control d-flex justify-content-center"
-                      defaultValue="10"
                       onChange={[Function]}
+                      value="10"
 >
                       <option
                                             value="10"
@@ -3676,8 +3676,8 @@ ShallowWrapper {
 </option>,
                       ],
                       "className": "form-control d-flex justify-content-center",
-                      "defaultValue": "10",
                       "onChange": [Function],
+                      "value": "10",
                     },
                     "ref": null,
                     "rendered": Array [

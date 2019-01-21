@@ -14,7 +14,7 @@
   padding-top: 0px;
   width: 648px;
 }
-.card-bio:focus{
+.card-bio:focus {
   outline: 1px solid #0459e4 !important;
 }
 .card-bio:after {
@@ -31,7 +31,7 @@
   border-radius: 4px;
   background-color: #ffffff;
 }
-.card-project:focus{
+.card-project:focus {
   outline: 1px solid #0459e4 !important;
 }
 .rectangle {
