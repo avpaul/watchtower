@@ -35,3 +35,7 @@ galen/reports
 .vscode/settings.json
 
 package-lock.json
+
+# vim
+*.swp
+*.swo

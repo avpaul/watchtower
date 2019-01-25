@@ -79,7 +79,7 @@ class OpsDashboardMain extends Component {
   fellowMapOnClick = event => {
     if (event.currentTarget.id === '0')
       this.setState({ displayManagers: 'LF', show: true });
-    else this.setState(this.setState({ displayManagers: 'TTL', show: true }));
+    else this.setState({ displayManagers: 'TTL', show: true });
   };
 
   handleMapClose = () => {

@@ -124,5 +124,10 @@ export default {
     loading: false,
     data: {},
     error: null
+  },
+  engineeringManagerTtls: {
+    loading: false,
+    data: [],
+    error: null
   }
 };

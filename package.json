@@ -64,7 +64,7 @@
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
     "lint": "eslint 'src/**' -c .eslintrc.json",

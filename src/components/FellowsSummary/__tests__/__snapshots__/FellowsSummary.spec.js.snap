@@ -1,0 +1,1099 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FellowsSummary /> renders only DOA card <FilterCard /> when SL is logged in 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FellowsSummary
+    displayByRole={
+        Object {
+            "WATCH_TOWER_SL": "343242434",
+          }
+    }
+    fellowsSummary={
+        Array [
+            Object {
+              "id": "D0BFellowsCount",
+              "title": "Test key 1",
+              "totalFellows": 10,
+            },
+            Object {
+              "id": "D0AFellowsCount",
+              "title": "Test key 2",
+              "totalFellows": 5,
+            },
+            Object {
+              "id": "testkey3",
+              "title": "Test key 3",
+              "totalFellows": 5,
+            },
+          ]
+    }
+    handleCardClick={[Function]}
+    loggedInRole="WATCH_TOWER_SL"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <FellowSummaryLabel />,
+        <div
+          className="row ops-dashboard__filter"
+>
+          <Slider
+                    className="contain"
+                    infinite={false}
+                    nextArrow={
+                              <NavArrow
+                                        buttonClass="slick-next"
+                                        iconClass="fa-angle-right"
+                              />
+                    }
+                    prevArrow={
+                              <NavArrow
+                                        buttonClass="slick-prev"
+                                        iconClass="fa-angle-left"
+                              />
+                    }
+                    responsive={
+                              Array [
+                                        Object {
+                                          "breakpoint": 1000,
+                                          "settings": Object {
+                                            "slidesToScroll": 1,
+                                            "slidesToShow": 2,
+                                          },
+                                        },
+                                        Object {
+                                          "breakpoint": 700,
+                                          "settings": Object {
+                                            "slidesToScroll": 1,
+                                            "slidesToShow": 1,
+                                          },
+                                        },
+                                      ]
+                    }
+                    rows={1}
+                    slidesToShow={3}
+                    swipeToSlide={true}
+          >
+                    <div
+                              className="p-1"
+                    >
+                              <FilterCard
+                                        cardDetails={
+                                                  Object {
+                                                            "id": "D0AFellowsCount",
+                                                            "title": "Test key 2",
+                                                            "totalFellows": 5,
+                                                          }
+                                        }
+                                        className="card"
+                                        filterId="D0AFellowsCount"
+                                        onClick={[Function]}
+                              />
+                    </div>
+          </Slider>
+</div>,
+      ],
+      "className": "ops-dashboard__fellows-summary",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Slider
+            className="contain"
+            infinite={false}
+            nextArrow={
+                        <NavArrow
+                                    buttonClass="slick-next"
+                                    iconClass="fa-angle-right"
+                        />
+            }
+            prevArrow={
+                        <NavArrow
+                                    buttonClass="slick-prev"
+                                    iconClass="fa-angle-left"
+                        />
+            }
+            responsive={
+                        Array [
+                                    Object {
+                                      "breakpoint": 1000,
+                                      "settings": Object {
+                                        "slidesToScroll": 1,
+                                        "slidesToShow": 2,
+                                      },
+                                    },
+                                    Object {
+                                      "breakpoint": 700,
+                                      "settings": Object {
+                                        "slidesToScroll": 1,
+                                        "slidesToShow": 1,
+                                      },
+                                    },
+                                  ]
+            }
+            rows={1}
+            slidesToShow={3}
+            swipeToSlide={true}
+>
+            <div
+                        className="p-1"
+            >
+                        <FilterCard
+                                    cardDetails={
+                                                Object {
+                                                            "id": "D0AFellowsCount",
+                                                            "title": "Test key 2",
+                                                            "totalFellows": 5,
+                                                          }
+                                    }
+                                    className="card"
+                                    filterId="D0AFellowsCount"
+                                    onClick={[Function]}
+                        />
+            </div>
+</Slider>,
+          "className": "row ops-dashboard__filter",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <div
+                className="p-1"
+>
+                <FilterCard
+                                cardDetails={
+                                                Object {
+                                                                "id": "D0AFellowsCount",
+                                                                "title": "Test key 2",
+                                                                "totalFellows": 5,
+                                                              }
+                                }
+                                className="card"
+                                filterId="D0AFellowsCount"
+                                onClick={[Function]}
+                />
+</div>,
+            ],
+            "className": "contain",
+            "infinite": false,
+            "nextArrow": <NavArrow
+              buttonClass="slick-next"
+              iconClass="fa-angle-right"
+/>,
+            "prevArrow": <NavArrow
+              buttonClass="slick-prev"
+              iconClass="fa-angle-left"
+/>,
+            "responsive": Array [
+              Object {
+                "breakpoint": 1000,
+                "settings": Object {
+                  "slidesToScroll": 1,
+                  "slidesToShow": 2,
+                },
+              },
+              Object {
+                "breakpoint": 700,
+                "settings": Object {
+                  "slidesToScroll": 1,
+                  "slidesToShow": 1,
+                },
+              },
+            ],
+            "rows": 1,
+            "slidesToShow": 3,
+            "swipeToSlide": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <FilterCard
+                  cardDetails={
+                                    Object {
+                                                      "id": "D0AFellowsCount",
+                                                      "title": "Test key 2",
+                                                      "totalFellows": 5,
+                                                    }
+                  }
+                  className="card"
+                  filterId="D0AFellowsCount"
+                  onClick={[Function]}
+/>,
+                "className": "p-1",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": "D0AFellowsCount",
+                "nodeType": "function",
+                "props": Object {
+                  "cardDetails": Object {
+                    "id": "D0AFellowsCount",
+                    "title": "Test key 2",
+                    "totalFellows": 5,
+                  },
+                  "className": "card",
+                  "filterId": "D0AFellowsCount",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FellowSummaryLabel />,
+          <div
+            className="row ops-dashboard__filter"
+>
+            <Slider
+                        className="contain"
+                        infinite={false}
+                        nextArrow={
+                                    <NavArrow
+                                                buttonClass="slick-next"
+                                                iconClass="fa-angle-right"
+                                    />
+                        }
+                        prevArrow={
+                                    <NavArrow
+                                                buttonClass="slick-prev"
+                                                iconClass="fa-angle-left"
+                                    />
+                        }
+                        responsive={
+                                    Array [
+                                                Object {
+                                                  "breakpoint": 1000,
+                                                  "settings": Object {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 2,
+                                                  },
+                                                },
+                                                Object {
+                                                  "breakpoint": 700,
+                                                  "settings": Object {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 1,
+                                                  },
+                                                },
+                                              ]
+                        }
+                        rows={1}
+                        slidesToShow={3}
+                        swipeToSlide={true}
+            >
+                        <div
+                                    className="p-1"
+                        >
+                                    <FilterCard
+                                                cardDetails={
+                                                            Object {
+                                                                        "id": "D0AFellowsCount",
+                                                                        "title": "Test key 2",
+                                                                        "totalFellows": 5,
+                                                                      }
+                                                }
+                                                className="card"
+                                                filterId="D0AFellowsCount"
+                                                onClick={[Function]}
+                                    />
+                        </div>
+            </Slider>
+</div>,
+        ],
+        "className": "ops-dashboard__fellows-summary",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Slider
+              className="contain"
+              infinite={false}
+              nextArrow={
+                            <NavArrow
+                                          buttonClass="slick-next"
+                                          iconClass="fa-angle-right"
+                            />
+              }
+              prevArrow={
+                            <NavArrow
+                                          buttonClass="slick-prev"
+                                          iconClass="fa-angle-left"
+                            />
+              }
+              responsive={
+                            Array [
+                                          Object {
+                                            "breakpoint": 1000,
+                                            "settings": Object {
+                                              "slidesToScroll": 1,
+                                              "slidesToShow": 2,
+                                            },
+                                          },
+                                          Object {
+                                            "breakpoint": 700,
+                                            "settings": Object {
+                                              "slidesToScroll": 1,
+                                              "slidesToShow": 1,
+                                            },
+                                          },
+                                        ]
+              }
+              rows={1}
+              slidesToShow={3}
+              swipeToSlide={true}
+>
+              <div
+                            className="p-1"
+              >
+                            <FilterCard
+                                          cardDetails={
+                                                        Object {
+                                                                      "id": "D0AFellowsCount",
+                                                                      "title": "Test key 2",
+                                                                      "totalFellows": 5,
+                                                                    }
+                                          }
+                                          className="card"
+                                          filterId="D0AFellowsCount"
+                                          onClick={[Function]}
+                            />
+              </div>
+</Slider>,
+            "className": "row ops-dashboard__filter",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="p-1"
+>
+                  <FilterCard
+                                    cardDetails={
+                                                      Object {
+                                                                        "id": "D0AFellowsCount",
+                                                                        "title": "Test key 2",
+                                                                        "totalFellows": 5,
+                                                                      }
+                                    }
+                                    className="card"
+                                    filterId="D0AFellowsCount"
+                                    onClick={[Function]}
+                  />
+</div>,
+              ],
+              "className": "contain",
+              "infinite": false,
+              "nextArrow": <NavArrow
+                buttonClass="slick-next"
+                iconClass="fa-angle-right"
+/>,
+              "prevArrow": <NavArrow
+                buttonClass="slick-prev"
+                iconClass="fa-angle-left"
+/>,
+              "responsive": Array [
+                Object {
+                  "breakpoint": 1000,
+                  "settings": Object {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 2,
+                  },
+                },
+                Object {
+                  "breakpoint": 700,
+                  "settings": Object {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 1,
+                  },
+                },
+              ],
+              "rows": 1,
+              "slidesToShow": 3,
+              "swipeToSlide": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <FilterCard
+                    cardDetails={
+                                        Object {
+                                                            "id": "D0AFellowsCount",
+                                                            "title": "Test key 2",
+                                                            "totalFellows": 5,
+                                                          }
+                    }
+                    className="card"
+                    filterId="D0AFellowsCount"
+                    onClick={[Function]}
+/>,
+                  "className": "p-1",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": "D0AFellowsCount",
+                  "nodeType": "function",
+                  "props": Object {
+                    "cardDetails": Object {
+                      "id": "D0AFellowsCount",
+                      "title": "Test key 2",
+                      "totalFellows": 5,
+                    },
+                    "className": "card",
+                    "filterId": "D0AFellowsCount",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`<FellowsSummary /> renders only one card <FilterCard /> 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FellowsSummary
+    displayByRole={
+        Object {
+            "WATCH_TOWER_EM": "343242434",
+          }
+    }
+    fellowsSummary={
+        Array [
+            Object {
+              "id": "D0BFellowsCount",
+              "title": "Test key 1",
+              "totalFellows": 10,
+            },
+            Object {
+              "id": "D0AFellowsCount",
+              "title": "Test key 2",
+              "totalFellows": 5,
+            },
+            Object {
+              "id": "testkey3",
+              "title": "Test key 3",
+              "totalFellows": 5,
+            },
+          ]
+    }
+    handleCardClick={[Function]}
+    loggedInRole="WATCH_TOWER_EM"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <FellowSummaryLabel />,
+        <div
+          className="row ops-dashboard__filter"
+>
+          <Slider
+                    className="contain"
+                    infinite={false}
+                    nextArrow={
+                              <NavArrow
+                                        buttonClass="slick-next"
+                                        iconClass="fa-angle-right"
+                              />
+                    }
+                    prevArrow={
+                              <NavArrow
+                                        buttonClass="slick-prev"
+                                        iconClass="fa-angle-left"
+                              />
+                    }
+                    responsive={
+                              Array [
+                                        Object {
+                                          "breakpoint": 1000,
+                                          "settings": Object {
+                                            "slidesToScroll": 1,
+                                            "slidesToShow": 2,
+                                          },
+                                        },
+                                        Object {
+                                          "breakpoint": 700,
+                                          "settings": Object {
+                                            "slidesToScroll": 1,
+                                            "slidesToShow": 1,
+                                          },
+                                        },
+                                      ]
+                    }
+                    rows={1}
+                    slidesToShow={3}
+                    swipeToSlide={true}
+          >
+                    <div
+                              className="p-1"
+                    >
+                              <FilterCard
+                                        cardDetails={
+                                                  Object {
+                                                            "id": "D0BFellowsCount",
+                                                            "title": "Test key 1",
+                                                            "totalFellows": 10,
+                                                          }
+                                        }
+                                        className="card"
+                                        filterId="D0BFellowsCount"
+                                        onClick={[Function]}
+                              />
+                    </div>
+          </Slider>
+</div>,
+      ],
+      "className": "ops-dashboard__fellows-summary",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Slider
+            className="contain"
+            infinite={false}
+            nextArrow={
+                        <NavArrow
+                                    buttonClass="slick-next"
+                                    iconClass="fa-angle-right"
+                        />
+            }
+            prevArrow={
+                        <NavArrow
+                                    buttonClass="slick-prev"
+                                    iconClass="fa-angle-left"
+                        />
+            }
+            responsive={
+                        Array [
+                                    Object {
+                                      "breakpoint": 1000,
+                                      "settings": Object {
+                                        "slidesToScroll": 1,
+                                        "slidesToShow": 2,
+                                      },
+                                    },
+                                    Object {
+                                      "breakpoint": 700,
+                                      "settings": Object {
+                                        "slidesToScroll": 1,
+                                        "slidesToShow": 1,
+                                      },
+                                    },
+                                  ]
+            }
+            rows={1}
+            slidesToShow={3}
+            swipeToSlide={true}
+>
+            <div
+                        className="p-1"
+            >
+                        <FilterCard
+                                    cardDetails={
+                                                Object {
+                                                            "id": "D0BFellowsCount",
+                                                            "title": "Test key 1",
+                                                            "totalFellows": 10,
+                                                          }
+                                    }
+                                    className="card"
+                                    filterId="D0BFellowsCount"
+                                    onClick={[Function]}
+                        />
+            </div>
+</Slider>,
+          "className": "row ops-dashboard__filter",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <div
+                className="p-1"
+>
+                <FilterCard
+                                cardDetails={
+                                                Object {
+                                                                "id": "D0BFellowsCount",
+                                                                "title": "Test key 1",
+                                                                "totalFellows": 10,
+                                                              }
+                                }
+                                className="card"
+                                filterId="D0BFellowsCount"
+                                onClick={[Function]}
+                />
+</div>,
+            ],
+            "className": "contain",
+            "infinite": false,
+            "nextArrow": <NavArrow
+              buttonClass="slick-next"
+              iconClass="fa-angle-right"
+/>,
+            "prevArrow": <NavArrow
+              buttonClass="slick-prev"
+              iconClass="fa-angle-left"
+/>,
+            "responsive": Array [
+              Object {
+                "breakpoint": 1000,
+                "settings": Object {
+                  "slidesToScroll": 1,
+                  "slidesToShow": 2,
+                },
+              },
+              Object {
+                "breakpoint": 700,
+                "settings": Object {
+                  "slidesToScroll": 1,
+                  "slidesToShow": 1,
+                },
+              },
+            ],
+            "rows": 1,
+            "slidesToShow": 3,
+            "swipeToSlide": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <FilterCard
+                  cardDetails={
+                                    Object {
+                                                      "id": "D0BFellowsCount",
+                                                      "title": "Test key 1",
+                                                      "totalFellows": 10,
+                                                    }
+                  }
+                  className="card"
+                  filterId="D0BFellowsCount"
+                  onClick={[Function]}
+/>,
+                "className": "p-1",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": "D0BFellowsCount",
+                "nodeType": "function",
+                "props": Object {
+                  "cardDetails": Object {
+                    "id": "D0BFellowsCount",
+                    "title": "Test key 1",
+                    "totalFellows": 10,
+                  },
+                  "className": "card",
+                  "filterId": "D0BFellowsCount",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FellowSummaryLabel />,
+          <div
+            className="row ops-dashboard__filter"
+>
+            <Slider
+                        className="contain"
+                        infinite={false}
+                        nextArrow={
+                                    <NavArrow
+                                                buttonClass="slick-next"
+                                                iconClass="fa-angle-right"
+                                    />
+                        }
+                        prevArrow={
+                                    <NavArrow
+                                                buttonClass="slick-prev"
+                                                iconClass="fa-angle-left"
+                                    />
+                        }
+                        responsive={
+                                    Array [
+                                                Object {
+                                                  "breakpoint": 1000,
+                                                  "settings": Object {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 2,
+                                                  },
+                                                },
+                                                Object {
+                                                  "breakpoint": 700,
+                                                  "settings": Object {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 1,
+                                                  },
+                                                },
+                                              ]
+                        }
+                        rows={1}
+                        slidesToShow={3}
+                        swipeToSlide={true}
+            >
+                        <div
+                                    className="p-1"
+                        >
+                                    <FilterCard
+                                                cardDetails={
+                                                            Object {
+                                                                        "id": "D0BFellowsCount",
+                                                                        "title": "Test key 1",
+                                                                        "totalFellows": 10,
+                                                                      }
+                                                }
+                                                className="card"
+                                                filterId="D0BFellowsCount"
+                                                onClick={[Function]}
+                                    />
+                        </div>
+            </Slider>
+</div>,
+        ],
+        "className": "ops-dashboard__fellows-summary",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Slider
+              className="contain"
+              infinite={false}
+              nextArrow={
+                            <NavArrow
+                                          buttonClass="slick-next"
+                                          iconClass="fa-angle-right"
+                            />
+              }
+              prevArrow={
+                            <NavArrow
+                                          buttonClass="slick-prev"
+                                          iconClass="fa-angle-left"
+                            />
+              }
+              responsive={
+                            Array [
+                                          Object {
+                                            "breakpoint": 1000,
+                                            "settings": Object {
+                                              "slidesToScroll": 1,
+                                              "slidesToShow": 2,
+                                            },
+                                          },
+                                          Object {
+                                            "breakpoint": 700,
+                                            "settings": Object {
+                                              "slidesToScroll": 1,
+                                              "slidesToShow": 1,
+                                            },
+                                          },
+                                        ]
+              }
+              rows={1}
+              slidesToShow={3}
+              swipeToSlide={true}
+>
+              <div
+                            className="p-1"
+              >
+                            <FilterCard
+                                          cardDetails={
+                                                        Object {
+                                                                      "id": "D0BFellowsCount",
+                                                                      "title": "Test key 1",
+                                                                      "totalFellows": 10,
+                                                                    }
+                                          }
+                                          className="card"
+                                          filterId="D0BFellowsCount"
+                                          onClick={[Function]}
+                            />
+              </div>
+</Slider>,
+            "className": "row ops-dashboard__filter",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="p-1"
+>
+                  <FilterCard
+                                    cardDetails={
+                                                      Object {
+                                                                        "id": "D0BFellowsCount",
+                                                                        "title": "Test key 1",
+                                                                        "totalFellows": 10,
+                                                                      }
+                                    }
+                                    className="card"
+                                    filterId="D0BFellowsCount"
+                                    onClick={[Function]}
+                  />
+</div>,
+              ],
+              "className": "contain",
+              "infinite": false,
+              "nextArrow": <NavArrow
+                buttonClass="slick-next"
+                iconClass="fa-angle-right"
+/>,
+              "prevArrow": <NavArrow
+                buttonClass="slick-prev"
+                iconClass="fa-angle-left"
+/>,
+              "responsive": Array [
+                Object {
+                  "breakpoint": 1000,
+                  "settings": Object {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 2,
+                  },
+                },
+                Object {
+                  "breakpoint": 700,
+                  "settings": Object {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 1,
+                  },
+                },
+              ],
+              "rows": 1,
+              "slidesToShow": 3,
+              "swipeToSlide": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <FilterCard
+                    cardDetails={
+                                        Object {
+                                                            "id": "D0BFellowsCount",
+                                                            "title": "Test key 1",
+                                                            "totalFellows": 10,
+                                                          }
+                    }
+                    className="card"
+                    filterId="D0BFellowsCount"
+                    onClick={[Function]}
+/>,
+                  "className": "p-1",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": "D0BFellowsCount",
+                  "nodeType": "function",
+                  "props": Object {
+                    "cardDetails": Object {
+                      "id": "D0BFellowsCount",
+                      "title": "Test key 1",
+                      "totalFellows": 10,
+                    },
+                    "className": "card",
+                    "filterId": "D0BFellowsCount",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

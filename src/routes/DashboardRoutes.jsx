@@ -3,6 +3,7 @@ import OpsDashboard from '../views/OpsDashboard';
 import NotFoundPage from '../views/NotFoundPage';
 import TTLDashboard from '../views/TTLDashboard';
 import FellowDashboard from '../views/FellowDashboard';
+import EngineeringManagerSimsLeadDashboard from '../views/EngineeringManagerSimsLeadDashboard';
 
 /**
  * Defines wrapper function that switch users dashboard context
@@ -23,6 +24,8 @@ const Dashboards = props => {
     case 'WATCH_TOWER_LF':
       return <TTLDashboard {...props} role={role} />;
     case 'WATCH_TOWER_EM':
+    case 'WATCH_TOWER_SL':
+      return <EngineeringManagerSimsLeadDashboard {...props} role={role} />;
     case 'Fellow':
       return <FellowDashboard {...props} role={role} />;
     case 'WATCH_TOWER_OPS':
