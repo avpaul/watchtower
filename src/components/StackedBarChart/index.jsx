@@ -25,6 +25,9 @@ class StackedBarChart extends React.Component {
   renderXAxis = () => (
     <XAxis
       dataKey="cohort"
+      angle={-45}
+      dy={20}
+      height={62}
       label={{
         fontSize: '14px',
         fontFamily: 'DIN Pro Light',

@@ -104,6 +104,7 @@ ShallowWrapper {
                               allowDataOverflow={false}
                               allowDecimals={true}
                               allowDuplicatedCategory={true}
+                              angle={-45}
                               axisLine={
                                         Object {
                                                   "stroke": "#ECECEC",
@@ -116,7 +117,8 @@ ShallowWrapper {
                                                   "auto",
                                                 ]
                               }
-                              height={30}
+                              dy={20}
+                              height={62}
                               hide={false}
                               interval={0}
                               label={
@@ -387,6 +389,7 @@ ShallowWrapper {
                         allowDataOverflow={false}
                         allowDecimals={true}
                         allowDuplicatedCategory={true}
+                        angle={-45}
                         axisLine={
                                     Object {
                                                 "stroke": "#ECECEC",
@@ -399,7 +402,8 @@ ShallowWrapper {
                                                 "auto",
                                               ]
                         }
-                        height={30}
+                        dy={20}
+                        height={62}
                         hide={false}
                         interval={0}
                         label={
@@ -612,6 +616,7 @@ ShallowWrapper {
                 allowDataOverflow={false}
                 allowDecimals={true}
                 allowDuplicatedCategory={true}
+                angle={-45}
                 axisLine={
                                 Object {
                                                 "stroke": "#ECECEC",
@@ -624,7 +629,8 @@ ShallowWrapper {
                                                 "auto",
                                               ]
                 }
-                height={30}
+                dy={20}
+                height={62}
                 hide={false}
                 interval={0}
                 label={
@@ -863,6 +869,7 @@ ShallowWrapper {
                 "allowDataOverflow": false,
                 "allowDecimals": true,
                 "allowDuplicatedCategory": true,
+                "angle": -45,
                 "axisLine": Object {
                   "stroke": "#ECECEC",
                 },
@@ -871,7 +878,8 @@ ShallowWrapper {
                   0,
                   "auto",
                 ],
-                "height": 30,
+                "dy": 20,
+                "height": 62,
                 "hide": false,
                 "interval": 0,
                 "label": Object {
@@ -1150,6 +1158,7 @@ ShallowWrapper {
                                     allowDataOverflow={false}
                                     allowDecimals={true}
                                     allowDuplicatedCategory={true}
+                                    angle={-45}
                                     axisLine={
                                                 Object {
                                                             "stroke": "#ECECEC",
@@ -1162,7 +1171,8 @@ ShallowWrapper {
                                                             "auto",
                                                           ]
                                     }
-                                    height={30}
+                                    dy={20}
+                                    height={62}
                                     hide={false}
                                     interval={0}
                                     label={
@@ -1433,6 +1443,7 @@ ShallowWrapper {
                             allowDataOverflow={false}
                             allowDecimals={true}
                             allowDuplicatedCategory={true}
+                            angle={-45}
                             axisLine={
                                           Object {
                                                         "stroke": "#ECECEC",
@@ -1445,7 +1456,8 @@ ShallowWrapper {
                                                         "auto",
                                                       ]
                             }
-                            height={30}
+                            dy={20}
+                            height={62}
                             hide={false}
                             interval={0}
                             label={
@@ -1658,6 +1670,7 @@ ShallowWrapper {
                   allowDataOverflow={false}
                   allowDecimals={true}
                   allowDuplicatedCategory={true}
+                  angle={-45}
                   axisLine={
                                     Object {
                                                       "stroke": "#ECECEC",
@@ -1670,7 +1683,8 @@ ShallowWrapper {
                                                       "auto",
                                                     ]
                   }
-                  height={30}
+                  dy={20}
+                  height={62}
                   hide={false}
                   interval={0}
                   label={
@@ -1909,6 +1923,7 @@ ShallowWrapper {
                   "allowDataOverflow": false,
                   "allowDecimals": true,
                   "allowDuplicatedCategory": true,
+                  "angle": -45,
                   "axisLine": Object {
                     "stroke": "#ECECEC",
                   },
@@ -1917,7 +1932,8 @@ ShallowWrapper {
                     0,
                     "auto",
                   ],
-                  "height": 30,
+                  "dy": 20,
+                  "height": 62,
                   "hide": false,
                   "interval": 0,
                   "label": Object {
