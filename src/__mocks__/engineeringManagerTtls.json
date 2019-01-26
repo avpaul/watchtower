@@ -1,0 +1,182 @@
+{
+  "engineeringManager": {
+    "firstName": "Bukola",
+    "lastName": "Makinwa",
+    "email": "bukola.makinwa@andela.com",
+    "roleId": 1,
+    "staffId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+    "id": 1,
+    "createdAt": "2019-01-23 17:35:53",
+    "updatedAt": "2019-01-23 17:35:53",
+    "ttls": [
+      {
+        "firstName": "Kesiena",
+        "lastName": "Akpobome",
+        "email": "kesiena.akpobome@andela.com",
+        "roleId": 2,
+        "id": 4,
+        "staffId": "-KXGy1MT1oimjQgFim8t",
+        "createdAt": "2019-01-23 17:35:54",
+        "updatedAt": "2019-01-23 17:35:54",
+        "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+        "fellowsCount": 0,
+        "fellows": []
+      },
+      {
+        "firstName": "Olaoluwa",
+        "lastName": "Faniyi",
+        "email": "olaoluwa.faniyi@andela.com",
+        "roleId": 2,
+        "id": 8,
+        "staffId": "-LLEJdcxseZX4fPTxnqu",
+        "createdAt": "2019-01-23 17:35:54",
+        "updatedAt": "2019-01-23 17:35:54",
+        "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+        "fellowsCount": 0,
+        "fellows": []
+      },
+      {
+        "firstName": "Olaolu",
+        "lastName": "Akinsete",
+        "email": "olaolu.akinsete@andela.com",
+        "roleId": 2,
+        "id": 9,
+        "staffId": "-LU5ayJwwvcPATT1akh5",
+        "createdAt": "2019-01-23 17:35:54",
+        "updatedAt": "2019-01-23 17:35:54",
+        "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+        "fellowsCount": 0,
+        "fellows": []
+      },
+      {
+        "firstName": "Samuel",
+        "lastName": "Kubai",
+        "email": "samuel.kubai@andela.com",
+        "roleId": 2,
+        "id": 12,
+        "staffId": "-LDetFxSyHMIJqlvwcQH",
+        "createdAt": "2019-01-23 17:35:54",
+        "updatedAt": "2019-01-23 17:35:54",
+        "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+        "fellowsCount": 0,
+        "fellows": []
+      },
+      {
+        "firstName": "Trust ",
+        "lastName": "Birungi",
+        "email": "trust.birungi@andela.com",
+        "roleId": 2,
+        "id": 13,
+        "staffId": "-jghdgfyregjksfjdgfejkgfs",
+        "createdAt": "2019-01-23 17:35:54",
+        "updatedAt": "2019-01-23 17:35:54",
+        "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+        "fellowsCount": 5,
+        "fellows": [
+          {
+            "id": 9,
+            "email": "tovieye.ozi@andela.com",
+            "roleId": 1,
+            "level": "D0B Apprenticeship",
+            "status": "onTrack",
+            "createdAt": "2019-01-23 17:35:21",
+            "updatedAt": "2019-01-23 17:35:21",
+            "managerId": "-jghdgfyregjksfjdgfejkgfs",
+            "project": "Undefined",
+            "lmsId": null,
+            "user": {
+              "id": 9,
+              "firstName": "Tovieye",
+              "lastName": "Ozi",
+              "email": "tovieye.ozi@andela.com",
+              "createdAt": "2019-01-23 17:35:21",
+              "updatedAt": "2019-01-23 17:35:21"
+            }
+          },
+          {
+            "id": 11,
+            "email": "james.katarikawe@andela.com",
+            "roleId": 1,
+            "level": "D0B Apprenticeship",
+            "status": "gteWk5OffTrack",
+            "createdAt": "2019-01-23 17:35:21",
+            "updatedAt": "2019-01-23 17:35:21",
+            "managerId": "-jghdgfyregjksfjdgfejkgfs",
+            "project": "Undefined",
+            "lmsId": null,
+            "user": {
+              "id": 11,
+              "firstName": "James",
+              "lastName": "Katarikawe",
+              "email": "james.katarikawe@andela.com",
+              "createdAt": "2019-01-23 17:35:21",
+              "updatedAt": "2019-01-23 17:35:21"
+            }
+          },
+          {
+            "id": 16,
+            "email": "sinmiloluwa.oloyede@andela.com",
+            "roleId": 1,
+            "level": "D0B Apprenticeship",
+            "status": "onTrack",
+            "createdAt": "2019-01-23 17:35:21",
+            "updatedAt": "2019-01-23 17:35:21",
+            "managerId": "-jghdgfyregjksfjdgfejkgfs",
+            "project": "Watch Tower",
+            "lmsId": null,
+            "user": {
+              "id": 16,
+              "firstName": "Sinmiloluwa",
+              "lastName": "Oloyede",
+              "email": "sinmiloluwa.oloyede@andela.com",
+              "createdAt": "2019-01-23 17:35:21",
+              "updatedAt": "2019-01-23 17:35:21"
+            }
+          },
+          {
+            "id": 17,
+            "email": "kingsley.obot@andela.com",
+            "roleId": 1,
+            "level": "D0B Apprenticeship",
+            "status": "onTrack",
+            "createdAt": "2019-01-23 17:35:21",
+            "updatedAt": "2019-01-23 17:35:21",
+            "managerId": "-jghdgfyregjksfjdgfejkgfs",
+            "project": "Watch Tower",
+            "lmsId": null,
+            "user": {
+              "id": 17,
+              "firstName": "Kingsley",
+              "lastName": "Obot",
+              "email": "kingsley.obot@andela.com",
+              "createdAt": "2019-01-23 17:35:21",
+              "updatedAt": "2019-01-23 17:35:21"
+            }
+          },
+          {
+            "id": 18,
+            "email": "folajimi.ogunbadejo@andela.com",
+            "roleId": 1,
+            "level": "D0B Apprenticeship",
+            "status": "onTrack",
+            "createdAt": "2019-01-23 17:35:21",
+            "updatedAt": "2019-01-23 17:35:21",
+            "managerId": "-jghdgfyregjksfjdgfejkgfs",
+            "project": "Watch Tower",
+            "lmsId": null,
+            "user": {
+              "id": 18,
+              "firstName": "Folajimi",
+              "lastName": "Ogunbadejo",
+              "email": "folajimi.ogunbadejo@andela.com",
+              "createdAt": "2019-01-23 17:35:21",
+              "updatedAt": "2019-01-23 17:35:21"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "totalFellows": 5,
+  "averageFellowsPerTtl": 5
+}

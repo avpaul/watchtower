@@ -6,7 +6,11 @@ const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 const getEngineeringManagerTtls = email => dispatch => {
   dispatch({ type: types.LOAD_ENGINEERING_MANAGER_TTLS_REQUEST });
-  const url = `${serverURL}/api/v1/engineeringmanagers/ttls/?email=${email}`;
+  const newEmail =
+    email.split('@')[0] === 'wt-test-em'
+      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
+      : email;
+  const url = `${serverURL}/api/v1/engineeringmanagers/ttls/?email=${newEmail}`;
   return axios
     .get(url)
     .then(response =>

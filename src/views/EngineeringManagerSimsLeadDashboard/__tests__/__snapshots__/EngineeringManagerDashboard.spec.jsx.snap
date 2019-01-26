@@ -1,15 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tests on EngineeringDashboard component renders to match snapshot 1`] = `
+exports[`EngineeringDashboard component renders to match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EngineeringManagerDashboard
+    data={
+        Object {
+            "engineeringManager": Object {
+              "ttls": Array [
+                Object {
+                  "createdAt": "2019-01-23 17:35:54",
+                  "email": "kesiena.akpobome@andela.com",
+                  "fellows": Array [],
+                  "fellowsCount": 0,
+                  "firstName": "Kesiena",
+                  "id": 4,
+                  "lastName": "Akpobome",
+                  "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+                  "roleId": 2,
+                  "staffId": "-KXGy1MT1oimjQgFim8t",
+                  "updatedAt": "2019-01-23 17:35:54",
+                },
+                Object {
+                  "createdAt": "2019-01-23 17:35:54",
+                  "email": "olaoluwa.faniyi@andela.com",
+                  "fellows": Array [],
+                  "fellowsCount": 0,
+                  "firstName": "Olaoluwa",
+                  "id": 8,
+                  "lastName": "Faniyi",
+                  "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+                  "roleId": 2,
+                  "staffId": "-LLEJdcxseZX4fPTxnqu",
+                  "updatedAt": "2019-01-23 17:35:54",
+                },
+                Object {
+                  "createdAt": "2019-01-23 17:35:54",
+                  "email": "olaolu.akinsete@andela.com",
+                  "fellows": Array [],
+                  "fellowsCount": 0,
+                  "firstName": "Olaolu",
+                  "id": 9,
+                  "lastName": "Akinsete",
+                  "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+                  "roleId": 2,
+                  "staffId": "-LU5ayJwwvcPATT1akh5",
+                  "updatedAt": "2019-01-23 17:35:54",
+                },
+                Object {
+                  "createdAt": "2019-01-23 17:35:54",
+                  "email": "samuel.kubai@andela.com",
+                  "fellows": Array [],
+                  "fellowsCount": 0,
+                  "firstName": "Samuel",
+                  "id": 12,
+                  "lastName": "Kubai",
+                  "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+                  "roleId": 2,
+                  "staffId": "-LDetFxSyHMIJqlvwcQH",
+                  "updatedAt": "2019-01-23 17:35:54",
+                },
+                Object {
+                  "createdAt": "2019-01-23 17:35:54",
+                  "email": "trust.birungi@andela.com",
+                  "fellows": Array [
+                    Object {
+                      "createdAt": "2019-01-23 17:35:21",
+                      "email": "tovieye.ozi@andela.com",
+                      "id": 9,
+                      "level": "D0B Apprenticeship",
+                      "lmsId": null,
+                      "managerId": "-jghdgfyregjksfjdgfejkgfs",
+                      "project": "Undefined",
+                      "roleId": 1,
+                      "status": "onTrack",
+                      "updatedAt": "2019-01-23 17:35:21",
+                      "user": Object {
+                        "createdAt": "2019-01-23 17:35:21",
+                        "email": "tovieye.ozi@andela.com",
+                        "firstName": "Tovieye",
+                        "id": 9,
+                        "lastName": "Ozi",
+                        "updatedAt": "2019-01-23 17:35:21",
+                      },
+                    },
+                    Object {
+                      "createdAt": "2019-01-23 17:35:21",
+                      "email": "james.katarikawe@andela.com",
+                      "id": 11,
+                      "level": "D0B Apprenticeship",
+                      "lmsId": null,
+                      "managerId": "-jghdgfyregjksfjdgfejkgfs",
+                      "project": "Undefined",
+                      "roleId": 1,
+                      "status": "gteWk5OffTrack",
+                      "updatedAt": "2019-01-23 17:35:21",
+                      "user": Object {
+                        "createdAt": "2019-01-23 17:35:21",
+                        "email": "james.katarikawe@andela.com",
+                        "firstName": "James",
+                        "id": 11,
+                        "lastName": "Katarikawe",
+                        "updatedAt": "2019-01-23 17:35:21",
+                      },
+                    },
+                    Object {
+                      "createdAt": "2019-01-23 17:35:21",
+                      "email": "sinmiloluwa.oloyede@andela.com",
+                      "id": 16,
+                      "level": "D0B Apprenticeship",
+                      "lmsId": null,
+                      "managerId": "-jghdgfyregjksfjdgfejkgfs",
+                      "project": "Watch Tower",
+                      "roleId": 1,
+                      "status": "onTrack",
+                      "updatedAt": "2019-01-23 17:35:21",
+                      "user": Object {
+                        "createdAt": "2019-01-23 17:35:21",
+                        "email": "sinmiloluwa.oloyede@andela.com",
+                        "firstName": "Sinmiloluwa",
+                        "id": 16,
+                        "lastName": "Oloyede",
+                        "updatedAt": "2019-01-23 17:35:21",
+                      },
+                    },
+                    Object {
+                      "createdAt": "2019-01-23 17:35:21",
+                      "email": "kingsley.obot@andela.com",
+                      "id": 17,
+                      "level": "D0B Apprenticeship",
+                      "lmsId": null,
+                      "managerId": "-jghdgfyregjksfjdgfejkgfs",
+                      "project": "Watch Tower",
+                      "roleId": 1,
+                      "status": "onTrack",
+                      "updatedAt": "2019-01-23 17:35:21",
+                      "user": Object {
+                        "createdAt": "2019-01-23 17:35:21",
+                        "email": "kingsley.obot@andela.com",
+                        "firstName": "Kingsley",
+                        "id": 17,
+                        "lastName": "Obot",
+                        "updatedAt": "2019-01-23 17:35:21",
+                      },
+                    },
+                    Object {
+                      "createdAt": "2019-01-23 17:35:21",
+                      "email": "folajimi.ogunbadejo@andela.com",
+                      "id": 18,
+                      "level": "D0B Apprenticeship",
+                      "lmsId": null,
+                      "managerId": "-jghdgfyregjksfjdgfejkgfs",
+                      "project": "Watch Tower",
+                      "roleId": 1,
+                      "status": "onTrack",
+                      "updatedAt": "2019-01-23 17:35:21",
+                      "user": Object {
+                        "createdAt": "2019-01-23 17:35:21",
+                        "email": "folajimi.ogunbadejo@andela.com",
+                        "firstName": "Folajimi",
+                        "id": 18,
+                        "lastName": "Ogunbadejo",
+                        "updatedAt": "2019-01-23 17:35:21",
+                      },
+                    },
+                  ],
+                  "fellowsCount": 5,
+                  "firstName": "Trust ",
+                  "id": 13,
+                  "lastName": "Birungi",
+                  "managerId": "-akhdjkaurewgrjlf;grghufweghsdfgsd",
+                  "roleId": 2,
+                  "staffId": "-jghdgfyregjksfjdgfejkgfs",
+                  "updatedAt": "2019-01-23 17:35:54",
+                },
+              ],
+            },
+            "totalFellows": 5,
+          }
+    }
     getEngineeringManagerTtls={[Function]}
     user={
         Object {
             "email": "",
             "roles": Object {
-              "WATCH_TOWER_EM": "3223",
+              "WATCH_TOWER_EM": "hdkjshdjsdha",
             },
           }
     }
@@ -28,11 +203,36 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(FellowsSummaryChart)
-          displayByRole={
-                    Object {
-                              "WATCH_TOWER_EM": "3223",
-                            }
+        <FellowsSummary
+          fellowsSummary={
+                    Array [
+                              Object {
+                                "id": "total-fellows-card",
+                                "subTitle": "Click to see details",
+                                "title": "Total D0 Fellows",
+                                "totalFellows": "5",
+                              },
+                              Object {
+                                "title": "TTL - Kesiena A",
+                                "totalFellows": 0,
+                              },
+                              Object {
+                                "title": "TTL - Olaoluwa F",
+                                "totalFellows": 0,
+                              },
+                              Object {
+                                "title": "TTL - Olaolu A",
+                                "totalFellows": 0,
+                              },
+                              Object {
+                                "title": "TTL - Samuel K",
+                                "totalFellows": 0,
+                              },
+                              Object {
+                                "title": "TTL - Trust  B",
+                                "totalFellows": 5,
+                              },
+                            ]
           }
 />,
         <div
@@ -63,11 +263,36 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "displayByRole": Object {
-            "WATCH_TOWER_EM": "3223",
-          },
+          "fellowsSummary": Array [
+            Object {
+              "id": "total-fellows-card",
+              "subTitle": "Click to see details",
+              "title": "Total D0 Fellows",
+              "totalFellows": "5",
+            },
+            Object {
+              "title": "TTL - Kesiena A",
+              "totalFellows": 0,
+            },
+            Object {
+              "title": "TTL - Olaoluwa F",
+              "totalFellows": 0,
+            },
+            Object {
+              "title": "TTL - Olaolu A",
+              "totalFellows": 0,
+            },
+            Object {
+              "title": "TTL - Samuel K",
+              "totalFellows": 0,
+            },
+            Object {
+              "title": "TTL - Trust  B",
+              "totalFellows": 5,
+            },
+          ],
         },
         "ref": null,
         "rendered": null,
@@ -125,11 +350,36 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(FellowsSummaryChart)
-            displayByRole={
-                        Object {
-                                    "WATCH_TOWER_EM": "3223",
-                                  }
+          <FellowsSummary
+            fellowsSummary={
+                        Array [
+                                    Object {
+                                      "id": "total-fellows-card",
+                                      "subTitle": "Click to see details",
+                                      "title": "Total D0 Fellows",
+                                      "totalFellows": "5",
+                                    },
+                                    Object {
+                                      "title": "TTL - Kesiena A",
+                                      "totalFellows": 0,
+                                    },
+                                    Object {
+                                      "title": "TTL - Olaoluwa F",
+                                      "totalFellows": 0,
+                                    },
+                                    Object {
+                                      "title": "TTL - Olaolu A",
+                                      "totalFellows": 0,
+                                    },
+                                    Object {
+                                      "title": "TTL - Samuel K",
+                                      "totalFellows": 0,
+                                    },
+                                    Object {
+                                      "title": "TTL - Trust  B",
+                                      "totalFellows": 5,
+                                    },
+                                  ]
             }
 />,
           <div
@@ -160,11 +410,36 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "displayByRole": Object {
-              "WATCH_TOWER_EM": "3223",
-            },
+            "fellowsSummary": Array [
+              Object {
+                "id": "total-fellows-card",
+                "subTitle": "Click to see details",
+                "title": "Total D0 Fellows",
+                "totalFellows": "5",
+              },
+              Object {
+                "title": "TTL - Kesiena A",
+                "totalFellows": 0,
+              },
+              Object {
+                "title": "TTL - Olaoluwa F",
+                "totalFellows": 0,
+              },
+              Object {
+                "title": "TTL - Olaolu A",
+                "totalFellows": 0,
+              },
+              Object {
+                "title": "TTL - Samuel K",
+                "totalFellows": 0,
+              },
+              Object {
+                "title": "TTL - Trust  B",
+                "totalFellows": 5,
+              },
+            ],
           },
           "ref": null,
           "rendered": null,

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DisplayCard from '../../components/Filters/DisplayCard';
-import FellowsSummaryChart from '../../components/FellowsSummaryChart';
+import TtlsFellowSummary from './TtlsFellowSummary';
 
 /**
  * Class representing Engineering Manager dashboard
@@ -20,9 +20,7 @@ class EngineeringManagerDashboard extends Component {
 
   componentDidMount() {
     const { getEngineeringManagerTtls, user } = this.props;
-    const email = user.email.split('@')[0].includes('wt-test-em')
-      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
-      : user.email;
+    const { email } = user;
     if (user.roles.WATCH_TOWER_EM) {
       getEngineeringManagerTtls(email).then(data => {
         if (!data.error) {
@@ -34,6 +32,30 @@ class EngineeringManagerDashboard extends Component {
       });
     }
   }
+
+  mapDisplayFellowSummary = (ttlsArrays, totalFellows) => {
+    const titleName = 'TTL - ';
+    const displayList = [
+      {
+        id: 'total-fellows-card',
+        title: 'Total D0 Fellows',
+        subTitle: 'Click to see details',
+        totalFellows: `${totalFellows === undefined ? 0 : totalFellows}`
+      }
+    ];
+    for (let i = 0; i < ttlsArrays.length; i += 1) {
+      const content = {
+        title: titleName.concat(
+          ttlsArrays[i].firstName,
+          ' ',
+          ttlsArrays[i].lastName.substring(1, 0)
+        ),
+        totalFellows: ttlsArrays[i].fellowsCount
+      };
+      displayList.push(content);
+    }
+    return displayList;
+  };
 
   mapDisplayContent = () => {
     const {
@@ -55,16 +77,20 @@ class EngineeringManagerDashboard extends Component {
   };
 
   render() {
-    const opsDashboardStyle = {
+    const emDashboardStyle = {
       paddingLeft: '0',
       paddingRight: '0',
       paddingBottom: '49px'
     };
-    const { user } = this.props;
+    const { data } = this.props;
+    const ttls = data.length !== 0 ? data.engineeringManager.ttls : '';
+    const { totalFellows } = data.length !== 0 ? data : '';
     // Add components here for EngineeringMangerDashboard
     return (
-      <div className="container-fluid" style={opsDashboardStyle}>
-        <FellowsSummaryChart displayByRole={user.roles} />
+      <div className="container-fluid" style={emDashboardStyle}>
+        <TtlsFellowSummary
+          fellowsSummary={this.mapDisplayFellowSummary(ttls, totalFellows)}
+        />
         <div className="row map-card-row">
           {this.mapDisplayContent().map((displayContent, index) => (
             <DisplayCard
@@ -81,6 +107,8 @@ class EngineeringManagerDashboard extends Component {
 }
 
 EngineeringManagerDashboard.propTypes = {
+  // required prop-types
+  data: PropTypes.arrayOf.isRequired,
   user: PropTypes.arrayOf.isRequired,
   getEngineeringManagerTtls: PropTypes.func.isRequired
 };
