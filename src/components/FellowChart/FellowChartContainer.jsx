@@ -38,8 +38,8 @@ const FellowChartContainer = props => {
     fellowChartTooltipClass
   } = props;
   const fc = getFellowCount(data, filter);
-
   const fellowChartTooltip = getFilterTooltips(filter);
+
   return (
     <Fragment>
       {!loading && fc.length > 0 ? (

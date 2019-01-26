@@ -7,11 +7,27 @@ import FilterCard from '../../Filters/FilterCard';
 const setup = propOverrides => {
   const { loggedInRole } = propOverrides;
   const props = {
-    fellowsSummary: [
-      { id: 'D0BFellowsCount', title: 'Test key 1', totalFellows: 10 },
-      { id: 'D0AFellowsCount', title: 'Test key 2', totalFellows: 5 },
-      { id: 'testkey3', title: 'Test key 3', totalFellows: 5 }
-    ],
+    fellowsSummary: {
+      loading: false,
+      fellowsSummaryToday: {
+        data: [{}, {}],
+        keys: ['Total', 'D0A', 'D0B'],
+        latestWeekSummary: {
+          Total: 10,
+          D0A: 5,
+          D0B: 5
+        }
+      },
+      fellowsSummaryTrend: {
+        data: [{}, {}],
+        keys: ['Total', 'D0A', 'D0B'],
+        latestWeekSummary: {
+          Total: 10,
+          D0A: 5,
+          D0B: 5
+        }
+      }
+    },
     handleCardClick: jest.fn(),
     displayByRole: {
       [`${loggedInRole}`]: '343242434'

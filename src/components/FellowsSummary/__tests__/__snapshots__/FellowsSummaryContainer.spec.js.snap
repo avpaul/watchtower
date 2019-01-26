@@ -2,22 +2,16 @@
 
 exports[`FellowsSummaryContainer should map state to props 1`] = `
 Object {
-  "fellowsSummary": Array [
-    Object {
-      "id": "allFellowsCount",
-      "title": "Total D0 Fellows",
-      "totalFellows": 0,
+  "fellowsSummary": Object {
+    "data": Object {
+      "D0AFellowsCount": 0,
+      "D0BFellowsCount": 0,
+      "allFellowsCount": 0,
     },
-    Object {
-      "id": "D0AFellowsCount",
-      "title": "Total D0A Fellows",
-      "totalFellows": 0,
-    },
-    Object {
-      "id": "D0BFellowsCount",
-      "title": "Total D0B Fellows",
-      "totalFellows": 0,
-    },
-  ],
+    "error": "",
+    "fellowsSummaryToday": Object {},
+    "fellowsSummaryTrend": Object {},
+    "loading": false,
+  },
 }
 `;

@@ -11,12 +11,7 @@ class FellowsSummaryChart extends Component {
   };
 
   componentDidMount() {
-    const {
-      getFellowCountHistory,
-      fetchFellowsSummary,
-      getFellowSummaryOps
-    } = this.props;
-    fetchFellowsSummary();
+    const { getFellowCountHistory, getFellowSummaryOps } = this.props;
     getFellowCountHistory();
     getFellowSummaryOps();
   }
@@ -27,24 +22,18 @@ class FellowsSummaryChart extends Component {
 
   handleCardClick = event => {
     const currentCard = event.currentTarget.id;
-    if (currentCard === 'D0AFellowsCount') {
-      this.setState({ showChart: true, fellowsSummaryFilter: 'D0A' });
-    } else if (currentCard === 'D0BFellowsCount') {
-      this.setState({ showChart: true, fellowsSummaryFilter: 'D0B' });
-    } else {
-      this.setState({ showChart: true, fellowsSummaryFilter: 'Total' });
-    }
+    this.setState({ showChart: true, fellowsSummaryFilter: currentCard });
   };
 
   updateFellowSummary = selected => {
     const { fellowsSummary } = this.props;
     const history = fellowsSummary.fellowsSummaryToday;
-    const treads = fellowsSummary.fellowsSummaryTrend;
+    const trend = fellowsSummary.fellowsSummaryTrend;
     let datapoint;
     if (selected === 'Today') {
       datapoint = history;
     } else if (selected === 'Trend') {
-      datapoint = treads;
+      datapoint = trend;
     }
     return datapoint;
   };

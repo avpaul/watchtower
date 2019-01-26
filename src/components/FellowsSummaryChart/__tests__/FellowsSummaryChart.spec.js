@@ -55,9 +55,9 @@ describe('<FellowsSummaryChart />', () => {
   });
 
   it('handles card Click', () => {
-    setupHandleCardClickExpect('D0AFellowsCount', 'D0A');
-    setupHandleCardClickExpect('D0BFellowsCount', 'D0B');
-    setupHandleCardClickExpect('allFellowsCount', 'Total');
+    setupHandleCardClickExpect('D0A', 'D0A');
+    setupHandleCardClickExpect('D0B', 'D0B');
+    setupHandleCardClickExpect('Total', 'Total');
   });
 
   it('closes the chart when the close button is clicked', () => {

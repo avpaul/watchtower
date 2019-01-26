@@ -12,7 +12,6 @@ const formatProjects = projects => {
     title: key,
     totalFellows: parseInt(projects[key], 10)
   }));
-
   return result;
 };
 

@@ -5,58 +5,20 @@ import {
 } from '../../constants/fellowActionTypes';
 import initialState from '../initialState';
 
-const fellowsSummaryReducer = (
-  state = initialState.opsDashboard.fellowsSummary,
-  action
-) => {
+export default (state = initialState.opsDashboard.fellowsSummary, action) => {
   switch (action.type) {
     case FETCH_FELLOWS_SUMMARY_REQUEST:
       return { ...state, loading: true };
     case FETCH_FELLOWS_SUMMARY_ERROR:
-      return { ...state, error: action.error };
+      return { ...state, error: action.error, loading: false };
     case FETCH_FELLOWS_SUMMARY_SUCCESS:
-      if (action.payload) {
-        return {
-          ...state,
-          data: action.payload
-        };
-      }
       return {
         ...state,
-        fellowsSummaryTrend: action.fellowsSummaryTrend,
-        fellowsSummaryToday: action.fellowsSummaryToday
+        loading: false,
+        fellowsSummaryToday: action.fellowsSummaryToday,
+        fellowsSummaryTrend: action.fellowsSummaryTrend
       };
     default:
       return state;
   }
 };
-
-/**
- * Return array of fellow summary
- * @exports
- *
- * @param {object} state Redux state tree
- *
- * @returns {Array} Array of fellow summary
- */
-export const getFellowsSummary = state => {
-  const fellowsSummaryData = state.fellowsSummary.data;
-  const keys = Object.keys(fellowsSummaryData);
-  return keys.map(key => {
-    if (key === 'allFellowsCount') {
-      return {
-        id: key,
-        title: 'Total D0 Fellows',
-        totalFellows: fellowsSummaryData[key]
-      };
-    }
-
-    return {
-      id: key,
-      title: `Total ${key.slice(0, 3)} Fellows`,
-      totalFellows: fellowsSummaryData[key]
-    };
-  });
-};
-
-export default fellowsSummaryReducer;

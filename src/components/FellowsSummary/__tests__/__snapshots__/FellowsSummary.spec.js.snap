@@ -10,23 +10,41 @@ ShallowWrapper {
           }
     }
     fellowsSummary={
-        Array [
-            Object {
-              "id": "D0BFellowsCount",
-              "title": "Test key 1",
-              "totalFellows": 10,
+        Object {
+            "fellowsSummaryToday": Object {
+              "data": Array [
+                Object {},
+                Object {},
+              ],
+              "keys": Array [
+                "Total",
+                "D0A",
+                "D0B",
+              ],
+              "latestWeekSummary": Object {
+                "D0A": 5,
+                "D0B": 5,
+                "Total": 10,
+              },
             },
-            Object {
-              "id": "D0AFellowsCount",
-              "title": "Test key 2",
-              "totalFellows": 5,
+            "fellowsSummaryTrend": Object {
+              "data": Array [
+                Object {},
+                Object {},
+              ],
+              "keys": Array [
+                "Total",
+                "D0A",
+                "D0B",
+              ],
+              "latestWeekSummary": Object {
+                "D0A": 5,
+                "D0B": 5,
+                "Total": 10,
+              },
             },
-            Object {
-              "id": "testkey3",
-              "title": "Test key 3",
-              "totalFellows": 5,
-            },
-          ]
+            "loading": false,
+          }
     }
     handleCardClick={[Function]}
     loggedInRole="WATCH_TOWER_SL"
@@ -92,13 +110,12 @@ ShallowWrapper {
                               <FilterCard
                                         cardDetails={
                                                   Object {
-                                                            "id": "D0AFellowsCount",
-                                                            "title": "Test key 2",
+                                                            "title": "D0A",
                                                             "totalFellows": 5,
                                                           }
                                         }
                                         className="card"
-                                        filterId="D0AFellowsCount"
+                                        filterId="D0A"
                                         onClick={[Function]}
                               />
                     </div>
@@ -166,13 +183,12 @@ ShallowWrapper {
                         <FilterCard
                                     cardDetails={
                                                 Object {
-                                                            "id": "D0AFellowsCount",
-                                                            "title": "Test key 2",
+                                                            "title": "D0A",
                                                             "totalFellows": 5,
                                                           }
                                     }
                                     className="card"
-                                    filterId="D0AFellowsCount"
+                                    filterId="D0A"
                                     onClick={[Function]}
                         />
             </div>
@@ -192,13 +208,12 @@ ShallowWrapper {
                 <FilterCard
                                 cardDetails={
                                                 Object {
-                                                                "id": "D0AFellowsCount",
-                                                                "title": "Test key 2",
+                                                                "title": "D0A",
                                                                 "totalFellows": 5,
                                                               }
                                 }
                                 className="card"
-                                filterId="D0AFellowsCount"
+                                filterId="D0A"
                                 onClick={[Function]}
                 />
 </div>,
@@ -243,13 +258,12 @@ ShallowWrapper {
                 "children": <FilterCard
                   cardDetails={
                                     Object {
-                                                      "id": "D0AFellowsCount",
-                                                      "title": "Test key 2",
+                                                      "title": "D0A",
                                                       "totalFellows": 5,
                                                     }
                   }
                   className="card"
-                  filterId="D0AFellowsCount"
+                  filterId="D0A"
                   onClick={[Function]}
 />,
                 "className": "p-1",
@@ -257,16 +271,15 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": "D0AFellowsCount",
+                "key": "D0A",
                 "nodeType": "function",
                 "props": Object {
                   "cardDetails": Object {
-                    "id": "D0AFellowsCount",
-                    "title": "Test key 2",
+                    "title": "D0A",
                     "totalFellows": 5,
                   },
                   "className": "card",
-                  "filterId": "D0AFellowsCount",
+                  "filterId": "D0A",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -337,13 +350,12 @@ ShallowWrapper {
                                     <FilterCard
                                                 cardDetails={
                                                             Object {
-                                                                        "id": "D0AFellowsCount",
-                                                                        "title": "Test key 2",
+                                                                        "title": "D0A",
                                                                         "totalFellows": 5,
                                                                       }
                                                 }
                                                 className="card"
-                                                filterId="D0AFellowsCount"
+                                                filterId="D0A"
                                                 onClick={[Function]}
                                     />
                         </div>
@@ -411,13 +423,12 @@ ShallowWrapper {
                             <FilterCard
                                           cardDetails={
                                                         Object {
-                                                                      "id": "D0AFellowsCount",
-                                                                      "title": "Test key 2",
+                                                                      "title": "D0A",
                                                                       "totalFellows": 5,
                                                                     }
                                           }
                                           className="card"
-                                          filterId="D0AFellowsCount"
+                                          filterId="D0A"
                                           onClick={[Function]}
                             />
               </div>
@@ -437,13 +448,12 @@ ShallowWrapper {
                   <FilterCard
                                     cardDetails={
                                                       Object {
-                                                                        "id": "D0AFellowsCount",
-                                                                        "title": "Test key 2",
+                                                                        "title": "D0A",
                                                                         "totalFellows": 5,
                                                                       }
                                     }
                                     className="card"
-                                    filterId="D0AFellowsCount"
+                                    filterId="D0A"
                                     onClick={[Function]}
                   />
 </div>,
@@ -488,13 +498,12 @@ ShallowWrapper {
                   "children": <FilterCard
                     cardDetails={
                                         Object {
-                                                            "id": "D0AFellowsCount",
-                                                            "title": "Test key 2",
+                                                            "title": "D0A",
                                                             "totalFellows": 5,
                                                           }
                     }
                     className="card"
-                    filterId="D0AFellowsCount"
+                    filterId="D0A"
                     onClick={[Function]}
 />,
                   "className": "p-1",
@@ -502,16 +511,15 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
-                  "key": "D0AFellowsCount",
+                  "key": "D0A",
                   "nodeType": "function",
                   "props": Object {
                     "cardDetails": Object {
-                      "id": "D0AFellowsCount",
-                      "title": "Test key 2",
+                      "title": "D0A",
                       "totalFellows": 5,
                     },
                     "className": "card",
-                    "filterId": "D0AFellowsCount",
+                    "filterId": "D0A",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -559,23 +567,41 @@ ShallowWrapper {
           }
     }
     fellowsSummary={
-        Array [
-            Object {
-              "id": "D0BFellowsCount",
-              "title": "Test key 1",
-              "totalFellows": 10,
+        Object {
+            "fellowsSummaryToday": Object {
+              "data": Array [
+                Object {},
+                Object {},
+              ],
+              "keys": Array [
+                "Total",
+                "D0A",
+                "D0B",
+              ],
+              "latestWeekSummary": Object {
+                "D0A": 5,
+                "D0B": 5,
+                "Total": 10,
+              },
             },
-            Object {
-              "id": "D0AFellowsCount",
-              "title": "Test key 2",
-              "totalFellows": 5,
+            "fellowsSummaryTrend": Object {
+              "data": Array [
+                Object {},
+                Object {},
+              ],
+              "keys": Array [
+                "Total",
+                "D0A",
+                "D0B",
+              ],
+              "latestWeekSummary": Object {
+                "D0A": 5,
+                "D0B": 5,
+                "Total": 10,
+              },
             },
-            Object {
-              "id": "testkey3",
-              "title": "Test key 3",
-              "totalFellows": 5,
-            },
-          ]
+            "loading": false,
+          }
     }
     handleCardClick={[Function]}
     loggedInRole="WATCH_TOWER_EM"
@@ -641,13 +667,12 @@ ShallowWrapper {
                               <FilterCard
                                         cardDetails={
                                                   Object {
-                                                            "id": "D0BFellowsCount",
-                                                            "title": "Test key 1",
-                                                            "totalFellows": 10,
+                                                            "title": "D0B",
+                                                            "totalFellows": 5,
                                                           }
                                         }
                                         className="card"
-                                        filterId="D0BFellowsCount"
+                                        filterId="D0B"
                                         onClick={[Function]}
                               />
                     </div>
@@ -715,13 +740,12 @@ ShallowWrapper {
                         <FilterCard
                                     cardDetails={
                                                 Object {
-                                                            "id": "D0BFellowsCount",
-                                                            "title": "Test key 1",
-                                                            "totalFellows": 10,
+                                                            "title": "D0B",
+                                                            "totalFellows": 5,
                                                           }
                                     }
                                     className="card"
-                                    filterId="D0BFellowsCount"
+                                    filterId="D0B"
                                     onClick={[Function]}
                         />
             </div>
@@ -741,13 +765,12 @@ ShallowWrapper {
                 <FilterCard
                                 cardDetails={
                                                 Object {
-                                                                "id": "D0BFellowsCount",
-                                                                "title": "Test key 1",
-                                                                "totalFellows": 10,
+                                                                "title": "D0B",
+                                                                "totalFellows": 5,
                                                               }
                                 }
                                 className="card"
-                                filterId="D0BFellowsCount"
+                                filterId="D0B"
                                 onClick={[Function]}
                 />
 </div>,
@@ -792,13 +815,12 @@ ShallowWrapper {
                 "children": <FilterCard
                   cardDetails={
                                     Object {
-                                                      "id": "D0BFellowsCount",
-                                                      "title": "Test key 1",
-                                                      "totalFellows": 10,
+                                                      "title": "D0B",
+                                                      "totalFellows": 5,
                                                     }
                   }
                   className="card"
-                  filterId="D0BFellowsCount"
+                  filterId="D0B"
                   onClick={[Function]}
 />,
                 "className": "p-1",
@@ -806,16 +828,15 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": "D0BFellowsCount",
+                "key": "D0B",
                 "nodeType": "function",
                 "props": Object {
                   "cardDetails": Object {
-                    "id": "D0BFellowsCount",
-                    "title": "Test key 1",
-                    "totalFellows": 10,
+                    "title": "D0B",
+                    "totalFellows": 5,
                   },
                   "className": "card",
-                  "filterId": "D0BFellowsCount",
+                  "filterId": "D0B",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -886,13 +907,12 @@ ShallowWrapper {
                                     <FilterCard
                                                 cardDetails={
                                                             Object {
-                                                                        "id": "D0BFellowsCount",
-                                                                        "title": "Test key 1",
-                                                                        "totalFellows": 10,
+                                                                        "title": "D0B",
+                                                                        "totalFellows": 5,
                                                                       }
                                                 }
                                                 className="card"
-                                                filterId="D0BFellowsCount"
+                                                filterId="D0B"
                                                 onClick={[Function]}
                                     />
                         </div>
@@ -960,13 +980,12 @@ ShallowWrapper {
                             <FilterCard
                                           cardDetails={
                                                         Object {
-                                                                      "id": "D0BFellowsCount",
-                                                                      "title": "Test key 1",
-                                                                      "totalFellows": 10,
+                                                                      "title": "D0B",
+                                                                      "totalFellows": 5,
                                                                     }
                                           }
                                           className="card"
-                                          filterId="D0BFellowsCount"
+                                          filterId="D0B"
                                           onClick={[Function]}
                             />
               </div>
@@ -986,13 +1005,12 @@ ShallowWrapper {
                   <FilterCard
                                     cardDetails={
                                                       Object {
-                                                                        "id": "D0BFellowsCount",
-                                                                        "title": "Test key 1",
-                                                                        "totalFellows": 10,
+                                                                        "title": "D0B",
+                                                                        "totalFellows": 5,
                                                                       }
                                     }
                                     className="card"
-                                    filterId="D0BFellowsCount"
+                                    filterId="D0B"
                                     onClick={[Function]}
                   />
 </div>,
@@ -1037,13 +1055,12 @@ ShallowWrapper {
                   "children": <FilterCard
                     cardDetails={
                                         Object {
-                                                            "id": "D0BFellowsCount",
-                                                            "title": "Test key 1",
-                                                            "totalFellows": 10,
+                                                            "title": "D0B",
+                                                            "totalFellows": 5,
                                                           }
                     }
                     className="card"
-                    filterId="D0BFellowsCount"
+                    filterId="D0B"
                     onClick={[Function]}
 />,
                   "className": "p-1",
@@ -1051,16 +1068,15 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
-                  "key": "D0BFellowsCount",
+                  "key": "D0B",
                   "nodeType": "function",
                   "props": Object {
                     "cardDetails": Object {
-                      "id": "D0BFellowsCount",
-                      "title": "Test key 1",
-                      "totalFellows": 10,
+                      "title": "D0B",
+                      "totalFellows": 5,
                     },
                     "className": "card",
-                    "filterId": "D0BFellowsCount",
+                    "filterId": "D0B",
                     "onClick": [Function],
                   },
                   "ref": null,

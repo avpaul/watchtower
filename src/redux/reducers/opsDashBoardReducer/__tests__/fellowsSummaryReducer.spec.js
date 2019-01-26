@@ -22,6 +22,26 @@ const initialState = {
   }
 };
 
+const fellowsSummaryToday = {
+  data: [{}, {}],
+  keys: ['Total', 'D0A', 'D0B'],
+  latestWeekSummary: {
+    Total: 10,
+    D0A: 5,
+    D0B: 5
+  }
+};
+
+const fellowsSummaryTrend = {
+  data: [{}, {}],
+  keys: ['Total', 'D0A', 'D0B'],
+  latestWeekSummary: {
+    Total: 10,
+    D0A: 5,
+    D0B: 5
+  }
+};
+
 const testCases = [
   {
     name: 'should return the initial state',
@@ -52,19 +72,13 @@ const testCases = [
     state: initialState.OpsDashboard.fellowsSummary,
     action: {
       type: FETCH_FELLOWS_SUMMARY_SUCCESS,
-      payload: {
-        allFellowsCount: 10,
-        D0AFellowsCount: 5,
-        D0BFellowsCount: 5
-      }
+      fellowsSummaryToday,
+      fellowsSummaryTrend
     },
     result: {
       ...initialState.OpsDashboard.fellowsSummary,
-      data: {
-        allFellowsCount: 10,
-        D0AFellowsCount: 5,
-        D0BFellowsCount: 5
-      }
+      fellowsSummaryToday,
+      fellowsSummaryTrend
     }
   }
 ];

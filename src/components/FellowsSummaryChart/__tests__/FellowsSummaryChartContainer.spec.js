@@ -38,6 +38,6 @@ describe('FellowsSummaryChartContainer', () => {
     const wrapper = shallow(
       <FellowsSummaryChartContainer store={store} {...state} />
     );
-    expect(wrapper.props().fetchFellowsSummary).toBeDefined();
+    expect(wrapper.props().fellowsSummary).toBeDefined();
   });
 });
