@@ -224,6 +224,7 @@ class DashboardPage extends Component {
     const {
       getFellows,
       filter,
+      fellows,
       pagination: { perPage, results }
     } = this.props;
     return (
@@ -246,7 +247,7 @@ class DashboardPage extends Component {
             handleSearchChange={this.handleSearchChange}
           />
         </div>
-        {this.renderDownloadButton()}
+        {fellows.length !== 0 ? this.renderDownloadButton() : null}
       </Fragment>
     );
   }
