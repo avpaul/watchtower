@@ -7,6 +7,9 @@ ShallowWrapper {
     data={
         Object {
             "engineeringManager": Object {
+              "displayManagers": "TTL",
+              "managerFellowSortRatio": "HIGH_TO_LOW",
+              "show": true,
               "ttls": Array [
                 Object {
                   "createdAt": "2019-01-23 17:35:54",
@@ -247,9 +250,10 @@ ShallowWrapper {
                                       }
                     }
                     id={0}
-                    onClick={undefined}
+                    onClick={[Function]}
           />
 </div>,
+        false,
       ],
       "className": "container-fluid",
       "style": Object {
@@ -313,7 +317,7 @@ ShallowWrapper {
                                         }
               }
               id={0}
-              onClick={undefined}
+              onClick={[Function]}
 />,
           ],
           "className": "row map-card-row",
@@ -331,7 +335,7 @@ ShallowWrapper {
                 "title": "TTL to FELLOW MAP",
               },
               "id": 0,
-              "onClick": undefined,
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -340,6 +344,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      false,
     ],
     "type": "div",
   },
@@ -394,9 +399,10 @@ ShallowWrapper {
                                               }
                         }
                         id={0}
-                        onClick={undefined}
+                        onClick={[Function]}
             />
 </div>,
+          false,
         ],
         "className": "container-fluid",
         "style": Object {
@@ -460,7 +466,7 @@ ShallowWrapper {
                                               }
                 }
                 id={0}
-                onClick={undefined}
+                onClick={[Function]}
 />,
             ],
             "className": "row map-card-row",
@@ -478,7 +484,7 @@ ShallowWrapper {
                   "title": "TTL to FELLOW MAP",
                 },
                 "id": 0,
-                "onClick": undefined,
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -487,6 +493,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        false,
       ],
       "type": "div",
     },
