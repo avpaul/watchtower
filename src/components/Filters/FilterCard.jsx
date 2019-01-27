@@ -17,7 +17,9 @@ const FilterCard = ({ className, onClick, filterId, cardDetails }) => (
     role="button"
     tabIndex="0"
   >
-    <p className="title">{cardDetails.title}</p>
+    <p className="title">
+      {cardDetails.heading ? cardDetails.heading : cardDetails.title}
+    </p>
     <p className="sub">{cardDetails.subTitle}</p>
     <p className="number">{cardDetails.totalFellows}</p>
   </div>
