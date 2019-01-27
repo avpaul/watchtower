@@ -85,7 +85,6 @@ class EngineeringManagerDashboard extends Component {
     const { data } = this.props;
     const ttls = data.length !== 0 ? data.engineeringManager.ttls : '';
     const { totalFellows } = data.length !== 0 ? data : '';
-    // Add components here for EngineeringMangerDashboard
     return (
       <div className="container-fluid" style={emDashboardStyle}>
         <TtlsFellowSummary
