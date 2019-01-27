@@ -36,5 +36,7 @@ describe('Tests on EngineeringManagerContainer component', () => {
     expect(wrapper.props().loading).toEqual(false);
     expect(wrapper.props().data).toEqual([]);
     expect(wrapper.props().error).toEqual(null);
+    expect(wrapper.props().simsLeadData).toEqual([]);
+    expect(wrapper.props().simsLeadError).toEqual(null);
   });
 });

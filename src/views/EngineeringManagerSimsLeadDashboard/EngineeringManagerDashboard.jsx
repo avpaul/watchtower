@@ -16,9 +16,11 @@ class EngineeringManagerDashboard extends Component {
       averageFellowsPerTtl: 0,
       averageFellowsPerLf: 0,
       isEngineeringManager: true,
+      managerTitle: 'TTL',
+      lfs: [],
       ttls: [],
+      totalFellows: 0,
       show: false,
-      displayManagers: 'TTL',
       managerFellowSortRatio: 'HIGH_TO_LOW'
     };
     this.onSelectManagerFellowRatio = this.onSelectManagerFellowRatio.bind(
@@ -27,15 +29,31 @@ class EngineeringManagerDashboard extends Component {
   }
 
   componentDidMount() {
-    const { getEngineeringManagerTtls, user } = this.props;
-    const { email } = user;
+    const {
+      getEngineeringManagerTtls,
+      getSimulationsLeadLfs,
+      user
+    } = this.props;
     if (user.roles.WATCH_TOWER_EM) {
-      getEngineeringManagerTtls(email).then(data => {
+      getEngineeringManagerTtls(user.email).then(data => {
         if (!data.error) {
           this.setState({
+            ttls: data.data.engineeringManager.ttls,
             averageFellowsPerTtl: data.data.averageFellowsPerTtl,
-            isEngineeringManager: true,
-            ttls: data.data.engineeringManager.ttls
+            totalFellows: data.data.totalFellows,
+            isEngineeringManager: true
+          });
+        }
+      });
+    } else {
+      getSimulationsLeadLfs(user.email).then(data => {
+        if (!data.error) {
+          this.setState({
+            lfs: data.data.simulationsLead.lfs,
+            averageFellowsPerLf: data.data.averageFellowsPerLf,
+            totalFellows: data.data.totalFellows,
+            isEngineeringManager: false,
+            managerTitle: 'LF'
           });
         }
       });
@@ -50,8 +68,8 @@ class EngineeringManagerDashboard extends Component {
     this.setState({ managerFellowSortRatio: sortRatio });
   }
 
-  mapDisplayFellowSummary = (ttlsArrays, totalFellows) => {
-    const titleName = 'TTL - ';
+  mapDisplayFellowSummary = (managersArray, totalFellows, title) => {
+    const titleName = title.concat(' - ');
     const displayList = [
       {
         id: 'total-fellows-card',
@@ -60,28 +78,53 @@ class EngineeringManagerDashboard extends Component {
         totalFellows: `${totalFellows === undefined ? 0 : totalFellows}`
       }
     ];
-    for (let i = 0; i < ttlsArrays.length; i += 1) {
+    for (let i = 0; i < managersArray.length; i += 1) {
       const content = {
         title: titleName.concat(
-          ttlsArrays[i].firstName,
+          managersArray[i].firstName,
           ' ',
-          ttlsArrays[i].lastName.substring(1, 0)
+          managersArray[i].lastName.substring(1, 0)
         ),
-        totalFellows: ttlsArrays[i].fellowsCount
+        totalFellows: managersArray[i].fellowsCount
       };
       displayList.push(content);
     }
     return displayList;
   };
 
-  fellowMapOnClick = event => {
-    if (event.currentTarget.id === '0')
-      this.setState({ displayManagers: 'TTL', show: true });
-    else this.setState({ displayManagers: 'LF', show: true });
+  fellowMapOnClick = () => {
+    this.setState({
+      show: true
+    });
   };
 
   handleMapClose = () => {
     this.setState({ show: false });
+  };
+
+  renderManagerFellowMap = () => {
+    const {
+      show,
+      managerFellowSortRatio,
+      managerTitle,
+      lfs,
+      ttls
+    } = this.state;
+    const [managers, style] =
+      managerTitle === 'TTL'
+        ? [ttls, { '--arrow-left-margin-style': '31%' }]
+        : [lfs, { '--arrow-left-margin-style': '9%' }];
+    return (
+      show && (
+        <ManagerFellowMap
+          arrowStyle={style}
+          handleMapClose={this.handleMapClose}
+          onSortManagers={this.onSelectManagerFellowRatio}
+          sortRatio={managerFellowSortRatio}
+          managers={managers}
+        />
+      )
+    );
   };
 
   mapDisplayContent = () => {
@@ -103,44 +146,27 @@ class EngineeringManagerDashboard extends Component {
     ];
   };
 
-  renderManagerFellowMap = () => {
-    const {
-      show,
-      managerFellowSortRatio,
-      displayManagers,
-      lfs,
-      ttls
-    } = this.state;
-    const [managers, style] =
-      displayManagers === 'TTL'
-        ? [ttls, { '--arrow-left-margin-style': '31%' }]
-        : [lfs, { '--arrow-left-margin-style': '9%' }];
-    return (
-      show && (
-        <ManagerFellowMap
-          arrowStyle={style}
-          handleMapClose={this.handleMapClose}
-          onSortManagers={this.onSelectManagerFellowRatio}
-          sortRatio={managerFellowSortRatio}
-          managers={managers}
-        />
-      )
-    );
-  };
-
   render() {
     const emDashboardStyle = {
       paddingLeft: '0',
       paddingRight: '0',
       paddingBottom: '49px'
     };
-    const { data } = this.props;
-    const ttls = data.length !== 0 ? data.engineeringManager.ttls : '';
-    const { totalFellows } = data.length !== 0 ? data : '';
+    const {
+      ttls,
+      lfs,
+      isEngineeringManager,
+      managerTitle,
+      totalFellows
+    } = this.state;
     return (
       <div className="container-fluid" style={emDashboardStyle}>
         <TtlsFellowSummary
-          fellowsSummary={this.mapDisplayFellowSummary(ttls, totalFellows)}
+          fellowsSummary={this.mapDisplayFellowSummary(
+            isEngineeringManager ? ttls : lfs,
+            totalFellows,
+            managerTitle
+          )}
         />
         <div className="row map-card-row">
           {this.mapDisplayContent().map((displayContent, index) => (
@@ -160,9 +186,9 @@ class EngineeringManagerDashboard extends Component {
 
 EngineeringManagerDashboard.propTypes = {
   // required prop-types
-  data: PropTypes.arrayOf.isRequired,
   user: PropTypes.arrayOf.isRequired,
-  getEngineeringManagerTtls: PropTypes.func.isRequired
+  getEngineeringManagerTtls: PropTypes.func.isRequired,
+  getSimulationsLeadLfs: PropTypes.func.isRequired
 };
 
 export default EngineeringManagerDashboard;

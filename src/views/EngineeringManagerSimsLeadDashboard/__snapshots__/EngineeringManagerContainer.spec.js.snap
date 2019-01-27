@@ -31,7 +31,10 @@ ShallowWrapper {
       "data": Array [],
       "error": null,
       "getEngineeringManagerTtls": [Function],
+      "getSimulationsLeadLfs": [Function],
       "loading": false,
+      "simsLeadData": Array [],
+      "simsLeadError": null,
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -73,7 +76,10 @@ ShallowWrapper {
         "data": Array [],
         "error": null,
         "getEngineeringManagerTtls": [Function],
+        "getSimulationsLeadLfs": [Function],
         "loading": false,
+        "simsLeadData": Array [],
+        "simsLeadError": null,
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
@@ -132,5 +138,7 @@ Object {
   "data": Array [],
   "error": null,
   "loading": false,
+  "simsLeadData": Array [],
+  "simsLeadError": null,
 }
 `;

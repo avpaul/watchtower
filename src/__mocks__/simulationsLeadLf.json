@@ -1,0 +1,130 @@
+{
+  "simulationsLead": {
+    "firstName": "Ngibuini",
+    "lastName": "Mwaura",
+    "email": "ngibuini.mwaura@andela.com",
+    "roleId": 6,
+    "staffId": "-KXGy1MT1oimjQgFim9O",
+    "id": 3,
+    "createdAt": "2019-01-24 17:02:04",
+    "updatedAt": "2019-01-24 17:02:04",
+    "lfs": [
+      {
+        "id": 1,
+        "firstName": "Ephraim",
+        "lastName": "Malinga",
+        "email": "ephraim.malinga@andela.com",
+        "roleId": 3,
+        "staffId": "-LAmk78f7GyBWkt2UWpb",
+        "createdAt": "2019-01-24 17:02:06",
+        "updatedAt": "2019-01-24 17:02:06",
+        "managerId": "-KXGy1MT1oimjQgFim9O",
+        "fellowsCount": 2,
+        "fellows": [
+          {
+            "id": 10,
+            "email": "gordon.balaaka@andela.com",
+            "roleId": 1,
+            "level": "D0A Simulations",
+            "status": "onTrack",
+            "createdAt": "2019-01-24 17:01:50",
+            "updatedAt": "2019-01-24 17:01:50",
+            "managerId": "-LAmk78f7GyBWkt2UWpb",
+            "project": "Undefined",
+            "lmsId": null,
+            "user": {
+              "id": 10,
+              "firstName": "Gordon",
+              "lastName": "Balaaka",
+              "email": "gordon.balaaka@andela.com",
+              "createdAt": "2019-01-24 17:01:50",
+              "updatedAt": "2019-01-24 17:01:50"
+            }
+          },
+          {
+            "id": 14,
+            "email": "edward.kigozi@andela.com",
+            "roleId": 1,
+            "level": "D0A Simulations",
+            "status": "onTrack",
+            "createdAt": "2019-01-24 17:01:50",
+            "updatedAt": "2019-01-24 17:01:50",
+            "managerId": "-LAmk78f7GyBWkt2UWpb",
+            "project": "Undefined",
+            "lmsId": null,
+            "user": {
+              "id": 14,
+              "firstName": "Edward",
+              "lastName": "Kigozi",
+              "email": "edward.kigozi@andela.com",
+              "createdAt": "2019-01-24 17:01:50",
+              "updatedAt": "2019-01-24 17:01:50"
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "firstName": "Martin",
+        "lastName": "Bbaale",
+        "email": "martin.bbaale@andela.com",
+        "roleId": 3,
+        "staffId": "-LJXG90epIwmW2U1XQHB",
+        "createdAt": "2019-01-24 17:02:06",
+        "updatedAt": "2019-01-24 17:02:06",
+        "managerId": "-KXGy1MT1oimjQgFim9O",
+        "fellowsCount": 1,
+        "fellows": [
+          {
+            "id": 15,
+            "email": "samuel.bwambale@andela.com",
+            "roleId": 1,
+            "level": "D0A Simulations",
+            "status": "onTrack",
+            "createdAt": "2019-01-24 17:01:50",
+            "updatedAt": "2019-01-24 17:01:50",
+            "managerId": "-LJXG90epIwmW2U1XQHB",
+            "project": "Undefined",
+            "lmsId": null,
+            "user": {
+              "id": 15,
+              "firstName": "Samuel",
+              "lastName": "Bwambale",
+              "email": "samuel.bwambale@andela.com",
+              "createdAt": "2019-01-24 17:01:50",
+              "updatedAt": "2019-01-24 17:01:50"
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "firstName": "Patrick",
+        "lastName": "Oryono",
+        "email": "patrick.oryono@andela.com",
+        "roleId": 3,
+        "staffId": "-LRk_Ge_bGAPkEnhFfIs",
+        "createdAt": "2019-01-24 17:02:06",
+        "updatedAt": "2019-01-24 17:02:06",
+        "managerId": "-KXGy1MT1oimjQgFim9O",
+        "fellowsCount": 0,
+        "fellows": []
+      },
+      {
+        "id": 4,
+        "firstName": "David",
+        "lastName": "Buyinza",
+        "email": "david.buyinza@andela.com",
+        "roleId": 3,
+        "staffId": "-LQnPSlfF0FLe3tayNGy",
+        "createdAt": "2019-01-24 17:02:06",
+        "updatedAt": "2019-01-24 17:02:06",
+        "managerId": "-KXGy1MT1oimjQgFim9O",
+        "fellowsCount": 0,
+        "fellows": []
+      }
+    ]
+  },
+  "totalFellows": 3,
+  "averageFellowsPerLf": 1
+}

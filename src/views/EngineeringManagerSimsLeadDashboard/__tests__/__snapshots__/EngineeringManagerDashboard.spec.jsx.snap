@@ -7,8 +7,8 @@ ShallowWrapper {
     data={
         Object {
             "engineeringManager": Object {
-              "displayManagers": "TTL",
               "managerFellowSortRatio": "HIGH_TO_LOW",
+              "managerTitle": "TTL",
               "show": true,
               "ttls": Array [
                 Object {
@@ -213,27 +213,7 @@ ShallowWrapper {
                                 "id": "total-fellows-card",
                                 "subTitle": "Click to see details",
                                 "title": "Total D0 Fellows",
-                                "totalFellows": "5",
-                              },
-                              Object {
-                                "title": "TTL - Kesiena A",
-                                "totalFellows": 0,
-                              },
-                              Object {
-                                "title": "TTL - Olaoluwa F",
-                                "totalFellows": 0,
-                              },
-                              Object {
-                                "title": "TTL - Olaolu A",
-                                "totalFellows": 0,
-                              },
-                              Object {
-                                "title": "TTL - Samuel K",
-                                "totalFellows": 0,
-                              },
-                              Object {
-                                "title": "TTL - Trust  B",
-                                "totalFellows": 5,
+                                "totalFellows": "0",
                               },
                             ]
           }
@@ -274,27 +254,7 @@ ShallowWrapper {
               "id": "total-fellows-card",
               "subTitle": "Click to see details",
               "title": "Total D0 Fellows",
-              "totalFellows": "5",
-            },
-            Object {
-              "title": "TTL - Kesiena A",
-              "totalFellows": 0,
-            },
-            Object {
-              "title": "TTL - Olaoluwa F",
-              "totalFellows": 0,
-            },
-            Object {
-              "title": "TTL - Olaolu A",
-              "totalFellows": 0,
-            },
-            Object {
-              "title": "TTL - Samuel K",
-              "totalFellows": 0,
-            },
-            Object {
-              "title": "TTL - Trust  B",
-              "totalFellows": 5,
+              "totalFellows": "0",
             },
           ],
         },
@@ -362,27 +322,7 @@ ShallowWrapper {
                                       "id": "total-fellows-card",
                                       "subTitle": "Click to see details",
                                       "title": "Total D0 Fellows",
-                                      "totalFellows": "5",
-                                    },
-                                    Object {
-                                      "title": "TTL - Kesiena A",
-                                      "totalFellows": 0,
-                                    },
-                                    Object {
-                                      "title": "TTL - Olaoluwa F",
-                                      "totalFellows": 0,
-                                    },
-                                    Object {
-                                      "title": "TTL - Olaolu A",
-                                      "totalFellows": 0,
-                                    },
-                                    Object {
-                                      "title": "TTL - Samuel K",
-                                      "totalFellows": 0,
-                                    },
-                                    Object {
-                                      "title": "TTL - Trust  B",
-                                      "totalFellows": 5,
+                                      "totalFellows": "0",
                                     },
                                   ]
             }
@@ -423,27 +363,7 @@ ShallowWrapper {
                 "id": "total-fellows-card",
                 "subTitle": "Click to see details",
                 "title": "Total D0 Fellows",
-                "totalFellows": "5",
-              },
-              Object {
-                "title": "TTL - Kesiena A",
-                "totalFellows": 0,
-              },
-              Object {
-                "title": "TTL - Olaoluwa F",
-                "totalFellows": 0,
-              },
-              Object {
-                "title": "TTL - Olaolu A",
-                "totalFellows": 0,
-              },
-              Object {
-                "title": "TTL - Samuel K",
-                "totalFellows": 0,
-              },
-              Object {
-                "title": "TTL - Trust  B",
-                "totalFellows": 5,
+                "totalFellows": "0",
               },
             ],
           },

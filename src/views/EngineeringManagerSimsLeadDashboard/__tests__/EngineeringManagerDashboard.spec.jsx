@@ -32,7 +32,7 @@ describe('EngineeringManagerDashboard', () => {
 });
 
 describe('EngineeringDashboard component', () => {
-  const setup = () => {
+  const setup = (loggedInRole = 'WATCH_TOWER_EM') => {
     const spyResolve = jest.fn().mockImplementation(() =>
       Promise.resolve({
         error: null,
@@ -50,14 +50,14 @@ describe('EngineeringDashboard component', () => {
       user: {
         email: '',
         roles: {
-          WATCH_TOWER_EM: 'hdkjshdjsdha'
+          [`${loggedInRole}`]: 'hdkjshdjsdha'
         }
       },
       data: {
         engineeringManager: {
           ttls: engineeringManagerTtls.engineeringManager.ttls,
           show: true,
-          displayManagers: 'TTL',
+          managerTitle: 'TTL',
           managerFellowSortRatio: 'HIGH_TO_LOW'
         },
         totalFellows: 5
@@ -105,24 +105,23 @@ describe('EngineeringDashboard component', () => {
     expect(wrapper.state().show).toBe(false);
   });
 
-  it('should change map to display base on the map card clicked', () => {
-    const { wrapper } = setup();
-    wrapper
-      .find('DisplayCard')
-      .first()
-      .simulate('click', { currentTarget: { id: '0' } });
-    expect(wrapper.state('displayManagers')).toBe('TTL');
-    wrapper
-      .find('DisplayCard')
-      .first()
-      .simulate('click', { currentTarget: { id: '1' } });
-    expect(wrapper.state('displayManagers')).toBe('LF');
-  });
-
   it('should fetch ttls data when data is not in store', () => {
     const { wrapper, props } = setup();
     wrapper.setProps({ ttls: [] });
     wrapper.instance().componentDidMount();
     expect(props.getEngineeringManagerTtls).toHaveBeenCalled();
+  });
+
+  it('sets show to true when fellowMapOnClick is called ', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ show: false });
+    const fellowMapOnClickSpy = jest.spyOn(
+      wrapper.instance(),
+      'fellowMapOnClick'
+    );
+
+    wrapper.instance().fellowMapOnClick();
+    expect(fellowMapOnClickSpy).toHaveBeenCalledTimes(1);
+    expect(wrapper.state().show).toBe(true);
   });
 });

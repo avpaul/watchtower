@@ -129,5 +129,10 @@ export default {
     loading: false,
     data: [],
     error: null
+  },
+  simulationsLeadLfs: {
+    loading: false,
+    data: [],
+    error: null
   }
 };
