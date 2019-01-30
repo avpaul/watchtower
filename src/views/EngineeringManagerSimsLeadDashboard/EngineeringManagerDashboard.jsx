@@ -93,7 +93,9 @@ class EngineeringManagerDashboard extends Component {
   };
 
   fellowMapOnClick = () => {
+    const { isEngineeringManager } = this.state;
     this.setState({
+      managerTitle: isEngineeringManager ? 'TTL' : 'LF',
       show: true
     });
   };

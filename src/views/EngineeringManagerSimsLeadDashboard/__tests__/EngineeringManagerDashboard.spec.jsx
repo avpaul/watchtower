@@ -3,6 +3,7 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import EngineeringManagerSimsLeadDashboard from '../index';
 import engineeringManagerTtls from '../../../__mocks__/engineeringManagerTtls';
+import simulationsLeadLf from '../../../__mocks__/simulationsLeadLf';
 import EngineeringManagerDashboard from '../EngineeringManagerDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 import ManagerFellowMap from '../../../components/ManagerFellowMap';
@@ -40,6 +41,9 @@ describe('EngineeringDashboard component', () => {
           engineeringManager: {
             ttls: engineeringManagerTtls.engineeringManager.ttls
           },
+          simulationsLead: {
+            lfs: simulationsLeadLf.simulationsLead.lfs
+          },
           totalFellows: 5,
           averageFellowsPerTtl: 5
         }
@@ -60,9 +64,14 @@ describe('EngineeringDashboard component', () => {
           managerTitle: 'TTL',
           managerFellowSortRatio: 'HIGH_TO_LOW'
         },
+        simulationsLead: {
+          lfs: simulationsLeadLf.simulationsLead.lfs,
+          show: true
+        },
         totalFellows: 5
       },
-      getEngineeringManagerTtls: spyResolve
+      getEngineeringManagerTtls: spyResolve,
+      getSimulationsLeadLfs: spyResolve
     };
 
     const wrapper = shallow(<EngineeringManagerDashboard {...props} />);
@@ -123,5 +132,11 @@ describe('EngineeringDashboard component', () => {
     wrapper.instance().fellowMapOnClick();
     expect(fellowMapOnClickSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.state().show).toBe(true);
+  });
+
+  it('renders SimsLead dashboard when user role is WATCH_TOWER_SL ', () => {
+    const { wrapper, props } = setup('WATCH_TOWER_SL');
+    wrapper.instance().componentDidMount();
+    expect(props.getSimulationsLeadLfs).toHaveBeenCalled();
   });
 });
