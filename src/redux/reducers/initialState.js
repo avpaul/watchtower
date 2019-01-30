@@ -134,20 +134,5 @@ export default {
     loading: false,
     data: [],
     error: null
-  },
-  lfNotification: {
-    loading: false,
-    lfNotification: [],
-    error: null
-  },
-  ttlNotification: {
-    loading: false,
-    ttlNotification: [],
-    error: null
-  },
-  updateManagerNotification: {
-    loading: false,
-    managerNotification: [],
-    error: null
   }
 };
