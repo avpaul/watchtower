@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import OpsDashboard from '../views/OpsDashboard';
 import NotFoundPage from '../views/NotFoundPage';
 import TTLDashboard from '../views/TTLDashboard';
@@ -33,6 +34,10 @@ const Dashboards = props => {
     default:
       return <NotFoundPage />;
   }
+};
+
+Dashboards.propTypes = {
+  user: PropTypes.instanceOf(Object).isRequired
 };
 
 export default Dashboards;

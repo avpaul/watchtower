@@ -8,25 +8,41 @@ import { HeaderConnected, Header } from './Header';
 
 describe('Header Component Test Suite', () => {
   let wrapper;
+  let role;
+  let store;
+  let storeItems;
+  const zeroFellows = '0 of your Fellows';
+  const oneFellow = '1 of your Fellows';
+  const newNotification = {
+    id: 1,
+    manager: {
+      onTrack: zeroFellows,
+      offTrack: zeroFellows,
+      pip: zeroFellows
+    },
+    createdAt: { date: Date.now() }
+  };
+
   beforeAll(() => {
-    const user = {
-      name: 'Test User',
-      picture: 'http://'
-    };
-    const role = 'WATCH_TOWER_OPS';
+    role = 'WATCH_TOWER_OPS';
 
     const mockStore = configureStore([thunk]);
-    const storeItems = {
-      notification: {},
-      notifications: [{ data: { id: 'KK', status: 'active' } }],
+    storeItems = {
+      notification: { data: { id: 'KK', status: 'active' } },
+      notifications: [
+        { data: { id: 'KK', status: 'active' }, createdAt: Date.now() }
+      ],
       unreadnotification: { unreadnotification: {} },
-      readnotification: { readnotification: {} }
+      readnotification: { readnotification: {} },
+      ttlNotification: [{ readAt: Date.now() }],
+      lfNotification: { lfNotification: [] },
+      getReadNotification: jest.fn(),
+      getUnreadNotification: jest.fn(),
+      getTtlNotification: jest.fn(),
+      getLfNotification: jest.fn(),
+      updateNotificationAsRead: jest.fn()
     };
-    const store = mockStore({ ...storeItems });
-
-    wrapper = shallow(
-      <HeaderConnected user={user} role={role} store={store} />
-    );
+    store = mockStore({ ...storeItems });
   });
 
   it('renders without crashing', () => {
@@ -34,14 +50,7 @@ describe('Header Component Test Suite', () => {
       name: 'Test User',
       picture: 'http://'
     };
-    const role = 'WATCH_TOWER_OPS';
-    const mockStore = configureStore([thunk]);
-    const storeItems = {
-      notification: { notification: {} },
-      unreadnotification: [{}],
-      readnotification: [{}]
-    };
-    const store = mockStore({ ...storeItems });
+
     wrapper = shallow(
       <HeaderConnected user={user} role={role} store={store} />
     );
@@ -53,22 +62,13 @@ describe('Header Component Test Suite', () => {
       name: 'Test User',
       picture: 'http://'
     };
-    const role = 'WATCH_TOWER_OPS';
-    const props = {
-      getNotification: jest.fn(),
-      notifications: [{ data: { id: 'KK', status: 'active' } }],
-      unreadnotifications: {},
-      readnotifications: {},
-      getUnreadNotification: jest.fn(),
-      getReadNotification: jest.fn()
-    };
+
     wrapper = shallow(
-      <Header user={user} role={role} notification="" {...props} />
+      <Header user={user} role="WATCH_TOWER_TTL" {...storeItems} />
     );
+
     expect(wrapper).toBeDefined();
-    expect(wrapper.find('.watch-tower').text()).toEqual('WatchTower');
-    expect(wrapper.find('Menu').length).toEqual(1);
-    expect(wrapper.find('.user__text').text()).toEqual('Test User');
+    expect(wrapper.find('ManagerHeader').exists()).toBe(true);
   });
 
   it('should update state when handleMenuClick is called on the inactive element', () => {
@@ -76,18 +76,9 @@ describe('Header Component Test Suite', () => {
       name: 'Test User',
       picture: 'http://'
     };
-    const role = 'WATCH_TOWER_OPS';
-    const props = {
-      notification: {},
-      getNotification: jest.fn(),
-      notifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      unreadnotifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      readnotifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      getUnreadNotification: jest.fn(),
-      getReadNotification: jest.fn()
-    };
+
     wrapper = shallow(
-      <Header user={user} role={role} notification="" {...props} />
+      <Header user={user} role="WATCH_TOWER_LF" {...storeItems} />
     );
     wrapper.setState({
       activeItems: {
@@ -118,19 +109,8 @@ describe('Header Component Test Suite', () => {
       name: 'Test User',
       picture: 'http://'
     };
-    const role = 'WATCH_TOWER_OPS';
-    const props = {
-      notification: {},
-      getNotification: jest.fn(),
-      notifications: [{ data: { id: 'KK', status: 'onTrack' } }],
-      unreadnotifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      readnotifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      getUnreadNotification: jest.fn(),
-      getReadNotification: jest.fn()
-    };
-    wrapper = shallow(
-      <Header user={user} role={role} notification="" {...props} />
-    );
+
+    wrapper = shallow(<Header user={user} role={role} {...storeItems} />);
     wrapper.setState({
       activeItems: {
         fellows: true,
@@ -160,19 +140,8 @@ describe('Header Component Test Suite', () => {
       name: 'Test User',
       picture: 'http://'
     };
-    const role = 'WATCH_TOWER_OPS';
-    const props = {
-      notification: {},
-      getNotification: jest.fn(),
-      notifications: [{ data: { id: 'KK', status: 'onTrack' } }],
-      unreadnotifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      readnotifications: [{ data: { id: 'KK', status: 'offTrack' } }],
-      getUnreadNotification: jest.fn(),
-      getReadNotification: jest.fn()
-    };
-    wrapper = shallow(
-      <Header user={user} role={role} notification="" {...props} />
-    );
+
+    wrapper = shallow(<Header user={user} role={role} {...storeItems} />);
     const mounted = jest.spyOn(wrapper.instance(), 'hideModal');
     wrapper.instance().hideModal();
     expect(mounted).toHaveBeenCalled();
@@ -199,6 +168,93 @@ describe('Header Component Test Suite', () => {
   it('calls clearNotification', () => {
     const mounted = jest.spyOn(wrapper.instance(), 'clearNotification');
     wrapper.instance().clearNotification();
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('renderOrder works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'renderOrder');
+    wrapper.instance().renderOrder(storeItems.notifications);
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('renderIcons works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'renderIcons');
+    wrapper
+      .instance()
+      .renderIcons(storeItems.notification, storeItems.notifications);
+    storeItems.notification.data.status = 'onTrack';
+    wrapper
+      .instance()
+      .renderIcons(storeItems.notification, storeItems.notifications);
+    expect(mounted).toHaveBeenCalledTimes(2);
+  });
+
+  it('renderNotificationModal works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'renderNotificationModal');
+    const ordered = { key: [{ id: 'id', data: { status: 'onTrack' } }] };
+    wrapper
+      .instance()
+      .renderNotificationModal(ordered, true, storeItems.notifications);
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('renderArchivesModal works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'renderArchivesModal');
+    wrapper.instance().renderArchivesModal(true, storeItems.notifications);
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('clearManagerNotification works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'clearManagerNotification');
+    wrapper.instance().clearManagerNotification();
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('displayManagerNotification works as expected', () => {
+    const mounted = jest.spyOn(
+      wrapper.instance(),
+      'displayManagerNotification'
+    );
+    wrapper.instance().displayManagerNotification();
+    wrapper.instance().displayManagerNotification(newNotification);
+    newNotification.manager.onTrack = oneFellow;
+    newNotification.manager.offTrack = oneFellow;
+    newNotification.manager.pip = oneFellow;
+    wrapper.instance().displayManagerNotification(newNotification);
+    expect(mounted).toHaveBeenCalledTimes(3);
+  });
+
+  it('managerArchiveModal works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'managerArchiveModal');
+    wrapper.instance().managerArchiveModal(newNotification);
+    newNotification.readAt = Date.now();
+    newNotification.manager.onTrack = oneFellow;
+    newNotification.manager.offTrack = oneFellow;
+    newNotification.manager.pip = oneFellow;
+    wrapper.instance().managerArchiveModal(newNotification);
+    expect(mounted).toHaveBeenCalledTimes(2);
+  });
+
+  it('renderManagerArchivesModal works as expected', () => {
+    const mounted = jest.spyOn(
+      wrapper.instance(),
+      'renderManagerArchivesModal'
+    );
+    wrapper.instance().renderManagerArchivesModal(true, newNotification);
+    expect(mounted).toHaveBeenCalled();
+  });
+
+  it('displayNotificationModal works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'displayNotificationModal');
+    wrapper.instance().displayNotificationModal(true, [newNotification]);
+    delete newNotification.readAt;
+    wrapper.instance().displayNotificationModal(true, [newNotification]);
+    expect(mounted).toHaveBeenCalledTimes(2);
+  });
+
+  it('renderManagerModal works as expected', () => {
+    const mounted = jest.spyOn(wrapper.instance(), 'renderManagerModal');
+    wrapper.instance().renderManagerModal([newNotification]);
     expect(mounted).toHaveBeenCalled();
   });
 });

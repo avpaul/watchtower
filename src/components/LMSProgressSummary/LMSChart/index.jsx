@@ -82,7 +82,8 @@ LMSChart.propTypes = {
   lmsSubmissions: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(Object)
-  ]).isRequired
+  ]).isRequired,
+  lmsSummary: PropTypes.instanceOf(Object).isRequired
 };
 
 export default LMSChart;

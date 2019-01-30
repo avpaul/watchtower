@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import mapValues from 'lodash.mapvalues';
 import PropTypes from 'prop-types';
 import './Header.css';
 import { connect } from 'react-redux';
 import moment from 'moment';
-import Menu from './Menu';
-import { getMenuItems } from './navlinks';
-import watchTowerLogo from '../../static/Logo.svg';
-import notificationIcon from '../../static/Notification.svg';
-import LogOutModal from '../LogOutModal/LogOutModal';
-import truncate from '../../utils';
 import OffTrackIcon from '../../static/OffTrack.svg';
 import OnTrackIcon from '../../static/OnTrack.svg';
 import { Modal } from '../Notifications/Modal';
@@ -21,6 +14,11 @@ import getFellowReadNotification from '../../redux/actionCreators/fellowNotifica
 import renderArchiveHeader from '../Notifications/ArchiveHeader';
 import renderNotificationHeader from '../Notifications/NotificationHeader';
 import renderMessageHeader from '../Notifications/MessageHeader';
+import getLfNotifications from '../../redux/actionCreators/lfNotificationAction';
+import getTtlNotifications from '../../redux/actionCreators/ttlNotificationActions';
+import updateManagerNotification from '../../redux/actionCreators/managerNotificationReadActions';
+import FellowHeader from './FellowHeader';
+import ManagerHeader from './ManagerHeader';
 
 /**
  * Header UI Component
@@ -42,9 +40,8 @@ export class Header extends Component {
   }
 
   componentDidMount() {
-    const { user, getNotification, getUnreadNotification } = this.props;
-    getNotification(user.email);
-    getUnreadNotification(user.email);
+    const { role } = this.props;
+    this.switchNotificationsType(role);
   }
 
   showModal = () => {
@@ -200,78 +197,258 @@ export class Header extends Component {
     );
   };
 
-  render() {
-    const { activeItems } = this.state;
-    const { user, role, notifications, unreadnotifications } = this.props;
+  clearManagerNotification = () => {
+    const { user, getTtlNotification } = this.props;
+    getTtlNotification(user.email);
+  };
+
+  displayManagerNotification = notification => {
+    if (!notification) {
+      return (
+        <div className="modal-text text-sizing">
+          <p>No new notifications yet</p>
+        </div>
+      );
+    }
+
+    const { id } = notification;
+    const { updateNotificationAsRead } = this.props;
+    const { onTrack, offTrack, pip } = notification.manager;
+    updateNotificationAsRead(id);
     return (
-      <div id="nav" className="header">
-        <LogOutModal />
-        {this.renderModal(notifications, unreadnotifications)}
-        <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
-          <Link to="/dashboard" className="logo">
-            <img
-              className="watch-tower__logo"
-              src={watchTowerLogo}
-              alt="watch tower logo"
-            />
-            <span className="watch-tower d-none d-sm-inline-block">
-              WatchTower
+      <div>
+        <div className="message-body">
+          <div className="message-date" key="date here">
+            <span className="left">
+              {groupedDate(notification.createdAt.date)}
             </span>
-          </Link>
-          <div className="d-flex flex-row">
             <span
-              className="notification"
-              onClick={this.showModal}
-              onKeyDown=""
-              role="presentation"
+              className="right clear-cursor"
+              aria-hidden="true"
+              onClick={this.clearManagerNotification}
             >
-              <img
-                className="notification__icon"
-                src={notificationIcon}
-                alt="notificationIcon"
-              />
-              <i
-                className={
-                  unreadnotifications.length > 0 ? 'notification__icon' : ''
-                }
-              />
+              Clear All{' '}
             </span>
-            <div id="profile-menu" className="dropdown">
-              <div
-                className="d-flex flex-row align-items-center .dropdown-toggle"
-                data-toggle="dropdown"
-              >
-                <div className="d-flex pr-3 align-items-center">
-                  <img className="user__image" src={user.picture} alt="User" />
-                  <span className="user__text d-none d-sm-inline-block d-md-inline-block d-lg-inline-block text-center">
-                    {truncate(user.name, 14)}
-                  </span>
-                </div>
-                <i className="fas fa-caret-down header__dropdown" />
-              </div>
-              <div className="dropdown-menu dropdown-menu-right">
-                <a
-                  className="dropdown-item"
-                  data-toggle="modal"
-                  data-target="#logout-modal"
-                  href="/"
-                >
-                  Log out
-                </a>
-              </div>
-            </div>
           </div>
         </div>
-        <hr className="header__divider" />
-        <Menu
-          user={user}
-          role={role}
-          items={getMenuItems(role)}
-          handleMenuClick={this.handleMenuClick}
-          activeItems={activeItems}
-        />
+        <div className="modal-text text-sizing">
+          <img
+            src={
+              !onTrack.includes('0 of your Fellows')
+                ? OnTrackIcon
+                : OffTrackIcon
+            }
+            alt="Notification Archives"
+            className="img-padding"
+          />
+          {onTrack}
+        </div>
+        <div className="modal-text text-sizing">
+          <img
+            src={
+              offTrack.includes('0 of your Fellows')
+                ? OnTrackIcon
+                : OffTrackIcon
+            }
+            alt="Notification Archives"
+            className="img-padding"
+          />
+          {offTrack}
+        </div>
+        <div className="modal-text text-sizing">
+          <img
+            src={pip.includes('0 of your Fellows') ? OnTrackIcon : OffTrackIcon}
+            alt="Notification Archives"
+            className="img-padding"
+          />
+          {pip}
+        </div>
       </div>
     );
+  };
+
+  managerArchiveModal = notification => {
+    if (notification.readAt) {
+      const { onTrack, offTrack, pip } = notification.manager;
+      return (
+        <div>
+          <div className="message-date" key="date here">
+            <span className="left">
+              {groupedDate(notification.readAt.date)}
+            </span>
+          </div>
+          <div className="modal-text text-sizing">
+            <img
+              src={
+                !onTrack.includes('0 of your Fellows')
+                  ? OnTrackIcon
+                  : OffTrackIcon
+              }
+              alt="Notification Archives"
+              className="img-padding"
+            />
+            {onTrack}
+          </div>
+          <div className="modal-text text-sizing">
+            <img
+              src={
+                offTrack.includes('0 of your Fellows')
+                  ? OnTrackIcon
+                  : OffTrackIcon
+              }
+              alt="Notification Archives"
+              className="img-padding"
+            />
+            {offTrack}
+          </div>
+          <div className="modal-text text-sizing">
+            <img
+              src={
+                pip.includes('0 of your Fellows') ? OnTrackIcon : OffTrackIcon
+              }
+              alt="Notification Archives"
+              className="img-padding"
+            />
+            {pip}
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  renderManagerArchivesModal = (show, notification) => (
+    <Modal show={show} handleClose={this.hideModal}>
+      {this.renderModalHeader()}
+      {Object.values(notification).map(notify => (
+        <div>{this.managerArchiveModal(notify)}</div>
+      ))}
+    </Modal>
+  );
+
+  displayNotificationModal = (show, notification) => {
+    const unreadNotifications = notification.filter(notif => !notif.readAt);
+    if (!unreadNotifications.length) {
+      return (
+        <Modal show={show} handleClose={this.hideModal}>
+          {this.renderModalHeader()}
+          {this.displayManagerNotification(null)}
+        </Modal>
+      );
+    }
+
+    return (
+      <Modal show={show} handleClose={this.hideModal}>
+        {this.renderModalHeader()}
+        {unreadNotifications.map(notify => (
+          <div>{this.displayManagerNotification(notify)}</div>
+        ))}
+      </Modal>
+    );
+  };
+
+  renderManagerModal = notification => {
+    const { show, viewNotifications } = this.state;
+
+    return (
+      <div>
+        {viewNotifications && this.displayNotificationModal(show, notification)}
+        {!viewNotifications &&
+          this.renderManagerArchivesModal(show, notification)}
+      </div>
+    );
+  };
+
+  switchNotificationsType = role => {
+    const {
+      user,
+      getNotification,
+      getUnreadNotification,
+      getLfNotification,
+      getTtlNotification
+    } = this.props;
+    switch (role) {
+      case 'Fellow':
+        getNotification(user.email);
+        getUnreadNotification(user.email);
+        break;
+      case 'WATCH_TOWER_LF':
+        getLfNotification(user.email);
+        break;
+      case 'WATCH_TOWER_TTL':
+        getTtlNotification(user.email);
+        break;
+      default:
+        return null;
+    }
+    return null;
+  };
+
+  switchHeader = userRole => {
+    const { activeItems } = this.state;
+    const {
+      user,
+      role,
+      notifications,
+      unreadnotifications,
+      ttlNotification,
+      lfNotification
+    } = this.props;
+    const managerNotification = !ttlNotification
+      ? lfNotification
+      : ttlNotification;
+    const unreadManagerNotification = managerNotification.filter(
+      notif => !notif.readAt
+    );
+
+    switch (userRole) {
+      case 'WATCH_TOWER_LF':
+        return (
+          <ManagerHeader
+            renderManagerModal={this.renderManagerModal}
+            showModal={this.showModal}
+            handleMenuClick={this.handleMenuClick}
+            activeItems={activeItems}
+            notifications={lfNotification}
+            unreadnotifications={unreadManagerNotification}
+            user={user}
+            role={role}
+          />
+        );
+
+      case 'WATCH_TOWER_TTL':
+        return (
+          <ManagerHeader
+            renderManagerModal={this.renderManagerModal}
+            showModal={this.showModal}
+            handleMenuClick={this.handleMenuClick}
+            activeItems={activeItems}
+            notifications={ttlNotification}
+            unreadnotifications={unreadManagerNotification}
+            user={user}
+            role={role}
+          />
+        );
+
+      default:
+        return (
+          <FellowHeader
+            renderModal={this.renderModal}
+            showModal={this.showModal}
+            handleMenuClick={this.handleMenuClick}
+            activeItems={activeItems}
+            notifications={notifications}
+            unreadnotifications={unreadnotifications}
+            user={user}
+            role={role}
+          />
+        );
+    }
+  };
+
+  render() {
+    const { role } = this.props;
+    return <div>{this.switchHeader(role)}</div>;
   }
 }
 Header.propTypes = {
@@ -285,18 +462,28 @@ Header.propTypes = {
   getReadNotification: PropTypes.func.isRequired,
   notifications: PropTypes.shape({}).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
-  readnotifications: PropTypes.shape({}).isRequired
+  readnotifications: PropTypes.shape({}).isRequired,
+  getTtlNotification: PropTypes.func.isRequired,
+  updateNotificationAsRead: PropTypes.func.isRequired,
+  getLfNotification: PropTypes.func.isRequired,
+  ttlNotification: PropTypes.func.isRequired,
+  lfNotification: PropTypes.func.isRequired
 };
 const mapStateToProps = state => ({
   notifications: state.notification.notification,
   unreadnotifications: state.unreadnotification.unreadnotification,
-  readnotifications: state.readnotification.readnotification
+  readnotifications: state.readnotification.readnotification,
+  ttlNotification: state.ttlNotification.ttlNotification,
+  lfNotification: state.lfNotification.lfNotification
 });
 export const HeaderConnected = connect(
   mapStateToProps,
   {
     getNotification: getFellowNotification,
     getUnreadNotification: getFellowUnreadNotification,
-    getReadNotification: getFellowReadNotification
+    getReadNotification: getFellowReadNotification,
+    getLfNotification: getLfNotifications,
+    getTtlNotification: getTtlNotifications,
+    updateNotificationAsRead: updateManagerNotification
   }
 )(Header);
