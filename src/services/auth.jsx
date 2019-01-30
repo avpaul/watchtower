@@ -43,7 +43,8 @@ const isAuthorized = () => {
         'WATCH_TOWER_TTL',
         'WATCH_TOWER_LF',
         'WATCH_TOWER_EM',
-        'WATCH_TOWER_OPS'
+        'WATCH_TOWER_OPS',
+        'WATCH_TOWER_SL'
       ];
   return user
     ? Object.keys(user.roles).some(role => allowedRoles.includes(role))
