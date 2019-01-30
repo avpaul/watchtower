@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import fellowsCount from '../../__mocks__/fellowsCount.json';
-// import RadioCard from './RadioCard/RadioCard';
+import RadioCard from './RadioCard/RadioCard';
 
 import FellowChart from './FellowChart';
 
@@ -31,26 +31,22 @@ const setup = propOverrides => {
   };
 };
 
-it('mounts without crashing', () => {
+it('renders to match snapshot', () => {
   const { wrapper } = setup();
-  expect(wrapper).toHaveLength(1);
+  expect(wrapper).toMatchSnapshot();
 });
-// it('renders to match snapshot', () => {
-//   const { wrapper } = setup();
-//   expect(wrapper).toMatchSnapshot();
-// });
-// it('changes the display when the radio button is clicked', () => {
-//   const { wrapper } = setup();
-//   const handleRadioClickSpy = jest.spyOn(
-//     wrapper.instance(),
-//     'handleRadioClick'
-//   );
-//   wrapper
-//     .instance()
-//     .handleRadioClick({ target: { value: radioCardOptions[1].value } });
-//   expect(handleRadioClickSpy).toHaveBeenCalledTimes(1);
-// });
-// it('shows the correct number of radio cards', () => {
-//   const { wrapper } = setup();
-//   expect(wrapper.find(RadioCard)).toHaveLength(radioCardOptions.length);
-// });
+it('changes the display when the radio button is clicked', () => {
+  const { wrapper } = setup();
+  const handleRadioClickSpy = jest.spyOn(
+    wrapper.instance(),
+    'handleRadioClick'
+  );
+  wrapper
+    .instance()
+    .handleRadioClick({ target: { value: radioCardOptions[1].value } });
+  expect(handleRadioClickSpy).toHaveBeenCalledTimes(1);
+});
+it('shows the correct number of radio cards', () => {
+  const { wrapper } = setup();
+  expect(wrapper.find(RadioCard)).toHaveLength(radioCardOptions.length);
+});
