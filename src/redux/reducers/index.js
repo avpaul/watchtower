@@ -21,6 +21,9 @@ import fellowLmsSummaryReducer from './fellowLmsSummaryReducer';
 import fellowLmsSubmissionsReducer from './fellowLmsSubmissionsReducer';
 import engineeringManagerTtlsReducer from './engineeringManagerTtlsReducer';
 import simulationsLeadLfsReducer from './simulationsLeadLfsReducer';
+import lfNotificationReducer from './lfNotificationReducer';
+import ttlNotificationReducer from './ttlNotificationReducer';
+import updateManagerNotification from './managerNotificationReducer';
 
 const rootReducer = combineReducers({
   fellows: fellowReducer,
@@ -43,7 +46,10 @@ const rootReducer = combineReducers({
   fellowLmsSubmissions: fellowLmsSubmissionsReducer,
   fellowsSummary,
   engineeringManagerTtls: engineeringManagerTtlsReducer,
-  simulationsLeadLfs: simulationsLeadLfsReducer
+  simulationsLeadLfs: simulationsLeadLfsReducer,
+  lfNotification: lfNotificationReducer,
+  ttlNotification: ttlNotificationReducer,
+  updateManagerNotification
 });
 
 export default rootReducer;

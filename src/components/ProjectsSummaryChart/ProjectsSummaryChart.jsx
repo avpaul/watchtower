@@ -89,7 +89,9 @@ class ProjectsSummaryChart extends Component {
 
 ProjectsSummaryChart.propTypes = {
   fetchTtlProjects: PropTypes.func.isRequired,
-  user: PropTypes.instanceOf(Object).isRequired
+  user: PropTypes.instanceOf(Object).isRequired,
+  fetchFellowsSummaryTTLLF: PropTypes.func.isRequired,
+  fellowsSummary: PropTypes.instanceOf(Object).isRequired
 };
 
 export default ProjectsSummaryChart;
