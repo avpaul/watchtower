@@ -10,7 +10,7 @@ const getEngineeringManagerTtls = email => dispatch => {
     email.split('@')[0] === 'wt-test-em'
       ? process.env.REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
       : email;
-  const url = `${serverURL}/api/v1/engineeringmanagers/ttls/?email=${newEmail}`;
+  const url = `${serverURL}/api/v1/engineeringmanagers/ttls?email=${newEmail}`;
   return axios
     .get(url)
     .then(response =>

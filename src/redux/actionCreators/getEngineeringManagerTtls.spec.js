@@ -11,7 +11,7 @@ import getEngineeringManagerTtls from './getEngineeringManagerTtls';
 
 describe("fetch engineering manager 's data actions", () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/engineeringmanagers/ttls/?email=ai.ls@andela.com`;
+  const baseURL = `${serverURL}/api/v1/engineeringmanagers/ttls?email=ai.ls@andela.com`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore({
