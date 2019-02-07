@@ -10,7 +10,7 @@ const getSimulationsLeadLfs = email => dispatch => {
     email.split('@')[0] === 'wt-test-sl'
       ? process.env.REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL
       : email;
-  const url = `${serverURL}/api/v1/simulationsLeads/lfs/?email=${newEmail}`;
+  const url = `${serverURL}/api/v1/simulationsLeads/lfs?email=${newEmail}`;
   return axios
     .get(url)
     .then(response =>

@@ -11,7 +11,7 @@ import getSimulationsLeadLfs from './simulationsLeadLfActions';
 
 describe("fetch simulationsLead's data actions", () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/simulationsLeads/lfs/?email=sims.lead@andela.com`;
+  const baseURL = `${serverURL}/api/v1/simulationsLeads/lfs?email=sims.lead@andela.com`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore({
