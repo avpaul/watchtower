@@ -33,6 +33,7 @@ const FellowChartContainer = props => {
     loading,
     data,
     updateSelected,
+    user,
     filter,
     handleChartClose,
     fellowChartTooltipClass
@@ -49,6 +50,7 @@ const FellowChartContainer = props => {
           handleChartClose={handleChartClose}
           fellowChartTooltip={fellowChartTooltip || fellowChartTooltipClass}
           updateSelected={updateSelected}
+          user={user}
         />
       ) : (
         <Loader />
@@ -72,6 +74,7 @@ FellowChartContainer.propTypes = {
   fellowChartTooltipClass: PropTypes.instanceOf(Object),
   data: PropTypes.shape({}).isRequired,
   updateSelected: PropTypes.func.isRequired,
+  user: PropTypes.arrayOf.isRequired,
   filter: PropTypes.string,
   loading: PropTypes.bool.isRequired
 };

@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 
+import emsDashboardReducer from './emsDashBoardReducer';
 import fellowReducer from './fellowReducer';
 import fellowCountHistoryReducer from './fellowCountHistoryReducer';
 import managerReducer from './managerReducer';
@@ -26,6 +27,7 @@ import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
 
 const rootReducer = combineReducers({
+  emsDashboard: emsDashboardReducer,
   fellows: fellowReducer,
   fellowCountHistory: fellowCountHistoryReducer,
   visibilityFilter,

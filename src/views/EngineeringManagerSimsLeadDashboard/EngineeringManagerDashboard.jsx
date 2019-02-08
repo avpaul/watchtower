@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DisplayCard from '../../components/Filters/DisplayCard';
+import FellowChart from '../../components/FellowChart';
 import TtlsFellowSummary from './TtlsFellowSummary';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
 
@@ -15,12 +16,14 @@ class EngineeringManagerDashboard extends Component {
     this.state = {
       averageFellowsPerTtl: 0,
       averageFellowsPerLf: 0,
+      chartFilter: 'Total',
       isEngineeringManager: true,
       managerTitle: 'TTL',
       lfs: [],
       ttls: [],
       totalFellows: 0,
       show: false,
+      showChart: false,
       managerFellowSortRatio: 'HIGH_TO_LOW'
     };
     this.onSelectManagerFellowRatio = this.onSelectManagerFellowRatio.bind(
@@ -30,6 +33,7 @@ class EngineeringManagerDashboard extends Component {
 
   componentDidMount() {
     const {
+      fetchFellowsSummaryEm,
       getEngineeringManagerTtls,
       getSimulationsLeadLfs,
       user
@@ -44,6 +48,7 @@ class EngineeringManagerDashboard extends Component {
             isEngineeringManager: true
           });
         }
+        fetchFellowsSummaryEm(user.email);
       });
     } else {
       getSimulationsLeadLfs(user.email).then(data => {
@@ -74,12 +79,16 @@ class EngineeringManagerDashboard extends Component {
       {
         id: 'total-fellows-card',
         title: 'Total D0 Fellows',
-        subTitle: 'Click to see details',
+        // subTitle: 'Click to see details',
         totalFellows: `${totalFellows === undefined ? 0 : totalFellows}`
       }
     ];
     for (let i = 0; i < managersArray.length; i += 1) {
+      const ttlsName = `${managersArray[i].firstName} ${
+        managersArray[i].lastName
+      }`;
       const content = {
+        id: ttlsName,
         title: titleName.concat(
           managersArray[i].firstName,
           ' ',
@@ -102,6 +111,22 @@ class EngineeringManagerDashboard extends Component {
 
   handleMapClose = () => {
     this.setState({ show: false });
+  };
+
+  handleCardClick = event => {
+    const cardId = event.currentTarget.id.replace(/\s+/g, ' ').trim();
+    const { fetchFellowsSummaryTTLLFAction } = this.props;
+
+    if (cardId === 'total-fellows-card') {
+      this.setState({ chartFilter: 'Total', showChart: true });
+    } else {
+      fetchFellowsSummaryTTLLFAction(cardId);
+      this.setState({ chartFilter: 'TTL', showChart: true });
+    }
+  };
+
+  handleChartClose = () => {
+    this.setState({ showChart: false });
   };
 
   renderManagerFellowMap = () => {
@@ -154,13 +179,24 @@ class EngineeringManagerDashboard extends Component {
       paddingRight: '0',
       paddingBottom: '49px'
     };
+
+    const { fellowsSummaryEM, fellowsSummaryTTL, user } = this.props;
+
     const {
       ttls,
       lfs,
       isEngineeringManager,
       managerTitle,
+      showChart,
+      chartFilter,
       totalFellows
     } = this.state;
+
+    let chartData = fellowsSummaryEM.summary;
+    if (chartFilter === 'TTL') {
+      chartData = fellowsSummaryTTL.data;
+    }
+
     return (
       <div className="container-fluid" style={emDashboardStyle}>
         <TtlsFellowSummary
@@ -169,7 +205,17 @@ class EngineeringManagerDashboard extends Component {
             totalFellows,
             managerTitle
           )}
+          handleCardClick={this.handleCardClick}
         />
+
+        {showChart && (
+          <FellowChart
+            handleChartClose={this.handleChartClose}
+            data={chartData}
+            user={user}
+          />
+        )}
+
         <div className="row map-card-row">
           {this.mapDisplayContent().map((displayContent, index) => (
             <DisplayCard
@@ -188,6 +234,10 @@ class EngineeringManagerDashboard extends Component {
 
 EngineeringManagerDashboard.propTypes = {
   // required prop-types
+  fellowsSummaryEM: PropTypes.shape({}).isRequired,
+  fellowsSummaryTTL: PropTypes.shape({}).isRequired,
+  fetchFellowsSummaryEm: PropTypes.func.isRequired,
+  fetchFellowsSummaryTTLLFAction: PropTypes.func.isRequired,
   user: PropTypes.arrayOf.isRequired,
   getEngineeringManagerTtls: PropTypes.func.isRequired,
   getSimulationsLeadLfs: PropTypes.func.isRequired

@@ -9,7 +9,10 @@ import errorHandler from '../../../services/errorHandler';
 import {
   FETCH_TTLLF_SUMMARY_REQUEST,
   FETCH_TTLLF_SUMMARY_SUCCESS,
-  FETCH_TTLLF_SUMMARY_ERROR
+  FETCH_TTLLF_SUMMARY_ERROR,
+  FETCH_EM_SUMMARY_REQUEST,
+  FETCH_EM_SUMMARY_SUCCESS,
+  FETCH_EM_SUMMARY_ERROR
 } from '../../constants/fellowSummary';
 
 export const fetchFellowsSummaryError = error => ({
@@ -82,5 +85,28 @@ export const fetchFellowsSummaryTTLLFAction = name => dispatch => {
           error: errorHandler(error)
         })
     )
+  );
+};
+
+export const fetchFellowsSummaryEm = email => dispatch => {
+  dispatch({ type: FETCH_EM_SUMMARY_REQUEST });
+  const requestURL = `${serverURL}/api/v1/engineeringmanager`;
+  const newEmail =
+    email.split('@')[0] === 'wt-test-em'
+      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
+      : email;
+  return Axios.get(`${requestURL}/history?email=${newEmail}`).then(
+    response => {
+      dispatch({
+        type: FETCH_EM_SUMMARY_SUCCESS,
+        summary: response.data.data
+      });
+    },
+    error => {
+      dispatch({
+        type: FETCH_EM_SUMMARY_ERROR,
+        error: errorHandler(error)
+      });
+    }
   );
 };

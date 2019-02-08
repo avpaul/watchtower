@@ -167,6 +167,7 @@ ShallowWrapper {
                       ]
         }
         updateSelected={undefined}
+        user={undefined}
 />,
     },
     "ref": null,
@@ -193,6 +194,7 @@ ShallowWrapper {
           },
         ],
         "updateSelected": undefined,
+        "user": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -231,6 +233,7 @@ ShallowWrapper {
                             ]
           }
           updateSelected={undefined}
+          user={undefined}
 />,
       },
       "ref": null,
@@ -257,6 +260,7 @@ ShallowWrapper {
             },
           ],
           "updateSelected": undefined,
+          "user": undefined,
         },
         "ref": null,
         "rendered": null,

@@ -99,6 +99,13 @@ ShallowWrapper {
           ]
     }
     updateSelected={[Function]}
+    user={
+        Object {
+            "roles": Object {
+              "WATCH_TOWER_EM": "em",
+            },
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -136,18 +143,6 @@ ShallowWrapper {
                               className="far fa-times-circle"
                     />
           </button>
-          <RadioCard
-                    current="Trend"
-                    handleRadioClick={[Function]}
-                    name=" Today"
-                    value="Trend"
-          />
-          <RadioCard
-                    current="Trend"
-                    handleRadioClick={[Function]}
-                    name="Trend"
-                    value="Today"
-          />
           <Chart
                     data={
                               Array [
@@ -264,20 +259,7 @@ ShallowWrapper {
                             className="far fa-times-circle"
               />
 </button>,
-            Array [
-              <RadioCard
-                current="Trend"
-                handleRadioClick={[Function]}
-                name=" Today"
-                value="Trend"
-/>,
-              <RadioCard
-                current="Trend"
-                handleRadioClick={[Function]}
-                name="Trend"
-                value="Today"
-/>,
-            ],
+            false,
             <Chart
               data={
                             Array [
@@ -391,34 +373,7 @@ ShallowWrapper {
             },
             "type": "button",
           },
-          Object {
-            "instance": null,
-            "key": "Trend",
-            "nodeType": "function",
-            "props": Object {
-              "current": "Trend",
-              "handleRadioClick": [Function],
-              "name": " Today",
-              "value": "Trend",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Today",
-            "nodeType": "function",
-            "props": Object {
-              "current": "Trend",
-              "handleRadioClick": [Function],
-              "name": "Trend",
-              "value": "Today",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -539,18 +494,6 @@ ShallowWrapper {
                                     className="far fa-times-circle"
                         />
             </button>
-            <RadioCard
-                        current="Trend"
-                        handleRadioClick={[Function]}
-                        name=" Today"
-                        value="Trend"
-            />
-            <RadioCard
-                        current="Trend"
-                        handleRadioClick={[Function]}
-                        name="Trend"
-                        value="Today"
-            />
             <Chart
                         data={
                                     Array [
@@ -667,20 +610,7 @@ ShallowWrapper {
                                 className="far fa-times-circle"
                 />
 </button>,
-              Array [
-                <RadioCard
-                  current="Trend"
-                  handleRadioClick={[Function]}
-                  name=" Today"
-                  value="Trend"
-/>,
-                <RadioCard
-                  current="Trend"
-                  handleRadioClick={[Function]}
-                  name="Trend"
-                  value="Today"
-/>,
-              ],
+              false,
               <Chart
                 data={
                                 Array [
@@ -794,34 +724,7 @@ ShallowWrapper {
               },
               "type": "button",
             },
-            Object {
-              "instance": null,
-              "key": "Trend",
-              "nodeType": "function",
-              "props": Object {
-                "current": "Trend",
-                "handleRadioClick": [Function],
-                "name": " Today",
-                "value": "Trend",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "Today",
-              "nodeType": "function",
-              "props": Object {
-                "current": "Trend",
-                "handleRadioClick": [Function],
-                "name": "Trend",
-                "value": "Today",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            false,
             Object {
               "instance": null,
               "key": undefined,

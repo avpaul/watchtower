@@ -7,6 +7,7 @@ import simulationsLeadLf from '../../../__mocks__/simulationsLeadLf';
 import EngineeringManagerDashboard from '../EngineeringManagerDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 import ManagerFellowMap from '../../../components/ManagerFellowMap';
+import DisplayCard from '../../../components/Filters/DisplayCard';
 
 describe('EngineeringManagerDashboard', () => {
   let wrapper;
@@ -70,6 +71,10 @@ describe('EngineeringDashboard component', () => {
         },
         totalFellows: 5
       },
+      fellowsSummaryEM: {},
+      fellowsSummaryTTL: {},
+      fetchFellowsSummaryEm: spyResolve,
+      fetchFellowsSummaryTTLLFAction: spyResolve,
       getEngineeringManagerTtls: spyResolve,
       getSimulationsLeadLfs: spyResolve
     };
@@ -104,6 +109,15 @@ describe('EngineeringDashboard component', () => {
     expect(wrapper.state().managerFellowSortRatio).toBe('LOW_TO_HIGH');
   });
 
+  it('handles card click', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ chartFilter: 'TTL' });
+    const totalFellowsCard = wrapper.find(DisplayCard);
+
+    totalFellowsCard.simulate('click');
+    expect(wrapper.state().chartFilter).toBe('TTL');
+  });
+
   it('closes the map when the close button is clicked', () => {
     const { wrapper } = setup();
     wrapper.setState({ show: true });
@@ -114,11 +128,53 @@ describe('EngineeringDashboard component', () => {
     expect(wrapper.state().show).toBe(false);
   });
 
+  it('sets chartfilter state to Total when the handle Card  Click is clicked', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ show: true });
+    const event = {
+      currentTarget: { id: 'total-fellows-card' }
+    };
+    const instance = wrapper.instance();
+    instance.handleCardClick(event);
+    expect(wrapper.state().chartFilter).toBe('Total');
+  });
+
+  it('closes the map when the handle Card  Click is clicked', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ show: true });
+    const event = {
+      currentTarget: { id: 'trustburundi' }
+    };
+    const instance = wrapper.instance();
+    instance.handleCardClick(event);
+    expect(wrapper.state().chartFilter).toBe('TTL');
+  });
+
+  it('closes the chart when the close button is clicked', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ showChart: true });
+    const handleChartCloseSpy = jest.spyOn(
+      wrapper.instance(),
+      'handleChartClose'
+    );
+
+    wrapper.instance().handleChartClose();
+    expect(handleChartCloseSpy).toHaveBeenCalledTimes(1);
+    expect(wrapper.state().showChart).toBe(false);
+  });
+
   it('should fetch ttls data when data is not in store', () => {
     const { wrapper, props } = setup();
     wrapper.setProps({ ttls: [] });
     wrapper.instance().componentDidMount();
     expect(props.getEngineeringManagerTtls).toHaveBeenCalled();
+  });
+
+  it('should fetch ems fellows summary data when data is not in store', () => {
+    const { wrapper, props } = setup();
+    wrapper.setProps({ ttls: [] });
+    wrapper.instance().componentDidMount();
+    expect(props.fetchFellowsSummaryEm).toHaveBeenCalled();
   });
 
   it('sets show to true when fellowMapOnClick is called ', () => {

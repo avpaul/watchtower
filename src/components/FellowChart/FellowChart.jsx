@@ -49,14 +49,20 @@ class FellowChart extends Component {
 
   render() {
     const { selected } = this.state;
-    const { fellowsCount, radioCardOptions, fellowChartTooltip } = this.props;
+    const {
+      fellowsCount,
+      radioCardOptions,
+      fellowChartTooltip,
+      user
+    } = this.props;
+
     const title = radioCardOptions.find(({ value }) => value === selected).name;
     return (
       <div className="fellow-chart-container">
         <div className="base" style={fellowChartTooltip} />
         <div className="fellow-chart">
           {this.renderCloseButton()}
-          {this.renderRadioCard()}
+          {!user.roles.WATCH_TOWER_EM && this.renderRadioCard()}
           <Chart data={fellowsCount} title={title} />
         </div>
       </div>
@@ -72,6 +78,7 @@ FellowChart.propTypes = {
   radioCardOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleChartClose: PropTypes.func.isRequired,
   updateSelected: PropTypes.func.isRequired,
+  user: PropTypes.arrayOf.isRequired,
   fellowChartTooltip: PropTypes.shape({
     '--fellow-chart-tooltip': PropTypes.string.isRequired
   })

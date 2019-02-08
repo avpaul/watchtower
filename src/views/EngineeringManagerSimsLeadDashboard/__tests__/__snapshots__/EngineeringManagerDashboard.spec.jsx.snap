@@ -301,6 +301,10 @@ ShallowWrapper {
             "totalFellows": 5,
           }
     }
+    fellowsSummaryEM={Object {}}
+    fellowsSummaryTTL={Object {}}
+    fetchFellowsSummaryEm={[Function]}
+    fetchFellowsSummaryTTLLFAction={[Function]}
     getEngineeringManagerTtls={[Function]}
     getSimulationsLeadLfs={[Function]}
     user={
@@ -331,13 +335,14 @@ ShallowWrapper {
                     Array [
                               Object {
                                 "id": "total-fellows-card",
-                                "subTitle": "Click to see details",
                                 "title": "Total D0 Fellows",
                                 "totalFellows": "0",
                               },
                             ]
           }
+          handleCardClick={[Function]}
 />,
+        false,
         <div
           className="row map-card-row"
 >
@@ -372,16 +377,17 @@ ShallowWrapper {
           "fellowsSummary": Array [
             Object {
               "id": "total-fellows-card",
-              "subTitle": "Click to see details",
               "title": "Total D0 Fellows",
               "totalFellows": "0",
             },
           ],
+          "handleCardClick": [Function],
         },
         "ref": null,
         "rendered": null,
         "type": [Function],
       },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -440,13 +446,14 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "id": "total-fellows-card",
-                                      "subTitle": "Click to see details",
                                       "title": "Total D0 Fellows",
                                       "totalFellows": "0",
                                     },
                                   ]
             }
+            handleCardClick={[Function]}
 />,
+          false,
           <div
             className="row map-card-row"
 >
@@ -481,16 +488,17 @@ ShallowWrapper {
             "fellowsSummary": Array [
               Object {
                 "id": "total-fellows-card",
-                "subTitle": "Click to see details",
                 "title": "Total D0 Fellows",
                 "totalFellows": "0",
               },
             ],
+            "handleCardClick": [Function],
           },
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
+        false,
         Object {
           "instance": null,
           "key": undefined,

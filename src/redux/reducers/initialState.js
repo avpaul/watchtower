@@ -1,6 +1,13 @@
 import { ALL } from '../constants/fellowFilters';
 
 export default {
+  emsDashboard: {
+    fellowsSummary: {
+      loading: false,
+      summary: [],
+      error: ''
+    }
+  },
   fellows: {
     pagination: {
       perPage: 10,

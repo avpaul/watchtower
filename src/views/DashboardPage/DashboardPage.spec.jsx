@@ -8,7 +8,10 @@ import DashboardPage from './DashboardPage';
 import fellows from '../../__mocks__/fellows';
 import pagination from '../../__mocks__/pagination';
 import Error from '../../components/Error';
-import { ONTRACK, OFFTRACK_WK4_MINUS } from '../../redux/constants/fellowFilters';
+import {
+  ONTRACK,
+  OFFTRACK_WK4_MINUS
+} from '../../redux/constants/fellowFilters';
 import table from './tableHeaders';
 import jsonToCsv from '../../utils/jsonToCsv';
 import jsonToPdf from '../../utils/jsonToPdf';
@@ -28,10 +31,10 @@ const props = {
   getFellows: jest.fn(),
   user: {
     name: 'Test user',
-    picture: 'http://',
+    picture: 'http://'
   },
-  results:[],
-  role: 'Technology',
+  results: [],
+  role: 'Technology'
 };
 
 beforeEach(() => {
@@ -42,7 +45,12 @@ beforeEach(() => {
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<MemoryRouter><DashboardPage {...props} /></MemoryRouter>, div);
+  ReactDOM.render(
+    <MemoryRouter>
+      <DashboardPage {...props} />
+    </MemoryRouter>,
+    div
+  );
   ReactDOM.unmountComponentAtNode(div);
 });
 
@@ -79,7 +87,10 @@ it('does not make an API call when the filter prop has not changed', () => {
 
 it("renders the dashboard table when there's no error", () => {
   const wrapper = shallow(<DashboardPage {...props} />);
-  const handleSearchChangeSpy = jest.spyOn(wrapper.instance(), 'handleSearchChange');
+  const handleSearchChangeSpy = jest.spyOn(
+    wrapper.instance(),
+    'handleSearchChange'
+  );
   wrapper.instance().handleSearchChange({ target: { value: 'search' } });
   expect(handleSearchChangeSpy).toHaveBeenCalled();
 });
@@ -87,13 +98,17 @@ it("renders the dashboard table when there's no error", () => {
 it('changes state when getCriteriaFilter is called', () => {
   const wrapper = shallow(<DashboardPage {...props} />);
   wrapper.setState({
-      headers: ['Name', 'Class'],
-      statusType: 'LMSStatus',
-      cellKeys: table.lmsCriteria.cells,
-      criteria: 'LMS',
-      status: 'All'
+    headers: ['Name', 'Class'],
+    statusType: 'LMSStatus',
+    cellKeys: table.lmsCriteria.cells,
+    criteria: 'LMS',
+    status: 'All'
   });
-  const getCriteriaFilterSpy = jest.spyOn(wrapper.instance(), 'getCriteriaFilter');
+
+  const getCriteriaFilterSpy = jest.spyOn(
+    wrapper.instance(),
+    'getCriteriaFilter'
+  );
   wrapper.instance().getCriteriaFilter('criteria', 'DevPulse');
   expect(getCriteriaFilterSpy).toHaveBeenCalled();
   expect(wrapper.state('headers')).toEqual([
@@ -123,7 +138,6 @@ it('changes state when getCriteriaFilter is called', () => {
   ]);
   expect(wrapper.state('criteria')).toEqual('DevPulse');
 });
-
 it('changes state and calls getFellows when getStatusFilter is called', () => {
   const getFellowsSpy = jest.fn();
   const propsWithSpy = { ...props, getFellows: getFellowsSpy };
@@ -131,11 +145,11 @@ it('changes state and calls getFellows when getStatusFilter is called', () => {
   wrapper.setProps({ filter: OFFTRACK_WK4_MINUS });
   expect(getFellowsSpy).toHaveBeenCalled();
   wrapper.setState({
-      headers: ['Name', 'Class'],
-      statusType: 'LMSStatus',
-      cellKeys: table.lmsCriteria.cells,
-      criteria: 'All',
-      status: 'All'
+    headers: ['Name', 'Class'],
+    statusType: 'LMSStatus',
+    cellKeys: table.lmsCriteria.cells,
+    criteria: 'All',
+    status: 'All'
   });
   const getStatusFilterSpy = jest.spyOn(wrapper.instance(), 'getStatusFilter');
   wrapper.instance().getStatusFilter('status', 'On Track');
@@ -165,11 +179,11 @@ it('changes state and calls getFellows when getStatusFilter is called', () => {
 it('only changes state when getStatusFilter is called and loading prop is true', () => {
   const wrapper = shallow(<DashboardPage {...props} />);
   wrapper.setState({
-      headers: ['Name', 'Class'],
-      statusType: 'LMSStatus',
-      cellKeys: table.lmsCriteria.cells,
-      criteria: 'All',
-      status: 'All'
+    headers: ['Name', 'Class'],
+    statusType: 'LMSStatus',
+    cellKeys: table.lmsCriteria.cells,
+    criteria: 'All',
+    status: 'All'
   });
   wrapper.setProps({
     loading: true
@@ -254,8 +268,10 @@ it('makes an API call when clickDownload is called', () => {
     pagination: { results: 50 }
   });
   mock
-    .onGet(`${serverURL}/api/v1/fellows?perPage=50&page=${1}&filter=${'all'}&level=All&status=All`)
-    .reply(200, { results: true })
+    .onGet(
+      `${serverURL}/api/v1/fellows?perPage=50&page=${1}&filter=${'all'}&level=All&status=All`
+    )
+    .reply(200, { results: true });
   const clickDownloadSpy = jest.spyOn(wrapper.instance(), 'clickDownload');
   wrapper.instance().clickDownload();
   expect(clickDownloadSpy).toHaveBeenCalled();
