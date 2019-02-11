@@ -10,7 +10,7 @@ const ProjectCard = ({ data, Id }) => (
         {data.apprenticeshipTeam || data.simulationsTeam}
       </RenderItem>
       <RenderItem title={data.apprenticeshipManager ? 'TTL' : 'LF'}>
-        {data.apprenticeshipManager || data.simulationsPm}
+        {data.apprenticeshipManager || data.simulationsPM}
       </RenderItem>
       <RenderItem title="PM">--</RenderItem>
     </div>
