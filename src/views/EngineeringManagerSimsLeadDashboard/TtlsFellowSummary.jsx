@@ -14,7 +14,11 @@ const FellowsSummary = ({ fellowsSummary, handleCardClick }) => (
             key={fellowSummary.id}
             filterId={fellowSummary.id}
             cardDetails={fellowSummary}
-            className="card"
+            className={
+              fellowSummary.id === 'total-fellows-card'
+                ? 'card total-fellows-card'
+                : 'card'
+            }
             onClick={handleCardClick}
           />
         </div>

@@ -32,6 +32,10 @@
   margin: 20px auto 0 auto;
 }
 
+.total-fellows-card {
+  font-weight: bolder;
+}
+
 @media screen and (min-width: 729px) {
   .ops-dashboard__filter {
     justify-content: left;
