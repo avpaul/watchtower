@@ -32,6 +32,7 @@ describe('<LoginPage />', () => {
   it('It redirects user to dashboard when logged in', () => {
     authService.isAuthenticated.mockImplementation(() => true);
     authService.isAuthorized.mockImplementation(() => true);
+    authService.loadUserFromToken.mockImplementation(() => ({ id: 'some-id' }));
     const instance = shallow(
       <LoginPage authHostUrl={ANDELA_AUTH_URL} authRedirectUrl={REDIRECT_URL} />
     );
@@ -40,6 +41,7 @@ describe('<LoginPage />', () => {
   it('It shows toast message for unauthorized users', () => {
     authService.isAuthenticated.mockImplementation(() => true);
     authService.isAuthorized.mockImplementation(() => false);
+
     shallow(
       <LoginPage authHostUrl={ANDELA_AUTH_URL} authRedirectUrl={REDIRECT_URL} />
     );

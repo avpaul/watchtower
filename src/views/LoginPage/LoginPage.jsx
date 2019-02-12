@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import Error from '../../components/Error';
 import authService from '../../services/auth';
+import analytics from '../../services/analytics';
 import 'react-toastify/dist/ReactToastify.css';
 import andelaLogo from '../../static/Logo-andela.png';
 import googleLogo from '../../static/icons8-google-48.png';
@@ -97,6 +98,8 @@ class LoginPage extends Component {
     const { ErrorBoundary } = Error;
 
     if (loggedIn && hasAllowedRoles) {
+      const { id } = authService.loadUserFromToken();
+      analytics.fireloginEvent(id);
       return <Redirect to="/dashboard" />;
     }
     return (

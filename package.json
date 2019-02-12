@@ -46,6 +46,7 @@
     "react-burger-menu": "^2.5.4",
     "react-debounce-input": "^3.2.0",
     "react-dom": "^16.5.1",
+    "react-ga": "^2.5.7",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
