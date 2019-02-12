@@ -118,10 +118,12 @@ class OpsDashboardMain extends Component {
       paddingBottom: '49px'
     };
 
+    const { user } = this.props;
+
     // Add components here for opsDashboard
     return (
       <div className="container-fluid" style={opsDashboardStyle}>
-        <FellowsSummaryChart />
+        <FellowsSummaryChart user={user} />
         <div className="row map-card-row">
           {this.mapDisplayContent().map((displayContent, index) => (
             <DisplayCard
@@ -170,7 +172,8 @@ OpsDashboardMain.propTypes = {
   ).isRequired,
   averageFellowsPerTtl: PropTypes.number.isRequired,
   averageFellowsPerLf: PropTypes.number.isRequired,
-  getManagers: PropTypes.func.isRequired
+  getManagers: PropTypes.func.isRequired,
+  user: PropTypes.arrayOf.isRequired
 };
 
 export default OpsDashboardMain;

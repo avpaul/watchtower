@@ -67,7 +67,7 @@ class ProjectsSummaryChart extends Component {
 
   render() {
     const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { fellowsSummary } = this.props;
+    const { fellowsSummary, user } = this.props;
     const data = this.updateFellowSummary(selected);
     return (
       <div>
@@ -80,6 +80,7 @@ class ProjectsSummaryChart extends Component {
             {...fellowsSummary}
             data={data}
             fellowChartTooltipClass={this.getCurrentClass()}
+            user={user}
           />
         )}
       </div>

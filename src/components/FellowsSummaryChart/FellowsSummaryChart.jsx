@@ -44,7 +44,7 @@ class FellowsSummaryChart extends Component {
 
   render() {
     const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { fellowCountHistory, displayByRole } = this.props;
+    const { fellowCountHistory, displayByRole, user } = this.props;
     const { data } = this.updateFellowSummary(selected);
     return (
       <Fragment>
@@ -59,6 +59,7 @@ class FellowsSummaryChart extends Component {
             updateSelected={this.updateSelected}
             {...fellowCountHistory}
             data={data}
+            user={user}
           />
         )}
       </Fragment>
@@ -76,7 +77,8 @@ FellowsSummaryChart.propTypes = {
     loading: PropTypes.bool
   }).isRequired,
   getFellowSummaryOps: PropTypes.func.isRequired,
-  fetchFellowsSummary: PropTypes.func.isRequired
+  fetchFellowsSummary: PropTypes.func.isRequired,
+  user: PropTypes.arrayOf.isRequired
 };
 
 export default FellowsSummaryChart;

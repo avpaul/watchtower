@@ -1611,7 +1611,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(FellowsSummaryChart) />,
+        <Connect(FellowsSummaryChart)
+          user={undefined}
+/>,
         <div
           className="row map-card-row"
 >
@@ -1654,7 +1656,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "user": undefined,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -1749,7 +1753,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(FellowsSummaryChart) />,
+          <Connect(FellowsSummaryChart)
+            user={undefined}
+/>,
           <div
             className="row map-card-row"
 >
@@ -1792,7 +1798,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "user": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
