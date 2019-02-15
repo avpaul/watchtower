@@ -3,9 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import Error from '../../components/Error';
 import authService from '../../services/auth';
-import analytics from '../../services/analytics';
 import 'react-toastify/dist/ReactToastify.css';
-import andelaLogo from '../../static/Logo-andela.png';
 import googleLogo from '../../static/icons8-google-48.png';
 import watchTowerLogo from '../../static/Logo-watchTower.svg';
 import './LoginPage.css';
@@ -54,21 +52,14 @@ class LoginPage extends Component {
         className="login-page__logo"
         id="watch-tower-logo"
       />
-      <span className="login-page__text-by">by</span>
-      <img
-        src={andelaLogo}
-        alt="andela-logo"
-        className="login-page__logo"
-        id="andela-logo"
-      />
     </div>
   );
 
   renderPageTagLine = () => (
-    <div className="login-page__tagline text-center">
+    <div className="login-page__tagline">
       <p>
         Overseeing Talent Development
-        <span className="login-page__text-and">&</span>
+        <span className="login-page__text-and"> & </span>
         Growth
       </p>
     </div>
@@ -88,7 +79,7 @@ class LoginPage extends Component {
           className="login-page__btn-logo"
         />
         <span className="login-page__line" />
-        <span className="login-page__btn-text">LOGIN WITH GOOGLE</span>
+        <span className="login-page__btn-text">Login to Get Started</span>
       </a>
     </div>
   );
@@ -98,13 +89,11 @@ class LoginPage extends Component {
     const { ErrorBoundary } = Error;
 
     if (loggedIn && hasAllowedRoles) {
-      const { id } = authService.loadUserFromToken();
-      analytics.fireloginEvent(id);
       return <Redirect to="/dashboard" />;
     }
     return (
       <ErrorBoundary>
-        <main className=".container-fluid text-center login-page">
+        <main className="container-fluid login-page">
           {this.renderPageHeader()}
           <ToastContainer autoClose={5000} transition={Slide} />
 

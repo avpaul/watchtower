@@ -22,7 +22,7 @@ describe('<LoginPage />', () => {
   });
   it('should render login button with correct text', () => {
     const loginButton = wrapper.find('.login-page__btn');
-    expect(loginButton.text()).toEqual('LOGIN WITH GOOGLE');
+    expect(loginButton.text()).toEqual('Login to Get Started');
   });
   it('should attempt sign-in when login button is clicked', () => {
     const loginButton = wrapper.find('.login-page__btn');
