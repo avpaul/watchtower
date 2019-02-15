@@ -56,3 +56,13 @@
     margin: 20px 20px 28px 0;
   }
 }
+
+.scroll-wrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.card-scroll-wrapper {
+  display: inline-block;
+}
