@@ -117,10 +117,6 @@
     text-align: center;
   }
 
-  .login-page__logo {
-    margin: 40px auto 10px auto;
-  }
-
   .login-page__btn {
     font-size: 0.825rem !important;
   }
