@@ -16,7 +16,6 @@ class EngineeringManagerDashboard extends Component {
     this.state = {
       averageFellowsPerTtl: 0,
       averageFellowsPerLf: 0,
-      chartFilter: 'Total',
       isEngineeringManager: true,
       managerTitle: 'TTL',
       lfs: [],
@@ -36,6 +35,7 @@ class EngineeringManagerDashboard extends Component {
       fetchFellowsSummaryEm,
       getEngineeringManagerTtls,
       getSimulationsLeadLfs,
+      fetchFellowsSummarySl,
       user
     } = this.props;
     if (user.roles.WATCH_TOWER_EM) {
@@ -60,6 +60,7 @@ class EngineeringManagerDashboard extends Component {
             isEngineeringManager: false,
             managerTitle: 'LF'
           });
+          fetchFellowsSummarySl(user.email);
         }
       });
     }
@@ -87,8 +88,10 @@ class EngineeringManagerDashboard extends Component {
       const ttlsName = `${managersArray[i].firstName} ${
         managersArray[i].lastName
       }`;
+      const lfEmail = managersArray[i].email;
+      const id = managersArray[i].roleId === 2 ? ttlsName : lfEmail;
       const content = {
-        id: ttlsName,
+        id,
         title: titleName.concat(
           managersArray[i].firstName,
           ' ',
@@ -115,13 +118,27 @@ class EngineeringManagerDashboard extends Component {
 
   handleCardClick = event => {
     const cardId = event.currentTarget.id.replace(/\s+/g, ' ').trim();
-    const { fetchFellowsSummaryTTLLFAction } = this.props;
+    const {
+      fetchFellowsSummaryTtl,
+      fetchFellowsSummaryLf,
+      fetchFellowsSummarySl,
+      fetchFellowsSummaryEm,
+      user
+    } = this.props;
 
     if (cardId === 'total-fellows-card') {
-      this.setState({ chartFilter: 'Total', showChart: true });
+      if (user.roles.WATCH_TOWER_EM) {
+        fetchFellowsSummaryEm(user.email);
+      } else {
+        fetchFellowsSummarySl(user.email);
+      }
+      this.setState({ showChart: true });
+    } else if (user.roles.WATCH_TOWER_EM) {
+      fetchFellowsSummaryTtl(cardId);
+      this.setState({ showChart: true });
     } else {
-      fetchFellowsSummaryTTLLFAction(cardId);
-      this.setState({ chartFilter: 'TTL', showChart: true });
+      fetchFellowsSummaryLf(cardId);
+      this.setState({ showChart: true });
     }
   };
 
@@ -180,7 +197,7 @@ class EngineeringManagerDashboard extends Component {
       paddingBottom: '49px'
     };
 
-    const { fellowsSummaryEM, fellowsSummaryTTL, user } = this.props;
+    const { fellowsSummary, user } = this.props;
 
     const {
       ttls,
@@ -188,14 +205,10 @@ class EngineeringManagerDashboard extends Component {
       isEngineeringManager,
       managerTitle,
       showChart,
-      chartFilter,
       totalFellows
     } = this.state;
 
-    let chartData = fellowsSummaryEM.summary;
-    if (chartFilter === 'TTL') {
-      chartData = fellowsSummaryTTL.data;
-    }
+    const chartData = fellowsSummary.summary;
 
     return (
       <div className="container-fluid" style={emDashboardStyle}>
@@ -234,10 +247,11 @@ class EngineeringManagerDashboard extends Component {
 
 EngineeringManagerDashboard.propTypes = {
   // required prop-types
-  fellowsSummaryEM: PropTypes.shape({}).isRequired,
-  fellowsSummaryTTL: PropTypes.shape({}).isRequired,
+  fellowsSummary: PropTypes.shape({}).isRequired,
   fetchFellowsSummaryEm: PropTypes.func.isRequired,
-  fetchFellowsSummaryTTLLFAction: PropTypes.func.isRequired,
+  fetchFellowsSummarySl: PropTypes.func.isRequired,
+  fetchFellowsSummaryLf: PropTypes.func.isRequired,
+  fetchFellowsSummaryTtl: PropTypes.func.isRequired,
   user: PropTypes.arrayOf.isRequired,
   getEngineeringManagerTtls: PropTypes.func.isRequired,
   getSimulationsLeadLfs: PropTypes.func.isRequired

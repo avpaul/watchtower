@@ -301,10 +301,11 @@ ShallowWrapper {
             "totalFellows": 5,
           }
     }
-    fellowsSummaryEM={Object {}}
-    fellowsSummaryTTL={Object {}}
+    fellowsSummary={Object {}}
     fetchFellowsSummaryEm={[Function]}
-    fetchFellowsSummaryTTLLFAction={[Function]}
+    fetchFellowsSummaryLf={[Function]}
+    fetchFellowsSummarySl={[Function]}
+    fetchFellowsSummaryTtl={[Function]}
     getEngineeringManagerTtls={[Function]}
     getSimulationsLeadLfs={[Function]}
     user={

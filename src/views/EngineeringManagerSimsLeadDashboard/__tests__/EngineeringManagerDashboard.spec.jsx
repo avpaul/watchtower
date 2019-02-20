@@ -7,7 +7,6 @@ import simulationsLeadLf from '../../../__mocks__/simulationsLeadLf';
 import EngineeringManagerDashboard from '../EngineeringManagerDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 import ManagerFellowMap from '../../../components/ManagerFellowMap';
-import DisplayCard from '../../../components/Filters/DisplayCard';
 
 describe('EngineeringManagerDashboard', () => {
   let wrapper;
@@ -71,10 +70,11 @@ describe('EngineeringDashboard component', () => {
         },
         totalFellows: 5
       },
-      fellowsSummaryEM: {},
-      fellowsSummaryTTL: {},
+      fellowsSummary: {},
       fetchFellowsSummaryEm: spyResolve,
-      fetchFellowsSummaryTTLLFAction: spyResolve,
+      fetchFellowsSummarySl: spyResolve,
+      fetchFellowsSummaryTtl: spyResolve,
+      fetchFellowsSummaryLf: spyResolve,
       getEngineeringManagerTtls: spyResolve,
       getSimulationsLeadLfs: spyResolve
     };
@@ -109,15 +109,6 @@ describe('EngineeringDashboard component', () => {
     expect(wrapper.state().managerFellowSortRatio).toBe('LOW_TO_HIGH');
   });
 
-  it('handles card click', () => {
-    const { wrapper } = setup();
-    wrapper.setState({ chartFilter: 'TTL' });
-    const totalFellowsCard = wrapper.find(DisplayCard);
-
-    totalFellowsCard.simulate('click');
-    expect(wrapper.state().chartFilter).toBe('TTL');
-  });
-
   it('closes the map when the close button is clicked', () => {
     const { wrapper } = setup();
     wrapper.setState({ show: true });
@@ -128,26 +119,48 @@ describe('EngineeringDashboard component', () => {
     expect(wrapper.state().show).toBe(false);
   });
 
-  it('sets chartfilter state to Total when the handle Card  Click is clicked', () => {
-    const { wrapper } = setup();
-    wrapper.setState({ show: true });
+  it('sets showChart state to true when the handleCardClick function is called', () => {
+    const { wrapper } = setup('WATCH_TOWER_SL');
+    wrapper.setState({ show: false });
     const event = {
       currentTarget: { id: 'total-fellows-card' }
     };
     const instance = wrapper.instance();
     instance.handleCardClick(event);
-    expect(wrapper.state().chartFilter).toBe('Total');
+    expect(wrapper.state().showChart).toBe(true);
   });
 
-  it('closes the map when the handle Card  Click is clicked', () => {
-    const { wrapper } = setup();
-    wrapper.setState({ show: true });
+  it('sets showChart state to true when the handleCardClick function is called', () => {
+    const { wrapper } = setup('WATCH_TOWER_EM');
+    wrapper.setState({ show: false });
     const event = {
-      currentTarget: { id: 'trustburundi' }
+      currentTarget: { id: 'wt-test-ttl@andela.com' }
     };
     const instance = wrapper.instance();
     instance.handleCardClick(event);
-    expect(wrapper.state().chartFilter).toBe('TTL');
+    expect(wrapper.state().showChart).toBe(true);
+  });
+
+  it('sets showChart state to true when the handleCardClick function is called', () => {
+    const { wrapper } = setup('WATCH_TOWER_SL');
+    wrapper.setState({ show: false });
+    const event = {
+      currentTarget: { id: 'wt-test-ttl@andela.com' }
+    };
+    const instance = wrapper.instance();
+    instance.handleCardClick(event);
+    expect(wrapper.state().showChart).toBe(true);
+  });
+
+  it('sets showChart state to true when the handleCardClick function is called', () => {
+    const { wrapper } = setup('WATCH_TOWER_EM');
+    wrapper.setState({ show: false });
+    const event = {
+      currentTarget: { id: 'total-fellows-card' }
+    };
+    const instance = wrapper.instance();
+    instance.handleCardClick(event);
+    expect(wrapper.state().showChart).toBe(true);
   });
 
   it('closes the chart when the close button is clicked', () => {

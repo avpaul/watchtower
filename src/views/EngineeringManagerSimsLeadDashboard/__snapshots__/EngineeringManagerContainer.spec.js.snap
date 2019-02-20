@@ -30,14 +30,15 @@ ShallowWrapper {
     "props": Object {
       "data": Array [],
       "error": null,
-      "fellowsSummaryEM": Object {
+      "fellowsSummary": Object {
         "error": "",
         "loading": false,
         "summary": Array [],
       },
-      "fellowsSummaryTTL": Object {},
       "fetchFellowsSummaryEm": [Function],
-      "fetchFellowsSummaryTTLLFAction": [Function],
+      "fetchFellowsSummaryLf": [Function],
+      "fetchFellowsSummarySl": [Function],
+      "fetchFellowsSummaryTtl": [Function],
       "getEngineeringManagerTtls": [Function],
       "getSimulationsLeadLfs": [Function],
       "loading": false,
@@ -83,14 +84,15 @@ ShallowWrapper {
       "props": Object {
         "data": Array [],
         "error": null,
-        "fellowsSummaryEM": Object {
+        "fellowsSummary": Object {
           "error": "",
           "loading": false,
           "summary": Array [],
         },
-        "fellowsSummaryTTL": Object {},
         "fetchFellowsSummaryEm": [Function],
-        "fetchFellowsSummaryTTLLFAction": [Function],
+        "fetchFellowsSummaryLf": [Function],
+        "fetchFellowsSummarySl": [Function],
+        "fetchFellowsSummaryTtl": [Function],
         "getEngineeringManagerTtls": [Function],
         "getSimulationsLeadLfs": [Function],
         "loading": false,
@@ -153,12 +155,11 @@ exports[`Tests on EngineeringManagerContainer component should map state to prop
 Object {
   "data": Array [],
   "error": null,
-  "fellowsSummaryEM": Object {
+  "fellowsSummary": Object {
     "error": "",
     "loading": false,
     "summary": Array [],
   },
-  "fellowsSummaryTTL": Object {},
   "loading": false,
   "simsLeadData": Array [],
   "simsLeadError": null,

@@ -62,7 +62,9 @@ class FellowChart extends Component {
         <div className="base" style={fellowChartTooltip} />
         <div className="fellow-chart">
           {this.renderCloseButton()}
-          {!user.roles.WATCH_TOWER_EM && this.renderRadioCard()}
+          {!user.roles.WATCH_TOWER_EM &&
+            !user.roles.WATCH_TOWER_SL &&
+            this.renderRadioCard()}
           <Chart data={fellowsCount} title={title} />
         </div>
       </div>
