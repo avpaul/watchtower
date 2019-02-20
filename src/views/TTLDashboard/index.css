@@ -15,8 +15,9 @@
 }
 
 .card {
-  margin-left: 0px !important;
+  margin-left: 1px !important;
   margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .empty_chart {

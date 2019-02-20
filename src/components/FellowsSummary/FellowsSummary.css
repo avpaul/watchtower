@@ -9,8 +9,9 @@
   padding-right: 4.166666%;
 }
 
-.ops-dashboard__filter > .contain {
-  padding-left: 0px;
+.ops-dashboard__filter .contain {
+  padding-left: 1%;
+  padding-right: 0;
 }
 
 .ops-dashboard__fellow-summary-text {
@@ -36,11 +37,20 @@
   font-weight: bolder;
 }
 
+@media screen and (max-width: 700px) {
+  .ops-dashboard__filter {
+    justify-content: left;
+  }
+
+  .ops-dashboard__filter .contain {
+    padding-left: 4%;
+    padding-right: 0;
+  }
+}
+
 @media screen and (min-width: 729px) {
   .ops-dashboard__filter {
     justify-content: left;
-    margin-left: 0.45px;
-    margin-right: 0.45px;
   }
 
   .ops-dashboard .row {
