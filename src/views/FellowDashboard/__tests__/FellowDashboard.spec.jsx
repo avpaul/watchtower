@@ -57,6 +57,9 @@ describe('FellowDashboard component', () => {
     const store = mockStore({
       ...initialState
     });
+    const location = {
+      pathname: '/dashboard/fellows'
+    };
     const anotherWrapper = mount(
       <Provider store={store}>
         <MemoryRouter initialEntries={['/dashboard']}>
@@ -64,6 +67,7 @@ describe('FellowDashboard component', () => {
             <FellowDashboard
               user={{ name: 'test', email: 'roni@gmail.com' }}
               role="Fellow"
+              location={location}
             />
           </Router>
         </MemoryRouter>

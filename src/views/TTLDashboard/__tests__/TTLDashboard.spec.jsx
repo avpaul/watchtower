@@ -41,3 +41,41 @@ describe('<TLLDasboard  /> tests', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+
+describe('<TLLDasboard  /> developers tab route tests', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <MemoryRouter initialEntries={['/dashboard/fellows']}>
+        <TTLDasboard
+          user={{ name: 'test', picture: 'http://' }}
+          role="WATCH_TOWER_OPS"
+        />
+      </MemoryRouter>
+    );
+  });
+
+  it('matchs correctly', () => {
+    expect(
+      wrapper
+        .find(TTLDasboard)
+        .dive()
+        .name()
+    ).toBe('Route');
+  });
+
+  it('renders without crashing', () => {
+    const props = {
+      getTtlProjects: jest.fn(),
+      ttlProjects: {
+        projects: {}
+      },
+      user: {
+        email: 'test@mail.com'
+      }
+    };
+    wrapper = shallow(<TTLDashboardMain {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});

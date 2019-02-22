@@ -4,7 +4,6 @@ import DisplayCard from '../../components/Filters/DisplayCard';
 import FellowChart from '../../components/FellowChart';
 import TtlsFellowSummary from './TtlsFellowSummary';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
-
 /**
  * Class representing Engineering Manager dashboard
  * @class
@@ -212,6 +211,7 @@ class EngineeringManagerDashboard extends Component {
 
     return (
       <div className="container-fluid" style={emDashboardStyle}>
+        {/* <div className="container"><FellowsSummaryCard /></div> */}
         <TtlsFellowSummary
           fellowsSummary={this.mapDisplayFellowSummary(
             isEngineeringManager ? ttls : lfs,

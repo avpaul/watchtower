@@ -59,8 +59,9 @@ export const ttlItems = [
     activeIcon: dashboardIconFill
   },
   {
-    key: 'ttl',
+    key: 'developers',
     name: 'Developers',
+    path: '/dashboard/fellows',
     icon: userIcon,
     activeIcon: userIconFill
   },
@@ -74,23 +75,22 @@ export const ttlItems = [
 
 export const managerItems = [
   {
-    key: 'Dashboard',
+    key: 'dashboard',
     name: 'Dashboard',
     path: '/dashboard',
     icon: dashboardIcon,
     activeIcon: dashboardIconFill
   },
   {
-    key: 'Developer',
-    name: 'Developer Manager',
-    dropdown: ['All Developers', 'Developers under PIP'],
+    key: 'developers',
+    name: 'Developers',
+    path: '/dashboard/fellows',
     icon: userIcon,
     activeIcon: userIconFill
   },
   {
     key: 'Performance',
-    name: 'Performance Manager',
-    dropdown: ['Pre-PIP Feedback', 'PIP Feedback'],
+    name: 'Feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }
@@ -105,7 +105,7 @@ export const opsItems = [
     path: '/dashboard'
   },
   {
-    key: 'developer',
+    key: 'developers',
     name: 'Developers',
     path: '/dashboard/fellows',
     icon: userIcon,
@@ -128,6 +128,7 @@ export const getMenuItems = role => {
     case 'WATCH_TOWER_LF':
       return ttlItems;
     case 'WATCH_TOWER_EM':
+    case 'WATCH_TOWER_SL':
       return managerItems;
     case 'WATCH_TOWER_OPS':
       return opsItems;

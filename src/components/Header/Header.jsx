@@ -30,8 +30,9 @@ export class Header extends Component {
     super(props, context);
     this.state = {
       activeItems: {
-        fellows: true,
-        dashboard: true,
+        fellows: false,
+        dashboard: false,
+        developers: false,
         settings: false
       },
       show: false,
@@ -40,8 +41,17 @@ export class Header extends Component {
   }
 
   componentDidMount() {
-    const { role } = this.props;
+    const { role, location } = this.props;
     this.switchNotificationsType(role);
+    switch (location.pathname) {
+      case '/dashboard':
+        this.setState({ activeItems: { dashboard: true } });
+        break;
+      case '/dashboard/fellows':
+        this.setState({ activeItems: { developers: true } });
+        break;
+      default:
+    }
   }
 
   showModal = () => {
@@ -456,6 +466,7 @@ Header.propTypes = {
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired
   }).isRequired,
+  location: PropTypes.shape({}).isRequired,
   role: PropTypes.string.isRequired,
   getNotification: PropTypes.func.isRequired,
   getUnreadNotification: PropTypes.func.isRequired,

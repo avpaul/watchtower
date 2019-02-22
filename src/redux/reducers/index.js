@@ -25,6 +25,7 @@ import simulationsLeadLfsReducer from './simulationsLeadLfsReducer';
 import lfNotificationReducer from './lfNotificationReducer';
 import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
+import managerFellowsSummary from './ManagerFellowsSummaryReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -51,7 +52,8 @@ const rootReducer = combineReducers({
   simulationsLeadLfs: simulationsLeadLfsReducer,
   lfNotification: lfNotificationReducer,
   ttlNotification: ttlNotificationReducer,
-  updateManagerNotification
+  updateManagerNotification,
+  managerFellowsSummary
 });
 
 export default rootReducer;

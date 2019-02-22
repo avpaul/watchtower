@@ -299,18 +299,9 @@ ShallowWrapper {
                               >
                                         Total Fellow (Filtered)
                               </span>
-                              <button
-                                        className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                                        onClick={[Function]}
-                                        style={
-                                                  Object {
-                                                            "textDecoration": "underline",
-                                                          }
-                                        }
-                                        type="button"
-                              >
-                                        Clear Filters
-                              </button>
+                              <FilterButton
+                                        clearFilters={[Function]}
+                              />
                     </div>
                     <DashboardTable
                               cellValues={
@@ -661,18 +652,9 @@ ShallowWrapper {
                         >
                                     Total Fellow (Filtered)
                         </span>
-                        <button
-                                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                                    onClick={[Function]}
-                                    style={
-                                                Object {
-                                                            "textDecoration": "underline",
-                                                          }
-                                    }
-                                    type="button"
-                        >
-                                    Clear Filters
-                        </button>
+                        <FilterButton
+                                    clearFilters={[Function]}
+                        />
             </div>
             <DashboardTable
                         cellValues={
@@ -961,18 +943,9 @@ ShallowWrapper {
                 >
                                 Total Fellow (Filtered)
                 </span>
-                <button
-                                className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                                onClick={[Function]}
-                                style={
-                                                Object {
-                                                                "textDecoration": "underline",
-                                                              }
-                                }
-                                type="button"
-                >
-                                Clear Filters
-                </button>
+                <FilterButton
+                                clearFilters={[Function]}
+                />
 </div>,
               <DashboardTable
                 cellValues={
@@ -1427,18 +1400,9 @@ ShallowWrapper {
 >
                     Total Fellow (Filtered)
 </span>,
-                  <button
-                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                    onClick={[Function]}
-                    style={
-                                        Object {
-                                                            "textDecoration": "underline",
-                                                          }
-                    }
-                    type="button"
->
-                    Clear Filters
-</button>,
+                  <FilterButton
+                    clearFilters={[Function]}
+/>,
                 ],
                 "className": "result-count",
               },
@@ -1471,19 +1435,13 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": "Clear Filters",
-                    "className": "btn bg-transparent border-0 px-0 clear-filters my-3",
-                    "onClick": [Function],
-                    "style": Object {
-                      "textDecoration": "underline",
-                    },
-                    "type": "button",
+                    "clearFilters": [Function],
                   },
                   "ref": null,
-                  "rendered": "Clear Filters",
-                  "type": "button",
+                  "rendered": null,
+                  "type": [Function],
                 },
               ],
               "type": "div",
@@ -2061,18 +2019,9 @@ ShallowWrapper {
                                     >
                                                 Total Fellow (Filtered)
                                     </span>
-                                    <button
-                                                className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                                                onClick={[Function]}
-                                                style={
-                                                            Object {
-                                                                        "textDecoration": "underline",
-                                                                      }
-                                                }
-                                                type="button"
-                                    >
-                                                Clear Filters
-                                    </button>
+                                    <FilterButton
+                                                clearFilters={[Function]}
+                                    />
                         </div>
                         <DashboardTable
                                     cellValues={
@@ -2423,18 +2372,9 @@ ShallowWrapper {
                             >
                                           Total Fellow (Filtered)
                             </span>
-                            <button
-                                          className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                                          onClick={[Function]}
-                                          style={
-                                                        Object {
-                                                                      "textDecoration": "underline",
-                                                                    }
-                                          }
-                                          type="button"
-                            >
-                                          Clear Filters
-                            </button>
+                            <FilterButton
+                                          clearFilters={[Function]}
+                            />
               </div>
               <DashboardTable
                             cellValues={
@@ -2723,18 +2663,9 @@ ShallowWrapper {
                   >
                                     Total Fellow (Filtered)
                   </span>
-                  <button
-                                    className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                                    onClick={[Function]}
-                                    style={
-                                                      Object {
-                                                                        "textDecoration": "underline",
-                                                                      }
-                                    }
-                                    type="button"
-                  >
-                                    Clear Filters
-                  </button>
+                  <FilterButton
+                                    clearFilters={[Function]}
+                  />
 </div>,
                 <DashboardTable
                   cellValues={
@@ -3189,18 +3120,9 @@ ShallowWrapper {
 >
                       Total Fellow (Filtered)
 </span>,
-                    <button
-                      className="btn bg-transparent border-0 px-0 clear-filters my-3"
-                      onClick={[Function]}
-                      style={
-                                            Object {
-                                                                  "textDecoration": "underline",
-                                                                }
-                      }
-                      type="button"
->
-                      Clear Filters
-</button>,
+                    <FilterButton
+                      clearFilters={[Function]}
+/>,
                   ],
                   "className": "result-count",
                 },
@@ -3233,19 +3155,13 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": "Clear Filters",
-                      "className": "btn bg-transparent border-0 px-0 clear-filters my-3",
-                      "onClick": [Function],
-                      "style": Object {
-                        "textDecoration": "underline",
-                      },
-                      "type": "button",
+                      "clearFilters": [Function],
                     },
                     "ref": null,
-                    "rendered": "Clear Filters",
-                    "type": "button",
+                    "rendered": null,
+                    "type": [Function],
                   },
                 ],
                 "type": "div",

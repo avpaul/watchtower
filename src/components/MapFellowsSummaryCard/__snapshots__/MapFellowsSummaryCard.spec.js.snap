@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test fellowsSummaryCard snapshots fellowSummaryCard should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MapFellowsSummary
+    fellowsSummaryCardDetails={
+        Array [
+            Object {
+              "apprEndDate": "2019-01-16",
+              "apprStartDate": "2018-10-15",
+              "devPulseAverage": "1.04",
+              "firstName": "Kingsley",
+              "lastName": "Obot",
+              "level": "D0B Apprenticeship",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Watch Tower",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "ltWk5OffTrack",
+            },
+            Object {
+              "apprEndDate": "2019-01-16",
+              "apprStartDate": "2018-10-15",
+              "devPulseAverage": "1.04",
+              "firstName": "Kingsley",
+              "lastName": "Obot",
+              "level": "D0B Apprenticeship",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Watch Tower",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "gteWk5OffTrack",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="row"
+>
+        <FellowsSummaryCard
+                devPulseAverage="1.04"
+                ending="16-Jan-2019"
+                level="D0B"
+                lmsOutputs="4/18"
+                name="Kingsley Obot"
+                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                product="Watch Tower"
+                started="15-Oct-2018"
+                status="Pip"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="1.04"
+                ending="16-Jan-2019"
+                level="D0B"
+                lmsOutputs="4/18"
+                name="Kingsley Obot"
+                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                product="Watch Tower"
+                started="15-Oct-2018"
+                status="Off-Track"
+        />
+</div>,
+      "className": "ops-dashboard__fellows-summary",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FellowsSummaryCard
+            devPulseAverage="1.04"
+            ending="16-Jan-2019"
+            level="D0B"
+            lmsOutputs="4/18"
+            name="Kingsley Obot"
+            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+            product="Watch Tower"
+            started="15-Oct-2018"
+            status="Pip"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="1.04"
+            ending="16-Jan-2019"
+            level="D0B"
+            lmsOutputs="4/18"
+            name="Kingsley Obot"
+            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+            product="Watch Tower"
+            started="15-Oct-2018"
+            status="Off-Track"
+/>,
+        ],
+        "className": "row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.04",
+            "ending": "16-Jan-2019",
+            "level": "D0B",
+            "lmsOutputs": "4/18",
+            "name": "Kingsley Obot",
+            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+            "product": "Watch Tower",
+            "started": "15-Oct-2018",
+            "status": "Pip",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.04",
+            "ending": "16-Jan-2019",
+            "level": "D0B",
+            "lmsOutputs": "4/18",
+            "name": "Kingsley Obot",
+            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+            "product": "Watch Tower",
+            "started": "15-Oct-2018",
+            "status": "Off-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="row"
+>
+          <FellowsSummaryCard
+                    devPulseAverage="1.04"
+                    ending="16-Jan-2019"
+                    level="D0B"
+                    lmsOutputs="4/18"
+                    name="Kingsley Obot"
+                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                    product="Watch Tower"
+                    started="15-Oct-2018"
+                    status="Pip"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="1.04"
+                    ending="16-Jan-2019"
+                    level="D0B"
+                    lmsOutputs="4/18"
+                    name="Kingsley Obot"
+                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                    product="Watch Tower"
+                    started="15-Oct-2018"
+                    status="Off-Track"
+          />
+</div>,
+        "className": "ops-dashboard__fellows-summary",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <FellowsSummaryCard
+              devPulseAverage="1.04"
+              ending="16-Jan-2019"
+              level="D0B"
+              lmsOutputs="4/18"
+              name="Kingsley Obot"
+              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+              product="Watch Tower"
+              started="15-Oct-2018"
+              status="Pip"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="1.04"
+              ending="16-Jan-2019"
+              level="D0B"
+              lmsOutputs="4/18"
+              name="Kingsley Obot"
+              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+              product="Watch Tower"
+              started="15-Oct-2018"
+              status="Off-Track"
+/>,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.04",
+              "ending": "16-Jan-2019",
+              "level": "D0B",
+              "lmsOutputs": "4/18",
+              "name": "Kingsley Obot",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "product": "Watch Tower",
+              "started": "15-Oct-2018",
+              "status": "Pip",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.04",
+              "ending": "16-Jan-2019",
+              "level": "D0B",
+              "lmsOutputs": "4/18",
+              "name": "Kingsley Obot",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "product": "Watch Tower",
+              "started": "15-Oct-2018",
+              "status": "Off-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

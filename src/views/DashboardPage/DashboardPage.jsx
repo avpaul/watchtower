@@ -11,6 +11,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import FilterDropdown from '../OpsDashboard/FellowsProgress/Filter';
 import './index.css';
 import Filters from './Filters/Filters';
+import FilterButton from '../../components/Buttons/Button';
 import table from './tableHeaders';
 import {
   getCriteriaFilterValues,
@@ -261,14 +262,7 @@ class DashboardPage extends Component {
       <div className="result-count">
         <span className="border-bottom mr-2 pb-2">{results || 0}</span>
         <span className="mr-3">{`Total ${resultTerm} (Filtered)`}</span>
-        <button
-          className="btn bg-transparent border-0 px-0 clear-filters my-3"
-          style={{ textDecoration: 'underline' }}
-          type="button"
-          onClick={this.clearFilters}
-        >
-          Clear Filters
-        </button>
+        <FilterButton clearFilters={this.clearFilters} />
       </div>
     );
   };

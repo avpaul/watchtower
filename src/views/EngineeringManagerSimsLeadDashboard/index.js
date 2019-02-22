@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import DashboardPage from '../DashboardPage';
+import DeveloperDashboardContainer from '../DeveloperDashboard';
 import Header from '../../components/Header';
 import EngineeringManagerContainer from './EngineeringManagerContainer';
 // import SimulationsLeadContainer from './SimulationsLeadContainer'
@@ -22,7 +22,7 @@ const EngineeringManagerSimsLeadDashboard = props => (
         <Route
           exact
           path="/dashboard/fellows"
-          component={() => <DashboardPage {...props} />}
+          component={() => <DeveloperDashboardContainer {...props} />}
         />
       </Switch>
     </React.Fragment>

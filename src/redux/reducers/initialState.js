@@ -156,5 +156,10 @@ export default {
     loading: false,
     managerNotification: [],
     error: null
+  },
+  managerFellowsSummary: {
+    loading: false,
+    data: [],
+    error: null
   }
 };

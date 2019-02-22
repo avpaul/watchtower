@@ -51,8 +51,16 @@ describe('Header Component Test Suite', () => {
       picture: 'http://'
     };
 
+    const location = {
+      pathname: '/dashboard'
+    };
     wrapper = shallow(
-      <HeaderConnected user={user} role={role} store={store} />
+      <HeaderConnected
+        user={user}
+        role={role}
+        location={location}
+        store={store}
+      />
     );
     expect(wrapper).toBeDefined();
   });
@@ -63,8 +71,17 @@ describe('Header Component Test Suite', () => {
       picture: 'http://'
     };
 
+    const location = {
+      pathname: '/dashboard'
+    };
+
     wrapper = shallow(
-      <Header user={user} role="WATCH_TOWER_TTL" {...storeItems} />
+      <Header
+        user={user}
+        location={location}
+        role="WATCH_TOWER_TTL"
+        {...storeItems}
+      />
     );
 
     expect(wrapper).toBeDefined();
@@ -77,8 +94,17 @@ describe('Header Component Test Suite', () => {
       picture: 'http://'
     };
 
+    const location = {
+      pathname: '/dashboard'
+    };
+
     wrapper = shallow(
-      <Header user={user} role="WATCH_TOWER_LF" {...storeItems} />
+      <Header
+        user={user}
+        role="WATCH_TOWER_LF"
+        location={location}
+        {...storeItems}
+      />
     );
     wrapper.setState({
       activeItems: {
@@ -110,7 +136,13 @@ describe('Header Component Test Suite', () => {
       picture: 'http://'
     };
 
-    wrapper = shallow(<Header user={user} role={role} {...storeItems} />);
+    const location = {
+      pathname: '/dashboard'
+    };
+
+    wrapper = shallow(
+      <Header user={user} role={role} location={location} {...storeItems} />
+    );
     wrapper.setState({
       activeItems: {
         fellows: true,
@@ -141,7 +173,13 @@ describe('Header Component Test Suite', () => {
       picture: 'http://'
     };
 
-    wrapper = shallow(<Header user={user} role={role} {...storeItems} />);
+    const location = {
+      pathname: '/dashboard'
+    };
+
+    wrapper = shallow(
+      <Header user={user} role={role} location={location} {...storeItems} />
+    );
     const mounted = jest.spyOn(wrapper.instance(), 'hideModal');
     wrapper.instance().hideModal();
     expect(mounted).toHaveBeenCalled();
