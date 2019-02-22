@@ -4,6 +4,8 @@ import DisplayCard from '../../components/Filters/DisplayCard';
 import FellowChart from '../../components/FellowChart';
 import TtlsFellowSummary from './TtlsFellowSummary';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
+import FellowsProgressBar from './FellowsProgressBar';
+
 /**
  * Class representing Engineering Manager dashboard
  * @class
@@ -240,6 +242,7 @@ class EngineeringManagerDashboard extends Component {
           ))}
         </div>
         {this.renderManagerFellowMap()}
+        <FellowsProgressBar />
       </div>
     );
   }

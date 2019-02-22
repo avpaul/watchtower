@@ -9,7 +9,10 @@ import {
   LOAD_FELLOW_PROGRESS_SUCCESS,
   LOAD_FELLOW_PROGRESS_FAILURE
 } from '../../constants/fellowProgressTypes';
-import getFellowProgress from '../fellowProgressActions';
+
+import getFellowProgress, {
+  getEmFellowsProgress
+} from '../fellowProgressActions';
 
 describe('Fellow Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
@@ -91,6 +94,32 @@ describe('Fellow Actions', () => {
     return store.dispatch(getFellowProgress()).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toMatchObject(expectedActions);
+    });
+  });
+
+  it('getEmFellowsProgress dispatches LOAD_FELLOW_PROGRESS_SUCCESS if successful', () => {
+    mock
+      .onGet(`${serverURL}/api/v1/engineeringmanagers/fellows`)
+      .reply(200, []);
+
+    const expectedActions = [
+      { type: LOAD_FELLOW_PROGRESS_SUCCESS, payload: { fellowsProgressD0: [] } }
+    ];
+    return store.dispatch(getEmFellowsProgress({})).then(() => {
+      expect(store.getActions()).toMatchObject(expectedActions);
+    });
+  });
+
+  it('getEmFellowsProgress dispatches LOAD_FELLOW_PROGRESS_FAILURE if the request fails', () => {
+    mock
+      .onGet(`${serverURL}/api/v1/engineeringmanagers/fellows`)
+      .reply(500, 'Network failed');
+
+    const expectedActions = [{ type: LOAD_FELLOW_PROGRESS_FAILURE }];
+    return store.dispatch(getEmFellowsProgress({})).then(() => {
+      expect(store.getActions()).toEqual(
+        expect.objectContaining(expectedActions)
+      );
     });
   });
 });
