@@ -18,6 +18,7 @@ ShallowWrapper {
             },
           ]
     }
+    getFellowDevPulse={[Function]}
     match={
         Object {
             "params": Object {
@@ -25,6 +26,12 @@ ShallowWrapper {
             },
           }
     }
+    ratings={
+        Array [
+            Object {},
+          ]
+    }
+    ratingsLoading={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -90,9 +97,26 @@ ShallowWrapper {
                                                                 },
                                                               ]
                                                 }
+                                                handleCardClick={[Function]}
                                         />
                                 </div>
                         </Unknown>
+                </div>
+                <div
+                        className="row"
+                >
+                        <div
+                                className="col-12 mt-5"
+                        >
+                                <DevPulseTable
+                                        loading={false}
+                                        ratings={
+                                                Array [
+                                                        Object {},
+                                                      ]
+                                        }
+                                />
+                        </div>
                 </div>
         </div>
 </div>,
@@ -152,9 +176,26 @@ ShallowWrapper {
                                                                       },
                                                                     ]
                                                   }
+                                                  handleCardClick={[Function]}
                                         />
                               </div>
                     </Unknown>
+          </div>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-12 mt-5"
+                    >
+                              <DevPulseTable
+                                        loading={false}
+                                        ratings={
+                                                  Array [
+                                                            Object {},
+                                                          ]
+                                        }
+                              />
+                    </div>
           </div>
 </div>,
         "className": "fellow-history__top row",
@@ -211,9 +252,26 @@ ShallowWrapper {
                                                                                     },
                                                                                   ]
                                                         }
+                                                        handleCardClick={[Function]}
                                           />
                             </div>
               </Unknown>
+</div>,
+            <div
+              className="row"
+>
+              <div
+                            className="col-12 mt-5"
+              >
+                            <DevPulseTable
+                                          loading={false}
+                                          ratings={
+                                                        Array [
+                                                                      Object {},
+                                                                    ]
+                                          }
+                            />
+              </div>
 </div>,
           ],
           "className": "col",
@@ -285,6 +343,7 @@ ShallowWrapper {
                                                                                 },
                                                                               ]
                                                 }
+                                                handleCardClick={[Function]}
                                 />
                 </div>
 </Unknown>,
@@ -329,6 +388,7 @@ ShallowWrapper {
                                                                                 },
                                                                               ]
                                         }
+                                        handleCardClick={[Function]}
                     />
 </div>,
                 ],
@@ -398,6 +458,7 @@ ShallowWrapper {
                                                                   },
                                                                 ]
                       }
+                      handleCardClick={[Function]}
 />,
                     "className": "col-xl-6 mt-3 mt-xl-0",
                   },
@@ -419,6 +480,7 @@ ShallowWrapper {
                           "title": "LMS",
                         },
                       ],
+                      "handleCardClick": [Function],
                     },
                     "ref": null,
                     "rendered": null,
@@ -428,6 +490,66 @@ ShallowWrapper {
                 },
               ],
               "type": Symbol(react.fragment),
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="col-12 mt-5"
+>
+                <DevPulseTable
+                                loading={false}
+                                ratings={
+                                                Array [
+                                                                Object {},
+                                                              ]
+                                }
+                />
+</div>,
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <DevPulseTable
+                    loading={false}
+                    ratings={
+                                        Array [
+                                                            Object {},
+                                                          ]
+                    }
+/>,
+                  false,
+                ],
+                "className": "col-12 mt-5",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "loading": false,
+                    "ratings": Array [
+                      Object {},
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                false,
+              ],
+              "type": "div",
             },
             "type": "div",
           },
@@ -495,9 +617,26 @@ ShallowWrapper {
                                                                                 },
                                                                               ]
                                                             }
+                                                            handleCardClick={[Function]}
                                                   />
                                         </div>
                               </Unknown>
+                    </div>
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-12 mt-5"
+                              >
+                                        <DevPulseTable
+                                                  loading={false}
+                                                  ratings={
+                                                            Array [
+                                                                      Object {},
+                                                                    ]
+                                                  }
+                                        />
+                              </div>
                     </div>
           </div>
 </div>,
@@ -557,9 +696,26 @@ ShallowWrapper {
                                                                                     },
                                                                                   ]
                                                             }
+                                                            handleCardClick={[Function]}
                                                 />
                                     </div>
                         </Unknown>
+            </div>
+            <div
+                        className="row"
+            >
+                        <div
+                                    className="col-12 mt-5"
+                        >
+                                    <DevPulseTable
+                                                loading={false}
+                                                ratings={
+                                                            Array [
+                                                                        Object {},
+                                                                      ]
+                                                }
+                                    />
+                        </div>
             </div>
 </div>,
           "className": "fellow-history__top row",
@@ -616,9 +772,26 @@ ShallowWrapper {
                                                                                                 },
                                                                                               ]
                                                                 }
+                                                                handleCardClick={[Function]}
                                                 />
                                 </div>
                 </Unknown>
+</div>,
+              <div
+                className="row"
+>
+                <div
+                                className="col-12 mt-5"
+                >
+                                <DevPulseTable
+                                                loading={false}
+                                                ratings={
+                                                                Array [
+                                                                                Object {},
+                                                                              ]
+                                                }
+                                />
+                </div>
 </div>,
             ],
             "className": "col",
@@ -690,6 +863,7 @@ ShallowWrapper {
                                                                                           },
                                                                                         ]
                                                       }
+                                                      handleCardClick={[Function]}
                                     />
                   </div>
 </Unknown>,
@@ -734,6 +908,7 @@ ShallowWrapper {
                                                                                         },
                                                                                       ]
                                             }
+                                            handleCardClick={[Function]}
                       />
 </div>,
                   ],
@@ -803,6 +978,7 @@ ShallowWrapper {
                                                                         },
                                                                       ]
                         }
+                        handleCardClick={[Function]}
 />,
                       "className": "col-xl-6 mt-3 mt-xl-0",
                     },
@@ -824,6 +1000,7 @@ ShallowWrapper {
                             "title": "LMS",
                           },
                         ],
+                        "handleCardClick": [Function],
                       },
                       "ref": null,
                       "rendered": null,
@@ -833,6 +1010,66 @@ ShallowWrapper {
                   },
                 ],
                 "type": Symbol(react.fragment),
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="col-12 mt-5"
+>
+                  <DevPulseTable
+                                    loading={false}
+                                    ratings={
+                                                      Array [
+                                                                        Object {},
+                                                                      ]
+                                    }
+                  />
+</div>,
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <DevPulseTable
+                      loading={false}
+                      ratings={
+                                            Array [
+                                                                  Object {},
+                                                                ]
+                      }
+/>,
+                    false,
+                  ],
+                  "className": "col-12 mt-5",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "loading": false,
+                      "ratings": Array [
+                        Object {},
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  false,
+                ],
+                "type": "div",
               },
               "type": "div",
             },

@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the DevPulseRow renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DevPulseRow
+    rating={
+        Object {
+            "communication": 2,
+            "initiative": 2,
+            "integration": 0,
+            "professionalism": 0,
+            "quality": 2,
+            "quantity": 1,
+            "week": 1,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Cell
+          addedClass=""
+          title=""
+>
+          1
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          1
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          2
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          2
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          2
+</Cell>,
+        <Cell
+          addedClass="text-danger"
+          title=""
+/>,
+        <Cell
+          addedClass="text-danger"
+          title=""
+/>,
+      ],
+      "header": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 1,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 1,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 1,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 1,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 2,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 2,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 2,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 2,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 2,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 2,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "text-danger",
+          "children": 0,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 0,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "text-danger",
+          "children": 0,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 0,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Cell
+            addedClass=""
+            title=""
+>
+            1
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            1
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            2
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            2
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            2
+</Cell>,
+          <Cell
+            addedClass="text-danger"
+            title=""
+/>,
+          <Cell
+            addedClass="text-danger"
+            title=""
+/>,
+        ],
+        "header": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 1,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 1,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 1,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 1,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 2,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 2,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 2,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 2,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 2,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 2,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "text-danger",
+            "children": 0,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 0,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "text-danger",
+            "children": 0,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 0,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

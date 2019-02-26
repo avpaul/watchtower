@@ -34,7 +34,10 @@ describe('Fellow History Container', () => {
   const setup = (mountComponent = false, propOverrides = {}) => {
     let props = {
       match: { params: { name: 'kingsley.obot' } },
-      fellowSummaryDetails: [fellow]
+      fellowSummaryDetails: [fellow],
+      ratings: [{}],
+      ratingsLoading: false,
+      getFellowDevPulse: jest.fn()
     };
 
     props = { ...props, ...propOverrides };
@@ -144,5 +147,27 @@ describe('Fellow History Container', () => {
     fellowWithManager.manager.roleId = 99;
     fellowWithManager.manager.detail = `${fellow.user.firstName}'s Undefined`;
     testManagerByRole(fellowWithManager);
+  });
+
+  it('sets showDevpulse state to true when the handleCardClick function is called', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ showDevpulseTable: false });
+    const event = {
+      currentTarget: { id: 'DevPulse' }
+    };
+    const instance = wrapper.instance();
+    instance.handleCardClick(event);
+    expect(wrapper.state().showDevpulseTable).toBe(true);
+  });
+  it('sets showDevpulseTable state to false and showLmsTable to true state when the handleCardClick function is called', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ showDevpulseTable: true, showLmsTable: false });
+    const event = {
+      currentTarget: { id: 'LMS' }
+    };
+    const instance = wrapper.instance();
+    instance.handleCardClick(event);
+    expect(wrapper.state().showDevpulseTable).toBe(false);
+    expect(wrapper.state().showLmsTable).toBe(true);
   });
 });

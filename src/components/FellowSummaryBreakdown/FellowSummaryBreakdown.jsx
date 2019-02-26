@@ -4,9 +4,16 @@ import PropTypes from 'prop-types';
 import defaultSvg from '../../static/Defaultcard.svg';
 
 const FellowSummaryCard = props => {
-  const { breakdown } = props;
+  const { breakdown, handleCardClick } = props;
   return (
-    <div className="col-md-6 mb-3 card-scroll-wrapper">
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <div
+      className="col-md-6 mb-3 card-scroll-wrapper"
+      onClick={handleCardClick}
+      role="button"
+      tabIndex="0"
+      id={breakdown.title}
+      >
       <div className="fellow-breakdown-card row">
         {breakdown.checkedBydefault ? (
           <div className="checked">
@@ -25,12 +32,14 @@ const FellowSummaryCard = props => {
 };
 
 FellowSummaryCard.propTypes = {
-  breakdown: PropTypes.shape().isRequired
+  breakdown: PropTypes.shape().isRequired,
+  handleCardClick: PropTypes.func.isRequired
+
 };
 
 const FellowSummaryBreakdown = props => {
   const devPulseText = 'Filter by clicking a card';
-  const { fellowSummaryBreakdown } = props;
+  const { fellowSummaryBreakdown, handleCardClick } = props;
   
   return (
     <React.Fragment>
@@ -39,7 +48,7 @@ const FellowSummaryBreakdown = props => {
       </div>
       <div className="row row--no-margin">
         {fellowSummaryBreakdown.map(breakdown => (
-          <FellowSummaryCard breakdown={breakdown} />
+          <FellowSummaryCard breakdown={breakdown} handleCardClick={handleCardClick} />
         ))}
       </div>
     </React.Fragment>
@@ -51,7 +60,8 @@ FellowSummaryBreakdown.propTypes = {
     PropTypes.objectOf(
       PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     )
-  ).isRequired
+  ).isRequired,
+  handleCardClick: PropTypes.func.isRequired
 };
 
 export default FellowSummaryBreakdown;

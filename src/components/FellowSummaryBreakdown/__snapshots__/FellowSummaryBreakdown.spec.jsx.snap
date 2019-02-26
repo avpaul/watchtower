@@ -138,6 +138,7 @@ ShallowWrapper {
                                         "status": "ltWk5OffTrack",
                                       }
                     }
+                    handleCardClick={undefined}
           />
           <FellowSummaryCard
                     breakdown={
@@ -156,6 +157,7 @@ ShallowWrapper {
                                         "status": "gteWk5OffTrack",
                                       }
                     }
+                    handleCardClick={undefined}
           />
           <FellowSummaryCard
                     breakdown={
@@ -174,6 +176,7 @@ ShallowWrapper {
                                         "status": "onTrack",
                                       }
                     }
+                    handleCardClick={undefined}
           />
           <FellowSummaryCard
                     breakdown={
@@ -192,6 +195,7 @@ ShallowWrapper {
                                         "status": "onTrack",
                                       }
                     }
+                    handleCardClick={undefined}
           />
           <FellowSummaryCard
                     breakdown={
@@ -210,6 +214,7 @@ ShallowWrapper {
                                         "status": "gteWk5OffTrack",
                                       }
                     }
+                    handleCardClick={undefined}
           />
           <FellowSummaryCard
                     breakdown={
@@ -230,6 +235,7 @@ ShallowWrapper {
                                         },
                                       }
                     }
+                    handleCardClick={undefined}
           />
 </div>,
       ],
@@ -286,6 +292,7 @@ ShallowWrapper {
                                           "status": "ltWk5OffTrack",
                                         }
               }
+              handleCardClick={undefined}
 />,
             <FellowSummaryCard
               breakdown={
@@ -304,6 +311,7 @@ ShallowWrapper {
                                           "status": "gteWk5OffTrack",
                                         }
               }
+              handleCardClick={undefined}
 />,
             <FellowSummaryCard
               breakdown={
@@ -322,6 +330,7 @@ ShallowWrapper {
                                           "status": "onTrack",
                                         }
               }
+              handleCardClick={undefined}
 />,
             <FellowSummaryCard
               breakdown={
@@ -340,6 +349,7 @@ ShallowWrapper {
                                           "status": "onTrack",
                                         }
               }
+              handleCardClick={undefined}
 />,
             <FellowSummaryCard
               breakdown={
@@ -358,6 +368,7 @@ ShallowWrapper {
                                           "status": "gteWk5OffTrack",
                                         }
               }
+              handleCardClick={undefined}
 />,
             <FellowSummaryCard
               breakdown={
@@ -378,6 +389,7 @@ ShallowWrapper {
                                           },
                                         }
               }
+              handleCardClick={undefined}
 />,
           ],
           "className": "row row--no-margin",
@@ -403,6 +415,7 @@ ShallowWrapper {
                 "simsEndDate": null,
                 "status": "ltWk5OffTrack",
               },
+              "handleCardClick": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -427,6 +440,7 @@ ShallowWrapper {
                 "simsEndDate": null,
                 "status": "gteWk5OffTrack",
               },
+              "handleCardClick": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -451,6 +465,7 @@ ShallowWrapper {
                 "simsEndDate": null,
                 "status": "onTrack",
               },
+              "handleCardClick": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -475,6 +490,7 @@ ShallowWrapper {
                 "simsEndDate": null,
                 "status": "onTrack",
               },
+              "handleCardClick": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -499,6 +515,7 @@ ShallowWrapper {
                 "simsEndDate": "2019-06-14",
                 "status": "gteWk5OffTrack",
               },
+              "handleCardClick": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -525,6 +542,7 @@ ShallowWrapper {
                   "lastName": "",
                 },
               },
+              "handleCardClick": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -572,6 +590,7 @@ ShallowWrapper {
                                                 "status": "ltWk5OffTrack",
                                               }
                         }
+                        handleCardClick={undefined}
             />
             <FellowSummaryCard
                         breakdown={
@@ -590,6 +609,7 @@ ShallowWrapper {
                                                 "status": "gteWk5OffTrack",
                                               }
                         }
+                        handleCardClick={undefined}
             />
             <FellowSummaryCard
                         breakdown={
@@ -608,6 +628,7 @@ ShallowWrapper {
                                                 "status": "onTrack",
                                               }
                         }
+                        handleCardClick={undefined}
             />
             <FellowSummaryCard
                         breakdown={
@@ -626,6 +647,7 @@ ShallowWrapper {
                                                 "status": "onTrack",
                                               }
                         }
+                        handleCardClick={undefined}
             />
             <FellowSummaryCard
                         breakdown={
@@ -644,6 +666,7 @@ ShallowWrapper {
                                                 "status": "gteWk5OffTrack",
                                               }
                         }
+                        handleCardClick={undefined}
             />
             <FellowSummaryCard
                         breakdown={
@@ -664,6 +687,7 @@ ShallowWrapper {
                                                 },
                                               }
                         }
+                        handleCardClick={undefined}
             />
 </div>,
         ],
@@ -720,6 +744,7 @@ ShallowWrapper {
                                                 "status": "ltWk5OffTrack",
                                               }
                 }
+                handleCardClick={undefined}
 />,
               <FellowSummaryCard
                 breakdown={
@@ -738,6 +763,7 @@ ShallowWrapper {
                                                 "status": "gteWk5OffTrack",
                                               }
                 }
+                handleCardClick={undefined}
 />,
               <FellowSummaryCard
                 breakdown={
@@ -756,6 +782,7 @@ ShallowWrapper {
                                                 "status": "onTrack",
                                               }
                 }
+                handleCardClick={undefined}
 />,
               <FellowSummaryCard
                 breakdown={
@@ -774,6 +801,7 @@ ShallowWrapper {
                                                 "status": "onTrack",
                                               }
                 }
+                handleCardClick={undefined}
 />,
               <FellowSummaryCard
                 breakdown={
@@ -792,6 +820,7 @@ ShallowWrapper {
                                                 "status": "gteWk5OffTrack",
                                               }
                 }
+                handleCardClick={undefined}
 />,
               <FellowSummaryCard
                 breakdown={
@@ -812,6 +841,7 @@ ShallowWrapper {
                                                 },
                                               }
                 }
+                handleCardClick={undefined}
 />,
             ],
             "className": "row row--no-margin",
@@ -837,6 +867,7 @@ ShallowWrapper {
                   "simsEndDate": null,
                   "status": "ltWk5OffTrack",
                 },
+                "handleCardClick": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -861,6 +892,7 @@ ShallowWrapper {
                   "simsEndDate": null,
                   "status": "gteWk5OffTrack",
                 },
+                "handleCardClick": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -885,6 +917,7 @@ ShallowWrapper {
                   "simsEndDate": null,
                   "status": "onTrack",
                 },
+                "handleCardClick": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -909,6 +942,7 @@ ShallowWrapper {
                   "simsEndDate": null,
                   "status": "onTrack",
                 },
+                "handleCardClick": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -933,6 +967,7 @@ ShallowWrapper {
                   "simsEndDate": "2019-06-14",
                   "status": "gteWk5OffTrack",
                 },
+                "handleCardClick": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -959,6 +994,7 @@ ShallowWrapper {
                     "lastName": "",
                   },
                 },
+                "handleCardClick": undefined,
               },
               "ref": null,
               "rendered": null,
