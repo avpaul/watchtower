@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
 import FellowProfileCard from './FellowProfileCard';
-
+import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
 import './FellowHistory.css';
 
 export class FellowHistory extends Component {
@@ -16,20 +16,20 @@ export class FellowHistory extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     const { fellowSummaryDetails } = this.props;
 
     if (fellowSummaryDetails.length !== 0) this.setFellow();
-  }
+  };
 
-  componentDidUpdate() {
+  componentDidUpdate = () => {
     const { fellowSummaryDetails } = this.props;
     const { updated } = this.state;
 
     if (!updated && fellowSummaryDetails.length > 0) this.setFellow();
-  }
+  };
 
-  setFellow() {
+  setFellow = () => {
     const { match, fellowSummaryDetails, history } = this.props;
     const fellowFound = fellowSummaryDetails.find(
       fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
@@ -38,7 +38,27 @@ export class FellowHistory extends Component {
     if (fellowFound === undefined) history.push('/dashboard/fellows');
 
     this.setState({ fellow: fellowFound, updated: true });
-  }
+  };
+
+  mapDisplayslistData = fellow => {
+    if (fellow !== undefined) {
+      const fellowsListDisplayData = [
+        {
+          checkedBydefault: true,
+          title: 'DevPulse',
+          ratings:
+            fellow.devPulseAverage === null ? '0' : fellow.devPulseAverage
+        },
+        {
+          checkedBydefault: false,
+          title: 'LMS',
+          ratings: fellow.lmsOutput === null ? '0/0' : fellow.lmsOutput
+        }
+      ];
+      return fellowsListDisplayData;
+    }
+    return [];
+  };
 
   render() {
     const { fellow } = this.state;
@@ -54,6 +74,11 @@ export class FellowHistory extends Component {
             <div className="row">
               <div className="col-xs-12 col-md-4">
                 <FellowProfileCard fellow={fellow} />
+              </div>
+              <div className="col-xs-12 col-md-8">
+                <FellowSummaryBreakdown
+                  fellowSummaryBreakdown={this.mapDisplayslistData(fellow)}
+                />
               </div>
             </div>
           </div>

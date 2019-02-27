@@ -31,6 +31,9 @@ const setup = loggedInRole => {
   const managerDataForTest = getManagerDataByRole(loggedInRole);
 
   const props = {
+    history: {
+      push: jest.fn()
+    },
     user: {
       roles: {
         [`${loggedInRole}`]: '34323234Yf-34'
@@ -69,6 +72,36 @@ describe('Developers dashboard test', () => {
     const { getManagerFellowsSummary } = props;
     developerDashboardWrapper.instance().componentDidMount();
     expect(getManagerFellowsSummary).toHaveBeenCalled();
+  });
+
+  it('should do something', () => {
+    const { props } = setup();
+    const wrapper = shallow(<DeveloperDashboard {...props} />);
+    const instance = wrapper.instance();
+    const fellowSummaryDetails = [
+      {
+        user: {
+          email: 'brian.mboya@andela.com'
+        }
+      }
+    ];
+    instance.setState({ fellowSummaryDetails });
+    const event = {
+      target: {
+        getAttribute: jest.fn(() => 0)
+      }
+    };
+    const email = {
+      substr: jest.fn(() => 'brian.mboya'),
+      search: jest.fn(() => '@andela.com')
+    };
+
+    instance.handleCardClick(event);
+    instance.redirectUrl(email, props.history);
+    expect(email.substr).toHaveBeenCalled();
+    expect(email.search).toHaveBeenCalled();
+    expect(event.target.getAttribute).toHaveBeenCalled();
+    expect(props.history.push).toHaveBeenCalled();
   });
 });
 

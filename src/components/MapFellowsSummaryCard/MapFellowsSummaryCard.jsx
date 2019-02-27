@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import FellowsSummaryCard from '../FellowsSummaryCard';
 
-const MapFellowsSummary = ({ fellowsSummaryCardDetails }) => {
+const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
   const refineDate = (fellow, Start) =>
     moment(
       fellow.level && fellow.level.includes('D0A')
@@ -20,6 +20,7 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails }) => {
             fellow.user.firstName} ${fellow.lastName || fellow.user.lastName}`;
           return (
             <FellowsSummaryCard
+              mykey={fellowsSummaryCardDetails.indexOf(fellow)}
               key={fellowsSummaryCardDetails.indexOf(fellow)}
               name={
                 refinedName.length > 20
@@ -46,6 +47,7 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails }) => {
               }
               lmsOutputs={fellow.lmsOutput}
               picture={fellow.picture}
+              onClick={handleClick}
             />
           );
         })}
@@ -55,7 +57,8 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails }) => {
 };
 
 MapFellowsSummary.propTypes = {
-  fellowsSummaryCardDetails: PropTypes.shape([]).isRequired
+  fellowsSummaryCardDetails: PropTypes.shape([]).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default MapFellowsSummary;

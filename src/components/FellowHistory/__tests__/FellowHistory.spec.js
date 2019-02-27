@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-
 import { FellowHistory } from '../FellowHistory';
 
 describe('Fellow History Container', () => {
@@ -11,6 +10,7 @@ describe('Fellow History Container', () => {
         {
           id: 10,
           picture: null,
+          devPulseAverage: '1.13',
           project: 'Watch Tower',
           email: 'kingsley.obot@andela.com',
           user: {
@@ -57,7 +57,6 @@ describe('Fellow History Container', () => {
 
   it('renders fellows page if fellow not found', () => {
     let currentPath = '';
-
     setup(true, {
       match: { params: { name: 'Kingsley.Obota' } },
       history: {

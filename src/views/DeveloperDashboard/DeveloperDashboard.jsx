@@ -13,6 +13,7 @@ class DeveloperDashboard extends Component {
     this.state = {
       fellowSummaryDetails: []
     };
+    this.handleCardClick = this.handleCardClick.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +48,19 @@ class DeveloperDashboard extends Component {
     this.setState({ fellowSummaryDetails: fellows });
   };
 
+  redirectUrl = (email, history) => {
+    const name = email.substr(0, email.search('@andela.com'));
+    history.push(`/dashboard/fellow/${name}`);
+  };
+
+  handleCardClick = e => {
+    const id = e.target.getAttribute('data-key');
+    const { history } = this.props;
+    const { fellowSummaryDetails } = this.state;
+    const { email } = fellowSummaryDetails[id].user || fellowSummaryDetails[id];
+    this.redirectUrl(email, history);
+  };
+
   renderResultCount = () => {
     const { fellowSummaryDetails } = this.state;
     const results = fellowSummaryDetails.length || 0;
@@ -66,6 +80,7 @@ class DeveloperDashboard extends Component {
       <div>{this.renderResultCount()}</div>
       <div className="">
         <MapFellowsSummaryCard
+          handleClick={this.handleCardClick}
           fellowsSummaryCardDetails={fellowSummaryDetails}
         />
       </div>
@@ -106,7 +121,9 @@ class DeveloperDashboard extends Component {
 DeveloperDashboard.propTypes = {
   getManagerFellowsSummary: PropTypes.func.isRequired,
   user: PropTypes.shape({}).isRequired,
-  role: PropTypes.shape({}).isRequired
+  role: PropTypes.shape({}).isRequired,
+  history: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({}).isRequired
 };
 
 export default DeveloperDashboard;

@@ -89,4 +89,28 @@ describe('<Dashboards />', () => {
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
     expect(item.name()).toEqual('TTLDashboard');
   });
+
+  it('should render appropriate dashboards SL and EM', () => {
+    const mockStore = configureStore();
+    const store = mockStore({
+      setVisibilityFilter: () => {},
+      fellows,
+      pagination: {
+        page: 1,
+        perPage: 10
+      },
+      loading: false,
+      getFellows: () => {},
+      filter: '',
+      user: {
+        name: 'Test User',
+        picture: 'http://',
+        roles: { Andelan: 'key', WATCH_TOWER_SL: 'key' }
+      },
+      role: 'WATCH_TOWER_SL'
+    });
+
+    const item = shallow(<Dashboards {...store.getState()} store={store} />);
+    expect(item.name()).toEqual('EngineeringManagerSimsLeadDashboard');
+  });
 });
