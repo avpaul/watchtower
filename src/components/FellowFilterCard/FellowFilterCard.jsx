@@ -4,7 +4,7 @@ import check from '../../static/check-mark.svg';
 
 /**
  * @method FellowFilterCard
- * @summary Method to render fellow's cards that can be filtered
+ * @summary - Method to render fellow's cards that can be filtered
  * @param { cardName {string},
  * numberOfFellows { number }, isTicked {object - Project|status},
  * handleClick { function }, filterKey {string} } param0 {Object}
@@ -19,7 +19,12 @@ const FellowFilterCard = ({
   filterKey
 }) => (
   <div
-    className="fellow-summary-card fellow-filter-card mt-4"
+    className={`fellow-summary-card fellow-filter-card mt-4 
+    ${
+      isTicked.project === cardName || isTicked.status === cardName
+        ? 'fellow-card-highlight'
+        : ''
+    }`}
     id={cardName}
     filterKey={filterKey}
     onClick={handleCardClick}

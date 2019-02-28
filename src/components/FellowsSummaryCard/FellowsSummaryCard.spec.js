@@ -30,7 +30,7 @@ describe('Test fellowsSummaryCard snapshots', () => {
     expect(fellowsSummaryCardWrapper).toMatchSnapshot();
   });
   it('fellowSummaryCard should display Pip when fellow is on pip', () => {
-    const { fellowsSummaryCardWrapper } = setup('Pip');
+    const { fellowsSummaryCardWrapper } = setup('PIP');
     expect(fellowsSummaryCardWrapper).toMatchSnapshot();
   });
 });

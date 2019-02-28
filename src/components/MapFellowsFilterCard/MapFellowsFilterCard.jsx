@@ -32,7 +32,7 @@ const MapFellowsFilterCard = ({
     refinedArray = [
       { 'All Fellows': allFellows },
       { 'On Track': onTrack },
-      { 'Off-Track': offTrack },
+      { 'Off Track': offTrack },
       { PIP: pip }
     ];
   }

@@ -72,8 +72,8 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Noldor",
-              "simStartDate": null,
-              "simsEndDate": null,
+              "simStartDate": "2019-03-06",
+              "simsEndDate": "2019-06-14",
               "status": "gteWk5OffTrack",
             },
             Object {
@@ -84,8 +84,8 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Noldor",
-              "simStartDate": null,
-              "simsEndDate": null,
+              "simStartDate": "2019-03-06",
+              "simsEndDate": "2019-06-14",
               "status": "gteWk5OffTrack",
               "user": Object {
                 "firstName": "somereallyreallylongusername",

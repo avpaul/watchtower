@@ -1,18 +1,18 @@
 .fellow-summary-card {
   position: relative;
-  min-height: 341px;
-  width: 295px;
-  border-radius: 4px;
+  min-height: 21.3125rem;
+  width: 18.4375rem;
+  border-radius: 0.25rem;
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(35, 47, 73, 0.06);
-  margin-right: 20px;
-  margin-left: 15px;
-  margin-bottom: 48px;
+  margin-right: 1.25rem;
+  margin-left: 0.9375rem;
+  margin-bottom: 3rem;
   outline: none;
 }
 
 .fellow-filter-card {
-  min-height: 79px;
+  min-height: 4.9375rem;
 }
 
 .card-name {
@@ -22,9 +22,9 @@
 .checkmark {
   position: absolute;
   left: 95%;
-  top: -8%;
-  width: 1.25rem;
-  height: 1.25rem;
+  top: -15%;
+  width: 1.6rem;
+  height: 1.6rem;
   background-color: #ffffff;
 }
 
@@ -32,43 +32,43 @@
   font-size: 1.75em;
 }
 
-.fellow-summary-card:hover {
+.fellow-summary-card:focus,
+.fellow-card-highlight {
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
-  outline: 1px solid #0459e4;
+  outline: 0.0625rem solid #0459e4;
 }
 
 .fellow-filter-card {
-  min-height: 79px;
+  min-height: 4.9375rem;
 }
 
 .fellow-summary-page-header {
   font-family: 'DIN Pro', Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
-  line-height: 26px;
-  font-weight: 400;
-  margin-top: 57px;
-  margin-bottom: 48px;
+  line-height: 1.625rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
 }
 
 .fellow-summary-page-header .header-underline {
-  border-bottom: 2px solid #3359db;
+  border-bottom: 0.125rem solid #3359db;
 }
 .active-card {
-  border: 1px solid #0459e4;
+  border: 0.0625rem solid #0459e4;
   outline: none;
 }
 
 .fellow-summary-card-header {
-  min-height: 95px;
+  min-height: 5.9375rem;
   margin-left: 0;
   margin-right: 0;
 }
 
 .fellow-summary-card-header .avatar {
-  height: 58px;
-  width: 58px;
-  margin-top: 22px;
+  height: 3.625rem;
+  width: 3.625rem;
+  margin-top: 1.375rem;
 }
 
 .fellow-summary-card-header .fellow-name {
@@ -76,26 +76,26 @@
   font-family: 'DIN Pro';
   font-size: 1.25rem;
   font-weight: 900;
-  line-height: 26px;
+  line-height: 1.625rem;
 }
 
 .fellow-summary-card-header .product {
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.875rem;
-  line-height: 18px;
+  line-height: 1.125rem;
 }
 
 .line-2 {
   box-sizing: border-box;
-  border: 1px solid #f4f8f9;
+  border: 0.0625rem solid #f4f8f9;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .fellow-summary-card-body {
-  margin-top: 20px;
-  margin-right: 0px;
+  margin-top: 1.25rem;
+  margin-right: 0;
 }
 .fellow-summary-card-body p {
   margin-right: 0;
@@ -105,7 +105,7 @@
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .level-description {
@@ -113,15 +113,15 @@
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 22px;
-  margin-bottom: 30px;
+  line-height: 1.375rem;
+  margin-bottom: 1.875rem;
 }
 
 .fellow-summary-card-body .started-header {
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .started-description {
@@ -129,34 +129,34 @@
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 22px;
-  margin-bottom: 39px;
+  line-height: 1.375rem;
+  margin-bottom: 2.4375rem;
 }
 
 .left {
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .right {
-  margin-right: 27px;
+  margin-right: 1.6875rem;
 }
 
 .fellow-card-avatar-wrapper {
-  margin-left: 29px;
+  margin-left: 1.8125rem;
   padding-left: 0;
   padding-right: 0;
 }
 .name-product-wrapper {
-  margin-left: 10px;
-  margin-top: 28.37px;
-  margin-right: 5px;
+  margin-left: 0.625rem;
+  margin-top: 1.773125rem;
+  margin-right: 0.3125rem;
 }
 
 .fellow-summary-card-body .pulse-avg-header {
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .pulse-avg-description {
@@ -164,22 +164,22 @@
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 26px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .status-header {
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .status-description {
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 22px;
-  margin-bottom: 30px;
+  line-height: 1.375rem;
+  margin-bottom: 1.875rem;
 }
 
 .color-off-track {
@@ -201,7 +201,7 @@
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .ending-description {
@@ -209,15 +209,15 @@
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 22px;
-  margin-bottom: 39px;
+  line-height: 1.375rem;
+  margin-bottom: 2.4375rem;
 }
 
 .fellow-summary-card-body .lms-outputs-header {
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .lms-outputs-description {
@@ -225,14 +225,14 @@
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 26px;
+  line-height: 1.625rem;
 }
 
 .fellow-summary-card-body .dev-pulse-average-header {
   color: rgba(51, 62, 68, 0.75);
   font-family: 'DIN Pro';
   font-size: 0.8125rem;
-  line-height: 17px;
+  line-height: 1.0625rem;
 }
 
 .fellow-summary-card-body .dev-pulse-average-description {
@@ -240,5 +240,5 @@
   font-family: 'DIN Pro';
   font-size: 1.0625rem;
   font-weight: 900;
-  line-height: 26px;
+  line-height: 1.625rem;
 }

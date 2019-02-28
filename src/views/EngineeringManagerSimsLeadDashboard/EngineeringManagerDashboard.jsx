@@ -213,7 +213,6 @@ class EngineeringManagerDashboard extends Component {
 
     return (
       <div className="container-fluid" style={emDashboardStyle}>
-        {/* <div className="container"><FellowsSummaryCard /></div> */}
         <TtlsFellowSummary
           fellowsSummary={this.mapDisplayFellowSummary(
             isEngineeringManager ? ttls : lfs,

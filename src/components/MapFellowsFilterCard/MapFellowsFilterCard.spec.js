@@ -99,7 +99,7 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(2)
         .props().cardName
-    ).toBe('Off-Track');
+    ).toBe('Off Track');
     expect(
       mapFellowsFilterCardWrapper
         .find(FellowFilterCard)

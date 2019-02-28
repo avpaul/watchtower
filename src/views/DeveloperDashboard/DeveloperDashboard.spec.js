@@ -98,8 +98,8 @@ describe('Developers dashboard test', () => {
     ];
     instance.setState({ fellowSummaryDetails });
     const event = {
-      target: {
-        getAttribute: jest.fn(() => 0)
+      currentTarget: {
+        id: 0
       }
     };
     const email = {
@@ -111,7 +111,6 @@ describe('Developers dashboard test', () => {
     instance.redirectUrl(email, props.history);
     expect(email.substr).toHaveBeenCalled();
     expect(email.search).toHaveBeenCalled();
-    expect(event.target.getAttribute).toHaveBeenCalled();
     expect(props.history.push).toHaveBeenCalled();
   });
 
@@ -226,7 +225,7 @@ describe('Developers dashboard test', () => {
     ).toEqual(2);
   });
 
-  it('should set status to off-track when off-track card is clicked', () => {
+  it('should set status to Off Track when Off Track card is clicked', () => {
     const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
       'WATCH_TOWER_TTL'
     );
@@ -244,13 +243,13 @@ describe('Developers dashboard test', () => {
       .dive()
       .simulate('click', {
         currentTarget: {
-          id: 'Off-Track',
+          id: 'Off Track',
           attributes: [{}, {}, { value: 'status' }]
         }
       });
     expect(developerDashboardWrapper.state('isTicked')).toEqual({
       project: 'All Products',
-      status: 'Off-Track'
+      status: 'Off Track'
     });
     expect(
       developerDashboardWrapper.state('fellowSummaryDetails').length

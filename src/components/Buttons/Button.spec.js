@@ -9,7 +9,6 @@ describe('test button', () => {
   it('should render', () => {
     expect(shallow(<FilterButton {...props} />)).toMatchSnapshot();
   });
-
   it('should call clearFilters when button is clicked', () => {
     shallow(<FilterButton {...props} />)
       .find('button')
