@@ -38,8 +38,8 @@ ShallowWrapper {
                 render={[Function]}
         />
         <Route
-                component={[Function]}
                 path="/dashboard/fellows"
+                render={[Function]}
         />
 </Switch>,
     },
@@ -55,8 +55,8 @@ ShallowWrapper {
             render={[Function]}
 />,
           <Route
-            component={[Function]}
             path="/dashboard/fellows"
+            render={[Function]}
 />,
         ],
       },
@@ -79,8 +79,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
             "path": "/dashboard/fellows",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -103,8 +103,8 @@ ShallowWrapper {
                     render={[Function]}
           />
           <Route
-                    component={[Function]}
                     path="/dashboard/fellows"
+                    render={[Function]}
           />
 </Switch>,
       },
@@ -120,8 +120,8 @@ ShallowWrapper {
               render={[Function]}
 />,
             <Route
-              component={[Function]}
               path="/dashboard/fellows"
+              render={[Function]}
 />,
           ],
         },
@@ -144,8 +144,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "component": [Function],
               "path": "/dashboard/fellows",
+              "render": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -215,8 +215,8 @@ ShallowWrapper {
                 render={[Function]}
         />
         <Route
-                component={[Function]}
                 path="/dashboard/fellows"
+                render={[Function]}
         />
 </Switch>,
     },
@@ -232,8 +232,8 @@ ShallowWrapper {
             render={[Function]}
 />,
           <Route
-            component={[Function]}
             path="/dashboard/fellows"
+            render={[Function]}
 />,
         ],
       },
@@ -256,8 +256,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
             "path": "/dashboard/fellows",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -280,8 +280,8 @@ ShallowWrapper {
                     render={[Function]}
           />
           <Route
-                    component={[Function]}
                     path="/dashboard/fellows"
+                    render={[Function]}
           />
 </Switch>,
       },
@@ -297,8 +297,8 @@ ShallowWrapper {
               render={[Function]}
 />,
             <Route
-              component={[Function]}
               path="/dashboard/fellows"
+              render={[Function]}
 />,
           ],
         },
@@ -321,8 +321,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "component": [Function],
               "path": "/dashboard/fellows",
+              "render": [Function],
             },
             "ref": null,
             "rendered": null,

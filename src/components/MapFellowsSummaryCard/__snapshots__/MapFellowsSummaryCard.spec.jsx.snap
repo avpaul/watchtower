@@ -34,6 +34,64 @@ ShallowWrapper {
               "simsEndDate": null,
               "status": "gteWk5OffTrack",
             },
+            Object {
+              "apprEndDate": "2019-01-16",
+              "apprStartDate": "2018-10-15",
+              "devPulseAverage": "1.04",
+              "firstName": "Oluseyi",
+              "lastName": "Anani",
+              "level": "D0B Apprenticeship",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Watch Tower",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "onTrack",
+            },
+            Object {
+              "apprEndDate": "2019-01-16",
+              "apprStartDate": "2018-10-15",
+              "devPulseAverage": "1.04",
+              "firstName": "Brian",
+              "lastName": "Bett",
+              "level": "D0B Apprenticeship",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Watch Tower",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "onTrack",
+            },
+            Object {
+              "apprEndDate": null,
+              "apprStartDate": null,
+              "devPulseAverage": "1.04",
+              "firstName": "",
+              "lastName": "",
+              "level": "D0A Simulations",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Noldor",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "gteWk5OffTrack",
+            },
+            Object {
+              "apprEndDate": null,
+              "apprStartDate": null,
+              "devPulseAverage": "1.04",
+              "level": "",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Noldor",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "gteWk5OffTrack",
+              "user": Object {
+                "firstName": "somereallyreallylongusername",
+                "lastName": "",
+              },
+            },
           ]
     }
     handleClick={[Function]}
@@ -65,7 +123,7 @@ ShallowWrapper {
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Watch Tower"
                 started="15-Oct-2018"
-                status="Pip"
+                status="Off-Track"
         />
         <FellowsSummaryCard
                 devPulseAverage="1.04"
@@ -78,7 +136,59 @@ ShallowWrapper {
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Watch Tower"
                 started="15-Oct-2018"
-                status="Off-Track"
+                status="Pip"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="1.04"
+                ending="16-Jan-2019"
+                level="D0B"
+                lmsOutputs="4/18"
+                mykey={2}
+                name="Oluseyi Anani"
+                onClick={[Function]}
+                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                product="Watch Tower"
+                started="15-Oct-2018"
+                status="On-Track"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="1.04"
+                ending="16-Jan-2019"
+                level="D0B"
+                lmsOutputs="4/18"
+                mykey={3}
+                name="Brian Bett"
+                onClick={[Function]}
+                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                product="Watch Tower"
+                started="15-Oct-2018"
+                status="On-Track"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="1.04"
+                ending="No date"
+                level="D0A"
+                lmsOutputs="4/18"
+                mykey={4}
+                name=" "
+                onClick={[Function]}
+                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                product="Noldor"
+                started="6-Mar-2019"
+                status="Pip"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="1.04"
+                ending="No date"
+                level=""
+                lmsOutputs="4/18"
+                mykey={5}
+                name="somereallyreallylo ..."
+                onClick={[Function]}
+                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                product="Noldor"
+                started="No date"
+                status="Pip"
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -101,7 +211,7 @@ ShallowWrapper {
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Watch Tower"
             started="15-Oct-2018"
-            status="Pip"
+            status="Off-Track"
 />,
           <FellowsSummaryCard
             devPulseAverage="1.04"
@@ -114,7 +224,59 @@ ShallowWrapper {
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Watch Tower"
             started="15-Oct-2018"
-            status="Off-Track"
+            status="Pip"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="1.04"
+            ending="16-Jan-2019"
+            level="D0B"
+            lmsOutputs="4/18"
+            mykey={2}
+            name="Oluseyi Anani"
+            onClick={[Function]}
+            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+            product="Watch Tower"
+            started="15-Oct-2018"
+            status="On-Track"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="1.04"
+            ending="16-Jan-2019"
+            level="D0B"
+            lmsOutputs="4/18"
+            mykey={3}
+            name="Brian Bett"
+            onClick={[Function]}
+            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+            product="Watch Tower"
+            started="15-Oct-2018"
+            status="On-Track"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="1.04"
+            ending="No date"
+            level="D0A"
+            lmsOutputs="4/18"
+            mykey={4}
+            name=" "
+            onClick={[Function]}
+            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+            product="Noldor"
+            started="6-Mar-2019"
+            status="Pip"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="1.04"
+            ending="No date"
+            level=""
+            lmsOutputs="4/18"
+            mykey={5}
+            name="somereallyreallylo ..."
+            onClick={[Function]}
+            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+            product="Noldor"
+            started="No date"
+            status="Pip"
 />,
         ],
         "className": "row",
@@ -136,7 +298,7 @@ ShallowWrapper {
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Watch Tower",
             "started": "15-Oct-2018",
-            "status": "Pip",
+            "status": "Off-Track",
           },
           "ref": null,
           "rendered": null,
@@ -157,7 +319,91 @@ ShallowWrapper {
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Watch Tower",
             "started": "15-Oct-2018",
-            "status": "Off-Track",
+            "status": "Pip",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.04",
+            "ending": "16-Jan-2019",
+            "level": "D0B",
+            "lmsOutputs": "4/18",
+            "mykey": 2,
+            "name": "Oluseyi Anani",
+            "onClick": [Function],
+            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+            "product": "Watch Tower",
+            "started": "15-Oct-2018",
+            "status": "On-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.04",
+            "ending": "16-Jan-2019",
+            "level": "D0B",
+            "lmsOutputs": "4/18",
+            "mykey": 3,
+            "name": "Brian Bett",
+            "onClick": [Function],
+            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+            "product": "Watch Tower",
+            "started": "15-Oct-2018",
+            "status": "On-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "4",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.04",
+            "ending": "No date",
+            "level": "D0A",
+            "lmsOutputs": "4/18",
+            "mykey": 4,
+            "name": " ",
+            "onClick": [Function],
+            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+            "product": "Noldor",
+            "started": "6-Mar-2019",
+            "status": "Pip",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "5",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.04",
+            "ending": "No date",
+            "level": "",
+            "lmsOutputs": "4/18",
+            "mykey": 5,
+            "name": "somereallyreallylo ...",
+            "onClick": [Function],
+            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+            "product": "Noldor",
+            "started": "No date",
+            "status": "Pip",
           },
           "ref": null,
           "rendered": null,
@@ -188,7 +434,7 @@ ShallowWrapper {
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Watch Tower"
                     started="15-Oct-2018"
-                    status="Pip"
+                    status="Off-Track"
           />
           <FellowsSummaryCard
                     devPulseAverage="1.04"
@@ -201,7 +447,59 @@ ShallowWrapper {
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Watch Tower"
                     started="15-Oct-2018"
-                    status="Off-Track"
+                    status="Pip"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="1.04"
+                    ending="16-Jan-2019"
+                    level="D0B"
+                    lmsOutputs="4/18"
+                    mykey={2}
+                    name="Oluseyi Anani"
+                    onClick={[Function]}
+                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                    product="Watch Tower"
+                    started="15-Oct-2018"
+                    status="On-Track"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="1.04"
+                    ending="16-Jan-2019"
+                    level="D0B"
+                    lmsOutputs="4/18"
+                    mykey={3}
+                    name="Brian Bett"
+                    onClick={[Function]}
+                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                    product="Watch Tower"
+                    started="15-Oct-2018"
+                    status="On-Track"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="1.04"
+                    ending="No date"
+                    level="D0A"
+                    lmsOutputs="4/18"
+                    mykey={4}
+                    name=" "
+                    onClick={[Function]}
+                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                    product="Noldor"
+                    started="6-Mar-2019"
+                    status="Pip"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="1.04"
+                    ending="No date"
+                    level=""
+                    lmsOutputs="4/18"
+                    mykey={5}
+                    name="somereallyreallylo ..."
+                    onClick={[Function]}
+                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+                    product="Noldor"
+                    started="No date"
+                    status="Pip"
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -224,7 +522,7 @@ ShallowWrapper {
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Watch Tower"
               started="15-Oct-2018"
-              status="Pip"
+              status="Off-Track"
 />,
             <FellowsSummaryCard
               devPulseAverage="1.04"
@@ -237,7 +535,59 @@ ShallowWrapper {
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Watch Tower"
               started="15-Oct-2018"
-              status="Off-Track"
+              status="Pip"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="1.04"
+              ending="16-Jan-2019"
+              level="D0B"
+              lmsOutputs="4/18"
+              mykey={2}
+              name="Oluseyi Anani"
+              onClick={[Function]}
+              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+              product="Watch Tower"
+              started="15-Oct-2018"
+              status="On-Track"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="1.04"
+              ending="16-Jan-2019"
+              level="D0B"
+              lmsOutputs="4/18"
+              mykey={3}
+              name="Brian Bett"
+              onClick={[Function]}
+              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+              product="Watch Tower"
+              started="15-Oct-2018"
+              status="On-Track"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="1.04"
+              ending="No date"
+              level="D0A"
+              lmsOutputs="4/18"
+              mykey={4}
+              name=" "
+              onClick={[Function]}
+              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+              product="Noldor"
+              started="6-Mar-2019"
+              status="Pip"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="1.04"
+              ending="No date"
+              level=""
+              lmsOutputs="4/18"
+              mykey={5}
+              name="somereallyreallylo ..."
+              onClick={[Function]}
+              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
+              product="Noldor"
+              started="No date"
+              status="Pip"
 />,
           ],
           "className": "row",
@@ -259,7 +609,7 @@ ShallowWrapper {
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Watch Tower",
               "started": "15-Oct-2018",
-              "status": "Pip",
+              "status": "Off-Track",
             },
             "ref": null,
             "rendered": null,
@@ -280,7 +630,91 @@ ShallowWrapper {
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Watch Tower",
               "started": "15-Oct-2018",
-              "status": "Off-Track",
+              "status": "Pip",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.04",
+              "ending": "16-Jan-2019",
+              "level": "D0B",
+              "lmsOutputs": "4/18",
+              "mykey": 2,
+              "name": "Oluseyi Anani",
+              "onClick": [Function],
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "product": "Watch Tower",
+              "started": "15-Oct-2018",
+              "status": "On-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.04",
+              "ending": "16-Jan-2019",
+              "level": "D0B",
+              "lmsOutputs": "4/18",
+              "mykey": 3,
+              "name": "Brian Bett",
+              "onClick": [Function],
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "product": "Watch Tower",
+              "started": "15-Oct-2018",
+              "status": "On-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "4",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.04",
+              "ending": "No date",
+              "level": "D0A",
+              "lmsOutputs": "4/18",
+              "mykey": 4,
+              "name": " ",
+              "onClick": [Function],
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "product": "Noldor",
+              "started": "6-Mar-2019",
+              "status": "Pip",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "5",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.04",
+              "ending": "No date",
+              "level": "",
+              "lmsOutputs": "4/18",
+              "mykey": 5,
+              "name": "somereallyreallylo ...",
+              "onClick": [Function],
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "product": "Noldor",
+              "started": "No date",
+              "status": "Pip",
             },
             "ref": null,
             "rendered": null,

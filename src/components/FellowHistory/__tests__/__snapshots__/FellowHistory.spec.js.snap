@@ -7,8 +7,10 @@ ShallowWrapper {
     fellowSummaryDetails={
         Array [
             Object {
+              "devPulseAverage": null,
               "email": "kingsley.obot@andela.com",
               "id": 10,
+              "lmsOutput": null,
               "picture": null,
               "project": "Watch Tower",
               "user": Object {
@@ -63,8 +65,10 @@ ShallowWrapper {
                                 <FellowProfile
                                         fellow={
                                                 Object {
+                                                        "devPulseAverage": null,
                                                         "email": "kingsley.obot@andela.com",
                                                         "id": 10,
+                                                        "lmsOutput": null,
                                                         "picture": null,
                                                         "project": "Watch Tower",
                                                         "user": Object {
@@ -83,12 +87,12 @@ ShallowWrapper {
                                                 Array [
                                                         Object {
                                                           "checkedBydefault": true,
-                                                          "ratings": undefined,
+                                                          "ratings": "0",
                                                           "title": "DevPulse",
                                                         },
                                                         Object {
                                                           "checkedBydefault": false,
-                                                          "ratings": undefined,
+                                                          "ratings": "0/0",
                                                           "title": "LMS",
                                                         },
                                                       ]
@@ -127,8 +131,10 @@ ShallowWrapper {
                               <FellowProfile
                                         fellow={
                                                   Object {
+                                                            "devPulseAverage": null,
                                                             "email": "kingsley.obot@andela.com",
                                                             "id": 10,
+                                                            "lmsOutput": null,
                                                             "picture": null,
                                                             "project": "Watch Tower",
                                                             "user": Object {
@@ -147,12 +153,12 @@ ShallowWrapper {
                                                   Array [
                                                             Object {
                                                               "checkedBydefault": true,
-                                                              "ratings": undefined,
+                                                              "ratings": "0",
                                                               "title": "DevPulse",
                                                             },
                                                             Object {
                                                               "checkedBydefault": false,
-                                                              "ratings": undefined,
+                                                              "ratings": "0/0",
                                                               "title": "LMS",
                                                             },
                                                           ]
@@ -188,8 +194,10 @@ ShallowWrapper {
                             <FellowProfile
                                           fellow={
                                                         Object {
+                                                                      "devPulseAverage": null,
                                                                       "email": "kingsley.obot@andela.com",
                                                                       "id": 10,
+                                                                      "lmsOutput": null,
                                                                       "picture": null,
                                                                       "project": "Watch Tower",
                                                                       "user": Object {
@@ -208,12 +216,12 @@ ShallowWrapper {
                                                         Array [
                                                                       Object {
                                                                         "checkedBydefault": true,
-                                                                        "ratings": undefined,
+                                                                        "ratings": "0",
                                                                         "title": "DevPulse",
                                                                       },
                                                                       Object {
                                                                         "checkedBydefault": false,
-                                                                        "ratings": undefined,
+                                                                        "ratings": "0/0",
                                                                         "title": "LMS",
                                                                       },
                                                                     ]
@@ -265,8 +273,10 @@ ShallowWrapper {
                   <FellowProfile
                                     fellow={
                                                       Object {
+                                                                        "devPulseAverage": null,
                                                                         "email": "kingsley.obot@andela.com",
                                                                         "id": 10,
+                                                                        "lmsOutput": null,
                                                                         "picture": null,
                                                                         "project": "Watch Tower",
                                                                         "user": Object {
@@ -285,12 +295,12 @@ ShallowWrapper {
                                                       Array [
                                                                         Object {
                                                                           "checkedBydefault": true,
-                                                                          "ratings": undefined,
+                                                                          "ratings": "0",
                                                                           "title": "DevPulse",
                                                                         },
                                                                         Object {
                                                                           "checkedBydefault": false,
-                                                                          "ratings": undefined,
+                                                                          "ratings": "0/0",
                                                                           "title": "LMS",
                                                                         },
                                                                       ]
@@ -310,8 +320,10 @@ ShallowWrapper {
                   "children": <FellowProfile
                     fellow={
                                         Object {
+                                                            "devPulseAverage": null,
                                                             "email": "kingsley.obot@andela.com",
                                                             "id": 10,
+                                                            "lmsOutput": null,
                                                             "picture": null,
                                                             "project": "Watch Tower",
                                                             "user": Object {
@@ -330,8 +342,10 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "fellow": Object {
+                      "devPulseAverage": null,
                       "email": "kingsley.obot@andela.com",
                       "id": 10,
+                      "lmsOutput": null,
                       "picture": null,
                       "project": "Watch Tower",
                       "user": Object {
@@ -356,12 +370,12 @@ ShallowWrapper {
                                         Array [
                                                             Object {
                                                               "checkedBydefault": true,
-                                                              "ratings": undefined,
+                                                              "ratings": "0",
                                                               "title": "DevPulse",
                                                             },
                                                             Object {
                                                               "checkedBydefault": false,
-                                                              "ratings": undefined,
+                                                              "ratings": "0/0",
                                                               "title": "LMS",
                                                             },
                                                           ]
@@ -378,12 +392,12 @@ ShallowWrapper {
                     "fellowSummaryBreakdown": Array [
                       Object {
                         "checkedBydefault": true,
-                        "ratings": undefined,
+                        "ratings": "0",
                         "title": "DevPulse",
                       },
                       Object {
                         "checkedBydefault": false,
-                        "ratings": undefined,
+                        "ratings": "0/0",
                         "title": "LMS",
                       },
                     ],
@@ -434,8 +448,10 @@ ShallowWrapper {
                                         <FellowProfile
                                                   fellow={
                                                             Object {
+                                                                      "devPulseAverage": null,
                                                                       "email": "kingsley.obot@andela.com",
                                                                       "id": 10,
+                                                                      "lmsOutput": null,
                                                                       "picture": null,
                                                                       "project": "Watch Tower",
                                                                       "user": Object {
@@ -454,12 +470,12 @@ ShallowWrapper {
                                                             Array [
                                                                       Object {
                                                                         "checkedBydefault": true,
-                                                                        "ratings": undefined,
+                                                                        "ratings": "0",
                                                                         "title": "DevPulse",
                                                                       },
                                                                       Object {
                                                                         "checkedBydefault": false,
-                                                                        "ratings": undefined,
+                                                                        "ratings": "0/0",
                                                                         "title": "LMS",
                                                                       },
                                                                     ]
@@ -498,8 +514,10 @@ ShallowWrapper {
                                     <FellowProfile
                                                 fellow={
                                                             Object {
+                                                                        "devPulseAverage": null,
                                                                         "email": "kingsley.obot@andela.com",
                                                                         "id": 10,
+                                                                        "lmsOutput": null,
                                                                         "picture": null,
                                                                         "project": "Watch Tower",
                                                                         "user": Object {
@@ -518,12 +536,12 @@ ShallowWrapper {
                                                             Array [
                                                                         Object {
                                                                           "checkedBydefault": true,
-                                                                          "ratings": undefined,
+                                                                          "ratings": "0",
                                                                           "title": "DevPulse",
                                                                         },
                                                                         Object {
                                                                           "checkedBydefault": false,
-                                                                          "ratings": undefined,
+                                                                          "ratings": "0/0",
                                                                           "title": "LMS",
                                                                         },
                                                                       ]
@@ -559,8 +577,10 @@ ShallowWrapper {
                                 <FellowProfile
                                                 fellow={
                                                                 Object {
+                                                                                "devPulseAverage": null,
                                                                                 "email": "kingsley.obot@andela.com",
                                                                                 "id": 10,
+                                                                                "lmsOutput": null,
                                                                                 "picture": null,
                                                                                 "project": "Watch Tower",
                                                                                 "user": Object {
@@ -579,12 +599,12 @@ ShallowWrapper {
                                                                 Array [
                                                                                 Object {
                                                                                   "checkedBydefault": true,
-                                                                                  "ratings": undefined,
+                                                                                  "ratings": "0",
                                                                                   "title": "DevPulse",
                                                                                 },
                                                                                 Object {
                                                                                   "checkedBydefault": false,
-                                                                                  "ratings": undefined,
+                                                                                  "ratings": "0/0",
                                                                                   "title": "LMS",
                                                                                 },
                                                                               ]
@@ -636,8 +656,10 @@ ShallowWrapper {
                     <FellowProfile
                                         fellow={
                                                             Object {
+                                                                                "devPulseAverage": null,
                                                                                 "email": "kingsley.obot@andela.com",
                                                                                 "id": 10,
+                                                                                "lmsOutput": null,
                                                                                 "picture": null,
                                                                                 "project": "Watch Tower",
                                                                                 "user": Object {
@@ -656,12 +678,12 @@ ShallowWrapper {
                                                             Array [
                                                                                 Object {
                                                                                   "checkedBydefault": true,
-                                                                                  "ratings": undefined,
+                                                                                  "ratings": "0",
                                                                                   "title": "DevPulse",
                                                                                 },
                                                                                 Object {
                                                                                   "checkedBydefault": false,
-                                                                                  "ratings": undefined,
+                                                                                  "ratings": "0/0",
                                                                                   "title": "LMS",
                                                                                 },
                                                                               ]
@@ -681,8 +703,10 @@ ShallowWrapper {
                     "children": <FellowProfile
                       fellow={
                                             Object {
+                                                                  "devPulseAverage": null,
                                                                   "email": "kingsley.obot@andela.com",
                                                                   "id": 10,
+                                                                  "lmsOutput": null,
                                                                   "picture": null,
                                                                   "project": "Watch Tower",
                                                                   "user": Object {
@@ -701,8 +725,10 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "fellow": Object {
+                        "devPulseAverage": null,
                         "email": "kingsley.obot@andela.com",
                         "id": 10,
+                        "lmsOutput": null,
                         "picture": null,
                         "project": "Watch Tower",
                         "user": Object {
@@ -727,12 +753,12 @@ ShallowWrapper {
                                             Array [
                                                                   Object {
                                                                     "checkedBydefault": true,
-                                                                    "ratings": undefined,
+                                                                    "ratings": "0",
                                                                     "title": "DevPulse",
                                                                   },
                                                                   Object {
                                                                     "checkedBydefault": false,
-                                                                    "ratings": undefined,
+                                                                    "ratings": "0/0",
                                                                     "title": "LMS",
                                                                   },
                                                                 ]
@@ -749,12 +775,12 @@ ShallowWrapper {
                       "fellowSummaryBreakdown": Array [
                         Object {
                           "checkedBydefault": true,
-                          "ratings": undefined,
+                          "ratings": "0",
                           "title": "DevPulse",
                         },
                         Object {
                           "checkedBydefault": false,
-                          "ratings": undefined,
+                          "ratings": "0/0",
                           "title": "LMS",
                         },
                       ],
