@@ -1,5 +1,9 @@
 import {
-  getMenuItems, fellowItems, ttlItems, managerItems, opsItems,
+  getMenuItems,
+  fellowItems,
+  ttlItems,
+  managerItems,
+  opsItems
 } from './navlinks';
 
 describe('Navlinks Test Suite', () => {
@@ -12,7 +16,11 @@ describe('Navlinks Test Suite', () => {
     expect(menu).toEqual(ttlItems);
     menu = getMenuItems('WATCH_TOWER_EM');
     expect(menu).toEqual(managerItems);
+    menu = getMenuItems('WATCH_TOWER_SL');
+    expect(menu).toEqual(managerItems);
     menu = getMenuItems('WATCH_TOWER_OPS');
     expect(menu).toEqual(opsItems);
+    menu = getMenuItems('none');
+    expect(menu).toEqual(fellowItems);
   });
 });

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "main",
+    "title": "All TTLs",
+    "fellowsCount": 6,
+    "styles": {
+      "titleDisplayStyle": "",
+      "nameAvatarDisplayStyle": "d-none"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Kesiena Akpobome",
+    "fellowsCount": 0,
+    "styles": {
+      "titleDisplayStyle": "d-none",
+      "nameAvatarDisplayStyle": ""
+    }
+  },
+  {
+    "id": 6,
+    "name": "Olaoluwa Faniyi",
+    "fellowsCount": 0,
+    "styles": {
+      "titleDisplayStyle": "d-none",
+      "nameAvatarDisplayStyle": ""
+    }
+  },
+  {
+    "id": 7,
+    "name": "Olaolu Akinsete",
+    "fellowsCount": 0,
+    "styles": {
+      "titleDisplayStyle": "d-none",
+      "nameAvatarDisplayStyle": ""
+    }
+  },
+  {
+    "id": 10,
+    "name": "Samuel Kubai",
+    "fellowsCount": 0,
+    "styles": {
+      "titleDisplayStyle": "d-none",
+      "nameAvatarDisplayStyle": ""
+    }
+  },
+  {
+    "id": 11,
+    "name": "Trust  Birungi",
+    "fellowsCount": 6,
+    "styles": {
+      "titleDisplayStyle": "d-none",
+      "nameAvatarDisplayStyle": ""
+    }
+  }
+]

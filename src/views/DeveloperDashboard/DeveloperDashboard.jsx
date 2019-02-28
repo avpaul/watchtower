@@ -7,6 +7,7 @@ import MapFellowsFilterCard from '../../components/MapFellowsFilterCard';
 import Error from '../../components/Error';
 import FilterButton from '../../components/Buttons/Button';
 import FellowHistoryContainer from '../../components/FellowHistory';
+import MapLfTtlSummaryCard from '../../components/MapLfTtlSummaryCard';
 
 /**
  * Class DeveloperDashboard - this component renders the DeveloperDashboard component
@@ -23,7 +24,15 @@ class DeveloperDashboard extends Component {
     this.state = {
       fellowSummaryDetails: [],
       allFellows: [],
-      isTicked: { project: 'All Products', status: 'All Fellows' }
+      isTicked: {
+        managers: 'All Managers',
+        project: 'All Products',
+        status: 'All Fellows'
+      },
+      lfTtlSummary: [],
+      resetFellows: [],
+      totalFellows: 0,
+      managerCardId: 'main'
     };
     this.handleCardClick = this.handleCardClick.bind(this);
   }
@@ -70,20 +79,22 @@ class DeveloperDashboard extends Component {
     const fellows = [];
     data.forEach(manager => {
       let updatedFellows = manager.fellows;
-
       if (updatedFellows){
         updatedFellows = updatedFellows.map(fellow => {
           const updatedFellow = fellow;
           updatedFellow.manager = manager;
-          delete updatedFellow.manager.fellows;
-          return fellow;
+          return updatedFellow;
         });
       }
-
       fellows.push(...updatedFellows);
     });
-
-    this.setState({ fellowSummaryDetails: fellows, allFellows: fellows });
+    this.setState({
+      fellowSummaryDetails: fellows,
+      allFellows: fellows,
+      lfTtlSummary: data,
+      resetFellows: fellows,
+      totalFellows: fellows.length
+    });
   };
 
   /**
@@ -122,9 +133,39 @@ class DeveloperDashboard extends Component {
    */
   clearFilters = () => {
     this.setState(state => ({
-      isTicked: { project: 'All Products', status: 'All Fellows' },
-      fellowSummaryDetails: state.allFellows
+      isTicked: {
+        managers: 'All Managers',
+        project: 'All Products',
+        status: 'All Fellows'
+      },
+      fellowSummaryDetails: state.resetFellows,
+      managerCardId: 'main'
     }));
+  };
+
+  /**
+   * @param target
+   * @description - this method takes the name of the status card clicked and
+   * returns the refined status name
+   */
+  processFilterByStatus = target => {
+    let data;
+    switch (target) {
+      case 'All Fellows':
+        data = '';
+        break;
+      case 'PIP':
+        data = 'gteWk5';
+        break;
+      case 'Off Track':
+        data = 'ltWk5';
+        break;
+      case 'On Track':
+        data = 'onTrack';
+        break;
+      default:
+    }
+    return data;
   };
 
   /**
@@ -134,25 +175,6 @@ class DeveloperDashboard extends Component {
    */
   handleFilterCardClick = e => {
     const { allFellows, isTicked } = this.state;
-    const processFilterByStatus = target => {
-      let data;
-      switch (target) {
-        case 'All Fellows':
-          data = '';
-          break;
-        case 'PIP':
-          data = 'gteWk5';
-          break;
-        case 'Off Track':
-          data = 'ltWk5';
-          break;
-        case 'On Track':
-          data = 'onTrack';
-          break;
-        default:
-      }
-      return data;
-    };
 
     /**
      * @method
@@ -163,7 +185,9 @@ class DeveloperDashboard extends Component {
       allFellows.filter(
         fellow =>
           fellow.status &&
-          fellow.status.includes(processFilterByStatus(tickedCard.status)) &&
+          fellow.status.includes(
+            this.processFilterByStatus(tickedCard.status)
+          ) &&
           fellow.project &&
           fellow.project.includes(
             tickedCard.project === 'All Products' ? '' : tickedCard.project
@@ -191,6 +215,73 @@ class DeveloperDashboard extends Component {
   };
 
   /**
+   * @method mapLfTtlData
+   * @description - processes the ttls data and returns an array of objects I.e the ttls
+   */
+  mapLfTtlData = () => {
+    const { role } = this.props;
+    const { totalFellows, lfTtlSummary } = this.state;
+    const displayList = [
+      {
+        id: 'main',
+        title: role === 'WATCH_TOWER_EM' ? 'All TTLs' : 'All LFs',
+        fellowsCount: totalFellows,
+        styles: { titleDisplayStyle: '', nameAvatarDisplayStyle: 'd-none' }
+      }
+    ];
+    lfTtlSummary.forEach(manager => {
+      const name = `${manager.firstName} ${manager.lastName}`;
+      const content = {
+        id: manager.id,
+        picture: manager.picture || undefined,
+        name,
+        title: undefined,
+        fellowsCount: manager.fellowsCount,
+        styles: { titleDisplayStyle: 'd-none', nameAvatarDisplayStyle: '' }
+      };
+      displayList.push(content);
+    });
+    return displayList;
+  };
+
+  /**
+   * @method filterFellows
+   * @param {mixed}  filterKey - This identifies the ttl card clicked
+   * @description - filters the fellows according to the ttl managing them.
+   */
+  filterFellows = filterKey => {
+    const { lfTtlSummary, isTicked, resetFellows } = this.state;
+    let filteredFellows = [];
+    const getManagerByid = id =>
+      lfTtlSummary.find(manager => manager.id === id);
+    const filterFellowsbyStatus = (allFellows, status) =>
+      allFellows
+        ? allFellows.filter(fellow => fellow.status.includes(status))
+        : [];
+    const status = this.processFilterByStatus(isTicked.status);
+    this.setState({ managerCardId: filterKey });
+    if (getManagerByid(filterKey)) {
+      const manager = getManagerByid(filterKey);
+      filteredFellows = filterFellowsbyStatus(manager.fellows, status);
+      return this.setState({
+        fellowSummaryDetails: filteredFellows,
+        allFellows: manager.fellows
+      });
+    }
+    if (status === '') {
+      return this.setState({
+        fellowSummaryDetails: resetFellows,
+        allFellows: resetFellows
+      });
+    }
+    filteredFellows = filterFellowsbyStatus(resetFellows, status);
+    return this.setState({
+      fellowSummaryDetails: filteredFellows,
+      allFellows: resetFellows
+    });
+  };
+
+  /**
    * @method renderResultCount
    * @description - displays the number of fellows rendered on the developers dashbaord
    */
@@ -214,15 +305,23 @@ class DeveloperDashboard extends Component {
    * on '/developers/fellows' route
    */
   renderFellowsDashboard = () => {
-    const { fellowSummaryDetails } = this.state;
-
+    const { fellowSummaryDetails, managerCardId } = this.state;
+    const { user } = this.props;
     return (
       <Fragment>
         <div className="ops-dashboard__fellows-summary">
           <p className="ops-dashboard__fellow-summary-text mb-2">PROJECTS</p>
           <p className="filter_card_title">Filter by clicking cards</p>
         </div>
-        {this.renderFilterCards('project')}
+        {user.roles.WATCH_TOWER_EM || user.roles.WATCH_TOWER_SL ? (
+          <MapLfTtlSummaryCard
+            lfTtlSummary={this.mapLfTtlData()}
+            filterFellows={this.filterFellows}
+            lfTtlCheckId={managerCardId}
+          />
+        ) : (
+          this.renderFilterCards('project')
+        )}
         {this.renderFilterCards('status')}
         <div>{this.renderResultCount()}</div>
         <div className="">
@@ -252,16 +351,10 @@ class DeveloperDashboard extends Component {
     );
   };
 
-  /**
-   * @method render
-   * @descrption - render lifecycle method
-   */
   render() {
-    const { fellowSummaryDetails } = this.state;
     const { role, user } = this.props;
-
+    const { fellowSummaryDetails } = this.state;
     const { ErrorBoundary } = Error;
-
     return (
       <ErrorBoundary>
         <Switch>

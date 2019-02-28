@@ -49,6 +49,8 @@ describe('<FellowsSummary />', () => {
     const { props } = setup({ loggedInRole: 'WATCH_TOWER_OPS' });
     const div = document.createElement('div');
     ReactDOM.render(<FellowsSummary {...props} />, div);
+    const newProp = { ...props, displayByRole: null };
+    ReactDOM.render(<FellowsSummary {...newProp} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
