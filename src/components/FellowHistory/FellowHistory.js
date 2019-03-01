@@ -16,20 +16,20 @@ export class FellowHistory extends Component {
     };
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     const { fellowSummaryDetails } = this.props;
 
     if (fellowSummaryDetails.length !== 0) this.setFellow();
-  };
+  }
 
-  componentDidUpdate = () => {
+  componentDidUpdate() {
     const { fellowSummaryDetails } = this.props;
     const { updated } = this.state;
 
     if (!updated && fellowSummaryDetails.length > 0) this.setFellow();
-  };
+  }
 
-  setFellow = () => {
+  setFellow() {
     const { match, fellowSummaryDetails, history } = this.props;
     const fellowFound = fellowSummaryDetails.find(
       fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
@@ -72,10 +72,10 @@ export class FellowHistory extends Component {
               </span>
             </div>
             <div className="row">
-              <div className="col-xs-12 col-md-4">
+              <div className="col-lg-4">
                 <FellowProfileCard fellow={fellow} />
               </div>
-              <div className="col-xs-12 col-md-8">
+              <div className="col-md-8">
                 <FellowSummaryBreakdown
                   fellowSummaryBreakdown={this.mapDisplayslistData(fellow)}
                 />

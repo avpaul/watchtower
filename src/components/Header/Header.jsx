@@ -52,7 +52,7 @@ export class Header extends Component {
         this.setState({ activeItems: { developers: true } });
         break;
       default: {
-        if (location.pathname.search('/dashboard/fellow/') === 0) {
+        if (location.pathname.search('/dashboard/fellows/') === 0) {
           this.setState({ activeItems: { developers: true } });
         }
       }

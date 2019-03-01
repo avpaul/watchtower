@@ -50,7 +50,7 @@ class DeveloperDashboard extends Component {
 
   redirectUrl = (email, history) => {
     const name = email.substr(0, email.search('@andela.com'));
-    history.push(`/dashboard/fellow/${name}`);
+    history.push(`/dashboard/fellows/${name}`);
   };
 
   handleCardClick = e => {
@@ -97,7 +97,7 @@ class DeveloperDashboard extends Component {
       <ErrorBoundary>
         <Switch>
           <Route
-            path="/dashboard/fellow/:name"
+            path="/dashboard/fellows/:name"
             render={newProps => (
               <FellowHistoryContainer
                 role={role}
