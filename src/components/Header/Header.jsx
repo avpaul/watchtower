@@ -43,6 +43,7 @@ export class Header extends Component {
   componentDidMount() {
     const { role, location } = this.props;
     this.switchNotificationsType(role);
+
     switch (location.pathname) {
       case '/dashboard':
         this.setState({ activeItems: { dashboard: true } });
@@ -50,7 +51,11 @@ export class Header extends Component {
       case '/dashboard/fellows':
         this.setState({ activeItems: { developers: true } });
         break;
-      default:
+      default: {
+        if (location.pathname.search('/dashboard/fellow/') === 0) {
+          this.setState({ activeItems: { developers: true } });
+        }
+      }
     }
   }
 

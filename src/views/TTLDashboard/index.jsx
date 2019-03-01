@@ -20,8 +20,10 @@ const TTLDashboard = props => (
         />
         <Route
           exact
-          path="/dashboard/fellows"
-          component={() => <DeveloperDashboardContainer {...props} />}
+          path={['/dashboard/fellows', '/dashboard/fellow/:name']}
+          component={newProps => (
+            <DeveloperDashboardContainer match={newProps.match} {...props} />
+          )}
         />
       </Switch>
     </React.Fragment>

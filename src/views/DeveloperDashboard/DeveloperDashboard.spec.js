@@ -1,25 +1,34 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+
 import DeveloperDashboard from './DeveloperDashboard';
+
 import FellowSummaryData from '../../__mocks__/fellowSummary.json';
 import EngineeringManagerFellowsSummaryData from '../../__mocks__/engineeringManagerTtls.json';
 import SimulationLeadData from '../../__mocks__/simulationsLeadLf.json';
 
-const setup = loggedInRole => {
-  let managerDataForTest;
+export function getManagerDataByRole(loggedInRole) {
   switch (loggedInRole) {
     case 'WATCH_TOWER_EM':
-      managerDataForTest = EngineeringManagerFellowsSummaryData;
-      break;
+      return EngineeringManagerFellowsSummaryData;
     case 'WATCH_TOWER_SL':
-      managerDataForTest = SimulationLeadData;
-      break;
+      return SimulationLeadData;
     case 'WATCH_TOWER_TTL':
     case 'WATCH_TOWER_LF':
-      managerDataForTest = FellowSummaryData;
-      break;
+      return FellowSummaryData;
     default:
+      return null;
   }
+}
+
+const setup = loggedInRole => {
+  /**
+   * Creates an enzyme instance to test the component.
+   * @function
+   *
+   * @returns { developerDashboardWrapper, props }
+   */
+  const managerDataForTest = getManagerDataByRole(loggedInRole);
 
   const props = {
     user: {
@@ -35,19 +44,26 @@ const setup = loggedInRole => {
       })
     )
   };
+
   const developerDashboardWrapper = shallow(<DeveloperDashboard {...props} />);
 
   return { developerDashboardWrapper, props };
 };
+
 describe('Developers dashboard test', () => {
-  it('should render developers dashboard without crashing', () => {
-    const { developerDashboardWrapper } = setup('WATCH_TOWER_TTL');
+  const testComponentUsingRole = role => {
+    const { developerDashboardWrapper } = setup(role);
     expect(developerDashboardWrapper).toMatchSnapshot();
+  };
+
+  it('should render developers dashboard as WATCH_TOWER_TTL without crashing', () => {
+    testComponentUsingRole('WATCH_TOWER_TTL');
   });
-  it('should render developers dashboard without crashing', () => {
-    const { developerDashboardWrapper } = setup('WATCH_TOWER_SL');
-    expect(developerDashboardWrapper).toMatchSnapshot();
+
+  it('should render developers dashboard as WATCH_TOWER_SL without crashing', () => {
+    testComponentUsingRole('WATCH_TOWER_SL');
   });
+
   it('should call the getManagerFellowsAction when developers dashboard mounts', () => {
     const { developerDashboardWrapper, props } = setup('WATCH_TOWER_EM');
     const { getManagerFellowsSummary } = props;
@@ -55,3 +71,7 @@ describe('Developers dashboard test', () => {
     expect(getManagerFellowsSummary).toHaveBeenCalled();
   });
 });
+
+export default {
+  getManagerDataByRole
+};

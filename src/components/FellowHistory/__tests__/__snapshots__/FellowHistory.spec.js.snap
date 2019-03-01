@@ -1,0 +1,539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fellow History Container renders to match shapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FellowHistory
+    fellowSummaryDetails={
+        Array [
+            Object {
+              "email": "kingsley.obot@andela.com",
+              "id": 10,
+              "picture": null,
+              "project": "Watch Tower",
+              "user": Object {
+                "firstName": "Kingsley",
+                "lastName": "Obot",
+              },
+            },
+          ]
+    }
+    match={
+        Object {
+            "params": Object {
+              "name": "kingsley.obot",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="fellow-history__top row"
+>
+        <div
+                className="col"
+        >
+                <div
+                        className="row"
+                >
+                        <span
+                                className="fellow-history__header col"
+                        >
+                                DEVELOPER HISTORY
+                        </span>
+                </div>
+                <div
+                        className="row"
+                >
+                        <div
+                                className="col-xs-12 col-md-4"
+                        >
+                                <FellowProfile
+                                        fellow={
+                                                Object {
+                                                        "email": "kingsley.obot@andela.com",
+                                                        "id": 10,
+                                                        "picture": null,
+                                                        "project": "Watch Tower",
+                                                        "user": Object {
+                                                          "firstName": "Kingsley",
+                                                          "lastName": "Obot",
+                                                        },
+                                                      }
+                                        }
+                                />
+                        </div>
+                </div>
+        </div>
+</div>,
+      "className": "fellow-history container",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="col"
+>
+          <div
+                    className="row"
+          >
+                    <span
+                              className="fellow-history__header col"
+                    >
+                              DEVELOPER HISTORY
+                    </span>
+          </div>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-xs-12 col-md-4"
+                    >
+                              <FellowProfile
+                                        fellow={
+                                                  Object {
+                                                            "email": "kingsley.obot@andela.com",
+                                                            "id": 10,
+                                                            "picture": null,
+                                                            "project": "Watch Tower",
+                                                            "user": Object {
+                                                              "firstName": "Kingsley",
+                                                              "lastName": "Obot",
+                                                            },
+                                                          }
+                                        }
+                              />
+                    </div>
+          </div>
+</div>,
+        "className": "fellow-history__top row",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="row"
+>
+              <span
+                            className="fellow-history__header col"
+              >
+                            DEVELOPER HISTORY
+              </span>
+</div>,
+            <div
+              className="row"
+>
+              <div
+                            className="col-xs-12 col-md-4"
+              >
+                            <FellowProfile
+                                          fellow={
+                                                        Object {
+                                                                      "email": "kingsley.obot@andela.com",
+                                                                      "id": 10,
+                                                                      "picture": null,
+                                                                      "project": "Watch Tower",
+                                                                      "user": Object {
+                                                                        "firstName": "Kingsley",
+                                                                        "lastName": "Obot",
+                                                                      },
+                                                                    }
+                                          }
+                            />
+              </div>
+</div>,
+          ],
+          "className": "col",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span
+                className="fellow-history__header col"
+>
+                DEVELOPER HISTORY
+</span>,
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "DEVELOPER HISTORY",
+                "className": "fellow-history__header col",
+              },
+              "ref": null,
+              "rendered": "DEVELOPER HISTORY",
+              "type": "span",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="col-xs-12 col-md-4"
+>
+                <FellowProfile
+                                fellow={
+                                                Object {
+                                                                "email": "kingsley.obot@andela.com",
+                                                                "id": 10,
+                                                                "picture": null,
+                                                                "project": "Watch Tower",
+                                                                "user": Object {
+                                                                  "firstName": "Kingsley",
+                                                                  "lastName": "Obot",
+                                                                },
+                                                              }
+                                }
+                />
+</div>,
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <FellowProfile
+                  fellow={
+                                    Object {
+                                                      "email": "kingsley.obot@andela.com",
+                                                      "id": 10,
+                                                      "picture": null,
+                                                      "project": "Watch Tower",
+                                                      "user": Object {
+                                                        "firstName": "Kingsley",
+                                                        "lastName": "Obot",
+                                                      },
+                                                    }
+                  }
+/>,
+                "className": "col-xs-12 col-md-4",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "fellow": Object {
+                    "email": "kingsley.obot@andela.com",
+                    "id": 10,
+                    "picture": null,
+                    "project": "Watch Tower",
+                    "user": Object {
+                      "firstName": "Kingsley",
+                      "lastName": "Obot",
+                    },
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="fellow-history__top row"
+>
+          <div
+                    className="col"
+          >
+                    <div
+                              className="row"
+                    >
+                              <span
+                                        className="fellow-history__header col"
+                              >
+                                        DEVELOPER HISTORY
+                              </span>
+                    </div>
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-12 col-md-4"
+                              >
+                                        <FellowProfile
+                                                  fellow={
+                                                            Object {
+                                                                      "email": "kingsley.obot@andela.com",
+                                                                      "id": 10,
+                                                                      "picture": null,
+                                                                      "project": "Watch Tower",
+                                                                      "user": Object {
+                                                                        "firstName": "Kingsley",
+                                                                        "lastName": "Obot",
+                                                                      },
+                                                                    }
+                                                  }
+                                        />
+                              </div>
+                    </div>
+          </div>
+</div>,
+        "className": "fellow-history container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="col"
+>
+            <div
+                        className="row"
+            >
+                        <span
+                                    className="fellow-history__header col"
+                        >
+                                    DEVELOPER HISTORY
+                        </span>
+            </div>
+            <div
+                        className="row"
+            >
+                        <div
+                                    className="col-xs-12 col-md-4"
+                        >
+                                    <FellowProfile
+                                                fellow={
+                                                            Object {
+                                                                        "email": "kingsley.obot@andela.com",
+                                                                        "id": 10,
+                                                                        "picture": null,
+                                                                        "project": "Watch Tower",
+                                                                        "user": Object {
+                                                                          "firstName": "Kingsley",
+                                                                          "lastName": "Obot",
+                                                                        },
+                                                                      }
+                                                }
+                                    />
+                        </div>
+            </div>
+</div>,
+          "className": "fellow-history__top row",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="row"
+>
+                <span
+                                className="fellow-history__header col"
+                >
+                                DEVELOPER HISTORY
+                </span>
+</div>,
+              <div
+                className="row"
+>
+                <div
+                                className="col-xs-12 col-md-4"
+                >
+                                <FellowProfile
+                                                fellow={
+                                                                Object {
+                                                                                "email": "kingsley.obot@andela.com",
+                                                                                "id": 10,
+                                                                                "picture": null,
+                                                                                "project": "Watch Tower",
+                                                                                "user": Object {
+                                                                                  "firstName": "Kingsley",
+                                                                                  "lastName": "Obot",
+                                                                                },
+                                                                              }
+                                                }
+                                />
+                </div>
+</div>,
+            ],
+            "className": "col",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span
+                  className="fellow-history__header col"
+>
+                  DEVELOPER HISTORY
+</span>,
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "DEVELOPER HISTORY",
+                  "className": "fellow-history__header col",
+                },
+                "ref": null,
+                "rendered": "DEVELOPER HISTORY",
+                "type": "span",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="col-xs-12 col-md-4"
+>
+                  <FellowProfile
+                                    fellow={
+                                                      Object {
+                                                                        "email": "kingsley.obot@andela.com",
+                                                                        "id": 10,
+                                                                        "picture": null,
+                                                                        "project": "Watch Tower",
+                                                                        "user": Object {
+                                                                          "firstName": "Kingsley",
+                                                                          "lastName": "Obot",
+                                                                        },
+                                                                      }
+                                    }
+                  />
+</div>,
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <FellowProfile
+                    fellow={
+                                        Object {
+                                                            "email": "kingsley.obot@andela.com",
+                                                            "id": 10,
+                                                            "picture": null,
+                                                            "project": "Watch Tower",
+                                                            "user": Object {
+                                                              "firstName": "Kingsley",
+                                                              "lastName": "Obot",
+                                                            },
+                                                          }
+                    }
+/>,
+                  "className": "col-xs-12 col-md-4",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "fellow": Object {
+                      "email": "kingsley.obot@andela.com",
+                      "id": 10,
+                      "picture": null,
+                      "project": "Watch Tower",
+                      "user": Object {
+                        "firstName": "Kingsley",
+                        "lastName": "Obot",
+                      },
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

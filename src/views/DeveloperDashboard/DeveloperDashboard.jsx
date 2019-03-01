@@ -1,8 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Route, Switch } from 'react-router-dom';
+
 import MapFellowsSummaryCard from '../../components/MapFellowsSummaryCard';
 import Error from '../../components/Error';
 import FilterButton from '../../components/Buttons/Button';
+import FellowHistoryContainer from '../../components/FellowHistory';
 
 class DeveloperDashboard extends Component {
   constructor(props) {
@@ -14,21 +17,17 @@ class DeveloperDashboard extends Component {
 
   componentDidMount() {
     const { getManagerFellowsSummary, user } = this.props;
-    const fellows = [];
-    const updateState = data => {
-      data.forEach(x => {
-        fellows.push(...x.fellows);
-        this.setState({ fellowSummaryDetails: fellows });
-      });
-    };
+
     getManagerFellowsSummary(user.roles, user.email).then(data => {
       if (!data.error) {
         switch (true) {
           case !!user.roles.WATCH_TOWER_EM:
-            updateState(data.managerFellowsSummary.engineeringManager.ttls);
+            this.updateState(
+              data.managerFellowsSummary.engineeringManager.ttls
+            );
             break;
           case !!user.roles.WATCH_TOWER_SL:
-            updateState(data.managerFellowsSummary.simulationsLead.lfs);
+            this.updateState(data.managerFellowsSummary.simulationsLead.lfs);
             break;
           case !!user.roles.WATCH_TOWER_LF:
           case !!user.roles.WATCH_TOWER_TTL:
@@ -37,8 +36,16 @@ class DeveloperDashboard extends Component {
             });
             break;
           default:
-        }}});
+        }
+      }
+    });
   }
+
+  updateState = data => {
+    const fellows = [];
+    data.forEach(x => fellows.push(...x.fellows));
+    this.setState({ fellowSummaryDetails: fellows });
+  };
 
   renderResultCount = () => {
     const { fellowSummaryDetails } = this.state;
@@ -54,19 +61,43 @@ class DeveloperDashboard extends Component {
     );
   };
 
+  renderFellowsDashboard = fellowSummaryDetails => (
+    <Fragment>
+      <div>{this.renderResultCount()}</div>
+      <div className="">
+        <MapFellowsSummaryCard
+          fellowsSummaryCardDetails={fellowSummaryDetails}
+        />
+      </div>
+    </Fragment>
+  );
+
   render() {
     const { fellowSummaryDetails } = this.state;
+    const { role, user } = this.props;
+
     const { ErrorBoundary } = Error;
+
     return (
       <ErrorBoundary>
-        <Fragment>
-          <div>{this.renderResultCount()}</div>
-          <div className="">
-            <MapFellowsSummaryCard
-              fellowsSummaryCardDetails={fellowSummaryDetails}
-            />
-          </div>
-        </Fragment>
+        <Switch>
+          <Route
+            path="/dashboard/fellow/:name"
+            render={newProps => (
+              <FellowHistoryContainer
+                role={role}
+                user={user}
+                {...newProps}
+                fellowSummaryDetails={fellowSummaryDetails}
+              />
+            )}
+          />
+
+          <Route
+            path="/dashboard/fellows"
+            component={() => this.renderFellowsDashboard(fellowSummaryDetails)}
+          />
+        </Switch>
       </ErrorBoundary>
     );
   }
@@ -74,7 +105,8 @@ class DeveloperDashboard extends Component {
 
 DeveloperDashboard.propTypes = {
   getManagerFellowsSummary: PropTypes.func.isRequired,
-  user: PropTypes.shape({}).isRequired
+  user: PropTypes.shape({}).isRequired,
+  role: PropTypes.shape({}).isRequired
 };
 
 export default DeveloperDashboard;
