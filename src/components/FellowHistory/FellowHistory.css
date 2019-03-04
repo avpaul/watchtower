@@ -1,0 +1,79 @@
+.fellow-history__top {
+  float: left;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.fellow-history__header {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.fellow-card {
+  box-sizing: border-box;
+  height: 120px;
+  border: 1px solid rgba(101, 110, 114, 0.12);
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 7px 0 rgba(35, 47, 73, 0.06);
+}
+
+.fellow-card:hover {
+  box-shadow: rgba(35, 47, 73, 0.15) 0px 4px 10px 1px;
+}
+
+.fellow-card__image {
+  margin: 60px 20px 0 40px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+.fellow-card__image img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.fellow-card__right {
+  float: left;
+  width: 50%;
+  margin-top: 30px;
+}
+
+.fellow-card__name {
+  float: left;
+  width: 100%;
+  color: #333;
+  font-weight: 500;
+}
+
+.fellow-card__name--s {
+  font-size: 16px;
+}
+
+.fellow-card__name--b {
+  font-size: 24px;
+}
+
+.fellow-card__project {
+  float: left;
+  width: 100%;
+  color: #999;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.fellow-history__not-found {
+  color: #999;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}

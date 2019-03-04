@@ -34,7 +34,8 @@
 
 .fellow-summary-card-header {
   min-height: 95px;
-  margin-left: -2px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .fellow-summary-card-header .avatar {

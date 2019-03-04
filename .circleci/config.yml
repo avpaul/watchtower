@@ -116,7 +116,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - *attach_workspace
-      - run: 
+      - run:
           name: Add gcloud key to json file
           command: echo $GCLOUD_SERVICE_KEY > ~/watch-tower/auth_key.json
       - *configure_gcloud
@@ -145,7 +145,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - *attach_workspace
-      - run: 
+      - run:
           name: Add gcloud key to json file
           command: echo $GCLOUD_SERVICE_KEY > ~/watch-tower/auth_key.json
       - *configure_gcloud
@@ -188,22 +188,22 @@ jobs:
   slack_staging_notification:
     working_directory: ~/watch-tower
     docker:
-        - image: circleci/node:latest
+      - image: circleci/node:latest
     steps:
-        - checkout
-        - run:
-            name: Slack notification
-            command: .circleci/slack.sh
+      - checkout
+      - run:
+          name: Slack notification
+          command: .circleci/slack.sh
 
   slack_production_notification:
     working_directory: ~/watch-tower
     docker:
-        - image: circleci/node:latest
+      - image: circleci/node:latest
     steps:
-        - checkout
-        - run:
-            name: Slack notification
-            command: .circleci/slack.sh
+      - checkout
+      - run:
+          name: Slack notification
+          command: .circleci/slack.sh
 
   lint:
     <<: *defaults
@@ -227,10 +227,10 @@ jobs:
       - run:
           name: Run watch-tower Test Suites
           command: |
-              ./cc-test-reporter before-build
-              yarn test --coverage
-              ./cc-test-reporter format-coverage coverage/lcov.info -t lcov
-              ./cc-test-reporter upload-coverage
+            ./cc-test-reporter before-build
+            yarn test --coverage
+            ./cc-test-reporter format-coverage coverage/lcov.info -t lcov
+            ./cc-test-reporter upload-coverage
 
 workflows:
   version: 2

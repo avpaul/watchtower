@@ -36,6 +36,7 @@ ShallowWrapper {
             },
           ]
     }
+    handleClick={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -58,7 +59,9 @@ ShallowWrapper {
                 ending="16-Jan-2019"
                 level="D0B"
                 lmsOutputs="4/18"
+                mykey={0}
                 name="Kingsley Obot"
+                onClick={[Function]}
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Watch Tower"
                 started="15-Oct-2018"
@@ -69,7 +72,9 @@ ShallowWrapper {
                 ending="16-Jan-2019"
                 level="D0B"
                 lmsOutputs="4/18"
+                mykey={1}
                 name="Kingsley Obot"
+                onClick={[Function]}
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Watch Tower"
                 started="15-Oct-2018"
@@ -90,7 +95,9 @@ ShallowWrapper {
             ending="16-Jan-2019"
             level="D0B"
             lmsOutputs="4/18"
+            mykey={0}
             name="Kingsley Obot"
+            onClick={[Function]}
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Watch Tower"
             started="15-Oct-2018"
@@ -101,7 +108,9 @@ ShallowWrapper {
             ending="16-Jan-2019"
             level="D0B"
             lmsOutputs="4/18"
+            mykey={1}
             name="Kingsley Obot"
+            onClick={[Function]}
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Watch Tower"
             started="15-Oct-2018"
@@ -121,7 +130,9 @@ ShallowWrapper {
             "ending": "16-Jan-2019",
             "level": "D0B",
             "lmsOutputs": "4/18",
+            "mykey": 0,
             "name": "Kingsley Obot",
+            "onClick": [Function],
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Watch Tower",
             "started": "15-Oct-2018",
@@ -140,7 +151,9 @@ ShallowWrapper {
             "ending": "16-Jan-2019",
             "level": "D0B",
             "lmsOutputs": "4/18",
+            "mykey": 1,
             "name": "Kingsley Obot",
+            "onClick": [Function],
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Watch Tower",
             "started": "15-Oct-2018",
@@ -169,7 +182,9 @@ ShallowWrapper {
                     ending="16-Jan-2019"
                     level="D0B"
                     lmsOutputs="4/18"
+                    mykey={0}
                     name="Kingsley Obot"
+                    onClick={[Function]}
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Watch Tower"
                     started="15-Oct-2018"
@@ -180,7 +195,9 @@ ShallowWrapper {
                     ending="16-Jan-2019"
                     level="D0B"
                     lmsOutputs="4/18"
+                    mykey={1}
                     name="Kingsley Obot"
+                    onClick={[Function]}
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Watch Tower"
                     started="15-Oct-2018"
@@ -201,7 +218,9 @@ ShallowWrapper {
               ending="16-Jan-2019"
               level="D0B"
               lmsOutputs="4/18"
+              mykey={0}
               name="Kingsley Obot"
+              onClick={[Function]}
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Watch Tower"
               started="15-Oct-2018"
@@ -212,7 +231,9 @@ ShallowWrapper {
               ending="16-Jan-2019"
               level="D0B"
               lmsOutputs="4/18"
+              mykey={1}
               name="Kingsley Obot"
+              onClick={[Function]}
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Watch Tower"
               started="15-Oct-2018"
@@ -232,7 +253,9 @@ ShallowWrapper {
               "ending": "16-Jan-2019",
               "level": "D0B",
               "lmsOutputs": "4/18",
+              "mykey": 0,
               "name": "Kingsley Obot",
+              "onClick": [Function],
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Watch Tower",
               "started": "15-Oct-2018",
@@ -251,7 +274,9 @@ ShallowWrapper {
               "ending": "16-Jan-2019",
               "level": "D0B",
               "lmsOutputs": "4/18",
+              "mykey": 1,
               "name": "Kingsley Obot",
+              "onClick": [Function],
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Watch Tower",
               "started": "15-Oct-2018",

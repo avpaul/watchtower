@@ -1,15 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Developers dashboard test should render developers dashboard without crashing 1`] = `
+exports[`Developers dashboard test should render developers dashboard as WATCH_TOWER_SL without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DeveloperDashboard
     getManagerFellowsSummary={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     user={
         Object {
             "email": "ty@andela.com",
             "roles": Object {
-              "WATCH_TOWER_TTL": "34323234Yf-34",
+              "WATCH_TOWER_SL": "34323234Yf-34",
             },
           }
     }
@@ -27,68 +32,32 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Unknown>
-        <div>
-                <div
-                        className="ops-dashboard__fellows-summary fellow-summary-page-header"
-                >
-                        <span
-                                className="header-underline mr-2 pb-2"
-                        >
-                                0 Total
-                        </span>
-                        <span
-                                className="mr-3"
-                        >
-                                Fellow (Filtered)
-                        </span>
-                        <FilterButton
-                                clearFilters={[Function]}
-                        />
-                </div>
-        </div>
-        <div
-                className=""
-        >
-                <MapFellowsSummary
-                        fellowsSummaryCardDetails={Array []}
-                />
-        </div>
-</Unknown>,
+      "children": <Switch>
+        <Route
+                path="/dashboard/fellow/:name"
+                render={[Function]}
+        />
+        <Route
+                component={[Function]}
+                path="/dashboard/fellows"
+        />
+</Switch>,
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
-          <div>
-            <div
-                        className="ops-dashboard__fellows-summary fellow-summary-page-header"
-            >
-                        <span
-                                    className="header-underline mr-2 pb-2"
-                        >
-                                    0 Total
-                        </span>
-                        <span
-                                    className="mr-3"
-                        >
-                                    Fellow (Filtered)
-                        </span>
-                        <FilterButton
-                                    clearFilters={[Function]}
-                        />
-            </div>
-</div>,
-          <div
-            className=""
->
-            <MapFellowsSummary
-                        fellowsSummaryCardDetails={Array []}
-            />
-</div>,
+          <Route
+            path="/dashboard/fellow/:name"
+            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            path="/dashboard/fellows"
+/>,
         ],
       },
       "ref": null,
@@ -96,117 +65,29 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <div
-              className="ops-dashboard__fellows-summary fellow-summary-page-header"
->
-              <span
-                            className="header-underline mr-2 pb-2"
-              >
-                            0 Total
-              </span>
-              <span
-                            className="mr-3"
-              >
-                            Fellow (Filtered)
-              </span>
-              <FilterButton
-                            clearFilters={[Function]}
-              />
-</div>,
+            "path": "/dashboard/fellow/:name",
+            "render": [Function],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  className="header-underline mr-2 pb-2"
->
-                  0 Total
-</span>,
-                <span
-                  className="mr-3"
->
-                  Fellow (Filtered)
-</span>,
-                <FilterButton
-                  clearFilters={[Function]}
-/>,
-              ],
-              "className": "ops-dashboard__fellows-summary fellow-summary-page-header",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "0 Total",
-                  "className": "header-underline mr-2 pb-2",
-                },
-                "ref": null,
-                "rendered": "0 Total",
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Fellow (Filtered)",
-                  "className": "mr-3",
-                },
-                "ref": null,
-                "rendered": "Fellow (Filtered)",
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "clearFilters": [Function],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <MapFellowsSummary
-              fellowsSummaryCardDetails={Array []}
-/>,
-            "className": "",
+            "component": [Function],
+            "path": "/dashboard/fellows",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "fellowsSummaryCardDetails": Array [],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
       ],
-      "type": Symbol(react.fragment),
+      "type": [Function],
     },
     "type": [Function],
   },
@@ -216,68 +97,32 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Unknown>
-          <div>
-                    <div
-                              className="ops-dashboard__fellows-summary fellow-summary-page-header"
-                    >
-                              <span
-                                        className="header-underline mr-2 pb-2"
-                              >
-                                        0 Total
-                              </span>
-                              <span
-                                        className="mr-3"
-                              >
-                                        Fellow (Filtered)
-                              </span>
-                              <FilterButton
-                                        clearFilters={[Function]}
-                              />
-                    </div>
-          </div>
-          <div
-                    className=""
-          >
-                    <MapFellowsSummary
-                              fellowsSummaryCardDetails={Array []}
-                    />
-          </div>
-</Unknown>,
+        "children": <Switch>
+          <Route
+                    path="/dashboard/fellow/:name"
+                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    path="/dashboard/fellows"
+          />
+</Switch>,
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "children": Array [
-            <div>
-              <div
-                            className="ops-dashboard__fellows-summary fellow-summary-page-header"
-              >
-                            <span
-                                          className="header-underline mr-2 pb-2"
-                            >
-                                          0 Total
-                            </span>
-                            <span
-                                          className="mr-3"
-                            >
-                                          Fellow (Filtered)
-                            </span>
-                            <FilterButton
-                                          clearFilters={[Function]}
-                            />
-              </div>
-</div>,
-            <div
-              className=""
->
-              <MapFellowsSummary
-                            fellowsSummaryCardDetails={Array []}
-              />
-</div>,
+            <Route
+              path="/dashboard/fellow/:name"
+              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              path="/dashboard/fellows"
+/>,
           ],
         },
         "ref": null,
@@ -285,117 +130,29 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": <div
-                className="ops-dashboard__fellows-summary fellow-summary-page-header"
->
-                <span
-                                className="header-underline mr-2 pb-2"
-                >
-                                0 Total
-                </span>
-                <span
-                                className="mr-3"
-                >
-                                Fellow (Filtered)
-                </span>
-                <FilterButton
-                                clearFilters={[Function]}
-                />
-</div>,
+              "path": "/dashboard/fellow/:name",
+              "render": [Function],
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span
-                    className="header-underline mr-2 pb-2"
->
-                    0 Total
-</span>,
-                  <span
-                    className="mr-3"
->
-                    Fellow (Filtered)
-</span>,
-                  <FilterButton
-                    clearFilters={[Function]}
-/>,
-                ],
-                "className": "ops-dashboard__fellows-summary fellow-summary-page-header",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "0 Total",
-                    "className": "header-underline mr-2 pb-2",
-                  },
-                  "ref": null,
-                  "rendered": "0 Total",
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Fellow (Filtered)",
-                    "className": "mr-3",
-                  },
-                  "ref": null,
-                  "rendered": "Fellow (Filtered)",
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "clearFilters": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": "div",
-            },
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": <MapFellowsSummary
-                fellowsSummaryCardDetails={Array []}
-/>,
-              "className": "",
+              "component": [Function],
+              "path": "/dashboard/fellows",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "fellowsSummaryCardDetails": Array [],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
         ],
-        "type": Symbol(react.fragment),
+        "type": [Function],
       },
       "type": [Function],
     },
@@ -420,16 +177,21 @@ ShallowWrapper {
 }
 `;
 
-exports[`Developers dashboard test should render developers dashboard without crashing 2`] = `
+exports[`Developers dashboard test should render developers dashboard as WATCH_TOWER_TTL without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DeveloperDashboard
     getManagerFellowsSummary={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     user={
         Object {
             "email": "ty@andela.com",
             "roles": Object {
-              "WATCH_TOWER_SL": "34323234Yf-34",
+              "WATCH_TOWER_TTL": "34323234Yf-34",
             },
           }
     }
@@ -447,68 +209,32 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Unknown>
-        <div>
-                <div
-                        className="ops-dashboard__fellows-summary fellow-summary-page-header"
-                >
-                        <span
-                                className="header-underline mr-2 pb-2"
-                        >
-                                0 Total
-                        </span>
-                        <span
-                                className="mr-3"
-                        >
-                                Fellow (Filtered)
-                        </span>
-                        <FilterButton
-                                clearFilters={[Function]}
-                        />
-                </div>
-        </div>
-        <div
-                className=""
-        >
-                <MapFellowsSummary
-                        fellowsSummaryCardDetails={Array []}
-                />
-        </div>
-</Unknown>,
+      "children": <Switch>
+        <Route
+                path="/dashboard/fellow/:name"
+                render={[Function]}
+        />
+        <Route
+                component={[Function]}
+                path="/dashboard/fellows"
+        />
+</Switch>,
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
-          <div>
-            <div
-                        className="ops-dashboard__fellows-summary fellow-summary-page-header"
-            >
-                        <span
-                                    className="header-underline mr-2 pb-2"
-                        >
-                                    0 Total
-                        </span>
-                        <span
-                                    className="mr-3"
-                        >
-                                    Fellow (Filtered)
-                        </span>
-                        <FilterButton
-                                    clearFilters={[Function]}
-                        />
-            </div>
-</div>,
-          <div
-            className=""
->
-            <MapFellowsSummary
-                        fellowsSummaryCardDetails={Array []}
-            />
-</div>,
+          <Route
+            path="/dashboard/fellow/:name"
+            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            path="/dashboard/fellows"
+/>,
         ],
       },
       "ref": null,
@@ -516,117 +242,29 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <div
-              className="ops-dashboard__fellows-summary fellow-summary-page-header"
->
-              <span
-                            className="header-underline mr-2 pb-2"
-              >
-                            0 Total
-              </span>
-              <span
-                            className="mr-3"
-              >
-                            Fellow (Filtered)
-              </span>
-              <FilterButton
-                            clearFilters={[Function]}
-              />
-</div>,
+            "path": "/dashboard/fellow/:name",
+            "render": [Function],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  className="header-underline mr-2 pb-2"
->
-                  0 Total
-</span>,
-                <span
-                  className="mr-3"
->
-                  Fellow (Filtered)
-</span>,
-                <FilterButton
-                  clearFilters={[Function]}
-/>,
-              ],
-              "className": "ops-dashboard__fellows-summary fellow-summary-page-header",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "0 Total",
-                  "className": "header-underline mr-2 pb-2",
-                },
-                "ref": null,
-                "rendered": "0 Total",
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Fellow (Filtered)",
-                  "className": "mr-3",
-                },
-                "ref": null,
-                "rendered": "Fellow (Filtered)",
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "clearFilters": [Function],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <MapFellowsSummary
-              fellowsSummaryCardDetails={Array []}
-/>,
-            "className": "",
+            "component": [Function],
+            "path": "/dashboard/fellows",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "fellowsSummaryCardDetails": Array [],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
       ],
-      "type": Symbol(react.fragment),
+      "type": [Function],
     },
     "type": [Function],
   },
@@ -636,68 +274,32 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Unknown>
-          <div>
-                    <div
-                              className="ops-dashboard__fellows-summary fellow-summary-page-header"
-                    >
-                              <span
-                                        className="header-underline mr-2 pb-2"
-                              >
-                                        0 Total
-                              </span>
-                              <span
-                                        className="mr-3"
-                              >
-                                        Fellow (Filtered)
-                              </span>
-                              <FilterButton
-                                        clearFilters={[Function]}
-                              />
-                    </div>
-          </div>
-          <div
-                    className=""
-          >
-                    <MapFellowsSummary
-                              fellowsSummaryCardDetails={Array []}
-                    />
-          </div>
-</Unknown>,
+        "children": <Switch>
+          <Route
+                    path="/dashboard/fellow/:name"
+                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    path="/dashboard/fellows"
+          />
+</Switch>,
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "children": Array [
-            <div>
-              <div
-                            className="ops-dashboard__fellows-summary fellow-summary-page-header"
-              >
-                            <span
-                                          className="header-underline mr-2 pb-2"
-                            >
-                                          0 Total
-                            </span>
-                            <span
-                                          className="mr-3"
-                            >
-                                          Fellow (Filtered)
-                            </span>
-                            <FilterButton
-                                          clearFilters={[Function]}
-                            />
-              </div>
-</div>,
-            <div
-              className=""
->
-              <MapFellowsSummary
-                            fellowsSummaryCardDetails={Array []}
-              />
-</div>,
+            <Route
+              path="/dashboard/fellow/:name"
+              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              path="/dashboard/fellows"
+/>,
           ],
         },
         "ref": null,
@@ -705,117 +307,29 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": <div
-                className="ops-dashboard__fellows-summary fellow-summary-page-header"
->
-                <span
-                                className="header-underline mr-2 pb-2"
-                >
-                                0 Total
-                </span>
-                <span
-                                className="mr-3"
-                >
-                                Fellow (Filtered)
-                </span>
-                <FilterButton
-                                clearFilters={[Function]}
-                />
-</div>,
+              "path": "/dashboard/fellow/:name",
+              "render": [Function],
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span
-                    className="header-underline mr-2 pb-2"
->
-                    0 Total
-</span>,
-                  <span
-                    className="mr-3"
->
-                    Fellow (Filtered)
-</span>,
-                  <FilterButton
-                    clearFilters={[Function]}
-/>,
-                ],
-                "className": "ops-dashboard__fellows-summary fellow-summary-page-header",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "0 Total",
-                    "className": "header-underline mr-2 pb-2",
-                  },
-                  "ref": null,
-                  "rendered": "0 Total",
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Fellow (Filtered)",
-                    "className": "mr-3",
-                  },
-                  "ref": null,
-                  "rendered": "Fellow (Filtered)",
-                  "type": "span",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "clearFilters": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": "div",
-            },
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "children": <MapFellowsSummary
-                fellowsSummaryCardDetails={Array []}
-/>,
-              "className": "",
+              "component": [Function],
+              "path": "/dashboard/fellows",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "fellowsSummaryCardDetails": Array [],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
         ],
-        "type": Symbol(react.fragment),
+        "type": [Function],
       },
       "type": [Function],
     },
