@@ -34,7 +34,7 @@ ShallowWrapper {
           className="fellow-card__image"
 >
           <img
-                    alt="Kingsley Obot profile pic"
+                    alt="Kingsley O... profile pic"
                     src="profile.svg"
           />
 </div>,
@@ -42,9 +42,9 @@ ShallowWrapper {
           className="fellow-card__right"
 >
           <div
-                    className="fellow-card__name fellow-card__name--b"
+                    className="fellow-card__name"
           >
-                    Kingsley Obot
+                    Kingsley O...
           </div>
           <div
                     className="fellow-card__project"
@@ -63,7 +63,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <img
-            alt="Kingsley Obot profile pic"
+            alt="Kingsley O... profile pic"
             src="profile.svg"
 />,
           "className": "fellow-card__image",
@@ -74,7 +74,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "Kingsley Obot profile pic",
+            "alt": "Kingsley O... profile pic",
             "src": "profile.svg",
           },
           "ref": null,
@@ -90,9 +90,9 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="fellow-card__name fellow-card__name--b"
+              className="fellow-card__name"
 >
-              Kingsley Obot
+              Kingsley O...
 </div>,
             <div
               className="fellow-card__project"
@@ -109,11 +109,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Kingsley Obot",
-              "className": "fellow-card__name fellow-card__name--b",
+              "children": "Kingsley O...",
+              "className": "fellow-card__name",
             },
             "ref": null,
-            "rendered": "Kingsley Obot",
+            "rendered": "Kingsley O...",
             "type": "div",
           },
           Object {
@@ -145,7 +145,7 @@ ShallowWrapper {
             className="fellow-card__image"
 >
             <img
-                        alt="Kingsley Obot profile pic"
+                        alt="Kingsley O... profile pic"
                         src="profile.svg"
             />
 </div>,
@@ -153,9 +153,9 @@ ShallowWrapper {
             className="fellow-card__right"
 >
             <div
-                        className="fellow-card__name fellow-card__name--b"
+                        className="fellow-card__name"
             >
-                        Kingsley Obot
+                        Kingsley O...
             </div>
             <div
                         className="fellow-card__project"
@@ -174,7 +174,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <img
-              alt="Kingsley Obot profile pic"
+              alt="Kingsley O... profile pic"
               src="profile.svg"
 />,
             "className": "fellow-card__image",
@@ -185,7 +185,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Kingsley Obot profile pic",
+              "alt": "Kingsley O... profile pic",
               "src": "profile.svg",
             },
             "ref": null,
@@ -201,9 +201,9 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="fellow-card__name fellow-card__name--b"
+                className="fellow-card__name"
 >
-                Kingsley Obot
+                Kingsley O...
 </div>,
               <div
                 className="fellow-card__project"
@@ -220,11 +220,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Kingsley Obot",
-                "className": "fellow-card__name fellow-card__name--b",
+                "children": "Kingsley O...",
+                "className": "fellow-card__name",
               },
               "ref": null,
-              "rendered": "Kingsley Obot",
+              "rendered": "Kingsley O...",
               "type": "div",
             },
             Object {

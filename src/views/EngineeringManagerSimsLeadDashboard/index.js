@@ -21,7 +21,7 @@ const EngineeringManagerSimsLeadDashboard = props => (
         />
         <Route
           exact
-          path={['/dashboard/fellows', '/dashboard/fellow/:name']}
+          path={['/dashboard/fellows/:name', '/dashboard/fellows']}
           component={() => <DeveloperDashboardContainer {...props} />}
         />
       </Switch>

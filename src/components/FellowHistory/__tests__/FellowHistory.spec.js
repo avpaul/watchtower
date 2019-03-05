@@ -3,22 +3,21 @@ import { mount, shallow } from 'enzyme';
 import { FellowHistory } from '../FellowHistory';
 
 describe('Fellow History Container', () => {
+  const fellow = {
+    id: 10,
+    picture: null,
+    project: 'Watch Tower',
+    email: 'kingsley.obot@andela.com',
+    user: {
+      firstName: 'Kingsley',
+      lastName: 'Obot'
+    }
+  };
+
   const setup = (mountComponent = false, propOverrides = {}) => {
     let props = {
       match: { params: { name: 'kingsley.obot' } },
-      fellowSummaryDetails: [
-        {
-          id: 10,
-          picture: null,
-          devPulseAverage: '1.13',
-          project: 'Watch Tower',
-          email: 'kingsley.obot@andela.com',
-          user: {
-            firstName: 'Kingsley',
-            lastName: 'Obot'
-          }
-        }
-      ]
+      fellowSummaryDetails: [fellow]
     };
 
     props = { ...props, ...propOverrides };
@@ -35,24 +34,39 @@ describe('Fellow History Container', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders the expected fellow profile details', () => {
-    let currentPath = '';
-
-    const { wrapper, props } = setup(true, {
-      history: {
-        push: url => {
-          currentPath = url;
-        }
-      }
-    });
-    const fellow = props.fellowSummaryDetails[0];
+  const testFellowHistoryCard = (wrapper, currentFellow = fellow) => {
     expect(wrapper.find('.fellow-card__name').text()).toEqual(
-      `${fellow.user.firstName} ${fellow.user.lastName}`
+      `${currentFellow.user.firstName} O...`
     );
     expect(wrapper.find('.fellow-card__project').text()).toEqual(
-      fellow.project
+      currentFellow.project
     );
-    expect(currentPath).toBe('');
+  };
+
+  it('renders the expected fellow profile details on update', () => {
+    const { wrapper, props } = setup(true, {
+      history: { push: jest.fn() },
+      fellowSummaryDetails: []
+    });
+
+    const action = jest.spyOn(wrapper.instance(), 'setFellow');
+
+    wrapper.setProps({ fellowSummaryDetails: [fellow] }, () => {
+      setTimeout(() => {
+        expect(props.history.push).not.toBeCalled();
+        expect(action).toBeCalled();
+        testFellowHistoryCard(wrapper);
+      }, 100);
+    });
+  });
+
+  it('renders the expected fellow profile details', () => {
+    const { wrapper, props } = setup(true, {
+      history: { push: jest.fn() }
+    });
+
+    testFellowHistoryCard(wrapper);
+    expect(props.history.push).not.toBeCalled();
   });
 
   it('renders fellows page if fellow not found', () => {

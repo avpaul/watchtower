@@ -7,7 +7,6 @@ ShallowWrapper {
     fellowSummaryDetails={
         Array [
             Object {
-              "devPulseAverage": "1.13",
               "email": "kingsley.obot@andela.com",
               "id": 10,
               "picture": null,
@@ -59,12 +58,11 @@ ShallowWrapper {
                         className="row"
                 >
                         <div
-                                className="col-xs-12 col-md-4"
+                                className="col-lg-4"
                         >
                                 <FellowProfile
                                         fellow={
                                                 Object {
-                                                        "devPulseAverage": "1.13",
                                                         "email": "kingsley.obot@andela.com",
                                                         "id": 10,
                                                         "picture": null,
@@ -78,14 +76,14 @@ ShallowWrapper {
                                 />
                         </div>
                         <div
-                                className="col-xs-12 col-md-8"
+                                className="col-md-8"
                         >
                                 <FellowSummaryBreakdown
                                         fellowSummaryBreakdown={
                                                 Array [
                                                         Object {
                                                           "checkedBydefault": true,
-                                                          "ratings": "1.13",
+                                                          "ratings": undefined,
                                                           "title": "DevPulse",
                                                         },
                                                         Object {
@@ -124,12 +122,11 @@ ShallowWrapper {
                     className="row"
           >
                     <div
-                              className="col-xs-12 col-md-4"
+                              className="col-lg-4"
                     >
                               <FellowProfile
                                         fellow={
                                                   Object {
-                                                            "devPulseAverage": "1.13",
                                                             "email": "kingsley.obot@andela.com",
                                                             "id": 10,
                                                             "picture": null,
@@ -143,14 +140,14 @@ ShallowWrapper {
                               />
                     </div>
                     <div
-                              className="col-xs-12 col-md-8"
+                              className="col-md-8"
                     >
                               <FellowSummaryBreakdown
                                         fellowSummaryBreakdown={
                                                   Array [
                                                             Object {
                                                               "checkedBydefault": true,
-                                                              "ratings": "1.13",
+                                                              "ratings": undefined,
                                                               "title": "DevPulse",
                                                             },
                                                             Object {
@@ -186,12 +183,11 @@ ShallowWrapper {
               className="row"
 >
               <div
-                            className="col-xs-12 col-md-4"
+                            className="col-lg-4"
               >
                             <FellowProfile
                                           fellow={
                                                         Object {
-                                                                      "devPulseAverage": "1.13",
                                                                       "email": "kingsley.obot@andela.com",
                                                                       "id": 10,
                                                                       "picture": null,
@@ -205,14 +201,14 @@ ShallowWrapper {
                             />
               </div>
               <div
-                            className="col-xs-12 col-md-8"
+                            className="col-md-8"
               >
                             <FellowSummaryBreakdown
                                           fellowSummaryBreakdown={
                                                         Array [
                                                                       Object {
                                                                         "checkedBydefault": true,
-                                                                        "ratings": "1.13",
+                                                                        "ratings": undefined,
                                                                         "title": "DevPulse",
                                                                       },
                                                                       Object {
@@ -264,12 +260,11 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="col-xs-12 col-md-4"
+                  className="col-lg-4"
 >
                   <FellowProfile
                                     fellow={
                                                       Object {
-                                                                        "devPulseAverage": "1.13",
                                                                         "email": "kingsley.obot@andela.com",
                                                                         "id": 10,
                                                                         "picture": null,
@@ -283,14 +278,14 @@ ShallowWrapper {
                   />
 </div>,
                 <div
-                  className="col-xs-12 col-md-8"
+                  className="col-md-8"
 >
                   <FellowSummaryBreakdown
                                     fellowSummaryBreakdown={
                                                       Array [
                                                                         Object {
                                                                           "checkedBydefault": true,
-                                                                          "ratings": "1.13",
+                                                                          "ratings": undefined,
                                                                           "title": "DevPulse",
                                                                         },
                                                                         Object {
@@ -315,7 +310,6 @@ ShallowWrapper {
                   "children": <FellowProfile
                     fellow={
                                         Object {
-                                                            "devPulseAverage": "1.13",
                                                             "email": "kingsley.obot@andela.com",
                                                             "id": 10,
                                                             "picture": null,
@@ -327,7 +321,7 @@ ShallowWrapper {
                                                           }
                     }
 />,
-                  "className": "col-xs-12 col-md-4",
+                  "className": "col-lg-4",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -336,7 +330,6 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "fellow": Object {
-                      "devPulseAverage": "1.13",
                       "email": "kingsley.obot@andela.com",
                       "id": 10,
                       "picture": null,
@@ -363,7 +356,7 @@ ShallowWrapper {
                                         Array [
                                                             Object {
                                                               "checkedBydefault": true,
-                                                              "ratings": "1.13",
+                                                              "ratings": undefined,
                                                               "title": "DevPulse",
                                                             },
                                                             Object {
@@ -374,7 +367,7 @@ ShallowWrapper {
                                                           ]
                     }
 />,
-                  "className": "col-xs-12 col-md-8",
+                  "className": "col-md-8",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -385,7 +378,7 @@ ShallowWrapper {
                     "fellowSummaryBreakdown": Array [
                       Object {
                         "checkedBydefault": true,
-                        "ratings": "1.13",
+                        "ratings": undefined,
                         "title": "DevPulse",
                       },
                       Object {
@@ -436,12 +429,11 @@ ShallowWrapper {
                               className="row"
                     >
                               <div
-                                        className="col-xs-12 col-md-4"
+                                        className="col-lg-4"
                               >
                                         <FellowProfile
                                                   fellow={
                                                             Object {
-                                                                      "devPulseAverage": "1.13",
                                                                       "email": "kingsley.obot@andela.com",
                                                                       "id": 10,
                                                                       "picture": null,
@@ -455,14 +447,14 @@ ShallowWrapper {
                                         />
                               </div>
                               <div
-                                        className="col-xs-12 col-md-8"
+                                        className="col-md-8"
                               >
                                         <FellowSummaryBreakdown
                                                   fellowSummaryBreakdown={
                                                             Array [
                                                                       Object {
                                                                         "checkedBydefault": true,
-                                                                        "ratings": "1.13",
+                                                                        "ratings": undefined,
                                                                         "title": "DevPulse",
                                                                       },
                                                                       Object {
@@ -501,12 +493,11 @@ ShallowWrapper {
                         className="row"
             >
                         <div
-                                    className="col-xs-12 col-md-4"
+                                    className="col-lg-4"
                         >
                                     <FellowProfile
                                                 fellow={
                                                             Object {
-                                                                        "devPulseAverage": "1.13",
                                                                         "email": "kingsley.obot@andela.com",
                                                                         "id": 10,
                                                                         "picture": null,
@@ -520,14 +511,14 @@ ShallowWrapper {
                                     />
                         </div>
                         <div
-                                    className="col-xs-12 col-md-8"
+                                    className="col-md-8"
                         >
                                     <FellowSummaryBreakdown
                                                 fellowSummaryBreakdown={
                                                             Array [
                                                                         Object {
                                                                           "checkedBydefault": true,
-                                                                          "ratings": "1.13",
+                                                                          "ratings": undefined,
                                                                           "title": "DevPulse",
                                                                         },
                                                                         Object {
@@ -563,12 +554,11 @@ ShallowWrapper {
                 className="row"
 >
                 <div
-                                className="col-xs-12 col-md-4"
+                                className="col-lg-4"
                 >
                                 <FellowProfile
                                                 fellow={
                                                                 Object {
-                                                                                "devPulseAverage": "1.13",
                                                                                 "email": "kingsley.obot@andela.com",
                                                                                 "id": 10,
                                                                                 "picture": null,
@@ -582,14 +572,14 @@ ShallowWrapper {
                                 />
                 </div>
                 <div
-                                className="col-xs-12 col-md-8"
+                                className="col-md-8"
                 >
                                 <FellowSummaryBreakdown
                                                 fellowSummaryBreakdown={
                                                                 Array [
                                                                                 Object {
                                                                                   "checkedBydefault": true,
-                                                                                  "ratings": "1.13",
+                                                                                  "ratings": undefined,
                                                                                   "title": "DevPulse",
                                                                                 },
                                                                                 Object {
@@ -641,12 +631,11 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div
-                    className="col-xs-12 col-md-4"
+                    className="col-lg-4"
 >
                     <FellowProfile
                                         fellow={
                                                             Object {
-                                                                                "devPulseAverage": "1.13",
                                                                                 "email": "kingsley.obot@andela.com",
                                                                                 "id": 10,
                                                                                 "picture": null,
@@ -660,14 +649,14 @@ ShallowWrapper {
                     />
 </div>,
                   <div
-                    className="col-xs-12 col-md-8"
+                    className="col-md-8"
 >
                     <FellowSummaryBreakdown
                                         fellowSummaryBreakdown={
                                                             Array [
                                                                                 Object {
                                                                                   "checkedBydefault": true,
-                                                                                  "ratings": "1.13",
+                                                                                  "ratings": undefined,
                                                                                   "title": "DevPulse",
                                                                                 },
                                                                                 Object {
@@ -692,7 +681,6 @@ ShallowWrapper {
                     "children": <FellowProfile
                       fellow={
                                             Object {
-                                                                  "devPulseAverage": "1.13",
                                                                   "email": "kingsley.obot@andela.com",
                                                                   "id": 10,
                                                                   "picture": null,
@@ -704,7 +692,7 @@ ShallowWrapper {
                                                                 }
                       }
 />,
-                    "className": "col-xs-12 col-md-4",
+                    "className": "col-lg-4",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -713,7 +701,6 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "fellow": Object {
-                        "devPulseAverage": "1.13",
                         "email": "kingsley.obot@andela.com",
                         "id": 10,
                         "picture": null,
@@ -740,7 +727,7 @@ ShallowWrapper {
                                             Array [
                                                                   Object {
                                                                     "checkedBydefault": true,
-                                                                    "ratings": "1.13",
+                                                                    "ratings": undefined,
                                                                     "title": "DevPulse",
                                                                   },
                                                                   Object {
@@ -751,7 +738,7 @@ ShallowWrapper {
                                                                 ]
                       }
 />,
-                    "className": "col-xs-12 col-md-8",
+                    "className": "col-md-8",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -762,7 +749,7 @@ ShallowWrapper {
                       "fellowSummaryBreakdown": Array [
                         Object {
                           "checkedBydefault": true,
-                          "ratings": "1.13",
+                          "ratings": undefined,
                           "title": "DevPulse",
                         },
                         Object {

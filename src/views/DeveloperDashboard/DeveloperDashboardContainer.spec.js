@@ -90,7 +90,7 @@ describe('Tests on DevelopersDashboardContainer component', () => {
   };
 
   it('should render the fellow history container', () => {
-    testRoute('/dashboard/fellow/John.Doe', FellowHistoryContainer);
+    testRoute('/dashboard/fellows/John.Doe', FellowHistoryContainer);
   });
 
   it('should render the fellows container', () => {

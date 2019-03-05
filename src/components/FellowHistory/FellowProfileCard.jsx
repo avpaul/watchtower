@@ -16,11 +16,9 @@ const FellowProfile = props => {
 
   if (fellow === undefined || fellow.project === undefined) return <div />;
 
-  const fellowName = getFellowName(fellow);
-
-  const fellowNameClass = `fellow-card__name fellow-card__name--${
-    fellowName.length > 13 ? 's' : 'b'
-  }`;
+  let fellowName = getFellowName(fellow);
+  fellowName =
+    fellowName.length > 10 ? `${fellowName.substr(0, 10)}...` : fellowName;
 
   return (
     <div className="fellow-card">
@@ -28,7 +26,7 @@ const FellowProfile = props => {
         <img src={getFellowImage(fellow)} alt={`${fellowName} profile pic`} />
       </div>
       <div className="fellow-card__right">
-        <div className={fellowNameClass}>{fellowName}</div>
+        <div className="fellow-card__name">{fellowName}</div>
         <div className="fellow-card__project">{`${fellow.project}`}</div>
       </div>
     </div>

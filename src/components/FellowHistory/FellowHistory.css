@@ -9,29 +9,30 @@
   margin-bottom: 1rem;
   color: #0459e4;
   font-family: 'DIN Pro';
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 1.63rem;
 }
 
 .fellow-card {
   box-sizing: border-box;
-  height: 120px;
-  border: 1px solid rgba(101, 110, 114, 0.12);
-  border-radius: 8px;
+  height: 7.5rem;
+  border: 0.06rem solid rgba(101, 110, 114, 0.12);
+  border-radius: 0.5rem;
   background-color: #ffffff;
-  box-shadow: 0 4px 7px 0 rgba(35, 47, 73, 0.06);
+  box-shadow: 0 0.25rem 0.44rem 0 rgba(35, 47, 73, 0.06);
+  transition: 0.2s ease all;
 }
 
 .fellow-card:hover {
-  box-shadow: rgba(35, 47, 73, 0.15) 0px 4px 10px 1px;
+  box-shadow: rgba(35, 47, 73, 0.15) 0 0.25rem 0.63rem 0.06rem;
 }
 
 .fellow-card__image {
-  margin: 60px 20px 0 40px;
+  margin: 3.75rem 1.25rem 0 2.5rem;
   transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   float: left;
 }
 
@@ -44,36 +45,29 @@
 .fellow-card__right {
   float: left;
   width: 50%;
-  margin-top: 30px;
+  margin-top: 1.88rem;
 }
 
 .fellow-card__name {
   float: left;
   width: 100%;
-  color: #333;
+  color: #333333;
   font-weight: 500;
-}
-
-.fellow-card__name--s {
-  font-size: 16px;
-}
-
-.fellow-card__name--b {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .fellow-card__project {
   float: left;
   width: 100%;
-  color: #999;
+  color: #999999;
   font-family: 'DIN Pro';
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.88rem;
+  line-height: 1.13rem;
 }
 
 .fellow-history__not-found {
-  color: #999;
+  color: #999999;
   font-family: 'DIN Pro';
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.88rem;
+  line-height: 1.13rem;
 }
