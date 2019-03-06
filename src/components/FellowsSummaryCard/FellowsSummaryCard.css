@@ -1,4 +1,5 @@
 .fellow-summary-card {
+  position: relative;
   min-height: 341px;
   width: 295px;
   border-radius: 4px;
@@ -7,12 +8,38 @@
   margin-right: 20px;
   margin-left: 15px;
   margin-bottom: 48px;
+  outline: none;
+}
+
+.fellow-filter-card {
+  min-height: 79px;
+}
+
+.card-name {
+  font-size: 1.125rem;
+}
+
+.checkmark {
+  position: absolute;
+  left: 95%;
+  top: -8%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #ffffff;
+}
+
+.card-number-display {
+  font-size: 1.75em;
 }
 
 .fellow-summary-card:hover {
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
   outline: 1px solid #0459e4;
+}
+
+.fellow-filter-card {
+  min-height: 79px;
 }
 
 .fellow-summary-page-header {

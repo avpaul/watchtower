@@ -34,6 +34,64 @@ ShallowWrapper {
               "simsEndDate": null,
               "status": "gteWk5OffTrack",
             },
+            Object {
+              "apprEndDate": "2019-01-16",
+              "apprStartDate": "2018-10-15",
+              "devPulseAverage": "1.04",
+              "firstName": "Oluseyi",
+              "lastName": "Anani",
+              "level": "D0B Apprenticeship",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Watch Tower",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "onTrack",
+            },
+            Object {
+              "apprEndDate": "2019-01-16",
+              "apprStartDate": "2018-10-15",
+              "devPulseAverage": "1.04",
+              "firstName": "Brian",
+              "lastName": "Bett",
+              "level": "D0B Apprenticeship",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Watch Tower",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "onTrack",
+            },
+            Object {
+              "apprEndDate": null,
+              "apprStartDate": null,
+              "devPulseAverage": "1.04",
+              "firstName": "",
+              "lastName": "",
+              "level": "D0A Simulations",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Noldor",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "gteWk5OffTrack",
+            },
+            Object {
+              "apprEndDate": null,
+              "apprStartDate": null,
+              "devPulseAverage": "1.04",
+              "level": "",
+              "lmsOutput": "4/18",
+              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "project": "Noldor",
+              "simStartDate": null,
+              "simsEndDate": null,
+              "status": "gteWk5OffTrack",
+              "user": Object {
+                "firstName": "somereallyreallylongusername",
+                "lastName": "",
+              },
+            },
           ]
     }
 />,
@@ -85,6 +143,62 @@ ShallowWrapper {
                         />
             </div>
 </div>,
+          <div
+            className="card-scroll-wrapper"
+>
+            <div
+                        className="fellow-breakdown-card"
+            >
+                        <div
+                                    className="fellow-breakdown-title"
+                        />
+                        <div
+                                    className="number"
+                        />
+            </div>
+</div>,
+          <div
+            className="card-scroll-wrapper"
+>
+            <div
+                        className="fellow-breakdown-card"
+            >
+                        <div
+                                    className="fellow-breakdown-title"
+                        />
+                        <div
+                                    className="number"
+                        />
+            </div>
+</div>,
+          <div
+            className="card-scroll-wrapper"
+>
+            <div
+                        className="fellow-breakdown-card"
+            >
+                        <div
+                                    className="fellow-breakdown-title"
+                        />
+                        <div
+                                    className="number"
+                        />
+            </div>
+</div>,
+          <div
+            className="card-scroll-wrapper"
+>
+            <div
+                        className="fellow-breakdown-card"
+            >
+                        <div
+                                    className="fellow-breakdown-title"
+                        />
+                        <div
+                                    className="number"
+                        />
+            </div>
+</div>,
         ],
       ],
     },
@@ -100,6 +214,286 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "Filter by clicking a card",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            null,
+            <div
+              className="fellow-breakdown-card"
+>
+              <div
+                            className="fellow-breakdown-title"
+              />
+              <div
+                            className="number"
+              />
+</div>,
+          ],
+          "className": "card-scroll-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="fellow-breakdown-title"
+/>,
+                <div
+                  className="number"
+/>,
+              ],
+              "className": "fellow-breakdown-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "fellow-breakdown-title",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "number",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            null,
+            <div
+              className="fellow-breakdown-card"
+>
+              <div
+                            className="fellow-breakdown-title"
+              />
+              <div
+                            className="number"
+              />
+</div>,
+          ],
+          "className": "card-scroll-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="fellow-breakdown-title"
+/>,
+                <div
+                  className="number"
+/>,
+              ],
+              "className": "fellow-breakdown-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "fellow-breakdown-title",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "number",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            null,
+            <div
+              className="fellow-breakdown-card"
+>
+              <div
+                            className="fellow-breakdown-title"
+              />
+              <div
+                            className="number"
+              />
+</div>,
+          ],
+          "className": "card-scroll-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="fellow-breakdown-title"
+/>,
+                <div
+                  className="number"
+/>,
+              ],
+              "className": "fellow-breakdown-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "fellow-breakdown-title",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "number",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            null,
+            <div
+              className="fellow-breakdown-card"
+>
+              <div
+                            className="fellow-breakdown-title"
+              />
+              <div
+                            className="number"
+              />
+</div>,
+          ],
+          "className": "card-scroll-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="fellow-breakdown-title"
+/>,
+                <div
+                  className="number"
+/>,
+              ],
+              "className": "fellow-breakdown-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "fellow-breakdown-title",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "number",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
         "type": "div",
       },
       Object {
@@ -286,6 +680,62 @@ ShallowWrapper {
                             />
               </div>
 </div>,
+            <div
+              className="card-scroll-wrapper"
+>
+              <div
+                            className="fellow-breakdown-card"
+              >
+                            <div
+                                          className="fellow-breakdown-title"
+                            />
+                            <div
+                                          className="number"
+                            />
+              </div>
+</div>,
+            <div
+              className="card-scroll-wrapper"
+>
+              <div
+                            className="fellow-breakdown-card"
+              >
+                            <div
+                                          className="fellow-breakdown-title"
+                            />
+                            <div
+                                          className="number"
+                            />
+              </div>
+</div>,
+            <div
+              className="card-scroll-wrapper"
+>
+              <div
+                            className="fellow-breakdown-card"
+              >
+                            <div
+                                          className="fellow-breakdown-title"
+                            />
+                            <div
+                                          className="number"
+                            />
+              </div>
+</div>,
+            <div
+              className="card-scroll-wrapper"
+>
+              <div
+                            className="fellow-breakdown-card"
+              >
+                            <div
+                                          className="fellow-breakdown-title"
+                            />
+                            <div
+                                          className="number"
+                            />
+              </div>
+</div>,
           ],
         ],
       },
@@ -301,6 +751,286 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Filter by clicking a card",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              null,
+              <div
+                className="fellow-breakdown-card"
+>
+                <div
+                                className="fellow-breakdown-title"
+                />
+                <div
+                                className="number"
+                />
+</div>,
+            ],
+            "className": "card-scroll-wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="fellow-breakdown-title"
+/>,
+                  <div
+                    className="number"
+/>,
+                ],
+                "className": "fellow-breakdown-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "fellow-breakdown-title",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "number",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              null,
+              <div
+                className="fellow-breakdown-card"
+>
+                <div
+                                className="fellow-breakdown-title"
+                />
+                <div
+                                className="number"
+                />
+</div>,
+            ],
+            "className": "card-scroll-wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="fellow-breakdown-title"
+/>,
+                  <div
+                    className="number"
+/>,
+                ],
+                "className": "fellow-breakdown-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "fellow-breakdown-title",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "number",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              null,
+              <div
+                className="fellow-breakdown-card"
+>
+                <div
+                                className="fellow-breakdown-title"
+                />
+                <div
+                                className="number"
+                />
+</div>,
+            ],
+            "className": "card-scroll-wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="fellow-breakdown-title"
+/>,
+                  <div
+                    className="number"
+/>,
+                ],
+                "className": "fellow-breakdown-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "fellow-breakdown-title",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "number",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              null,
+              <div
+                className="fellow-breakdown-card"
+>
+                <div
+                                className="fellow-breakdown-title"
+                />
+                <div
+                                className="number"
+                />
+</div>,
+            ],
+            "className": "card-scroll-wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="fellow-breakdown-title"
+/>,
+                  <div
+                    className="number"
+/>,
+                ],
+                "className": "fellow-breakdown-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "fellow-breakdown-title",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "number",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
           "type": "div",
         },
         Object {

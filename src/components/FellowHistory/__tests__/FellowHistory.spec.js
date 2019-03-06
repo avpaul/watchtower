@@ -17,7 +17,20 @@ describe('Fellow History Container', () => {
   const setup = (mountComponent = false, propOverrides = {}) => {
     let props = {
       match: { params: { name: 'kingsley.obot' } },
-      fellowSummaryDetails: [fellow]
+      fellowSummaryDetails: [
+        {
+          id: 10,
+          picture: null,
+          devPulseAverage: null,
+          lmsOutput: null,
+          project: 'Watch Tower',
+          email: 'kingsley.obot@andela.com',
+          user: {
+            firstName: 'Kingsley',
+            lastName: 'Obot'
+          }
+        }
+      ]
     };
 
     props = { ...props, ...propOverrides };

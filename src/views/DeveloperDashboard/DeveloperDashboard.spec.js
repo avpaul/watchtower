@@ -1,13 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
 
 import DeveloperDashboard from './DeveloperDashboard';
-
 import FellowSummaryData from '../../__mocks__/fellowSummary.json';
 import EngineeringManagerFellowsSummaryData from '../../__mocks__/engineeringManagerTtls.json';
 import SimulationLeadData from '../../__mocks__/simulationsLeadLf.json';
+import FilterButton from '../../components/Buttons/Button';
+import FellowFilterCard from '../../components/FellowFilterCard';
+import MapFellowsFilterCard from '../../components/MapFellowsFilterCard';
 
-export function getManagerDataByRole(loggedInRole) {
+export const getManagerDataByRole = loggedInRole => {
   switch (loggedInRole) {
     case 'WATCH_TOWER_EM':
       return EngineeringManagerFellowsSummaryData;
@@ -19,9 +22,9 @@ export function getManagerDataByRole(loggedInRole) {
     default:
       return null;
   }
-}
+};
 
-const setup = loggedInRole => {
+const setup = (loggedInRole, urlPath = '/dashboard/fellows') => {
   /**
    * Creates an enzyme instance to test the component.
    * @function
@@ -50,7 +53,15 @@ const setup = loggedInRole => {
 
   const developerDashboardWrapper = shallow(<DeveloperDashboard {...props} />);
 
-  return { developerDashboardWrapper, props };
+  const developerDashboardMountWrapper = shallow(
+    <MemoryRouter initialEntries={[urlPath]}>
+      {developerDashboardWrapper
+        .find('Route[path="/dashboard/fellows"]')
+        .prop('render')()}
+    </MemoryRouter>
+  );
+  developerDashboardWrapper.setState({ fellowSummaryDetails: [] });
+  return { developerDashboardWrapper, props, developerDashboardMountWrapper };
 };
 
 describe('Developers dashboard test', () => {
@@ -74,7 +85,7 @@ describe('Developers dashboard test', () => {
     expect(getManagerFellowsSummary).toHaveBeenCalled();
   });
 
-  it('should do something', () => {
+  it('should redirect user to developer page when developer card is clicked', () => {
     const { props } = setup();
     const wrapper = shallow(<DeveloperDashboard {...props} />);
     const instance = wrapper.instance();
@@ -103,8 +114,179 @@ describe('Developers dashboard test', () => {
     expect(event.target.getAttribute).toHaveBeenCalled();
     expect(props.history.push).toHaveBeenCalled();
   });
+
+  it('should clear state to default when clear filters button is clicked', () => {
+    const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
+      'WATCH_TOWER_TTL'
+    );
+    developerDashboardWrapper.setState({
+      isTicked: { status: 'On Track', project: 'All Product' },
+      fellowSummaryDetails: []
+    });
+    developerDashboardMountWrapper
+      .find(FilterButton)
+      .dive()
+      .simulate('click');
+    expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      project: 'All Products',
+      status: 'All Fellows'
+    });
+  });
+
+  it('should set status to all fellows  when a all-fellows card is clicked', () => {
+    const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
+      'WATCH_TOWER_TTL'
+    );
+    developerDashboardWrapper.setState({
+      isTicked: { status: 'On Track', project: 'All Products' },
+      allFellows: FellowSummaryData,
+      fellowSummaryDetails: []
+    });
+    developerDashboardMountWrapper
+      .find(MapFellowsFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'All Fellows',
+          attributes: [{}, {}, { value: 'status' }]
+        }
+      });
+    expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      project: 'All Products',
+      status: 'All Fellows'
+    });
+    expect(
+      developerDashboardWrapper.state('fellowSummaryDetails').length
+    ).toEqual(6);
+  });
+
+  it('should status to ontrack when a on-track card is clicked', () => {
+    const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
+      'WATCH_TOWER_TTL'
+    );
+    developerDashboardWrapper.setState({
+      isTicked: { status: 'On Track', project: 'All Products' },
+      allFellows: FellowSummaryData,
+      fellowSummaryDetails: []
+    });
+    developerDashboardMountWrapper
+      .find(MapFellowsFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'Watch Tower',
+          attributes: [{}, {}, { value: 'project' }]
+        }
+      });
+    expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      project: 'Watch Tower',
+      status: 'On Track'
+    });
+    expect(
+      developerDashboardWrapper.state('fellowSummaryDetails').length
+    ).toEqual(2);
+  });
+
+  it('should status to ontrack when a on-track card is clicked', () => {
+    const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
+      'WATCH_TOWER_TTL'
+    );
+    developerDashboardWrapper.setState({
+      isTicked: { status: 'All Fellows', project: 'All Products' },
+      allFellows: FellowSummaryData,
+      fellowSummaryDetails: []
+    });
+    developerDashboardMountWrapper
+      .find(MapFellowsFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'On Track',
+          attributes: [{}, {}, { value: 'status' }]
+        }
+      });
+    expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      project: 'All Products',
+      status: 'On Track'
+    });
+    expect(
+      developerDashboardWrapper.state('fellowSummaryDetails').length
+    ).toEqual(2);
+  });
+
+  it('should set status to off-track when off-track card is clicked', () => {
+    const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
+      'WATCH_TOWER_TTL'
+    );
+    developerDashboardWrapper.setState({
+      isTicked: { status: 'All Fellows', project: 'All Products' },
+      allFellows: FellowSummaryData,
+      fellowSummaryDetails: []
+    });
+    developerDashboardMountWrapper
+      .find(MapFellowsFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'Off-Track',
+          attributes: [{}, {}, { value: 'status' }]
+        }
+      });
+    expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      project: 'All Products',
+      status: 'Off-Track'
+    });
+    expect(
+      developerDashboardWrapper.state('fellowSummaryDetails').length
+    ).toEqual(1);
+  });
+
+  it('should set status to PIP when pip card is clicked', () => {
+    const { developerDashboardWrapper, developerDashboardMountWrapper } = setup(
+      'WATCH_TOWER_TTL'
+    );
+    developerDashboardWrapper.setState({
+      isTicked: { status: 'All Fellows', project: 'All Products' },
+      allFellows: FellowSummaryData,
+      fellowSummaryDetails: []
+    });
+    developerDashboardMountWrapper
+      .find(MapFellowsFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'PIP',
+          attributes: [{}, {}, { value: 'status' }]
+        }
+      });
+    expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      project: 'All Products',
+      status: 'PIP'
+    });
+    expect(
+      developerDashboardWrapper.state('fellowSummaryDetails').length
+    ).toEqual(3);
+  });
 });
 
-export default {
-  getManagerDataByRole
-};
+export default getManagerDataByRole;

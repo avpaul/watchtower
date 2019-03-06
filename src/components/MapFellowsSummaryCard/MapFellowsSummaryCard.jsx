@@ -11,13 +11,14 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
         : fellow[`appr${Start}Date`]
     ).format('D-MMM-YYYY');
   const resolveStatus = fellowStatus =>
-    fellowStatus.status.includes('gteWk5') ? 'Off-Track' : 'On-Track';
+    fellowStatus.status.includes('ltWk5') ? 'Off-Track' : 'On-Track';
   return (
     <div className="ops-dashboard__fellows-summary">
       <div className="row">
         {fellowsSummaryCardDetails.map(fellow => {
           const refinedName = `${fellow.firstName ||
-            fellow.user.firstName} ${fellow.lastName || fellow.user.lastName}`;
+            `${fellow.user ? fellow.user.firstName : ''}`} ${fellow.lastName ||
+            `${fellow.user ? fellow.user.lastName : ''}`}`;
           return (
             <FellowsSummaryCard
               mykey={fellowsSummaryCardDetails.indexOf(fellow)}
@@ -36,7 +37,7 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
               }
               devPulseAverage={fellow.devPulseAverage}
               status={
-                fellow.status && fellow.status.includes('ltWk5')
+                fellow.status && fellow.status.includes('gteWk5')
                   ? 'Pip'
                   : resolveStatus(fellow)
               }
