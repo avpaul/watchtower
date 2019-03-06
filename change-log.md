@@ -15,3 +15,9 @@
 - canvas integration
 - email notifications
 - in-app notifications
+
+# V 1.0.1
+
+## Features
+
+- filter developers by project
