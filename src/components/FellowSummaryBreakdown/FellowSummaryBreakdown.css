@@ -1,3 +1,9 @@
+@media (max-height: 900px) {
+  .row--no-margin {
+    margin: 0 !important;
+  }
+}
+
 .developer-history {
   height: 26px;
   width: 196px;
@@ -20,54 +26,56 @@
   font-family: 'DIN Pro';
   font-size: 14px;
   line-height: 26px;
-  margin-bottom: 0rem;
 }
 
 .fellow-breakdown-card {
   height: 79px;
-  width: 300px;
+  width: 100%;
   background-color: #ffffff;
   box-shadow: 0 4px 7px 0 rgba(35, 47, 73, 0.06);
-  margin-right: 50px;
+  position: relative;
+  padding: 0.5rem 1rem;
 }
+
 .fellow-breakdown-card:hover {
   box-shadow: rgba(35, 47, 73, 0.15) 0px 4px 10px 1px;
 }
 
-.fellow-breakdown-title {
+.fellow-breakdown-card__title {
   height: 23px;
-  width: 183px;
   color: #232f49;
   font-family: 'DIN Pro';
   font-size: 18px;
   line-height: 23px;
-  margin-left: 25px;
 }
 
-.number {
+.fellow-breakdown-card__number {
   height: 36px;
-  width: 52px;
   color: #232f49;
   font-family: 'DIN Pro';
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 1.75rem;
+  line-height: 4rem;
   text-align: right;
-}
-
-.checked-image {
-  height: 15px;
-  width: 15px;
-  margin-top: -0.5em;
 }
 
 .checked {
   height: 20px;
   width: 20px;
   background-color: #0459e4;
-  margin-left: 293.17px;
-  margin-top: -0.5em;
   border-radius: 50%;
   text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -10px -10px 0 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.checked__image {
+  height: 50%;
+  width: 50%;
+  margin-top: -5px;
 }
 
 .card-scroll-wrapper {

@@ -7,10 +7,8 @@ ShallowWrapper {
     fellowSummaryDetails={
         Array [
             Object {
-              "devPulseAverage": null,
               "email": "kingsley.obot@andela.com",
               "id": 10,
-              "lmsOutput": null,
               "picture": null,
               "project": "Watch Tower",
               "user": Object {
@@ -59,50 +57,46 @@ ShallowWrapper {
                 <div
                         className="row"
                 >
-                        <div
-                                className="col-lg-4"
-                        >
-                                <FellowProfile
-                                        fellow={
-                                                Object {
-                                                        "devPulseAverage": null,
-                                                        "email": "kingsley.obot@andela.com",
-                                                        "id": 10,
-                                                        "lmsOutput": null,
-                                                        "picture": null,
-                                                        "project": "Watch Tower",
-                                                        "user": Object {
-                                                          "firstName": "Kingsley",
-                                                          "lastName": "Obot",
-                                                        },
-                                                      }
-                                        }
-                                />
-                        </div>
-                        <div
-                                className="col-md-8"
-                        >
-                                <FellowSummaryBreakdown
-                                        fellowSummaryBreakdown={
-                                                Array [
+                        <Unknown>
+                                <div
+                                        className="col-md-6 col-xl-3 mb-3"
+                                >
+                                        <HistoryCard
+                                                user={
                                                         Object {
-                                                          "checkedBydefault": true,
-                                                          "ratings": "0",
-                                                          "title": "DevPulse",
-                                                        },
-                                                        Object {
-                                                          "checkedBydefault": false,
-                                                          "ratings": "0/0",
-                                                          "title": "LMS",
-                                                        },
-                                                      ]
-                                        }
-                                />
-                        </div>
+                                                                "detail": "Watch Tower",
+                                                                "image": undefined,
+                                                                "name": "Kingsley Obot",
+                                                              }
+                                                }
+                                        />
+                                </div>
+                                <div />
+                                <div
+                                        className="col-xl-6 mt-3 mt-xl-0"
+                                >
+                                        <FellowSummaryBreakdown
+                                                fellowSummaryBreakdown={
+                                                        Array [
+                                                                Object {
+                                                                  "checkedBydefault": true,
+                                                                  "ratings": undefined,
+                                                                  "title": "DevPulse",
+                                                                },
+                                                                Object {
+                                                                  "checkedBydefault": false,
+                                                                  "ratings": undefined,
+                                                                  "title": "LMS",
+                                                                },
+                                                              ]
+                                                }
+                                        />
+                                </div>
+                        </Unknown>
                 </div>
         </div>
 </div>,
-      "className": "fellow-history container",
+      "className": "fellow-history container-fluid",
     },
     "ref": null,
     "rendered": Object {
@@ -125,46 +119,42 @@ ShallowWrapper {
           <div
                     className="row"
           >
-                    <div
-                              className="col-lg-4"
-                    >
-                              <FellowProfile
-                                        fellow={
-                                                  Object {
-                                                            "devPulseAverage": null,
-                                                            "email": "kingsley.obot@andela.com",
-                                                            "id": 10,
-                                                            "lmsOutput": null,
-                                                            "picture": null,
-                                                            "project": "Watch Tower",
-                                                            "user": Object {
-                                                              "firstName": "Kingsley",
-                                                              "lastName": "Obot",
-                                                            },
-                                                          }
-                                        }
-                              />
-                    </div>
-                    <div
-                              className="col-md-8"
-                    >
-                              <FellowSummaryBreakdown
-                                        fellowSummaryBreakdown={
-                                                  Array [
+                    <Unknown>
+                              <div
+                                        className="col-md-6 col-xl-3 mb-3"
+                              >
+                                        <HistoryCard
+                                                  user={
                                                             Object {
-                                                              "checkedBydefault": true,
-                                                              "ratings": "0",
-                                                              "title": "DevPulse",
-                                                            },
-                                                            Object {
-                                                              "checkedBydefault": false,
-                                                              "ratings": "0/0",
-                                                              "title": "LMS",
-                                                            },
-                                                          ]
-                                        }
-                              />
-                    </div>
+                                                                      "detail": "Watch Tower",
+                                                                      "image": undefined,
+                                                                      "name": "Kingsley Obot",
+                                                                    }
+                                                  }
+                                        />
+                              </div>
+                              <div />
+                              <div
+                                        className="col-xl-6 mt-3 mt-xl-0"
+                              >
+                                        <FellowSummaryBreakdown
+                                                  fellowSummaryBreakdown={
+                                                            Array [
+                                                                      Object {
+                                                                        "checkedBydefault": true,
+                                                                        "ratings": undefined,
+                                                                        "title": "DevPulse",
+                                                                      },
+                                                                      Object {
+                                                                        "checkedBydefault": false,
+                                                                        "ratings": undefined,
+                                                                        "title": "LMS",
+                                                                      },
+                                                                    ]
+                                                  }
+                                        />
+                              </div>
+                    </Unknown>
           </div>
 </div>,
         "className": "fellow-history__top row",
@@ -188,46 +178,42 @@ ShallowWrapper {
             <div
               className="row"
 >
-              <div
-                            className="col-lg-4"
-              >
-                            <FellowProfile
-                                          fellow={
-                                                        Object {
-                                                                      "devPulseAverage": null,
-                                                                      "email": "kingsley.obot@andela.com",
-                                                                      "id": 10,
-                                                                      "lmsOutput": null,
-                                                                      "picture": null,
-                                                                      "project": "Watch Tower",
-                                                                      "user": Object {
-                                                                        "firstName": "Kingsley",
-                                                                        "lastName": "Obot",
-                                                                      },
-                                                                    }
-                                          }
-                            />
-              </div>
-              <div
-                            className="col-md-8"
-              >
-                            <FellowSummaryBreakdown
-                                          fellowSummaryBreakdown={
-                                                        Array [
+              <Unknown>
+                            <div
+                                          className="col-md-6 col-xl-3 mb-3"
+                            >
+                                          <HistoryCard
+                                                        user={
                                                                       Object {
-                                                                        "checkedBydefault": true,
-                                                                        "ratings": "0",
-                                                                        "title": "DevPulse",
-                                                                      },
-                                                                      Object {
-                                                                        "checkedBydefault": false,
-                                                                        "ratings": "0/0",
-                                                                        "title": "LMS",
-                                                                      },
-                                                                    ]
-                                          }
-                            />
-              </div>
+                                                                                    "detail": "Watch Tower",
+                                                                                    "image": undefined,
+                                                                                    "name": "Kingsley Obot",
+                                                                                  }
+                                                        }
+                                          />
+                            </div>
+                            <div />
+                            <div
+                                          className="col-xl-6 mt-3 mt-xl-0"
+                            >
+                                          <FellowSummaryBreakdown
+                                                        fellowSummaryBreakdown={
+                                                                      Array [
+                                                                                    Object {
+                                                                                      "checkedBydefault": true,
+                                                                                      "ratings": undefined,
+                                                                                      "title": "DevPulse",
+                                                                                    },
+                                                                                    Object {
+                                                                                      "checkedBydefault": false,
+                                                                                      "ratings": undefined,
+                                                                                      "title": "LMS",
+                                                                                    },
+                                                                                  ]
+                                                        }
+                                          />
+                            </div>
+              </Unknown>
 </div>,
           ],
           "className": "col",
@@ -266,149 +252,183 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
+              "children": <Unknown>
                 <div
-                  className="col-lg-4"
->
-                  <FellowProfile
-                                    fellow={
-                                                      Object {
-                                                                        "devPulseAverage": null,
-                                                                        "email": "kingsley.obot@andela.com",
-                                                                        "id": 10,
-                                                                        "lmsOutput": null,
-                                                                        "picture": null,
-                                                                        "project": "Watch Tower",
-                                                                        "user": Object {
-                                                                          "firstName": "Kingsley",
-                                                                          "lastName": "Obot",
-                                                                        },
-                                                                      }
-                                    }
-                  />
-</div>,
+                                className="col-md-6 col-xl-3 mb-3"
+                >
+                                <HistoryCard
+                                                user={
+                                                                Object {
+                                                                                "detail": "Watch Tower",
+                                                                                "image": undefined,
+                                                                                "name": "Kingsley Obot",
+                                                                              }
+                                                }
+                                />
+                </div>
+                <div />
                 <div
-                  className="col-md-8"
->
-                  <FellowSummaryBreakdown
-                                    fellowSummaryBreakdown={
-                                                      Array [
-                                                                        Object {
-                                                                          "checkedBydefault": true,
-                                                                          "ratings": "0",
-                                                                          "title": "DevPulse",
-                                                                        },
-                                                                        Object {
-                                                                          "checkedBydefault": false,
-                                                                          "ratings": "0/0",
-                                                                          "title": "LMS",
-                                                                        },
-                                                                      ]
-                                    }
-                  />
-</div>,
-              ],
+                                className="col-xl-6 mt-3 mt-xl-0"
+                >
+                                <FellowSummaryBreakdown
+                                                fellowSummaryBreakdown={
+                                                                Array [
+                                                                                Object {
+                                                                                  "checkedBydefault": true,
+                                                                                  "ratings": undefined,
+                                                                                  "title": "DevPulse",
+                                                                                },
+                                                                                Object {
+                                                                                  "checkedBydefault": false,
+                                                                                  "ratings": undefined,
+                                                                                  "title": "LMS",
+                                                                                },
+                                                                              ]
+                                                }
+                                />
+                </div>
+</Unknown>,
               "className": "row",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <FellowProfile
-                    fellow={
-                                        Object {
-                                                            "devPulseAverage": null,
-                                                            "email": "kingsley.obot@andela.com",
-                                                            "id": 10,
-                                                            "lmsOutput": null,
-                                                            "picture": null,
-                                                            "project": "Watch Tower",
-                                                            "user": Object {
-                                                              "firstName": "Kingsley",
-                                                              "lastName": "Obot",
-                                                            },
-                                                          }
-                    }
-/>,
-                  "className": "col-lg-4",
-                },
-                "ref": null,
-                "rendered": Object {
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="col-md-6 col-xl-3 mb-3"
+>
+                    <HistoryCard
+                                        user={
+                                                            Object {
+                                                                                "detail": "Watch Tower",
+                                                                                "image": undefined,
+                                                                                "name": "Kingsley Obot",
+                                                                              }
+                                        }
+                    />
+</div>,
+                  <div />,
+                  <div
+                    className="col-xl-6 mt-3 mt-xl-0"
+>
+                    <FellowSummaryBreakdown
+                                        fellowSummaryBreakdown={
+                                                            Array [
+                                                                                Object {
+                                                                                  "checkedBydefault": true,
+                                                                                  "ratings": undefined,
+                                                                                  "title": "DevPulse",
+                                                                                },
+                                                                                Object {
+                                                                                  "checkedBydefault": false,
+                                                                                  "ratings": undefined,
+                                                                                  "title": "LMS",
+                                                                                },
+                                                                              ]
+                                        }
+                    />
+</div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "host",
                   "props": Object {
-                    "fellow": Object {
-                      "devPulseAverage": null,
-                      "email": "kingsley.obot@andela.com",
-                      "id": 10,
-                      "lmsOutput": null,
-                      "picture": null,
-                      "project": "Watch Tower",
+                    "children": <HistoryCard
+                      user={
+                                            Object {
+                                                                  "detail": "Watch Tower",
+                                                                  "image": undefined,
+                                                                  "name": "Kingsley Obot",
+                                                                }
+                      }
+/>,
+                    "className": "col-md-6 col-xl-3 mb-3",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
                       "user": Object {
-                        "firstName": "Kingsley",
-                        "lastName": "Obot",
+                        "detail": "Watch Tower",
+                        "image": undefined,
+                        "name": "Kingsley Obot",
                       },
                     },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "type": "div",
                 },
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <FellowSummaryBreakdown
-                    fellowSummaryBreakdown={
-                                        Array [
-                                                            Object {
-                                                              "checkedBydefault": true,
-                                                              "ratings": "0",
-                                                              "title": "DevPulse",
-                                                            },
-                                                            Object {
-                                                              "checkedBydefault": false,
-                                                              "ratings": "0/0",
-                                                              "title": "LMS",
-                                                            },
-                                                          ]
-                    }
-/>,
-                  "className": "col-md-8",
-                },
-                "ref": null,
-                "rendered": Object {
+                Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "fellowSummaryBreakdown": Array [
-                      Object {
-                        "checkedBydefault": true,
-                        "ratings": "0",
-                        "title": "DevPulse",
-                      },
-                      Object {
-                        "checkedBydefault": false,
-                        "ratings": "0/0",
-                        "title": "LMS",
-                      },
-                    ],
-                  },
+                  "nodeType": "host",
+                  "props": Object {},
                   "ref": null,
                   "rendered": null,
-                  "type": [Function],
+                  "type": "div",
                 },
-                "type": "div",
-              },
-            ],
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <FellowSummaryBreakdown
+                      fellowSummaryBreakdown={
+                                            Array [
+                                                                  Object {
+                                                                    "checkedBydefault": true,
+                                                                    "ratings": undefined,
+                                                                    "title": "DevPulse",
+                                                                  },
+                                                                  Object {
+                                                                    "checkedBydefault": false,
+                                                                    "ratings": undefined,
+                                                                    "title": "LMS",
+                                                                  },
+                                                                ]
+                      }
+/>,
+                    "className": "col-xl-6 mt-3 mt-xl-0",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "fellowSummaryBreakdown": Array [
+                        Object {
+                          "checkedBydefault": true,
+                          "ratings": undefined,
+                          "title": "DevPulse",
+                        },
+                        Object {
+                          "checkedBydefault": false,
+                          "ratings": undefined,
+                          "title": "LMS",
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": Symbol(react.fragment),
+            },
             "type": "div",
           },
         ],
@@ -442,50 +462,46 @@ ShallowWrapper {
                     <div
                               className="row"
                     >
-                              <div
-                                        className="col-lg-4"
-                              >
-                                        <FellowProfile
-                                                  fellow={
-                                                            Object {
-                                                                      "devPulseAverage": null,
-                                                                      "email": "kingsley.obot@andela.com",
-                                                                      "id": 10,
-                                                                      "lmsOutput": null,
-                                                                      "picture": null,
-                                                                      "project": "Watch Tower",
-                                                                      "user": Object {
-                                                                        "firstName": "Kingsley",
-                                                                        "lastName": "Obot",
-                                                                      },
-                                                                    }
-                                                  }
-                                        />
-                              </div>
-                              <div
-                                        className="col-md-8"
-                              >
-                                        <FellowSummaryBreakdown
-                                                  fellowSummaryBreakdown={
-                                                            Array [
+                              <Unknown>
+                                        <div
+                                                  className="col-md-6 col-xl-3 mb-3"
+                                        >
+                                                  <HistoryCard
+                                                            user={
                                                                       Object {
-                                                                        "checkedBydefault": true,
-                                                                        "ratings": "0",
-                                                                        "title": "DevPulse",
-                                                                      },
-                                                                      Object {
-                                                                        "checkedBydefault": false,
-                                                                        "ratings": "0/0",
-                                                                        "title": "LMS",
-                                                                      },
-                                                                    ]
-                                                  }
-                                        />
-                              </div>
+                                                                                "detail": "Watch Tower",
+                                                                                "image": undefined,
+                                                                                "name": "Kingsley Obot",
+                                                                              }
+                                                            }
+                                                  />
+                                        </div>
+                                        <div />
+                                        <div
+                                                  className="col-xl-6 mt-3 mt-xl-0"
+                                        >
+                                                  <FellowSummaryBreakdown
+                                                            fellowSummaryBreakdown={
+                                                                      Array [
+                                                                                Object {
+                                                                                  "checkedBydefault": true,
+                                                                                  "ratings": undefined,
+                                                                                  "title": "DevPulse",
+                                                                                },
+                                                                                Object {
+                                                                                  "checkedBydefault": false,
+                                                                                  "ratings": undefined,
+                                                                                  "title": "LMS",
+                                                                                },
+                                                                              ]
+                                                            }
+                                                  />
+                                        </div>
+                              </Unknown>
                     </div>
           </div>
 </div>,
-        "className": "fellow-history container",
+        "className": "fellow-history container-fluid",
       },
       "ref": null,
       "rendered": Object {
@@ -508,46 +524,42 @@ ShallowWrapper {
             <div
                         className="row"
             >
-                        <div
-                                    className="col-lg-4"
-                        >
-                                    <FellowProfile
-                                                fellow={
-                                                            Object {
-                                                                        "devPulseAverage": null,
-                                                                        "email": "kingsley.obot@andela.com",
-                                                                        "id": 10,
-                                                                        "lmsOutput": null,
-                                                                        "picture": null,
-                                                                        "project": "Watch Tower",
-                                                                        "user": Object {
-                                                                          "firstName": "Kingsley",
-                                                                          "lastName": "Obot",
-                                                                        },
-                                                                      }
-                                                }
-                                    />
-                        </div>
-                        <div
-                                    className="col-md-8"
-                        >
-                                    <FellowSummaryBreakdown
-                                                fellowSummaryBreakdown={
-                                                            Array [
+                        <Unknown>
+                                    <div
+                                                className="col-md-6 col-xl-3 mb-3"
+                                    >
+                                                <HistoryCard
+                                                            user={
                                                                         Object {
-                                                                          "checkedBydefault": true,
-                                                                          "ratings": "0",
-                                                                          "title": "DevPulse",
-                                                                        },
-                                                                        Object {
-                                                                          "checkedBydefault": false,
-                                                                          "ratings": "0/0",
-                                                                          "title": "LMS",
-                                                                        },
-                                                                      ]
-                                                }
-                                    />
-                        </div>
+                                                                                    "detail": "Watch Tower",
+                                                                                    "image": undefined,
+                                                                                    "name": "Kingsley Obot",
+                                                                                  }
+                                                            }
+                                                />
+                                    </div>
+                                    <div />
+                                    <div
+                                                className="col-xl-6 mt-3 mt-xl-0"
+                                    >
+                                                <FellowSummaryBreakdown
+                                                            fellowSummaryBreakdown={
+                                                                        Array [
+                                                                                    Object {
+                                                                                      "checkedBydefault": true,
+                                                                                      "ratings": undefined,
+                                                                                      "title": "DevPulse",
+                                                                                    },
+                                                                                    Object {
+                                                                                      "checkedBydefault": false,
+                                                                                      "ratings": undefined,
+                                                                                      "title": "LMS",
+                                                                                    },
+                                                                                  ]
+                                                            }
+                                                />
+                                    </div>
+                        </Unknown>
             </div>
 </div>,
           "className": "fellow-history__top row",
@@ -571,46 +583,42 @@ ShallowWrapper {
               <div
                 className="row"
 >
-                <div
-                                className="col-lg-4"
-                >
-                                <FellowProfile
-                                                fellow={
-                                                                Object {
-                                                                                "devPulseAverage": null,
-                                                                                "email": "kingsley.obot@andela.com",
-                                                                                "id": 10,
-                                                                                "lmsOutput": null,
-                                                                                "picture": null,
-                                                                                "project": "Watch Tower",
-                                                                                "user": Object {
-                                                                                  "firstName": "Kingsley",
-                                                                                  "lastName": "Obot",
-                                                                                },
-                                                                              }
-                                                }
-                                />
-                </div>
-                <div
-                                className="col-md-8"
-                >
-                                <FellowSummaryBreakdown
-                                                fellowSummaryBreakdown={
-                                                                Array [
+                <Unknown>
+                                <div
+                                                className="col-md-6 col-xl-3 mb-3"
+                                >
+                                                <HistoryCard
+                                                                user={
                                                                                 Object {
-                                                                                  "checkedBydefault": true,
-                                                                                  "ratings": "0",
-                                                                                  "title": "DevPulse",
-                                                                                },
-                                                                                Object {
-                                                                                  "checkedBydefault": false,
-                                                                                  "ratings": "0/0",
-                                                                                  "title": "LMS",
-                                                                                },
-                                                                              ]
-                                                }
-                                />
-                </div>
+                                                                                                "detail": "Watch Tower",
+                                                                                                "image": undefined,
+                                                                                                "name": "Kingsley Obot",
+                                                                                              }
+                                                                }
+                                                />
+                                </div>
+                                <div />
+                                <div
+                                                className="col-xl-6 mt-3 mt-xl-0"
+                                >
+                                                <FellowSummaryBreakdown
+                                                                fellowSummaryBreakdown={
+                                                                                Array [
+                                                                                                Object {
+                                                                                                  "checkedBydefault": true,
+                                                                                                  "ratings": undefined,
+                                                                                                  "title": "DevPulse",
+                                                                                                },
+                                                                                                Object {
+                                                                                                  "checkedBydefault": false,
+                                                                                                  "ratings": undefined,
+                                                                                                  "title": "LMS",
+                                                                                                },
+                                                                                              ]
+                                                                }
+                                                />
+                                </div>
+                </Unknown>
 </div>,
             ],
             "className": "col",
@@ -649,149 +657,183 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
+                "children": <Unknown>
                   <div
-                    className="col-lg-4"
->
-                    <FellowProfile
-                                        fellow={
-                                                            Object {
-                                                                                "devPulseAverage": null,
-                                                                                "email": "kingsley.obot@andela.com",
-                                                                                "id": 10,
-                                                                                "lmsOutput": null,
-                                                                                "picture": null,
-                                                                                "project": "Watch Tower",
-                                                                                "user": Object {
-                                                                                  "firstName": "Kingsley",
-                                                                                  "lastName": "Obot",
-                                                                                },
-                                                                              }
-                                        }
-                    />
-</div>,
+                                    className="col-md-6 col-xl-3 mb-3"
+                  >
+                                    <HistoryCard
+                                                      user={
+                                                                        Object {
+                                                                                          "detail": "Watch Tower",
+                                                                                          "image": undefined,
+                                                                                          "name": "Kingsley Obot",
+                                                                                        }
+                                                      }
+                                    />
+                  </div>
+                  <div />
                   <div
-                    className="col-md-8"
->
-                    <FellowSummaryBreakdown
-                                        fellowSummaryBreakdown={
-                                                            Array [
-                                                                                Object {
-                                                                                  "checkedBydefault": true,
-                                                                                  "ratings": "0",
-                                                                                  "title": "DevPulse",
-                                                                                },
-                                                                                Object {
-                                                                                  "checkedBydefault": false,
-                                                                                  "ratings": "0/0",
-                                                                                  "title": "LMS",
-                                                                                },
-                                                                              ]
-                                        }
-                    />
-</div>,
-                ],
+                                    className="col-xl-6 mt-3 mt-xl-0"
+                  >
+                                    <FellowSummaryBreakdown
+                                                      fellowSummaryBreakdown={
+                                                                        Array [
+                                                                                          Object {
+                                                                                            "checkedBydefault": true,
+                                                                                            "ratings": undefined,
+                                                                                            "title": "DevPulse",
+                                                                                          },
+                                                                                          Object {
+                                                                                            "checkedBydefault": false,
+                                                                                            "ratings": undefined,
+                                                                                            "title": "LMS",
+                                                                                          },
+                                                                                        ]
+                                                      }
+                                    />
+                  </div>
+</Unknown>,
                 "className": "row",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <FellowProfile
-                      fellow={
-                                            Object {
-                                                                  "devPulseAverage": null,
-                                                                  "email": "kingsley.obot@andela.com",
-                                                                  "id": 10,
-                                                                  "lmsOutput": null,
-                                                                  "picture": null,
-                                                                  "project": "Watch Tower",
-                                                                  "user": Object {
-                                                                    "firstName": "Kingsley",
-                                                                    "lastName": "Obot",
-                                                                  },
-                                                                }
-                      }
-/>,
-                    "className": "col-lg-4",
-                  },
-                  "ref": null,
-                  "rendered": Object {
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="col-md-6 col-xl-3 mb-3"
+>
+                      <HistoryCard
+                                            user={
+                                                                  Object {
+                                                                                        "detail": "Watch Tower",
+                                                                                        "image": undefined,
+                                                                                        "name": "Kingsley Obot",
+                                                                                      }
+                                            }
+                      />
+</div>,
+                    <div />,
+                    <div
+                      className="col-xl-6 mt-3 mt-xl-0"
+>
+                      <FellowSummaryBreakdown
+                                            fellowSummaryBreakdown={
+                                                                  Array [
+                                                                                        Object {
+                                                                                          "checkedBydefault": true,
+                                                                                          "ratings": undefined,
+                                                                                          "title": "DevPulse",
+                                                                                        },
+                                                                                        Object {
+                                                                                          "checkedBydefault": false,
+                                                                                          "ratings": undefined,
+                                                                                          "title": "LMS",
+                                                                                        },
+                                                                                      ]
+                                            }
+                      />
+</div>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "host",
                     "props": Object {
-                      "fellow": Object {
-                        "devPulseAverage": null,
-                        "email": "kingsley.obot@andela.com",
-                        "id": 10,
-                        "lmsOutput": null,
-                        "picture": null,
-                        "project": "Watch Tower",
+                      "children": <HistoryCard
+                        user={
+                                                Object {
+                                                                        "detail": "Watch Tower",
+                                                                        "image": undefined,
+                                                                        "name": "Kingsley Obot",
+                                                                      }
+                        }
+/>,
+                      "className": "col-md-6 col-xl-3 mb-3",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
                         "user": Object {
-                          "firstName": "Kingsley",
-                          "lastName": "Obot",
+                          "detail": "Watch Tower",
+                          "image": undefined,
+                          "name": "Kingsley Obot",
                         },
                       },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
                     },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                    "type": "div",
                   },
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <FellowSummaryBreakdown
-                      fellowSummaryBreakdown={
-                                            Array [
-                                                                  Object {
-                                                                    "checkedBydefault": true,
-                                                                    "ratings": "0",
-                                                                    "title": "DevPulse",
-                                                                  },
-                                                                  Object {
-                                                                    "checkedBydefault": false,
-                                                                    "ratings": "0/0",
-                                                                    "title": "LMS",
-                                                                  },
-                                                                ]
-                      }
-/>,
-                    "className": "col-md-8",
-                  },
-                  "ref": null,
-                  "rendered": Object {
+                  Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "fellowSummaryBreakdown": Array [
-                        Object {
-                          "checkedBydefault": true,
-                          "ratings": "0",
-                          "title": "DevPulse",
-                        },
-                        Object {
-                          "checkedBydefault": false,
-                          "ratings": "0/0",
-                          "title": "LMS",
-                        },
-                      ],
-                    },
+                    "nodeType": "host",
+                    "props": Object {},
                     "ref": null,
                     "rendered": null,
-                    "type": [Function],
+                    "type": "div",
                   },
-                  "type": "div",
-                },
-              ],
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <FellowSummaryBreakdown
+                        fellowSummaryBreakdown={
+                                                Array [
+                                                                        Object {
+                                                                          "checkedBydefault": true,
+                                                                          "ratings": undefined,
+                                                                          "title": "DevPulse",
+                                                                        },
+                                                                        Object {
+                                                                          "checkedBydefault": false,
+                                                                          "ratings": undefined,
+                                                                          "title": "LMS",
+                                                                        },
+                                                                      ]
+                        }
+/>,
+                      "className": "col-xl-6 mt-3 mt-xl-0",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "fellowSummaryBreakdown": Array [
+                          Object {
+                            "checkedBydefault": true,
+                            "ratings": undefined,
+                            "title": "DevPulse",
+                          },
+                          Object {
+                            "checkedBydefault": false,
+                            "ratings": undefined,
+                            "title": "LMS",
+                          },
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": Symbol(react.fragment),
+              },
               "type": "div",
             },
           ],

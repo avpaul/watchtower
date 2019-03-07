@@ -24,13 +24,14 @@ export const getManagerDataByRole = loggedInRole => {
   }
 };
 
+/**
+ ** Creates an enzyme instance to test the component.
+ * @function
+ * @param loggedInRole The role of the logged in user
+ * @param urlPath The test url used to render the components accordingly.
+ * @return { developerDashboardWrapper, props }
+ */
 const setup = (loggedInRole, urlPath = '/dashboard/fellows') => {
-  /**
-   * Creates an enzyme instance to test the component.
-   * @function
-   *
-   * @returns { developerDashboardWrapper, props }
-   */
   const managerDataForTest = getManagerDataByRole(loggedInRole);
 
   const props = {
@@ -65,6 +66,10 @@ const setup = (loggedInRole, urlPath = '/dashboard/fellows') => {
 };
 
 describe('Developers dashboard test', () => {
+  /**
+   ** Tests the Developer Dashboard according to the provided user role.
+   * @param role The user role
+   */
   const testComponentUsingRole = role => {
     const { developerDashboardWrapper } = setup(role);
     expect(developerDashboardWrapper).toMatchSnapshot();

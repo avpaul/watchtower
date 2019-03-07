@@ -1,18 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Fellow History Profile Card renders to match shapshot 1`] = `
+exports[`Fellow History Card renders to match shapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <FellowProfile
-    fellow={
+  Symbol(enzyme.__unrendered__): <HistoryCard
+    user={
         Object {
-            "id": 10,
+            "detail": "Watch Tower",
+            "name": "Kingsley Obot",
             "picture": null,
-            "project": "Watch Tower",
-            "user": Object {
-              "firstName": "Kingsley",
-              "lastName": "Obot",
-            },
           }
     }
 />,
@@ -31,29 +27,29 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="fellow-card__image"
+          className="fellow-history-card__image"
 >
           <img
-                    alt="Kingsley O... profile pic"
+                    alt="Kingsley Obot profile pic"
                     src="profile.svg"
           />
 </div>,
         <div
-          className="fellow-card__right"
+          className="fellow-history-card__right"
 >
           <div
-                    className="fellow-card__name"
+                    className="fellow-history-card__name fellow-history-card__name--b"
           >
-                    Kingsley O...
+                    Kingsley Obot
           </div>
           <div
-                    className="fellow-card__project"
+                    className="fellow-history-card__detail"
           >
                     Watch Tower
           </div>
 </div>,
       ],
-      "className": "fellow-card",
+      "className": "fellow-history-card",
     },
     "ref": null,
     "rendered": Array [
@@ -63,10 +59,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <img
-            alt="Kingsley O... profile pic"
+            alt="Kingsley Obot profile pic"
             src="profile.svg"
 />,
-          "className": "fellow-card__image",
+          "className": "fellow-history-card__image",
         },
         "ref": null,
         "rendered": Object {
@@ -74,7 +70,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "Kingsley O... profile pic",
+            "alt": "Kingsley Obot profile pic",
             "src": "profile.svg",
           },
           "ref": null,
@@ -90,17 +86,17 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="fellow-card__name"
+              className="fellow-history-card__name fellow-history-card__name--b"
 >
-              Kingsley O...
+              Kingsley Obot
 </div>,
             <div
-              className="fellow-card__project"
+              className="fellow-history-card__detail"
 >
               Watch Tower
 </div>,
           ],
-          "className": "fellow-card__right",
+          "className": "fellow-history-card__right",
         },
         "ref": null,
         "rendered": Array [
@@ -109,11 +105,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Kingsley O...",
-              "className": "fellow-card__name",
+              "children": "Kingsley Obot",
+              "className": "fellow-history-card__name fellow-history-card__name--b",
             },
             "ref": null,
-            "rendered": "Kingsley O...",
+            "rendered": "Kingsley Obot",
             "type": "div",
           },
           Object {
@@ -122,7 +118,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Watch Tower",
-              "className": "fellow-card__project",
+              "className": "fellow-history-card__detail",
             },
             "ref": null,
             "rendered": "Watch Tower",
@@ -142,29 +138,29 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="fellow-card__image"
+            className="fellow-history-card__image"
 >
             <img
-                        alt="Kingsley O... profile pic"
+                        alt="Kingsley Obot profile pic"
                         src="profile.svg"
             />
 </div>,
           <div
-            className="fellow-card__right"
+            className="fellow-history-card__right"
 >
             <div
-                        className="fellow-card__name"
+                        className="fellow-history-card__name fellow-history-card__name--b"
             >
-                        Kingsley O...
+                        Kingsley Obot
             </div>
             <div
-                        className="fellow-card__project"
+                        className="fellow-history-card__detail"
             >
                         Watch Tower
             </div>
 </div>,
         ],
-        "className": "fellow-card",
+        "className": "fellow-history-card",
       },
       "ref": null,
       "rendered": Array [
@@ -174,10 +170,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <img
-              alt="Kingsley O... profile pic"
+              alt="Kingsley Obot profile pic"
               src="profile.svg"
 />,
-            "className": "fellow-card__image",
+            "className": "fellow-history-card__image",
           },
           "ref": null,
           "rendered": Object {
@@ -185,7 +181,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Kingsley O... profile pic",
+              "alt": "Kingsley Obot profile pic",
               "src": "profile.svg",
             },
             "ref": null,
@@ -201,17 +197,17 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="fellow-card__name"
+                className="fellow-history-card__name fellow-history-card__name--b"
 >
-                Kingsley O...
+                Kingsley Obot
 </div>,
               <div
-                className="fellow-card__project"
+                className="fellow-history-card__detail"
 >
                 Watch Tower
 </div>,
             ],
-            "className": "fellow-card__right",
+            "className": "fellow-history-card__right",
           },
           "ref": null,
           "rendered": Array [
@@ -220,11 +216,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Kingsley O...",
-                "className": "fellow-card__name",
+                "children": "Kingsley Obot",
+                "className": "fellow-history-card__name fellow-history-card__name--b",
               },
               "ref": null,
-              "rendered": "Kingsley O...",
+              "rendered": "Kingsley Obot",
               "type": "div",
             },
             Object {
@@ -233,7 +229,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Watch Tower",
-                "className": "fellow-card__project",
+                "className": "fellow-history-card__detail",
               },
               "ref": null,
               "rendered": "Watch Tower",
