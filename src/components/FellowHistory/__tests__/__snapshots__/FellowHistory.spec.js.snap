@@ -19,6 +19,9 @@ ShallowWrapper {
           ]
     }
     getFellowDevPulse={[Function]}
+    getLmsSubmissions={[Function]}
+    lmsLoading={false}
+    lmsSubmissions={Object {}}
     match={
         Object {
             "params": Object {

@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the LmsRow renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LmsRow
+    lmsSubmission={
+        Object {
+            "course_id": 132,
+            "due_date": "02/03/19",
+            "graded_date": "02/03/19",
+            "name": "test course",
+            "score": 2,
+            "submission_date": "02/03/19",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Cell
+          addedClass=""
+          title=""
+>
+          132
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          test course
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          02/03/2019
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          02/03/2019
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          02/03/2019
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          2
+</Cell>,
+      ],
+      "header": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 132,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 132,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": "test course",
+          "title": "",
+        },
+        "ref": null,
+        "rendered": "test course",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": "02/03/2019",
+          "title": "",
+        },
+        "ref": null,
+        "rendered": "02/03/2019",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": "02/03/2019",
+          "title": "",
+        },
+        "ref": null,
+        "rendered": "02/03/2019",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": "02/03/2019",
+          "title": "",
+        },
+        "ref": null,
+        "rendered": "02/03/2019",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
+          "children": 2,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 2,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Cell
+            addedClass=""
+            title=""
+>
+            132
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            test course
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            02/03/2019
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            02/03/2019
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            02/03/2019
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            2
+</Cell>,
+        ],
+        "header": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 132,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 132,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": "test course",
+            "title": "",
+          },
+          "ref": null,
+          "rendered": "test course",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": "02/03/2019",
+            "title": "",
+          },
+          "ref": null,
+          "rendered": "02/03/2019",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": "02/03/2019",
+            "title": "",
+          },
+          "ref": null,
+          "rendered": "02/03/2019",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": "02/03/2019",
+            "title": "",
+          },
+          "ref": null,
+          "rendered": "02/03/2019",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": 2,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 2,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

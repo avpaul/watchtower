@@ -9,6 +9,8 @@ import fetchDevPulse from '../../redux/actionCreators/fellowDevPulseActions';
 import PipActivationForm from '../PipActivationForm/PipActivationForm';
 import './FellowHistory.css';
 import DevPulseTable from '../DevPulseTable';
+import getLmsSubmissions from '../../redux/actionCreators/fellowLmsSubmissionsActions';
+import LmsTable from '../LmsTable';
 
 export class FellowHistory extends Component {
   constructor(props) {
@@ -38,14 +40,21 @@ export class FellowHistory extends Component {
    ** then sets it to the state.
    */
   setFellow() {
-    const { match, fellowSummaryDetails, history } = this.props;
+    const {
+      match,
+      fellowSummaryDetails,
+      history,
+      getFellowDevPulse,
+      getLmsSubmissions: getLms
+    } = this.props;
     const fellowFound = fellowSummaryDetails.find(
       fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
     );
 
     if (fellowFound !== undefined) {
-      const { getFellowDevPulse } = this.props;
-      getFellowDevPulse(fellowFound.email);
+      const { email } = fellowFound;
+      getLms(email);
+      getFellowDevPulse(email);
     } else {
       history.push('/dashboard/fellows');
     }
@@ -98,7 +107,7 @@ export class FellowHistory extends Component {
         <HistoryCard
           user={{
             name: `${manager.firstName} ${manager.lastName}`,
-            picture: manager.picture,
+            image: manager.picture,
             detail: `${fellow.firstName}'s ${managerRole}`
           }}
         />
@@ -123,7 +132,7 @@ export class FellowHistory extends Component {
           <HistoryCard
             user={{
               name: `${fellowBio.firstName} ${fellowBio.lastName}`,
-              picture: fellow.picture,
+              image: fellow.picture,
               detail: fellow.project
             }}
           />
@@ -171,7 +180,9 @@ export class FellowHistory extends Component {
     showDevpulseTable,
     showLmsTable,
     ratings,
-    ratingsLoading
+    ratingsLoading,
+    lmsLoading,
+    lmsSubmissions
   ) => (
     <div className="fellow-history container-fluid">
       <div className="fellow-history__top row">
@@ -188,7 +199,12 @@ export class FellowHistory extends Component {
               {showDevpulseTable && (
                 <DevPulseTable loading={ratingsLoading} ratings={ratings} />
               )}
-              {showLmsTable && 'LMS TABLE HERE'}
+              {showLmsTable && (
+                <LmsTable
+                  loading={lmsLoading}
+                  lmsSubmissions={lmsSubmissions}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -197,7 +213,13 @@ export class FellowHistory extends Component {
   );
 
   render() {
-    const { ratings, ratingsLoading, averageRatings } = this.props;
+    const {
+      ratings,
+      ratingsLoading,
+      averageRatings,
+      lmsLoading,
+      lmsSubmissions
+    } = this.props;
     const { fellow, showDevpulseTable, showLmsTable } = this.state;
 
     return (
@@ -219,7 +241,9 @@ export class FellowHistory extends Component {
               showDevpulseTable,
               showLmsTable,
               ratings,
-              ratingsLoading
+              ratingsLoading,
+              lmsLoading,
+              lmsSubmissions
             )
           }
         />
@@ -230,21 +254,26 @@ export class FellowHistory extends Component {
 
 FellowHistory.propTypes = {
   match: PropTypes.shape().isRequired,
-  fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  fellowSummaryDetails: PropTypes.shape().isRequired,
   history: PropTypes.shape().isRequired,
+  lmsSubmissions: PropTypes.shape([]).isRequired,
+  lmsLoading: PropTypes.shape({}).isRequired,
+  getLmsSubmissions: PropTypes.func.isRequired,
   ratings: PropTypes.shape([]).isRequired,
   ratingsLoading: PropTypes.shape({}).isRequired,
   getFellowDevPulse: PropTypes.func.isRequired,
   averageRatings: PropTypes.shape({}).isRequired
 };
 
-const mapStateToProps = ({ fellowDevPulse }) => ({
+const mapStateToProps = ({ fellowDevPulse, fellowLmsSubmissions }) => ({
   ratings: fellowDevPulse.ratings,
   ratingsLoading: fellowDevPulse.loading,
+  lmsSubmissions: fellowLmsSubmissions.lmsSubmissions,
+  lmsLoading: fellowLmsSubmissions.loading,
   averageRatings: fellowDevPulse.averageRatings
 });
 
 export default connect(
   mapStateToProps,
-  { getFellowDevPulse: fetchDevPulse }
+  { getFellowDevPulse: fetchDevPulse, getLmsSubmissions }
 )(withRouter(FellowHistory));
