@@ -106,100 +106,132 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         <div
-          className="filter-by-clicking-a"
+          className="row row--no-margin"
 >
-          Filter by clicking a card
-</div>,
-        Array [
           <div
-            className="card-scroll-wrapper"
->
-            <div
-                        className="fellow-breakdown-card"
-            >
-                        <div
-                                    className="fellow-breakdown-title"
-                        />
-                        <div
-                                    className="number"
-                        />
-            </div>
+                    className="col filter-by-clicking-a mb-3"
+          >
+                    Filter by clicking a card
+          </div>
 </div>,
-          <div
-            className="card-scroll-wrapper"
+        <div
+          className="row row--no-margin"
 >
-            <div
-                        className="fellow-breakdown-card"
-            >
-                        <div
-                                    className="fellow-breakdown-title"
-                        />
-                        <div
-                                    className="number"
-                        />
-            </div>
+          <FellowSummaryCard
+                    breakdown={
+                              Object {
+                                        "apprEndDate": "2019-01-16",
+                                        "apprStartDate": "2018-10-15",
+                                        "devPulseAverage": "1.04",
+                                        "firstName": "Kingsley",
+                                        "lastName": "Obot",
+                                        "level": "D0B Apprenticeship",
+                                        "lmsOutput": "4/18",
+                                        "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                        "project": "Watch Tower",
+                                        "simStartDate": null,
+                                        "simsEndDate": null,
+                                        "status": "ltWk5OffTrack",
+                                      }
+                    }
+          />
+          <FellowSummaryCard
+                    breakdown={
+                              Object {
+                                        "apprEndDate": "2019-01-16",
+                                        "apprStartDate": "2018-10-15",
+                                        "devPulseAverage": "1.04",
+                                        "firstName": "Kingsley",
+                                        "lastName": "Obot",
+                                        "level": "D0B Apprenticeship",
+                                        "lmsOutput": "4/18",
+                                        "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                        "project": "Watch Tower",
+                                        "simStartDate": null,
+                                        "simsEndDate": null,
+                                        "status": "gteWk5OffTrack",
+                                      }
+                    }
+          />
+          <FellowSummaryCard
+                    breakdown={
+                              Object {
+                                        "apprEndDate": "2019-01-16",
+                                        "apprStartDate": "2018-10-15",
+                                        "devPulseAverage": "1.04",
+                                        "firstName": "Oluseyi",
+                                        "lastName": "Anani",
+                                        "level": "D0B Apprenticeship",
+                                        "lmsOutput": "4/18",
+                                        "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                        "project": "Watch Tower",
+                                        "simStartDate": null,
+                                        "simsEndDate": null,
+                                        "status": "onTrack",
+                                      }
+                    }
+          />
+          <FellowSummaryCard
+                    breakdown={
+                              Object {
+                                        "apprEndDate": "2019-01-16",
+                                        "apprStartDate": "2018-10-15",
+                                        "devPulseAverage": "1.04",
+                                        "firstName": "Brian",
+                                        "lastName": "Bett",
+                                        "level": "D0B Apprenticeship",
+                                        "lmsOutput": "4/18",
+                                        "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                        "project": "Watch Tower",
+                                        "simStartDate": null,
+                                        "simsEndDate": null,
+                                        "status": "onTrack",
+                                      }
+                    }
+          />
+          <FellowSummaryCard
+                    breakdown={
+                              Object {
+                                        "apprEndDate": null,
+                                        "apprStartDate": null,
+                                        "devPulseAverage": "1.04",
+                                        "firstName": "",
+                                        "lastName": "",
+                                        "level": "D0A Simulations",
+                                        "lmsOutput": "4/18",
+                                        "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                        "project": "Noldor",
+                                        "simStartDate": "2019-03-06",
+                                        "simsEndDate": "2019-06-14",
+                                        "status": "gteWk5OffTrack",
+                                      }
+                    }
+          />
+          <FellowSummaryCard
+                    breakdown={
+                              Object {
+                                        "apprEndDate": null,
+                                        "apprStartDate": null,
+                                        "devPulseAverage": "1.04",
+                                        "level": "",
+                                        "lmsOutput": "4/18",
+                                        "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                        "project": "Noldor",
+                                        "simStartDate": "2019-03-06",
+                                        "simsEndDate": "2019-06-14",
+                                        "status": "gteWk5OffTrack",
+                                        "user": Object {
+                                          "firstName": "somereallyreallylongusername",
+                                          "lastName": "",
+                                        },
+                                      }
+                    }
+          />
 </div>,
-          <div
-            className="card-scroll-wrapper"
->
-            <div
-                        className="fellow-breakdown-card"
-            >
-                        <div
-                                    className="fellow-breakdown-title"
-                        />
-                        <div
-                                    className="number"
-                        />
-            </div>
-</div>,
-          <div
-            className="card-scroll-wrapper"
->
-            <div
-                        className="fellow-breakdown-card"
-            >
-                        <div
-                                    className="fellow-breakdown-title"
-                        />
-                        <div
-                                    className="number"
-                        />
-            </div>
-</div>,
-          <div
-            className="card-scroll-wrapper"
->
-            <div
-                        className="fellow-breakdown-card"
-            >
-                        <div
-                                    className="fellow-breakdown-title"
-                        />
-                        <div
-                                    className="number"
-                        />
-            </div>
-</div>,
-          <div
-            className="card-scroll-wrapper"
->
-            <div
-                        className="fellow-breakdown-card"
-            >
-                        <div
-                                    className="fellow-breakdown-title"
-                        />
-                        <div
-                                    className="number"
-                        />
-            </div>
-</div>,
-        ],
       ],
     },
     "ref": null,
@@ -209,81 +241,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Filter by clicking a card",
-          "className": "filter-by-clicking-a",
-        },
-        "ref": null,
-        "rendered": "Filter by clicking a card",
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            null,
-            <div
-              className="fellow-breakdown-card"
+          "children": <div
+            className="col filter-by-clicking-a mb-3"
 >
-              <div
-                            className="fellow-breakdown-title"
-              />
-              <div
-                            className="number"
-              />
+            Filter by clicking a card
 </div>,
-          ],
-          "className": "card-scroll-wrapper",
+          "className": "row row--no-margin",
         },
         "ref": null,
-        "rendered": Array [
-          null,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div
-                  className="fellow-breakdown-title"
-/>,
-                <div
-                  className="number"
-/>,
-              ],
-              "className": "fellow-breakdown-card",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "fellow-breakdown-title",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "number",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Filter by clicking a card",
+            "className": "col filter-by-clicking-a mb-3",
           },
-        ],
+          "ref": null,
+          "rendered": "Filter by clicking a card",
+          "type": "div",
+        },
         "type": "div",
       },
       Object {
@@ -292,451 +269,403 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            null,
-            <div
-              className="fellow-breakdown-card"
->
-              <div
-                            className="fellow-breakdown-title"
-              />
-              <div
-                            className="number"
-              />
-</div>,
+            <FellowSummaryCard
+              breakdown={
+                            Object {
+                                          "apprEndDate": "2019-01-16",
+                                          "apprStartDate": "2018-10-15",
+                                          "devPulseAverage": "1.04",
+                                          "firstName": "Kingsley",
+                                          "lastName": "Obot",
+                                          "level": "D0B Apprenticeship",
+                                          "lmsOutput": "4/18",
+                                          "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                          "project": "Watch Tower",
+                                          "simStartDate": null,
+                                          "simsEndDate": null,
+                                          "status": "ltWk5OffTrack",
+                                        }
+              }
+/>,
+            <FellowSummaryCard
+              breakdown={
+                            Object {
+                                          "apprEndDate": "2019-01-16",
+                                          "apprStartDate": "2018-10-15",
+                                          "devPulseAverage": "1.04",
+                                          "firstName": "Kingsley",
+                                          "lastName": "Obot",
+                                          "level": "D0B Apprenticeship",
+                                          "lmsOutput": "4/18",
+                                          "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                          "project": "Watch Tower",
+                                          "simStartDate": null,
+                                          "simsEndDate": null,
+                                          "status": "gteWk5OffTrack",
+                                        }
+              }
+/>,
+            <FellowSummaryCard
+              breakdown={
+                            Object {
+                                          "apprEndDate": "2019-01-16",
+                                          "apprStartDate": "2018-10-15",
+                                          "devPulseAverage": "1.04",
+                                          "firstName": "Oluseyi",
+                                          "lastName": "Anani",
+                                          "level": "D0B Apprenticeship",
+                                          "lmsOutput": "4/18",
+                                          "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                          "project": "Watch Tower",
+                                          "simStartDate": null,
+                                          "simsEndDate": null,
+                                          "status": "onTrack",
+                                        }
+              }
+/>,
+            <FellowSummaryCard
+              breakdown={
+                            Object {
+                                          "apprEndDate": "2019-01-16",
+                                          "apprStartDate": "2018-10-15",
+                                          "devPulseAverage": "1.04",
+                                          "firstName": "Brian",
+                                          "lastName": "Bett",
+                                          "level": "D0B Apprenticeship",
+                                          "lmsOutput": "4/18",
+                                          "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                          "project": "Watch Tower",
+                                          "simStartDate": null,
+                                          "simsEndDate": null,
+                                          "status": "onTrack",
+                                        }
+              }
+/>,
+            <FellowSummaryCard
+              breakdown={
+                            Object {
+                                          "apprEndDate": null,
+                                          "apprStartDate": null,
+                                          "devPulseAverage": "1.04",
+                                          "firstName": "",
+                                          "lastName": "",
+                                          "level": "D0A Simulations",
+                                          "lmsOutput": "4/18",
+                                          "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                          "project": "Noldor",
+                                          "simStartDate": "2019-03-06",
+                                          "simsEndDate": "2019-06-14",
+                                          "status": "gteWk5OffTrack",
+                                        }
+              }
+/>,
+            <FellowSummaryCard
+              breakdown={
+                            Object {
+                                          "apprEndDate": null,
+                                          "apprStartDate": null,
+                                          "devPulseAverage": "1.04",
+                                          "level": "",
+                                          "lmsOutput": "4/18",
+                                          "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                          "project": "Noldor",
+                                          "simStartDate": "2019-03-06",
+                                          "simsEndDate": "2019-06-14",
+                                          "status": "gteWk5OffTrack",
+                                          "user": Object {
+                                            "firstName": "somereallyreallylongusername",
+                                            "lastName": "",
+                                          },
+                                        }
+              }
+/>,
           ],
-          "className": "card-scroll-wrapper",
+          "className": "row row--no-margin",
         },
         "ref": null,
         "rendered": Array [
-          null,
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <div
-                  className="fellow-breakdown-title"
-/>,
-                <div
-                  className="number"
-/>,
-              ],
-              "className": "fellow-breakdown-card",
+              "breakdown": Object {
+                "apprEndDate": "2019-01-16",
+                "apprStartDate": "2018-10-15",
+                "devPulseAverage": "1.04",
+                "firstName": "Kingsley",
+                "lastName": "Obot",
+                "level": "D0B Apprenticeship",
+                "lmsOutput": "4/18",
+                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                "project": "Watch Tower",
+                "simStartDate": null,
+                "simsEndDate": null,
+                "status": "ltWk5OffTrack",
+              },
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "fellow-breakdown-title",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "number",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            null,
-            <div
-              className="fellow-breakdown-card"
->
-              <div
-                            className="fellow-breakdown-title"
-              />
-              <div
-                            className="number"
-              />
-</div>,
-          ],
-          "className": "card-scroll-wrapper",
-        },
-        "ref": null,
-        "rendered": Array [
-          null,
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <div
-                  className="fellow-breakdown-title"
-/>,
-                <div
-                  className="number"
-/>,
-              ],
-              "className": "fellow-breakdown-card",
+              "breakdown": Object {
+                "apprEndDate": "2019-01-16",
+                "apprStartDate": "2018-10-15",
+                "devPulseAverage": "1.04",
+                "firstName": "Kingsley",
+                "lastName": "Obot",
+                "level": "D0B Apprenticeship",
+                "lmsOutput": "4/18",
+                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                "project": "Watch Tower",
+                "simStartDate": null,
+                "simsEndDate": null,
+                "status": "gteWk5OffTrack",
+              },
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "fellow-breakdown-title",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "number",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            null,
-            <div
-              className="fellow-breakdown-card"
->
-              <div
-                            className="fellow-breakdown-title"
-              />
-              <div
-                            className="number"
-              />
-</div>,
-          ],
-          "className": "card-scroll-wrapper",
-        },
-        "ref": null,
-        "rendered": Array [
-          null,
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <div
-                  className="fellow-breakdown-title"
-/>,
-                <div
-                  className="number"
-/>,
-              ],
-              "className": "fellow-breakdown-card",
+              "breakdown": Object {
+                "apprEndDate": "2019-01-16",
+                "apprStartDate": "2018-10-15",
+                "devPulseAverage": "1.04",
+                "firstName": "Oluseyi",
+                "lastName": "Anani",
+                "level": "D0B Apprenticeship",
+                "lmsOutput": "4/18",
+                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                "project": "Watch Tower",
+                "simStartDate": null,
+                "simsEndDate": null,
+                "status": "onTrack",
+              },
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "fellow-breakdown-title",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "number",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            null,
-            <div
-              className="fellow-breakdown-card"
->
-              <div
-                            className="fellow-breakdown-title"
-              />
-              <div
-                            className="number"
-              />
-</div>,
-          ],
-          "className": "card-scroll-wrapper",
-        },
-        "ref": null,
-        "rendered": Array [
-          null,
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <div
-                  className="fellow-breakdown-title"
-/>,
-                <div
-                  className="number"
-/>,
-              ],
-              "className": "fellow-breakdown-card",
+              "breakdown": Object {
+                "apprEndDate": "2019-01-16",
+                "apprStartDate": "2018-10-15",
+                "devPulseAverage": "1.04",
+                "firstName": "Brian",
+                "lastName": "Bett",
+                "level": "D0B Apprenticeship",
+                "lmsOutput": "4/18",
+                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                "project": "Watch Tower",
+                "simStartDate": null,
+                "simsEndDate": null,
+                "status": "onTrack",
+              },
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "fellow-breakdown-title",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "number",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            null,
-            <div
-              className="fellow-breakdown-card"
->
-              <div
-                            className="fellow-breakdown-title"
-              />
-              <div
-                            className="number"
-              />
-</div>,
-          ],
-          "className": "card-scroll-wrapper",
-        },
-        "ref": null,
-        "rendered": Array [
-          null,
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <div
-                  className="fellow-breakdown-title"
-/>,
-                <div
-                  className="number"
-/>,
-              ],
-              "className": "fellow-breakdown-card",
+              "breakdown": Object {
+                "apprEndDate": null,
+                "apprStartDate": null,
+                "devPulseAverage": "1.04",
+                "firstName": "",
+                "lastName": "",
+                "level": "D0A Simulations",
+                "lmsOutput": "4/18",
+                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                "project": "Noldor",
+                "simStartDate": "2019-03-06",
+                "simsEndDate": "2019-06-14",
+                "status": "gteWk5OffTrack",
+              },
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "fellow-breakdown-title",
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "breakdown": Object {
+                "apprEndDate": null,
+                "apprStartDate": null,
+                "devPulseAverage": "1.04",
+                "level": "",
+                "lmsOutput": "4/18",
+                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                "project": "Noldor",
+                "simStartDate": "2019-03-06",
+                "simsEndDate": "2019-06-14",
+                "status": "gteWk5OffTrack",
+                "user": Object {
+                  "firstName": "somereallyreallylongusername",
+                  "lastName": "",
                 },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": undefined,
-                  "className": "number",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
         ],
         "type": "div",
       },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           <div
-            className="filter-by-clicking-a"
+            className="row row--no-margin"
 >
-            Filter by clicking a card
-</div>,
-          Array [
             <div
-              className="card-scroll-wrapper"
->
-              <div
-                            className="fellow-breakdown-card"
-              >
-                            <div
-                                          className="fellow-breakdown-title"
-                            />
-                            <div
-                                          className="number"
-                            />
-              </div>
+                        className="col filter-by-clicking-a mb-3"
+            >
+                        Filter by clicking a card
+            </div>
 </div>,
-            <div
-              className="card-scroll-wrapper"
+          <div
+            className="row row--no-margin"
 >
-              <div
-                            className="fellow-breakdown-card"
-              >
-                            <div
-                                          className="fellow-breakdown-title"
-                            />
-                            <div
-                                          className="number"
-                            />
-              </div>
+            <FellowSummaryCard
+                        breakdown={
+                                    Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Kingsley",
+                                                "lastName": "Obot",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "ltWk5OffTrack",
+                                              }
+                        }
+            />
+            <FellowSummaryCard
+                        breakdown={
+                                    Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Kingsley",
+                                                "lastName": "Obot",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "gteWk5OffTrack",
+                                              }
+                        }
+            />
+            <FellowSummaryCard
+                        breakdown={
+                                    Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Oluseyi",
+                                                "lastName": "Anani",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "onTrack",
+                                              }
+                        }
+            />
+            <FellowSummaryCard
+                        breakdown={
+                                    Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Brian",
+                                                "lastName": "Bett",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "onTrack",
+                                              }
+                        }
+            />
+            <FellowSummaryCard
+                        breakdown={
+                                    Object {
+                                                "apprEndDate": null,
+                                                "apprStartDate": null,
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "",
+                                                "lastName": "",
+                                                "level": "D0A Simulations",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Noldor",
+                                                "simStartDate": "2019-03-06",
+                                                "simsEndDate": "2019-06-14",
+                                                "status": "gteWk5OffTrack",
+                                              }
+                        }
+            />
+            <FellowSummaryCard
+                        breakdown={
+                                    Object {
+                                                "apprEndDate": null,
+                                                "apprStartDate": null,
+                                                "devPulseAverage": "1.04",
+                                                "level": "",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Noldor",
+                                                "simStartDate": "2019-03-06",
+                                                "simsEndDate": "2019-06-14",
+                                                "status": "gteWk5OffTrack",
+                                                "user": Object {
+                                                  "firstName": "somereallyreallylongusername",
+                                                  "lastName": "",
+                                                },
+                                              }
+                        }
+            />
 </div>,
-            <div
-              className="card-scroll-wrapper"
->
-              <div
-                            className="fellow-breakdown-card"
-              >
-                            <div
-                                          className="fellow-breakdown-title"
-                            />
-                            <div
-                                          className="number"
-                            />
-              </div>
-</div>,
-            <div
-              className="card-scroll-wrapper"
->
-              <div
-                            className="fellow-breakdown-card"
-              >
-                            <div
-                                          className="fellow-breakdown-title"
-                            />
-                            <div
-                                          className="number"
-                            />
-              </div>
-</div>,
-            <div
-              className="card-scroll-wrapper"
->
-              <div
-                            className="fellow-breakdown-card"
-              >
-                            <div
-                                          className="fellow-breakdown-title"
-                            />
-                            <div
-                                          className="number"
-                            />
-              </div>
-</div>,
-            <div
-              className="card-scroll-wrapper"
->
-              <div
-                            className="fellow-breakdown-card"
-              >
-                            <div
-                                          className="fellow-breakdown-title"
-                            />
-                            <div
-                                          className="number"
-                            />
-              </div>
-</div>,
-          ],
         ],
       },
       "ref": null,
@@ -746,81 +675,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Filter by clicking a card",
-            "className": "filter-by-clicking-a",
-          },
-          "ref": null,
-          "rendered": "Filter by clicking a card",
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              null,
-              <div
-                className="fellow-breakdown-card"
+            "children": <div
+              className="col filter-by-clicking-a mb-3"
 >
-                <div
-                                className="fellow-breakdown-title"
-                />
-                <div
-                                className="number"
-                />
+              Filter by clicking a card
 </div>,
-            ],
-            "className": "card-scroll-wrapper",
+            "className": "row row--no-margin",
           },
           "ref": null,
-          "rendered": Array [
-            null,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <div
-                    className="fellow-breakdown-title"
-/>,
-                  <div
-                    className="number"
-/>,
-                ],
-                "className": "fellow-breakdown-card",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "fellow-breakdown-title",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "number",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Filter by clicking a card",
+              "className": "col filter-by-clicking-a mb-3",
             },
-          ],
+            "ref": null,
+            "rendered": "Filter by clicking a card",
+            "type": "div",
+          },
           "type": "div",
         },
         Object {
@@ -829,352 +703,272 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              null,
-              <div
-                className="fellow-breakdown-card"
->
-                <div
-                                className="fellow-breakdown-title"
-                />
-                <div
-                                className="number"
-                />
-</div>,
+              <FellowSummaryCard
+                breakdown={
+                                Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Kingsley",
+                                                "lastName": "Obot",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "ltWk5OffTrack",
+                                              }
+                }
+/>,
+              <FellowSummaryCard
+                breakdown={
+                                Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Kingsley",
+                                                "lastName": "Obot",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "gteWk5OffTrack",
+                                              }
+                }
+/>,
+              <FellowSummaryCard
+                breakdown={
+                                Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Oluseyi",
+                                                "lastName": "Anani",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "onTrack",
+                                              }
+                }
+/>,
+              <FellowSummaryCard
+                breakdown={
+                                Object {
+                                                "apprEndDate": "2019-01-16",
+                                                "apprStartDate": "2018-10-15",
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "Brian",
+                                                "lastName": "Bett",
+                                                "level": "D0B Apprenticeship",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Watch Tower",
+                                                "simStartDate": null,
+                                                "simsEndDate": null,
+                                                "status": "onTrack",
+                                              }
+                }
+/>,
+              <FellowSummaryCard
+                breakdown={
+                                Object {
+                                                "apprEndDate": null,
+                                                "apprStartDate": null,
+                                                "devPulseAverage": "1.04",
+                                                "firstName": "",
+                                                "lastName": "",
+                                                "level": "D0A Simulations",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Noldor",
+                                                "simStartDate": "2019-03-06",
+                                                "simsEndDate": "2019-06-14",
+                                                "status": "gteWk5OffTrack",
+                                              }
+                }
+/>,
+              <FellowSummaryCard
+                breakdown={
+                                Object {
+                                                "apprEndDate": null,
+                                                "apprStartDate": null,
+                                                "devPulseAverage": "1.04",
+                                                "level": "",
+                                                "lmsOutput": "4/18",
+                                                "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                                                "project": "Noldor",
+                                                "simStartDate": "2019-03-06",
+                                                "simsEndDate": "2019-06-14",
+                                                "status": "gteWk5OffTrack",
+                                                "user": Object {
+                                                  "firstName": "somereallyreallylongusername",
+                                                  "lastName": "",
+                                                },
+                                              }
+                }
+/>,
             ],
-            "className": "card-scroll-wrapper",
+            "className": "row row--no-margin",
           },
           "ref": null,
           "rendered": Array [
-            null,
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="fellow-breakdown-title"
-/>,
-                  <div
-                    className="number"
-/>,
-                ],
-                "className": "fellow-breakdown-card",
+                "breakdown": Object {
+                  "apprEndDate": "2019-01-16",
+                  "apprStartDate": "2018-10-15",
+                  "devPulseAverage": "1.04",
+                  "firstName": "Kingsley",
+                  "lastName": "Obot",
+                  "level": "D0B Apprenticeship",
+                  "lmsOutput": "4/18",
+                  "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                  "project": "Watch Tower",
+                  "simStartDate": null,
+                  "simsEndDate": null,
+                  "status": "ltWk5OffTrack",
+                },
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "fellow-breakdown-title",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "number",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              null,
-              <div
-                className="fellow-breakdown-card"
->
-                <div
-                                className="fellow-breakdown-title"
-                />
-                <div
-                                className="number"
-                />
-</div>,
-            ],
-            "className": "card-scroll-wrapper",
-          },
-          "ref": null,
-          "rendered": Array [
-            null,
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="fellow-breakdown-title"
-/>,
-                  <div
-                    className="number"
-/>,
-                ],
-                "className": "fellow-breakdown-card",
+                "breakdown": Object {
+                  "apprEndDate": "2019-01-16",
+                  "apprStartDate": "2018-10-15",
+                  "devPulseAverage": "1.04",
+                  "firstName": "Kingsley",
+                  "lastName": "Obot",
+                  "level": "D0B Apprenticeship",
+                  "lmsOutput": "4/18",
+                  "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                  "project": "Watch Tower",
+                  "simStartDate": null,
+                  "simsEndDate": null,
+                  "status": "gteWk5OffTrack",
+                },
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "fellow-breakdown-title",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "number",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              null,
-              <div
-                className="fellow-breakdown-card"
->
-                <div
-                                className="fellow-breakdown-title"
-                />
-                <div
-                                className="number"
-                />
-</div>,
-            ],
-            "className": "card-scroll-wrapper",
-          },
-          "ref": null,
-          "rendered": Array [
-            null,
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="fellow-breakdown-title"
-/>,
-                  <div
-                    className="number"
-/>,
-                ],
-                "className": "fellow-breakdown-card",
+                "breakdown": Object {
+                  "apprEndDate": "2019-01-16",
+                  "apprStartDate": "2018-10-15",
+                  "devPulseAverage": "1.04",
+                  "firstName": "Oluseyi",
+                  "lastName": "Anani",
+                  "level": "D0B Apprenticeship",
+                  "lmsOutput": "4/18",
+                  "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                  "project": "Watch Tower",
+                  "simStartDate": null,
+                  "simsEndDate": null,
+                  "status": "onTrack",
+                },
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "fellow-breakdown-title",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "number",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              null,
-              <div
-                className="fellow-breakdown-card"
->
-                <div
-                                className="fellow-breakdown-title"
-                />
-                <div
-                                className="number"
-                />
-</div>,
-            ],
-            "className": "card-scroll-wrapper",
-          },
-          "ref": null,
-          "rendered": Array [
-            null,
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="fellow-breakdown-title"
-/>,
-                  <div
-                    className="number"
-/>,
-                ],
-                "className": "fellow-breakdown-card",
+                "breakdown": Object {
+                  "apprEndDate": "2019-01-16",
+                  "apprStartDate": "2018-10-15",
+                  "devPulseAverage": "1.04",
+                  "firstName": "Brian",
+                  "lastName": "Bett",
+                  "level": "D0B Apprenticeship",
+                  "lmsOutput": "4/18",
+                  "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                  "project": "Watch Tower",
+                  "simStartDate": null,
+                  "simsEndDate": null,
+                  "status": "onTrack",
+                },
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "fellow-breakdown-title",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "number",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              null,
-              <div
-                className="fellow-breakdown-card"
->
-                <div
-                                className="fellow-breakdown-title"
-                />
-                <div
-                                className="number"
-                />
-</div>,
-            ],
-            "className": "card-scroll-wrapper",
-          },
-          "ref": null,
-          "rendered": Array [
-            null,
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <div
-                    className="fellow-breakdown-title"
-/>,
-                  <div
-                    className="number"
-/>,
-                ],
-                "className": "fellow-breakdown-card",
+                "breakdown": Object {
+                  "apprEndDate": null,
+                  "apprStartDate": null,
+                  "devPulseAverage": "1.04",
+                  "firstName": "",
+                  "lastName": "",
+                  "level": "D0A Simulations",
+                  "lmsOutput": "4/18",
+                  "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                  "project": "Noldor",
+                  "simStartDate": "2019-03-06",
+                  "simsEndDate": "2019-06-14",
+                  "status": "gteWk5OffTrack",
+                },
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "fellow-breakdown-title",
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "breakdown": Object {
+                  "apprEndDate": null,
+                  "apprStartDate": null,
+                  "devPulseAverage": "1.04",
+                  "level": "",
+                  "lmsOutput": "4/18",
+                  "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+                  "project": "Noldor",
+                  "simStartDate": "2019-03-06",
+                  "simsEndDate": "2019-06-14",
+                  "status": "gteWk5OffTrack",
+                  "user": Object {
+                    "firstName": "somereallyreallylongusername",
+                    "lastName": "",
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": undefined,
-                    "className": "number",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
           ],
           "type": "div",
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

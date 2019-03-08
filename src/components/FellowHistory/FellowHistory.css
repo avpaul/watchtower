@@ -1,7 +1,17 @@
+.fellow-history {
+  padding: 0 4.166666%;
+}
+@media (min-width: 1400px) {
+  .fellow-history {
+    width: 80% !important;
+    margin-left: 0 !important;
+  }
+}
+
 .fellow-history__top {
   float: left;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .fellow-history__header {
@@ -14,7 +24,7 @@
   line-height: 1.63rem;
 }
 
-.fellow-card {
+.fellow-history-card {
   box-sizing: border-box;
   height: 7.5rem;
   border: 0.06rem solid rgba(101, 110, 114, 0.12);
@@ -22,47 +32,65 @@
   background-color: #ffffff;
   box-shadow: 0 0.25rem 0.44rem 0 rgba(35, 47, 73, 0.06);
   transition: 0.2s ease all;
+  position: relative;
 }
 
-.fellow-card:hover {
+.fellow-history-card:hover {
   box-shadow: rgba(35, 47, 73, 0.15) 0 0.25rem 0.63rem 0.06rem;
 }
 
-.fellow-card__image {
-  margin: 3.75rem 1.25rem 0 2.5rem;
+.fellow-history-card__image {
   transform: translateY(-50%);
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.fellow-history-card__image img {
+  border-radius: 50%;
   width: 3.75rem;
   height: 3.75rem;
+  transform: translateX(-50%);
+  margin-left: 60%;
   float: left;
 }
 
-.fellow-card__image img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
+.fellow-history-card__right {
+  width: 60%;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
 }
 
-.fellow-card__right {
-  float: left;
-  width: 50%;
-  margin-top: 1.88rem;
-}
-
-.fellow-card__name {
+.fellow-history-card__name,
+.fellow-history-card__name {
   float: left;
   width: 100%;
   color: #333333;
   font-weight: 500;
+  padding-right: 1rem;
+}
+
+.fellow-history-card__name--s {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.fellow-history-card__name--b {
+  line-height: 1.7rem;
   font-size: 1.5rem;
 }
 
-.fellow-card__project {
+.fellow-history-card__detail {
   float: left;
   width: 100%;
   color: #999999;
   font-family: 'DIN Pro';
   font-size: 0.88rem;
   line-height: 1.13rem;
+  margin-top: 0.5rem;
 }
 
 .fellow-history__not-found {
@@ -70,4 +98,8 @@
   font-family: 'DIN Pro';
   font-size: 0.88rem;
   line-height: 1.13rem;
+}
+
+.card-scroll-wrapper {
+  float: left;
 }

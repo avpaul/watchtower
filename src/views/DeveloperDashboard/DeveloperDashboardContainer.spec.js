@@ -18,15 +18,14 @@ const initState = initialState;
 const mockStore = configureStore();
 let store;
 
+/**
+ * Creates an enzyme instance to test the component. The component is rendered
+ * according to the url path that is being pre-defined
+ * @function
+ *
+ * @returns { mountedWrapper, props}
+ */
 const setup = (loggedInRole, urlPath) => {
-  /**
-   * Creates an enzyme instance to test the component. The component is rendered
-   * according to the url path that is being pre-defined
-   * @function
-   *
-   * @returns { mountedWrapper, props}
-   */
-
   const managerDataForTest = getManagerDataByRole(loggedInRole);
 
   const props = {
@@ -80,11 +79,11 @@ describe('Tests on DevelopersDashboardContainer component', () => {
     expect(wrapper.props().error).toEqual(null);
   });
 
+  /**
+   * Tests if the routes are rendering the expected components
+   * @function
+   */
   const testRoute = (path, container) => {
-    /**
-     * Tests if the routes are rendering the expected components
-     * @function
-     */
     const { mountedWrapper } = setup('WATCH_TOWER_TTL', path);
     expect(mountedWrapper.find(container).exists()).toBe(true);
   };

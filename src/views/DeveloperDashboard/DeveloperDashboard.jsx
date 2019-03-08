@@ -68,7 +68,21 @@ class DeveloperDashboard extends Component {
    */
   updateState = data => {
     const fellows = [];
-    data.forEach(x => fellows.push(...x.fellows));
+    data.forEach(manager => {
+      let updatedFellows = manager.fellows;
+
+      if (updatedFellows){
+        updatedFellows = updatedFellows.map(fellow => {
+          const updatedFellow = fellow;
+          updatedFellow.manager = manager;
+          delete updatedFellow.manager.fellows;
+          return fellow;
+        });
+      }
+
+      fellows.push(...updatedFellows);
+    });
+
     this.setState({ fellowSummaryDetails: fellows, allFellows: fellows });
   };
 
