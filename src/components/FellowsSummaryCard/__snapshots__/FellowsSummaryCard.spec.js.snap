@@ -9,7 +9,6 @@ ShallowWrapper {
     level="D0B Apprenticeship"
     lmsOutput="4/18"
     lmsOutputs={undefined}
-    mykey={null}
     name="Kingsley obot"
     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
     product="Watch Tower"
@@ -32,46 +31,35 @@ ShallowWrapper {
       "children": Array [
         <div
           className="row fellow-summary-card-header"
-          data-key={null}
 >
           <div
                     className="col-2 fellow-card-avatar-wrapper"
-                    data-key={null}
           >
                     <div
                               className=""
-                              data-key={null}
                     >
                               <img
                                         alt=""
                                         className="img-responsive rounded-circle avatar"
-                                        data-key={null}
                                         src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                               />
                     </div>
           </div>
           <div
                     className="col name-product-wrapper"
-                    data-key={null}
           >
                     <div
                               className="fellow-name"
-                              data-key={null}
                     >
-                              <span
-                                        data-key={null}
-                              >
+                              <span>
                                          
                                         Kingsley obot
                               </span>
                     </div>
                     <div
                               className="product"
-                              data-key={null}
                     >
-                              <span
-                                        data-key={null}
-                              >
+                              <span>
                                         Watch Tower
                               </span>
                     </div>
@@ -82,87 +70,72 @@ ShallowWrapper {
 />,
         <div
           className="fellow-summary-card-body"
-          data-key={null}
 >
           <div
                     className="float-left left"
-                    data-key={null}
           >
                     <p
-                              className="level-header offset-margin-bottom "
-                              data-key={null}
+                              className="level-header offset-margin-bottom"
                     >
                               Level
                     </p>
                     <p
                               className="level-description"
-                              data-key={null}
                     >
                               D0B Apprenticeship
                     </p>
                     <p
-                              className="started-header offset-margin-bottom  "
-                              data-key={null}
+                              className="started-header offset-margin-bottom"
                     >
                               Started
                     </p>
                     <p
                               className="started-description"
-                              data-key={null}
                     >
                               2018-10-15
                     </p>
                     <p
-                              className="dev-pulse-average-header offset-margin-bottom "
-                              data-key={null}
+                              className="dev-pulse-average-header offset-margin-bottom"
                     >
                               DevPulse Average
                     </p>
                     <p
                               className="dev-pulse-average-description"
-                              data-key={null}
                     >
                               1.04
                     </p>
           </div>
           <div
                     className="float-right right"
-                    data-key={null}
           >
                     <p
                               className="status-header offset-margin-bottom"
-                              data-key={null}
                     >
                               Status
                     </p>
                     <p
                               className="status-description 
                                     color-off-track"
-                              data-key={null}
                     >
                               Off-Track
                     </p>
                     <p
                               className="ending-header offset-margin-bottom"
-                              data-key={null}
                     >
                               Ending
                     </p>
                     <p
                               className="ending-description"
-                              data-key={null}
                     >
                               2019-01-16
                     </p>
                     <p
                               className="lms-outputs-header offset-margin-bottom"
-                              data-key={null}
                     >
-                              Lms Outputs
+                              LMS Outputs
                     </p>
                     <p
                               className="lms-outputs-description"
-                              data-key={null}
                     >
                               No lms data
                     </p>
@@ -170,7 +143,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "fellow-summary-card",
-      "data-key": null,
+      "id": undefined,
       "onClick": undefined,
       "onKeyPress": undefined,
       "role": "button",
@@ -186,49 +159,38 @@ ShallowWrapper {
           "children": Array [
             <div
               className="col-2 fellow-card-avatar-wrapper"
-              data-key={null}
 >
               <div
                             className=""
-                            data-key={null}
               >
                             <img
                                           alt=""
                                           className="img-responsive rounded-circle avatar"
-                                          data-key={null}
                                           src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                             />
               </div>
 </div>,
             <div
               className="col name-product-wrapper"
-              data-key={null}
 >
               <div
                             className="fellow-name"
-                            data-key={null}
               >
-                            <span
-                                          data-key={null}
-                            >
+                            <span>
                                            
                                           Kingsley obot
                             </span>
               </div>
               <div
                             className="product"
-                            data-key={null}
               >
-                            <span
-                                          data-key={null}
-                            >
+                            <span>
                                           Watch Tower
                             </span>
               </div>
 </div>,
           ],
           "className": "row fellow-summary-card-header",
-          "data-key": null,
         },
         "ref": null,
         "rendered": Array [
@@ -239,17 +201,14 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className=""
-                data-key={null}
 >
                 <img
                                 alt=""
                                 className="img-responsive rounded-circle avatar"
-                                data-key={null}
                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 />
 </div>,
               "className": "col-2 fellow-card-avatar-wrapper",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Object {
@@ -260,11 +219,9 @@ ShallowWrapper {
                 "children": <img
                   alt=""
                   className="img-responsive rounded-circle avatar"
-                  data-key={null}
                   src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
 />,
                 "className": "",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Object {
@@ -274,7 +231,6 @@ ShallowWrapper {
                 "props": Object {
                   "alt": "",
                   "className": "img-responsive rounded-circle avatar",
-                  "data-key": null,
                   "src": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
                 },
                 "ref": null,
@@ -293,28 +249,21 @@ ShallowWrapper {
               "children": Array [
                 <div
                   className="fellow-name"
-                  data-key={null}
 >
-                  <span
-                                    data-key={null}
-                  >
+                  <span>
                                      
                                     Kingsley obot
                   </span>
 </div>,
                 <div
                   className="product"
-                  data-key={null}
 >
-                  <span
-                                    data-key={null}
-                  >
+                  <span>
                                     Watch Tower
                   </span>
 </div>,
               ],
               "className": "col name-product-wrapper",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -323,14 +272,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    data-key={null}
->
+                  "children": <span>
                      
                     Kingsley obot
 </span>,
                   "className": "fellow-name",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -342,7 +288,6 @@ ShallowWrapper {
                       " ",
                       "Kingsley obot",
                     ],
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Array [
@@ -358,13 +303,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    data-key={null}
->
+                  "children": <span>
                     Watch Tower
 </span>,
                   "className": "product",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -373,7 +315,6 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Watch Tower",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Watch Tower",
@@ -406,90 +347,75 @@ ShallowWrapper {
           "children": Array [
             <div
               className="float-left left"
-              data-key={null}
 >
               <p
-                            className="level-header offset-margin-bottom "
-                            data-key={null}
+                            className="level-header offset-margin-bottom"
               >
                             Level
               </p>
               <p
                             className="level-description"
-                            data-key={null}
               >
                             D0B Apprenticeship
               </p>
               <p
-                            className="started-header offset-margin-bottom  "
-                            data-key={null}
+                            className="started-header offset-margin-bottom"
               >
                             Started
               </p>
               <p
                             className="started-description"
-                            data-key={null}
               >
                             2018-10-15
               </p>
               <p
-                            className="dev-pulse-average-header offset-margin-bottom "
-                            data-key={null}
+                            className="dev-pulse-average-header offset-margin-bottom"
               >
                             DevPulse Average
               </p>
               <p
                             className="dev-pulse-average-description"
-                            data-key={null}
               >
                             1.04
               </p>
 </div>,
             <div
               className="float-right right"
-              data-key={null}
 >
               <p
                             className="status-header offset-margin-bottom"
-                            data-key={null}
               >
                             Status
               </p>
               <p
                             className="status-description 
                               color-off-track"
-                            data-key={null}
               >
                             Off-Track
               </p>
               <p
                             className="ending-header offset-margin-bottom"
-                            data-key={null}
               >
                             Ending
               </p>
               <p
                             className="ending-description"
-                            data-key={null}
               >
                             2019-01-16
               </p>
               <p
                             className="lms-outputs-header offset-margin-bottom"
-                            data-key={null}
               >
-                            Lms Outputs
+                            LMS Outputs
               </p>
               <p
                             className="lms-outputs-description"
-                            data-key={null}
               >
                             No lms data
               </p>
 </div>,
           ],
           "className": "fellow-summary-card-body",
-          "data-key": null,
         },
         "ref": null,
         "rendered": Array [
@@ -500,44 +426,37 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="level-header offset-margin-bottom "
-                  data-key={null}
+                  className="level-header offset-margin-bottom"
 >
                   Level
 </p>,
                 <p
                   className="level-description"
-                  data-key={null}
 >
                   D0B Apprenticeship
 </p>,
                 <p
-                  className="started-header offset-margin-bottom  "
-                  data-key={null}
+                  className="started-header offset-margin-bottom"
 >
                   Started
 </p>,
                 <p
                   className="started-description"
-                  data-key={null}
 >
                   2018-10-15
 </p>,
                 <p
-                  className="dev-pulse-average-header offset-margin-bottom "
-                  data-key={null}
+                  className="dev-pulse-average-header offset-margin-bottom"
 >
                   DevPulse Average
 </p>,
                 <p
                   className="dev-pulse-average-description"
-                  data-key={null}
 >
                   1.04
 </p>,
               ],
               "className": "float-left left",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -547,8 +466,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Level",
-                  "className": "level-header offset-margin-bottom ",
-                  "data-key": null,
+                  "className": "level-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "Level",
@@ -561,7 +479,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "D0B Apprenticeship",
                   "className": "level-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "D0B Apprenticeship",
@@ -573,8 +490,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Started",
-                  "className": "started-header offset-margin-bottom  ",
-                  "data-key": null,
+                  "className": "started-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "Started",
@@ -587,7 +503,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "2018-10-15",
                   "className": "started-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "2018-10-15",
@@ -599,8 +514,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "DevPulse Average",
-                  "className": "dev-pulse-average-header offset-margin-bottom ",
-                  "data-key": null,
+                  "className": "dev-pulse-average-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "DevPulse Average",
@@ -613,7 +527,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "1.04",
                   "className": "dev-pulse-average-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "1.04",
@@ -630,44 +543,37 @@ ShallowWrapper {
               "children": Array [
                 <p
                   className="status-header offset-margin-bottom"
-                  data-key={null}
 >
                   Status
 </p>,
                 <p
                   className="status-description 
                 color-off-track"
-                  data-key={null}
 >
                   Off-Track
 </p>,
                 <p
                   className="ending-header offset-margin-bottom"
-                  data-key={null}
 >
                   Ending
 </p>,
                 <p
                   className="ending-description"
-                  data-key={null}
 >
                   2019-01-16
 </p>,
                 <p
                   className="lms-outputs-header offset-margin-bottom"
-                  data-key={null}
 >
-                  Lms Outputs
+                  LMS Outputs
 </p>,
                 <p
                   className="lms-outputs-description"
-                  data-key={null}
 >
                   No lms data
 </p>,
               ],
               "className": "float-right right",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -678,7 +584,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Status",
                   "className": "status-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Status",
@@ -692,7 +597,6 @@ ShallowWrapper {
                   "children": "Off-Track",
                   "className": "status-description 
                 color-off-track",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Off-Track",
@@ -705,7 +609,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Ending",
                   "className": "ending-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Ending",
@@ -718,7 +621,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "2019-01-16",
                   "className": "ending-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "2019-01-16",
@@ -729,12 +631,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Lms Outputs",
+                  "children": "LMS Outputs",
                   "className": "lms-outputs-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
-                "rendered": "Lms Outputs",
+                "rendered": "LMS Outputs",
                 "type": "p",
               },
               Object {
@@ -744,7 +645,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "No lms data",
                   "className": "lms-outputs-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "No lms data",
@@ -768,46 +668,35 @@ ShallowWrapper {
         "children": Array [
           <div
             className="row fellow-summary-card-header"
-            data-key={null}
 >
             <div
                         className="col-2 fellow-card-avatar-wrapper"
-                        data-key={null}
             >
                         <div
                                     className=""
-                                    data-key={null}
                         >
                                     <img
                                                 alt=""
                                                 className="img-responsive rounded-circle avatar"
-                                                data-key={null}
                                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                                     />
                         </div>
             </div>
             <div
                         className="col name-product-wrapper"
-                        data-key={null}
             >
                         <div
                                     className="fellow-name"
-                                    data-key={null}
                         >
-                                    <span
-                                                data-key={null}
-                                    >
+                                    <span>
                                                  
                                                 Kingsley obot
                                     </span>
                         </div>
                         <div
                                     className="product"
-                                    data-key={null}
                         >
-                                    <span
-                                                data-key={null}
-                                    >
+                                    <span>
                                                 Watch Tower
                                     </span>
                         </div>
@@ -818,87 +707,72 @@ ShallowWrapper {
 />,
           <div
             className="fellow-summary-card-body"
-            data-key={null}
 >
             <div
                         className="float-left left"
-                        data-key={null}
             >
                         <p
-                                    className="level-header offset-margin-bottom "
-                                    data-key={null}
+                                    className="level-header offset-margin-bottom"
                         >
                                     Level
                         </p>
                         <p
                                     className="level-description"
-                                    data-key={null}
                         >
                                     D0B Apprenticeship
                         </p>
                         <p
-                                    className="started-header offset-margin-bottom  "
-                                    data-key={null}
+                                    className="started-header offset-margin-bottom"
                         >
                                     Started
                         </p>
                         <p
                                     className="started-description"
-                                    data-key={null}
                         >
                                     2018-10-15
                         </p>
                         <p
-                                    className="dev-pulse-average-header offset-margin-bottom "
-                                    data-key={null}
+                                    className="dev-pulse-average-header offset-margin-bottom"
                         >
                                     DevPulse Average
                         </p>
                         <p
                                     className="dev-pulse-average-description"
-                                    data-key={null}
                         >
                                     1.04
                         </p>
             </div>
             <div
                         className="float-right right"
-                        data-key={null}
             >
                         <p
                                     className="status-header offset-margin-bottom"
-                                    data-key={null}
                         >
                                     Status
                         </p>
                         <p
                                     className="status-description 
                                         color-off-track"
-                                    data-key={null}
                         >
                                     Off-Track
                         </p>
                         <p
                                     className="ending-header offset-margin-bottom"
-                                    data-key={null}
                         >
                                     Ending
                         </p>
                         <p
                                     className="ending-description"
-                                    data-key={null}
                         >
                                     2019-01-16
                         </p>
                         <p
                                     className="lms-outputs-header offset-margin-bottom"
-                                    data-key={null}
                         >
-                                    Lms Outputs
+                                    LMS Outputs
                         </p>
                         <p
                                     className="lms-outputs-description"
-                                    data-key={null}
                         >
                                     No lms data
                         </p>
@@ -906,7 +780,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "fellow-summary-card",
-        "data-key": null,
+        "id": undefined,
         "onClick": undefined,
         "onKeyPress": undefined,
         "role": "button",
@@ -922,49 +796,38 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="col-2 fellow-card-avatar-wrapper"
-                data-key={null}
 >
                 <div
                                 className=""
-                                data-key={null}
                 >
                                 <img
                                                 alt=""
                                                 className="img-responsive rounded-circle avatar"
-                                                data-key={null}
                                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                                 />
                 </div>
 </div>,
               <div
                 className="col name-product-wrapper"
-                data-key={null}
 >
                 <div
                                 className="fellow-name"
-                                data-key={null}
                 >
-                                <span
-                                                data-key={null}
-                                >
+                                <span>
                                                  
                                                 Kingsley obot
                                 </span>
                 </div>
                 <div
                                 className="product"
-                                data-key={null}
                 >
-                                <span
-                                                data-key={null}
-                                >
+                                <span>
                                                 Watch Tower
                                 </span>
                 </div>
 </div>,
             ],
             "className": "row fellow-summary-card-header",
-            "data-key": null,
           },
           "ref": null,
           "rendered": Array [
@@ -975,17 +838,14 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className=""
-                  data-key={null}
 >
                   <img
                                     alt=""
                                     className="img-responsive rounded-circle avatar"
-                                    data-key={null}
                                     src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                   />
 </div>,
                 "className": "col-2 fellow-card-avatar-wrapper",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Object {
@@ -996,11 +856,9 @@ ShallowWrapper {
                   "children": <img
                     alt=""
                     className="img-responsive rounded-circle avatar"
-                    data-key={null}
                     src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
 />,
                   "className": "",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1010,7 +868,6 @@ ShallowWrapper {
                   "props": Object {
                     "alt": "",
                     "className": "img-responsive rounded-circle avatar",
-                    "data-key": null,
                     "src": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
                   },
                   "ref": null,
@@ -1029,28 +886,21 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     className="fellow-name"
-                    data-key={null}
 >
-                    <span
-                                        data-key={null}
-                    >
+                    <span>
                                          
                                         Kingsley obot
                     </span>
 </div>,
                   <div
                     className="product"
-                    data-key={null}
 >
-                    <span
-                                        data-key={null}
-                    >
+                    <span>
                                         Watch Tower
                     </span>
 </div>,
                 ],
                 "className": "col name-product-wrapper",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -1059,14 +909,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <span
-                      data-key={null}
->
+                    "children": <span>
                        
                       Kingsley obot
 </span>,
                     "className": "fellow-name",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1078,7 +925,6 @@ ShallowWrapper {
                         " ",
                         "Kingsley obot",
                       ],
-                      "data-key": null,
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1094,13 +940,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <span
-                      data-key={null}
->
+                    "children": <span>
                       Watch Tower
 </span>,
                     "className": "product",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1109,7 +952,6 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Watch Tower",
-                      "data-key": null,
                     },
                     "ref": null,
                     "rendered": "Watch Tower",
@@ -1142,90 +984,75 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="float-left left"
-                data-key={null}
 >
                 <p
-                                className="level-header offset-margin-bottom "
-                                data-key={null}
+                                className="level-header offset-margin-bottom"
                 >
                                 Level
                 </p>
                 <p
                                 className="level-description"
-                                data-key={null}
                 >
                                 D0B Apprenticeship
                 </p>
                 <p
-                                className="started-header offset-margin-bottom  "
-                                data-key={null}
+                                className="started-header offset-margin-bottom"
                 >
                                 Started
                 </p>
                 <p
                                 className="started-description"
-                                data-key={null}
                 >
                                 2018-10-15
                 </p>
                 <p
-                                className="dev-pulse-average-header offset-margin-bottom "
-                                data-key={null}
+                                className="dev-pulse-average-header offset-margin-bottom"
                 >
                                 DevPulse Average
                 </p>
                 <p
                                 className="dev-pulse-average-description"
-                                data-key={null}
                 >
                                 1.04
                 </p>
 </div>,
               <div
                 className="float-right right"
-                data-key={null}
 >
                 <p
                                 className="status-header offset-margin-bottom"
-                                data-key={null}
                 >
                                 Status
                 </p>
                 <p
                                 className="status-description 
                                 color-off-track"
-                                data-key={null}
                 >
                                 Off-Track
                 </p>
                 <p
                                 className="ending-header offset-margin-bottom"
-                                data-key={null}
                 >
                                 Ending
                 </p>
                 <p
                                 className="ending-description"
-                                data-key={null}
                 >
                                 2019-01-16
                 </p>
                 <p
                                 className="lms-outputs-header offset-margin-bottom"
-                                data-key={null}
                 >
-                                Lms Outputs
+                                LMS Outputs
                 </p>
                 <p
                                 className="lms-outputs-description"
-                                data-key={null}
                 >
                                 No lms data
                 </p>
 </div>,
             ],
             "className": "fellow-summary-card-body",
-            "data-key": null,
           },
           "ref": null,
           "rendered": Array [
@@ -1236,44 +1063,37 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="level-header offset-margin-bottom "
-                    data-key={null}
+                    className="level-header offset-margin-bottom"
 >
                     Level
 </p>,
                   <p
                     className="level-description"
-                    data-key={null}
 >
                     D0B Apprenticeship
 </p>,
                   <p
-                    className="started-header offset-margin-bottom  "
-                    data-key={null}
+                    className="started-header offset-margin-bottom"
 >
                     Started
 </p>,
                   <p
                     className="started-description"
-                    data-key={null}
 >
                     2018-10-15
 </p>,
                   <p
-                    className="dev-pulse-average-header offset-margin-bottom "
-                    data-key={null}
+                    className="dev-pulse-average-header offset-margin-bottom"
 >
                     DevPulse Average
 </p>,
                   <p
                     className="dev-pulse-average-description"
-                    data-key={null}
 >
                     1.04
 </p>,
                 ],
                 "className": "float-left left",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -1283,8 +1103,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Level",
-                    "className": "level-header offset-margin-bottom ",
-                    "data-key": null,
+                    "className": "level-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "Level",
@@ -1297,7 +1116,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "D0B Apprenticeship",
                     "className": "level-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "D0B Apprenticeship",
@@ -1309,8 +1127,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Started",
-                    "className": "started-header offset-margin-bottom  ",
-                    "data-key": null,
+                    "className": "started-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "Started",
@@ -1323,7 +1140,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "2018-10-15",
                     "className": "started-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "2018-10-15",
@@ -1335,8 +1151,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "DevPulse Average",
-                    "className": "dev-pulse-average-header offset-margin-bottom ",
-                    "data-key": null,
+                    "className": "dev-pulse-average-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "DevPulse Average",
@@ -1349,7 +1164,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "1.04",
                     "className": "dev-pulse-average-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "1.04",
@@ -1366,44 +1180,37 @@ ShallowWrapper {
                 "children": Array [
                   <p
                     className="status-header offset-margin-bottom"
-                    data-key={null}
 >
                     Status
 </p>,
                   <p
                     className="status-description 
                 color-off-track"
-                    data-key={null}
 >
                     Off-Track
 </p>,
                   <p
                     className="ending-header offset-margin-bottom"
-                    data-key={null}
 >
                     Ending
 </p>,
                   <p
                     className="ending-description"
-                    data-key={null}
 >
                     2019-01-16
 </p>,
                   <p
                     className="lms-outputs-header offset-margin-bottom"
-                    data-key={null}
 >
-                    Lms Outputs
+                    LMS Outputs
 </p>,
                   <p
                     className="lms-outputs-description"
-                    data-key={null}
 >
                     No lms data
 </p>,
                 ],
                 "className": "float-right right",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -1414,7 +1221,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "Status",
                     "className": "status-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Status",
@@ -1428,7 +1234,6 @@ ShallowWrapper {
                     "children": "Off-Track",
                     "className": "status-description 
                 color-off-track",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Off-Track",
@@ -1441,7 +1246,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "Ending",
                     "className": "ending-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Ending",
@@ -1454,7 +1258,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "2019-01-16",
                     "className": "ending-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "2019-01-16",
@@ -1465,12 +1268,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Lms Outputs",
+                    "children": "LMS Outputs",
                     "className": "lms-outputs-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
-                  "rendered": "Lms Outputs",
+                  "rendered": "LMS Outputs",
                   "type": "p",
                 },
                 Object {
@@ -1480,7 +1282,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "No lms data",
                     "className": "lms-outputs-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "No lms data",
@@ -1525,7 +1326,6 @@ ShallowWrapper {
     level="D0B Apprenticeship"
     lmsOutput="4/18"
     lmsOutputs={undefined}
-    mykey={null}
     name="Kingsley obot"
     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
     product="Watch Tower"
@@ -1548,46 +1348,35 @@ ShallowWrapper {
       "children": Array [
         <div
           className="row fellow-summary-card-header"
-          data-key={null}
 >
           <div
                     className="col-2 fellow-card-avatar-wrapper"
-                    data-key={null}
           >
                     <div
                               className=""
-                              data-key={null}
                     >
                               <img
                                         alt=""
                                         className="img-responsive rounded-circle avatar"
-                                        data-key={null}
                                         src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                               />
                     </div>
           </div>
           <div
                     className="col name-product-wrapper"
-                    data-key={null}
           >
                     <div
                               className="fellow-name"
-                              data-key={null}
                     >
-                              <span
-                                        data-key={null}
-                              >
+                              <span>
                                          
                                         Kingsley obot
                               </span>
                     </div>
                     <div
                               className="product"
-                              data-key={null}
                     >
-                              <span
-                                        data-key={null}
-                              >
+                              <span>
                                         Watch Tower
                               </span>
                     </div>
@@ -1598,87 +1387,72 @@ ShallowWrapper {
 />,
         <div
           className="fellow-summary-card-body"
-          data-key={null}
 >
           <div
                     className="float-left left"
-                    data-key={null}
           >
                     <p
-                              className="level-header offset-margin-bottom "
-                              data-key={null}
+                              className="level-header offset-margin-bottom"
                     >
                               Level
                     </p>
                     <p
                               className="level-description"
-                              data-key={null}
                     >
                               D0B Apprenticeship
                     </p>
                     <p
-                              className="started-header offset-margin-bottom  "
-                              data-key={null}
+                              className="started-header offset-margin-bottom"
                     >
                               Started
                     </p>
                     <p
                               className="started-description"
-                              data-key={null}
                     >
                               2018-10-15
                     </p>
                     <p
-                              className="dev-pulse-average-header offset-margin-bottom "
-                              data-key={null}
+                              className="dev-pulse-average-header offset-margin-bottom"
                     >
                               DevPulse Average
                     </p>
                     <p
                               className="dev-pulse-average-description"
-                              data-key={null}
                     >
                               1.04
                     </p>
           </div>
           <div
                     className="float-right right"
-                    data-key={null}
           >
                     <p
                               className="status-header offset-margin-bottom"
-                              data-key={null}
                     >
                               Status
                     </p>
                     <p
                               className="status-description 
                                     color-on-track"
-                              data-key={null}
                     >
                               On-Track
                     </p>
                     <p
                               className="ending-header offset-margin-bottom"
-                              data-key={null}
                     >
                               Ending
                     </p>
                     <p
                               className="ending-description"
-                              data-key={null}
                     >
                               2019-01-16
                     </p>
                     <p
                               className="lms-outputs-header offset-margin-bottom"
-                              data-key={null}
                     >
-                              Lms Outputs
+                              LMS Outputs
                     </p>
                     <p
                               className="lms-outputs-description"
-                              data-key={null}
                     >
                               No lms data
                     </p>
@@ -1686,7 +1460,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "fellow-summary-card",
-      "data-key": null,
+      "id": undefined,
       "onClick": undefined,
       "onKeyPress": undefined,
       "role": "button",
@@ -1702,49 +1476,38 @@ ShallowWrapper {
           "children": Array [
             <div
               className="col-2 fellow-card-avatar-wrapper"
-              data-key={null}
 >
               <div
                             className=""
-                            data-key={null}
               >
                             <img
                                           alt=""
                                           className="img-responsive rounded-circle avatar"
-                                          data-key={null}
                                           src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                             />
               </div>
 </div>,
             <div
               className="col name-product-wrapper"
-              data-key={null}
 >
               <div
                             className="fellow-name"
-                            data-key={null}
               >
-                            <span
-                                          data-key={null}
-                            >
+                            <span>
                                            
                                           Kingsley obot
                             </span>
               </div>
               <div
                             className="product"
-                            data-key={null}
               >
-                            <span
-                                          data-key={null}
-                            >
+                            <span>
                                           Watch Tower
                             </span>
               </div>
 </div>,
           ],
           "className": "row fellow-summary-card-header",
-          "data-key": null,
         },
         "ref": null,
         "rendered": Array [
@@ -1755,17 +1518,14 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className=""
-                data-key={null}
 >
                 <img
                                 alt=""
                                 className="img-responsive rounded-circle avatar"
-                                data-key={null}
                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 />
 </div>,
               "className": "col-2 fellow-card-avatar-wrapper",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Object {
@@ -1776,11 +1536,9 @@ ShallowWrapper {
                 "children": <img
                   alt=""
                   className="img-responsive rounded-circle avatar"
-                  data-key={null}
                   src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
 />,
                 "className": "",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Object {
@@ -1790,7 +1548,6 @@ ShallowWrapper {
                 "props": Object {
                   "alt": "",
                   "className": "img-responsive rounded-circle avatar",
-                  "data-key": null,
                   "src": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
                 },
                 "ref": null,
@@ -1809,28 +1566,21 @@ ShallowWrapper {
               "children": Array [
                 <div
                   className="fellow-name"
-                  data-key={null}
 >
-                  <span
-                                    data-key={null}
-                  >
+                  <span>
                                      
                                     Kingsley obot
                   </span>
 </div>,
                 <div
                   className="product"
-                  data-key={null}
 >
-                  <span
-                                    data-key={null}
-                  >
+                  <span>
                                     Watch Tower
                   </span>
 </div>,
               ],
               "className": "col name-product-wrapper",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -1839,14 +1589,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    data-key={null}
->
+                  "children": <span>
                      
                     Kingsley obot
 </span>,
                   "className": "fellow-name",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1858,7 +1605,6 @@ ShallowWrapper {
                       " ",
                       "Kingsley obot",
                     ],
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1874,13 +1620,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    data-key={null}
->
+                  "children": <span>
                     Watch Tower
 </span>,
                   "className": "product",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1889,7 +1632,6 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Watch Tower",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Watch Tower",
@@ -1922,90 +1664,75 @@ ShallowWrapper {
           "children": Array [
             <div
               className="float-left left"
-              data-key={null}
 >
               <p
-                            className="level-header offset-margin-bottom "
-                            data-key={null}
+                            className="level-header offset-margin-bottom"
               >
                             Level
               </p>
               <p
                             className="level-description"
-                            data-key={null}
               >
                             D0B Apprenticeship
               </p>
               <p
-                            className="started-header offset-margin-bottom  "
-                            data-key={null}
+                            className="started-header offset-margin-bottom"
               >
                             Started
               </p>
               <p
                             className="started-description"
-                            data-key={null}
               >
                             2018-10-15
               </p>
               <p
-                            className="dev-pulse-average-header offset-margin-bottom "
-                            data-key={null}
+                            className="dev-pulse-average-header offset-margin-bottom"
               >
                             DevPulse Average
               </p>
               <p
                             className="dev-pulse-average-description"
-                            data-key={null}
               >
                             1.04
               </p>
 </div>,
             <div
               className="float-right right"
-              data-key={null}
 >
               <p
                             className="status-header offset-margin-bottom"
-                            data-key={null}
               >
                             Status
               </p>
               <p
                             className="status-description 
                               color-on-track"
-                            data-key={null}
               >
                             On-Track
               </p>
               <p
                             className="ending-header offset-margin-bottom"
-                            data-key={null}
               >
                             Ending
               </p>
               <p
                             className="ending-description"
-                            data-key={null}
               >
                             2019-01-16
               </p>
               <p
                             className="lms-outputs-header offset-margin-bottom"
-                            data-key={null}
               >
-                            Lms Outputs
+                            LMS Outputs
               </p>
               <p
                             className="lms-outputs-description"
-                            data-key={null}
               >
                             No lms data
               </p>
 </div>,
           ],
           "className": "fellow-summary-card-body",
-          "data-key": null,
         },
         "ref": null,
         "rendered": Array [
@@ -2016,44 +1743,37 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="level-header offset-margin-bottom "
-                  data-key={null}
+                  className="level-header offset-margin-bottom"
 >
                   Level
 </p>,
                 <p
                   className="level-description"
-                  data-key={null}
 >
                   D0B Apprenticeship
 </p>,
                 <p
-                  className="started-header offset-margin-bottom  "
-                  data-key={null}
+                  className="started-header offset-margin-bottom"
 >
                   Started
 </p>,
                 <p
                   className="started-description"
-                  data-key={null}
 >
                   2018-10-15
 </p>,
                 <p
-                  className="dev-pulse-average-header offset-margin-bottom "
-                  data-key={null}
+                  className="dev-pulse-average-header offset-margin-bottom"
 >
                   DevPulse Average
 </p>,
                 <p
                   className="dev-pulse-average-description"
-                  data-key={null}
 >
                   1.04
 </p>,
               ],
               "className": "float-left left",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -2063,8 +1783,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Level",
-                  "className": "level-header offset-margin-bottom ",
-                  "data-key": null,
+                  "className": "level-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "Level",
@@ -2077,7 +1796,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "D0B Apprenticeship",
                   "className": "level-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "D0B Apprenticeship",
@@ -2089,8 +1807,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Started",
-                  "className": "started-header offset-margin-bottom  ",
-                  "data-key": null,
+                  "className": "started-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "Started",
@@ -2103,7 +1820,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "2018-10-15",
                   "className": "started-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "2018-10-15",
@@ -2115,8 +1831,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "DevPulse Average",
-                  "className": "dev-pulse-average-header offset-margin-bottom ",
-                  "data-key": null,
+                  "className": "dev-pulse-average-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "DevPulse Average",
@@ -2129,7 +1844,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "1.04",
                   "className": "dev-pulse-average-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "1.04",
@@ -2146,44 +1860,37 @@ ShallowWrapper {
               "children": Array [
                 <p
                   className="status-header offset-margin-bottom"
-                  data-key={null}
 >
                   Status
 </p>,
                 <p
                   className="status-description 
                 color-on-track"
-                  data-key={null}
 >
                   On-Track
 </p>,
                 <p
                   className="ending-header offset-margin-bottom"
-                  data-key={null}
 >
                   Ending
 </p>,
                 <p
                   className="ending-description"
-                  data-key={null}
 >
                   2019-01-16
 </p>,
                 <p
                   className="lms-outputs-header offset-margin-bottom"
-                  data-key={null}
 >
-                  Lms Outputs
+                  LMS Outputs
 </p>,
                 <p
                   className="lms-outputs-description"
-                  data-key={null}
 >
                   No lms data
 </p>,
               ],
               "className": "float-right right",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -2194,7 +1901,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Status",
                   "className": "status-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Status",
@@ -2208,7 +1914,6 @@ ShallowWrapper {
                   "children": "On-Track",
                   "className": "status-description 
                 color-on-track",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "On-Track",
@@ -2221,7 +1926,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Ending",
                   "className": "ending-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Ending",
@@ -2234,7 +1938,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "2019-01-16",
                   "className": "ending-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "2019-01-16",
@@ -2245,12 +1948,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Lms Outputs",
+                  "children": "LMS Outputs",
                   "className": "lms-outputs-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
-                "rendered": "Lms Outputs",
+                "rendered": "LMS Outputs",
                 "type": "p",
               },
               Object {
@@ -2260,7 +1962,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "No lms data",
                   "className": "lms-outputs-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "No lms data",
@@ -2284,46 +1985,35 @@ ShallowWrapper {
         "children": Array [
           <div
             className="row fellow-summary-card-header"
-            data-key={null}
 >
             <div
                         className="col-2 fellow-card-avatar-wrapper"
-                        data-key={null}
             >
                         <div
                                     className=""
-                                    data-key={null}
                         >
                                     <img
                                                 alt=""
                                                 className="img-responsive rounded-circle avatar"
-                                                data-key={null}
                                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                                     />
                         </div>
             </div>
             <div
                         className="col name-product-wrapper"
-                        data-key={null}
             >
                         <div
                                     className="fellow-name"
-                                    data-key={null}
                         >
-                                    <span
-                                                data-key={null}
-                                    >
+                                    <span>
                                                  
                                                 Kingsley obot
                                     </span>
                         </div>
                         <div
                                     className="product"
-                                    data-key={null}
                         >
-                                    <span
-                                                data-key={null}
-                                    >
+                                    <span>
                                                 Watch Tower
                                     </span>
                         </div>
@@ -2334,87 +2024,72 @@ ShallowWrapper {
 />,
           <div
             className="fellow-summary-card-body"
-            data-key={null}
 >
             <div
                         className="float-left left"
-                        data-key={null}
             >
                         <p
-                                    className="level-header offset-margin-bottom "
-                                    data-key={null}
+                                    className="level-header offset-margin-bottom"
                         >
                                     Level
                         </p>
                         <p
                                     className="level-description"
-                                    data-key={null}
                         >
                                     D0B Apprenticeship
                         </p>
                         <p
-                                    className="started-header offset-margin-bottom  "
-                                    data-key={null}
+                                    className="started-header offset-margin-bottom"
                         >
                                     Started
                         </p>
                         <p
                                     className="started-description"
-                                    data-key={null}
                         >
                                     2018-10-15
                         </p>
                         <p
-                                    className="dev-pulse-average-header offset-margin-bottom "
-                                    data-key={null}
+                                    className="dev-pulse-average-header offset-margin-bottom"
                         >
                                     DevPulse Average
                         </p>
                         <p
                                     className="dev-pulse-average-description"
-                                    data-key={null}
                         >
                                     1.04
                         </p>
             </div>
             <div
                         className="float-right right"
-                        data-key={null}
             >
                         <p
                                     className="status-header offset-margin-bottom"
-                                    data-key={null}
                         >
                                     Status
                         </p>
                         <p
                                     className="status-description 
                                         color-on-track"
-                                    data-key={null}
                         >
                                     On-Track
                         </p>
                         <p
                                     className="ending-header offset-margin-bottom"
-                                    data-key={null}
                         >
                                     Ending
                         </p>
                         <p
                                     className="ending-description"
-                                    data-key={null}
                         >
                                     2019-01-16
                         </p>
                         <p
                                     className="lms-outputs-header offset-margin-bottom"
-                                    data-key={null}
                         >
-                                    Lms Outputs
+                                    LMS Outputs
                         </p>
                         <p
                                     className="lms-outputs-description"
-                                    data-key={null}
                         >
                                     No lms data
                         </p>
@@ -2422,7 +2097,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "fellow-summary-card",
-        "data-key": null,
+        "id": undefined,
         "onClick": undefined,
         "onKeyPress": undefined,
         "role": "button",
@@ -2438,49 +2113,38 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="col-2 fellow-card-avatar-wrapper"
-                data-key={null}
 >
                 <div
                                 className=""
-                                data-key={null}
                 >
                                 <img
                                                 alt=""
                                                 className="img-responsive rounded-circle avatar"
-                                                data-key={null}
                                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                                 />
                 </div>
 </div>,
               <div
                 className="col name-product-wrapper"
-                data-key={null}
 >
                 <div
                                 className="fellow-name"
-                                data-key={null}
                 >
-                                <span
-                                                data-key={null}
-                                >
+                                <span>
                                                  
                                                 Kingsley obot
                                 </span>
                 </div>
                 <div
                                 className="product"
-                                data-key={null}
                 >
-                                <span
-                                                data-key={null}
-                                >
+                                <span>
                                                 Watch Tower
                                 </span>
                 </div>
 </div>,
             ],
             "className": "row fellow-summary-card-header",
-            "data-key": null,
           },
           "ref": null,
           "rendered": Array [
@@ -2491,17 +2155,14 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className=""
-                  data-key={null}
 >
                   <img
                                     alt=""
                                     className="img-responsive rounded-circle avatar"
-                                    data-key={null}
                                     src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                   />
 </div>,
                 "className": "col-2 fellow-card-avatar-wrapper",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Object {
@@ -2512,11 +2173,9 @@ ShallowWrapper {
                   "children": <img
                     alt=""
                     className="img-responsive rounded-circle avatar"
-                    data-key={null}
                     src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
 />,
                   "className": "",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -2526,7 +2185,6 @@ ShallowWrapper {
                   "props": Object {
                     "alt": "",
                     "className": "img-responsive rounded-circle avatar",
-                    "data-key": null,
                     "src": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
                   },
                   "ref": null,
@@ -2545,28 +2203,21 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     className="fellow-name"
-                    data-key={null}
 >
-                    <span
-                                        data-key={null}
-                    >
+                    <span>
                                          
                                         Kingsley obot
                     </span>
 </div>,
                   <div
                     className="product"
-                    data-key={null}
 >
-                    <span
-                                        data-key={null}
-                    >
+                    <span>
                                         Watch Tower
                     </span>
 </div>,
                 ],
                 "className": "col name-product-wrapper",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -2575,14 +2226,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <span
-                      data-key={null}
->
+                    "children": <span>
                        
                       Kingsley obot
 </span>,
                     "className": "fellow-name",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2594,7 +2242,6 @@ ShallowWrapper {
                         " ",
                         "Kingsley obot",
                       ],
-                      "data-key": null,
                     },
                     "ref": null,
                     "rendered": Array [
@@ -2610,13 +2257,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <span
-                      data-key={null}
->
+                    "children": <span>
                       Watch Tower
 </span>,
                     "className": "product",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2625,7 +2269,6 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Watch Tower",
-                      "data-key": null,
                     },
                     "ref": null,
                     "rendered": "Watch Tower",
@@ -2658,90 +2301,75 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="float-left left"
-                data-key={null}
 >
                 <p
-                                className="level-header offset-margin-bottom "
-                                data-key={null}
+                                className="level-header offset-margin-bottom"
                 >
                                 Level
                 </p>
                 <p
                                 className="level-description"
-                                data-key={null}
                 >
                                 D0B Apprenticeship
                 </p>
                 <p
-                                className="started-header offset-margin-bottom  "
-                                data-key={null}
+                                className="started-header offset-margin-bottom"
                 >
                                 Started
                 </p>
                 <p
                                 className="started-description"
-                                data-key={null}
                 >
                                 2018-10-15
                 </p>
                 <p
-                                className="dev-pulse-average-header offset-margin-bottom "
-                                data-key={null}
+                                className="dev-pulse-average-header offset-margin-bottom"
                 >
                                 DevPulse Average
                 </p>
                 <p
                                 className="dev-pulse-average-description"
-                                data-key={null}
                 >
                                 1.04
                 </p>
 </div>,
               <div
                 className="float-right right"
-                data-key={null}
 >
                 <p
                                 className="status-header offset-margin-bottom"
-                                data-key={null}
                 >
                                 Status
                 </p>
                 <p
                                 className="status-description 
                                 color-on-track"
-                                data-key={null}
                 >
                                 On-Track
                 </p>
                 <p
                                 className="ending-header offset-margin-bottom"
-                                data-key={null}
                 >
                                 Ending
                 </p>
                 <p
                                 className="ending-description"
-                                data-key={null}
                 >
                                 2019-01-16
                 </p>
                 <p
                                 className="lms-outputs-header offset-margin-bottom"
-                                data-key={null}
                 >
-                                Lms Outputs
+                                LMS Outputs
                 </p>
                 <p
                                 className="lms-outputs-description"
-                                data-key={null}
                 >
                                 No lms data
                 </p>
 </div>,
             ],
             "className": "fellow-summary-card-body",
-            "data-key": null,
           },
           "ref": null,
           "rendered": Array [
@@ -2752,44 +2380,37 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="level-header offset-margin-bottom "
-                    data-key={null}
+                    className="level-header offset-margin-bottom"
 >
                     Level
 </p>,
                   <p
                     className="level-description"
-                    data-key={null}
 >
                     D0B Apprenticeship
 </p>,
                   <p
-                    className="started-header offset-margin-bottom  "
-                    data-key={null}
+                    className="started-header offset-margin-bottom"
 >
                     Started
 </p>,
                   <p
                     className="started-description"
-                    data-key={null}
 >
                     2018-10-15
 </p>,
                   <p
-                    className="dev-pulse-average-header offset-margin-bottom "
-                    data-key={null}
+                    className="dev-pulse-average-header offset-margin-bottom"
 >
                     DevPulse Average
 </p>,
                   <p
                     className="dev-pulse-average-description"
-                    data-key={null}
 >
                     1.04
 </p>,
                 ],
                 "className": "float-left left",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -2799,8 +2420,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Level",
-                    "className": "level-header offset-margin-bottom ",
-                    "data-key": null,
+                    "className": "level-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "Level",
@@ -2813,7 +2433,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "D0B Apprenticeship",
                     "className": "level-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "D0B Apprenticeship",
@@ -2825,8 +2444,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Started",
-                    "className": "started-header offset-margin-bottom  ",
-                    "data-key": null,
+                    "className": "started-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "Started",
@@ -2839,7 +2457,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "2018-10-15",
                     "className": "started-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "2018-10-15",
@@ -2851,8 +2468,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "DevPulse Average",
-                    "className": "dev-pulse-average-header offset-margin-bottom ",
-                    "data-key": null,
+                    "className": "dev-pulse-average-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "DevPulse Average",
@@ -2865,7 +2481,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "1.04",
                     "className": "dev-pulse-average-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "1.04",
@@ -2882,44 +2497,37 @@ ShallowWrapper {
                 "children": Array [
                   <p
                     className="status-header offset-margin-bottom"
-                    data-key={null}
 >
                     Status
 </p>,
                   <p
                     className="status-description 
                 color-on-track"
-                    data-key={null}
 >
                     On-Track
 </p>,
                   <p
                     className="ending-header offset-margin-bottom"
-                    data-key={null}
 >
                     Ending
 </p>,
                   <p
                     className="ending-description"
-                    data-key={null}
 >
                     2019-01-16
 </p>,
                   <p
                     className="lms-outputs-header offset-margin-bottom"
-                    data-key={null}
 >
-                    Lms Outputs
+                    LMS Outputs
 </p>,
                   <p
                     className="lms-outputs-description"
-                    data-key={null}
 >
                     No lms data
 </p>,
                 ],
                 "className": "float-right right",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -2930,7 +2538,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "Status",
                     "className": "status-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Status",
@@ -2944,7 +2551,6 @@ ShallowWrapper {
                     "children": "On-Track",
                     "className": "status-description 
                 color-on-track",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "On-Track",
@@ -2957,7 +2563,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "Ending",
                     "className": "ending-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Ending",
@@ -2970,7 +2575,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "2019-01-16",
                     "className": "ending-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "2019-01-16",
@@ -2981,12 +2585,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Lms Outputs",
+                    "children": "LMS Outputs",
                     "className": "lms-outputs-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
-                  "rendered": "Lms Outputs",
+                  "rendered": "LMS Outputs",
                   "type": "p",
                 },
                 Object {
@@ -2996,7 +2599,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "No lms data",
                     "className": "lms-outputs-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "No lms data",
@@ -3041,12 +2643,11 @@ ShallowWrapper {
     level="D0B Apprenticeship"
     lmsOutput="4/18"
     lmsOutputs={undefined}
-    mykey={null}
     name="Kingsley obot"
     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
     product="Watch Tower"
     started="2018-10-15"
-    status="Pip"
+    status="PIP"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -3064,46 +2665,35 @@ ShallowWrapper {
       "children": Array [
         <div
           className="row fellow-summary-card-header"
-          data-key={null}
 >
           <div
                     className="col-2 fellow-card-avatar-wrapper"
-                    data-key={null}
           >
                     <div
                               className=""
-                              data-key={null}
                     >
                               <img
                                         alt=""
                                         className="img-responsive rounded-circle avatar"
-                                        data-key={null}
                                         src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                               />
                     </div>
           </div>
           <div
                     className="col name-product-wrapper"
-                    data-key={null}
           >
                     <div
                               className="fellow-name"
-                              data-key={null}
                     >
-                              <span
-                                        data-key={null}
-                              >
+                              <span>
                                          
                                         Kingsley obot
                               </span>
                     </div>
                     <div
                               className="product"
-                              data-key={null}
                     >
-                              <span
-                                        data-key={null}
-                              >
+                              <span>
                                         Watch Tower
                               </span>
                     </div>
@@ -3114,87 +2704,72 @@ ShallowWrapper {
 />,
         <div
           className="fellow-summary-card-body"
-          data-key={null}
 >
           <div
                     className="float-left left"
-                    data-key={null}
           >
                     <p
-                              className="level-header offset-margin-bottom "
-                              data-key={null}
+                              className="level-header offset-margin-bottom"
                     >
                               Level
                     </p>
                     <p
                               className="level-description"
-                              data-key={null}
                     >
                               D0B Apprenticeship
                     </p>
                     <p
-                              className="started-header offset-margin-bottom  "
-                              data-key={null}
+                              className="started-header offset-margin-bottom"
                     >
                               Started
                     </p>
                     <p
                               className="started-description"
-                              data-key={null}
                     >
                               2018-10-15
                     </p>
                     <p
-                              className="dev-pulse-average-header offset-margin-bottom "
-                              data-key={null}
+                              className="dev-pulse-average-header offset-margin-bottom"
                     >
                               DevPulse Average
                     </p>
                     <p
                               className="dev-pulse-average-description"
-                              data-key={null}
                     >
                               1.04
                     </p>
           </div>
           <div
                     className="float-right right"
-                    data-key={null}
           >
                     <p
                               className="status-header offset-margin-bottom"
-                              data-key={null}
                     >
                               Status
                     </p>
                     <p
                               className="status-description 
                                     color-on-pip"
-                              data-key={null}
                     >
-                              Pip
+                              PIP
                     </p>
                     <p
                               className="ending-header offset-margin-bottom"
-                              data-key={null}
                     >
                               Ending
                     </p>
                     <p
                               className="ending-description"
-                              data-key={null}
                     >
                               2019-01-16
                     </p>
                     <p
                               className="lms-outputs-header offset-margin-bottom"
-                              data-key={null}
                     >
-                              Lms Outputs
+                              LMS Outputs
                     </p>
                     <p
                               className="lms-outputs-description"
-                              data-key={null}
                     >
                               No lms data
                     </p>
@@ -3202,7 +2777,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "fellow-summary-card",
-      "data-key": null,
+      "id": undefined,
       "onClick": undefined,
       "onKeyPress": undefined,
       "role": "button",
@@ -3218,49 +2793,38 @@ ShallowWrapper {
           "children": Array [
             <div
               className="col-2 fellow-card-avatar-wrapper"
-              data-key={null}
 >
               <div
                             className=""
-                            data-key={null}
               >
                             <img
                                           alt=""
                                           className="img-responsive rounded-circle avatar"
-                                          data-key={null}
                                           src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                             />
               </div>
 </div>,
             <div
               className="col name-product-wrapper"
-              data-key={null}
 >
               <div
                             className="fellow-name"
-                            data-key={null}
               >
-                            <span
-                                          data-key={null}
-                            >
+                            <span>
                                            
                                           Kingsley obot
                             </span>
               </div>
               <div
                             className="product"
-                            data-key={null}
               >
-                            <span
-                                          data-key={null}
-                            >
+                            <span>
                                           Watch Tower
                             </span>
               </div>
 </div>,
           ],
           "className": "row fellow-summary-card-header",
-          "data-key": null,
         },
         "ref": null,
         "rendered": Array [
@@ -3271,17 +2835,14 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className=""
-                data-key={null}
 >
                 <img
                                 alt=""
                                 className="img-responsive rounded-circle avatar"
-                                data-key={null}
                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 />
 </div>,
               "className": "col-2 fellow-card-avatar-wrapper",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Object {
@@ -3292,11 +2853,9 @@ ShallowWrapper {
                 "children": <img
                   alt=""
                   className="img-responsive rounded-circle avatar"
-                  data-key={null}
                   src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
 />,
                 "className": "",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Object {
@@ -3306,7 +2865,6 @@ ShallowWrapper {
                 "props": Object {
                   "alt": "",
                   "className": "img-responsive rounded-circle avatar",
-                  "data-key": null,
                   "src": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
                 },
                 "ref": null,
@@ -3325,28 +2883,21 @@ ShallowWrapper {
               "children": Array [
                 <div
                   className="fellow-name"
-                  data-key={null}
 >
-                  <span
-                                    data-key={null}
-                  >
+                  <span>
                                      
                                     Kingsley obot
                   </span>
 </div>,
                 <div
                   className="product"
-                  data-key={null}
 >
-                  <span
-                                    data-key={null}
-                  >
+                  <span>
                                     Watch Tower
                   </span>
 </div>,
               ],
               "className": "col name-product-wrapper",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -3355,14 +2906,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    data-key={null}
->
+                  "children": <span>
                      
                     Kingsley obot
 </span>,
                   "className": "fellow-name",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -3374,7 +2922,6 @@ ShallowWrapper {
                       " ",
                       "Kingsley obot",
                     ],
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Array [
@@ -3390,13 +2937,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <span
-                    data-key={null}
->
+                  "children": <span>
                     Watch Tower
 </span>,
                   "className": "product",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -3405,7 +2949,6 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Watch Tower",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Watch Tower",
@@ -3438,90 +2981,75 @@ ShallowWrapper {
           "children": Array [
             <div
               className="float-left left"
-              data-key={null}
 >
               <p
-                            className="level-header offset-margin-bottom "
-                            data-key={null}
+                            className="level-header offset-margin-bottom"
               >
                             Level
               </p>
               <p
                             className="level-description"
-                            data-key={null}
               >
                             D0B Apprenticeship
               </p>
               <p
-                            className="started-header offset-margin-bottom  "
-                            data-key={null}
+                            className="started-header offset-margin-bottom"
               >
                             Started
               </p>
               <p
                             className="started-description"
-                            data-key={null}
               >
                             2018-10-15
               </p>
               <p
-                            className="dev-pulse-average-header offset-margin-bottom "
-                            data-key={null}
+                            className="dev-pulse-average-header offset-margin-bottom"
               >
                             DevPulse Average
               </p>
               <p
                             className="dev-pulse-average-description"
-                            data-key={null}
               >
                             1.04
               </p>
 </div>,
             <div
               className="float-right right"
-              data-key={null}
 >
               <p
                             className="status-header offset-margin-bottom"
-                            data-key={null}
               >
                             Status
               </p>
               <p
                             className="status-description 
                               color-on-pip"
-                            data-key={null}
               >
-                            Pip
+                            PIP
               </p>
               <p
                             className="ending-header offset-margin-bottom"
-                            data-key={null}
               >
                             Ending
               </p>
               <p
                             className="ending-description"
-                            data-key={null}
               >
                             2019-01-16
               </p>
               <p
                             className="lms-outputs-header offset-margin-bottom"
-                            data-key={null}
               >
-                            Lms Outputs
+                            LMS Outputs
               </p>
               <p
                             className="lms-outputs-description"
-                            data-key={null}
               >
                             No lms data
               </p>
 </div>,
           ],
           "className": "fellow-summary-card-body",
-          "data-key": null,
         },
         "ref": null,
         "rendered": Array [
@@ -3532,44 +3060,37 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="level-header offset-margin-bottom "
-                  data-key={null}
+                  className="level-header offset-margin-bottom"
 >
                   Level
 </p>,
                 <p
                   className="level-description"
-                  data-key={null}
 >
                   D0B Apprenticeship
 </p>,
                 <p
-                  className="started-header offset-margin-bottom  "
-                  data-key={null}
+                  className="started-header offset-margin-bottom"
 >
                   Started
 </p>,
                 <p
                   className="started-description"
-                  data-key={null}
 >
                   2018-10-15
 </p>,
                 <p
-                  className="dev-pulse-average-header offset-margin-bottom "
-                  data-key={null}
+                  className="dev-pulse-average-header offset-margin-bottom"
 >
                   DevPulse Average
 </p>,
                 <p
                   className="dev-pulse-average-description"
-                  data-key={null}
 >
                   1.04
 </p>,
               ],
               "className": "float-left left",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -3579,8 +3100,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Level",
-                  "className": "level-header offset-margin-bottom ",
-                  "data-key": null,
+                  "className": "level-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "Level",
@@ -3593,7 +3113,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "D0B Apprenticeship",
                   "className": "level-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "D0B Apprenticeship",
@@ -3605,8 +3124,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Started",
-                  "className": "started-header offset-margin-bottom  ",
-                  "data-key": null,
+                  "className": "started-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "Started",
@@ -3619,7 +3137,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "2018-10-15",
                   "className": "started-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "2018-10-15",
@@ -3631,8 +3148,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "DevPulse Average",
-                  "className": "dev-pulse-average-header offset-margin-bottom ",
-                  "data-key": null,
+                  "className": "dev-pulse-average-header offset-margin-bottom",
                 },
                 "ref": null,
                 "rendered": "DevPulse Average",
@@ -3645,7 +3161,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "1.04",
                   "className": "dev-pulse-average-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "1.04",
@@ -3662,44 +3177,37 @@ ShallowWrapper {
               "children": Array [
                 <p
                   className="status-header offset-margin-bottom"
-                  data-key={null}
 >
                   Status
 </p>,
                 <p
                   className="status-description 
                 color-on-pip"
-                  data-key={null}
 >
-                  Pip
+                  PIP
 </p>,
                 <p
                   className="ending-header offset-margin-bottom"
-                  data-key={null}
 >
                   Ending
 </p>,
                 <p
                   className="ending-description"
-                  data-key={null}
 >
                   2019-01-16
 </p>,
                 <p
                   className="lms-outputs-header offset-margin-bottom"
-                  data-key={null}
 >
-                  Lms Outputs
+                  LMS Outputs
 </p>,
                 <p
                   className="lms-outputs-description"
-                  data-key={null}
 >
                   No lms data
 </p>,
               ],
               "className": "float-right right",
-              "data-key": null,
             },
             "ref": null,
             "rendered": Array [
@@ -3710,7 +3218,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Status",
                   "className": "status-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Status",
@@ -3721,13 +3228,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Pip",
+                  "children": "PIP",
                   "className": "status-description 
                 color-on-pip",
-                  "data-key": null,
                 },
                 "ref": null,
-                "rendered": "Pip",
+                "rendered": "PIP",
                 "type": "p",
               },
               Object {
@@ -3737,7 +3243,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Ending",
                   "className": "ending-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "Ending",
@@ -3750,7 +3255,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "2019-01-16",
                   "className": "ending-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "2019-01-16",
@@ -3761,12 +3265,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Lms Outputs",
+                  "children": "LMS Outputs",
                   "className": "lms-outputs-header offset-margin-bottom",
-                  "data-key": null,
                 },
                 "ref": null,
-                "rendered": "Lms Outputs",
+                "rendered": "LMS Outputs",
                 "type": "p",
               },
               Object {
@@ -3776,7 +3279,6 @@ ShallowWrapper {
                 "props": Object {
                   "children": "No lms data",
                   "className": "lms-outputs-description",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": "No lms data",
@@ -3800,46 +3302,35 @@ ShallowWrapper {
         "children": Array [
           <div
             className="row fellow-summary-card-header"
-            data-key={null}
 >
             <div
                         className="col-2 fellow-card-avatar-wrapper"
-                        data-key={null}
             >
                         <div
                                     className=""
-                                    data-key={null}
                         >
                                     <img
                                                 alt=""
                                                 className="img-responsive rounded-circle avatar"
-                                                data-key={null}
                                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                                     />
                         </div>
             </div>
             <div
                         className="col name-product-wrapper"
-                        data-key={null}
             >
                         <div
                                     className="fellow-name"
-                                    data-key={null}
                         >
-                                    <span
-                                                data-key={null}
-                                    >
+                                    <span>
                                                  
                                                 Kingsley obot
                                     </span>
                         </div>
                         <div
                                     className="product"
-                                    data-key={null}
                         >
-                                    <span
-                                                data-key={null}
-                                    >
+                                    <span>
                                                 Watch Tower
                                     </span>
                         </div>
@@ -3850,87 +3341,72 @@ ShallowWrapper {
 />,
           <div
             className="fellow-summary-card-body"
-            data-key={null}
 >
             <div
                         className="float-left left"
-                        data-key={null}
             >
                         <p
-                                    className="level-header offset-margin-bottom "
-                                    data-key={null}
+                                    className="level-header offset-margin-bottom"
                         >
                                     Level
                         </p>
                         <p
                                     className="level-description"
-                                    data-key={null}
                         >
                                     D0B Apprenticeship
                         </p>
                         <p
-                                    className="started-header offset-margin-bottom  "
-                                    data-key={null}
+                                    className="started-header offset-margin-bottom"
                         >
                                     Started
                         </p>
                         <p
                                     className="started-description"
-                                    data-key={null}
                         >
                                     2018-10-15
                         </p>
                         <p
-                                    className="dev-pulse-average-header offset-margin-bottom "
-                                    data-key={null}
+                                    className="dev-pulse-average-header offset-margin-bottom"
                         >
                                     DevPulse Average
                         </p>
                         <p
                                     className="dev-pulse-average-description"
-                                    data-key={null}
                         >
                                     1.04
                         </p>
             </div>
             <div
                         className="float-right right"
-                        data-key={null}
             >
                         <p
                                     className="status-header offset-margin-bottom"
-                                    data-key={null}
                         >
                                     Status
                         </p>
                         <p
                                     className="status-description 
                                         color-on-pip"
-                                    data-key={null}
                         >
-                                    Pip
+                                    PIP
                         </p>
                         <p
                                     className="ending-header offset-margin-bottom"
-                                    data-key={null}
                         >
                                     Ending
                         </p>
                         <p
                                     className="ending-description"
-                                    data-key={null}
                         >
                                     2019-01-16
                         </p>
                         <p
                                     className="lms-outputs-header offset-margin-bottom"
-                                    data-key={null}
                         >
-                                    Lms Outputs
+                                    LMS Outputs
                         </p>
                         <p
                                     className="lms-outputs-description"
-                                    data-key={null}
                         >
                                     No lms data
                         </p>
@@ -3938,7 +3414,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "fellow-summary-card",
-        "data-key": null,
+        "id": undefined,
         "onClick": undefined,
         "onKeyPress": undefined,
         "role": "button",
@@ -3954,49 +3430,38 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="col-2 fellow-card-avatar-wrapper"
-                data-key={null}
 >
                 <div
                                 className=""
-                                data-key={null}
                 >
                                 <img
                                                 alt=""
                                                 className="img-responsive rounded-circle avatar"
-                                                data-key={null}
                                                 src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                                 />
                 </div>
 </div>,
               <div
                 className="col name-product-wrapper"
-                data-key={null}
 >
                 <div
                                 className="fellow-name"
-                                data-key={null}
                 >
-                                <span
-                                                data-key={null}
-                                >
+                                <span>
                                                  
                                                 Kingsley obot
                                 </span>
                 </div>
                 <div
                                 className="product"
-                                data-key={null}
                 >
-                                <span
-                                                data-key={null}
-                                >
+                                <span>
                                                 Watch Tower
                                 </span>
                 </div>
 </div>,
             ],
             "className": "row fellow-summary-card-header",
-            "data-key": null,
           },
           "ref": null,
           "rendered": Array [
@@ -4007,17 +3472,14 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className=""
-                  data-key={null}
 >
                   <img
                                     alt=""
                                     className="img-responsive rounded-circle avatar"
-                                    data-key={null}
                                     src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                   />
 </div>,
                 "className": "col-2 fellow-card-avatar-wrapper",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Object {
@@ -4028,11 +3490,9 @@ ShallowWrapper {
                   "children": <img
                     alt=""
                     className="img-responsive rounded-circle avatar"
-                    data-key={null}
                     src="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
 />,
                   "className": "",
-                  "data-key": null,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -4042,7 +3502,6 @@ ShallowWrapper {
                   "props": Object {
                     "alt": "",
                     "className": "img-responsive rounded-circle avatar",
-                    "data-key": null,
                     "src": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
                   },
                   "ref": null,
@@ -4061,28 +3520,21 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     className="fellow-name"
-                    data-key={null}
 >
-                    <span
-                                        data-key={null}
-                    >
+                    <span>
                                          
                                         Kingsley obot
                     </span>
 </div>,
                   <div
                     className="product"
-                    data-key={null}
 >
-                    <span
-                                        data-key={null}
-                    >
+                    <span>
                                         Watch Tower
                     </span>
 </div>,
                 ],
                 "className": "col name-product-wrapper",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -4091,14 +3543,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <span
-                      data-key={null}
->
+                    "children": <span>
                        
                       Kingsley obot
 </span>,
                     "className": "fellow-name",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -4110,7 +3559,6 @@ ShallowWrapper {
                         " ",
                         "Kingsley obot",
                       ],
-                      "data-key": null,
                     },
                     "ref": null,
                     "rendered": Array [
@@ -4126,13 +3574,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <span
-                      data-key={null}
->
+                    "children": <span>
                       Watch Tower
 </span>,
                     "className": "product",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -4141,7 +3586,6 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Watch Tower",
-                      "data-key": null,
                     },
                     "ref": null,
                     "rendered": "Watch Tower",
@@ -4174,90 +3618,75 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="float-left left"
-                data-key={null}
 >
                 <p
-                                className="level-header offset-margin-bottom "
-                                data-key={null}
+                                className="level-header offset-margin-bottom"
                 >
                                 Level
                 </p>
                 <p
                                 className="level-description"
-                                data-key={null}
                 >
                                 D0B Apprenticeship
                 </p>
                 <p
-                                className="started-header offset-margin-bottom  "
-                                data-key={null}
+                                className="started-header offset-margin-bottom"
                 >
                                 Started
                 </p>
                 <p
                                 className="started-description"
-                                data-key={null}
                 >
                                 2018-10-15
                 </p>
                 <p
-                                className="dev-pulse-average-header offset-margin-bottom "
-                                data-key={null}
+                                className="dev-pulse-average-header offset-margin-bottom"
                 >
                                 DevPulse Average
                 </p>
                 <p
                                 className="dev-pulse-average-description"
-                                data-key={null}
                 >
                                 1.04
                 </p>
 </div>,
               <div
                 className="float-right right"
-                data-key={null}
 >
                 <p
                                 className="status-header offset-margin-bottom"
-                                data-key={null}
                 >
                                 Status
                 </p>
                 <p
                                 className="status-description 
                                 color-on-pip"
-                                data-key={null}
                 >
-                                Pip
+                                PIP
                 </p>
                 <p
                                 className="ending-header offset-margin-bottom"
-                                data-key={null}
                 >
                                 Ending
                 </p>
                 <p
                                 className="ending-description"
-                                data-key={null}
                 >
                                 2019-01-16
                 </p>
                 <p
                                 className="lms-outputs-header offset-margin-bottom"
-                                data-key={null}
                 >
-                                Lms Outputs
+                                LMS Outputs
                 </p>
                 <p
                                 className="lms-outputs-description"
-                                data-key={null}
                 >
                                 No lms data
                 </p>
 </div>,
             ],
             "className": "fellow-summary-card-body",
-            "data-key": null,
           },
           "ref": null,
           "rendered": Array [
@@ -4268,44 +3697,37 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="level-header offset-margin-bottom "
-                    data-key={null}
+                    className="level-header offset-margin-bottom"
 >
                     Level
 </p>,
                   <p
                     className="level-description"
-                    data-key={null}
 >
                     D0B Apprenticeship
 </p>,
                   <p
-                    className="started-header offset-margin-bottom  "
-                    data-key={null}
+                    className="started-header offset-margin-bottom"
 >
                     Started
 </p>,
                   <p
                     className="started-description"
-                    data-key={null}
 >
                     2018-10-15
 </p>,
                   <p
-                    className="dev-pulse-average-header offset-margin-bottom "
-                    data-key={null}
+                    className="dev-pulse-average-header offset-margin-bottom"
 >
                     DevPulse Average
 </p>,
                   <p
                     className="dev-pulse-average-description"
-                    data-key={null}
 >
                     1.04
 </p>,
                 ],
                 "className": "float-left left",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -4315,8 +3737,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Level",
-                    "className": "level-header offset-margin-bottom ",
-                    "data-key": null,
+                    "className": "level-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "Level",
@@ -4329,7 +3750,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "D0B Apprenticeship",
                     "className": "level-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "D0B Apprenticeship",
@@ -4341,8 +3761,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Started",
-                    "className": "started-header offset-margin-bottom  ",
-                    "data-key": null,
+                    "className": "started-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "Started",
@@ -4355,7 +3774,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "2018-10-15",
                     "className": "started-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "2018-10-15",
@@ -4367,8 +3785,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "DevPulse Average",
-                    "className": "dev-pulse-average-header offset-margin-bottom ",
-                    "data-key": null,
+                    "className": "dev-pulse-average-header offset-margin-bottom",
                   },
                   "ref": null,
                   "rendered": "DevPulse Average",
@@ -4381,7 +3798,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "1.04",
                     "className": "dev-pulse-average-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "1.04",
@@ -4398,44 +3814,37 @@ ShallowWrapper {
                 "children": Array [
                   <p
                     className="status-header offset-margin-bottom"
-                    data-key={null}
 >
                     Status
 </p>,
                   <p
                     className="status-description 
                 color-on-pip"
-                    data-key={null}
 >
-                    Pip
+                    PIP
 </p>,
                   <p
                     className="ending-header offset-margin-bottom"
-                    data-key={null}
 >
                     Ending
 </p>,
                   <p
                     className="ending-description"
-                    data-key={null}
 >
                     2019-01-16
 </p>,
                   <p
                     className="lms-outputs-header offset-margin-bottom"
-                    data-key={null}
 >
-                    Lms Outputs
+                    LMS Outputs
 </p>,
                   <p
                     className="lms-outputs-description"
-                    data-key={null}
 >
                     No lms data
 </p>,
                 ],
                 "className": "float-right right",
-                "data-key": null,
               },
               "ref": null,
               "rendered": Array [
@@ -4446,7 +3855,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "Status",
                     "className": "status-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Status",
@@ -4457,13 +3865,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Pip",
+                    "children": "PIP",
                     "className": "status-description 
                 color-on-pip",
-                    "data-key": null,
                   },
                   "ref": null,
-                  "rendered": "Pip",
+                  "rendered": "PIP",
                   "type": "p",
                 },
                 Object {
@@ -4473,7 +3880,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "Ending",
                     "className": "ending-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "Ending",
@@ -4486,7 +3892,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "2019-01-16",
                     "className": "ending-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "2019-01-16",
@@ -4497,12 +3902,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Lms Outputs",
+                    "children": "LMS Outputs",
                     "className": "lms-outputs-header offset-margin-bottom",
-                    "data-key": null,
                   },
                   "ref": null,
-                  "rendered": "Lms Outputs",
+                  "rendered": "LMS Outputs",
                   "type": "p",
                 },
                 Object {
@@ -4512,7 +3916,6 @@ ShallowWrapper {
                   "props": Object {
                     "children": "No lms data",
                     "className": "lms-outputs-description",
-                    "data-key": null,
                   },
                   "ref": null,
                   "rendered": "No lms data",

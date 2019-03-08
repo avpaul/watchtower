@@ -21,8 +21,8 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
             `${fellow.user ? fellow.user.lastName : ''}`}`;
           return (
             <FellowsSummaryCard
-              mykey={fellowsSummaryCardDetails.indexOf(fellow)}
               key={fellowsSummaryCardDetails.indexOf(fellow)}
+              id={fellowsSummaryCardDetails.indexOf(fellow)}
               name={
                 refinedName.length > 20
                   ? `${refinedName.substr(0, 18)} ...`
@@ -38,7 +38,7 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
               devPulseAverage={fellow.devPulseAverage}
               status={
                 fellow.status && fellow.status.includes('gteWk5')
-                  ? 'Pip'
+                  ? 'PIP'
                   : resolveStatus(fellow)
               }
               ending={

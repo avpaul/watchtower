@@ -69,7 +69,7 @@ class DeveloperDashboard extends Component {
   updateState = data => {
     const fellows = [];
     data.forEach(x => fellows.push(...x.fellows));
-    this.setState({ fellowSummaryDetails: fellows });
+    this.setState({ fellowSummaryDetails: fellows, allFellows: fellows });
   };
 
   /**
@@ -82,8 +82,9 @@ class DeveloperDashboard extends Component {
    *
    */
   redirectUrl = (email, history) => {
+    if (!email) return history.push('/dashboard/fellows');
     const name = email.substr(0, email.search('@andela.com'));
-    history.push(`/dashboard/fellows/${name}`);
+    return history.push(`/dashboard/fellows/${name}`);
   };
 
   /**
@@ -92,10 +93,12 @@ class DeveloperDashboard extends Component {
    * @description - This method handle clicks on the fellow summary cards
    */
   handleCardClick = e => {
-    const id = e.target.getAttribute('data-key');
+    const { id } = e.currentTarget;
     const { history } = this.props;
     const { fellowSummaryDetails } = this.state;
-    const { email } = fellowSummaryDetails[id].user || fellowSummaryDetails[id];
+    const { email } =
+      fellowSummaryDetails[id] ||
+      `${fellowSummaryDetails[id] ? fellowSummaryDetails[id].user : ''}`;
     this.redirectUrl(email, history);
   };
 
@@ -115,7 +118,7 @@ class DeveloperDashboard extends Component {
    * @description - This method handles filters when a card is clicked
    * This is done by updating the states
    */
-  handleCardFilterClick = e => {
+  handleFilterCardClick = e => {
     const { allFellows, isTicked } = this.state;
     const processFilterByStatus = target => {
       let data;
@@ -126,7 +129,7 @@ class DeveloperDashboard extends Component {
         case 'PIP':
           data = 'gteWk5';
           break;
-        case 'Off-Track':
+        case 'Off Track':
           data = 'ltWk5';
           break;
         case 'On Track':
@@ -203,9 +206,7 @@ class DeveloperDashboard extends Component {
       <Fragment>
         <div className="ops-dashboard__fellows-summary">
           <p className="ops-dashboard__fellow-summary-text mb-2">PROJECTS</p>
-          <p className="fellow_progress__filter_title">
-            Filter by clicking cards
-          </p>
+          <p className="filter_card_title">Filter by clicking cards</p>
         </div>
         {this.renderFilterCards('project')}
         {this.renderFilterCards('status')}
@@ -231,7 +232,7 @@ class DeveloperDashboard extends Component {
       <MapFellowsFilterCard
         fellowSummaryDetails={allFellows}
         display={display}
-        handleCardClick={this.handleCardFilterClick}
+        handleCardClick={this.handleFilterCardClick}
         isTicked={isTicked}
       />
     );
@@ -261,7 +262,6 @@ class DeveloperDashboard extends Component {
               />
             )}
           />
-
           <Route
             path="/dashboard/fellows"
             render={() => this.renderFellowsDashboard()}

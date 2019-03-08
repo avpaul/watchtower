@@ -14,12 +14,12 @@ const FellowsSummaryCard = ({
   lmsOutputs,
   picture,
   onClick,
-  mykey
+  id
 }) => {
   const getStatusColor = fellowStatus => {
     let style;
     switch (fellowStatus) {
-      case 'Pip':
+      case 'PIP':
         style = 'color-on-pip';
         break;
       case 'On-Track':
@@ -39,78 +39,53 @@ const FellowsSummaryCard = ({
       onKeyPress={onClick}
       role="button"
       tabIndex="0"
-      data-key={mykey}
+      id={id}
+      key={id}
     >
-      <div className="row fellow-summary-card-header" data-key={mykey}>
-        <div className="col-2 fellow-card-avatar-wrapper" data-key={mykey}>
-          <div className="" data-key={mykey}>
+      <div className="row fellow-summary-card-header">
+        <div className="col-2 fellow-card-avatar-wrapper">
+          <div className="">
             <img
               className="img-responsive rounded-circle avatar"
               src={picture || defaultPicture}
               alt=""
-              data-key={mykey}
             />
           </div>
         </div>
 
-        <div className="col name-product-wrapper" data-key={mykey}>
-          <div className="fellow-name" data-key={mykey}>
-            <span data-key={mykey}> {name}</span>
+        <div className="col name-product-wrapper">
+          <div className="fellow-name">
+            <span> {name}</span>
           </div>
-          <div className="product" data-key={mykey}>
-            <span data-key={mykey}>{product}</span>
+          <div className="product">
+            <span>{product}</span>
           </div>
         </div>
       </div>
       <hr className="line-2" />
-      <div className="fellow-summary-card-body" data-key={mykey}>
-        <div className="float-left left" data-key={mykey}>
-          <p className="level-header offset-margin-bottom " data-key={mykey}>
-            Level
-          </p>
-          <p className="level-description" data-key={mykey}>
-            {level}
-          </p>
-          <p className="started-header offset-margin-bottom  " data-key={mykey}>
-            Started
-          </p>
-          <p className="started-description" data-key={mykey}>
-            {started}
-          </p>
-          <p
-            className="dev-pulse-average-header offset-margin-bottom "
-            data-key={mykey}
-          >
+      <div className="fellow-summary-card-body">
+        <div className="float-left left">
+          <p className="level-header offset-margin-bottom">Level</p>
+          <p className="level-description">{level}</p>
+          <p className="started-header offset-margin-bottom">Started</p>
+          <p className="started-description">{started}</p>
+          <p className="dev-pulse-average-header offset-margin-bottom">
             DevPulse Average
           </p>
-          <p className="dev-pulse-average-description" data-key={mykey}>
-            {devPulseAverage}
-          </p>
+          <p className="dev-pulse-average-description">{devPulseAverage}</p>
         </div>
-        <div className="float-right right" data-key={mykey}>
-          <p className="status-header offset-margin-bottom" data-key={mykey}>
-            Status
-          </p>
+        <div className="float-right right">
+          <p className="status-header offset-margin-bottom">Status</p>
           <p
             className={`status-description 
                 ${getStatusColor(status)}`}
-            data-key={mykey}
           >
             {status}
           </p>
-          <p className="ending-header offset-margin-bottom" data-key={mykey}>
-            Ending
-          </p>
-          <p className="ending-description" data-key={mykey}>
-            {ending}
-          </p>
-          <p
-            className="lms-outputs-header offset-margin-bottom"
-            data-key={mykey}
-          >
-            Lms Outputs
-          </p>
-          <p className="lms-outputs-description" data-key={mykey}>
+          <p className="ending-header offset-margin-bottom">Ending</p>
+          <p className="ending-description">{ending}</p>
+          <p className="lms-outputs-header offset-margin-bottom">LMS Outputs</p>
+          <p className="lms-outputs-description">
             {lmsOutputs || 'No lms data'}
           </p>
         </div>
@@ -125,17 +100,17 @@ FellowsSummaryCard.propTypes = {
   level: PropTypes.string.isRequired,
   started: PropTypes.string.isRequired,
   ending: PropTypes.string.isRequired,
-  devPulseAverage: PropTypes.string.isRequired,
+  devPulseAverage: PropTypes.string,
   status: PropTypes.string.isRequired,
   lmsOutputs: PropTypes.string,
   picture: PropTypes.string,
   onClick: PropTypes.func.isRequired,
-  mykey: PropTypes.string
+  id: PropTypes.number.isRequired
 };
 
 FellowsSummaryCard.defaultProps = {
   lmsOutputs: undefined,
   picture: null,
-  mykey: null
+  devPulseAverage: undefined
 };
 export default FellowsSummaryCard;
