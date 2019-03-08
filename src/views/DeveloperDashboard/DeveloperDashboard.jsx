@@ -79,7 +79,7 @@ class DeveloperDashboard extends Component {
     const fellows = [];
     data.forEach(manager => {
       let updatedFellows = manager.fellows;
-      if (updatedFellows){
+      if (updatedFellows) {
         updatedFellows = updatedFellows.map(fellow => {
           const updatedFellow = fellow;
           updatedFellow.manager = manager;
@@ -351,24 +351,31 @@ class DeveloperDashboard extends Component {
     );
   };
 
-  render() {
+  renderRoute = urlPath => {
     const { role, user } = this.props;
     const { fellowSummaryDetails } = this.state;
+    return (
+      <Route
+        path={urlPath}
+        render={newProps => (
+          <FellowHistoryContainer
+            role={role}
+            user={user}
+            {...newProps}
+            fellowSummaryDetails={fellowSummaryDetails}
+          />
+        )}
+      />
+    );
+  };
+
+  render() {
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
         <Switch>
-          <Route
-            path="/dashboard/fellows/:name"
-            render={newProps => (
-              <FellowHistoryContainer
-                role={role}
-                user={user}
-                {...newProps}
-                fellowSummaryDetails={fellowSummaryDetails}
-              />
-            )}
-          />
+          {this.renderRoute('/dashboard/fellows/pip/activation/:name')}
+          {this.renderRoute('/dashboard/fellows/:name')}
           <Route
             path="/dashboard/fellows"
             render={() => this.renderFellowsDashboard()}

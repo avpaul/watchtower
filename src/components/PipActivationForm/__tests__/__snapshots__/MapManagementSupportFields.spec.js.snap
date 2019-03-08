@@ -1,37 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Fellow History Container renders to match shapshot 1`] = `
+exports[`Test MapManagementSupportFields snapshots should render properly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <FellowHistory
-    fellowSummaryDetails={
-        Array [
-            Object {
-              "email": "kingsley.obot@andela.com",
-              "id": 10,
-              "picture": null,
-              "project": "Watch Tower",
-              "user": Object {
-                "firstName": "Kingsley",
-                "lastName": "Obot",
-              },
-            },
-          ]
-    }
-    getFellowDevPulse={[Function]}
-    match={
-        Object {
-            "params": Object {
-              "name": "kingsley.obot",
-            },
-          }
-    }
-    ratings={
-        Array [
-            Object {},
-          ]
-    }
-    ratingsLoading={false}
+  Symbol(enzyme.__unrendered__): <MapManagementSupportFields
+    handleMgtInputChange={[Function]}
+    mgtSupportFieldCount={2}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -44,16 +18,16 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Route
-          path="/dashboard/fellows/pip/activation/:name"
-          render={[Function]}
+        <ManagementSupportField
+          dataKey={1}
+          handleMgtInputChange={[Function]}
 />,
-        <Route
-          path="/dashboard/fellows/:name"
-          render={[Function]}
+        <ManagementSupportField
+          dataKey={2}
+          handleMgtInputChange={[Function]}
 />,
       ],
     },
@@ -62,10 +36,10 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "path": "/dashboard/fellows/pip/activation/:name",
-          "render": [Function],
+          "dataKey": 1,
+          "handleMgtInputChange": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -74,32 +48,32 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "path": "/dashboard/fellows/:name",
-          "render": [Function],
+          "dataKey": 2,
+          "handleMgtInputChange": [Function],
         },
         "ref": null,
         "rendered": null,
         "type": [Function],
       },
     ],
-    "type": [Function],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Route
-            path="/dashboard/fellows/pip/activation/:name"
-            render={[Function]}
+          <ManagementSupportField
+            dataKey={1}
+            handleMgtInputChange={[Function]}
 />,
-          <Route
-            path="/dashboard/fellows/:name"
-            render={[Function]}
+          <ManagementSupportField
+            dataKey={2}
+            handleMgtInputChange={[Function]}
 />,
         ],
       },
@@ -108,10 +82,10 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "path": "/dashboard/fellows/pip/activation/:name",
-            "render": [Function],
+            "dataKey": 1,
+            "handleMgtInputChange": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -120,17 +94,17 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "path": "/dashboard/fellows/:name",
-            "render": [Function],
+            "dataKey": 2,
+            "handleMgtInputChange": [Function],
           },
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
       ],
-      "type": [Function],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
