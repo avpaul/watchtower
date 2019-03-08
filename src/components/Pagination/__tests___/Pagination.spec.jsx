@@ -8,14 +8,16 @@ describe('Tests Pagination component', () => {
   let wrapper2;
   beforeEach(() => {
     const mockFn = () => {};
-    wrapper = shallow(<Pagination
-      handlePageChange={mockFn}
-      totalPages="10"
-      perPage="10"
-      prevPageUrl=""
-      nextPage="2"
-      handleValueChange={mockFn}
-    />);
+    wrapper = shallow(
+      <Pagination
+        handlePageChange={mockFn}
+        totalPages="10"
+        perPage="10"
+        prevPageUrl=""
+        nextPage="2"
+        handleValueChange={mockFn}
+      />
+    );
   });
 
   it('matches snapshot', () => {
@@ -37,22 +39,42 @@ describe('Tests Pagination component', () => {
     const event = {
       target: {
         name: 'next',
-        value: '1',
-      },
+        value: '1'
+      }
     };
     wrapper.instance().onPageChange(event);
   });
 
   it('calls render normal', () => {
-    wrapper = shallow(<Pagination
-      handlePageChange={() => {}}
-      totalPages="10"
-      currentPage="3"
-      perPage="10"
-      prevPageUrl=""
-      nextPage="5"
-      handleValueChange={() => {}}
-    />);
+    wrapper = shallow(
+      <Pagination
+        handlePageChange={() => {}}
+        totalPages="10"
+        currentPage="3"
+        perPage="10"
+        prevPageUrl=""
+        nextPage="5"
+        handleValueChange={() => {}}
+      />
+    );
+    const shallowWrapper = wrapper.instance();
+    const spy = jest.spyOn(shallowWrapper, 'renderNormal');
+    shallowWrapper.renderNormal();
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls render total pages equals current page normal', () => {
+    wrapper = shallow(
+      <Pagination
+        handlePageChange={() => {}}
+        totalPages="10"
+        currentPage="10"
+        perPage="10"
+        prevPageUrl=""
+        nextPage="5"
+        handleValueChange={() => {}}
+      />
+    );
     const shallowWrapper = wrapper.instance();
     const spy = jest.spyOn(shallowWrapper, 'renderNormal');
     shallowWrapper.renderNormal();
@@ -60,21 +82,23 @@ describe('Tests Pagination component', () => {
   });
 
   it('onPageChange should handle change on first', () => {
-    wrapper = shallow(<Pagination
-      handlePageChange={() => {}}
-      totalPages="10"
-      currentPage="3"
-      count="10"
-      perPage="10"
-      prevPageUrl=""
-      nextPage="5"
-      handleValueChange={() => {}}
-    />);
+    wrapper = shallow(
+      <Pagination
+        handlePageChange={() => {}}
+        totalPages="10"
+        currentPage="3"
+        count="10"
+        perPage="10"
+        prevPageUrl=""
+        nextPage="5"
+        handleValueChange={() => {}}
+      />
+    );
     const event = {
       target: {
         name: 'first',
-        value: '1',
-      },
+        value: '1'
+      }
     };
     wrapper.setState({ disabled: true });
     wrapper.instance().onPageChange(event);
@@ -85,8 +109,8 @@ describe('Tests Pagination component', () => {
     const event = {
       target: {
         name: 'first',
-        value: '1',
-      },
+        value: '1'
+      }
     };
     shallowWrapper.onValueChange(event);
   });
@@ -102,8 +126,8 @@ describe('Tests Pagination component', () => {
     const event = {
       target: {
         name: 'first',
-        value: '1',
-      },
+        value: '1'
+      }
     };
     wrapper.instance().onPageChange(event);
   });
@@ -116,14 +140,16 @@ describe('Tests Pagination component', () => {
 
   it('calls render button with different props', () => {
     const mockFn = jest.fn();
-    wrapper = shallow(<Pagination
-      totalPages="1"
-      handlePageChange={mockFn}
-      perPage="1"
-      prevPageUrl=""
-      nextPage="2"
-      handleValueChange={mockFn}
-    />);
+    wrapper = shallow(
+      <Pagination
+        totalPages="1"
+        handlePageChange={mockFn}
+        perPage="1"
+        prevPageUrl=""
+        nextPage="2"
+        handleValueChange={mockFn}
+      />
+    );
     const shallowWrapper = wrapper.instance();
     const spy = jest.spyOn(shallowWrapper, 'renderButton');
     shallowWrapper.renderButton();
@@ -131,34 +157,40 @@ describe('Tests Pagination component', () => {
   });
 
   it('onPageChange should set state', () => {
-    wrapper2 = shallow(<Pagination
-      handlePageChange={() => {}}
-      totalPages="10"
-      perPage="10"
-      prevPageUrl=""
-      nextPage="2"
-      handleValueChange={() => {}}
-    />);
+    wrapper2 = shallow(
+      <Pagination
+        handlePageChange={() => {}}
+        totalPages="10"
+        perPage="10"
+        prevPageUrl=""
+        nextPage="2"
+        handleValueChange={() => {}}
+      />
+    );
     const event = {
       target: {
         name: 'first',
-        value: '1',
-      },
+        value: '1'
+      }
     };
     wrapper2.instance().onPageChange(event);
-    wrapper2.instance().setState({ disabled: 'true', count: '10', totalPages: '10' });
+    wrapper2
+      .instance()
+      .setState({ disabled: 'true', count: '10', totalPages: '10' });
   });
 
   it('calls render button with totalpages as 3', () => {
     const mockFn = jest.fn();
-    wrapper = shallow(<Pagination
-      totalPages="3"
-      handlePageChange={mockFn}
-      perPage="1"
-      prevPageUrl=""
-      nextPage="2"
-      handleValueChange={mockFn}
-    />);
+    wrapper = shallow(
+      <Pagination
+        totalPages="3"
+        handlePageChange={mockFn}
+        perPage="1"
+        prevPageUrl=""
+        nextPage="2"
+        handleValueChange={mockFn}
+      />
+    );
     const shallowWrapper = wrapper.instance();
     const spy = jest.spyOn(shallowWrapper, 'renderButton');
     shallowWrapper.renderButton();

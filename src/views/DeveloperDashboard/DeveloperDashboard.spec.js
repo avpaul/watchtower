@@ -78,9 +78,34 @@ describe('Developers dashboard test', () => {
   it('should render developers dashboard as WATCH_TOWER_TTL without crashing', () => {
     testComponentUsingRole('WATCH_TOWER_TTL');
   });
+  it('should render developers dashboard without crashing', () => {
+    const { developerDashboardWrapper } = setup('WATCH_TOWER_LF');
+    expect(developerDashboardWrapper).toMatchSnapshot();
+    developerDashboardWrapper.setState({
+      lfTtlSummary: [{ id: 1, name: '' }],
+      isTicked: {status: 'status'},
+      resetFellows: [{id: 1, status: 'status'}],
+      allFellows: []
+    });
+    developerDashboardWrapper.instance().filterFellows('main');
+    developerDashboardWrapper.instance().filterFellows(1);
+    developerDashboardWrapper.instance().renderResultCount();
+    developerDashboardWrapper.instance().mapLfTtlData();
+    developerDashboardWrapper.instance().renderFellowsDashboard([], 1);
+  });
 
-  it('should render developers dashboard as WATCH_TOWER_SL without crashing', () => {
-    testComponentUsingRole('WATCH_TOWER_SL');
+  it('should call filterFellows when the status filter represents all fellows', () => {
+    const { developerDashboardWrapper } = setup('WATCH_TOWER_LF');
+    developerDashboardWrapper.setState({
+      isTicked: {status: 'All Fellows'},
+      resetFellows: []
+    });
+    developerDashboardWrapper.instance().filterFellows(1);
+  })
+
+  it('should render developers dashboard without crashing', () => {
+    const { developerDashboardWrapper } = setup('WATCH_TOWER_SL');
+    expect(developerDashboardWrapper).toMatchSnapshot();
   });
 
   it('should call the getManagerFellowsAction when developers dashboard mounts', () => {
@@ -132,6 +157,7 @@ describe('Developers dashboard test', () => {
       .dive()
       .simulate('click');
     expect(developerDashboardWrapper.state('isTicked')).toEqual({
+      managers: 'All Managers',
       project: 'All Products',
       status: 'All Fellows'
     });

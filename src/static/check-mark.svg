@@ -1,6 +1,30 @@
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490.05 490.05" style="enable-background:new 0 0 490.05 490.05;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
-	<g>
-		<path d="M418.275,418.275c95.7-95.7,95.7-250.8,0-346.5s-250.8-95.7-346.5,0s-95.7,250.8,0,346.5S322.675,513.975,418.275,418.275    z M157.175,207.575l55.1,55.1l120.7-120.6l42.7,42.7l-120.6,120.6l-42.8,42.7l-42.7-42.7l-55.1-55.1L157.175,207.575z" data-original="#000000" class="active-path" data-old_color="#0459e4" fill="#0459e4"/>
-	</g>
-</g></g> </svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>61BB94E6-E3E3-4F8E-BC4E-FB0F68157161</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M10.1666667,20.5 C15.6895142,20.5 20.1666667,16.0228475 20.1666667,10.5 C20.1666667,4.9771525 15.6895142,0.5 10.1666667,0.5 C4.64381917,0.5 0.166666667,4.9771525 0.166666667,10.5 C0.166666667,16.0228475 4.64381917,20.5 10.1666667,20.5 Z" id="path-1"></path>
+        <filter x="-10.0%" y="-10.0%" width="120.0%" height="120.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0765681612 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="LF/TTL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LF/TTL---Dev-Manager-&gt;-Dev-History-2" transform="translate(-1003.000000, -254.000000)" fill-rule="nonzero">
+            <g id="History" transform="translate(60.000000, 178.000000)">
+                <g id="Filter-Card-(checked)" transform="translate(667.000000, 73.000000)">
+                    <g id="tick" transform="translate(276.000000, 3.000000)">
+                        <g id="Path">
+                            <use fill="#0459E4" xlink:href="#path-1"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        </g>
+                        <path d="M14.1409158,7.39701905 C14.473933,7.10665486 14.9792834,7.14123195 15.2696476,7.47424913 C15.5600118,7.80726631 15.5254347,8.31261676 15.1924175,8.60298095 L8.31104861,14.6029809 C7.99697651,14.8768265 7.52529498,14.863731 7.2269008,14.5728812 L4.10826973,11.533099 C3.79187618,11.2247049 3.78539136,10.7182145 4.09378547,10.4018209 C4.40217958,10.0854274 4.90867005,10.0789425 5.2250636,10.3873366 L7.8154968,12.9122755 L14.1409158,7.39701905 Z" id="Path-3" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
