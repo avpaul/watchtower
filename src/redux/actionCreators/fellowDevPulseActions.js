@@ -5,12 +5,16 @@ import auth from '../../services/auth';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
-const getFellowDevPulse = () => dispatch => {
+const getFellowDevPulse = fellowEmail => dispatch => {
   dispatch({ type: types.LOAD_FELLOW_PULSE_REQUEST });
   let requestURL;
-  const { email } = auth.loadUserFromToken();
+  let newEmail = fellowEmail;
+  if (!fellowEmail) {
+    const { email } = auth.loadUserFromToken();
+    newEmail = email;
+  }
   if (!requestURL) {
-    requestURL = `${serverURL}/api/v1/fellows/pulse?user=${email}`;
+    requestURL = `${serverURL}/api/v1/fellows/pulse?user=${newEmail}`;
   }
   return axios.get(requestURL).then(
     response =>

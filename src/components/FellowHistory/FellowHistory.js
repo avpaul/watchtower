@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
+import { connect } from 'react-redux';
 
 import HistoryCard from './FellowHistoryCard';
 import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
 import './FellowHistory.css';
+import getFellowDevPulse from '../../redux/actionCreators/fellowDevPulseActions';
+import DevPulseTable from '../DevPulseTable';
 
 export class FellowHistory extends Component {
   constructor(props) {
@@ -12,20 +15,20 @@ export class FellowHistory extends Component {
 
     this.state = {
       fellow: {},
-      updated: false
+      updated: false,
+      showDevpulseTable: true,
+      showLmsTable: false
     };
   }
 
   componentDidMount() {
     const { fellowSummaryDetails } = this.props;
-
     if (fellowSummaryDetails.length !== 0) this.setFellow();
   }
 
   componentDidUpdate() {
     const { fellowSummaryDetails } = this.props;
     const { updated } = this.state;
-
     if (!updated && fellowSummaryDetails.length > 0) this.setFellow();
   }
 
@@ -39,20 +42,28 @@ export class FellowHistory extends Component {
       fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
     );
 
-    if (fellowFound === undefined) history.push('/dashboard/fellows');
+    if (fellowFound === undefined) {
+      history.push('/dashboard/fellows');
+    } else {
+      const fellowEmail = fellowFound.email;
+      // eslint-disable-next-line react/destructuring-assignment
+      this.props.getFellowDevPulse(fellowEmail);
+    }
 
     this.setState({ fellow: fellowFound, updated: true });
   }
 
   mapDisplayslistData = fellow => {
+    const { showDevpulseTable, showLmsTable } = this.state;
     const fellowsListDisplayData = [
       {
-        checkedBydefault: true,
+        checkedBydefault: showDevpulseTable,
         title: 'DevPulse',
-        ratings: fellow.devPulseAverage === null ? '0' : fellow.devPulseAverage
+        ratings:
+          fellow.devPulseAverage === null ? '0' : fellow.devPulseAverage
       },
       {
-        checkedBydefault: false,
+        checkedBydefault: showLmsTable,
         title: 'LMS',
         ratings: fellow.lmsOutput === null ? '0/0' : fellow.lmsOutput
       }
@@ -94,7 +105,7 @@ export class FellowHistory extends Component {
         />
       </div>
     );
-  };
+};
 
   /**
    ** Renders the fellow's bio card, manager's card as well as the fellow's
@@ -123,15 +134,25 @@ export class FellowHistory extends Component {
         <div className="col-xl-6 mt-3 mt-xl-0">
           <FellowSummaryBreakdown
             fellowSummaryBreakdown={this.mapDisplayslistData(fellow)}
+            handleCardClick={this.handleCardClick}
           />
         </div>
       </React.Fragment>
     );
   };
 
-  render() {
-    const { fellow } = this.state;
+  handleCardClick = event => {
+    const cardId = event.currentTarget.id;
+    if (cardId === 'DevPulse') {
+      this.setState({ showDevpulseTable: true, showLmsTable: false });
+    } else if (cardId === 'LMS') {
+      this.setState({ showDevpulseTable: false, showLmsTable: true });
+    }
+  };
 
+  render() {
+    const { fellow, showDevpulseTable, showLmsTable } = this.state;
+    const { ratings, ratingsLoading } = this.props;
     return (
       <div className="fellow-history container-fluid">
         <div className="fellow-history__top row">
@@ -142,6 +163,14 @@ export class FellowHistory extends Component {
               </span>
             </div>
             <div className="row">{this.renderCards(fellow)}</div>
+            <div className="row">
+              <div className="col-12 mt-5">
+                {showDevpulseTable && (
+                  <DevPulseTable loading={ratingsLoading} ratings={ratings} />
+                )}
+                {showLmsTable && 'LMS TABLE HERE'}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -152,7 +181,18 @@ export class FellowHistory extends Component {
 FellowHistory.propTypes = {
   match: PropTypes.shape().isRequired,
   fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  history: PropTypes.shape().isRequired
+  history: PropTypes.shape().isRequired,
+  ratings: PropTypes.shape([]).isRequired,
+  ratingsLoading: PropTypes.shape({}).isRequired,
+  getFellowDevPulse: PropTypes.func.isRequired
 };
 
-export default withRouter(FellowHistory);
+const mapStateToProps = ({ fellowDevPulse }) => ({
+  ratings: fellowDevPulse.ratings,
+  ratingsLoading: fellowDevPulse.loading
+});
+
+export default connect(
+  mapStateToProps,
+  { getFellowDevPulse }
+)(withRouter(FellowHistory));

@@ -35,6 +35,8 @@
   box-shadow: 0 4px 7px 0 rgba(35, 47, 73, 0.06);
   position: relative;
   padding: 0.5rem 1rem;
+  margin-right: 50px;
+  cursor: pointer;
 }
 
 .fellow-breakdown-card:hover {
@@ -80,4 +82,12 @@
 
 .card-scroll-wrapper {
   display: inline-block;
+  cursor: pointer;
+}
+.card-scroll-wrapper:focus,
+.card-scroll-wrapper:hover,
+.card-scroll-wrapper:active {
+  outline: none;
+  border: inherit;
+  cursor: pointer;
 }

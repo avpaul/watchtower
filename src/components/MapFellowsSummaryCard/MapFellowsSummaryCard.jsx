@@ -50,6 +50,7 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
               picture={fellow.picture}
               onClick={handleClick}
             />
+            // </div>
           );
         })}
       </div>
