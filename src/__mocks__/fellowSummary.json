@@ -8,7 +8,7 @@
     "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
     "apprStartDate": "2018-10-15",
     "apprEndDate": "2019-01-16",
-    "simStartDate": null,
+    "simsStartDate": null,
     "simsEndDate": null,
     "devPulseAverage": "1.04",
     "lmsOutput": "4/18"
@@ -22,7 +22,7 @@
     "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
     "apprStartDate": "2018-10-15",
     "apprEndDate": "2019-01-16",
-    "simStartDate": null,
+    "simsStartDate": null,
     "simsEndDate": null,
     "devPulseAverage": "1.04",
     "lmsOutput": "4/18"
@@ -36,7 +36,7 @@
     "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
     "apprStartDate": "2018-10-15",
     "apprEndDate": "2019-01-16",
-    "simStartDate": null,
+    "simsStartDate": null,
     "simsEndDate": null,
     "devPulseAverage": "1.04",
     "lmsOutput": "4/18"
@@ -50,7 +50,7 @@
     "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
     "apprStartDate": "2018-10-15",
     "apprEndDate": "2019-01-16",
-    "simStartDate": null,
+    "simsStartDate": null,
     "simsEndDate": null,
     "devPulseAverage": "1.04",
     "lmsOutput": "4/18"
@@ -64,7 +64,7 @@
     "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
     "apprStartDate": null,
     "apprEndDate": null,
-    "simStartDate": "2019-03-06",
+    "simsStartDate": "2019-03-06",
     "simsEndDate": "2019-06-14",
     "devPulseAverage": "1.04",
     "lmsOutput": "4/18"
@@ -75,12 +75,12 @@
       "lastName": ""
     },
     "project": "Noldor",
-    "level": "",
+    "level": "D0A Simulations",
     "status": "gteWk5OffTrack",
     "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
     "apprStartDate": null,
     "apprEndDate": null,
-    "simStartDate": "2019-03-06",
+    "simsStartDate": "2019-03-06",
     "simsEndDate": "2019-06-14",
     "devPulseAverage": "1.04",
     "lmsOutput": "4/18"
