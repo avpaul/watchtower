@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { mount, shallow } from 'enzyme';
 import { FellowHistory } from '../FellowHistory';
 
@@ -31,7 +32,7 @@ describe('Fellow History Container', () => {
    *
    * @returns { wrapper, props }
    */
-  const setup = (mountComponent = false, propOverrides = {}) => {
+  const setup = (mountComponent = false, propOverrides = {}, urlPath) => {
     let props = {
       match: { params: { name: 'kingsley.obot' } },
       fellowSummaryDetails: [fellow],
@@ -43,7 +44,11 @@ describe('Fellow History Container', () => {
     props = { ...props, ...propOverrides };
 
     const wrapper = mountComponent
-      ? mount(<FellowHistory {...props} />)
+      ? mount(
+          <MemoryRouter initialEntries={[urlPath]}>
+            <FellowHistory {...props} />
+          </MemoryRouter>
+        )
       : shallow(<FellowHistory {...props} />);
 
     return { props, wrapper };
@@ -76,12 +81,18 @@ describe('Fellow History Container', () => {
   });
 
   it('renders the expected fellow profile details on update', () => {
-    const { wrapper, props } = setup(true, {
-      history: { push: jest.fn() },
-      fellowSummaryDetails: []
-    });
-
-    const action = jest.spyOn(wrapper.instance(), 'setFellow');
+    const { wrapper, props } = setup(
+      true,
+      {
+        history: { push: jest.fn() },
+        fellowSummaryDetails: []
+      },
+      '/dashboard/fellows/:name'
+    );
+    const action = jest.spyOn(
+      wrapper.find(FellowHistory).instance(),
+      'setFellow'
+    );
 
     wrapper.setProps({ fellowSummaryDetails: [fellow] }, () => {
       setTimeout(() => {
@@ -99,10 +110,14 @@ describe('Fellow History Container', () => {
       lmsOutput: '17/18'
     };
 
-    const { wrapper, props } = setup(true, {
-      history: { push: jest.fn() },
-      fellowSummaryDetails: [newFellow]
-    });
+    const { wrapper, props } = setup(
+      true,
+      {
+        history: { push: jest.fn() },
+        fellowSummaryDetails: [newFellow]
+      },
+      '/dashboard/fellows/:name'
+    );
 
     testFellowHistoryCard(wrapper);
     expect(props.history.push).not.toBeCalled();
@@ -110,23 +125,31 @@ describe('Fellow History Container', () => {
 
   it('renders fellows page if fellow not found', () => {
     let currentPath = '';
-    setup(true, {
-      match: { params: { name: 'Kingsley.Obota' } },
-      history: {
-        push: url => {
-          currentPath = url;
+    setup(
+      true,
+      {
+        match: { params: { name: 'Kingsley.Obota' } },
+        history: {
+          push: url => {
+            currentPath = url;
+          }
         }
-      }
-    });
+      },
+      '/dashboard/fellows/:name'
+    );
 
     expect(currentPath).toEqual('/dashboard/fellows');
   });
 
   const testManagerByRole = (currentFellow = fellowWithManager) => {
-    const { wrapper, props } = setup(true, {
-      history: { push: jest.fn() },
-      fellowSummaryDetails: [currentFellow]
-    });
+    const { wrapper, props } = setup(
+      true,
+      {
+        history: { push: jest.fn() },
+        fellowSummaryDetails: [currentFellow]
+      },
+      '/dashboard/fellows/:name'
+    );
 
     const fellowCard = wrapper.find('.fellow-history-card').at(1);
     testFellowHistoryCard(fellowCard, currentFellow.manager);
@@ -170,4 +193,20 @@ describe('Fellow History Container', () => {
     expect(wrapper.state().showDevpulseTable).toBe(false);
     expect(wrapper.state().showLmsTable).toBe(true);
   });
+
+  it('renders the PipActivationForm when button is clicked', () => {
+    const { wrapper, props } = setup(
+      true,
+      {
+        history: { push: jest.fn() },
+        fellowSummaryDetails: []
+      },
+      '/dashboard/fellows/:name'
+    );
+    const fellowHistoryWrapper = wrapper.find(FellowHistory).instance();
+    fellowHistoryWrapper.setState({ fellow });
+    fellowHistoryWrapper.renderPipActivationForm();
+    expect(props.history.push).toHaveBeenCalled();
+  });
 });
+

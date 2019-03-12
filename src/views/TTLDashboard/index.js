@@ -20,7 +20,11 @@ const TTLDashboard = props => (
         />
         <Route
           exact
-          path={['/dashboard/fellows', '/dashboard/fellows/:name']}
+          path={[
+            '/dashboard/fellows',
+            '/dashboard/fellows/:name',
+            '/dashboard/fellows/pip/activation/:name'
+          ]}
           component={newProps => (
             <DeveloperDashboardContainer match={newProps.match} {...props} />
           )}

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { connect } from 'react-redux';
-
+import { Switch, Route } from 'react-router-dom';
 import HistoryCard from './FellowHistoryCard';
 import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
+import fetchDevPulse from '../../redux/actionCreators/fellowDevPulseActions';
+import PipActivationForm from '../PipActivationForm/PipActivationForm';
 import './FellowHistory.css';
-import getFellowDevPulse from '../../redux/actionCreators/fellowDevPulseActions';
 import DevPulseTable from '../DevPulseTable';
 
 export class FellowHistory extends Component {
@@ -42,12 +43,11 @@ export class FellowHistory extends Component {
       fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
     );
 
-    if (fellowFound === undefined) {
-      history.push('/dashboard/fellows');
+    if (fellowFound !== undefined) {
+      const { getFellowDevPulse } = this.props;
+      getFellowDevPulse(fellowFound.email);
     } else {
-      const fellowEmail = fellowFound.email;
-      // eslint-disable-next-line react/destructuring-assignment
-      this.props.getFellowDevPulse(fellowEmail);
+      history.push('/dashboard/fellows');
     }
 
     this.setState({ fellow: fellowFound, updated: true });
@@ -59,8 +59,7 @@ export class FellowHistory extends Component {
       {
         checkedBydefault: showDevpulseTable,
         title: 'DevPulse',
-        ratings:
-          fellow.devPulseAverage === null ? '0' : fellow.devPulseAverage
+        ratings: fellow.devPulseAverage === null ? '0' : fellow.devPulseAverage
       },
       {
         checkedBydefault: showLmsTable,
@@ -99,13 +98,13 @@ export class FellowHistory extends Component {
         <HistoryCard
           user={{
             name: `${manager.firstName} ${manager.lastName}`,
-            image: manager.image,
+            image: manager.picture,
             detail: `${fellow.firstName}'s ${managerRole}`
           }}
         />
       </div>
     );
-};
+  };
 
   /**
    ** Renders the fellow's bio card, manager's card as well as the fellow's
@@ -124,7 +123,7 @@ export class FellowHistory extends Component {
           <HistoryCard
             user={{
               name: `${fellowBio.firstName} ${fellowBio.lastName}`,
-              image: fellow.image,
+              image: fellow.picture,
               detail: fellow.project
             }}
           />
@@ -150,30 +149,81 @@ export class FellowHistory extends Component {
     }
   };
 
-  render() {
-    const { fellow, showDevpulseTable, showLmsTable } = this.state;
-    const { ratings, ratingsLoading } = this.props;
-    return (
-      <div className="fellow-history container-fluid">
-        <div className="fellow-history__top row">
-          <div className="col">
-            <div className="row">
-              <span className="fellow-history__header col">
-                DEVELOPER HISTORY
-              </span>
-            </div>
-            <div className="row">{this.renderCards(fellow)}</div>
-            <div className="row">
-              <div className="col-12 mt-5">
-                {showDevpulseTable && (
-                  <DevPulseTable loading={ratingsLoading} ratings={ratings} />
-                )}
-                {showLmsTable && 'LMS TABLE HERE'}
-              </div>
+  loadPipActivationForm = () => (
+    <button
+      type="submit"
+      className="btn btn-add-support"
+      onClick={this.renderPipActivationForm}
+    >
+      Activate Pip
+    </button>
+  );
+
+  renderPipActivationForm = () => {
+    const { history } = this.props;
+    const { fellow } = this.state;
+    const name = fellow.email.substr(0, fellow.email.search('@andela.com'));
+    history.push(`/dashboard/fellows/pip/activation/${name}`);
+  };
+
+  renderFellowHistory = (
+    fellow,
+    showDevpulseTable,
+    showLmsTable,
+    ratings,
+    ratingsLoading
+  ) => (
+    <div className="fellow-history container-fluid">
+      <div className="fellow-history__top row">
+        <div className="col">
+          <div className="row">
+            <span className="fellow-history__header col">
+              DEVELOPER HISTORY
+            </span>
+          </div>
+          <div className="row">{this.renderCards(fellow)}</div>
+          <div>{this.loadPipActivationForm()}</div>
+          <div className="row">
+            <div className="col-12 mt-5">
+              {showDevpulseTable && (
+                <DevPulseTable loading={ratingsLoading} ratings={ratings} />
+              )}
+              {showLmsTable && 'LMS TABLE HERE'}
             </div>
           </div>
         </div>
       </div>
+    </div>
+  );
+
+  render() {
+    const { ratings, ratingsLoading, averageRatings } = this.props;
+    const { fellow, showDevpulseTable, showLmsTable } = this.state;
+
+    return (
+      <Switch>
+        <Route
+          path="/dashboard/fellows/pip/activation/:name"
+          render={() => (
+            <PipActivationForm
+              fellow={fellow}
+              averageRatings={averageRatings}
+            />
+          )}
+        />
+        <Route
+          path="/dashboard/fellows/:name"
+          render={() =>
+            this.renderFellowHistory(
+              fellow,
+              showDevpulseTable,
+              showLmsTable,
+              ratings,
+              ratingsLoading
+            )
+          }
+        />
+      </Switch>
     );
   }
 }
@@ -184,15 +234,17 @@ FellowHistory.propTypes = {
   history: PropTypes.shape().isRequired,
   ratings: PropTypes.shape([]).isRequired,
   ratingsLoading: PropTypes.shape({}).isRequired,
-  getFellowDevPulse: PropTypes.func.isRequired
+  getFellowDevPulse: PropTypes.func.isRequired,
+  averageRatings: PropTypes.shape({}).isRequired
 };
 
 const mapStateToProps = ({ fellowDevPulse }) => ({
   ratings: fellowDevPulse.ratings,
-  ratingsLoading: fellowDevPulse.loading
+  ratingsLoading: fellowDevPulse.loading,
+  averageRatings: fellowDevPulse.averageRatings
 });
 
 export default connect(
   mapStateToProps,
-  { getFellowDevPulse }
+  { getFellowDevPulse: fetchDevPulse }
 )(withRouter(FellowHistory));

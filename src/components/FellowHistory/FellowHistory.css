@@ -1,9 +1,10 @@
 .fellow-history {
   padding: 0 4.166666%;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .fellow-history {
     width: 80% !important;
+    max-width: 80% !important;
     margin-left: 0 !important;
   }
 }
