@@ -19,7 +19,7 @@ describe('Fellow History Container', () => {
   fellowWithManager.manager = {
     firstName: 'John',
     lastName: 'Doe',
-    image: null,
+    picture: null,
     roleId: 2,
     detail: `${fellow.user.firstName}'s TTL`
   };
@@ -209,4 +209,3 @@ describe('Fellow History Container', () => {
     expect(props.history.push).toHaveBeenCalled();
   });
 });
-

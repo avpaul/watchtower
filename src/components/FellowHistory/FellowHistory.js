@@ -98,7 +98,7 @@ export class FellowHistory extends Component {
         <HistoryCard
           user={{
             name: `${manager.firstName} ${manager.lastName}`,
-            image: manager.picture,
+            picture: manager.picture,
             detail: `${fellow.firstName}'s ${managerRole}`
           }}
         />
@@ -123,7 +123,7 @@ export class FellowHistory extends Component {
           <HistoryCard
             user={{
               name: `${fellowBio.firstName} ${fellowBio.lastName}`,
-              image: fellow.picture,
+              picture: fellow.picture,
               detail: fellow.project
             }}
           />
