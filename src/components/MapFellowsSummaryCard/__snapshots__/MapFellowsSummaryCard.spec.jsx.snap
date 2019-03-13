@@ -16,8 +16,8 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Watch Tower",
-              "simStartDate": null,
               "simsEndDate": null,
+              "simsStartDate": null,
               "status": "ltWk5OffTrack",
             },
             Object {
@@ -30,8 +30,8 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Watch Tower",
-              "simStartDate": null,
               "simsEndDate": null,
+              "simsStartDate": null,
               "status": "gteWk5OffTrack",
             },
             Object {
@@ -44,8 +44,8 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Watch Tower",
-              "simStartDate": null,
               "simsEndDate": null,
+              "simsStartDate": null,
               "status": "onTrack",
             },
             Object {
@@ -58,8 +58,8 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Watch Tower",
-              "simStartDate": null,
               "simsEndDate": null,
+              "simsStartDate": null,
               "status": "onTrack",
             },
             Object {
@@ -72,20 +72,20 @@ ShallowWrapper {
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Noldor",
-              "simStartDate": "2019-03-06",
               "simsEndDate": "2019-06-14",
+              "simsStartDate": "2019-03-06",
               "status": "gteWk5OffTrack",
             },
             Object {
               "apprEndDate": null,
               "apprStartDate": null,
               "devPulseAverage": "1.04",
-              "level": "",
+              "level": "D0A Simulations",
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "project": "Noldor",
-              "simStartDate": "2019-03-06",
               "simsEndDate": "2019-06-14",
+              "simsStartDate": "2019-03-06",
               "status": "gteWk5OffTrack",
               "user": Object {
                 "firstName": "somereallyreallylongusername",
@@ -174,20 +174,20 @@ ShallowWrapper {
                 onClick={[Function]}
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Noldor"
-                started="12-Mar-2019"
+                started="6-Mar-2019"
                 status="PIP"
         />
         <FellowsSummaryCard
                 devPulseAverage="1.04"
-                ending="No date"
+                ending="14-Jun-2019"
                 id={5}
-                level=""
+                level="D0A"
                 lmsOutputs="4/18"
                 name="somereallyreallylo ..."
                 onClick={[Function]}
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Noldor"
-                started="No date"
+                started="6-Mar-2019"
                 status="PIP"
         />
 </div>,
@@ -262,20 +262,20 @@ ShallowWrapper {
             onClick={[Function]}
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Noldor"
-            started="12-Mar-2019"
+            started="6-Mar-2019"
             status="PIP"
 />,
           <FellowsSummaryCard
             devPulseAverage="1.04"
-            ending="No date"
+            ending="14-Jun-2019"
             id={5}
-            level=""
+            level="D0A"
             lmsOutputs="4/18"
             name="somereallyreallylo ..."
             onClick={[Function]}
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Noldor"
-            started="No date"
+            started="6-Mar-2019"
             status="PIP"
 />,
         ],
@@ -381,7 +381,7 @@ ShallowWrapper {
             "onClick": [Function],
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Noldor",
-            "started": "12-Mar-2019",
+            "started": "6-Mar-2019",
             "status": "PIP",
           },
           "ref": null,
@@ -394,15 +394,15 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "devPulseAverage": "1.04",
-            "ending": "No date",
+            "ending": "14-Jun-2019",
             "id": 5,
-            "level": "",
+            "level": "D0A",
             "lmsOutputs": "4/18",
             "name": "somereallyreallylo ...",
             "onClick": [Function],
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Noldor",
-            "started": "No date",
+            "started": "6-Mar-2019",
             "status": "PIP",
           },
           "ref": null,
@@ -485,20 +485,20 @@ ShallowWrapper {
                     onClick={[Function]}
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Noldor"
-                    started="12-Mar-2019"
+                    started="6-Mar-2019"
                     status="PIP"
           />
           <FellowsSummaryCard
                     devPulseAverage="1.04"
-                    ending="No date"
+                    ending="14-Jun-2019"
                     id={5}
-                    level=""
+                    level="D0A"
                     lmsOutputs="4/18"
                     name="somereallyreallylo ..."
                     onClick={[Function]}
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Noldor"
-                    started="No date"
+                    started="6-Mar-2019"
                     status="PIP"
           />
 </div>,
@@ -573,20 +573,20 @@ ShallowWrapper {
               onClick={[Function]}
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Noldor"
-              started="12-Mar-2019"
+              started="6-Mar-2019"
               status="PIP"
 />,
             <FellowsSummaryCard
               devPulseAverage="1.04"
-              ending="No date"
+              ending="14-Jun-2019"
               id={5}
-              level=""
+              level="D0A"
               lmsOutputs="4/18"
               name="somereallyreallylo ..."
               onClick={[Function]}
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Noldor"
-              started="No date"
+              started="6-Mar-2019"
               status="PIP"
 />,
           ],
@@ -692,7 +692,7 @@ ShallowWrapper {
               "onClick": [Function],
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Noldor",
-              "started": "12-Mar-2019",
+              "started": "6-Mar-2019",
               "status": "PIP",
             },
             "ref": null,
@@ -705,15 +705,15 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "devPulseAverage": "1.04",
-              "ending": "No date",
+              "ending": "14-Jun-2019",
               "id": 5,
-              "level": "",
+              "level": "D0A",
               "lmsOutputs": "4/18",
               "name": "somereallyreallylo ...",
               "onClick": [Function],
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Noldor",
-              "started": "No date",
+              "started": "6-Mar-2019",
               "status": "PIP",
             },
             "ref": null,
