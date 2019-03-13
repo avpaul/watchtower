@@ -29,60 +29,100 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Unknown>
-        <FeedbackDashboardTable
-                currentRole="WATCH_TOWER_OPS"
-                feedbackArray={Array []}
-                type="pip"
-        />
-</Unknown>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": <FeedbackDashboardTable
-          currentRole="WATCH_TOWER_OPS"
-          feedbackArray={Array []}
-          type="pip"
+      "children": Array [
+        <div>
+          <p>
+                    Start Date: 
+                    1234564567
+          </p>
+          <p>
+                    End Date: 
+                    1467547453
+          </p>
+</div>,
+        <ActionButton
+          clickHandler={[Function]}
+          text="Clear Duration"
 />,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "currentRole": "WATCH_TOWER_OPS",
-          "feedbackArray": Array [],
-          "type": "pip",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": Symbol(react.fragment),
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Unknown>
+        <Unknown>
           <FeedbackDashboardTable
                     currentRole="WATCH_TOWER_OPS"
                     feedbackArray={Array []}
                     type="pip"
           />
 </Unknown>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Start Date: 
+              1234564567
+</p>,
+            <p>
+              End Date: 
+              1467547453
+</p>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Start Date: ",
+                1234564567,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Start Date: ",
+              1234564567,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "End Date: ",
+                1467547453,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "End Date: ",
+              1467547453,
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "clickHandler": [Function],
+          "text": "Clear Duration",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
@@ -109,6 +149,136 @@ ShallowWrapper {
         },
         "type": Symbol(react.fragment),
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            <p>
+                        Start Date: 
+                        1234564567
+            </p>
+            <p>
+                        End Date: 
+                        1467547453
+            </p>
+</div>,
+          <ActionButton
+            clickHandler={[Function]}
+            text="Clear Duration"
+/>,
+          <Unknown>
+            <FeedbackDashboardTable
+                        currentRole="WATCH_TOWER_OPS"
+                        feedbackArray={Array []}
+                        type="pip"
+            />
+</Unknown>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Start Date: 
+                1234564567
+</p>,
+              <p>
+                End Date: 
+                1467547453
+</p>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Start Date: ",
+                  1234564567,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Start Date: ",
+                1234564567,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "End Date: ",
+                  1467547453,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "End Date: ",
+                1467547453,
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "clickHandler": [Function],
+            "text": "Clear Duration",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <FeedbackDashboardTable
+              currentRole="WATCH_TOWER_OPS"
+              feedbackArray={Array []}
+              type="pip"
+/>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "currentRole": "WATCH_TOWER_OPS",
+              "feedbackArray": Array [],
+              "type": "pip",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Symbol(react.fragment),
+        },
+      ],
       "type": "div",
     },
   ],

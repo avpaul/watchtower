@@ -92,8 +92,8 @@ export const managerItems = [
   {
     key: 'Performance',
     name: 'Feedback',
-    icon: feedbackIcon,
     path: '/dashboard/feedback',
+    icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }
 ];

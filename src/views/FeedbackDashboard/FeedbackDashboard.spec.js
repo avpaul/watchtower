@@ -3,6 +3,7 @@ import { shallow, mount } from 'enzyme';
 import FeedbackDashboard from './FeedbackDashboard';
 import FeedbackDashboardTable from './FeedbackDashboardTable';
 import feedbackArrayMock from '../../__mocks__/feedbackSummary.json';
+import ActionButton from '../../components/ActionButton';
 
 describe('Test Feedback Dashboard', () => {
   const props = {
@@ -22,6 +23,10 @@ describe('Test Feedback Dashboard', () => {
 
   it('renders correctly', () => {
     const wrapper = shallow(<FeedbackDashboard {...props} />);
+    wrapper.setState({
+      startDate: 1234564567,
+      endDate: 1467547453
+    });
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -60,5 +65,14 @@ describe('Test Feedback Dashboard', () => {
       props.user.roles,
       props.user.email
     );
+  });
+
+  it('should simulate click on the clear duration', () => {
+    const wrapper = shallow(<FeedbackDashboard {...props} />);
+    wrapper
+      .find(ActionButton)
+      .dive()
+      .find('button')
+      .simulate('click');
   });
 });
