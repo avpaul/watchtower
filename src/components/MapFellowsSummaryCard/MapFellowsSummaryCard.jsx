@@ -3,60 +3,72 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import FellowsSummaryCard from '../FellowsSummaryCard';
 
-const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
-  const refineDate = (fellow, Start) =>
-    moment(
-      fellow.level && fellow.level.includes('D0A')
-        ? fellow[`sims${Start}Date`]
-        : fellow[`appr${Start}Date`]
-    ).format('D-MMM-YYYY');
-  const resolveStatus = fellowStatus =>
-    fellowStatus.status.includes('ltWk5') ? 'Off-Track' : 'On-Track';
+const refineDate = (fellow, dateKey) => {
+  /**
+   ** Transforms date timestamp to a human readable format
+   * @param fellow Fellow's details as an object
+   * @param dateKey Part of the key for the date property to be rendered
+   * from fellow object
+   * @returns date (string)
+   */
+  const date =
+    fellow.level && fellow.level.includes('D0A')
+      ? fellow[`sims${dateKey}Date`]
+      : fellow[`appr${dateKey}Date`];
+  return !date ? 'No date' : moment(date).format('D-MMM-YYYY');
+};
+
+const resolveStatus = fellow => {
+  /**
+   ** Renders the fellow's current progress status
+   * @param fellow Fellow's details as an object
+   */
+  if (!fellow.status) return 'No Status';
+
+  if (fellow.status.includes('gteWk5')) return 'PIP';
+  if (fellow.status.includes('ltWk5')) return 'Off-Track';
+
+  return 'On-Track';
+};
+
+const renderFellow = (fellow, fellowIndex, handleClick) => {
+  /**
+   ** Renders the fellow summary card
+   * @param fellow Fellow's details as an object
+   * @param fellowIndex Fellow's index in the fellowSummaryDetails array
+   * @param handleClick On click event listener function
+   */
+  const fellowBio = fellow.user ? fellow.user : fellow;
+  let refinedName = `${fellowBio.firstName} ${fellowBio.lastName}`;
+  refinedName =
+    refinedName.length > 20 ? `${refinedName.substr(0, 18)} ...` : refinedName;
   return (
-    <div className="ops-dashboard__fellows-summary">
-      <div className="row">
-        {fellowsSummaryCardDetails.map(fellow => {
-          const refinedName = `${fellow.firstName ||
-            `${fellow.user ? fellow.user.firstName : ''}`} ${fellow.lastName ||
-            `${fellow.user ? fellow.user.lastName : ''}`}`;
-          return (
-            <FellowsSummaryCard
-              key={fellowsSummaryCardDetails.indexOf(fellow)}
-              id={fellowsSummaryCardDetails.indexOf(fellow)}
-              name={
-                refinedName.length > 20
-                  ? `${refinedName.substr(0, 18)} ...`
-                  : refinedName
-              }
-              product={fellow.project}
-              level={fellow.level ? fellow.level.split(' ')[0] : ''}
-              started={
-                refineDate(fellow, 'Start') === 'Invalid date'
-                  ? 'No date'
-                  : refineDate(fellow, 'Start')
-              }
-              devPulseAverage={fellow.devPulseAverage}
-              status={
-                fellow.status && fellow.status.includes('gteWk5')
-                  ? 'PIP'
-                  : resolveStatus(fellow)
-              }
-              ending={
-                refineDate(fellow, 'End') === 'Invalid date'
-                  ? 'No date'
-                  : refineDate(fellow, 'End')
-              }
-              lmsOutputs={fellow.lmsOutput}
-              picture={fellow.picture}
-              onClick={handleClick}
-            />
-            // </div>
-          );
-        })}
-      </div>
-    </div>
+    <FellowsSummaryCard
+      key={fellowIndex}
+      id={fellowIndex}
+      name={refinedName}
+      product={fellow.project}
+      level={fellow.level ? fellow.level.split(' ')[0] : ''}
+      started={refineDate(fellow, 'Start')}
+      devPulseAverage={fellow.devPulseAverage}
+      status={resolveStatus(fellow)}
+      ending={refineDate(fellow, 'End')}
+      lmsOutputs={fellow.lmsOutput}
+      picture={fellow.picture}
+      onClick={handleClick}
+    />
   );
 };
+
+const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => (
+  <div className="ops-dashboard__fellows-summary">
+    <div className="row">
+      {fellowsSummaryCardDetails.map((fellow, index) =>
+        renderFellow(fellow, index, handleClick)
+      )}
+    </div>
+  </div>
+);
 
 MapFellowsSummary.propTypes = {
   fellowsSummaryCardDetails: PropTypes.shape([]).isRequired,
