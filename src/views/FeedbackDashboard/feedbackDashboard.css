@@ -1,0 +1,12 @@
+.feedback-share {
+  color: #0459e4;
+  font-size: 15px;
+  height: 20px;
+  width: 32px;
+  font-family: 'DIN Pro';
+  font-weight: 500;
+}
+
+.feedback-share:hover {
+  text-decoration: none;
+}

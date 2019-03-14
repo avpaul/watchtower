@@ -34,6 +34,7 @@ export class Header extends Component {
         fellows: false,
         dashboard: false,
         developers: false,
+        feedback: false,
         settings: false
       },
       show: false,
@@ -51,6 +52,9 @@ export class Header extends Component {
         break;
       case '/dashboard/fellows':
         this.setState({ activeItems: { developers: true } });
+        break;
+      case '/dashboard/feedback':
+        this.setState({ activeItems: { feedback: true } });
         break;
       default: {
         if (location.pathname.search('/dashboard/fellows/') === 0) {

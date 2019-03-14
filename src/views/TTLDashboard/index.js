@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../../components/Header';
 import TTLDashboardContainer from './TTLDashboardContainer';
 import DeveloperDashboardContainer from '../DeveloperDashboard';
-
+import FeedbackDashboardContainer from '../FeedbackDashboard/FeedbackDashboardContainer';
 /**
  * Defines routes for the ttldashboard
  * @function
@@ -23,6 +23,11 @@ const TTLDashboard = props => (
           component={newProps => (
             <DeveloperDashboardContainer match={newProps.match} {...props} />
           )}
+        />
+        <Route
+          exact
+          path="/dashboard/feedback"
+          component={() => <FeedbackDashboardContainer {...props} />}
         />
       </Switch>
     </React.Fragment>

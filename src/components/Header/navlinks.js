@@ -68,6 +68,7 @@ export const ttlItems = [
   {
     key: 'feedback',
     name: 'Feedback',
+    path: '/dashboard/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }
@@ -92,6 +93,7 @@ export const managerItems = [
     key: 'Performance',
     name: 'Feedback',
     icon: feedbackIcon,
+    path: '/dashboard/feedback',
     activeIcon: feedbackIconFill
   }
 ];
@@ -114,6 +116,7 @@ export const opsItems = [
   {
     key: 'feedback',
     name: 'Feedback',
+    path: '/dashboard/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }

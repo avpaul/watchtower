@@ -161,5 +161,10 @@ export default {
     loading: false,
     data: [],
     error: null
+  },
+  feedback: {
+    loading: false,
+    data: [],
+    error: null
   }
 };
