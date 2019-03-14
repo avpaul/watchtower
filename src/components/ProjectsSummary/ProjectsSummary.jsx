@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { carouselOptions } from '../../utils';
 import FilterCard from '../Filters/FilterCard';
 import FellowSummaryLabel from '../FellowSummaryLabel';
+import Loader from '../Loader/Loader';
 import '../FellowsSummary/FellowsSummary.css';
 
 const formatProjects = projects => {
@@ -20,34 +21,42 @@ const ProjectsSummary = props => {
     fellowsSummary: {
       fellowsSummaryToday: { latestWeekSummary = {} }
     },
-    handleCardClick
+    handleCardClick,
+    loading
   } = props;
   const projectsCard = formatProjects(latestWeekSummary);
 
   return (
     <div className="ops-dashboard__fellows-summary">
       <FellowSummaryLabel />
-      <div className="row ops-dashboard__filter">
-        <Slider {...carouselOptions(4)}>
-          {projectsCard.map(projectCard => (
-            <div className="p-1">
-              <FilterCard
-                key={projectCard.title}
-                filterId={projectCard.title}
-                cardDetails={projectCard}
-                className="card"
-                onClick={handleCardClick}
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      <Fragment>
+        {!loading ? (
+          <div className="row ops-dashboard__filter">
+            <Slider {...carouselOptions(4)}>
+              {projectsCard.map(projectCard => (
+                <div className="p-1">
+                  <FilterCard
+                    key={projectCard.title}
+                    filterId={projectCard.title}
+                    cardDetails={projectCard}
+                    className="card"
+                    onClick={handleCardClick}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        ) : (
+          <Loader />
+        )}
+      </Fragment>
     </div>
   );
 };
 
 ProjectsSummary.propTypes = {
   fellowsSummary: PropTypes.instanceOf(Object).isRequired,
+  loading: PropTypes.bool.isRequired,
   handleCardClick: PropTypes.func.isRequired
 };
 

@@ -21,7 +21,7 @@
 
 .chart_loader {
   border: 5px solid #f3f3f3;
-  border-top: 5px solid #3359db;
+  border-top: 5px solid #0459e4;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -30,7 +30,7 @@
   opacity: 1 !important;
   z-index: 100000;
   margin-top: 10vh;
-  margin-left: 30vw;
+  margin-left: 42.7vw;
 }
 
 @keyframes spin {

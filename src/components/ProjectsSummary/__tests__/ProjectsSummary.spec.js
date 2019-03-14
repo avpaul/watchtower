@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import ProjectsSummary from '../ProjectsSummary';
 import FilterCard from '../../Filters/FilterCard';
+import Loader from '../../Loader/Loader';
 
 const setup = () => {
   const props = {
@@ -55,5 +56,13 @@ describe('<ProjectsSummary />', () => {
       .first()
       .simulate('click');
     expect(handleCardClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders correctly when project summary details are loading', () => {
+    const { props } = setup();
+    const wrapper = shallow(
+      <ProjectsSummary {...{ ...props, ...{ loading: true } }} />
+    );
+    expect(wrapper.contains(<Loader />)).toEqual(true);
   });
 });
