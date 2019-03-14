@@ -19,7 +19,7 @@ describe('Fellow History Container', () => {
   fellowWithManager.manager = {
     firstName: 'John',
     lastName: 'Doe',
-    picture: null,
+    image: null,
     roleId: 2,
     detail: `${fellow.user.firstName}'s TTL`
   };
@@ -36,6 +36,9 @@ describe('Fellow History Container', () => {
     let props = {
       match: { params: { name: 'kingsley.obot' } },
       fellowSummaryDetails: [fellow],
+      getLmsSubmissions: jest.fn(),
+      lmsSubmissions: {},
+      lmsLoading: false,
       ratings: [{}],
       ratingsLoading: false,
       getFellowDevPulse: jest.fn()

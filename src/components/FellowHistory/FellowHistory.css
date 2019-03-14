@@ -3,8 +3,8 @@
 }
 @media (min-width: 1600px) {
   .fellow-history {
-    width: 80% !important;
     max-width: 80% !important;
+    width: 100% !important;
     margin-left: 0 !important;
   }
 }

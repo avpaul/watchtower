@@ -1,3 +1,10 @@
+.lms-table .dashboard-table__cell:first-child {
+  width: 188px;
+}
+.lms-table .dashboard-table__cell:nth-child(2) {
+  width: 500px;
+}
+
 .dashboard-table__cell {
   box-sizing: border-box;
   display: table-cell;
