@@ -9,6 +9,7 @@ import SimulationLeadData from '../../../__mocks__/simulationsLeadLf.json';
 import FilterButton from '../../../components/Buttons/Button';
 import FellowFilterCard from '../../../components/FellowFilterCard';
 import MapFellowsFilterCard from '../../../components/MapFellowsFilterCard';
+import FellowsCount from '../../../components/FellowsCount';
 
 const getManagerDataByRole = loggedInRole => {
   switch (loggedInRole) {
@@ -150,6 +151,8 @@ describe('Developers dashboard test', () => {
       fellowSummaryDetails: []
     });
     developerDashboardMountWrapper
+      .find(FellowsCount)
+      .dive()
       .find(FilterButton)
       .dive()
       .simulate('click');

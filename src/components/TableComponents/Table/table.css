@@ -1,6 +1,8 @@
 .dashboard-table__container {
   overflow-x: scroll;
   margin-bottom: 60px;
+  width: 100%;
+  margin: -2% 4% 2% 4%;
 }
 
 .dashboard-table {
@@ -24,7 +26,7 @@
 
 @media screen and (min-width: 1800px) {
   .dashboard-table {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
   }
@@ -38,7 +40,7 @@
     margin-left: 10% !important;
   }
   .dashboard-table {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
   }

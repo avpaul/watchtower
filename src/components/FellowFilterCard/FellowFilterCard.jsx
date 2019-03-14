@@ -17,40 +17,41 @@ const FellowFilterCard = ({
   isTicked,
   handleCardClick,
   filterKey
-}) => (
-  <div
-    className={`fellow-summary-card fellow-filter-card mt-4 
-    ${
-      isTicked.project === cardName || isTicked.status === cardName
-        ? 'fellow-card-highlight'
-        : ''
-    }`}
-    id={cardName}
-    filterkey={filterKey}
-    onClick={handleCardClick}
-    onKeyPress={handleCardClick}
-    role="button"
-    tabIndex="0"
-  >
-    <div className="">
-      <img
-        className="img-responsive rounded-circle checkmark float-right"
-        style={{
-          display:
-            isTicked.project === cardName || isTicked.status === cardName
-              ? 'block'
-              : 'none'
-        }}
-        src={check}
-        alt=""
-      />
+}) => {
+  const shouldDisplayTick =
+    isTicked.project === cardName ||
+    isTicked.status === cardName ||
+    isTicked.type === cardName ||
+    isTicked.criteria === cardName ||
+    isTicked.level === cardName;
+  return (
+    <div
+      className={`fellow-summary-card fellow-filter-card mt-4 
+    ${shouldDisplayTick ? 'fellow-card-highlight' : ''}`}
+      id={cardName}
+      filterKey={filterKey}
+      onClick={handleCardClick}
+      onKeyPress={handleCardClick}
+      role="button"
+      tabIndex="0"
+    >
+      <div className="">
+        <img
+          className="img-responsive rounded-circle checkmark float-right"
+          style={{
+            display: shouldDisplayTick ? 'block' : 'none'
+          }}
+          src={check}
+          alt=""
+        />
+      </div>
+      <div className="float-left left mt-3 card-name">{cardName}</div>
+      <div className="float-right right mt-3 card-number-display">
+        {numberOfFellows}
+      </div>
     </div>
-    <div className="float-left left mt-3 card-name">{cardName}</div>
-    <div className="float-right right mt-3 card-number-display">
-      {numberOfFellows}
-    </div>
-  </div>
-);
+  );
+};
 
 /**
  * @name FellowFilterCard Proptypes

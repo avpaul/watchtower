@@ -3,8 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import DashboardPage from '../DashboardPage';
 import Header from '../../components/Header';
 import OpsDashboardContainer from './OpsDashboardContainer';
-import FeedbackDashboardContainer from '../FeedbackDashboard/FeedbackDashboardContainer';
-
+import FeedbackDashboardContainer from '../FeedbackDashboard';
 /**
  * Defines routes for the opsdashboard
  * @function

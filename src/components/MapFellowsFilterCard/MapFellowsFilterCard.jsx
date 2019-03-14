@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
 import FellowFilterCard from '../FellowFilterCard';
+import { processCountInformation, processArray } from '../../services/helper';
 
 /**
  * @method MapFellowsFilterCard
@@ -44,19 +45,14 @@ const MapFellowsFilterCard = ({
   if (display === 'project') {
     refinedArray = [{ 'All Products': fellowSummaryDetails.length }];
     const productArray = {};
-    fellowSummaryDetails.forEach(fellow => {
-      if (!productArray[fellow.project]) {
-        productArray[fellow.project] = 1;
-      } else {
-        productArray[fellow.project] += 1;
-      }
-    });
-    refinedArray = [
-      ...refinedArray,
-      ...Array.from(Object.keys(productArray), product => ({
-        [product]: productArray[product]
-      }))
-    ];
+
+    const processedResult = processCountInformation(
+      fellowSummaryDetails,
+      productArray,
+      'project'
+    );
+
+    refinedArray = processArray(refinedArray, processedResult);
   }
 
   return (
