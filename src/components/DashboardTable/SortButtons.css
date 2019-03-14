@@ -1,0 +1,22 @@
+.sort-buttons {
+  min-width: 10px;
+  min-height: 5px;
+}
+.sort-buttons i {
+  width: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.sort-buttons i:focus,
+.sort-buttons i:hover,
+.sort-buttons i:active {
+  outline: none;
+  border: inherit;
+  cursor: pointer;
+}
+
+.sort-buttons div {
+  height: 10px;
+  width: 15px;
+  text-align: center;
+}
