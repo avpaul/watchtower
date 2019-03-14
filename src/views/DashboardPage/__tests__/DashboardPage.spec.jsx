@@ -13,19 +13,21 @@ describe('Tests Pagination component', () => {
     fellows,
     pagination: {
       page: 1,
-      perPage: 10,
+      perPage: 25
     },
     getFellows: jest.fn(),
     filter: '',
     loading: false,
     user: {
       name: 'Test user',
-      picture: 'http://',
+      picture: 'http://'
     },
-    role: 'Technology',
+    role: 'Technology'
   };
   beforeEach(() => {
-    mock.onGet('http://localhost:8000/api/v1/fellows?page=1&perPage=10').reply(200, { fellows });
+    mock
+      .onGet('http://localhost:8000/api/v1/fellows?page=1&perPage=25')
+      .reply(200, { fellows });
     wrapper = shallow(<DashboardPage {...props} />);
   });
 
@@ -51,7 +53,7 @@ describe('Tests Pagination component', () => {
   it('handles page change', () => {
     const shallowWrapper = wrapper.instance();
     const spy = jest.spyOn(shallowWrapper, 'handlePageChange');
-    const newPage = 'http://localhost:8000/api/v1/fellows?page=1&perPage=10';
+    const newPage = 'http://localhost:8000/api/v1/fellows?page=1&perPage=25';
     shallowWrapper.handlePageChange(newPage);
     expect(spy).toHaveBeenCalled();
   });
@@ -70,8 +72,8 @@ describe('Tests Pagination component', () => {
     const event = {
       target: {
         name: 'second',
-        value: '2',
-      },
+        value: '2'
+      }
     };
     shallowWrapper.onChange(event);
     expect(spy).toHaveBeenCalled();

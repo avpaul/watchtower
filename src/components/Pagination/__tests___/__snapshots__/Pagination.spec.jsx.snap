@@ -7,7 +7,7 @@ ShallowWrapper {
     handlePageChange={[Function]}
     handleValueChange={[Function]}
     nextPage="2"
-    perPage="10"
+    perPage="25"
     prevPageUrl=""
     totalPages="10"
 />,

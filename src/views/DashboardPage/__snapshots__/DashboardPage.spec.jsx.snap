@@ -553,22 +553,22 @@ ShallowWrapper {
                               <select
                                         className="form-control d-flex justify-content-center"
                                         onChange={[Function]}
-                                        value="10"
+                                        value="25"
                               >
-                                        <option
-                                                  value="10"
-                                        >
-                                                  10
-                                        </option>
-                                        <option
-                                                  value="20"
-                                        >
-                                                  20
-                                        </option>
                                         <option
                                                   value="25"
                                         >
                                                   25
+                                        </option>
+                                        <option
+                                                  value="50"
+                                        >
+                                                  50
+                                        </option>
+                                        <option
+                                                  value="100"
+                                        >
+                                                  100
                                         </option>
                               </select>
                     </div>
@@ -581,7 +581,7 @@ ShallowWrapper {
                               handlePageChange={[Function]}
                               handleValueChange={[Function]}
                               nextPage="http://localhost:8000/api/fellows?page=2"
-                              perPage="10"
+                              perPage="25"
                               prevPageUrl="http://localhost:8000/api/fellows?page=1"
                               totalPages={3}
                     />
@@ -1722,22 +1722,22 @@ ShallowWrapper {
                             <select
                                           className="form-control d-flex justify-content-center"
                                           onChange={[Function]}
-                                          value="10"
+                                          value="25"
                             >
-                                          <option
-                                                        value="10"
-                                          >
-                                                        10
-                                          </option>
-                                          <option
-                                                        value="20"
-                                          >
-                                                        20
-                                          </option>
                                           <option
                                                         value="25"
                                           >
                                                         25
+                                          </option>
+                                          <option
+                                                        value="50"
+                                          >
+                                                        50
+                                          </option>
+                                          <option
+                                                        value="100"
+                                          >
+                                                        100
                                           </option>
                             </select>
               </div>
@@ -1750,7 +1750,7 @@ ShallowWrapper {
                             handlePageChange={[Function]}
                             handleValueChange={[Function]}
                             nextPage="http://localhost:8000/api/fellows?page=2"
-                            perPage="10"
+                            perPage="25"
                             prevPageUrl="http://localhost:8000/api/fellows?page=1"
                             totalPages={3}
               />
@@ -1778,22 +1778,22 @@ ShallowWrapper {
                   <select
                                     className="form-control d-flex justify-content-center"
                                     onChange={[Function]}
-                                    value="10"
+                                    value="25"
                   >
-                                    <option
-                                                      value="10"
-                                    >
-                                                      10
-                                    </option>
-                                    <option
-                                                      value="20"
-                                    >
-                                                      20
-                                    </option>
                                     <option
                                                       value="25"
                                     >
                                                       25
+                                    </option>
+                                    <option
+                                                      value="50"
+                                    >
+                                                      50
+                                    </option>
+                                    <option
+                                                      value="100"
+                                    >
+                                                      100
                                     </option>
                   </select>
 </div>,
@@ -1806,7 +1806,7 @@ ShallowWrapper {
                   handlePageChange={[Function]}
                   handleValueChange={[Function]}
                   nextPage="http://localhost:8000/api/fellows?page=2"
-                  perPage="10"
+                  perPage="25"
                   prevPageUrl="http://localhost:8000/api/fellows?page=1"
                   totalPages={3}
 />,
@@ -1835,22 +1835,22 @@ ShallowWrapper {
                   "children": <select
                     className="form-control d-flex justify-content-center"
                     onChange={[Function]}
-                    value="10"
+                    value="25"
 >
-                    <option
-                                        value="10"
-                    >
-                                        10
-                    </option>
-                    <option
-                                        value="20"
-                    >
-                                        20
-                    </option>
                     <option
                                         value="25"
                     >
                                         25
+                    </option>
+                    <option
+                                        value="50"
+                    >
+                                        50
+                    </option>
+                    <option
+                                        value="100"
+                    >
+                                        100
                     </option>
 </select>,
                   "className": "select",
@@ -1863,51 +1863,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <option
-                        value="10"
->
-                        10
-</option>,
-                      <option
-                        value="20"
->
-                        20
-</option>,
-                      <option
                         value="25"
 >
                         25
 </option>,
+                      <option
+                        value="50"
+>
+                        50
+</option>,
+                      <option
+                        value="100"
+>
+                        100
+</option>,
                     ],
                     "className": "form-control d-flex justify-content-center",
                     "onChange": [Function],
-                    "value": "10",
+                    "value": "25",
                   },
                   "ref": null,
                   "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "10",
-                        "value": "10",
-                      },
-                      "ref": null,
-                      "rendered": "10",
-                      "type": "option",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "20",
-                        "value": "20",
-                      },
-                      "ref": null,
-                      "rendered": "20",
-                      "type": "option",
-                    },
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -1918,6 +1894,30 @@ ShallowWrapper {
                       },
                       "ref": null,
                       "rendered": "25",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "50",
+                        "value": "50",
+                      },
+                      "ref": null,
+                      "rendered": "50",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "100",
+                        "value": "100",
+                      },
+                      "ref": null,
+                      "rendered": "100",
                       "type": "option",
                     },
                   ],
@@ -1938,7 +1938,7 @@ ShallowWrapper {
                   "handlePageChange": [Function],
                   "handleValueChange": [Function],
                   "nextPage": "http://localhost:8000/api/fellows?page=2",
-                  "perPage": "10",
+                  "perPage": "25",
                   "prevPageUrl": "http://localhost:8000/api/fellows?page=1",
                   "totalPages": 3,
                 },
@@ -2274,22 +2274,22 @@ ShallowWrapper {
                                     <select
                                                 className="form-control d-flex justify-content-center"
                                                 onChange={[Function]}
-                                                value="10"
+                                                value="25"
                                     >
-                                                <option
-                                                            value="10"
-                                                >
-                                                            10
-                                                </option>
-                                                <option
-                                                            value="20"
-                                                >
-                                                            20
-                                                </option>
                                                 <option
                                                             value="25"
                                                 >
                                                             25
+                                                </option>
+                                                <option
+                                                            value="50"
+                                                >
+                                                            50
+                                                </option>
+                                                <option
+                                                            value="100"
+                                                >
+                                                            100
                                                 </option>
                                     </select>
                         </div>
@@ -2302,7 +2302,7 @@ ShallowWrapper {
                                     handlePageChange={[Function]}
                                     handleValueChange={[Function]}
                                     nextPage="http://localhost:8000/api/fellows?page=2"
-                                    perPage="10"
+                                    perPage="25"
                                     prevPageUrl="http://localhost:8000/api/fellows?page=1"
                                     totalPages={3}
                         />
@@ -3443,22 +3443,22 @@ ShallowWrapper {
                                 <select
                                                 className="form-control d-flex justify-content-center"
                                                 onChange={[Function]}
-                                                value="10"
+                                                value="25"
                                 >
-                                                <option
-                                                                value="10"
-                                                >
-                                                                10
-                                                </option>
-                                                <option
-                                                                value="20"
-                                                >
-                                                                20
-                                                </option>
                                                 <option
                                                                 value="25"
                                                 >
                                                                 25
+                                                </option>
+                                                <option
+                                                                value="50"
+                                                >
+                                                                50
+                                                </option>
+                                                <option
+                                                                value="100"
+                                                >
+                                                                100
                                                 </option>
                                 </select>
                 </div>
@@ -3471,7 +3471,7 @@ ShallowWrapper {
                                 handlePageChange={[Function]}
                                 handleValueChange={[Function]}
                                 nextPage="http://localhost:8000/api/fellows?page=2"
-                                perPage="10"
+                                perPage="25"
                                 prevPageUrl="http://localhost:8000/api/fellows?page=1"
                                 totalPages={3}
                 />
@@ -3499,22 +3499,22 @@ ShallowWrapper {
                     <select
                                         className="form-control d-flex justify-content-center"
                                         onChange={[Function]}
-                                        value="10"
+                                        value="25"
                     >
-                                        <option
-                                                            value="10"
-                                        >
-                                                            10
-                                        </option>
-                                        <option
-                                                            value="20"
-                                        >
-                                                            20
-                                        </option>
                                         <option
                                                             value="25"
                                         >
                                                             25
+                                        </option>
+                                        <option
+                                                            value="50"
+                                        >
+                                                            50
+                                        </option>
+                                        <option
+                                                            value="100"
+                                        >
+                                                            100
                                         </option>
                     </select>
 </div>,
@@ -3527,7 +3527,7 @@ ShallowWrapper {
                     handlePageChange={[Function]}
                     handleValueChange={[Function]}
                     nextPage="http://localhost:8000/api/fellows?page=2"
-                    perPage="10"
+                    perPage="25"
                     prevPageUrl="http://localhost:8000/api/fellows?page=1"
                     totalPages={3}
 />,
@@ -3556,22 +3556,22 @@ ShallowWrapper {
                     "children": <select
                       className="form-control d-flex justify-content-center"
                       onChange={[Function]}
-                      value="10"
+                      value="25"
 >
-                      <option
-                                            value="10"
-                      >
-                                            10
-                      </option>
-                      <option
-                                            value="20"
-                      >
-                                            20
-                      </option>
                       <option
                                             value="25"
                       >
                                             25
+                      </option>
+                      <option
+                                            value="50"
+                      >
+                                            50
+                      </option>
+                      <option
+                                            value="100"
+                      >
+                                            100
                       </option>
 </select>,
                     "className": "select",
@@ -3584,51 +3584,27 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         <option
-                          value="10"
->
-                          10
-</option>,
-                        <option
-                          value="20"
->
-                          20
-</option>,
-                        <option
                           value="25"
 >
                           25
 </option>,
+                        <option
+                          value="50"
+>
+                          50
+</option>,
+                        <option
+                          value="100"
+>
+                          100
+</option>,
                       ],
                       "className": "form-control d-flex justify-content-center",
                       "onChange": [Function],
-                      "value": "10",
+                      "value": "25",
                     },
                     "ref": null,
                     "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "10",
-                          "value": "10",
-                        },
-                        "ref": null,
-                        "rendered": "10",
-                        "type": "option",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "20",
-                          "value": "20",
-                        },
-                        "ref": null,
-                        "rendered": "20",
-                        "type": "option",
-                      },
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -3639,6 +3615,30 @@ ShallowWrapper {
                         },
                         "ref": null,
                         "rendered": "25",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "50",
+                          "value": "50",
+                        },
+                        "ref": null,
+                        "rendered": "50",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "100",
+                          "value": "100",
+                        },
+                        "ref": null,
+                        "rendered": "100",
                         "type": "option",
                       },
                     ],
@@ -3659,7 +3659,7 @@ ShallowWrapper {
                     "handlePageChange": [Function],
                     "handleValueChange": [Function],
                     "nextPage": "http://localhost:8000/api/fellows?page=2",
-                    "perPage": "10",
+                    "perPage": "25",
                     "prevPageUrl": "http://localhost:8000/api/fellows?page=1",
                     "totalPages": 3,
                   },
@@ -4251,22 +4251,22 @@ ShallowWrapper {
                               <select
                                         className="form-control d-flex justify-content-center"
                                         onChange={[Function]}
-                                        value="10"
+                                        value="25"
                               >
-                                        <option
-                                                  value="10"
-                                        >
-                                                  10
-                                        </option>
-                                        <option
-                                                  value="20"
-                                        >
-                                                  20
-                                        </option>
                                         <option
                                                   value="25"
                                         >
                                                   25
+                                        </option>
+                                        <option
+                                                  value="50"
+                                        >
+                                                  50
+                                        </option>
+                                        <option
+                                                  value="100"
+                                        >
+                                                  100
                                         </option>
                               </select>
                     </div>
@@ -4279,7 +4279,7 @@ ShallowWrapper {
                               handlePageChange={[Function]}
                               handleValueChange={[Function]}
                               nextPage="http://localhost:8000/api/fellows?page=2"
-                              perPage="10"
+                              perPage="25"
                               prevPageUrl="http://localhost:8000/api/fellows?page=1"
                               totalPages={3}
                     />
@@ -5420,22 +5420,22 @@ ShallowWrapper {
                             <select
                                           className="form-control d-flex justify-content-center"
                                           onChange={[Function]}
-                                          value="10"
+                                          value="25"
                             >
-                                          <option
-                                                        value="10"
-                                          >
-                                                        10
-                                          </option>
-                                          <option
-                                                        value="20"
-                                          >
-                                                        20
-                                          </option>
                                           <option
                                                         value="25"
                                           >
                                                         25
+                                          </option>
+                                          <option
+                                                        value="50"
+                                          >
+                                                        50
+                                          </option>
+                                          <option
+                                                        value="100"
+                                          >
+                                                        100
                                           </option>
                             </select>
               </div>
@@ -5448,7 +5448,7 @@ ShallowWrapper {
                             handlePageChange={[Function]}
                             handleValueChange={[Function]}
                             nextPage="http://localhost:8000/api/fellows?page=2"
-                            perPage="10"
+                            perPage="25"
                             prevPageUrl="http://localhost:8000/api/fellows?page=1"
                             totalPages={3}
               />
@@ -5476,22 +5476,22 @@ ShallowWrapper {
                   <select
                                     className="form-control d-flex justify-content-center"
                                     onChange={[Function]}
-                                    value="10"
+                                    value="25"
                   >
-                                    <option
-                                                      value="10"
-                                    >
-                                                      10
-                                    </option>
-                                    <option
-                                                      value="20"
-                                    >
-                                                      20
-                                    </option>
                                     <option
                                                       value="25"
                                     >
                                                       25
+                                    </option>
+                                    <option
+                                                      value="50"
+                                    >
+                                                      50
+                                    </option>
+                                    <option
+                                                      value="100"
+                                    >
+                                                      100
                                     </option>
                   </select>
 </div>,
@@ -5504,7 +5504,7 @@ ShallowWrapper {
                   handlePageChange={[Function]}
                   handleValueChange={[Function]}
                   nextPage="http://localhost:8000/api/fellows?page=2"
-                  perPage="10"
+                  perPage="25"
                   prevPageUrl="http://localhost:8000/api/fellows?page=1"
                   totalPages={3}
 />,
@@ -5533,22 +5533,22 @@ ShallowWrapper {
                   "children": <select
                     className="form-control d-flex justify-content-center"
                     onChange={[Function]}
-                    value="10"
+                    value="25"
 >
-                    <option
-                                        value="10"
-                    >
-                                        10
-                    </option>
-                    <option
-                                        value="20"
-                    >
-                                        20
-                    </option>
                     <option
                                         value="25"
                     >
                                         25
+                    </option>
+                    <option
+                                        value="50"
+                    >
+                                        50
+                    </option>
+                    <option
+                                        value="100"
+                    >
+                                        100
                     </option>
 </select>,
                   "className": "select",
@@ -5561,51 +5561,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <option
-                        value="10"
->
-                        10
-</option>,
-                      <option
-                        value="20"
->
-                        20
-</option>,
-                      <option
                         value="25"
 >
                         25
 </option>,
+                      <option
+                        value="50"
+>
+                        50
+</option>,
+                      <option
+                        value="100"
+>
+                        100
+</option>,
                     ],
                     "className": "form-control d-flex justify-content-center",
                     "onChange": [Function],
-                    "value": "10",
+                    "value": "25",
                   },
                   "ref": null,
                   "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "10",
-                        "value": "10",
-                      },
-                      "ref": null,
-                      "rendered": "10",
-                      "type": "option",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "20",
-                        "value": "20",
-                      },
-                      "ref": null,
-                      "rendered": "20",
-                      "type": "option",
-                    },
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -5616,6 +5592,30 @@ ShallowWrapper {
                       },
                       "ref": null,
                       "rendered": "25",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "50",
+                        "value": "50",
+                      },
+                      "ref": null,
+                      "rendered": "50",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "100",
+                        "value": "100",
+                      },
+                      "ref": null,
+                      "rendered": "100",
                       "type": "option",
                     },
                   ],
@@ -5636,7 +5636,7 @@ ShallowWrapper {
                   "handlePageChange": [Function],
                   "handleValueChange": [Function],
                   "nextPage": "http://localhost:8000/api/fellows?page=2",
-                  "perPage": "10",
+                  "perPage": "25",
                   "prevPageUrl": "http://localhost:8000/api/fellows?page=1",
                   "totalPages": 3,
                 },
@@ -5972,22 +5972,22 @@ ShallowWrapper {
                                     <select
                                                 className="form-control d-flex justify-content-center"
                                                 onChange={[Function]}
-                                                value="10"
+                                                value="25"
                                     >
-                                                <option
-                                                            value="10"
-                                                >
-                                                            10
-                                                </option>
-                                                <option
-                                                            value="20"
-                                                >
-                                                            20
-                                                </option>
                                                 <option
                                                             value="25"
                                                 >
                                                             25
+                                                </option>
+                                                <option
+                                                            value="50"
+                                                >
+                                                            50
+                                                </option>
+                                                <option
+                                                            value="100"
+                                                >
+                                                            100
                                                 </option>
                                     </select>
                         </div>
@@ -6000,7 +6000,7 @@ ShallowWrapper {
                                     handlePageChange={[Function]}
                                     handleValueChange={[Function]}
                                     nextPage="http://localhost:8000/api/fellows?page=2"
-                                    perPage="10"
+                                    perPage="25"
                                     prevPageUrl="http://localhost:8000/api/fellows?page=1"
                                     totalPages={3}
                         />
@@ -7141,22 +7141,22 @@ ShallowWrapper {
                                 <select
                                                 className="form-control d-flex justify-content-center"
                                                 onChange={[Function]}
-                                                value="10"
+                                                value="25"
                                 >
-                                                <option
-                                                                value="10"
-                                                >
-                                                                10
-                                                </option>
-                                                <option
-                                                                value="20"
-                                                >
-                                                                20
-                                                </option>
                                                 <option
                                                                 value="25"
                                                 >
                                                                 25
+                                                </option>
+                                                <option
+                                                                value="50"
+                                                >
+                                                                50
+                                                </option>
+                                                <option
+                                                                value="100"
+                                                >
+                                                                100
                                                 </option>
                                 </select>
                 </div>
@@ -7169,7 +7169,7 @@ ShallowWrapper {
                                 handlePageChange={[Function]}
                                 handleValueChange={[Function]}
                                 nextPage="http://localhost:8000/api/fellows?page=2"
-                                perPage="10"
+                                perPage="25"
                                 prevPageUrl="http://localhost:8000/api/fellows?page=1"
                                 totalPages={3}
                 />
@@ -7197,22 +7197,22 @@ ShallowWrapper {
                     <select
                                         className="form-control d-flex justify-content-center"
                                         onChange={[Function]}
-                                        value="10"
+                                        value="25"
                     >
-                                        <option
-                                                            value="10"
-                                        >
-                                                            10
-                                        </option>
-                                        <option
-                                                            value="20"
-                                        >
-                                                            20
-                                        </option>
                                         <option
                                                             value="25"
                                         >
                                                             25
+                                        </option>
+                                        <option
+                                                            value="50"
+                                        >
+                                                            50
+                                        </option>
+                                        <option
+                                                            value="100"
+                                        >
+                                                            100
                                         </option>
                     </select>
 </div>,
@@ -7225,7 +7225,7 @@ ShallowWrapper {
                     handlePageChange={[Function]}
                     handleValueChange={[Function]}
                     nextPage="http://localhost:8000/api/fellows?page=2"
-                    perPage="10"
+                    perPage="25"
                     prevPageUrl="http://localhost:8000/api/fellows?page=1"
                     totalPages={3}
 />,
@@ -7254,22 +7254,22 @@ ShallowWrapper {
                     "children": <select
                       className="form-control d-flex justify-content-center"
                       onChange={[Function]}
-                      value="10"
+                      value="25"
 >
-                      <option
-                                            value="10"
-                      >
-                                            10
-                      </option>
-                      <option
-                                            value="20"
-                      >
-                                            20
-                      </option>
                       <option
                                             value="25"
                       >
                                             25
+                      </option>
+                      <option
+                                            value="50"
+                      >
+                                            50
+                      </option>
+                      <option
+                                            value="100"
+                      >
+                                            100
                       </option>
 </select>,
                     "className": "select",
@@ -7282,51 +7282,27 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         <option
-                          value="10"
->
-                          10
-</option>,
-                        <option
-                          value="20"
->
-                          20
-</option>,
-                        <option
                           value="25"
 >
                           25
 </option>,
+                        <option
+                          value="50"
+>
+                          50
+</option>,
+                        <option
+                          value="100"
+>
+                          100
+</option>,
                       ],
                       "className": "form-control d-flex justify-content-center",
                       "onChange": [Function],
-                      "value": "10",
+                      "value": "25",
                     },
                     "ref": null,
                     "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "10",
-                          "value": "10",
-                        },
-                        "ref": null,
-                        "rendered": "10",
-                        "type": "option",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "20",
-                          "value": "20",
-                        },
-                        "ref": null,
-                        "rendered": "20",
-                        "type": "option",
-                      },
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -7337,6 +7313,30 @@ ShallowWrapper {
                         },
                         "ref": null,
                         "rendered": "25",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "50",
+                          "value": "50",
+                        },
+                        "ref": null,
+                        "rendered": "50",
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "100",
+                          "value": "100",
+                        },
+                        "ref": null,
+                        "rendered": "100",
                         "type": "option",
                       },
                     ],
@@ -7357,7 +7357,7 @@ ShallowWrapper {
                     "handlePageChange": [Function],
                     "handleValueChange": [Function],
                     "nextPage": "http://localhost:8000/api/fellows?page=2",
-                    "perPage": "10",
+                    "perPage": "25",
                     "prevPageUrl": "http://localhost:8000/api/fellows?page=1",
                     "totalPages": 3,
                   },

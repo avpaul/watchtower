@@ -14,7 +14,7 @@ const filter = ALL;
 describe('Fellow Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
   const baseURL = `${serverURL}/api/v1/fellows`;
-  const perPage = 10;
+  const perPage = 25;
   const page = 1;
   const level = 'all';
   const status = 'all';
@@ -25,7 +25,7 @@ describe('Fellow Actions', () => {
   const summary = {
     gteWk5OffTrack: 12,
     ltWk5OffTrack: 10,
-    onTrack: 13,
+    onTrack: 13
   };
   beforeEach(() => {
     store.clearActions();
@@ -39,10 +39,12 @@ describe('Fellow Actions', () => {
     const data = {
       payload: fellows,
       summary,
-      ...pagination,
+      ...pagination
     };
     mock
-      .onGet(`${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}`)
+      .onGet(
+        `${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}`
+      )
       .reply(200, { ...data });
     const expectedActions = [
       { type: types.LOAD_FELLOW_REQUEST },
@@ -50,8 +52,8 @@ describe('Fellow Actions', () => {
         type: types.LOAD_FELLOW_SUCCESS,
         fellows,
         summary,
-        pagination,
-      },
+        pagination
+      }
     ];
     return store.dispatch(fellowActions.getFellows()).then(() => {
       const dispatchedActions = store.getActions();
@@ -63,11 +65,13 @@ describe('Fellow Actions', () => {
     const data = {
       payload: fellows,
       summary,
-      ...pagination,
+      ...pagination
     };
     const search = 'West';
     mock
-      .onGet(`${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}&search=${search}`)
+      .onGet(
+        `${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}&level=${level}&status=${status}&statusType=${statusType}&search=${search}`
+      )
       .reply(200, { ...data });
     const expectedActions = [
       { type: types.LOAD_FELLOW_REQUEST },
@@ -75,8 +79,8 @@ describe('Fellow Actions', () => {
         type: types.LOAD_FELLOW_SUCCESS,
         fellows,
         summary,
-        pagination,
-      },
+        pagination
+      }
     ];
     return store.dispatch(fellowActions.getFellows({ search })).then(() => {
       const dispatchedActions = store.getActions();
@@ -88,7 +92,7 @@ describe('Fellow Actions', () => {
     const data = {
       payload: fellows,
       summary,
-      ...pagination,
+      ...pagination
     };
     const requestURL = `${baseURL}?perPage=${perPage}&page=${page}&filter=${filter}`;
     mock.onGet(requestURL).reply(200, { ...data });
@@ -98,13 +102,15 @@ describe('Fellow Actions', () => {
         type: types.LOAD_FELLOW_SUCCESS,
         fellows,
         summary,
-        pagination,
-      },
+        pagination
+      }
     ];
-    return store.dispatch(fellowActions.getFellows({ url: requestURL })).then(() => {
-      const dispatchedActions = store.getActions();
-      expect(dispatchedActions).toMatchObject(expectedActions);
-    });
+    return store
+      .dispatch(fellowActions.getFellows({ url: requestURL }))
+      .then(() => {
+        const dispatchedActions = store.getActions();
+        expect(dispatchedActions).toMatchObject(expectedActions);
+      });
   });
 
   it('dispatches FELLOW_REQUEST and FELLOW_FAILURE on failing to fetch fellows', () => {
@@ -112,8 +118,8 @@ describe('Fellow Actions', () => {
       { type: types.LOAD_FELLOW_REQUEST },
       {
         type: types.LOAD_FELLOW_FAILURE,
-        error: 'Request failed with status code 404',
-      },
+        error: 'Request failed with status code 404'
+      }
     ];
     return store.dispatch(fellowActions.getFellows()).then(() => {
       const dispatchedActions = store.getActions();

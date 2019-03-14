@@ -25,7 +25,7 @@ describe('<Dashboards />', () => {
       fellows,
       pagination: {
         page: 1,
-        perPage: 10
+        perPage: 25
       },
       loading: false,
       getFellows: () => {},
@@ -49,7 +49,7 @@ describe('<Dashboards />', () => {
       fellows,
       pagination: {
         page: 1,
-        perPage: 10
+        perPage: 25
       },
       loading: false,
       getFellows: () => {},
@@ -73,7 +73,7 @@ describe('<Dashboards />', () => {
       fellows,
       pagination: {
         page: 1,
-        perPage: 10
+        perPage: 25
       },
       loading: false,
       getFellows: () => {},
@@ -97,7 +97,7 @@ describe('<Dashboards />', () => {
       fellows,
       pagination: {
         page: 1,
-        perPage: 10
+        perPage: 25
       },
       loading: false,
       getFellows: () => {},

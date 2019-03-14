@@ -181,5 +181,5 @@ Pagination.propTypes = {
 
 Pagination.defaultProps = {
   totalPages: 10,
-  perPage: '10'
+  perPage: '25'
 };
