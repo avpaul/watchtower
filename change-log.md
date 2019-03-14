@@ -12,6 +12,7 @@
 - fix missing fellow profile pictures
 - fix self-updating snapshot
 
+
 # V 1.0.1
 
 ## Features
