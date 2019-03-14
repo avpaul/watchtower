@@ -9,6 +9,7 @@ Object {
     "fellowsSummaryTrend": Object {},
     "loading": false,
   },
+  "loading": false,
   "ttlProjects": Object {
     "error": null,
     "loading": false,
