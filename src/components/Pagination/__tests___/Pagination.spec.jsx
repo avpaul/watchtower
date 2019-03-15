@@ -12,7 +12,7 @@ describe('Tests Pagination component', () => {
       <Pagination
         handlePageChange={mockFn}
         totalPages="10"
-        perPage="10"
+        perPage="25"
         prevPageUrl=""
         nextPage="2"
         handleValueChange={mockFn}
@@ -51,7 +51,7 @@ describe('Tests Pagination component', () => {
         handlePageChange={() => {}}
         totalPages="10"
         currentPage="3"
-        perPage="10"
+        perPage="25"
         prevPageUrl=""
         nextPage="5"
         handleValueChange={() => {}}
@@ -69,7 +69,7 @@ describe('Tests Pagination component', () => {
         handlePageChange={() => {}}
         totalPages="10"
         currentPage="10"
-        perPage="10"
+        perPage="25"
         prevPageUrl=""
         nextPage="5"
         handleValueChange={() => {}}
@@ -88,7 +88,7 @@ describe('Tests Pagination component', () => {
         totalPages="10"
         currentPage="3"
         count="10"
-        perPage="10"
+        perPage="25"
         prevPageUrl=""
         nextPage="5"
         handleValueChange={() => {}}
@@ -161,7 +161,7 @@ describe('Tests Pagination component', () => {
       <Pagination
         handlePageChange={() => {}}
         totalPages="10"
-        perPage="10"
+        perPage="25"
         prevPageUrl=""
         nextPage="2"
         handleValueChange={() => {}}

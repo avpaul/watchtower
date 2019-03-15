@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 
 export const getCriteriaFilterValues = (type, value, table, status) => {
@@ -9,7 +8,7 @@ export const getCriteriaFilterValues = (type, value, table, status) => {
       statusType: 'devPulseStatus',
       cellKeys: table.devPulseCriteria.cells,
       criteria: 'DevPulse'
-    }
+    };
   } else if (value === 'LMS') {
     filterValues = {
       headers: table.lmsCriteria.titles,
@@ -24,7 +23,11 @@ export const getCriteriaFilterValues = (type, value, table, status) => {
       criteria: 'All'
     };
   } else {
-    filterValues = { criteria: 'All', headers: table.allCriteria.titles, cellKeys: table.allCriteria.cells };
+    filterValues = {
+      criteria: 'All',
+      headers: table.allCriteria.titles,
+      cellKeys: table.allCriteria.cells
+    };
   }
   return filterValues;
 };
@@ -79,9 +82,9 @@ export const clearFilters = () => {
   return filterValues;
 };
 
-export const defaultState = (table) => {
+export const defaultState = table => {
   const initialState = {
-    perPage: '10',
+    perPage: '25',
     page: '1',
     search: '',
     headers: table.default.titles,
@@ -91,7 +94,7 @@ export const defaultState = (table) => {
     status: 'All',
     statusType: 'All',
     downloadFellows: []
-  }
+  };
   return initialState;
 };
 
@@ -120,4 +123,4 @@ export const defaultPropTypes = () => {
     error: PropTypes.string
   };
   return initialPropTypes;
-}
+};

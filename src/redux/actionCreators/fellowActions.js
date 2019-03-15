@@ -7,7 +7,7 @@ import paginationExtract from '../../services/paginationExtract';
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 export const getFellows = ({
-  perPage = 10,
+  perPage = 25,
   page = 1,
   filter = ALL,
   search,

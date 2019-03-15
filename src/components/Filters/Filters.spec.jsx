@@ -4,13 +4,13 @@ import Filters from './Filters';
 import {
   ONTRACK,
   OFFTRACK_WK4_MINUS,
-  OFFTRACK_WK5_PLUS,
+  OFFTRACK_WK5_PLUS
 } from '../../redux/constants/fellowFilters';
 
 const summary = {
   onTrack: 2,
   gteWk5OffTrack: 2,
-  ltWk5OffTrack: 2,
+  ltWk5OffTrack: 2
 };
 const handleCardClickSpy = jest.spyOn(Filters.prototype, 'handleCardClick');
 
@@ -20,8 +20,8 @@ const props = {
   summary,
   filter: ONTRACK,
   setFilter: jest.fn(),
-  perPage: 10,
-  loading: false,
+  perPage: 25,
+  loading: false
 };
 
 const wrapper = shallow(<Filters {...props} />);
@@ -50,7 +50,11 @@ describe('Test Filter Cards', () => {
   beforeEach(() => {
     getFellowsSpy = jest.fn();
     setFilterSpy = jest.fn();
-    propsWithSpy = { ...props, getFellows: getFellowsSpy, setFilter: setFilterSpy };
+    propsWithSpy = {
+      ...props,
+      getFellows: getFellowsSpy,
+      setFilter: setFilterSpy
+    };
     wrapperWithSpy = mount(<Filters {...propsWithSpy} />);
   });
   it('setFilter is called when ONTRACK card is clicked', () => {
@@ -62,24 +66,28 @@ describe('Test Filter Cards', () => {
   });
 
   it('setFilter is called when OFFTRACK_WK4_MINUS card is clicked', () => {
-    const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK4_MINUS}"]`);
+    const card = wrapperWithSpy.find(
+      `FilterCard[filterId="${OFFTRACK_WK4_MINUS}"]`
+    );
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
     expect(getFellowsSpy).toHaveBeenCalledWith({
       filter: OFFTRACK_WK4_MINUS,
-      perPage: 10,
-      search: '',
+      perPage: 25,
+      search: ''
     });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK4_MINUS);
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK4_MINUS } });
   });
 
   it('setFilter is called when OFFTRACK_WK5_PLUS card is clicked', () => {
-    const card = wrapperWithSpy.find(`FilterCard[filterId="${OFFTRACK_WK5_PLUS}"]`);
+    const card = wrapperWithSpy.find(
+      `FilterCard[filterId="${OFFTRACK_WK5_PLUS}"]`
+    );
     card.simulate('click', { currentTarget: { filterId: OFFTRACK_WK5_PLUS } });
     expect(getFellowsSpy).toHaveBeenCalledWith({
       filter: OFFTRACK_WK5_PLUS,
-      perPage: 10,
-      search: '',
+      perPage: 25,
+      search: ''
     });
     expect(setFilterSpy).toHaveBeenCalledWith(OFFTRACK_WK5_PLUS);
   });

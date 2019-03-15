@@ -7,7 +7,7 @@ ShallowWrapper {
     filter="onTrack"
     getFellows={[Function]}
     loading={false}
-    perPage={10}
+    perPage={25}
     search=""
     setFilter={[Function]}
     summary={

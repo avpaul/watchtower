@@ -10,7 +10,7 @@ export default {
   },
   fellows: {
     pagination: {
-      perPage: 10,
+      perPage: 25,
       page: 1,
       pages: 1,
       firstPageURL: '',
