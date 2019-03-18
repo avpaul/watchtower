@@ -18,13 +18,11 @@ const formatProjects = projects => {
 
 const ProjectsSummary = props => {
   const {
-    fellowsSummary: {
-      fellowsSummaryToday: { latestWeekSummary = {} }
-    },
     handleCardClick,
+    ttlProjects: { projects = {} },
     loading
   } = props;
-  const projectsCard = formatProjects(latestWeekSummary);
+  const projectsCard = formatProjects(projects);
 
   return (
     <div className="ops-dashboard__fellows-summary">
