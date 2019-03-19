@@ -21,6 +21,12 @@ const setup = () => {
         }
       }
     },
+    ttlProjects: {
+      projects: {
+        Total: 3,
+        WatchTower: 3
+      }
+    },
     handleCardClick: jest.fn()
   };
 
