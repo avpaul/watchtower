@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import FeedbackDashboardTable from './FeedbackDashboardTable';
+import ActionButton from '../../components/ActionButton';
 
 /**
  * @class - FeedbackDashboard
@@ -16,6 +17,8 @@ class FeedbackDashboard extends Component {
     super(props);
 
     this.state = {
+      startDate: this.defaultDate(),
+      endDate: this.defaultDate(),
       feedbackArray: [],
       isTicked: {
         type: 'pip'
@@ -34,6 +37,23 @@ class FeedbackDashboard extends Component {
     });
   }
 
+    /**
+   * @method clearDuration
+   * @description - This method reset's the startDate and endDate state Objects to their Default
+   */
+  clearDuration = () => {
+    this.setState({
+      startDate: this.defaultDate(),
+      endDate: this.defaultDate()
+    });
+  };
+
+  /**
+   * @method defaultDate
+   * @description Sets the default date which is now
+   */
+  defaultDate = () => new Date().toISOString().split('T')[0];
+
   renderFeedbackDetails = () => {
     const { feedbackArray, isTicked } = this.state;
     const { role } = this.props;
@@ -50,7 +70,17 @@ class FeedbackDashboard extends Component {
   };
 
   render() {
-    return <div>{this.renderFeedbackDetails()}</div>;
+    const {startDate, endDate} = this.state;
+    return <div>
+      <div>
+        <p>Start Date: {startDate}</p>
+        <p>End Date: {endDate}</p>
+      </div>
+
+    <ActionButton clickHandler={this.clearDuration} text="Clear Duration" />
+    {this.renderFeedbackDetails()}
+    
+    </div>;
   }
 }
 
