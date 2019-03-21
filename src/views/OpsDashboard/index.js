@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import DashboardPage from '../DashboardPage';
 import Header from '../../components/Header';
 import OpsDashboardContainer from './OpsDashboardContainer';
+import FeedbackDashboardContainer from '../FeedbackDashboard/FeedbackDashboardContainer';
 
 /**
  * Defines routes for the opsdashboard
@@ -22,6 +23,11 @@ const OpsDashboard = props => (
           exact
           path="/dashboard/fellows"
           component={() => <DashboardPage {...props} />}
+        />
+        <Route
+          exact
+          path="/dashboard/feedback"
+          component={() => <FeedbackDashboardContainer {...props} />}
         />
       </Switch>
     </React.Fragment>
