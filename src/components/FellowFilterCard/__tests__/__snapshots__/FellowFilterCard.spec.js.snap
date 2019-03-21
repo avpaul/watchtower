@@ -56,7 +56,7 @@ ShallowWrapper {
       ],
       "className": "fellow-summary-card fellow-filter-card mt-4 
     ",
-      "filterkey": "status",
+      "filterKey": "status",
       "id": "Watch Tower",
       "onClick": [Function],
       "onKeyPress": [Function],
@@ -162,7 +162,7 @@ ShallowWrapper {
         ],
         "className": "fellow-summary-card fellow-filter-card mt-4 
     ",
-        "filterkey": "status",
+        "filterKey": "status",
         "id": "Watch Tower",
         "onClick": [Function],
         "onKeyPress": [Function],

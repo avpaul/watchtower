@@ -5,6 +5,9 @@ import FeedbackDashboardTable from './FeedbackDashboardTable';
 import feedbackArrayMock from '../../__mocks__/feedbackSummary.json';
 import ActionButton from '../../components/ActionButton';
 
+import MapFeedbackFilterCard from '../../components/MapFeedbackFilterCard';
+import FellowFilterCard from '../../components/FellowFilterCard';
+
 describe('Test Feedback Dashboard', () => {
   const props = {
     getManagerFeedback: jest.fn(() =>
@@ -21,17 +24,12 @@ describe('Test Feedback Dashboard', () => {
     role: 'WATCH_TOWER_OPS'
   };
 
-  it('renders correctly', () => {
+  it('renders FeedbackDashboard Table shallow rendering', () => {
     const wrapper = shallow(<FeedbackDashboard {...props} />);
-    wrapper.setState({
+      wrapper.setState({
       startDate: 1234564567,
       endDate: 1467547453
     });
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders FeedbackDashboard Table shallow rendering', () => {
-    const wrapper = shallow(<FeedbackDashboard {...props} />);
     expect(
       wrapper.find(
         <FeedbackDashboardTable
@@ -74,5 +72,67 @@ describe('Test Feedback Dashboard', () => {
       .dive()
       .find('button')
       .simulate('click');
+  });
+});
+
+describe('FeedbackDashboard tests', () => {
+  const setup = (user, role) => {
+    const props = {
+      user,
+      role,
+      getManagerFeedback: jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          error: false,
+          managersFeedback: feedbackArrayMock
+        })
+      )
+    };
+    const feedbackDashboardWrapper = shallow(<FeedbackDashboard {...props} />);
+    return { feedbackDashboardWrapper };
+  };
+
+  it('should render feedback dashboard without crashing', () => {
+    const { feedbackDashboardWrapper } = setup(
+      { roles: 'WATCH_TOWER_LF' },
+      'WATCH_TOWER_LF'
+    );
+    expect(feedbackDashboardWrapper).toMatchSnapshot();
+  });
+
+  it('should set status to all fellows  when a all-fellows card is clicked', () => {
+    const { feedbackDashboardWrapper } = setup(
+      { roles: 'WATCH_TOWER_LF' },
+      'WATCH_TOWER_LF'
+    );
+    feedbackDashboardWrapper.setState({
+      feedbackArray: feedbackArrayMock,
+      allFeedback: feedbackArrayMock,
+      isTicked: {
+        level: 'All Levels',
+        type: 'Pre-PIP & PIP',
+        criteria: 'All Criteria',
+        project: 'All Projects'
+      }
+    });
+    feedbackDashboardWrapper
+      .find(MapFeedbackFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'LMS',
+          attributes: [{}, {}, { value: 'criteria' }]
+        }
+      });
+    expect(feedbackDashboardWrapper.state('isTicked')).toEqual({
+      level: 'All Levels',
+      type: 'Pre-PIP & PIP',
+      criteria: 'LMS',
+      project: 'All Projects'
+    });
+    expect(feedbackDashboardWrapper.state('allFeedback').length).toEqual(2);
   });
 });

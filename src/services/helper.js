@@ -76,3 +76,45 @@ export const getCurrentWeek = start => {
 
 export const groupedDate = date =>
   DateToday(date) || DateYesterday(date) || GetMonth(date);
+
+/**
+ * this method processes count on an array with counts and converts it to an object
+ * @param {*} informationArray an array of objects with counts
+ * @param {*} emptyObject the initial empty object to be passed in
+ * @param {*} filterKey the key to count
+ */
+export const processCountInformation = (
+  informationArray,
+  emptyObject,
+  filterKey
+) => {
+  let processedCountInformation = emptyObject;
+  if (filterKey === 'level')
+    processedCountInformation = {
+      'D0A Simulations': 0,
+      'D0B Apprenticeship': 0
+    };
+  if (filterKey === 'type')
+    processedCountInformation = { 'pre-pip': 0, pip: 0 };
+  if (filterKey === 'criteria')
+    processedCountInformation = { pulse: 0, lms: 0 };
+  informationArray.forEach(information => {
+    if (!processedCountInformation[information[filterKey]]) {
+      processedCountInformation[information[filterKey]] = 1;
+    } else {
+      processedCountInformation[information[filterKey]] += 1;
+    }
+  });
+  return processedCountInformation;
+};
+
+export const processArray = (informationArray, objectWithCounts) => {
+  let refinedArray = informationArray;
+  refinedArray = [
+    ...refinedArray,
+    ...Array.from(Object.keys(objectWithCounts), product => ({
+      [product]: objectWithCounts[product]
+    }))
+  ];
+  return refinedArray;
+};

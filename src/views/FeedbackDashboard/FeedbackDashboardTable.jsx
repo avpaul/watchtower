@@ -23,7 +23,9 @@ const formatFeedback = (feedback, index, type) => {
       Serial: index + 1,
       Date: feedback.start_date,
       Name: `${feedback.first_name} ${feedback.last_name}`,
-      Manager: '',
+      Manager: feedback.manager_email
+        ? formatName(feedback.manager_email)
+        : 'N/A',
       Feedback: ''
     };
   } else {

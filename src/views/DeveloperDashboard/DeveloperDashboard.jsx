@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import MapFellowsSummaryCard from '../../components/MapFellowsSummaryCard';
 import MapFellowsFilterCard from '../../components/MapFellowsFilterCard';
 import Error from '../../components/Error';
-import FilterButton from '../../components/Buttons/Button';
+import FellowsCount from '../../components/FellowsCount';
 import FellowHistoryContainer from '../../components/FellowHistory';
 import MapLfTtlSummaryCard from '../../components/MapLfTtlSummaryCard';
 
@@ -294,15 +294,7 @@ class DeveloperDashboard extends Component {
   renderResultCount = () => {
     const { fellowSummaryDetails } = this.state;
     const results = fellowSummaryDetails ? fellowSummaryDetails.length : 0;
-    const resultTerm = results > 1 ? 'Fellows' : 'Fellow';
-    return (
-      <div className="ops-dashboard__fellows-summary fellow-summary-page-header">
-        <span className="header-underline mr-2 pb-2">{`${results ||
-          0} Total`}</span>
-        <span className="mr-3">{`${resultTerm} (Filtered)`}</span>
-        <FilterButton clearFilters={this.clearFilters} />
-      </div>
-    );
+    return <FellowsCount count={results} clearFilters={this.clearFilters} />;
   };
 
   /**

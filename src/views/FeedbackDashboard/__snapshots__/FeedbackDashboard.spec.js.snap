@@ -1,18 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Feedback Dashboard renders correctly 1`] = `
+exports[`FeedbackDashboard tests should render feedback dashboard without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
-    currentRole="WATCH_TOWER_OPS"
     getManagerFeedback={[Function]}
-    role="WATCH_TOWER_OPS"
+    role="WATCH_TOWER_LF"
     user={
         Object {
-            "email": "wt-test-ops@andela.com",
-            "roles": Object {
-              "WATCH_TOWER_OPS": "-l1ujhfhjbshwjrn",
-            },
+            "roles": "WATCH_TOWER_LF",
           }
     }
 />,
@@ -27,160 +23,230 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <div>
-          <p>
-                    Start Date: 
-                    1234564567
-          </p>
-          <p>
-                    End Date: 
-                    1467547453
-          </p>
+      "children": <div
+        className="container-fluid"
+>
+        <div
+                className="row"
+        >
+                <div
+                        className="col-xl-9"
+                >
+                        <Title
+                                subTitle="Filter by clicking cards"
+                                title="FEEDBACK"
+                        />
+                        <MapFeedbackFilterCard
+                                feedbackArray={Array []}
+                                filterKey="level"
+                                handleCardClick={[Function]}
+                                isTicked={
+                                        Object {
+                                                "criteria": "All Criteria",
+                                                "level": "All Levels",
+                                                "project": "All Projects",
+                                                "type": "Pre-PIP & PIP",
+                                              }
+                                }
+                                title="All Levels"
+                        />
+                        <MapFeedbackFilterCard
+                                feedbackArray={Array []}
+                                filterKey="type"
+                                handleCardClick={[Function]}
+                                isTicked={
+                                        Object {
+                                                "criteria": "All Criteria",
+                                                "level": "All Levels",
+                                                "project": "All Projects",
+                                                "type": "Pre-PIP & PIP",
+                                              }
+                                }
+                                title="Pre-PIP & PIP"
+                        />
+                        <MapFeedbackFilterCard
+                                feedbackArray={Array []}
+                                filterKey="criteria"
+                                handleCardClick={[Function]}
+                                isTicked={
+                                        Object {
+                                                "criteria": "All Criteria",
+                                                "level": "All Levels",
+                                                "project": "All Projects",
+                                                "type": "Pre-PIP & PIP",
+                                              }
+                                }
+                                title="All Criteria"
+                        />
+                </div>
+                <div
+                        className="col-xl-3"
+                >
+                        <Title
+                                subTitle="Choose when you want to see feedback"
+                                title="Duration"
+                        />
+                        <div
+                                className="ops-dashboard__fellows-summary"
+                        >
+                                <div>
+                                        <p>
+                                                Start Date: 
+                                                2019-03-21
+                                        </p>
+                                        <p>
+                                                End Date: 
+                                                2019-03-21
+                                        </p>
+                                </div>
+                                calendar here
+                        </div>
+                        <ActionButton
+                                clickHandler={[Function]}
+                                text="Clear Duration"
+                        />
+                </div>
+        </div>
+        <div
+                className="row"
+        >
+                <div
+                        className="col-xl-12 px-0"
+                >
+                        <FellowsCount
+                                clearFilters={[Function]}
+                                count={0}
+                        />
+                </div>
+        </div>
+        <div
+                className="row"
+        >
+                <Unknown>
+                        <FeedbackDashboardTable
+                                currentRole="WATCH_TOWER_LF"
+                                feedbackArray={Array []}
+                                type=""
+                        />
+                </Unknown>
+        </div>
 </div>,
-        <ActionButton
-          clickHandler={[Function]}
-          text="Clear Duration"
-/>,
-        <Unknown>
-          <FeedbackDashboardTable
-                    currentRole="WATCH_TOWER_OPS"
-                    feedbackArray={Array []}
-                    type="pip"
-          />
-</Unknown>,
-      ],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p>
-              Start Date: 
-              1234564567
-</p>,
-            <p>
-              End Date: 
-              1467547453
-</p>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Start Date: ",
-                1234564567,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "Start Date: ",
-              1234564567,
-            ],
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "End Date: ",
-                1467547453,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "End Date: ",
-              1467547453,
-            ],
-            "type": "p",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "clickHandler": [Function],
-          "text": "Clear Duration",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": <FeedbackDashboardTable
-            currentRole="WATCH_TOWER_OPS"
-            feedbackArray={Array []}
-            type="pip"
-/>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "currentRole": "WATCH_TOWER_OPS",
-            "feedbackArray": Array [],
-            "type": "pip",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": Symbol(react.fragment),
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
-            <p>
-                        Start Date: 
-                        1234564567
-            </p>
-            <p>
-                        End Date: 
-                        1467547453
-            </p>
+          <div
+            className="row"
+>
+            <div
+                        className="col-xl-9"
+            >
+                        <Title
+                                    subTitle="Filter by clicking cards"
+                                    title="FEEDBACK"
+                        />
+                        <MapFeedbackFilterCard
+                                    feedbackArray={Array []}
+                                    filterKey="level"
+                                    handleCardClick={[Function]}
+                                    isTicked={
+                                                Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                                    }
+                                    title="All Levels"
+                        />
+                        <MapFeedbackFilterCard
+                                    feedbackArray={Array []}
+                                    filterKey="type"
+                                    handleCardClick={[Function]}
+                                    isTicked={
+                                                Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                                    }
+                                    title="Pre-PIP & PIP"
+                        />
+                        <MapFeedbackFilterCard
+                                    feedbackArray={Array []}
+                                    filterKey="criteria"
+                                    handleCardClick={[Function]}
+                                    isTicked={
+                                                Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                                    }
+                                    title="All Criteria"
+                        />
+            </div>
+            <div
+                        className="col-xl-3"
+            >
+                        <Title
+                                    subTitle="Choose when you want to see feedback"
+                                    title="Duration"
+                        />
+                        <div
+                                    className="ops-dashboard__fellows-summary"
+                        >
+                                    <div>
+                                                <p>
+                                                            Start Date: 
+                                                            2019-03-21
+                                                </p>
+                                                <p>
+                                                            End Date: 
+                                                            2019-03-21
+                                                </p>
+                                    </div>
+                                    calendar here
+                        </div>
+                        <ActionButton
+                                    clickHandler={[Function]}
+                                    text="Clear Duration"
+                        />
+            </div>
 </div>,
-          <ActionButton
-            clickHandler={[Function]}
-            text="Clear Duration"
-/>,
-          <Unknown>
-            <FeedbackDashboardTable
-                        currentRole="WATCH_TOWER_OPS"
-                        feedbackArray={Array []}
-                        type="pip"
-            />
-</Unknown>,
+          <div
+            className="row"
+>
+            <div
+                        className="col-xl-12 px-0"
+            >
+                        <FellowsCount
+                                    clearFilters={[Function]}
+                                    count={0}
+                        />
+            </div>
+</div>,
+          <div
+            className="row"
+>
+            <Unknown>
+                        <FeedbackDashboardTable
+                                    currentRole="WATCH_TOWER_LF"
+                                    feedbackArray={Array []}
+                                    type=""
+                        />
+            </Unknown>
+</div>,
         ],
+        "className": "container-fluid",
       },
       "ref": null,
       "rendered": Array [
@@ -190,15 +256,85 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
-                Start Date: 
-                1234564567
-</p>,
-              <p>
-                End Date: 
-                1467547453
-</p>,
+              <div
+                className="col-xl-9"
+>
+                <Title
+                                subTitle="Filter by clicking cards"
+                                title="FEEDBACK"
+                />
+                <MapFeedbackFilterCard
+                                feedbackArray={Array []}
+                                filterKey="level"
+                                handleCardClick={[Function]}
+                                isTicked={
+                                                Object {
+                                                                "criteria": "All Criteria",
+                                                                "level": "All Levels",
+                                                                "project": "All Projects",
+                                                                "type": "Pre-PIP & PIP",
+                                                              }
+                                }
+                                title="All Levels"
+                />
+                <MapFeedbackFilterCard
+                                feedbackArray={Array []}
+                                filterKey="type"
+                                handleCardClick={[Function]}
+                                isTicked={
+                                                Object {
+                                                                "criteria": "All Criteria",
+                                                                "level": "All Levels",
+                                                                "project": "All Projects",
+                                                                "type": "Pre-PIP & PIP",
+                                                              }
+                                }
+                                title="Pre-PIP & PIP"
+                />
+                <MapFeedbackFilterCard
+                                feedbackArray={Array []}
+                                filterKey="criteria"
+                                handleCardClick={[Function]}
+                                isTicked={
+                                                Object {
+                                                                "criteria": "All Criteria",
+                                                                "level": "All Levels",
+                                                                "project": "All Projects",
+                                                                "type": "Pre-PIP & PIP",
+                                                              }
+                                }
+                                title="All Criteria"
+                />
+</div>,
+              <div
+                className="col-xl-3"
+>
+                <Title
+                                subTitle="Choose when you want to see feedback"
+                                title="Duration"
+                />
+                <div
+                                className="ops-dashboard__fellows-summary"
+                >
+                                <div>
+                                                <p>
+                                                                Start Date: 
+                                                                2019-03-21
+                                                </p>
+                                                <p>
+                                                                End Date: 
+                                                                2019-03-21
+                                                </p>
+                                </div>
+                                calendar here
+                </div>
+                <ActionButton
+                                clickHandler={[Function]}
+                                text="Clear Duration"
+                />
+</div>,
             ],
+            "className": "row",
           },
           "ref": null,
           "rendered": Array [
@@ -208,16 +344,131 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Start Date: ",
-                  1234564567,
+                  <Title
+                    subTitle="Filter by clicking cards"
+                    title="FEEDBACK"
+/>,
+                  <MapFeedbackFilterCard
+                    feedbackArray={Array []}
+                    filterKey="level"
+                    handleCardClick={[Function]}
+                    isTicked={
+                                        Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                    }
+                    title="All Levels"
+/>,
+                  <MapFeedbackFilterCard
+                    feedbackArray={Array []}
+                    filterKey="type"
+                    handleCardClick={[Function]}
+                    isTicked={
+                                        Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                    }
+                    title="Pre-PIP & PIP"
+/>,
+                  <MapFeedbackFilterCard
+                    feedbackArray={Array []}
+                    filterKey="criteria"
+                    handleCardClick={[Function]}
+                    isTicked={
+                                        Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                    }
+                    title="All Criteria"
+/>,
                 ],
+                "className": "col-xl-9",
               },
               "ref": null,
               "rendered": Array [
-                "Start Date: ",
-                1234564567,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "subTitle": "Filter by clicking cards",
+                    "title": "FEEDBACK",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "feedbackArray": Array [],
+                    "filterKey": "level",
+                    "handleCardClick": [Function],
+                    "isTicked": Object {
+                      "criteria": "All Criteria",
+                      "level": "All Levels",
+                      "project": "All Projects",
+                      "type": "Pre-PIP & PIP",
+                    },
+                    "title": "All Levels",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "feedbackArray": Array [],
+                    "filterKey": "type",
+                    "handleCardClick": [Function],
+                    "isTicked": Object {
+                      "criteria": "All Criteria",
+                      "level": "All Levels",
+                      "project": "All Projects",
+                      "type": "Pre-PIP & PIP",
+                    },
+                    "title": "Pre-PIP & PIP",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "feedbackArray": Array [],
+                    "filterKey": "criteria",
+                    "handleCardClick": [Function],
+                    "isTicked": Object {
+                      "criteria": "All Criteria",
+                      "level": "All Levels",
+                      "project": "All Projects",
+                      "type": "Pre-PIP & PIP",
+                    },
+                    "title": "All Criteria",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
               ],
-              "type": "p",
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -225,16 +476,141 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "End Date: ",
-                  1467547453,
+                  <Title
+                    subTitle="Choose when you want to see feedback"
+                    title="Duration"
+/>,
+                  <div
+                    className="ops-dashboard__fellows-summary"
+>
+                    <div>
+                                        <p>
+                                                            Start Date: 
+                                                            2019-03-21
+                                        </p>
+                                        <p>
+                                                            End Date: 
+                                                            2019-03-21
+                                        </p>
+                    </div>
+                    calendar here
+</div>,
+                  <ActionButton
+                    clickHandler={[Function]}
+                    text="Clear Duration"
+/>,
                 ],
+                "className": "col-xl-3",
               },
               "ref": null,
               "rendered": Array [
-                "End Date: ",
-                1467547453,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "subTitle": "Choose when you want to see feedback",
+                    "title": "Duration",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        <p>
+                                                Start Date: 
+                                                2019-03-21
+                        </p>
+                        <p>
+                                                End Date: 
+                                                2019-03-21
+                        </p>
+</div>,
+                      "calendar here",
+                    ],
+                    "className": "ops-dashboard__fellows-summary",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p>
+                            Start Date: 
+                            2019-03-21
+</p>,
+                          <p>
+                            End Date: 
+                            2019-03-21
+</p>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Start Date: ",
+                              "2019-03-21",
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Start Date: ",
+                            "2019-03-21",
+                          ],
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "End Date: ",
+                              "2019-03-21",
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "End Date: ",
+                            "2019-03-21",
+                          ],
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "calendar here",
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "clickHandler": [Function],
+                    "text": "Clear Duration",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
               ],
-              "type": "p",
+              "type": "div",
             },
           ],
           "type": "div",
@@ -242,25 +618,60 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "clickHandler": [Function],
-            "text": "Clear Duration",
+            "children": <div
+              className="col-xl-12 px-0"
+>
+              <FellowsCount
+                            clearFilters={[Function]}
+                            count={0}
+              />
+</div>,
+            "className": "row",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <FellowsCount
+                clearFilters={[Function]}
+                count={0}
+/>,
+              "className": "col-xl-12 px-0",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "clearFilters": [Function],
+                "count": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "children": <FeedbackDashboardTable
-              currentRole="WATCH_TOWER_OPS"
-              feedbackArray={Array []}
-              type="pip"
-/>,
+            "children": <Unknown>
+              <FeedbackDashboardTable
+                            currentRole="WATCH_TOWER_LF"
+                            feedbackArray={Array []}
+                            type=""
+              />
+</Unknown>,
+            "className": "row",
           },
           "ref": null,
           "rendered": Object {
@@ -268,18 +679,723 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "currentRole": "WATCH_TOWER_OPS",
-              "feedbackArray": Array [],
-              "type": "pip",
+              "children": <FeedbackDashboardTable
+                currentRole="WATCH_TOWER_LF"
+                feedbackArray={Array []}
+                type=""
+/>,
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "currentRole": "WATCH_TOWER_LF",
+                "feedbackArray": Array [],
+                "type": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": Symbol(react.fragment),
           },
-          "type": Symbol(react.fragment),
+          "type": "div",
         },
       ],
       "type": "div",
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <div
+          className="container-fluid"
+>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-xl-9"
+                    >
+                              <Title
+                                        subTitle="Filter by clicking cards"
+                                        title="FEEDBACK"
+                              />
+                              <MapFeedbackFilterCard
+                                        feedbackArray={Array []}
+                                        filterKey="level"
+                                        handleCardClick={[Function]}
+                                        isTicked={
+                                                  Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                                        }
+                                        title="All Levels"
+                              />
+                              <MapFeedbackFilterCard
+                                        feedbackArray={Array []}
+                                        filterKey="type"
+                                        handleCardClick={[Function]}
+                                        isTicked={
+                                                  Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                                        }
+                                        title="Pre-PIP & PIP"
+                              />
+                              <MapFeedbackFilterCard
+                                        feedbackArray={Array []}
+                                        filterKey="criteria"
+                                        handleCardClick={[Function]}
+                                        isTicked={
+                                                  Object {
+                                                            "criteria": "All Criteria",
+                                                            "level": "All Levels",
+                                                            "project": "All Projects",
+                                                            "type": "Pre-PIP & PIP",
+                                                          }
+                                        }
+                                        title="All Criteria"
+                              />
+                    </div>
+                    <div
+                              className="col-xl-3"
+                    >
+                              <Title
+                                        subTitle="Choose when you want to see feedback"
+                                        title="Duration"
+                              />
+                              <div
+                                        className="ops-dashboard__fellows-summary"
+                              >
+                                        <div>
+                                                  <p>
+                                                            Start Date: 
+                                                            2019-03-21
+                                                  </p>
+                                                  <p>
+                                                            End Date: 
+                                                            2019-03-21
+                                                  </p>
+                                        </div>
+                                        calendar here
+                              </div>
+                              <ActionButton
+                                        clickHandler={[Function]}
+                                        text="Clear Duration"
+                              />
+                    </div>
+          </div>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-xl-12 px-0"
+                    >
+                              <FellowsCount
+                                        clearFilters={[Function]}
+                                        count={0}
+                              />
+                    </div>
+          </div>
+          <div
+                    className="row"
+          >
+                    <Unknown>
+                              <FeedbackDashboardTable
+                                        currentRole="WATCH_TOWER_LF"
+                                        feedbackArray={Array []}
+                                        type=""
+                              />
+                    </Unknown>
+          </div>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="row"
+>
+              <div
+                            className="col-xl-9"
+              >
+                            <Title
+                                          subTitle="Filter by clicking cards"
+                                          title="FEEDBACK"
+                            />
+                            <MapFeedbackFilterCard
+                                          feedbackArray={Array []}
+                                          filterKey="level"
+                                          handleCardClick={[Function]}
+                                          isTicked={
+                                                        Object {
+                                                                      "criteria": "All Criteria",
+                                                                      "level": "All Levels",
+                                                                      "project": "All Projects",
+                                                                      "type": "Pre-PIP & PIP",
+                                                                    }
+                                          }
+                                          title="All Levels"
+                            />
+                            <MapFeedbackFilterCard
+                                          feedbackArray={Array []}
+                                          filterKey="type"
+                                          handleCardClick={[Function]}
+                                          isTicked={
+                                                        Object {
+                                                                      "criteria": "All Criteria",
+                                                                      "level": "All Levels",
+                                                                      "project": "All Projects",
+                                                                      "type": "Pre-PIP & PIP",
+                                                                    }
+                                          }
+                                          title="Pre-PIP & PIP"
+                            />
+                            <MapFeedbackFilterCard
+                                          feedbackArray={Array []}
+                                          filterKey="criteria"
+                                          handleCardClick={[Function]}
+                                          isTicked={
+                                                        Object {
+                                                                      "criteria": "All Criteria",
+                                                                      "level": "All Levels",
+                                                                      "project": "All Projects",
+                                                                      "type": "Pre-PIP & PIP",
+                                                                    }
+                                          }
+                                          title="All Criteria"
+                            />
+              </div>
+              <div
+                            className="col-xl-3"
+              >
+                            <Title
+                                          subTitle="Choose when you want to see feedback"
+                                          title="Duration"
+                            />
+                            <div
+                                          className="ops-dashboard__fellows-summary"
+                            >
+                                          <div>
+                                                        <p>
+                                                                      Start Date: 
+                                                                      2019-03-21
+                                                        </p>
+                                                        <p>
+                                                                      End Date: 
+                                                                      2019-03-21
+                                                        </p>
+                                          </div>
+                                          calendar here
+                            </div>
+                            <ActionButton
+                                          clickHandler={[Function]}
+                                          text="Clear Duration"
+                            />
+              </div>
+</div>,
+            <div
+              className="row"
+>
+              <div
+                            className="col-xl-12 px-0"
+              >
+                            <FellowsCount
+                                          clearFilters={[Function]}
+                                          count={0}
+                            />
+              </div>
+</div>,
+            <div
+              className="row"
+>
+              <Unknown>
+                            <FeedbackDashboardTable
+                                          currentRole="WATCH_TOWER_LF"
+                                          feedbackArray={Array []}
+                                          type=""
+                            />
+              </Unknown>
+</div>,
+          ],
+          "className": "container-fluid",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-xl-9"
+>
+                  <Title
+                                    subTitle="Filter by clicking cards"
+                                    title="FEEDBACK"
+                  />
+                  <MapFeedbackFilterCard
+                                    feedbackArray={Array []}
+                                    filterKey="level"
+                                    handleCardClick={[Function]}
+                                    isTicked={
+                                                      Object {
+                                                                        "criteria": "All Criteria",
+                                                                        "level": "All Levels",
+                                                                        "project": "All Projects",
+                                                                        "type": "Pre-PIP & PIP",
+                                                                      }
+                                    }
+                                    title="All Levels"
+                  />
+                  <MapFeedbackFilterCard
+                                    feedbackArray={Array []}
+                                    filterKey="type"
+                                    handleCardClick={[Function]}
+                                    isTicked={
+                                                      Object {
+                                                                        "criteria": "All Criteria",
+                                                                        "level": "All Levels",
+                                                                        "project": "All Projects",
+                                                                        "type": "Pre-PIP & PIP",
+                                                                      }
+                                    }
+                                    title="Pre-PIP & PIP"
+                  />
+                  <MapFeedbackFilterCard
+                                    feedbackArray={Array []}
+                                    filterKey="criteria"
+                                    handleCardClick={[Function]}
+                                    isTicked={
+                                                      Object {
+                                                                        "criteria": "All Criteria",
+                                                                        "level": "All Levels",
+                                                                        "project": "All Projects",
+                                                                        "type": "Pre-PIP & PIP",
+                                                                      }
+                                    }
+                                    title="All Criteria"
+                  />
+</div>,
+                <div
+                  className="col-xl-3"
+>
+                  <Title
+                                    subTitle="Choose when you want to see feedback"
+                                    title="Duration"
+                  />
+                  <div
+                                    className="ops-dashboard__fellows-summary"
+                  >
+                                    <div>
+                                                      <p>
+                                                                        Start Date: 
+                                                                        2019-03-21
+                                                      </p>
+                                                      <p>
+                                                                        End Date: 
+                                                                        2019-03-21
+                                                      </p>
+                                    </div>
+                                    calendar here
+                  </div>
+                  <ActionButton
+                                    clickHandler={[Function]}
+                                    text="Clear Duration"
+                  />
+</div>,
+              ],
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Title
+                      subTitle="Filter by clicking cards"
+                      title="FEEDBACK"
+/>,
+                    <MapFeedbackFilterCard
+                      feedbackArray={Array []}
+                      filterKey="level"
+                      handleCardClick={[Function]}
+                      isTicked={
+                                            Object {
+                                                                  "criteria": "All Criteria",
+                                                                  "level": "All Levels",
+                                                                  "project": "All Projects",
+                                                                  "type": "Pre-PIP & PIP",
+                                                                }
+                      }
+                      title="All Levels"
+/>,
+                    <MapFeedbackFilterCard
+                      feedbackArray={Array []}
+                      filterKey="type"
+                      handleCardClick={[Function]}
+                      isTicked={
+                                            Object {
+                                                                  "criteria": "All Criteria",
+                                                                  "level": "All Levels",
+                                                                  "project": "All Projects",
+                                                                  "type": "Pre-PIP & PIP",
+                                                                }
+                      }
+                      title="Pre-PIP & PIP"
+/>,
+                    <MapFeedbackFilterCard
+                      feedbackArray={Array []}
+                      filterKey="criteria"
+                      handleCardClick={[Function]}
+                      isTicked={
+                                            Object {
+                                                                  "criteria": "All Criteria",
+                                                                  "level": "All Levels",
+                                                                  "project": "All Projects",
+                                                                  "type": "Pre-PIP & PIP",
+                                                                }
+                      }
+                      title="All Criteria"
+/>,
+                  ],
+                  "className": "col-xl-9",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "subTitle": "Filter by clicking cards",
+                      "title": "FEEDBACK",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "feedbackArray": Array [],
+                      "filterKey": "level",
+                      "handleCardClick": [Function],
+                      "isTicked": Object {
+                        "criteria": "All Criteria",
+                        "level": "All Levels",
+                        "project": "All Projects",
+                        "type": "Pre-PIP & PIP",
+                      },
+                      "title": "All Levels",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "feedbackArray": Array [],
+                      "filterKey": "type",
+                      "handleCardClick": [Function],
+                      "isTicked": Object {
+                        "criteria": "All Criteria",
+                        "level": "All Levels",
+                        "project": "All Projects",
+                        "type": "Pre-PIP & PIP",
+                      },
+                      "title": "Pre-PIP & PIP",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "feedbackArray": Array [],
+                      "filterKey": "criteria",
+                      "handleCardClick": [Function],
+                      "isTicked": Object {
+                        "criteria": "All Criteria",
+                        "level": "All Levels",
+                        "project": "All Projects",
+                        "type": "Pre-PIP & PIP",
+                      },
+                      "title": "All Criteria",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Title
+                      subTitle="Choose when you want to see feedback"
+                      title="Duration"
+/>,
+                    <div
+                      className="ops-dashboard__fellows-summary"
+>
+                      <div>
+                                            <p>
+                                                                  Start Date: 
+                                                                  2019-03-21
+                                            </p>
+                                            <p>
+                                                                  End Date: 
+                                                                  2019-03-21
+                                            </p>
+                      </div>
+                      calendar here
+</div>,
+                    <ActionButton
+                      clickHandler={[Function]}
+                      text="Clear Duration"
+/>,
+                  ],
+                  "className": "col-xl-3",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "subTitle": "Choose when you want to see feedback",
+                      "title": "Duration",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div>
+                          <p>
+                                                    Start Date: 
+                                                    2019-03-21
+                          </p>
+                          <p>
+                                                    End Date: 
+                                                    2019-03-21
+                          </p>
+</div>,
+                        "calendar here",
+                      ],
+                      "className": "ops-dashboard__fellows-summary",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p>
+                              Start Date: 
+                              2019-03-21
+</p>,
+                            <p>
+                              End Date: 
+                              2019-03-21
+</p>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "Start Date: ",
+                                "2019-03-21",
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "Start Date: ",
+                              "2019-03-21",
+                            ],
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "End Date: ",
+                                "2019-03-21",
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "End Date: ",
+                              "2019-03-21",
+                            ],
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      "calendar here",
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "clickHandler": [Function],
+                      "text": "Clear Duration",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="col-xl-12 px-0"
+>
+                <FellowsCount
+                                clearFilters={[Function]}
+                                count={0}
+                />
+</div>,
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <FellowsCount
+                  clearFilters={[Function]}
+                  count={0}
+/>,
+                "className": "col-xl-12 px-0",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "clearFilters": [Function],
+                  "count": 0,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Unknown>
+                <FeedbackDashboardTable
+                                currentRole="WATCH_TOWER_LF"
+                                feedbackArray={Array []}
+                                type=""
+                />
+</Unknown>,
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <FeedbackDashboardTable
+                  currentRole="WATCH_TOWER_LF"
+                  feedbackArray={Array []}
+                  type=""
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "currentRole": "WATCH_TOWER_LF",
+                  "feedbackArray": Array [],
+                  "type": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": Symbol(react.fragment),
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

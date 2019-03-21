@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../../components/Header';
 import TTLDashboardContainer from './TTLDashboardContainer';
 import DeveloperDashboardContainer from '../DeveloperDashboard';
-import FeedbackDashboardContainer from '../FeedbackDashboard/FeedbackDashboardContainer';
+import FeedbackDashboardContainer from '../FeedbackDashboard';
+
 /**
  * Defines routes for the ttldashboard
  * @function
