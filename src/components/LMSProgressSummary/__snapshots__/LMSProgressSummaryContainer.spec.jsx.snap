@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`LMSProgressSummaryContainer component should map state to props 1`] = `
-Object {
-  "lmsSubmissions": undefined,
-  "lmsSummary": Array [],
-}
-`;

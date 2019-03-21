@@ -1,6 +1,8 @@
 import './FellowSummaryBreakdown.css';
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
+
 import defaultSvg from '../../static/Defaultcard.svg';
 
 const FellowSummaryCard = props => {
@@ -13,7 +15,7 @@ const FellowSummaryCard = props => {
       role="button"
       tabIndex="0"
       id={breakdown.title}
-      >
+    >
       <div className="fellow-breakdown-card row">
         {breakdown.checkedBydefault ? (
           <div className="checked">
@@ -34,13 +36,12 @@ const FellowSummaryCard = props => {
 FellowSummaryCard.propTypes = {
   breakdown: PropTypes.shape().isRequired,
   handleCardClick: PropTypes.func.isRequired
-
 };
 
 const FellowSummaryBreakdown = props => {
   const devPulseText = 'Filter by clicking a card';
   const { fellowSummaryBreakdown, handleCardClick } = props;
-  
+
   return (
     <React.Fragment>
       <div className="row row--no-margin">
@@ -48,7 +49,11 @@ const FellowSummaryBreakdown = props => {
       </div>
       <div className="row row--no-margin">
         {fellowSummaryBreakdown.map(breakdown => (
-          <FellowSummaryCard breakdown={breakdown} handleCardClick={handleCardClick} />
+          <FellowSummaryCard
+            key={arrayKey(breakdown)}
+            breakdown={breakdown}
+            handleCardClick={handleCardClick}
+          />
         ))}
       </div>
     </React.Fragment>
@@ -57,9 +62,11 @@ const FellowSummaryBreakdown = props => {
 
 FellowSummaryBreakdown.propTypes = {
   fellowSummaryBreakdown: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    )
+    PropTypes.shape({
+      checkedBydefault: PropTypes.bool,
+      title: PropTypes.string,
+      ratings: PropTypes.string
+    })
   ).isRequired,
   handleCardClick: PropTypes.func.isRequired
 };

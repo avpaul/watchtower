@@ -80,7 +80,7 @@ FellowChart.propTypes = {
   radioCardOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleChartClose: PropTypes.func.isRequired,
   updateSelected: PropTypes.func.isRequired,
-  user: PropTypes.arrayOf.isRequired,
+  user: PropTypes.shape({}).isRequired,
   fellowChartTooltip: PropTypes.shape({
     '--fellow-chart-tooltip': PropTypes.string.isRequired
   })

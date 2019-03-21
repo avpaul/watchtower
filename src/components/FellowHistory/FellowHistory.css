@@ -65,21 +65,12 @@
   right: 0;
 }
 
-.fellow-history-card__name,
 .fellow-history-card__name {
   float: left;
   width: 100%;
   color: #333333;
   font-weight: 500;
   padding-right: 1rem;
-}
-
-.fellow-history-card__name--s {
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-}
-
-.fellow-history-card__name--b {
   line-height: 1.7rem;
   font-size: 1.5rem;
 }

@@ -17,7 +17,11 @@ const NavArrow = props => {
 NavArrow.propTypes = {
   buttonClass: PropTypes.string.isRequired,
   iconClass: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
+};
+
+NavArrow.defaultProps = {
+  onClick: () => {}
 };
 
 export default NavArrow;

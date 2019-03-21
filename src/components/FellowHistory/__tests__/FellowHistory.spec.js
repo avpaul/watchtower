@@ -41,14 +41,23 @@ describe('Fellow History Container', () => {
       lmsLoading: false,
       ratings: [{}],
       ratingsLoading: false,
-      getFellowDevPulse: jest.fn()
+      getFellowDevPulse: jest.fn(),
+      history: { push: jest.fn() },
+      averageRatings: {
+        quality: '0.1',
+        quantity: '0.41',
+        initiative: '0.33',
+        communication: '0.00',
+        professionalism: '0.00',
+        integration: '0.00'
+      }
     };
 
     props = { ...props, ...propOverrides };
 
     const wrapper = mountComponent
       ? mount(
-          <MemoryRouter initialEntries={[urlPath]}>
+          <MemoryRouter keyLength={0} initialEntries={[urlPath]}>
             <FellowHistory {...props} />
           </MemoryRouter>
         )
@@ -76,6 +85,25 @@ describe('Fellow History Container', () => {
     expect(wrapper.find('.fellow-history-card__detail').text()).toEqual(
       user.detail
     );
+  };
+
+  /**
+   ** A reusable function used to test the rendering of the manager history card
+   * @function
+   * @param manager The expected user's (TTL/LF) details that override the default manager details.
+   */
+  const testManagerByRole = (manager = {}) => {
+    const currentFellow = fellowWithManager;
+    currentFellow.manager = { ...fellowWithManager.manager, ...manager };
+    const { wrapper, props } = setup(
+      true,
+      { fellowSummaryDetails: [currentFellow] },
+      '/dashboard/fellows/:name'
+    );
+
+    const fellowCard = wrapper.find('.fellow-history-card').at(1);
+    testFellowHistoryCard(fellowCard, { ...currentFellow.manager, manager });
+    expect(props.history.push).not.toBeCalled();
   };
 
   it('renders to match shapshot', () => {
@@ -115,10 +143,7 @@ describe('Fellow History Container', () => {
 
     const { wrapper, props } = setup(
       true,
-      {
-        history: { push: jest.fn() },
-        fellowSummaryDetails: [newFellow]
-      },
+      { fellowSummaryDetails: [newFellow] },
       '/dashboard/fellows/:name'
     );
 
@@ -144,35 +169,22 @@ describe('Fellow History Container', () => {
     expect(currentPath).toEqual('/dashboard/fellows');
   });
 
-  const testManagerByRole = (currentFellow = fellowWithManager) => {
-    const { wrapper, props } = setup(
-      true,
-      {
-        history: { push: jest.fn() },
-        fellowSummaryDetails: [currentFellow]
-      },
-      '/dashboard/fellows/:name'
-    );
-
-    const fellowCard = wrapper.find('.fellow-history-card').at(1);
-    testFellowHistoryCard(fellowCard, currentFellow.manager);
-    expect(props.history.push).not.toBeCalled();
-  };
-
   it('renders the expected TTL details', () => {
     testManagerByRole();
   });
 
   it('renders the expected LF details', () => {
-    fellowWithManager.manager.roleId = 3;
-    fellowWithManager.manager.detail = `${fellow.user.firstName}'s LF`;
-    testManagerByRole(fellowWithManager);
+    testManagerByRole({
+      roleId: 3,
+      detail: `${fellow.user.firstName}'s LF`
+    });
   });
 
   it('renders the expected manager details with an undefined role', () => {
-    fellowWithManager.manager.roleId = 99;
-    fellowWithManager.manager.detail = `${fellow.user.firstName}'s Undefined`;
-    testManagerByRole(fellowWithManager);
+    testManagerByRole({
+      roleId: 99,
+      detail: `${fellow.user.firstName}'s Undefined`
+    });
   });
 
   it('sets showDevpulse state to true when the handleCardClick function is called', () => {
@@ -185,6 +197,7 @@ describe('Fellow History Container', () => {
     instance.handleCardClick(event);
     expect(wrapper.state().showDevpulseTable).toBe(true);
   });
+
   it('sets showDevpulseTable state to false and showLmsTable to true state when the handleCardClick function is called', () => {
     const { wrapper } = setup();
     wrapper.setState({ showDevpulseTable: true, showLmsTable: false });

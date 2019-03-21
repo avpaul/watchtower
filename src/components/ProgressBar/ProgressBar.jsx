@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 
 import './ProgressBar.css';
 
@@ -28,7 +29,7 @@ const ProgressBar = ({ onTrack, noOfWeeks, widthStyle, isSmallScreen }) => (
     </div>
     <div className="week-label">
       {noOfWeeks.map(value => (
-        <span>
+        <span key={arrayKey({ value })}>
           {isSmallScreen ? 'Wk' : 'Week'} {value}
         </span>
       ))}
@@ -40,6 +41,11 @@ ProgressBar.propTypes = {
   onTrack: PropTypes.bool.isRequired,
   noOfWeeks: PropTypes.arrayOf(PropTypes.number).isRequired,
   widthStyle: PropTypes.objectOf(PropTypes.string).isRequired,
-  isSmallScreen: PropTypes.bool.isRequired
+  isSmallScreen: PropTypes.bool
 };
+
+ProgressBar.defaultProps = {
+  isSmallScreen: false
+};
+
 export default ProgressBar;

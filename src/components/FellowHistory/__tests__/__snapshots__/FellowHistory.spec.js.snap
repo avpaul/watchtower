@@ -4,6 +4,16 @@ exports[`Fellow History Container renders to match shapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FellowHistory
+    averageRatings={
+        Object {
+            "communication": "0.00",
+            "initiative": "0.33",
+            "integration": "0.00",
+            "professionalism": "0.00",
+            "quality": "0.1",
+            "quantity": "0.41",
+          }
+    }
     fellowSummaryDetails={
         Array [
             Object {
@@ -20,6 +30,11 @@ ShallowWrapper {
     }
     getFellowDevPulse={[Function]}
     getLmsSubmissions={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     lmsLoading={false}
     lmsSubmissions={Object {}}
     match={

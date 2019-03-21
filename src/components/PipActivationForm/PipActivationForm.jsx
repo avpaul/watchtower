@@ -114,6 +114,7 @@ class PipActivationForm extends Component {
       name={fieldId}
       id={fieldId}
       value={fieldId}
+      onChange={() => {}}
     />
   );
 

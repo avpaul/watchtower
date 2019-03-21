@@ -13,7 +13,7 @@ const fellowLmsSubmissionsReducer = (
     case LOAD_FELLOW_LMS_SUBMISSIONS_REQUEST:
       return {
         ...state,
-        lmsSubmissions: [],
+        lmsSubmissions: {},
         loading: true,
         error: null
       };

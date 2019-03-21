@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import classnames from 'classnames';
+import arrayKey from 'weak-key';
 import { carouselOptions } from '../../utils';
 import './Filters.css';
 import FilterCard from './FilterCard';
@@ -74,13 +75,12 @@ class Filters extends Component {
 
   render() {
     const { filter } = this.props;
-    const cardArray = this.cardArray();
     const settings = carouselOptions(3);
     return (
       <Slider {...settings}>
-        {cardArray.map(({ filterId, cardDetails }) => (
+        {this.cardArray().map(({ filterId, cardDetails }) => (
           <FilterCard
-            key={filterId}
+            key={arrayKey(cardDetails)}
             filterId={filterId}
             cardDetails={cardDetails}
             className={classnames('card', {

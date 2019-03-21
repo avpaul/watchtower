@@ -18,7 +18,7 @@ const ManagementSupportField = ({ handleMgtInputChange, dataKey }) => (
 
 ManagementSupportField.propTypes = {
   handleMgtInputChange: PropTypes.func.isRequired,
-  dataKey: PropTypes.instanceOf.isRequired
+  dataKey: PropTypes.number.isRequired
 };
 
 export default ManagementSupportField;

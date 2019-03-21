@@ -1,32 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import { shallow, mount } from 'enzyme';
 import FellowsSummary from '../FellowsSummary';
 import FilterCard from '../../Filters/FilterCard';
 
-const setup = propOverrides => {
+const summary = {
+  data: [{}, {}],
+  keys: ['Total', 'D0A', 'D0B'],
+  latestWeekSummary: {
+    Total: 10,
+    D0A: 5,
+    D0B: 5
+  }
+};
+
+const setup = (propOverrides, mountComponent = false) => {
   const { loggedInRole } = propOverrides;
   const props = {
     fellowsSummary: {
       loading: false,
-      fellowsSummaryToday: {
-        data: [{}, {}],
-        keys: ['Total', 'D0A', 'D0B'],
-        latestWeekSummary: {
-          Total: 10,
-          D0A: 5,
-          D0B: 5
-        }
-      },
-      fellowsSummaryTrend: {
-        data: [{}, {}],
-        keys: ['Total', 'D0A', 'D0B'],
-        latestWeekSummary: {
-          Total: 10,
-          D0A: 5,
-          D0B: 5
-        }
-      }
+      fellowsSummaryToday: summary,
+      fellowsSummaryTrend: summary
     },
     handleCardClick: jest.fn(),
     displayByRole: {
@@ -35,16 +30,23 @@ const setup = propOverrides => {
     ...propOverrides
   };
 
-  const wrapper = shallow(<FellowsSummary {...props} />);
+  const wrapper = mountComponent
+    ? mount(
+        <MemoryRouter>
+          <FellowsSummary {...props} />
+        </MemoryRouter>
+      )
+    : shallow(<FellowsSummary {...props} />);
 
-  return {
-    props,
-    wrapper,
-    count: wrapper.find(FilterCard).length
-  };
+  return { props, wrapper, count: wrapper.find(FilterCard).length };
 };
 
 describe('<FellowsSummary />', () => {
+  const testByUserRole = (loggedInRole, testCount = 1) => {
+    const { count } = setup({ loggedInRole }, true);
+    expect(count).toEqual(testCount);
+  };
+
   it('renders without crashing', () => {
     const { props } = setup({ loggedInRole: 'WATCH_TOWER_OPS' });
     const div = document.createElement('div');
@@ -54,34 +56,28 @@ describe('<FellowsSummary />', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
+  it('renders to match snapshots', () => {
+    const { wrapper } = setup({ loggedInRole: 'WATCH_TOWER_OPS' });
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders three(3) <FilterCard />', () => {
-    const { count } = setup({
-      loggedInRole: 'WATCH_TOWER_OPS'
-    });
-    expect(count).toEqual(3);
+    testByUserRole('WATCH_TOWER_OPS', 3);
   });
 
   it('renders only one card <FilterCard />', () => {
-    const { count, wrapper } = setup({
-      loggedInRole: 'WATCH_TOWER_EM'
-    });
-    expect(count).toEqual(1);
-    expect(wrapper).toMatchSnapshot();
+    testByUserRole('WATCH_TOWER_EM');
   });
 
   it('renders only DOA card <FilterCard /> when SL is logged in', () => {
-    const { count, wrapper } = setup({
-      loggedInRole: 'WATCH_TOWER_SL'
-    });
-    expect(count).toEqual(1);
-    expect(wrapper).toMatchSnapshot();
+    testByUserRole('WATCH_TOWER_SL');
   });
 
   it('handles click events on the <FilterCard />', () => {
     const {
       props: { handleCardClick },
       wrapper
-    } = setup({ loggedInRole: 'WATCH_TOWER_OPS' });
+    } = setup({ loggedInRole: 'WATCH_TOWER_OPS' }, true);
     wrapper
       .find(FilterCard)
       .first()

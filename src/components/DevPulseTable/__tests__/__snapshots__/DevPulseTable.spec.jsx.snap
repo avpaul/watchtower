@@ -26,61 +26,20 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Table>
-          <Row
-                    header={true}
-          >
-                    <Cell
-                              Key={0}
-                              addedClass=""
-                              title=""
-                    >
-                              Week
-                    </Cell>
-                    <Cell
-                              Key={1}
-                              addedClass=""
-                              title=""
-                    >
-                              Quantity
-                    </Cell>
-                    <Cell
-                              Key={2}
-                              addedClass=""
-                              title=""
-                    >
-                              Quality
-                    </Cell>
-                    <Cell
-                              Key={3}
-                              addedClass=""
-                              title=""
-                    >
-                              Initiative
-                    </Cell>
-                    <Cell
-                              Key={4}
-                              addedClass=""
-                              title=""
-                    >
-                              Communication
-                    </Cell>
-                    <Cell
-                              Key={5}
-                              addedClass=""
-                              title=""
-                    >
-                              Professionalism
-                    </Cell>
-                    <Cell
-                              Key={6}
-                              addedClass=""
-                              title=""
-                    >
-                              Integration
-                    </Cell>
-          </Row>
+          <TableHeader
+                    headers={
+                              Array [
+                                        "Week",
+                                        "Quantity",
+                                        "Quality",
+                                        "Initiative",
+                                        "Communication",
+                                        "Professionalism",
+                                        "Integration",
+                                      ]
+                    }
+          />
           <DevPulseRow
-                    Key={0}
                     rating={Object {}}
           />
 </Table>,
@@ -95,62 +54,21 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <Row
-              header={true}
->
-              <Cell
-                            Key={0}
-                            addedClass=""
-                            title=""
-              >
-                            Week
-              </Cell>
-              <Cell
-                            Key={1}
-                            addedClass=""
-                            title=""
-              >
-                            Quantity
-              </Cell>
-              <Cell
-                            Key={2}
-                            addedClass=""
-                            title=""
-              >
-                            Quality
-              </Cell>
-              <Cell
-                            Key={3}
-                            addedClass=""
-                            title=""
-              >
-                            Initiative
-              </Cell>
-              <Cell
-                            Key={4}
-                            addedClass=""
-                            title=""
-              >
-                            Communication
-              </Cell>
-              <Cell
-                            Key={5}
-                            addedClass=""
-                            title=""
-              >
-                            Professionalism
-              </Cell>
-              <Cell
-                            Key={6}
-                            addedClass=""
-                            title=""
-              >
-                            Integration
-              </Cell>
-</Row>,
+            <TableHeader
+              headers={
+                            Array [
+                                          "Week",
+                                          "Quantity",
+                                          "Quality",
+                                          "Initiative",
+                                          "Communication",
+                                          "Professionalism",
+                                          "Integration",
+                                        ]
+              }
+/>,
             Array [
               <DevPulseRow
-                Key={0}
                 rating={Object {}}
 />,
             ],
@@ -163,168 +81,25 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <Cell
-                  Key={0}
-                  addedClass=""
-                  title=""
->
-                  Week
-</Cell>,
-                <Cell
-                  Key={1}
-                  addedClass=""
-                  title=""
->
-                  Quantity
-</Cell>,
-                <Cell
-                  Key={2}
-                  addedClass=""
-                  title=""
->
-                  Quality
-</Cell>,
-                <Cell
-                  Key={3}
-                  addedClass=""
-                  title=""
->
-                  Initiative
-</Cell>,
-                <Cell
-                  Key={4}
-                  addedClass=""
-                  title=""
->
-                  Communication
-</Cell>,
-                <Cell
-                  Key={5}
-                  addedClass=""
-                  title=""
->
-                  Professionalism
-</Cell>,
-                <Cell
-                  Key={6}
-                  addedClass=""
-                  title=""
->
-                  Integration
-</Cell>,
+              "headers": Array [
+                "Week",
+                "Quantity",
+                "Quality",
+                "Initiative",
+                "Communication",
+                "Professionalism",
+                "Integration",
               ],
-              "header": true,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 0,
-                  "addedClass": "",
-                  "children": "Week",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Week",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 1,
-                  "addedClass": "",
-                  "children": "Quantity",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Quantity",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 2,
-                  "addedClass": "",
-                  "children": "Quality",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Quality",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 3,
-                  "addedClass": "",
-                  "children": "Initiative",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Initiative",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 4,
-                  "addedClass": "",
-                  "children": "Communication",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Communication",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 5,
-                  "addedClass": "",
-                  "children": "Professionalism",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Professionalism",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 6,
-                  "addedClass": "",
-                  "children": "Integration",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Integration",
-                "type": [Function],
-              },
-            ],
+            "rendered": null,
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-0",
             "nodeType": "function",
             "props": Object {
-              "Key": 0,
               "rating": Object {},
             },
             "ref": null,
@@ -346,61 +121,20 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Table>
-            <Row
-                        header={true}
-            >
-                        <Cell
-                                    Key={0}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Week
-                        </Cell>
-                        <Cell
-                                    Key={1}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Quantity
-                        </Cell>
-                        <Cell
-                                    Key={2}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Quality
-                        </Cell>
-                        <Cell
-                                    Key={3}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Initiative
-                        </Cell>
-                        <Cell
-                                    Key={4}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Communication
-                        </Cell>
-                        <Cell
-                                    Key={5}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Professionalism
-                        </Cell>
-                        <Cell
-                                    Key={6}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Integration
-                        </Cell>
-            </Row>
+            <TableHeader
+                        headers={
+                                    Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                        }
+            />
             <DevPulseRow
-                        Key={0}
                         rating={Object {}}
             />
 </Table>,
@@ -415,62 +149,21 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <Row
-                header={true}
->
-                <Cell
-                                Key={0}
-                                addedClass=""
-                                title=""
-                >
-                                Week
-                </Cell>
-                <Cell
-                                Key={1}
-                                addedClass=""
-                                title=""
-                >
-                                Quantity
-                </Cell>
-                <Cell
-                                Key={2}
-                                addedClass=""
-                                title=""
-                >
-                                Quality
-                </Cell>
-                <Cell
-                                Key={3}
-                                addedClass=""
-                                title=""
-                >
-                                Initiative
-                </Cell>
-                <Cell
-                                Key={4}
-                                addedClass=""
-                                title=""
-                >
-                                Communication
-                </Cell>
-                <Cell
-                                Key={5}
-                                addedClass=""
-                                title=""
-                >
-                                Professionalism
-                </Cell>
-                <Cell
-                                Key={6}
-                                addedClass=""
-                                title=""
-                >
-                                Integration
-                </Cell>
-</Row>,
+              <TableHeader
+                headers={
+                                Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                }
+/>,
               Array [
                 <DevPulseRow
-                  Key={0}
                   rating={Object {}}
 />,
               ],
@@ -483,168 +176,25 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <Cell
-                    Key={0}
-                    addedClass=""
-                    title=""
->
-                    Week
-</Cell>,
-                  <Cell
-                    Key={1}
-                    addedClass=""
-                    title=""
->
-                    Quantity
-</Cell>,
-                  <Cell
-                    Key={2}
-                    addedClass=""
-                    title=""
->
-                    Quality
-</Cell>,
-                  <Cell
-                    Key={3}
-                    addedClass=""
-                    title=""
->
-                    Initiative
-</Cell>,
-                  <Cell
-                    Key={4}
-                    addedClass=""
-                    title=""
->
-                    Communication
-</Cell>,
-                  <Cell
-                    Key={5}
-                    addedClass=""
-                    title=""
->
-                    Professionalism
-</Cell>,
-                  <Cell
-                    Key={6}
-                    addedClass=""
-                    title=""
->
-                    Integration
-</Cell>,
+                "headers": Array [
+                  "Week",
+                  "Quantity",
+                  "Quality",
+                  "Initiative",
+                  "Communication",
+                  "Professionalism",
+                  "Integration",
                 ],
-                "header": true,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 0,
-                    "addedClass": "",
-                    "children": "Week",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Week",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 1,
-                    "addedClass": "",
-                    "children": "Quantity",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Quantity",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 2,
-                    "addedClass": "",
-                    "children": "Quality",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Quality",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 3,
-                    "addedClass": "",
-                    "children": "Initiative",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Initiative",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 4,
-                    "addedClass": "",
-                    "children": "Communication",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Communication",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 5,
-                    "addedClass": "",
-                    "children": "Professionalism",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Professionalism",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 6,
-                    "addedClass": "",
-                    "children": "Integration",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Integration",
-                  "type": [Function],
-                },
-              ],
+              "rendered": null,
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-0",
               "nodeType": "function",
               "props": Object {
-                "Key": 0,
                 "rating": Object {},
               },
               "ref": null,
@@ -701,59 +251,19 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Table>
-          <Row
-                    header={true}
-          >
-                    <Cell
-                              Key={0}
-                              addedClass=""
-                              title=""
-                    >
-                              Week
-                    </Cell>
-                    <Cell
-                              Key={1}
-                              addedClass=""
-                              title=""
-                    >
-                              Quantity
-                    </Cell>
-                    <Cell
-                              Key={2}
-                              addedClass=""
-                              title=""
-                    >
-                              Quality
-                    </Cell>
-                    <Cell
-                              Key={3}
-                              addedClass=""
-                              title=""
-                    >
-                              Initiative
-                    </Cell>
-                    <Cell
-                              Key={4}
-                              addedClass=""
-                              title=""
-                    >
-                              Communication
-                    </Cell>
-                    <Cell
-                              Key={5}
-                              addedClass=""
-                              title=""
-                    >
-                              Professionalism
-                    </Cell>
-                    <Cell
-                              Key={6}
-                              addedClass=""
-                              title=""
-                    >
-                              Integration
-                    </Cell>
-          </Row>
+          <TableHeader
+                    headers={
+                              Array [
+                                        "Week",
+                                        "Quantity",
+                                        "Quality",
+                                        "Initiative",
+                                        "Communication",
+                                        "Professionalism",
+                                        "Integration",
+                                      ]
+                    }
+          />
 </Table>,
         <Loader />,
       ],
@@ -766,59 +276,19 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <Row
-              header={true}
->
-              <Cell
-                            Key={0}
-                            addedClass=""
-                            title=""
-              >
-                            Week
-              </Cell>
-              <Cell
-                            Key={1}
-                            addedClass=""
-                            title=""
-              >
-                            Quantity
-              </Cell>
-              <Cell
-                            Key={2}
-                            addedClass=""
-                            title=""
-              >
-                            Quality
-              </Cell>
-              <Cell
-                            Key={3}
-                            addedClass=""
-                            title=""
-              >
-                            Initiative
-              </Cell>
-              <Cell
-                            Key={4}
-                            addedClass=""
-                            title=""
-              >
-                            Communication
-              </Cell>
-              <Cell
-                            Key={5}
-                            addedClass=""
-                            title=""
-              >
-                            Professionalism
-              </Cell>
-              <Cell
-                            Key={6}
-                            addedClass=""
-                            title=""
-              >
-                            Integration
-              </Cell>
-</Row>,
+            <TableHeader
+              headers={
+                            Array [
+                                          "Week",
+                                          "Quantity",
+                                          "Quality",
+                                          "Initiative",
+                                          "Communication",
+                                          "Professionalism",
+                                          "Integration",
+                                        ]
+              }
+/>,
             Array [],
           ],
         },
@@ -829,160 +299,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <Cell
-                  Key={0}
-                  addedClass=""
-                  title=""
->
-                  Week
-</Cell>,
-                <Cell
-                  Key={1}
-                  addedClass=""
-                  title=""
->
-                  Quantity
-</Cell>,
-                <Cell
-                  Key={2}
-                  addedClass=""
-                  title=""
->
-                  Quality
-</Cell>,
-                <Cell
-                  Key={3}
-                  addedClass=""
-                  title=""
->
-                  Initiative
-</Cell>,
-                <Cell
-                  Key={4}
-                  addedClass=""
-                  title=""
->
-                  Communication
-</Cell>,
-                <Cell
-                  Key={5}
-                  addedClass=""
-                  title=""
->
-                  Professionalism
-</Cell>,
-                <Cell
-                  Key={6}
-                  addedClass=""
-                  title=""
->
-                  Integration
-</Cell>,
+              "headers": Array [
+                "Week",
+                "Quantity",
+                "Quality",
+                "Initiative",
+                "Communication",
+                "Professionalism",
+                "Integration",
               ],
-              "header": true,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 0,
-                  "addedClass": "",
-                  "children": "Week",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Week",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 1,
-                  "addedClass": "",
-                  "children": "Quantity",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Quantity",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 2,
-                  "addedClass": "",
-                  "children": "Quality",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Quality",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 3,
-                  "addedClass": "",
-                  "children": "Initiative",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Initiative",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 4,
-                  "addedClass": "",
-                  "children": "Communication",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Communication",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 5,
-                  "addedClass": "",
-                  "children": "Professionalism",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Professionalism",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "Key": 6,
-                  "addedClass": "",
-                  "children": "Integration",
-                  "title": "",
-                },
-                "ref": null,
-                "rendered": "Integration",
-                "type": [Function],
-              },
-            ],
+            "rendered": null,
             "type": [Function],
           },
         ],
@@ -1008,59 +336,19 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Table>
-            <Row
-                        header={true}
-            >
-                        <Cell
-                                    Key={0}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Week
-                        </Cell>
-                        <Cell
-                                    Key={1}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Quantity
-                        </Cell>
-                        <Cell
-                                    Key={2}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Quality
-                        </Cell>
-                        <Cell
-                                    Key={3}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Initiative
-                        </Cell>
-                        <Cell
-                                    Key={4}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Communication
-                        </Cell>
-                        <Cell
-                                    Key={5}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Professionalism
-                        </Cell>
-                        <Cell
-                                    Key={6}
-                                    addedClass=""
-                                    title=""
-                        >
-                                    Integration
-                        </Cell>
-            </Row>
+            <TableHeader
+                        headers={
+                                    Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                        }
+            />
 </Table>,
           <Loader />,
         ],
@@ -1073,59 +361,19 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <Row
-                header={true}
->
-                <Cell
-                                Key={0}
-                                addedClass=""
-                                title=""
-                >
-                                Week
-                </Cell>
-                <Cell
-                                Key={1}
-                                addedClass=""
-                                title=""
-                >
-                                Quantity
-                </Cell>
-                <Cell
-                                Key={2}
-                                addedClass=""
-                                title=""
-                >
-                                Quality
-                </Cell>
-                <Cell
-                                Key={3}
-                                addedClass=""
-                                title=""
-                >
-                                Initiative
-                </Cell>
-                <Cell
-                                Key={4}
-                                addedClass=""
-                                title=""
-                >
-                                Communication
-                </Cell>
-                <Cell
-                                Key={5}
-                                addedClass=""
-                                title=""
-                >
-                                Professionalism
-                </Cell>
-                <Cell
-                                Key={6}
-                                addedClass=""
-                                title=""
-                >
-                                Integration
-                </Cell>
-</Row>,
+              <TableHeader
+                headers={
+                                Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                }
+/>,
               Array [],
             ],
           },
@@ -1136,160 +384,18 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <Cell
-                    Key={0}
-                    addedClass=""
-                    title=""
->
-                    Week
-</Cell>,
-                  <Cell
-                    Key={1}
-                    addedClass=""
-                    title=""
->
-                    Quantity
-</Cell>,
-                  <Cell
-                    Key={2}
-                    addedClass=""
-                    title=""
->
-                    Quality
-</Cell>,
-                  <Cell
-                    Key={3}
-                    addedClass=""
-                    title=""
->
-                    Initiative
-</Cell>,
-                  <Cell
-                    Key={4}
-                    addedClass=""
-                    title=""
->
-                    Communication
-</Cell>,
-                  <Cell
-                    Key={5}
-                    addedClass=""
-                    title=""
->
-                    Professionalism
-</Cell>,
-                  <Cell
-                    Key={6}
-                    addedClass=""
-                    title=""
->
-                    Integration
-</Cell>,
+                "headers": Array [
+                  "Week",
+                  "Quantity",
+                  "Quality",
+                  "Initiative",
+                  "Communication",
+                  "Professionalism",
+                  "Integration",
                 ],
-                "header": true,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 0,
-                    "addedClass": "",
-                    "children": "Week",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Week",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 1,
-                    "addedClass": "",
-                    "children": "Quantity",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Quantity",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 2,
-                    "addedClass": "",
-                    "children": "Quality",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Quality",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 3,
-                    "addedClass": "",
-                    "children": "Initiative",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Initiative",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 4,
-                    "addedClass": "",
-                    "children": "Communication",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Communication",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 5,
-                    "addedClass": "",
-                    "children": "Professionalism",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Professionalism",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "Key": 6,
-                    "addedClass": "",
-                    "children": "Integration",
-                    "title": "",
-                  },
-                  "ref": null,
-                  "rendered": "Integration",
-                  "type": [Function],
-                },
-              ],
+              "rendered": null,
               "type": [Function],
             },
           ],

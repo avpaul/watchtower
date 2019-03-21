@@ -57,7 +57,7 @@ export default {
   },
   fellowLmsSubmissions: {
     loading: false,
-    lmsSubmissions: [],
+    lmsSubmissions: {},
     error: null
   },
   ttls: {
@@ -94,7 +94,7 @@ export default {
   },
   notification: {
     loading: false,
-    notification: {},
+    notification: [],
     error: ''
   },
   unreadnotification: {

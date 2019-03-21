@@ -47,51 +47,18 @@ class DashboardPage extends Component {
 
   renderPagination = () => {
     const { perPage } = this.state;
-    const { pagination, filter } = this.props;
+    const { pagination, filter, fellows } = this.props;
     return (
       <Pagination
-        firstPageUrl={pagination.firstPageURL}
-        firstPage={pagination.from}
         totalPages={pagination.pages}
-        finalPageUrl={pagination.finalPageURL}
-        nextPage={pagination.nextPageURL}
         perPage={perPage}
-        prevPageUrl={pagination.prevPageURL}
+        onPerPageChange={this.onChange}
         handlePageChange={this.handlePageChange}
         handleValueChange={this.handleValueChange}
         currentPage={pagination.page}
         filter={filter}
+        hasFellows={fellows.length > 0}
       />
-    );
-  };
-
-  returnShowing = () => {
-    const { pagination } = this.props;
-    return (
-      <p className="text-center">
-        showing {pagination.page} of {pagination.pages} pages
-      </p>
-    );
-  };
-
-  renderPerPageSelector = () => {
-    const { perPage } = this.state;
-    return (
-      <div className="row d-flex justify-content-center">
-        <div className="per-page">Per page</div>
-        <div className="select">
-          <select
-            className="form-control d-flex justify-content-center"
-            value={perPage}
-            onChange={this.onChange}
-          >
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-          </select>
-        </div>
-        {this.renderPagination()}
-      </div>
     );
   };
 
@@ -192,9 +159,7 @@ class DashboardPage extends Component {
 
   clearFilters = () => {
     const { loading, getFellows } = this.props;
-    if (!loading) {
-      getFellows({ status: 'All', level: 'All' });
-    }
+    if (!loading) getFellows({ status: 'All', level: 'All' });
     this.setState(clearFilters());
   };
 
@@ -228,6 +193,7 @@ class DashboardPage extends Component {
       fellows,
       pagination: { perPage, results }
     } = this.props;
+
     return (
       <Fragment>
         <Filters
@@ -288,14 +254,12 @@ class DashboardPage extends Component {
   }
 
   render() {
-    const { error, fellows } = this.props;
+    const { error } = this.props;
     const { ErrorPage } = Error;
-    const hasFellows = fellows.length > 0;
     return (
       <div>
         {error ? <ErrorPage /> : this.renderPageBody()}
-        {hasFellows && this.returnShowing()}
-        <div> {hasFellows && this.renderPerPageSelector()} &nbsp; </div>
+        <div> {this.renderPagination()} &nbsp; </div>
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
+import TableHeader from '../TableComponents/Header';
 import Table from '../TableComponents/Table';
-import Cell from '../TableComponents/Cell';
-import Row from '../TableComponents/Row';
 import Error from '../Error';
 import Loader from '../Loader/Loader';
 import LmsRow from './LmsRow';
@@ -32,14 +32,13 @@ const LmsTable = ({ lmsSubmissions, loading }) => {
     <Fragment>
       <div className="lms-table">
         <Table>
-          <Row header>
-            {headers.map((element, index) => (
-              <Cell Key={index}>{element}</Cell>
-            ))}
-          </Row>
+          <TableHeader headers={headers} />
           {newLmsData &&
-            newLmsData.map((lmsSubmission, index) => (
-              <LmsRow Key={index} lmsSubmission={lmsSubmission} />
+            newLmsData.map(lmsSubmission => (
+              <LmsRow
+                key={arrayKey(lmsSubmission)}
+                lmsSubmission={lmsSubmission}
+              />
             ))}
         </Table>
       </div>
@@ -49,7 +48,7 @@ const LmsTable = ({ lmsSubmissions, loading }) => {
 };
 
 LmsTable.propTypes = {
-  lmsSubmissions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  lmsSubmissions: PropTypes.shape().isRequired,
   loading: PropTypes.bool.isRequired
 };
 

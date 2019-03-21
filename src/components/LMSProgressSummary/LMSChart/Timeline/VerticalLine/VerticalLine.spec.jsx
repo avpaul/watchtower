@@ -6,7 +6,7 @@ import VerticalLine from '.';
 
 describe('VerticalLine component', () => {
   const props = {
-    numOfIntervalsq: 10,
+    numOfIntervals: 10,
     leftMargin: 76
   };
 

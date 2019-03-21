@@ -6,7 +6,6 @@ describe('tests the LmsTable', () => {
   let wrapper;
   let wrapper2;
   let wrapper3;
-  let wrapper4;
   beforeEach(() => {
     const props = {
       lmsSubmissions: {},
@@ -18,11 +17,6 @@ describe('tests the LmsTable', () => {
     };
 
     const props3 = {
-      lmsSubmissions: '',
-      loading: true
-    };
-
-    const props4 = {
       lmsSubmissions: {
         data: {
           outputs: {}
@@ -34,7 +28,6 @@ describe('tests the LmsTable', () => {
     wrapper = shallow(<LmsTable {...props} />);
     wrapper2 = shallow(<LmsTable {...props2} />);
     wrapper3 = shallow(<LmsTable {...props3} />);
-    wrapper4 = shallow(<LmsTable {...props4} />);
   });
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
@@ -44,8 +37,5 @@ describe('tests the LmsTable', () => {
   });
   it('renders correctly', () => {
     expect(wrapper3).toMatchSnapshot();
-  });
-  it('renders correctly', () => {
-    expect(wrapper4).toMatchSnapshot();
   });
 });

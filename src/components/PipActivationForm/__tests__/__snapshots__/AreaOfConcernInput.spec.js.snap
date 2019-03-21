@@ -4,8 +4,10 @@ exports[`AreaOfConcernInput component should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AreaOfConcernInput
-    attribute="Quality"
+    areaOfConcern="Quality"
     handleChange={[Function]}
+    id="description"
+    title="Quality"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -23,11 +25,13 @@ ShallowWrapper {
       "children": Array [
         <div
           className="pip-activation-form-label"
-/>,
+>
+          Quality
+</div>,
         <textarea
           className="form-control area-of-concern-input"
-          id={undefined}
-          name={undefined}
+          id="description"
+          name="description"
           onChange={[Function]}
           rows="4"
           type="text"
@@ -42,11 +46,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "Quality",
           "className": "pip-activation-form-label",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "Quality",
         "type": "div",
       },
       Object {
@@ -55,8 +59,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control area-of-concern-input",
-          "id": undefined,
-          "name": undefined,
+          "id": "description",
+          "name": "description",
           "onChange": [Function],
           "rows": "4",
           "type": "text",
@@ -77,11 +81,13 @@ ShallowWrapper {
         "children": Array [
           <div
             className="pip-activation-form-label"
-/>,
+>
+            Quality
+</div>,
           <textarea
             className="form-control area-of-concern-input"
-            id={undefined}
-            name={undefined}
+            id="description"
+            name="description"
             onChange={[Function]}
             rows="4"
             type="text"
@@ -96,11 +102,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Quality",
             "className": "pip-activation-form-label",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Quality",
           "type": "div",
         },
         Object {
@@ -109,8 +115,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control area-of-concern-input",
-            "id": undefined,
-            "name": undefined,
+            "id": "description",
+            "name": "description",
             "onChange": [Function],
             "rows": "4",
             "type": "text",

@@ -55,24 +55,82 @@ class Pagination extends Component {
     );
   };
 
+  returnShowing = () => {
+    const { currentPage, totalPages } = this.props;
+    return (
+      <p className="text-center">
+        showing {currentPage} of {totalPages} pages
+      </p>
+    );
+  };
+
+  renderNextButtons = (buttonOne, buttonTwo) => (
+    <React.Fragment>
+      {this.renderPaginationButtons(
+        'btn btn-default second',
+        'next',
+        buttonOne,
+        this.onValueChange,
+        buttonOne
+      )}
+      {this.renderPaginationButtons(
+        'btn btn-default second',
+        'next',
+        buttonTwo,
+        this.onValueChange,
+        buttonTwo
+      )}
+    </React.Fragment>
+  );
+
+  renderPrevButtons = (buttonOne, buttonTwo) => (
+    <React.Fragment>
+      {this.renderPaginationButtons(
+        buttonOne
+          ? 'btn btn-default first active-page'
+          : 'btn btn-default first',
+        'previous',
+        buttonOne,
+        this.onValueChange,
+        buttonOne
+      )}
+      {this.renderPaginationButtons(
+        'btn btn-default second',
+        'previous',
+        buttonTwo,
+        this.onValueChange,
+        buttonTwo
+      )}
+    </React.Fragment>
+  );
+
+  renderMiddleButtons = () => {
+    const { currentPage, totalPages } = this.props;
+    return (
+      <React.Fragment>
+        <div
+          className="btn-group mr-2 ml-2"
+          role="group"
+          aria-label="First group"
+        >
+          {this.renderPrevButtons(currentPage, currentPage + 1)}
+          <button type="button" className="btn btn-default second" value="">
+            ...
+          </button>
+          {this.renderNextButtons(totalPages - 1, totalPages)}
+        </div>
+      </React.Fragment>
+    );
+  };
+
   renderNormal(
     { currentPage, nextPage, prevPageUrl, totalPages } = this.props
   ) {
     const disableObject = {
-      disabled: false,
-      disable: true
+      disabled: currentPage === totalPages,
+      disable: currentPage > 1
     };
-    const buttonOneEllipsis = currentPage;
-    const buttonTwoEllipsis = currentPage + 1;
-    const buttonOneAfterEllipse = totalPages - 1;
-    const buttonTwoAfterEllipse = totalPages;
 
-    if (currentPage > 1) {
-      disableObject.disable = false;
-    }
-    if (currentPage === totalPages) {
-      disableObject.disabled = true;
-    }
     return (
       <div id="form-group col-md-4 row">
         {this.renderPaginationButtons(
@@ -83,45 +141,7 @@ class Pagination extends Component {
           'Prev',
           disableObject.disable
         )}
-        <div
-          className="btn-group mr-2 ml-2"
-          role="group"
-          aria-label="First group"
-        >
-          {this.renderPaginationButtons(
-            currentPage
-              ? 'btn btn-default first active-page'
-              : 'btn btn-default first',
-            'previous',
-            currentPage,
-            this.onValueChange,
-            buttonOneEllipsis
-          )}
-          {this.renderPaginationButtons(
-            'btn btn-default second',
-            'previous',
-            currentPage + 1,
-            this.onValueChange,
-            buttonTwoEllipsis
-          )}
-          <button type="button" className="btn btn-default second" value="">
-            ...
-          </button>
-          {this.renderPaginationButtons(
-            'btn btn-default second',
-            'next',
-            buttonOneAfterEllipse,
-            this.onValueChange,
-            buttonOneAfterEllipse
-          )}
-          {this.renderPaginationButtons(
-            'btn btn-default second',
-            'next',
-            buttonTwoAfterEllipse,
-            this.onValueChange,
-            buttonTwoAfterEllipse
-          )}
-        </div>
+        {this.renderMiddleButtons()}
         {this.renderPaginationButtons(
           'btn btn-default first',
           'next',
@@ -155,16 +175,37 @@ class Pagination extends Component {
     </button>
   );
 
-  renderButton = () => {
+  renderButtons = () => {
     const { totalPages } = this.props;
-    if (totalPages < 5) {
-      return this.renderItems(totalPages);
-    }
-    return this.renderNormal();
+    return totalPages < 5 ? this.renderItems(totalPages) : this.renderNormal();
   };
 
   render() {
-    return <div>{this.renderButton()}</div>;
+    const { perPage, perPageOptions, onPerPageChange, hasFellows } = this.props;
+    if (!hasFellows) return <div />;
+
+    return (
+      <React.Fragment>
+        {this.returnShowing()}
+        <div className="row d-flex justify-content-center">
+          <div className="per-page">Per page</div>
+          <div className="select">
+            <select
+              className="form-control d-flex justify-content-center"
+              value={perPage}
+              onChange={onPerPageChange}
+            >
+              {perPageOptions.map(pages => (
+                <option key={pages} value={pages}>
+                  {pages}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>{this.renderButtons()}</div>
+        </div>
+      </React.Fragment>
+    );
   }
 }
 
@@ -176,10 +217,15 @@ Pagination.propTypes = {
   perPage: PropTypes.string,
   handleValueChange: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
-  currentPage: PropTypes.number.isRequired
+  currentPage: PropTypes.number.isRequired,
+  perPageOptions: PropTypes.arrayOf(PropTypes.number),
+  onPerPageChange: PropTypes.func.isRequired,
+  hasFellows: PropTypes.bool
 };
 
 Pagination.defaultProps = {
   totalPages: 10,
-  perPage: '25'
+  perPage: '25',
+  perPageOptions: [25, 50, 100],
+  hasFellows: false
 };

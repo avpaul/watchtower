@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import FilterDropdown from '../../OpsDashboard/FellowsProgress/Filter';
 
 const Filters = ({
@@ -40,7 +41,7 @@ const Filters = ({
   const renderFilter = () => (
     <Fragment>
       {FilterValues.map(filter => (
-        <div className="developer-filter">
+        <div className="developer-filter" key={arrayKey(filter)}>
           <FilterDropdown
             key={filter.key}
             search={false}

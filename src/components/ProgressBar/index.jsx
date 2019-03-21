@@ -32,9 +32,10 @@ const ProgressContainer = props => {
 };
 
 ProgressContainer.propTypes = {
-  user: PropTypes.shape({
-    email: PropTypes.string.isRequired
-  }).isRequired,
-  fellow: PropTypes.objectOf(PropTypes.string).isRequired
+  fellow: PropTypes.shape({
+    fellow: PropTypes.shape(),
+    loading: PropTypes.bool
+  }).isRequired
 };
+
 export default ProgressContainer;

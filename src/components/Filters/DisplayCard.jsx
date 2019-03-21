@@ -19,9 +19,14 @@ const DisplayCard = ({ displayContent, id, onClick }) => {
 };
 DisplayCard.propTypes = {
   displayContent: PropTypes.objectOf(
-    PropTypes.oneOfType([ PropTypes.string, PropTypes.number])).isRequired,
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  ).isRequired,
   id: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
+};
+
+DisplayCard.defaultProps = {
+  onClick: () => {}
 };
 
 export default DisplayCard;

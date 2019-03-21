@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 
 import profileDefaultPic from '../../static/profile.svg';
 
-export const getClassForName = name =>
-  `fellow-history-card__name--${name.length > 10 ? 'b' : 's'}`;
-
 const getImage = user => (!user.picture ? profileDefaultPic : user.picture);
 
 const HistoryCard = props => {
   const { user } = props;
 
-  if (user === undefined) return <div />;
+  if (!user) return <div />;
 
   return (
     <div className="fellow-history-card">
@@ -19,11 +16,7 @@ const HistoryCard = props => {
         <img src={getImage(user)} alt={`${user.name} profile pic`} />
       </div>
       <div className="fellow-history-card__right">
-        <div
-          className={`fellow-history-card__name ${getClassForName(user.name)}`}
-        >
-          {user.name}
-        </div>
+        <div className="fellow-history-card__name">{user.name}</div>
         <div className="fellow-history-card__detail">{`${user.detail}`}</div>
       </div>
     </div>

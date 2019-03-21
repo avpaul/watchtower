@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import MenuLink from './MenuLink';
 
 /**
@@ -9,22 +10,17 @@ import MenuLink from './MenuLink';
  *
  * @returns {JSX} React JSX
  */
-const Menu = ({
-  items, handleMenuClick, activeItems, role,
-}) => (
+const Menu = ({ items, handleMenuClick, activeItems, role }) => (
   <div className="header--bottom d-flex justify-content-center">
-    {items.map(
-      item => (
-        <MenuLink
-          role={role}
-          key={item.key}
-          link={item}
-          handleMenuClick={handleMenuClick}
-          isActive={activeItems[item.key]}
-        />
-      ),
-    )
-    }
+    {items.map(item => (
+      <MenuLink
+        role={role}
+        key={arrayKey(item)}
+        link={item}
+        handleMenuClick={handleMenuClick}
+        isActive={activeItems[item.key]}
+      />
+    ))}
   </div>
 );
 
@@ -33,9 +29,9 @@ Menu.propTypes = {
   role: PropTypes.string.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
   activeItems: PropTypes.shape({
-    fellows: PropTypes.bool.isRequired,
-    settings: PropTypes.bool.isRequired,
-  }).isRequired,
+    fellows: PropTypes.bool,
+    settings: PropTypes.bool
+  }).isRequired
 };
 
 export default Menu;

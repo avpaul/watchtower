@@ -39,7 +39,6 @@ const ManagerHeader = props => {
           <span
             className="notification"
             onClick={showModal}
-            onKeyDown=""
             role="presentation"
           >
             <img
@@ -95,9 +94,9 @@ ManagerHeader.propTypes = {
   renderManagerModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
-  activeItems: PropTypes.func.isRequired,
-  notifications: PropTypes.shape({}).isRequired,
-  unreadnotifications: PropTypes.shape({}).isRequired,
+  activeItems: PropTypes.shape({}).isRequired,
+  notifications: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  unreadnotifications: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired

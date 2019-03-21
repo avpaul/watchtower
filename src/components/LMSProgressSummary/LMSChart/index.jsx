@@ -5,7 +5,7 @@ import LMSChartOverview from './LMSChartOverview';
 import Timeline from './Timeline';
 import './LMSChart.css';
 
-const chartOverview = (lmsSummary, allOutputs) => {
+export const chartOverview = (lmsSummary, allOutputs) => {
   const numOfOutputsSubmitted = lmsSummary.data
     ? lmsSummary.data[0].number_of_outputs_submitted
     : 0;
@@ -35,7 +35,7 @@ const sortOutputs = allSubmissions => {
   return sortedOutputs;
 };
 
-const formatOutputs = outputs => {
+export const formatOutputs = outputs => {
   const allSubmissionsFormatted = outputs
     ? outputs.map(item =>
         //eslint-disable-line

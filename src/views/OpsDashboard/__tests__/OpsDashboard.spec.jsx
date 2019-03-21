@@ -51,7 +51,8 @@ describe('OpsDashboardMain component', () => {
       displayManagers: 'LF',
       managerFellowSortRatio: 'HIGH_TO_LOW',
       averageFellowsPerLf: 22,
-      averageFellowsPerTtl: 20
+      averageFellowsPerTtl: 20,
+      user: { name: 'test', picture: 'http://' }
     };
 
     const wrapper = shallow(<OpsDashboardMain {...props} />);

@@ -16,6 +16,19 @@ const formatProjects = projects => {
   return result;
 };
 
+const renderProjectCards = (projectsCard, handleCardClick) =>
+  projectsCard.map(projectCard => (
+    <div className="p-1" key={projectCard.title}>
+      <FilterCard
+        key={projectCard.title}
+        filterId={projectCard.title}
+        cardDetails={projectCard}
+        className="card"
+        onClick={handleCardClick}
+      />
+    </div>
+  ));
+
 const ProjectsSummary = props => {
   const {
     handleCardClick,
@@ -31,17 +44,7 @@ const ProjectsSummary = props => {
         {!loading ? (
           <div className="row ops-dashboard__filter">
             <Slider {...carouselOptions(4)}>
-              {projectsCard.map(projectCard => (
-                <div className="p-1">
-                  <FilterCard
-                    key={projectCard.title}
-                    filterId={projectCard.title}
-                    cardDetails={projectCard}
-                    className="card"
-                    onClick={handleCardClick}
-                  />
-                </div>
-              ))}
+              {renderProjectCards(projectsCard, handleCardClick)}
             </Slider>
           </div>
         ) : (

@@ -19,7 +19,7 @@ const ProjectCard = ({ data, Id }) => (
 
 ProjectCard.propTypes = {
   Id: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired
+  data: PropTypes.shape().isRequired
 };
 
 export default ProjectCard;

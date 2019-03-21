@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import Cell from '../../TableComponents/Cell';
 import Row from '../../TableComponents/Row';
 
@@ -18,12 +19,14 @@ const formatRating = rating => {
 
 const DevPulseRow = ({ rating }) => (
   <Row>
-    {Object.keys(formatRating(rating)).map(key => {
-      if (rating[key] < 1) {
-        return <Cell addedClass="text-danger">{rating[key]}</Cell>;
-      }
-      return <Cell>{rating[key]}</Cell>;
-    })}
+    {Object.keys(formatRating(rating)).map(key => (
+      <Cell
+        key={arrayKey({ key })}
+        addedClass={rating[key] < 1 ? 'text-danger' : null}
+      >
+        {rating[key]}
+      </Cell>
+    ))}
   </Row>
 );
 

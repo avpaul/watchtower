@@ -13,7 +13,14 @@ const RenderItem = ({ title, children }) => (
 
 RenderItem.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+};
+
+RenderItem.defaultProps = {
+  children: ''
 };
 
 export default RenderItem;

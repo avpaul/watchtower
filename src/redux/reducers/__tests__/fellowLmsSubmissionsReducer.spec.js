@@ -8,7 +8,7 @@ import {
 it('should return the initial state for unknown action type', () => {
   expect(fellowLmsSubmissionsReducer(undefined, {})).toEqual({
     loading: false,
-    lmsSubmissions: [],
+    lmsSubmissions: {},
     error: null
   });
 });
@@ -17,7 +17,7 @@ it('should set loading state on fetching submissions data', () => {
   const newState = {
     loading: true,
     error: null,
-    lmsSubmissions: []
+    lmsSubmissions: {}
   };
   const action = { type: LOAD_FELLOW_LMS_SUBMISSIONS_REQUEST };
   expect(fellowLmsSubmissionsReducer(undefined, action)).toMatchObject(
@@ -28,12 +28,12 @@ it('should set loading state on fetching submissions data', () => {
 it('should add fetched submissions to state', () => {
   const newState = {
     loading: false,
-    lmsSubmissions: [],
+    lmsSubmissions: {},
     error: null
   };
   const action = {
     type: LOAD_FELLOW_LMS_SUBMISSIONS_SUCCESS,
-    lmsSubmissions: [],
+    lmsSubmissions: {},
     error: null
   };
 
@@ -46,7 +46,7 @@ it('should add the error message on failing to fetch submissions', () => {
   const newState = {
     loading: false,
     error: { message: 'error' },
-    lmsSubmissions: []
+    lmsSubmissions: {}
   };
   const action = {
     type: LOAD_FELLOW_LMS_SUBMISSIONS_FAILURE,

@@ -36,7 +36,14 @@ describe('FellowsSummaryChartContainer', () => {
     const mockStore = configureStore();
     const store = mockStore(state);
     const wrapper = shallow(
-      <FellowsSummaryChartContainer store={store} {...state} />
+      <FellowsSummaryChartContainer
+        store={store}
+        {...state}
+        user={{
+          name: 'Test User',
+          picture: 'http://'
+        }}
+      />
     );
     expect(wrapper.props().fellowsSummary).toBeDefined();
   });

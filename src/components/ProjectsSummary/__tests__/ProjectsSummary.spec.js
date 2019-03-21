@@ -27,7 +27,8 @@ const setup = () => {
         WatchTower: 3
       }
     },
-    handleCardClick: jest.fn()
+    handleCardClick: jest.fn(),
+    loading: false
   };
 
   const wrapper = shallow(<ProjectsSummary {...props} />);

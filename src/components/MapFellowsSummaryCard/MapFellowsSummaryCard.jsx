@@ -71,7 +71,7 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => (
 );
 
 MapFellowsSummary.propTypes = {
-  fellowsSummaryCardDetails: PropTypes.shape([]).isRequired,
+  fellowsSummaryCardDetails: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   handleClick: PropTypes.func.isRequired
 };
 

@@ -175,52 +175,46 @@ export class FellowHistory extends Component {
     history.push(`/dashboard/fellows/pip/activation/${name}`);
   };
 
-  renderFellowHistory = (
-    fellow,
-    showDevpulseTable,
-    showLmsTable,
-    ratings,
-    ratingsLoading,
-    lmsLoading,
-    lmsSubmissions
-  ) => (
-    <div className="fellow-history container-fluid">
-      <div className="fellow-history__top row">
-        <div className="col">
-          <div className="row">
-            <span className="fellow-history__header col">
-              DEVELOPER HISTORY
-            </span>
-          </div>
-          <div className="row">{this.renderCards(fellow)}</div>
-          <div>{this.loadPipActivationForm()}</div>
-          <div className="row">
-            <div className="col-12 mt-5">
-              {showDevpulseTable && (
-                <DevPulseTable loading={ratingsLoading} ratings={ratings} />
-              )}
-              {showLmsTable && (
-                <LmsTable
-                  loading={lmsLoading}
-                  lmsSubmissions={lmsSubmissions}
-                />
-              )}
+  renderTables = () => {
+    const { ratings, ratingsLoading, lmsLoading, lmsSubmissions } = this.props;
+    const { showDevpulseTable, showLmsTable } = this.state;
+
+    return (
+      <div className="col-12 mt-5">
+        {showDevpulseTable && (
+          <DevPulseTable loading={ratingsLoading} ratings={ratings} />
+        )}
+        {showLmsTable && (
+          <LmsTable loading={lmsLoading} lmsSubmissions={lmsSubmissions} />
+        )}
+      </div>
+    );
+  };
+
+  renderFellowHistory = () => {
+    const { fellow } = this.state;
+
+    return (
+      <div className="fellow-history container-fluid">
+        <div className="fellow-history__top row">
+          <div className="col">
+            <div className="row">
+              <span className="fellow-history__header col">
+                DEVELOPER HISTORY
+              </span>
             </div>
+            <div className="row">{this.renderCards(fellow)}</div>
+            <div>{this.loadPipActivationForm()}</div>
+            <div className="row">{this.renderTables()}</div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   render() {
-    const {
-      ratings,
-      ratingsLoading,
-      averageRatings,
-      lmsLoading,
-      lmsSubmissions
-    } = this.props;
-    const { fellow, showDevpulseTable, showLmsTable } = this.state;
+    const { averageRatings } = this.props;
+    const { fellow } = this.state;
 
     return (
       <Switch>
@@ -235,17 +229,7 @@ export class FellowHistory extends Component {
         />
         <Route
           path="/dashboard/fellows/:name"
-          render={() =>
-            this.renderFellowHistory(
-              fellow,
-              showDevpulseTable,
-              showLmsTable,
-              ratings,
-              ratingsLoading,
-              lmsLoading,
-              lmsSubmissions
-            )
-          }
+          render={() => this.renderFellowHistory()}
         />
       </Switch>
     );
@@ -254,13 +238,13 @@ export class FellowHistory extends Component {
 
 FellowHistory.propTypes = {
   match: PropTypes.shape().isRequired,
-  fellowSummaryDetails: PropTypes.shape().isRequired,
+  fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   history: PropTypes.shape().isRequired,
-  lmsSubmissions: PropTypes.shape([]).isRequired,
-  lmsLoading: PropTypes.shape({}).isRequired,
+  lmsSubmissions: PropTypes.PropTypes.shape({}).isRequired,
+  lmsLoading: PropTypes.bool.isRequired,
   getLmsSubmissions: PropTypes.func.isRequired,
-  ratings: PropTypes.shape([]).isRequired,
-  ratingsLoading: PropTypes.shape({}).isRequired,
+  ratings: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  ratingsLoading: PropTypes.bool.isRequired,
   getFellowDevPulse: PropTypes.func.isRequired,
   averageRatings: PropTypes.shape({}).isRequired
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import FellowFilterCard from '../FellowFilterCard';
 
 /**
@@ -68,6 +69,7 @@ const MapFellowsFilterCard = ({
             isTicked={isTicked}
             handleCardClick={handleCardClick}
             filterKey={display}
+            key={arrayKey({ fellows })}
           />
         ))}
       </div>
@@ -84,10 +86,10 @@ const MapFellowsFilterCard = ({
  * @property isTicked - string
  */
 MapFellowsFilterCard.propTypes = {
-  fellowSummaryDetails: PropTypes.shape([]).isRequired,
+  fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   display: PropTypes.string.isRequired,
   handleCardClick: PropTypes.func.isRequired,
-  isTicked: PropTypes.string.isRequired
+  isTicked: PropTypes.shape({}).isRequired
 };
 
 export default MapFellowsFilterCard;

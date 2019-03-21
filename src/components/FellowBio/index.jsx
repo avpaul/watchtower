@@ -21,8 +21,8 @@ export class FellowBio extends Component {
     return (
       <Fragment>
         <div className="row fellow-bio-container justify-content-between">
-          <BioCard data={fellow} />
-          <ProjectCard data={fellow} />
+          <BioCard data={fellow} Id={`fellow-${fellow.email}`} />
+          <ProjectCard data={fellow} Id={`fellow-${fellow.email}`} />
         </div>
       </Fragment>
     );
@@ -31,7 +31,7 @@ export class FellowBio extends Component {
 
 FellowBio.propTypes = {
   getFellowBioAction: PropTypes.func.isRequired,
-  fellow: PropTypes.string.isRequired,
+  fellow: PropTypes.shape().isRequired,
   user: PropTypes.shape({
     email: PropTypes.string.isRequired
   }).isRequired

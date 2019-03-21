@@ -12101,6 +12101,13 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
+weak-key@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/weak-key/-/weak-key-1.0.1.tgz#a8f8faa4ba211ceb1e34dbd198da942245213f2b"
+  integrity sha512-HgISuSXCBGIDQf4Hzm7wkVoW6BPLzi1sJPoiiDSxERsbA0Ut8TJVDMbho+Q3RVGyCmW0MHKdcCnNVcPh0iJ0gA==
+  dependencies:
+    core-js "^2.4.0"
+
 webidl-conversions@^3.0.0, webidl-conversions@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"

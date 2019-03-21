@@ -38,7 +38,6 @@ const FellowHeader = props => {
           <span
             className="notification"
             onClick={showModal}
-            onKeyDown=""
             role="presentation"
           >
             <img
@@ -94,7 +93,7 @@ FellowHeader.propTypes = {
   renderModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
-  activeItems: PropTypes.func.isRequired,
+  activeItems: PropTypes.shape({}).isRequired,
   notifications: PropTypes.shape({}).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
   user: PropTypes.shape({

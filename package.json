@@ -60,13 +60,16 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "source-map-explorer": "^1.6.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.1",
+    "weak-key": "^1.0.1"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
+    "test:coverage": "react-scripts test --env=jsdom --silent --coverage",
+    "test:debug": "react-scripts test --env=jsdom --runInBand --verbose --expand --debug",
     "eject": "react-scripts eject",
     "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
     "lint": "eslint 'src/**' -c .eslintrc.json",

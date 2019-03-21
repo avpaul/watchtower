@@ -87,6 +87,7 @@ ShallowWrapper {
                                                             className="form-control fellow-details-input"
                                                             id="KINGSLEY OBOT"
                                                             name="KINGSLEY OBOT"
+                                                            onChange={[Function]}
                                                             type="text"
                                                             value="KINGSLEY OBOT"
                                                   />
@@ -103,6 +104,7 @@ ShallowWrapper {
                                                             className="form-control fellow-details-input"
                                                             id="TDD"
                                                             name="TDD"
+                                                            onChange={[Function]}
                                                             type="text"
                                                             value="TDD"
                                                   />
@@ -189,7 +191,7 @@ ShallowWrapper {
                                                                       previousMonthButtonLabel="Previous Month"
                                                                       readOnly={false}
                                                                       renderDayContents={[Function]}
-                                                                      selected="2019-01-01"
+                                                                      selected={2019-01-01T16:00:00.000Z}
                                                                       shouldCloseOnSelect={true}
                                                                       showTimeSelect={false}
                                                                       timeCaption="Time"
@@ -306,6 +308,7 @@ ShallowWrapper {
                                                             className="form-control fellow-details-input"
                                                             id="KINGSLEY OBOT"
                                                             name="KINGSLEY OBOT"
+                                                            onChange={[Function]}
                                                             type="text"
                                                             value="KINGSLEY OBOT"
                                                 />
@@ -322,6 +325,7 @@ ShallowWrapper {
                                                             className="form-control fellow-details-input"
                                                             id="TDD"
                                                             name="TDD"
+                                                            onChange={[Function]}
                                                             type="text"
                                                             value="TDD"
                                                 />
@@ -408,7 +412,7 @@ ShallowWrapper {
                                                                         previousMonthButtonLabel="Previous Month"
                                                                         readOnly={false}
                                                                         renderDayContents={[Function]}
-                                                                        selected="2019-01-01"
+                                                                        selected={2019-01-01T16:00:00.000Z}
                                                                         shouldCloseOnSelect={true}
                                                                         showTimeSelect={false}
                                                                         timeCaption="Time"
@@ -501,6 +505,7 @@ ShallowWrapper {
                                                         className="form-control fellow-details-input"
                                                         id="KINGSLEY OBOT"
                                                         name="KINGSLEY OBOT"
+                                                        onChange={[Function]}
                                                         type="text"
                                                         value="KINGSLEY OBOT"
                                           />
@@ -517,6 +522,7 @@ ShallowWrapper {
                                                         className="form-control fellow-details-input"
                                                         id="TDD"
                                                         name="TDD"
+                                                        onChange={[Function]}
                                                         type="text"
                                                         value="TDD"
                                           />
@@ -603,7 +609,7 @@ ShallowWrapper {
                                                                       previousMonthButtonLabel="Previous Month"
                                                                       readOnly={false}
                                                                       renderDayContents={[Function]}
-                                                                      selected="2019-01-01"
+                                                                      selected={2019-01-01T16:00:00.000Z}
                                                                       shouldCloseOnSelect={true}
                                                                       showTimeSelect={false}
                                                                       timeCaption="Time"
@@ -693,6 +699,7 @@ ShallowWrapper {
                                                       className="form-control fellow-details-input"
                                                       id="KINGSLEY OBOT"
                                                       name="KINGSLEY OBOT"
+                                                      onChange={[Function]}
                                                       type="text"
                                                       value="KINGSLEY OBOT"
                                     />
@@ -709,6 +716,7 @@ ShallowWrapper {
                                                       className="form-control fellow-details-input"
                                                       id="TDD"
                                                       name="TDD"
+                                                      onChange={[Function]}
                                                       type="text"
                                                       value="TDD"
                                     />
@@ -795,7 +803,7 @@ ShallowWrapper {
                                                                         previousMonthButtonLabel="Previous Month"
                                                                         readOnly={false}
                                                                         renderDayContents={[Function]}
-                                                                        selected="2019-01-01"
+                                                                        selected={2019-01-01T16:00:00.000Z}
                                                                         shouldCloseOnSelect={true}
                                                                         showTimeSelect={false}
                                                                         timeCaption="Time"
@@ -883,6 +891,7 @@ ShallowWrapper {
                                             className="form-control fellow-details-input"
                                             id="KINGSLEY OBOT"
                                             name="KINGSLEY OBOT"
+                                            onChange={[Function]}
                                             type="text"
                                             value="KINGSLEY OBOT"
                       />
@@ -899,6 +908,7 @@ ShallowWrapper {
                                             className="form-control fellow-details-input"
                                             id="TDD"
                                             name="TDD"
+                                            onChange={[Function]}
                                             type="text"
                                             value="TDD"
                       />
@@ -923,6 +933,7 @@ ShallowWrapper {
                           className="form-control fellow-details-input"
                           id="KINGSLEY OBOT"
                           name="KINGSLEY OBOT"
+                          onChange={[Function]}
                           type="text"
                           value="KINGSLEY OBOT"
 />,
@@ -951,6 +962,7 @@ ShallowWrapper {
                           "className": "form-control fellow-details-input",
                           "id": "KINGSLEY OBOT",
                           "name": "KINGSLEY OBOT",
+                          "onChange": [Function],
                           "type": "text",
                           "value": "KINGSLEY OBOT",
                         },
@@ -976,6 +988,7 @@ ShallowWrapper {
                           className="form-control fellow-details-input"
                           id="TDD"
                           name="TDD"
+                          onChange={[Function]}
                           type="text"
                           value="TDD"
 />,
@@ -1004,6 +1017,7 @@ ShallowWrapper {
                           "className": "form-control fellow-details-input",
                           "id": "TDD",
                           "name": "TDD",
+                          "onChange": [Function],
                           "type": "text",
                           "value": "TDD",
                         },
@@ -1205,7 +1219,7 @@ ShallowWrapper {
                                                                   previousMonthButtonLabel="Previous Month"
                                                                   readOnly={false}
                                                                   renderDayContents={[Function]}
-                                                                  selected="2019-01-01"
+                                                                  selected={2019-01-01T16:00:00.000Z}
                                                                   shouldCloseOnSelect={true}
                                                                   showTimeSelect={false}
                                                                   timeCaption="Time"
@@ -1301,7 +1315,7 @@ ShallowWrapper {
                                                     previousMonthButtonLabel="Previous Month"
                                                     readOnly={false}
                                                     renderDayContents={[Function]}
-                                                    selected="2019-01-01"
+                                                    selected={2019-01-01T16:00:00.000Z}
                                                     shouldCloseOnSelect={true}
                                                     showTimeSelect={false}
                                                     timeCaption="Time"
@@ -1368,7 +1382,7 @@ ShallowWrapper {
                               previousMonthButtonLabel="Previous Month"
                               readOnly={false}
                               renderDayContents={[Function]}
-                              selected="2019-01-01"
+                              selected={2019-01-01T16:00:00.000Z}
                               shouldCloseOnSelect={true}
                               showTimeSelect={false}
                               timeCaption="Time"
@@ -1419,7 +1433,7 @@ ShallowWrapper {
                               "previousMonthButtonLabel": "Previous Month",
                               "readOnly": false,
                               "renderDayContents": [Function],
-                              "selected": "2019-01-01",
+                              "selected": 2019-01-01T16:00:00.000Z,
                               "shouldCloseOnSelect": true,
                               "showTimeSelect": false,
                               "timeCaption": "Time",
@@ -1683,6 +1697,7 @@ ShallowWrapper {
                                                                         className="form-control fellow-details-input"
                                                                         id="KINGSLEY OBOT"
                                                                         name="KINGSLEY OBOT"
+                                                                        onChange={[Function]}
                                                                         type="text"
                                                                         value="KINGSLEY OBOT"
                                                             />
@@ -1699,6 +1714,7 @@ ShallowWrapper {
                                                                         className="form-control fellow-details-input"
                                                                         id="TDD"
                                                                         name="TDD"
+                                                                        onChange={[Function]}
                                                                         type="text"
                                                                         value="TDD"
                                                             />
@@ -1785,7 +1801,7 @@ ShallowWrapper {
                                                                                     previousMonthButtonLabel="Previous Month"
                                                                                     readOnly={false}
                                                                                     renderDayContents={[Function]}
-                                                                                    selected="2019-01-01"
+                                                                                    selected={2019-01-01T16:00:00.000Z}
                                                                                     shouldCloseOnSelect={true}
                                                                                     showTimeSelect={false}
                                                                                     timeCaption="Time"
@@ -1902,6 +1918,7 @@ ShallowWrapper {
                                                                       className="form-control fellow-details-input"
                                                                       id="KINGSLEY OBOT"
                                                                       name="KINGSLEY OBOT"
+                                                                      onChange={[Function]}
                                                                       type="text"
                                                                       value="KINGSLEY OBOT"
                                                         />
@@ -1918,6 +1935,7 @@ ShallowWrapper {
                                                                       className="form-control fellow-details-input"
                                                                       id="TDD"
                                                                       name="TDD"
+                                                                      onChange={[Function]}
                                                                       type="text"
                                                                       value="TDD"
                                                         />
@@ -2004,7 +2022,7 @@ ShallowWrapper {
                                                                                     previousMonthButtonLabel="Previous Month"
                                                                                     readOnly={false}
                                                                                     renderDayContents={[Function]}
-                                                                                    selected="2019-01-01"
+                                                                                    selected={2019-01-01T16:00:00.000Z}
                                                                                     shouldCloseOnSelect={true}
                                                                                     showTimeSelect={false}
                                                                                     timeCaption="Time"
@@ -2097,6 +2115,7 @@ ShallowWrapper {
                                                                 className="form-control fellow-details-input"
                                                                 id="KINGSLEY OBOT"
                                                                 name="KINGSLEY OBOT"
+                                                                onChange={[Function]}
                                                                 type="text"
                                                                 value="KINGSLEY OBOT"
                                                 />
@@ -2113,6 +2132,7 @@ ShallowWrapper {
                                                                 className="form-control fellow-details-input"
                                                                 id="TDD"
                                                                 name="TDD"
+                                                                onChange={[Function]}
                                                                 type="text"
                                                                 value="TDD"
                                                 />
@@ -2199,7 +2219,7 @@ ShallowWrapper {
                                                                                 previousMonthButtonLabel="Previous Month"
                                                                                 readOnly={false}
                                                                                 renderDayContents={[Function]}
-                                                                                selected="2019-01-01"
+                                                                                selected={2019-01-01T16:00:00.000Z}
                                                                                 shouldCloseOnSelect={true}
                                                                                 showTimeSelect={false}
                                                                                 timeCaption="Time"
@@ -2289,6 +2309,7 @@ ShallowWrapper {
                                                             className="form-control fellow-details-input"
                                                             id="KINGSLEY OBOT"
                                                             name="KINGSLEY OBOT"
+                                                            onChange={[Function]}
                                                             type="text"
                                                             value="KINGSLEY OBOT"
                                         />
@@ -2305,6 +2326,7 @@ ShallowWrapper {
                                                             className="form-control fellow-details-input"
                                                             id="TDD"
                                                             name="TDD"
+                                                            onChange={[Function]}
                                                             type="text"
                                                             value="TDD"
                                         />
@@ -2391,7 +2413,7 @@ ShallowWrapper {
                                                                                 previousMonthButtonLabel="Previous Month"
                                                                                 readOnly={false}
                                                                                 renderDayContents={[Function]}
-                                                                                selected="2019-01-01"
+                                                                                selected={2019-01-01T16:00:00.000Z}
                                                                                 shouldCloseOnSelect={true}
                                                                                 showTimeSelect={false}
                                                                                 timeCaption="Time"
@@ -2479,6 +2501,7 @@ ShallowWrapper {
                                                 className="form-control fellow-details-input"
                                                 id="KINGSLEY OBOT"
                                                 name="KINGSLEY OBOT"
+                                                onChange={[Function]}
                                                 type="text"
                                                 value="KINGSLEY OBOT"
                         />
@@ -2495,6 +2518,7 @@ ShallowWrapper {
                                                 className="form-control fellow-details-input"
                                                 id="TDD"
                                                 name="TDD"
+                                                onChange={[Function]}
                                                 type="text"
                                                 value="TDD"
                         />
@@ -2519,6 +2543,7 @@ ShallowWrapper {
                             className="form-control fellow-details-input"
                             id="KINGSLEY OBOT"
                             name="KINGSLEY OBOT"
+                            onChange={[Function]}
                             type="text"
                             value="KINGSLEY OBOT"
 />,
@@ -2547,6 +2572,7 @@ ShallowWrapper {
                             "className": "form-control fellow-details-input",
                             "id": "KINGSLEY OBOT",
                             "name": "KINGSLEY OBOT",
+                            "onChange": [Function],
                             "type": "text",
                             "value": "KINGSLEY OBOT",
                           },
@@ -2572,6 +2598,7 @@ ShallowWrapper {
                             className="form-control fellow-details-input"
                             id="TDD"
                             name="TDD"
+                            onChange={[Function]}
                             type="text"
                             value="TDD"
 />,
@@ -2600,6 +2627,7 @@ ShallowWrapper {
                             "className": "form-control fellow-details-input",
                             "id": "TDD",
                             "name": "TDD",
+                            "onChange": [Function],
                             "type": "text",
                             "value": "TDD",
                           },
@@ -2801,7 +2829,7 @@ ShallowWrapper {
                                                                         previousMonthButtonLabel="Previous Month"
                                                                         readOnly={false}
                                                                         renderDayContents={[Function]}
-                                                                        selected="2019-01-01"
+                                                                        selected={2019-01-01T16:00:00.000Z}
                                                                         shouldCloseOnSelect={true}
                                                                         showTimeSelect={false}
                                                                         timeCaption="Time"
@@ -2897,7 +2925,7 @@ ShallowWrapper {
                                                         previousMonthButtonLabel="Previous Month"
                                                         readOnly={false}
                                                         renderDayContents={[Function]}
-                                                        selected="2019-01-01"
+                                                        selected={2019-01-01T16:00:00.000Z}
                                                         shouldCloseOnSelect={true}
                                                         showTimeSelect={false}
                                                         timeCaption="Time"
@@ -2964,7 +2992,7 @@ ShallowWrapper {
                                 previousMonthButtonLabel="Previous Month"
                                 readOnly={false}
                                 renderDayContents={[Function]}
-                                selected="2019-01-01"
+                                selected={2019-01-01T16:00:00.000Z}
                                 shouldCloseOnSelect={true}
                                 showTimeSelect={false}
                                 timeCaption="Time"
@@ -3015,7 +3043,7 @@ ShallowWrapper {
                                 "previousMonthButtonLabel": "Previous Month",
                                 "readOnly": false,
                                 "renderDayContents": [Function],
-                                "selected": "2019-01-01",
+                                "selected": 2019-01-01T16:00:00.000Z,
                                 "shouldCloseOnSelect": true,
                                 "showTimeSelect": false,
                                 "timeCaption": "Time",

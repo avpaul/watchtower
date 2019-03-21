@@ -7,11 +7,11 @@ ShallowWrapper {
     lmsSubmission={
         Object {
             "course_id": 132,
-            "due_date": "02/03/19",
-            "graded_date": "02/03/19",
+            "due_date": "2018-12-14T13:59:00Z",
+            "graded_date": "2018-12-14T13:59:00Z",
             "name": "test course",
             "score": 2,
-            "submission_date": "02/03/19",
+            "submission_date": "2018-12-14T13:59:00Z",
           }
     }
 />,
@@ -45,19 +45,19 @@ ShallowWrapper {
           addedClass=""
           title=""
 >
-          02/03/2019
+          12/14/2018
 </Cell>,
         <Cell
           addedClass=""
           title=""
 >
-          02/03/2019
+          12/14/2018
 </Cell>,
         <Cell
           addedClass=""
           title=""
 >
-          02/03/2019
+          12/14/2018
 </Cell>,
         <Cell
           addedClass=""
@@ -72,7 +72,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-0",
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
@@ -85,7 +85,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-1",
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
@@ -98,46 +98,46 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-2",
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
-          "children": "02/03/2019",
+          "children": "12/14/2018",
           "title": "",
         },
         "ref": null,
-        "rendered": "02/03/2019",
+        "rendered": "12/14/2018",
         "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-3",
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
-          "children": "02/03/2019",
+          "children": "12/14/2018",
           "title": "",
         },
         "ref": null,
-        "rendered": "02/03/2019",
+        "rendered": "12/14/2018",
         "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-4",
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
-          "children": "02/03/2019",
+          "children": "12/14/2018",
           "title": "",
         },
         "ref": null,
-        "rendered": "02/03/2019",
+        "rendered": "12/14/2018",
         "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-5",
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
@@ -174,19 +174,19 @@ ShallowWrapper {
             addedClass=""
             title=""
 >
-            02/03/2019
+            12/14/2018
 </Cell>,
           <Cell
             addedClass=""
             title=""
 >
-            02/03/2019
+            12/14/2018
 </Cell>,
           <Cell
             addedClass=""
             title=""
 >
-            02/03/2019
+            12/14/2018
 </Cell>,
           <Cell
             addedClass=""
@@ -201,7 +201,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-0",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",
@@ -214,7 +214,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-1",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",
@@ -227,46 +227,46 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-2",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",
-            "children": "02/03/2019",
+            "children": "12/14/2018",
             "title": "",
           },
           "ref": null,
-          "rendered": "02/03/2019",
+          "rendered": "12/14/2018",
           "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-3",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",
-            "children": "02/03/2019",
+            "children": "12/14/2018",
             "title": "",
           },
           "ref": null,
-          "rendered": "02/03/2019",
+          "rendered": "12/14/2018",
           "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-4",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",
-            "children": "02/03/2019",
+            "children": "12/14/2018",
             "title": "",
           },
           "ref": null,
-          "rendered": "02/03/2019",
+          "rendered": "12/14/2018",
           "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-5",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",

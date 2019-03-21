@@ -7,9 +7,7 @@ export const Modal = ({ show, children }) => {
 
   return (
     <div className={showHideClassName}>
-      <section className="modal-main">
-        {children}
-      </section>
+      <section className="modal-main">{children}</section>
     </div>
   );
 };
@@ -18,8 +16,11 @@ export default Modal;
 
 function newFunction() {
   Modal.propTypes = {
-    show: PropTypes.string.isRequired,
-    children: PropTypes.objectOf.isRequired,
+    show: PropTypes.bool.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ]).isRequired
   };
 }
 

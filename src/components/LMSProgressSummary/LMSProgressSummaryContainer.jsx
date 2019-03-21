@@ -5,7 +5,7 @@ import getLmsSubmissions from '../../redux/actionCreators/fellowLmsSubmissionsAc
 
 export const mapStateToProps = state => ({
   lmsSummary: state.fellowLmsSummary.lmsSummary,
-  lmsSubmissions: state.fellowLmsSubmissions.lmsSubmissions.data
+  lmsSubmissions: state.fellowLmsSubmissions.lmsSubmissions
 });
 
 const mapDispatchToProps = dispatch => ({

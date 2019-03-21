@@ -7,8 +7,10 @@ describe('AreaOfConcernInput component', () => {
   const mockStore = configureMockStore();
   let wrapper;
   const props = {
-    attribute: 'Quality',
-    handleChange: jest.fn()
+    title: 'Quality',
+    handleChange: jest.fn(),
+    areaOfConcern: 'Quality',
+    id: 'description'
   };
 
   beforeEach(() => {

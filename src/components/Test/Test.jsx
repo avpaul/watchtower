@@ -15,16 +15,15 @@ export class Test extends Component {
   }
 
   render() {
-    return (
-      <div>
-        This is a test
-      </div>
-    );
+    return <div>This is a test</div>;
   }
 }
 
 Test.propTypes = {
-  testRedux: PropTypes.func.isRequired,
+  testRedux: PropTypes.func.isRequired
 };
 
-export default connect(null, { testRedux: test })(Test);
+export default connect(
+  null,
+  { testRedux: test }
+)(Test);

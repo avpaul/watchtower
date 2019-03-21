@@ -31,31 +31,31 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Cell
-          addedClass=""
+          addedClass={null}
           title=""
 >
           1
 </Cell>,
         <Cell
-          addedClass=""
+          addedClass={null}
           title=""
 >
           1
 </Cell>,
         <Cell
-          addedClass=""
+          addedClass={null}
           title=""
 >
           2
 </Cell>,
         <Cell
-          addedClass=""
+          addedClass={null}
           title=""
 >
           2
 </Cell>,
         <Cell
-          addedClass=""
+          addedClass={null}
           title=""
 >
           2
@@ -75,10 +75,10 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-0",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "",
+          "addedClass": null,
           "children": 1,
           "title": "",
         },
@@ -88,10 +88,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-1",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "",
+          "addedClass": null,
           "children": 1,
           "title": "",
         },
@@ -101,10 +101,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-2",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "",
+          "addedClass": null,
           "children": 2,
           "title": "",
         },
@@ -114,10 +114,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-3",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "",
+          "addedClass": null,
           "children": 2,
           "title": "",
         },
@@ -127,10 +127,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-4",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "",
+          "addedClass": null,
           "children": 2,
           "title": "",
         },
@@ -140,7 +140,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-5",
         "nodeType": "function",
         "props": Object {
           "addedClass": "text-danger",
@@ -153,7 +153,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "weak-key-6",
         "nodeType": "function",
         "props": Object {
           "addedClass": "text-danger",
@@ -175,31 +175,31 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Cell
-            addedClass=""
+            addedClass={null}
             title=""
 >
             1
 </Cell>,
           <Cell
-            addedClass=""
+            addedClass={null}
             title=""
 >
             1
 </Cell>,
           <Cell
-            addedClass=""
+            addedClass={null}
             title=""
 >
             2
 </Cell>,
           <Cell
-            addedClass=""
+            addedClass={null}
             title=""
 >
             2
 </Cell>,
           <Cell
-            addedClass=""
+            addedClass={null}
             title=""
 >
             2
@@ -219,10 +219,10 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-0",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "",
+            "addedClass": null,
             "children": 1,
             "title": "",
           },
@@ -232,10 +232,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-1",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "",
+            "addedClass": null,
             "children": 1,
             "title": "",
           },
@@ -245,10 +245,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-2",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "",
+            "addedClass": null,
             "children": 2,
             "title": "",
           },
@@ -258,10 +258,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-3",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "",
+            "addedClass": null,
             "children": 2,
             "title": "",
           },
@@ -271,10 +271,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-4",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "",
+            "addedClass": null,
             "children": 2,
             "title": "",
           },
@@ -284,7 +284,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-5",
           "nodeType": "function",
           "props": Object {
             "addedClass": "text-danger",
@@ -297,7 +297,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "weak-key-6",
           "nodeType": "function",
           "props": Object {
             "addedClass": "text-danger",

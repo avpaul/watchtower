@@ -41,7 +41,7 @@ class EngineeringManagerDashboard extends Component {
     } = this.props;
     if (user.roles.WATCH_TOWER_EM) {
       getEngineeringManagerTtls(user.email).then(data => {
-        if (!data.error) {
+        if (!data.error && data.data) {
           this.setState({
             ttls: data.data.engineeringManager.ttls,
             averageFellowsPerTtl: data.data.averageFellowsPerTtl,
@@ -227,6 +227,7 @@ class EngineeringManagerDashboard extends Component {
             handleChartClose={this.handleChartClose}
             data={chartData}
             user={user}
+            loading={fellowsSummary.loading || false}
           />
         )}
 
@@ -254,7 +255,7 @@ EngineeringManagerDashboard.propTypes = {
   fetchFellowsSummarySl: PropTypes.func.isRequired,
   fetchFellowsSummaryLf: PropTypes.func.isRequired,
   fetchFellowsSummaryTtl: PropTypes.func.isRequired,
-  user: PropTypes.arrayOf.isRequired,
+  user: PropTypes.shape().isRequired,
   getEngineeringManagerTtls: PropTypes.func.isRequired,
   getSimulationsLeadLfs: PropTypes.func.isRequired
 };

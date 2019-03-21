@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import Table from '../TableComponents/Table';
 import Cell from '../TableComponents/Cell';
 import Row from '../TableComponents/Row';
@@ -32,13 +33,13 @@ const DashboardTable = ({ fellows, loading, headers, cellValues }) => {
     <Fragment>
       <Table>
         <Row header>
-          {headers.map(element => (
-            <Cell>{element}</Cell>
+          {headers.map((element, index) => (
+            <Cell key={arrayKey({ element, index })}>{element}</Cell>
           ))}
         </Row>
         {sortFellows(fellows, 'firstName').map(fellow => (
           <DashboardRow
-            key={fellow.id}
+            key={arrayKey(fellow)}
             fellow={fellow}
             fellowCells={fellowCells(fellow)}
           />

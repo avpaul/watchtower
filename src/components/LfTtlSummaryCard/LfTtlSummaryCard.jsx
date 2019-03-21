@@ -69,12 +69,12 @@ const LfTtlSummaryCard = ({
  * @property lfTtlCheckId - mixed
  */
 LfTtlSummaryCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   picture: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   styles: PropTypes.shape({}).isRequired,
-  fellowsCount: PropTypes.string.isRequired,
+  fellowsCount: PropTypes.number.isRequired,
   filterFellows: PropTypes.func.isRequired,
   lfTtlCheckId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired

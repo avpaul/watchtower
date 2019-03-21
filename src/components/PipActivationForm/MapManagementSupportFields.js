@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKeyGen from 'weak-key';
 import ManagementSupportField from './ManagementSupportField';
 
 const MapManagementSupportFields = ({
@@ -11,6 +12,7 @@ const MapManagementSupportFields = ({
   while (count > 0) {
     mgtFieldsArray.push(
       <ManagementSupportField
+        key={arrayKeyGen({ count })}
         handleMgtInputChange={handleMgtInputChange}
         dataKey={count}
       />
@@ -22,7 +24,7 @@ const MapManagementSupportFields = ({
 
 MapManagementSupportFields.propTypes = {
   handleMgtInputChange: PropTypes.func.isRequired,
-  mgtSupportFieldCount: PropTypes.instanceOf.isRequired
+  mgtSupportFieldCount: PropTypes.number.isRequired
 };
 
 export default MapManagementSupportFields;

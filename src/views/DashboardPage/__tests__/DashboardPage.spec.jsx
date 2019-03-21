@@ -13,7 +13,8 @@ describe('Tests Pagination component', () => {
     fellows,
     pagination: {
       page: 1,
-      perPage: 25
+      perPage: 25,
+      currentPage: 1
     },
     getFellows: jest.fn(),
     filter: '',

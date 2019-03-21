@@ -26,7 +26,7 @@ const FellowFilterCard = ({
         : ''
     }`}
     id={cardName}
-    filterKey={filterKey}
+    filterkey={filterKey}
     onClick={handleCardClick}
     onKeyPress={handleCardClick}
     role="button"
@@ -63,7 +63,7 @@ const FellowFilterCard = ({
 FellowFilterCard.propTypes = {
   cardName: PropTypes.string.isRequired,
   numberOfFellows: PropTypes.number.isRequired,
-  isTicked: PropTypes.bool.isRequired,
+  isTicked: PropTypes.shape({}).isRequired,
   handleCardClick: PropTypes.func.isRequired,
   filterKey: PropTypes.string.isRequired
 };

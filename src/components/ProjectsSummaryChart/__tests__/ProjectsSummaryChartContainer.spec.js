@@ -22,8 +22,18 @@ describe('ProjectsSummaryChartContainer', () => {
     };
 
     const mockStore = configureStore();
-    const store = mockStore(state);
-    const wrapper = shallow(<ProjectsSummaryChartContainer store={store} />);
+    const store = mockStore({ ...initialState, ...state });
+    const wrapper = shallow(
+      <ProjectsSummaryChartContainer
+        store={store}
+        user={{
+          name: 'Trust Birungi',
+          email: {
+            includes: jest.fn()
+          }
+        }}
+      />
+    );
     expect(wrapper.props().fetchTtlProjects).toBeDefined();
   });
 });

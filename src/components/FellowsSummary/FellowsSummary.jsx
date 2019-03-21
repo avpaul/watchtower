@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Slider from 'react-slick';
-import { carouselOptions } from '../../utils';
-import FilterCard from '../Filters/FilterCard';
+
+import FiltersView from '../Filters/FiltersView';
 import FellowSummaryLabel from '../FellowSummaryLabel';
 import './FellowsSummary.css';
 
@@ -15,6 +14,19 @@ const formatCards = fellowLevels => {
   }));
   return result;
 };
+
+const filterByRole = (fellowsSummaryCard, displayByRole) =>
+  fellowsSummaryCard.filter(card => {
+    if (!displayByRole) return true;
+    switch (true) {
+      case !!displayByRole.WATCH_TOWER_EM:
+        return card.title === 'D0B';
+      case !!displayByRole.WATCH_TOWER_SL:
+        return card.title === 'D0A';
+      default:
+        return true;
+    }
+  });
 
 const FellowsSummary = props => {
   const {
@@ -30,31 +42,12 @@ const FellowsSummary = props => {
     <div className="ops-dashboard__fellows-summary">
       <FellowSummaryLabel />
       <div className="row ops-dashboard__filter">
-        <Slider {...carouselOptions(3)}>
-          {fellowsSummaryCard
-            .filter(card => {
-              if (!displayByRole) return true;
-              switch (true) {
-                case !!displayByRole.WATCH_TOWER_EM:
-                  return card.title === 'D0B';
-                case !!displayByRole.WATCH_TOWER_SL:
-                  return card.title === 'D0A';
-                default:
-                  return true;
-              }
-            })
-            .map(fellowSummary => (
-              <div className="p-1">
-                <FilterCard
-                  key={fellowSummary.title}
-                  filterId={fellowSummary.title}
-                  cardDetails={fellowSummary}
-                  className="card"
-                  onClick={handleCardClick}
-                />
-              </div>
-            ))}
-        </Slider>
+        <FiltersView
+          handleCardClick={handleCardClick}
+          displayByRole={displayByRole}
+          filters={filterByRole(fellowsSummaryCard, displayByRole)}
+          filterCardClassName="p-1"
+        />
       </div>
     </div>
   );
@@ -63,9 +56,13 @@ const FellowsSummary = props => {
 FellowsSummary.propTypes = {
   displayByRole: PropTypes.objectOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  ).isRequired,
+  ),
   fellowsSummary: PropTypes.instanceOf(Object).isRequired,
   handleCardClick: PropTypes.func.isRequired
+};
+
+FellowsSummary.defaultProps = {
+  displayByRole: null
 };
 
 export default FellowsSummary;

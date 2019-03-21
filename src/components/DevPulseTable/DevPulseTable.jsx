@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
+
 import Table from '../TableComponents/Table';
-import Cell from '../TableComponents/Cell';
-import Row from '../TableComponents/Row';
+import TableHeader from '../TableComponents/Header';
 import Error from '../Error';
 import Loader from '../Loader/Loader';
 import DevPulseRow from './DevPulseRow';
@@ -27,13 +28,9 @@ const DevPulseTable = ({ ratings, loading }) => {
   return (
     <Fragment>
       <Table>
-        <Row header>
-          {headers.map((element, index) => (
-            <Cell Key={index}>{element}</Cell>
-          ))}
-        </Row>
-        {ratings.map((rating, index) => (
-          <DevPulseRow Key={index} rating={rating} />
+        <TableHeader headers={headers} />
+        {ratings.map(rating => (
+          <DevPulseRow key={arrayKey(rating)} rating={rating} />
         ))}
       </Table>
       {loading && <Loader />}

@@ -48,8 +48,12 @@ describe('PipActivationForm component', () => {
   });
 
   it('should render correctly', () => {
-    wrapper.setState({ startDate: '2019-01-01' });
-    expect(wrapper).toMatchSnapshot();
+    wrapper.setState(
+      { startDate: new Date('01 Jan 2019 16:00:00 GMT') },
+      () => {
+        expect(wrapper).toMatchSnapshot();
+      }
+    );
   });
 
   it('should call addManagementSupport() when the addSupport button is clicked', () => {
@@ -69,9 +73,9 @@ describe('PipActivationForm component', () => {
   });
 
   it('should call handleDateChange() when the the calendar is clicked', () => {
-    wrapper.find(DatePicker).simulate('change', '2019-03-08');
-
-    expect(wrapper.state().startDate).toBe('2019-03-08');
+    const newDate = new Date('08 Mat 2019 16:00:00 GMT');
+    wrapper.find(DatePicker).simulate('change', newDate);
+    expect(wrapper.state().startDate).toBe(newDate);
   });
 
   it('should update managementSupport array when a new Management Support has been added', () => {
@@ -93,136 +97,98 @@ describe('PipActivationForm component', () => {
     );
   });
 
-  it('should populate the quality area of concern if AverageRating is < 1  ', () => {
+  const findAreaOfConcernInput = inputIndex =>
     wrapper
       .find(MapAreasOfConcernData)
       .dive()
       .find(AreaOfConcern)
-      .first()
+      .at(inputIndex)
       .dive()
       .find(AreaOfConcernInput)
       .at(1)
       .dive()
-      .find('textarea')
-      .simulate('change', {
-        target: {
-          name: 'description',
-          value: 'Your quality of work below expectations'
-        }
-      });
-    expect(wrapper.state().quality.description).toBe(
-      'Your quality of work below expectations'
+      .find('textarea');
+
+  const testAreaOfConcernInput = (input, target) => {
+    findAreaOfConcernInput(input.index).simulate('change', { target });
+    expect(wrapper.state()[input.name][target.name]).toBe(target.value);
+  };
+
+  it('should populate the quality area of concern if AverageRating is < 1  ', () => {
+    testAreaOfConcernInput(
+      {
+        index: 0,
+        name: 'quality'
+      },
+      {
+        name: 'description',
+        value: 'Your quality of work below expectations'
+      }
     );
   });
 
   it('should populate the quantity area of concern if AverageRating is < 1 ', () => {
-    wrapper
-      .find(MapAreasOfConcernData)
-      .dive()
-      .find(AreaOfConcern)
-      .at(1)
-      .dive()
-      .find(AreaOfConcernInput)
-      .at(1)
-      .dive()
-      .find('textarea')
-      .simulate('change', {
-        target: {
-          name: 'details',
-          value: 'Your delivery is below expectations'
-        }
-      });
-    expect(wrapper.state().quantity.details).toBe(
-      'Your delivery is below expectations'
+    testAreaOfConcernInput(
+      {
+        index: 1,
+        name: 'quantity'
+      },
+      {
+        name: 'details',
+        value: 'Your delivery is below expectations'
+      }
     );
   });
 
   it('should populate the initiative area of concern if AverageRating is < 1 ', () => {
-    wrapper
-      .find(MapAreasOfConcernData)
-      .dive()
-      .find(AreaOfConcern)
-      .at(2)
-      .dive()
-      .find(AreaOfConcernInput)
-      .at(1)
-      .dive()
-      .find('textarea')
-      .simulate('change', {
-        target: {
-          name: 'description',
-          value: 'Your initiative needs improvement'
-        }
-      });
-    expect(wrapper.state().initiative.description).toBe(
-      'Your initiative needs improvement'
+    testAreaOfConcernInput(
+      {
+        index: 2,
+        name: 'initiative'
+      },
+      {
+        name: 'description',
+        value: 'Your initiative needs improvement'
+      }
     );
   });
 
   it('should populate the communication area of concern if AverageRating is < 1 ', () => {
-    wrapper
-      .find(MapAreasOfConcernData)
-      .dive()
-      .find(AreaOfConcern)
-      .at(3)
-      .dive()
-      .find(AreaOfConcernInput)
-      .at(1)
-      .dive()
-      .find('textarea')
-      .simulate('change', {
-        target: {
-          name: 'description',
-          value: 'Your communication skills are lacking'
-        }
-      });
-    expect(wrapper.state().communication.description).toBe(
-      'Your communication skills are lacking'
+    testAreaOfConcernInput(
+      {
+        index: 3,
+        name: 'communication'
+      },
+      {
+        name: 'description',
+        value: 'Your communication skills are lacking'
+      }
     );
   });
 
   it('should populate the professionalism area of concern if AverageRating is < 1 ', () => {
-    wrapper
-      .find(MapAreasOfConcernData)
-      .dive()
-      .find(AreaOfConcern)
-      .at(4)
-      .dive()
-      .find(AreaOfConcernInput)
-      .at(1)
-      .dive()
-      .find('textarea')
-      .simulate('change', {
-        target: {
-          name: 'details',
-          value: 'Please improve on your professionalism'
-        }
-      });
-    expect(wrapper.state().professionalism.details).toBe(
-      'Please improve on your professionalism'
+    testAreaOfConcernInput(
+      {
+        index: 4,
+        name: 'professionalism'
+      },
+      {
+        name: 'details',
+        value: 'Please improve on your professionalism'
+      }
     );
   });
 
   it('should populate the integration area of concern if AverageRating is < 1 ', () => {
-    wrapper
-      .find(MapAreasOfConcernData)
-      .dive()
-      .find(AreaOfConcern)
-      .at(5)
-      .dive()
-      .find(AreaOfConcernInput)
-      .at(1)
-      .dive()
-      .find('textarea')
-      .first()
-      .simulate('change', {
-        target: {
-          name: 'description',
-          value: 'Please improve on your integration skills'
-        }
-      });
-    expect(wrapper.state().integration.description).toBe(
-      'Please improve on your integration skills'
+    testAreaOfConcernInput(
+      {
+        index: 5,
+        name: 'integration'
+      },
+      {
+        name: 'description',
+        value: 'Please improve on your integration skills'
+      }
     );
   });
 

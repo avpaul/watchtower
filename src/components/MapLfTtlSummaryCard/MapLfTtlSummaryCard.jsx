@@ -15,11 +15,11 @@ const MapLfTtlSummaryCard = ({ lfTtlSummary, filterFellows, lfTtlCheckId }) => (
     <div className="ttl-lf-cards-wrapper">
       {lfTtlSummary.map(lfTtl => (
         <LfTtlSummaryCard
-          id={lfTtl.id}
+          id={`${lfTtl.id}`}
           key={lfTtl.id}
-          picture={lfTtl.picture || undefined}
-          title={lfTtl.title}
-          name={lfTtl.name}
+          picture={lfTtl.picture || ''}
+          title={lfTtl.title || ''}
+          name={lfTtl.name || ''}
           fellowsCount={lfTtl.fellowsCount}
           styles={lfTtl.styles}
           filterFellows={filterFellows}
@@ -38,7 +38,7 @@ const MapLfTtlSummaryCard = ({ lfTtlSummary, filterFellows, lfTtlCheckId }) => (
  * @property lfTtlCheckId - mixed
  */
 MapLfTtlSummaryCard.propTypes = {
-  lfTtlSummary: PropTypes.shape([]).isRequired,
+  lfTtlSummary: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   filterFellows: PropTypes.func.isRequired,
   lfTtlCheckId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired

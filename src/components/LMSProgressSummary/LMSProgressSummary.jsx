@@ -12,8 +12,9 @@ class LMSProgressSummary extends Component {
 
   render() {
     const { lmsSummary, lmsSubmissions } = this.props;
-    return lmsSubmissions && Object.values(lmsSubmissions).length > 0 ? (
-      <LMSChart lmsSummary={lmsSummary} lmsSubmissions={lmsSubmissions} />
+    return lmsSubmissions.data &&
+      Object.values(lmsSubmissions.data).length > 0 ? (
+      <LMSChart lmsSummary={lmsSummary} lmsSubmissions={lmsSubmissions.data} />
     ) : (
       <div className="lms-chart timeline">No LMS Data</div>
     );

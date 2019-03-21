@@ -20,7 +20,7 @@ const BioCard = ({ data, Id }) => (
 );
 
 BioCard.propTypes = {
-  data: PropTypes.string.isRequired,
+  data: PropTypes.shape().isRequired,
   Id: PropTypes.string.isRequired
 };
 

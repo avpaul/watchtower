@@ -59,12 +59,6 @@ const FellowChartContainer = props => {
   );
 };
 
-FellowChartContainer.defaultProps = {
-  filter: 'Total',
-  countSummary: {},
-  fellowChartTooltipClass: { '--fellow-chart-tooltip': '13%' }
-};
-
 FellowChartContainer.propTypes = {
   handleChartClose: PropTypes.func.isRequired,
   countSummary: PropTypes.shape({
@@ -72,11 +66,19 @@ FellowChartContainer.propTypes = {
     'D0B Apprenticeship': PropTypes.object
   }),
   fellowChartTooltipClass: PropTypes.instanceOf(Object),
-  data: PropTypes.shape({}).isRequired,
-  updateSelected: PropTypes.func.isRequired,
-  user: PropTypes.arrayOf.isRequired,
+  data: PropTypes.instanceOf(Array),
+  updateSelected: PropTypes.func,
+  user: PropTypes.shape({}).isRequired,
   filter: PropTypes.string,
   loading: PropTypes.bool.isRequired
+};
+
+FellowChartContainer.defaultProps = {
+  filter: 'Total',
+  countSummary: {},
+  fellowChartTooltipClass: { '--fellow-chart-tooltip': '13%' },
+  data: null,
+  updateSelected: () => {}
 };
 
 export default FellowChartContainer;

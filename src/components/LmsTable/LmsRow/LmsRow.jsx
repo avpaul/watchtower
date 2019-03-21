@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import arrayKey from 'weak-key';
+
 import Cell from '../../TableComponents/Cell';
 import Row from '../../TableComponents/Row';
 
@@ -20,13 +22,18 @@ const formatLmsDetails = lmsSubmission => {
   return formatedLmsSubmission;
 };
 
-const LmsRow = ({ lmsSubmission }) => (
-  <Row>
-    {Object.keys(formatLmsDetails(lmsSubmission)).map(key => (
-      <Cell>{formatLmsDetails(lmsSubmission)[key]}</Cell>
-    ))}
-  </Row>
-);
+const LmsRow = ({ lmsSubmission }) => {
+  const formattedLMSSubmissions = formatLmsDetails(lmsSubmission);
+  return (
+    <Row>
+      {Object.keys(formattedLMSSubmissions).map((key, index) => (
+        <Cell key={arrayKey({ key, index })}>
+          {formattedLMSSubmissions[key]}
+        </Cell>
+      ))}
+    </Row>
+  );
+};
 LmsRow.propTypes = {
   lmsSubmission: PropTypes.shape({}).isRequired
 };

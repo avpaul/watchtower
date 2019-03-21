@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
+
 import Cell from '../../TableComponents/Cell';
 import Row from '../../TableComponents/Row';
 import './DashboardRow.css';
@@ -7,7 +9,11 @@ import './DashboardRow.css';
 const DashboardRow = ({ fellow, fellowCells }) => (
   <Row key={fellow.id}>
     {fellowCells.map(element => (
-      <Cell addedClass={element.color || 'default'} title={element.key}>
+      <Cell
+        addedClass={element.color || 'default'}
+        title={element.key}
+        key={arrayKey(element)}
+      >
         {element.value}
       </Cell>
     ))}

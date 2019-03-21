@@ -7,22 +7,25 @@ import Authorization from '../components/AuthorizationHOC';
 import Analytics from '../components/Analytics';
 import Dashboards from './DashboardRoutes';
 
+export const RouteList = () => (
+  <React.Fragment>
+    <Route component={Analytics} />
+    <Switch>
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/login" component={LoginPage} />
+      <Route path="/test" component={ConnectedTest} />
+      <Route path="/dashboard" component={Authorization(Dashboards)} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  </React.Fragment>
+);
 /**
  * Defines application routes
  * @function
  */
 const Routes = () => (
   <Router>
-    <React.Fragment>
-      <Route component={Analytics} />
-      <Switch>
-        <Route exact path="/" component={LoginPage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/test" component={ConnectedTest} />
-        <Route path="/dashboard" component={Authorization(Dashboards)} />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </React.Fragment>
+    <RouteList />
   </Router>
 );
 

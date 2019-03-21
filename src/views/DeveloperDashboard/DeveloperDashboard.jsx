@@ -46,29 +46,38 @@ class DeveloperDashboard extends Component {
    */
   componentDidMount() {
     const { getManagerFellowsSummary, user } = this.props;
-    getManagerFellowsSummary(user.roles, user.email).then(data => {
-      if (!data.error) {
-        switch (true) {
-          case !!user.roles.WATCH_TOWER_EM:
-            this.updateState(
-              data.managerFellowsSummary.engineeringManager.ttls
-            );
-            break;
-          case !!user.roles.WATCH_TOWER_SL:
-            this.updateState(data.managerFellowsSummary.simulationsLead.lfs);
-            break;
-          case !!user.roles.WATCH_TOWER_LF:
-          case !!user.roles.WATCH_TOWER_TTL:
-            this.setState({
-              fellowSummaryDetails: data.managerFellowsSummary.data,
-              allFellows: data.managerFellowsSummary.data
-            });
-            break;
-          default:
-        }
-      }
-    });
+    getManagerFellowsSummary(user.roles, user.email)
+      .then(data => this.updateFellowsState(data))
+      .catch(() => {});
   }
+
+  /**
+   ** This method updates the state with the fellows' data fetched from the backend
+   * @param data Response data from an API request
+   */
+  updateFellowsState = data => {
+    const { user } = this.props;
+
+    if (!data.error) {
+      switch (true) {
+        case !!user.roles.WATCH_TOWER_EM:
+          this.updateState(data.managerFellowsSummary.engineeringManager.ttls);
+          break;
+        case !!user.roles.WATCH_TOWER_SL:
+          this.updateState(data.managerFellowsSummary.simulationsLead.lfs);
+          break;
+        case !!user.roles.WATCH_TOWER_LF:
+        case !!user.roles.WATCH_TOWER_TTL: {
+          this.setState({
+            fellowSummaryDetails: data.managerFellowsSummary.data,
+            allFellows: data.managerFellowsSummary.data
+          });
+          break;
+        }
+        default:
+      }
+    }
+  };
 
   /**
    * @method updateState
@@ -80,14 +89,11 @@ class DeveloperDashboard extends Component {
     data.forEach(manager => {
       let updatedFellows = manager.fellows;
       if (updatedFellows) {
-        updatedFellows = updatedFellows.map(fellow => {
-          const updatedFellow = fellow;
-          updatedFellow.manager = manager;
-          return updatedFellow;
-        });
+        updatedFellows = updatedFellows.map(fellow => ({ ...fellow, manager }));
       }
       fellows.push(...updatedFellows);
     });
+
     this.setState({
       fellowSummaryDetails: fellows,
       allFellows: fellows,
@@ -341,6 +347,7 @@ class DeveloperDashboard extends Component {
    */
   renderFilterCards = display => {
     const { allFellows, isTicked } = this.state;
+
     return (
       <MapFellowsFilterCard
         fellowSummaryDetails={allFellows}
@@ -389,9 +396,8 @@ class DeveloperDashboard extends Component {
 DeveloperDashboard.propTypes = {
   getManagerFellowsSummary: PropTypes.func.isRequired,
   user: PropTypes.shape({}).isRequired,
-  role: PropTypes.shape({}).isRequired,
-  history: PropTypes.shape({}).isRequired,
-  data: PropTypes.shape({}).isRequired
+  role: PropTypes.string.isRequired,
+  history: PropTypes.shape({}).isRequired
 };
 
 export default DeveloperDashboard;

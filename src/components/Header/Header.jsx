@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import mapValues from 'lodash.mapvalues';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import './Header.css';
 import { connect } from 'react-redux';
 import moment from 'moment';
@@ -166,8 +167,8 @@ export class Header extends Component {
   renderNotificationModal = (ordered, show, unreadnotifications) => (
     <Modal show={show} handleClose={this.hideModal}>
       {this.renderModalHeader()}
-      {Object.keys(ordered).map(key => (
-        <div className="message-body">
+      {Object.keys(ordered).map((key, index) => (
+        <div className="message-body" key={arrayKey({ key, index })}>
           <div className="message-date" key={key}>
             <span className="left">{key}</span>
             <span
@@ -192,8 +193,11 @@ export class Header extends Component {
   renderArchivesModal = (show, notifications) => (
     <Modal show={show} handleClose={this.hideModal}>
       {this.renderModalHeader()}
-      {Object.values(notifications).map(notification => (
-        <div className="modal-text text-sizing">
+      {Object.values(notifications).map((notification, index) => (
+        <div
+          className="modal-text text-sizing"
+          key={arrayKey({ notification, index })}
+        >
           <div>{this.renderIcons(notification, notifications)}</div>
         </div>
       ))}
@@ -216,6 +220,21 @@ export class Header extends Component {
     const { user, getTtlNotification } = this.props;
     getTtlNotification(user.email);
   };
+
+  renderNotificationIcon = trackStatus => (
+    <div className="modal-text text-sizing">
+      <img
+        src={
+          !trackStatus.includes('0 of your Fellows')
+            ? OnTrackIcon
+            : OffTrackIcon
+        }
+        alt="Notification Archives"
+        className="img-padding"
+      />
+      {trackStatus}
+    </div>
+  );
 
   displayManagerNotification = notification => {
     if (!notification) {
@@ -246,38 +265,9 @@ export class Header extends Component {
             </span>
           </div>
         </div>
-        <div className="modal-text text-sizing">
-          <img
-            src={
-              !onTrack.includes('0 of your Fellows')
-                ? OnTrackIcon
-                : OffTrackIcon
-            }
-            alt="Notification Archives"
-            className="img-padding"
-          />
-          {onTrack}
-        </div>
-        <div className="modal-text text-sizing">
-          <img
-            src={
-              offTrack.includes('0 of your Fellows')
-                ? OnTrackIcon
-                : OffTrackIcon
-            }
-            alt="Notification Archives"
-            className="img-padding"
-          />
-          {offTrack}
-        </div>
-        <div className="modal-text text-sizing">
-          <img
-            src={pip.includes('0 of your Fellows') ? OnTrackIcon : OffTrackIcon}
-            alt="Notification Archives"
-            className="img-padding"
-          />
-          {pip}
-        </div>
+        {this.renderNotificationIcon(onTrack)}
+        {this.renderNotificationIcon(offTrack)}
+        {this.renderNotificationIcon(pip)}
       </div>
     );
   };
@@ -292,54 +282,30 @@ export class Header extends Component {
               {groupedDate(notification.readAt.date)}
             </span>
           </div>
-          <div className="modal-text text-sizing">
-            <img
-              src={
-                !onTrack.includes('0 of your Fellows')
-                  ? OnTrackIcon
-                  : OffTrackIcon
-              }
-              alt="Notification Archives"
-              className="img-padding"
-            />
-            {onTrack}
-          </div>
-          <div className="modal-text text-sizing">
-            <img
-              src={
-                offTrack.includes('0 of your Fellows')
-                  ? OnTrackIcon
-                  : OffTrackIcon
-              }
-              alt="Notification Archives"
-              className="img-padding"
-            />
-            {offTrack}
-          </div>
-          <div className="modal-text text-sizing">
-            <img
-              src={
-                pip.includes('0 of your Fellows') ? OnTrackIcon : OffTrackIcon
-              }
-              alt="Notification Archives"
-              className="img-padding"
-            />
-            {pip}
-          </div>
+          {this.renderNotificationIcon(onTrack)}
+          {this.renderNotificationIcon(offTrack)}
+          {this.renderNotificationIcon(pip)}
         </div>
       );
     }
     return null;
   };
 
-  renderManagerArchivesModal = (show, notification) => (
+  renderNotifications = (notifications, show, modalAction) => (
     <Modal show={show} handleClose={this.hideModal}>
       {this.renderModalHeader()}
-      {Object.values(notification).map(notify => (
-        <div>{this.managerArchiveModal(notify)}</div>
+      {notifications.map((notify, index) => (
+        <div key={arrayKey({ notify, index })}>{this[modalAction](notify)}</div>
       ))}
     </Modal>
   );
+
+  renderManagerArchivesModal = (show, notification) =>
+    this.renderNotifications(
+      Object.values(notification),
+      show,
+      'managerArchiveModal'
+    );
 
   displayNotificationModal = (show, notification) => {
     const unreadNotifications = notification.filter(notif => !notif.readAt);
@@ -352,13 +318,10 @@ export class Header extends Component {
       );
     }
 
-    return (
-      <Modal show={show} handleClose={this.hideModal}>
-        {this.renderModalHeader()}
-        {unreadNotifications.map(notify => (
-          <div>{this.displayManagerNotification(notify)}</div>
-        ))}
-      </Modal>
+    return this.renderNotifications(
+      unreadNotifications,
+      show,
+      'displayManagerNotification'
     );
   };
 
@@ -418,19 +381,6 @@ export class Header extends Component {
 
     switch (userRole) {
       case 'WATCH_TOWER_LF':
-        return (
-          <ManagerHeader
-            renderManagerModal={this.renderManagerModal}
-            showModal={this.showModal}
-            handleMenuClick={this.handleMenuClick}
-            activeItems={activeItems}
-            notifications={lfNotification}
-            unreadnotifications={unreadManagerNotification}
-            user={user}
-            role={role}
-          />
-        );
-
       case 'WATCH_TOWER_TTL':
         return (
           <ManagerHeader
@@ -438,13 +388,14 @@ export class Header extends Component {
             showModal={this.showModal}
             handleMenuClick={this.handleMenuClick}
             activeItems={activeItems}
-            notifications={ttlNotification}
-            unreadnotifications={unreadManagerNotification}
+            notifications={
+              userRole === 'WATCH_TOWER_TTL' ? ttlNotification : lfNotification
+            }
+            unreadnotifications={unreadManagerNotification || []}
             user={user}
             role={role}
           />
         );
-
       default:
         return (
           <FellowHeader
@@ -453,7 +404,7 @@ export class Header extends Component {
             handleMenuClick={this.handleMenuClick}
             activeItems={activeItems}
             notifications={notifications}
-            unreadnotifications={unreadnotifications}
+            unreadnotifications={unreadnotifications || []}
             user={user}
             role={role}
           />
@@ -476,14 +427,14 @@ Header.propTypes = {
   getNotification: PropTypes.func.isRequired,
   getUnreadNotification: PropTypes.func.isRequired,
   getReadNotification: PropTypes.func.isRequired,
-  notifications: PropTypes.shape({}).isRequired,
+  notifications: PropTypes.instanceOf(Array).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
   readnotifications: PropTypes.shape({}).isRequired,
   getTtlNotification: PropTypes.func.isRequired,
   updateNotificationAsRead: PropTypes.func.isRequired,
   getLfNotification: PropTypes.func.isRequired,
-  ttlNotification: PropTypes.func.isRequired,
-  lfNotification: PropTypes.func.isRequired
+  ttlNotification: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  lfNotification: PropTypes.arrayOf(PropTypes.shape()).isRequired
 };
 const mapStateToProps = state => ({
   notifications: state.notification.notification,

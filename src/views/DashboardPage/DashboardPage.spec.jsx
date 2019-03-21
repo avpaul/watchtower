@@ -265,7 +265,7 @@ it('makes an API call when clickDownload is called', () => {
     status: 'All'
   });
   wrapper.setProps({
-    pagination: { results: 50 }
+    pagination: { ...pagination, results: 50 }
   });
   mock
     .onGet(

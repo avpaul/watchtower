@@ -17,8 +17,13 @@ const setup = propOverrides => {
       loading: false,
       error: null
     },
+    user: {
+      name: 'Test User',
+      picture: 'http://'
+    },
     ...propOverrides
   };
+
   const store = configureStore(initialState);
 
   const wrapper = shallow(<FellowsSummaryChart {...props} store={store} />);

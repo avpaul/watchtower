@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import AreaOfConcern from './AreaOfConcern';
 
 const MapAreasOfConcernData = ({ averageRatings, handleChange }) => {
@@ -22,7 +23,7 @@ const MapAreasOfConcernData = ({ averageRatings, handleChange }) => {
     <div>
       {getAffectedAttributes(averageRatings).map(attribute => (
         <AreaOfConcern
-          key={attribute}
+          key={arrayKey(attribute)}
           attribute={attribute}
           handleChange={handleChange}
         />

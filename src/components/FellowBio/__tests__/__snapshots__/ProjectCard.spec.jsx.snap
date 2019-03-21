@@ -91,11 +91,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": undefined,
+              "children": "",
               "title": "Project Name",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "",
             "type": [Function],
           },
           Object {
@@ -103,11 +103,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": undefined,
+              "children": "",
               "title": "LF",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "",
             "type": [Function],
           },
           Object {
@@ -205,11 +205,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": undefined,
+                "children": "",
                 "title": "Project Name",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "",
               "type": [Function],
             },
             Object {
@@ -217,11 +217,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": undefined,
+                "children": "",
                 "title": "LF",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "",
               "type": [Function],
             },
             Object {

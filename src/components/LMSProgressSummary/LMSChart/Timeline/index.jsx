@@ -25,15 +25,22 @@ const Timeline = ({ outputsDue, width, allOutputs }) => {
     </div>
   );
 };
+
 Timeline.propTypes = {
   allOutputs: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(Array)
-  ]).isRequired,
+  ]),
   width: PropTypes.number.isRequired,
   outputsDue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(Array)
-  ]).isRequired
+  ])
 };
+
+Timeline.defaultProps = {
+  allOutputs: [],
+  outputsDue: []
+};
+
 export default Timeline;

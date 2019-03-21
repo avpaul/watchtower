@@ -173,7 +173,7 @@ OpsDashboardMain.propTypes = {
   averageFellowsPerTtl: PropTypes.number.isRequired,
   averageFellowsPerLf: PropTypes.number.isRequired,
   getManagers: PropTypes.func.isRequired,
-  user: PropTypes.arrayOf.isRequired
+  user: PropTypes.shape().isRequired
 };
 
 export default OpsDashboardMain;

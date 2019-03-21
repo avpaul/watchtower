@@ -9,9 +9,9 @@ describe('tests the LmsRow', () => {
       lmsSubmission: {
         name: 'test course',
         course_id: 132,
-        due_date: '02/03/19',
-        submission_date: '02/03/19',
-        graded_date: '02/03/19',
+        due_date: '2018-12-14T13:59:00Z',
+        submission_date: '2018-12-14T13:59:00Z',
+        graded_date: '2018-12-14T13:59:00Z',
         score: 2
       }
     };

@@ -1596,6 +1596,12 @@ ShallowWrapper {
             },
           ]
     }
+    user={
+        Object {
+            "name": "test",
+            "picture": "http://",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1612,7 +1618,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(FellowsSummaryChart)
-          user={undefined}
+          user={
+                    Object {
+                              "name": "test",
+                              "picture": "http://",
+                            }
+          }
 />,
         <div
           className="row map-card-row"
@@ -1657,7 +1668,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "user": undefined,
+          "user": Object {
+            "name": "test",
+            "picture": "http://",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -1754,7 +1768,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(FellowsSummaryChart)
-            user={undefined}
+            user={
+                        Object {
+                                    "name": "test",
+                                    "picture": "http://",
+                                  }
+            }
 />,
           <div
             className="row map-card-row"
@@ -1799,7 +1818,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "user": undefined,
+            "user": Object {
+              "name": "test",
+              "picture": "http://",
+            },
           },
           "ref": null,
           "rendered": null,
