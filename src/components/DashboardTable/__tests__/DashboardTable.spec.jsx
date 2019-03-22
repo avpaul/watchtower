@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import DashboardTable from '../DashboardTable';
 import fellows from '../../../__mocks__/fellows';
@@ -14,16 +13,9 @@ const props = {
   cellValues: table.default.cells
 };
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<DashboardTable {...props} />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
-
 it('renders ErrorMessage when no fellows and is not fetching fellows', () => {
-  const wrapper = shallow(
-    <DashboardTable {...{ ...props, ...{ fellows: [] } }} />
-  );
+  const newProps = { ...props, fellows: [] };
+  const wrapper = shallow(<DashboardTable {...newProps} />);
 
   expect(
     wrapper.contains(
@@ -33,11 +25,15 @@ it('renders ErrorMessage when no fellows and is not fetching fellows', () => {
 });
 
 it('renders table cells in the correct order', () => {
+  const event = {
+    target: {
+      getAttribute: () => 'Augustine'
+    }
+  };
   const wrapper = shallow(<DashboardTable {...props} />);
   expect(wrapper).toMatchSnapshot();
-});
-
-it('renders to match snapshot', () => {
-  const wrapper = mount(<DashboardTable {...props} />);
-  expect(wrapper).toMatchSnapshot();
+  wrapper.instance().arrowUpClick(event);
+  expect(wrapper.state('sortBy')).toBe('Augustine');
+  wrapper.instance().arrowDownClick(event);
+  expect(wrapper.state('sortType')).toBe('ascending');
 });
