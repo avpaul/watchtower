@@ -60,11 +60,11 @@ class FeedbackDashboard extends Component {
    * @description - This method reset's the startDate and endDate state Objects to their Default
    */
   clearDuration = () => {
-    this.setState({
+    this.setState(state => ({
       startDate: this.defaultDate(),
       endDate: this.defaultDate(),
-      filteredFeedbackData: []
-    });
+      filteredFeedbackData: state.feedbackArray
+    }));
   };
 
   /**
@@ -99,13 +99,32 @@ class FeedbackDashboard extends Component {
   };
 
   /**
+   * @method clearFiltersTables
+   * @description - This method clears the filtered tables when it is clicked
+   * and resets set to it's initial setting.
+   */
+  clearFilterTables = () => {
+    this.setState(state => ({
+      isTicked: {
+        level: 'All Levels',
+        type: 'Pre-PIP & PIP',
+        criteria: 'All Criteria',
+        project: 'All Projects'
+      },
+      filteredFeedbackData: state.feedbackArray
+    }));
+  };
+
+  /**
    * @method renderResultCount
    * @description - displays the number of fellows feedback rendered on the dashbaord
    */
   renderResultCount = () => {
     const { filteredFeedbackData } = this.state;
     const results = filteredFeedbackData ? filteredFeedbackData.length : 0;
-    return <FellowsCount count={results} />;
+    return (
+      <FellowsCount count={results} clearFilters={this.clearFilterTables} />
+    );
   };
 
   renderFilterCards = (title, filterKey) => {

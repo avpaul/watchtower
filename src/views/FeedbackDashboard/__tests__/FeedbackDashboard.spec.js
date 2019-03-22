@@ -64,6 +64,20 @@ describe('Test Feedback Dashboard', () => {
       props.user.email
     );
   });
+
+  it('should clear filtered table of fellows', () => {
+    const wrapper = mount(<FeedbackDashboard {...props} />);
+
+    const button = wrapper.find('.clear-filters');
+
+    button.simulate('click');
+    expect(wrapper.state().isTicked).toEqual({
+      level: 'All Levels',
+      type: 'Pre-PIP & PIP',
+      criteria: 'All Criteria',
+      project: 'All Projects'
+    });
+  });
 });
 
 describe('FeedbackDashboard tests', () => {
