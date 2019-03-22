@@ -17,7 +17,7 @@ it('should return the initial state for unknown action type', () => {
 it('should set loading state on fetching manager fellows  data', () => {
   const newState = {
     loading: true,
-    error: null,
+    error: '',
     managerFellows: {}
   };
   const action = { type: LOAD_MANAGERFELLOWS_REQUEST };

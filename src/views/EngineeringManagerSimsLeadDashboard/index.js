@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import DeveloperDashboardContainer from '../DeveloperDashboard';
 import Header from '../../components/Header';
 import EngineeringManagerContainer from './EngineeringManagerContainer';
+import FeedbackDashboardContainer from '../FeedbackDashboard';
 
 /**
  * Defines routes for the opsdashboard
@@ -19,7 +20,13 @@ const EngineeringManagerSimsLeadDashboard = props => (
           component={() => <EngineeringManagerContainer {...props} />}
         />
         <Route
-          path="/dashboard/fellows"
+          exact
+          path="/dashboard/feedback"
+          component={() => <FeedbackDashboardContainer {...props} />}
+        />
+        <Route
+          exact
+          path={['/dashboard/fellows/:name', '/dashboard/fellows']}
           component={() => <DeveloperDashboardContainer {...props} />}
         />
       </Switch>

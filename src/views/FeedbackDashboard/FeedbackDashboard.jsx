@@ -5,16 +5,17 @@ import MapFeedbackFilterCard from '../../components/MapFeedbackFilterCard/MapFee
 import TranslatorTable from '../../utils/TranslatorTable';
 import Title from '../../components/Title';
 import FeedbackDashboardTable from './FeedbackDashboardTable';
-import ActionButton from '../../components/ActionButton';
+import FeedbackDuration from '../../components/FeedbackDuration';
 
 class FeedbackDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      feedbackArray: [],
+      filteredFeedbackData: [],
       startDate: this.defaultDate(),
       endDate: this.defaultDate(),
-      feedbackArray: [],
-      allFeedback: [],
+      currentDate: this.defaultDate(),
       isTicked: {
         level: 'All Levels',
         type: 'Pre-PIP & PIP',
@@ -30,11 +31,29 @@ class FeedbackDashboard extends Component {
       if (!data.error) {
         this.setState({
           feedbackArray: data.managersFeedback,
-          allFeedback: data.managersFeedback
+          filteredFeedbackData: data.managersFeedback
         });
       }
     });
   }
+
+  handleStartDateChange = date => {
+    this.setState(
+      {
+        startDate: date
+      },
+      () => this.updateFeedbackData()
+    );
+  };
+
+  handleEndDateChange = date => {
+    this.setState(
+      {
+        endDate: date
+      },
+      () => this.updateFeedbackData()
+    );
+  };
 
   /**
    * @method clearDuration
@@ -43,7 +62,8 @@ class FeedbackDashboard extends Component {
   clearDuration = () => {
     this.setState({
       startDate: this.defaultDate(),
-      endDate: this.defaultDate()
+      endDate: this.defaultDate(),
+      filteredFeedbackData: []
     });
   };
 
@@ -51,15 +71,40 @@ class FeedbackDashboard extends Component {
    * @method defaultDate
    * @description Sets the default date which is now
    */
-  defaultDate = () => new Date().toISOString().split('T')[0];
+  defaultDate = () => new Date();
+
+  /**
+   * @method updateFeedbackData
+   * @description update state with data of what the user desires
+   */
+  updateFeedbackData = () => {
+    this.setState({
+      filteredFeedbackData: this.filterFeedbackData()
+    });
+  };
+
+  /**
+   * @method filterFeedbackData
+   * @description filter data and stores the filtered in an array
+   */
+  filterFeedbackData = () => {
+    const { isTicked, feedbackArray } = this.state;
+    const data = this.filterFeedback(isTicked, feedbackArray);
+    const feedbackDataArray = data.filter(feedbackData => {
+      const { startDate, endDate } = this.state;
+      const date = new Date(feedbackData.start_date);
+      return date >= startDate && date <= endDate;
+    });
+    return feedbackDataArray;
+  };
 
   /**
    * @method renderResultCount
    * @description - displays the number of fellows feedback rendered on the dashbaord
    */
   renderResultCount = () => {
-    const { allFeedback } = this.state;
-    const results = allFeedback ? allFeedback.length : 0;
+    const { filteredFeedbackData } = this.state;
+    const results = filteredFeedbackData ? filteredFeedbackData.length : 0;
     return <FellowsCount count={results} />;
   };
 
@@ -78,13 +123,13 @@ class FeedbackDashboard extends Component {
   };
 
   renderFeedbackDetails = () => {
-    const { allFeedback, isTicked } = this.state;
+    const { filteredFeedbackData, isTicked } = this.state;
     const { role } = this.props;
 
     return (
       <Fragment>
         <FeedbackDashboardTable
-          feedbackArray={allFeedback}
+          feedbackArray={filteredFeedbackData}
           currentRole={role}
           type={TranslatorTable[isTicked.type]}
         />
@@ -108,25 +153,22 @@ class FeedbackDashboard extends Component {
     );
   };
 
-  renderDate = () => {
-    const { startDate, endDate } = this.state;
-    return (
-      <div className="col-xl-3">
-        <Title
-          title="Duration"
-          subTitle="Choose when you want to see feedback"
+  renderDate = (startDate, endDate, currentDate) => (
+    <div className="col-xl-3">
+      <Title title="Duration" subTitle="Choose when you want to see feedback" />
+      <div className="ops-dashboard__fellows-summary">
+        <FeedbackDuration
+          // set up props for feedback
+          startDate={startDate}
+          endDate={endDate}
+          currentDate={currentDate}
+          handleStartDateChange={this.handleStartDateChange}
+          handleEndDateChange={this.handleEndDateChange}
+          clearDuration={this.clearDuration}
         />
-        <div className="ops-dashboard__fellows-summary">
-          <div>
-            <p>Start Date: {startDate}</p>
-            <p>End Date: {endDate}</p>
-          </div>
-          calendar here
-        </div>
-        <ActionButton clickHandler={this.clearDuration} text="Clear Duration" />
       </div>
-    );
-  };
+    </div>
+  );
 
   filterFeedback = (isTicked, feedbackArray) => {
     const { user } = this.props;
@@ -161,18 +203,23 @@ class FeedbackDashboard extends Component {
       },
       () =>
         this.setState(state => ({
-          allFeedback: this.filterFeedback(state.isTicked, feedbackArray)
+          filteredFeedbackData: this.filterFeedback(
+            state.isTicked,
+            feedbackArray
+          )
         }))
     );
   };
 
   render() {
+    const { startDate, endDate, currentDate } = this.state;
+
     return (
       <Fragment>
         <div className="container-fluid">
           <div className="row">
             {this.renderFilter()}
-            {this.renderDate()}
+            {this.renderDate(startDate, endDate, currentDate)}
           </div>
           <div className="row">
             <div className="col-xl-12 px-0">{this.renderResultCount()}</div>

@@ -1,5 +1,5 @@
-import { mapStateToProps } from './FeedbackDashboardContainer';
-import feedbackData from '../../__mocks__/feedbackSummary.json';
+import { mapStateToProps } from '../FeedbackDashboardContainer';
+import feedbackData from '../../../__mocks__/feedbackSummary.json';
 
 describe('mapStateToProps works as it should', () => {
   it('maps state to props correctly', () => {

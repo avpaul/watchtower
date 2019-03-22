@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import FeedbackDashboard from './FeedbackDashboard';
-import FeedbackDashboardTable from './FeedbackDashboardTable';
-import feedbackArrayMock from '../../__mocks__/feedbackSummary.json';
-import ActionButton from '../../components/ActionButton';
-
-import MapFeedbackFilterCard from '../../components/MapFeedbackFilterCard';
-import FellowFilterCard from '../../components/FellowFilterCard';
+import FeedbackDashboard from '../FeedbackDashboard';
+import FeedbackDashboardTable from '../FeedbackDashboardTable';
+import feedbackArrayMock from '../../../__mocks__/feedbackSummary.json';
+import ActionButton from '../../../components/ActionButton';
+import FeedbackDuration from '../../../components/FeedbackDuration';
+import MapFeedbackFilterCard from '../../../components/MapFeedbackFilterCard';
+import FellowFilterCard from '../../../components/FellowFilterCard';
 
 describe('Test Feedback Dashboard', () => {
   const props = {
@@ -26,7 +26,7 @@ describe('Test Feedback Dashboard', () => {
 
   it('renders FeedbackDashboard Table shallow rendering', () => {
     const wrapper = shallow(<FeedbackDashboard {...props} />);
-      wrapper.setState({
+    wrapper.setState({
       startDate: 1234564567,
       endDate: 1467547453
     });
@@ -64,15 +64,6 @@ describe('Test Feedback Dashboard', () => {
       props.user.email
     );
   });
-
-  it('should simulate click on the clear duration', () => {
-    const wrapper = shallow(<FeedbackDashboard {...props} />);
-    wrapper
-      .find(ActionButton)
-      .dive()
-      .find('button')
-      .simulate('click');
-  });
 });
 
 describe('FeedbackDashboard tests', () => {
@@ -96,7 +87,16 @@ describe('FeedbackDashboard tests', () => {
       { roles: 'WATCH_TOWER_LF' },
       'WATCH_TOWER_LF'
     );
-    expect(feedbackDashboardWrapper).toMatchSnapshot();
+    feedbackDashboardWrapper.setState(
+      {
+        startDate: '2019-03-10',
+        endDate: '2019-3-15',
+        currentDate: '2019-3-15'
+      },
+      () => {
+        expect(feedbackDashboardWrapper).toMatchSnapshot();
+      }
+    );
   });
 
   it('should set status to all fellows  when a all-fellows card is clicked', () => {
@@ -106,7 +106,7 @@ describe('FeedbackDashboard tests', () => {
     );
     feedbackDashboardWrapper.setState({
       feedbackArray: feedbackArrayMock,
-      allFeedback: feedbackArrayMock,
+      filteredFeedbackData: feedbackArrayMock,
       isTicked: {
         level: 'All Levels',
         type: 'Pre-PIP & PIP',
@@ -133,6 +133,45 @@ describe('FeedbackDashboard tests', () => {
       criteria: 'LMS',
       project: 'All Projects'
     });
-    expect(feedbackDashboardWrapper.state('allFeedback').length).toEqual(2);
+    expect(
+      feedbackDashboardWrapper.state('filteredFeedbackData').length
+    ).toEqual(2);
+  });
+
+  it('should simulate click on the clear duration', () => {
+    const { feedbackDashboardWrapper } = setup(
+      { roles: 'WATCH_TOWER_LF' },
+      'WATCH_TOWER_LF'
+    );
+    feedbackDashboardWrapper
+      .find(FeedbackDuration)
+      .dive()
+      .find(ActionButton)
+      .dive()
+      .find('button')
+      .simulate('click');
+  });
+
+  it('handleStartDateChange and handlEndDateChange should be called', () => {
+    const { feedbackDashboardWrapper } = setup(
+      { roles: 'WATCH_TOWER_LF' },
+      'WATCH_TOWER_LF'
+    );
+    feedbackDashboardWrapper.setState({
+      feedbackArray: feedbackArrayMock,
+      filteredFeedbackData: feedbackArrayMock,
+      isTicked: {
+        level: 'All Levels',
+        type: 'Pre-PIP & PIP',
+        criteria: 'All Criteria',
+        project: 'All Projects'
+      }
+    });
+    const startDate = '2019-03-05';
+    const endDate = '2019-03-15';
+    feedbackDashboardWrapper.instance().handleStartDateChange(startDate);
+    feedbackDashboardWrapper.instance().handleEndDateChange(endDate);
+    expect(feedbackDashboardWrapper.state('startDate')).toEqual(startDate);
+    expect(feedbackDashboardWrapper.state('endDate')).toEqual(endDate);
   });
 });

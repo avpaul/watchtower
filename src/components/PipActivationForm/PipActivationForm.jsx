@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import MapAreasOfConcernData from './MapAreasOfConcernData';
 import MapManagementSupportFields from './MapManagementSupportFields';
 import { renderInputLabels } from './AreaOfConcernInput';
+import CalendarInput from '../CalendarInput/CalendarInput';
 import './PipActivationForm.css';
 
 class PipActivationForm extends Component {
@@ -182,11 +183,7 @@ class PipActivationForm extends Component {
                       onChange={this.handleDateChange}
                       dateFormat="MM/dd/yyyy"
                     />
-                    <div className="input-group-apend text-right">
-                      <div className="input-group-text">
-                        <i className="fas fa-calendar-alt" />
-                      </div>
-                    </div>
+                    <CalendarInput />
                   </div>
                 </div>
                 <div className="form-group fellow-details-body col-md-4">

@@ -1,10 +1,10 @@
-import managerFeedbackReducer from './managerFeedbackReducer';
+import managerFeedbackReducer from '../managerFeedbackReducer';
 import {
   LOAD_FEEDBACK_REQUEST,
   FEEDBACK_REQUEST_FAILURE,
   FEEDBACK_REQUEST_SUCCESS
-} from '../constants/managerFeedbackActionTypes';
-import initialState from './initialState';
+} from '../../constants/managerFeedbackActionTypes';
+import initialState from '../initialState';
 
 it('should return the initial state for unknown action type', () => {
   expect(managerFeedbackReducer(undefined, {})).toEqual(initialState.feedback);

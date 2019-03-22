@@ -8,7 +8,7 @@
     "criteria": "lms",
     "manager": "Trust birungi",
     "manager_email": "trust.birungi@andela.com",
-    "start_date": "2019-01-01",
+    "start_date": "2019-03-05",
     "end_date": "null",
     "project": "Watch Tower"
   },
@@ -21,7 +21,7 @@
     "criteria": "pulse",
     "manager": "Trust birungi",
     "manager_email": "trust.birungi@andela.com",
-    "start_date": "2019-01-01",
+    "start_date": "2019-03-06",
     "end_date": "2018-07-18",
     "project": "Noldor"
   },
@@ -34,7 +34,7 @@
     "criteria": "pulse",
     "manager": "Trust birungi",
     "manager_email": "trust.birungi@andela.com",
-    "start_date": "2019-01-01",
+    "start_date": "2019-03-08",
     "end_date": "2018-07-18",
     "project": "Noldor"
   },
@@ -47,7 +47,7 @@
     "criteria": "lms",
     "manager": "Trust birungi",
     "manager_email": "trust.birungi@andela.com",
-    "start_date": "2019-01-01",
+    "start_date": "2019-03-10",
     "end_date": "2018-07-18",
     "project": "Noldor"
   }

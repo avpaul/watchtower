@@ -16,7 +16,7 @@ ShallowWrapper {
               "manager": "Trust birungi",
               "manager_email": "trust.birungi@andela.com",
               "project": "Watch Tower",
-              "start_date": "2019-01-01",
+              "start_date": "2019-03-05",
               "type": "pre-pip",
             },
             Object {
@@ -29,7 +29,7 @@ ShallowWrapper {
               "manager": "Trust birungi",
               "manager_email": "trust.birungi@andela.com",
               "project": "Noldor",
-              "start_date": "2019-01-01",
+              "start_date": "2019-03-06",
               "type": "pip",
             },
             Object {
@@ -42,7 +42,7 @@ ShallowWrapper {
               "manager": "Trust birungi",
               "manager_email": "trust.birungi@andela.com",
               "project": "Noldor",
-              "start_date": "2019-01-01",
+              "start_date": "2019-03-08",
               "type": "pip",
             },
             Object {
@@ -55,7 +55,7 @@ ShallowWrapper {
               "manager": "Trust birungi",
               "manager_email": "trust.birungi@andela.com",
               "project": "Noldor",
-              "start_date": "2019-01-01",
+              "start_date": "2019-03-10",
               "type": "pip",
             },
           ]

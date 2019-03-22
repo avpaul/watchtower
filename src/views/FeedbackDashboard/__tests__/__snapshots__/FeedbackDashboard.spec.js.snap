@@ -91,22 +91,15 @@ ShallowWrapper {
                         <div
                                 className="ops-dashboard__fellows-summary"
                         >
-                                <div>
-                                        <p>
-                                                Start Date: 
-                                                2019-03-21
-                                        </p>
-                                        <p>
-                                                End Date: 
-                                                2019-03-21
-                                        </p>
-                                </div>
-                                calendar here
+                                <FeedbackDuration
+                                        clearDuration={[Function]}
+                                        currentDate="2019-3-15"
+                                        endDate="2019-3-15"
+                                        handleEndDateChange={[Function]}
+                                        handleStartDateChange={[Function]}
+                                        startDate="2019-03-10"
+                                />
                         </div>
-                        <ActionButton
-                                clickHandler={[Function]}
-                                text="Clear Duration"
-                        />
                 </div>
         </div>
         <div
@@ -204,22 +197,15 @@ ShallowWrapper {
                         <div
                                     className="ops-dashboard__fellows-summary"
                         >
-                                    <div>
-                                                <p>
-                                                            Start Date: 
-                                                            2019-03-21
-                                                </p>
-                                                <p>
-                                                            End Date: 
-                                                            2019-03-21
-                                                </p>
-                                    </div>
-                                    calendar here
+                                    <FeedbackDuration
+                                                clearDuration={[Function]}
+                                                currentDate="2019-3-15"
+                                                endDate="2019-3-15"
+                                                handleEndDateChange={[Function]}
+                                                handleStartDateChange={[Function]}
+                                                startDate="2019-03-10"
+                                    />
                         </div>
-                        <ActionButton
-                                    clickHandler={[Function]}
-                                    text="Clear Duration"
-                        />
             </div>
 </div>,
           <div
@@ -316,22 +302,15 @@ ShallowWrapper {
                 <div
                                 className="ops-dashboard__fellows-summary"
                 >
-                                <div>
-                                                <p>
-                                                                Start Date: 
-                                                                2019-03-21
-                                                </p>
-                                                <p>
-                                                                End Date: 
-                                                                2019-03-21
-                                                </p>
-                                </div>
-                                calendar here
+                                <FeedbackDuration
+                                                clearDuration={[Function]}
+                                                currentDate="2019-3-15"
+                                                endDate="2019-3-15"
+                                                handleEndDateChange={[Function]}
+                                                handleStartDateChange={[Function]}
+                                                startDate="2019-03-10"
+                                />
                 </div>
-                <ActionButton
-                                clickHandler={[Function]}
-                                text="Clear Duration"
-                />
 </div>,
             ],
             "className": "row",
@@ -483,22 +462,15 @@ ShallowWrapper {
                   <div
                     className="ops-dashboard__fellows-summary"
 >
-                    <div>
-                                        <p>
-                                                            Start Date: 
-                                                            2019-03-21
-                                        </p>
-                                        <p>
-                                                            End Date: 
-                                                            2019-03-21
-                                        </p>
-                    </div>
-                    calendar here
+                    <FeedbackDuration
+                                        clearDuration={[Function]}
+                                        currentDate="2019-3-15"
+                                        endDate="2019-3-15"
+                                        handleEndDateChange={[Function]}
+                                        handleStartDateChange={[Function]}
+                                        startDate="2019-03-10"
+                    />
 </div>,
-                  <ActionButton
-                    clickHandler={[Function]}
-                    text="Clear Duration"
-/>,
                 ],
                 "className": "col-xl-3",
               },
@@ -521,93 +493,34 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      <div>
-                        <p>
-                                                Start Date: 
-                                                2019-03-21
-                        </p>
-                        <p>
-                                                End Date: 
-                                                2019-03-21
-                        </p>
-</div>,
-                      "calendar here",
-                    ],
+                    "children": <FeedbackDuration
+                      clearDuration={[Function]}
+                      currentDate="2019-3-15"
+                      endDate="2019-3-15"
+                      handleEndDateChange={[Function]}
+                      handleStartDateChange={[Function]}
+                      startDate="2019-03-10"
+/>,
                     "className": "ops-dashboard__fellows-summary",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
-                          <p>
-                            Start Date: 
-                            2019-03-21
-</p>,
-                          <p>
-                            End Date: 
-                            2019-03-21
-</p>,
-                        ],
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": Array [
-                              "Start Date: ",
-                              "2019-03-21",
-                            ],
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            "Start Date: ",
-                            "2019-03-21",
-                          ],
-                          "type": "p",
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": Array [
-                              "End Date: ",
-                              "2019-03-21",
-                            ],
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            "End Date: ",
-                            "2019-03-21",
-                          ],
-                          "type": "p",
-                        },
-                      ],
-                      "type": "div",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "clearDuration": [Function],
+                      "currentDate": "2019-3-15",
+                      "endDate": "2019-3-15",
+                      "handleEndDateChange": [Function],
+                      "handleStartDateChange": [Function],
+                      "startDate": "2019-03-10",
                     },
-                    "calendar here",
-                  ],
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "clickHandler": [Function],
-                    "text": "Clear Duration",
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "type": "div",
                 },
               ],
               "type": "div",
@@ -780,22 +693,15 @@ ShallowWrapper {
                               <div
                                         className="ops-dashboard__fellows-summary"
                               >
-                                        <div>
-                                                  <p>
-                                                            Start Date: 
-                                                            2019-03-21
-                                                  </p>
-                                                  <p>
-                                                            End Date: 
-                                                            2019-03-21
-                                                  </p>
-                                        </div>
-                                        calendar here
+                                        <FeedbackDuration
+                                                  clearDuration={[Function]}
+                                                  currentDate="2019-3-15"
+                                                  endDate="2019-3-15"
+                                                  handleEndDateChange={[Function]}
+                                                  handleStartDateChange={[Function]}
+                                                  startDate="2019-03-10"
+                                        />
                               </div>
-                              <ActionButton
-                                        clickHandler={[Function]}
-                                        text="Clear Duration"
-                              />
                     </div>
           </div>
           <div
@@ -893,22 +799,15 @@ ShallowWrapper {
                             <div
                                           className="ops-dashboard__fellows-summary"
                             >
-                                          <div>
-                                                        <p>
-                                                                      Start Date: 
-                                                                      2019-03-21
-                                                        </p>
-                                                        <p>
-                                                                      End Date: 
-                                                                      2019-03-21
-                                                        </p>
-                                          </div>
-                                          calendar here
+                                          <FeedbackDuration
+                                                        clearDuration={[Function]}
+                                                        currentDate="2019-3-15"
+                                                        endDate="2019-3-15"
+                                                        handleEndDateChange={[Function]}
+                                                        handleStartDateChange={[Function]}
+                                                        startDate="2019-03-10"
+                                          />
                             </div>
-                            <ActionButton
-                                          clickHandler={[Function]}
-                                          text="Clear Duration"
-                            />
               </div>
 </div>,
             <div
@@ -1005,22 +904,15 @@ ShallowWrapper {
                   <div
                                     className="ops-dashboard__fellows-summary"
                   >
-                                    <div>
-                                                      <p>
-                                                                        Start Date: 
-                                                                        2019-03-21
-                                                      </p>
-                                                      <p>
-                                                                        End Date: 
-                                                                        2019-03-21
-                                                      </p>
-                                    </div>
-                                    calendar here
+                                    <FeedbackDuration
+                                                      clearDuration={[Function]}
+                                                      currentDate="2019-3-15"
+                                                      endDate="2019-3-15"
+                                                      handleEndDateChange={[Function]}
+                                                      handleStartDateChange={[Function]}
+                                                      startDate="2019-03-10"
+                                    />
                   </div>
-                  <ActionButton
-                                    clickHandler={[Function]}
-                                    text="Clear Duration"
-                  />
 </div>,
               ],
               "className": "row",
@@ -1172,22 +1064,15 @@ ShallowWrapper {
                     <div
                       className="ops-dashboard__fellows-summary"
 >
-                      <div>
-                                            <p>
-                                                                  Start Date: 
-                                                                  2019-03-21
-                                            </p>
-                                            <p>
-                                                                  End Date: 
-                                                                  2019-03-21
-                                            </p>
-                      </div>
-                      calendar here
+                      <FeedbackDuration
+                                            clearDuration={[Function]}
+                                            currentDate="2019-3-15"
+                                            endDate="2019-3-15"
+                                            handleEndDateChange={[Function]}
+                                            handleStartDateChange={[Function]}
+                                            startDate="2019-03-10"
+                      />
 </div>,
-                    <ActionButton
-                      clickHandler={[Function]}
-                      text="Clear Duration"
-/>,
                   ],
                   "className": "col-xl-3",
                 },
@@ -1210,93 +1095,34 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": Array [
-                        <div>
-                          <p>
-                                                    Start Date: 
-                                                    2019-03-21
-                          </p>
-                          <p>
-                                                    End Date: 
-                                                    2019-03-21
-                          </p>
-</div>,
-                        "calendar here",
-                      ],
+                      "children": <FeedbackDuration
+                        clearDuration={[Function]}
+                        currentDate="2019-3-15"
+                        endDate="2019-3-15"
+                        handleEndDateChange={[Function]}
+                        handleStartDateChange={[Function]}
+                        startDate="2019-03-10"
+/>,
                       "className": "ops-dashboard__fellows-summary",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": Array [
-                            <p>
-                              Start Date: 
-                              2019-03-21
-</p>,
-                            <p>
-                              End Date: 
-                              2019-03-21
-</p>,
-                          ],
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": Array [
-                                "Start Date: ",
-                                "2019-03-21",
-                              ],
-                            },
-                            "ref": null,
-                            "rendered": Array [
-                              "Start Date: ",
-                              "2019-03-21",
-                            ],
-                            "type": "p",
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": Array [
-                                "End Date: ",
-                                "2019-03-21",
-                              ],
-                            },
-                            "ref": null,
-                            "rendered": Array [
-                              "End Date: ",
-                              "2019-03-21",
-                            ],
-                            "type": "p",
-                          },
-                        ],
-                        "type": "div",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "clearDuration": [Function],
+                        "currentDate": "2019-3-15",
+                        "endDate": "2019-3-15",
+                        "handleEndDateChange": [Function],
+                        "handleStartDateChange": [Function],
+                        "startDate": "2019-03-10",
                       },
-                      "calendar here",
-                    ],
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "clickHandler": [Function],
-                      "text": "Clear Duration",
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
                     },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                    "type": "div",
                   },
                 ],
                 "type": "div",

@@ -6,8 +6,8 @@ import {
   LOAD_FEEDBACK_REQUEST,
   FEEDBACK_REQUEST_FAILURE,
   FEEDBACK_REQUEST_SUCCESS
-} from '../constants/managerFeedbackActionTypes';
-import getManagerFeedback from './managerFeedbackActions';
+} from '../../constants/managerFeedbackActionTypes';
+import getManagerFeedback from '../managerFeedbackActions';
 
 describe("fetch manager 's fellows feedback ", () => {
   const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;

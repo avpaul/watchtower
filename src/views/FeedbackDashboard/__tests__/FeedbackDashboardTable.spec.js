@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FeedbackDashboardTable from './FeedbackDashboardTable';
-import feedbackArrayMock from '../../__mocks__/feedbackSummary.json';
+import FeedbackDashboardTable from '../FeedbackDashboardTable';
+import feedbackArrayMock from '../../../__mocks__/feedbackSummary.json';
 
 describe('FeedbackDashboardTable', () => {
   const props = {

@@ -57,8 +57,8 @@ export class Header extends Component {
         this.setState({ activeItems: { feedback: true } });
         break;
       default: {
-        if (location.pathname.search('/dashboard/fellows/') === 0) {
-          this.setState({ activeItems: { developers: true } });
+        if (location.pathname.search('/dashboard/') === 0) {
+          this.setState({ activeItems: { dashboard: true } });
         }
       }
     }

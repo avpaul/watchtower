@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>B0F4E5B0-7C7A-4BBC-83C7-22747EB667C7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M248,44 L247,44 L247,43 C247,42.45 246.55,42 246,42 C245.45,42 245,42.45 245,43 L245,44 L237,44 L237,43 C237,42.45 236.55,42 236,42 C235.45,42 235,42.45 235,43 L235,44 L234,44 C232.89,44 232.01,44.9 232.01,46 L232,60 C232,61.1 232.89,62 234,62 L248,62 C249.1,62 250,61.1 250,60 L250,46 C250,44.9 249.1,44 248,44 Z M248,59 C248,59.55 247.55,60 247,60 L235,60 C234.45,60 234,59.55 234,59 L234,49 L248,49 L248,59 Z M236,51 L238,51 L238,53 L236,53 L236,51 Z M240,51 L242,51 L242,53 L240,53 L240,51 Z M244,51 L246,51 L246,53 L244,53 L244,51 Z" id="path-1"></path>
+    </defs>
+    <g id="Ops" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TDD-Ops---PIP-Feedback" transform="translate(-1331.000000, -310.000000)">
+            <g id="Duration" transform="translate(1079.000000, 171.000000)">
+                <g id="Group" transform="translate(20.000000, 97.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="icon/action/date_range_24px" fill="#B4B4B4" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
