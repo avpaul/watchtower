@@ -1,9 +1,9 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import Table from '../TableComponents/Table';
-import Cell from '../TableComponents/Cell';
-import Row from '../TableComponents/Row';
 import DashboardRow from './DashboardRow';
+import Row from '../TableComponents/Row';
+import Cell from '../TableComponents/Cell';
 import Error from '../Error';
 import Loader from '../Loader/Loader';
 import cellAttr from './setAttributes';

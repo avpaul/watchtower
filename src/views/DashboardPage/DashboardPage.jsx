@@ -33,44 +33,26 @@ class DashboardPage extends Component {
 
   componentDidMount() {
     const { getFellows, filter } = this.props;
-    getFellows({ filter, ...this.state });
+    getFellows({ filter, ...this.state, perPage: 25, page: 1 });
   }
 
-  onChange = event => {
-    const { filter, getFellows } = this.props;
-    const newState = event.target.value;
-    this.setState({ perPage: newState }, () => {
-      getFellows({ filter, ...this.state });
-    });
-    this.setState({ perPage: newState });
+  handlePaginationChange = queryData => {
+    const { getFellows } = this.props;
+    getFellows({ ...queryData });
   };
 
   renderPagination = () => {
-    const { perPage } = this.state;
     const { pagination, filter, fellows } = this.props;
     return (
       <Pagination
         totalPages={pagination.pages}
-        perPage={perPage}
-        onPerPageChange={this.onChange}
-        handlePageChange={this.handlePageChange}
-        handleValueChange={this.handleValueChange}
-        currentPage={pagination.page}
+        handlePageChange={this.handlePaginationChange}
+        handleValueChange={this.handlePaginationChange}
+        currentPage={parseInt(pagination.page, 10)}
         filter={filter}
         hasFellows={fellows.length > 0}
       />
     );
-  };
-
-  handlePageChange = url => {
-    const { getFellows } = this.props;
-    getFellows({ url });
-  };
-
-  handleValueChange = page => {
-    const { perPage } = this.state;
-    const { filter, getFellows } = this.props;
-    getFellows({ perPage, page, filter });
   };
 
   handleSearchChange = event => {

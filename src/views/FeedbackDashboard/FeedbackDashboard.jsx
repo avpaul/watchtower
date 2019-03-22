@@ -6,22 +6,34 @@ import TranslatorTable from '../../utils/TranslatorTable';
 import Title from '../../components/Title';
 import FeedbackDashboardTable from './FeedbackDashboardTable';
 import FeedbackDuration from '../../components/FeedbackDuration';
+import Pagination from '../../components/Pagination/Pagination';
 
 class FeedbackDashboard extends Component {
   constructor(props) {
     super(props);
+
+    const defaultIsTicked = {
+      level: 'All Levels',
+      type: 'Pre-PIP & PIP',
+      criteria: 'All Criteria',
+      project: 'All Projects'
+    };
+
     this.state = {
       feedbackArray: [],
       filteredFeedbackData: [],
       startDate: this.defaultDate(),
       endDate: this.defaultDate(),
       currentDate: this.defaultDate(),
-      isTicked: {
-        level: 'All Levels',
-        type: 'Pre-PIP & PIP',
-        criteria: 'All Criteria',
-        project: 'All Projects'
-      }
+      paginatedFeedback: [],
+      paginationFilter: {
+        perPage: 25,
+        page: 1,
+        totalPages: 0
+      },
+      filter: {},
+      isTicked: defaultIsTicked,
+      defaultIsTicked
     };
   }
 
@@ -29,30 +41,28 @@ class FeedbackDashboard extends Component {
     const { getManagerFeedback, user } = this.props;
     getManagerFeedback(user.roles, user.email).then(data => {
       if (!data.error) {
-        this.setState({
-          feedbackArray: data.managersFeedback,
-          filteredFeedbackData: data.managersFeedback
-        });
+        this.setState(
+          {
+            feedbackArray: data.managersFeedback,
+            filteredFeedbackData: data.managersFeedback,
+            paginationFilter: {
+              perPage: 25,
+              page: 1,
+              totalPages: Math.ceil(data.managersFeedback.length / 25)
+            }
+          },
+          this.paginateFeedback
+        );
       }
     });
   }
 
   handleStartDateChange = date => {
-    this.setState(
-      {
-        startDate: date
-      },
-      () => this.updateFeedbackData()
-    );
+    this.setState({ startDate: date }, () => this.updateFeedbackData());
   };
 
   handleEndDateChange = date => {
-    this.setState(
-      {
-        endDate: date
-      },
-      () => this.updateFeedbackData()
-    );
+    this.setState({ endDate: date }, () => this.updateFeedbackData());
   };
 
   /**
@@ -60,11 +70,14 @@ class FeedbackDashboard extends Component {
    * @description - This method reset's the startDate and endDate state Objects to their Default
    */
   clearDuration = () => {
-    this.setState(state => ({
-      startDate: this.defaultDate(),
-      endDate: this.defaultDate(),
-      filteredFeedbackData: state.feedbackArray
-    }));
+    this.setState(
+      state => ({
+        startDate: this.defaultDate(),
+        endDate: this.defaultDate(),
+        filteredFeedbackData: state.feedbackArray
+      }),
+      this.paginateFeedback
+    );
   };
 
   /**
@@ -78,9 +91,10 @@ class FeedbackDashboard extends Component {
    * @description update state with data of what the user desires
    */
   updateFeedbackData = () => {
-    this.setState({
-      filteredFeedbackData: this.filterFeedbackData()
-    });
+    this.setState(
+      { filteredFeedbackData: this.filterFeedbackData() },
+      this.paginateFeedback
+    );
   };
 
   /**
@@ -88,14 +102,12 @@ class FeedbackDashboard extends Component {
    * @description filter data and stores the filtered in an array
    */
   filterFeedbackData = () => {
-    const { isTicked, feedbackArray } = this.state;
+    const { isTicked, feedbackArray, startDate, endDate } = this.state;
     const data = this.filterFeedback(isTicked, feedbackArray);
-    const feedbackDataArray = data.filter(feedbackData => {
-      const { startDate, endDate } = this.state;
+    return data.filter(feedbackData => {
       const date = new Date(feedbackData.start_date);
       return date >= startDate && date <= endDate;
     });
-    return feedbackDataArray;
   };
 
   /**
@@ -104,15 +116,11 @@ class FeedbackDashboard extends Component {
    * and resets set to it's initial setting.
    */
   clearFilterTables = () => {
-    this.setState(state => ({
-      isTicked: {
-        level: 'All Levels',
-        type: 'Pre-PIP & PIP',
-        criteria: 'All Criteria',
-        project: 'All Projects'
-      },
-      filteredFeedbackData: state.feedbackArray
-    }));
+    const {
+      defaultIsTicked: isTicked,
+      feedbackArray: filteredFeedbackData
+    } = this.state;
+    this.setState({ isTicked, filteredFeedbackData }, this.paginateFeedback);
   };
 
   /**
@@ -128,8 +136,7 @@ class FeedbackDashboard extends Component {
   };
 
   renderFilterCards = (title, filterKey) => {
-    const { isTicked } = this.state;
-    const { feedbackArray } = this.state;
+    const { isTicked, feedbackArray } = this.state;
     return (
       <MapFeedbackFilterCard
         feedbackArray={feedbackArray}
@@ -141,17 +148,69 @@ class FeedbackDashboard extends Component {
     );
   };
 
-  renderFeedbackDetails = () => {
-    const { filteredFeedbackData, isTicked } = this.state;
-    const { role } = this.props;
+  /**
+   * @description Filters the feedback records according to the current page
+   * @param pagination Object that contains the values used to filter the feedback records eg.
+   * current page, per page value
+   */
+  paginateFeedback = () => {
+    const { filteredFeedbackData, paginationFilter } = this.state;
+    const offset = (paginationFilter.page - 1) * paginationFilter.perPage;
+    const upperBound = offset + paginationFilter.perPage;
+    // Retrieves a sub array of feedback according to current page and the page size set.
+    const updatedFeedback = filteredFeedbackData;
+    this.setState({
+      paginatedFeedback: updatedFeedback.slice(offset, upperBound)
+    });
+  };
 
+  /**
+   * @description pagination buttons' onClick event handler
+   * @param queryData pagination filters returned from the Pagination component
+   */
+  handlePaginationPageChange = queryData => {
+    this.setState(
+      state => ({
+        paginationFilter: {
+          perPage: queryData.perPage,
+          page: queryData.page,
+          totalPages: Math.ceil(
+            state.filteredFeedbackData.length / queryData.perPage
+          )
+        }
+      }),
+      this.paginateFeedback
+    );
+  };
+
+  /**
+   * @description Renders the pagination component
+   */
+  renderPagination = () => {
+    const { filter, filteredFeedbackData, paginationFilter } = this.state;
+    return (
+      <Pagination
+        totalPages={paginationFilter.totalPages}
+        handlePageChange={this.handlePaginationPageChange}
+        handleValueChange={this.handlePaginationPageChange}
+        currentPage={paginationFilter.page}
+        filter={filter}
+        hasFellows={filteredFeedbackData.length > 0}
+      />
+    );
+  };
+
+  renderFeedbackDetails = () => {
+    const { paginatedFeedback, isTicked } = this.state;
+    const { role } = this.props;
     return (
       <Fragment>
         <FeedbackDashboardTable
-          feedbackArray={filteredFeedbackData}
+          feedbackArray={paginatedFeedback}
           currentRole={role}
           type={TranslatorTable[isTicked.type]}
         />
+        <div className="col mb-4">{this.renderPagination()}</div>
       </Fragment>
     );
   };
@@ -161,7 +220,7 @@ class FeedbackDashboard extends Component {
     const isManager =
       !!user.roles.WATCH_TOWER_TTL || !!user.roles.WATCH_TOWER_LF;
     return (
-      <div className="col-xl-9">
+      <div className="col-xl-9 p-0">
         <Title title="FEEDBACK" subTitle="Filter by clicking cards" />
         {isManager
           ? this.renderFilterCards('All Projects', 'project')
@@ -200,33 +259,29 @@ class FeedbackDashboard extends Component {
           ? TranslatorTable[isTicked[filterKey]]
           : isTicked[filterKey]
       );
-    const filteredFeedback = feedbackArray.filter(
+    return feedbackArray.filter(
       feedbackUnit =>
-        (isManager
-          ? filterUnit(feedbackUnit, 'project')
-          : filterUnit(feedbackUnit, 'level')) &&
+        filterUnit(feedbackUnit, isManager ? 'project' : 'level') &&
         filterUnit(feedbackUnit, 'criteria') &&
         filterUnit(feedbackUnit, 'type')
-    );
-    return filteredFeedback;
+    );;
   };
 
   handleFilterCardClick = event => {
     const { feedbackArray, isTicked } = this.state;
+    const updatedIsTicked = {
+      ...isTicked,
+      [event.currentTarget.attributes[2].value]: event.currentTarget.id
+    };
     this.setState(
       {
-        isTicked: {
-          ...isTicked,
-          [event.currentTarget.attributes[2].value]: event.currentTarget.id
-        }
+        isTicked: updatedIsTicked,
+        filteredFeedbackData: this.filterFeedback(
+          updatedIsTicked,
+          feedbackArray
+        )
       },
-      () =>
-        this.setState(state => ({
-          filteredFeedbackData: this.filterFeedback(
-            state.isTicked,
-            feedbackArray
-          )
-        }))
+      this.paginateFeedback
     );
   };
 
@@ -235,7 +290,7 @@ class FeedbackDashboard extends Component {
 
     return (
       <Fragment>
-        <div className="container-fluid">
+        <div className="feedbackDashboard container-fluid">
           <div className="row">
             {this.renderFilter()}
             {this.renderDate(startDate, endDate, currentDate)}
@@ -250,10 +305,10 @@ class FeedbackDashboard extends Component {
   }
 }
 
-export default FeedbackDashboard;
-
 FeedbackDashboard.propTypes = {
   user: PropTypes.shape({}).isRequired,
   role: PropTypes.string.isRequired,
   getManagerFeedback: PropTypes.func.isRequired
 };
+
+export default FeedbackDashboard;

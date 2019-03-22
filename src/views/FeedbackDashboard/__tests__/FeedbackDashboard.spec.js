@@ -28,7 +28,8 @@ describe('Test Feedback Dashboard', () => {
     const wrapper = shallow(<FeedbackDashboard {...props} />);
     wrapper.setState({
       startDate: 1234564567,
-      endDate: 1467547453
+      endDate: 1467547453,
+      currentDate: 1234564567
     });
     expect(
       wrapper.find(
@@ -187,5 +188,20 @@ describe('FeedbackDashboard tests', () => {
     feedbackDashboardWrapper.instance().handleEndDateChange(endDate);
     expect(feedbackDashboardWrapper.state('startDate')).toEqual(startDate);
     expect(feedbackDashboardWrapper.state('endDate')).toEqual(endDate);
+  });
+
+  it('handlePaginationChange should change page state as expected', () => {
+    const { feedbackDashboardWrapper } = setup(
+      { roles: 'WATCH_TOWER_LF' },
+      'WATCH_TOWER_LF'
+    );
+    const filters = {
+      page: 2,
+      perPage: 25,
+      totalPages: 0
+    };
+
+    feedbackDashboardWrapper.instance().handlePaginationPageChange(filters);
+    expect(feedbackDashboardWrapper.state().paginationFilter.page).toBe(2);
   });
 });

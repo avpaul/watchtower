@@ -26,7 +26,9 @@ const props = {
   loading: false,
   pagination,
   error: '',
-  filter: ONTRACK,
+  filter: {
+    filter: ONTRACK
+  },
   setVisibilityFilter: jest.fn(),
   getFellows: jest.fn(),
   user: {

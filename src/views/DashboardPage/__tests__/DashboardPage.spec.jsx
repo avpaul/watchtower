@@ -17,7 +17,9 @@ describe('Tests Pagination component', () => {
       currentPage: 1
     },
     getFellows: jest.fn(),
-    filter: '',
+    filter: {
+      filter: ''
+    },
     loading: false,
     user: {
       name: 'Test user',
@@ -51,32 +53,13 @@ describe('Tests Pagination component', () => {
     expect(props.getFellows).toBeCalled();
   });
 
-  it('handles page change', () => {
+  it('calls handlePaginationChange', () => {
     const shallowWrapper = wrapper.instance();
-    const spy = jest.spyOn(shallowWrapper, 'handlePageChange');
-    const newPage = 'http://localhost:8000/api/v1/fellows?page=1&perPage=25';
-    shallowWrapper.handlePageChange(newPage);
-    expect(spy).toHaveBeenCalled();
-  });
-
-  it('calls handleValueChange', () => {
-    const shallowWrapper = wrapper.instance();
-    const spy = jest.spyOn(shallowWrapper, 'handleValueChange');
-    const value = 1;
-    shallowWrapper.handleValueChange(value);
-    expect(spy).toHaveBeenCalled();
-  });
-
-  it('calls onChange', () => {
-    const shallowWrapper = wrapper.instance();
-    const spy = jest.spyOn(shallowWrapper, 'onChange');
-    const event = {
-      target: {
-        name: 'second',
-        value: '2'
-      }
-    };
-    shallowWrapper.onChange(event);
+    const spy = jest.spyOn(shallowWrapper, 'handlePaginationChange');
+    shallowWrapper.handlePaginationChange({
+      page: 2,
+      perPage: 25
+    });
     expect(spy).toHaveBeenCalled();
   });
 });

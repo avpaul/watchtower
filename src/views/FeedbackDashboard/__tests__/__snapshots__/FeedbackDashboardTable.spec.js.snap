@@ -87,46 +87,18 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Row
-          header={true}
->
-          <Cell
-                    addedClass=""
-                    title=""
-          >
-                    S/N
-          </Cell>
-          <Cell
-                    addedClass=""
-                    title=""
-          >
-                    Start Date
-          </Cell>
-          <Cell
-                    addedClass=""
-                    title=""
-          >
-                    End Date
-          </Cell>
-          <Cell
-                    addedClass=""
-                    title=""
-          >
-                    Name
-          </Cell>
-          <Cell
-                    addedClass=""
-                    title=""
-          >
-                    TTL/LF
-          </Cell>
-          <Cell
-                    addedClass=""
-                    title=""
-          >
-                    Feedback
-          </Cell>
-</Row>,
+        <TableHeader
+          headers={
+                    Array [
+                              "S/N",
+                              "Start Date",
+                              "End Date",
+                              "Name",
+                              "TTL/LF",
+                              "Feedback",
+                            ]
+          }
+/>,
         Array [
           <Row
             header={false}
@@ -135,41 +107,31 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                         
                         1
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         2019-03-05
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         N/A
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Oluseyi Anani
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Trust Birungi
-                         
             </Cell>
             <Cell
                         addedClass=""
@@ -194,41 +156,31 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                         
                         2
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         2019-03-06
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         N/A
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Brian Mboya
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Trust Birungi
-                         
             </Cell>
             <Cell
                         addedClass=""
@@ -253,41 +205,31 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                         
                         3
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         2019-03-08
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         N/A
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Brian Mboya
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Trust Birungi
-                         
             </Cell>
             <Cell
                         addedClass=""
@@ -312,41 +254,31 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                         
                         4
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         2019-03-10
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         N/A
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Brian Mboya
-                         
             </Cell>
             <Cell
                         addedClass=""
                         title=""
             >
-                         
                         Trust Birungi
-                         
             </Cell>
             <Cell
                         addedClass=""
@@ -374,127 +306,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <Cell
-              addedClass=""
-              title=""
->
-              S/N
-</Cell>,
-            <Cell
-              addedClass=""
-              title=""
->
-              Start Date
-</Cell>,
-            <Cell
-              addedClass=""
-              title=""
->
-              End Date
-</Cell>,
-            <Cell
-              addedClass=""
-              title=""
->
-              Name
-</Cell>,
-            <Cell
-              addedClass=""
-              title=""
->
-              TTL/LF
-</Cell>,
-            <Cell
-              addedClass=""
-              title=""
->
-              Feedback
-</Cell>,
+          "headers": Array [
+            "S/N",
+            "Start Date",
+            "End Date",
+            "Name",
+            "TTL/LF",
+            "Feedback",
           ],
-          "header": true,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "S/N",
-            "nodeType": "function",
-            "props": Object {
-              "addedClass": "",
-              "children": "S/N",
-              "title": "",
-            },
-            "ref": null,
-            "rendered": "S/N",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Start Date",
-            "nodeType": "function",
-            "props": Object {
-              "addedClass": "",
-              "children": "Start Date",
-              "title": "",
-            },
-            "ref": null,
-            "rendered": "Start Date",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "End Date",
-            "nodeType": "function",
-            "props": Object {
-              "addedClass": "",
-              "children": "End Date",
-              "title": "",
-            },
-            "ref": null,
-            "rendered": "End Date",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Name",
-            "nodeType": "function",
-            "props": Object {
-              "addedClass": "",
-              "children": "Name",
-              "title": "",
-            },
-            "ref": null,
-            "rendered": "Name",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "TTL/LF",
-            "nodeType": "function",
-            "props": Object {
-              "addedClass": "",
-              "children": "TTL/LF",
-              "title": "",
-            },
-            "ref": null,
-            "rendered": "TTL/LF",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Feedback",
-            "nodeType": "function",
-            "props": Object {
-              "addedClass": "",
-              "children": "Feedback",
-              "title": "",
-            },
-            "ref": null,
-            "rendered": "Feedback",
-            "type": [Function],
-          },
-        ],
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -507,41 +329,31 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-               
               1
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               2019-03-05
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               N/A
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Oluseyi Anani
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Trust Birungi
-               
 </Cell>,
             <Cell
               addedClass=""
@@ -565,112 +377,72 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-0",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                1,
-                " ",
-              ],
+              "children": 1,
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              1,
-              " ",
-            ],
+            "rendered": 1,
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-1",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "2019-03-05",
-                " ",
-              ],
+              "children": "2019-03-05",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "2019-03-05",
-              " ",
-            ],
+            "rendered": "2019-03-05",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-2",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "children": "N/A",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "N/A",
-              " ",
-            ],
+            "rendered": "N/A",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-3",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Oluseyi Anani",
-                " ",
-              ],
+              "children": "Oluseyi Anani",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Oluseyi Anani",
-              " ",
-            ],
+            "rendered": "Oluseyi Anani",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-4",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "children": "Trust Birungi",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Trust Birungi",
-              " ",
-            ],
+            "rendered": "Trust Birungi",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "0",
+            "key": "weak-key-5",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
@@ -735,41 +507,31 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-               
               2
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               2019-03-06
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               N/A
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Brian Mboya
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Trust Birungi
-               
 </Cell>,
             <Cell
               addedClass=""
@@ -793,112 +555,72 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-6",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                2,
-                " ",
-              ],
+              "children": 2,
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              2,
-              " ",
-            ],
+            "rendered": 2,
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-7",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "2019-03-06",
-                " ",
-              ],
+              "children": "2019-03-06",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "2019-03-06",
-              " ",
-            ],
+            "rendered": "2019-03-06",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-8",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "children": "N/A",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "N/A",
-              " ",
-            ],
+            "rendered": "N/A",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-9",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Brian Mboya",
-                " ",
-              ],
+              "children": "Brian Mboya",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Brian Mboya",
-              " ",
-            ],
+            "rendered": "Brian Mboya",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-10",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "children": "Trust Birungi",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Trust Birungi",
-              " ",
-            ],
+            "rendered": "Trust Birungi",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "1",
+            "key": "weak-key-11",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
@@ -963,41 +685,31 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-               
               3
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               2019-03-08
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               N/A
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Brian Mboya
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Trust Birungi
-               
 </Cell>,
             <Cell
               addedClass=""
@@ -1021,112 +733,72 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-12",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                3,
-                " ",
-              ],
+              "children": 3,
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              3,
-              " ",
-            ],
+            "rendered": 3,
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-13",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "2019-03-08",
-                " ",
-              ],
+              "children": "2019-03-08",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "2019-03-08",
-              " ",
-            ],
+            "rendered": "2019-03-08",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-14",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "children": "N/A",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "N/A",
-              " ",
-            ],
+            "rendered": "N/A",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-15",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Brian Mboya",
-                " ",
-              ],
+              "children": "Brian Mboya",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Brian Mboya",
-              " ",
-            ],
+            "rendered": "Brian Mboya",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-16",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "children": "Trust Birungi",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Trust Birungi",
-              " ",
-            ],
+            "rendered": "Trust Birungi",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "2",
+            "key": "weak-key-17",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
@@ -1191,41 +863,31 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-               
               4
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               2019-03-10
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               N/A
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Brian Mboya
-               
 </Cell>,
             <Cell
               addedClass=""
               title=""
 >
-               
               Trust Birungi
-               
 </Cell>,
             <Cell
               addedClass=""
@@ -1249,112 +911,72 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-18",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                4,
-                " ",
-              ],
+              "children": 4,
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              4,
-              " ",
-            ],
+            "rendered": 4,
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-19",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "2019-03-10",
-                " ",
-              ],
+              "children": "2019-03-10",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "2019-03-10",
-              " ",
-            ],
+            "rendered": "2019-03-10",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-20",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "children": "N/A",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "N/A",
-              " ",
-            ],
+            "rendered": "N/A",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-21",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Brian Mboya",
-                " ",
-              ],
+              "children": "Brian Mboya",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Brian Mboya",
-              " ",
-            ],
+            "rendered": "Brian Mboya",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "weak-key-22",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "children": "Trust Birungi",
               "title": "",
             },
             "ref": null,
-            "rendered": Array [
-              " ",
-              "Trust Birungi",
-              " ",
-            ],
+            "rendered": "Trust Birungi",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "3",
+            "key": "weak-key-23",
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
@@ -1419,46 +1041,18 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Row
-            header={true}
->
-            <Cell
-                        addedClass=""
-                        title=""
-            >
-                        S/N
-            </Cell>
-            <Cell
-                        addedClass=""
-                        title=""
-            >
-                        Start Date
-            </Cell>
-            <Cell
-                        addedClass=""
-                        title=""
-            >
-                        End Date
-            </Cell>
-            <Cell
-                        addedClass=""
-                        title=""
-            >
-                        Name
-            </Cell>
-            <Cell
-                        addedClass=""
-                        title=""
-            >
-                        TTL/LF
-            </Cell>
-            <Cell
-                        addedClass=""
-                        title=""
-            >
-                        Feedback
-            </Cell>
-</Row>,
+          <TableHeader
+            headers={
+                        Array [
+                                    "S/N",
+                                    "Start Date",
+                                    "End Date",
+                                    "Name",
+                                    "TTL/LF",
+                                    "Feedback",
+                                  ]
+            }
+/>,
           Array [
             <Row
               header={false}
@@ -1467,41 +1061,31 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                             
                             1
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             2019-03-05
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             N/A
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Oluseyi Anani
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Trust Birungi
-                             
               </Cell>
               <Cell
                             addedClass=""
@@ -1526,41 +1110,31 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                             
                             2
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             2019-03-06
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             N/A
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Brian Mboya
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Trust Birungi
-                             
               </Cell>
               <Cell
                             addedClass=""
@@ -1585,41 +1159,31 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                             
                             3
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             2019-03-08
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             N/A
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Brian Mboya
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Trust Birungi
-                             
               </Cell>
               <Cell
                             addedClass=""
@@ -1644,41 +1208,31 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                             
                             4
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             2019-03-10
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             N/A
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Brian Mboya
-                             
               </Cell>
               <Cell
                             addedClass=""
                             title=""
               >
-                             
                             Trust Birungi
-                             
               </Cell>
               <Cell
                             addedClass=""
@@ -1706,127 +1260,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <Cell
-                addedClass=""
-                title=""
->
-                S/N
-</Cell>,
-              <Cell
-                addedClass=""
-                title=""
->
-                Start Date
-</Cell>,
-              <Cell
-                addedClass=""
-                title=""
->
-                End Date
-</Cell>,
-              <Cell
-                addedClass=""
-                title=""
->
-                Name
-</Cell>,
-              <Cell
-                addedClass=""
-                title=""
->
-                TTL/LF
-</Cell>,
-              <Cell
-                addedClass=""
-                title=""
->
-                Feedback
-</Cell>,
+            "headers": Array [
+              "S/N",
+              "Start Date",
+              "End Date",
+              "Name",
+              "TTL/LF",
+              "Feedback",
             ],
-            "header": true,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "S/N",
-              "nodeType": "function",
-              "props": Object {
-                "addedClass": "",
-                "children": "S/N",
-                "title": "",
-              },
-              "ref": null,
-              "rendered": "S/N",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "Start Date",
-              "nodeType": "function",
-              "props": Object {
-                "addedClass": "",
-                "children": "Start Date",
-                "title": "",
-              },
-              "ref": null,
-              "rendered": "Start Date",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "End Date",
-              "nodeType": "function",
-              "props": Object {
-                "addedClass": "",
-                "children": "End Date",
-                "title": "",
-              },
-              "ref": null,
-              "rendered": "End Date",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "Name",
-              "nodeType": "function",
-              "props": Object {
-                "addedClass": "",
-                "children": "Name",
-                "title": "",
-              },
-              "ref": null,
-              "rendered": "Name",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "TTL/LF",
-              "nodeType": "function",
-              "props": Object {
-                "addedClass": "",
-                "children": "TTL/LF",
-                "title": "",
-              },
-              "ref": null,
-              "rendered": "TTL/LF",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "Feedback",
-              "nodeType": "function",
-              "props": Object {
-                "addedClass": "",
-                "children": "Feedback",
-                "title": "",
-              },
-              "ref": null,
-              "rendered": "Feedback",
-              "type": [Function],
-            },
-          ],
+          "rendered": null,
           "type": [Function],
         },
         Object {
@@ -1839,41 +1283,31 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                 
                 1
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 2019-03-05
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 N/A
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Oluseyi Anani
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Trust Birungi
-                 
 </Cell>,
               <Cell
                 addedClass=""
@@ -1897,112 +1331,72 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-0",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  1,
-                  " ",
-                ],
+                "children": 1,
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                1,
-                " ",
-              ],
+              "rendered": 1,
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-1",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "2019-03-05",
-                  " ",
-                ],
+                "children": "2019-03-05",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "2019-03-05",
-                " ",
-              ],
+              "rendered": "2019-03-05",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-2",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "N/A",
-                  " ",
-                ],
+                "children": "N/A",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "rendered": "N/A",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-3",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Oluseyi Anani",
-                  " ",
-                ],
+                "children": "Oluseyi Anani",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Oluseyi Anani",
-                " ",
-              ],
+              "rendered": "Oluseyi Anani",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-4",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Trust Birungi",
-                  " ",
-                ],
+                "children": "Trust Birungi",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "rendered": "Trust Birungi",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "0",
+              "key": "weak-key-5",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
@@ -2067,41 +1461,31 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                 
                 2
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 2019-03-06
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 N/A
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Brian Mboya
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Trust Birungi
-                 
 </Cell>,
               <Cell
                 addedClass=""
@@ -2125,112 +1509,72 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-6",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  2,
-                  " ",
-                ],
+                "children": 2,
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                2,
-                " ",
-              ],
+              "rendered": 2,
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-7",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "2019-03-06",
-                  " ",
-                ],
+                "children": "2019-03-06",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "2019-03-06",
-                " ",
-              ],
+              "rendered": "2019-03-06",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-8",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "N/A",
-                  " ",
-                ],
+                "children": "N/A",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "rendered": "N/A",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-9",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Brian Mboya",
-                  " ",
-                ],
+                "children": "Brian Mboya",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Brian Mboya",
-                " ",
-              ],
+              "rendered": "Brian Mboya",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-10",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Trust Birungi",
-                  " ",
-                ],
+                "children": "Trust Birungi",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "rendered": "Trust Birungi",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "1",
+              "key": "weak-key-11",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
@@ -2295,41 +1639,31 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                 
                 3
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 2019-03-08
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 N/A
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Brian Mboya
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Trust Birungi
-                 
 </Cell>,
               <Cell
                 addedClass=""
@@ -2353,112 +1687,72 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-12",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  3,
-                  " ",
-                ],
+                "children": 3,
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                3,
-                " ",
-              ],
+              "rendered": 3,
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-13",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "2019-03-08",
-                  " ",
-                ],
+                "children": "2019-03-08",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "2019-03-08",
-                " ",
-              ],
+              "rendered": "2019-03-08",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-14",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "N/A",
-                  " ",
-                ],
+                "children": "N/A",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "rendered": "N/A",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-15",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Brian Mboya",
-                  " ",
-                ],
+                "children": "Brian Mboya",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Brian Mboya",
-                " ",
-              ],
+              "rendered": "Brian Mboya",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-16",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Trust Birungi",
-                  " ",
-                ],
+                "children": "Trust Birungi",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "rendered": "Trust Birungi",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "2",
+              "key": "weak-key-17",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
@@ -2523,41 +1817,31 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                 
                 4
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 2019-03-10
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 N/A
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Brian Mboya
-                 
 </Cell>,
               <Cell
                 addedClass=""
                 title=""
 >
-                 
                 Trust Birungi
-                 
 </Cell>,
               <Cell
                 addedClass=""
@@ -2581,112 +1865,72 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-18",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  4,
-                  " ",
-                ],
+                "children": 4,
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                4,
-                " ",
-              ],
+              "rendered": 4,
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-19",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "2019-03-10",
-                  " ",
-                ],
+                "children": "2019-03-10",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "2019-03-10",
-                " ",
-              ],
+              "rendered": "2019-03-10",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-20",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "N/A",
-                  " ",
-                ],
+                "children": "N/A",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "N/A",
-                " ",
-              ],
+              "rendered": "N/A",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-21",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Brian Mboya",
-                  " ",
-                ],
+                "children": "Brian Mboya",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Brian Mboya",
-                " ",
-              ],
+              "rendered": "Brian Mboya",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "weak-key-22",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": Array [
-                  " ",
-                  "Trust Birungi",
-                  " ",
-                ],
+                "children": "Trust Birungi",
                 "title": "",
               },
               "ref": null,
-              "rendered": Array [
-                " ",
-                "Trust Birungi",
-                " ",
-              ],
+              "rendered": "Trust Birungi",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "3",
+              "key": "weak-key-23",
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",

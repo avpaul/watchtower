@@ -10,3 +10,15 @@
 .feedback-share:hover {
   text-decoration: none;
 }
+
+.feedbackDashboard .col-xl-9 {
+  max-width: 72% !important;
+}
+
+.feedbackDashboard .ops-dashboard__fellows-summary {
+  padding-right: 0 !important;
+}
+
+.feedbackDashboard .feedback-calendar-body {
+  margin-top: 2.5rem;
+}

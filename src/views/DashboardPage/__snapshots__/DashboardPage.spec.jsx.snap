@@ -197,7 +197,11 @@ ShallowWrapper {
             },
           ]
     }
-    filter="onTrack"
+    filter={
+        Object {
+            "filter": "onTrack",
+          }
+    }
     getFellows={[Function]}
     loading={false}
     pagination={
@@ -259,7 +263,11 @@ ShallowWrapper {
                                         />
                                         <div>
                                                   <SearchBar
-                                                            filter="onTrack"
+                                                            filter={
+                                                                      Object {
+                                                                                "filter": "onTrack",
+                                                                              }
+                                                            }
                                                             getFellows={[Function]}
                                                             handleSearchChange={[Function]}
                                                             perPage={10}
@@ -533,12 +541,15 @@ ShallowWrapper {
            
           <Pagination
                     currentPage={1}
-                    filter="onTrack"
+                    filter={
+                              Object {
+                                        "filter": "onTrack",
+                                      }
+                    }
                     handlePageChange={[Function]}
                     handleValueChange={[Function]}
                     hasFellows={true}
-                    onPerPageChange={[Function]}
-                    perPage="25"
+                    perPage={25}
                     perPageOptions={
                               Array [
                                         25,
@@ -574,7 +585,11 @@ ShallowWrapper {
                                     />
                                     <div>
                                                 <SearchBar
-                                                            filter="onTrack"
+                                                            filter={
+                                                                        Object {
+                                                                                    "filter": "onTrack",
+                                                                                  }
+                                                            }
                                                             getFellows={[Function]}
                                                             handleSearchChange={[Function]}
                                                             perPage={10}
@@ -865,7 +880,11 @@ ShallowWrapper {
                                 />
                                 <div>
                                                 <SearchBar
-                                                                filter="onTrack"
+                                                                filter={
+                                                                                Object {
+                                                                                                "filter": "onTrack",
+                                                                                              }
+                                                                }
                                                                 getFellows={[Function]}
                                                                 handleSearchChange={[Function]}
                                                                 perPage={10}
@@ -1153,7 +1172,11 @@ ShallowWrapper {
                   />
                   <div>
                                     <SearchBar
-                                                      filter="onTrack"
+                                                      filter={
+                                                                        Object {
+                                                                                          "filter": "onTrack",
+                                                                                        }
+                                                      }
                                                       getFellows={[Function]}
                                                       handleSearchChange={[Function]}
                                                       perPage={10}
@@ -1207,7 +1230,11 @@ ShallowWrapper {
 />,
                     <div>
                       <SearchBar
-                                            filter="onTrack"
+                                            filter={
+                                                                  Object {
+                                                                                        "filter": "onTrack",
+                                                                                      }
+                                            }
                                             getFellows={[Function]}
                                             handleSearchChange={[Function]}
                                             perPage={10}
@@ -1267,7 +1294,11 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <SearchBar
-                        filter="onTrack"
+                        filter={
+                                                Object {
+                                                                        "filter": "onTrack",
+                                                                      }
+                        }
                         getFellows={[Function]}
                         handleSearchChange={[Function]}
                         perPage={10}
@@ -1281,7 +1312,9 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "filter": "onTrack",
+                        "filter": Object {
+                          "filter": "onTrack",
+                        },
                         "getFellows": [Function],
                         "handleSearchChange": [Function],
                         "perPage": 10,
@@ -1648,12 +1681,15 @@ ShallowWrapper {
             " ",
             <Pagination
               currentPage={1}
-              filter="onTrack"
+              filter={
+                            Object {
+                                          "filter": "onTrack",
+                                        }
+              }
               handlePageChange={[Function]}
               handleValueChange={[Function]}
               hasFellows={true}
-              onPerPageChange={[Function]}
-              perPage="25"
+              perPage={25}
               perPageOptions={
                             Array [
                                           25,
@@ -1675,12 +1711,13 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "currentPage": 1,
-              "filter": "onTrack",
+              "filter": Object {
+                "filter": "onTrack",
+              },
               "handlePageChange": [Function],
               "handleValueChange": [Function],
               "hasFellows": true,
-              "onPerPageChange": [Function],
-              "perPage": "25",
+              "perPage": 25,
               "perPageOptions": Array [
                 25,
                 50,
@@ -1722,7 +1759,11 @@ ShallowWrapper {
                                                 />
                                                 <div>
                                                             <SearchBar
-                                                                        filter="onTrack"
+                                                                        filter={
+                                                                                    Object {
+                                                                                                "filter": "onTrack",
+                                                                                              }
+                                                                        }
                                                                         getFellows={[Function]}
                                                                         handleSearchChange={[Function]}
                                                                         perPage={10}
@@ -1996,12 +2037,15 @@ ShallowWrapper {
              
             <Pagination
                         currentPage={1}
-                        filter="onTrack"
+                        filter={
+                                    Object {
+                                                "filter": "onTrack",
+                                              }
+                        }
                         handlePageChange={[Function]}
                         handleValueChange={[Function]}
                         hasFellows={true}
-                        onPerPageChange={[Function]}
-                        perPage="25"
+                        perPage={25}
                         perPageOptions={
                                     Array [
                                                 25,
@@ -2037,7 +2081,11 @@ ShallowWrapper {
                                           />
                                           <div>
                                                         <SearchBar
-                                                                      filter="onTrack"
+                                                                      filter={
+                                                                                    Object {
+                                                                                                  "filter": "onTrack",
+                                                                                                }
+                                                                      }
                                                                       getFellows={[Function]}
                                                                       handleSearchChange={[Function]}
                                                                       perPage={10}
@@ -2328,7 +2376,11 @@ ShallowWrapper {
                                     />
                                     <div>
                                                       <SearchBar
-                                                                        filter="onTrack"
+                                                                        filter={
+                                                                                          Object {
+                                                                                                            "filter": "onTrack",
+                                                                                                          }
+                                                                        }
                                                                         getFellows={[Function]}
                                                                         handleSearchChange={[Function]}
                                                                         perPage={10}
@@ -2616,7 +2668,11 @@ ShallowWrapper {
                     />
                     <div>
                                         <SearchBar
-                                                            filter="onTrack"
+                                                            filter={
+                                                                                Object {
+                                                                                                    "filter": "onTrack",
+                                                                                                  }
+                                                            }
                                                             getFellows={[Function]}
                                                             handleSearchChange={[Function]}
                                                             perPage={10}
@@ -2670,7 +2726,11 @@ ShallowWrapper {
 />,
                       <div>
                         <SearchBar
-                                                filter="onTrack"
+                                                filter={
+                                                                        Object {
+                                                                                                "filter": "onTrack",
+                                                                                              }
+                                                }
                                                 getFellows={[Function]}
                                                 handleSearchChange={[Function]}
                                                 perPage={10}
@@ -2730,7 +2790,11 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <SearchBar
-                          filter="onTrack"
+                          filter={
+                                                    Object {
+                                                                              "filter": "onTrack",
+                                                                            }
+                          }
                           getFellows={[Function]}
                           handleSearchChange={[Function]}
                           perPage={10}
@@ -2744,7 +2808,9 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "filter": "onTrack",
+                          "filter": Object {
+                            "filter": "onTrack",
+                          },
                           "getFellows": [Function],
                           "handleSearchChange": [Function],
                           "perPage": 10,
@@ -3111,12 +3177,15 @@ ShallowWrapper {
               " ",
               <Pagination
                 currentPage={1}
-                filter="onTrack"
+                filter={
+                                Object {
+                                                "filter": "onTrack",
+                                              }
+                }
                 handlePageChange={[Function]}
                 handleValueChange={[Function]}
                 hasFellows={true}
-                onPerPageChange={[Function]}
-                perPage="25"
+                perPage={25}
                 perPageOptions={
                                 Array [
                                                 25,
@@ -3138,12 +3207,13 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "currentPage": 1,
-                "filter": "onTrack",
+                "filter": Object {
+                  "filter": "onTrack",
+                },
                 "handlePageChange": [Function],
                 "handleValueChange": [Function],
                 "hasFellows": true,
-                "onPerPageChange": [Function],
-                "perPage": "25",
+                "perPage": 25,
                 "perPageOptions": Array [
                   25,
                   50,
@@ -3380,7 +3450,11 @@ ShallowWrapper {
             },
           ]
     }
-    filter="onTrack"
+    filter={
+        Object {
+            "filter": "onTrack",
+          }
+    }
     getFellows={[Function]}
     loading={true}
     pagination={
@@ -3442,7 +3516,11 @@ ShallowWrapper {
                                         />
                                         <div>
                                                   <SearchBar
-                                                            filter="onTrack"
+                                                            filter={
+                                                                      Object {
+                                                                                "filter": "onTrack",
+                                                                              }
+                                                            }
                                                             getFellows={[Function]}
                                                             handleSearchChange={[Function]}
                                                             perPage={10}
@@ -3716,12 +3794,15 @@ ShallowWrapper {
            
           <Pagination
                     currentPage={1}
-                    filter="onTrack"
+                    filter={
+                              Object {
+                                        "filter": "onTrack",
+                                      }
+                    }
                     handlePageChange={[Function]}
                     handleValueChange={[Function]}
                     hasFellows={true}
-                    onPerPageChange={[Function]}
-                    perPage="25"
+                    perPage={25}
                     perPageOptions={
                               Array [
                                         25,
@@ -3757,7 +3838,11 @@ ShallowWrapper {
                                     />
                                     <div>
                                                 <SearchBar
-                                                            filter="onTrack"
+                                                            filter={
+                                                                        Object {
+                                                                                    "filter": "onTrack",
+                                                                                  }
+                                                            }
                                                             getFellows={[Function]}
                                                             handleSearchChange={[Function]}
                                                             perPage={10}
@@ -4048,7 +4133,11 @@ ShallowWrapper {
                                 />
                                 <div>
                                                 <SearchBar
-                                                                filter="onTrack"
+                                                                filter={
+                                                                                Object {
+                                                                                                "filter": "onTrack",
+                                                                                              }
+                                                                }
                                                                 getFellows={[Function]}
                                                                 handleSearchChange={[Function]}
                                                                 perPage={10}
@@ -4336,7 +4425,11 @@ ShallowWrapper {
                   />
                   <div>
                                     <SearchBar
-                                                      filter="onTrack"
+                                                      filter={
+                                                                        Object {
+                                                                                          "filter": "onTrack",
+                                                                                        }
+                                                      }
                                                       getFellows={[Function]}
                                                       handleSearchChange={[Function]}
                                                       perPage={10}
@@ -4390,7 +4483,11 @@ ShallowWrapper {
 />,
                     <div>
                       <SearchBar
-                                            filter="onTrack"
+                                            filter={
+                                                                  Object {
+                                                                                        "filter": "onTrack",
+                                                                                      }
+                                            }
                                             getFellows={[Function]}
                                             handleSearchChange={[Function]}
                                             perPage={10}
@@ -4450,7 +4547,11 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <SearchBar
-                        filter="onTrack"
+                        filter={
+                                                Object {
+                                                                        "filter": "onTrack",
+                                                                      }
+                        }
                         getFellows={[Function]}
                         handleSearchChange={[Function]}
                         perPage={10}
@@ -4464,7 +4565,9 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "filter": "onTrack",
+                        "filter": Object {
+                          "filter": "onTrack",
+                        },
                         "getFellows": [Function],
                         "handleSearchChange": [Function],
                         "perPage": 10,
@@ -4831,12 +4934,15 @@ ShallowWrapper {
             " ",
             <Pagination
               currentPage={1}
-              filter="onTrack"
+              filter={
+                            Object {
+                                          "filter": "onTrack",
+                                        }
+              }
               handlePageChange={[Function]}
               handleValueChange={[Function]}
               hasFellows={true}
-              onPerPageChange={[Function]}
-              perPage="25"
+              perPage={25}
               perPageOptions={
                             Array [
                                           25,
@@ -4858,12 +4964,13 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "currentPage": 1,
-              "filter": "onTrack",
+              "filter": Object {
+                "filter": "onTrack",
+              },
               "handlePageChange": [Function],
               "handleValueChange": [Function],
               "hasFellows": true,
-              "onPerPageChange": [Function],
-              "perPage": "25",
+              "perPage": 25,
               "perPageOptions": Array [
                 25,
                 50,
@@ -4905,7 +5012,11 @@ ShallowWrapper {
                                                 />
                                                 <div>
                                                             <SearchBar
-                                                                        filter="onTrack"
+                                                                        filter={
+                                                                                    Object {
+                                                                                                "filter": "onTrack",
+                                                                                              }
+                                                                        }
                                                                         getFellows={[Function]}
                                                                         handleSearchChange={[Function]}
                                                                         perPage={10}
@@ -5179,12 +5290,15 @@ ShallowWrapper {
              
             <Pagination
                         currentPage={1}
-                        filter="onTrack"
+                        filter={
+                                    Object {
+                                                "filter": "onTrack",
+                                              }
+                        }
                         handlePageChange={[Function]}
                         handleValueChange={[Function]}
                         hasFellows={true}
-                        onPerPageChange={[Function]}
-                        perPage="25"
+                        perPage={25}
                         perPageOptions={
                                     Array [
                                                 25,
@@ -5220,7 +5334,11 @@ ShallowWrapper {
                                           />
                                           <div>
                                                         <SearchBar
-                                                                      filter="onTrack"
+                                                                      filter={
+                                                                                    Object {
+                                                                                                  "filter": "onTrack",
+                                                                                                }
+                                                                      }
                                                                       getFellows={[Function]}
                                                                       handleSearchChange={[Function]}
                                                                       perPage={10}
@@ -5511,7 +5629,11 @@ ShallowWrapper {
                                     />
                                     <div>
                                                       <SearchBar
-                                                                        filter="onTrack"
+                                                                        filter={
+                                                                                          Object {
+                                                                                                            "filter": "onTrack",
+                                                                                                          }
+                                                                        }
                                                                         getFellows={[Function]}
                                                                         handleSearchChange={[Function]}
                                                                         perPage={10}
@@ -5799,7 +5921,11 @@ ShallowWrapper {
                     />
                     <div>
                                         <SearchBar
-                                                            filter="onTrack"
+                                                            filter={
+                                                                                Object {
+                                                                                                    "filter": "onTrack",
+                                                                                                  }
+                                                            }
                                                             getFellows={[Function]}
                                                             handleSearchChange={[Function]}
                                                             perPage={10}
@@ -5853,7 +5979,11 @@ ShallowWrapper {
 />,
                       <div>
                         <SearchBar
-                                                filter="onTrack"
+                                                filter={
+                                                                        Object {
+                                                                                                "filter": "onTrack",
+                                                                                              }
+                                                }
                                                 getFellows={[Function]}
                                                 handleSearchChange={[Function]}
                                                 perPage={10}
@@ -5913,7 +6043,11 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <SearchBar
-                          filter="onTrack"
+                          filter={
+                                                    Object {
+                                                                              "filter": "onTrack",
+                                                                            }
+                          }
                           getFellows={[Function]}
                           handleSearchChange={[Function]}
                           perPage={10}
@@ -5927,7 +6061,9 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "filter": "onTrack",
+                          "filter": Object {
+                            "filter": "onTrack",
+                          },
                           "getFellows": [Function],
                           "handleSearchChange": [Function],
                           "perPage": 10,
@@ -6294,12 +6430,15 @@ ShallowWrapper {
               " ",
               <Pagination
                 currentPage={1}
-                filter="onTrack"
+                filter={
+                                Object {
+                                                "filter": "onTrack",
+                                              }
+                }
                 handlePageChange={[Function]}
                 handleValueChange={[Function]}
                 hasFellows={true}
-                onPerPageChange={[Function]}
-                perPage="25"
+                perPage={25}
                 perPageOptions={
                                 Array [
                                                 25,
@@ -6321,12 +6460,13 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "currentPage": 1,
-                "filter": "onTrack",
+                "filter": Object {
+                  "filter": "onTrack",
+                },
                 "handlePageChange": [Function],
                 "handleValueChange": [Function],
                 "hasFellows": true,
-                "onPerPageChange": [Function],
-                "perPage": "25",
+                "perPage": 25,
                 "perPageOptions": Array [
                   25,
                   50,

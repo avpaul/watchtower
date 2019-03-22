@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
+
 import Row from '../../components/TableComponents/Row';
 import Cell from '../../components/TableComponents/Cell';
 import Table from '../../components/TableComponents/Table';
+import TableHeader from '../../components/TableComponents/Header';
+
 import renderHeader from './feedbackHeader';
 import share from '../../static/share.svg';
 import './feedbackDashboard.css';
@@ -42,22 +46,24 @@ const formatFeedback = (feedback, index, type) => {
   }
   return formattedFeedback;
 };
+
 const feedbackRow = (feedback, index, type) => {
   const formattedFeedback = formatFeedback(feedback, index, type);
   return (
     <Row key={index}>
       {Object.keys(formattedFeedback).map(key => {
         const feedbackLink = '#';
-        if (key === 'Feedback') {
-          return (
-            <Cell key={index}>
+        return (
+          <Cell key={arrayKey({ key, index })}>
+            {key === 'Feedback' ? (
               <a href={feedbackLink} className="feedback-share">
                 View <img src={share} alt="share icon" />
               </a>
-            </Cell>
-          );
-        }
-        return <Cell> {formattedFeedback[key]} </Cell>;
+            ) : (
+              formattedFeedback[key]
+            )}
+          </Cell>
+        );
       })}
     </Row>
   );
@@ -67,11 +73,7 @@ const FeedbackDashboardTable = ({ feedbackArray, currentRole, type }) => {
   const headers = renderHeader(currentRole, type);
   return (
     <Table>
-      <Row header>
-        {headers.map(element => (
-          <Cell key={element}>{element}</Cell>
-        ))}
-      </Row>
+      <TableHeader headers={headers} />
 
       {feedbackArray.map((feedback, index) =>
         feedbackRow(feedback, index, type)
@@ -83,7 +85,11 @@ const FeedbackDashboardTable = ({ feedbackArray, currentRole, type }) => {
 FeedbackDashboardTable.propTypes = {
   feedbackArray: PropTypes.arrayOf(
     PropTypes.objectOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.shape()
+      ])
     )
   ).isRequired,
   currentRole: PropTypes.string.isRequired,

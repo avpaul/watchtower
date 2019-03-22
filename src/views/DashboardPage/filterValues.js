@@ -84,8 +84,6 @@ export const clearFilters = () => {
 
 export const defaultState = table => {
   const initialState = {
-    perPage: '25',
-    page: '1',
     search: '',
     headers: table.default.titles,
     cellKeys: table.default.cells,
