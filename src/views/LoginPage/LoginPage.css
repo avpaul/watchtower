@@ -1,201 +1,190 @@
 .login-page {
   width: 100%;
   padding: 1rem;
-  background-color: #1d66de !important;
+  background-color: #1d66de;
   background-image: url(../../static/Landing-Image.png);
-  background-size: cover;
+  background-size: 800px 450px;
   background-repeat: no-repeat;
   min-height: 100vh;
-  background-position: 70% 0;
+  background-position: 90% 100%;
 }
-.toaster {
-  background-color: #ffa550;
-  color: white;
-}
-
 .login-page__logo {
-  margin: 10% 0% 5% 8%;
-}
-
-.login-page__text-and {
-  display: block;
+  padding: 15% 5% 0 25%;
 }
 
 .login-page__tagline {
-  height: 88px;
-  width: 400px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin: 10% 5%;
   color: #ffffff;
-  font-family: 'DIN Pro Light';
-  text-align: left;
-  letter-spacing: 0.5px;
-  font-size: 250% !important;
-  line-height: 120%;
-  margin: 5% 0% 10% 8% !important;
+}
+
+.login-page__btn-container {
+  margin: 10% auto;
+  margin-left: 15%;
 }
 
 .login-page__btn {
-  height: 50px;
-  width: 224px;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #ffffff;
   color: #3359db;
   font-family: 'DIN Pro';
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 40px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  line-height: 22px;
+  padding: 4%;
+  box-shadow: 0 5px 12px 0 rgba(83, 89, 98, 0.12);
   cursor: pointer;
+}
+
+.login-page__btn-logo {
+  height: 15px;
+  padding-right: 4%;
+  border-radius: 4px 0 0 4px;
+  background-color: #ffffff;
+}
+
+.login-page__btn-text {
+  padding-left: 1.5%;
+  color: #000;
 }
 
 .login-page__btn:hover {
   text-decoration: none;
 }
 
-.login-page__btn-logo {
-  width: 50px;
-  padding: 13px 13px;
-  border-radius: 4px 0 0 4px;
-  border-right: 1px solid #415ad7;
-  background-color: #ffffff;
-  margin-bottom: 5px;
-}
-
-.login-page__btn-text {
-  width: 50px;
-  color: #3359db;
-  border-radius: 0 4px 4px 0;
-  padding-left: 26px;
-  padding-right: 26px;
-}
-
-@media screen and (max-width: 375px),
-  screen and (min-height: 560px),
-  screen and (max-height: 680px) {
-  .login-page__tagline {
-    font-size: 18px !important;
-    line-height: 22px;
-    text-align: center !important;
-    margin: 0% auto 20% auto !important;
-    max-width: 300px;
+@media only screen and (min-width: 425px) {
+  .login-page__btn-container {
+    margin-left: 25%;
   }
 
-  .login-page__header {
-    padding-top: 0%;
-    height: 10%;
-    margin: 0% auto 0% auto;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 414px), screen and (min-height: 800px) {
   .login-page {
-    background-size: 700px 450px;
-    background-position: 95% 100%;
+    background-position: 100% 100%;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .page-info__container {
+    width: 100%;
+    margin: 9% 2%;
   }
 
   .login-page__tagline {
-    font-size: 18px !important;
-    line-height: 22px;
-    text-align: center !important;
-    margin: 0% auto 20% auto !important;
-    max-width: 300px;
-  }
-
-  .login-image {
-    margin: 200px 0px 0px 100px;
-    position: absolute;
-    height: 300px !important;
-    width: 330px;
-  }
-
-  .login-page__header {
-    padding-top: 0%;
-    height: 10%;
-    margin: 0px auto 0px auto;
+    font-size: 1.2rem;
     text-align: center;
+    margin: 3% 5%;
+  }
+  .login-page__btn-container {
+    width: 50%;
+    margin: 15% auto;
   }
 
   .login-page__btn {
-    font-size: 0.825rem !important;
+    padding: 4%;
+  }
+  .login-page__btn-logo {
+    padding-right: unset;
+  }
+  .login-page__btn-text {
+    padding-left: 1.5%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .page-info__container {
+    width: 100%;
+    margin: 9% -15%;
+  }
+  .login-page__tagline {
+    font-size: 1.5rem;
+  }
+  .login-page__btn-container {
+    margin: 10% auto;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .login-page {
+    background-size: 1000px 800px;
+    background-position: 80% -120%;
+  }
+
+  .page-info__container {
+    margin: 9% -22%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .login-page {
+    background-size: 1440px 826px;
+    background-position: 100% -140%;
+  }
+
+  .page-info__container {
+    width: 60%;
+    margin: 10% -5%;
+  }
+
+  .login-page__tagline {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .login-page__btn-text {
+    height: 41px;
+    width: 160px;
+    color: #000000d6;
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    line-height: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 
   .login-page__btn-logo {
-    width: 40px !important;
+    height: 21px;
+    padding-left: 1.5%;
+    margin-bottom: 0.5%;
   }
-
   .login-page__btn-container {
-    text-align: center;
-    padding-top: 0px;
+    margin-top: 5%;
+    margin-left: 20%;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .login-page {
-    background-size: 700px 450px;
-  }
-
+@media only screen and (min-width: 1400px) {
   .login-page__tagline {
-    font-size: 18px !important;
-    line-height: 22px;
-    text-align: center !important;
-    margin: 0px auto 250px auto !important;
-    max-width: 300px;
-  }
-
-  .login-image {
-    margin: 200px 0px 0px 100px;
-    position: absolute;
-    height: 300px !important;
-    width: 330px;
-  }
-
-  .login-page__header {
-    padding-top: 0px;
-    height: 100px;
-    margin: 0px auto 0px auto;
-    text-align: center;
-  }
-
-  .login-page__btn-container {
-    text-align: center;
-    padding-top: 40px;
-  }
-}
-
-@media screen and (min-width: 1024px), (orientation: landscape) {
-  .login-page {
-    background-position: 95% 0;
-    background-size: cover;
-  }
-
-  .login-page__logo {
-    margin-bottom: 0.5rem;
-    width: 20%;
-  }
-
-  .login-page__header {
-    text-align: left;
-    margin: 5% 0% 5% 0%;
-  }
-
-  .login-page__text-and {
-    display: inline-block;
-  }
-
-  .login-page__tagline {
+    height: 158px;
+    width: 507px;
     color: #ffffff;
-    font-family: 'DIN Pro Light';
-    font-size: 220% !important;
-    line-height: 120%;
-    text-align: left !important;
-    margin: 0% 0% 0% 8% !important;
+    font-family: 'DIN Pro';
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 66px;
+    letter-spacing: 1.5px;
+    margin-bottom: -3%;
   }
 
-  .login-page__btn-container {
+  .login-page__header {
+    margin-top: -13%;
+  }
+
+  .page-info__container {
+    width: 100%;
+    margin-left: 10%;
+  }
+  .login-page__tagline {
     text-align: left;
-    padding-top: 5%;
-    margin: 5% 0% 0% 8% !important;
+  }
+  .login-page__logo {
+    padding-left: 5%;
+    margin-bottom: 3%;
+  }
+
+  .login-page__btn {
+    padding: 2%;
+  }
+  .login-page__btn-container {
+    margin-left: 5%;
   }
 }

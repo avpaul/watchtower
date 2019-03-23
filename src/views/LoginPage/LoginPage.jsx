@@ -94,11 +94,13 @@ class LoginPage extends Component {
     return (
       <ErrorBoundary>
         <main className="container-fluid login-page">
-          {this.renderPageHeader()}
-          <ToastContainer autoClose={5000} transition={Slide} />
+          <div className="page-info__container">
+            {this.renderPageHeader()}
+            <ToastContainer autoClose={5000} transition={Slide} />
 
-          {this.renderPageTagLine()}
-          {this.renderPageLoginButton(authUrl)}
+            {this.renderPageTagLine()}
+            {this.renderPageLoginButton(authUrl)}
+          </div>
         </main>
       </ErrorBoundary>
     );
