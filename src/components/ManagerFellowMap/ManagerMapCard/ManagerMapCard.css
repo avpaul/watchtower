@@ -57,3 +57,25 @@
 .manager_card__name:hover + .manager_card__fellows--number {
   display: none;
 }
+
+.dot {
+  height: 16px;
+  width: 16px;
+  background-color: #ffaf30;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dots {
+  height: 16px;
+  width: 16px;
+  background-color: #3359db;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+p.track-key {
+  align-items: left;
+  padding: 8px;
+  white-space: nowrap;
+}
