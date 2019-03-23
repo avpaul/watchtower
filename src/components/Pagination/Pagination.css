@@ -12,6 +12,10 @@
   position: relative;
 }
 
+.pg__per-page {
+  width: 4rem;
+}
+
 .pg__buttons .btn:nth-child(1),
 .pg__buttons .btn:nth-child(7) {
   margin: 0 1rem;
