@@ -11,6 +11,7 @@ const formatProjects = projects => {
   const keys = projects ? Object.keys(projects) : '';
   const result = keys.map(key => ({
     title: key,
+    subTitle: 'Click for more details',
     totalFellows: parseInt(projects[key], 10)
   }));
   return result;
