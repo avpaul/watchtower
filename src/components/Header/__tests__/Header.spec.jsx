@@ -161,6 +161,12 @@ describe('Header Component Test Suite', () => {
     expect(mounted).toHaveBeenCalled();
   };
 
+  const testHeaderActionNoMessage = (action, actionParams = []) => {
+    const mounted = jest.spyOn(globalWrapper.instance(), action);
+    globalWrapper.instance()[action](...actionParams);
+    expect(mounted).toHaveBeenCalled();
+  };
+
   it('calls hide modal', () => testHeaderAction('hideModal'));
 
   it('calls show modal', () => testHeaderAction('showModal'));
@@ -173,6 +179,9 @@ describe('Header Component Test Suite', () => {
 
   it('renderOrder works as expected', () =>
     testHeaderAction('renderOrder', [storeItems.notifications]));
+
+  it('renders feedback when no new notification', () =>
+    testHeaderActionNoMessage('renderOrder', [storeItems.notification]));
 
   it('renderIcons works as expected', () => {
     const mounted = jest.spyOn(globalWrapper.instance(), 'renderIcons');
@@ -193,6 +202,11 @@ describe('Header Component Test Suite', () => {
       true,
       storeItems.notifications
     ]);
+  });
+
+  it('renderNotificationModal works as expected when no new notification', () => {
+    const ordered = { key: [{ id: 'id', data: { status: 'onTrack' } }] };
+    testHeaderActionNoMessage('renderNotificationModal', [ordered, true, {}]);
   });
 
   it('renderArchivesModal works as expected', () => {
@@ -255,5 +269,16 @@ describe('Header Component Test Suite', () => {
     });
     expect(wrapper).toBeDefined();
     expect(wrapper.find('ManagerHeader').exists()).toBe(true);
+  });
+
+  it('renders header top properly when loading feedback dashboard', () => {
+    const { wrapper } = setup({
+      location: {
+        pathname: '/dashboard/feedback'
+      },
+      setupRole: 'WATCH_TOWER_OPS'
+    });
+    expect(wrapper).toBeDefined();
+    expect(wrapper.state().activeItems.feedback).toBe(true);
   });
 });
