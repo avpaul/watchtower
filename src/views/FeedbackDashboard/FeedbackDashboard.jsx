@@ -264,7 +264,7 @@ class FeedbackDashboard extends Component {
         filterUnit(feedbackUnit, isManager ? 'project' : 'level') &&
         filterUnit(feedbackUnit, 'criteria') &&
         filterUnit(feedbackUnit, 'type')
-    );;
+    );
   };
 
   handleFilterCardClick = event => {

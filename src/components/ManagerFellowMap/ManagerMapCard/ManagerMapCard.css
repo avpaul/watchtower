@@ -74,8 +74,8 @@
   display: inline-block;
 }
 
-p.track-key {
-  align-items: left;
-  padding: 8px;
+.track-key {
+  text-align: right;
   white-space: nowrap;
+  margin-right: 1.5rem;
 }
