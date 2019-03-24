@@ -161,10 +161,10 @@ export class FellowHistory extends Component {
   loadPipActivationForm = () => (
     <button
       type="submit"
-      className="btn btn-add-support"
+      className="btn btn-pip-activation"
       onClick={this.renderPipActivationForm}
     >
-      Activate Pip
+      ACTIVATE PIP
     </button>
   );
 
@@ -198,13 +198,15 @@ export class FellowHistory extends Component {
       <div className="fellow-history container-fluid">
         <div className="fellow-history__top row">
           <div className="col">
+            <div className="btn-pip-container">
+              {this.loadPipActivationForm()}
+            </div>
             <div className="row">
               <span className="fellow-history__header col">
                 DEVELOPER HISTORY
               </span>
             </div>
             <div className="row">{this.renderCards(fellow)}</div>
-            <div>{this.loadPipActivationForm()}</div>
             <div className="row">{this.renderTables()}</div>
           </div>
         </div>

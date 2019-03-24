@@ -90,6 +90,28 @@
   margin-top: 15px;
 }
 
+.btn-pip-container {
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
+
+.btn-pip-activation {
+  box-sizing: border-box;
+  height: 46px;
+  width: 130px;
+  background-color: rgb(245, 173, 41);
+  color: #ffffff;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-pip-activation:hover {
+  background-color: blue;
+}
+
 .btn-submit-pip-form {
   box-sizing: border-box;
   height: 46px;
@@ -179,4 +201,10 @@
 
 .input-group .fellow-details-input .mb-2 .react-datepicker-wrapper {
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .btn-pip-container {
+    position: relative;
+  }
 }

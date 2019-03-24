@@ -32,6 +32,18 @@
   text-align: left;
 }
 
+.heading {
+  height: 21px;
+  color: #232f49;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 21px;
+  margin: 0px 42px 10px 25px;
+  padding: 15px 0 20px 0;
+  text-align: left;
+}
+
 .title {
   height: 23px;
   width: 223px !important;
