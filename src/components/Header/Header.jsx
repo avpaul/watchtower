@@ -168,31 +168,43 @@ export class Header extends Component {
    * @function {@param, @param, @param}
    * @returns
    */
-  renderNotificationModal = (ordered, show, unreadnotifications) => (
-    <Modal show={show} handleClose={this.hideModal}>
-      {this.renderModalHeader()}
-      {Object.keys(ordered).map((key, index) => (
-        <div className="message-body" key={arrayKey({ key, index })}>
-          <div className="message-date" key={key}>
-            <span className="left">{key}</span>
-            <span
-              className="right clear-cursor"
-              aria-hidden="true"
-              onClick={this.clearNotification}
-            >
-              Clear All{' '}
-            </span>
+  renderNotificationModal = (ordered, show, unreadnotifications) => {
+    if (show && !unreadnotifications.length) {
+      return (
+        <Modal show={show} handleClose={this.hideModal}>
+          {this.renderModalHeader()}
+          <div className="modal-text text-sizing">
+            <p>No new notifications yet</p>
           </div>
-          {ordered[key].map(notification => (
-            <div key={notification.id} className="modal-text">
-              <div className="message-header">{renderMessageHeader()}</div>
-              <div>{this.renderIcons(notification, unreadnotifications)}</div>
+        </Modal>
+      );
+    }
+    return (
+      <Modal show={show} handleClose={this.hideModal}>
+        {this.renderModalHeader()}
+        {Object.keys(ordered).map((key, index) => (
+          <div className="message-body" key={arrayKey({ key, index })}>
+            <div className="message-date" key={key}>
+              <span className="left">{key}</span>
+              <span
+                className="right clear-cursor"
+                aria-hidden="true"
+                onClick={this.clearNotification}
+              >
+                Clear All{' '}
+              </span>
             </div>
-          ))}
-        </div>
-      ))}
-    </Modal>
-  );
+            {ordered[key].map(notification => (
+              <div key={notification.id} className="modal-text">
+                <div className="message-header">{renderMessageHeader()}</div>
+                <div>{this.renderIcons(notification, unreadnotifications)}</div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </Modal>
+    );
+  };
 
   renderArchivesModal = (show, notifications) => (
     <Modal show={show} handleClose={this.hideModal}>
