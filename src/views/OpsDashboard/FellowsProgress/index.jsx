@@ -69,6 +69,8 @@ export class FellowsProgress extends Component {
           items={['All', ...ttlsAvilable.sort()]}
           getFilter={this.getFilter}
           type="ttl"
+          characterLength={35}
+          width="13rem"
           chevronColor="#808FA3"
         />
       </div>
