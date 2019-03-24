@@ -1,3 +1,30 @@
+# V 1.0.3
+
+## Features
+
+- display a loader when project summary details are loading
+- enable feedback filter cards for TTLs/LFs/OPs
+- modify display per-page values
+- display filtered data for LF/TTL PIP feedback
+- display filtered data for TTL/LF/OPs PIP feedback
+- set PIP feedback duration
+- clear PIP feedback duration
+- paginate TTL/LF PIP feedback table
+- clear filtered PIP list of fellows on the feedback dashboard
+- display pre-PIP/PIP filters on EM/SL feedback dashboard
+
+## Bug Fixes
+
+- refactor and fix console-log errors
+- fix fellow summary count discrepancy on TTL/LF dashboard
+- fix missing Google Analytics variable
+- fix feedback dashboard CSS style
+- fix feedback dashboard file
+- fix visuals for fellows notification
+- fix PIP activation button
+- fix landing page responsiveness
+- fix cards scrollbar
+
 # V 1.0.2
 
 ## Features
