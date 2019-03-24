@@ -17,7 +17,9 @@ const TranslatorTable = {
   'All Projects': '',
   WATCH_TOWER_LF: 'LF',
   WATCH_TOWER_OPS: 'TTL/LF',
-  WATCH_TOWER_TTL: 'TTL'
+  WATCH_TOWER_TTL: 'TTL',
+  WATCH_TOWER_EM: 'TTL',
+  WATCH_TOWER_SL: 'LF'
 };
 
 export default TranslatorTable;
