@@ -7,8 +7,8 @@ export const getRadioCardData = value => [
   {
     value: 'Trend',
     name: `${value} Today`
-  },
-  { value: 'Today', name: `${value} Trend` }
+  }
+  // { value: 'Today', name: `${value} Trend` }
 ];
 
 export const getFilterTooltips = filter => {
