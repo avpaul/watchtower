@@ -45,8 +45,8 @@ it('calculates the radio card data', () => {
     {
       value: 'Trend',
       name: `Today Today`
-    },
-    { value: 'Today', name: `Today Trend` }
+    }
+    // { value: 'Today', name: `Today Trend` }
   ];
 
   expect(getRadioCardData('Today')).toEqual(
