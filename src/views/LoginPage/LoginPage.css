@@ -8,6 +8,12 @@
   min-height: 100vh;
   background-position: 90% 100%;
 }
+
+.toaster {
+  background-color: #ffa550;
+  color: white;
+}
+
 .login-page__logo {
   padding: 15% 5% 0 25%;
 }
