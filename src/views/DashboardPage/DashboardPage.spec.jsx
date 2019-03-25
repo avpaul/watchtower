@@ -225,10 +225,33 @@ it('does not change state when getLevelFilter is called and the loading prop is 
   expect(wrapper.state('level')).toEqual('All');
 });
 
+it('calls jsonToPdf when value is "as PDF" when downloadCsvPdf is NOT called', () => {
+  const wrapper = shallow(<DashboardPage {...props} />);
+  wrapper.setProps({
+    loading: false
+  });
+
+  wrapper.setState({
+    value: 'as PDF',
+    loading: true,
+    downloadFellows: []
+  });
+  const downloadCsvPdfSpy = jest.spyOn(wrapper.instance(), 'downloadCsvPdf');
+  wrapper.instance().downloadCsvPdf('download', 'as PDF');
+  expect(downloadCsvPdfSpy).toHaveBeenCalled();
+  expect(jsonToPdf).not.toHaveBeenCalled();
+});
+
 it('calls jsonToPdf when value is "as PDF" when downloadCsvPdf is called', () => {
   const wrapper = shallow(<DashboardPage {...props} />);
   wrapper.setProps({
     loading: false
+  });
+
+  wrapper.setState({
+    value: 'as PDF',
+    loading: true,
+    downloadFellows: ['some data', 'some more data']
   });
   const downloadCsvPdfSpy = jest.spyOn(wrapper.instance(), 'downloadCsvPdf');
   wrapper.instance().downloadCsvPdf('download', 'as PDF');

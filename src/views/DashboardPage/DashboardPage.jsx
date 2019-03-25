@@ -109,7 +109,7 @@ class DashboardPage extends Component {
       pagination: { results },
       loading
     } = this.props;
-    if (value === 'as PDF' && !loading) {
+    if (value === 'as PDF' && !loading && !!downloadFellows.length) {
       jsonToPdf(
         headers,
         cellKeys,
