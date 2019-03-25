@@ -81,7 +81,7 @@ class EngineeringManagerDashboard extends Component {
       {
         id: 'total-fellows-card',
         title: 'Total D0 Fellows',
-        // subTitle: 'Click to see details',
+        subTitle: 'Click to see details',
         totalFellows: `${totalFellows === undefined ? 0 : totalFellows}`
       }
     ];
@@ -98,6 +98,7 @@ class EngineeringManagerDashboard extends Component {
           ' ',
           managersArray[i].lastName.substring(1, 0)
         ),
+        subTitle: 'Click to see details',
         totalFellows: managersArray[i].fellowsCount
       };
       displayList.push(content);
@@ -181,6 +182,7 @@ class EngineeringManagerDashboard extends Component {
     return [
       {
         title: isEngineeringManager ? 'TTL to FELLOW MAP' : 'LF to FELLOW MAP',
+        subTitle: 'Click to see details',
         text: isEngineeringManager
           ? 'Average TTL to Fellow ratio'
           : 'Average LF to Fellow ratio',
