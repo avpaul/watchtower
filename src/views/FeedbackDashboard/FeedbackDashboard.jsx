@@ -6,10 +6,10 @@ import TranslatorTable from '../../utils/TranslatorTable';
 import Title from '../../components/Title';
 import FeedbackDashboardTable from './FeedbackDashboardTable';
 import FeedbackDuration from '../../components/FeedbackDuration';
-import Pagination from '../../components/Pagination/Pagination';
+import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
 import { convertToEmail } from '../../services/helper';
 
-class FeedbackDashboard extends Component {
+export class FeedbackDashboard extends Component {
   constructor(props) {
     super(props);
 
@@ -28,13 +28,6 @@ class FeedbackDashboard extends Component {
       startDate: this.defaultDate(),
       endDate: this.defaultDate(),
       currentDate: this.defaultDate(),
-      paginatedFeedback: [],
-      paginationFilter: {
-        perPage: 25,
-        page: 1,
-        totalPages: 0
-      },
-      filter: {},
       isTicked: defaultIsTicked,
       defaultIsTicked
     };
@@ -50,7 +43,6 @@ class FeedbackDashboard extends Component {
             feedback = this.processFeedbackData(
               data.managersFeedback.length ? data.managersFeedback[0].ttls : []
             );
-
             break;
           case !!user.roles.WATCH_TOWER_SL:
             feedback = this.processFeedbackData(
@@ -72,22 +64,19 @@ class FeedbackDashboard extends Component {
     });
   }
 
-  updateInitialState = feedback =>
+  updateInitialState = feedback =>{
+    const { paginationWrapper } = this.props;
     this.setState(
       {
         feedbackArray: feedback,
         filteredFeedbackData: feedback,
         cachedDurationData: feedback,
-        paginatedFeedback: feedback,
-        paginationFilter: {
-          perPage: 25,
-          page: 1,
-          totalPages: Math.ceil(feedback.length / 25)
-        }
       },
-      this.paginateFeedback
+      () => paginationWrapper.updateData(feedback)
     );
 
+  }
+    
   /**
    * @method updateState
    * @param {Object} data - the data to be processed
@@ -99,18 +88,30 @@ class FeedbackDashboard extends Component {
       feedback.push(...manager.feedback);
     });
     return feedback;
+  }
+
+  /**
+   * @method updateFeedbackData
+   * @description update state with data of what the user desires
+   */
+  updateFeedbackData = () => {
+    const { paginationWrapper } = this.props;
+    const feedback = this.filterFeedbackData();
+    this.setState({ filteredFeedbackData: feedback }, () =>
+      paginationWrapper.updateData(feedback)
+    );
   };
 
   handleStartDateChange = date => {
     const { endDate } = this.state;
-    if (date > endDate) {
-      this.setState({ endDate: this.defaultDate() });
-    }
-    this.setState({ startDate: date }, () => this.updateFeedbackData());
+    this.setState(state => ({
+      startDate: date,
+      endDate: date > endDate ? this.defaultDate() : state.endDate
+    }), this.updateFeedbackData);
   };
 
   handleEndDateChange = date => {
-    this.setState({ endDate: date }, () => this.updateFeedbackData());
+    this.setState({ endDate: date }, this.updateFeedbackData);
   };
 
   /**
@@ -118,6 +119,7 @@ class FeedbackDashboard extends Component {
    * @description - This method reset's the startDate and endDate state Objects to their Default
    */
   clearDuration = () => {
+    const { paginationWrapper } = this.props;
     const { cachedDurationData } = this.state;
     this.setState(
       {
@@ -125,7 +127,7 @@ class FeedbackDashboard extends Component {
         endDate: this.defaultDate(),
         filteredFeedbackData: cachedDurationData
       },
-      this.paginateFeedback
+      () => paginationWrapper.updateData(cachedDurationData)
     );
   };
 
@@ -134,17 +136,6 @@ class FeedbackDashboard extends Component {
    * @description Sets the default date which is now
    */
   defaultDate = () => new Date();
-
-  /**
-   * @method updateFeedbackData
-   * @description update state with data of what the user desires
-   */
-  updateFeedbackData = () => {
-    this.setState(
-      { filteredFeedbackData: this.filterFeedbackData() },
-      this.paginateFeedback
-    );
-  };
 
   /**
    * @method filterFeedbackData
@@ -169,7 +160,10 @@ class FeedbackDashboard extends Component {
       defaultIsTicked: isTicked,
       feedbackArray: filteredFeedbackData
     } = this.state;
-    this.setState({ isTicked, filteredFeedbackData }, this.paginateFeedback);
+    const { paginationWrapper } = this.props;
+    this.setState({ isTicked, filteredFeedbackData }, () =>
+      paginationWrapper.updateData(filteredFeedbackData)
+    );
   };
 
   /**
@@ -201,70 +195,19 @@ class FeedbackDashboard extends Component {
     );
   };
 
-  /**
-   * @description Filters the feedback records according to the current page
-   * @param pagination Object that contains the values used to filter the feedback records eg.
-   * current page, per page value
-   */
-  paginateFeedback = () => {
-    const { filteredFeedbackData, paginationFilter } = this.state;
-    const offset = (paginationFilter.page - 1) * paginationFilter.perPage;
-    const upperBound = offset + paginationFilter.perPage;
-    // Retrieves a sub array of feedback according to current page and the page size set.
-    const updatedFeedback = filteredFeedbackData;
-    this.setState({
-      paginatedFeedback: updatedFeedback.slice(offset, upperBound)
-    });
-  };
-
-  /**
-   * @description pagination buttons' onClick event handler
-   * @param queryData pagination filters returned from the Pagination component
-   */
-  handlePaginationPageChange = queryData => {
-    this.setState(
-      state => ({
-        paginationFilter: {
-          perPage: queryData.perPage,
-          page: queryData.page,
-          totalPages: Math.ceil(
-            state.filteredFeedbackData.length / queryData.perPage
-          )
-        }
-      }),
-      this.paginateFeedback
-    );
-  };
-
-  /**
-   * @description Renders the pagination component
-   */
-  renderPagination = () => {
-    const { filter, filteredFeedbackData, paginationFilter } = this.state;
-    return (
-      <Pagination
-        totalPages={paginationFilter.totalPages}
-        handlePageChange={this.handlePaginationPageChange}
-        handleValueChange={this.handlePaginationPageChange}
-        currentPage={paginationFilter.page}
-        perPage={paginationFilter.perPage}
-        filter={filter}
-        hasFellows={filteredFeedbackData.length > 0}
-      />
-    );
-  };
-
   renderFeedbackDetails = () => {
-    const { paginatedFeedback, isTicked } = this.state;
-    const { role } = this.props;
+    const { isTicked } = this.state;
+    const { role, paginationWrapper } = this.props;
     return (
       <Fragment>
         <FeedbackDashboardTable
-          feedbackArray={paginatedFeedback}
+          feedbackArray={paginationWrapper.state.paginatedData}
           currentRole={role}
           type={TranslatorTable[isTicked.type]}
         />
-        <div className="col mb-4">{this.renderPagination()}</div>
+        <div className="col-12 mb-4">
+          {paginationWrapper.renderPagination()}
+        </div>
       </Fragment>
     );
   };
@@ -346,26 +289,23 @@ class FeedbackDashboard extends Component {
   };
 
   handleFilterCardClick = event => {
-    const { feedbackArray, isTicked, paginationFilter } = this.state;
+    const { isTicked, feedbackArray } = this.state;
+    const { paginationWrapper } = this.props;
     const updatedIsTicked = {
       ...isTicked,
       [event.currentTarget.attributes[2].value]: event.currentTarget.id
     };
-    const newFilteredData = this.filterFeedback(updatedIsTicked, feedbackArray);
+    const filteredFeedbackData = this.filterFeedback(
+      updatedIsTicked,
+      feedbackArray
+    );
     this.setState(
       {
         isTicked: updatedIsTicked,
-        filteredFeedbackData: newFilteredData,
-        cachedDurationData: newFilteredData,
-        paginationFilter: {
-          ...paginationFilter,
-          page: 1,
-          totalPages: Math.ceil(
-            newFilteredData.length / paginationFilter.perPage
-          )
-        }
+        filteredFeedbackData,
+        cachedDurationData: filteredFeedbackData
       },
-      this.paginateFeedback
+      () => paginationWrapper.updateData(filteredFeedbackData, { page: 1 })
     );
   };
 
@@ -392,7 +332,12 @@ class FeedbackDashboard extends Component {
 FeedbackDashboard.propTypes = {
   user: PropTypes.shape({}).isRequired,
   role: PropTypes.string.isRequired,
-  getManagerFeedback: PropTypes.func.isRequired
+  getManagerFeedback: PropTypes.func.isRequired,
+  paginationWrapper: PropTypes.shape().isRequired
 };
 
-export default FeedbackDashboard;
+const PaginationWrapped = props => (
+  <PaginationFrontendWrapper component={<FeedbackDashboard {...props} />} />
+);
+
+export default PaginationWrapped;

@@ -1,11 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
 import 'jspdf-autotable';
 import jsonToCsv from '../../utils/jsonToCsv';
 import jsonToPdf from '../../utils/jsonToPdf';
 import DashboardTable from '../../components/DashboardTable';
 import Error from '../../components/Error';
-import Pagination from '../../components/Pagination/Pagination';
 import '../../components/Pagination/Pagination.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import FilterDropdown from '../OpsDashboard/FellowsProgress/Filter';
@@ -18,14 +16,16 @@ import {
   getStatusFilterValues,
   clearFilters,
   defaultState,
-  defaultPropTypes
+  defaultPropTypes,
+  filterFellows
 } from './filterValues';
+import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
 
 /**
  * Class representing Dashboard Page
  * @class
  */
-class DashboardPage extends Component {
+export class DashboardPage extends Component {
   constructor(props) {
     super(props);
     this.state = defaultState(table);
@@ -33,74 +33,47 @@ class DashboardPage extends Component {
 
   componentDidMount() {
     const { getFellows, filter } = this.props;
-    getFellows({ filter, ...this.state, perPage: 25, page: 1 });
+    getFellows({ filter, perPage: 'all' });
   }
 
-  handlePaginationChange = queryData => {
-    const { getFellows } = this.props;
-    getFellows({ ...queryData });
-  };
+  componentDidUpdate(prevProps) {
+    const { fellows } = this.props;
+    if (prevProps.fellows && prevProps.fellows !== fellows)
+      this.updateFellows(fellows);
+  }
 
-  renderPagination = () => {
-    const { pagination, filter, fellows } = this.props;
-    return (
-      <Pagination
-        totalPages={pagination.pages}
-        handlePageChange={this.handlePaginationChange}
-        handleValueChange={this.handlePaginationChange}
-        currentPage={parseInt(pagination.page, 10)}
-        filter={filter}
-        hasFellows={fellows.length > 0}
-      />
+  updateFellows = fellows => {
+    const { paginationWrapper } = this.props;
+    this.setState({ filteredFellows: fellows }, () =>
+      paginationWrapper.updateData(fellows)
     );
   };
 
-  handleSearchChange = event => {
-    this.setState({ search: event.target.value });
+  filterFellows = () => {
+    const { search, level, criteria, statusType, status } = this.state;
+    const { fellows } = this.props;
+    const filters = { search, level, statusType, criteria, status };
+    this.updateFellows(filterFellows(fellows, filters));
   };
 
   getCriteriaFilter = (type, value) => {
     const { status } = this.state;
-    this.setState(getCriteriaFilterValues(type, value, table, status));
+    this.setState(
+      getCriteriaFilterValues(type, value, table, status),
+      this.filterFellows
+    );
   };
 
   getStatusFilter = (type, value) => {
-    const {
-      loading,
-      pagination: { perPage },
-      getFellows
-    } = this.props;
-    const { search, level, criteria } = this.state;
-    if (!loading) {
-      getFellows({
-        perPage,
-        search,
-        statusType: criteria,
-        status: value,
-        level
-      });
-    }
-    this.setState(getStatusFilterValues(type, value, table, criteria));
+    const { criteria } = this.state;
+    this.setState(
+      getStatusFilterValues(type, value, table, criteria),
+      this.filterFellows
+    );
   };
 
-  getLevelFilter = (type, value) => {
-    const {
-      loading,
-      pagination: { perPage },
-      getFellows
-    } = this.props;
-    const { search, status, criteria } = this.state;
-    if (!loading) {
-      getFellows({
-        perPage,
-        search,
-        statusType: criteria,
-        status,
-        level: value
-      });
-      this.setState({ level: value });
-    }
-  };
+  getLevelFilter = (type, value) =>
+    this.setState({ level: value }, this.filterFellows);
 
   downloadCsvPdf = (type, value) => {
     const { headers, cellKeys, criteria } = this.state;
@@ -109,6 +82,7 @@ class DashboardPage extends Component {
       pagination: { results },
       loading
     } = this.props;
+
     if (value === 'as PDF' && !loading && !!downloadFellows.length) {
       jsonToPdf(
         headers,
@@ -125,24 +99,38 @@ class DashboardPage extends Component {
   };
 
   clickDownload = () => {
-    const { status, level } = this.state;
     const {
-      pagination: { results }
+      paginationWrapper: {
+        state: { paginatedData }
+      }
     } = this.props;
-    const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-    axios
-      .get(
-        `${serverURL}/api/v1/fellows?perPage=${results}&page=${1}&filter=${'all'}&level=${level}&status=${status}`
-      )
-      .then(res => {
-        this.setState({ downloadFellows: res.data.payload });
-      });
+    this.setState({ downloadFellows: paginatedData });
   };
 
-  clearFilters = () => {
-    const { loading, getFellows } = this.props;
-    if (!loading) getFellows({ status: 'All', level: 'All' });
-    this.setState(clearFilters());
+  clearFilters = () => this.setState(clearFilters(), this.filterFellows);
+
+  handleSearchBarChange = ({ search }) =>
+    this.setState({ search }, this.filterFellows);
+
+  handleSearchInputChange = event =>
+    this.setState({ search: event.target.value }, this.filterFellows);
+
+  renderSearchBar = () => {
+    const { search } = this.state;
+    const {
+      paginationWrapper: {
+        state: { paginationFilter: filter }
+      }
+    } = this.props;
+    return (
+      <SearchBar
+        getFellows={this.handleSearchBarChange}
+        perPage={filter.perPage}
+        filter={filter}
+        search={search}
+        handleSearchChange={this.handleSearchInputChange}
+      />
+    );
   };
 
   renderDownloadButton() {
@@ -168,14 +156,12 @@ class DashboardPage extends Component {
   }
 
   renderFilter() {
-    const { criteria, status, level, search } = this.state;
+    const { criteria, status, level } = this.state;
     const {
-      getFellows,
-      filter,
-      fellows,
-      pagination: { perPage, results }
+      paginationWrapper: {
+        state: { paginatedData }
+      }
     } = this.props;
-
     return (
       <Fragment>
         <Filters
@@ -186,29 +172,20 @@ class DashboardPage extends Component {
           getLevelFilter={this.getLevelFilter}
           getStatusFilter={this.getStatusFilter}
         />
-        <div>
-          <SearchBar
-            results={results}
-            getFellows={getFellows}
-            perPage={perPage}
-            filter={filter}
-            search={search}
-            handleSearchChange={this.handleSearchChange}
-          />
-        </div>
-        {fellows.length !== 0 ? this.renderDownloadButton() : null}
+        <div>{this.renderSearchBar()}</div>
+        {paginatedData.length !== 0 ? this.renderDownloadButton() : null}
       </Fragment>
     );
   }
 
   renderResultCount = () => {
-    const {
-      pagination: { results }
-    } = this.props;
-    const resultTerm = results > 1 ? 'Fellows' : 'Fellow';
+    const { filteredFellows } = this.state;
+    const resultTerm = filteredFellows.length > 1 ? 'Fellows' : 'Fellow';
     return (
       <div className="result-count">
-        <span className="border-bottom mr-2 pb-2">{results || 0}</span>
+        <span className="border-bottom mr-2 pb-2">
+          {filteredFellows.length || 0}
+        </span>
         <span className="mr-3">{`Total ${resultTerm} (Filtered)`}</span>
         <FilterButton clearFilters={this.clearFilters} />
       </div>
@@ -216,7 +193,12 @@ class DashboardPage extends Component {
   };
 
   renderPageBody() {
-    const { fellows, loading } = this.props;
+    const {
+      loading,
+      paginationWrapper: {
+        state: { paginatedData }
+      }
+    } = this.props;
     const { headers, cellKeys } = this.state;
     const { ErrorBoundary } = Error;
     return (
@@ -226,7 +208,7 @@ class DashboardPage extends Component {
           {this.renderResultCount()}
           <DashboardTable
             headers={headers}
-            fellows={fellows}
+            fellows={paginatedData}
             loading={loading}
             cellValues={cellKeys}
           />
@@ -236,17 +218,16 @@ class DashboardPage extends Component {
   }
 
   render() {
-    const { error } = this.props;
+    const { error, paginationWrapper } = this.props;
     const { ErrorPage } = Error;
     return (
       <div>
         {error ? <ErrorPage /> : this.renderPageBody()}
-        <div> {this.renderPagination()} &nbsp; </div>
+        <div className="mb-5">{paginationWrapper.renderPagination()}</div>
       </div>
     );
   }
 }
-export default DashboardPage;
 
 DashboardPage.defaultProps = {
   summary: { onTrack: 0, gteWk5OffTrack: 0, ltWk5OffTrack: 0 },
@@ -254,3 +235,9 @@ DashboardPage.defaultProps = {
 };
 
 DashboardPage.propTypes = defaultPropTypes;
+
+const PaginationWrapped = props => (
+  <PaginationFrontendWrapper component={<DashboardPage {...props} />} />
+);
+
+export default PaginationWrapped;

@@ -213,8 +213,8 @@ class Pagination extends Component {
   );
 
   render() {
-    const { hasFellows, totalPages } = this.props;
-    if (!hasFellows) return <div />;
+    const { hasData, totalPages } = this.props;
+    if (!hasData) return <div />;
 
     const isFewPages = totalPages < 5;
     const classNames = {
@@ -244,12 +244,12 @@ Pagination.propTypes = {
   handleValueChange: PropTypes.func.isRequired,
   filter: PropTypes.shape().isRequired,
   currentPage: PropTypes.number.isRequired,
-  hasFellows: PropTypes.bool
+  hasData: PropTypes.bool
 };
 
 Pagination.defaultProps = {
   totalPages: 10,
   perPage: 25,
   perPageOptions: [25, 50, 100],
-  hasFellows: false
+  hasData: false
 };

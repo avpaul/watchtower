@@ -4,7 +4,26 @@ exports[`Feedback simslead and engineering dashboard tests should render feedbac
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
+    currentRole="WATCH_TOWER_OPS"
     getManagerFeedback={[Function]}
+    paginationWrapper={
+        Object {
+            "handlePaginationPageChange": [Function],
+            "paginateData": [Function],
+            "processData": [Function],
+            "renderPagination": [Function],
+            "state": Object {
+              "filteredData": Array [],
+              "paginatedData": Array [],
+              "paginationFilter": Object {
+                "page": 1,
+                "perPage": 25,
+                "totalPages": 0,
+              },
+            },
+            "updateData": [Function],
+          }
+    }
     role="WATCH_TOWER_EM"
     user={
         Object {
@@ -299,25 +318,8 @@ ShallowWrapper {
                                 type=""
                         />
                         <div
-                                className="col mb-4"
-                        >
-                                <Pagination
-                                        currentPage={1}
-                                        filter={Object {}}
-                                        handlePageChange={[Function]}
-                                        handleValueChange={[Function]}
-                                        hasFellows={true}
-                                        perPage={25}
-                                        perPageOptions={
-                                                Array [
-                                                        25,
-                                                        50,
-                                                        100,
-                                                      ]
-                                        }
-                                        totalPages={0}
-                                />
-                        </div>
+                                className="col-12 mb-4"
+                        />
                 </Unknown>
         </div>
 </div>,
@@ -597,25 +599,8 @@ ShallowWrapper {
                                     type=""
                         />
                         <div
-                                    className="col mb-4"
-                        >
-                                    <Pagination
-                                                currentPage={1}
-                                                filter={Object {}}
-                                                handlePageChange={[Function]}
-                                                handleValueChange={[Function]}
-                                                hasFellows={true}
-                                                perPage={25}
-                                                perPageOptions={
-                                                            Array [
-                                                                        25,
-                                                                        50,
-                                                                        100,
-                                                                      ]
-                                                }
-                                                totalPages={0}
-                                    />
-                        </div>
+                                    className="col-12 mb-4"
+                        />
             </Unknown>
 </div>,
         ],
@@ -1481,25 +1466,8 @@ ShallowWrapper {
                             type=""
               />
               <div
-                            className="col mb-4"
-              >
-                            <Pagination
-                                          currentPage={1}
-                                          filter={Object {}}
-                                          handlePageChange={[Function]}
-                                          handleValueChange={[Function]}
-                                          hasFellows={true}
-                                          perPage={25}
-                                          perPageOptions={
-                                                        Array [
-                                                                      25,
-                                                                      50,
-                                                                      100,
-                                                                    ]
-                                          }
-                                          totalPages={0}
-                            />
-              </div>
+                            className="col-12 mb-4"
+              />
 </Unknown>,
             "className": "row",
           },
@@ -1516,25 +1484,8 @@ ShallowWrapper {
                   type=""
 />,
                 <div
-                  className="col mb-4"
->
-                  <Pagination
-                                    currentPage={1}
-                                    filter={Object {}}
-                                    handlePageChange={[Function]}
-                                    handleValueChange={[Function]}
-                                    hasFellows={true}
-                                    perPage={25}
-                                    perPageOptions={
-                                                      Array [
-                                                                        25,
-                                                                        50,
-                                                                        100,
-                                                                      ]
-                                    }
-                                    totalPages={0}
-                  />
-</div>,
+                  className="col-12 mb-4"
+/>,
               ],
             },
             "ref": null,
@@ -1557,47 +1508,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Pagination
-                    currentPage={1}
-                    filter={Object {}}
-                    handlePageChange={[Function]}
-                    handleValueChange={[Function]}
-                    hasFellows={true}
-                    perPage={25}
-                    perPageOptions={
-                                        Array [
-                                                            25,
-                                                            50,
-                                                            100,
-                                                          ]
-                    }
-                    totalPages={0}
-/>,
-                  "className": "col mb-4",
+                  "children": undefined,
+                  "className": "col-12 mb-4",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "currentPage": 1,
-                    "filter": Object {},
-                    "handlePageChange": [Function],
-                    "handleValueChange": [Function],
-                    "hasFellows": true,
-                    "perPage": 25,
-                    "perPageOptions": Array [
-                      25,
-                      50,
-                      100,
-                    ],
-                    "totalPages": 0,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": "div",
               },
             ],
@@ -1887,25 +1802,8 @@ ShallowWrapper {
                                         type=""
                               />
                               <div
-                                        className="col mb-4"
-                              >
-                                        <Pagination
-                                                  currentPage={1}
-                                                  filter={Object {}}
-                                                  handlePageChange={[Function]}
-                                                  handleValueChange={[Function]}
-                                                  hasFellows={true}
-                                                  perPage={25}
-                                                  perPageOptions={
-                                                            Array [
-                                                                      25,
-                                                                      50,
-                                                                      100,
-                                                                    ]
-                                                  }
-                                                  totalPages={0}
-                                        />
-                              </div>
+                                        className="col-12 mb-4"
+                              />
                     </Unknown>
           </div>
 </div>,
@@ -2185,25 +2083,8 @@ ShallowWrapper {
                                           type=""
                             />
                             <div
-                                          className="col mb-4"
-                            >
-                                          <Pagination
-                                                        currentPage={1}
-                                                        filter={Object {}}
-                                                        handlePageChange={[Function]}
-                                                        handleValueChange={[Function]}
-                                                        hasFellows={true}
-                                                        perPage={25}
-                                                        perPageOptions={
-                                                                      Array [
-                                                                                    25,
-                                                                                    50,
-                                                                                    100,
-                                                                                  ]
-                                                        }
-                                                        totalPages={0}
-                                          />
-                            </div>
+                                          className="col-12 mb-4"
+                            />
               </Unknown>
 </div>,
           ],
@@ -3069,25 +2950,8 @@ ShallowWrapper {
                                 type=""
                 />
                 <div
-                                className="col mb-4"
-                >
-                                <Pagination
-                                                currentPage={1}
-                                                filter={Object {}}
-                                                handlePageChange={[Function]}
-                                                handleValueChange={[Function]}
-                                                hasFellows={true}
-                                                perPage={25}
-                                                perPageOptions={
-                                                                Array [
-                                                                                25,
-                                                                                50,
-                                                                                100,
-                                                                              ]
-                                                }
-                                                totalPages={0}
-                                />
-                </div>
+                                className="col-12 mb-4"
+                />
 </Unknown>,
               "className": "row",
             },
@@ -3104,25 +2968,8 @@ ShallowWrapper {
                     type=""
 />,
                   <div
-                    className="col mb-4"
->
-                    <Pagination
-                                        currentPage={1}
-                                        filter={Object {}}
-                                        handlePageChange={[Function]}
-                                        handleValueChange={[Function]}
-                                        hasFellows={true}
-                                        perPage={25}
-                                        perPageOptions={
-                                                            Array [
-                                                                                25,
-                                                                                50,
-                                                                                100,
-                                                                              ]
-                                        }
-                                        totalPages={0}
-                    />
-</div>,
+                    className="col-12 mb-4"
+/>,
                 ],
               },
               "ref": null,
@@ -3145,47 +2992,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <Pagination
-                      currentPage={1}
-                      filter={Object {}}
-                      handlePageChange={[Function]}
-                      handleValueChange={[Function]}
-                      hasFellows={true}
-                      perPage={25}
-                      perPageOptions={
-                                            Array [
-                                                                  25,
-                                                                  50,
-                                                                  100,
-                                                                ]
-                      }
-                      totalPages={0}
-/>,
-                    "className": "col mb-4",
+                    "children": undefined,
+                    "className": "col-12 mb-4",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "currentPage": 1,
-                      "filter": Object {},
-                      "handlePageChange": [Function],
-                      "handleValueChange": [Function],
-                      "hasFellows": true,
-                      "perPage": 25,
-                      "perPageOptions": Array [
-                        25,
-                        50,
-                        100,
-                      ],
-                      "totalPages": 0,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
+                  "rendered": null,
                   "type": "div",
                 },
               ],
@@ -3223,7 +3034,26 @@ exports[`Feedback simslead and engineering dashboard tests should render feedbac
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
+    currentRole="WATCH_TOWER_OPS"
     getManagerFeedback={[Function]}
+    paginationWrapper={
+        Object {
+            "handlePaginationPageChange": [Function],
+            "paginateData": [Function],
+            "processData": [Function],
+            "renderPagination": [Function],
+            "state": Object {
+              "filteredData": Array [],
+              "paginatedData": Array [],
+              "paginationFilter": Object {
+                "page": 1,
+                "perPage": 25,
+                "totalPages": 0,
+              },
+            },
+            "updateData": [Function],
+          }
+    }
     role="WATCH_TOWER_SL"
     user={
         Object {
@@ -3518,25 +3348,8 @@ ShallowWrapper {
                                 type=""
                         />
                         <div
-                                className="col mb-4"
-                        >
-                                <Pagination
-                                        currentPage={1}
-                                        filter={Object {}}
-                                        handlePageChange={[Function]}
-                                        handleValueChange={[Function]}
-                                        hasFellows={true}
-                                        perPage={25}
-                                        perPageOptions={
-                                                Array [
-                                                        25,
-                                                        50,
-                                                        100,
-                                                      ]
-                                        }
-                                        totalPages={0}
-                                />
-                        </div>
+                                className="col-12 mb-4"
+                        />
                 </Unknown>
         </div>
 </div>,
@@ -3816,25 +3629,8 @@ ShallowWrapper {
                                     type=""
                         />
                         <div
-                                    className="col mb-4"
-                        >
-                                    <Pagination
-                                                currentPage={1}
-                                                filter={Object {}}
-                                                handlePageChange={[Function]}
-                                                handleValueChange={[Function]}
-                                                hasFellows={true}
-                                                perPage={25}
-                                                perPageOptions={
-                                                            Array [
-                                                                        25,
-                                                                        50,
-                                                                        100,
-                                                                      ]
-                                                }
-                                                totalPages={0}
-                                    />
-                        </div>
+                                    className="col-12 mb-4"
+                        />
             </Unknown>
 </div>,
         ],
@@ -4700,25 +4496,8 @@ ShallowWrapper {
                             type=""
               />
               <div
-                            className="col mb-4"
-              >
-                            <Pagination
-                                          currentPage={1}
-                                          filter={Object {}}
-                                          handlePageChange={[Function]}
-                                          handleValueChange={[Function]}
-                                          hasFellows={true}
-                                          perPage={25}
-                                          perPageOptions={
-                                                        Array [
-                                                                      25,
-                                                                      50,
-                                                                      100,
-                                                                    ]
-                                          }
-                                          totalPages={0}
-                            />
-              </div>
+                            className="col-12 mb-4"
+              />
 </Unknown>,
             "className": "row",
           },
@@ -4735,25 +4514,8 @@ ShallowWrapper {
                   type=""
 />,
                 <div
-                  className="col mb-4"
->
-                  <Pagination
-                                    currentPage={1}
-                                    filter={Object {}}
-                                    handlePageChange={[Function]}
-                                    handleValueChange={[Function]}
-                                    hasFellows={true}
-                                    perPage={25}
-                                    perPageOptions={
-                                                      Array [
-                                                                        25,
-                                                                        50,
-                                                                        100,
-                                                                      ]
-                                    }
-                                    totalPages={0}
-                  />
-</div>,
+                  className="col-12 mb-4"
+/>,
               ],
             },
             "ref": null,
@@ -4776,47 +4538,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Pagination
-                    currentPage={1}
-                    filter={Object {}}
-                    handlePageChange={[Function]}
-                    handleValueChange={[Function]}
-                    hasFellows={true}
-                    perPage={25}
-                    perPageOptions={
-                                        Array [
-                                                            25,
-                                                            50,
-                                                            100,
-                                                          ]
-                    }
-                    totalPages={0}
-/>,
-                  "className": "col mb-4",
+                  "children": undefined,
+                  "className": "col-12 mb-4",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "currentPage": 1,
-                    "filter": Object {},
-                    "handlePageChange": [Function],
-                    "handleValueChange": [Function],
-                    "hasFellows": true,
-                    "perPage": 25,
-                    "perPageOptions": Array [
-                      25,
-                      50,
-                      100,
-                    ],
-                    "totalPages": 0,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": "div",
               },
             ],
@@ -5106,25 +4832,8 @@ ShallowWrapper {
                                         type=""
                               />
                               <div
-                                        className="col mb-4"
-                              >
-                                        <Pagination
-                                                  currentPage={1}
-                                                  filter={Object {}}
-                                                  handlePageChange={[Function]}
-                                                  handleValueChange={[Function]}
-                                                  hasFellows={true}
-                                                  perPage={25}
-                                                  perPageOptions={
-                                                            Array [
-                                                                      25,
-                                                                      50,
-                                                                      100,
-                                                                    ]
-                                                  }
-                                                  totalPages={0}
-                                        />
-                              </div>
+                                        className="col-12 mb-4"
+                              />
                     </Unknown>
           </div>
 </div>,
@@ -5404,25 +5113,8 @@ ShallowWrapper {
                                           type=""
                             />
                             <div
-                                          className="col mb-4"
-                            >
-                                          <Pagination
-                                                        currentPage={1}
-                                                        filter={Object {}}
-                                                        handlePageChange={[Function]}
-                                                        handleValueChange={[Function]}
-                                                        hasFellows={true}
-                                                        perPage={25}
-                                                        perPageOptions={
-                                                                      Array [
-                                                                                    25,
-                                                                                    50,
-                                                                                    100,
-                                                                                  ]
-                                                        }
-                                                        totalPages={0}
-                                          />
-                            </div>
+                                          className="col-12 mb-4"
+                            />
               </Unknown>
 </div>,
           ],
@@ -6288,25 +5980,8 @@ ShallowWrapper {
                                 type=""
                 />
                 <div
-                                className="col mb-4"
-                >
-                                <Pagination
-                                                currentPage={1}
-                                                filter={Object {}}
-                                                handlePageChange={[Function]}
-                                                handleValueChange={[Function]}
-                                                hasFellows={true}
-                                                perPage={25}
-                                                perPageOptions={
-                                                                Array [
-                                                                                25,
-                                                                                50,
-                                                                                100,
-                                                                              ]
-                                                }
-                                                totalPages={0}
-                                />
-                </div>
+                                className="col-12 mb-4"
+                />
 </Unknown>,
               "className": "row",
             },
@@ -6323,25 +5998,8 @@ ShallowWrapper {
                     type=""
 />,
                   <div
-                    className="col mb-4"
->
-                    <Pagination
-                                        currentPage={1}
-                                        filter={Object {}}
-                                        handlePageChange={[Function]}
-                                        handleValueChange={[Function]}
-                                        hasFellows={true}
-                                        perPage={25}
-                                        perPageOptions={
-                                                            Array [
-                                                                                25,
-                                                                                50,
-                                                                                100,
-                                                                              ]
-                                        }
-                                        totalPages={0}
-                    />
-</div>,
+                    className="col-12 mb-4"
+/>,
                 ],
               },
               "ref": null,
@@ -6364,47 +6022,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <Pagination
-                      currentPage={1}
-                      filter={Object {}}
-                      handlePageChange={[Function]}
-                      handleValueChange={[Function]}
-                      hasFellows={true}
-                      perPage={25}
-                      perPageOptions={
-                                            Array [
-                                                                  25,
-                                                                  50,
-                                                                  100,
-                                                                ]
-                      }
-                      totalPages={0}
-/>,
-                    "className": "col mb-4",
+                    "children": undefined,
+                    "className": "col-12 mb-4",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "currentPage": 1,
-                      "filter": Object {},
-                      "handlePageChange": [Function],
-                      "handleValueChange": [Function],
-                      "hasFellows": true,
-                      "perPage": 25,
-                      "perPageOptions": Array [
-                        25,
-                        50,
-                        100,
-                      ],
-                      "totalPages": 0,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
+                  "rendered": null,
                   "type": "div",
                 },
               ],
@@ -6438,11 +6060,30 @@ ShallowWrapper {
 }
 `;
 
-exports[`FeedbackDashboard tests should render feedback dashboard without crashing 1`] = `
+exports[`Test Feedback Dashboard should render feedback dashboard without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
+    currentRole="WATCH_TOWER_OPS"
     getManagerFeedback={[Function]}
+    paginationWrapper={
+        Object {
+            "handlePaginationPageChange": [Function],
+            "paginateData": [Function],
+            "processData": [Function],
+            "renderPagination": [Function],
+            "state": Object {
+              "filteredData": Array [],
+              "paginatedData": Array [],
+              "paginationFilter": Object {
+                "page": 1,
+                "perPage": 25,
+                "totalPages": 0,
+              },
+            },
+            "updateData": [Function],
+          }
+    }
     role="WATCH_TOWER_LF"
     user={
         Object {
@@ -6555,25 +6196,8 @@ ShallowWrapper {
                                 type=""
                         />
                         <div
-                                className="col mb-4"
-                        >
-                                <Pagination
-                                        currentPage={1}
-                                        filter={Object {}}
-                                        handlePageChange={[Function]}
-                                        handleValueChange={[Function]}
-                                        hasFellows={false}
-                                        perPage={25}
-                                        perPageOptions={
-                                                Array [
-                                                        25,
-                                                        50,
-                                                        100,
-                                                      ]
-                                        }
-                                        totalPages={0}
-                                />
-                        </div>
+                                className="col-12 mb-4"
+                        />
                 </Unknown>
         </div>
 </div>,
@@ -6674,25 +6298,8 @@ ShallowWrapper {
                                     type=""
                         />
                         <div
-                                    className="col mb-4"
-                        >
-                                    <Pagination
-                                                currentPage={1}
-                                                filter={Object {}}
-                                                handlePageChange={[Function]}
-                                                handleValueChange={[Function]}
-                                                hasFellows={false}
-                                                perPage={25}
-                                                perPageOptions={
-                                                            Array [
-                                                                        25,
-                                                                        50,
-                                                                        100,
-                                                                      ]
-                                                }
-                                                totalPages={0}
-                                    />
-                        </div>
+                                    className="col-12 mb-4"
+                        />
             </Unknown>
 </div>,
         ],
@@ -7021,25 +6628,8 @@ ShallowWrapper {
                             type=""
               />
               <div
-                            className="col mb-4"
-              >
-                            <Pagination
-                                          currentPage={1}
-                                          filter={Object {}}
-                                          handlePageChange={[Function]}
-                                          handleValueChange={[Function]}
-                                          hasFellows={false}
-                                          perPage={25}
-                                          perPageOptions={
-                                                        Array [
-                                                                      25,
-                                                                      50,
-                                                                      100,
-                                                                    ]
-                                          }
-                                          totalPages={0}
-                            />
-              </div>
+                            className="col-12 mb-4"
+              />
 </Unknown>,
             "className": "row",
           },
@@ -7056,25 +6646,8 @@ ShallowWrapper {
                   type=""
 />,
                 <div
-                  className="col mb-4"
->
-                  <Pagination
-                                    currentPage={1}
-                                    filter={Object {}}
-                                    handlePageChange={[Function]}
-                                    handleValueChange={[Function]}
-                                    hasFellows={false}
-                                    perPage={25}
-                                    perPageOptions={
-                                                      Array [
-                                                                        25,
-                                                                        50,
-                                                                        100,
-                                                                      ]
-                                    }
-                                    totalPages={0}
-                  />
-</div>,
+                  className="col-12 mb-4"
+/>,
               ],
             },
             "ref": null,
@@ -7097,47 +6670,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Pagination
-                    currentPage={1}
-                    filter={Object {}}
-                    handlePageChange={[Function]}
-                    handleValueChange={[Function]}
-                    hasFellows={false}
-                    perPage={25}
-                    perPageOptions={
-                                        Array [
-                                                            25,
-                                                            50,
-                                                            100,
-                                                          ]
-                    }
-                    totalPages={0}
-/>,
-                  "className": "col mb-4",
+                  "children": undefined,
+                  "className": "col-12 mb-4",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "currentPage": 1,
-                    "filter": Object {},
-                    "handlePageChange": [Function],
-                    "handleValueChange": [Function],
-                    "hasFellows": false,
-                    "perPage": 25,
-                    "perPageOptions": Array [
-                      25,
-                      50,
-                      100,
-                    ],
-                    "totalPages": 0,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": "div",
               },
             ],
@@ -7248,25 +6785,8 @@ ShallowWrapper {
                                         type=""
                               />
                               <div
-                                        className="col mb-4"
-                              >
-                                        <Pagination
-                                                  currentPage={1}
-                                                  filter={Object {}}
-                                                  handlePageChange={[Function]}
-                                                  handleValueChange={[Function]}
-                                                  hasFellows={false}
-                                                  perPage={25}
-                                                  perPageOptions={
-                                                            Array [
-                                                                      25,
-                                                                      50,
-                                                                      100,
-                                                                    ]
-                                                  }
-                                                  totalPages={0}
-                                        />
-                              </div>
+                                        className="col-12 mb-4"
+                              />
                     </Unknown>
           </div>
 </div>,
@@ -7367,25 +6887,8 @@ ShallowWrapper {
                                           type=""
                             />
                             <div
-                                          className="col mb-4"
-                            >
-                                          <Pagination
-                                                        currentPage={1}
-                                                        filter={Object {}}
-                                                        handlePageChange={[Function]}
-                                                        handleValueChange={[Function]}
-                                                        hasFellows={false}
-                                                        perPage={25}
-                                                        perPageOptions={
-                                                                      Array [
-                                                                                    25,
-                                                                                    50,
-                                                                                    100,
-                                                                                  ]
-                                                        }
-                                                        totalPages={0}
-                                          />
-                            </div>
+                                          className="col-12 mb-4"
+                            />
               </Unknown>
 </div>,
           ],
@@ -7714,25 +7217,8 @@ ShallowWrapper {
                                 type=""
                 />
                 <div
-                                className="col mb-4"
-                >
-                                <Pagination
-                                                currentPage={1}
-                                                filter={Object {}}
-                                                handlePageChange={[Function]}
-                                                handleValueChange={[Function]}
-                                                hasFellows={false}
-                                                perPage={25}
-                                                perPageOptions={
-                                                                Array [
-                                                                                25,
-                                                                                50,
-                                                                                100,
-                                                                              ]
-                                                }
-                                                totalPages={0}
-                                />
-                </div>
+                                className="col-12 mb-4"
+                />
 </Unknown>,
               "className": "row",
             },
@@ -7749,25 +7235,8 @@ ShallowWrapper {
                     type=""
 />,
                   <div
-                    className="col mb-4"
->
-                    <Pagination
-                                        currentPage={1}
-                                        filter={Object {}}
-                                        handlePageChange={[Function]}
-                                        handleValueChange={[Function]}
-                                        hasFellows={false}
-                                        perPage={25}
-                                        perPageOptions={
-                                                            Array [
-                                                                                25,
-                                                                                50,
-                                                                                100,
-                                                                              ]
-                                        }
-                                        totalPages={0}
-                    />
-</div>,
+                    className="col-12 mb-4"
+/>,
                 ],
               },
               "ref": null,
@@ -7790,47 +7259,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <Pagination
-                      currentPage={1}
-                      filter={Object {}}
-                      handlePageChange={[Function]}
-                      handleValueChange={[Function]}
-                      hasFellows={false}
-                      perPage={25}
-                      perPageOptions={
-                                            Array [
-                                                                  25,
-                                                                  50,
-                                                                  100,
-                                                                ]
-                      }
-                      totalPages={0}
-/>,
-                    "className": "col mb-4",
+                    "children": undefined,
+                    "className": "col-12 mb-4",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "currentPage": 1,
-                      "filter": Object {},
-                      "handlePageChange": [Function],
-                      "handleValueChange": [Function],
-                      "hasFellows": false,
-                      "perPage": 25,
-                      "perPageOptions": Array [
-                        25,
-                        50,
-                        100,
-                      ],
-                      "totalPages": 0,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
+                  "rendered": null,
                   "type": "div",
                 },
               ],

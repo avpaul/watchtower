@@ -13,7 +13,7 @@ ShallowWrapper {
     }
     handlePageChange={[Function]}
     handleValueChange={[Function]}
-    hasFellows={true}
+    hasData={true}
     nextPage="2"
     onPerPageChange={[Function]}
     perPage={10}
@@ -2047,6 +2047,81 @@ ShallowWrapper {
 }
 `;
 
+exports[`Tests Pagination component renders pagination button to match snapshots 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PaginationButton
+    buttonText="prev"
+    className="btn btn-default pg__button"
+    disableBool={false}
+    name="previous"
+    onClick={[Function]}
+    value="prev"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "prev",
+    "nodeType": "host",
+    "props": Object {
+      "children": "prev",
+      "className": "btn btn-default pg__button",
+      "disabled": false,
+      "name": "previous",
+      "onClick": [Function],
+      "type": "button",
+      "value": "prev",
+    },
+    "ref": null,
+    "rendered": "prev",
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "prev",
+      "nodeType": "host",
+      "props": Object {
+        "children": "prev",
+        "className": "btn btn-default pg__button",
+        "disabled": false,
+        "name": "previous",
+        "onClick": [Function],
+        "type": "button",
+        "value": "prev",
+      },
+      "ref": null,
+      "rendered": "prev",
+      "type": "button",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
 exports[`Tests Pagination component renders pagination button with totalpages as 3 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
@@ -2060,7 +2135,7 @@ ShallowWrapper {
     }
     handlePageChange={[Function]}
     handleValueChange={[Function]}
-    hasFellows={true}
+    hasData={true}
     nextPage="2"
     onPerPageChange={[Function]}
     perPage={1}

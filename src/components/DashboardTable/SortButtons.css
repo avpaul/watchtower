@@ -1,12 +1,17 @@
 .sort-buttons {
   min-width: 10px;
   min-height: 5px;
+  width: 15px;
+  height: 15px;
+  position: relative;
 }
+
 .sort-buttons i {
   width: 5px;
   font-size: 10px;
   cursor: pointer;
 }
+
 .sort-buttons i:focus,
 .sort-buttons i:hover,
 .sort-buttons i:active {
@@ -15,8 +20,18 @@
   cursor: pointer;
 }
 
-.sort-buttons div {
+.sort-buttons__up,
+.sort-buttons__down {
+  width: 100%;
   height: 10px;
-  width: 15px;
-  text-align: center;
+  position: absolute;
+  right: 0;
+}
+
+.sort-buttons__up {
+  top: 0;
+}
+
+.sort-buttons__down {
+  bottom: 0;
 }
