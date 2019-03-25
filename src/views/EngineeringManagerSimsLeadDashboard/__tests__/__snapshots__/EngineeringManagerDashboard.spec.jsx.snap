@@ -336,6 +336,7 @@ ShallowWrapper {
                     Array [
                               Object {
                                 "id": "total-fellows-card",
+                                "subTitle": "Click to see details",
                                 "title": "Total D0 Fellows",
                                 "totalFellows": "0",
                               },
@@ -351,6 +352,7 @@ ShallowWrapper {
                     displayContent={
                               Object {
                                         "averageValue": 0,
+                                        "subTitle": "Click to see details",
                                         "text": "Average TTL to Fellow ratio",
                                         "title": "TTL to FELLOW MAP",
                                       }
@@ -379,6 +381,7 @@ ShallowWrapper {
           "fellowsSummary": Array [
             Object {
               "id": "total-fellows-card",
+              "subTitle": "Click to see details",
               "title": "Total D0 Fellows",
               "totalFellows": "0",
             },
@@ -400,6 +403,7 @@ ShallowWrapper {
               displayContent={
                             Object {
                                           "averageValue": 0,
+                                          "subTitle": "Click to see details",
                                           "text": "Average TTL to Fellow ratio",
                                           "title": "TTL to FELLOW MAP",
                                         }
@@ -419,6 +423,7 @@ ShallowWrapper {
             "props": Object {
               "displayContent": Object {
                 "averageValue": 0,
+                "subTitle": "Click to see details",
                 "text": "Average TTL to Fellow ratio",
                 "title": "TTL to FELLOW MAP",
               },
@@ -457,6 +462,7 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "id": "total-fellows-card",
+                                      "subTitle": "Click to see details",
                                       "title": "Total D0 Fellows",
                                       "totalFellows": "0",
                                     },
@@ -472,6 +478,7 @@ ShallowWrapper {
                         displayContent={
                                     Object {
                                                 "averageValue": 0,
+                                                "subTitle": "Click to see details",
                                                 "text": "Average TTL to Fellow ratio",
                                                 "title": "TTL to FELLOW MAP",
                                               }
@@ -500,6 +507,7 @@ ShallowWrapper {
             "fellowsSummary": Array [
               Object {
                 "id": "total-fellows-card",
+                "subTitle": "Click to see details",
                 "title": "Total D0 Fellows",
                 "totalFellows": "0",
               },
@@ -521,6 +529,7 @@ ShallowWrapper {
                 displayContent={
                                 Object {
                                                 "averageValue": 0,
+                                                "subTitle": "Click to see details",
                                                 "text": "Average TTL to Fellow ratio",
                                                 "title": "TTL to FELLOW MAP",
                                               }
@@ -540,6 +549,7 @@ ShallowWrapper {
               "props": Object {
                 "displayContent": Object {
                   "averageValue": 0,
+                  "subTitle": "Click to see details",
                   "text": "Average TTL to Fellow ratio",
                   "title": "TTL to FELLOW MAP",
                 },

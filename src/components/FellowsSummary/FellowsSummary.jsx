@@ -9,6 +9,7 @@ const formatCards = fellowLevels => {
   const keys = fellowLevels ? Object.keys(fellowLevels) : '';
   const result = keys.map(key => ({
     title: key,
+    subTitle: 'Click to see details',
     heading: key === 'Total' ? 'Total D0 Fellows' : `Total ${key} Fellows`,
     totalFellows: parseInt(fellowLevels[key], 10)
   }));

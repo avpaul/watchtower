@@ -1632,6 +1632,7 @@ ShallowWrapper {
                     displayContent={
                               Object {
                                         "averageValue": 22,
+                                        "subTitle": "Click to see details",
                                         "text": "Average LF to Fellow ratio",
                                         "title": "LF to FELLOW MAP",
                                       }
@@ -1643,6 +1644,7 @@ ShallowWrapper {
                     displayContent={
                               Object {
                                         "averageValue": 20,
+                                        "subTitle": "Click to see details",
                                         "text": "Average TTL to Fellow ratio",
                                         "title": "TTL to FELLOW MAP",
                                       }
@@ -1687,6 +1689,7 @@ ShallowWrapper {
               displayContent={
                             Object {
                                           "averageValue": 22,
+                                          "subTitle": "Click to see details",
                                           "text": "Average LF to Fellow ratio",
                                           "title": "LF to FELLOW MAP",
                                         }
@@ -1698,6 +1701,7 @@ ShallowWrapper {
               displayContent={
                             Object {
                                           "averageValue": 20,
+                                          "subTitle": "Click to see details",
                                           "text": "Average TTL to Fellow ratio",
                                           "title": "TTL to FELLOW MAP",
                                         }
@@ -1717,6 +1721,7 @@ ShallowWrapper {
             "props": Object {
               "displayContent": Object {
                 "averageValue": 22,
+                "subTitle": "Click to see details",
                 "text": "Average LF to Fellow ratio",
                 "title": "LF to FELLOW MAP",
               },
@@ -1734,6 +1739,7 @@ ShallowWrapper {
             "props": Object {
               "displayContent": Object {
                 "averageValue": 20,
+                "subTitle": "Click to see details",
                 "text": "Average TTL to Fellow ratio",
                 "title": "TTL to FELLOW MAP",
               },
@@ -1782,6 +1788,7 @@ ShallowWrapper {
                         displayContent={
                                     Object {
                                                 "averageValue": 22,
+                                                "subTitle": "Click to see details",
                                                 "text": "Average LF to Fellow ratio",
                                                 "title": "LF to FELLOW MAP",
                                               }
@@ -1793,6 +1800,7 @@ ShallowWrapper {
                         displayContent={
                                     Object {
                                                 "averageValue": 20,
+                                                "subTitle": "Click to see details",
                                                 "text": "Average TTL to Fellow ratio",
                                                 "title": "TTL to FELLOW MAP",
                                               }
@@ -1837,6 +1845,7 @@ ShallowWrapper {
                 displayContent={
                                 Object {
                                                 "averageValue": 22,
+                                                "subTitle": "Click to see details",
                                                 "text": "Average LF to Fellow ratio",
                                                 "title": "LF to FELLOW MAP",
                                               }
@@ -1848,6 +1857,7 @@ ShallowWrapper {
                 displayContent={
                                 Object {
                                                 "averageValue": 20,
+                                                "subTitle": "Click to see details",
                                                 "text": "Average TTL to Fellow ratio",
                                                 "title": "TTL to FELLOW MAP",
                                               }
@@ -1867,6 +1877,7 @@ ShallowWrapper {
               "props": Object {
                 "displayContent": Object {
                   "averageValue": 22,
+                  "subTitle": "Click to see details",
                   "text": "Average LF to Fellow ratio",
                   "title": "LF to FELLOW MAP",
                 },
@@ -1884,6 +1895,7 @@ ShallowWrapper {
               "props": Object {
                 "displayContent": Object {
                   "averageValue": 20,
+                  "subTitle": "Click to see details",
                   "text": "Average TTL to Fellow ratio",
                   "title": "TTL to FELLOW MAP",
                 },

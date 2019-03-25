@@ -78,16 +78,19 @@ ShallowWrapper {
                               Array [
                                         Object {
                                           "heading": "Total D0 Fellows",
+                                          "subTitle": "Click to see details",
                                           "title": "Total",
                                           "totalFellows": 10,
                                         },
                                         Object {
                                           "heading": "Total D0A Fellows",
+                                          "subTitle": "Click to see details",
                                           "title": "D0A",
                                           "totalFellows": 5,
                                         },
                                         Object {
                                           "heading": "Total D0B Fellows",
+                                          "subTitle": "Click to see details",
                                           "title": "D0B",
                                           "totalFellows": 5,
                                         },
@@ -126,16 +129,19 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "heading": "Total D0 Fellows",
+                                      "subTitle": "Click to see details",
                                       "title": "Total",
                                       "totalFellows": 10,
                                     },
                                     Object {
                                       "heading": "Total D0A Fellows",
+                                      "subTitle": "Click to see details",
                                       "title": "D0A",
                                       "totalFellows": 5,
                                     },
                                     Object {
                                       "heading": "Total D0B Fellows",
+                                      "subTitle": "Click to see details",
                                       "title": "D0B",
                                       "totalFellows": 5,
                                     },
@@ -158,16 +164,19 @@ ShallowWrapper {
             "filters": Array [
               Object {
                 "heading": "Total D0 Fellows",
+                "subTitle": "Click to see details",
                 "title": "Total",
                 "totalFellows": 10,
               },
               Object {
                 "heading": "Total D0A Fellows",
+                "subTitle": "Click to see details",
                 "title": "D0A",
                 "totalFellows": 5,
               },
               Object {
                 "heading": "Total D0B Fellows",
+                "subTitle": "Click to see details",
                 "title": "D0B",
                 "totalFellows": 5,
               },
@@ -205,16 +214,19 @@ ShallowWrapper {
                                     Array [
                                                 Object {
                                                   "heading": "Total D0 Fellows",
+                                                  "subTitle": "Click to see details",
                                                   "title": "Total",
                                                   "totalFellows": 10,
                                                 },
                                                 Object {
                                                   "heading": "Total D0A Fellows",
+                                                  "subTitle": "Click to see details",
                                                   "title": "D0A",
                                                   "totalFellows": 5,
                                                 },
                                                 Object {
                                                   "heading": "Total D0B Fellows",
+                                                  "subTitle": "Click to see details",
                                                   "title": "D0B",
                                                   "totalFellows": 5,
                                                 },
@@ -253,16 +265,19 @@ ShallowWrapper {
                             Array [
                                           Object {
                                             "heading": "Total D0 Fellows",
+                                            "subTitle": "Click to see details",
                                             "title": "Total",
                                             "totalFellows": 10,
                                           },
                                           Object {
                                             "heading": "Total D0A Fellows",
+                                            "subTitle": "Click to see details",
                                             "title": "D0A",
                                             "totalFellows": 5,
                                           },
                                           Object {
                                             "heading": "Total D0B Fellows",
+                                            "subTitle": "Click to see details",
                                             "title": "D0B",
                                             "totalFellows": 5,
                                           },
@@ -285,16 +300,19 @@ ShallowWrapper {
               "filters": Array [
                 Object {
                   "heading": "Total D0 Fellows",
+                  "subTitle": "Click to see details",
                   "title": "Total",
                   "totalFellows": 10,
                 },
                 Object {
                   "heading": "Total D0A Fellows",
+                  "subTitle": "Click to see details",
                   "title": "D0A",
                   "totalFellows": 5,
                 },
                 Object {
                   "heading": "Total D0B Fellows",
+                  "subTitle": "Click to see details",
                   "title": "D0B",
                   "totalFellows": 5,
                 },
