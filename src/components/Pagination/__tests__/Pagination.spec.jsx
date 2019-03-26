@@ -173,6 +173,8 @@ describe('Tests Pagination component', () => {
     };
 
     wrapper = shallow(<Pagination {...newProps} />);
+    wrapper.instance().componentDidUpdate({ ...newProps, perPage: 10 });
+    expect(wrapper.state('perPage')).toBe(1);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -68,7 +68,7 @@ ShallowWrapper {
                                         className="pg__per-page__select col-md-1"
                               >
                                         <select
-                                                  className="form-control d-flex justify-content-center"
+                                                  className="form-control d-flex justify-content-center pg__per-page"
                                                   onChange={[Function]}
                                                   value={10}
                                         >
@@ -218,7 +218,7 @@ ShallowWrapper {
                                     className="pg__per-page__select col-md-1"
                         >
                                     <select
-                                                className="form-control d-flex justify-content-center"
+                                                className="form-control d-flex justify-content-center pg__per-page"
                                                 onChange={[Function]}
                                                 value={10}
                                     >
@@ -338,7 +338,7 @@ ShallowWrapper {
                             className="pg__per-page__select col-md-1"
               >
                             <select
-                                          className="form-control d-flex justify-content-center"
+                                          className="form-control d-flex justify-content-center pg__per-page"
                                           onChange={[Function]}
                                           value={10}
                             >
@@ -455,7 +455,7 @@ ShallowWrapper {
                   className="pg__per-page__select col-md-1"
 >
                   <select
-                                    className="form-control d-flex justify-content-center"
+                                    className="form-control d-flex justify-content-center pg__per-page"
                                     onChange={[Function]}
                                     value={10}
                   >
@@ -576,7 +576,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <select
-                    className="form-control d-flex justify-content-center"
+                    className="form-control d-flex justify-content-center pg__per-page"
                     onChange={[Function]}
                     value={10}
 >
@@ -621,7 +621,7 @@ ShallowWrapper {
                         100
 </option>,
                     ],
-                    "className": "form-control d-flex justify-content-center",
+                    "className": "form-control d-flex justify-content-center pg__per-page",
                     "onChange": [Function],
                     "value": 10,
                   },
@@ -1064,7 +1064,7 @@ ShallowWrapper {
                                                 className="pg__per-page__select col-md-1"
                                     >
                                                 <select
-                                                            className="form-control d-flex justify-content-center"
+                                                            className="form-control d-flex justify-content-center pg__per-page"
                                                             onChange={[Function]}
                                                             value={10}
                                                 >
@@ -1214,7 +1214,7 @@ ShallowWrapper {
                                           className="pg__per-page__select col-md-1"
                             >
                                           <select
-                                                        className="form-control d-flex justify-content-center"
+                                                        className="form-control d-flex justify-content-center pg__per-page"
                                                         onChange={[Function]}
                                                         value={10}
                                           >
@@ -1334,7 +1334,7 @@ ShallowWrapper {
                                 className="pg__per-page__select col-md-1"
                 >
                                 <select
-                                                className="form-control d-flex justify-content-center"
+                                                className="form-control d-flex justify-content-center pg__per-page"
                                                 onChange={[Function]}
                                                 value={10}
                                 >
@@ -1451,7 +1451,7 @@ ShallowWrapper {
                     className="pg__per-page__select col-md-1"
 >
                     <select
-                                        className="form-control d-flex justify-content-center"
+                                        className="form-control d-flex justify-content-center pg__per-page"
                                         onChange={[Function]}
                                         value={10}
                     >
@@ -1572,7 +1572,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <select
-                      className="form-control d-flex justify-content-center"
+                      className="form-control d-flex justify-content-center pg__per-page"
                       onChange={[Function]}
                       value={10}
 >
@@ -1617,7 +1617,7 @@ ShallowWrapper {
                           100
 </option>,
                       ],
-                      "className": "form-control d-flex justify-content-center",
+                      "className": "form-control d-flex justify-content-center pg__per-page",
                       "onChange": [Function],
                       "value": 10,
                     },
@@ -2115,7 +2115,7 @@ ShallowWrapper {
                                         className="pg__per-page__select col-md-2"
                               >
                                         <select
-                                                  className="form-control d-flex justify-content-center"
+                                                  className="form-control d-flex justify-content-center pg__per-page"
                                                   onChange={[Function]}
                                                   value={1}
                                         >
@@ -2220,7 +2220,7 @@ ShallowWrapper {
                                     className="pg__per-page__select col-md-2"
                         >
                                     <select
-                                                className="form-control d-flex justify-content-center"
+                                                className="form-control d-flex justify-content-center pg__per-page"
                                                 onChange={[Function]}
                                                 value={1}
                                     >
@@ -2295,7 +2295,7 @@ ShallowWrapper {
                             className="pg__per-page__select col-md-2"
               >
                             <select
-                                          className="form-control d-flex justify-content-center"
+                                          className="form-control d-flex justify-content-center pg__per-page"
                                           onChange={[Function]}
                                           value={1}
                             >
@@ -2367,7 +2367,7 @@ ShallowWrapper {
                   className="pg__per-page__select col-md-2"
 >
                   <select
-                                    className="form-control d-flex justify-content-center"
+                                    className="form-control d-flex justify-content-center pg__per-page"
                                     onChange={[Function]}
                                     value={1}
                   >
@@ -2443,7 +2443,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <select
-                    className="form-control d-flex justify-content-center"
+                    className="form-control d-flex justify-content-center pg__per-page"
                     onChange={[Function]}
                     value={1}
 >
@@ -2488,7 +2488,7 @@ ShallowWrapper {
                         100
 </option>,
                     ],
-                    "className": "form-control d-flex justify-content-center",
+                    "className": "form-control d-flex justify-content-center pg__per-page",
                     "onChange": [Function],
                     "value": 1,
                   },
@@ -2672,7 +2672,7 @@ ShallowWrapper {
                                                 className="pg__per-page__select col-md-2"
                                     >
                                                 <select
-                                                            className="form-control d-flex justify-content-center"
+                                                            className="form-control d-flex justify-content-center pg__per-page"
                                                             onChange={[Function]}
                                                             value={1}
                                                 >
@@ -2777,7 +2777,7 @@ ShallowWrapper {
                                           className="pg__per-page__select col-md-2"
                             >
                                           <select
-                                                        className="form-control d-flex justify-content-center"
+                                                        className="form-control d-flex justify-content-center pg__per-page"
                                                         onChange={[Function]}
                                                         value={1}
                                           >
@@ -2852,7 +2852,7 @@ ShallowWrapper {
                                 className="pg__per-page__select col-md-2"
                 >
                                 <select
-                                                className="form-control d-flex justify-content-center"
+                                                className="form-control d-flex justify-content-center pg__per-page"
                                                 onChange={[Function]}
                                                 value={1}
                                 >
@@ -2924,7 +2924,7 @@ ShallowWrapper {
                     className="pg__per-page__select col-md-2"
 >
                     <select
-                                        className="form-control d-flex justify-content-center"
+                                        className="form-control d-flex justify-content-center pg__per-page"
                                         onChange={[Function]}
                                         value={1}
                     >
@@ -3000,7 +3000,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <select
-                      className="form-control d-flex justify-content-center"
+                      className="form-control d-flex justify-content-center pg__per-page"
                       onChange={[Function]}
                       value={1}
 >
@@ -3045,7 +3045,7 @@ ShallowWrapper {
                           100
 </option>,
                       ],
-                      "className": "form-control d-flex justify-content-center",
+                      "className": "form-control d-flex justify-content-center pg__per-page",
                       "onChange": [Function],
                       "value": 1,
                     },

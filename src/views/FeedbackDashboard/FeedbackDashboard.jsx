@@ -45,6 +45,7 @@ class FeedbackDashboard extends Component {
           {
             feedbackArray: data.managersFeedback,
             filteredFeedbackData: data.managersFeedback,
+            paginatedFeedback: data.managersFeedback,
             paginationFilter: {
               perPage: 25,
               page: 1,
@@ -194,6 +195,7 @@ class FeedbackDashboard extends Component {
         handlePageChange={this.handlePaginationPageChange}
         handleValueChange={this.handlePaginationPageChange}
         currentPage={paginationFilter.page}
+        perPage={paginationFilter.perPage}
         filter={filter}
         hasFellows={filteredFeedbackData.length > 0}
       />
@@ -268,18 +270,23 @@ class FeedbackDashboard extends Component {
   };
 
   handleFilterCardClick = event => {
-    const { feedbackArray, isTicked } = this.state;
+    const { feedbackArray, isTicked, paginationFilter } = this.state;
     const updatedIsTicked = {
       ...isTicked,
       [event.currentTarget.attributes[2].value]: event.currentTarget.id
     };
+    const newFilteredData = this.filterFeedback(updatedIsTicked, feedbackArray);
     this.setState(
       {
         isTicked: updatedIsTicked,
-        filteredFeedbackData: this.filterFeedback(
-          updatedIsTicked,
-          feedbackArray
-        )
+        filteredFeedbackData: newFilteredData,
+        paginationFilter: {
+          ...paginationFilter,
+          page: 1,
+          totalPages: Math.ceil(
+            newFilteredData.length / paginationFilter.perPage
+          )
+        }
       },
       this.paginateFeedback
     );

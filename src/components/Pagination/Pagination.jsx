@@ -20,22 +20,29 @@ class Pagination extends Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    const { perPage } = this.props;
+    if (prevProps.perPage !== perPage) this.updatePerPage(perPage);
+  }
+
+  updatePerPage = perPage => this.setState({ perPage });
+
   /**
    * changes page based on next or previous click
    * @param { object } - event that happens
    */
   onPageChange = event => {
-    const { handlePageChange } = this.props;
+    const { handlePageChange, totalPages } = this.props;
     let { page } = this.state;
     const { perPage } = this.state;
 
     const action = event.target.name;
     switch (action) {
       case 'previous':
-        page -= 1;
+        page = page === 1 ? page : (page -= 1);
         break;
       case 'next':
-        page += 1;
+        page = page === totalPages ? page : (page += 1);
         break;
       default:
         break;
@@ -162,11 +169,10 @@ class Pagination extends Component {
   };
 
   renderShowing = () => {
-    const { page } = this.state;
-    const { totalPages } = this.props;
+    const { totalPages, currentPage } = this.props;
     return (
       <p className="text-center">
-        Showing {page} of {totalPages} pages
+        Showing {currentPage} of {totalPages} pages
       </p>
     );
   };
@@ -177,7 +183,7 @@ class Pagination extends Component {
 
     return (
       <select
-        className="form-control d-flex justify-content-center"
+        className="form-control d-flex justify-content-center pg__per-page"
         value={perPage}
         onChange={this.onPerPageChange}
       >
