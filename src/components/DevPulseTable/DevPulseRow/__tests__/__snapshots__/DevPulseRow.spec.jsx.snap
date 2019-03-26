@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <DevPulseRow
     rating={
         Object {
+            "average": "1.16",
             "communication": 2,
             "initiative": 2,
             "integration": 0,
@@ -35,6 +36,12 @@ ShallowWrapper {
           title=""
 >
           1
+</Cell>,
+        <Cell
+          addedClass={null}
+          title=""
+>
+          1.16
 </Cell>,
         <Cell
           addedClass={null}
@@ -92,11 +99,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": 1,
+          "children": "1.16",
           "title": "",
         },
         "ref": null,
-        "rendered": 1,
+        "rendered": "1.16",
         "type": [Function],
       },
       Object {
@@ -105,11 +112,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": 2,
+          "children": 1,
           "title": "",
         },
         "ref": null,
-        "rendered": 2,
+        "rendered": 1,
         "type": [Function],
       },
       Object {
@@ -143,6 +150,19 @@ ShallowWrapper {
         "key": "weak-key-5",
         "nodeType": "function",
         "props": Object {
+          "addedClass": null,
+          "children": 2,
+          "title": "",
+        },
+        "ref": null,
+        "rendered": 2,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "weak-key-6",
+        "nodeType": "function",
+        "props": Object {
           "addedClass": "text-danger",
           "children": 0,
           "title": "",
@@ -153,7 +173,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "weak-key-6",
+        "key": "weak-key-7",
         "nodeType": "function",
         "props": Object {
           "addedClass": "text-danger",
@@ -179,6 +199,12 @@ ShallowWrapper {
             title=""
 >
             1
+</Cell>,
+          <Cell
+            addedClass={null}
+            title=""
+>
+            1.16
 </Cell>,
           <Cell
             addedClass={null}
@@ -236,11 +262,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": 1,
+            "children": "1.16",
             "title": "",
           },
           "ref": null,
-          "rendered": 1,
+          "rendered": "1.16",
           "type": [Function],
         },
         Object {
@@ -249,11 +275,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": 2,
+            "children": 1,
             "title": "",
           },
           "ref": null,
-          "rendered": 2,
+          "rendered": 1,
           "type": [Function],
         },
         Object {
@@ -287,6 +313,19 @@ ShallowWrapper {
           "key": "weak-key-5",
           "nodeType": "function",
           "props": Object {
+            "addedClass": null,
+            "children": 2,
+            "title": "",
+          },
+          "ref": null,
+          "rendered": 2,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "weak-key-6",
+          "nodeType": "function",
+          "props": Object {
             "addedClass": "text-danger",
             "children": 0,
             "title": "",
@@ -297,7 +336,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "weak-key-6",
+          "key": "weak-key-7",
           "nodeType": "function",
           "props": Object {
             "addedClass": "text-danger",
