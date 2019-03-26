@@ -13,9 +13,9 @@ const ManagerFellowSortInput = ({ onChange }) => {
         items={sortKeys}
         current={sortKeys[0]}
         getFilter={onChange}
-        width="209px"
+        width="15rem"
         fontSize="14px"
-        characterLength={21}
+        characterLength={35}
         chevronColor="#808FA3"
       />
     </div>
