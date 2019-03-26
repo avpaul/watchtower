@@ -8,9 +8,29 @@ const calcProgressWidth = (startDate, endDate) => {
   return (1 / noOfWeeks) * 100 * getCurrentWeek(startDate);
 };
 
+/**
+ * function to compute default end date using 12 weeks
+ * @function {@param}
+ */
+const getDefaultEndDate = startDate => {
+  const defaultNoOfDays = 12 * 7 + 1;
+  const date = new Date();
+  const result = startDate === undefined ? date : new Date(startDate);
+  result.setDate(result.getDate() + defaultNoOfDays);
+  const formattedDate = `${result.getFullYear()}-${result.getMonth() +
+    1}-${result.getDate()}`;
+  return formattedDate;
+};
+
+const newEndDate = (programEnddate, defaultEndDate) =>
+  programEnddate === '' || programEnddate === undefined
+    ? defaultEndDate
+    : programEnddate;
+
 const ProgressContainer = props => {
   const isSmallScreen = !!(window.screen.width < 770);
   const { fellow } = props;
+  const { loading } = fellow;
   const {
     actualApprenticeshipStartDate,
     simulationStartDate,
@@ -19,12 +39,16 @@ const ProgressContainer = props => {
     status
   } = fellow.fellow;
   const startDate = actualApprenticeshipStartDate || simulationStartDate;
-  const endDate =
+  const programEnddate =
     expectedApprenticeshipCompletionDate || expectedSimulationsCompletionDate;
+  const defaultEndDate = getDefaultEndDate(startDate);
+  const endDate = newEndDate(programEnddate, defaultEndDate);
+
   return (
     <ProgressBar
       noOfWeeks={calcNoOfWeeks(startDate, endDate)}
       isSmallScreen={isSmallScreen}
+      loader={loading}
       onTrack={!!(status === 'onTrack')}
       widthStyle={{ '--value': `${calcProgressWidth(startDate, endDate)}%` }}
     />

@@ -8,7 +8,13 @@ import './ProgressBar.css';
   Progress UI component
   *@returns {JSX} React component
  */
-const ProgressBar = ({ onTrack, noOfWeeks, widthStyle, isSmallScreen }) => (
+const ProgressBar = ({
+  onTrack,
+  noOfWeeks,
+  widthStyle,
+  isSmallScreen,
+  loader
+}) => (
   <div className="progress-wrapper">
     <p>
       PROGRESS BAR
@@ -27,13 +33,17 @@ const ProgressBar = ({ onTrack, noOfWeeks, widthStyle, isSmallScreen }) => (
         style={widthStyle}
       />
     </div>
-    <div className="week-label">
-      {noOfWeeks.map(value => (
-        <span key={arrayKey({ value })}>
-          {isSmallScreen ? 'Wk' : 'Week'} {value}
-        </span>
-      ))}
-    </div>
+    {loader ? (
+      ''
+    ) : (
+      <div className="week-label">
+        {noOfWeeks.map(value => (
+          <span key={arrayKey({ value })}>
+            {isSmallScreen ? 'Wk' : 'Week'} {value}
+          </span>
+        ))}
+      </div>
+    )}
   </div>
 );
 
@@ -41,11 +51,13 @@ ProgressBar.propTypes = {
   onTrack: PropTypes.bool.isRequired,
   noOfWeeks: PropTypes.arrayOf(PropTypes.number).isRequired,
   widthStyle: PropTypes.objectOf(PropTypes.string).isRequired,
-  isSmallScreen: PropTypes.bool
+  isSmallScreen: PropTypes.bool,
+  loader: PropTypes.bool
 };
 
 ProgressBar.defaultProps = {
-  isSmallScreen: false
+  isSmallScreen: false,
+  loader: false
 };
 
 export default ProgressBar;

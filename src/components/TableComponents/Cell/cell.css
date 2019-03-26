@@ -92,7 +92,6 @@ span.row span.pl-2 {
   .dashboard-table__container {
     width: 91.6%;
   }
-
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
