@@ -15,6 +15,8 @@ const TranslatorTable = {
   'Pre-PIP & PIP': '',
   'All Criteria': '',
   'All Projects': '',
+  'All TTLs': '',
+  'All LFs': '',
   WATCH_TOWER_LF: 'LF',
   WATCH_TOWER_OPS: 'TTL/LF',
   WATCH_TOWER_TTL: 'TTL',

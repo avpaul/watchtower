@@ -121,8 +121,10 @@ ShallowWrapper {
 >
         <FellowFilterCard
                 cardName="All Products"
+                displayPicture={false}
                 filterKey="project"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -130,11 +132,14 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={6}
+                picture=""
         />
         <FellowFilterCard
                 cardName="Watch Tower"
+                displayPicture={false}
                 filterKey="project"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -142,11 +147,14 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={4}
+                picture=""
         />
         <FellowFilterCard
                 cardName="Noldor"
+                displayPicture={false}
                 filterKey="project"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -154,6 +162,7 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={2}
+                picture=""
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -167,8 +176,10 @@ ShallowWrapper {
         "children": Array [
           <FellowFilterCard
             cardName="All Products"
+            displayPicture={false}
             filterKey="project"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -176,11 +187,14 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={6}
+            picture=""
 />,
           <FellowFilterCard
             cardName="Watch Tower"
+            displayPicture={false}
             filterKey="project"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -188,11 +202,14 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={4}
+            picture=""
 />,
           <FellowFilterCard
             cardName="Noldor"
+            displayPicture={false}
             filterKey="project"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -200,6 +217,7 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={2}
+            picture=""
 />,
         ],
         "className": "row",
@@ -212,13 +230,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "All Products",
+            "displayPicture": false,
             "filterKey": "project",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 6,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -230,13 +251,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "Watch Tower",
+            "displayPicture": false,
             "filterKey": "project",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 4,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -248,13 +272,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "Noldor",
+            "displayPicture": false,
             "filterKey": "project",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 2,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -276,8 +303,10 @@ ShallowWrapper {
 >
           <FellowFilterCard
                     cardName="All Products"
+                    displayPicture={false}
                     filterKey="project"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -285,11 +314,14 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={6}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="Watch Tower"
+                    displayPicture={false}
                     filterKey="project"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -297,11 +329,14 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={4}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="Noldor"
+                    displayPicture={false}
                     filterKey="project"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -309,6 +344,7 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={2}
+                    picture=""
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -322,8 +358,10 @@ ShallowWrapper {
           "children": Array [
             <FellowFilterCard
               cardName="All Products"
+              displayPicture={false}
               filterKey="project"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -331,11 +369,14 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={6}
+              picture=""
 />,
             <FellowFilterCard
               cardName="Watch Tower"
+              displayPicture={false}
               filterKey="project"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -343,11 +384,14 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={4}
+              picture=""
 />,
             <FellowFilterCard
               cardName="Noldor"
+              displayPicture={false}
               filterKey="project"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -355,6 +399,7 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={2}
+              picture=""
 />,
           ],
           "className": "row",
@@ -367,13 +412,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "All Products",
+              "displayPicture": false,
               "filterKey": "project",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 6,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -385,13 +433,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "Watch Tower",
+              "displayPicture": false,
               "filterKey": "project",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 4,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -403,13 +454,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "Noldor",
+              "displayPicture": false,
               "filterKey": "project",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 2,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -562,8 +616,10 @@ ShallowWrapper {
 >
         <FellowFilterCard
                 cardName="All Fellows"
+                displayPicture={false}
                 filterKey="status"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -571,11 +627,14 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={6}
+                picture=""
         />
         <FellowFilterCard
                 cardName="On Track"
+                displayPicture={false}
                 filterKey="status"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -583,11 +642,14 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={2}
+                picture=""
         />
         <FellowFilterCard
                 cardName="Off Track"
+                displayPicture={false}
                 filterKey="status"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -595,11 +657,14 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={1}
+                picture=""
         />
         <FellowFilterCard
                 cardName="PIP"
+                displayPicture={false}
                 filterKey="status"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "All Products",
@@ -607,6 +672,7 @@ ShallowWrapper {
                               }
                 }
                 numberOfFellows={3}
+                picture=""
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -620,8 +686,10 @@ ShallowWrapper {
         "children": Array [
           <FellowFilterCard
             cardName="All Fellows"
+            displayPicture={false}
             filterKey="status"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -629,11 +697,14 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={6}
+            picture=""
 />,
           <FellowFilterCard
             cardName="On Track"
+            displayPicture={false}
             filterKey="status"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -641,11 +712,14 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={2}
+            picture=""
 />,
           <FellowFilterCard
             cardName="Off Track"
+            displayPicture={false}
             filterKey="status"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -653,11 +727,14 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={1}
+            picture=""
 />,
           <FellowFilterCard
             cardName="PIP"
+            displayPicture={false}
             filterKey="status"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "All Products",
@@ -665,6 +742,7 @@ ShallowWrapper {
                                   }
             }
             numberOfFellows={3}
+            picture=""
 />,
         ],
         "className": "row",
@@ -677,13 +755,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "All Fellows",
+            "displayPicture": false,
             "filterKey": "status",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 6,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -695,13 +776,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "On Track",
+            "displayPicture": false,
             "filterKey": "status",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 2,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -713,13 +797,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "Off Track",
+            "displayPicture": false,
             "filterKey": "status",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 1,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -731,13 +818,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardName": "PIP",
+            "displayPicture": false,
             "filterKey": "status",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "All Products",
               "status": "All Fellows",
             },
             "numberOfFellows": 3,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -759,8 +849,10 @@ ShallowWrapper {
 >
           <FellowFilterCard
                     cardName="All Fellows"
+                    displayPicture={false}
                     filterKey="status"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -768,11 +860,14 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={6}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="On Track"
+                    displayPicture={false}
                     filterKey="status"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -780,11 +875,14 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={2}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="Off Track"
+                    displayPicture={false}
                     filterKey="status"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -792,11 +890,14 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={1}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="PIP"
+                    displayPicture={false}
                     filterKey="status"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "All Products",
@@ -804,6 +905,7 @@ ShallowWrapper {
                                       }
                     }
                     numberOfFellows={3}
+                    picture=""
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -817,8 +919,10 @@ ShallowWrapper {
           "children": Array [
             <FellowFilterCard
               cardName="All Fellows"
+              displayPicture={false}
               filterKey="status"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -826,11 +930,14 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={6}
+              picture=""
 />,
             <FellowFilterCard
               cardName="On Track"
+              displayPicture={false}
               filterKey="status"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -838,11 +945,14 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={2}
+              picture=""
 />,
             <FellowFilterCard
               cardName="Off Track"
+              displayPicture={false}
               filterKey="status"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -850,11 +960,14 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={1}
+              picture=""
 />,
             <FellowFilterCard
               cardName="PIP"
+              displayPicture={false}
               filterKey="status"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "All Products",
@@ -862,6 +975,7 @@ ShallowWrapper {
                                         }
               }
               numberOfFellows={3}
+              picture=""
 />,
           ],
           "className": "row",
@@ -874,13 +988,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "All Fellows",
+              "displayPicture": false,
               "filterKey": "status",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 6,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -892,13 +1009,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "On Track",
+              "displayPicture": false,
               "filterKey": "status",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 2,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -910,13 +1030,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "Off Track",
+              "displayPicture": false,
               "filterKey": "status",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 1,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -928,13 +1051,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "cardName": "PIP",
+              "displayPicture": false,
               "filterKey": "status",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "All Products",
                 "status": "All Fellows",
               },
               "numberOfFellows": 3,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,

@@ -67,6 +67,15 @@
   margin-right: 0;
 }
 
+.manager-picture {
+  height: 3.625rem;
+  width: 3.625rem;
+}
+
+.manager-card__top {
+  margin-top: 3.5rem;
+}
+
 .fellow-summary-card-header .avatar {
   height: 3.625rem;
   width: 3.625rem;
@@ -136,7 +145,7 @@
 }
 
 .left {
-  margin-left: 1.875rem;
+  margin-left: 1.56rem;
 }
 
 .right {
@@ -243,4 +252,10 @@
   font-size: 1.0625rem;
   font-weight: 900;
   line-height: 1.625rem;
+}
+
+@media (max-width: 765px) {
+  .feedbackDashboard .col-xl-9 {
+    max-width: 100% !important;
+  }
 }

@@ -77,6 +77,20 @@ export const getCurrentWeek = start => {
 export const groupedDate = date =>
   DateToday(date) || DateYesterday(date) || GetMonth(date);
 
+export const formatName = name => {
+  const nameForFormat = `${name}`.split('@')[0].split('.');
+  const formattedName = number =>
+    `${nameForFormat[number].charAt(0).toUpperCase()}${nameForFormat[
+      number
+    ].substr(1)}`;
+  return `${formattedName(0)} ${formattedName(1)}`;
+};
+
+export const convertToEmail = name =>
+  `${`${name}`
+    .split(' ')
+    .join('.')
+    .toLowerCase()}@andela.com`;
 /**
  * this method processes count on an array with counts and converts it to an object
  * @param {*} informationArray an array of objects with counts
@@ -89,6 +103,8 @@ export const processCountInformation = (
   filterKey
 ) => {
   let processedCountInformation = emptyObject;
+  const imageInformation = {};
+
   if (filterKey === 'level')
     processedCountInformation = {
       'D0A Simulations': 0,
@@ -99,13 +115,22 @@ export const processCountInformation = (
   if (filterKey === 'criteria')
     processedCountInformation = { pulse: 0, lms: 0 };
   informationArray.forEach(information => {
-    if (!processedCountInformation[information[filterKey]]) {
-      processedCountInformation[information[filterKey]] = 1;
+    const determineDisplay =
+      filterKey === 'manager_email'
+        ? formatName(information[filterKey])
+        : information[filterKey];
+
+    if (!processedCountInformation[determineDisplay]) {
+      processedCountInformation[determineDisplay] = 1;
     } else {
-      processedCountInformation[information[filterKey]] += 1;
+      processedCountInformation[determineDisplay] += 1;
     }
+
+    if (!imageInformation[determineDisplay] && filterKey === 'manager_email')
+      imageInformation[determineDisplay] = informationArray.picture;
   });
-  return processedCountInformation;
+
+  return { processedCountInformation, imageInformation };
 };
 
 export const processArray = (informationArray, objectWithCounts) => {

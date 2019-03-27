@@ -7,6 +7,7 @@ import ActionButton from '../../../components/ActionButton';
 import FeedbackDuration from '../../../components/FeedbackDuration';
 import MapFeedbackFilterCard from '../../../components/MapFeedbackFilterCard';
 import FellowFilterCard from '../../../components/FellowFilterCard';
+import FellowsCount from '../../../components/FellowsCount';
 
 describe('Test Feedback Dashboard', () => {
   const props = {
@@ -76,7 +77,8 @@ describe('Test Feedback Dashboard', () => {
       level: 'All Levels',
       type: 'Pre-PIP & PIP',
       criteria: 'All Criteria',
-      project: 'All Projects'
+      project: 'All Projects',
+      manager_email: 'All TTLs'
     });
   });
 });
@@ -205,5 +207,163 @@ describe('FeedbackDashboard tests', () => {
 
     feedbackDashboardWrapper.instance().handlePaginationPageChange(filters);
     expect(feedbackDashboardWrapper.state().paginationFilter.page).toBe(2);
+  });
+});
+
+describe('Feedback simslead and engineering dashboard tests', () => {
+  const setup = (user, role, fellowManager) => {
+    const props = {
+      user,
+      role,
+      getManagerFeedback: jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          error: false,
+          managersFeedback: [
+            {
+              firstName: 'Bukola',
+              lastName: 'Makinwa',
+              email: 'bukola.makinwa@andela.com',
+              roleId: 4,
+              staffId: '-KXGy1MT1oimjQgFim9C',
+              id: 1,
+              createdAt: '2019-03-25 15:20:30',
+              updatedAt: '2019-03-25 15:20:30',
+              [`${fellowManager.role}`]: [
+                {
+                  firstName: fellowManager.firstName,
+                  lastName: fellowManager.lastName,
+                  email: fellowManager.email,
+                  roleId: 2,
+                  id: 2,
+                  staffId: '-KXGy1MT1oimjQgFim8t',
+                  createdAt: '2019-03-25 15:20:31',
+                  updatedAt: '2019-03-25 15:20:31',
+                  managerId: '-KXGy1MT1oimjQgFim9C',
+                  feedback: feedbackArrayMock
+                }
+              ]
+            }
+          ]
+        })
+      )
+    };
+    const feedbackDashboardWrapper = shallow(<FeedbackDashboard {...props} />);
+    feedbackDashboardWrapper.setState({
+      feedbackArray: feedbackArrayMock,
+      filteredFeedbackData: feedbackArrayMock,
+      isTicked: {
+        level: 'All Levels',
+        type: 'Pre-PIP & PIP',
+        criteria: 'All Criteria',
+        project: 'All Projects',
+        manager_email: 'All LFs'
+      },
+      startDate: '2019-03-10',
+      endDate: '2019-3-15',
+      currentDate: '2019-3-15'
+    });
+    return { feedbackDashboardWrapper };
+  };
+
+  it('should render feedback dashboard  when simslead is logged in without crashing', () => {
+    const { feedbackDashboardWrapper } = setup(
+      {
+        roles: { WATCH_TOWER_EM: '44343243' },
+        email: 'bukola.makinwa@andela.com'
+      },
+      'WATCH_TOWER_EM',
+      {
+        role: 'ttls',
+        email: 'trust.birungi@andela.com',
+        firstName: 'Trust',
+        lastName: 'Birungi'
+      }
+    );
+
+    expect(feedbackDashboardWrapper).toMatchSnapshot();
+  });
+
+  it('should render 4 total filtered feedback when feedback dashboard mounts', () => {
+    const { feedbackDashboardWrapper } = setup(
+      {
+        roles: { WATCH_TOWER_EM: '44343243' },
+        email: 'bukola.makinwa@andela.com'
+      },
+      'WATCH_TOWER_EM',
+      {
+        role: 'ttls',
+        email: 'trust.birungi@andela.com',
+        firstName: 'Trust',
+        lastName: 'Birungi'
+      }
+    );
+    expect(feedbackDashboardWrapper.find(FellowsCount).props().count).toBe(4);
+  });
+
+  it('should set manager_email to a particular TTL  when a a TTL card is clicked', () => {
+    const { feedbackDashboardWrapper } = setup(
+      {
+        roles: { WATCH_TOWER_EM: '44343243' },
+        email: 'bukola.makinwa@andela.com'
+      },
+      'WATCH_TOWER_EM',
+      {
+        role: 'ttls',
+        email: 'trust.birungi@andela.com',
+        firstName: 'Trust',
+        lastName: 'Birungi'
+      }
+    );
+    feedbackDashboardWrapper.setState({
+      feedbackArray: feedbackArrayMock,
+      filteredFeedbackData: feedbackArrayMock,
+      isTicked: {
+        level: 'All Levels',
+        type: 'Pre-PIP & PIP',
+        criteria: 'All Criteria',
+        project: 'All Projects',
+        manager_email: 'All TTLs'
+      }
+    });
+    feedbackDashboardWrapper
+      .find(MapFeedbackFilterCard)
+      .at(1)
+      .dive()
+      .find(FellowFilterCard)
+      .first()
+      .dive()
+      .simulate('click', {
+        currentTarget: {
+          id: 'Trust Birungi',
+          attributes: [{}, {}, { value: 'manager_email' }]
+        }
+      });
+    expect(feedbackDashboardWrapper.state('isTicked')).toEqual({
+      level: 'All Levels',
+      type: 'Pre-PIP & PIP',
+      criteria: 'All Criteria',
+      project: 'All Projects',
+      manager_email: 'Trust Birungi'
+    });
+    expect(
+      feedbackDashboardWrapper.state('filteredFeedbackData').length
+    ).toEqual(4);
+  });
+
+  it('should render feedback dashboard  when simslead is logged in without crashing', () => {
+    const { feedbackDashboardWrapper } = setup(
+      {
+        roles: { WATCH_TOWER_SL: '44343243' },
+        email: 'ngbinu.muwra@andela.com'
+      },
+      'WATCH_TOWER_SL',
+      {
+        role: 'lfs',
+        email: 'ephraim.malinga@andela.com',
+        firstName: 'Ephraim',
+        lastName: 'Malinga'
+      }
+    );
+    expect(feedbackDashboardWrapper).toMatchSnapshot();
   });
 });
