@@ -188,6 +188,8 @@ describe('FeedbackDashboard tests', () => {
     feedbackDashboardWrapper.instance().handleEndDateChange(endDate);
     expect(feedbackDashboardWrapper.state('startDate')).toEqual(startDate);
     expect(feedbackDashboardWrapper.state('endDate')).toEqual(endDate);
+    feedbackDashboardWrapper.instance().handleStartDateChange('2019-03-18');
+    expect(feedbackDashboardWrapper.state('startDate')).toEqual('2019-03-18');
   });
 
   it('handlePaginationChange should change page state as expected', () => {

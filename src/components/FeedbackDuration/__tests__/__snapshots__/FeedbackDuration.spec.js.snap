@@ -106,6 +106,7 @@ ShallowWrapper {
                                 endDate="2019-03-15"
                                 inlineFocusSelectedMonth={false}
                                 maxDate="2019-03-15"
+                                minDate="2019-03-10"
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next month"
                                 onBlur={[Function]}
@@ -245,6 +246,7 @@ ShallowWrapper {
                               endDate="2019-03-15"
                               inlineFocusSelectedMonth={false}
                               maxDate="2019-03-15"
+                              minDate="2019-03-10"
                               monthsShown={1}
                               nextMonthButtonLabel="Next month"
                               onBlur={[Function]}
@@ -381,6 +383,7 @@ ShallowWrapper {
                             endDate="2019-03-15"
                             inlineFocusSelectedMonth={false}
                             maxDate="2019-03-15"
+                            minDate="2019-03-10"
                             monthsShown={1}
                             nextMonthButtonLabel="Next month"
                             onBlur={[Function]}
@@ -605,6 +608,7 @@ ShallowWrapper {
                   endDate="2019-03-15"
                   inlineFocusSelectedMonth={false}
                   maxDate="2019-03-15"
+                  minDate="2019-03-10"
                   monthsShown={1}
                   nextMonthButtonLabel="Next month"
                   onBlur={[Function]}
@@ -666,6 +670,7 @@ ShallowWrapper {
                   "endDate": "2019-03-15",
                   "inlineFocusSelectedMonth": false,
                   "maxDate": "2019-03-15",
+                  "minDate": "2019-03-10",
                   "monthsShown": 1,
                   "nextMonthButtonLabel": "Next month",
                   "onBlur": [Function],
@@ -831,6 +836,7 @@ ShallowWrapper {
                                         endDate="2019-03-15"
                                         inlineFocusSelectedMonth={false}
                                         maxDate="2019-03-15"
+                                        minDate="2019-03-10"
                                         monthsShown={1}
                                         nextMonthButtonLabel="Next month"
                                         onBlur={[Function]}
@@ -970,6 +976,7 @@ ShallowWrapper {
                                     endDate="2019-03-15"
                                     inlineFocusSelectedMonth={false}
                                     maxDate="2019-03-15"
+                                    minDate="2019-03-10"
                                     monthsShown={1}
                                     nextMonthButtonLabel="Next month"
                                     onBlur={[Function]}
@@ -1106,6 +1113,7 @@ ShallowWrapper {
                                 endDate="2019-03-15"
                                 inlineFocusSelectedMonth={false}
                                 maxDate="2019-03-15"
+                                minDate="2019-03-10"
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next month"
                                 onBlur={[Function]}
@@ -1330,6 +1338,7 @@ ShallowWrapper {
                     endDate="2019-03-15"
                     inlineFocusSelectedMonth={false}
                     maxDate="2019-03-15"
+                    minDate="2019-03-10"
                     monthsShown={1}
                     nextMonthButtonLabel="Next month"
                     onBlur={[Function]}
@@ -1391,6 +1400,7 @@ ShallowWrapper {
                     "endDate": "2019-03-15",
                     "inlineFocusSelectedMonth": false,
                     "maxDate": "2019-03-15",
+                    "minDate": "2019-03-10",
                     "monthsShown": 1,
                     "nextMonthButtonLabel": "Next month",
                     "onBlur": [Function],

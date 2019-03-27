@@ -61,6 +61,7 @@ const FeedbackDuration = ({
               disabledKeyboardNavigation
               maxDate={currentDate}
               endDate={endDate}
+              minDate={startDate}
               selectsEnd
               popperModifiers={{
                 flip: {
