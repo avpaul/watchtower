@@ -61,6 +61,10 @@ class FeedbackDashboard extends Component {
   }
 
   handleStartDateChange = date => {
+    const { endDate } = this.state;
+    if (date > endDate) {
+      this.setState({ endDate: this.defaultDate() });
+    }
     this.setState({ startDate: date }, () => this.updateFeedbackData());
   };
 
