@@ -30,6 +30,7 @@ ShallowWrapper {
                     headers={
                               Array [
                                         "Week",
+                                        "Average",
                                         "Quantity",
                                         "Quality",
                                         "Initiative",
@@ -58,6 +59,7 @@ ShallowWrapper {
               headers={
                             Array [
                                           "Week",
+                                          "Average",
                                           "Quantity",
                                           "Quality",
                                           "Initiative",
@@ -83,6 +85,7 @@ ShallowWrapper {
             "props": Object {
               "headers": Array [
                 "Week",
+                "Average",
                 "Quantity",
                 "Quality",
                 "Initiative",
@@ -125,6 +128,7 @@ ShallowWrapper {
                         headers={
                                     Array [
                                                 "Week",
+                                                "Average",
                                                 "Quantity",
                                                 "Quality",
                                                 "Initiative",
@@ -153,6 +157,7 @@ ShallowWrapper {
                 headers={
                                 Array [
                                                 "Week",
+                                                "Average",
                                                 "Quantity",
                                                 "Quality",
                                                 "Initiative",
@@ -178,6 +183,7 @@ ShallowWrapper {
               "props": Object {
                 "headers": Array [
                   "Week",
+                  "Average",
                   "Quantity",
                   "Quality",
                   "Initiative",
@@ -255,6 +261,7 @@ ShallowWrapper {
                     headers={
                               Array [
                                         "Week",
+                                        "Average",
                                         "Quantity",
                                         "Quality",
                                         "Initiative",
@@ -280,6 +287,7 @@ ShallowWrapper {
               headers={
                             Array [
                                           "Week",
+                                          "Average",
                                           "Quantity",
                                           "Quality",
                                           "Initiative",
@@ -301,6 +309,7 @@ ShallowWrapper {
             "props": Object {
               "headers": Array [
                 "Week",
+                "Average",
                 "Quantity",
                 "Quality",
                 "Initiative",
@@ -340,6 +349,7 @@ ShallowWrapper {
                         headers={
                                     Array [
                                                 "Week",
+                                                "Average",
                                                 "Quantity",
                                                 "Quality",
                                                 "Initiative",
@@ -365,6 +375,7 @@ ShallowWrapper {
                 headers={
                                 Array [
                                                 "Week",
+                                                "Average",
                                                 "Quantity",
                                                 "Quality",
                                                 "Initiative",
@@ -386,6 +397,7 @@ ShallowWrapper {
               "props": Object {
                 "headers": Array [
                   "Week",
+                  "Average",
                   "Quantity",
                   "Quality",
                   "Initiative",

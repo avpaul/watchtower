@@ -17,6 +17,7 @@ const DevPulseTable = ({ ratings, loading }) => {
   }
   const headers = [
     'Week',
+    'Average',
     'Quantity',
     'Quality',
     'Initiative',

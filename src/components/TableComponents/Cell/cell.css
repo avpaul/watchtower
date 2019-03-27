@@ -9,15 +9,15 @@
   box-sizing: border-box;
   display: table-cell;
   min-width: 100px;
-  padding: 13px 10px 17px;
+  padding: 13px 5px 17px;
 }
 
 .dashboard-table__header .dashboard-table__cell {
-  padding: 9px 10px 11px;
+  padding: 9px 2px 11px;
 }
 
 .dashboard-table__cell:first-child {
-  padding-left: 50px;
+  padding-left: 2rem;
   width: 200px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -26,11 +26,14 @@
 }
 
 .dashboard-table__cell:nth-child(2) {
+  width: 6.25rem;
+  padding-left: 0.625rem;
   left: 12em;
 }
 
 .dashboard-table__cell:nth-child(n + 3) {
-  text-align: left;
+  width: 6.25rem;
+  position: sticky;
 }
 
 .dashboard-table__cell:last-child {
@@ -92,7 +95,6 @@ span.row span.pl-2 {
   .dashboard-table__container {
     width: 91.6%;
   }
-
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
