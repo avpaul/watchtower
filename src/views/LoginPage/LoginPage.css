@@ -3,10 +3,10 @@
   padding: 1rem;
   background-color: #1d66de;
   background-image: url(../../static/Landing-Image.png);
-  background-size: 800px 450px;
+  background-size: 700px 450px;
   background-repeat: no-repeat;
   min-height: 100vh;
-  background-position: 90% 100%;
+  background-position: 95% 100%;
 }
 
 .toaster {
@@ -97,12 +97,20 @@
 }
 
 @media only screen and (min-width: 700px) {
+  .login-page {
+    background-size: 1000px 750px;
+    background-position: 100% 100%;
+  }
   .page-info__container {
     width: 100%;
     margin: 9% -15%;
   }
   .login-page__tagline {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    width: 50%;
+    text-align: left;
+    margin-left: 25%;
   }
   .login-page__btn-container {
     margin: 10% auto;
@@ -122,8 +130,8 @@
 
 @media only screen and (min-width: 1000px) {
   .login-page {
-    background-size: 1440px 826px;
-    background-position: 100% -140%;
+    background-size: cover;
+    background-position: center;
   }
 
   .page-info__container {
@@ -132,8 +140,7 @@
   }
 
   .login-page__tagline {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    margin-left: 20%;
   }
 
   .login-page__btn-text {
@@ -181,6 +188,7 @@
   }
   .login-page__tagline {
     text-align: left;
+    margin-left: 5%;
   }
   .login-page__logo {
     padding-left: 5%;
