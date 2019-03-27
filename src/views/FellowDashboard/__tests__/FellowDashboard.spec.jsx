@@ -51,7 +51,7 @@ describe('FellowDashboard component', () => {
     const mockStore = configureStore([thunk]);
     const store = mockStore({ ...initialState });
     const location = {
-      pathname: '/dashboard/fellows'
+      pathname: '/developers'
     };
     const anotherWrapper = mount(
       <Provider store={store}>

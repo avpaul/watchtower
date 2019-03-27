@@ -263,7 +263,7 @@ describe('Header Component Test Suite', () => {
   it('renders header top properly when loading fellow history page', () => {
     const { wrapper } = setup({
       location: {
-        pathname: '/dashboard/fellows/John.Doe'
+        pathname: '/developers/John.Doe'
       },
       setupRole: 'WATCH_TOWER_TTL'
     });
@@ -274,7 +274,7 @@ describe('Header Component Test Suite', () => {
   it('renders header top properly when loading feedback dashboard', () => {
     const { wrapper } = setup({
       location: {
-        pathname: '/dashboard/feedback'
+        pathname: '/feedback'
       },
       setupRole: 'WATCH_TOWER_OPS'
     });

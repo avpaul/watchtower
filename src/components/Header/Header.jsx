@@ -50,15 +50,15 @@ export class Header extends Component {
       case '/dashboard':
         this.setState({ activeItems: { dashboard: true } });
         break;
-      case '/dashboard/fellows':
+      case '/developers':
         this.setState({ activeItems: { developers: true } });
         break;
-      case '/dashboard/feedback':
+      case '/feedback':
         this.setState({ activeItems: { feedback: true } });
         break;
       default: {
-        if (location.pathname.search('/dashboard/') === 0) {
-          this.setState({ activeItems: { dashboard: true } });
+        if (location.pathname.search('/developers/') === 0) {
+          this.setState({ activeItems: { developers: true } });
         }
       }
     }

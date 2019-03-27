@@ -20,14 +20,14 @@ const TTLDashboard = props => (
           component={() => <TTLDashboardContainer {...props} />}
         />
         <Route
-          path="/dashboard/fellows"
+          path="/developers"
           component={newProps => (
             <DeveloperDashboardContainer match={newProps.match} {...props} />
           )}
         />
         <Route
           exact
-          path="/dashboard/feedback"
+          path="/feedback"
           component={() => <FeedbackDashboardContainer {...props} />}
         />
       </Switch>

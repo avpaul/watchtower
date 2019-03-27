@@ -20,12 +20,12 @@ const OpsDashboard = props => (
         />
         <Route
           exact
-          path="/dashboard/fellows"
+          path="/developers"
           component={() => <DashboardPage {...props} />}
         />
         <Route
           exact
-          path="/dashboard/feedback"
+          path="/feedback"
           component={() => <FeedbackDashboardContainer {...props} />}
         />
       </Switch>

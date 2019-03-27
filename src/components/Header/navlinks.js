@@ -61,14 +61,14 @@ export const ttlItems = [
   {
     key: 'developers',
     name: 'Developers',
-    path: '/dashboard/fellows',
+    path: '/developers',
     icon: userIcon,
     activeIcon: userIconFill
   },
   {
     key: 'feedback',
     name: 'Feedback',
-    path: '/dashboard/feedback',
+    path: '/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }
@@ -85,14 +85,14 @@ export const managerItems = [
   {
     key: 'developers',
     name: 'Developers',
-    path: '/dashboard/fellows',
+    path: '/developers',
     icon: userIcon,
     activeIcon: userIconFill
   },
   {
-    key: 'Performance',
+    key: 'feedback',
     name: 'Feedback',
-    path: '/dashboard/feedback',
+    path: '/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }
@@ -109,14 +109,14 @@ export const opsItems = [
   {
     key: 'developers',
     name: 'Developers',
-    path: '/dashboard/fellows',
+    path: '/developers',
     icon: userIcon,
     activeIcon: userIconFill
   },
   {
     key: 'feedback',
     name: 'Feedback',
-    path: '/dashboard/feedback',
+    path: '/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
   }

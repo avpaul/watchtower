@@ -35,15 +35,15 @@ ShallowWrapper {
     "props": Object {
       "children": <Switch>
         <Route
-                path="/dashboard/fellows/pip/activation/:name"
+                path="/developers/pip/activation/:name"
                 render={[Function]}
         />
         <Route
-                path="/dashboard/fellows/:name"
+                path="/developers/:name"
                 render={[Function]}
         />
         <Route
-                path="/dashboard/fellows"
+                path="/developers"
                 render={[Function]}
         />
 </Switch>,
@@ -56,15 +56,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Route
-            path="/dashboard/fellows/pip/activation/:name"
+            path="/developers/pip/activation/:name"
             render={[Function]}
 />,
           <Route
-            path="/dashboard/fellows/:name"
+            path="/developers/:name"
             render={[Function]}
 />,
           <Route
-            path="/dashboard/fellows"
+            path="/developers"
             render={[Function]}
 />,
         ],
@@ -76,7 +76,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows/pip/activation/:name",
+            "path": "/developers/pip/activation/:name",
             "render": [Function],
           },
           "ref": null,
@@ -88,7 +88,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows/:name",
+            "path": "/developers/:name",
             "render": [Function],
           },
           "ref": null,
@@ -100,7 +100,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows",
+            "path": "/developers",
             "render": [Function],
           },
           "ref": null,
@@ -120,15 +120,15 @@ ShallowWrapper {
       "props": Object {
         "children": <Switch>
           <Route
-                    path="/dashboard/fellows/pip/activation/:name"
+                    path="/developers/pip/activation/:name"
                     render={[Function]}
           />
           <Route
-                    path="/dashboard/fellows/:name"
+                    path="/developers/:name"
                     render={[Function]}
           />
           <Route
-                    path="/dashboard/fellows"
+                    path="/developers"
                     render={[Function]}
           />
 </Switch>,
@@ -141,15 +141,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Route
-              path="/dashboard/fellows/pip/activation/:name"
+              path="/developers/pip/activation/:name"
               render={[Function]}
 />,
             <Route
-              path="/dashboard/fellows/:name"
+              path="/developers/:name"
               render={[Function]}
 />,
             <Route
-              path="/dashboard/fellows"
+              path="/developers"
               render={[Function]}
 />,
           ],
@@ -161,7 +161,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows/pip/activation/:name",
+              "path": "/developers/pip/activation/:name",
               "render": [Function],
             },
             "ref": null,
@@ -173,7 +173,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows/:name",
+              "path": "/developers/:name",
               "render": [Function],
             },
             "ref": null,
@@ -185,7 +185,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows",
+              "path": "/developers",
               "render": [Function],
             },
             "ref": null,
@@ -253,15 +253,15 @@ ShallowWrapper {
     "props": Object {
       "children": <Switch>
         <Route
-                path="/dashboard/fellows/pip/activation/:name"
+                path="/developers/pip/activation/:name"
                 render={[Function]}
         />
         <Route
-                path="/dashboard/fellows/:name"
+                path="/developers/:name"
                 render={[Function]}
         />
         <Route
-                path="/dashboard/fellows"
+                path="/developers"
                 render={[Function]}
         />
 </Switch>,
@@ -274,15 +274,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Route
-            path="/dashboard/fellows/pip/activation/:name"
+            path="/developers/pip/activation/:name"
             render={[Function]}
 />,
           <Route
-            path="/dashboard/fellows/:name"
+            path="/developers/:name"
             render={[Function]}
 />,
           <Route
-            path="/dashboard/fellows"
+            path="/developers"
             render={[Function]}
 />,
         ],
@@ -294,7 +294,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows/pip/activation/:name",
+            "path": "/developers/pip/activation/:name",
             "render": [Function],
           },
           "ref": null,
@@ -306,7 +306,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows/:name",
+            "path": "/developers/:name",
             "render": [Function],
           },
           "ref": null,
@@ -318,7 +318,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows",
+            "path": "/developers",
             "render": [Function],
           },
           "ref": null,
@@ -338,15 +338,15 @@ ShallowWrapper {
       "props": Object {
         "children": <Switch>
           <Route
-                    path="/dashboard/fellows/pip/activation/:name"
+                    path="/developers/pip/activation/:name"
                     render={[Function]}
           />
           <Route
-                    path="/dashboard/fellows/:name"
+                    path="/developers/:name"
                     render={[Function]}
           />
           <Route
-                    path="/dashboard/fellows"
+                    path="/developers"
                     render={[Function]}
           />
 </Switch>,
@@ -359,15 +359,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Route
-              path="/dashboard/fellows/pip/activation/:name"
+              path="/developers/pip/activation/:name"
               render={[Function]}
 />,
             <Route
-              path="/dashboard/fellows/:name"
+              path="/developers/:name"
               render={[Function]}
 />,
             <Route
-              path="/dashboard/fellows"
+              path="/developers"
               render={[Function]}
 />,
           ],
@@ -379,7 +379,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows/pip/activation/:name",
+              "path": "/developers/pip/activation/:name",
               "render": [Function],
             },
             "ref": null,
@@ -391,7 +391,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows/:name",
+              "path": "/developers/:name",
               "render": [Function],
             },
             "ref": null,
@@ -403,7 +403,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows",
+              "path": "/developers",
               "render": [Function],
             },
             "ref": null,
@@ -471,15 +471,15 @@ ShallowWrapper {
     "props": Object {
       "children": <Switch>
         <Route
-                path="/dashboard/fellows/pip/activation/:name"
+                path="/developers/pip/activation/:name"
                 render={[Function]}
         />
         <Route
-                path="/dashboard/fellows/:name"
+                path="/developers/:name"
                 render={[Function]}
         />
         <Route
-                path="/dashboard/fellows"
+                path="/developers"
                 render={[Function]}
         />
 </Switch>,
@@ -492,15 +492,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Route
-            path="/dashboard/fellows/pip/activation/:name"
+            path="/developers/pip/activation/:name"
             render={[Function]}
 />,
           <Route
-            path="/dashboard/fellows/:name"
+            path="/developers/:name"
             render={[Function]}
 />,
           <Route
-            path="/dashboard/fellows"
+            path="/developers"
             render={[Function]}
 />,
         ],
@@ -512,7 +512,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows/pip/activation/:name",
+            "path": "/developers/pip/activation/:name",
             "render": [Function],
           },
           "ref": null,
@@ -524,7 +524,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows/:name",
+            "path": "/developers/:name",
             "render": [Function],
           },
           "ref": null,
@@ -536,7 +536,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "path": "/dashboard/fellows",
+            "path": "/developers",
             "render": [Function],
           },
           "ref": null,
@@ -556,15 +556,15 @@ ShallowWrapper {
       "props": Object {
         "children": <Switch>
           <Route
-                    path="/dashboard/fellows/pip/activation/:name"
+                    path="/developers/pip/activation/:name"
                     render={[Function]}
           />
           <Route
-                    path="/dashboard/fellows/:name"
+                    path="/developers/:name"
                     render={[Function]}
           />
           <Route
-                    path="/dashboard/fellows"
+                    path="/developers"
                     render={[Function]}
           />
 </Switch>,
@@ -577,15 +577,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Route
-              path="/dashboard/fellows/pip/activation/:name"
+              path="/developers/pip/activation/:name"
               render={[Function]}
 />,
             <Route
-              path="/dashboard/fellows/:name"
+              path="/developers/:name"
               render={[Function]}
 />,
             <Route
-              path="/dashboard/fellows"
+              path="/developers"
               render={[Function]}
 />,
           ],
@@ -597,7 +597,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows/pip/activation/:name",
+              "path": "/developers/pip/activation/:name",
               "render": [Function],
             },
             "ref": null,
@@ -609,7 +609,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows/:name",
+              "path": "/developers/:name",
               "render": [Function],
             },
             "ref": null,
@@ -621,7 +621,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/dashboard/fellows",
+              "path": "/developers",
               "render": [Function],
             },
             "ref": null,

@@ -32,7 +32,7 @@ const getManagerDataByRole = loggedInRole => {
  * @param urlPath The test url used to render the components accordingly.
  * @return { developerDashboardWrapper, props }
  */
-const setup = (loggedInRole, urlPath = '/dashboard/fellows') => {
+const setup = (loggedInRole, urlPath = '/developers') => {
   const managerDataForTest = getManagerDataByRole(loggedInRole);
 
   const props = {
@@ -55,7 +55,7 @@ const setup = (loggedInRole, urlPath = '/dashboard/fellows') => {
   const developerDashboardMountWrapper = shallow(
     <MemoryRouter initialEntries={[urlPath]}>
       {developerDashboardWrapper
-        .find('Route[path="/dashboard/fellows"]')
+        .find('Route[path="/developers"]')
         .prop('render')()}
     </MemoryRouter>
   );

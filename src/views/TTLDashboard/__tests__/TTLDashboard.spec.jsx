@@ -47,7 +47,7 @@ describe('<TLLDasboard  /> developers tab route tests', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <MemoryRouter initialEntries={['/dashboard/fellows']}>
+      <MemoryRouter initialEntries={['/developers']}>
         <TTLDasboard
           user={{ name: 'test', picture: 'http://' }}
           role="WATCH_TOWER_OPS"
