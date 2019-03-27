@@ -22,6 +22,7 @@ class FeedbackDashboard extends Component {
     this.state = {
       feedbackArray: [],
       filteredFeedbackData: [],
+      cachedDurationData: [],
       startDate: this.defaultDate(),
       endDate: this.defaultDate(),
       currentDate: this.defaultDate(),
@@ -45,6 +46,7 @@ class FeedbackDashboard extends Component {
           {
             feedbackArray: data.managersFeedback,
             filteredFeedbackData: data.managersFeedback,
+            cachedDurationData: data.managersFeedback,
             paginatedFeedback: data.managersFeedback,
             paginationFilter: {
               perPage: 25,
@@ -71,12 +73,13 @@ class FeedbackDashboard extends Component {
    * @description - This method reset's the startDate and endDate state Objects to their Default
    */
   clearDuration = () => {
+    const { cachedDurationData } = this.state;
     this.setState(
-      state => ({
+      {
         startDate: this.defaultDate(),
         endDate: this.defaultDate(),
-        filteredFeedbackData: state.feedbackArray
-      }),
+        filteredFeedbackData: cachedDurationData
+      },
       this.paginateFeedback
     );
   };
@@ -280,6 +283,7 @@ class FeedbackDashboard extends Component {
       {
         isTicked: updatedIsTicked,
         filteredFeedbackData: newFilteredData,
+        cachedDurationData: newFilteredData,
         paginationFilter: {
           ...paginationFilter,
           page: 1,
