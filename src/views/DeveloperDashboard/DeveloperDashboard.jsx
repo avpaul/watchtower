@@ -259,7 +259,7 @@ class DeveloperDashboard extends Component {
     const { lfTtlSummary, isTicked, resetFellows } = this.state;
     let filteredFellows = [];
     const getManagerByid = id =>
-      lfTtlSummary.find(manager => manager.id === id);
+      lfTtlSummary.find(manager => +manager.id === +id);
     const filterFellowsbyStatus = (allFellows, status) =>
       allFellows
         ? allFellows.filter(fellow => fellow.status.includes(status))
