@@ -15,6 +15,11 @@
   margin-top: 3rem;
 }
 
+.fellow-history-data {
+  float: left;
+  width: 100%;
+}
+
 .fellow-history__header {
   width: 100%;
   margin-bottom: 1rem;
