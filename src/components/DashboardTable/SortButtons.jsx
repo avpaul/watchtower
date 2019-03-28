@@ -9,18 +9,17 @@ const SortButtons = ({
   active,
   sortType
 }) => {
-  const arrowUpClass =
-    active && sortType === 'descending'
-      ? 'fas fa-angle-up col-6 text-primary'
-      : 'fas fa-angle-up col-6';
-  const arrowDownClass =
-    active && sortType === 'ascending'
-      ? 'fas fa-angle-down col-6 text-primary'
-      : 'fas fa-angle-down col-6';
+  const arrowClass = 'fas align-self-center';
+  const arrowUpClass = `${arrowClass} fa-angle-up ${
+    active && sortType === 'ascending' ? 'text-primary' : ''
+  }`;
+  const arrowDownClass = `${arrowClass} fa-angle-down ${
+    active && sortType === 'descending' ? 'text-primary' : ''
+  }`;
 
   return (
-    <span className=" ml-1 sort-buttons row p-0 text-left">
-      <div className="col-12 p-0">
+    <span className="sort-buttons ml-3 p-0 text-left">
+      <div className="sort-buttons__up p-0">
         <i
           className={arrowUpClass}
           onClick={arrowUpClick}
@@ -28,15 +27,16 @@ const SortButtons = ({
           role="button"
           tabIndex="0"
           data-target={headerName}
+          data-ascending
         />
       </div>
-      <div className="col-12 p-0">
+      <div className="sort-buttons__down p-0">
         <i
           className={arrowDownClass}
           onClick={arrowDownClick}
           onKeyPress={arrowDownClick}
           role="button"
-          tabIndex="0"
+          tabIndex="-1"
           data-target={headerName}
         />
       </div>

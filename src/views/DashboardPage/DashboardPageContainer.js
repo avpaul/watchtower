@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import DashboardPage from './DashboardPage';
+import DashboardPageWrapped from './DashboardPage';
 import {
   getFellows,
   setVisibilityFilter
@@ -19,4 +19,4 @@ export const mapStateToProps = ({ fellows, visibilityFilter }) => ({
 export default connect(
   mapStateToProps,
   { getFellows, setVisibilityFilter }
-)(DashboardPage);
+)(DashboardPageWrapped);

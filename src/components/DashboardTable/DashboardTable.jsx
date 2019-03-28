@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import Table from '../TableComponents/Table';
 import DashboardRow from './DashboardRow';
 import Row from '../TableComponents/Row';
@@ -21,29 +22,24 @@ class DashboardTable extends Component {
     };
   }
 
-  sortFellows = (list, name, sortType) => {
-    if (sortType === 'descending') {
-      const sortedList = list.sort((a, b) => {
-        const A = typeof a[name] === 'string' ? a[name].toLowerCase() : a[name];
-        const B = typeof b[name] === 'string' ? b[name].toLowerCase() : b[name];
-        if (A < B) return 1;
-        if (A > B) return -1;
-        return 0;
-      });
-      return sortedList;
-    }
-    if (sortType === 'ascending') {
-      const sortedList = list.sort((a, b) => {
-        const A = typeof a[name] === 'string' ? a[name].toLowerCase() : a[name];
-        const B = typeof b[name] === 'string' ? b[name].toLowerCase() : b[name];
+  sortFellows = () => {
+    const { sortBy: name, sortType } = this.state;
+    const { fellows } = this.props;
 
-        if (A < B) return -1;
-        if (A > B) return 1;
-        return 0;
-      });
-      return sortedList;
-    }
-    return list;
+    return fellows.sort((a, b) => {
+      let A = typeof a[name] === 'string' ? a[name].toLowerCase() : a[name];
+      let B = typeof b[name] === 'string' ? b[name].toLowerCase() : b[name];
+
+      if (name === 'weeksSpent') {
+        A = typeof A === 'string' ? 0 : A;
+        B = typeof B === 'string' ? 0 : B;
+      }
+
+      if (A < B) return sortType === 'descending' ? 1 : -1;
+      if (A > B) return sortType === 'descending' ? -1 : 1;
+
+      return 0;
+    });
   };
 
   fellowCells = fellow => {
@@ -51,19 +47,48 @@ class DashboardTable extends Component {
     return cellValues.map(element => cellAttr(element, fellow));
   };
 
-  arrowUpClick = event => {
+  arrowClick = event => {
     const name = event.target.getAttribute('data-target');
-    this.setState({ sortBy: name, sortType: 'descending' });
+    const isAscending = event.target.getAttribute('data-ascending');
+    this.setState({
+      sortBy: name,
+      sortType: isAscending ? 'ascending' : 'descending'
+    });
   };
 
-  arrowDownClick = event => {
-    const name = event.target.getAttribute('data-target');
-    this.setState({ sortBy: name, sortType: 'ascending' });
+  renderTableHeaders = () => {
+    const { headers } = this.props;
+    const { sortBy, sortType } = this.state;
+
+    return (
+      <Row header>
+        {headers.map((element, index) => {
+          const headerName = formatHeaderName(element);
+          const active = headerName.toLowerCase() === sortBy.toLowerCase();
+          return (
+            <Cell key={arrayKey({ element, index })}>
+              <span className="row">
+                <span className="pl-2 pt-2">{element}</span>
+                <div>
+                  <SortButtons
+                    arrowUpClick={this.arrowClick}
+                    arrowDownClick={this.arrowClick}
+                    handleCardClick={this.handleCardClick}
+                    headerName={headerName}
+                    active={active}
+                    sortType={sortType}
+                  />
+                </div>
+              </span>
+            </Cell>
+          );
+        })}
+      </Row>
+    );
   };
 
   render() {
-    const { fellows, loading, headers } = this.props;
-    const { sortBy, sortType } = this.state;
+    const { fellows, loading } = this.props;
     if (fellows.length < 1 && !loading) {
       return (
         <ErrorMessage message="There's currently no fellows matching the filter and/or search." />
@@ -73,34 +98,8 @@ class DashboardTable extends Component {
     return (
       <Fragment>
         <Table>
-          <Row header>
-            {headers.map(element => {
-              let active = false;
-              const headerName = formatHeaderName(element);
-              if (headerName.toLowerCase() === sortBy.toLowerCase()) {
-                active = true;
-              }
-              return (
-                <Cell>
-                  <span className="row">
-                    <span className="pl-2 pt-2">{element}</span>
-                    <div className="">
-                      <SortButtons
-                        arrowUpClick={this.arrowUpClick}
-                        arrowDownClick={this.arrowDownClick}
-                        handleCardClick={this.handleCardClick}
-                        headerName={headerName}
-                        active={active}
-                        sortType={sortType}
-                      />
-                    </div>
-                  </span>
-                </Cell>
-              );
-            })}
-          </Row>
-
-          {this.sortFellows(fellows, sortBy, sortType).map(fellow => (
+          {this.renderTableHeaders()}
+          {this.sortFellows().map(fellow => (
             <DashboardRow
               key={fellow.id}
               fellow={fellow}

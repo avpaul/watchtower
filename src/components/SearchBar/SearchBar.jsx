@@ -62,7 +62,7 @@ SearchBar.propTypes = {
   getFellows: PropTypes.func.isRequired,
   handleSearchChange: PropTypes.func.isRequired,
   perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  filter: PropTypes.string.isRequired,
+  filter: PropTypes.shape().isRequired,
   search: PropTypes.string.isRequired
 };
 

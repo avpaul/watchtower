@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Pagination from '../Pagination';
-import fellows from '../../../__mocks__/fellows';
+import PaginationButton from '../PaginationButton';
 
 describe('Tests Pagination component', () => {
   let wrapper;
@@ -20,7 +20,7 @@ describe('Tests Pagination component', () => {
     },
     handleValueChange: jest.fn(),
     onPerPageChange: jest.fn(),
-    hasFellows: true
+    hasData: true
   };
 
   const testPaginationComponentMethod = (method, testWrapper = wrapper) => {
@@ -75,13 +75,7 @@ describe('Tests Pagination component', () => {
     testPaginationComponentMethod('renderNormal', wrapper);
   });
 
-  const testPageChange = (change, result) => {
-    const newProps = {
-      ...props,
-      nextPage: '5',
-      currentPage: 10
-    };
-
+  const testPageChange = (change, result, newProps) => {
     wrapper = shallow(<Pagination {...newProps} />);
 
     const event = {
@@ -92,22 +86,23 @@ describe('Tests Pagination component', () => {
     };
 
     wrapper.instance().onPageChange(event);
-
-    setTimeout(() => {
-      expect(wrapper.state().page).toBe(result);
-    }, 500);
+    expect(wrapper.state().page).toBe(result);
   };
 
-  it('onPageChange should handle change on first', () => {
-    testPageChange('first', 11);
+  it('onPageChange should handle change on previous page', () => {
+    testPageChange('previous', 4, { ...props, currentPage: 5 });
   });
 
-  it('onPageChange should handle change on first', () => {
-    testPageChange('previous', 9);
+  it('onPageChange should handle change on previous page', () => {
+    testPageChange('previous', 1, { ...props, currentPage: 1 });
   });
 
-  it('onPageChange should handle change on first', () => {
-    testPageChange('next', 11);
+  it('onPageChange should handle change on next page', () => {
+    testPageChange('next', 6, { ...props, currentPage: 5 });
+  });
+
+  it('onPageChange should not change to next page if pages are maxed out', () => {
+    testPageChange('next', 5, { ...props, currentPage: 5, totalPages: 5 });
   });
 
   it('onValueChange is called', () => {
@@ -146,7 +141,6 @@ describe('Tests Pagination component', () => {
   });
 
   it('onValueChange is called', () => {
-    wrapper.setState({ fellows });
     const button = wrapper.find('.pg__button').first();
     button.simulate('click', { target: { value: '1' } });
   });
@@ -176,5 +170,31 @@ describe('Tests Pagination component', () => {
     wrapper.instance().componentDidUpdate({ ...newProps, perPage: 10 });
     expect(wrapper.state('perPage')).toBe(1);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders pagination button with totalpages as 3', () => {
+    const newProps = {
+      ...props,
+      totalPages: 0,
+      perPage: 1
+    };
+
+    wrapper = shallow(<Pagination {...newProps} />);
+    expect(wrapper.find(PaginationButton).exists()).toBeFalsy();
+  });
+
+  it('renders pagination button to match snapshots', () => {
+    const buttonWrapper = shallow(
+      <PaginationButton
+        className="btn btn-default pg__button"
+        name="previous"
+        value="prev"
+        onClick={() => {}}
+        key="prev"
+        buttonText="prev"
+      />
+    );
+
+    expect(buttonWrapper).toMatchSnapshot();
   });
 });

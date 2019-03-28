@@ -63,9 +63,10 @@ class DeveloperDashboard extends Component {
         case !!user.roles.WATCH_TOWER_EM:
           this.updateState(data.managerFellowsSummary.engineeringManager.ttls);
           break;
-        case !!user.roles.WATCH_TOWER_SL:
+        case !!user.roles.WATCH_TOWER_SL: {
           this.updateState(data.managerFellowsSummary.simulationsLead.lfs);
           break;
+        }
         case !!user.roles.WATCH_TOWER_LF:
         case !!user.roles.WATCH_TOWER_TTL: {
           this.setState({

@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import FeedbackDashboard from '../FeedbackDashboard';
+import FeedbackDashboardPaginationWrapped, {
+  FeedbackDashboard
+} from '../FeedbackDashboard';
 import FeedbackDashboardTable from '../FeedbackDashboardTable';
 import feedbackArrayMock from '../../../__mocks__/feedbackSummary.json';
 import ActionButton from '../../../components/ActionButton';
@@ -8,102 +10,51 @@ import FeedbackDuration from '../../../components/FeedbackDuration';
 import MapFeedbackFilterCard from '../../../components/MapFeedbackFilterCard';
 import FellowFilterCard from '../../../components/FellowFilterCard';
 import FellowsCount from '../../../components/FellowsCount';
+import mockPaginationWrapper from '../../../components/Pagination/mockPaginationWrapper';
+
+const props = {
+  getManagerFeedback: jest.fn(() =>
+    Promise.resolve({
+      error: true,
+      managersFeedback: feedbackArrayMock
+    })
+  ),
+  user: {
+    roles: { WATCH_TOWER_OPS: '-l1ujhfhjbshwjrn' },
+    email: 'wt-test-ops@andela.com'
+  },
+  currentRole: 'WATCH_TOWER_OPS',
+  role: 'WATCH_TOWER_OPS'
+};
+
+/**
+ * @description Creates an enzyme instance to test the Feedback Dashboard Page component.
+ * @param mountComponent Renders a mounted enzyme wrapper if set to true
+ * @param propOverrides Used to edit the props passed to the component when being mounted
+ *
+ * @returns { object } { props, feedbackDashboardWrapper }
+ */
+const setup = (mountComponent = false, propsOverrides = {}) => {
+  const newProps = { ...props, ...propsOverrides };
+
+  const feedbackDashboardWrapper = mountComponent
+    ? mount(<FeedbackDashboardPaginationWrapped {...newProps} />)
+    : shallow(
+        <FeedbackDashboard
+          {...newProps}
+          paginationWrapper={mockPaginationWrapper}
+        />
+      );
+
+  return { feedbackDashboardWrapper, props: newProps };
+};
 
 describe('Test Feedback Dashboard', () => {
-  const props = {
-    getManagerFeedback: jest.fn(() =>
-      Promise.resolve({
-        error: true,
-        managersFeedback: feedbackArrayMock
-      })
-    ),
-    user: {
-      roles: { WATCH_TOWER_OPS: '-l1ujhfhjbshwjrn' },
-      email: 'wt-test-ops@andela.com'
-    },
-    currentRole: 'WATCH_TOWER_OPS',
-    role: 'WATCH_TOWER_OPS'
-  };
-
-  it('renders FeedbackDashboard Table shallow rendering', () => {
-    const wrapper = shallow(<FeedbackDashboard {...props} />);
-    wrapper.setState({
-      startDate: 1234564567,
-      endDate: 1467547453,
-      currentDate: 1234564567
-    });
-    expect(
-      wrapper.find(
-        <FeedbackDashboardTable
-          feedbackArray={feedbackArrayMock}
-          type="pip"
-          currentRole="WATCH_TOWER_OPS"
-        />
-      )
-    ).toBeDefined();
-  });
-
-  it('renders FeedbackDashboard Table full mount rendering', () => {
-    props.getManagerFeedback = jest.fn(() =>
-      Promise.resolve({
-        error: false,
-        managersFeedback: feedbackArrayMock
-      })
-    );
-    const wrapper = mount(<FeedbackDashboard {...props} />);
-    expect(
-      wrapper.find(
-        <FeedbackDashboardTable
-          {...props}
-          feedbackArray={feedbackArrayMock}
-          type="pip"
-          currentRole="WATCH_TOWER_OPS"
-        />
-      )
-    ).toBeDefined();
-    expect(props.getManagerFeedback).toBeCalledWith(
-      props.user.roles,
-      props.user.email
-    );
-  });
-
-  it('should clear filtered table of fellows', () => {
-    const wrapper = mount(<FeedbackDashboard {...props} />);
-
-    const button = wrapper.find('.clear-filters');
-
-    button.simulate('click');
-    expect(wrapper.state().isTicked).toEqual({
-      level: 'All Levels',
-      type: 'Pre-PIP & PIP',
-      criteria: 'All Criteria',
-      project: 'All Projects',
-      manager_email: 'All TTLs'
-    });
-  });
-});
-
-describe('FeedbackDashboard tests', () => {
-  const setup = (user, role) => {
-    const props = {
-      user,
-      role,
-      getManagerFeedback: jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          error: false,
-          managersFeedback: feedbackArrayMock
-        })
-      )
-    };
-    const feedbackDashboardWrapper = shallow(<FeedbackDashboard {...props} />);
-    return { feedbackDashboardWrapper };
-  };
-
   it('should render feedback dashboard without crashing', () => {
-    const { feedbackDashboardWrapper } = setup(
-      { roles: 'WATCH_TOWER_LF' },
-      'WATCH_TOWER_LF'
-    );
+    const { feedbackDashboardWrapper } = setup(false, {
+      user: { roles: 'WATCH_TOWER_LF' },
+      role: 'WATCH_TOWER_LF'
+    });
     feedbackDashboardWrapper.setState(
       {
         startDate: '2019-03-10',
@@ -117,10 +68,10 @@ describe('FeedbackDashboard tests', () => {
   });
 
   it('should set status to all fellows  when a all-fellows card is clicked', () => {
-    const { feedbackDashboardWrapper } = setup(
-      { roles: 'WATCH_TOWER_LF' },
-      'WATCH_TOWER_LF'
-    );
+    const { feedbackDashboardWrapper } = setup(false, {
+      user: { roles: 'WATCH_TOWER_LF' },
+      role: 'WATCH_TOWER_LF'
+    });
     feedbackDashboardWrapper.setState({
       feedbackArray: feedbackArrayMock,
       filteredFeedbackData: feedbackArrayMock,
@@ -156,10 +107,10 @@ describe('FeedbackDashboard tests', () => {
   });
 
   it('should simulate click on the clear duration', () => {
-    const { feedbackDashboardWrapper } = setup(
-      { roles: 'WATCH_TOWER_LF' },
-      'WATCH_TOWER_LF'
-    );
+    const { feedbackDashboardWrapper } = setup(false, {
+      user: { roles: 'WATCH_TOWER_LF' },
+      role: 'WATCH_TOWER_LF'
+    });
     feedbackDashboardWrapper
       .find(FeedbackDuration)
       .dive()
@@ -170,10 +121,10 @@ describe('FeedbackDashboard tests', () => {
   });
 
   it('handleStartDateChange and handlEndDateChange should be called', () => {
-    const { feedbackDashboardWrapper } = setup(
-      { roles: 'WATCH_TOWER_LF' },
-      'WATCH_TOWER_LF'
-    );
+    const { feedbackDashboardWrapper } = setup(false, {
+      user: { roles: 'WATCH_TOWER_LF' },
+      role: 'WATCH_TOWER_LF'
+    });
     feedbackDashboardWrapper.setState({
       feedbackArray: feedbackArrayMock,
       filteredFeedbackData: feedbackArrayMock,
@@ -194,79 +145,130 @@ describe('FeedbackDashboard tests', () => {
     expect(feedbackDashboardWrapper.state('startDate')).toEqual('2019-03-18');
   });
 
-  it('handlePaginationChange should change page state as expected', () => {
-    const { feedbackDashboardWrapper } = setup(
-      { roles: 'WATCH_TOWER_LF' },
-      'WATCH_TOWER_LF'
-    );
-    const filters = {
-      page: 2,
-      perPage: 25,
-      totalPages: 0
-    };
+  it('renders FeedbackDashboard Table shallow rendering', () => {
+    const { feedbackDashboardWrapper } = setup();
+    feedbackDashboardWrapper.setState({
+      startDate: 1234564567,
+      endDate: 1467547453,
+      currentDate: 1234564567
+    });
+    expect(
+      feedbackDashboardWrapper.find(
+        <FeedbackDashboardTable
+          feedbackArray={feedbackArrayMock}
+          type="pip"
+          currentRole="WATCH_TOWER_OPS"
+        />
+      )
+    ).toBeDefined();
+  });
 
-    feedbackDashboardWrapper.instance().handlePaginationPageChange(filters);
-    expect(feedbackDashboardWrapper.state().paginationFilter.page).toBe(2);
+  it('renders FeedbackDashboard Table full mount rendering', () => {
+    props.getManagerFeedback = jest.fn(() =>
+      Promise.resolve({
+        error: false,
+        managersFeedback: feedbackArrayMock
+      })
+    );
+    const { feedbackDashboardWrapper } = setup(false, props);
+    expect(
+      feedbackDashboardWrapper.find(
+        <FeedbackDashboardTable
+          {...props}
+          feedbackArray={feedbackArrayMock}
+          type="pip"
+          currentRole="WATCH_TOWER_OPS"
+        />
+      )
+    ).toBeDefined();
+    expect(props.getManagerFeedback).toBeCalledWith(
+      props.user.roles,
+      props.user.email
+    );
+  });
+
+  it('should clear filtered table of fellows', () => {
+    const feedbackDashboardWrapper = mount(
+      <FeedbackDashboard {...props} paginationWrapper={mockPaginationWrapper} />
+    );
+
+    const button = feedbackDashboardWrapper.find('.clear-filters');
+
+    button.simulate('click');
+    expect(feedbackDashboardWrapper.state().isTicked).toEqual({
+      level: 'All Levels',
+      type: 'Pre-PIP & PIP',
+      manager_email: 'All TTLs',
+      criteria: 'All Criteria',
+      project: 'All Projects'
+    });
   });
 });
 
 describe('Feedback simslead and engineering dashboard tests', () => {
-  const setup = (user, role, fellowManager) => {
-    const props = {
+  const managersFeedback = [
+    {
+      firstName: 'Bukola',
+      lastName: 'Makinwa',
+      email: 'bukola.makinwa@andela.com',
+      roleId: 4,
+      staffId: '-KXGy1MT1oimjQgFim9C',
+      id: 1,
+      createdAt: '2019-03-25 15:20:30',
+      updatedAt: '2019-03-25 15:20:30'
+    }
+  ];
+
+  const stateFOrEMSLTests = {
+    feedbackArray: feedbackArrayMock,
+    filteredFeedbackData: feedbackArrayMock,
+    isTicked: {
+      level: 'All Levels',
+      type: 'Pre-PIP & PIP',
+      criteria: 'All Criteria',
+      project: 'All Projects',
+      manager_email: 'All LFs'
+    },
+    startDate: '2019-03-10',
+    endDate: '2019-3-15',
+    currentDate: '2019-3-15'
+  };
+
+  const setupForEMSLTests = (user, role, fellowManager) => {
+    const newProps = {
       user,
       role,
       getManagerFeedback: jest.fn().mockImplementation(() =>
         Promise.resolve({
           error: false,
-          managersFeedback: [
-            {
-              firstName: 'Bukola',
-              lastName: 'Makinwa',
-              email: 'bukola.makinwa@andela.com',
-              roleId: 4,
-              staffId: '-KXGy1MT1oimjQgFim9C',
-              id: 1,
-              createdAt: '2019-03-25 15:20:30',
-              updatedAt: '2019-03-25 15:20:30',
-              [`${fellowManager.role}`]: [
-                {
-                  firstName: fellowManager.firstName,
-                  lastName: fellowManager.lastName,
-                  email: fellowManager.email,
-                  roleId: 2,
-                  id: 2,
-                  staffId: '-KXGy1MT1oimjQgFim8t',
-                  createdAt: '2019-03-25 15:20:31',
-                  updatedAt: '2019-03-25 15:20:31',
-                  managerId: '-KXGy1MT1oimjQgFim9C',
-                  feedback: feedbackArrayMock
-                }
-              ]
-            }
-          ]
+          managersFeedback: {
+            ...managersFeedback,
+            [`${fellowManager.role}`]: [
+              {
+                firstName: fellowManager.firstName,
+                lastName: fellowManager.lastName,
+                email: fellowManager.email,
+                roleId: 2,
+                id: 2,
+                staffId: '-KXGy1MT1oimjQgFim8t',
+                createdAt: '2019-03-25 15:20:31',
+                updatedAt: '2019-03-25 15:20:31',
+                managerId: '-KXGy1MT1oimjQgFim9C',
+                feedback: feedbackArrayMock
+              }
+            ]
+          }
         })
       )
     };
-    const feedbackDashboardWrapper = shallow(<FeedbackDashboard {...props} />);
-    feedbackDashboardWrapper.setState({
-      feedbackArray: feedbackArrayMock,
-      filteredFeedbackData: feedbackArrayMock,
-      isTicked: {
-        level: 'All Levels',
-        type: 'Pre-PIP & PIP',
-        criteria: 'All Criteria',
-        project: 'All Projects',
-        manager_email: 'All LFs'
-      },
-      startDate: '2019-03-10',
-      endDate: '2019-3-15',
-      currentDate: '2019-3-15'
-    });
+
+    const { feedbackDashboardWrapper } = setup(false, newProps);
+    feedbackDashboardWrapper.setState(stateFOrEMSLTests);
     return { feedbackDashboardWrapper };
   };
 
   it('should render feedback dashboard  when simslead is logged in without crashing', () => {
-    const { feedbackDashboardWrapper } = setup(
+    const { feedbackDashboardWrapper } = setupForEMSLTests(
       {
         roles: { WATCH_TOWER_EM: '44343243' },
         email: 'bukola.makinwa@andela.com'
@@ -284,7 +286,7 @@ describe('Feedback simslead and engineering dashboard tests', () => {
   });
 
   it('should render 4 total filtered feedback when feedback dashboard mounts', () => {
-    const { feedbackDashboardWrapper } = setup(
+    const { feedbackDashboardWrapper } = setupForEMSLTests(
       {
         roles: { WATCH_TOWER_EM: '44343243' },
         email: 'bukola.makinwa@andela.com'
@@ -301,7 +303,7 @@ describe('Feedback simslead and engineering dashboard tests', () => {
   });
 
   it('should set manager_email to a particular TTL  when a a TTL card is clicked', () => {
-    const { feedbackDashboardWrapper } = setup(
+    const { feedbackDashboardWrapper } = setupForEMSLTests(
       {
         roles: { WATCH_TOWER_EM: '44343243' },
         email: 'bukola.makinwa@andela.com'
@@ -351,7 +353,7 @@ describe('Feedback simslead and engineering dashboard tests', () => {
   });
 
   it('should render feedback dashboard  when simslead is logged in without crashing', () => {
-    const { feedbackDashboardWrapper } = setup(
+    const { feedbackDashboardWrapper } = setupForEMSLTests(
       {
         roles: { WATCH_TOWER_SL: '44343243' },
         email: 'ngbinu.muwra@andela.com'

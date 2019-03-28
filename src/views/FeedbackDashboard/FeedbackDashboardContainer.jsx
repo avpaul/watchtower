@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import FeedbackDashboard from './FeedbackDashboard';
+import FeedbackDashboardWrapped from './FeedbackDashboard';
 import getManagerFeedback from '../../redux/actionCreators/managerFeedbackActions';
 
 export const mapStateToProps = ({ feedback }) => ({
@@ -10,4 +10,4 @@ export const mapStateToProps = ({ feedback }) => ({
 export default connect(
   mapStateToProps,
   { getManagerFeedback }
-)(FeedbackDashboard);
+)(FeedbackDashboardWrapped);
