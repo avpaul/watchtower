@@ -136,7 +136,7 @@ ShallowWrapper {
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Watch Tower"
                 started="15-Oct-2018"
-                status="PIP"
+                status="Off-Track"
         />
         <FellowsSummaryCard
                 devPulseAverage="1.04"
@@ -175,7 +175,7 @@ ShallowWrapper {
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Noldor"
                 started="6-Mar-2019"
-                status="PIP"
+                status="Off-Track"
         />
         <FellowsSummaryCard
                 devPulseAverage="1.04"
@@ -188,7 +188,7 @@ ShallowWrapper {
                 picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                 product="Noldor"
                 started="6-Mar-2019"
-                status="PIP"
+                status="Off-Track"
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -224,7 +224,7 @@ ShallowWrapper {
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Watch Tower"
             started="15-Oct-2018"
-            status="PIP"
+            status="Off-Track"
 />,
           <FellowsSummaryCard
             devPulseAverage="1.04"
@@ -263,7 +263,7 @@ ShallowWrapper {
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Noldor"
             started="6-Mar-2019"
-            status="PIP"
+            status="Off-Track"
 />,
           <FellowsSummaryCard
             devPulseAverage="1.04"
@@ -276,7 +276,7 @@ ShallowWrapper {
             picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
             product="Noldor"
             started="6-Mar-2019"
-            status="PIP"
+            status="Off-Track"
 />,
         ],
         "className": "row",
@@ -319,7 +319,7 @@ ShallowWrapper {
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Watch Tower",
             "started": "15-Oct-2018",
-            "status": "PIP",
+            "status": "Off-Track",
           },
           "ref": null,
           "rendered": null,
@@ -382,7 +382,7 @@ ShallowWrapper {
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Noldor",
             "started": "6-Mar-2019",
-            "status": "PIP",
+            "status": "Off-Track",
           },
           "ref": null,
           "rendered": null,
@@ -403,7 +403,7 @@ ShallowWrapper {
             "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
             "product": "Noldor",
             "started": "6-Mar-2019",
-            "status": "PIP",
+            "status": "Off-Track",
           },
           "ref": null,
           "rendered": null,
@@ -447,7 +447,7 @@ ShallowWrapper {
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Watch Tower"
                     started="15-Oct-2018"
-                    status="PIP"
+                    status="Off-Track"
           />
           <FellowsSummaryCard
                     devPulseAverage="1.04"
@@ -486,7 +486,7 @@ ShallowWrapper {
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Noldor"
                     started="6-Mar-2019"
-                    status="PIP"
+                    status="Off-Track"
           />
           <FellowsSummaryCard
                     devPulseAverage="1.04"
@@ -499,7 +499,7 @@ ShallowWrapper {
                     picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
                     product="Noldor"
                     started="6-Mar-2019"
-                    status="PIP"
+                    status="Off-Track"
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -535,7 +535,7 @@ ShallowWrapper {
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Watch Tower"
               started="15-Oct-2018"
-              status="PIP"
+              status="Off-Track"
 />,
             <FellowsSummaryCard
               devPulseAverage="1.04"
@@ -574,7 +574,7 @@ ShallowWrapper {
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Noldor"
               started="6-Mar-2019"
-              status="PIP"
+              status="Off-Track"
 />,
             <FellowsSummaryCard
               devPulseAverage="1.04"
@@ -587,7 +587,7 @@ ShallowWrapper {
               picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
               product="Noldor"
               started="6-Mar-2019"
-              status="PIP"
+              status="Off-Track"
 />,
           ],
           "className": "row",
@@ -630,7 +630,7 @@ ShallowWrapper {
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Watch Tower",
               "started": "15-Oct-2018",
-              "status": "PIP",
+              "status": "Off-Track",
             },
             "ref": null,
             "rendered": null,
@@ -693,7 +693,7 @@ ShallowWrapper {
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Noldor",
               "started": "6-Mar-2019",
-              "status": "PIP",
+              "status": "Off-Track",
             },
             "ref": null,
             "rendered": null,
@@ -714,7 +714,7 @@ ShallowWrapper {
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
               "product": "Noldor",
               "started": "6-Mar-2019",
-              "status": "PIP",
+              "status": "Off-Track",
             },
             "ref": null,
             "rendered": null,
