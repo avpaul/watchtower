@@ -23,10 +23,15 @@ const resolveStatus = fellow => {
    ** Renders the fellow's current progress status
    * @param fellow Fellow's details as an object
    */
-  if (!fellow.status) return 'No Status';
+  if (!fellow.status && !fellow.pipStatus) return 'No Status';
 
-  if (fellow.status.includes('gteWk5')) return 'PIP';
-  if (fellow.status.includes('ltWk5')) return 'Off-Track';
+  if (
+    fellow.status.includes('gteWk5') ||
+    (fellow.status.includes('ltWk5') && !fellow.pipStatus)
+  )
+    return 'Off-Track';
+
+  if (fellow.pipStatus) return 'PIP';
 
   return 'On-Track';
 };
