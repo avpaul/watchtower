@@ -7,6 +7,7 @@ import Title from '../../components/Title';
 import FeedbackDashboardTable from './FeedbackDashboardTable';
 import FeedbackDuration from '../../components/FeedbackDuration';
 import Pagination from '../../components/Pagination/Pagination';
+import { convertToEmail } from '../../services/helper';
 
 class FeedbackDashboard extends Component {
   constructor(props) {
@@ -16,7 +17,8 @@ class FeedbackDashboard extends Component {
       level: 'All Levels',
       type: 'Pre-PIP & PIP',
       criteria: 'All Criteria',
-      project: 'All Projects'
+      project: 'All Projects',
+      manager_email: 'All TTLs'
     };
 
     this.state = {
@@ -42,23 +44,62 @@ class FeedbackDashboard extends Component {
     const { getManagerFeedback, user } = this.props;
     getManagerFeedback(user.roles, user.email).then(data => {
       if (!data.error) {
-        this.setState(
-          {
-            feedbackArray: data.managersFeedback,
-            filteredFeedbackData: data.managersFeedback,
-            cachedDurationData: data.managersFeedback,
-            paginatedFeedback: data.managersFeedback,
-            paginationFilter: {
-              perPage: 25,
-              page: 1,
-              totalPages: Math.ceil(data.managersFeedback.length / 25)
-            }
-          },
-          this.paginateFeedback
-        );
+        let feedback = [];
+        switch (true) {
+          case !!user.roles.WATCH_TOWER_EM:
+            feedback = this.processFeedbackData(
+              data.managersFeedback.length ? data.managersFeedback[0].ttls : []
+            );
+
+            break;
+          case !!user.roles.WATCH_TOWER_SL:
+            feedback = this.processFeedbackData(
+              data.managersFeedback.length ? data.managersFeedback[0].lfs : []
+            );
+            this.setState(state => ({
+              isTicked: { ...state.isTicked, manager_email: 'All LFs' }
+            }));
+            break;
+          case !!user.roles.WATCH_TOWER_LF ||
+            !!user.roles.WATCH_TOWER_TTL ||
+            !!user.roles.WATCH_TOWER_OPS:
+            feedback = data.managersFeedback;
+            break;
+          default:
+        }
+        this.updateInitialState(feedback);
       }
     });
   }
+
+  updateInitialState = feedback =>
+    this.setState(
+      {
+        feedbackArray: feedback,
+        filteredFeedbackData: feedback,
+        cachedDurationData: feedback,
+        paginatedFeedback: feedback,
+        paginationFilter: {
+          perPage: 25,
+          page: 1,
+          totalPages: Math.ceil(feedback.length / 25)
+        }
+      },
+      this.paginateFeedback
+    );
+
+  /**
+   * @method updateState
+   * @param {Object} data - the data to be processed
+   * @description - This method updates the state with fellows from data
+   */
+  processFeedbackData = data => {
+    const feedback = [];
+    data.forEach(manager => {
+      feedback.push(...manager.feedback);
+    });
+    return feedback;
+  };
 
   handleStartDateChange = date => {
     const { endDate } = this.state;
@@ -139,7 +180,11 @@ class FeedbackDashboard extends Component {
     const { filteredFeedbackData } = this.state;
     const results = filteredFeedbackData ? filteredFeedbackData.length : 0;
     return (
-      <FellowsCount count={results} clearFilters={this.clearFilterTables} />
+      <FellowsCount
+        count={results}
+        clearFilters={this.clearFilterTables}
+        countName="Feedback"
+      />
     );
   };
 
@@ -228,12 +273,20 @@ class FeedbackDashboard extends Component {
     const { user } = this.props;
     const isManager =
       !!user.roles.WATCH_TOWER_TTL || !!user.roles.WATCH_TOWER_LF;
+    const isEngineeringManager = !!user.roles.WATCH_TOWER_EM;
+    const isSimulationsLead = !!user.roles.WATCH_TOWER_SL;
+    const isOperationsTeam = !!user.roles.WATCH_TOWER_OPS;
     return (
       <div className="col-xl-9 p-0">
         <Title title="FEEDBACK" subTitle="Filter by clicking cards" />
-        {isManager
-          ? this.renderFilterCards('All Projects', 'project')
-          : this.renderFilterCards('All Levels', 'level')}
+        {isSimulationsLead
+          ? this.renderFilterCards('All LFs', 'manager_email')
+          : ''}
+        {isEngineeringManager
+          ? this.renderFilterCards('All TTLs', 'manager_email')
+          : ''}
+        {isManager ? this.renderFilterCards('All Projects', 'project') : ''}
+        {isOperationsTeam ? this.renderFilterCards('All Levels', 'level') : ''}
         {this.renderFilterCards('Pre-PIP & PIP', 'type')}
         {this.renderFilterCards('All Criteria', 'criteria')}
       </div>
@@ -258,19 +311,35 @@ class FeedbackDashboard extends Component {
   );
 
   filterFeedback = (isTicked, feedbackArray) => {
-    const { user } = this.props;
-    const isManager =
-      !!user.roles.WATCH_TOWER_TTL || !!user.roles.WATCH_TOWER_LF;
+    const { role } = this.props;
+    const switchFilterByRolesTable = {
+      WATCH_TOWER_OPS: 'level',
+      WATCH_TOWER_TTL: 'project',
+      WATCH_TOWER_LF: 'project',
+      WATCH_TOWER_SL: 'manager_email',
+      WATCH_TOWER_EM: 'manager_email'
+    };
+    const processIsTick = filterKey =>
+      filterKey === 'manager_email'
+        ? convertToEmail(isTicked[filterKey])
+        : isTicked[filterKey];
+
+    const processFeedbackUnit = (feedbackUnit, filterKey) =>
+      filterKey === 'manager_email'
+        ? `${feedbackUnit[filterKey]}`.toLowerCase()
+        : feedbackUnit[filterKey];
+
     const filterUnit = (feedbackUnit, filterKey) =>
-      feedbackUnit[filterKey].startsWith(
+      `${processFeedbackUnit(feedbackUnit, filterKey)}`.startsWith(
         TranslatorTable[isTicked[filterKey]] ||
           TranslatorTable[isTicked[filterKey]] === ''
           ? TranslatorTable[isTicked[filterKey]]
-          : isTicked[filterKey]
+          : processIsTick(filterKey)
       );
+
     return feedbackArray.filter(
       feedbackUnit =>
-        filterUnit(feedbackUnit, isManager ? 'project' : 'level') &&
+        filterUnit(feedbackUnit, switchFilterByRolesTable[role]) &&
         filterUnit(feedbackUnit, 'criteria') &&
         filterUnit(feedbackUnit, 'type')
     );

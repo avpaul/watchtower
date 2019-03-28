@@ -87,36 +87,45 @@ ShallowWrapper {
 >
         <FellowFilterCard
                 cardName="All Products"
+                displayPicture={true}
                 filterKey="project"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "",
                               }
                 }
                 numberOfFellows={4}
+                picture=""
         />
         <FellowFilterCard
                 cardName="Watch Tower"
+                displayPicture={true}
                 filterKey="project"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "",
                               }
                 }
                 numberOfFellows={1}
+                picture=""
         />
         <FellowFilterCard
                 cardName="Noldor"
+                displayPicture={true}
                 filterKey="project"
                 handleCardClick={[Function]}
+                isManager={false}
                 isTicked={
                         Object {
                                 "project": "",
                               }
                 }
                 numberOfFellows={3}
+                picture=""
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -130,36 +139,45 @@ ShallowWrapper {
         "children": Array [
           <FellowFilterCard
             cardName="All Products"
+            displayPicture={true}
             filterKey="project"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "",
                                   }
             }
             numberOfFellows={4}
+            picture=""
 />,
           <FellowFilterCard
             cardName="Watch Tower"
+            displayPicture={true}
             filterKey="project"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "",
                                   }
             }
             numberOfFellows={1}
+            picture=""
 />,
           <FellowFilterCard
             cardName="Noldor"
+            displayPicture={true}
             filterKey="project"
             handleCardClick={[Function]}
+            isManager={false}
             isTicked={
                         Object {
                                     "project": "",
                                   }
             }
             numberOfFellows={3}
+            picture=""
 />,
         ],
         "className": "row",
@@ -168,16 +186,19 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "All Products",
           "nodeType": "function",
           "props": Object {
             "cardName": "All Products",
+            "displayPicture": true,
             "filterKey": "project",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "",
             },
             "numberOfFellows": 4,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -185,16 +206,19 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "Watch Tower",
           "nodeType": "function",
           "props": Object {
             "cardName": "Watch Tower",
+            "displayPicture": true,
             "filterKey": "project",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "",
             },
             "numberOfFellows": 1,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -202,16 +226,19 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "Noldor",
           "nodeType": "function",
           "props": Object {
             "cardName": "Noldor",
+            "displayPicture": true,
             "filterKey": "project",
             "handleCardClick": [Function],
+            "isManager": false,
             "isTicked": Object {
               "project": "",
             },
             "numberOfFellows": 3,
+            "picture": "",
           },
           "ref": null,
           "rendered": null,
@@ -233,36 +260,45 @@ ShallowWrapper {
 >
           <FellowFilterCard
                     cardName="All Products"
+                    displayPicture={true}
                     filterKey="project"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "",
                                       }
                     }
                     numberOfFellows={4}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="Watch Tower"
+                    displayPicture={true}
                     filterKey="project"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "",
                                       }
                     }
                     numberOfFellows={1}
+                    picture=""
           />
           <FellowFilterCard
                     cardName="Noldor"
+                    displayPicture={true}
                     filterKey="project"
                     handleCardClick={[Function]}
+                    isManager={false}
                     isTicked={
                               Object {
                                         "project": "",
                                       }
                     }
                     numberOfFellows={3}
+                    picture=""
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -276,36 +312,45 @@ ShallowWrapper {
           "children": Array [
             <FellowFilterCard
               cardName="All Products"
+              displayPicture={true}
               filterKey="project"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "",
                                         }
               }
               numberOfFellows={4}
+              picture=""
 />,
             <FellowFilterCard
               cardName="Watch Tower"
+              displayPicture={true}
               filterKey="project"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "",
                                         }
               }
               numberOfFellows={1}
+              picture=""
 />,
             <FellowFilterCard
               cardName="Noldor"
+              displayPicture={true}
               filterKey="project"
               handleCardClick={[Function]}
+              isManager={false}
               isTicked={
                             Object {
                                           "project": "",
                                         }
               }
               numberOfFellows={3}
+              picture=""
 />,
           ],
           "className": "row",
@@ -314,16 +359,19 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "All Products",
             "nodeType": "function",
             "props": Object {
               "cardName": "All Products",
+              "displayPicture": true,
               "filterKey": "project",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "",
               },
               "numberOfFellows": 4,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -331,16 +379,19 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Watch Tower",
             "nodeType": "function",
             "props": Object {
               "cardName": "Watch Tower",
+              "displayPicture": true,
               "filterKey": "project",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "",
               },
               "numberOfFellows": 1,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,
@@ -348,16 +399,19 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Noldor",
             "nodeType": "function",
             "props": Object {
               "cardName": "Noldor",
+              "displayPicture": true,
               "filterKey": "project",
               "handleCardClick": [Function],
+              "isManager": false,
               "isTicked": Object {
                 "project": "",
               },
               "numberOfFellows": 3,
+              "picture": "",
             },
             "ref": null,
             "rendered": null,

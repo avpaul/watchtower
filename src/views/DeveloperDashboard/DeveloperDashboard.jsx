@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
-
 import MapFellowsSummaryCard from '../../components/MapFellowsSummaryCard';
 import MapFellowsFilterCard from '../../components/MapFellowsFilterCard';
 import Error from '../../components/Error';
 import FellowsCount from '../../components/FellowsCount';
 import FellowHistoryContainer from '../../components/FellowHistory';
 import MapLfTtlSummaryCard from '../../components/MapLfTtlSummaryCard';
+import Title from '../../components/Title';
 
 /**
  * Class DeveloperDashboard - this component renders the DeveloperDashboard component
@@ -305,13 +305,14 @@ class DeveloperDashboard extends Component {
   renderFellowsDashboard = () => {
     const { fellowSummaryDetails, managerCardId } = this.state;
     const { user } = this.props;
+    const isManager = user.roles.WATCH_TOWER_EM || user.roles.WATCH_TOWER_SL;
     return (
       <Fragment>
-        <div className="ops-dashboard__fellows-summary">
-          <p className="ops-dashboard__fellow-summary-text mb-2">PROJECTS</p>
-          <p className="filter_card_title">Filter by clicking cards</p>
-        </div>
-        {user.roles.WATCH_TOWER_EM || user.roles.WATCH_TOWER_SL ? (
+        <Title
+          title={isManager ? 'MANAGERS' : 'PROJECTS'}
+          subTitle="Filter by clicking cards"
+        />
+        {isManager ? (
           <MapLfTtlSummaryCard
             lfTtlSummary={this.mapLfTtlData()}
             filterFellows={this.filterFellows}

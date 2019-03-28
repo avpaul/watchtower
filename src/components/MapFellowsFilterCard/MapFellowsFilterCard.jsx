@@ -46,13 +46,13 @@ const MapFellowsFilterCard = ({
     refinedArray = [{ 'All Products': fellowSummaryDetails.length }];
     const productArray = {};
 
-    const processedResult = processCountInformation(
+    const { processedCountInformation } = processCountInformation(
       fellowSummaryDetails,
       productArray,
       'project'
     );
 
-    refinedArray = processArray(refinedArray, processedResult);
+    refinedArray = processArray(refinedArray, processedCountInformation);
   }
 
   return (
@@ -82,10 +82,14 @@ const MapFellowsFilterCard = ({
  * @property isTicked - string
  */
 MapFellowsFilterCard.propTypes = {
-  fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape({})),
   display: PropTypes.string.isRequired,
   handleCardClick: PropTypes.func.isRequired,
   isTicked: PropTypes.shape({}).isRequired
+};
+
+MapFellowsFilterCard.defaultProps = {
+  fellowSummaryDetails: undefined
 };
 
 export default MapFellowsFilterCard;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import check from '../../static/check-mark.svg';
+import defaultPicture from '../../static/profile.svg';
 
 /**
  * @method FellowFilterCard
@@ -16,14 +17,32 @@ const FellowFilterCard = ({
   numberOfFellows,
   isTicked,
   handleCardClick,
-  filterKey
+  filterKey,
+  isManager,
+  picture = '',
+  displayPicture
 }) => {
   const shouldDisplayTick =
     isTicked.project === cardName ||
     isTicked.status === cardName ||
     isTicked.type === cardName ||
     isTicked.criteria === cardName ||
-    isTicked.level === cardName;
+    isTicked.level === cardName ||
+    isTicked.manager_email === cardName;
+
+  const shouldRenderImage =
+    isManager && displayPicture ? (
+      <img className="manager-picture" src={picture || defaultPicture} alt="" />
+    ) : (
+      ''
+    );
+
+  const adjustCardNameStyles = isManager && displayPicture ? `pl-3` : '';
+
+  const styleCardNumber = `float-right right ${
+    isManager ? 'manager-card__top mb-2' : 'mt-3'
+  }  card-number-display`;
+
   return (
     <div
       className={`fellow-summary-card fellow-filter-card mt-4 
@@ -45,10 +64,11 @@ const FellowFilterCard = ({
           alt=""
         />
       </div>
-      <div className="float-left left mt-3 card-name">{cardName}</div>
-      <div className="float-right right mt-3 card-number-display">
-        {numberOfFellows}
+      <div className="float-left left mt-3 card-name">
+        {shouldRenderImage}
+        <span className={adjustCardNameStyles}>{cardName}</span>
       </div>
+      <div className={styleCardNumber}>{numberOfFellows}</div>
     </div>
   );
 };
@@ -66,7 +86,16 @@ FellowFilterCard.propTypes = {
   numberOfFellows: PropTypes.number.isRequired,
   isTicked: PropTypes.shape({}).isRequired,
   handleCardClick: PropTypes.func.isRequired,
-  filterKey: PropTypes.string.isRequired
+  filterKey: PropTypes.string.isRequired,
+  isManager: PropTypes.bool,
+  picture: PropTypes.string,
+  displayPicture: PropTypes.bool
+};
+
+FellowFilterCard.defaultProps = {
+  picture: '',
+  isManager: false,
+  displayPicture: false
 };
 
 export default FellowFilterCard;

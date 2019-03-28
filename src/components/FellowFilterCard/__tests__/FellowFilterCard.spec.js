@@ -33,15 +33,12 @@ describe('Fellow filter card tests', () => {
   });
 
   it('should display WatchTower on fellow filter card when the WatchTower is passed in', () => {
-    expect(fellowFilterCardWrapper.find('.card-name').props().children).toBe(
-      'Watch Tower'
-    );
-  });
-
-  it('should display WatchTower on fellow filter card when the WatchTower is passed in', () => {
-    expect(fellowFilterCardWrapper.find('.card-name').props().children).toBe(
-      'Watch Tower'
-    );
+    expect(
+      fellowFilterCardWrapper
+        .find('.card-name')
+        .find('span')
+        .text()
+    ).toBe('Watch Tower');
   });
 
   it('should not render checkmark on card if status or project props is not equal to cards name', () => {
