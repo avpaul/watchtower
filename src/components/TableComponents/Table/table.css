@@ -1,7 +1,8 @@
 .dashboard-table__container {
   overflow-x: scroll;
   margin-bottom: 60px;
-  width: 100%;
+  margin: -2% 4% 2% 4%;
+  width: 91.6%;
 }
 
 .dashboard-table {
@@ -14,7 +15,6 @@
   background-color: transparent;
   border-collapse: separate;
   border-spacing: 0px 8px;
-  overflow-x: scroll;
 }
 
 @media screen and (max-width: 868px) {

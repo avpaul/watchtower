@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
@@ -195,22 +195,24 @@ export class FellowHistory extends Component {
     const { fellow } = this.state;
 
     return (
-      <div className="fellow-history container-fluid">
-        <div className="fellow-history__top row">
-          <div className="col">
-            <div className="btn-pip-container">
-              {this.loadPipActivationForm()}
+      <Fragment>
+        <div className="fellow-history container-fluid">
+          <div className="fellow-history__top row">
+            <div className="col">
+              <div className="btn-pip-container">
+                {this.loadPipActivationForm()}
+              </div>
+              <div className="row">
+                <span className="fellow-history__header col">
+                  DEVELOPER HISTORY
+                </span>
+              </div>
+              <div className="row">{this.renderCards(fellow)}</div>
             </div>
-            <div className="row">
-              <span className="fellow-history__header col">
-                DEVELOPER HISTORY
-              </span>
-            </div>
-            <div className="row">{this.renderCards(fellow)}</div>
-            <div className="row">{this.renderTables()}</div>
           </div>
         </div>
-      </div>
+        <div className="fellow-history-data">{this.renderTables()}</div>
+      </Fragment>
     );
   };
 
