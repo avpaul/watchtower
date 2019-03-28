@@ -1,3 +1,20 @@
+# V 1.0.4
+
+## Bug Fixes
+
+- align LMS table on the Ops dashboard
+- fix dashboard buttons
+- fix downloading of empty pdf data on initial login
+- fix fellows pagination
+- enable clearing pip feedback duration on the EM/SL dashboard
+- fix table alignment
+- enable pre-pip and pip filters on the EM/SL dashboard
+- fix wrong computation of weeks on the fellow progress bar
+- fix edge cases on the filter-by-duration functionality
+- fix wrong active bar on the main menu
+- make login page responsive on large screens
+- correct fellow status information on fellow-summary cards
+
 # V 1.0.3
 
 ## Features
