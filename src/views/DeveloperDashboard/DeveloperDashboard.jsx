@@ -113,9 +113,9 @@ class DeveloperDashboard extends Component {
    *
    */
   redirectUrl = (email, history) => {
-    if (!email) return history.push('/dashboard/fellows');
+    if (!email) return history.push('/developers');
     const name = email.substr(0, email.search('@andela.com'));
-    return history.push(`/dashboard/fellows/${name}`);
+    return history.push(`/developers/${name}`);
   };
 
   /**
@@ -373,10 +373,10 @@ class DeveloperDashboard extends Component {
     return (
       <ErrorBoundary>
         <Switch>
-          {this.renderRoute('/dashboard/fellows/pip/activation/:name')}
-          {this.renderRoute('/dashboard/fellows/:name')}
+          {this.renderRoute('/developers/pip/activation/:name')}
+          {this.renderRoute('/developers/:name')}
           <Route
-            path="/dashboard/fellows"
+            path="/developers"
             render={() => this.renderFellowsDashboard()}
           />
         </Switch>

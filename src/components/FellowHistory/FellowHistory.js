@@ -56,7 +56,7 @@ export class FellowHistory extends Component {
       getLms(email);
       getFellowDevPulse(email);
     } else {
-      history.push('/dashboard/fellows');
+      history.push('/developers');
     }
 
     this.setState({ fellow: fellowFound, updated: true });
@@ -172,7 +172,7 @@ export class FellowHistory extends Component {
     const { history } = this.props;
     const { fellow } = this.state;
     const name = fellow.email.substr(0, fellow.email.search('@andela.com'));
-    history.push(`/dashboard/fellows/pip/activation/${name}`);
+    history.push(`/developers/pip/activation/${name}`);
   };
 
   renderTables = () => {
@@ -221,7 +221,7 @@ export class FellowHistory extends Component {
     return (
       <Switch>
         <Route
-          path="/dashboard/fellows/pip/activation/:name"
+          path="/developers/pip/activation/:name"
           render={() => (
             <PipActivationForm
               fellow={fellow}
@@ -230,7 +230,7 @@ export class FellowHistory extends Component {
           )}
         />
         <Route
-          path="/dashboard/fellows/:name"
+          path="/developers/:name"
           render={() => this.renderFellowHistory()}
         />
       </Switch>

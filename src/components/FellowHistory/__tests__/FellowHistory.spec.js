@@ -98,7 +98,7 @@ describe('Fellow History Container', () => {
     const { wrapper, props } = setup(
       true,
       { fellowSummaryDetails: [currentFellow] },
-      '/dashboard/fellows/:name'
+      '/developers/:name'
     );
 
     const fellowCard = wrapper.find('.fellow-history-card').at(1);
@@ -118,7 +118,7 @@ describe('Fellow History Container', () => {
         history: { push: jest.fn() },
         fellowSummaryDetails: []
       },
-      '/dashboard/fellows/:name'
+      '/developers/:name'
     );
     const action = jest.spyOn(
       wrapper.find(FellowHistory).instance(),
@@ -144,7 +144,7 @@ describe('Fellow History Container', () => {
     const { wrapper, props } = setup(
       true,
       { fellowSummaryDetails: [newFellow] },
-      '/dashboard/fellows/:name'
+      '/developers/:name'
     );
 
     testFellowHistoryCard(wrapper);
@@ -163,10 +163,10 @@ describe('Fellow History Container', () => {
           }
         }
       },
-      '/dashboard/fellows/:name'
+      '/developers/:name'
     );
 
-    expect(currentPath).toEqual('/dashboard/fellows');
+    expect(currentPath).toEqual('/developers');
   });
 
   it('renders the expected TTL details', () => {
@@ -217,7 +217,7 @@ describe('Fellow History Container', () => {
         history: { push: jest.fn() },
         fellowSummaryDetails: []
       },
-      '/dashboard/fellows/:name'
+      '/developers/:name'
     );
     const fellowHistoryWrapper = wrapper.find(FellowHistory).instance();
     fellowHistoryWrapper.setState({ fellow });

@@ -21,12 +21,16 @@ const EngineeringManagerSimsLeadDashboard = props => (
         />
         <Route
           exact
-          path="/dashboard/feedback"
+          path="/feedback"
           component={() => <FeedbackDashboardContainer {...props} />}
         />
         <Route
           exact
-          path={['/dashboard/fellows/:name', '/dashboard/fellows']}
+          path={[
+            '/developers/:name',
+            '/developers',
+            '/developers/pip/activation/:name'
+          ]}
           component={() => <DeveloperDashboardContainer {...props} />}
         />
       </Switch>
