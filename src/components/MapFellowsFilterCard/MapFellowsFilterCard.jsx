@@ -26,9 +26,14 @@ const MapFellowsFilterCard = ({
   let refinedArray;
   if (display === 'status') {
     fellowSummaryDetails.forEach(fellow => {
-      if (fellow.status && fellow.status.includes('gteWk5')) pip += 1;
-      if (fellow.status && fellow.status.includes('ltWk5')) offTrack += 1;
-      if (fellow.status && fellow.status.includes('onTrack')) onTrack += 1;
+      if (fellow.pipStatus) pip += 1;
+      if (
+        (`${fellow.status}`.includes('ltWk5') ||
+          `${fellow.status}`.includes('gteWk5')) &&
+        !fellow.pipStatus
+      )
+        offTrack += 1;
+      if (`${fellow.status}`.includes('onTrack')) onTrack += 1;
     });
     const allFellows = pip + offTrack + onTrack;
     refinedArray = [
