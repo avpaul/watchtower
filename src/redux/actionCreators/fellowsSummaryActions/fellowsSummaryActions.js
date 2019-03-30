@@ -31,7 +31,7 @@ export const fetchFellowsSummaryError = error => ({
 
 export const fetchFellowsSummarySuccess = payload => ({
   type: FETCH_FELLOWS_SUMMARY_SUCCESS,
-  payload
+  data: { ...payload }
 });
 
 export const fetchFellowsSummary = () => async dispatch => {

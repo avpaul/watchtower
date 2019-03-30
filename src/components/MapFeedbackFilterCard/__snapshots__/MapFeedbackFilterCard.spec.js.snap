@@ -80,61 +80,154 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": <div
-        className="row"
->
+      "children": Array [
         <FellowFilterCard
-                cardName="All Products"
-                displayPicture={true}
-                filterKey="project"
-                handleCardClick={[Function]}
-                isManager={false}
-                isTicked={
-                        Object {
-                                "project": "",
-                              }
-                }
-                numberOfFellows={4}
-                picture=""
-        />
+          cardName="All Products"
+          displayPicture={true}
+          filterKey="project"
+          handleCardClick={[Function]}
+          isManager={false}
+          isTicked={
+                    Object {
+                              "project": "",
+                            }
+          }
+          numberOfFellows={4}
+          picture=""
+/>,
         <FellowFilterCard
-                cardName="Watch Tower"
-                displayPicture={true}
-                filterKey="project"
-                handleCardClick={[Function]}
-                isManager={false}
-                isTicked={
-                        Object {
-                                "project": "",
-                              }
-                }
-                numberOfFellows={1}
-                picture=""
-        />
+          cardName="Watch Tower"
+          displayPicture={true}
+          filterKey="project"
+          handleCardClick={[Function]}
+          isManager={false}
+          isTicked={
+                    Object {
+                              "project": "",
+                            }
+          }
+          numberOfFellows={1}
+          picture=""
+/>,
         <FellowFilterCard
-                cardName="Noldor"
-                displayPicture={true}
-                filterKey="project"
-                handleCardClick={[Function]}
-                isManager={false}
-                isTicked={
-                        Object {
-                                "project": "",
-                              }
-                }
-                numberOfFellows={3}
-                picture=""
-        />
-</div>,
-      "className": "ops-dashboard__fellows-summary",
+          cardName="Noldor"
+          displayPicture={true}
+          filterKey="project"
+          handleCardClick={[Function]}
+          isManager={false}
+          isTicked={
+                    Object {
+                              "project": "",
+                            }
+          }
+          numberOfFellows={3}
+          picture=""
+/>,
+      ],
+      "className": "manager-slick",
+      "infinite": false,
+      "nextArrow": <NavArrow
+        buttonClass="slick-next"
+        iconClass="fa-angle-right"
+        onClick={[Function]}
+/>,
+      "prevArrow": <NavArrow
+        buttonClass="slick-prev"
+        iconClass="fa-angle-left"
+        onClick={[Function]}
+/>,
+      "responsive": Array [
+        Object {
+          "breakpoint": 1000,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 2,
+          },
+        },
+        Object {
+          "breakpoint": 700,
+          "settings": Object {
+            "slidesToScroll": 1,
+            "slidesToShow": 1,
+          },
+        },
+      ],
+      "rows": 1,
+      "slidesToShow": 2.9999,
+      "swipeToSlide": true,
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "All Products",
+        "nodeType": "function",
+        "props": Object {
+          "cardName": "All Products",
+          "displayPicture": true,
+          "filterKey": "project",
+          "handleCardClick": [Function],
+          "isManager": false,
+          "isTicked": Object {
+            "project": "",
+          },
+          "numberOfFellows": 4,
+          "picture": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Watch Tower",
+        "nodeType": "function",
+        "props": Object {
+          "cardName": "Watch Tower",
+          "displayPicture": true,
+          "filterKey": "project",
+          "handleCardClick": [Function],
+          "isManager": false,
+          "isTicked": Object {
+            "project": "",
+          },
+          "numberOfFellows": 1,
+          "picture": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Noldor",
+        "nodeType": "function",
+        "props": Object {
+          "cardName": "Noldor",
+          "displayPicture": true,
+          "filterKey": "project",
+          "handleCardClick": [Function],
+          "isManager": false,
+          "isTicked": Object {
+            "project": "",
+          },
+          "numberOfFellows": 3,
+          "picture": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <FellowFilterCard
@@ -180,7 +273,37 @@ ShallowWrapper {
             picture=""
 />,
         ],
-        "className": "row",
+        "className": "manager-slick",
+        "infinite": false,
+        "nextArrow": <NavArrow
+          buttonClass="slick-next"
+          iconClass="fa-angle-right"
+          onClick={[Function]}
+/>,
+        "prevArrow": <NavArrow
+          buttonClass="slick-prev"
+          iconClass="fa-angle-left"
+          onClick={[Function]}
+/>,
+        "responsive": Array [
+          Object {
+            "breakpoint": 1000,
+            "settings": Object {
+              "slidesToScroll": 1,
+              "slidesToShow": 2,
+            },
+          },
+          Object {
+            "breakpoint": 700,
+            "settings": Object {
+              "slidesToScroll": 1,
+              "slidesToShow": 1,
+            },
+          },
+        ],
+        "rows": 1,
+        "slidesToShow": 2.9999,
+        "swipeToSlide": true,
       },
       "ref": null,
       "rendered": Array [
@@ -245,182 +368,7 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="row"
->
-          <FellowFilterCard
-                    cardName="All Products"
-                    displayPicture={true}
-                    filterKey="project"
-                    handleCardClick={[Function]}
-                    isManager={false}
-                    isTicked={
-                              Object {
-                                        "project": "",
-                                      }
-                    }
-                    numberOfFellows={4}
-                    picture=""
-          />
-          <FellowFilterCard
-                    cardName="Watch Tower"
-                    displayPicture={true}
-                    filterKey="project"
-                    handleCardClick={[Function]}
-                    isManager={false}
-                    isTicked={
-                              Object {
-                                        "project": "",
-                                      }
-                    }
-                    numberOfFellows={1}
-                    picture=""
-          />
-          <FellowFilterCard
-                    cardName="Noldor"
-                    displayPicture={true}
-                    filterKey="project"
-                    handleCardClick={[Function]}
-                    isManager={false}
-                    isTicked={
-                              Object {
-                                        "project": "",
-                                      }
-                    }
-                    numberOfFellows={3}
-                    picture=""
-          />
-</div>,
-        "className": "ops-dashboard__fellows-summary",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <FellowFilterCard
-              cardName="All Products"
-              displayPicture={true}
-              filterKey="project"
-              handleCardClick={[Function]}
-              isManager={false}
-              isTicked={
-                            Object {
-                                          "project": "",
-                                        }
-              }
-              numberOfFellows={4}
-              picture=""
-/>,
-            <FellowFilterCard
-              cardName="Watch Tower"
-              displayPicture={true}
-              filterKey="project"
-              handleCardClick={[Function]}
-              isManager={false}
-              isTicked={
-                            Object {
-                                          "project": "",
-                                        }
-              }
-              numberOfFellows={1}
-              picture=""
-/>,
-            <FellowFilterCard
-              cardName="Noldor"
-              displayPicture={true}
-              filterKey="project"
-              handleCardClick={[Function]}
-              isManager={false}
-              isTicked={
-                            Object {
-                                          "project": "",
-                                        }
-              }
-              numberOfFellows={3}
-              picture=""
-/>,
-          ],
-          "className": "row",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "All Products",
-            "nodeType": "function",
-            "props": Object {
-              "cardName": "All Products",
-              "displayPicture": true,
-              "filterKey": "project",
-              "handleCardClick": [Function],
-              "isManager": false,
-              "isTicked": Object {
-                "project": "",
-              },
-              "numberOfFellows": 4,
-              "picture": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Watch Tower",
-            "nodeType": "function",
-            "props": Object {
-              "cardName": "Watch Tower",
-              "displayPicture": true,
-              "filterKey": "project",
-              "handleCardClick": [Function],
-              "isManager": false,
-              "isTicked": Object {
-                "project": "",
-              },
-              "numberOfFellows": 1,
-              "picture": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Noldor",
-            "nodeType": "function",
-            "props": Object {
-              "cardName": "Noldor",
-              "displayPicture": true,
-              "filterKey": "project",
-              "handleCardClick": [Function],
-              "isManager": false,
-              "isTicked": Object {
-                "project": "",
-              },
-              "numberOfFellows": 3,
-              "picture": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

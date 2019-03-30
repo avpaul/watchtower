@@ -36,7 +36,8 @@ describe('Fellow filter card tests', () => {
     expect(
       fellowFilterCardWrapper
         .find('.card-name')
-        .find('span')
+        .find('div')
+        .at(1)
         .text()
     ).toBe('Watch Tower');
   });

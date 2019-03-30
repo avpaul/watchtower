@@ -198,7 +198,7 @@ describe('Test Feedback Dashboard', () => {
     expect(feedbackDashboardWrapper.state().isTicked).toEqual({
       level: 'All Levels',
       type: 'Pre-PIP & PIP',
-      manager_email: 'All TTLs',
+      manager_email: 'All LFs',
       criteria: 'All Criteria',
       project: 'All Projects'
     });

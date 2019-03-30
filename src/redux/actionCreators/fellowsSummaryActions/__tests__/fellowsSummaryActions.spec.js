@@ -49,7 +49,7 @@ describe('fellowsSummaryActions', () => {
     const payload = { fakePayload: 'test data' };
     expect(fetchFellowsSummarySuccess(payload)).toEqual({
       type: types.FETCH_FELLOWS_SUMMARY_SUCCESS,
-      payload
+      data: { ...payload }
     });
   });
 
@@ -66,7 +66,7 @@ describe('fellowsSummaryActions', () => {
       { type: types.FETCH_FELLOWS_SUMMARY_REQUEST },
       {
         type: types.FETCH_FELLOWS_SUMMARY_SUCCESS,
-        payload: response.data
+        data: { ...response.data }
       }
     ];
     return store.dispatch(fetchFellowsSummary()).then(() => {

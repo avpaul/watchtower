@@ -47,14 +47,24 @@ ShallowWrapper {
           />
 </div>,
         <div
-          className="float-left left mt-3 card-name"
+          className="float-left left-card mt-3 card-name"
 >
-          
-          <span
-                    className=""
+          <div
+                    className="row"
           >
-                    Watch Tower
-          </span>
+                    <div
+                              className=""
+                    />
+                    <div
+                              className=""
+                    >
+                              <span
+                                        className=""
+                              >
+                                        Watch Tower
+                              </span>
+                    </div>
+          </div>
 </div>,
         <div
           className="float-right right mt-3  card-number-display"
@@ -62,7 +72,7 @@ ShallowWrapper {
           3
 </div>,
       ],
-      "className": "fellow-summary-card fellow-filter-card mt-4 
+      "className": "fellow-summary-card fellow-filter-card mt-4
     ",
       "filterKey": "status",
       "id": "Watch Tower",
@@ -114,32 +124,90 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "",
-            <span
-              className=""
+          "children": <div
+            className="row"
 >
-              Watch Tower
-</span>,
-          ],
-          "className": "float-left left mt-3 card-name",
+            <div
+                        className=""
+            />
+            <div
+                        className=""
+            >
+                        <span
+                                    className=""
+                        >
+                                    Watch Tower
+                        </span>
+            </div>
+</div>,
+          "className": "float-left left-card mt-3 card-name",
         },
         "ref": null,
-        "rendered": Array [
-          "",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Watch Tower",
-              "className": "",
-            },
-            "ref": null,
-            "rendered": "Watch Tower",
-            "type": "span",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className=""
+/>,
+              <div
+                className=""
+>
+                <span
+                                className=""
+                >
+                                Watch Tower
+                </span>
+</div>,
+            ],
+            "className": "row",
           },
-        ],
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span
+                  className=""
+>
+                  Watch Tower
+</span>,
+                "className": "",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Watch Tower",
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": "Watch Tower",
+                "type": "span",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
       Object {
@@ -179,14 +247,24 @@ ShallowWrapper {
             />
 </div>,
           <div
-            className="float-left left mt-3 card-name"
+            className="float-left left-card mt-3 card-name"
 >
-            
-            <span
-                        className=""
+            <div
+                        className="row"
             >
-                        Watch Tower
-            </span>
+                        <div
+                                    className=""
+                        />
+                        <div
+                                    className=""
+                        >
+                                    <span
+                                                className=""
+                                    >
+                                                Watch Tower
+                                    </span>
+                        </div>
+            </div>
 </div>,
           <div
             className="float-right right mt-3  card-number-display"
@@ -194,7 +272,7 @@ ShallowWrapper {
             3
 </div>,
         ],
-        "className": "fellow-summary-card fellow-filter-card mt-4 
+        "className": "fellow-summary-card fellow-filter-card mt-4
     ",
         "filterKey": "status",
         "id": "Watch Tower",
@@ -246,32 +324,90 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "",
-              <span
-                className=""
+            "children": <div
+              className="row"
 >
-                Watch Tower
-</span>,
-            ],
-            "className": "float-left left mt-3 card-name",
+              <div
+                            className=""
+              />
+              <div
+                            className=""
+              >
+                            <span
+                                          className=""
+                            >
+                                          Watch Tower
+                            </span>
+              </div>
+</div>,
+            "className": "float-left left-card mt-3 card-name",
           },
           "ref": null,
-          "rendered": Array [
-            "",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Watch Tower",
-                "className": "",
-              },
-              "ref": null,
-              "rendered": "Watch Tower",
-              "type": "span",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className=""
+/>,
+                <div
+                  className=""
+>
+                  <span
+                                    className=""
+                  >
+                                    Watch Tower
+                  </span>
+</div>,
+              ],
+              "className": "row",
             },
-          ],
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className=""
+>
+                    Watch Tower
+</span>,
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Watch Tower",
+                    "className": "",
+                  },
+                  "ref": null,
+                  "rendered": "Watch Tower",
+                  "type": "span",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
           "type": "div",
         },
         Object {

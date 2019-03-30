@@ -20,9 +20,9 @@ export const getOutputStatus = output => {
   return outputStatus;
 };
 
-export const carouselOptions = numDefaultSlides => {
+export const carouselOptions = (numDefaultSlides, style) => {
   const options = {
-    className: 'contain',
+    className: `${style || 'contain'}`,
     infinite: false,
     slidesToShow: numDefaultSlides,
     swipeToSlide: true,

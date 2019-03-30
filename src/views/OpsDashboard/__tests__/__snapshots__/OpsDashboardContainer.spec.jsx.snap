@@ -38,6 +38,7 @@ ShallowWrapper {
     "props": Object {
       "averageFellowsPerLf": 0,
       "averageFellowsPerTtl": 0,
+      "fetchFellowsSummary": [Function],
       "getManagers": [Function],
       "lfs": Array [],
       "loading": false,
@@ -88,6 +89,7 @@ ShallowWrapper {
       "props": Object {
         "averageFellowsPerLf": 0,
         "averageFellowsPerTtl": 0,
+        "fetchFellowsSummary": [Function],
         "getManagers": [Function],
         "lfs": Array [],
         "loading": false,

@@ -78,7 +78,8 @@ const testCases = [
     result: {
       ...initialState.OpsDashboard.fellowsSummary,
       fellowsSummaryToday,
-      fellowsSummaryTrend
+      fellowsSummaryTrend,
+      type: FETCH_FELLOWS_SUMMARY_SUCCESS
     }
   }
 ];

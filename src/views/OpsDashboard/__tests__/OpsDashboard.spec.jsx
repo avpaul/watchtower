@@ -47,6 +47,7 @@ describe('OpsDashboardMain component', () => {
       ttls: fellowManagers.ttls,
       lfs: fellowManagers.lfs,
       getManagers: spyResolve,
+      fetchFellowsSummary: jest.fn,
       show: true,
       displayManagers: 'LF',
       managerFellowSortRatio: 'HIGH_TO_LOW',

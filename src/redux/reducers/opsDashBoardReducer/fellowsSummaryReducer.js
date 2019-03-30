@@ -15,8 +15,7 @@ export default (state = initialState.opsDashboard.fellowsSummary, action) => {
       return {
         ...state,
         loading: false,
-        fellowsSummaryToday: action.fellowsSummaryToday,
-        fellowsSummaryTrend: action.fellowsSummaryTrend
+        ...action
       };
     default:
       return state;

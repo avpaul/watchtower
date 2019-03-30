@@ -41,8 +41,29 @@
   outline: 0.0625rem solid #0459e4;
 }
 
-.fellow-filter-card {
-  min-height: 4.9375rem;
+.slider > .slick-list {
+  margin-left: -0.9%;
+  padding: 1%;
+  margin-top: -2%;
+  margin-bottom: -2%;
+}
+
+.manager-slider > .slick-list {
+  margin-left: 2%;
+  margin-bottom: -3.3%;
+}
+.manager-slick > .slick-list {
+  margin-left: 3%;
+  padding: 0.1%;
+  margin-top: -2%;
+}
+
+.left-card {
+  margin-left: 2.56rem;
+}
+
+.slick-slider .manager-picture {
+  display: inline-block;
 }
 
 .fellow-summary-page-header {
@@ -74,8 +95,12 @@
 
 .manager-card__top {
   margin-top: 3.5rem;
+  margin-bottom: 10%;
 }
 
+.manager-filter-card {
+  min-height: 6.7rem;
+}
 .fellow-summary-card-header .avatar {
   height: 3.625rem;
   width: 3.625rem;
@@ -257,5 +282,21 @@
 @media (max-width: 765px) {
   .feedbackDashboard .col-xl-9 {
     max-width: 100% !important;
+  }
+  .slider > .slick-list {
+    margin-left: -15%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .slider > .slick-list {
+    width: 100% !important;
+  }
+  .manager-slick > .slick-list {
+    margin-left: 1%;
+  }
+  .manager-slider > .slick-list {
+    margin-left: 0;
   }
 }

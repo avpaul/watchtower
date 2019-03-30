@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import OpsDashboardMain from './OpsDashboard';
 import getManagers from '../../redux/actionCreators/managerActions';
+import { fetchFellowsSummary } from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
 
 export const mapStateToProps = ({ managers }) => ({
   loading: managers.loading,
@@ -12,5 +13,5 @@ export const mapStateToProps = ({ managers }) => ({
 
 export default connect(
   mapStateToProps,
-  { getManagers }
+  { getManagers, fetchFellowsSummary }
 )(OpsDashboardMain);

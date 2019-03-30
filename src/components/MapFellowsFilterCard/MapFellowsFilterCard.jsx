@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
+import Slider from 'react-slick';
+import { carouselOptions } from '../../utils';
 import FellowFilterCard from '../FellowFilterCard';
 import { processCountInformation, processArray } from '../../services/helper';
 
@@ -55,20 +57,22 @@ const MapFellowsFilterCard = ({
     refinedArray = processArray(refinedArray, processedCountInformation);
   }
 
-  return (
+  const renderCards = refinedArray.map(fellows => (
+    <FellowFilterCard
+      cardName={Object.keys(fellows)[0]}
+      numberOfFellows={fellows[Object.keys(fellows)[0]]}
+      isTicked={isTicked}
+      handleCardClick={handleCardClick}
+      filterKey={display}
+      key={arrayKey({ fellows })}
+    />
+  ));
+
+  return display === 'project' ? (
+    <Slider {...carouselOptions(2.9999, 'manager-slick')}>{renderCards}</Slider>
+  ) : (
     <div className="ops-dashboard__fellows-summary">
-      <div className="row">
-        {refinedArray.map(fellows => (
-          <FellowFilterCard
-            cardName={Object.keys(fellows)[0]}
-            numberOfFellows={fellows[Object.keys(fellows)[0]]}
-            isTicked={isTicked}
-            handleCardClick={handleCardClick}
-            filterKey={display}
-            key={arrayKey({ fellows })}
-          />
-        ))}
-      </div>
+      <div className="row">{renderCards}</div>
     </div>
   );
 };

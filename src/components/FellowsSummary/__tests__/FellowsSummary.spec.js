@@ -21,7 +21,12 @@ const setup = (propOverrides, mountComponent = false) => {
     fellowsSummary: {
       loading: false,
       fellowsSummaryToday: summary,
-      fellowsSummaryTrend: summary
+      fellowsSummaryTrend: summary,
+      data: {
+        D0AFellowsCount: 2,
+        D0BFellowsCount: 1,
+        allFellowsCount: 3
+      }
     },
     handleCardClick: jest.fn(),
     displayByRole: {
