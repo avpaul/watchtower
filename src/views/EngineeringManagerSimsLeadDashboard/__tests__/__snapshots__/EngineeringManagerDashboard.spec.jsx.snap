@@ -74,9 +74,10 @@ ShallowWrapper {
                       "level": "D0B Apprenticeship",
                       "lmsId": null,
                       "managerId": "-jghdgfyregjksfjdgfejkgfs",
+                      "pipStatus": true,
                       "project": "Undefined",
                       "roleId": 1,
-                      "status": "onTrack",
+                      "status": "gteWkOffTrack",
                       "updatedAt": "2019-01-23 17:35:21",
                       "user": Object {
                         "createdAt": "2019-01-23 17:35:21",

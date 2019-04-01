@@ -8,6 +8,7 @@ import FellowsCount from '../../components/FellowsCount';
 import FellowHistoryContainer from '../../components/FellowHistory';
 import MapLfTtlSummaryCard from '../../components/MapLfTtlSummaryCard';
 import Title from '../../components/Title';
+import TranslatorTable from '../../utils/TranslatorTable';
 
 /**
  * Class DeveloperDashboard - this component renders the DeveloperDashboard component
@@ -151,31 +152,6 @@ class DeveloperDashboard extends Component {
   };
 
   /**
-   * @param target
-   * @description - this method takes the name of the status card clicked and
-   * returns the refined status name
-   */
-  processFilterByStatus = target => {
-    let data;
-    switch (target) {
-      case 'All Fellows':
-        data = '';
-        break;
-      case 'PIP':
-        data = 'gteWk5';
-        break;
-      case 'Off Track':
-        data = 'ltWk5';
-        break;
-      case 'On Track':
-        data = 'onTrack';
-        break;
-      default:
-    }
-    return data;
-  };
-
-  /**
    * @method handleFilterCardClick
    * @description - This method handles filters when a card is clicked
    * This is done by updating the states
@@ -189,16 +165,13 @@ class DeveloperDashboard extends Component {
      * @description - This method filters fellows based on the ticked card status and product
      */
     const filterFellows = tickedCard =>
-      allFellows.filter(
-        fellow =>
-          fellow.status &&
-          fellow.status.includes(
-            this.processFilterByStatus(tickedCard.status)
-          ) &&
-          fellow.project &&
-          fellow.project.includes(
-            tickedCard.project === 'All Products' ? '' : tickedCard.project
-          )
+      allFellows.filter(fellow =>
+        fellow.pipStatus
+          ? fellow.pipStatus === TranslatorTable[tickedCard.status]
+          : `${fellow.status}`.includes(TranslatorTable[tickedCard.status]) &&
+            `${fellow.project}`.includes(
+              tickedCard.project === 'All Products' ? '' : tickedCard.project
+            )
       );
 
     /**
@@ -263,9 +236,13 @@ class DeveloperDashboard extends Component {
       lfTtlSummary.find(manager => +manager.id === +id);
     const filterFellowsbyStatus = (allFellows, status) =>
       allFellows
-        ? allFellows.filter(fellow => fellow.status.includes(status))
+        ? allFellows.filter(fellow =>
+            fellow.pipStatus
+              ? fellow.pipStatus === status
+              : `${fellow.status}`.includes(status)
+          )
         : [];
-    const status = this.processFilterByStatus(isTicked.status);
+    const status = TranslatorTable[isTicked.status];
     this.setState({ managerCardId: filterKey });
     if (getManagerByid(filterKey)) {
       const manager = getManagerByid(filterKey);

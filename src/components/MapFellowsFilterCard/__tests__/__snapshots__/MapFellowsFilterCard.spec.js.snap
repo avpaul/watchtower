@@ -30,6 +30,7 @@ ShallowWrapper {
               "level": "D0B Apprenticeship",
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "pipStatus": true,
               "project": "Watch Tower",
               "simsEndDate": null,
               "simsStartDate": null,
@@ -525,6 +526,7 @@ ShallowWrapper {
               "level": "D0B Apprenticeship",
               "lmsOutput": "4/18",
               "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
+              "pipStatus": true,
               "project": "Watch Tower",
               "simsEndDate": null,
               "simsStartDate": null,
@@ -656,7 +658,7 @@ ShallowWrapper {
                                 "status": "All Fellows",
                               }
                 }
-                numberOfFellows={1}
+                numberOfFellows={3}
                 picture=""
         />
         <FellowFilterCard
@@ -671,7 +673,7 @@ ShallowWrapper {
                                 "status": "All Fellows",
                               }
                 }
-                numberOfFellows={3}
+                numberOfFellows={1}
                 picture=""
         />
 </div>,
@@ -726,7 +728,7 @@ ShallowWrapper {
                                     "status": "All Fellows",
                                   }
             }
-            numberOfFellows={1}
+            numberOfFellows={3}
             picture=""
 />,
           <FellowFilterCard
@@ -741,7 +743,7 @@ ShallowWrapper {
                                     "status": "All Fellows",
                                   }
             }
-            numberOfFellows={3}
+            numberOfFellows={1}
             picture=""
 />,
         ],
@@ -805,7 +807,7 @@ ShallowWrapper {
               "project": "All Products",
               "status": "All Fellows",
             },
-            "numberOfFellows": 1,
+            "numberOfFellows": 3,
             "picture": "",
           },
           "ref": null,
@@ -826,7 +828,7 @@ ShallowWrapper {
               "project": "All Products",
               "status": "All Fellows",
             },
-            "numberOfFellows": 3,
+            "numberOfFellows": 1,
             "picture": "",
           },
           "ref": null,
@@ -889,7 +891,7 @@ ShallowWrapper {
                                         "status": "All Fellows",
                                       }
                     }
-                    numberOfFellows={1}
+                    numberOfFellows={3}
                     picture=""
           />
           <FellowFilterCard
@@ -904,7 +906,7 @@ ShallowWrapper {
                                         "status": "All Fellows",
                                       }
                     }
-                    numberOfFellows={3}
+                    numberOfFellows={1}
                     picture=""
           />
 </div>,
@@ -959,7 +961,7 @@ ShallowWrapper {
                                           "status": "All Fellows",
                                         }
               }
-              numberOfFellows={1}
+              numberOfFellows={3}
               picture=""
 />,
             <FellowFilterCard
@@ -974,7 +976,7 @@ ShallowWrapper {
                                           "status": "All Fellows",
                                         }
               }
-              numberOfFellows={3}
+              numberOfFellows={1}
               picture=""
 />,
           ],
@@ -1038,7 +1040,7 @@ ShallowWrapper {
                 "project": "All Products",
                 "status": "All Fellows",
               },
-              "numberOfFellows": 1,
+              "numberOfFellows": 3,
               "picture": "",
             },
             "ref": null,
@@ -1059,7 +1061,7 @@ ShallowWrapper {
                 "project": "All Products",
                 "status": "All Fellows",
               },
-              "numberOfFellows": 3,
+              "numberOfFellows": 1,
               "picture": "",
             },
             "ref": null,
