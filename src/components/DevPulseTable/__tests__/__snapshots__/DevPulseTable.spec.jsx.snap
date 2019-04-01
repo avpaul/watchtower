@@ -4,6 +4,7 @@ exports[`tests the DevPulseTable renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DevPulseTable
+    fellow={Object {}}
     loading={false}
     ratings={
         Array [
@@ -24,97 +25,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <Table>
-          <TableHeader
-                    headers={
-                              Array [
-                                        "Week",
-                                        "Average",
-                                        "Quantity",
-                                        "Quality",
-                                        "Initiative",
-                                        "Communication",
-                                        "Professionalism",
-                                        "Integration",
-                                      ]
-                    }
-          />
-          <DevPulseRow
-                    rating={Object {}}
-          />
-</Table>,
-        false,
-      ],
+      "customStyle": Object {},
+      "message": "There's currently no ratings for this fellow",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <TableHeader
-              headers={
-                            Array [
-                                          "Week",
-                                          "Average",
-                                          "Quantity",
-                                          "Quality",
-                                          "Initiative",
-                                          "Communication",
-                                          "Professionalism",
-                                          "Integration",
-                                        ]
-              }
-/>,
-            Array [
-              <DevPulseRow
-                rating={Object {}}
-/>,
-            ],
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "headers": Array [
-                "Week",
-                "Average",
-                "Quantity",
-                "Quality",
-                "Initiative",
-                "Communication",
-                "Professionalism",
-                "Integration",
-              ],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "weak-key-0",
-            "nodeType": "function",
-            "props": Object {
-              "rating": Object {},
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      false,
-    ],
-    "type": Symbol(react.fragment),
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -122,97 +38,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <Table>
-            <TableHeader
-                        headers={
-                                    Array [
-                                                "Week",
-                                                "Average",
-                                                "Quantity",
-                                                "Quality",
-                                                "Initiative",
-                                                "Communication",
-                                                "Professionalism",
-                                                "Integration",
-                                              ]
-                        }
-            />
-            <DevPulseRow
-                        rating={Object {}}
-            />
-</Table>,
-          false,
-        ],
+        "customStyle": Object {},
+        "message": "There's currently no ratings for this fellow",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <TableHeader
-                headers={
-                                Array [
-                                                "Week",
-                                                "Average",
-                                                "Quantity",
-                                                "Quality",
-                                                "Initiative",
-                                                "Communication",
-                                                "Professionalism",
-                                                "Integration",
-                                              ]
-                }
-/>,
-              Array [
-                <DevPulseRow
-                  rating={Object {}}
-/>,
-              ],
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "headers": Array [
-                  "Week",
-                  "Average",
-                  "Quantity",
-                  "Quality",
-                  "Initiative",
-                  "Communication",
-                  "Professionalism",
-                  "Integration",
-                ],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "weak-key-0",
-              "nodeType": "function",
-              "props": Object {
-                "rating": Object {},
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        false,
-      ],
-      "type": Symbol(react.fragment),
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -239,6 +70,7 @@ exports[`tests the DevPulseTable renders correctly 2`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DevPulseTable
+    fellow={Object {}}
     loading={true}
     ratings={Array []}
 />,
@@ -255,87 +87,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <Table>
-          <TableHeader
-                    headers={
-                              Array [
-                                        "Week",
-                                        "Average",
-                                        "Quantity",
-                                        "Quality",
-                                        "Initiative",
-                                        "Communication",
-                                        "Professionalism",
-                                        "Integration",
-                                      ]
-                    }
-          />
-</Table>,
-        <Loader />,
-      ],
+      "customStyle": Object {},
+      "message": "There's currently no ratings for this fellow",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <TableHeader
-              headers={
-                            Array [
-                                          "Week",
-                                          "Average",
-                                          "Quantity",
-                                          "Quality",
-                                          "Initiative",
-                                          "Communication",
-                                          "Professionalism",
-                                          "Integration",
-                                        ]
-              }
-/>,
-            Array [],
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "headers": Array [
-                "Week",
-                "Average",
-                "Quantity",
-                "Quality",
-                "Initiative",
-                "Communication",
-                "Professionalism",
-                "Integration",
-              ],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": Symbol(react.fragment),
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -343,87 +100,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <Table>
-            <TableHeader
-                        headers={
-                                    Array [
-                                                "Week",
-                                                "Average",
-                                                "Quantity",
-                                                "Quality",
-                                                "Initiative",
-                                                "Communication",
-                                                "Professionalism",
-                                                "Integration",
-                                              ]
-                        }
-            />
-</Table>,
-          <Loader />,
-        ],
+        "customStyle": Object {},
+        "message": "There's currently no ratings for this fellow",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <TableHeader
-                headers={
-                                Array [
-                                                "Week",
-                                                "Average",
-                                                "Quantity",
-                                                "Quality",
-                                                "Initiative",
-                                                "Communication",
-                                                "Professionalism",
-                                                "Integration",
-                                              ]
-                }
-/>,
-              Array [],
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "headers": Array [
-                  "Week",
-                  "Average",
-                  "Quantity",
-                  "Quality",
-                  "Initiative",
-                  "Communication",
-                  "Professionalism",
-                  "Integration",
-                ],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": Symbol(react.fragment),
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -450,6 +132,7 @@ exports[`tests the DevPulseTable renders correctly 3`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DevPulseTable
+    fellow={Object {}}
     loading={false}
     ratings={Array []}
 />,

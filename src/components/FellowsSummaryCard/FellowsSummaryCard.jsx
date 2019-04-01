@@ -72,7 +72,9 @@ const FellowsSummaryCard = ({
           <p className="dev-pulse-average-header offset-margin-bottom">
             DevPulse Average
           </p>
-          <p className="dev-pulse-average-description">{devPulseAverage}</p>
+          <p className="dev-pulse-average-description">
+            {devPulseAverage || 'N/A'}
+          </p>
         </div>
         <div className="float-right right">
           <p className="status-header offset-margin-bottom">Status</p>

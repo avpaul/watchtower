@@ -8,9 +8,12 @@ import Error from '../Error';
 import Loader from '../Loader/Loader';
 import DevPulseRow from './DevPulseRow';
 
-const DevPulseTable = ({ ratings, loading }) => {
+const DevPulseTable = props => {
+  const { ratings, loading, fellow } = props;
+  const apprenticeshipStartDate = fellow.apprStartDate;
+  const fellowCurrentLevel = fellow.level;
   const { ErrorMessage } = Error;
-  if (ratings.length < 1 && !loading) {
+  if ((ratings.length < 1 && !loading) || !fellow.devPulseAverage) {
     return (
       <ErrorMessage message="There's currently no ratings for this fellow" />
     );
@@ -30,18 +33,26 @@ const DevPulseTable = ({ ratings, loading }) => {
     <Fragment>
       <Table>
         <TableHeader headers={headers} />
-        {ratings.map(rating => (
-          <DevPulseRow key={arrayKey(rating)} rating={rating} />
-        ))}
+        {ratings.map(rating =>
+          apprenticeshipStartDate > rating.week &&
+          fellowCurrentLevel === 'D0B Apprenticeship' ? null : (
+            <DevPulseRow key={arrayKey(rating)} rating={rating} />
+          )
+        )}
       </Table>
       {loading && <Loader />}
     </Fragment>
   );
 };
 
+DevPulseTable.defaultProps = {
+  fellow: {}
+};
+
 DevPulseTable.propTypes = {
   ratings: PropTypes.arrayOf(PropTypes.object).isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  fellow: PropTypes.shape({})
 };
 
 export default DevPulseTable;

@@ -68,7 +68,8 @@ export class FellowHistory extends Component {
       {
         checkedBydefault: showDevpulseTable,
         title: 'DevPulse',
-        ratings: fellow.devPulseAverage === null ? '0' : fellow.devPulseAverage
+        ratings:
+          fellow.devPulseAverage === null ? 'N/A' : fellow.devPulseAverage
       },
       {
         checkedBydefault: showLmsTable,
@@ -177,12 +178,16 @@ export class FellowHistory extends Component {
 
   renderTables = () => {
     const { ratings, ratingsLoading, lmsLoading, lmsSubmissions } = this.props;
-    const { showDevpulseTable, showLmsTable } = this.state;
+    const { showDevpulseTable, showLmsTable, fellow } = this.state;
 
     return (
       <div className="col-12 mt-5">
         {showDevpulseTable && (
-          <DevPulseTable loading={ratingsLoading} ratings={ratings} />
+          <DevPulseTable
+            loading={ratingsLoading}
+            ratings={ratings}
+            fellow={fellow}
+          />
         )}
         {showLmsTable && (
           <LmsTable loading={lmsLoading} lmsSubmissions={lmsSubmissions} />
