@@ -40,11 +40,11 @@ const setup = (mountComponent = false, propsOverrides = {}) => {
   const feedbackDashboardWrapper = mountComponent
     ? mount(<FeedbackDashboardPaginationWrapped {...newProps} />)
     : shallow(
-        <FeedbackDashboard
-          {...newProps}
-          paginationWrapper={mockPaginationWrapper}
-        />
-      );
+      <FeedbackDashboard
+        {...newProps}
+        paginationWrapper={mockPaginationWrapper}
+      />
+    );
 
   return { feedbackDashboardWrapper, props: newProps };
 };
@@ -167,6 +167,21 @@ describe('Test Feedback Dashboard', () => {
         />
       )
     ).toBeDefined();
+  });
+
+  it('calls the handleViewClick method', () => {
+    const { feedbackDashboardWrapper } = setup();
+    feedbackDashboardWrapper.setState({
+      feedbackArray: [{ attribute: '' }, { attribute: 'data' }]
+    });
+    feedbackDashboardWrapper.setProps({ history: [], fellowFeedback: jest.fn() })
+    // create custom event
+    const event = Object.assign(jest.fn(), {
+      preventDefault: () => { }, target: {
+        getAttribute: (x) => x === 'data-key' ? 1 : 0
+      }
+    });
+    feedbackDashboardWrapper.instance().handleViewClick(event);
   });
 
   it('renders FeedbackDashboard Table full mount rendering', () => {

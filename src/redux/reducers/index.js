@@ -24,6 +24,7 @@ import updateManagerNotification from './managerNotificationReducer';
 import managerFellowsSummary from './ManagerFellowsSummaryReducer';
 import managersFeedbackReducer from './managerFeedbackReducer';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
+import fellowFeedbackReducer from './fellowFeedbackReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -49,7 +50,8 @@ const rootReducer = combineReducers({
   ttlNotification: ttlNotificationReducer,
   updateManagerNotification,
   managerFellowsSummary,
-  feedback: managersFeedbackReducer
+  feedback: managersFeedbackReducer,
+  fellowFeedback: fellowFeedbackReducer
 });
 
 export default rootReducer;

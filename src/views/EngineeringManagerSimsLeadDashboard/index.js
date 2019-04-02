@@ -4,6 +4,7 @@ import DeveloperDashboardContainer from '../DeveloperDashboard';
 import Header from '../../components/Header';
 import EManagerSimsLeadsContainer from './EManagerSimsLeadsContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
+import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 
 /**
  * Defines routes for the opsdashboard
@@ -23,6 +24,11 @@ const EngineeringManagerSimsLeadDashboard = props => (
           exact
           path="/feedback"
           component={() => <FeedbackDashboardContainer {...props} />}
+        />
+        <Route
+          exact
+          path="/feedback/:fellowName"
+          component={() => <PrePipNotificationForm {...props} />}
         />
         <Route
           exact

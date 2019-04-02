@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import TTLDashboardContainer from './TTLDashboardContainer';
 import DeveloperDashboardContainer from '../DeveloperDashboard';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
+import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 
 /**
  * Defines routes for the ttldashboard
@@ -29,6 +30,11 @@ const TTLDashboard = props => (
           exact
           path="/feedback"
           component={() => <FeedbackDashboardContainer {...props} />}
+        />
+        <Route
+          exact
+          path="/feedback/:fellowName"
+          component={() => <PrePipNotificationForm {...props} />}
         />
       </Switch>
     </React.Fragment>

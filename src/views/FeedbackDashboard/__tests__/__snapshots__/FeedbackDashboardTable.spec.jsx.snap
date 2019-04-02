@@ -137,16 +137,24 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                        <a
+                        <Link
                                     className="feedback-share"
-                                    href="#"
+                                    data-key={0}
+                                    onClick={undefined}
+                                    replace={false}
+                                    to={
+                                                Object {
+                                                            "dataKey": 0,
+                                                            "pathname": "/feedback/Oluseyi.Anani",
+                                                          }
+                                    }
                         >
                                     View 
                                     <img
                                                 alt="share icon"
                                                 src="share.svg"
                                     />
-                        </a>
+                        </Link>
             </Cell>
 </Row>,
           <Row
@@ -186,16 +194,24 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                        <a
+                        <Link
                                     className="feedback-share"
-                                    href="#"
+                                    data-key={1}
+                                    onClick={undefined}
+                                    replace={false}
+                                    to={
+                                                Object {
+                                                            "dataKey": 1,
+                                                            "pathname": "/feedback/Brian.Mboya",
+                                                          }
+                                    }
                         >
                                     View 
                                     <img
                                                 alt="share icon"
                                                 src="share.svg"
                                     />
-                        </a>
+                        </Link>
             </Cell>
 </Row>,
           <Row
@@ -235,16 +251,24 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                        <a
+                        <Link
                                     className="feedback-share"
-                                    href="#"
+                                    data-key={2}
+                                    onClick={undefined}
+                                    replace={false}
+                                    to={
+                                                Object {
+                                                            "dataKey": 2,
+                                                            "pathname": "/feedback/Brian.Mboya",
+                                                          }
+                                    }
                         >
                                     View 
                                     <img
                                                 alt="share icon"
                                                 src="share.svg"
                                     />
-                        </a>
+                        </Link>
             </Cell>
 </Row>,
           <Row
@@ -284,16 +308,24 @@ ShallowWrapper {
                         addedClass=""
                         title=""
             >
-                        <a
+                        <Link
                                     className="feedback-share"
-                                    href="#"
+                                    data-key={3}
+                                    onClick={undefined}
+                                    replace={false}
+                                    to={
+                                                Object {
+                                                            "dataKey": 3,
+                                                            "pathname": "/feedback/Brian.Mboya",
+                                                          }
+                                    }
                         >
                                     View 
                                     <img
                                                 alt="share icon"
                                                 src="share.svg"
                                     />
-                        </a>
+                        </Link>
             </Cell>
 </Row>,
         ],
@@ -359,16 +391,24 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-              <a
+              <Link
                             className="feedback-share"
-                            href="#"
+                            data-key={0}
+                            onClick={undefined}
+                            replace={false}
+                            to={
+                                          Object {
+                                                        "dataKey": 0,
+                                                        "pathname": "/feedback/Oluseyi.Anani",
+                                                      }
+                            }
               >
                             View 
                             <img
                                           alt="share icon"
                                           src="share.svg"
                             />
-              </a>
+              </Link>
 </Cell>,
           ],
           "header": false,
@@ -446,23 +486,31 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": <a
+              "children": <Link
                 className="feedback-share"
-                href="#"
+                data-key={0}
+                onClick={undefined}
+                replace={false}
+                to={
+                                Object {
+                                                "dataKey": 0,
+                                                "pathname": "/feedback/Oluseyi.Anani",
+                                              }
+                }
 >
                 View 
                 <img
                                 alt="share icon"
                                 src="share.svg"
                 />
-</a>,
+</Link>,
               "title": "",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": Array [
                   "View ",
@@ -472,7 +520,13 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "href": "#",
+                "data-key": 0,
+                "onClick": undefined,
+                "replace": false,
+                "to": Object {
+                  "dataKey": 0,
+                  "pathname": "/feedback/Oluseyi.Anani",
+                },
               },
               "ref": null,
               "rendered": Array [
@@ -490,7 +544,7 @@ ShallowWrapper {
                   "type": "img",
                 },
               ],
-              "type": "a",
+              "type": [Function],
             },
             "type": [Function],
           },
@@ -537,16 +591,24 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-              <a
+              <Link
                             className="feedback-share"
-                            href="#"
+                            data-key={1}
+                            onClick={undefined}
+                            replace={false}
+                            to={
+                                          Object {
+                                                        "dataKey": 1,
+                                                        "pathname": "/feedback/Brian.Mboya",
+                                                      }
+                            }
               >
                             View 
                             <img
                                           alt="share icon"
                                           src="share.svg"
                             />
-              </a>
+              </Link>
 </Cell>,
           ],
           "header": false,
@@ -624,23 +686,31 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": <a
+              "children": <Link
                 className="feedback-share"
-                href="#"
+                data-key={1}
+                onClick={undefined}
+                replace={false}
+                to={
+                                Object {
+                                                "dataKey": 1,
+                                                "pathname": "/feedback/Brian.Mboya",
+                                              }
+                }
 >
                 View 
                 <img
                                 alt="share icon"
                                 src="share.svg"
                 />
-</a>,
+</Link>,
               "title": "",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": Array [
                   "View ",
@@ -650,7 +720,13 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "href": "#",
+                "data-key": 1,
+                "onClick": undefined,
+                "replace": false,
+                "to": Object {
+                  "dataKey": 1,
+                  "pathname": "/feedback/Brian.Mboya",
+                },
               },
               "ref": null,
               "rendered": Array [
@@ -668,7 +744,7 @@ ShallowWrapper {
                   "type": "img",
                 },
               ],
-              "type": "a",
+              "type": [Function],
             },
             "type": [Function],
           },
@@ -715,16 +791,24 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-              <a
+              <Link
                             className="feedback-share"
-                            href="#"
+                            data-key={2}
+                            onClick={undefined}
+                            replace={false}
+                            to={
+                                          Object {
+                                                        "dataKey": 2,
+                                                        "pathname": "/feedback/Brian.Mboya",
+                                                      }
+                            }
               >
                             View 
                             <img
                                           alt="share icon"
                                           src="share.svg"
                             />
-              </a>
+              </Link>
 </Cell>,
           ],
           "header": false,
@@ -802,23 +886,31 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": <a
+              "children": <Link
                 className="feedback-share"
-                href="#"
+                data-key={2}
+                onClick={undefined}
+                replace={false}
+                to={
+                                Object {
+                                                "dataKey": 2,
+                                                "pathname": "/feedback/Brian.Mboya",
+                                              }
+                }
 >
                 View 
                 <img
                                 alt="share icon"
                                 src="share.svg"
                 />
-</a>,
+</Link>,
               "title": "",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": Array [
                   "View ",
@@ -828,7 +920,13 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "href": "#",
+                "data-key": 2,
+                "onClick": undefined,
+                "replace": false,
+                "to": Object {
+                  "dataKey": 2,
+                  "pathname": "/feedback/Brian.Mboya",
+                },
               },
               "ref": null,
               "rendered": Array [
@@ -846,7 +944,7 @@ ShallowWrapper {
                   "type": "img",
                 },
               ],
-              "type": "a",
+              "type": [Function],
             },
             "type": [Function],
           },
@@ -893,16 +991,24 @@ ShallowWrapper {
               addedClass=""
               title=""
 >
-              <a
+              <Link
                             className="feedback-share"
-                            href="#"
+                            data-key={3}
+                            onClick={undefined}
+                            replace={false}
+                            to={
+                                          Object {
+                                                        "dataKey": 3,
+                                                        "pathname": "/feedback/Brian.Mboya",
+                                                      }
+                            }
               >
                             View 
                             <img
                                           alt="share icon"
                                           src="share.svg"
                             />
-              </a>
+              </Link>
 </Cell>,
           ],
           "header": false,
@@ -980,23 +1086,31 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": <a
+              "children": <Link
                 className="feedback-share"
-                href="#"
+                data-key={3}
+                onClick={undefined}
+                replace={false}
+                to={
+                                Object {
+                                                "dataKey": 3,
+                                                "pathname": "/feedback/Brian.Mboya",
+                                              }
+                }
 >
                 View 
                 <img
                                 alt="share icon"
                                 src="share.svg"
                 />
-</a>,
+</Link>,
               "title": "",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
                 "children": Array [
                   "View ",
@@ -1006,7 +1120,13 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "href": "#",
+                "data-key": 3,
+                "onClick": undefined,
+                "replace": false,
+                "to": Object {
+                  "dataKey": 3,
+                  "pathname": "/feedback/Brian.Mboya",
+                },
               },
               "ref": null,
               "rendered": Array [
@@ -1024,7 +1144,7 @@ ShallowWrapper {
                   "type": "img",
                 },
               ],
-              "type": "a",
+              "type": [Function],
             },
             "type": [Function],
           },
@@ -1091,16 +1211,24 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                            <a
+                            <Link
                                           className="feedback-share"
-                                          href="#"
+                                          data-key={0}
+                                          onClick={undefined}
+                                          replace={false}
+                                          to={
+                                                        Object {
+                                                                      "dataKey": 0,
+                                                                      "pathname": "/feedback/Oluseyi.Anani",
+                                                                    }
+                                          }
                             >
                                           View 
                                           <img
                                                         alt="share icon"
                                                         src="share.svg"
                                           />
-                            </a>
+                            </Link>
               </Cell>
 </Row>,
             <Row
@@ -1140,16 +1268,24 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                            <a
+                            <Link
                                           className="feedback-share"
-                                          href="#"
+                                          data-key={1}
+                                          onClick={undefined}
+                                          replace={false}
+                                          to={
+                                                        Object {
+                                                                      "dataKey": 1,
+                                                                      "pathname": "/feedback/Brian.Mboya",
+                                                                    }
+                                          }
                             >
                                           View 
                                           <img
                                                         alt="share icon"
                                                         src="share.svg"
                                           />
-                            </a>
+                            </Link>
               </Cell>
 </Row>,
             <Row
@@ -1189,16 +1325,24 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                            <a
+                            <Link
                                           className="feedback-share"
-                                          href="#"
+                                          data-key={2}
+                                          onClick={undefined}
+                                          replace={false}
+                                          to={
+                                                        Object {
+                                                                      "dataKey": 2,
+                                                                      "pathname": "/feedback/Brian.Mboya",
+                                                                    }
+                                          }
                             >
                                           View 
                                           <img
                                                         alt="share icon"
                                                         src="share.svg"
                                           />
-                            </a>
+                            </Link>
               </Cell>
 </Row>,
             <Row
@@ -1238,16 +1382,24 @@ ShallowWrapper {
                             addedClass=""
                             title=""
               >
-                            <a
+                            <Link
                                           className="feedback-share"
-                                          href="#"
+                                          data-key={3}
+                                          onClick={undefined}
+                                          replace={false}
+                                          to={
+                                                        Object {
+                                                                      "dataKey": 3,
+                                                                      "pathname": "/feedback/Brian.Mboya",
+                                                                    }
+                                          }
                             >
                                           View 
                                           <img
                                                         alt="share icon"
                                                         src="share.svg"
                                           />
-                            </a>
+                            </Link>
               </Cell>
 </Row>,
           ],
@@ -1313,16 +1465,24 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                <a
+                <Link
                                 className="feedback-share"
-                                href="#"
+                                data-key={0}
+                                onClick={undefined}
+                                replace={false}
+                                to={
+                                                Object {
+                                                                "dataKey": 0,
+                                                                "pathname": "/feedback/Oluseyi.Anani",
+                                                              }
+                                }
                 >
                                 View 
                                 <img
                                                 alt="share icon"
                                                 src="share.svg"
                                 />
-                </a>
+                </Link>
 </Cell>,
             ],
             "header": false,
@@ -1400,23 +1560,31 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": <a
+                "children": <Link
                   className="feedback-share"
-                  href="#"
+                  data-key={0}
+                  onClick={undefined}
+                  replace={false}
+                  to={
+                                    Object {
+                                                      "dataKey": 0,
+                                                      "pathname": "/feedback/Oluseyi.Anani",
+                                                    }
+                  }
 >
                   View 
                   <img
                                     alt="share icon"
                                     src="share.svg"
                   />
-</a>,
+</Link>,
                 "title": "",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
                   "children": Array [
                     "View ",
@@ -1426,7 +1594,13 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "href": "#",
+                  "data-key": 0,
+                  "onClick": undefined,
+                  "replace": false,
+                  "to": Object {
+                    "dataKey": 0,
+                    "pathname": "/feedback/Oluseyi.Anani",
+                  },
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1444,7 +1618,7 @@ ShallowWrapper {
                     "type": "img",
                   },
                 ],
-                "type": "a",
+                "type": [Function],
               },
               "type": [Function],
             },
@@ -1491,16 +1665,24 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                <a
+                <Link
                                 className="feedback-share"
-                                href="#"
+                                data-key={1}
+                                onClick={undefined}
+                                replace={false}
+                                to={
+                                                Object {
+                                                                "dataKey": 1,
+                                                                "pathname": "/feedback/Brian.Mboya",
+                                                              }
+                                }
                 >
                                 View 
                                 <img
                                                 alt="share icon"
                                                 src="share.svg"
                                 />
-                </a>
+                </Link>
 </Cell>,
             ],
             "header": false,
@@ -1578,23 +1760,31 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": <a
+                "children": <Link
                   className="feedback-share"
-                  href="#"
+                  data-key={1}
+                  onClick={undefined}
+                  replace={false}
+                  to={
+                                    Object {
+                                                      "dataKey": 1,
+                                                      "pathname": "/feedback/Brian.Mboya",
+                                                    }
+                  }
 >
                   View 
                   <img
                                     alt="share icon"
                                     src="share.svg"
                   />
-</a>,
+</Link>,
                 "title": "",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
                   "children": Array [
                     "View ",
@@ -1604,7 +1794,13 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "href": "#",
+                  "data-key": 1,
+                  "onClick": undefined,
+                  "replace": false,
+                  "to": Object {
+                    "dataKey": 1,
+                    "pathname": "/feedback/Brian.Mboya",
+                  },
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1622,7 +1818,7 @@ ShallowWrapper {
                     "type": "img",
                   },
                 ],
-                "type": "a",
+                "type": [Function],
               },
               "type": [Function],
             },
@@ -1669,16 +1865,24 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                <a
+                <Link
                                 className="feedback-share"
-                                href="#"
+                                data-key={2}
+                                onClick={undefined}
+                                replace={false}
+                                to={
+                                                Object {
+                                                                "dataKey": 2,
+                                                                "pathname": "/feedback/Brian.Mboya",
+                                                              }
+                                }
                 >
                                 View 
                                 <img
                                                 alt="share icon"
                                                 src="share.svg"
                                 />
-                </a>
+                </Link>
 </Cell>,
             ],
             "header": false,
@@ -1756,23 +1960,31 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": <a
+                "children": <Link
                   className="feedback-share"
-                  href="#"
+                  data-key={2}
+                  onClick={undefined}
+                  replace={false}
+                  to={
+                                    Object {
+                                                      "dataKey": 2,
+                                                      "pathname": "/feedback/Brian.Mboya",
+                                                    }
+                  }
 >
                   View 
                   <img
                                     alt="share icon"
                                     src="share.svg"
                   />
-</a>,
+</Link>,
                 "title": "",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
                   "children": Array [
                     "View ",
@@ -1782,7 +1994,13 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "href": "#",
+                  "data-key": 2,
+                  "onClick": undefined,
+                  "replace": false,
+                  "to": Object {
+                    "dataKey": 2,
+                    "pathname": "/feedback/Brian.Mboya",
+                  },
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1800,7 +2018,7 @@ ShallowWrapper {
                     "type": "img",
                   },
                 ],
-                "type": "a",
+                "type": [Function],
               },
               "type": [Function],
             },
@@ -1847,16 +2065,24 @@ ShallowWrapper {
                 addedClass=""
                 title=""
 >
-                <a
+                <Link
                                 className="feedback-share"
-                                href="#"
+                                data-key={3}
+                                onClick={undefined}
+                                replace={false}
+                                to={
+                                                Object {
+                                                                "dataKey": 3,
+                                                                "pathname": "/feedback/Brian.Mboya",
+                                                              }
+                                }
                 >
                                 View 
                                 <img
                                                 alt="share icon"
                                                 src="share.svg"
                                 />
-                </a>
+                </Link>
 </Cell>,
             ],
             "header": false,
@@ -1934,23 +2160,31 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": <a
+                "children": <Link
                   className="feedback-share"
-                  href="#"
+                  data-key={3}
+                  onClick={undefined}
+                  replace={false}
+                  to={
+                                    Object {
+                                                      "dataKey": 3,
+                                                      "pathname": "/feedback/Brian.Mboya",
+                                                    }
+                  }
 >
                   View 
                   <img
                                     alt="share icon"
                                     src="share.svg"
                   />
-</a>,
+</Link>,
                 "title": "",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "class",
                 "props": Object {
                   "children": Array [
                     "View ",
@@ -1960,7 +2194,13 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "href": "#",
+                  "data-key": 3,
+                  "onClick": undefined,
+                  "replace": false,
+                  "to": Object {
+                    "dataKey": 3,
+                    "pathname": "/feedback/Brian.Mboya",
+                  },
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1978,7 +2218,7 @@ ShallowWrapper {
                     "type": "img",
                   },
                 ],
-                "type": "a",
+                "type": [Function],
               },
               "type": [Function],
             },
