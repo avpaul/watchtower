@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
+import { carouselOptions } from '../../utils';
 import LfTtlSummaryCard from '../LfTtlSummaryCard';
 
 /**
@@ -11,23 +13,21 @@ import LfTtlSummaryCard from '../LfTtlSummaryCard';
  * the number of fellows under the ttl/lf
  */
 const MapLfTtlSummaryCard = ({ lfTtlSummary, filterFellows, lfTtlCheckId }) => (
-  <div className="ops-dashboard__fellows-summary">
-    <div className="ttl-lf-cards-wrapper">
-      {lfTtlSummary.map(lfTtl => (
-        <LfTtlSummaryCard
-          id={`${lfTtl.id}`}
-          key={lfTtl.id}
-          picture={lfTtl.picture || ''}
-          title={lfTtl.title || ''}
-          name={lfTtl.name || ''}
-          fellowsCount={lfTtl.fellowsCount}
-          styles={lfTtl.styles}
-          filterFellows={filterFellows}
-          lfTtlCheckId={lfTtlCheckId}
-        />
-      ))}
-    </div>
-  </div>
+  <Slider {...carouselOptions(3.5, 'contain slider')}>
+    {lfTtlSummary.map(lfTtl => (
+      <LfTtlSummaryCard
+        id={`${lfTtl.id}`}
+        key={lfTtl.id}
+        picture={lfTtl.picture || ''}
+        title={lfTtl.title || ''}
+        name={lfTtl.name || ''}
+        fellowsCount={lfTtl.fellowsCount}
+        styles={lfTtl.styles}
+        filterFellows={filterFellows}
+        lfTtlCheckId={lfTtlCheckId}
+      />
+    ))}
+  </Slider>
 );
 
 /**

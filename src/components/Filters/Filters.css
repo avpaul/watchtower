@@ -211,7 +211,7 @@
 
 @media screen and (min-width: 480px) {
   .slick-track {
-    width: 1300px !important;
+    width: 100% !important;
   }
   .slick-slide {
     width: initial !important;
@@ -220,7 +220,7 @@
 
 @media screen and (min-width: 1800px) {
   .contain {
-    width: 85%;
+    width: 100%;
   }
   .title {
     font-size: 1.313em;

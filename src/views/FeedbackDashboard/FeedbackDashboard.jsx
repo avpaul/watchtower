@@ -64,19 +64,18 @@ export class FeedbackDashboard extends Component {
     });
   }
 
-  updateInitialState = feedback =>{
+  updateInitialState = feedback => {
     const { paginationWrapper } = this.props;
     this.setState(
       {
         feedbackArray: feedback,
         filteredFeedbackData: feedback,
-        cachedDurationData: feedback,
+        cachedDurationData: feedback
       },
       () => paginationWrapper.updateData(feedback)
     );
+  };
 
-  }
-    
   /**
    * @method updateState
    * @param {Object} data - the data to be processed
@@ -88,7 +87,7 @@ export class FeedbackDashboard extends Component {
       feedback.push(...manager.feedback);
     });
     return feedback;
-  }
+  };
 
   /**
    * @method updateFeedbackData
@@ -104,10 +103,13 @@ export class FeedbackDashboard extends Component {
 
   handleStartDateChange = date => {
     const { endDate } = this.state;
-    this.setState(state => ({
-      startDate: date,
-      endDate: date > endDate ? this.defaultDate() : state.endDate
-    }), this.updateFeedbackData);
+    this.setState(
+      state => ({
+        startDate: date,
+        endDate: date > endDate ? this.defaultDate() : state.endDate
+      }),
+      this.updateFeedbackData
+    );
   };
 
   handleEndDateChange = date => {
@@ -160,9 +162,15 @@ export class FeedbackDashboard extends Component {
       defaultIsTicked: isTicked,
       feedbackArray: filteredFeedbackData
     } = this.state;
-    const { paginationWrapper } = this.props;
-    this.setState({ isTicked, filteredFeedbackData }, () =>
-      paginationWrapper.updateData(filteredFeedbackData)
+    const { paginationWrapper, role } = this.props;
+    const isEngineeringManager = role === 'WATCH_TOWER_EM';
+    const decideReset = isEngineeringManager ? 'All TTLs' : 'All LFs';
+    this.setState(
+      {
+        isTicked: { ...isTicked, manager_email: decideReset },
+        filteredFeedbackData
+      },
+      () => paginationWrapper.updateData(filteredFeedbackData)
     );
   };
 

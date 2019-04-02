@@ -80,9 +80,9 @@ export const groupedDate = date =>
 export const formatName = name => {
   const nameForFormat = `${name}`.split('@')[0].split('.');
   const formattedName = number =>
-    `${nameForFormat[number].charAt(0).toUpperCase()}${nameForFormat[
-      number
-    ].substr(1)}`;
+    `${`${nameForFormat[number]}`.charAt(0).toUpperCase()}${`${
+      nameForFormat[number]
+    }`.substr(1)}`;
   return `${formattedName(0)} ${formattedName(1)}`;
 };
 

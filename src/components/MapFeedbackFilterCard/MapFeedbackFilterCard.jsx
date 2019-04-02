@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
+import { carouselOptions } from '../../utils';
 import FellowFilterCard from '../FellowFilterCard';
 import TranslatorTable from '../../utils/TranslatorTable';
 import { processArray, processCountInformation } from '../../services/helper';
@@ -28,24 +30,36 @@ const MapFeedbackFilterCard = ({
 
   const shouldDisplayPicture = fellows =>
     getCardName(fellows) !== 'All TTLs' && getCardName(fellows) !== 'All LFs';
+  const shouldDisplaySlider =
+    filterKey === 'manager_email' || filterKey === 'project';
 
-  return (
+  const shouldDisplayManager = filterKey === 'manager_email';
+
+  const adjustCarouselStyle = shouldDisplayManager
+    ? 'slider manager-slider'
+    : 'manager-slick';
+
+  const renderedCards = refinedArray.map(fellows => (
+    <FellowFilterCard
+      key={Object.keys(fellows)[0]}
+      cardName={getCardName(fellows)}
+      numberOfFellows={fellows[Object.keys(fellows)[0]]}
+      isTicked={isTicked}
+      handleCardClick={handleCardClick}
+      filterKey={filterKey}
+      isManager={shouldDisplayManager}
+      picture={imageInformation[getCardName(fellows)]}
+      displayPicture={shouldDisplayPicture(fellows)}
+    />
+  ));
+
+  return shouldDisplaySlider ? (
+    <Slider {...carouselOptions(2.9999, `${adjustCarouselStyle}`)}>
+      {renderedCards}
+    </Slider>
+  ) : (
     <div className="ops-dashboard__fellows-summary">
-      <div className="row">
-        {refinedArray.map(fellows => (
-          <FellowFilterCard
-            key={Object.keys(fellows)[0]}
-            cardName={getCardName(fellows)}
-            numberOfFellows={fellows[Object.keys(fellows)[0]]}
-            isTicked={isTicked}
-            handleCardClick={handleCardClick}
-            filterKey={filterKey}
-            isManager={filterKey === 'manager_email'}
-            picture={imageInformation[getCardName(fellows)]}
-            displayPicture={shouldDisplayPicture(fellows)}
-          />
-        ))}
-      </div>
+      <div className="row">{renderedCards}</div>
     </div>
   );
 };

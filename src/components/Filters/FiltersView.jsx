@@ -6,7 +6,7 @@ import { carouselOptions } from '../../utils';
 import FilterCard from './FilterCard';
 
 const FiltersView = ({ handleCardClick, filters, filterCardClassName }) => (
-  <Slider {...carouselOptions(3)}>
+  <Slider {...carouselOptions(3.99995)}>
     {filters.map(filter => (
       <div className={filterCardClassName} key={arrayKey(filter)}>
         <FilterCard

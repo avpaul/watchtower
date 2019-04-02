@@ -32,10 +32,12 @@ class OpsDashboardMain extends Component {
       getManagers,
       ttls,
       lfs,
+      fetchFellowsSummary,
       averageFellowsPerLf,
       averageFellowsPerTtl
     } = this.props;
 
+    fetchFellowsSummary();
     // checks store for ttl/lfs before API call
     if (ttls[0])
       this.setState({ lfs, ttls, averageFellowsPerLf, averageFellowsPerTtl });
@@ -175,6 +177,7 @@ OpsDashboardMain.propTypes = {
   averageFellowsPerTtl: PropTypes.number.isRequired,
   averageFellowsPerLf: PropTypes.number.isRequired,
   getManagers: PropTypes.func.isRequired,
+  fetchFellowsSummary: PropTypes.func.isRequired,
   user: PropTypes.shape().isRequired
 };
 

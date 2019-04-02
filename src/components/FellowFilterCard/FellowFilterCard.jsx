@@ -38,6 +38,9 @@ const FellowFilterCard = ({
     );
 
   const adjustCardNameStyles = isManager && displayPicture ? `pl-3` : '';
+  const cardNameStyle = isManager
+    ? 'manager-filter-card'
+    : 'fellow-filter-card';
 
   const styleCardNumber = `float-right right ${
     isManager ? 'manager-card__top mb-2' : 'mt-3'
@@ -45,7 +48,7 @@ const FellowFilterCard = ({
 
   return (
     <div
-      className={`fellow-summary-card fellow-filter-card mt-4 
+      className={`fellow-summary-card ${cardNameStyle} mt-4
     ${shouldDisplayTick ? 'fellow-card-highlight' : ''}`}
       id={cardName}
       filterKey={filterKey}
@@ -64,9 +67,13 @@ const FellowFilterCard = ({
           alt=""
         />
       </div>
-      <div className="float-left left mt-3 card-name">
-        {shouldRenderImage}
-        <span className={adjustCardNameStyles}>{cardName}</span>
+      <div className="float-left left-card mt-3 card-name">
+        <div className="row">
+          <div className="">{shouldRenderImage}</div>
+          <div className="">
+            <span className={adjustCardNameStyles}>{cardName}</span>
+          </div>
+        </div>
       </div>
       <div className={styleCardNumber}>{numberOfFellows}</div>
     </div>
