@@ -125,6 +125,11 @@ describe('Test Feedback Dashboard', () => {
       user: { roles: 'WATCH_TOWER_LF' },
       role: 'WATCH_TOWER_LF'
     });
+    const data = [
+      {
+        feedback: []
+      }
+    ];
     feedbackDashboardWrapper.setState({
       feedbackArray: feedbackArrayMock,
       filteredFeedbackData: feedbackArrayMock,
@@ -143,6 +148,7 @@ describe('Test Feedback Dashboard', () => {
     expect(feedbackDashboardWrapper.state('endDate')).toEqual(endDate);
     feedbackDashboardWrapper.instance().handleStartDateChange('2019-03-18');
     expect(feedbackDashboardWrapper.state('startDate')).toEqual('2019-03-18');
+    feedbackDashboardWrapper.instance().processFeedbackData(data);
   });
 
   it('renders FeedbackDashboard Table shallow rendering', () => {

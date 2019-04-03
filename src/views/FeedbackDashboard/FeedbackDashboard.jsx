@@ -38,16 +38,15 @@ export class FeedbackDashboard extends Component {
     getManagerFeedback(user.roles, user.email).then(data => {
       if (!data.error) {
         let feedback = [];
+        const managersFeedback = data.managersFeedback.length
+          ? data.managersFeedback
+          : [];
         switch (true) {
           case !!user.roles.WATCH_TOWER_EM:
-            feedback = this.processFeedbackData(
-              data.managersFeedback.length ? data.managersFeedback[0].ttls : []
-            );
+            feedback = this.processFeedbackData(managersFeedback);
             break;
           case !!user.roles.WATCH_TOWER_SL:
-            feedback = this.processFeedbackData(
-              data.managersFeedback.length ? data.managersFeedback[0].lfs : []
-            );
+            feedback = this.processFeedbackData(managersFeedback);
             this.setState(state => ({
               isTicked: { ...state.isTicked, manager_email: 'All LFs' }
             }));
