@@ -6,6 +6,8 @@ import {
 } from '../../constants/fellowActionTypes';
 import fellowsSummaryService from '../../../services/fellowsSummaryService';
 import errorHandler from '../../../services/errorHandler';
+import { formatPerformanceData } from '../../../utils';
+
 import {
   FETCH_TTLLF_SUMMARY_REQUEST,
   FETCH_TTLLF_SUMMARY_SUCCESS,
@@ -51,17 +53,17 @@ export const fetchFellowsSummary = () => async dispatch => {
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 export const fetchFellowsSummaryOps = () => dispatch => {
   dispatch({ type: FETCH_FELLOWS_SUMMARY_REQUEST });
-  const requestURL = `${serverURL}/api/v1/fellows`;
+  const requestURL = `${serverURL}/api/v2/fellows`;
   return Axios.all([
-    Axios.get(`${requestURL}/trend?offset=5`),
-    Axios.get(`${requestURL}/history`)
+    Axios.get(`${requestURL}/history?type=current`),
+    Axios.get(`${requestURL}/history?type=trend`)
   ]).then(
     Axios.spread(
       (fellowsSummaryToday, fellowsSummaryTrend) => {
         dispatch({
           type: FETCH_FELLOWS_SUMMARY_SUCCESS,
-          fellowsSummaryToday: fellowsSummaryToday.data,
-          fellowsSummaryTrend: fellowsSummaryTrend.data
+          fellowsSummaryToday: formatPerformanceData(fellowsSummaryToday.data),
+          fellowsSummaryTrend: formatPerformanceData(fellowsSummaryTrend.data)
         });
       },
       error =>

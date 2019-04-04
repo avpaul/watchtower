@@ -70,4 +70,22 @@ export const roundOff = (number, decimalPlaces) => {
   );
 };
 
+export const formatPerformanceData = performanceData => ({
+  ...performanceData,
+  data: Object.values(performanceData.data).map(weekData => {
+    const updatedWeekData = {};
+    Object.keys(weekData).forEach(key => {
+      if (key === 'week') updatedWeekData.week = weekData.week;
+      else
+        updatedWeekData[key] = {
+          'On Track': weekData[key].ontrack,
+          'Off Track': weekData[key].offtrack,
+          PIP: weekData[key].pip,
+          week: weekData[key].week
+        };
+    });
+    return updatedWeekData;
+  })
+});
+
 export default truncate;

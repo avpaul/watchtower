@@ -2,10 +2,6 @@
 
 exports[`FellowsSummaryChartContainer should map state to props 1`] = `
 Object {
-  "fellowCountHistory": Object {
-    "countSummary": Object {},
-    "loading": false,
-  },
   "fellowsSummary": Object {
     "data": Object {
       "D0AFellowsCount": 0,
