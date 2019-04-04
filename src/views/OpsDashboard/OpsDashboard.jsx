@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FellowsSummaryChart from '../../components/FellowsSummaryChart';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
 import { FellowsProgressConnected } from './FellowsProgress';
-import DisplayCard from '../../components/Filters/DisplayCard';
+import FellowRatio from '../../components/ManagerFellowMap/FellowRatio';
 
 /**
  * Class representing Ops Dashboard Page
@@ -128,16 +128,10 @@ class OpsDashboardMain extends Component {
     return (
       <div className="container-fluid" style={opsDashboardStyle}>
         <FellowsSummaryChart user={user} />
-        <div className="row map-card-row">
-          {this.mapDisplayContent().map((displayContent, index) => (
-            <DisplayCard
-              key={displayContent.title}
-              id={index}
-              onClick={this.fellowMapOnClick}
-              displayContent={displayContent}
-            />
-          ))}
-        </div>
+        <FellowRatio
+          mapDisplayContent={this.mapDisplayContent}
+          fellowMapOnClick={this.fellowMapOnClick}
+        />
         {this.renderManagerFellowMap()}
         <FellowsProgressConnected />
       </div>

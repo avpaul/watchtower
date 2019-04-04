@@ -44,7 +44,7 @@ const ManagerFellowMap = ({
         </div>
         <div className="row" style={{ marginLeft: '1px' }}>
           {sortedManagers.map(manager => (
-            <ManagerMapCard key={manager.id.toString()} manager={manager} />
+            <ManagerMapCard key={manager.staff_id} manager={manager} />
           ))}
         </div>
       </div>

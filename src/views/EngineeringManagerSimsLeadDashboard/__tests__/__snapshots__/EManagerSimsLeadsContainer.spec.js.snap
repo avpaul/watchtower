@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests on EngineeringManagerContainer component renders correctly 1`] = `
+exports[`Tests on EManagerSimsLeadsContainer component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(EngineeringManagerDashboard)
+  Symbol(enzyme.__unrendered__): <Connect(EManagerSimsLeadsDashboard)
     store={
         Object {
             "clearActions": [Function],
@@ -16,7 +16,6 @@ ShallowWrapper {
     }
     user={
         Object {
-            "email": "ty@andela.com",
             "roles": Object {
               "WATCH_TOWER_EM": "34323234Yf-34",
             },
@@ -47,11 +46,8 @@ ShallowWrapper {
       "fetchFellowsSummaryLf": [Function],
       "fetchFellowsSummarySl": [Function],
       "fetchFellowsSummaryTtl": [Function],
-      "getEngineeringManagerTtls": [Function],
-      "getSimulationsLeadLfs": [Function],
+      "getEmsSimsLeadsActions": [Function],
       "loading": false,
-      "simsLeadData": Array [],
-      "simsLeadError": null,
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -80,7 +76,6 @@ ShallowWrapper {
         "unsubscribe": [Function],
       },
       "user": Object {
-        "email": "ty@andela.com",
         "roles": Object {
           "WATCH_TOWER_EM": "34323234Yf-34",
         },
@@ -107,11 +102,8 @@ ShallowWrapper {
         "fetchFellowsSummaryLf": [Function],
         "fetchFellowsSummarySl": [Function],
         "fetchFellowsSummaryTtl": [Function],
-        "getEngineeringManagerTtls": [Function],
-        "getSimulationsLeadLfs": [Function],
+        "getEmsSimsLeadsActions": [Function],
         "loading": false,
-        "simsLeadData": Array [],
-        "simsLeadError": null,
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
@@ -140,7 +132,6 @@ ShallowWrapper {
           "unsubscribe": [Function],
         },
         "user": Object {
-          "email": "ty@andela.com",
           "roles": Object {
             "WATCH_TOWER_EM": "34323234Yf-34",
           },
@@ -171,7 +162,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`Tests on EngineeringManagerContainer component should map state to props 1`] = `
+exports[`Tests on EManagerSimsLeadsContainer component should map state to props 1`] = `
 Object {
   "data": Array [],
   "error": null,
@@ -181,7 +172,5 @@ Object {
     "summary": Array [],
   },
   "loading": false,
-  "simsLeadData": Array [],
-  "simsLeadError": null,
 }
 `;

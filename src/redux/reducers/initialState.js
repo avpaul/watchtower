@@ -122,12 +122,12 @@ export default {
       error: ''
     }
   },
-  engineeringManagerTtls: {
+  fellowLmsRatings: {
     loading: false,
-    data: [],
+    data: {},
     error: null
   },
-  simulationsLeadLfs: {
+  engineeringManagerSimsLeads: {
     loading: false,
     data: [],
     error: null

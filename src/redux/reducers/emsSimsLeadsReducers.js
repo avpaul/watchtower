@@ -1,24 +1,24 @@
 import initialState from './initialState';
-import * as types from '../constants/simulationsLeadTypes';
+import * as types from '../constants/emsSimsLeadsTypes';
 
-const simulationsLeadLfsReducer = (
-  state = initialState.simulationsLeadLfs,
+const emsSimsLeadsReducers = (
+  state = initialState.engineeringManagerSimsLeads,
   action
 ) => {
   switch (action.type) {
-    case types.LOAD_SIMULATIONS_LEAD_LF_REQUEST:
+    case types.LOAD_EM_SIMSLEADS_REQUEST:
       return {
         ...state,
         loading: true,
         error: null
       };
-    case types.LOAD_SIMULATIONS_LEAD_LF_SUCCESS:
+    case types.LOAD_EM_SIMSLEADS_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.data
       };
-    case types.LOAD_SIMULATIONS_LEAD_LF_FAILURE:
+    case types.LOAD_EM_SIMSLEADS_FAILURE:
       return {
         ...state,
         loading: false,
@@ -30,4 +30,4 @@ const simulationsLeadLfsReducer = (
   }
 };
 
-export default simulationsLeadLfsReducer;
+export default emsSimsLeadsReducers;
