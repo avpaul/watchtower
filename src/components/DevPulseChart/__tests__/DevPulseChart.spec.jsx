@@ -10,32 +10,24 @@ import { DevPulseChart, mapStateToProps } from '../DevPulseChart';
 
 const setup = propOverrides => {
   const props = {
-    getFellowDevPulse: jest.fn(),
-    fellowDevPulse: {
+    fellow: {
       loading: false,
-      ratings: fellowsRatings,
-      averageRatings: avgRatings
+      fellow: {
+        ratings: fellowsRatings,
+        pulse: avgRatings
+      }
     },
     ...propOverrides
   };
 
   const wrapper = shallow(<DevPulseChart {...props} />);
 
-  return {
-    props,
-    wrapper
-  };
+  return { props, wrapper };
 };
 
 it('renders to match snapshot', () => {
   const { wrapper } = setup();
   expect(wrapper).toMatchSnapshot();
-});
-
-it('Should call api on mount', () => {
-  const { wrapper, props } = setup();
-  wrapper.instance().componentDidMount();
-  expect(props.getFellowDevPulse).toHaveBeenCalled();
 });
 
 it('should map state to props', () => {

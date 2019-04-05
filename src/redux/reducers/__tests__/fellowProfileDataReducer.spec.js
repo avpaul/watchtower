@@ -1,13 +1,13 @@
 import initialState from '../initialState';
-import fellowBioReducer from '../fellowBio';
+import fellowProfileDataReducer from '../fellowProfileDataReducer';
 import {
-  LOAD_FELLOWBIO_REQUEST,
-  LOAD_FELLOWBIO_SUCCESS,
-  LOAD_FELLOWBIO_FAILURE
-} from '../../constants/fellowBioTypes';
+  LOAD_FELLOW_PROFILE_DATA_REQUEST,
+  LOAD_FELLOW_PROFILE_DATA_SUCCESS,
+  LOAD_FELLOW_PROFILE_DATA_FAILURE
+} from '../../constants/fellowProfileDataTypes';
 
 it('should return the initial state for unknown action type', () => {
-  expect(fellowBioReducer(undefined, {})).toEqual({
+  expect(fellowProfileDataReducer(undefined, {})).toEqual({
     loading: false,
     fellow: {},
     error: ''
@@ -20,8 +20,8 @@ it('should set loading state on fetching fellow data', () => {
     error: null,
     fellow: {}
   };
-  const action = { type: LOAD_FELLOWBIO_REQUEST };
-  expect(fellowBioReducer(undefined, action)).toMatchObject(newState);
+  const action = { type: LOAD_FELLOW_PROFILE_DATA_REQUEST };
+  expect(fellowProfileDataReducer(undefined, action)).toMatchObject(newState);
   expect(initialState).toEqual(initialState);
 });
 
@@ -31,11 +31,11 @@ it('should add fetched fellow to state', () => {
     fellow: {}
   };
   const action = {
-    type: LOAD_FELLOWBIO_SUCCESS,
+    type: LOAD_FELLOW_PROFILE_DATA_SUCCESS,
     fellow: {}
   };
 
-  expect(fellowBioReducer(undefined, action)).toMatchObject(newState);
+  expect(fellowProfileDataReducer(undefined, action)).toMatchObject(newState);
 });
 
 it('should add the error message on failing to fetch fellow', () => {
@@ -45,9 +45,9 @@ it('should add the error message on failing to fetch fellow', () => {
     fellow: {}
   };
   const action = {
-    type: LOAD_FELLOWBIO_FAILURE,
+    type: LOAD_FELLOW_PROFILE_DATA_FAILURE,
     error: { message: 'error' }
   };
 
-  expect(fellowBioReducer(undefined, action)).toMatchObject(newState);
+  expect(fellowProfileDataReducer(undefined, action)).toMatchObject(newState);
 });

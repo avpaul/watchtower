@@ -1,14 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FellowDashboardMain from '../FellowDashboardMain';
+import { FellowDashboard } from '../FellowDashboardMain';
 import { FellowBioConnected } from '../../../components/FellowBio';
 import LMSProgressSummary from '../../../components/LMSProgressSummary/LMSProgressSummary';
 
 describe('Tests FellowDashboardMain component', () => {
   let wrapper;
+  const props = {
+    getFellowProfileData: jest.fn()
+  };
 
   beforeEach(() => {
-    wrapper = shallow(<FellowDashboardMain />);
+    wrapper = shallow(<FellowDashboard {...props} />);
   });
 
   it('renders correctly', () => {

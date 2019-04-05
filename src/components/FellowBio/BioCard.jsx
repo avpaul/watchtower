@@ -1,27 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RenderItem from './RenderItem';
+import Loader from '../Loader/Loader';
 
-const BioCard = ({ data, Id }) => (
-  <div className="bio">
-    <div className="my-bio">MY PROFILE</div>
-    <div className="card-bio" id={Id} role="button" tabIndex="0">
-      <RenderItem title="Cohort">{data.cohort}</RenderItem>
-      <RenderItem title="Level">{data.level}</RenderItem>
-      <RenderItem title="Start Date">
-        {data.actualApprenticeshipStartDate || data.simulationStartDate}
-      </RenderItem>
-      <RenderItem title="End Date">
-        {data.expectedApprenticeshipCompletionDate ||
-          data.expectedSimulationsCompletionDate}
-      </RenderItem>
-    </div>
-  </div>
+const renderBioDetails = fellow => (
+  <React.Fragment>
+    <RenderItem title="Cohort">{fellow.cohort}</RenderItem>
+    <RenderItem title="Level">{fellow.level}</RenderItem>
+    <RenderItem title="Start Date">
+      {fellow.details.actualApprenticeshipStartDate ||
+        fellow.details.simulationStartDate}
+    </RenderItem>
+    <RenderItem title="End Date">
+      {fellow.details.expectedApprenticeshipCompletionDate ||
+        fellow.details.expectedSimulationsCompletionDate}
+    </RenderItem>
+  </React.Fragment>
 );
 
+const BioCard = ({ data }) => {
+  const { fellow, loading } = data;
+
+  return (
+    <div className="bio">
+      <div className="my-bio">MY PROFILE</div>
+      <div
+        className="card-bio"
+        id={`fellow-${fellow.email}`}
+        role="button"
+        tabIndex="0"
+      >
+        {!loading && fellow.details ? renderBioDetails(fellow) : <Loader />}
+      </div>
+    </div>
+  );
+};
+
 BioCard.propTypes = {
-  data: PropTypes.shape().isRequired,
-  Id: PropTypes.string.isRequired
+  data: PropTypes.shape().isRequired
 };
 
 export default BioCard;

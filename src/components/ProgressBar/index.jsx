@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import ProgressBar from './ProgressBar';
 import { calcNoOfWeeks, getCurrentWeek } from '../../services/helper';
 
+const defaultFellowDetails = {
+  actualApprenticeshipStartDate: new Date(),
+  simulationStartDate: '',
+  expectedApprenticeshipCompletionDate: new Date(),
+  expectedSimulationsCompletionDate: ''
+};
+
 const calcProgressWidth = (startDate, endDate) => {
   const noOfWeeks = calcNoOfWeeks(startDate, endDate).length;
   return (1 / noOfWeeks) * 100 * getCurrentWeek(startDate);
@@ -27,20 +34,20 @@ const newEndDate = (programEnddate, defaultEndDate) =>
     ? defaultEndDate
     : programEnddate;
 
-const ProgressContainer = props => {
+const ProgressContainer = ({ fellow: { fellow, loading } }) => {
   const isSmallScreen = !!(window.screen.width < 770);
-  const { fellow } = props;
-  const { loading } = fellow;
   const {
-    actualApprenticeshipStartDate,
-    simulationStartDate,
-    expectedApprenticeshipCompletionDate,
-    expectedSimulationsCompletionDate,
-    status
-  } = fellow.fellow;
-  const startDate = actualApprenticeshipStartDate || simulationStartDate;
+    details = defaultFellowDetails,
+    status = {
+      overall: ''
+    }
+  } = fellow;
+
+  const startDate =
+    details.actualApprenticeshipStartDate || details.simulationStartDate;
   const programEnddate =
-    expectedApprenticeshipCompletionDate || expectedSimulationsCompletionDate;
+    details.expectedApprenticeshipCompletionDate ||
+    details.expectedSimulationsCompletionDate;
   const defaultEndDate = getDefaultEndDate(startDate);
   const endDate = newEndDate(programEnddate, defaultEndDate);
 
@@ -49,7 +56,7 @@ const ProgressContainer = props => {
       noOfWeeks={calcNoOfWeeks(startDate, endDate)}
       isSmallScreen={isSmallScreen}
       loader={loading}
-      onTrack={!!(status === 'onTrack')}
+      onTrack={!!status && status.overall === 'onTrack'}
       widthStyle={{ '--value': `${calcProgressWidth(startDate, endDate)}%` }}
     />
   );

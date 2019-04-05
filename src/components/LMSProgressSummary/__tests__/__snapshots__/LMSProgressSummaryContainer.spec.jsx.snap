@@ -2,24 +2,10 @@
 
 exports[`LMSProgressSummaryContainer component should map state to props 1`] = `
 Object {
-  "lmsSubmissions": Object {
-    "data": Array [
-      Object {
-        "due_date": "2019-03-15T15:57:56.602Z",
-        "id": 1122,
-        "name": "Output 1.1 Kick off call",
-        "score": "",
-        "workflow_state": "submitted",
-      },
-      Object {
-        "due_date": "2019-03-15T15:57:56.602Z",
-        "id": 1322,
-        "name": "Output 1.2 Estimating risks",
-        "score": "2",
-        "workflow_state": "graded",
-      },
-    ],
+  "fellow": Object {
+    "error": "",
+    "fellow": Object {},
+    "loading": false,
   },
-  "lmsSummary": Array [],
 }
 `;

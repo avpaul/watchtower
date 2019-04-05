@@ -3,18 +3,18 @@ import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import {
-  LOAD_FELLOWBIO_REQUEST,
-  LOAD_FELLOWBIO_FAILURE,
-  LOAD_FELLOWBIO_SUCCESS
-} from '../../constants/fellowBioTypes';
-import getFellowBio from '../fellowBioActions';
+  LOAD_FELLOW_PROFILE_DATA_REQUEST,
+  LOAD_FELLOW_PROFILE_DATA_FAILURE,
+  LOAD_FELLOW_PROFILE_DATA_SUCCESS
+} from '../../constants/fellowProfileDataTypes';
+import getFellowProfileData from '../fellowProfileDataActions';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 describe('Manager Fellow Actions', () => {
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
-  const url = `${serverURL}/api/v1/fellows/profile?email=trust`;
+  const url = `${serverURL}/api/v2/fellows/profile`;
   const store = mockStore({
     loading: false,
     fellow: {},
@@ -28,34 +28,34 @@ describe('Manager Fellow Actions', () => {
     mock.reset();
   });
 
-  it('dispatches LOAD_FELLOWBIO_REQUEST and  LOAD_FELLOWBIO_ERROR on failing to fetch fellow', () => {
+  it('dispatches LOAD_FELLOW_PROFILE_DATA_REQUEST and  LOAD_FELLOW_PROFILE_DATA_ERROR on failing to fetch fellow', () => {
     const expectedActions = [
-      { type: LOAD_FELLOWBIO_REQUEST },
+      { type: LOAD_FELLOW_PROFILE_DATA_REQUEST },
       {
-        type: LOAD_FELLOWBIO_FAILURE,
+        type: LOAD_FELLOW_PROFILE_DATA_FAILURE,
         error: 'Request failed with status code 404'
       }
     ];
-    return store.dispatch(getFellowBio({ email: '' })).then(() => {
+    return store.dispatch(getFellowProfileData()).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });
   });
-  it('dispatches LOAD_FELLOWBIO_REQUEST and  LOAD_FELLOWBIO_SUCCESS on failing to fetch fellow', () => {
+  it('dispatches LOAD_FELLOW_PROFILE_DATA_REQUEST and  LOAD_FELLOW_PROFILE_DATA_SUCCESS on failing to fetch fellow', () => {
     const data = {
-      fellow: undefined
+      fellow: {}
     };
 
-    mock.onGet(`${url}`).reply(200, data);
+    mock.onGet(`${url}`).reply(200, data.fellow);
 
     const expectedActions = [
-      { type: LOAD_FELLOWBIO_REQUEST },
+      { type: LOAD_FELLOW_PROFILE_DATA_REQUEST },
       {
-        type: LOAD_FELLOWBIO_SUCCESS,
+        type: LOAD_FELLOW_PROFILE_DATA_SUCCESS,
         ...data
       }
     ];
-    return store.dispatch(getFellowBio('trust')).then(() => {
+    return store.dispatch(getFellowProfileData()).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });

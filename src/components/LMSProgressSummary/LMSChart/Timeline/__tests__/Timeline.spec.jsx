@@ -12,16 +12,20 @@ describe('Timeline component', () => {
     {
       id: 1122,
       due_date: new Date(),
-      name: 'Output 1.1 Kick off call',
       score: '',
-      workflow_state: 'submitted'
+      status: 'submitted',
+      assignment: {
+        name: 'Output 1.1 Kick off call'
+      }
     },
     {
       id: 1322,
       due_date: new Date(),
-      name: 'Output 1.2 Estimating risks',
       score: '2',
-      workflow_state: 'graded'
+      status: 'graded',
+      assignment: {
+        name: 'Output 1.2 Estimating risks'
+      }
     }
   ];
 

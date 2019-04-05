@@ -6,8 +6,10 @@ describe('tests the project card', () => {
   let wrapper;
   beforeEach(() => {
     const props = {
-      data: {},
-      Id: '1'
+      data: {
+        fellow: {},
+        loading: false
+      }
     };
     wrapper = shallow(<ProjectCard {...props} />);
   });

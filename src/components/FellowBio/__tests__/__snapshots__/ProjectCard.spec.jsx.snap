@@ -4,8 +4,12 @@ exports[`tests the project card renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProjectCard
-    Id="1"
-    data={Object {}}
+    data={
+        Object {
+            "fellow": Object {},
+            "loading": false,
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -28,21 +32,11 @@ ShallowWrapper {
 </div>,
         <div
           className="card-project"
-          id="1"
+          id="fellow-undefined"
           role="button"
           tabIndex="0"
 >
-          <RenderItem
-                    title="Project Name"
-          />
-          <RenderItem
-                    title="LF"
-          />
-          <RenderItem
-                    title="PM"
-          >
-                    --
-          </RenderItem>
+          <Loader />
 </div>,
       ],
       "className": "project",
@@ -66,63 +60,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <RenderItem
-              title="Project Name"
-/>,
-            <RenderItem
-              title="LF"
-/>,
-            <RenderItem
-              title="PM"
->
-              --
-</RenderItem>,
-          ],
+          "children": <Loader />,
           "className": "card-project",
-          "id": "1",
+          "id": "fellow-undefined",
           "role": "button",
           "tabIndex": "0",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": "",
-              "title": "Project Name",
-            },
-            "ref": null,
-            "rendered": "",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": "",
-              "title": "LF",
-            },
-            "ref": null,
-            "rendered": "",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": "--",
-              "title": "PM",
-            },
-            "ref": null,
-            "rendered": "--",
-            "type": [Function],
-          },
-        ],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": "div",
       },
     ],
@@ -142,21 +95,11 @@ ShallowWrapper {
 </div>,
           <div
             className="card-project"
-            id="1"
+            id="fellow-undefined"
             role="button"
             tabIndex="0"
 >
-            <RenderItem
-                        title="Project Name"
-            />
-            <RenderItem
-                        title="LF"
-            />
-            <RenderItem
-                        title="PM"
-            >
-                        --
-            </RenderItem>
+            <Loader />
 </div>,
         ],
         "className": "project",
@@ -180,63 +123,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <RenderItem
-                title="Project Name"
-/>,
-              <RenderItem
-                title="LF"
-/>,
-              <RenderItem
-                title="PM"
->
-                --
-</RenderItem>,
-            ],
+            "children": <Loader />,
             "className": "card-project",
-            "id": "1",
+            "id": "fellow-undefined",
             "role": "button",
             "tabIndex": "0",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": "",
-                "title": "Project Name",
-              },
-              "ref": null,
-              "rendered": "",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": "",
-                "title": "LF",
-              },
-              "ref": null,
-              "rendered": "",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": "--",
-                "title": "PM",
-              },
-              "ref": null,
-              "rendered": "--",
-              "type": [Function],
-            },
-          ],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": "div",
         },
       ],

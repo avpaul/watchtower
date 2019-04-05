@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
-
 import './ProgressBar.css';
 
 /**
@@ -33,9 +32,7 @@ const ProgressBar = ({
         style={widthStyle}
       />
     </div>
-    {loader ? (
-      ''
-    ) : (
+    {loader ? null : (
       <div className="week-label">
         {noOfWeeks.map(value => (
           <span key={arrayKey({ value })}>

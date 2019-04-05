@@ -3,7 +3,9 @@
 exports[`Tests FellowDashboardMain component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <FellowDashboardMain />,
+  Symbol(enzyme.__unrendered__): <FellowDashboard
+    getFellowProfileData={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,9 +20,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(FellowBio) />,
+        <Connect(FellowBio)
+          getFellowProfileData={[Function]}
+/>,
         <Connect(ProgressContainer) />,
-        <Connect(DevPulseChart) />,
+        <Connect(Component) />,
         <Connect(LMSProgressSummary) />,
       ],
       "className": "container-fluid",
@@ -31,7 +35,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "getFellowProfileData": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -73,9 +79,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(FellowBio) />,
+          <Connect(FellowBio)
+            getFellowProfileData={[Function]}
+/>,
           <Connect(ProgressContainer) />,
-          <Connect(DevPulseChart) />,
+          <Connect(Component) />,
           <Connect(LMSProgressSummary) />,
         ],
         "className": "container-fluid",
@@ -86,7 +94,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "getFellowProfileData": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

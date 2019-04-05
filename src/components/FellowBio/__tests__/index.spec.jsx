@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
-import { FellowBioConnected, FellowBio } from '../index';
+import FellowBio, { FellowBioConnected } from '../index';
 
 describe('tests the index component', () => {
   it('renders correctly', () => {

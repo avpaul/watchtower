@@ -1,27 +1,27 @@
 import initialState from './initialState';
 import {
-  LOAD_FELLOWBIO_REQUEST,
-  LOAD_FELLOWBIO_SUCCESS,
-  LOAD_FELLOWBIO_FAILURE
-} from '../constants/fellowBioTypes';
+  LOAD_FELLOW_PROFILE_DATA_REQUEST,
+  LOAD_FELLOW_PROFILE_DATA_SUCCESS,
+  LOAD_FELLOW_PROFILE_DATA_FAILURE
+} from '../constants/fellowProfileDataTypes';
 
 const fellowBioReducer = (state = initialState.fellow, action) => {
   switch (action.type) {
-    case LOAD_FELLOWBIO_REQUEST:
+    case LOAD_FELLOW_PROFILE_DATA_REQUEST:
       return {
         ...state,
         loading: true,
         error: null
       };
 
-    case LOAD_FELLOWBIO_SUCCESS:
+    case LOAD_FELLOW_PROFILE_DATA_SUCCESS:
       return {
         ...state,
         loading: false,
         fellow: action.fellow
       };
 
-    case LOAD_FELLOWBIO_FAILURE:
+    case LOAD_FELLOW_PROFILE_DATA_FAILURE:
       return {
         ...state,
         loading: false,

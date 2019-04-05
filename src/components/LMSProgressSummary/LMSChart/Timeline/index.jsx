@@ -16,7 +16,7 @@ const Timeline = ({ outputsDue, width, allOutputs }) => {
 
   return (
     <div className="timeline">
-      <ProgressLine outputsDue={allOutputs} interval={progressInterval} />
+      <ProgressLine outputs={allOutputs} interval={progressInterval} />
       <Track outputs={allOutputs} interval={trackInterval} />
       <VerticalLine
         numOfIntervals={outputsDue.length}

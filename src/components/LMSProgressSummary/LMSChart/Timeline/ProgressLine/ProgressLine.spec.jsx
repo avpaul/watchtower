@@ -10,21 +10,25 @@ describe('ProgressLine component', () => {
     {
       id: 1122,
       due_date: new Date(),
-      name: 'Output 1.1 Kick off call',
       score: '',
-      workflow_state: 'submitted'
+      status: 'submitted',
+      assignment: {
+        name: 'Output 1.1 Kick off call'
+      }
     },
     {
       id: 1322,
       due_date: new Date(),
-      name: 'Output 1.2 Estimating risks',
       score: '2',
-      workflow_state: 'graded'
+      status: 'graded',
+      assignment: {
+        name: 'Output 1.2 Estimating risks'
+      }
     }
   ];
 
   const props = {
-    outputsDue: outputs,
+    outputs,
     interval: 76
   };
 
@@ -36,6 +40,6 @@ describe('ProgressLine component', () => {
 
   it('renders line', () => {
     const wrapper = shallow(<ProgressLine {...props} />);
-    expect(wrapper.find('.item').length).toEqual(props.outputsDue.length);
+    expect(wrapper.find('.item').length).toEqual(props.outputs.length);
   });
 });

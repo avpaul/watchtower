@@ -1,19 +1,25 @@
 .lms-chart {
+  padding: 10px 65px 50px 65px;
+}
+
+.lms-chart__timeline {
   color: #303030;
   height: 250px;
   width: 1450px;
   position: relative;
-  margin: 50px 65px;
 }
 
-.lms-chart::before {
-  content: 'LMS';
-  position: absolute;
-  top: -2.5em;
+.lms-chart__header {
   color: #0459e4;
   font-size: 20px;
   font-weight: bolder;
   line-height: 26px;
+  margin-bottom: 25px;
+}
+
+.lms-chart__wrapper {
+  width: 100%;
+  overflow-x: scroll;
 }
 
 .timeline {
