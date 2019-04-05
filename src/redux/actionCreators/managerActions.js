@@ -7,7 +7,7 @@ const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 const getManagers = () => dispatch => {
   dispatch({ type: types.LOAD_MANAGER_REQUEST });
 
-  const requestURL = `${serverURL}/api/v1/managers`;
+  const requestURL = `${serverURL}/api/v2/managers`;
 
   return axios.get(requestURL).then(
     response =>

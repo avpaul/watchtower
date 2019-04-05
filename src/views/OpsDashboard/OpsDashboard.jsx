@@ -69,13 +69,13 @@ class OpsDashboardMain extends Component {
         title: 'LF to FELLOW MAP',
         subTitle: 'Click to see details',
         text: 'Average LF to Fellow ratio',
-        averageValue: averageFellowsPerLf
+        averageValue: parseInt(averageFellowsPerLf, 10)
       },
       {
         title: 'TTL to FELLOW MAP',
         subTitle: 'Click to see details',
         text: 'Average TTL to Fellow ratio',
-        averageValue: averageFellowsPerTtl
+        averageValue: parseInt(averageFellowsPerTtl, 10)
       }
     ];
   };
