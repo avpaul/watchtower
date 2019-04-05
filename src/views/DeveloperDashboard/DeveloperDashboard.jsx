@@ -32,7 +32,6 @@ class DeveloperDashboard extends Component {
       },
       lfTtlSummary: [],
       resetFellows: [],
-      totalFellows: 0,
       managerCardId: 'main'
     };
     this.handleCardClick = this.handleCardClick.bind(this);
@@ -62,7 +61,7 @@ class DeveloperDashboard extends Component {
     if (!data.error) {
       switch (true) {
         case !!user.roles.WATCH_TOWER_EM:
-          this.updateState(data.managerFellowsSummary.engineeringManager.ttls);
+          this.updateState(data.managerFellowsSummary.data);
           break;
         case !!user.roles.WATCH_TOWER_SL: {
           this.updateState(data.managerFellowsSummary.simulationsLead.lfs);
@@ -100,8 +99,7 @@ class DeveloperDashboard extends Component {
       fellowSummaryDetails: fellows,
       allFellows: fellows,
       lfTtlSummary: data,
-      resetFellows: fellows,
-      totalFellows: fellows.length
+      resetFellows: fellows
     });
   };
 
@@ -129,9 +127,7 @@ class DeveloperDashboard extends Component {
     const { id } = e.currentTarget;
     const { history } = this.props;
     const { fellowSummaryDetails } = this.state;
-    const { email } =
-      fellowSummaryDetails[id] ||
-      `${fellowSummaryDetails[id] ? fellowSummaryDetails[id].user : ''}`;
+    const { email } = fellowSummaryDetails[id] ? fellowSummaryDetails[id] : '';
     this.redirectUrl(email, history);
   };
 
@@ -165,14 +161,18 @@ class DeveloperDashboard extends Component {
      * @description - This method filters fellows based on the ticked card status and product
      */
     const filterFellows = tickedCard =>
-      allFellows.filter(fellow =>
-        fellow.pipStatus
-          ? fellow.pipStatus === TranslatorTable[tickedCard.status]
-          : `${fellow.status}`.includes(TranslatorTable[tickedCard.status]) &&
-            `${fellow.project}`.includes(
-              tickedCard.project === 'All Products' ? '' : tickedCard.project
-            )
-      );
+      allFellows.filter(fellow => {
+        if (
+          tickedCard.status === 'On Track' ||
+          tickedCard.status === 'Off Track' ||
+          tickedCard.status === 'PIP'
+        ) {
+          return fellow
+            ? fellow.overall_status === TranslatorTable[tickedCard.status]
+            : '';
+        }
+        return true;
+      });
 
     /**
      * this updates the state, initiates a callback when the state is updated.
@@ -200,21 +200,20 @@ class DeveloperDashboard extends Component {
    */
   mapLfTtlData = () => {
     const { role } = this.props;
-    const { totalFellows, lfTtlSummary } = this.state;
+    const { lfTtlSummary } = this.state;
     const displayList = [
       {
         id: 'main',
         title: role === 'WATCH_TOWER_EM' ? 'All TTLs' : 'All LFs',
-        fellowsCount: totalFellows,
+        fellowsCount: lfTtlSummary.length,
         styles: { titleDisplayStyle: '', nameAvatarDisplayStyle: 'd-none' }
       }
     ];
     lfTtlSummary.forEach(manager => {
-      const name = `${manager.firstName} ${manager.lastName}`;
       const content = {
-        id: manager.id,
+        id: manager.staff_id,
         picture: manager.picture || undefined,
-        name,
+        name: manager.managerName,
         title: undefined,
         fellowsCount: manager.fellowsCount,
         styles: { titleDisplayStyle: 'd-none', nameAvatarDisplayStyle: '' }
@@ -233,14 +232,17 @@ class DeveloperDashboard extends Component {
     const { lfTtlSummary, isTicked, resetFellows } = this.state;
     let filteredFellows = [];
     const getManagerByid = id =>
-      lfTtlSummary.find(manager => +manager.id === +id);
+      lfTtlSummary.find(manager => manager.staff_id === id);
     const filterFellowsbyStatus = (allFellows, status) =>
       allFellows
-        ? allFellows.filter(fellow =>
-            fellow.pipStatus
-              ? fellow.pipStatus === status
-              : `${fellow.status}`.includes(status)
-          )
+        ? allFellows.filter(fellow => {
+            switch (status) {
+              case '':
+                return true;
+              default:
+                return fellow ? fellow.overall_status === status : false;
+            }
+          })
         : [];
     const status = TranslatorTable[isTicked.status];
     this.setState({ managerCardId: filterKey });

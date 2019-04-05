@@ -23,23 +23,21 @@ const MapFellowsFilterCard = ({
   isTicked
 }) => {
   let offTrack = 0;
-  let pip = 0;
+  const pip = 0;
   let onTrack = 0;
   let refinedArray;
   if (display === 'status') {
     fellowSummaryDetails.forEach(fellow => {
-      if (fellow.pipStatus) pip += 1;
-      if (
-        (`${fellow.status}`.includes('ltWk5') ||
-          `${fellow.status}`.includes('gteWk5')) &&
-        !fellow.pipStatus
-      )
-        offTrack += 1;
-      if (`${fellow.status}`.includes('onTrack')) onTrack += 1;
+      if (fellow) {
+        if (fellow.overall_status === 'offTrack') {
+          offTrack += 1;
+        } else if (fellow.overall_status === 'onTrack') {
+          onTrack += 1;
+        }
+      }
     });
-    const allFellows = pip + offTrack + onTrack;
     refinedArray = [
-      { 'All Fellows': allFellows },
+      { 'All Fellows': fellowSummaryDetails.length },
       { 'On Track': onTrack },
       { 'Off Track': offTrack },
       { PIP: pip }

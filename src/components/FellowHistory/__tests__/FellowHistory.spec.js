@@ -9,19 +9,24 @@ describe('Fellow History Container', () => {
     picture: null,
     project: 'Watch Tower',
     email: 'kingsley.obot@andela.com',
-    user: {
-      firstName: 'Kingsley',
-      lastName: 'Obot'
-    }
+    name: 'Kingsley Obot',
+    overall_status: 'onTrack',
+    overall_average: 1,
+    total: 16,
+    submitted: 16,
+    apprenticeshipTeam: 'Watch Tower',
+    managerName: 'Kesiena Akpobome',
+    managerEmail: 'kesiena.akpobome@andela.com',
+    managerRole: 'TTL'
   };
 
-  const fellowWithManager = { ...fellow };
-  fellowWithManager.manager = {
-    firstName: 'John',
-    lastName: 'Doe',
-    image: null,
-    roleId: 2,
-    detail: `${fellow.user.firstName}'s TTL`
+  const fellow1 = {
+    id: 10,
+    picture: null,
+    project: 'Watch Tower',
+    email: 'kingsley.obot@andela.com',
+    name: 'Kingsley Obot',
+    overall_status: 'N/A'
   };
 
   /**
@@ -36,12 +41,55 @@ describe('Fellow History Container', () => {
     let props = {
       match: { params: { name: 'kingsley.obot' } },
       fellowSummaryDetails: [fellow],
-      getLmsSubmissions: jest.fn(),
-      lmsSubmissions: {},
+      lmsSubmissions: [
+        {
+          assignment: {
+            id: 2465,
+            name: 'Output 3.2: Communicating Proactively',
+            course_id: 282
+          },
+          course_id: 282,
+          due_date: '2019-02-22',
+          fellow_id: '-LLUWWd2rDslm51iDJzh',
+          graded_at: '2019-02-22',
+          level: 'D0B',
+          score: 2,
+          submitted_at: '2019-02-22 14:20:52'
+        }
+      ],
       lmsLoading: false,
-      ratings: [{}],
+      ratings: [
+        {
+          scores: [
+            {
+              attribute: 'Quantity',
+              score: 1
+            },
+            {
+              attribute: 'Quality',
+              score: 2
+            },
+            {
+              attribute: 'Initiative',
+              score: 2
+            },
+            {
+              attribute: 'Communication',
+              score: 2
+            },
+            {
+              attribute: 'Professionalism',
+              score: 0
+            },
+            {
+              attribute: 'Integration',
+              score: 0
+            }
+          ]
+        }
+      ],
       ratingsLoading: false,
-      getFellowDevPulse: jest.fn(),
+      getFellowHistoryData: jest.fn(),
       history: { push: jest.fn() },
       averageRatings: {
         quality: '0.1',
@@ -72,38 +120,19 @@ describe('Fellow History Container', () => {
    * @param wrapper The enzyme instance used to query for the specific dom elements
    * @param user The expected user's (Fellow/TTL/LF) details.
    */
-  const testFellowHistoryCard = (
-    wrapper,
-    user = {
-      ...fellow.user,
-      detail: fellow.project
-    }
-  ) => {
-    expect(wrapper.find('.fellow-history-card__name').text()).toEqual(
-      `${user.firstName} ${user.lastName}`
-    );
-    expect(wrapper.find('.fellow-history-card__detail').text()).toEqual(
-      user.detail
-    );
-  };
-
-  /**
-   ** A reusable function used to test the rendering of the manager history card
-   * @function
-   * @param manager The expected user's (TTL/LF) details that override the default manager details.
-   */
-  const testManagerByRole = (manager = {}) => {
-    const currentFellow = fellowWithManager;
-    currentFellow.manager = { ...fellowWithManager.manager, ...manager };
-    const { wrapper, props } = setup(
-      true,
-      { fellowSummaryDetails: [currentFellow] },
-      '/developers/:name'
-    );
-
-    const fellowCard = wrapper.find('.fellow-history-card').at(1);
-    testFellowHistoryCard(fellowCard, { ...currentFellow.manager, manager });
-    expect(props.history.push).not.toBeCalled();
+  const testFellowHistoryCard = (wrapper, user = fellow) => {
+    expect(
+      wrapper
+        .find('.fellow-history-card__name')
+        .at(0)
+        .text()
+    ).toEqual(user.name);
+    expect(
+      wrapper
+        .find('.fellow-history-card__detail')
+        .at(0)
+        .text()
+    ).toEqual(user.apprenticeshipTeam);
   };
 
   it('renders to match shapshot', () => {
@@ -136,9 +165,7 @@ describe('Fellow History Container', () => {
 
   it('renders the expected fellow profile details', () => {
     const newFellow = {
-      ...fellow,
-      devPulseAverage: '2',
-      lmsOutput: '17/18'
+      ...fellow
     };
 
     const { wrapper, props } = setup(
@@ -170,21 +197,16 @@ describe('Fellow History Container', () => {
   });
 
   it('renders the expected TTL details', () => {
-    testManagerByRole();
+    const { wrapper } = setup();
+    wrapper.instance().renderManagerCard(fellow);
+    wrapper.instance().renderManagerCard(null);
+    wrapper.instance().mapDisplayslistData(fellow1);
   });
 
   it('renders the expected LF details', () => {
-    testManagerByRole({
-      roleId: 3,
-      detail: `${fellow.user.firstName}'s LF`
-    });
-  });
-
-  it('renders the expected manager details with an undefined role', () => {
-    testManagerByRole({
-      roleId: 99,
-      detail: `${fellow.user.firstName}'s Undefined`
-    });
+    const { wrapper } = setup();
+    fellow.managerRole = 'LF';
+    wrapper.instance().renderManagerCard(fellow);
   });
 
   it('sets showDevpulse state to true when the handleCardClick function is called', () => {

@@ -8,7 +8,7 @@ const getImage = user => (!user.picture ? profileDefaultPic : user.picture);
 const HistoryCard = props => {
   const { user } = props;
 
-  if (!user) return <div />;
+  if (!user) return <div data-test="fellow-history-card-blank" />;
 
   return (
     <div className="fellow-history-card">

@@ -7,14 +7,34 @@ describe('tests the DevPulseRow', () => {
   beforeEach(() => {
     const props = {
       rating: {
-        week: 1,
-        quantity: 1,
-        quality: 2,
-        initiative: 2,
-        communication: 2,
-        professionalism: 0,
-        integration: 0
-      }
+        scores: [
+          {
+            attribute: 'Quantity',
+            score: 1
+          },
+          {
+            attribute: 'Quality',
+            score: 2
+          },
+          {
+            attribute: 'Initiative',
+            score: 2
+          },
+          {
+            attribute: 'Communication',
+            score: 2
+          },
+          {
+            attribute: 'Professionalism',
+            score: 0
+          },
+          {
+            attribute: 'Integration',
+            score: 0
+          }
+        ]
+      },
+      counter: 1
     };
     wrapper = shallow(<DevPulseRow {...props} />);
   });

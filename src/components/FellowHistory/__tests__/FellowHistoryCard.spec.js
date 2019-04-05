@@ -42,4 +42,13 @@ describe('Fellow History Card', () => {
       props.user.detail
     );
   });
+
+  it('renders a div if no user is present', () => {
+    const props = {
+      user: null
+    };
+    const wrapper = shallow(<FellowHistoryCard {...props} />);
+    const card = wrapper.find("[data-test='fellow-history-card-blank']");
+    expect(card.length).toBe(1);
+  });
 });

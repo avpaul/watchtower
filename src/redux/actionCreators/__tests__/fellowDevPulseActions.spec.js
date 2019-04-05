@@ -10,12 +10,12 @@ import {
   LOAD_FELLOW_PULSE_FAILURE
 } from '../../constants/fellowActionTypes';
 import initialState from '../../reducers/initialState';
-import getFellowDevPulse from '../fellowDevPulseActions';
+import getFellowHistoryData from '../fellowDevPulseActions';
 
 describe('Fellow Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const email = 'test.user@andela.com';
-  const baseURL = `${serverURL}/api/v1/fellows/pulse?user=${email}`;
+  const fellowId = '-LP6C8U9vaZuCUteSlXq';
+  const baseURL = `${serverURL}/api/v2/fellows/${fellowId}`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
@@ -47,34 +47,20 @@ describe('Fellow Actions', () => {
   it('dispatches LOAD_FELLOW_PULSE_REQUEST and LOAD_FELLOW_PULSE_SUCCESS on successfully fetching fellow ratings', () => {
     const data = {
       data: {
-        weeklyRatings: [],
-        averageRatings: {
-          communication: '1',
-          integration: '1.1',
-          quantity: '1.5',
-          quality: '0.4',
-          professionalism: '1.3',
-          initiative: '1.7'
-        }
+        ratings: [],
+        lms_submissions: []
       }
     };
     mock.onGet(baseURL).reply(200, { ...data });
     const expectedActions = [
       { type: LOAD_FELLOW_PULSE_REQUEST },
       {
-        type: LOAD_FELLOW_PULSE_SUCCESS,
-        averageRatings: {
-          communication: '1',
-          initiative: '1.7',
-          integration: '1.1',
-          professionalism: '1.3',
-          quality: '0.4',
-          quantity: '1.5'
-        },
-        ratings: []
+        lmsSubmissions: undefined,
+        ratings: undefined,
+        type: LOAD_FELLOW_PULSE_SUCCESS
       }
     ];
-    return store.dispatch(getFellowDevPulse()).then(() => {
+    return store.dispatch(getFellowHistoryData(fellowId)).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toMatchObject(expectedActions);
     });
@@ -88,7 +74,7 @@ describe('Fellow Actions', () => {
         error: 'Request failed with status code 404'
       }
     ];
-    return store.dispatch(getFellowDevPulse()).then(() => {
+    return store.dispatch(getFellowHistoryData()).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });

@@ -20,7 +20,7 @@ const fellowDevPulseReducer = (state = initialState.fellowDevPulse, action) => {
         ...state,
         loading: false,
         ratings: action.ratings,
-        averageRatings: action.averageRatings
+        lmsSubmissions: action.lmsSubmissions
       };
 
     case LOAD_FELLOW_PULSE_FAILURE:

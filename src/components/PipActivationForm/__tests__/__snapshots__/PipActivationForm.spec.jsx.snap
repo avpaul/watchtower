@@ -27,7 +27,7 @@ ShallowWrapper {
             },
           }
     }
-    getFellowDevPulse={[Function]}
+    getFellowHistoryData={[Function]}
     handleChange={[Function]}
     handleMgtInputChange={[Function]}
     handleSubmit={[Function]}

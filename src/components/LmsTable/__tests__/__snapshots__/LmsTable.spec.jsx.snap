@@ -4,7 +4,7 @@ exports[`tests the LmsTable renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LmsTable
-    lmsSubmissions={Object {}}
+    lmsSubmissions={Array []}
     loading={true}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -20,110 +20,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <div
-          className="lms-table"
->
-          <Table>
-                    <TableHeader
-                              headers={
-                                        Array [
-                                                  "Course Id",
-                                                  "Output Name",
-                                                  "Due Date",
-                                                  "Submission Date",
-                                                  "Review Date",
-                                                  "Score",
-                                                ]
-                              }
-                    />
-          </Table>
-</div>,
-        <Loader />,
-      ],
+      "customStyle": Object {},
+      "message": "There's currently no LMS data for this fellow",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <Table>
-            <TableHeader
-                        headers={
-                                    Array [
-                                                "Course Id",
-                                                "Output Name",
-                                                "Due Date",
-                                                "Submission Date",
-                                                "Review Date",
-                                                "Score",
-                                              ]
-                        }
-            />
-</Table>,
-          "className": "lms-table",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <TableHeader
-                headers={
-                                Array [
-                                                "Course Id",
-                                                "Output Name",
-                                                "Due Date",
-                                                "Submission Date",
-                                                "Review Date",
-                                                "Score",
-                                              ]
-                }
-/>,
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "headers": Array [
-                  "Course Id",
-                  "Output Name",
-                  "Due Date",
-                  "Submission Date",
-                  "Review Date",
-                  "Score",
-                ],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            undefined,
-          ],
-          "type": [Function],
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": Symbol(react.fragment),
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -131,110 +33,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <div
-            className="lms-table"
->
-            <Table>
-                        <TableHeader
-                                    headers={
-                                                Array [
-                                                            "Course Id",
-                                                            "Output Name",
-                                                            "Due Date",
-                                                            "Submission Date",
-                                                            "Review Date",
-                                                            "Score",
-                                                          ]
-                                    }
-                        />
-            </Table>
-</div>,
-          <Loader />,
-        ],
+        "customStyle": Object {},
+        "message": "There's currently no LMS data for this fellow",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <Table>
-              <TableHeader
-                            headers={
-                                          Array [
-                                                        "Course Id",
-                                                        "Output Name",
-                                                        "Due Date",
-                                                        "Submission Date",
-                                                        "Review Date",
-                                                        "Score",
-                                                      ]
-                            }
-              />
-</Table>,
-            "className": "lms-table",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": Array [
-                <TableHeader
-                  headers={
-                                    Array [
-                                                      "Course Id",
-                                                      "Output Name",
-                                                      "Due Date",
-                                                      "Submission Date",
-                                                      "Review Date",
-                                                      "Score",
-                                                    ]
-                  }
-/>,
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "headers": Array [
-                    "Course Id",
-                    "Output Name",
-                    "Due Date",
-                    "Submission Date",
-                    "Review Date",
-                    "Score",
-                  ],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              undefined,
-            ],
-            "type": [Function],
-          },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": Symbol(react.fragment),
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -261,11 +65,7 @@ exports[`tests the LmsTable renders correctly 2`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LmsTable
-    lmsSubmissions={
-        Object {
-            "data": Array [],
-          }
-    }
+    lmsSubmissions={Array []}
     loading={false}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -327,11 +127,20 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LmsTable
     lmsSubmissions={
-        Object {
-            "data": Object {
-              "outputs": Object {},
+        Array [
+            Object {
+              "assignment": Object {
+                "course_id": 282,
+                "id": 2465,
+                "name": "Output 3.2: Communicating Proactively",
+              },
+              "course_id": 282,
+              "due_date": "2019-03-29",
+              "graded_at": null,
+              "score": null,
+              "submitted_at": "2019-03-29 14:47:04",
             },
-          }
+          ]
     }
     loading={true}
 />,
@@ -365,6 +174,22 @@ ShallowWrapper {
                                                 ]
                               }
                     />
+                    <LmsRow
+                              lmsSubmission={
+                                        Object {
+                                                  "assignment": Object {
+                                                    "course_id": 282,
+                                                    "id": 2465,
+                                                    "name": "Output 3.2: Communicating Proactively",
+                                                  },
+                                                  "course_id": 282,
+                                                  "due_date": "2019-03-29",
+                                                  "graded_at": null,
+                                                  "score": null,
+                                                  "submitted_at": "2019-03-29 14:47:04",
+                                                }
+                              }
+                    />
           </Table>
 </div>,
         <Loader />,
@@ -390,6 +215,22 @@ ShallowWrapper {
                                               ]
                         }
             />
+            <LmsRow
+                        lmsSubmission={
+                                    Object {
+                                                "assignment": Object {
+                                                  "course_id": 282,
+                                                  "id": 2465,
+                                                  "name": "Output 3.2: Communicating Proactively",
+                                                },
+                                                "course_id": 282,
+                                                "due_date": "2019-03-29",
+                                                "graded_at": null,
+                                                "score": null,
+                                                "submitted_at": "2019-03-29 14:47:04",
+                                              }
+                        }
+            />
 </Table>,
           "className": "lms-table",
         },
@@ -412,7 +253,24 @@ ShallowWrapper {
                                               ]
                 }
 />,
-              Array [],
+              Array [
+                <LmsRow
+                  lmsSubmission={
+                                    Object {
+                                                      "assignment": Object {
+                                                        "course_id": 282,
+                                                        "id": 2465,
+                                                        "name": "Output 3.2: Communicating Proactively",
+                                                      },
+                                                      "course_id": 282,
+                                                      "due_date": "2019-03-29",
+                                                      "graded_at": null,
+                                                      "score": null,
+                                                      "submitted_at": "2019-03-29 14:47:04",
+                                                    }
+                  }
+/>,
+              ],
             ],
           },
           "ref": null,
@@ -430,6 +288,28 @@ ShallowWrapper {
                   "Review Date",
                   "Score",
                 ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "weak-key-2",
+              "nodeType": "function",
+              "props": Object {
+                "lmsSubmission": Object {
+                  "assignment": Object {
+                    "course_id": 282,
+                    "id": 2465,
+                    "name": "Output 3.2: Communicating Proactively",
+                  },
+                  "course_id": 282,
+                  "due_date": "2019-03-29",
+                  "graded_at": null,
+                  "score": null,
+                  "submitted_at": "2019-03-29 14:47:04",
+                },
               },
               "ref": null,
               "rendered": null,
@@ -475,6 +355,22 @@ ShallowWrapper {
                                                           ]
                                     }
                         />
+                        <LmsRow
+                                    lmsSubmission={
+                                                Object {
+                                                            "assignment": Object {
+                                                              "course_id": 282,
+                                                              "id": 2465,
+                                                              "name": "Output 3.2: Communicating Proactively",
+                                                            },
+                                                            "course_id": 282,
+                                                            "due_date": "2019-03-29",
+                                                            "graded_at": null,
+                                                            "score": null,
+                                                            "submitted_at": "2019-03-29 14:47:04",
+                                                          }
+                                    }
+                        />
             </Table>
 </div>,
           <Loader />,
@@ -500,6 +396,22 @@ ShallowWrapper {
                                                       ]
                             }
               />
+              <LmsRow
+                            lmsSubmission={
+                                          Object {
+                                                        "assignment": Object {
+                                                          "course_id": 282,
+                                                          "id": 2465,
+                                                          "name": "Output 3.2: Communicating Proactively",
+                                                        },
+                                                        "course_id": 282,
+                                                        "due_date": "2019-03-29",
+                                                        "graded_at": null,
+                                                        "score": null,
+                                                        "submitted_at": "2019-03-29 14:47:04",
+                                                      }
+                            }
+              />
 </Table>,
             "className": "lms-table",
           },
@@ -522,7 +434,24 @@ ShallowWrapper {
                                                     ]
                   }
 />,
-                Array [],
+                Array [
+                  <LmsRow
+                    lmsSubmission={
+                                        Object {
+                                                            "assignment": Object {
+                                                              "course_id": 282,
+                                                              "id": 2465,
+                                                              "name": "Output 3.2: Communicating Proactively",
+                                                            },
+                                                            "course_id": 282,
+                                                            "due_date": "2019-03-29",
+                                                            "graded_at": null,
+                                                            "score": null,
+                                                            "submitted_at": "2019-03-29 14:47:04",
+                                                          }
+                    }
+/>,
+                ],
               ],
             },
             "ref": null,
@@ -540,6 +469,28 @@ ShallowWrapper {
                     "Review Date",
                     "Score",
                   ],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "weak-key-2",
+                "nodeType": "function",
+                "props": Object {
+                  "lmsSubmission": Object {
+                    "assignment": Object {
+                      "course_id": 282,
+                      "id": 2465,
+                      "name": "Output 3.2: Communicating Proactively",
+                    },
+                    "course_id": 282,
+                    "due_date": "2019-03-29",
+                    "graded_at": null,
+                    "score": null,
+                    "submitted_at": "2019-03-29 14:47:04",
+                  },
                 },
                 "ref": null,
                 "rendered": null,

@@ -4,64 +4,36 @@ import arrayKey from 'weak-key';
 import Cell from '../../TableComponents/Cell';
 import Row from '../../TableComponents/Row';
 
-const formatRating = rating => {
-  const formatedRating = {
-    week: rating.week,
-    average: rating.average,
-    quantity: rating.quantity,
-    quality: rating.quality,
-    initiative: rating.quality,
-    communication: rating.quality,
-    professionalism: rating.quality,
-    integration: rating.quality
-  };
+const formatRating = (rating, counter) => {
+  const formatedRating = {};
+  rating.scores.forEach(score => {
+    const { attribute } = score;
+    const criteria = [
+      'Quantity',
+      'Quality',
+      'Communication',
+      'Professionalism',
+      'Integration',
+      'Initiative'
+    ];
+    Object.assign(formatedRating, { Week: `Week ${counter}` });
+    if (criteria.includes(attribute)) {
+      Object.assign(formatedRating, { [attribute]: score.score });
+    }
+  });
   return formatedRating;
 };
 
-/**
- * @description - Converts whole numbers to floats with two decimal places
- * e.g. if result is 1, converts to 1.00
- * @param {*} number
- * @returns float number
- */
-const turnWholeNumbersToFloat = number => {
-  // Convert the number to a string
-  let digit = number;
-  digit = digit.toString();
-  digit += digit.includes('.') ? '' : '.00';
-  return digit;
-};
-
-/**
- * @description - Calculates the average rating for a developer
- * weekly and returns a float of 2 decimal places. Achieved by
- * looping through the object passed as a parameter
- * @param {*} rating
- * @returns float number
- */
-const caculateAvg = rating => {
-  let total = 0;
-  Object.keys(formatRating(rating)).map(key => {
-    total += key !== 'week' && key !== 'average' ? parseFloat(rating[key]) : 0;
-    return total;
-  });
-  const value = total / 6;
-  return turnWholeNumbersToFloat(Math.floor(value * 100) / 100);
-};
-
-const DevPulseRow = ({ rating }) => {
-  // calculate avarage
-  const avg = caculateAvg(rating);
-  // assign the average to the rating object
-  Object.assign(rating, { average: avg });
+const DevPulseRow = ({ rating, counter }) => {
+  const scores = formatRating(rating, counter);
   return (
     <Row>
-      {Object.keys(formatRating(rating)).map(key => (
+      {Object.keys(scores).map(key => (
         <Cell
           key={arrayKey({ key })}
-          addedClass={rating[key] < 1 ? 'text-danger' : null}
+          addedClass={scores[key] < 1 ? 'text-danger' : null}
         >
-          {rating[key]}
+          {scores[key]}
         </Cell>
       ))}
     </Row>
@@ -69,7 +41,8 @@ const DevPulseRow = ({ rating }) => {
 };
 
 DevPulseRow.propTypes = {
-  rating: PropTypes.shape({}).isRequired
+  rating: PropTypes.shape({}).isRequired,
+  counter: PropTypes.number.isRequired
 };
 
 export default DevPulseRow;
