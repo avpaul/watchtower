@@ -1,3 +1,15 @@
+# V1.0.5
+
+## Features
+
+- add sliders across cascading filter cards
+
+## Bug Fixes
+
+- fix disparity on developers dashboard filters
+- display accurate DevPulse average for fellows' current D-level
+- fix the naming of the LF name environment variable
+
 # V 1.0.4
 
 ## Bug Fixes
