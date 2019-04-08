@@ -5,73 +5,72 @@ import LMSChartOverview from './LMSChartOverview';
 import Timeline from './Timeline';
 import './LMSChart.css';
 
-export const chartOverview = (lmsSummary, allOutputs) => {
-  const numOfOutputsSubmitted = lmsSummary.data
-    ? lmsSummary.data[0].number_of_outputs_submitted
-    : 0;
-  const numOfOutputsGreaterThanOne = lmsSummary.data
-    ? lmsSummary.data[0].number_of_outputs_satisfied
-    : 0;
-  const numOfOutputsSuggested = allOutputs ? allOutputs.length : 0;
-  const chartOverviewProps = {
+export const chartOverview = lmsSummary => {
+  const numOfOutputsSubmitted = lmsSummary ? lmsSummary.submitted : 0;
+  const numOfOutputsGreaterThanOne = lmsSummary ? lmsSummary.satisfied : 0;
+  const numOfOutputsSuggested = lmsSummary ? lmsSummary.total : 0;
+
+  return {
     numOfOutputsGreaterThanOne,
     numOfOutputsSuggested,
     numOfOutputsSubmitted
   };
-  return chartOverviewProps;
 };
 
 const sortOutputs = allSubmissions => {
   const allOutputs = allSubmissions
-    ? allSubmissions.map(output => {
-        output.due_date = new Date(output.due_date);
-        return output;
-      })
-    : 0;
-  const sortedOutputs = allOutputs
-    ? allOutputs.sort((item1, item2) => item1.due_date - item2.due_date)
-    : '';
+    ? allSubmissions
+        .map(output => {
+          output.due_date = new Date(output.due_date);
+          return output;
+        })
+        .sort((item1, item2) => {
+          if (item1.due_date > item2.due_date) return 1;
+          if (item1.due_date < item2.due_date) return -1;
+          return 0;
+        })
+    : [];
 
-  return sortedOutputs;
+  return allOutputs;
 };
 
 export const formatOutputs = outputs => {
   const allSubmissionsFormatted = outputs
-    ? outputs.map(item =>
-        //eslint-disable-line
-        ({
-          ...item,
-          title:
-            item.name.slice(-4) === 'Quiz' ? 'Quiz' : item.name.substring(7, 10)
-        })
-      )
-    : '';
+    ? outputs.map(item => ({
+        ...item,
+        title:
+          item.assignment.name.slice(-4) === 'Quiz'
+            ? 'Quiz'
+            : item.assignment.name.substring(7, 10)
+      }))
+    : [];
   return allSubmissionsFormatted;
 };
 
 const LMSChart = props => {
   const { lmsSummary, lmsSubmissions } = props;
   const chartWidth = 1480;
-  const allSubmissions = lmsSubmissions
-    ? Object.values(lmsSubmissions.outputs)
-    : '';
+  const allSubmissions = Object.values(lmsSubmissions);
   const today = new Date();
   const allSubmissionsFormatted = formatOutputs(allSubmissions);
   const allOutputs = sortOutputs(allSubmissionsFormatted);
   const outputsDue = allSubmissionsFormatted
     ? allSubmissionsFormatted.filter(output => output.due_date < today)
-    : '';
-  const chartOverviewProps = chartOverview(lmsSummary, allOutputs);
+    : [];
+  const chartOverviewProps = chartOverview(lmsSummary);
 
   return (
-    <div className="row" style={{ overflowX: 'scroll' }}>
-      <div className="lms-chart">
-        <LMSChartOverview {...chartOverviewProps} />
-        <Timeline
-          allOutputs={allOutputs}
-          outputsDue={outputsDue}
-          width={chartWidth}
-        />
+    <div className="lms-chart row">
+      <div className="lms-chart__header">LMS</div>
+      <div className="lms-chart__wrapper">
+        <div className="lms-chart__timeline">
+          <LMSChartOverview {...chartOverviewProps} />
+          <Timeline
+            allOutputs={allOutputs}
+            outputsDue={outputsDue}
+            width={chartWidth}
+          />
+        </div>
       </div>
     </div>
   );

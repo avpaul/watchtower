@@ -15,32 +15,32 @@ describe('LMS output status utility', () => {
     number: '1.1',
     title: 'Your team kick-off call',
     due_date: '2018-10-27T23:59:00',
-    workflow_state: 'submitted',
+    status: 'submitted',
     reviewed: true,
     score: '2'
   };
 
   it('returns correct status color for a scored output > 1', () => {
-    output.workflow_state = 'graded';
+    output.status = 'graded';
     const statusColor = getOutputStatus(output);
     expect(statusColor).toEqual('green');
   });
 
   it('returns correct status color for a scored output < 2', () => {
-    output.workflow_state = 'graded';
+    output.status = 'graded';
     output.score = 1;
     const statusColor = getOutputStatus(output);
     expect(statusColor).toEqual('red');
   });
 
   it('returns correct status color for unreviewed output', () => {
-    output.workflow_state = 'submitted';
+    output.status = 'submitted';
     const statusColor = getOutputStatus(output);
     expect(statusColor).toEqual('grey');
   });
 
   it('returns correct status color for unsubmitted output', () => {
-    output.workflow_state = '';
+    output.status = '';
     const statusColor = getOutputStatus(output);
     expect(statusColor).toEqual('orange');
   });

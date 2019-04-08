@@ -50,11 +50,6 @@ export default {
     },
     error: null
   },
-  fellowLmsSummary: {
-    loading: false,
-    lmsSummary: [],
-    error: null
-  },
   fellowLmsSubmissions: {
     loading: false,
     lmsSubmissions: {},
@@ -126,11 +121,6 @@ export default {
       },
       error: ''
     }
-  },
-  fellowLmsRatings: {
-    loading: false,
-    data: {},
-    error: null
   },
   engineeringManagerTtls: {
     loading: false,

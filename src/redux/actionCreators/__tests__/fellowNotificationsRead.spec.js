@@ -28,7 +28,7 @@ describe('Fellow Notifications Actions', () => {
     mock.reset();
   });
 
-  it('dispatches LOAD_FELLOWBIO_REQUEST and  LOAD_FELLOWBIO_ERROR on failing to fetch fellow', () => {
+  it('dispatches LOAD_READ_NOTIFICATION_REQUEST and  LOAD_READ_NOTIFICATION_ERROR on failing to fetch fellow', () => {
     const expectedActions = [
       { type: LOAD_READ_NOTIFICATION_REQUEST },
       {
@@ -41,7 +41,7 @@ describe('Fellow Notifications Actions', () => {
       expect(dispatchedActions).toEqual(expectedActions);
     });
   });
-  it('dispatches LOAD_FELLOWBIO_REQUEST and  LOAD_FELLOWBIO_SUCCESS on failing to fetch fellow', () => {
+  it('dispatches LOAD_READ_NOTIFICATION_REQUEST and  LOAD_READ_NOTIFICATION_SUCCESS on failing to fetch fellow', () => {
     const data = {
       readnotification: undefined
     };

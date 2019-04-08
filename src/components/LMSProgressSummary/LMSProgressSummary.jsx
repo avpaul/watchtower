@@ -1,31 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import LMSChart from './LMSChart';
 import './LMSChart/LMSChart.css';
 
-class LMSProgressSummary extends Component {
-  componentDidMount() {
-    const { getLmsSummary, getLmsSubmissions } = this.props;
-    getLmsSummary();
-    getLmsSubmissions();
-  }
+export default function LMSProgressSummary(props) {
+  const {
+    fellow: { fellow }
+  } = props;
+  const { lms_submissions: lmsSubmissions, lms } = fellow;
 
-  render() {
-    const { lmsSummary, lmsSubmissions } = this.props;
-    return lmsSubmissions.data &&
-      Object.values(lmsSubmissions.data).length > 0 ? (
-      <LMSChart lmsSummary={lmsSummary} lmsSubmissions={lmsSubmissions.data} />
-    ) : (
-      <div className="lms-chart timeline">No LMS Data</div>
+  if (!lmsSubmissions || !lms)
+    return (
+      <div className="lms-chart row">
+        <div className="lms-chart__header">LMS</div>
+        <div className="lms-chart__wrapper">
+          <div className="lms-chart__timeline timeline">No LMS Data</div>
+        </div>
+      </div>
     );
-  }
+
+  return <LMSChart lmsSummary={lms} lmsSubmissions={lmsSubmissions} />;
 }
 
 LMSProgressSummary.propTypes = {
-  getLmsSummary: PropTypes.func.isRequired,
-  getLmsSubmissions: PropTypes.func.isRequired,
-  lmsSummary: PropTypes.instanceOf(Object).isRequired,
-  lmsSubmissions: PropTypes.instanceOf(Object).isRequired
+  fellow: PropTypes.shape({
+    fellow: PropTypes.shape().isRequired,
+    loading: PropTypes.bool.isRequired
+  }).isRequired
 };
-
-export default LMSProgressSummary;

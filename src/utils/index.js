@@ -12,10 +12,9 @@ export const getReviewStatus = (isReviewed, score) =>
   isReviewed ? getScoreStatus(score) : 'grey';
 
 export const getOutputStatus = output => {
-  const isReviewed = output.workflow_state === 'graded';
   const outputStatus =
-    output.workflow_state === 'submitted' || output.workflow_state === 'graded'
-      ? getReviewStatus(isReviewed, parseInt(output.score, 10))
+    output.status === 'submitted' || output.status === 'graded'
+      ? getReviewStatus(output.status === 'graded', parseInt(output.score, 10))
       : 'orange';
   return outputStatus;
 };

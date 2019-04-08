@@ -8,18 +8,14 @@ import visibilityFilter from './visibilityFilter';
 import fellowProgressReducer from './fellowProgressReducer';
 import ttlReducer from './ttlReducer';
 import locationReducer from './locationReducer';
-import fellowLmsRatingsReducer from './fellowLmsRatingsReducer';
 import opsDashboardReducer from './opsDashBoardReducer';
 import managerFellowReducer from './managerFellows';
 import ttlProjectsReducer from './ttlProjectsReducer';
-import fellowBioReducer from './fellowBio';
-import fellowDevPulseReducer from './fellowDevPulseReducer';
+import fellowProfileDataReducer from './fellowProfileDataReducer';
 import fellowsSummary from './fellowsummary';
 import fellowNotificationReducer from './fellowNotificationReducer';
 import fellowUnreadNotificationReducer from './fellowUnreadNotificationReducer';
 import fellowReadNotificationReducer from './fellowReadNotificationReducer';
-import fellowLmsSummaryReducer from './fellowLmsSummaryReducer';
-import fellowLmsSubmissionsReducer from './fellowLmsSubmissionsReducer';
 import engineeringManagerTtlsReducer from './engineeringManagerTtlsReducer';
 import simulationsLeadLfsReducer from './simulationsLeadLfsReducer';
 import lfNotificationReducer from './lfNotificationReducer';
@@ -27,6 +23,8 @@ import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
 import managerFellowsSummary from './ManagerFellowsSummaryReducer';
 import managersFeedbackReducer from './managerFeedbackReducer';
+import fellowLmsSubmissionsReducer from './fellowLmsSubmissionsReducer';
+import fellowDevPulseReducer from './fellowDevPulseReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -40,13 +38,11 @@ const rootReducer = combineReducers({
   opsDashboard: opsDashboardReducer,
   managerFellows: managerFellowReducer,
   ttlProjects: ttlProjectsReducer,
-  fellow: fellowBioReducer,
+  fellow: fellowProfileDataReducer,
   notification: fellowNotificationReducer,
   unreadnotification: fellowUnreadNotificationReducer,
   readnotification: fellowReadNotificationReducer,
-  fellowLmsRatings: fellowLmsRatingsReducer,
   fellowDevPulse: fellowDevPulseReducer,
-  fellowLmsSummary: fellowLmsSummaryReducer,
   fellowLmsSubmissions: fellowLmsSubmissionsReducer,
   fellowsSummary,
   engineeringManagerTtls: engineeringManagerTtlsReducer,

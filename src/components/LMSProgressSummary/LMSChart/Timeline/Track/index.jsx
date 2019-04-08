@@ -20,7 +20,7 @@ const Track = ({ outputs, interval }) => (
               <p className="output-name">{output.title}</p>
               <span className="pseudo" />
               <span className="details">
-                <strong>{`${output.name}`}</strong>
+                <strong>{`${output.assignment.name}`}</strong>
                 <br />
                 <div
                   className={getOutputStatus(output)}

@@ -5,7 +5,4 @@ const mapStateToProps = ({ fellow }) => ({
   fellow
 });
 
-export default connect(
-  mapStateToProps,
-  {}
-)(ProgressBar);
+export default connect(mapStateToProps)(ProgressBar);
