@@ -19,7 +19,7 @@ export default {
       finalPageURL: ''
     },
     fellows: [],
-    summary: { ltWk5OffTrack: 0, gteWk5OffTrack: 0, onTrack: 0 },
+    summary: { fellowsofftrack: 0, gteWk5OffTrack: 0, fellowsontrack: 0 },
     loading: false,
     error: ''
   },

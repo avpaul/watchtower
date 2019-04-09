@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import translatorTable from '../../utils/TranslatorTable';
 
 export const getCriteriaFilterValues = (type, value, table, status) => {
   let filterValues;
@@ -114,8 +115,14 @@ const searchFellow = (fellow, search) =>
 
 const checkFellowLevel = (fellow, level) => fellow.level.search(level) >= 0;
 
-const checkFellowStatus = (fellow, { status, criteria, statusType }) =>
-  fellow[criteria === 'All' ? 'advanceStatus' : statusType] === status;
+const checkFellowStatus = (fellow, { status, criteria, statusType }) => {
+  if (criteria !== 'All') {
+    const pulseOrLmsStatus = fellow[statusType];
+    return translatorTable[pulseOrLmsStatus] === status;
+  }
+  const advancementStatus = fellow.overall_status;
+  return translatorTable[advancementStatus] === status;
+};
 
 /**
  * @description Checks to see if fellow conforms to the provided filter parameters

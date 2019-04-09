@@ -26,7 +26,15 @@ const TranslatorTable = {
   WATCH_TOWER_OPS: 'TTL/LF',
   WATCH_TOWER_TTL: 'TTL',
   WATCH_TOWER_EM: 'TTL',
-  WATCH_TOWER_SL: 'LF'
+  WATCH_TOWER_SL: 'LF',
+  ltWk5OnTrack: 'On Track',
+  ltWk5OffTrack: 'Off Track',
+  ltWkOnTrack: 'On Track',
+  ltWKOffTrack: 'Off Track',
+  gteWk5OffTrack: 'Off Track',
+  gteWk5OnTrack: 'On Track',
+  onTrack: 'On Track',
+  offTrack: 'Off Track'
 };
 
 export default TranslatorTable;

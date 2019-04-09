@@ -17,9 +17,9 @@ Object {
   },
   "results": undefined,
   "summary": Object {
+    "fellowsofftrack": 0,
+    "fellowsontrack": 0,
     "gteWk5OffTrack": 0,
-    "ltWk5OffTrack": 0,
-    "onTrack": 0,
   },
 }
 `;
