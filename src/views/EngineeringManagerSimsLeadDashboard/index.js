@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import DeveloperDashboardContainer from '../DeveloperDashboard';
 import Header from '../../components/Header';
-import EngineeringManagerContainer from './EngineeringManagerContainer';
+import EManagerSimsLeadsContainer from './EManagerSimsLeadsContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 
 /**
@@ -17,7 +17,7 @@ const EngineeringManagerSimsLeadDashboard = props => (
         <Route
           exact
           path="/dashboard"
-          component={() => <EngineeringManagerContainer {...props} />}
+          component={() => <EManagerSimsLeadsContainer {...props} />}
         />
         <Route
           exact

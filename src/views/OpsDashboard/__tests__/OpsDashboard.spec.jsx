@@ -6,6 +6,7 @@ import fellowManagers from '../../../__mocks__/fellowManagers';
 import OpsDashboard from '../index';
 import OpsDashboardMain from '../OpsDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
+import FellowRatio from '../../../components/ManagerFellowMap/FellowRatio';
 
 describe('OpsDashboard', () => {
   let wrapper;
@@ -106,11 +107,15 @@ describe('OpsDashboardMain component', () => {
   it('should change map to display base on the map card clicked', () => {
     const { wrapper } = setup();
     wrapper
+      .find(FellowRatio)
+      .dive()
       .find('DisplayCard')
       .first()
       .simulate('click', { currentTarget: { id: '0' } });
     expect(wrapper.state('displayManagers')).toBe('LF');
     wrapper
+      .find(FellowRatio)
+      .dive()
       .find('DisplayCard')
       .first()
       .simulate('click', { currentTarget: { id: '1' } });

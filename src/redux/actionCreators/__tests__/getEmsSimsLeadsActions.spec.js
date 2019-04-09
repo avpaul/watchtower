@@ -3,15 +3,15 @@ import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import {
-  LOAD_ENGINEERING_MANAGER_TTLS_FAILURE,
-  LOAD_ENGINEERING_MANAGER_TTLS_REQUEST,
-  LOAD_ENGINEERING_MANAGER_TTLS_SUCCESS
-} from '../../constants/engineeringManagerTypes';
-import getEngineeringManagerTtls from '../getEngineeringManagerTtls';
+  LOAD_EM_SIMSLEADS_FAILURE,
+  LOAD_EM_SIMSLEADS_REQUEST,
+  LOAD_EM_SIMSLEADS_SUCCESS
+} from '../../constants/emsSimsLeadsTypes';
+import getEmsSimsLeadsActions from '../getEmsSimsLeadsActions';
 
 describe("fetch engineering manager 's data actions", () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/engineeringmanagers/ttls?email=ai.ls@andela.com`;
+  const baseURL = `${serverURL}/api/v2/managers/details`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore({
@@ -27,7 +27,7 @@ describe("fetch engineering manager 's data actions", () => {
     mock.reset();
   });
 
-  it(`dispatches LOAD_ENGINEERING_MANAGER_TTLS_REQUEST and LOAD_ENGINEERING_MANAGER_TTLS_SUCCESS 
+  it(`dispatches LOAD_EM_SIMSLEADS_REQUEST and LOAD_EM_SIMSLEADS_SUCCESS 
       on successful fetch of engineering manager's data`, () => {
     const data = {
       ttl: [
@@ -46,34 +46,30 @@ describe("fetch engineering manager 's data actions", () => {
     };
     mock.onGet(`${baseURL}`).reply(200, { ...data });
     const expectedActions = [
-      { type: LOAD_ENGINEERING_MANAGER_TTLS_REQUEST },
+      { type: LOAD_EM_SIMSLEADS_REQUEST },
       {
-        type: LOAD_ENGINEERING_MANAGER_TTLS_SUCCESS,
+        type: LOAD_EM_SIMSLEADS_SUCCESS,
         data
       }
     ];
-    return store
-      .dispatch(getEngineeringManagerTtls('ai.ls@andela.com'))
-      .then(() => {
-        const dispatchedActions = store.getActions();
-        expect(dispatchedActions).toEqual(expectedActions);
-      });
+    return store.dispatch(getEmsSimsLeadsActions()).then(() => {
+      const dispatchedActions = store.getActions();
+      expect(dispatchedActions).toEqual(expectedActions);
+    });
   });
 
-  it(`dispatches LOAD_ENGINEERING_MANAGER_TTLS_REQUEST and LOAD_ENGINEERING_MANAGER_TTLS_FAILURE
+  it(`dispatches LOAD_EM_SIMSLEADS_REQUEST and LOAD_EM_SIMSLEADS_FAILURE
   on failure to fetch engineering manager's data`, () => {
     const expectedActions = [
-      { type: LOAD_ENGINEERING_MANAGER_TTLS_REQUEST },
+      { type: LOAD_EM_SIMSLEADS_REQUEST },
       {
-        type: LOAD_ENGINEERING_MANAGER_TTLS_FAILURE,
+        type: LOAD_EM_SIMSLEADS_FAILURE,
         error: 'Request failed with status code 404'
       }
     ];
-    return store
-      .dispatch(getEngineeringManagerTtls('fake@mail.com'))
-      .then(() => {
-        const dispatchedActions = store.getActions();
-        expect(dispatchedActions).toEqual(expectedActions);
-      });
+    return store.dispatch(getEmsSimsLeadsActions()).then(() => {
+      const dispatchedActions = store.getActions();
+      expect(dispatchedActions).toEqual(expectedActions);
+    });
   });
 });

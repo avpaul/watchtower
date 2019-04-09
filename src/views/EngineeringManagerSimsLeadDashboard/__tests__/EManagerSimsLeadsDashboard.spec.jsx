@@ -2,13 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import EngineeringManagerSimsLeadDashboard from '../index';
-import engineeringManagerTtls from '../../../__mocks__/engineeringManagerTtls';
-import simulationsLeadLf from '../../../__mocks__/simulationsLeadLf';
-import EngineeringManagerDashboard from '../EngineeringManagerDashboard';
+import engineeringManagerSimsLeadData from '../../../__mocks__/engineeringManagerSimsLeadData.json';
+import EManagerSimsLeadsDashboard from '../EManagerSimsLeadsDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 import ManagerFellowMap from '../../../components/ManagerFellowMap';
 
-describe('EngineeringManagerDashboard', () => {
+describe('EManagerSimsLeadsDashboard', () => {
   let wrapper;
 
   beforeEach(() => {
@@ -38,12 +37,7 @@ describe('EngineeringDashboard component', () => {
       Promise.resolve({
         error: null,
         data: {
-          engineeringManager: {
-            ttls: engineeringManagerTtls.engineeringManager.ttls
-          },
-          simulationsLead: {
-            lfs: simulationsLeadLf.simulationsLead.lfs
-          },
+          managees: engineeringManagerSimsLeadData.managees,
           totalFellows: 5,
           averageFellowsPerTtl: 5
         }
@@ -52,22 +46,14 @@ describe('EngineeringDashboard component', () => {
 
     const props = {
       user: {
-        email: '',
         roles: {
           [`${loggedInRole}`]: 'hdkjshdjsdha'
         }
       },
       data: {
-        engineeringManager: {
-          ttls: engineeringManagerTtls.engineeringManager.ttls,
-          show: true,
-          managerTitle: 'TTL',
-          managerFellowSortRatio: 'HIGH_TO_LOW'
-        },
-        simulationsLead: {
-          lfs: simulationsLeadLf.simulationsLead.lfs,
-          show: true
-        },
+        managees: engineeringManagerSimsLeadData.managees,
+        show: true,
+        managerFellowSortRatio: 'HIGH_TO_LOW',
         totalFellows: 5
       },
       fellowsSummary: {},
@@ -75,11 +61,10 @@ describe('EngineeringDashboard component', () => {
       fetchFellowsSummarySl: spyResolve,
       fetchFellowsSummaryTtl: spyResolve,
       fetchFellowsSummaryLf: spyResolve,
-      getEngineeringManagerTtls: spyResolve,
-      getSimulationsLeadLfs: spyResolve
+      getEmsSimsLeadsActions: spyResolve
     };
 
-    const wrapper = shallow(<EngineeringManagerDashboard {...props} />);
+    const wrapper = shallow(<EManagerSimsLeadsDashboard {...props} />);
 
     return {
       props,
@@ -103,7 +88,7 @@ describe('EngineeringDashboard component', () => {
 
     managerFellowSortInput.simulate(
       'change',
-      'lfFellowRatio',
+      'LOW_TO_HIGH',
       'Fellow Ratio, Low to High'
     );
     expect(wrapper.state().managerFellowSortRatio).toBe('LOW_TO_HIGH');
@@ -176,16 +161,16 @@ describe('EngineeringDashboard component', () => {
     expect(wrapper.state().showChart).toBe(false);
   });
 
-  it('should fetch ttls data when data is not in store', () => {
+  it('should fetch managees data when data is not in store', () => {
     const { wrapper, props } = setup();
-    wrapper.setProps({ ttls: [] });
+    wrapper.setProps({ managees: [] });
     wrapper.instance().componentDidMount();
-    expect(props.getEngineeringManagerTtls).toHaveBeenCalled();
+    expect(props.getEmsSimsLeadsActions).toHaveBeenCalled();
   });
 
   it('should fetch ems fellows summary data when data is not in store', () => {
     const { wrapper, props } = setup();
-    wrapper.setProps({ ttls: [] });
+    wrapper.setProps({ managees: [] });
     wrapper.instance().componentDidMount();
     expect(props.fetchFellowsSummaryEm).toHaveBeenCalled();
   });
@@ -201,11 +186,5 @@ describe('EngineeringDashboard component', () => {
     wrapper.instance().fellowMapOnClick();
     expect(fellowMapOnClickSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.state().show).toBe(true);
-  });
-
-  it('renders SimsLead dashboard when user role is WATCH_TOWER_SL ', () => {
-    const { wrapper, props } = setup('WATCH_TOWER_SL');
-    wrapper.instance().componentDidMount();
-    expect(props.getSimulationsLeadLfs).toHaveBeenCalled();
   });
 });

@@ -1,14 +1,14 @@
-import engineeringManagerTtlsReducer from '../engineeringManagerTtlsReducer';
+import emsSimsLeadsReducers from '../emsSimsLeadsReducers';
 import {
-  LOAD_ENGINEERING_MANAGER_TTLS_FAILURE,
-  LOAD_ENGINEERING_MANAGER_TTLS_REQUEST,
-  LOAD_ENGINEERING_MANAGER_TTLS_SUCCESS
-} from '../../constants/engineeringManagerTypes';
+  LOAD_EM_SIMSLEADS_FAILURE,
+  LOAD_EM_SIMSLEADS_REQUEST,
+  LOAD_EM_SIMSLEADS_SUCCESS
+} from '../../constants/emsSimsLeadsTypes';
 import initialState from '../initialState';
 
 it('should return the initial state for unknown action type', () => {
-  expect(engineeringManagerTtlsReducer(undefined, {})).toEqual(
-    initialState.engineeringManagerTtls
+  expect(emsSimsLeadsReducers(undefined, {})).toEqual(
+    initialState.engineeringManagerSimsLeads
   );
 });
 
@@ -18,9 +18,9 @@ it("should trigger loading to true when fetching engineering manager's data", ()
     data: [],
     error: null
   };
-  const action = { type: LOAD_ENGINEERING_MANAGER_TTLS_REQUEST };
+  const action = { type: LOAD_EM_SIMSLEADS_REQUEST };
   expect(
-    engineeringManagerTtlsReducer(initialState.engineeringManagerTtls, action)
+    emsSimsLeadsReducers(initialState.engineeringManagerSimsLeads, action)
   ).toEqual(newState);
 });
 
@@ -31,11 +31,11 @@ it("should add the error message on failing to fetch engineering manager's data"
     error: { message: 'failed to fetch' }
   };
   const action = {
-    type: LOAD_ENGINEERING_MANAGER_TTLS_FAILURE,
+    type: LOAD_EM_SIMSLEADS_FAILURE,
     error: { message: 'failed to fetch' }
   };
   expect(
-    engineeringManagerTtlsReducer(initialState.engineeringManagerTtls, action)
+    emsSimsLeadsReducers(initialState.engineeringManagerSimsLeads, action)
   ).toEqual(newState);
 });
 
@@ -57,7 +57,7 @@ it("should add fetched engineering manager's data to state on success", () => {
     error: null
   };
   const action = {
-    type: LOAD_ENGINEERING_MANAGER_TTLS_SUCCESS,
+    type: LOAD_EM_SIMSLEADS_SUCCESS,
     data: [
       {
         ttls: [
@@ -72,6 +72,6 @@ it("should add fetched engineering manager's data to state on success", () => {
     ]
   };
   expect(
-    engineeringManagerTtlsReducer(initialState.engineeringManagerTtls, action)
+    emsSimsLeadsReducers(initialState.engineeringManagerSimsLeads, action)
   ).toEqual(newState);
 });

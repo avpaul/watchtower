@@ -1626,34 +1626,10 @@ ShallowWrapper {
                             }
           }
 />,
-        <div
-          className="row map-card-row"
->
-          <DisplayCard
-                    displayContent={
-                              Object {
-                                        "averageValue": 22,
-                                        "subTitle": "Click to see details",
-                                        "text": "Average LF to Fellow ratio",
-                                        "title": "LF to FELLOW MAP",
-                                      }
-                    }
-                    id={0}
-                    onClick={[Function]}
-          />
-          <DisplayCard
-                    displayContent={
-                              Object {
-                                        "averageValue": 20,
-                                        "subTitle": "Click to see details",
-                                        "text": "Average TTL to Fellow ratio",
-                                        "title": "TTL to FELLOW MAP",
-                                      }
-                    }
-                    id={1}
-                    onClick={[Function]}
-          />
-</div>,
+        <FellowRatio
+          fellowMapOnClick={[Function]}
+          mapDisplayContent={[Function]}
+/>,
         false,
         <Connect(FellowsProgress) />,
       ],
@@ -1683,76 +1659,14 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <DisplayCard
-              displayContent={
-                            Object {
-                                          "averageValue": 22,
-                                          "subTitle": "Click to see details",
-                                          "text": "Average LF to Fellow ratio",
-                                          "title": "LF to FELLOW MAP",
-                                        }
-              }
-              id={0}
-              onClick={[Function]}
-/>,
-            <DisplayCard
-              displayContent={
-                            Object {
-                                          "averageValue": 20,
-                                          "subTitle": "Click to see details",
-                                          "text": "Average TTL to Fellow ratio",
-                                          "title": "TTL to FELLOW MAP",
-                                        }
-              }
-              id={1}
-              onClick={[Function]}
-/>,
-          ],
-          "className": "row map-card-row",
+          "fellowMapOnClick": [Function],
+          "mapDisplayContent": [Function],
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "LF to FELLOW MAP",
-            "nodeType": "function",
-            "props": Object {
-              "displayContent": Object {
-                "averageValue": 22,
-                "subTitle": "Click to see details",
-                "text": "Average LF to Fellow ratio",
-                "title": "LF to FELLOW MAP",
-              },
-              "id": 0,
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "TTL to FELLOW MAP",
-            "nodeType": "function",
-            "props": Object {
-              "displayContent": Object {
-                "averageValue": 20,
-                "subTitle": "Click to see details",
-                "text": "Average TTL to Fellow ratio",
-                "title": "TTL to FELLOW MAP",
-              },
-              "id": 1,
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
       false,
       Object {
@@ -1782,34 +1696,10 @@ ShallowWrapper {
                                   }
             }
 />,
-          <div
-            className="row map-card-row"
->
-            <DisplayCard
-                        displayContent={
-                                    Object {
-                                                "averageValue": 22,
-                                                "subTitle": "Click to see details",
-                                                "text": "Average LF to Fellow ratio",
-                                                "title": "LF to FELLOW MAP",
-                                              }
-                        }
-                        id={0}
-                        onClick={[Function]}
-            />
-            <DisplayCard
-                        displayContent={
-                                    Object {
-                                                "averageValue": 20,
-                                                "subTitle": "Click to see details",
-                                                "text": "Average TTL to Fellow ratio",
-                                                "title": "TTL to FELLOW MAP",
-                                              }
-                        }
-                        id={1}
-                        onClick={[Function]}
-            />
-</div>,
+          <FellowRatio
+            fellowMapOnClick={[Function]}
+            mapDisplayContent={[Function]}
+/>,
           false,
           <Connect(FellowsProgress) />,
         ],
@@ -1839,76 +1729,14 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <DisplayCard
-                displayContent={
-                                Object {
-                                                "averageValue": 22,
-                                                "subTitle": "Click to see details",
-                                                "text": "Average LF to Fellow ratio",
-                                                "title": "LF to FELLOW MAP",
-                                              }
-                }
-                id={0}
-                onClick={[Function]}
-/>,
-              <DisplayCard
-                displayContent={
-                                Object {
-                                                "averageValue": 20,
-                                                "subTitle": "Click to see details",
-                                                "text": "Average TTL to Fellow ratio",
-                                                "title": "TTL to FELLOW MAP",
-                                              }
-                }
-                id={1}
-                onClick={[Function]}
-/>,
-            ],
-            "className": "row map-card-row",
+            "fellowMapOnClick": [Function],
+            "mapDisplayContent": [Function],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "LF to FELLOW MAP",
-              "nodeType": "function",
-              "props": Object {
-                "displayContent": Object {
-                  "averageValue": 22,
-                  "subTitle": "Click to see details",
-                  "text": "Average LF to Fellow ratio",
-                  "title": "LF to FELLOW MAP",
-                },
-                "id": 0,
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "TTL to FELLOW MAP",
-              "nodeType": "function",
-              "props": Object {
-                "displayContent": Object {
-                  "averageValue": 20,
-                  "subTitle": "Click to see details",
-                  "text": "Average TTL to Fellow ratio",
-                  "title": "TTL to FELLOW MAP",
-                },
-                "id": 1,
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
         false,
         Object {

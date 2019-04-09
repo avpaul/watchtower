@@ -16,14 +16,13 @@ import fellowsSummary from './fellowsummary';
 import fellowNotificationReducer from './fellowNotificationReducer';
 import fellowUnreadNotificationReducer from './fellowUnreadNotificationReducer';
 import fellowReadNotificationReducer from './fellowReadNotificationReducer';
-import engineeringManagerTtlsReducer from './engineeringManagerTtlsReducer';
-import simulationsLeadLfsReducer from './simulationsLeadLfsReducer';
+import fellowLmsSubmissionsReducer from './fellowLmsSubmissionsReducer';
+import emsSimsLeadsReducers from './emsSimsLeadsReducers';
 import lfNotificationReducer from './lfNotificationReducer';
 import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
 import managerFellowsSummary from './ManagerFellowsSummaryReducer';
 import managersFeedbackReducer from './managerFeedbackReducer';
-import fellowLmsSubmissionsReducer from './fellowLmsSubmissionsReducer';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
 
 const rootReducer = combineReducers({
@@ -45,8 +44,7 @@ const rootReducer = combineReducers({
   fellowDevPulse: fellowDevPulseReducer,
   fellowLmsSubmissions: fellowLmsSubmissionsReducer,
   fellowsSummary,
-  engineeringManagerTtls: engineeringManagerTtlsReducer,
-  simulationsLeadLfs: simulationsLeadLfsReducer,
+  engineeringManagerSimsLeads: emsSimsLeadsReducers,
   lfNotification: lfNotificationReducer,
   ttlNotification: ttlNotificationReducer,
   updateManagerNotification,
