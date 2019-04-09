@@ -20,24 +20,18 @@ export const getFilterTooltips = filter => {
   return tooltipOptions[filter];
 };
 
-const getFellowCount = (data, filter) => {
-  let fc = [];
-  if (data) {
-    fc = data.map(elem => elem[filter]);
-  }
-  return fc;
-};
+const getFellowCount = (data, filter) =>
+  data ? data.map(elem => elem[filter]) : [];
 
-const FellowChartContainer = props => {
-  const {
-    loading,
-    data,
-    updateSelected,
-    user,
-    filter,
-    handleChartClose,
-    fellowChartTooltipClass
-  } = props;
+const FellowChartContainer = ({
+  loading,
+  data,
+  updateSelected,
+  user,
+  filter,
+  handleChartClose,
+  fellowChartTooltipClass
+}) => {
   const fc = getFellowCount(data, filter);
   const fellowChartTooltip = getFilterTooltips(filter);
 
@@ -61,10 +55,6 @@ const FellowChartContainer = props => {
 
 FellowChartContainer.propTypes = {
   handleChartClose: PropTypes.func.isRequired,
-  countSummary: PropTypes.shape({
-    'D0A Simulations': PropTypes.object,
-    'D0B Apprenticeship': PropTypes.object
-  }),
   fellowChartTooltipClass: PropTypes.instanceOf(Object),
   data: PropTypes.instanceOf(Array),
   updateSelected: PropTypes.func,
@@ -75,7 +65,6 @@ FellowChartContainer.propTypes = {
 
 FellowChartContainer.defaultProps = {
   filter: 'Total',
-  countSummary: {},
   fellowChartTooltipClass: { '--fellow-chart-tooltip': '13%' },
   data: null,
   updateSelected: () => {}

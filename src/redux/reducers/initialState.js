@@ -60,9 +60,9 @@ export default {
     ttls: [],
     error: null
   },
-  ttlProjects: {
+  manager: {
     loading: false,
-    projects: [],
+    data: [],
     error: null
   },
   locations: {

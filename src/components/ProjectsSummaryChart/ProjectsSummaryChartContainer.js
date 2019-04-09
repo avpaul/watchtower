@@ -1,17 +1,15 @@
 import { connect } from 'react-redux';
 import ProjectsSummaryChart from './ProjectsSummaryChart';
-import ttlProjectsActions from '../../redux/actionCreators/ttlProjectsActions';
-import { fetchFellowsSummaryTTLLFAction } from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
+import managerProfileActions from '../../redux/actionCreators/managerProfileActions';
+// import { fetchFellowsSummaryTTLLFAction } from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
 
-export const mapStateToProps = ({ fellowCountHistory, fellowsSummary }) => ({
-  fellowCountHistory,
-  fellowsSummary
+export const mapStateToProps = ({ manager }) => ({
+  manager
 });
 
 export default connect(
   mapStateToProps,
   {
-    fetchTtlProjects: ttlProjectsActions,
-    fetchFellowsSummaryTTLLF: fetchFellowsSummaryTTLLFAction
+    fetchManagerProfile: managerProfileActions
   }
 )(ProjectsSummaryChart);
