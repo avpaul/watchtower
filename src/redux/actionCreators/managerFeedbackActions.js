@@ -3,32 +3,12 @@ import errorHandler from '../../services/errorHandler';
 import * as types from '../constants/managerFeedbackActionTypes';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-const ttlEmail = process.env.REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL;
-const lfEmail = process.env.REACT_APP_DEFAULT_WATCHTOWER_LF_EMAIL;
-const simsLeadEmail =
-  process.env.REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL;
-const emEmail = process.env.REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL;
 
-const getManagerFeedback = (role, email) => dispatch => {
+const getManagerFeedback = () => dispatch => {
   dispatch({
     type: types.LOAD_FEEDBACK_REQUEST
   });
-  let requestUrl = `${serverURL}/api/v1/managers/feedback`;
-
-  if (role.WATCH_TOWER_TTL)
-    requestUrl = `${serverURL}/api/v1/managers/feedback?email=${ttlEmail ||
-      email}`;
-  if (role.WATCH_TOWER_LF)
-    requestUrl = `${serverURL}/api/v1/managers/feedback?email=${lfEmail ||
-      email}`;
-
-  if (role.WATCH_TOWER_SL)
-    requestUrl = `${serverURL}/api/v1/simulationsLeads/feedback?email=${simsLeadEmail ||
-      email}`;
-
-  if (role.WATCH_TOWER_EM)
-    requestUrl = `${serverURL}/api/v1/engineeringmanagers/feedback?email=${emEmail ||
-      email}`;
+  const requestUrl = `${serverURL}/api/v2/managers/feedback`;
 
   return axios
     .get(requestUrl)
