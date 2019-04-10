@@ -7,7 +7,7 @@ import Row from '../../TableComponents/Row';
 import './DashboardRow.css';
 
 const DashboardRow = ({ fellow, fellowCells }) => (
-  <Row key={fellow.id}>
+  <Row key={fellow.fellow_id}>
     {fellowCells.map(element => (
       <Cell
         addedClass={element.color || 'default'}
@@ -22,7 +22,7 @@ const DashboardRow = ({ fellow, fellowCells }) => (
 
 DashboardRow.propTypes = {
   fellow: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    fellow_id: PropTypes.string.isRequired,
     level: PropTypes.string.isRequired,
     quantity: PropTypes.oneOfType([
       PropTypes.string.isRequired,

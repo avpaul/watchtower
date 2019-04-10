@@ -66,4 +66,11 @@ describe('Dashboard Table ', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('renders table cell values', () => {
+    const wrapper = shallow(<DashboardTable {...props} />);
+    wrapper.setState({ sortBy: 'weeksSpent' });
+    wrapper.instance().sortFellows();
+    expect(wrapper.state('sortBy')).toBe('weeksSpent');
+  });
 });

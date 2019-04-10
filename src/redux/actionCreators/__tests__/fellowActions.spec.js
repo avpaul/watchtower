@@ -13,7 +13,7 @@ const filter = ALL;
 
 describe('Fellow Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/fellows`;
+  const baseURL = `${serverURL}/api/v2/fellows`;
   const perPage = 25;
   const page = 1;
   const level = 'all';
@@ -37,7 +37,7 @@ describe('Fellow Actions', () => {
 
   it('dispatches FELLOW_REQUEST and FELLOW_SUCCESS on successfully fetching fellows', () => {
     const data = {
-      payload: fellows,
+      data: fellows,
       summary,
       ...pagination
     };
@@ -63,7 +63,7 @@ describe('Fellow Actions', () => {
 
   it('dispatches expected actions when called with search parameter', () => {
     const data = {
-      payload: fellows,
+      data: fellows,
       summary,
       ...pagination
     };
@@ -90,7 +90,7 @@ describe('Fellow Actions', () => {
 
   it('dispatches expected actions when called with url parameter', () => {
     const data = {
-      payload: fellows,
+      data: fellows,
       summary,
       ...pagination
     };

@@ -230,7 +230,7 @@ export class DashboardPage extends Component {
 }
 
 DashboardPage.defaultProps = {
-  summary: { onTrack: 0, gteWk5OffTrack: 0, ltWk5OffTrack: 0 },
+  summary: { fellowsofftrack: 0, fellowsontrack: 0, gteWk5OffTrack: 0 },
   error: ''
 };
 

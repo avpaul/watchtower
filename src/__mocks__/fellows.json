@@ -1,6 +1,6 @@
 [
   {
-    "id": "AND/F/001",
+    "fellow_id": "AND/F/001",
     "firstName": "Mathilda",
     "lastName": "West",
     "level": "D0A Simulations",
@@ -20,7 +20,7 @@
     "weeksSpent": 12
   },
   {
-    "id": "AND/F/002",
+    "fellow_id": "AND/F/002",
     "firstName": "Mittie",
     "lastName": "Bowers",
     "level": "D0B Apprenticeships",
@@ -32,7 +32,7 @@
     "integration": 0
   },
   {
-    "id": "AND/F/003",
+    "fellow_id": "AND/F/003",
     "firstName": "Adekunle",
     "lastName": "Gold",
     "level": "D0B Apprenticeships",
@@ -44,7 +44,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/004",
+    "fellow_id": "AND/F/004",
     "firstName": "Hallie",
     "lastName": "James",
     "level": "D0A Simulations",
@@ -56,7 +56,7 @@
     "integration": 0
   },
   {
-    "id": "AND/F/005",
+    "fellow_id": "AND/F/005",
     "firstName": "Estella",
     "lastName": "Graves",
     "level": "D0A Simulations",
@@ -68,7 +68,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/006",
+    "fellow_id": "AND/F/006",
     "firstName": "Genevieve",
     "lastName": "Black",
     "level": "D0B Apprenticeships",
@@ -80,7 +80,7 @@
     "integration": 0
   },
   {
-    "id": "AND/F/007",
+    "fellow_id": "AND/F/007",
     "firstName": "Gavin",
     "lastName": "Berry",
     "level": "D0A Simulations",
@@ -92,7 +92,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/008",
+    "fellow_id": "AND/F/008",
     "firstName": "Tonny",
     "lastName": "Gibbs",
     "level": "D0B Apprenticeships",
@@ -104,7 +104,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/009",
+    "fellow_id": "AND/F/009",
     "firstName": "Chase",
     "lastName": "Wright",
     "level": "D0B Apprenticeships",
@@ -116,7 +116,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/010",
+    "fellow_id": "AND/F/010",
     "firstName": "Hallie",
     "lastName": "Sullivan",
     "level": "D0A Simulations",
@@ -128,7 +128,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/011",
+    "fellow_id": "AND/F/011",
     "firstName": "Hallie",
     "lastName": "Sullivan",
     "level": "D0A Simulations",
@@ -140,7 +140,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/012",
+    "fellow_id": "AND/F/012",
     "firstName": "Hallie",
     "lastName": "Sullivan",
     "level": "D0A Simulations",
@@ -152,7 +152,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/013",
+    "fellow_id": "AND/F/013",
     "firstName": "Hallie",
     "lastName": "Sullivan",
     "level": "D0A Simulations",
@@ -164,7 +164,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/014",
+    "fellow_id": "AND/F/014",
     "firstName": "Hallie",
     "lastName": "Sullivan",
     "level": "D0A Simulations",
@@ -176,7 +176,7 @@
     "integration": 1
   },
   {
-    "id": "AND/F/015",
+    "fellow_id": "AND/F/015",
     "firstName": "Hallie",
     "lastName": "Sullivan",
     "level": "D0A Simulations",

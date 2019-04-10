@@ -101,7 +101,7 @@ class DashboardTable extends Component {
           {this.renderTableHeaders()}
           {this.sortFellows().map(fellow => (
             <DashboardRow
-              key={fellow.id}
+              key={fellow.fellow_id}
               fellow={fellow}
               fellowCells={this.fellowCells(fellow)}
             />
