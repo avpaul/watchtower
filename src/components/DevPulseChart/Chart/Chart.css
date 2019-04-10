@@ -9,3 +9,7 @@
 ul.recharts-default-legend {
   white-space: nowrap !important;
 }
+
+span.recharts-tooltip-item-name {
+  text-transform: capitalize;
+}
