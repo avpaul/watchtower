@@ -72,7 +72,7 @@ ShallowWrapper {
                               2018-12-15
                     </RenderItem>
                     <RenderItem
-                              title="End Date"
+                              title="Estimated End Date"
                     >
                               2019-03-11
                     </RenderItem>
@@ -117,7 +117,7 @@ ShallowWrapper {
                         2018-12-15
             </RenderItem>
             <RenderItem
-                        title="End Date"
+                        title="Estimated End Date"
             >
                         2019-03-11
             </RenderItem>
@@ -150,7 +150,7 @@ ShallowWrapper {
                 2018-12-15
 </RenderItem>,
               <RenderItem
-                title="End Date"
+                title="Estimated End Date"
 >
                 2019-03-11
 </RenderItem>,
@@ -200,7 +200,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "2019-03-11",
-                "title": "End Date",
+                "title": "Estimated End Date",
               },
               "ref": null,
               "rendered": "2019-03-11",
@@ -249,7 +249,7 @@ ShallowWrapper {
                                     2018-12-15
                         </RenderItem>
                         <RenderItem
-                                    title="End Date"
+                                    title="Estimated End Date"
                         >
                                     2019-03-11
                         </RenderItem>
@@ -294,7 +294,7 @@ ShallowWrapper {
                             2018-12-15
               </RenderItem>
               <RenderItem
-                            title="End Date"
+                            title="Estimated End Date"
               >
                             2019-03-11
               </RenderItem>
@@ -327,7 +327,7 @@ ShallowWrapper {
                   2018-12-15
 </RenderItem>,
                 <RenderItem
-                  title="End Date"
+                  title="Estimated End Date"
 >
                   2019-03-11
 </RenderItem>,
@@ -377,7 +377,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "2019-03-11",
-                  "title": "End Date",
+                  "title": "Estimated End Date",
                 },
                 "ref": null,
                 "rendered": "2019-03-11",

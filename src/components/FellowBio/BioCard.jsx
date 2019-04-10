@@ -11,7 +11,7 @@ const renderBioDetails = fellow => (
       {fellow.details.actualApprenticeshipStartDate ||
         fellow.details.simulationStartDate}
     </RenderItem>
-    <RenderItem title="End Date">
+    <RenderItem title="Estimated End Date">
       {fellow.details.expectedApprenticeshipCompletionDate ||
         fellow.details.expectedSimulationsCompletionDate}
     </RenderItem>
