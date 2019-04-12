@@ -25,7 +25,7 @@
 }
 
 .feedback-calendar {
-  height: 277px;
+  height: 300px;
   width: 301px;
   border-radius: 4px;
   background-color: #ffffff;
@@ -86,4 +86,8 @@
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   height: 100%;
+}
+
+.label-input {
+  display: none;
 }

@@ -45,7 +45,7 @@ class SearchBar extends Component {
             name="fellow_search"
             value={search}
             onChange={handleSearchChange}
-            placeholder="Search the Table"
+            placeholder="Search The Table"
           />
           {this.renderSearchButton()}
         </div>
