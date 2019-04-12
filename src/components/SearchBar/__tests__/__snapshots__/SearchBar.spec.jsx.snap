@@ -47,7 +47,7 @@ ShallowWrapper {
                         onBlur={undefined}
                         onChange={[Function]}
                         onKeyDown={undefined}
-                        placeholder="Search the Table"
+                        placeholder="Search The Table"
                         type="search"
                         value=""
                 />
@@ -93,7 +93,7 @@ ShallowWrapper {
                         onBlur={undefined}
                         onChange={[Function]}
                         onKeyDown={undefined}
-                        placeholder="Search the Table"
+                        placeholder="Search The Table"
                         type="search"
                         value=""
             />
@@ -147,7 +147,7 @@ ShallowWrapper {
                 onBlur={undefined}
                 onChange={[Function]}
                 onKeyDown={undefined}
-                placeholder="Search the Table"
+                placeholder="Search The Table"
                 type="search"
                 value=""
 />,
@@ -186,7 +186,7 @@ ShallowWrapper {
                 "onBlur": undefined,
                 "onChange": [Function],
                 "onKeyDown": undefined,
-                "placeholder": "Search the Table",
+                "placeholder": "Search The Table",
                 "type": "search",
                 "value": "",
               },
@@ -277,7 +277,7 @@ ShallowWrapper {
                               onBlur={undefined}
                               onChange={[Function]}
                               onKeyDown={undefined}
-                              placeholder="Search the Table"
+                              placeholder="Search The Table"
                               type="search"
                               value=""
                     />
@@ -323,7 +323,7 @@ ShallowWrapper {
                             onBlur={undefined}
                             onChange={[Function]}
                             onKeyDown={undefined}
-                            placeholder="Search the Table"
+                            placeholder="Search The Table"
                             type="search"
                             value=""
               />
@@ -377,7 +377,7 @@ ShallowWrapper {
                   onBlur={undefined}
                   onChange={[Function]}
                   onKeyDown={undefined}
-                  placeholder="Search the Table"
+                  placeholder="Search The Table"
                   type="search"
                   value=""
 />,
@@ -416,7 +416,7 @@ ShallowWrapper {
                   "onBlur": undefined,
                   "onChange": [Function],
                   "onKeyDown": undefined,
-                  "placeholder": "Search the Table",
+                  "placeholder": "Search The Table",
                   "type": "search",
                   "value": "",
                 },

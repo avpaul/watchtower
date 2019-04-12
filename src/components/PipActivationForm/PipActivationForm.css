@@ -194,7 +194,7 @@
 .input-group-apend {
   text-align: left;
   position: absolute;
-  z-index: 50;
+  z-index: 0;
   right: 0;
   height: 100%;
 }

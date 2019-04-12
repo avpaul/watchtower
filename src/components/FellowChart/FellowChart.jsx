@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import RadioCard from './RadioCard/RadioCard';
 import Chart from './Chart/Chart';
 import './FellowChart.css';
 
@@ -20,19 +19,6 @@ class FellowChart extends Component {
     updateSelected(selected);
   };
 
-  renderRadioCard = () => {
-    const { selected } = this.state;
-    const { radioCardOptions } = this.props;
-    return radioCardOptions.map(entry => (
-      <RadioCard
-        key={entry.value}
-        handleRadioClick={this.handleRadioClick}
-        current={selected}
-        {...entry}
-      />
-    ));
-  };
-
   renderCloseButton = () => {
     const { handleChartClose } = this.props;
     return (
@@ -49,12 +35,7 @@ class FellowChart extends Component {
 
   render() {
     const { selected } = this.state;
-    const {
-      fellowsCount,
-      radioCardOptions,
-      fellowChartTooltip,
-      user
-    } = this.props;
+    const { fellowsCount, radioCardOptions, fellowChartTooltip } = this.props;
 
     const title = radioCardOptions.find(({ value }) => value === selected).name;
     return (
@@ -62,9 +43,6 @@ class FellowChart extends Component {
         <div className="base" style={fellowChartTooltip} />
         <div className="fellow-chart">
           {this.renderCloseButton()}
-          {!user.roles.WATCH_TOWER_EM &&
-            !user.roles.WATCH_TOWER_SL &&
-            this.renderRadioCard()}
           <Chart data={fellowsCount} title={title} />
         </div>
       </div>

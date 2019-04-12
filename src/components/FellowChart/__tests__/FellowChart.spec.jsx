@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import fellowsCount from '../../../__mocks__/fellowsCount.json';
-import RadioCard from '../RadioCard/RadioCard';
 
 import FellowChart from '../FellowChart';
 
@@ -76,5 +75,5 @@ it('changes the display when the radio button is clicked', () => {
 });
 it('shows the correct number of radio cards', () => {
   const { wrapper } = setup2();
-  expect(wrapper.find(RadioCard)).toHaveLength(radioCardOptions.length);
+  expect(wrapper).toMatchSnapshot();
 });

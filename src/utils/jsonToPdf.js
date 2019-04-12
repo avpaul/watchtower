@@ -1,16 +1,24 @@
 import * as JsPDF from 'jspdf';
 import moment from 'moment';
+import translatorTable from './TranslatorTable';
+
+const formatValue = (field, value) =>
+  field === 'lmsStatus' || field === 'devPulseStatus'
+    ? translatorTable[value] || 'N/A'
+    : value;
 
 const rowsAndDoc = (downloadFellows, cellValues) => {
   const rows = downloadFellows.map(fellow => {
     const row = [];
     cellValues.forEach(field => {
-      if (field === 'name') {
-        row.push(`${fellow.name}`);
+      if (field === 'advanceStatus') {
+        row.push(`${fellow.overall_status || 'N/A'}`);
       } else if (field === 'ttlName') {
-        row.push(`${fellow.managerName}`);
+        row.push(`${fellow.managerName || 'N/A'}`);
       } else {
-        row.push(`${fellow[field]}`);
+        const formatedValue = formatValue(field, fellow[field]);
+
+        row.push(`${formatedValue}`);
       }
     });
     return row;

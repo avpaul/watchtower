@@ -115,7 +115,7 @@ export class FellowsProgress extends Component {
     const fellowDataLoading = fellowsProgress.loading;
     return (
       <div className="fellow_progress">
-        <h2 className="fellow_progress__title"> FELLOW’S PROGRESS BAR </h2>
+        <h2 className="fellow_progress__title"> FELLOWS PROGRESS BAR </h2>
         <div className="filters">
           {this.renderFilters(
             locationsAll,
