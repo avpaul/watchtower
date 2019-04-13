@@ -61,8 +61,8 @@ const table = {
       'weeksSpent',
       'ttlName',
       'lmsStatus',
-      'lmsOutputs',
-      'lmsOutputsGt2'
+      'submitted',
+      'satisfied'
     ]
   },
   allCriteriaAndPipStatus: {

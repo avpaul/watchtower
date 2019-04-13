@@ -10,9 +10,11 @@ import SortButtons from '../SortButtons';
 describe('Dashboard Table ', () => {
   const props = {
     fellows,
+    fellowsToDisplay: fellows,
     loading: false,
     headers: table.default.titles,
-    cellValues: table.default.cells
+    cellValues: table.default.cells,
+    handleSortingChange: jest.fn()
   };
 
   const getEvent = isAscending => ({
@@ -31,7 +33,7 @@ describe('Dashboard Table ', () => {
   });
 
   it('renders ErrorMessage when no fellows and is not fetching fellows', () => {
-    const newProps = { ...props, fellows: [] };
+    const newProps = { ...props, fellows: [], fellowsToDisplay: [] };
     const wrapper = shallow(<DashboardTable {...newProps} />);
 
     expect(
@@ -46,8 +48,8 @@ describe('Dashboard Table ', () => {
     const arrowDownEvent = getEvent(false);
 
     const wrapper = shallow(<DashboardTable {...props} />);
-    wrapper.instance().arrowClick(arrowUpEvent);
     expect(wrapper).toMatchSnapshot();
+    wrapper.instance().arrowClick(arrowUpEvent);
     expect(wrapper.state('sortBy')).toBe('name');
     wrapper.instance().arrowClick(arrowDownEvent);
     expect(wrapper.state('sortType')).toBe('descending');

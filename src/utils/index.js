@@ -1,5 +1,6 @@
 import React from 'react';
 import NavArrow from '../components/Carousel/NavArrow';
+import TranslatorTable from './TranslatorTable';
 
 const truncate = (str, length) => {
   const dots = str.length > length ? '...' : '';
@@ -34,6 +35,24 @@ export const carouselOptions = (numDefaultSlides, style) => {
     ]
   };
   return options;
+};
+
+export const setColor = value => {
+  if (value < 1 || value === 'Off Track' || value === 'On PIP')
+    return 'off-track';
+  if (value === 'N/A') return 'no-track';
+  return null;
+};
+
+export const displayCellContent = (key, value) => {
+  const useTranslatorTable =
+    key === 'devPulseStatus' || key === 'lmsStatus' || key === 'advanceStatus';
+  const newValue = useTranslatorTable ? TranslatorTable[value] : value;
+  return {
+    key,
+    value: value ? newValue : 'N/A',
+    color: value ? setColor(newValue) : 'no-track'
+  };
 };
 
 export default truncate;

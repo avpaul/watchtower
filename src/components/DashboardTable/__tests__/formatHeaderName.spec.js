@@ -1,16 +1,16 @@
-import formatformatHeaderName from '../formatHeaderName';
+import getColumnAttribute from '../Helpers';
 
-describe('FormatHeaderName tests', () => {
+describe('Get Column Attribute tests', () => {
   it('should render header name appropriately', () => {
-    expect(formatformatHeaderName('Communication')).toBe('communication');
-    expect(formatformatHeaderName('Initiative')).toBe('initiative');
-    expect(formatformatHeaderName('Integration')).toBe('integration');
-    expect(formatformatHeaderName('Professionalism')).toBe('professionalism');
-    expect(formatformatHeaderName('Quality')).toBe('quality');
-    expect(formatformatHeaderName('Quantity')).toBe('quantity');
-    expect(formatformatHeaderName('Status')).toBe('lmsStatus');
-    expect(formatformatHeaderName('LMS Outputs')).toBe('lmsOutputs');
-    expect(formatformatHeaderName('LMS Outputs > 2')).toBe('lmsOutput');
-    expect(formatformatHeaderName()).toBe('firstName');
+    expect(getColumnAttribute('Communication')).toBe('communication');
+    expect(getColumnAttribute('Initiative')).toBe('initiative');
+    expect(getColumnAttribute('Integration')).toBe('integration');
+    expect(getColumnAttribute('Professionalism')).toBe('professionalism');
+    expect(getColumnAttribute('Quality')).toBe('quality');
+    expect(getColumnAttribute('Quantity')).toBe('quantity');
+    expect(getColumnAttribute('Status')).toBe('lmsStatus');
+    expect(getColumnAttribute('LMS Outputs')).toBe('submitted');
+    expect(getColumnAttribute('LMS Outputs > 2')).toBe('satisfied');
+    expect(getColumnAttribute()).toBe('name');
   });
 });

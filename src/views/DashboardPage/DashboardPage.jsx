@@ -11,13 +11,15 @@ import './index.css';
 import Filters from './Filters/Filters';
 import FilterButton from '../../components/Buttons/Button';
 import table from './tableHeaders';
+
 import {
   getCriteriaFilterValues,
   getStatusFilterValues,
   clearFilters,
   defaultState,
   defaultPropTypes,
-  filterFellows
+  filterFellows,
+  formatFellows
 } from './filterValues';
 import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
 
@@ -28,7 +30,10 @@ import PaginationFrontendWrapper from '../../components/Pagination/PaginationWra
 export class DashboardPage extends Component {
   constructor(props) {
     super(props);
-    this.state = defaultState(table);
+    this.state = {
+      fellows: [],
+      ...defaultState(table)
+    };
   }
 
   componentDidMount() {
@@ -39,19 +44,18 @@ export class DashboardPage extends Component {
   componentDidUpdate(prevProps) {
     const { fellows } = this.props;
     if (prevProps.fellows && prevProps.fellows !== fellows)
-      this.updateFellows(fellows);
+      this.updateFellows(formatFellows(fellows));
   }
 
   updateFellows = fellows => {
     const { paginationWrapper } = this.props;
-    this.setState({ filteredFellows: fellows }, () =>
+    this.setState({ filteredFellows: fellows, fellows }, () =>
       paginationWrapper.updateData(fellows)
     );
   };
 
   filterFellows = () => {
-    const { search, level, criteria, statusType, status } = this.state;
-    const { fellows } = this.props;
+    const { search, level, criteria, statusType, status, fellows } = this.state;
     const filters = { search, level, statusType, criteria, status };
     this.updateFellows(filterFellows(fellows, filters));
   };
@@ -199,7 +203,7 @@ export class DashboardPage extends Component {
         state: { paginatedData }
       }
     } = this.props;
-    const { headers, cellKeys } = this.state;
+    const { headers, cellKeys, filteredFellows } = this.state;
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
@@ -208,9 +212,11 @@ export class DashboardPage extends Component {
           {this.renderResultCount()}
           <DashboardTable
             headers={headers}
-            fellows={paginatedData}
+            fellows={filteredFellows}
+            fellowsToDisplay={paginatedData}
             loading={loading}
             cellValues={cellKeys}
+            handleSortingChange={this.updateFellows}
           />
         </Fragment>
       </ErrorBoundary>

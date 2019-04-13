@@ -21,7 +21,7 @@ import emsSimsLeadsReducers from './emsSimsLeadsReducers';
 import lfNotificationReducer from './lfNotificationReducer';
 import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
-import managerFellowsSummary from './ManagerFellowsSummaryReducer';
+import managerFellowsSummary from './managerFellowsSummaryReducer';
 import managersFeedbackReducer from './managerFeedbackReducer';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
 
