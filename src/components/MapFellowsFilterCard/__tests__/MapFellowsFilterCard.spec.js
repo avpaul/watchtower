@@ -34,13 +34,13 @@ describe('MapFellowsFilterCard tests', () => {
     );
     expect(mapFellowsFilterCardWrapper).toMatchSnapshot();
   });
-  it('should render 3 fellow filter cards when only one product is available ', () => {
+  it('should render 2 fellow filter cards when only one product is available ', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'project',
       { project: 'All Products', status: 'All Fellows' }
     );
-    expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(3);
+    expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(2);
   });
   it('should always render 4 fellow filter cards when displaying fellows status', () => {
     const { mapFellowsFilterCardWrapper } = setup(
@@ -50,7 +50,7 @@ describe('MapFellowsFilterCard tests', () => {
     );
     expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(4);
   });
-  it('should render total number of fellows under all products to be 8', () => {
+  it('should render total number of fellows under all products to be 6', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'status',
@@ -67,9 +67,9 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .first()
         .props().numberOfFellows
-    ).toBe(8);
+    ).toBe(6);
   });
-  it('should render total number of fellows on track to be 4', () => {
+  it('should render total number of fellows on track to be 2', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'status',
@@ -86,7 +86,7 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(1)
         .props().numberOfFellows
-    ).toBe(4);
+    ).toBe(2);
   });
   it('should render total number of fellows off track to be 3', () => {
     const { mapFellowsFilterCardWrapper } = setup(
@@ -124,6 +124,6 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(3)
         .props().numberOfFellows
-    ).toBe(0);
+    ).toBe(1);
   });
 });

@@ -3,46 +3,23 @@ import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
 import Cell from '../../TableComponents/Cell';
 import Row from '../../TableComponents/Row';
+import { formatRating } from '../../../utils/pulse';
 
-const formatRating = (rating, counter) => {
-  const formatedRating = {};
-  rating.scores.forEach(score => {
-    const { attribute } = score;
-    const criteria = [
-      'Quantity',
-      'Quality',
-      'Communication',
-      'Professionalism',
-      'Integration',
-      'Initiative'
-    ];
-    Object.assign(formatedRating, { Week: `Week ${counter}` });
-    if (criteria.includes(attribute)) {
-      Object.assign(formatedRating, { [attribute]: score.score });
-    }
-  });
-  return formatedRating;
-};
-
-const DevPulseRow = ({ rating, counter }) => {
-  const scores = formatRating(rating, counter);
-  return (
-    <Row>
-      {Object.keys(scores).map(key => (
-        <Cell
-          key={arrayKey({ key })}
-          addedClass={scores[key] < 1 ? 'text-danger' : null}
-        >
-          {scores[key]}
-        </Cell>
-      ))}
-    </Row>
-  );
-};
+const DevPulseRow = ({ rating }) => (
+  <Row>
+    {Object.keys(formatRating(rating)).map(key => (
+      <Cell
+        key={arrayKey({ key })}
+        addedClass={formatRating(rating)[key] < 1 ? 'text-danger' : null}
+      >
+        {formatRating(rating)[key]}
+      </Cell>
+    ))}
+  </Row>
+);
 
 DevPulseRow.propTypes = {
-  rating: PropTypes.shape({}).isRequired,
-  counter: PropTypes.number.isRequired
+  rating: PropTypes.shape({}).isRequired
 };
 
 export default DevPulseRow;

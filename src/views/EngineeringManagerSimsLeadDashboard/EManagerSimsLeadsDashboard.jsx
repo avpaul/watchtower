@@ -35,13 +35,16 @@ class EManagerSimsLeadsDashboard extends Component {
       user,
       role
     } = this.props;
-    getEmsSimsLeadsActions().then(data => {
-      if (!data.error && data.data) {
-        const { managees, avaerageFellows, totalFellows } = data.data;
-
+    getEmsSimsLeadsActions().then(managerData => {
+      if (!managerData.error) {
+        const {
+          data,
+          averageFellowsPerManager,
+          totalFellows
+        } = managerData.data;
         this.setState({
-          managees,
-          averageFellows: avaerageFellows,
+          managees: data,
+          averageFellows: averageFellowsPerManager,
           totalFellows,
           isEngineeringManager: role === 'WATCH_TOWER_EM'
         });
@@ -69,16 +72,16 @@ class EManagerSimsLeadsDashboard extends Component {
       }
     ];
     managersArray.forEach(manager => {
-      const ttlsName = manager.name;
-      const lfEmail = manager.email;
-      const id = manager.role === 'TTL' ? ttlsName : lfEmail;
-      const { role } = manager;
-      const name = ttlsName.split(' ');
+      const id = manager.managerName;
+      const { managerRole } = manager;
+      const name = `${manager.managerName}`.split(' ');
       const content = {
         id,
-        title: role.concat(' - ').concat(name[0], ' ', name[1].substring(1, 0)),
+        title: managerRole
+          .concat(' - ')
+          .concat(name[0], ' ', name[1].substring(1, 0)),
         subTitle: 'Click to see details',
-        totalFellows: manager.fellows_count
+        totalFellows: manager.fellowsCount
       };
       displayList.push(content);
     });

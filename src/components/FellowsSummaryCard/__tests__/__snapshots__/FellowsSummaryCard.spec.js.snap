@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <FellowsSummaryCard
     devPulseAverage="1.04"
     ending="2019-01-16"
-    id={1}
+    id="1"
     level="D0B Apprenticeship"
     lmsOutput="4/18"
     lmsOutputs={undefined}
@@ -145,7 +145,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "fellow-summary-card",
-      "id": 1,
+      "id": "1",
       "onClick": [Function],
       "onKeyPress": [Function],
       "role": "button",
@@ -782,7 +782,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "fellow-summary-card",
-        "id": 1,
+        "id": "1",
         "onClick": [Function],
         "onKeyPress": [Function],
         "role": "button",
@@ -1325,7 +1325,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <FellowsSummaryCard
     devPulseAverage="1.04"
     ending="2019-01-16"
-    id={1}
+    id="1"
     level="D0B Apprenticeship"
     lmsOutput="4/18"
     lmsOutputs={undefined}
@@ -1464,7 +1464,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "fellow-summary-card",
-      "id": 1,
+      "id": "1",
       "onClick": [Function],
       "onKeyPress": [Function],
       "role": "button",
@@ -2101,7 +2101,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "fellow-summary-card",
-        "id": 1,
+        "id": "1",
         "onClick": [Function],
         "onKeyPress": [Function],
         "role": "button",
@@ -2644,7 +2644,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <FellowsSummaryCard
     devPulseAverage="1.04"
     ending="2019-01-16"
-    id={1}
+    id="1"
     level="D0B Apprenticeship"
     lmsOutput="4/18"
     lmsOutputs={undefined}
@@ -2783,7 +2783,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "fellow-summary-card",
-      "id": 1,
+      "id": "1",
       "onClick": [Function],
       "onKeyPress": [Function],
       "role": "button",
@@ -3420,7 +3420,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "fellow-summary-card",
-        "id": 1,
+        "id": "1",
         "onClick": [Function],
         "onKeyPress": [Function],
         "role": "button",

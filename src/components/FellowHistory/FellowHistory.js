@@ -5,12 +5,12 @@ import { withRouter } from 'react-router';
 import { Switch, Route } from 'react-router-dom';
 import HistoryCard from './FellowHistoryCard';
 import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
-import fetchFellowData from '../../redux/actionCreators/fellowDevPulseActions';
 import PipActivationForm from '../PipActivationForm/PipActivationForm';
 import './FellowHistory.css';
 import DevPulseTable from '../DevPulseTable';
+import getFellowData from '../../redux/actionCreators/fellowProfileDataActions';
 import LmsTable from '../LmsTable';
-import { roundOff } from '../../utils/index';
+import { formatRollingAveragePerAttribute } from '../../utils/pulse';
 
 export class FellowHistory extends Component {
   constructor(props) {
@@ -40,22 +40,14 @@ export class FellowHistory extends Component {
    ** then sets it to the state.
    */
   setFellow() {
-    const {
-      match,
-      fellowSummaryDetails,
-      history,
-      getFellowHistoryData
-    } = this.props;
+    const { match, fellowSummaryDetails, history, getFellow } = this.props;
     const fellowFound = fellowSummaryDetails.find(
-      fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
+      fellow => fellow.fellow_id === match.params.id
     );
-    if (fellowFound !== undefined) {
-      getFellowHistoryData(fellowFound.fellow_id);
-    } else {
-      history.push('/developers');
-    }
 
-    this.setState({ fellow: fellowFound, updated: true });
+    if (!fellowFound) return history.push('/developers');
+    getFellow(fellowFound.fellow_id || match.params.id);
+    return this.setState({ fellow: fellowFound, updated: true });
   }
 
   mapDisplayslistData = fellow => {
@@ -64,18 +56,16 @@ export class FellowHistory extends Component {
       {
         checkedBydefault: showDevpulseTable,
         title: 'DevPulse',
-        ratings:
-          fellow.overall_status === 'N/A'
-            ? fellow.overall_status
-            : roundOff(fellow.overall_average, 2)
+        ratings: !fellow.overall_average
+          ? 'N/A'
+          : fellow.overall_average.substr(0, 4)
       },
       {
         checkedBydefault: showLmsTable,
         title: 'LMS',
-        ratings:
-          fellow.submitted && fellow.total
-            ? `${fellow.submitted}/${fellow.total}`
-            : 'N/A'
+        ratings: fellow.satisfied
+          ? `${fellow.satisfied}/${fellow.total}`
+          : 'N/A'
       }
     ];
     return fellowsListDisplayData;
@@ -88,16 +78,15 @@ export class FellowHistory extends Component {
    * @param fellow The fellow's bio details
    * @returns JSX object
    */
-  renderManagerCard = fellow => {
-    if (!fellow) return <div />;
-
+  renderManagerCard = (manager, fellow) => {
+    if (!manager) return <div />;
     return (
       <div className="col-md-6 col-xl-3 mb-3">
         <HistoryCard
           user={{
-            name: fellow.managerName,
-            picture: '',
-            detail: `${fellow.name}'s ${fellow.managerRole}`
+            name: `${manager.managerName}`,
+            picture: manager.picture,
+            detail: `${`${fellow.name}`.split(' ')[0]}'s ${manager.managerRole}`
           }}
         />
       </div>
@@ -111,19 +100,20 @@ export class FellowHistory extends Component {
    * @returns JSX object
    */
   renderCards = fellow => {
-    if (!fellow) return <div />;
+    if (!fellow || !fellow.project) return <div />;
+
     return (
       <React.Fragment>
         <div className="col-md-6 col-xl-3 mb-3">
           <HistoryCard
             user={{
-              name: fellow.name,
+              name: `${fellow.name}`,
               picture: fellow.picture,
               detail: fellow.apprenticeshipTeam
             }}
           />
         </div>
-        {this.renderManagerCard(fellow)}
+        {this.renderManagerCard(fellow.manager, fellow)}
 
         <div className="col-xl-6 mt-3 mt-xl-0">
           <FellowSummaryBreakdown
@@ -157,35 +147,27 @@ export class FellowHistory extends Component {
   renderPipActivationForm = () => {
     const { history } = this.props;
     const { fellow } = this.state;
-    const name = fellow.email.substr(0, fellow.email.search('@andela.com'));
-    history.push(`/developers/pip/activation/${name}`);
+    history.push(`/developers/pip/activation/${fellow.fellow_id}`);
   };
 
   renderTables = () => {
-    const { ratings, ratingsLoading, lmsSubmissions } = this.props;
+    const { fellowDetails, fellowDetailsLoading } = this.props;
     const { showDevpulseTable, showLmsTable, fellow } = this.state;
-    let fellowCurrentLevel;
-    if (fellow && Object.keys(fellow).length > 0) {
-      fellowCurrentLevel = fellow.level;
-    }
-    const currentRatings = ratings
-      ? ratings.filter(rating => rating.level === fellowCurrentLevel)
-      : [];
-    const currentLms = lmsSubmissions
-      ? lmsSubmissions.filter(lms => lms.level === fellowCurrentLevel)
-      : [];
-
     return (
       <div className="col-12 mt-5">
         {showDevpulseTable && (
           <DevPulseTable
-            loading={ratingsLoading}
-            ratings={currentRatings}
+            loading={fellowDetailsLoading}
+            ratings={fellowDetails.ratings}
             fellow={fellow}
           />
         )}
         {showLmsTable && (
-          <LmsTable loading={ratingsLoading} lmsSubmissions={currentLms} />
+          <LmsTable
+            loading={fellowDetailsLoading}
+            lmsSubmissions={fellowDetails.lms_submissions}
+            fellow={fellow}
+          />
         )}
       </div>
     );
@@ -217,22 +199,24 @@ export class FellowHistory extends Component {
   };
 
   render() {
-    const { averageRatings } = this.props;
+    const { fellowDetails } = this.props;
     const { fellow } = this.state;
-
     return (
       <Switch>
         <Route
-          path="/developers/pip/activation/:name"
+          path="/developers/pip/activation/:id"
           render={() => (
             <PipActivationForm
               fellow={fellow}
-              averageRatings={averageRatings}
+              averageRatings={formatRollingAveragePerAttribute(
+                fellow.level,
+                fellowDetails.ratings
+              )}
             />
           )}
         />
         <Route
-          path="/developers/:name"
+          path="/developers/:id"
           render={() => this.renderFellowHistory()}
         />
       </Switch>
@@ -244,21 +228,21 @@ FellowHistory.propTypes = {
   match: PropTypes.shape().isRequired,
   fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   history: PropTypes.shape().isRequired,
-  lmsSubmissions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  ratings: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  ratingsLoading: PropTypes.bool.isRequired,
-  getFellowHistoryData: PropTypes.func.isRequired,
-  averageRatings: PropTypes.shape({}).isRequired
+  lmsSubmissions: PropTypes.PropTypes.shape({}).isRequired,
+  getFellow: PropTypes.func.isRequired,
+  averageRatings: PropTypes.shape({}).isRequired,
+  fellowDetails: PropTypes.PropTypes.shape({}).isRequired,
+  fellowDetailsLoading: PropTypes.bool.isRequired
 };
 
-const mapStateToProps = ({ fellowDevPulse }) => ({
-  ratings: fellowDevPulse.ratings,
-  ratingsLoading: fellowDevPulse.loading,
-  lmsSubmissions: fellowDevPulse.lmsSubmissions,
-  averageRatings: fellowDevPulse.averageRatings
+const mapStateToProps = ({ fellow }) => ({
+  fellowDetails: fellow.fellow,
+  fellowDetailsLoading: fellow.loading
 });
 
 export default connect(
   mapStateToProps,
-  { getFellowHistoryData: fetchFellowData }
+  {
+    getFellow: getFellowData,
+  }
 )(withRouter(FellowHistory));

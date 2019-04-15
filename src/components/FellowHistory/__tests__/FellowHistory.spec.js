@@ -9,24 +9,62 @@ describe('Fellow History Container', () => {
     picture: null,
     project: 'Watch Tower',
     email: 'kingsley.obot@andela.com',
-    name: 'Kingsley Obot',
-    overall_status: 'onTrack',
-    overall_average: 1,
-    total: 16,
-    submitted: 16,
-    apprenticeshipTeam: 'Watch Tower',
-    managerName: 'Kesiena Akpobome',
-    managerEmail: 'kesiena.akpobome@andela.com',
-    managerRole: 'TTL'
+    user: {
+      firstName: 'Kingsley',
+      lastName: 'Obot'
+    },
+    fellow_id: '-LQcqbQzyNpIlfJreeiZ'
   };
 
-  const fellow1 = {
-    id: 10,
-    picture: null,
+  const fellowDetails = {
+    fellow_id: '-LQcqbQzyNpIlfJreeiZ',
+    current_week: null,
+    manager_id: '-LGy4OuPDHCZCZvDuPz0',
     project: 'Watch Tower',
-    email: 'kingsley.obot@andela.com',
-    name: 'Kingsley Obot',
-    overall_status: 'N/A'
+    picture: 'https://lorempixel.com/100/100/people/?29579',
+    bio:
+      'Sed quo voluptatum ducimus sunt labore eos totam. Sit corporis est voluptates commodi occaecati. Modi harum assumenda quod voluptatem.',
+    cohort: 'Class 13 - KLA',
+    details: {
+      apprenticeshipTeam: 'Watch Tower',
+      apprenticeshipManager: 'Trust Birungi',
+      actualApprenticeshipStartDate: '2019-03-18',
+      actualSimulationsCompletionDate: '2019-03-15',
+      simulationsPM: 'David Buyinza'
+    },
+    email: 'stanton.rogahn@andela.com',
+    level: 'D0B',
+    lms: {
+      id: 36,
+      fellow_id: '-LQcqbQzyNpIlfJreeiZ',
+      submitted: 4,
+      total: 16,
+      unsubmitted: 12
+    },
+    lms_id: 1956,
+    lms_submissions: [{}],
+    location: 'Kampala',
+    manager: {
+      staff_id: '-LGy4OuPDHCZCZvDuPz0',
+      name: 'Trust  Birungi',
+      email: 'trust.birungi@andela.com',
+      role: 'TTL',
+      manager_id: '-KXGy1MT1oimjQgFim9C'
+    },
+    name: 'Stanton Rogahn',
+    pulse: null,
+    ratings: [],
+    start_date: '2018-12-03',
+    status: null
+  };
+
+  const fellowWithManager = { ...fellow };
+  fellowWithManager.manager = {
+    firstName: 'John',
+    lastName: 'Doe',
+    image: null,
+    roleId: 2,
+    detail: `${fellow.user.firstName}'s TTL`
   };
 
   /**
@@ -39,57 +77,15 @@ describe('Fellow History Container', () => {
    */
   const setup = (mountComponent = false, propOverrides = {}, urlPath) => {
     let props = {
-      match: { params: { name: 'kingsley.obot' } },
+      match: { params: { name: 'kingsley.obot', id: '-LQcqbQzyNpIlfJreeiZ' } },
       fellowSummaryDetails: [fellow],
-      lmsSubmissions: [
-        {
-          assignment: {
-            id: 2465,
-            name: 'Output 3.2: Communicating Proactively',
-            course_id: 282
-          },
-          course_id: 282,
-          due_date: '2019-02-22',
-          fellow_id: '-LLUWWd2rDslm51iDJzh',
-          graded_at: '2019-02-22',
-          level: 'D0B',
-          score: 2,
-          submitted_at: '2019-02-22 14:20:52'
-        }
-      ],
+      getLmsSubmissions: jest.fn(),
+      lmsSubmissions: {},
       lmsLoading: false,
-      ratings: [
-        {
-          scores: [
-            {
-              attribute: 'Quantity',
-              score: 1
-            },
-            {
-              attribute: 'Quality',
-              score: 2
-            },
-            {
-              attribute: 'Initiative',
-              score: 2
-            },
-            {
-              attribute: 'Communication',
-              score: 2
-            },
-            {
-              attribute: 'Professionalism',
-              score: 0
-            },
-            {
-              attribute: 'Integration',
-              score: 0
-            }
-          ]
-        }
-      ],
+      ratings: [{}],
       ratingsLoading: false,
-      getFellowHistoryData: jest.fn(),
+      fellowDetailsLoading: false,
+      getFellowDevPulse: jest.fn(),
       history: { push: jest.fn() },
       averageRatings: {
         quality: '0.1',
@@ -98,7 +94,9 @@ describe('Fellow History Container', () => {
         communication: '0.00',
         professionalism: '0.00',
         integration: '0.00'
-      }
+      },
+      getFellow: jest.fn(),
+      fellowDetails
     };
 
     props = { ...props, ...propOverrides };
@@ -115,24 +113,19 @@ describe('Fellow History Container', () => {
   };
 
   /**
-   ** A reusable function used to test the fellow history card for the expected details
+   ** A reusable function used to test the rendering of the manager history card
    * @function
-   * @param wrapper The enzyme instance used to query for the specific dom elements
-   * @param user The expected user's (Fellow/TTL/LF) details.
+   * @param manager The expected user's (TTL/LF) details that override the default manager details.
    */
-  const testFellowHistoryCard = (wrapper, user = fellow) => {
-    expect(
-      wrapper
-        .find('.fellow-history-card__name')
-        .at(0)
-        .text()
-    ).toEqual(user.name);
-    expect(
-      wrapper
-        .find('.fellow-history-card__detail')
-        .at(0)
-        .text()
-    ).toEqual(user.apprenticeshipTeam);
+  const testManagerByRole = (manager = {}) => {
+    const currentFellow = fellowWithManager;
+    currentFellow.manager = { ...fellowWithManager.manager, ...manager };
+    const { props } = setup(
+      true,
+      { fellowSummaryDetails: [currentFellow] },
+      '/developers/:name'
+    );
+    expect(props.history.push).not.toBeCalled();
   };
 
   it('renders to match shapshot', () => {
@@ -145,7 +138,10 @@ describe('Fellow History Container', () => {
       true,
       {
         history: { push: jest.fn() },
-        fellowSummaryDetails: []
+        fellowSummaryDetails: [],
+        match: {
+          params: { name: 'Kingsley.Obota', id: '-LP6C8U9vaZuCUteSlXq' }
+        }
       },
       '/developers/:name'
     );
@@ -154,27 +150,26 @@ describe('Fellow History Container', () => {
       'setFellow'
     );
 
-    wrapper.setProps({ fellowSummaryDetails: [fellow] }, () => {
+    wrapper.setProps({ fellowSummaryDetails: [fellowDetails] }, () => {
       setTimeout(() => {
-        expect(props.history.push).not.toBeCalled();
+        expect(props.history.push).toBeCalledWith('/developers');
         expect(action).toBeCalled();
-        testFellowHistoryCard(wrapper);
       }, 100);
     });
   });
 
   it('renders the expected fellow profile details', () => {
     const newFellow = {
-      ...fellow
+      ...fellow,
+      devPulseAverage: '2',
+      lmsOutput: '17/18'
     };
 
-    const { wrapper, props } = setup(
+    const { props } = setup(
       true,
       { fellowSummaryDetails: [newFellow] },
       '/developers/:name'
     );
-
-    testFellowHistoryCard(wrapper);
     expect(props.history.push).not.toBeCalled();
   });
 
@@ -183,7 +178,9 @@ describe('Fellow History Container', () => {
     setup(
       true,
       {
-        match: { params: { name: 'Kingsley.Obota' } },
+        match: {
+          params: { name: 'Kingsley.Obota', id: '-LP6C8U9vaZuCUteSlXq' }
+        },
         history: {
           push: url => {
             currentPath = url;
@@ -197,16 +194,21 @@ describe('Fellow History Container', () => {
   });
 
   it('renders the expected TTL details', () => {
-    const { wrapper } = setup();
-    wrapper.instance().renderManagerCard(fellow);
-    wrapper.instance().renderManagerCard(null);
-    wrapper.instance().mapDisplayslistData(fellow1);
+    testManagerByRole();
   });
 
   it('renders the expected LF details', () => {
-    const { wrapper } = setup();
-    fellow.managerRole = 'LF';
-    wrapper.instance().renderManagerCard(fellow);
+    testManagerByRole({
+      roleId: 3,
+      detail: `${fellow.user.firstName}'s LF`
+    });
+  });
+
+  it('renders the expected manager details with an undefined role', () => {
+    testManagerByRole({
+      roleId: 99,
+      detail: `${fellow.user.firstName}'s Undefined`
+    });
   });
 
   it('sets showDevpulse state to true when the handleCardClick function is called', () => {

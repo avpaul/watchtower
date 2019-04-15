@@ -11,8 +11,8 @@ ReactWrapper {
             "communication": "1.00",
             "devPulseStatus": "On Track",
             "email": "abbey.maddy@andela.com",
+            "fellow_id": "-LMKN5flPv4R7LCZs0lh",
             "firstName": "Abbey",
-            "id": "-LMKN5flPv4R7LCZs0lh",
             "initiative": "1.00",
             "integration": "1.00",
             "isBeforeWk5": true,
@@ -65,8 +65,8 @@ ReactWrapper {
         "communication": "1.00",
         "devPulseStatus": "On Track",
         "email": "abbey.maddy@andela.com",
+        "fellow_id": "-LMKN5flPv4R7LCZs0lh",
         "firstName": "Abbey",
-        "id": "-LMKN5flPv4R7LCZs0lh",
         "initiative": "1.00",
         "integration": "1.00",
         "isBeforeWk5": true,
@@ -98,7 +98,7 @@ ReactWrapper {
     "ref": null,
     "rendered": Object {
       "instance": null,
-      "key": undefined,
+      "key": "-LMKN5flPv4R7LCZs0lh",
       "nodeType": "function",
       "props": Object {
         "children": Array [
@@ -240,8 +240,8 @@ ReactWrapper {
           "communication": "1.00",
           "devPulseStatus": "On Track",
           "email": "abbey.maddy@andela.com",
+          "fellow_id": "-LMKN5flPv4R7LCZs0lh",
           "firstName": "Abbey",
-          "id": "-LMKN5flPv4R7LCZs0lh",
           "initiative": "1.00",
           "integration": "1.00",
           "isBeforeWk5": true,
@@ -273,7 +273,7 @@ ReactWrapper {
       "ref": null,
       "rendered": Object {
         "instance": null,
-        "key": undefined,
+        "key": "-LMKN5flPv4R7LCZs0lh",
         "nodeType": "function",
         "props": Object {
           "children": Array [

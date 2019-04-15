@@ -33,8 +33,8 @@ const TranslatorTable = {
   ltWKOffTrack: 'Off Track',
   gteWk5OffTrack: 'Off Track',
   gteWk5OnTrack: 'On Track',
-  onTrack: 'On Track',
-  offTrack: 'Off Track'
+  onTrack: 'On-Track',
+  offTrack: 'Off-Track'
 };
 
 export default TranslatorTable;

@@ -93,17 +93,6 @@ class PipActivationForm extends Component {
     }));
   };
 
-  extractFellowName = fellow => {
-    const fellowName = this.getFellowName(fellow);
-    const result = fellowName.split(' ');
-    return result[0] === 'undefined' ? '' : fellowName.toUpperCase();
-  };
-
-  getFellowName = fellow =>
-    fellow.user
-      ? `${fellow.user.firstName} ${fellow.user.lastName}`
-      : `${fellow.firstName} ${fellow.lastName}`;
-
   renderInputLabels = title => (
     <div className="pip-activation-form-label">{title}</div>
   );
@@ -127,11 +116,11 @@ class PipActivationForm extends Component {
       mgtSupportFieldCount
     } = this.state;
     const { averageRatings, fellow } = this.props;
-    const fellowName = this.extractFellowName(fellow);
+
     return (
       <div className="container">
         <div className="pip-activation-form-title mt-5">
-          PIP ACTIVATION {`- ${fellowName}`}
+          PIP ACTIVATION {`- ${fellow.name}`}
         </div>
         <div className="row">
           <div className="col-12">
@@ -139,7 +128,7 @@ class PipActivationForm extends Component {
               <div className="row">
                 <div className="form-group fellow-details-body col-md-4">
                   {renderInputLabels('Fellow Name')}
-                  {this.captureFellowDetails(fellowName)}
+                  {this.captureFellowDetails(fellow.name)}
                 </div>
                 <div className="form-group fellow-details-body col-md-4">
                   {renderInputLabels('Department')}

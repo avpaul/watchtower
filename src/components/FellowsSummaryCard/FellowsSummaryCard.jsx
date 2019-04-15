@@ -107,7 +107,7 @@ FellowsSummaryCard.propTypes = {
   lmsOutputs: PropTypes.string,
   picture: PropTypes.string,
   onClick: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired
+  id: PropTypes.string.isRequired
 };
 
 FellowsSummaryCard.defaultProps = {

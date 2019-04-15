@@ -16,7 +16,7 @@ describe('Test fellowsSummaryCard snapshots', () => {
       devPulseAverage: '1.04',
       lmsOutput: '4/18',
       onClick: jest.fn(),
-      id: 1
+      id: '1'
     };
 
     const fellowsSummaryCardWrapper = shallow(

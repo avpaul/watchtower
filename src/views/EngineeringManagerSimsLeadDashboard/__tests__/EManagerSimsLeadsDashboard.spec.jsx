@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import EngineeringManagerSimsLeadDashboard from '../index';
-import engineeringManagerSimsLeadData from '../../../__mocks__/engineeringManagerSimsLeadData.json';
+import engineeringManagerSimsLeadData from '../../../__mocks__/engineeringManagerTtls.json';
 import EManagerSimsLeadsDashboard from '../EManagerSimsLeadsDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 import ManagerFellowMap from '../../../components/ManagerFellowMap';
@@ -37,9 +37,7 @@ describe('EngineeringDashboard component', () => {
       Promise.resolve({
         error: null,
         data: {
-          managees: engineeringManagerSimsLeadData.managees,
-          totalFellows: 5,
-          averageFellowsPerTtl: 5
+          data: engineeringManagerSimsLeadData.data
         }
       })
     );
@@ -51,7 +49,7 @@ describe('EngineeringDashboard component', () => {
         }
       },
       data: {
-        managees: engineeringManagerSimsLeadData.managees,
+        managees: engineeringManagerSimsLeadData.data,
         show: true,
         managerFellowSortRatio: 'HIGH_TO_LOW',
         totalFellows: 5
