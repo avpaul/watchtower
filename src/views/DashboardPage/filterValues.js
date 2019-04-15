@@ -1,36 +1,32 @@
 import PropTypes from 'prop-types';
 import translatorTable from '../../utils/TranslatorTable';
+import { displayCellContent } from '../../utils';
 
 export const getCriteriaFilterValues = (type, value, table, status) => {
-  let filterValues;
-  if (value === 'DevPulse') {
-    filterValues = {
-      headers: table.devPulseCriteria.titles,
-      statusType: 'devPulseStatus',
-      cellKeys: table.devPulseCriteria.cells,
-      criteria: 'DevPulse'
-    };
-  } else if (value === 'LMS') {
-    filterValues = {
-      headers: table.lmsCriteria.titles,
-      criteria: 'LMS',
-      statusType: 'lmsStatus',
-      cellKeys: table.lmsCriteria.cells
-    };
-  } else if (value === 'All' && status === 'PIP') {
-    filterValues = {
-      cellKeys: table.allCriteriaAndPipStatus.cells,
-      headers: table.allCriteriaAndPipStatus.titles,
-      criteria: 'All'
-    };
-  } else {
-    filterValues = {
-      criteria: 'All',
-      headers: table.allCriteria.titles,
-      cellKeys: table.allCriteria.cells
-    };
+  switch (value) {
+    case 'DevPulse':
+      return {
+        headers: table.devPulseCriteria.titles,
+        statusType: 'devPulseStatus',
+        cellKeys: table.devPulseCriteria.cells,
+        criteria: 'DevPulse'
+      };
+    case 'LMS':
+      return {
+        headers: table.lmsCriteria.titles,
+        criteria: 'LMS',
+        statusType: 'lmsStatus',
+        cellKeys: table.lmsCriteria.cells
+      };
+    default: {
+      const key = `allCriteria${status === 'PIP' ? 'AndPipStatus' : ''}`;
+      return {
+        criteria: 'All',
+        headers: table[key].titles,
+        cellKeys: table[key].cells
+      };
+    }
   }
-  return filterValues;
 };
 
 export const getStatusFilterValues = (type, value, table, criteria) => {
@@ -176,3 +172,39 @@ export const defaultPropTypes = () => {
   };
   return initialPropTypes;
 };
+
+export const integerFields = [
+  'weeksSpent',
+  'communication',
+  'initiative',
+  'integration',
+  'professionalism',
+  'quality',
+  'quantity'
+];
+
+/**
+ * @description Formats the fellows' data for display and sorting
+ * @param fellows List of fellows' details
+ * @return Formatted list of fellows
+ * */
+export const formatFellows = fellows =>
+  fellows.map(fellow => {
+    const updatedFellow = {
+      ...fellow,
+      devPulseStatus: displayCellContent(
+        'devPulseStatus',
+        fellow.devPulseStatus
+      ).value,
+      lmsStatus: displayCellContent('lmsStatus', fellow.lmsStatus).value,
+      advanceStatus: displayCellContent('advanceStatus', fellow.overall_status)
+        .value,
+      ttlName: displayCellContent('ttlName', fellow.managerName).value
+    };
+
+    integerFields.forEach(field => {
+      updatedFellow[field] = parseFloat(Number(fellow[field]).toFixed(2));
+    });
+
+    return updatedFellow;
+  });

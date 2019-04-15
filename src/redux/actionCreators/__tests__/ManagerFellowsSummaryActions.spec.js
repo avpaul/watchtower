@@ -9,7 +9,7 @@ import {
 } from '../../constants/ManagerFellowsSummaryTypes';
 import getManagerFellowsSummary, {
   resolveUrlByRole
-} from '../ManagerFellowsSummaryActions';
+} from '../managerFellowsSummaryActions';
 
 describe("fetch manager 's data actions", () => {
   const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import DeveloperDashboard from './DeveloperDashboard';
-import getManagerFellowsSummary from '../../redux/actionCreators/ManagerFellowsSummaryActions';
+import getManagerFellowsSummary from '../../redux/actionCreators/managerFellowsSummaryActions';
 
 export const mapStateToProps = ({ managerFellowsSummary }) => ({
   loading: managerFellowsSummary.loading,

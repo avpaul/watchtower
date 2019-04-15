@@ -7,9 +7,10 @@ import Row from '../TableComponents/Row';
 import Cell from '../TableComponents/Cell';
 import Error from '../Error';
 import Loader from '../Loader/Loader';
-import cellAttr from './setAttributes';
-import formatHeaderName from './formatHeaderName';
+import { setColor } from '../../utils';
+import getColumnAttribute from './Helpers';
 import SortButtons from './SortButtons';
+import { integerFields } from '../../views/DashboardPage/filterValues';
 
 const { ErrorMessage } = Error;
 
@@ -17,22 +18,38 @@ class DashboardTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sortBy: 'firstName',
-      sortType: 'ascending'
+      sortBy: 'name',
+      sortType: 'ascending',
+      isInitiallySorted: false
     };
+  }
+
+  componentDidUpdate() {
+    const { fellows, handleSortingChange } = this.props;
+    const { isInitiallySorted } = this.state;
+
+    if (fellows.length !== 0 && !isInitiallySorted) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState(
+        { isInitiallySorted: true },
+        handleSortingChange(this.sortFellows())
+      );
+    }
   }
 
   sortFellows = () => {
     const { sortBy: name, sortType } = this.state;
     const { fellows } = this.props;
-
     return fellows.sort((a, b) => {
-      let A = typeof a[name] === 'string' ? a[name].toLowerCase() : a[name];
-      let B = typeof b[name] === 'string' ? b[name].toLowerCase() : b[name];
+      let A = a[name] || 'n/a';
+      let B = b[name] || 'n/a';
 
-      if (name === 'weeksSpent') {
-        A = typeof A === 'string' ? 0 : A;
-        B = typeof B === 'string' ? 0 : B;
+      A = typeof A === 'string' ? A.toLowerCase() : A;
+      B = typeof B === 'string' ? B.toLowerCase() : B;
+
+      if (integerFields.includes(name)) {
+        A = A === 'n/a' ? -5 : A;
+        B = B === 'n/a' ? -5 : B;
       }
 
       if (A < B) return sortType === 'descending' ? 1 : -1;
@@ -44,16 +61,23 @@ class DashboardTable extends Component {
 
   fellowCells = fellow => {
     const { cellValues } = this.props;
-    return cellValues.map(element => cellAttr(element, fellow));
+    return cellValues.map(element => ({
+      element,
+      value: fellow[element] || 'N/A',
+      color: fellow[element] ? setColor(fellow[element]) : 'no-track'
+    }));
   };
 
   arrowClick = event => {
-    const name = event.target.getAttribute('data-target');
-    const isAscending = event.target.getAttribute('data-ascending');
-    this.setState({
-      sortBy: name,
-      sortType: isAscending ? 'ascending' : 'descending'
-    });
+    const { handleSortingChange } = this.props;
+    const sortingParams = {
+      sortBy: event.target.getAttribute('data-target'),
+      sortType: event.target.getAttribute('data-ascending')
+        ? 'ascending'
+        : 'descending'
+    };
+
+    this.setState(sortingParams, () => handleSortingChange(this.sortFellows()));
   };
 
   renderTableHeaders = () => {
@@ -63,7 +87,7 @@ class DashboardTable extends Component {
     return (
       <Row header>
         {headers.map((element, index) => {
-          const headerName = formatHeaderName(element);
+          const headerName = getColumnAttribute(element);
           const active = headerName.toLowerCase() === sortBy.toLowerCase();
           return (
             <Cell key={arrayKey({ element, index })}>
@@ -88,8 +112,8 @@ class DashboardTable extends Component {
   };
 
   render() {
-    const { fellows, loading } = this.props;
-    if (fellows.length < 1 && !loading) {
+    const { fellowsToDisplay, loading } = this.props;
+    if (fellowsToDisplay.length < 1 && !loading) {
       return (
         <ErrorMessage message="There's currently no fellows matching the filter and/or search." />
       );
@@ -99,7 +123,7 @@ class DashboardTable extends Component {
       <Fragment>
         <Table>
           {this.renderTableHeaders()}
-          {this.sortFellows().map(fellow => (
+          {fellowsToDisplay.map(fellow => (
             <DashboardRow
               key={fellow.fellow_id}
               fellow={fellow}
@@ -115,6 +139,8 @@ class DashboardTable extends Component {
 
 DashboardTable.propTypes = {
   fellows: PropTypes.arrayOf(PropTypes.object).isRequired,
+  fellowsToDisplay: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleSortingChange: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
   cellValues: PropTypes.arrayOf(PropTypes.string).isRequired

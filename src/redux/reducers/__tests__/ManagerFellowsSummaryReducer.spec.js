@@ -1,4 +1,4 @@
-import managerFellowsSummary from '../ManagerFellowsSummaryReducer';
+import managerFellowsSummary from '../managerFellowsSummaryReducer';
 import {
   LOAD_MANAGER_FELLOWS_SUMMARY_REQUEST,
   LOAD_MANAGER_FELLOWS_SUMMARY_SUCCESS,
