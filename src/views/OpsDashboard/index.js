@@ -4,6 +4,7 @@ import DashboardPage from '../DashboardPage';
 import Header from '../../components/Header';
 import OpsDashboardContainer from './OpsDashboardContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
+import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 /**
  * Defines routes for the opsdashboard
  * @function
@@ -27,6 +28,11 @@ const OpsDashboard = props => (
           exact
           path="/feedback"
           component={() => <FeedbackDashboardContainer {...props} />}
+        />
+        <Route
+          exact
+          path="/feedback/:fellowName"
+          component={() => <PrePipNotificationForm {...props} />}
         />
       </Switch>
     </React.Fragment>

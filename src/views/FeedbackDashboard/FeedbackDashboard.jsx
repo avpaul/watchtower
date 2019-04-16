@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import FellowsCount from '../../components/FellowsCount';
 import MapFeedbackFilterCard from '../../components/MapFeedbackFilterCard/MapFeedbackFilterCard';
 import TranslatorTable from '../../utils/TranslatorTable';
@@ -8,6 +10,7 @@ import FeedbackDashboardTable from './FeedbackDashboardTable';
 import FeedbackDuration from '../../components/FeedbackDuration';
 import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
 import { convertToEmail } from '../../services/helper';
+import { fellowFeedbackAction } from '../../redux/actionCreators/fellowFeedback';
 
 export class FeedbackDashboard extends Component {
   constructor(props) {
@@ -189,6 +192,35 @@ export class FeedbackDashboard extends Component {
     );
   };
 
+  handleViewClick = event => {
+    event.preventDefault();
+    const { feedbackArray } = this.state;
+    const { history } = this.props;
+    const { fellowFeedback } = this.props;
+    const index = event.target.getAttribute('data-key');
+    const {
+      attribute,
+      context,
+      criteria,
+      first_name: firstName,
+      last_name: lastName,
+      recommendation,
+      manager
+    } = feedbackArray[index];
+    const fellowDetails = {
+      Attribute: attribute,
+      Context: context,
+      Criteria: criteria,
+      FirstName: firstName,
+      LastName: lastName,
+      Recommendation: recommendation,
+      Manager: manager,
+      index,
+    };
+    fellowFeedback(fellowDetails);
+    history.push(`/feedback/${firstName}.${lastName}`);
+  };
+
   renderFilterCards = (title, filterKey) => {
     const { isTicked, feedbackArray } = this.state;
     return (
@@ -208,6 +240,7 @@ export class FeedbackDashboard extends Component {
     return (
       <Fragment>
         <FeedbackDashboardTable
+          handleClick={this.handleViewClick}
           feedbackArray={paginationWrapper.state.paginatedData}
           currentRole={role}
           type={TranslatorTable[isTicked.type]}
@@ -318,7 +351,6 @@ export class FeedbackDashboard extends Component {
 
   render() {
     const { startDate, endDate, currentDate } = this.state;
-
     return (
       <Fragment>
         <div className="feedbackDashboard container-fluid">
@@ -340,11 +372,24 @@ FeedbackDashboard.propTypes = {
   user: PropTypes.shape({}).isRequired,
   role: PropTypes.string.isRequired,
   getManagerFeedback: PropTypes.func.isRequired,
-  paginationWrapper: PropTypes.shape().isRequired
+  paginationWrapper: PropTypes.shape().isRequired,
+  history: PropTypes.func.isRequired,
+  fellowFeedback: PropTypes.func.isRequired
 };
 
 const PaginationWrapped = props => (
   <PaginationFrontendWrapper component={<FeedbackDashboard {...props} />} />
 );
 
-export default PaginationWrapped;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      fellowFeedback: fellowFeedbackAction
+    },
+    dispatch
+  );
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(PaginationWrapped);

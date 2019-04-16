@@ -315,6 +315,7 @@ ShallowWrapper {
                         <FeedbackDashboardTable
                                 currentRole="WATCH_TOWER_EM"
                                 feedbackArray={Array []}
+                                handleClick={[Function]}
                                 type=""
                         />
                         <div
@@ -596,6 +597,7 @@ ShallowWrapper {
                         <FeedbackDashboardTable
                                     currentRole="WATCH_TOWER_EM"
                                     feedbackArray={Array []}
+                                    handleClick={[Function]}
                                     type=""
                         />
                         <div
@@ -1463,6 +1465,7 @@ ShallowWrapper {
               <FeedbackDashboardTable
                             currentRole="WATCH_TOWER_EM"
                             feedbackArray={Array []}
+                            handleClick={[Function]}
                             type=""
               />
               <div
@@ -1481,6 +1484,7 @@ ShallowWrapper {
                 <FeedbackDashboardTable
                   currentRole="WATCH_TOWER_EM"
                   feedbackArray={Array []}
+                  handleClick={[Function]}
                   type=""
 />,
                 <div
@@ -1497,6 +1501,7 @@ ShallowWrapper {
                 "props": Object {
                   "currentRole": "WATCH_TOWER_EM",
                   "feedbackArray": Array [],
+                  "handleClick": [Function],
                   "type": "",
                 },
                 "ref": null,
@@ -1799,6 +1804,7 @@ ShallowWrapper {
                               <FeedbackDashboardTable
                                         currentRole="WATCH_TOWER_EM"
                                         feedbackArray={Array []}
+                                        handleClick={[Function]}
                                         type=""
                               />
                               <div
@@ -2080,6 +2086,7 @@ ShallowWrapper {
                             <FeedbackDashboardTable
                                           currentRole="WATCH_TOWER_EM"
                                           feedbackArray={Array []}
+                                          handleClick={[Function]}
                                           type=""
                             />
                             <div
@@ -2947,6 +2954,7 @@ ShallowWrapper {
                 <FeedbackDashboardTable
                                 currentRole="WATCH_TOWER_EM"
                                 feedbackArray={Array []}
+                                handleClick={[Function]}
                                 type=""
                 />
                 <div
@@ -2965,6 +2973,7 @@ ShallowWrapper {
                   <FeedbackDashboardTable
                     currentRole="WATCH_TOWER_EM"
                     feedbackArray={Array []}
+                    handleClick={[Function]}
                     type=""
 />,
                   <div
@@ -2981,6 +2990,7 @@ ShallowWrapper {
                   "props": Object {
                     "currentRole": "WATCH_TOWER_EM",
                     "feedbackArray": Array [],
+                    "handleClick": [Function],
                     "type": "",
                   },
                   "ref": null,
@@ -3345,6 +3355,7 @@ ShallowWrapper {
                         <FeedbackDashboardTable
                                 currentRole="WATCH_TOWER_SL"
                                 feedbackArray={Array []}
+                                handleClick={[Function]}
                                 type=""
                         />
                         <div
@@ -3626,6 +3637,7 @@ ShallowWrapper {
                         <FeedbackDashboardTable
                                     currentRole="WATCH_TOWER_SL"
                                     feedbackArray={Array []}
+                                    handleClick={[Function]}
                                     type=""
                         />
                         <div
@@ -4493,6 +4505,7 @@ ShallowWrapper {
               <FeedbackDashboardTable
                             currentRole="WATCH_TOWER_SL"
                             feedbackArray={Array []}
+                            handleClick={[Function]}
                             type=""
               />
               <div
@@ -4511,6 +4524,7 @@ ShallowWrapper {
                 <FeedbackDashboardTable
                   currentRole="WATCH_TOWER_SL"
                   feedbackArray={Array []}
+                  handleClick={[Function]}
                   type=""
 />,
                 <div
@@ -4527,6 +4541,7 @@ ShallowWrapper {
                 "props": Object {
                   "currentRole": "WATCH_TOWER_SL",
                   "feedbackArray": Array [],
+                  "handleClick": [Function],
                   "type": "",
                 },
                 "ref": null,
@@ -4829,6 +4844,7 @@ ShallowWrapper {
                               <FeedbackDashboardTable
                                         currentRole="WATCH_TOWER_SL"
                                         feedbackArray={Array []}
+                                        handleClick={[Function]}
                                         type=""
                               />
                               <div
@@ -5110,6 +5126,7 @@ ShallowWrapper {
                             <FeedbackDashboardTable
                                           currentRole="WATCH_TOWER_SL"
                                           feedbackArray={Array []}
+                                          handleClick={[Function]}
                                           type=""
                             />
                             <div
@@ -5977,6 +5994,7 @@ ShallowWrapper {
                 <FeedbackDashboardTable
                                 currentRole="WATCH_TOWER_SL"
                                 feedbackArray={Array []}
+                                handleClick={[Function]}
                                 type=""
                 />
                 <div
@@ -5995,6 +6013,7 @@ ShallowWrapper {
                   <FeedbackDashboardTable
                     currentRole="WATCH_TOWER_SL"
                     feedbackArray={Array []}
+                    handleClick={[Function]}
                     type=""
 />,
                   <div
@@ -6011,6 +6030,7 @@ ShallowWrapper {
                   "props": Object {
                     "currentRole": "WATCH_TOWER_SL",
                     "feedbackArray": Array [],
+                    "handleClick": [Function],
                     "type": "",
                   },
                   "ref": null,
@@ -6193,6 +6213,7 @@ ShallowWrapper {
                         <FeedbackDashboardTable
                                 currentRole="WATCH_TOWER_LF"
                                 feedbackArray={Array []}
+                                handleClick={[Function]}
                                 type=""
                         />
                         <div
@@ -6295,6 +6316,7 @@ ShallowWrapper {
                         <FeedbackDashboardTable
                                     currentRole="WATCH_TOWER_LF"
                                     feedbackArray={Array []}
+                                    handleClick={[Function]}
                                     type=""
                         />
                         <div
@@ -6625,6 +6647,7 @@ ShallowWrapper {
               <FeedbackDashboardTable
                             currentRole="WATCH_TOWER_LF"
                             feedbackArray={Array []}
+                            handleClick={[Function]}
                             type=""
               />
               <div
@@ -6643,6 +6666,7 @@ ShallowWrapper {
                 <FeedbackDashboardTable
                   currentRole="WATCH_TOWER_LF"
                   feedbackArray={Array []}
+                  handleClick={[Function]}
                   type=""
 />,
                 <div
@@ -6659,6 +6683,7 @@ ShallowWrapper {
                 "props": Object {
                   "currentRole": "WATCH_TOWER_LF",
                   "feedbackArray": Array [],
+                  "handleClick": [Function],
                   "type": "",
                 },
                 "ref": null,
@@ -6782,6 +6807,7 @@ ShallowWrapper {
                               <FeedbackDashboardTable
                                         currentRole="WATCH_TOWER_LF"
                                         feedbackArray={Array []}
+                                        handleClick={[Function]}
                                         type=""
                               />
                               <div
@@ -6884,6 +6910,7 @@ ShallowWrapper {
                             <FeedbackDashboardTable
                                           currentRole="WATCH_TOWER_LF"
                                           feedbackArray={Array []}
+                                          handleClick={[Function]}
                                           type=""
                             />
                             <div
@@ -7214,6 +7241,7 @@ ShallowWrapper {
                 <FeedbackDashboardTable
                                 currentRole="WATCH_TOWER_LF"
                                 feedbackArray={Array []}
+                                handleClick={[Function]}
                                 type=""
                 />
                 <div
@@ -7232,6 +7260,7 @@ ShallowWrapper {
                   <FeedbackDashboardTable
                     currentRole="WATCH_TOWER_LF"
                     feedbackArray={Array []}
+                    handleClick={[Function]}
                     type=""
 />,
                   <div
@@ -7248,6 +7277,7 @@ ShallowWrapper {
                   "props": Object {
                     "currentRole": "WATCH_TOWER_LF",
                     "feedbackArray": Array [],
+                    "handleClick": [Function],
                     "type": "",
                   },
                   "ref": null,

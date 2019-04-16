@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pre pip notification form renders to match shapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PrePipNotificationForm
+    fellowFeedback={
+        Object {
+            "Attribute": null,
+            "Context": "Hi Sinmiloluwa",
+            "Criteria": "lms",
+            "FirstName": "Sinmiloluwa",
+            "LastName": "Oloyede",
+            "Manager": Object {
+              "email": "trust.birungi@andela.com",
+              "firstName": "Trust ",
+              "lastName": "Birungi",
+            },
+            "Recommendation": null,
+            "fellowFeedback": Object {},
+            "index": "0",
+          }
+    }
+    history={
+        Array [
+            "/feedback",
+          ]
+    }
+    store={
+        Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="feedbackDashboard container-fluid"
+>
+          <div
+                    className="row"
+          >
+                    <PrePipNotificationOutline
+                              fellowFeedback={
+                                        Object {
+                                                  "Attribute": null,
+                                                  "Context": "Hi Sinmiloluwa",
+                                                  "Criteria": "lms",
+                                                  "FirstName": "Sinmiloluwa",
+                                                  "LastName": "Oloyede",
+                                                  "Manager": Object {
+                                                    "email": "trust.birungi@andela.com",
+                                                    "firstName": "Trust ",
+                                                    "lastName": "Birungi",
+                                                  },
+                                                  "Recommendation": null,
+                                                  "fellowFeedback": Object {},
+                                                  "index": "0",
+                                                }
+                              }
+                              serialNumber={1}
+                    />
+          </div>
+</div>,
+        <div>
+          <button
+                    className="btn-print-prepip-form"
+                    onClick={[Function]}
+                    type="button"
+          >
+                    Print
+          </button>
+</div>,
+      ],
+      "className": "prepipOutline",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="row"
+>
+            <PrePipNotificationOutline
+                        fellowFeedback={
+                                    Object {
+                                                "Attribute": null,
+                                                "Context": "Hi Sinmiloluwa",
+                                                "Criteria": "lms",
+                                                "FirstName": "Sinmiloluwa",
+                                                "LastName": "Oloyede",
+                                                "Manager": Object {
+                                                  "email": "trust.birungi@andela.com",
+                                                  "firstName": "Trust ",
+                                                  "lastName": "Birungi",
+                                                },
+                                                "Recommendation": null,
+                                                "fellowFeedback": Object {},
+                                                "index": "0",
+                                              }
+                        }
+                        serialNumber={1}
+            />
+</div>,
+          "className": "feedbackDashboard container-fluid",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <PrePipNotificationOutline
+              fellowFeedback={
+                            Object {
+                                          "Attribute": null,
+                                          "Context": "Hi Sinmiloluwa",
+                                          "Criteria": "lms",
+                                          "FirstName": "Sinmiloluwa",
+                                          "LastName": "Oloyede",
+                                          "Manager": Object {
+                                            "email": "trust.birungi@andela.com",
+                                            "firstName": "Trust ",
+                                            "lastName": "Birungi",
+                                          },
+                                          "Recommendation": null,
+                                          "fellowFeedback": Object {},
+                                          "index": "0",
+                                        }
+              }
+              serialNumber={1}
+/>,
+            "className": "row",
+          },
+          "ref": Object {
+            "current": null,
+          },
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "fellowFeedback": Object {
+                "Attribute": null,
+                "Context": "Hi Sinmiloluwa",
+                "Criteria": "lms",
+                "FirstName": "Sinmiloluwa",
+                "LastName": "Oloyede",
+                "Manager": Object {
+                  "email": "trust.birungi@andela.com",
+                  "firstName": "Trust ",
+                  "lastName": "Birungi",
+                },
+                "Recommendation": null,
+                "fellowFeedback": Object {},
+                "index": "0",
+              },
+              "serialNumber": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            className="btn-print-prepip-form"
+            onClick={[Function]}
+            type="button"
+>
+            Print
+</button>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Print",
+            "className": "btn-print-prepip-form",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "Print",
+          "type": "button",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="feedbackDashboard container-fluid"
+>
+            <div
+                        className="row"
+            >
+                        <PrePipNotificationOutline
+                                    fellowFeedback={
+                                                Object {
+                                                            "Attribute": null,
+                                                            "Context": "Hi Sinmiloluwa",
+                                                            "Criteria": "lms",
+                                                            "FirstName": "Sinmiloluwa",
+                                                            "LastName": "Oloyede",
+                                                            "Manager": Object {
+                                                              "email": "trust.birungi@andela.com",
+                                                              "firstName": "Trust ",
+                                                              "lastName": "Birungi",
+                                                            },
+                                                            "Recommendation": null,
+                                                            "fellowFeedback": Object {},
+                                                            "index": "0",
+                                                          }
+                                    }
+                                    serialNumber={1}
+                        />
+            </div>
+</div>,
+          <div>
+            <button
+                        className="btn-print-prepip-form"
+                        onClick={[Function]}
+                        type="button"
+            >
+                        Print
+            </button>
+</div>,
+        ],
+        "className": "prepipOutline",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="row"
+>
+              <PrePipNotificationOutline
+                            fellowFeedback={
+                                          Object {
+                                                        "Attribute": null,
+                                                        "Context": "Hi Sinmiloluwa",
+                                                        "Criteria": "lms",
+                                                        "FirstName": "Sinmiloluwa",
+                                                        "LastName": "Oloyede",
+                                                        "Manager": Object {
+                                                          "email": "trust.birungi@andela.com",
+                                                          "firstName": "Trust ",
+                                                          "lastName": "Birungi",
+                                                        },
+                                                        "Recommendation": null,
+                                                        "fellowFeedback": Object {},
+                                                        "index": "0",
+                                                      }
+                            }
+                            serialNumber={1}
+              />
+</div>,
+            "className": "feedbackDashboard container-fluid",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <PrePipNotificationOutline
+                fellowFeedback={
+                                Object {
+                                                "Attribute": null,
+                                                "Context": "Hi Sinmiloluwa",
+                                                "Criteria": "lms",
+                                                "FirstName": "Sinmiloluwa",
+                                                "LastName": "Oloyede",
+                                                "Manager": Object {
+                                                  "email": "trust.birungi@andela.com",
+                                                  "firstName": "Trust ",
+                                                  "lastName": "Birungi",
+                                                },
+                                                "Recommendation": null,
+                                                "fellowFeedback": Object {},
+                                                "index": "0",
+                                              }
+                }
+                serialNumber={1}
+/>,
+              "className": "row",
+            },
+            "ref": Object {
+              "current": null,
+            },
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "fellowFeedback": Object {
+                  "Attribute": null,
+                  "Context": "Hi Sinmiloluwa",
+                  "Criteria": "lms",
+                  "FirstName": "Sinmiloluwa",
+                  "LastName": "Oloyede",
+                  "Manager": Object {
+                    "email": "trust.birungi@andela.com",
+                    "firstName": "Trust ",
+                    "lastName": "Birungi",
+                  },
+                  "Recommendation": null,
+                  "fellowFeedback": Object {},
+                  "index": "0",
+                },
+                "serialNumber": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="btn-print-prepip-form"
+              onClick={[Function]}
+              type="button"
+>
+              Print
+</button>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Print",
+              "className": "btn-print-prepip-form",
+              "onClick": [Function],
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": "Print",
+            "type": "button",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Pre pip notification form renders to match shapshot 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Connect(PrePipNotificationForm)
+    store={
+        Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "dispatch": [Function],
+      "fellowFeedback": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "dispatch": [Function],
+        "fellowFeedback": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "storeSubscription": Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
