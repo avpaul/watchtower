@@ -5,7 +5,7 @@
     "cohort": "Class 1 - NBO",
     "actual apprenticeship start date": "2018-12-10",
     "simulation start date": "2018-11-01",
-    "id": "-LMKN5flPv4R7LCZs0lh",
+    "fellow_id": "-LMKN5flPv4R7LCZs0lh",
     "staffId": null,
     "firstName": "Abbey",
     "lastName": "Maddy",
@@ -25,7 +25,7 @@
     "weeksSpent": 23
   },
   {
-    "id": "-LJK1qECFdekucrwqqkh",
+    "fellow_id": "-LJK1qECFdekucrwqqkh",
     "staffId": "-LAmk78f7GyBWkt2UWpb",
     "submitterFirstName": "Ephraim",
     "submitterLastName": "Malinga",
@@ -54,7 +54,7 @@
     "cohort": "Class 13 - KLA",
     "actual apprenticeship start date": "2018-10-15",
     "expected apprenticeship completion date": "2019-01-16",
-    "id": "-LJK2KDhq70_X1YbirFx",
+    "fellow_id": "-LJK2KDhq70_X1YbirFx",
     "staffId": "-LAmk78f7GyBWkt2UWpb",
     "firstName": "Timothy",
     "lastName": "Mubiru",
@@ -81,7 +81,7 @@
     "actual simulations completion date": "2019-02-14",
     "simulation start date": "2018-11-19",
     "expected apprenticeship completion date": "2019-05-16",
-    "id": "-LP641ReDxZeT2ABACW8",
+    "fellow_id": "-LP641ReDxZeT2ABACW8",
     "staffId": null,
     "firstName": "Sam",
     "lastName": "Rubarema",
@@ -108,7 +108,7 @@
     "actual simulations completion date": "2019-01-11",
     "simulation start date": "2018-10-16",
     "expected apprenticeship completion date": "2019-04-08",
-    "id": "-LLUW2BwQiZS0j9KF10j",
+    "fellow_id": "-LLUW2BwQiZS0j9KF10j",
     "staffId": "-LGy4OuPDHCZCZvDuPz0",
     "firstName": "Fredrick",
     "lastName": "Adegoke",
@@ -128,7 +128,7 @@
     "weeksSpent": 12
   },
   {
-    "id": "-LEnW5RRn0IkO8VjnMma",
+    "fellow_id": "-LEnW5RRn0IkO8VjnMma",
     "staffId": "-LGy4OuPDHCZCZvDuPz0",
     "submitterFirstName": "Trust",
     "submitterLastName": "Birungi",
@@ -152,7 +152,7 @@
     "weeksSpent": "N/A"
   },
   {
-    "id": "-LJK2fj_k_R7aYBAq_AR",
+    "fellow_id": "-LJK2fj_k_R7aYBAq_AR",
     "staffId": "-LJXG90epIwmW2U1XQHB",
     "submitterFirstName": "Martin",
     "submitterLastName": "Bbaale",
@@ -176,7 +176,7 @@
     "weeksSpent": "N/A"
   },
   {
-    "id": "-LD3PA3VgP4qvRRORX08",
+    "fellow_id": "-LD3PA3VgP4qvRRORX08",
     "staffId": "-LGy4OuPDHCZCZvDuPz0",
     "submitterFirstName": "Trust",
     "submitterLastName": "Birungi",
@@ -200,7 +200,7 @@
     "weeksSpent": "N/A"
   },
   {
-    "id": "-LJK2KDhq70_X1YbirFa",
+    "fellow_id": "-LJK2KDhq70_X1YbirFa",
     "staffId": "-LAmk78f7GyBWkt2UWpb",
     "submitterFirstName": "Ephraim",
     "submitterLastName": "Malinga",

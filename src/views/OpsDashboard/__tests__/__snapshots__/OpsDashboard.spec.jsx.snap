@@ -380,7 +380,7 @@ ShallowWrapper {
               "id": 1,
               "lastName": "Gitonga",
               "roleId": 3,
-              "staffId": "LOS/TTL/1050",
+              "staff_id": "LOS/TTL/1050",
               "updatedAt": "2018-12-06 10:13:21",
             },
             Object {
@@ -842,7 +842,7 @@ ShallowWrapper {
               "id": 2,
               "lastName": "Asiimwe",
               "roleId": 3,
-              "staffId": "UGD/TTL/2115",
+              "staff_id": "UGD/TTL/2115",
               "updatedAt": "2018-12-06 10:13:21",
             },
           ]
@@ -1220,7 +1220,7 @@ ShallowWrapper {
               "id": 1,
               "lastName": "Samuel",
               "roleId": 2,
-              "staffId": "LOS/TTL/1012",
+              "staff_id": "LOS/TTL/1012",
               "updatedAt": "2018-12-06 10:13:21",
             },
             Object {
@@ -1592,7 +1592,7 @@ ShallowWrapper {
               "id": 2,
               "lastName": "Birungi",
               "roleId": 2,
-              "staffId": "UGD/TTL/2135",
+              "staff_id": "UGD/TTL/2135",
               "updatedAt": "2018-12-06 10:13:21",
             },
           ]

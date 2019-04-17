@@ -61,23 +61,20 @@ class DeveloperDashboard extends Component {
     if (!data.error) {
       switch (true) {
         case !!user.roles.WATCH_TOWER_EM:
-          this.updateState(data.managerFellowsSummary.data);
-          break;
         case !!user.roles.WATCH_TOWER_SL: {
-          this.updateState(data.managerFellowsSummary.simulationsLead.lfs);
-          break;
+          return this.updateState(data.managerFellowsSummary.data);
         }
         case !!user.roles.WATCH_TOWER_LF:
-        case !!user.roles.WATCH_TOWER_TTL: {
+        case !!user.roles.WATCH_TOWER_TTL:
           this.setState({
             fellowSummaryDetails: data.managerFellowsSummary.data,
             allFellows: data.managerFellowsSummary.data
           });
           break;
-        }
         default:
       }
     }
+    return null;
   };
 
   /**
@@ -106,16 +103,15 @@ class DeveloperDashboard extends Component {
   /**
    *
    * @method redirectUrl
-   * @param {String} email - The email of the fellow clicked
+   * @param {String} fellowId - The id of the fellow
    * @param {Object} history - The history react object
    * @description - This method redirects the user to a page where he or she
    * can view a particular fellow detail
    *
    */
-  redirectUrl = (email, history) => {
-    if (!email) return history.push('/developers');
-    const name = email.substr(0, email.search('@andela.com'));
-    return history.push(`/developers/${name}`);
+  redirectUrl = (fellowId, history) => {
+    if (!fellowId) return history.push('/developers');
+    return history.push(`/developers/${fellowId}`);
   };
 
   /**
@@ -126,9 +122,7 @@ class DeveloperDashboard extends Component {
   handleCardClick = e => {
     const { id } = e.currentTarget;
     const { history } = this.props;
-    const { fellowSummaryDetails } = this.state;
-    const { email } = fellowSummaryDetails[id] ? fellowSummaryDetails[id] : '';
-    this.redirectUrl(email, history);
+    this.redirectUrl(id, history);
   };
 
   /**
@@ -161,18 +155,16 @@ class DeveloperDashboard extends Component {
      * @description - This method filters fellows based on the ticked card status and product
      */
     const filterFellows = tickedCard =>
-      allFellows.filter(fellow => {
-        if (
-          tickedCard.status === 'On Track' ||
-          tickedCard.status === 'Off Track' ||
-          tickedCard.status === 'PIP'
-        ) {
-          return fellow
-            ? fellow.overall_status === TranslatorTable[tickedCard.status]
-            : '';
-        }
-        return true;
-      });
+      allFellows.filter(fellow =>
+        fellow.pipStatus
+          ? fellow.pipStatus === TranslatorTable[tickedCard.status]
+          : `${fellow.overall_status}`.includes(
+              TranslatorTable[tickedCard.status]
+            ) &&
+            `${fellow.project}`.includes(
+              tickedCard.project === 'All Products' ? '' : tickedCard.project
+            )
+      );
 
     /**
      * this updates the state, initiates a callback when the state is updated.
@@ -213,7 +205,7 @@ class DeveloperDashboard extends Component {
       const content = {
         id: manager.staff_id,
         picture: manager.picture || undefined,
-        name: manager.managerName,
+        name: `${manager.managerName}`,
         title: undefined,
         fellowsCount: manager.fellowsCount,
         styles: { titleDisplayStyle: 'd-none', nameAvatarDisplayStyle: '' }
@@ -354,8 +346,8 @@ class DeveloperDashboard extends Component {
     return (
       <ErrorBoundary>
         <Switch>
-          {this.renderRoute('/developers/pip/activation/:name')}
-          {this.renderRoute('/developers/:name')}
+          {this.renderRoute('/developers/pip/activation/:id')}
+          {this.renderRoute('/developers/:id')}
           <Route
             path="/developers"
             render={() => this.renderFellowsDashboard()}

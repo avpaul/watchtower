@@ -13,7 +13,7 @@ import getManagerFellowsSummary, {
 
 describe("fetch manager 's data actions", () => {
   const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverUrl}/api/v1/manager/fellows/summary?email=trust.birungi@andela.com`;
+  const baseURL = `${serverUrl}/api/v2/managers/fellows/summary`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore({
@@ -95,55 +95,24 @@ describe("fetch manager 's data actions", () => {
       };
       return roleObject;
     };
-    expect(
-      resolveUrlByRole(
-        deduceRole('WATCH_TOWER_EM'),
-        'faker@email.com',
-        'ttl@email.com',
-        'simlead@email.com',
-        'em@email.com',
-        'mock.com'
-      )
-    ).toBe('mock.com');
+    expect(resolveUrlByRole(deduceRole('WATCH_TOWER_EM'), 'mock.com')).toBe(
+      'mock.com'
+    );
 
-    expect(
-      resolveUrlByRole(
-        deduceRole('WATCH_TOWER_TTL'),
-        'wt-test-ttl@andela.com',
-        'ttl@email.com',
-        'simlead@email.com',
-        'em@email.com'
-      )
-    ).toEqual(expect.stringContaining('ttl@email.com'));
+    expect(resolveUrlByRole(deduceRole('WATCH_TOWER_TTL'))).toEqual(
+      expect.stringContaining('api/v2/managers/fellows/summary')
+    );
 
-    expect(
-      resolveUrlByRole(
-        deduceRole('WATCH_TOWER_SL'),
-        'wt-test-sl@andela.com',
-        'ttl@email.com',
-        'simlead@email.com',
-        'em@email.com'
-      )
-    ).toEqual(expect.stringContaining('simlead@email.com'));
+    expect(resolveUrlByRole(deduceRole('WATCH_TOWER_SL'))).toEqual(
+      expect.stringContaining('api/v2/managers/detail')
+    );
 
-    expect(
-      resolveUrlByRole(
-        deduceRole('WATCH_TOWER_EM'),
-        'wt-test-em@andela.com',
-        'ttl@email.com',
-        'simlead@email.com',
-        'em@email.com'
-      )
-    ).toEqual(expect.stringContaining('details'));
+    expect(resolveUrlByRole(deduceRole('WATCH_TOWER_EM'))).toEqual(
+      expect.stringContaining('api/v2/managers/detail')
+    );
 
-    expect(
-      resolveUrlByRole(
-        deduceRole('WATCH_TOWER_LF'),
-        'wt-test-lf@andela.com',
-        'ttl@email.com',
-        'simlead@email.com',
-        'em@email.com'
-      )
-    ).toEqual(expect.stringContaining('ttl@email.com'));
+    expect(resolveUrlByRole(deduceRole('WATCH_TOWER_LF'))).toEqual(
+      expect.stringContaining('api/v2/managers/fellows/summary')
+    );
   });
 });

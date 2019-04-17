@@ -65,7 +65,7 @@ FellowSummaryBreakdown.propTypes = {
     PropTypes.shape({
       checkedBydefault: PropTypes.bool,
       title: PropTypes.string,
-      ratings: PropTypes.string
+      ratings: PropTypes.number
     })
   ).isRequired,
   handleCardClick: PropTypes.func.isRequired

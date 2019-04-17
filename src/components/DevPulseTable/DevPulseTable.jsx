@@ -9,10 +9,9 @@ import Loader from '../Loader/Loader';
 import DevPulseRow from './DevPulseRow';
 
 const DevPulseTable = props => {
-  const { ratings, loading } = props;
-
+  const { ratings, loading, fellow } = props;
   const { ErrorMessage } = Error;
-  if (ratings.length === 0 && !loading) {
+  if (!!ratings && ratings.length < 1 && !loading) {
     return (
       <ErrorMessage message="There's currently no ratings for this fellow" />
     );
@@ -26,21 +25,18 @@ const DevPulseTable = props => {
     'Professionalism',
     'Integration'
   ];
-  let counter = 0;
-  return (
+    return (
     <Fragment>
       <Table>
         <TableHeader headers={headers} />
-        {ratings.map(rating => {
-          counter += 1;
-          return (
-            <DevPulseRow
-              key={arrayKey(rating)}
-              rating={rating}
-              counter={counter}
-            />
-          );
-        })}
+        {!!ratings &&
+          ratings.map(rating =>
+            rating.level === fellow.level ? (
+              <DevPulseRow key={arrayKey(rating)} rating={rating} />
+            ) : (
+              ''
+            )
+          )}
       </Table>
       {loading && <Loader />}
     </Fragment>

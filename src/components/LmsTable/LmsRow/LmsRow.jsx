@@ -9,15 +9,17 @@ import Row from '../../TableComponents/Row';
 const formatLmsDetails = lmsSubmission => {
   const formatedLmsSubmission = {
     course_id: lmsSubmission.course_id,
-    name: lmsSubmission.assignment.name,
-    due_date: moment(lmsSubmission.due_date).format('L'),
+    name: lmsSubmission.assignment ? lmsSubmission.assignment.name : 'N/A',
+    due_date: lmsSubmission.due_date
+      ? moment(lmsSubmission.due_date).format('L')
+      : 'N/A',
     submission_date: lmsSubmission.submitted_at
       ? moment(lmsSubmission.submitted_at).format('L')
-      : 'Pending',
+      : 'N/A',
     graded_date: lmsSubmission.graded_at
       ? moment(lmsSubmission.graded_at).format('L')
-      : 'Pending',
-    score: lmsSubmission.score ? lmsSubmission.score : 'N/A'
+      : 'N/A',
+    score: lmsSubmission.score
   };
   return formatedLmsSubmission;
 };

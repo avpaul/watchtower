@@ -8,10 +8,10 @@ import {
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
-export default () => dispatch => {
+export default fellowId => dispatch => {
   dispatch({ type: LOAD_FELLOW_PROFILE_DATA_REQUEST });
 
-  return axios.get(`${serverURL}/api/v2/fellows/profile`).then(
+  return axios.get(`${serverURL}/api/v2/fellows/${fellowId || 'profile'}`).then(
     response =>
       dispatch({
         type: LOAD_FELLOW_PROFILE_DATA_SUCCESS,

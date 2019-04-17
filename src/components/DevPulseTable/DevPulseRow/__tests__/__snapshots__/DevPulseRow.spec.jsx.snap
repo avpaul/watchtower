@@ -4,35 +4,19 @@ exports[`tests the DevPulseRow renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DevPulseRow
-    counter={1}
     rating={
         Object {
             "scores": Array [
               Object {
-                "attribute": "Quantity",
-                "score": 1,
-              },
-              Object {
-                "attribute": "Quality",
-                "score": 2,
-              },
-              Object {
-                "attribute": "Initiative",
-                "score": 2,
-              },
-              Object {
-                "attribute": "Communication",
-                "score": 2,
-              },
-              Object {
-                "attribute": "Professionalism",
-                "score": 0,
-              },
-              Object {
-                "attribute": "Integration",
-                "score": 0,
+                "Communication": 2,
+                "Initiative": 2,
+                "Integration": 0,
+                "Professionalism": 0,
+                "Quality": 2,
+                "Quantity": 1,
               },
             ],
+            "week": 1,
           }
     }
 />,
@@ -54,40 +38,48 @@ ShallowWrapper {
           addedClass={null}
           title=""
 >
-          Week 1
+          04/17/2019
 </Cell>,
         <Cell
           addedClass={null}
-          title=""
->
-          1
-</Cell>,
-        <Cell
-          addedClass={null}
-          title=""
->
-          2
-</Cell>,
-        <Cell
-          addedClass={null}
-          title=""
->
-          2
-</Cell>,
-        <Cell
-          addedClass={null}
-          title=""
->
-          2
-</Cell>,
-        <Cell
-          addedClass="text-danger"
           title=""
 />,
         <Cell
-          addedClass="text-danger"
+          addedClass={null}
           title=""
-/>,
+>
+          N/A
+</Cell>,
+        <Cell
+          addedClass={null}
+          title=""
+>
+          N/A
+</Cell>,
+        <Cell
+          addedClass={null}
+          title=""
+>
+          N/A
+</Cell>,
+        <Cell
+          addedClass={null}
+          title=""
+>
+          N/A
+</Cell>,
+        <Cell
+          addedClass={null}
+          title=""
+>
+          N/A
+</Cell>,
+        <Cell
+          addedClass={null}
+          title=""
+>
+          N/A
+</Cell>,
       ],
       "header": false,
     },
@@ -99,11 +91,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": "Week 1",
+          "children": "04/17/2019",
           "title": "",
         },
         "ref": null,
-        "rendered": "Week 1",
+        "rendered": "04/17/2019",
         "type": [Function],
       },
       Object {
@@ -112,11 +104,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": 1,
+          "children": "",
           "title": "",
         },
         "ref": null,
-        "rendered": 1,
+        "rendered": "",
         "type": [Function],
       },
       Object {
@@ -125,11 +117,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": 2,
+          "children": "N/A",
           "title": "",
         },
         "ref": null,
-        "rendered": 2,
+        "rendered": "N/A",
         "type": [Function],
       },
       Object {
@@ -138,11 +130,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": 2,
+          "children": "N/A",
           "title": "",
         },
         "ref": null,
-        "rendered": 2,
+        "rendered": "N/A",
         "type": [Function],
       },
       Object {
@@ -151,11 +143,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": 2,
+          "children": "N/A",
           "title": "",
         },
         "ref": null,
-        "rendered": 2,
+        "rendered": "N/A",
         "type": [Function],
       },
       Object {
@@ -163,12 +155,12 @@ ShallowWrapper {
         "key": "weak-key-5",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "text-danger",
-          "children": 0,
+          "addedClass": null,
+          "children": "N/A",
           "title": "",
         },
         "ref": null,
-        "rendered": 0,
+        "rendered": "N/A",
         "type": [Function],
       },
       Object {
@@ -176,12 +168,25 @@ ShallowWrapper {
         "key": "weak-key-6",
         "nodeType": "function",
         "props": Object {
-          "addedClass": "text-danger",
-          "children": 0,
+          "addedClass": null,
+          "children": "N/A",
           "title": "",
         },
         "ref": null,
-        "rendered": 0,
+        "rendered": "N/A",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "weak-key-7",
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": null,
+          "children": "N/A",
+          "title": "",
+        },
+        "ref": null,
+        "rendered": "N/A",
         "type": [Function],
       },
     ],
@@ -198,40 +203,48 @@ ShallowWrapper {
             addedClass={null}
             title=""
 >
-            Week 1
+            04/17/2019
 </Cell>,
           <Cell
             addedClass={null}
-            title=""
->
-            1
-</Cell>,
-          <Cell
-            addedClass={null}
-            title=""
->
-            2
-</Cell>,
-          <Cell
-            addedClass={null}
-            title=""
->
-            2
-</Cell>,
-          <Cell
-            addedClass={null}
-            title=""
->
-            2
-</Cell>,
-          <Cell
-            addedClass="text-danger"
             title=""
 />,
           <Cell
-            addedClass="text-danger"
+            addedClass={null}
             title=""
-/>,
+>
+            N/A
+</Cell>,
+          <Cell
+            addedClass={null}
+            title=""
+>
+            N/A
+</Cell>,
+          <Cell
+            addedClass={null}
+            title=""
+>
+            N/A
+</Cell>,
+          <Cell
+            addedClass={null}
+            title=""
+>
+            N/A
+</Cell>,
+          <Cell
+            addedClass={null}
+            title=""
+>
+            N/A
+</Cell>,
+          <Cell
+            addedClass={null}
+            title=""
+>
+            N/A
+</Cell>,
         ],
         "header": false,
       },
@@ -243,11 +256,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": "Week 1",
+            "children": "04/17/2019",
             "title": "",
           },
           "ref": null,
-          "rendered": "Week 1",
+          "rendered": "04/17/2019",
           "type": [Function],
         },
         Object {
@@ -256,11 +269,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": 1,
+            "children": "",
             "title": "",
           },
           "ref": null,
-          "rendered": 1,
+          "rendered": "",
           "type": [Function],
         },
         Object {
@@ -269,11 +282,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": 2,
+            "children": "N/A",
             "title": "",
           },
           "ref": null,
-          "rendered": 2,
+          "rendered": "N/A",
           "type": [Function],
         },
         Object {
@@ -282,11 +295,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": 2,
+            "children": "N/A",
             "title": "",
           },
           "ref": null,
-          "rendered": 2,
+          "rendered": "N/A",
           "type": [Function],
         },
         Object {
@@ -295,11 +308,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": 2,
+            "children": "N/A",
             "title": "",
           },
           "ref": null,
-          "rendered": 2,
+          "rendered": "N/A",
           "type": [Function],
         },
         Object {
@@ -307,12 +320,12 @@ ShallowWrapper {
           "key": "weak-key-5",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "text-danger",
-            "children": 0,
+            "addedClass": null,
+            "children": "N/A",
             "title": "",
           },
           "ref": null,
-          "rendered": 0,
+          "rendered": "N/A",
           "type": [Function],
         },
         Object {
@@ -320,12 +333,25 @@ ShallowWrapper {
           "key": "weak-key-6",
           "nodeType": "function",
           "props": Object {
-            "addedClass": "text-danger",
-            "children": 0,
+            "addedClass": null,
+            "children": "N/A",
             "title": "",
           },
           "ref": null,
-          "rendered": 0,
+          "rendered": "N/A",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "weak-key-7",
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": null,
+            "children": "N/A",
+            "title": "",
+          },
+          "ref": null,
+          "rendered": "N/A",
           "type": [Function],
         },
       ],

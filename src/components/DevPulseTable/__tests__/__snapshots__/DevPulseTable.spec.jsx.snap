@@ -41,7 +41,6 @@ ShallowWrapper {
                     }
           />
           <DevPulseRow
-                    counter={1}
                     rating={Object {}}
           />
 </Table>,
@@ -71,7 +70,6 @@ ShallowWrapper {
 />,
             Array [
               <DevPulseRow
-                counter={1}
                 rating={Object {}}
 />,
             ],
@@ -103,7 +101,6 @@ ShallowWrapper {
             "key": "weak-key-0",
             "nodeType": "function",
             "props": Object {
-              "counter": 1,
               "rating": Object {},
             },
             "ref": null,
@@ -139,7 +136,6 @@ ShallowWrapper {
                         }
             />
             <DevPulseRow
-                        counter={1}
                         rating={Object {}}
             />
 </Table>,
@@ -169,7 +165,6 @@ ShallowWrapper {
 />,
               Array [
                 <DevPulseRow
-                  counter={1}
                   rating={Object {}}
 />,
               ],
@@ -201,7 +196,6 @@ ShallowWrapper {
               "key": "weak-key-0",
               "nodeType": "function",
               "props": Object {
-                "counter": 1,
                 "rating": Object {},
               },
               "ref": null,

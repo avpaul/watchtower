@@ -9,29 +9,43 @@ describe('tests the LmsTable', () => {
   beforeEach(() => {
     const props = {
       lmsSubmissions: [],
-      loading: true
+      loading: true,
+      fellow: {}
     };
     const props2 = {
       lmsSubmissions: [],
-      loading: false
+      loading: false,
+      fellow: {
+        actualApprenticeshipStartDate: '2019-03-18',
+        actualSimulationsCompletionDate: '2019-03-15',
+        apprenticeshipManager: 'Trust Birungi',
+        apprenticeshipTeam: 'Watch Tower',
+        apprenticeshipTechnology:
+          'JavaScript,  PHP/Laravel,  ReactJS,  Eloquent',
+        bio:
+          'Sed quo voluptatum ducimus sunt labore eos totam. Sit corporis est voluptates commodi occaecati. Modi harum assumenda quod voluptatem.',
+        cohort: 'Class 13 - KLA',
+        currentStage: 'Apprentice',
+        email: 'stanton.rogahn@andela.com'
+      }
     };
 
     const props3 = {
-      lmsSubmissions: [
-        {
-          assignment: {
-            course_id: 282,
-            id: 2465,
-            name: 'Output 3.2: Communicating Proactively'
-          },
-          course_id: 282,
-          due_date: '2019-03-29',
-          graded_at: null,
-          score: null,
-          submitted_at: '2019-03-29 14:47:04'
-        }
-      ],
-      loading: true
+      lmsSubmissions: [{}],
+      loading: true,
+      fellow: {
+        actualApprenticeshipStartDate: '2019-03-18',
+        actualSimulationsCompletionDate: '2019-03-15',
+        apprenticeshipManager: 'Trust Birungi',
+        apprenticeshipTeam: 'Watch Tower',
+        apprenticeshipTechnology:
+          'JavaScript,  PHP/Laravel,  ReactJS,  Eloquent',
+        bio:
+          'Sed quo voluptatum ducimus sunt labore eos totam. Sit corporis est voluptates commodi occaecati. Modi harum assumenda quod voluptatem.',
+        cohort: 'Class 13 - KLA',
+        currentStage: 'Apprentice',
+        email: 'stanton.rogahn@andela.com'
+      }
     };
 
     wrapper = shallow(<LmsTable {...props} />);

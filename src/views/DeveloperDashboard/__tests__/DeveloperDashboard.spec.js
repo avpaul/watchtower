@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-
 import DeveloperDashboard from '../DeveloperDashboard';
 import FellowSummaryData from '../../../__mocks__/fellowSummary.json';
 import SimulationLeadData from '../../../__mocks__/simulationsLeadLf.json';
@@ -152,7 +151,8 @@ describe('Developers dashboard test', () => {
     const fellowSummaryDetails = [
       {
         user: {
-          email: 'brian.mboya@andela.com'
+          email: 'brian.mboya@andela.com',
+          fellow_id: '-LP6C8U9vaZuCUteSlXq'
         }
       }
     ];
@@ -162,15 +162,9 @@ describe('Developers dashboard test', () => {
         id: 0
       }
     };
-    const email = {
-      substr: jest.fn(() => 'brian.mboya'),
-      search: jest.fn(() => '@andela.com')
-    };
 
     instance.handleCardClick(event);
-    instance.redirectUrl(email, props.history);
-    expect(email.substr).toHaveBeenCalled();
-    expect(email.search).toHaveBeenCalled();
+    instance.redirectUrl(fellowSummaryDetails[0].user.fellow_id, props.history);
     expect(props.history.push).toHaveBeenCalled();
   });
 
@@ -205,7 +199,7 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'All Fellows'
       },
-      8
+      5
     );
   });
 
@@ -216,7 +210,7 @@ describe('Developers dashboard test', () => {
         value: 'project'
       },
       { status: 'On Track', project: 'Watch Tower' },
-      4
+      2
     );
   });
 
@@ -244,7 +238,7 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'PIP'
       },
-      0
+      1
     );
   });
 
