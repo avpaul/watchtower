@@ -21,7 +21,7 @@ describe('PipActivationForm component', () => {
       professionalism: '0.00',
       integration: '0.00'
     },
-    getFellowDevPulse: jest.fn(),
+    getFellowHistoryData: jest.fn(),
     handleMgtInputChange: jest.fn(),
     addManagementSupport: jest.fn(),
     handleSubmit: jest.fn(),

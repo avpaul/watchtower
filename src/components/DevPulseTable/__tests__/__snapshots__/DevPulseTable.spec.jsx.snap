@@ -25,12 +25,97 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "customStyle": Object {},
-      "message": "There's currently no ratings for this fellow",
+      "children": Array [
+        <Table>
+          <TableHeader
+                    headers={
+                              Array [
+                                        "Week",
+                                        "Quantity",
+                                        "Quality",
+                                        "Initiative",
+                                        "Communication",
+                                        "Professionalism",
+                                        "Integration",
+                                      ]
+                    }
+          />
+          <DevPulseRow
+                    counter={1}
+                    rating={Object {}}
+          />
+</Table>,
+        false,
+      ],
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <TableHeader
+              headers={
+                            Array [
+                                          "Week",
+                                          "Quantity",
+                                          "Quality",
+                                          "Initiative",
+                                          "Communication",
+                                          "Professionalism",
+                                          "Integration",
+                                        ]
+              }
+/>,
+            Array [
+              <DevPulseRow
+                counter={1}
+                rating={Object {}}
+/>,
+            ],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "headers": Array [
+                "Week",
+                "Quantity",
+                "Quality",
+                "Initiative",
+                "Communication",
+                "Professionalism",
+                "Integration",
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "weak-key-0",
+            "nodeType": "function",
+            "props": Object {
+              "counter": 1,
+              "rating": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      false,
+    ],
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -38,12 +123,97 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "customStyle": Object {},
-        "message": "There's currently no ratings for this fellow",
+        "children": Array [
+          <Table>
+            <TableHeader
+                        headers={
+                                    Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                        }
+            />
+            <DevPulseRow
+                        counter={1}
+                        rating={Object {}}
+            />
+</Table>,
+          false,
+        ],
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <TableHeader
+                headers={
+                                Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                }
+/>,
+              Array [
+                <DevPulseRow
+                  counter={1}
+                  rating={Object {}}
+/>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "headers": Array [
+                  "Week",
+                  "Quantity",
+                  "Quality",
+                  "Initiative",
+                  "Communication",
+                  "Professionalism",
+                  "Integration",
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "weak-key-0",
+              "nodeType": "function",
+              "props": Object {
+                "counter": 1,
+                "rating": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        false,
+      ],
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -87,12 +257,84 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "customStyle": Object {},
-      "message": "There's currently no ratings for this fellow",
+      "children": Array [
+        <Table>
+          <TableHeader
+                    headers={
+                              Array [
+                                        "Week",
+                                        "Quantity",
+                                        "Quality",
+                                        "Initiative",
+                                        "Communication",
+                                        "Professionalism",
+                                        "Integration",
+                                      ]
+                    }
+          />
+</Table>,
+        <Loader />,
+      ],
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <TableHeader
+              headers={
+                            Array [
+                                          "Week",
+                                          "Quantity",
+                                          "Quality",
+                                          "Initiative",
+                                          "Communication",
+                                          "Professionalism",
+                                          "Integration",
+                                        ]
+              }
+/>,
+            Array [],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "headers": Array [
+                "Week",
+                "Quantity",
+                "Quality",
+                "Initiative",
+                "Communication",
+                "Professionalism",
+                "Integration",
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -100,12 +342,84 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "customStyle": Object {},
-        "message": "There's currently no ratings for this fellow",
+        "children": Array [
+          <Table>
+            <TableHeader
+                        headers={
+                                    Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                        }
+            />
+</Table>,
+          <Loader />,
+        ],
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <TableHeader
+                headers={
+                                Array [
+                                                "Week",
+                                                "Quantity",
+                                                "Quality",
+                                                "Initiative",
+                                                "Communication",
+                                                "Professionalism",
+                                                "Integration",
+                                              ]
+                }
+/>,
+              Array [],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "headers": Array [
+                  "Week",
+                  "Quantity",
+                  "Quality",
+                  "Initiative",
+                  "Communication",
+                  "Professionalism",
+                  "Integration",
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

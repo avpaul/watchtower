@@ -55,4 +55,19 @@ export const displayCellContent = (key, value) => {
   };
 };
 
+export const roundOff = (number, decimalPlaces) => {
+  /**
+   * Returns the number rounded off to the given number of decimal places
+   * @param {Float|Integer} number - floating point number
+   * @param {Integer} decimalPlaces - number of decimal places
+   * @return {String} rounded off to a given number of decimal places
+   */
+  if (Number.isInteger(Number(number))) {
+    return String(`${number}.00`);
+  }
+  return String(
+    +`${Math.round(`${number}e+${decimalPlaces}`)}e-${decimalPlaces}`
+  );
+};
+
 export default truncate;

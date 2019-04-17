@@ -4,8 +4,8 @@ import { MemoryRouter } from 'react-router-dom';
 
 import DeveloperDashboard from '../DeveloperDashboard';
 import FellowSummaryData from '../../../__mocks__/fellowSummary.json';
-import EngineeringManagerFellowsSummaryData from '../../../__mocks__/engineeringManagerTtls.json';
 import SimulationLeadData from '../../../__mocks__/simulationsLeadLf.json';
+import EngineeringManagerDeveloperSummary from '../../../__mocks__/emDeveloperSummery.json';
 import FilterButton from '../../../components/Buttons/Button';
 import FellowFilterCard from '../../../components/FellowFilterCard';
 import MapFellowsFilterCard from '../../../components/MapFellowsFilterCard';
@@ -14,7 +14,7 @@ import FellowsCount from '../../../components/FellowsCount';
 const getManagerDataByRole = loggedInRole => {
   switch (loggedInRole) {
     case 'WATCH_TOWER_EM':
-      return EngineeringManagerFellowsSummaryData;
+      return EngineeringManagerDeveloperSummary;
     case 'WATCH_TOWER_SL':
       return SimulationLeadData;
     case 'WATCH_TOWER_TTL':
@@ -118,6 +118,10 @@ describe('Developers dashboard test', () => {
     developerDashboardWrapper.instance().renderResultCount();
     developerDashboardWrapper.instance().mapLfTtlData();
     developerDashboardWrapper.instance().renderFellowsDashboard([], 1);
+    developerDashboardWrapper
+      .instance()
+      .updateState(EngineeringManagerDeveloperSummary.managees);
+    developerDashboardWrapper.instance().filterFellows('-LQnPSlfF0FLe3tayNGy');
   });
 
   it('should call filterFellows when the status filter represents all fellows', () => {
@@ -201,7 +205,7 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'All Fellows'
       },
-      5
+      8
     );
   });
 
@@ -212,7 +216,7 @@ describe('Developers dashboard test', () => {
         value: 'project'
       },
       { status: 'On Track', project: 'Watch Tower' },
-      2
+      4
     );
   });
 
@@ -240,9 +244,11 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'PIP'
       },
-      1
+      0
     );
   });
+
+  it('should filter Fellows given the manager ID', () => {});
 });
 
 export default getManagerDataByRole;

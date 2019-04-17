@@ -122,11 +122,6 @@ export default {
       error: ''
     }
   },
-  fellowLmsRatings: {
-    loading: false,
-    data: {},
-    error: null
-  },
   engineeringManagerSimsLeads: {
     loading: false,
     data: [],

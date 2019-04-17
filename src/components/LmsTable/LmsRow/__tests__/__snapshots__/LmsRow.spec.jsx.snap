@@ -6,12 +6,14 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <LmsRow
     lmsSubmission={
         Object {
+            "assignment": Object {
+              "name": "test course",
+            },
             "course_id": 132,
             "due_date": "2018-12-14T13:59:00Z",
-            "graded_date": "2018-12-14T13:59:00Z",
-            "name": "test course",
+            "graded_at": "2018-12-14T13:59:00Z",
             "score": 2,
-            "submission_date": "2018-12-14T13:59:00Z",
+            "submitted_at": "2018-12-14T13:59:00Z",
           }
     }
 />,

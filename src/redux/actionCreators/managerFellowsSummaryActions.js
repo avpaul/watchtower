@@ -12,7 +12,7 @@ const getUrl = (email, testEmail, envMail, roleId) => {
   let url;
   switch (roleId) {
     case 1:
-      url = '/api/v1/engineeringmanagers/ttls?email=';
+      url = '/api/v2/managers/details';
       break;
     case 2:
       url = '/api/v1/simulationsLeads/lfs?email=';
@@ -20,7 +20,9 @@ const getUrl = (email, testEmail, envMail, roleId) => {
     default:
       url = '/api/v1/manager/fellows/summary?email=';
   }
-  return `${serverURL}${url}${email === testEmail ? envMail : email}`;
+  if (url.includes('email'))
+    return `${serverURL}${url}${email === testEmail ? envMail : email}`;
+  return `${serverURL}${url}`;
 };
 
 export const resolveUrlByRole = (

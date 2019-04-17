@@ -134,7 +134,7 @@ describe("fetch manager 's data actions", () => {
         'simlead@email.com',
         'em@email.com'
       )
-    ).toEqual(expect.stringContaining('em@email.com'));
+    ).toEqual(expect.stringContaining('details'));
 
     expect(
       resolveUrlByRole(

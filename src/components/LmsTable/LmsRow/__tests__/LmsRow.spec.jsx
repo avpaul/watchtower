@@ -7,11 +7,11 @@ describe('tests the LmsRow', () => {
   beforeEach(() => {
     const props = {
       lmsSubmission: {
-        name: 'test course',
+        assignment: { name: 'test course' },
         course_id: 132,
         due_date: '2018-12-14T13:59:00Z',
-        submission_date: '2018-12-14T13:59:00Z',
-        graded_date: '2018-12-14T13:59:00Z',
+        submitted_at: '2018-12-14T13:59:00Z',
+        graded_at: '2018-12-14T13:59:00Z',
         score: 2
       }
     };

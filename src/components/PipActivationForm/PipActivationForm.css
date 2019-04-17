@@ -92,8 +92,8 @@
 
 .btn-pip-container {
   position: absolute;
-  right: 0;
-  top: -10px;
+  right: 4.166666666%;
+  top: 150px;
 }
 
 .btn-pip-activation {
@@ -205,6 +205,6 @@
 
 @media screen and (max-width: 767px) {
   .btn-pip-container {
-    position: relative;
+    top: 130px;
   }
 }

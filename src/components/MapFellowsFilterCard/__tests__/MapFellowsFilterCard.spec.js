@@ -50,7 +50,7 @@ describe('MapFellowsFilterCard tests', () => {
     );
     expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(4);
   });
-  it('should render total number of fellows under all products to be 6', () => {
+  it('should render total number of fellows under all products to be 8', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'status',
@@ -67,9 +67,9 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .first()
         .props().numberOfFellows
-    ).toBe(6);
+    ).toBe(8);
   });
-  it('should render total number of fellows on track to be 2', () => {
+  it('should render total number of fellows on track to be 4', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'status',
@@ -86,7 +86,7 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(1)
         .props().numberOfFellows
-    ).toBe(2);
+    ).toBe(4);
   });
   it('should render total number of fellows off track to be 3', () => {
     const { mapFellowsFilterCardWrapper } = setup(
@@ -107,7 +107,7 @@ describe('MapFellowsFilterCard tests', () => {
         .props().numberOfFellows
     ).toBe(3);
   });
-  it('should render total number of fellows on pip to be 1', () => {
+  it('should render total number of fellows on pip to be', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'status',
@@ -124,6 +124,6 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(3)
         .props().numberOfFellows
-    ).toBe(1);
+    ).toBe(0);
   });
 });

@@ -5,12 +5,12 @@ import { withRouter } from 'react-router';
 import { Switch, Route } from 'react-router-dom';
 import HistoryCard from './FellowHistoryCard';
 import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
-import fetchDevPulse from '../../redux/actionCreators/fellowDevPulseActions';
+import fetchFellowData from '../../redux/actionCreators/fellowDevPulseActions';
 import PipActivationForm from '../PipActivationForm/PipActivationForm';
 import './FellowHistory.css';
 import DevPulseTable from '../DevPulseTable';
-import getLmsSubmissions from '../../redux/actionCreators/fellowLmsSubmissionsActions';
 import LmsTable from '../LmsTable';
+import { roundOff } from '../../utils/index';
 
 export class FellowHistory extends Component {
   constructor(props) {
@@ -44,17 +44,13 @@ export class FellowHistory extends Component {
       match,
       fellowSummaryDetails,
       history,
-      getFellowDevPulse,
-      getLmsSubmissions: getLms
+      getFellowHistoryData
     } = this.props;
     const fellowFound = fellowSummaryDetails.find(
       fellow => fellow.email === `${match.params.name.toLowerCase()}@andela.com`
     );
-
     if (fellowFound !== undefined) {
-      const { email } = fellowFound;
-      getLms(email);
-      getFellowDevPulse(email);
+      getFellowHistoryData(fellowFound.fellow_id);
     } else {
       history.push('/developers');
     }
@@ -69,12 +65,17 @@ export class FellowHistory extends Component {
         checkedBydefault: showDevpulseTable,
         title: 'DevPulse',
         ratings:
-          fellow.devPulseAverage === null ? 'N/A' : fellow.devPulseAverage
+          fellow.overall_status === 'N/A'
+            ? fellow.overall_status
+            : roundOff(fellow.overall_average, 2)
       },
       {
         checkedBydefault: showLmsTable,
         title: 'LMS',
-        ratings: fellow.lmsOutput === null ? '0/0' : fellow.lmsOutput
+        ratings:
+          fellow.submitted && fellow.total
+            ? `${fellow.submitted}/${fellow.total}`
+            : 'N/A'
       }
     ];
     return fellowsListDisplayData;
@@ -87,29 +88,16 @@ export class FellowHistory extends Component {
    * @param fellow The fellow's bio details
    * @returns JSX object
    */
-  renderManagerCard = (manager, fellow) => {
-    if (!manager) return <div />;
-    let managerRole = '';
-
-    switch (manager.roleId) {
-      case 2:
-        managerRole = 'TTL';
-        break;
-      case 3:
-        managerRole = 'LF';
-        break;
-      default:
-        managerRole = 'Undefined';
-        break;
-    }
+  renderManagerCard = fellow => {
+    if (!fellow) return <div />;
 
     return (
       <div className="col-md-6 col-xl-3 mb-3">
         <HistoryCard
           user={{
-            name: `${manager.firstName} ${manager.lastName}`,
-            picture: manager.picture,
-            detail: `${fellow.firstName}'s ${managerRole}`
+            name: fellow.managerName,
+            picture: '',
+            detail: `${fellow.name}'s ${fellow.managerRole}`
           }}
         />
       </div>
@@ -123,22 +111,19 @@ export class FellowHistory extends Component {
    * @returns JSX object
    */
   renderCards = fellow => {
-    if (!fellow || !fellow.project) return <div />;
-
-    const fellowBio = fellow.user ? fellow.user : fellow;
-
+    if (!fellow) return <div />;
     return (
       <React.Fragment>
         <div className="col-md-6 col-xl-3 mb-3">
           <HistoryCard
             user={{
-              name: `${fellowBio.firstName} ${fellowBio.lastName}`,
+              name: fellow.name,
               picture: fellow.picture,
-              detail: fellow.project
+              detail: fellow.apprenticeshipTeam
             }}
           />
         </div>
-        {this.renderManagerCard(fellow.manager, fellowBio)}
+        {this.renderManagerCard(fellow)}
 
         <div className="col-xl-6 mt-3 mt-xl-0">
           <FellowSummaryBreakdown
@@ -177,20 +162,30 @@ export class FellowHistory extends Component {
   };
 
   renderTables = () => {
-    const { ratings, ratingsLoading, lmsLoading, lmsSubmissions } = this.props;
+    const { ratings, ratingsLoading, lmsSubmissions } = this.props;
     const { showDevpulseTable, showLmsTable, fellow } = this.state;
+    let fellowCurrentLevel;
+    if (fellow && Object.keys(fellow).length > 0) {
+      fellowCurrentLevel = fellow.level;
+    }
+    const currentRatings = ratings
+      ? ratings.filter(rating => rating.level === fellowCurrentLevel)
+      : [];
+    const currentLms = lmsSubmissions
+      ? lmsSubmissions.filter(lms => lms.level === fellowCurrentLevel)
+      : [];
 
     return (
       <div className="col-12 mt-5">
         {showDevpulseTable && (
           <DevPulseTable
             loading={ratingsLoading}
-            ratings={ratings}
+            ratings={currentRatings}
             fellow={fellow}
           />
         )}
         {showLmsTable && (
-          <LmsTable loading={lmsLoading} lmsSubmissions={lmsSubmissions} />
+          <LmsTable loading={ratingsLoading} lmsSubmissions={currentLms} />
         )}
       </div>
     );
@@ -203,10 +198,10 @@ export class FellowHistory extends Component {
       <Fragment>
         <div className="fellow-history container-fluid">
           <div className="fellow-history__top row">
+            <div className="btn-pip-container">
+              {this.loadPipActivationForm()}
+            </div>
             <div className="col">
-              <div className="btn-pip-container">
-                {this.loadPipActivationForm()}
-              </div>
               <div className="row">
                 <span className="fellow-history__header col">
                   DEVELOPER HISTORY
@@ -249,24 +244,21 @@ FellowHistory.propTypes = {
   match: PropTypes.shape().isRequired,
   fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   history: PropTypes.shape().isRequired,
-  lmsSubmissions: PropTypes.PropTypes.shape({}).isRequired,
-  lmsLoading: PropTypes.bool.isRequired,
-  getLmsSubmissions: PropTypes.func.isRequired,
+  lmsSubmissions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   ratings: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   ratingsLoading: PropTypes.bool.isRequired,
-  getFellowDevPulse: PropTypes.func.isRequired,
+  getFellowHistoryData: PropTypes.func.isRequired,
   averageRatings: PropTypes.shape({}).isRequired
 };
 
-const mapStateToProps = ({ fellowDevPulse, fellowLmsSubmissions }) => ({
+const mapStateToProps = ({ fellowDevPulse }) => ({
   ratings: fellowDevPulse.ratings,
   ratingsLoading: fellowDevPulse.loading,
-  lmsSubmissions: fellowLmsSubmissions.lmsSubmissions,
-  lmsLoading: fellowLmsSubmissions.loading,
+  lmsSubmissions: fellowDevPulse.lmsSubmissions,
   averageRatings: fellowDevPulse.averageRatings
 });
 
 export default connect(
   mapStateToProps,
-  { getFellowDevPulse: fetchDevPulse, getLmsSubmissions }
+  { getFellowHistoryData: fetchFellowData }
 )(withRouter(FellowHistory));

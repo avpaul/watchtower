@@ -7,91 +7,371 @@ ShallowWrapper {
     fellowsSummaryCardDetails={
         Array [
             Object {
-              "apprEndDate": "2019-01-16",
-              "apprStartDate": "2018-10-15",
-              "devPulseAverage": "1.04",
-              "firstName": "Kingsley",
-              "lastName": "Obot",
-              "level": "D0B Apprenticeship",
-              "lmsOutput": "4/18",
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "project": "Watch Tower",
-              "simsEndDate": null,
-              "simsStartDate": null,
-              "status": "ltWk5OffTrack",
+              "actualApprenticeshipStartDate": "2019-01-14",
+              "actualSimulationsCompletionDate": "2019-01-10",
+              "apprenticeshipManager": "Kesiena Akpobome",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  Typescript,  ReactJS,  Redux",
+              "bio": "Vitae rerum dolor aut accusantium incidunt. Assumenda quae est corporis aut laborum minima vitae consequatur. Quasi placeat a veritatis ut ratione dolorum inventore. Ea eos delectus soluta reiciendis minima.",
+              "cohort": "Class 41 - LOS",
+              "communication": "1",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "gteWk5OnTrack",
+              "email": "betty.fritsch@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-04-08",
+              "expectedApprenticeshipStartDate": "2019-01-14",
+              "expectedSimulationsCompletionDate": "2019-01-08",
+              "fellow_id": "-LLUWWd2rDslm51iDJzh",
+              "id": 221,
+              "initiative": "1",
+              "integration": "1",
+              "invalid_attempts": 0,
+              "launchDate": "2022-10-02",
+              "level": "D0A",
+              "lmsStatus": "ltWk5OnTrack",
+              "m1Facilitator": "Ukemeobong Akpan",
+              "managerEmail": "kesiena.akpobome@andela.com",
+              "managerName": "Kesiena Akpobome",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Betty Fritsch",
+              "overall_average": "1.01515151515152",
+              "overall_status": "onTrack",
+              "picture": "https://lorempixel.com/100/100/people/?22978",
+              "professionalism": "1",
+              "project": "Asset Mgt Front End",
+              "quality": "1",
+              "quantity": "1.09090909090909",
+              "ratings": 11,
+              "satisfied": 16,
+              "simulationStartDate": "2018-10-16",
+              "simulationsPM": "Mark Edomwande",
+              "simulationsStack": "Javascript/MEAN",
+              "simulationsTeam": "Noldor",
+              "startDate": "2018-10-02",
+              "status": "gteWk5OnTrack",
+              "submitted": 16,
+              "total": 16,
+              "unsubmitted": 0,
+              "weeksSpent": 13,
             },
             Object {
-              "apprEndDate": "2019-01-16",
-              "apprStartDate": "2018-10-15",
-              "devPulseAverage": "1.04",
-              "firstName": "Kingsley",
-              "lastName": "Obot",
-              "level": "D0B Apprenticeship",
-              "lmsOutput": "4/18",
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "pipStatus": true,
-              "project": "Watch Tower",
-              "simsEndDate": null,
-              "simsStartDate": null,
-              "status": "gteWk5OffTrack",
+              "actualApprenticeshipStartDate": "2019-02-18",
+              "actualSimulationsCompletionDate": "2019-02-11",
+              "apprenticeshipManager": "Kesiena Akpobome",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  Typescript,  ReactJS,  NodeJS,  ExpressJS,  Redux",
+              "bio": "Magni sapiente adipisci rerum voluptatem sed iure et qui. Minus qui quis voluptatem omnis. Minus quod amet quo voluptatibus facere ullam possimus.",
+              "cohort": "Class 32 - NBO",
+              "communication": "1.4",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "gteWk5OnTrack",
+              "email": "juwan.welch@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-05-16",
+              "expectedApprenticeshipStartDate": "2019-02-18",
+              "expectedSimulationsCompletionDate": "2019-02-11",
+              "fellow_id": "-LONjhec1Re6QptQhduO",
+              "id": 53,
+              "initiative": "1.4",
+              "integration": "1",
+              "invalid_attempts": 0,
+              "launchDate": "2022-11-05",
+              "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "kesiena.akpobome@andela.com",
+              "managerName": "Kesiena Akpobome",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Juwan Welch",
+              "overall_average": "1.13333333333333",
+              "overall_status": "onTrack",
+              "picture": "https://lorempixel.com/100/100/people/?59709",
+              "pluralsight": "javascript, node-js",
+              "professionalism": "1",
+              "project": "Asset Mgt Front End",
+              "quality": "1",
+              "quantity": "1",
+              "ratings": 5,
+              "satisfied": 2,
+              "simulationStartDate": "2018-11-19",
+              "simulationsPM": "Brian Maiyo",
+              "startDate": "2018-11-05",
+              "status": "gteWk5OnTrack",
+              "submitted": 8,
+              "total": 16,
+              "unsubmitted": 8,
+              "weeksSpent": 8,
             },
             Object {
-              "apprEndDate": "2019-01-16",
-              "apprStartDate": "2018-10-15",
-              "devPulseAverage": "1.04",
-              "firstName": "Oluseyi",
-              "lastName": "Anani",
-              "level": "D0B Apprenticeship",
-              "lmsOutput": "4/18",
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "project": "Watch Tower",
-              "simsEndDate": null,
-              "simsStartDate": null,
-              "status": "onTrack",
+              "actualApprenticeshipStartDate": "2019-03-18",
+              "actualSimulationsCompletionDate": "2019-03-11",
+              "apprenticeshipManager": "Kesiena Akpobome",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  ReactJS,  Redux,  NodeJS,  ExpressJS",
+              "bio": "Asperiores maxime fugit necessitatibus tempora. Voluptatem fugit ipsum magni enim voluptatum facilis. Sed vel maxime quis eligendi consectetur dignissimos fuga. Nostrum quia magnam dolorem aut sequi quia.",
+              "cohort": "Class 33 - NBO",
+              "communication": "1",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "ltWk5OnTrack",
+              "email": "juliana.reynolds@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-06-12",
+              "expectedApprenticeshipStartDate": "2019-03-18",
+              "expectedSimulationsCompletionDate": "2019-03-11",
+              "fellow_id": "-LQdduOe5sz1eUvJXrw7",
+              "id": 95,
+              "initiative": "2",
+              "integration": "1",
+              "invalid_attempts": 0,
+              "launchDate": "2022-12-03",
+              "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "kesiena.akpobome@andela.com",
+              "managerName": "Kesiena Akpobome",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Juliana Reynolds",
+              "overall_average": "1.33333333333333",
+              "overall_status": "onTrack",
+              "picture": "https://lorempixel.com/100/100/people/?75538",
+              "professionalism": "1",
+              "project": "Asset Mgt Front End",
+              "quality": "1",
+              "quantity": "2",
+              "ratings": 1,
+              "satisfied": 0,
+              "simulationStartDate": "2018-12-17",
+              "simulationsStack": "Python/Django",
+              "startDate": "2018-12-03",
+              "status": "ltWk5OnTrack",
+              "submitted": 4,
+              "total": 16,
+              "unsubmitted": 12,
+              "weeksSpent": 4,
             },
             Object {
-              "apprEndDate": "2019-01-16",
-              "apprStartDate": "2018-10-15",
-              "devPulseAverage": "1.04",
-              "firstName": "Brian",
-              "lastName": "Bett",
-              "level": "D0B Apprenticeship",
-              "lmsOutput": "4/18",
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "project": "Watch Tower",
-              "simsEndDate": null,
-              "simsStartDate": null,
-              "status": "onTrack",
+              "actualApprenticeshipStartDate": "2019-02-18",
+              "actualSimulationsCompletionDate": "2019-02-11",
+              "apprenticeshipManager": "Olaoluwa Faniyi",
+              "apprenticeshipTeam": "Asset Mgt Back End",
+              "apprenticeshipTechnology": "Python/Flask",
+              "bio": "Et nobis ipsa voluptatem quaerat accusantium blanditiis repellendus. Unde dolorum ut ut labore. Fuga id consequatur consequuntur recusandae dignissimos quis ea. At facere iure omnis excepturi laborum non sint cum. Officia ipsa explicabo sed aut non.",
+              "cohort": "Class 42 - LOS",
+              "communication": "1",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "ltWk5OnTrack",
+              "email": "kariane.bayer@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-05-16",
+              "expectedApprenticeshipStartDate": "2019-02-18",
+              "expectedSimulationsCompletionDate": "2019-02-11",
+              "fellow_id": "-LOYQetn238a1EphulLx",
+              "id": 93,
+              "initiative": "1",
+              "integration": "1",
+              "invalid_attempts": 0,
+              "launchDate": "2022-11-05",
+              "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "olaoluwa.faniyi@andela.com",
+              "managerName": "Olaoluwa Faniyi",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Kariane Bayer",
+              "overall_average": "1.04166666666667",
+              "overall_status": "onTrack",
+              "picture": "https://lorempixel.com/100/100/people/?29528",
+              "professionalism": "1",
+              "project": "Asset Mgt Back End",
+              "quality": "1",
+              "quantity": "1.25",
+              "ratings": 4,
+              "satisfied": 2,
+              "simulationStartDate": "2018-11-19",
+              "simulationsPM": "Victoria Offoma",
+              "startDate": "2018-11-05",
+              "status": "ltWk5OnTrack",
+              "submitted": 8,
+              "total": 16,
+              "unsubmitted": 8,
+              "weeksSpent": 8,
             },
             Object {
-              "apprEndDate": null,
-              "apprStartDate": null,
-              "devPulseAverage": "1.04",
-              "firstName": "",
-              "lastName": "",
-              "level": "D0A Simulations",
-              "lmsOutput": "4/18",
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "project": "Noldor",
-              "simsEndDate": "2019-06-14",
-              "simsStartDate": "2019-03-06",
-              "status": "gteWk5OffTrack",
+              "actualApprenticeshipStartDate": "2019-02-18",
+              "actualSimulationsCompletionDate": "2019-02-11",
+              "apprenticeshipManager": "Olaoluwa Faniyi",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  Typescript,  ReactJS,  Redux",
+              "bio": "Qui sunt nesciunt maxime est repellendus. Qui nesciunt eum facilis quis. Rerum et totam distinctio consectetur quae. Sint quasi id aut porro. Eos maxime dolor ratione dolores praesentium dolore est.",
+              "cohort": "Class 42 - LOS",
+              "communication": "1.16666666666667",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "gteWk5OnTrack",
+              "email": "michele.frami@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-05-16",
+              "expectedApprenticeshipStartDate": "2019-02-18",
+              "expectedSimulationsCompletionDate": "2019-02-11",
+              "fellow_id": "-LOYR3N-V2UAZZTg5Zph",
+              "id": 25,
+              "initiative": "1.16666666666667",
+              "integration": "1.16666666666667",
+              "invalid_attempts": 0,
+              "launchDate": "2022-11-05",
+              "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "olaoluwa.faniyi@andela.com",
+              "managerName": "Olaoluwa Faniyi",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Michele Frami",
+              "overall_average": "1.11111111111111",
+              "overall_status": "offTrack",
+              "picture": "https://lorempixel.com/100/100/people/?97301",
+              "professionalism": "1",
+              "project": "Asset Mgt Front End",
+              "quality": "1",
+              "quantity": "1.16666666666667",
+              "ratings": 6,
+              "satisfied": 7,
+              "simulationStartDate": "2018-11-19",
+              "simulationsPM": "Victoria Offoma",
+              "startDate": "2018-11-05",
+              "status": "gteWk5OnTrack",
+              "submitted": 8,
+              "total": 16,
+              "unsubmitted": 8,
+              "weeksSpent": 8,
             },
             Object {
-              "apprEndDate": null,
-              "apprStartDate": null,
-              "devPulseAverage": "1.04",
-              "level": "D0A Simulations",
-              "lmsOutput": "4/18",
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "project": "Noldor",
-              "simsEndDate": "2019-06-14",
-              "simsStartDate": "2019-03-06",
-              "status": "gteWk5OffTrack",
-              "user": Object {
-                "firstName": "somereallyreallylongusername",
-                "lastName": "",
-              },
+              "actualApprenticeshipStartDate": "2019-02-18",
+              "actualSimulationsCompletionDate": "2019-02-11",
+              "apprenticeshipManager": "Olaoluwa Faniyi",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  Typescript,  ReactJS,  Redux",
+              "bio": "At veniam atque eum quidem dolore est aut adipisci. Ex veniam repellat enim dolore perferendis temporibus repellendus dolore. Animi facilis fuga sapiente accusamus delectus qui ipsum. Laboriosam voluptatem odit et enim illo. Corporis omnis pariatur dolorem voluptatibus dolorem odit.",
+              "cohort": "Class 42 - LOS",
+              "communication": "1",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "gteWk5OnTrack",
+              "email": "deven.hickle@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-05-16",
+              "expectedApprenticeshipStartDate": "2019-02-18",
+              "expectedSimulationsCompletionDate": "2019-02-11",
+              "fellow_id": "-LOYRuAvS8eySADAc9cp",
+              "id": 54,
+              "initiative": "1.16666666666667",
+              "integration": "1",
+              "invalid_attempts": 0,
+              "launchDate": "2022-11-05",
+              "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "olaoluwa.faniyi@andela.com",
+              "managerName": "Olaoluwa Faniyi",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Deven Hickle",
+              "overall_average": "1.08333333333333",
+              "overall_status": "offTrack",
+              "picture": "https://lorempixel.com/100/100/people/?57713",
+              "professionalism": "1",
+              "project": "Asset Mgt Front End",
+              "quality": "1",
+              "quantity": "1.33333333333333",
+              "ratings": 6,
+              "satisfied": 8,
+              "simulationStartDate": "2018-11-19",
+              "simulationsPM": "Victoria Offoma",
+              "startDate": "2018-11-05",
+              "status": "gteWk5OnTrack",
+              "submitted": 8,
+              "total": 16,
+              "unsubmitted": 8,
+              "weeksSpent": 8,
+            },
+            Object {
+              "actualApprenticeshipStartDate": "2019-03-18",
+              "actualSimulationsCompletionDate": "2019-03-15",
+              "apprenticeshipManager": "Olaoluwa Faniyi",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  ReactJS,  Redux",
+              "bio": "Dolor asperiores maiores dolorum repellendus mollitia doloremque. Voluptatem aspernatur impedit accusantium. Consequuntur laudantium non a officiis maxime. Voluptatem laudantium dolorem illo doloribus aut.",
+              "cohort": "Class 13 - KLA",
+              "communication": "1",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "ltWk5OnTrack",
+              "email": "lloyd.hodkiewicz@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-06-12",
+              "fellow_id": "-LT8Ctwwfbv7pkSmBI7O",
+              "id": 197,
+              "initiative": "1",
+              "integration": "1",
+              "invalid_attempts": 0,
+              "launchDate": "2022-12-03",
+              "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "olaoluwa.faniyi@andela.com",
+              "managerName": "Olaoluwa Faniyi",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Lloyd Hodkiewicz",
+              "overall_average": "1",
+              "overall_status": "offTrack",
+              "picture": "https://lorempixel.com/100/100/people/?36955",
+              "professionalism": "1",
+              "project": "Asset Mgt Front End",
+              "quality": "1",
+              "quantity": "1",
+              "ratings": 2,
+              "satisfied": 4,
+              "startDate": "2018-12-03",
+              "status": "ltWk5OnTrack",
+              "submitted": 5,
+              "total": 16,
+              "unsubmitted": 11,
+              "weeksSpent": 4,
+            },
+            Object {
+              "actualApprenticeshipStartDate": "2019-02-18",
+              "actualSimulationsCompletionDate": "2019-02-11",
+              "apprenticeshipManager": "Olaoluwa Faniyi",
+              "apprenticeshipTeam": "Asset Mgt Front End",
+              "apprenticeshipTechnology": "JavaScript,  Typescript,  ReactJS,  Redux",
+              "bio": "Recusandae et corrupti omnis consequatur quibusdam et. Impedit aut vel et nam veritatis veritatis nulla fugit. Voluptatem quia ut aut voluptates ea ipsa beatae molestias.",
+              "cohort": "Class 32 - NBO",
+              "currentStage": "Apprentice",
+              "email": "julius.christiansen@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-05-16",
+              "expectedApprenticeshipStartDate": "2019-02-18",
+              "expectedSimulationsCompletionDate": "2019-02-11",
+              "fellow_id": "-LONklFht_g4mcI4kUh9",
+              "id": 312,
+              "invalid_attempts": 0,
+              "launchDate": "2022-11-05",
+              "level": "",
+              "lmsStatus": "ltWk5OnTrack",
+              "managerEmail": "olaoluwa.faniyi@andela.com",
+              "managerName": "Olaoluwa Faniyi",
+              "managerRole": "TTL",
+              "missing": 0,
+              "mostRecentAdvancementDate": "---",
+              "name": "Julius Christiansen",
+              "overall_status": "N/A",
+              "picture": "https://lorempixel.com/100/100/people/?77495",
+              "project": "Asset Mgt Front End",
+              "satisfied": 8,
+              "simulationStartDate": "2018-11-19",
+              "simulationsPM": "Brian Maiyo",
+              "startDate": "2018-11-05",
+              "status": "ltWk5OnTrack",
+              "submitted": 8,
+              "total": 16,
+              "unsubmitted": 8,
+              "weeksSpent": 8,
             },
           ]
     }
@@ -114,82 +394,108 @@ ShallowWrapper {
         className="row"
 >
         <FellowsSummaryCard
-                devPulseAverage="1.04"
-                ending="16-Jan-2019"
+                devPulseAverage="1.02"
+                ending="10-Jan-2019"
                 id={0}
-                level="D0B"
-                lmsOutputs="4/18"
-                name="Kingsley Obot"
+                level="D0A"
+                lmsOutputs="16/16"
+                name="Betty Fritsch"
                 onClick={[Function]}
-                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                product="Watch Tower"
-                started="15-Oct-2018"
-                status="Off-Track"
+                picture="https://lorempixel.com/100/100/people/?22978"
+                product="Asset Mgt Front End"
+                started="16-Oct-2018"
+                status="On-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="1.04"
-                ending="16-Jan-2019"
+                devPulseAverage="1.13"
+                ending="16-May-2019"
                 id={1}
                 level="D0B"
-                lmsOutputs="4/18"
-                name="Kingsley Obot"
+                lmsOutputs="8/16"
+                name="Juwan Welch"
                 onClick={[Function]}
-                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                product="Watch Tower"
-                started="15-Oct-2018"
-                status="Off-Track"
+                picture="https://lorempixel.com/100/100/people/?59709"
+                product="Asset Mgt Front End"
+                started="18-Feb-2019"
+                status="On-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="1.04"
-                ending="16-Jan-2019"
+                devPulseAverage="1.33"
+                ending="12-Jun-2019"
                 id={2}
                 level="D0B"
-                lmsOutputs="4/18"
-                name="Oluseyi Anani"
+                lmsOutputs="4/16"
+                name="Juliana Reynolds"
                 onClick={[Function]}
-                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                product="Watch Tower"
-                started="15-Oct-2018"
+                picture="https://lorempixel.com/100/100/people/?75538"
+                product="Asset Mgt Front End"
+                started="18-Mar-2019"
                 status="On-Track"
         />
         <FellowsSummaryCard
                 devPulseAverage="1.04"
-                ending="16-Jan-2019"
+                ending="16-May-2019"
                 id={3}
                 level="D0B"
-                lmsOutputs="4/18"
-                name="Brian Bett"
+                lmsOutputs="8/16"
+                name="Kariane Bayer"
                 onClick={[Function]}
-                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                product="Watch Tower"
-                started="15-Oct-2018"
+                picture="https://lorempixel.com/100/100/people/?29528"
+                product="Asset Mgt Back End"
+                started="18-Feb-2019"
                 status="On-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="1.04"
-                ending="14-Jun-2019"
+                devPulseAverage="1.11"
+                ending="16-May-2019"
                 id={4}
-                level="D0A"
-                lmsOutputs="4/18"
-                name=" "
+                level="D0B"
+                lmsOutputs="8/16"
+                name="Michele Frami"
                 onClick={[Function]}
-                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                product="Noldor"
-                started="6-Mar-2019"
+                picture="https://lorempixel.com/100/100/people/?97301"
+                product="Asset Mgt Front End"
+                started="18-Feb-2019"
                 status="Off-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="1.04"
-                ending="14-Jun-2019"
+                devPulseAverage="1.08"
+                ending="16-May-2019"
                 id={5}
-                level="D0A"
-                lmsOutputs="4/18"
-                name="somereallyreallylo ..."
+                level="D0B"
+                lmsOutputs="8/16"
+                name="Deven Hickle"
                 onClick={[Function]}
-                picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                product="Noldor"
-                started="6-Mar-2019"
+                picture="https://lorempixel.com/100/100/people/?57713"
+                product="Asset Mgt Front End"
+                started="18-Feb-2019"
                 status="Off-Track"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="1.00"
+                ending="12-Jun-2019"
+                id={6}
+                level="D0B"
+                lmsOutputs="5/16"
+                name="Lloyd Hodkiewicz"
+                onClick={[Function]}
+                picture="https://lorempixel.com/100/100/people/?36955"
+                product="Asset Mgt Front End"
+                started="18-Mar-2019"
+                status="Off-Track"
+        />
+        <FellowsSummaryCard
+                devPulseAverage="N/A"
+                ending="No date"
+                id={7}
+                level=""
+                lmsOutputs="N/A"
+                name="Julius Christiansen"
+                onClick={[Function]}
+                picture="https://lorempixel.com/100/100/people/?77495"
+                product="Asset Mgt Front End"
+                started="No date"
+                status="N/A"
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -202,82 +508,108 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <FellowsSummaryCard
-            devPulseAverage="1.04"
-            ending="16-Jan-2019"
+            devPulseAverage="1.02"
+            ending="10-Jan-2019"
             id={0}
-            level="D0B"
-            lmsOutputs="4/18"
-            name="Kingsley Obot"
+            level="D0A"
+            lmsOutputs="16/16"
+            name="Betty Fritsch"
             onClick={[Function]}
-            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-            product="Watch Tower"
-            started="15-Oct-2018"
-            status="Off-Track"
+            picture="https://lorempixel.com/100/100/people/?22978"
+            product="Asset Mgt Front End"
+            started="16-Oct-2018"
+            status="On-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="1.04"
-            ending="16-Jan-2019"
+            devPulseAverage="1.13"
+            ending="16-May-2019"
             id={1}
             level="D0B"
-            lmsOutputs="4/18"
-            name="Kingsley Obot"
+            lmsOutputs="8/16"
+            name="Juwan Welch"
             onClick={[Function]}
-            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-            product="Watch Tower"
-            started="15-Oct-2018"
-            status="Off-Track"
+            picture="https://lorempixel.com/100/100/people/?59709"
+            product="Asset Mgt Front End"
+            started="18-Feb-2019"
+            status="On-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="1.04"
-            ending="16-Jan-2019"
+            devPulseAverage="1.33"
+            ending="12-Jun-2019"
             id={2}
             level="D0B"
-            lmsOutputs="4/18"
-            name="Oluseyi Anani"
+            lmsOutputs="4/16"
+            name="Juliana Reynolds"
             onClick={[Function]}
-            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-            product="Watch Tower"
-            started="15-Oct-2018"
+            picture="https://lorempixel.com/100/100/people/?75538"
+            product="Asset Mgt Front End"
+            started="18-Mar-2019"
             status="On-Track"
 />,
           <FellowsSummaryCard
             devPulseAverage="1.04"
-            ending="16-Jan-2019"
+            ending="16-May-2019"
             id={3}
             level="D0B"
-            lmsOutputs="4/18"
-            name="Brian Bett"
+            lmsOutputs="8/16"
+            name="Kariane Bayer"
             onClick={[Function]}
-            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-            product="Watch Tower"
-            started="15-Oct-2018"
+            picture="https://lorempixel.com/100/100/people/?29528"
+            product="Asset Mgt Back End"
+            started="18-Feb-2019"
             status="On-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="1.04"
-            ending="14-Jun-2019"
+            devPulseAverage="1.11"
+            ending="16-May-2019"
             id={4}
-            level="D0A"
-            lmsOutputs="4/18"
-            name=" "
+            level="D0B"
+            lmsOutputs="8/16"
+            name="Michele Frami"
             onClick={[Function]}
-            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-            product="Noldor"
-            started="6-Mar-2019"
+            picture="https://lorempixel.com/100/100/people/?97301"
+            product="Asset Mgt Front End"
+            started="18-Feb-2019"
             status="Off-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="1.04"
-            ending="14-Jun-2019"
+            devPulseAverage="1.08"
+            ending="16-May-2019"
             id={5}
-            level="D0A"
-            lmsOutputs="4/18"
-            name="somereallyreallylo ..."
+            level="D0B"
+            lmsOutputs="8/16"
+            name="Deven Hickle"
             onClick={[Function]}
-            picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-            product="Noldor"
-            started="6-Mar-2019"
+            picture="https://lorempixel.com/100/100/people/?57713"
+            product="Asset Mgt Front End"
+            started="18-Feb-2019"
             status="Off-Track"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="1.00"
+            ending="12-Jun-2019"
+            id={6}
+            level="D0B"
+            lmsOutputs="5/16"
+            name="Lloyd Hodkiewicz"
+            onClick={[Function]}
+            picture="https://lorempixel.com/100/100/people/?36955"
+            product="Asset Mgt Front End"
+            started="18-Mar-2019"
+            status="Off-Track"
+/>,
+          <FellowsSummaryCard
+            devPulseAverage="N/A"
+            ending="No date"
+            id={7}
+            level=""
+            lmsOutputs="N/A"
+            name="Julius Christiansen"
+            onClick={[Function]}
+            picture="https://lorempixel.com/100/100/people/?77495"
+            product="Asset Mgt Front End"
+            started="No date"
+            status="N/A"
 />,
         ],
         "className": "row",
@@ -289,17 +621,17 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "function",
           "props": Object {
-            "devPulseAverage": "1.04",
-            "ending": "16-Jan-2019",
+            "devPulseAverage": "1.02",
+            "ending": "10-Jan-2019",
             "id": 0,
-            "level": "D0B",
-            "lmsOutputs": "4/18",
-            "name": "Kingsley Obot",
+            "level": "D0A",
+            "lmsOutputs": "16/16",
+            "name": "Betty Fritsch",
             "onClick": [Function],
-            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-            "product": "Watch Tower",
-            "started": "15-Oct-2018",
-            "status": "Off-Track",
+            "picture": "https://lorempixel.com/100/100/people/?22978",
+            "product": "Asset Mgt Front End",
+            "started": "16-Oct-2018",
+            "status": "On-Track",
           },
           "ref": null,
           "rendered": null,
@@ -310,17 +642,17 @@ ShallowWrapper {
           "key": "1",
           "nodeType": "function",
           "props": Object {
-            "devPulseAverage": "1.04",
-            "ending": "16-Jan-2019",
+            "devPulseAverage": "1.13",
+            "ending": "16-May-2019",
             "id": 1,
             "level": "D0B",
-            "lmsOutputs": "4/18",
-            "name": "Kingsley Obot",
+            "lmsOutputs": "8/16",
+            "name": "Juwan Welch",
             "onClick": [Function],
-            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-            "product": "Watch Tower",
-            "started": "15-Oct-2018",
-            "status": "Off-Track",
+            "picture": "https://lorempixel.com/100/100/people/?59709",
+            "product": "Asset Mgt Front End",
+            "started": "18-Feb-2019",
+            "status": "On-Track",
           },
           "ref": null,
           "rendered": null,
@@ -331,16 +663,16 @@ ShallowWrapper {
           "key": "2",
           "nodeType": "function",
           "props": Object {
-            "devPulseAverage": "1.04",
-            "ending": "16-Jan-2019",
+            "devPulseAverage": "1.33",
+            "ending": "12-Jun-2019",
             "id": 2,
             "level": "D0B",
-            "lmsOutputs": "4/18",
-            "name": "Oluseyi Anani",
+            "lmsOutputs": "4/16",
+            "name": "Juliana Reynolds",
             "onClick": [Function],
-            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-            "product": "Watch Tower",
-            "started": "15-Oct-2018",
+            "picture": "https://lorempixel.com/100/100/people/?75538",
+            "product": "Asset Mgt Front End",
+            "started": "18-Mar-2019",
             "status": "On-Track",
           },
           "ref": null,
@@ -353,15 +685,15 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "devPulseAverage": "1.04",
-            "ending": "16-Jan-2019",
+            "ending": "16-May-2019",
             "id": 3,
             "level": "D0B",
-            "lmsOutputs": "4/18",
-            "name": "Brian Bett",
+            "lmsOutputs": "8/16",
+            "name": "Kariane Bayer",
             "onClick": [Function],
-            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-            "product": "Watch Tower",
-            "started": "15-Oct-2018",
+            "picture": "https://lorempixel.com/100/100/people/?29528",
+            "product": "Asset Mgt Back End",
+            "started": "18-Feb-2019",
             "status": "On-Track",
           },
           "ref": null,
@@ -373,16 +705,16 @@ ShallowWrapper {
           "key": "4",
           "nodeType": "function",
           "props": Object {
-            "devPulseAverage": "1.04",
-            "ending": "14-Jun-2019",
+            "devPulseAverage": "1.11",
+            "ending": "16-May-2019",
             "id": 4,
-            "level": "D0A",
-            "lmsOutputs": "4/18",
-            "name": " ",
+            "level": "D0B",
+            "lmsOutputs": "8/16",
+            "name": "Michele Frami",
             "onClick": [Function],
-            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-            "product": "Noldor",
-            "started": "6-Mar-2019",
+            "picture": "https://lorempixel.com/100/100/people/?97301",
+            "product": "Asset Mgt Front End",
+            "started": "18-Feb-2019",
             "status": "Off-Track",
           },
           "ref": null,
@@ -394,17 +726,59 @@ ShallowWrapper {
           "key": "5",
           "nodeType": "function",
           "props": Object {
-            "devPulseAverage": "1.04",
-            "ending": "14-Jun-2019",
+            "devPulseAverage": "1.08",
+            "ending": "16-May-2019",
             "id": 5,
-            "level": "D0A",
-            "lmsOutputs": "4/18",
-            "name": "somereallyreallylo ...",
+            "level": "D0B",
+            "lmsOutputs": "8/16",
+            "name": "Deven Hickle",
             "onClick": [Function],
-            "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-            "product": "Noldor",
-            "started": "6-Mar-2019",
+            "picture": "https://lorempixel.com/100/100/people/?57713",
+            "product": "Asset Mgt Front End",
+            "started": "18-Feb-2019",
             "status": "Off-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "6",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.00",
+            "ending": "12-Jun-2019",
+            "id": 6,
+            "level": "D0B",
+            "lmsOutputs": "5/16",
+            "name": "Lloyd Hodkiewicz",
+            "onClick": [Function],
+            "picture": "https://lorempixel.com/100/100/people/?36955",
+            "product": "Asset Mgt Front End",
+            "started": "18-Mar-2019",
+            "status": "Off-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "7",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "N/A",
+            "ending": "No date",
+            "id": 7,
+            "level": "",
+            "lmsOutputs": "N/A",
+            "name": "Julius Christiansen",
+            "onClick": [Function],
+            "picture": "https://lorempixel.com/100/100/people/?77495",
+            "product": "Asset Mgt Front End",
+            "started": "No date",
+            "status": "N/A",
           },
           "ref": null,
           "rendered": null,
@@ -425,82 +799,108 @@ ShallowWrapper {
           className="row"
 >
           <FellowsSummaryCard
-                    devPulseAverage="1.04"
-                    ending="16-Jan-2019"
+                    devPulseAverage="1.02"
+                    ending="10-Jan-2019"
                     id={0}
-                    level="D0B"
-                    lmsOutputs="4/18"
-                    name="Kingsley Obot"
+                    level="D0A"
+                    lmsOutputs="16/16"
+                    name="Betty Fritsch"
                     onClick={[Function]}
-                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                    product="Watch Tower"
-                    started="15-Oct-2018"
-                    status="Off-Track"
+                    picture="https://lorempixel.com/100/100/people/?22978"
+                    product="Asset Mgt Front End"
+                    started="16-Oct-2018"
+                    status="On-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="1.04"
-                    ending="16-Jan-2019"
+                    devPulseAverage="1.13"
+                    ending="16-May-2019"
                     id={1}
                     level="D0B"
-                    lmsOutputs="4/18"
-                    name="Kingsley Obot"
+                    lmsOutputs="8/16"
+                    name="Juwan Welch"
                     onClick={[Function]}
-                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                    product="Watch Tower"
-                    started="15-Oct-2018"
-                    status="Off-Track"
+                    picture="https://lorempixel.com/100/100/people/?59709"
+                    product="Asset Mgt Front End"
+                    started="18-Feb-2019"
+                    status="On-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="1.04"
-                    ending="16-Jan-2019"
+                    devPulseAverage="1.33"
+                    ending="12-Jun-2019"
                     id={2}
                     level="D0B"
-                    lmsOutputs="4/18"
-                    name="Oluseyi Anani"
+                    lmsOutputs="4/16"
+                    name="Juliana Reynolds"
                     onClick={[Function]}
-                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                    product="Watch Tower"
-                    started="15-Oct-2018"
+                    picture="https://lorempixel.com/100/100/people/?75538"
+                    product="Asset Mgt Front End"
+                    started="18-Mar-2019"
                     status="On-Track"
           />
           <FellowsSummaryCard
                     devPulseAverage="1.04"
-                    ending="16-Jan-2019"
+                    ending="16-May-2019"
                     id={3}
                     level="D0B"
-                    lmsOutputs="4/18"
-                    name="Brian Bett"
+                    lmsOutputs="8/16"
+                    name="Kariane Bayer"
                     onClick={[Function]}
-                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                    product="Watch Tower"
-                    started="15-Oct-2018"
+                    picture="https://lorempixel.com/100/100/people/?29528"
+                    product="Asset Mgt Back End"
+                    started="18-Feb-2019"
                     status="On-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="1.04"
-                    ending="14-Jun-2019"
+                    devPulseAverage="1.11"
+                    ending="16-May-2019"
                     id={4}
-                    level="D0A"
-                    lmsOutputs="4/18"
-                    name=" "
+                    level="D0B"
+                    lmsOutputs="8/16"
+                    name="Michele Frami"
                     onClick={[Function]}
-                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                    product="Noldor"
-                    started="6-Mar-2019"
+                    picture="https://lorempixel.com/100/100/people/?97301"
+                    product="Asset Mgt Front End"
+                    started="18-Feb-2019"
                     status="Off-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="1.04"
-                    ending="14-Jun-2019"
+                    devPulseAverage="1.08"
+                    ending="16-May-2019"
                     id={5}
-                    level="D0A"
-                    lmsOutputs="4/18"
-                    name="somereallyreallylo ..."
+                    level="D0B"
+                    lmsOutputs="8/16"
+                    name="Deven Hickle"
                     onClick={[Function]}
-                    picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-                    product="Noldor"
-                    started="6-Mar-2019"
+                    picture="https://lorempixel.com/100/100/people/?57713"
+                    product="Asset Mgt Front End"
+                    started="18-Feb-2019"
                     status="Off-Track"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="1.00"
+                    ending="12-Jun-2019"
+                    id={6}
+                    level="D0B"
+                    lmsOutputs="5/16"
+                    name="Lloyd Hodkiewicz"
+                    onClick={[Function]}
+                    picture="https://lorempixel.com/100/100/people/?36955"
+                    product="Asset Mgt Front End"
+                    started="18-Mar-2019"
+                    status="Off-Track"
+          />
+          <FellowsSummaryCard
+                    devPulseAverage="N/A"
+                    ending="No date"
+                    id={7}
+                    level=""
+                    lmsOutputs="N/A"
+                    name="Julius Christiansen"
+                    onClick={[Function]}
+                    picture="https://lorempixel.com/100/100/people/?77495"
+                    product="Asset Mgt Front End"
+                    started="No date"
+                    status="N/A"
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -513,82 +913,108 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <FellowsSummaryCard
-              devPulseAverage="1.04"
-              ending="16-Jan-2019"
+              devPulseAverage="1.02"
+              ending="10-Jan-2019"
               id={0}
-              level="D0B"
-              lmsOutputs="4/18"
-              name="Kingsley Obot"
+              level="D0A"
+              lmsOutputs="16/16"
+              name="Betty Fritsch"
               onClick={[Function]}
-              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-              product="Watch Tower"
-              started="15-Oct-2018"
-              status="Off-Track"
+              picture="https://lorempixel.com/100/100/people/?22978"
+              product="Asset Mgt Front End"
+              started="16-Oct-2018"
+              status="On-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="1.04"
-              ending="16-Jan-2019"
+              devPulseAverage="1.13"
+              ending="16-May-2019"
               id={1}
               level="D0B"
-              lmsOutputs="4/18"
-              name="Kingsley Obot"
+              lmsOutputs="8/16"
+              name="Juwan Welch"
               onClick={[Function]}
-              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-              product="Watch Tower"
-              started="15-Oct-2018"
-              status="Off-Track"
+              picture="https://lorempixel.com/100/100/people/?59709"
+              product="Asset Mgt Front End"
+              started="18-Feb-2019"
+              status="On-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="1.04"
-              ending="16-Jan-2019"
+              devPulseAverage="1.33"
+              ending="12-Jun-2019"
               id={2}
               level="D0B"
-              lmsOutputs="4/18"
-              name="Oluseyi Anani"
+              lmsOutputs="4/16"
+              name="Juliana Reynolds"
               onClick={[Function]}
-              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-              product="Watch Tower"
-              started="15-Oct-2018"
+              picture="https://lorempixel.com/100/100/people/?75538"
+              product="Asset Mgt Front End"
+              started="18-Mar-2019"
               status="On-Track"
 />,
             <FellowsSummaryCard
               devPulseAverage="1.04"
-              ending="16-Jan-2019"
+              ending="16-May-2019"
               id={3}
               level="D0B"
-              lmsOutputs="4/18"
-              name="Brian Bett"
+              lmsOutputs="8/16"
+              name="Kariane Bayer"
               onClick={[Function]}
-              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-              product="Watch Tower"
-              started="15-Oct-2018"
+              picture="https://lorempixel.com/100/100/people/?29528"
+              product="Asset Mgt Back End"
+              started="18-Feb-2019"
               status="On-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="1.04"
-              ending="14-Jun-2019"
+              devPulseAverage="1.11"
+              ending="16-May-2019"
               id={4}
-              level="D0A"
-              lmsOutputs="4/18"
-              name=" "
+              level="D0B"
+              lmsOutputs="8/16"
+              name="Michele Frami"
               onClick={[Function]}
-              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-              product="Noldor"
-              started="6-Mar-2019"
+              picture="https://lorempixel.com/100/100/people/?97301"
+              product="Asset Mgt Front End"
+              started="18-Feb-2019"
               status="Off-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="1.04"
-              ending="14-Jun-2019"
+              devPulseAverage="1.08"
+              ending="16-May-2019"
               id={5}
-              level="D0A"
-              lmsOutputs="4/18"
-              name="somereallyreallylo ..."
+              level="D0B"
+              lmsOutputs="8/16"
+              name="Deven Hickle"
               onClick={[Function]}
-              picture="https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50"
-              product="Noldor"
-              started="6-Mar-2019"
+              picture="https://lorempixel.com/100/100/people/?57713"
+              product="Asset Mgt Front End"
+              started="18-Feb-2019"
               status="Off-Track"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="1.00"
+              ending="12-Jun-2019"
+              id={6}
+              level="D0B"
+              lmsOutputs="5/16"
+              name="Lloyd Hodkiewicz"
+              onClick={[Function]}
+              picture="https://lorempixel.com/100/100/people/?36955"
+              product="Asset Mgt Front End"
+              started="18-Mar-2019"
+              status="Off-Track"
+/>,
+            <FellowsSummaryCard
+              devPulseAverage="N/A"
+              ending="No date"
+              id={7}
+              level=""
+              lmsOutputs="N/A"
+              name="Julius Christiansen"
+              onClick={[Function]}
+              picture="https://lorempixel.com/100/100/people/?77495"
+              product="Asset Mgt Front End"
+              started="No date"
+              status="N/A"
 />,
           ],
           "className": "row",
@@ -600,17 +1026,17 @@ ShallowWrapper {
             "key": "0",
             "nodeType": "function",
             "props": Object {
-              "devPulseAverage": "1.04",
-              "ending": "16-Jan-2019",
+              "devPulseAverage": "1.02",
+              "ending": "10-Jan-2019",
               "id": 0,
-              "level": "D0B",
-              "lmsOutputs": "4/18",
-              "name": "Kingsley Obot",
+              "level": "D0A",
+              "lmsOutputs": "16/16",
+              "name": "Betty Fritsch",
               "onClick": [Function],
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "product": "Watch Tower",
-              "started": "15-Oct-2018",
-              "status": "Off-Track",
+              "picture": "https://lorempixel.com/100/100/people/?22978",
+              "product": "Asset Mgt Front End",
+              "started": "16-Oct-2018",
+              "status": "On-Track",
             },
             "ref": null,
             "rendered": null,
@@ -621,17 +1047,17 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "function",
             "props": Object {
-              "devPulseAverage": "1.04",
-              "ending": "16-Jan-2019",
+              "devPulseAverage": "1.13",
+              "ending": "16-May-2019",
               "id": 1,
               "level": "D0B",
-              "lmsOutputs": "4/18",
-              "name": "Kingsley Obot",
+              "lmsOutputs": "8/16",
+              "name": "Juwan Welch",
               "onClick": [Function],
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "product": "Watch Tower",
-              "started": "15-Oct-2018",
-              "status": "Off-Track",
+              "picture": "https://lorempixel.com/100/100/people/?59709",
+              "product": "Asset Mgt Front End",
+              "started": "18-Feb-2019",
+              "status": "On-Track",
             },
             "ref": null,
             "rendered": null,
@@ -642,16 +1068,16 @@ ShallowWrapper {
             "key": "2",
             "nodeType": "function",
             "props": Object {
-              "devPulseAverage": "1.04",
-              "ending": "16-Jan-2019",
+              "devPulseAverage": "1.33",
+              "ending": "12-Jun-2019",
               "id": 2,
               "level": "D0B",
-              "lmsOutputs": "4/18",
-              "name": "Oluseyi Anani",
+              "lmsOutputs": "4/16",
+              "name": "Juliana Reynolds",
               "onClick": [Function],
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "product": "Watch Tower",
-              "started": "15-Oct-2018",
+              "picture": "https://lorempixel.com/100/100/people/?75538",
+              "product": "Asset Mgt Front End",
+              "started": "18-Mar-2019",
               "status": "On-Track",
             },
             "ref": null,
@@ -664,15 +1090,15 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "devPulseAverage": "1.04",
-              "ending": "16-Jan-2019",
+              "ending": "16-May-2019",
               "id": 3,
               "level": "D0B",
-              "lmsOutputs": "4/18",
-              "name": "Brian Bett",
+              "lmsOutputs": "8/16",
+              "name": "Kariane Bayer",
               "onClick": [Function],
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "product": "Watch Tower",
-              "started": "15-Oct-2018",
+              "picture": "https://lorempixel.com/100/100/people/?29528",
+              "product": "Asset Mgt Back End",
+              "started": "18-Feb-2019",
               "status": "On-Track",
             },
             "ref": null,
@@ -684,16 +1110,16 @@ ShallowWrapper {
             "key": "4",
             "nodeType": "function",
             "props": Object {
-              "devPulseAverage": "1.04",
-              "ending": "14-Jun-2019",
+              "devPulseAverage": "1.11",
+              "ending": "16-May-2019",
               "id": 4,
-              "level": "D0A",
-              "lmsOutputs": "4/18",
-              "name": " ",
+              "level": "D0B",
+              "lmsOutputs": "8/16",
+              "name": "Michele Frami",
               "onClick": [Function],
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "product": "Noldor",
-              "started": "6-Mar-2019",
+              "picture": "https://lorempixel.com/100/100/people/?97301",
+              "product": "Asset Mgt Front End",
+              "started": "18-Feb-2019",
               "status": "Off-Track",
             },
             "ref": null,
@@ -705,17 +1131,59 @@ ShallowWrapper {
             "key": "5",
             "nodeType": "function",
             "props": Object {
-              "devPulseAverage": "1.04",
-              "ending": "14-Jun-2019",
+              "devPulseAverage": "1.08",
+              "ending": "16-May-2019",
               "id": 5,
-              "level": "D0A",
-              "lmsOutputs": "4/18",
-              "name": "somereallyreallylo ...",
+              "level": "D0B",
+              "lmsOutputs": "8/16",
+              "name": "Deven Hickle",
               "onClick": [Function],
-              "picture": "https://lh6.googleusercontent.com/-BufLjmmIcGY/AAAAAAAAAAI/AAAAAAAAAAA/ACevoQOvARh88U8Y-5JFnZpZ88zfTlb93A/mo/photo.jpg?sz=50",
-              "product": "Noldor",
-              "started": "6-Mar-2019",
+              "picture": "https://lorempixel.com/100/100/people/?57713",
+              "product": "Asset Mgt Front End",
+              "started": "18-Feb-2019",
               "status": "Off-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "6",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.00",
+              "ending": "12-Jun-2019",
+              "id": 6,
+              "level": "D0B",
+              "lmsOutputs": "5/16",
+              "name": "Lloyd Hodkiewicz",
+              "onClick": [Function],
+              "picture": "https://lorempixel.com/100/100/people/?36955",
+              "product": "Asset Mgt Front End",
+              "started": "18-Mar-2019",
+              "status": "Off-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "7",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "N/A",
+              "ending": "No date",
+              "id": 7,
+              "level": "",
+              "lmsOutputs": "N/A",
+              "name": "Julius Christiansen",
+              "onClick": [Function],
+              "picture": "https://lorempixel.com/100/100/people/?77495",
+              "product": "Asset Mgt Front End",
+              "started": "No date",
+              "status": "N/A",
             },
             "ref": null,
             "rendered": null,

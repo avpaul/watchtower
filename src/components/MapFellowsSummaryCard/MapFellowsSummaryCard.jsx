@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import FellowsSummaryCard from '../FellowsSummaryCard';
+import { roundOff } from '../../utils/index';
 
 const refineDate = (fellow, dateKey) => {
   /**
@@ -11,11 +12,23 @@ const refineDate = (fellow, dateKey) => {
    * from fellow object
    * @returns date (string)
    */
-  const date =
-    fellow.level && fellow.level.includes('D0A')
-      ? fellow[`sims${dateKey}Date`]
-      : fellow[`appr${dateKey}Date`];
-  return !date ? 'No date' : moment(date).format('D-MMM-YYYY');
+  let date = '';
+  switch (fellow.level) {
+    case 'D0A':
+      date =
+        dateKey === 'Start'
+          ? fellow.simulationStartDate
+          : fellow.actualSimulationsCompletionDate;
+      return moment(date).format('D-MMM-YYYY');
+    case 'D0B':
+      date =
+        dateKey === 'Start'
+          ? fellow.actualApprenticeshipStartDate
+          : fellow.expectedApprenticeshipCompletionDate;
+      return moment(date).format('D-MMM-YYYY');
+    default:
+      return 'No date';
+  }
 };
 
 const resolveStatus = fellow => {
@@ -23,17 +36,27 @@ const resolveStatus = fellow => {
    ** Renders the fellow's current progress status
    * @param fellow Fellow's details as an object
    */
-  if (!fellow.status) return 'No Status';
-
-  if (
-    fellow.status.includes('gteWk5') ||
-    (fellow.status.includes('ltWk5') && !fellow.pipStatus)
-  )
+  if (fellow.overall_status === 'offTrack') {
     return 'Off-Track';
+  }
+  if (fellow.overall_status === 'onTrack') {
+    return 'On-Track';
+  }
+  return fellow.overall_status;
+};
 
-  if (fellow.pipStatus) return 'PIP';
-
-  return 'On-Track';
+const computeLmsOrDevpulse = (fellow, option) => {
+  if (fellow.overall_status === 'N/A' || (!fellow.submitted && !fellow.total)) {
+    return 'N/A';
+  }
+  switch (option) {
+    case 'pulse':
+      return roundOff(fellow.overall_average, 2);
+    case 'lms':
+      return `${fellow.submitted}/${fellow.total}`;
+    default:
+      return 'N/A';
+  }
 };
 
 const renderFellow = (fellow, fellowIndex, handleClick) => {
@@ -43,22 +66,21 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
    * @param fellowIndex Fellow's index in the fellowSummaryDetails array
    * @param handleClick On click event listener function
    */
-  const fellowBio = fellow.user ? fellow.user : fellow;
-  let refinedName = `${fellowBio.firstName} ${fellowBio.lastName}`;
-  refinedName =
-    refinedName.length > 20 ? `${refinedName.substr(0, 18)} ...` : refinedName;
+  const { name } = fellow;
+  const refinedName = name.length > 20 ? `${name.substr(0, 18)} ...` : name;
+
   return (
     <FellowsSummaryCard
       key={fellowIndex}
       id={fellowIndex}
       name={refinedName}
-      product={fellow.project}
-      level={fellow.level ? fellow.level.split(' ')[0] : ''}
+      product={fellow.project || ''}
+      level={fellow.level}
       started={refineDate(fellow, 'Start')}
-      devPulseAverage={fellow.devPulseAverage}
+      devPulseAverage={computeLmsOrDevpulse(fellow, 'pulse')}
       status={resolveStatus(fellow)}
       ending={refineDate(fellow, 'End')}
-      lmsOutputs={fellow.lmsOutput}
+      lmsOutputs={computeLmsOrDevpulse(fellow, 'lms')}
       picture={fellow.picture}
       onClick={handleClick}
     />

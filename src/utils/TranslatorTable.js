@@ -20,7 +20,7 @@ const TranslatorTable = {
   'All TTLs': '',
   'All LFs': '',
   'On Track': 'onTrack',
-  'Off Track': 'Wk5',
+  'Off Track': 'offTrack',
   PIP: true,
   WATCH_TOWER_LF: 'LF',
   WATCH_TOWER_OPS: 'TTL/LF',
