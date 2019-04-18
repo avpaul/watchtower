@@ -31,3 +31,16 @@
   background: transparent;
   height: 40px;
 }
+
+.dashboard-table__column-stat,
+.dashboard-table__column-stat:nth-child(1),
+.dashboard-table__column-stat:nth-child(2) {
+  background-color: #0459e4 !important;
+  color: #d7dde0;
+}
+.dashboard-table__column-stat:nth-child(n + 2) {
+  width: 186px !important;
+}
+.dashboard-table__header > .dashboard-table__cell:nth-child(n + 2) {
+  width: 186px !important;
+}

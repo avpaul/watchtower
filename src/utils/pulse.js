@@ -6,12 +6,11 @@ export const findScores = (scoreArray, attributeKey) =>
 export const formatRating = rating => {
   const getScore = attribute =>
     findScores(rating.scores, attribute)
-      ? findScores(rating.scores, attribute).score
+      ? `${findScores(rating.scores, attribute).score}.00`
       : 'N/A';
 
   const formatedRating = {
     week: moment(rating.created_at).format('L'),
-    average: rating.average_score,
     quantity: getScore('Quantity'),
     quality: getScore('Quality'),
     initiative: getScore('Initiative'),
@@ -45,4 +44,15 @@ export const formatRollingAveragePerAttribute = (level, ratings) => {
     averageRating[key] /= count;
   });
   return averageRating;
+};
+
+export const formatAveragePulseValues = attribute => {
+  if (typeof attribute !== 'number') return attribute;
+
+  if (attribute === 1 || attribute === 2) return attribute.toFixed(2);
+
+  const decimalPlaces = `${attribute}`.split('.')[1].length;
+  return decimalPlaces === 1
+    ? attribute.toFixed(2)
+    : attribute.toString().substring(0, 4);
 };

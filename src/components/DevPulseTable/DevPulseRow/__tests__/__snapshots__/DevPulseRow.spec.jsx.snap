@@ -4,6 +4,7 @@ exports[`tests the DevPulseRow renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DevPulseRow
+    averageRatings={false}
     rating={
         Object {
             "scores": Array [
@@ -40,10 +41,6 @@ ShallowWrapper {
 >
           04/18/2019
 </Cell>,
-        <Cell
-          addedClass={null}
-          title=""
-/>,
         <Cell
           addedClass={null}
           title=""
@@ -104,11 +101,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": "",
+          "children": "N/A",
           "title": "",
         },
         "ref": null,
-        "rendered": "",
+        "rendered": "N/A",
         "type": [Function],
       },
       Object {
@@ -176,19 +173,6 @@ ShallowWrapper {
         "rendered": "N/A",
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": "weak-key-7",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": null,
-          "children": "N/A",
-          "title": "",
-        },
-        "ref": null,
-        "rendered": "N/A",
-        "type": [Function],
-      },
     ],
     "type": [Function],
   },
@@ -205,10 +189,6 @@ ShallowWrapper {
 >
             04/18/2019
 </Cell>,
-          <Cell
-            addedClass={null}
-            title=""
-/>,
           <Cell
             addedClass={null}
             title=""
@@ -269,11 +249,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": "",
+            "children": "N/A",
             "title": "",
           },
           "ref": null,
-          "rendered": "",
+          "rendered": "N/A",
           "type": [Function],
         },
         Object {
@@ -331,19 +311,6 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "weak-key-6",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": null,
-            "children": "N/A",
-            "title": "",
-          },
-          "ref": null,
-          "rendered": "N/A",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-7",
           "nodeType": "function",
           "props": Object {
             "addedClass": null,

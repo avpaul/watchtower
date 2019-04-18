@@ -6,6 +6,7 @@ describe('tests the LmsTable', () => {
   let wrapper;
   let wrapper2;
   let wrapper3;
+  let wrapper4;
   beforeEach(() => {
     const props = {
       lmsSubmissions: [],
@@ -48,9 +49,28 @@ describe('tests the LmsTable', () => {
       }
     };
 
+    const props4 = {
+      lmsSubmissions: null,
+      loading: true,
+      fellow: {
+        actualApprenticeshipStartDate: '2019-03-18',
+        actualSimulationsCompletionDate: '2019-03-15',
+        apprenticeshipManager: 'Trust Birungi',
+        apprenticeshipTeam: 'Watch Tower',
+        apprenticeshipTechnology:
+          'JavaScript,  PHP/Laravel,  ReactJS,  Eloquent',
+        bio:
+          'Sed quo voluptatum ducimus sunt labore eos totam. Sit corporis est voluptates commodi occaecati. Modi harum assumenda quod voluptatem.',
+        cohort: 'Class 13 - KLA',
+        currentStage: 'Apprentice',
+        email: 'stanton.rogahn@andela.com'
+      }
+    };
+
     wrapper = shallow(<LmsTable {...props} />);
     wrapper2 = shallow(<LmsTable {...props2} />);
     wrapper3 = shallow(<LmsTable {...props3} />);
+    wrapper4 = shallow(<LmsTable {...props4} />);
   });
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
@@ -60,5 +80,8 @@ describe('tests the LmsTable', () => {
   });
   it('renders correctly', () => {
     expect(wrapper3).toMatchSnapshot();
+  });
+  it('renders correctly', () => {
+    expect(wrapper4).toMatchSnapshot();
   });
 });
