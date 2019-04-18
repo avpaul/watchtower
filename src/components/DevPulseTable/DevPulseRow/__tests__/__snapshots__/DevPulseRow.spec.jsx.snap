@@ -38,7 +38,7 @@ ShallowWrapper {
           addedClass={null}
           title=""
 >
-          04/17/2019
+          04/18/2019
 </Cell>,
         <Cell
           addedClass={null}
@@ -91,11 +91,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": null,
-          "children": "04/17/2019",
+          "children": "04/18/2019",
           "title": "",
         },
         "ref": null,
-        "rendered": "04/17/2019",
+        "rendered": "04/18/2019",
         "type": [Function],
       },
       Object {
@@ -203,7 +203,7 @@ ShallowWrapper {
             addedClass={null}
             title=""
 >
-            04/17/2019
+            04/18/2019
 </Cell>,
           <Cell
             addedClass={null}
@@ -256,11 +256,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "addedClass": null,
-            "children": "04/17/2019",
+            "children": "04/18/2019",
             "title": "",
           },
           "ref": null,
-          "rendered": "04/17/2019",
+          "rendered": "04/18/2019",
           "type": [Function],
         },
         Object {

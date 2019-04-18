@@ -6,7 +6,7 @@ import './ManagerMapCard.css';
 
 const ManagerMapCard = ({ manager }) => {
   const managerFellows = manager.fellows.map(fellow => {
-    const { status } = fellow;
+    const status = fellow.pulse ? fellow.pulse.overall_status : 'N/A';
     return (
       <li key={fellow.email} className="list-group-item">
         <img
@@ -30,9 +30,9 @@ const ManagerMapCard = ({ manager }) => {
           className="manager_card__name float-left"
           data-toggle="tooltip"
           data-placement="top"
-          title={manager.managerName}
+          title={manager.name}
         >
-          {manager.managerName}
+          {manager.name}
         </span>
         <span className="manager_card__fellows--number float-right">
           {' '}
@@ -47,7 +47,7 @@ const ManagerMapCard = ({ manager }) => {
 ManagerMapCard.propTypes = {
   manager: PropTypes.shape({
     staff_id: PropTypes.string.isRequired,
-    managerName: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     fellows: PropTypes.arrayOf(PropTypes.object).isRequired
   }).isRequired
 };

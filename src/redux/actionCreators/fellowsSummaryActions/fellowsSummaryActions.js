@@ -145,7 +145,7 @@ export const fetchFellowsSummarySl = email => dispatch => {
 
 export const fetchFellowsSummaryLf = email => dispatch => {
   dispatch({ type: FETCH_LF_SUMMARY_REQUEST });
-  const requestURL = `${serverURL}/api/v1/managers`;
+  const requestURL = `${serverURL}/api/v2/managers`;
   return Axios.get(`${requestURL}/history?email=${email}`).then(
     response => {
       dispatch({
