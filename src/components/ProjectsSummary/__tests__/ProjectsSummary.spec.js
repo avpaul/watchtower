@@ -4,33 +4,40 @@ import { shallow } from 'enzyme';
 import ProjectsSummary from '../ProjectsSummary';
 import FilterCard from '../../Filters/FilterCard';
 import Loader from '../../Loader/Loader';
+import FellowsMock from '../../../__mocks__/fellows.json';
+
+const props = {
+  manager: {
+    loading: false,
+    data: {
+      fellows: FellowsMock,
+      projects: [
+        {
+          count: 3,
+          project: 'WatchTower'
+        }
+      ],
+      performance: {
+        today: {
+          latestWeekSummary: {
+            Total: 3,
+            WatchTower: 3
+          }
+        },
+        trend: {
+          latestWeekSummary: {
+            Total: 3,
+            WatchTower: 3
+          }
+        }
+      }
+    }
+  },
+  handleCardClick: jest.fn(),
+  loading: false
+};
 
 const setup = () => {
-  const props = {
-    fellowsSummary: {
-      fellowsSummaryToday: {
-        latestWeekSummary: {
-          Total: 3,
-          WatchTower: 3
-        }
-      },
-      fellowsSummaryTrend: {
-        latestWeekSummary: {
-          Total: 3,
-          WatchTower: 3
-        }
-      }
-    },
-    ttlProjects: {
-      projects: {
-        Total: 3,
-        WatchTower: 3
-      }
-    },
-    handleCardClick: jest.fn(),
-    loading: false
-  };
-
   const wrapper = shallow(<ProjectsSummary {...props} />);
 
   return {
@@ -42,7 +49,6 @@ const setup = () => {
 
 describe('<ProjectsSummary />', () => {
   it('renders without crashing', () => {
-    const { props } = setup();
     const div = document.createElement('div');
     ReactDOM.render(<ProjectsSummary {...props} />, div);
     ReactDOM.unmountComponentAtNode(div);
@@ -66,10 +72,9 @@ describe('<ProjectsSummary />', () => {
   });
 
   it('renders correctly when project summary details are loading', () => {
-    const { props } = setup();
-    const wrapper = shallow(
-      <ProjectsSummary {...{ ...props, ...{ loading: true } }} />
-    );
+    const newProps = { ...props };
+    newProps.manager.loading = true;
+    const wrapper = shallow(<ProjectsSummary {...newProps} />);
     expect(wrapper.contains(<Loader />)).toEqual(true);
   });
 });

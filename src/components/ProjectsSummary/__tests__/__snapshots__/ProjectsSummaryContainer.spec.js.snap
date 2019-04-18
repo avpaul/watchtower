@@ -9,11 +9,10 @@ Object {
     "fellowsSummaryTrend": Object {},
     "loading": false,
   },
-  "loading": false,
-  "ttlProjects": Object {
+  "manager": Object {
+    "data": Array [],
     "error": null,
     "loading": false,
-    "projects": Array [],
   },
 }
 `;

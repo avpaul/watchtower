@@ -14,9 +14,9 @@ describe('ProjectsSummaryChartContainer', () => {
 
   it('should map dispatch to props', () => {
     const state = {
-      TTLDashboard: {
+      manager: {
         loading: false,
-        projects: [],
+        data: [],
         error: null
       }
     };
@@ -34,6 +34,6 @@ describe('ProjectsSummaryChartContainer', () => {
         }}
       />
     );
-    expect(wrapper.props().fetchTtlProjects).toBeDefined();
+    expect(wrapper.props().fetchManagerProfile).toBeDefined();
   });
 });

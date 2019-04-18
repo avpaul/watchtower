@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Filters.css';
+
+export const generateFilterCardId = id =>
+  `filterCard-${id.toLowerCase().replace(' ', '')}`;
+
 /**
  *
  * FilterCard Component

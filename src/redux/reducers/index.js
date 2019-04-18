@@ -10,7 +10,7 @@ import ttlReducer from './ttlReducer';
 import locationReducer from './locationReducer';
 import opsDashboardReducer from './opsDashBoardReducer';
 import managerFellowReducer from './managerFellows';
-import ttlProjectsReducer from './ttlProjectsReducer';
+import managerProfileReducer from './managerProfileReducer';
 import fellowProfileDataReducer from './fellowProfileDataReducer';
 import fellowsSummary from './fellowsummary';
 import fellowNotificationReducer from './fellowNotificationReducer';
@@ -37,7 +37,7 @@ const rootReducer = combineReducers({
   locations: locationReducer,
   opsDashboard: opsDashboardReducer,
   managerFellows: managerFellowReducer,
-  ttlProjects: ttlProjectsReducer,
+  manager: managerProfileReducer,
   fellow: fellowProfileDataReducer,
   notification: fellowNotificationReducer,
   unreadnotification: fellowUnreadNotificationReducer,

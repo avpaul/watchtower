@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProjectsSummary from '../ProjectsSummary';
 import FellowChart from '../FellowChart';
+import { generateFilterCardId } from '../Filters/FilterCard';
 
 class ProjectsSummaryChart extends Component {
   state = {
@@ -10,65 +11,84 @@ class ProjectsSummaryChart extends Component {
     selected: 'Today'
   };
 
-  componentDidMount() {
-    const { fetchTtlProjects, user, fetchFellowsSummaryTTLLF } = this.props;
-    const name = user.email.includes('wt-test')
-      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME
-      : user.name;
-    fetchTtlProjects(name);
-    fetchFellowsSummaryTTLLF(name);
+  constructor(props) {
+    super(props);
+
+    this.handleCardClick = this.handleCardClick.bind(this);
   }
 
-  updateSelected = selected => {
-    this.setState({ selected });
-  };
+  componentDidMount() {
+    const { fetchManagerProfile } = this.props;
+    fetchManagerProfile();
+  }
+
+  updateSelected = selected => this.setState({ selected });
 
   handleCardClick = event => {
     const currentCard = event.currentTarget.id;
-    const { fellowsSummary } = this.props;
-    const { fellowsSummaryToday } = fellowsSummary;
-    if (
-      fellowsSummaryToday.keys &&
-      !(currentCard in fellowsSummaryToday.keys)
-    ) {
+    const {
+      manager: {
+        data: {
+          performance: { today }
+        }
+      }
+    } = this.props;
+    if (today.keys && !(currentCard in today.keys))
       this.setState({ showChart: true, fellowsSummaryFilter: currentCard });
-    }
   };
 
-  handleChartClose = () => {
-    this.setState({ showChart: false });
+  handleChartClose = () => this.setState({ showChart: false });
+
+  /**
+   * Retrieves the selected performance trend data
+   * @return array List of selected performance trend data
+   */
+  updateFellowSummary = () => {
+    const { selected } = this.state;
+    const {
+      manager: {
+        data: { performance }
+      }
+    } = this.props;
+
+    return performance[selected.toLowerCase()].data;
   };
 
-  updateFellowSummary = selected => {
-    const { fellowsSummary } = this.props;
-    const history = fellowsSummary.fellowsSummaryToday.data;
-    const treads = fellowsSummary.fellowsSummaryTrend.data;
-
-    let datapoint;
-    if (selected === 'Today') {
-      datapoint = history;
-    } else if (selected === 'Trend') {
-      datapoint = treads;
-    }
-    return datapoint;
+  /**
+   * Retrieves the document related offsets of the card HTML component
+   * @param object cardElement HTML element
+   * @return { top , left } Document related offsets
+   */
+  getCardOffset = cardElement => {
+    const rect = cardElement.getBoundingClientRect();
+    return {
+      top:
+        rect.top + (window.pageYOffset || document.documentElement.scrollTop),
+      left:
+        rect.left + (window.pageXOffset || document.documentElement.scrollLeft)
+    };
   };
 
+  /**
+   * Retrieves the position of the tooltip arrow that points to the card on focus
+   * @return { '--fellow-chart-tooltip' } X-axis position of the tooltip arrow
+   */
   getCurrentClass = () => {
     const { fellowsSummaryFilter } = this.state;
-    const { fellowsSummary } = this.props;
-    const history = fellowsSummary.fellowsSummaryToday.keys;
-    if (history) {
-      const index = history.indexOf(fellowsSummaryFilter);
-      const width = 23.5;
-      return { '--fellow-chart-tooltip': `${width / 2 + index * width - 4}%` };
-    }
-    return { '--fellow-chart-tooltip': `${12}%` };
+    const cardOnFocus = document.querySelector(
+      `.${generateFilterCardId(fellowsSummaryFilter)}`
+    ).parentNode;
+    const cardOnFocusOffsets = this.getCardOffset(cardOnFocus);
+    const width = Math.floor(
+      cardOnFocusOffsets.left + cardOnFocus.clientWidth / 2
+    );
+    return { '--fellow-chart-tooltip': `${width}px` };
   };
 
   render() {
-    const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { fellowsSummary, user } = this.props;
-    const data = this.updateFellowSummary(selected);
+    const { fellowsSummaryFilter, showChart } = this.state;
+    const { user } = this.props;
+
     return (
       <div>
         <ProjectsSummary handleCardClick={this.handleCardClick} />
@@ -77,8 +97,7 @@ class ProjectsSummaryChart extends Component {
             filter={fellowsSummaryFilter}
             handleChartClose={this.handleChartClose}
             updateSelected={this.updateSelected}
-            {...fellowsSummary}
-            data={data}
+            data={this.updateFellowSummary()}
             fellowChartTooltipClass={this.getCurrentClass()}
             user={user}
           />
@@ -89,10 +108,9 @@ class ProjectsSummaryChart extends Component {
 }
 
 ProjectsSummaryChart.propTypes = {
-  fetchTtlProjects: PropTypes.func.isRequired,
+  fetchManagerProfile: PropTypes.func.isRequired,
   user: PropTypes.instanceOf(Object).isRequired,
-  fetchFellowsSummaryTTLLF: PropTypes.func.isRequired,
-  fellowsSummary: PropTypes.instanceOf(Object).isRequired
+  manager: PropTypes.instanceOf(Object).isRequired
 };
 
 export default ProjectsSummaryChart;
