@@ -8,6 +8,8 @@ import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
 import PipActivationForm from '../PipActivationForm/PipActivationForm';
 import './FellowHistory.css';
 import DevPulseTable from '../DevPulseTable';
+import Table from '../TableComponents/Table';
+import DevPulseRow from '../DevPulseTable/DevPulseRow/DevPulseRow';
 import getFellowData from '../../redux/actionCreators/fellowProfileDataActions';
 import LmsTable from '../LmsTable';
 import { formatRollingAveragePerAttribute } from '../../utils/pulse';
@@ -150,17 +152,29 @@ export class FellowHistory extends Component {
     history.push(`/developers/pip/activation/${fellow.fellow_id}`);
   };
 
+  renderAverageRatings = (fellowLevel, fellowRatings) => (
+    <Table>
+      <DevPulseRow
+        rating={formatRollingAveragePerAttribute(fellowLevel, fellowRatings)}
+        averageRatings
+      />
+    </Table>
+  );
+
   renderTables = () => {
     const { fellowDetails, fellowDetailsLoading } = this.props;
     const { showDevpulseTable, showLmsTable, fellow } = this.state;
     return (
       <div className="col-12 mt-5">
         {showDevpulseTable && (
-          <DevPulseTable
-            loading={fellowDetailsLoading}
-            ratings={fellowDetails.ratings}
-            fellow={fellow}
-          />
+          <Fragment>
+            {this.renderAverageRatings(fellow.level, fellowDetails.ratings)}
+            <DevPulseTable
+              loading={fellowDetailsLoading}
+              ratings={fellowDetails.ratings}
+              fellow={fellow}
+            />
+          </Fragment>
         )}
         {showLmsTable && (
           <LmsTable
@@ -243,6 +257,6 @@ const mapStateToProps = ({ fellow }) => ({
 export default connect(
   mapStateToProps,
   {
-    getFellow: getFellowData,
+    getFellow: getFellowData
   }
 )(withRouter(FellowHistory));

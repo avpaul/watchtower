@@ -1,4 +1,7 @@
-import { formatRollingAveragePerAttribute } from '../pulse';
+import {
+  formatRollingAveragePerAttribute,
+  formatAveragePulseValues
+} from '../pulse';
 
 const level = 'D0B';
 const ratings = [
@@ -90,5 +93,35 @@ describe('Test for pulse functions', () => {
     };
     const actual = formatRollingAveragePerAttribute(level, ratings2);
     expect(actual).toEqual(defaultRating);
+  });
+
+  it('should return the same string passed', () => {
+    const attribute = 'Average Per Attribute';
+    const actual = formatAveragePulseValues(attribute);
+    expect(actual).toEqual(attribute);
+  });
+
+  it('should return 1.00', () => {
+    const attribute = 1;
+    const actual = formatAveragePulseValues(attribute);
+    expect(actual).toEqual('1.00');
+  });
+
+  it('should return 2.00', () => {
+    const attribute = 2;
+    const actual = formatAveragePulseValues(attribute);
+    expect(actual).toEqual('2.00');
+  });
+
+  it('should return 1.55', () => {
+    const attribute = 1.55;
+    const actual = formatAveragePulseValues(attribute);
+    expect(actual).toEqual('1.55');
+  });
+
+  it('should return 1.5', () => {
+    const attribute = 1.5;
+    const actual = formatAveragePulseValues(attribute);
+    expect(actual).toEqual('1.50');
   });
 });
