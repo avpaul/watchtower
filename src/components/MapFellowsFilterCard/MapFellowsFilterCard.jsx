@@ -25,6 +25,7 @@ const MapFellowsFilterCard = ({
   let offTrack = 0;
   let pip = 0;
   let onTrack = 0;
+  let noRatings = 0;
   let refinedArray;
   if (display === 'status') {
     fellowSummaryDetails.forEach(fellow => {
@@ -32,13 +33,15 @@ const MapFellowsFilterCard = ({
       if (`${fellow.overall_status}`.includes('offTrack') && !fellow.pipStatus)
         offTrack += 1;
       if (`${fellow.overall_status}`.includes('onTrack')) onTrack += 1;
+      if (`${fellow.overall_status}`.includes('N/A')) noRatings += 1;
     });
     const allFellows = fellowSummaryDetails.length;
     refinedArray = [
       { 'All Fellows': allFellows },
       { 'On Track': onTrack },
       { 'Off Track': offTrack },
-      { PIP: pip }
+      { PIP: pip },
+      { 'No Ratings': noRatings }
     ];
   }
 
@@ -69,7 +72,7 @@ const MapFellowsFilterCard = ({
     />
   ));
 
-  return display === 'project' ? (
+  return display === 'project' || 'status' ? (
     <Slider {...carouselOptions(2.9999, 'manager-slick')}>{renderCards}</Slider>
   ) : (
     <div className="ops-dashboard__fellows-summary">

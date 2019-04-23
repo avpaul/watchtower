@@ -21,6 +21,7 @@ const TranslatorTable = {
   'All LFs': '',
   'On Track': 'onTrack',
   'Off Track': 'offTrack',
+  'No Ratings': 'N/A',
   PIP: true,
   WATCH_TOWER_LF: 'LF',
   WATCH_TOWER_OPS: 'TTL/LF',

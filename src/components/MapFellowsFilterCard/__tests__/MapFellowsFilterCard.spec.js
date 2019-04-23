@@ -42,13 +42,13 @@ describe('MapFellowsFilterCard tests', () => {
     );
     expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(2);
   });
-  it('should always render 4 fellow filter cards when displaying fellows status', () => {
+  it('should always render 5 fellow filter cards when displaying fellows status', () => {
     const { mapFellowsFilterCardWrapper } = setup(
       fellowSummaryDetails,
       'status',
       { project: 'All Products', status: 'All Fellows' }
     );
-    expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(4);
+    expect(mapFellowsFilterCardWrapper.find(FellowFilterCard).length).toBe(5);
   });
   it('should render total number of fellows under all products to be 6', () => {
     const { mapFellowsFilterCardWrapper } = setup(
