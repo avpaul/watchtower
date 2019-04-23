@@ -34,12 +34,14 @@ const props = {
     }
   },
   handleCardClick: jest.fn(),
-  loading: false
+  loading: false,
+  ProjectsSummaryChartComponent: {
+    filterCardRefs: []
+  }
 };
 
 const setup = () => {
   const wrapper = shallow(<ProjectsSummary {...props} />);
-
   return {
     props,
     wrapper,
@@ -53,7 +55,7 @@ describe('<ProjectsSummary />', () => {
     ReactDOM.render(<ProjectsSummary {...props} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-
+  jest.mock('');
   it('renders four <FilterCard />', () => {
     const { count } = setup();
     expect(count).toEqual(2);

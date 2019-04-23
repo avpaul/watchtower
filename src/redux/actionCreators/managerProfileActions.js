@@ -4,7 +4,7 @@ import * as types from '../constants/managerActionTypes';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
-const formatPerformanceData = performanceData => ({
+export const formatPerformanceData = performanceData => ({
   ...performanceData,
   data: Object.values(performanceData.data).map(weekData => {
     const updatedWeekData = {};
@@ -27,17 +27,21 @@ const getManagerProfileData = () => dispatch => {
   const requestURL = `${serverURL}/api/v2/managers/fellows/profile`;
 
   return axios.get(requestURL).then(
-    response =>
-      dispatch({
+    response => {
+      const { data } = response;
+
+      if (data.performance) {
+        data.performance = {
+          today: formatPerformanceData(response.data.performance.today),
+          trend: formatPerformanceData(response.data.performance.trend)
+        };
+      }
+
+      return dispatch({
         type: types.MANAGER_PROFILE_DATA_SUCCESS,
-        data: {
-          ...response.data,
-          performance: {
-            today: formatPerformanceData(response.data.performance.today),
-            trend: formatPerformanceData(response.data.performance.trend)
-          }
-        }
-      }),
+        data
+      });
+    },
     error =>
       dispatch({
         type: types.MANAGER_PROFILE_DATA_FAILURE,

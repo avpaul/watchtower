@@ -15,6 +15,8 @@ class ProjectsSummaryChart extends Component {
     super(props);
 
     this.handleCardClick = this.handleCardClick.bind(this);
+
+    this.filterCardRefs = [];
   }
 
   componentDidMount() {
@@ -27,12 +29,12 @@ class ProjectsSummaryChart extends Component {
   handleCardClick = event => {
     const currentCard = event.currentTarget.id;
     const {
-      manager: {
-        data: {
-          performance: { today }
-        }
-      }
+      manager: { data }
     } = this.props;
+    if (!data.performance) return;
+
+    const { today } = data.performance;
+
     if (today.keys && !(currentCard in today.keys))
       this.setState({ showChart: true, fellowsSummaryFilter: currentCard });
   };
@@ -75,9 +77,9 @@ class ProjectsSummaryChart extends Component {
    */
   getCurrentClass = () => {
     const { fellowsSummaryFilter } = this.state;
-    const cardOnFocus = document.querySelector(
-      `.${generateFilterCardId(fellowsSummaryFilter)}`
-    ).parentNode;
+    const cardOnFocus = this.filterCardRefs[
+      generateFilterCardId(fellowsSummaryFilter)
+    ].current;
     const cardOnFocusOffsets = this.getCardOffset(cardOnFocus);
     const width = Math.floor(
       cardOnFocusOffsets.left + cardOnFocus.clientWidth / 2
@@ -87,11 +89,14 @@ class ProjectsSummaryChart extends Component {
 
   render() {
     const { fellowsSummaryFilter, showChart } = this.state;
-    const { user } = this.props;
+    const { user, manager } = this.props;
 
     return (
       <div>
-        <ProjectsSummary handleCardClick={this.handleCardClick} />
+        <ProjectsSummary
+          handleCardClick={this.handleCardClick}
+          ProjectsSummaryChartComponent={this}
+        />
         {showChart && (
           <FellowChart
             filter={fellowsSummaryFilter}
@@ -100,6 +105,7 @@ class ProjectsSummaryChart extends Component {
             data={this.updateFellowSummary()}
             fellowChartTooltipClass={this.getCurrentClass()}
             user={user}
+            loading={manager.loading}
           />
         )}
       </div>
