@@ -1,0 +1,249 @@
+{
+  "keys": ["Watch Tower", "Total"],
+  "data": {
+    "2018-12-31": {
+      "week": "2018-12-31",
+      "Watch Tower": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2018-12-31"
+      },
+      "Total": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2018-12-31"
+      }
+    },
+    "2019-01-07": {
+      "week": "2019-01-07",
+      "Watch Tower": {
+        "ontrack": 2,
+        "offtrack": 3,
+        "pip": 0,
+        "week": "2019-01-07"
+      },
+      "Total": {
+        "ontrack": 2,
+        "offtrack": 3,
+        "pip": 0,
+        "week": "2019-01-07"
+      }
+    },
+    "2019-01-14": {
+      "week": "2019-01-14",
+      "Watch Tower": {
+        "ontrack": 3,
+        "offtrack": 3,
+        "pip": 0,
+        "week": "2019-01-14"
+      },
+      "Total": {
+        "ontrack": 3,
+        "offtrack": 3,
+        "pip": 0,
+        "week": "2019-01-14"
+      }
+    },
+    "2019-01-21": {
+      "week": "2019-01-21",
+      "Watch Tower": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2019-01-21"
+      },
+      "Total": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2019-01-21"
+      }
+    },
+    "2019-01-28": {
+      "week": "2019-01-28",
+      "Watch Tower": {
+        "ontrack": 3,
+        "offtrack": 3,
+        "pip": 0,
+        "week": "2019-01-28"
+      },
+      "Total": {
+        "ontrack": 3,
+        "offtrack": 3,
+        "pip": 0,
+        "week": "2019-01-28"
+      }
+    },
+    "2019-02-04": {
+      "week": "2019-02-04",
+      "Watch Tower": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2019-02-04"
+      },
+      "Total": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2019-02-04"
+      }
+    },
+    "2019-02-11": {
+      "week": "2019-02-11",
+      "Watch Tower": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2019-02-11"
+      },
+      "Total": {
+        "ontrack": 4,
+        "offtrack": 2,
+        "pip": 0,
+        "week": "2019-02-11"
+      }
+    },
+    "2019-02-18": {
+      "week": "2019-02-18",
+      "Watch Tower": {
+        "ontrack": 5,
+        "offtrack": 1,
+        "pip": 0,
+        "week": "2019-02-18"
+      },
+      "Total": {
+        "ontrack": 5,
+        "offtrack": 1,
+        "pip": 0,
+        "week": "2019-02-18"
+      }
+    },
+    "2019-02-25": {
+      "week": "2019-02-25",
+      "Watch Tower": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-02-25"
+      },
+      "Total": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-02-25"
+      }
+    },
+    "2019-03-04": {
+      "week": "2019-03-04",
+      "Watch Tower": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-03-04"
+      },
+      "Total": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-03-04"
+      }
+    },
+    "2019-03-11": {
+      "week": "2019-03-11",
+      "Watch Tower": {
+        "ontrack": 5,
+        "offtrack": 1,
+        "pip": 0,
+        "week": "2019-03-11"
+      },
+      "Total": {
+        "ontrack": 5,
+        "offtrack": 1,
+        "pip": 0,
+        "week": "2019-03-11"
+      }
+    },
+    "2019-03-18": {
+      "week": "2019-03-18",
+      "Watch Tower": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-03-18"
+      },
+      "Total": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-03-18"
+      }
+    },
+    "2019-03-25": {
+      "week": "2019-03-25",
+      "Watch Tower": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-03-25"
+      },
+      "Total": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-03-25"
+      }
+    },
+    "2019-04-01": {
+      "week": "2019-04-01",
+      "Watch Tower": {
+        "ontrack": 5,
+        "offtrack": 1,
+        "pip": 0,
+        "week": "2019-04-01"
+      },
+      "Total": {
+        "ontrack": 5,
+        "offtrack": 1,
+        "pip": 0,
+        "week": "2019-04-01"
+      }
+    },
+    "2019-04-08": {
+      "week": "2019-04-08",
+      "Watch Tower": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-04-08"
+      },
+      "Total": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-04-08"
+      }
+    },
+    "2019-04-15": {
+      "week": "2019-04-15",
+      "Watch Tower": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-04-15"
+      },
+      "Total": {
+        "ontrack": 6,
+        "offtrack": 0,
+        "pip": 0,
+        "week": "2019-04-15"
+      }
+    }
+  },
+  "latestWeekSummary": {
+    "Watch Tower": 6,
+    "Total": 6
+  }
+}

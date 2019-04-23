@@ -152,7 +152,7 @@ export default {
     data: [],
     error: null
   },
-  fellowFeedbackNotify: {
+  fellowFeedback: {
     fellowFeedback: {}
   }
 };

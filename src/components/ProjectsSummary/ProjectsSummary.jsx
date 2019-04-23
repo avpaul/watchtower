@@ -14,22 +14,36 @@ const formatProjects = projects =>
     totalFellows: parseInt(group.count, 10)
   }));
 
-const renderProjectCards = (projectsCard, handleCardClick) =>
-  projectsCard.map(projectCard => (
-    <div className="p-1" key={projectCard.title}>
-      <FilterCard
+const renderProjectCards = (
+  projectsCard,
+  handleCardClick,
+  ProjectsSummaryChartComponent
+) =>
+  projectsCard.map(projectCard => {
+    const cardId = generateFilterCardId(projectCard.title);
+    // eslint-disable-next-line no-param-reassign
+    ProjectsSummaryChartComponent.filterCardRefs[cardId] = React.createRef();
+    return (
+      <div
+        className="p-1"
         key={projectCard.title}
-        filterId={projectCard.title}
-        cardDetails={projectCard}
-        className={`card ${generateFilterCardId(projectCard.title)}`}
-        onClick={handleCardClick}
-      />
-    </div>
-  ));
+        ref={ProjectsSummaryChartComponent.filterCardRefs[cardId]}
+      >
+        <FilterCard
+          key={projectCard.title}
+          filterId={projectCard.title}
+          cardDetails={projectCard}
+          className="card"
+          onClick={handleCardClick}
+        />
+      </div>
+    );
+  });
 
 const ProjectsSummary = ({
   handleCardClick,
-  manager: { data: managerData, loading }
+  manager: { data: managerData, loading },
+  ProjectsSummaryChartComponent
 }) => {
   const projectsCard = [
     {
@@ -46,7 +60,11 @@ const ProjectsSummary = ({
       {!loading ? (
         <div className="row ops-dashboard__filter">
           <Slider {...carouselOptions(4)}>
-            {renderProjectCards(projectsCard, handleCardClick)}
+            {renderProjectCards(
+              projectsCard,
+              handleCardClick,
+              ProjectsSummaryChartComponent
+            )}
           </Slider>
         </div>
       ) : (
@@ -59,7 +77,8 @@ const ProjectsSummary = ({
 ProjectsSummary.propTypes = {
   fellowsSummary: PropTypes.instanceOf(Object).isRequired,
   manager: PropTypes.instanceOf(Object).isRequired,
-  handleCardClick: PropTypes.func.isRequired
+  handleCardClick: PropTypes.func.isRequired,
+  ProjectsSummaryChartComponent: PropTypes.instanceOf(Object).isRequired
 };
 
 export default ProjectsSummary;

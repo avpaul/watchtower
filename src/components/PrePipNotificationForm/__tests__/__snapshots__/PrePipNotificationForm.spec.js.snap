@@ -442,7 +442,9 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "dispatch": [Function],
-      "fellowFeedback": undefined,
+      "fellowFeedback": Object {
+        "fellowFeedback": Object {},
+      },
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -482,7 +484,9 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "dispatch": [Function],
-        "fellowFeedback": undefined,
+        "fellowFeedback": Object {
+          "fellowFeedback": Object {},
+        },
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
