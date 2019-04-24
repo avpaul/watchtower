@@ -11,7 +11,7 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
               className="watch-tower__logo"
               src="/static/media/Logo.355ffce3.svg"
               alt="watch tower logo"
-            />{" "}
+            />{' '}
             WatchTower
           </div>
         </td>
@@ -21,12 +21,7 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
       </tr>
     </table>
     <p className="prepipHtml">
-      Dear{' '}
-      <b>
-        {fellowFeedback &&
-          `${fellowFeedback.FirstName} ${fellowFeedback.LastName}`}
-        ,
-      </b>
+      Dear <b>{fellowFeedback && `${fellowFeedback.name}`},</b>
     </p>
     <p className="prepipHtml">
       The purpose of this email is to notify you that your performance has been
@@ -72,7 +67,7 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
         </td>
       </tr>
     </table>
-    
+
     <p className="prepipHtml">
       Please note that this is the <b>insert number instance</b> of feedback you
       have received since the performance issue was observed. In
@@ -90,11 +85,7 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
     <p className="prepipHtml">TIA, </p>
     <p>
       <b>
-        {fellowFeedback.Manager &&
-          `${fellowFeedback.Manager.firstName} ${
-            fellowFeedback.Manager.lastName
-          }`}
-        , Manager
+        {fellowFeedback.Manager && `${fellowFeedback.Manager.name}`}, Manager
       </b>
     </p>
   </div>

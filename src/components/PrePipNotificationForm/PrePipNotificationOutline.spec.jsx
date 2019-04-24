@@ -10,11 +10,9 @@ describe('Pre pip notification form', () => {
         Attribute: null,
         Context: 'Hi Sinmiloluwa',
         Criteria: 'lms',
-        FirstName: 'Sinmiloluwa',
-        LastName: 'Oloyede',
+        name: 'Sinmiloluwa Oloyede',
         Manager: {
-          firstName: 'Trust ',
-          lastName: 'Birungi',
+          name: 'Trust Birungi',
           email: 'trust.birungi@andela.com'
         },
         Recommendation: null,

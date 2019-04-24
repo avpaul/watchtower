@@ -67,4 +67,23 @@ describe('Manager Profile Actions', () => {
       }
     ]);
   });
+
+  it('tests the formatPerformanceData function', () => {
+    const performanceData = {
+      data: {
+      key: ['MRM Front End', 'MRM Back End'],
+        '2018-12-24': {
+          week: '2018-12-24',
+          lms_satisified: 34,
+          lms_unsatisified: 9,
+          pulse_satisified: 10,
+          pulse_unsatisified: 0,
+          pip_satisified: 0,
+          pip_unsatisified: 0
+        }
+      }
+    };
+    const data = formatPerformanceData(performanceData);
+    expect(data).not.toBeNull();
+  });
 });
