@@ -1,6 +1,7 @@
 [
   {
-    "name": "Oluseyi Anani",
+    "first_name": "Oluseyi",
+    "last_name": "Anani",
     "level": "D0B Apprenticeship",
     "type": "pre-pip",
     "context": "Your quality is below expectation, you are off-track",
@@ -12,7 +13,8 @@
     "project": "Watch Tower"
   },
   {
-    "name": "Brian Mboya",
+    "first_name": "Brian",
+    "last_name": "Mboya",
     "level": "D0A Simulations",
     "type": "pip",
     "context": "Your quality is below expectation",
@@ -24,7 +26,8 @@
     "project": "Noldor"
   },
   {
-    "name": "Brian Mboya",
+    "first_name": "Brian",
+    "last_name": "Mboya",
     "level": "D0A Simulations",
     "type": "pip",
     "context": "Your quality is below expectation",
@@ -36,7 +39,8 @@
     "project": "Noldor"
   },
   {
-    "name": "Brian Mboya",
+    "first_name": "Brian",
+    "last_name": "Mboya",
     "level": "D0A Simulations",
     "type": "pip",
     "context": "Your quality is below expectation",

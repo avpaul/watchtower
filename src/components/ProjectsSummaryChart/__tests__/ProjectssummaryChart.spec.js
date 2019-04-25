@@ -59,24 +59,6 @@ describe('<ProjectsSummaryChart />', () => {
     expect(wrapper.instance().state.selected).toBe('DOA');
   });
 
-  it('test component methods', () => {
-    const { wrapper } = setup();
-    wrapper.setState({selected: 'Today', showChart: false, fellowsSummaryFilter: ''});
-    const propsData = {
-      manager: {
-        data: {
-          performance: {today: {data: "Null"}}
-        }
-      }
-    };
-    const event = {
-      currentTarget: { id: 'id' }
-    };
-    wrapper.setProps({propsData});
-    wrapper.instance().updateFellowSummary();
-    wrapper.instance().handleCardClick(event);
-  });
-
   it('should set state on handleChartClose', () => {
     const { wrapper } = setup();
     wrapper.instance().state.showChart = true;

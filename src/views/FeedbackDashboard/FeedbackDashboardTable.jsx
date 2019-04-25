@@ -17,7 +17,7 @@ const formatFeedback = (feedback, index, type) => {
     formattedFeedback = {
       Serial: index + 1,
       Date: feedback.start_date,
-      Name: feedback.name,
+      Name: `${feedback.first_name} ${feedback.last_name}`,
       Manager: feedback.manager_email
         ? formatName(feedback.manager_email)
         : 'N/A',
@@ -28,7 +28,7 @@ const formatFeedback = (feedback, index, type) => {
       Serial: index + 1,
       'Start Date': feedback.start_date,
       'End Date': feedback.endDate || 'N/A',
-      Name: feedback.name,
+      Name: `${feedback.first_name} ${feedback.last_name}`,
       Manager: feedback.manager_email
         ? formatName(feedback.manager_email)
         : 'N/A',
@@ -39,7 +39,7 @@ const formatFeedback = (feedback, index, type) => {
 };
 
 const ViewPrePip = (feedback, handleClick, index) => {
-  const feedbackLink = `/feedback/${feedback.name.split(' ').join('.')}`;
+  const feedbackLink = `/feedback/${feedback.first_name}.${feedback.last_name}`;
   return (
     <Link
       to={{

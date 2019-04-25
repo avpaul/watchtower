@@ -37,9 +37,11 @@ describe('Pre pip notification form', () => {
         Attribute: null,
         Context: 'Hi Sinmiloluwa',
         Criteria: 'lms',
-        name: 'Oloyede Sinmiloluwa',
+        FirstName: 'Sinmiloluwa',
+        LastName: 'Oloyede',
         Manager: {
-          name: 'Trust Birungi',
+          firstName: 'Trust ',
+          lastName: 'Birungi',
           email: 'trust.birungi@andela.com'
         },
         Recommendation: null,
@@ -52,6 +54,7 @@ describe('Pre pip notification form', () => {
     containerWrapper = shallow(
       <PrePipNotificationFormContainer store={store} />
     );
+
   });
 
   it('renders to match shapshot', () => {

@@ -9,14 +9,16 @@ ShallowWrapper {
             "Attribute": null,
             "Context": "Hi Sinmiloluwa",
             "Criteria": "lms",
+            "FirstName": "Sinmiloluwa",
+            "LastName": "Oloyede",
             "Manager": Object {
               "email": "trust.birungi@andela.com",
-              "name": "Trust Birungi",
+              "firstName": "Trust ",
+              "lastName": "Birungi",
             },
             "Recommendation": null,
             "fellowFeedback": Object {},
             "index": "0",
-            "name": "Oloyede Sinmiloluwa",
           }
     }
     history={
@@ -61,14 +63,16 @@ ShallowWrapper {
                                                   "Attribute": null,
                                                   "Context": "Hi Sinmiloluwa",
                                                   "Criteria": "lms",
+                                                  "FirstName": "Sinmiloluwa",
+                                                  "LastName": "Oloyede",
                                                   "Manager": Object {
                                                     "email": "trust.birungi@andela.com",
-                                                    "name": "Trust Birungi",
+                                                    "firstName": "Trust ",
+                                                    "lastName": "Birungi",
                                                   },
                                                   "Recommendation": null,
                                                   "fellowFeedback": Object {},
                                                   "index": "0",
-                                                  "name": "Oloyede Sinmiloluwa",
                                                 }
                               }
                               serialNumber={1}
@@ -103,14 +107,16 @@ ShallowWrapper {
                                                 "Attribute": null,
                                                 "Context": "Hi Sinmiloluwa",
                                                 "Criteria": "lms",
+                                                "FirstName": "Sinmiloluwa",
+                                                "LastName": "Oloyede",
                                                 "Manager": Object {
                                                   "email": "trust.birungi@andela.com",
-                                                  "name": "Trust Birungi",
+                                                  "firstName": "Trust ",
+                                                  "lastName": "Birungi",
                                                 },
                                                 "Recommendation": null,
                                                 "fellowFeedback": Object {},
                                                 "index": "0",
-                                                "name": "Oloyede Sinmiloluwa",
                                               }
                         }
                         serialNumber={1}
@@ -130,14 +136,16 @@ ShallowWrapper {
                                           "Attribute": null,
                                           "Context": "Hi Sinmiloluwa",
                                           "Criteria": "lms",
+                                          "FirstName": "Sinmiloluwa",
+                                          "LastName": "Oloyede",
                                           "Manager": Object {
                                             "email": "trust.birungi@andela.com",
-                                            "name": "Trust Birungi",
+                                            "firstName": "Trust ",
+                                            "lastName": "Birungi",
                                           },
                                           "Recommendation": null,
                                           "fellowFeedback": Object {},
                                           "index": "0",
-                                          "name": "Oloyede Sinmiloluwa",
                                         }
               }
               serialNumber={1}
@@ -156,14 +164,16 @@ ShallowWrapper {
                 "Attribute": null,
                 "Context": "Hi Sinmiloluwa",
                 "Criteria": "lms",
+                "FirstName": "Sinmiloluwa",
+                "LastName": "Oloyede",
                 "Manager": Object {
                   "email": "trust.birungi@andela.com",
-                  "name": "Trust Birungi",
+                  "firstName": "Trust ",
+                  "lastName": "Birungi",
                 },
                 "Recommendation": null,
                 "fellowFeedback": Object {},
                 "index": "0",
-                "name": "Oloyede Sinmiloluwa",
               },
               "serialNumber": 1,
             },
@@ -227,14 +237,16 @@ ShallowWrapper {
                                                             "Attribute": null,
                                                             "Context": "Hi Sinmiloluwa",
                                                             "Criteria": "lms",
+                                                            "FirstName": "Sinmiloluwa",
+                                                            "LastName": "Oloyede",
                                                             "Manager": Object {
                                                               "email": "trust.birungi@andela.com",
-                                                              "name": "Trust Birungi",
+                                                              "firstName": "Trust ",
+                                                              "lastName": "Birungi",
                                                             },
                                                             "Recommendation": null,
                                                             "fellowFeedback": Object {},
                                                             "index": "0",
-                                                            "name": "Oloyede Sinmiloluwa",
                                                           }
                                     }
                                     serialNumber={1}
@@ -269,14 +281,16 @@ ShallowWrapper {
                                                         "Attribute": null,
                                                         "Context": "Hi Sinmiloluwa",
                                                         "Criteria": "lms",
+                                                        "FirstName": "Sinmiloluwa",
+                                                        "LastName": "Oloyede",
                                                         "Manager": Object {
                                                           "email": "trust.birungi@andela.com",
-                                                          "name": "Trust Birungi",
+                                                          "firstName": "Trust ",
+                                                          "lastName": "Birungi",
                                                         },
                                                         "Recommendation": null,
                                                         "fellowFeedback": Object {},
                                                         "index": "0",
-                                                        "name": "Oloyede Sinmiloluwa",
                                                       }
                             }
                             serialNumber={1}
@@ -296,14 +310,16 @@ ShallowWrapper {
                                                 "Attribute": null,
                                                 "Context": "Hi Sinmiloluwa",
                                                 "Criteria": "lms",
+                                                "FirstName": "Sinmiloluwa",
+                                                "LastName": "Oloyede",
                                                 "Manager": Object {
                                                   "email": "trust.birungi@andela.com",
-                                                  "name": "Trust Birungi",
+                                                  "firstName": "Trust ",
+                                                  "lastName": "Birungi",
                                                 },
                                                 "Recommendation": null,
                                                 "fellowFeedback": Object {},
                                                 "index": "0",
-                                                "name": "Oloyede Sinmiloluwa",
                                               }
                 }
                 serialNumber={1}
@@ -322,14 +338,16 @@ ShallowWrapper {
                   "Attribute": null,
                   "Context": "Hi Sinmiloluwa",
                   "Criteria": "lms",
+                  "FirstName": "Sinmiloluwa",
+                  "LastName": "Oloyede",
                   "Manager": Object {
                     "email": "trust.birungi@andela.com",
-                    "name": "Trust Birungi",
+                    "firstName": "Trust ",
+                    "lastName": "Birungi",
                   },
                   "Recommendation": null,
                   "fellowFeedback": Object {},
                   "index": "0",
-                  "name": "Oloyede Sinmiloluwa",
                 },
                 "serialNumber": 1,
               },

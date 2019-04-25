@@ -9,13 +9,15 @@ ShallowWrapper {
             "Attribute": null,
             "Context": "Hi Sinmiloluwa",
             "Criteria": "lms",
+            "FirstName": "Sinmiloluwa",
+            "LastName": "Oloyede",
             "Manager": Object {
               "email": "trust.birungi@andela.com",
-              "name": "Trust Birungi",
+              "firstName": "Trust ",
+              "lastName": "Birungi",
             },
             "Recommendation": null,
             "index": "0",
-            "name": "Sinmiloluwa Oloyede",
           }
     }
     serialNumber={0}
@@ -65,7 +67,8 @@ ShallowWrapper {
         <p
           className="prepipHtml"
 >
-          Dear 
+          Dear
+           
           <b>
                     Sinmiloluwa Oloyede
                     ,
@@ -156,7 +159,7 @@ ShallowWrapper {
 </p>,
         <p>
           <b>
-                    Trust Birungi
+                    Trust  Birungi
                     , Manager
           </b>
 </p>,
@@ -324,7 +327,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Dear ",
+            "Dear",
+            " ",
             <b>
               Sinmiloluwa Oloyede
               ,
@@ -334,7 +338,8 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          "Dear ",
+          "Dear",
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -959,7 +964,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <b>
-            Trust Birungi
+            Trust  Birungi
             , Manager
 </b>,
         },
@@ -970,13 +975,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Trust Birungi",
+              "Trust  Birungi",
               ", Manager",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Trust Birungi",
+            "Trust  Birungi",
             ", Manager",
           ],
           "type": "b",
@@ -1024,7 +1029,8 @@ ShallowWrapper {
           <p
             className="prepipHtml"
 >
-            Dear 
+            Dear
+             
             <b>
                         Sinmiloluwa Oloyede
                         ,
@@ -1115,7 +1121,7 @@ ShallowWrapper {
 </p>,
           <p>
             <b>
-                        Trust Birungi
+                        Trust  Birungi
                         , Manager
             </b>
 </p>,
@@ -1283,7 +1289,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Dear ",
+              "Dear",
+              " ",
               <b>
                 Sinmiloluwa Oloyede
                 ,
@@ -1293,7 +1300,8 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            "Dear ",
+            "Dear",
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -1918,7 +1926,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <b>
-              Trust Birungi
+              Trust  Birungi
               , Manager
 </b>,
           },
@@ -1929,13 +1937,13 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Trust Birungi",
+                "Trust  Birungi",
                 ", Manager",
               ],
             },
             "ref": null,
             "rendered": Array [
-              "Trust Birungi",
+              "Trust  Birungi",
               ", Manager",
             ],
             "type": "b",

@@ -202,7 +202,8 @@ export class FeedbackDashboard extends Component {
       attribute,
       context,
       criteria,
-      name,
+      first_name: firstName,
+      last_name: lastName,
       recommendation,
       manager
     } = feedbackArray[index];
@@ -210,13 +211,14 @@ export class FeedbackDashboard extends Component {
       Attribute: attribute,
       Context: context,
       Criteria: criteria,
-      name,
+      FirstName: firstName,
+      LastName: lastName,
       Recommendation: recommendation,
       Manager: manager,
-      index
+      index,
     };
     fellowFeedback(fellowDetails);
-    history.push(`/feedback/${name.split(' ').join('.')}`);
+    history.push(`/feedback/${firstName}.${lastName}`);
   };
 
   renderFilterCards = (title, filterKey) => {
