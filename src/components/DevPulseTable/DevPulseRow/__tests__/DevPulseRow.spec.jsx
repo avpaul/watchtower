@@ -8,6 +8,7 @@ describe('tests the DevPulseRow', () => {
     const props = {
       rating: {
         week: 1,
+        created_at: '2019-09-09',
 
         scores: [
           {
