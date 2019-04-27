@@ -13,5 +13,6 @@ Object {
     "fellowsSummaryTrend": Object {},
     "loading": false,
   },
+  "opsSummaryLoading": false,
 }
 `;

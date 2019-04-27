@@ -26,8 +26,8 @@ it('renders ManagerMap cards with Default Ratio', () => {
 });
 
 it('renders ManagerMap cards with Low to High Ratio', () => {
-  props.sortRatio = 'LOW_TO_HIGH';
   const wrapper = shallow(<ManagerFellowMap {...props} />);
+  wrapper.setProps({ sortRatio: 'LOW_TO_HIGH' });
   expect(wrapper.find('.manager_card')).toBeDefined();
   expect(wrapper.find(ManagerFellowSortInput)).toBeDefined();
 });

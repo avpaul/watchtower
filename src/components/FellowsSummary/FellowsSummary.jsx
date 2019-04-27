@@ -30,18 +30,9 @@ const filterByRole = (fellowsSummaryCard, displayByRole) =>
   });
 
 const FellowsSummary = props => {
-  const {
-    fellowsSummary: { data },
-    handleCardClick,
-    displayByRole
-  } = props;
+  const { fellowsSummary, handleCardClick, displayByRole } = props;
 
-  const countData = {
-    Total: data.allFellowsCount,
-    D0A: data.D0AFellowsCount,
-    D0B: data.D0BFellowsCount
-  };
-  const fellowsSummaryCard = formatCards(countData);
+  const fellowsSummaryCard = formatCards(fellowsSummary);
   return (
     <div className="ops-dashboard__fellows-summary">
       <FellowSummaryLabel />

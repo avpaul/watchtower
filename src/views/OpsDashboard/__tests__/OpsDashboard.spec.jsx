@@ -34,20 +34,10 @@ describe('OpsDashboard', () => {
 
 describe('OpsDashboardMain component', () => {
   const setup = () => {
-    const spyResolve = jest.fn().mockImplementation(() =>
-      Promise.resolve({
-        error: false,
-        managers: {
-          lfs: fellowManagers.lfs,
-          ttls: fellowManagers.ttls
-        }
-      })
-    );
-
     const props = {
       ttls: fellowManagers.ttls,
       lfs: fellowManagers.lfs,
-      getManagers: spyResolve,
+      getOpsSummary: jest.fn(),
       fetchFellowsSummary: jest.fn,
       show: true,
       displayManagers: 'LF',
@@ -59,11 +49,7 @@ describe('OpsDashboardMain component', () => {
 
     const wrapper = shallow(<OpsDashboardMain {...props} />);
 
-    return {
-      props,
-      wrapper,
-      spyResolve
-    };
+    return { props, wrapper };
   };
 
   it('renders to match snapshot', () => {
@@ -101,24 +87,21 @@ describe('OpsDashboardMain component', () => {
     const { wrapper, props } = setup();
     wrapper.setProps({ ttls: [], lfs: [] });
     wrapper.instance().componentDidMount();
-    expect(props.getManagers).toHaveBeenCalled();
+    expect(props.getOpsSummary).toHaveBeenCalled();
   });
 
   it('should change map to display base on the map card clicked', () => {
     const { wrapper } = setup();
-    wrapper
+    const displayCard = wrapper
       .find(FellowRatio)
       .dive()
       .find('DisplayCard')
-      .first()
-      .simulate('click', { currentTarget: { id: '0' } });
+      .first();
+
+    displayCard.simulate('click', { currentTarget: { id: '0' } });
     expect(wrapper.state('displayManagers')).toBe('LF');
-    wrapper
-      .find(FellowRatio)
-      .dive()
-      .find('DisplayCard')
-      .first()
-      .simulate('click', { currentTarget: { id: '1' } });
+
+    displayCard.simulate('click', { currentTarget: { id: '1' } });
     expect(wrapper.state('displayManagers')).toBe('TTL');
   });
 });

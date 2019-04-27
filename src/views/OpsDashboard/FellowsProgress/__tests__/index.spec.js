@@ -1,20 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { FellowsProgress } from '..';
+import fellowManagersMock from '../../../../__mocks__/fellowManagers';
 
 describe('FellowProgress', () => {
-  const getTTLSpy = jest.fn();
   const props = {
-    ttls: {
-      ttls: [
-        {
-          id: 'UGD/TTL/2135',
-          name: 'Test TTL',
-          email: 'test.ttl@andela.com',
-          role: 'Technical Team Lead'
-        }
-      ]
-    },
+    ttls: fellowManagersMock.ttls,
     fellowsProgress: {
       data: {
         fellowsProgressD0A: [
@@ -29,9 +20,7 @@ describe('FellowProgress', () => {
         fellowsProgress: []
       }
     },
-    locations: { locations: [] },
-    getTTLs: getTTLSpy,
-    getLocations: jest.fn(),
+    locations: [],
     getFellowProgress: jest.fn()
   };
   let wrapper;
@@ -46,15 +35,15 @@ describe('FellowProgress', () => {
 
   it('Should call api on mount', () => {
     wrapper.instance().componentDidMount();
-    expect(props.getTTLs).toHaveBeenCalled();
-    expect(props.getLocations).toHaveBeenCalled();
     expect(props.getFellowProgress).toHaveBeenCalled();
   });
 
   it('Should update state on getFilter', () => {
-    wrapper.instance().getFilter('ttl', 'Test TTL');
-    expect(wrapper.state().ttl).toEqual(props.ttls.ttls[0]);
+    wrapper.instance().getFilter('ttl', props.ttls[0].name);
+    expect(wrapper.state().ttl).toEqual(props.ttls[0]);
     wrapper.instance().getFilter('location', 'NOB');
+    expect(wrapper.state().location).toEqual('NOB');
+    wrapper.instance().getFilter('invalid', 'value');
     expect(wrapper.state().location).toEqual('NOB');
     expect(props.getFellowProgress).toHaveBeenCalled();
   });

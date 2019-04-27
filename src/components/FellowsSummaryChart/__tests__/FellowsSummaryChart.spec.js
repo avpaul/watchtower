@@ -12,10 +12,11 @@ const setup = propOverrides => {
     getFellowCountHistory: jest.fn(),
     getFellowSummaryOps: jest.fn(),
     fellowsSummary: initialState.opsDashboard.fellowsSummary,
+    opsSummaryLoading: false,
     fellowCountHistory: {
-      countSummary: {},
-      loading: false,
-      error: null
+      Total: 10,
+      D0A: 5,
+      D0B: 5
     },
     user: {
       name: 'Test User',

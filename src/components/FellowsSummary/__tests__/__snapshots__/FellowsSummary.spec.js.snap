@@ -11,44 +11,9 @@ ShallowWrapper {
     }
     fellowsSummary={
         Object {
-            "data": Object {
-              "D0AFellowsCount": 2,
-              "D0BFellowsCount": 1,
-              "allFellowsCount": 3,
-            },
-            "fellowsSummaryToday": Object {
-              "data": Array [
-                Object {},
-                Object {},
-              ],
-              "keys": Array [
-                "Total",
-                "D0A",
-                "D0B",
-              ],
-              "latestWeekSummary": Object {
-                "D0A": 5,
-                "D0B": 5,
-                "Total": 10,
-              },
-            },
-            "fellowsSummaryTrend": Object {
-              "data": Array [
-                Object {},
-                Object {},
-              ],
-              "keys": Array [
-                "Total",
-                "D0A",
-                "D0B",
-              ],
-              "latestWeekSummary": Object {
-                "D0A": 5,
-                "D0B": 5,
-                "Total": 10,
-              },
-            },
-            "loading": false,
+            "D0A": 5,
+            "D0B": 5,
+            "Total": 10,
           }
     }
     handleCardClick={[Function]}
@@ -85,19 +50,19 @@ ShallowWrapper {
                                           "heading": "Total D0 Fellows",
                                           "subTitle": "Click to see details",
                                           "title": "Total",
-                                          "totalFellows": 3,
+                                          "totalFellows": 10,
                                         },
                                         Object {
                                           "heading": "Total D0A Fellows",
                                           "subTitle": "Click to see details",
                                           "title": "D0A",
-                                          "totalFellows": 2,
+                                          "totalFellows": 5,
                                         },
                                         Object {
                                           "heading": "Total D0B Fellows",
                                           "subTitle": "Click to see details",
                                           "title": "D0B",
-                                          "totalFellows": 1,
+                                          "totalFellows": 5,
                                         },
                                       ]
                     }
@@ -136,19 +101,19 @@ ShallowWrapper {
                                       "heading": "Total D0 Fellows",
                                       "subTitle": "Click to see details",
                                       "title": "Total",
-                                      "totalFellows": 3,
+                                      "totalFellows": 10,
                                     },
                                     Object {
                                       "heading": "Total D0A Fellows",
                                       "subTitle": "Click to see details",
                                       "title": "D0A",
-                                      "totalFellows": 2,
+                                      "totalFellows": 5,
                                     },
                                     Object {
                                       "heading": "Total D0B Fellows",
                                       "subTitle": "Click to see details",
                                       "title": "D0B",
-                                      "totalFellows": 1,
+                                      "totalFellows": 5,
                                     },
                                   ]
             }
@@ -171,19 +136,19 @@ ShallowWrapper {
                 "heading": "Total D0 Fellows",
                 "subTitle": "Click to see details",
                 "title": "Total",
-                "totalFellows": 3,
+                "totalFellows": 10,
               },
               Object {
                 "heading": "Total D0A Fellows",
                 "subTitle": "Click to see details",
                 "title": "D0A",
-                "totalFellows": 2,
+                "totalFellows": 5,
               },
               Object {
                 "heading": "Total D0B Fellows",
                 "subTitle": "Click to see details",
                 "title": "D0B",
-                "totalFellows": 1,
+                "totalFellows": 5,
               },
             ],
             "handleCardClick": [Function],
@@ -221,19 +186,19 @@ ShallowWrapper {
                                                   "heading": "Total D0 Fellows",
                                                   "subTitle": "Click to see details",
                                                   "title": "Total",
-                                                  "totalFellows": 3,
+                                                  "totalFellows": 10,
                                                 },
                                                 Object {
                                                   "heading": "Total D0A Fellows",
                                                   "subTitle": "Click to see details",
                                                   "title": "D0A",
-                                                  "totalFellows": 2,
+                                                  "totalFellows": 5,
                                                 },
                                                 Object {
                                                   "heading": "Total D0B Fellows",
                                                   "subTitle": "Click to see details",
                                                   "title": "D0B",
-                                                  "totalFellows": 1,
+                                                  "totalFellows": 5,
                                                 },
                                               ]
                         }
@@ -272,19 +237,19 @@ ShallowWrapper {
                                             "heading": "Total D0 Fellows",
                                             "subTitle": "Click to see details",
                                             "title": "Total",
-                                            "totalFellows": 3,
+                                            "totalFellows": 10,
                                           },
                                           Object {
                                             "heading": "Total D0A Fellows",
                                             "subTitle": "Click to see details",
                                             "title": "D0A",
-                                            "totalFellows": 2,
+                                            "totalFellows": 5,
                                           },
                                           Object {
                                             "heading": "Total D0B Fellows",
                                             "subTitle": "Click to see details",
                                             "title": "D0B",
-                                            "totalFellows": 1,
+                                            "totalFellows": 5,
                                           },
                                         ]
               }
@@ -307,19 +272,19 @@ ShallowWrapper {
                   "heading": "Total D0 Fellows",
                   "subTitle": "Click to see details",
                   "title": "Total",
-                  "totalFellows": 3,
+                  "totalFellows": 10,
                 },
                 Object {
                   "heading": "Total D0A Fellows",
                   "subTitle": "Click to see details",
                   "title": "D0A",
-                  "totalFellows": 2,
+                  "totalFellows": 5,
                 },
                 Object {
                   "heading": "Total D0B Fellows",
                   "subTitle": "Click to see details",
                   "title": "D0B",
-                  "totalFellows": 1,
+                  "totalFellows": 5,
                 },
               ],
               "handleCardClick": [Function],

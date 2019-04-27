@@ -15,9 +15,7 @@ class FellowsSummaryChart extends Component {
     getFellowSummaryOps();
   }
 
-  handleChartClose = () => {
-    this.setState({ showChart: false });
-  };
+  handleChartClose = () => this.setState({ showChart: false });
 
   handleCardClick = event => {
     const currentCard = event.currentTarget.id;
@@ -26,24 +24,14 @@ class FellowsSummaryChart extends Component {
 
   updateFellowSummary = selected => {
     const { fellowsSummary } = this.props;
-    const history = fellowsSummary.fellowsSummaryToday;
-    const trend = fellowsSummary.fellowsSummaryTrend;
-    let datapoint;
-    if (selected === 'Today') {
-      datapoint = history;
-    } else if (selected === 'Trend') {
-      datapoint = trend;
-    }
-    return datapoint;
+    return fellowsSummary[`fellowsSummary${selected}`];
   };
 
-  updateSelected = selected => {
-    this.setState({ selected });
-  };
+  updateSelected = selected => this.setState({ selected });
 
   render() {
     const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { displayByRole, user } = this.props;
+    const { displayByRole, user, fellowsSummary } = this.props;
     const { data } = this.updateFellowSummary(selected);
 
     return (
@@ -59,6 +47,7 @@ class FellowsSummaryChart extends Component {
             updateSelected={this.updateSelected}
             data={data}
             user={user}
+            loading={fellowsSummary.loading}
           />
         )}
       </Fragment>

@@ -4,23 +4,23 @@ import * as types from '../constants/managerActionTypes';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
-const getManagers = () => dispatch => {
-  dispatch({ type: types.LOAD_MANAGER_REQUEST });
+const getOpsSummary = () => dispatch => {
+  dispatch({ type: types.LOAD_OPS_SUMMARY_REQUEST });
 
-  const requestURL = `${serverURL}/api/v2/managers`;
+  const requestURL = `${serverURL}/api/v2/managers/ops`;
 
   return axios.get(requestURL).then(
     response =>
       dispatch({
-        type: types.LOAD_MANAGER_SUCCESS,
-        managers: response.data.data
+        type: types.LOAD_OPS_SUMMARY_SUCCESS,
+        data: response.data
       }),
     error =>
       dispatch({
-        type: types.LOAD_MANAGER_FAILURE,
+        type: types.LOAD_OPS_SUMMARY_FAILURE,
         error: errorHandler(error)
       })
   );
 };
 
-export default getManagers;
+export default getOpsSummary;

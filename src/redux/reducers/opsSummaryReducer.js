@@ -1,27 +1,27 @@
 import initialState from './initialState';
 import {
-  LOAD_MANAGER_REQUEST,
-  LOAD_MANAGER_SUCCESS,
-  LOAD_MANAGER_FAILURE
+  LOAD_OPS_SUMMARY_REQUEST,
+  LOAD_OPS_SUMMARY_SUCCESS,
+  LOAD_OPS_SUMMARY_FAILURE
 } from '../constants/managerActionTypes';
 
-const managerReducer = (state = initialState.managers, action) => {
+const opsSummaryReducer = (state = initialState.opsSummary, action) => {
   switch (action.type) {
-    case LOAD_MANAGER_REQUEST:
+    case LOAD_OPS_SUMMARY_REQUEST:
       return {
         ...state,
         loading: true,
         error: null
       };
 
-    case LOAD_MANAGER_SUCCESS:
+    case LOAD_OPS_SUMMARY_SUCCESS:
       return {
         ...state,
-        ...action.managers,
+        data: action.data,
         loading: false
       };
 
-    case LOAD_MANAGER_FAILURE:
+    case LOAD_OPS_SUMMARY_FAILURE:
       return {
         ...state,
         loading: false,
@@ -33,4 +33,4 @@ const managerReducer = (state = initialState.managers, action) => {
   }
 };
 
-export default managerReducer;
+export default opsSummaryReducer;
