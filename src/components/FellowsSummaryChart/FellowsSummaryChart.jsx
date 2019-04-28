@@ -11,8 +11,7 @@ class FellowsSummaryChart extends Component {
   };
 
   componentDidMount() {
-    const { getFellowCountHistory, getFellowSummaryOps } = this.props;
-    getFellowCountHistory();
+    const { getFellowSummaryOps } = this.props;
     getFellowSummaryOps();
   }
 
@@ -44,7 +43,7 @@ class FellowsSummaryChart extends Component {
 
   render() {
     const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { fellowCountHistory, displayByRole, user } = this.props;
+    const { displayByRole, user } = this.props;
     const { data } = this.updateFellowSummary(selected);
 
     return (
@@ -58,7 +57,6 @@ class FellowsSummaryChart extends Component {
             filter={fellowsSummaryFilter}
             handleChartClose={this.handleChartClose}
             updateSelected={this.updateSelected}
-            {...fellowCountHistory}
             data={data}
             user={user}
           />
@@ -69,22 +67,14 @@ class FellowsSummaryChart extends Component {
 }
 
 FellowsSummaryChart.propTypes = {
-  getFellowCountHistory: PropTypes.func.isRequired,
   displayByRole: PropTypes.shape({}),
   fellowsSummary: PropTypes.shape([]).isRequired,
-  fellowCountHistory: PropTypes.shape({
-    error: PropTypes.string,
-    countSummary: PropTypes.object,
-    loading: PropTypes.bool
-  }).isRequired,
   getFellowSummaryOps: PropTypes.func.isRequired,
-  fetchFellowsSummary: PropTypes.func,
   user: PropTypes.shape().isRequired
 };
 
 FellowsSummaryChart.defaultProps = {
-  displayByRole: null,
-  fetchFellowsSummary: () => {}
+  displayByRole: null
 };
 
 export default FellowsSummaryChart;

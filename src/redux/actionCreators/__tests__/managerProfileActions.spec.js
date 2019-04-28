@@ -2,9 +2,8 @@ import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
-import getManagerProfileData, {
-  formatPerformanceData
-} from '../managerProfileActions';
+import getManagerProfileData from '../managerProfileActions';
+import { formatPerformanceData } from '../../../utils';
 import {
   MANAGER_PROFILE_DATA_REQUEST,
   MANAGER_PROFILE_DATA_SUCCESS,

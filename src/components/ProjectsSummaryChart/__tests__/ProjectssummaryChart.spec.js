@@ -6,7 +6,7 @@ import configureStore from '../../../redux/store/configureStore';
 import ProjectsSummaryChart from '../ProjectsSummaryChart';
 
 import ProjectsSummary from '../../FellowsSummary';
-import { formatPerformanceData } from '../../../redux/actionCreators/managerProfileActions';
+import { formatPerformanceData } from '../../../utils';
 import managerProfileMock from '../../../__mocks__/managerProfile';
 
 const props = {

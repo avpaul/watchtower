@@ -8,6 +8,8 @@ import {
   fetchFellowsSummarySuccess,
   fetchFellowsSummaryOps
 } from '../fellowsSummaryActions';
+import { formatPerformanceData } from '../../../../utils';
+import PerformanceData from '../../../../__mocks__/performanceByProjectData.json';
 
 describe('fellowsSummaryActions', () => {
   const initialState = {
@@ -25,11 +27,12 @@ describe('fellowsSummaryActions', () => {
       }
     }
   };
+
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/fellows`;
+  const baseURL = `${serverURL}/api/v2/fellows`;
   const error = 'error fetching fellows summary';
 
   beforeEach(() => {
@@ -57,14 +60,15 @@ describe('fellowsSummaryActions', () => {
 
   it('creates FETCH_FELLOWS_SUMMARY_SUCCESS when fetching fellows summary is done', () => {
     const response = {
-      fellowsSummaryToday: {},
-      fellowsSummaryTrend: {}
+      fellowsSummaryToday: formatPerformanceData(PerformanceData),
+      fellowsSummaryTrend: formatPerformanceData(PerformanceData)
     };
+
     mock
-      .onGet(`${baseURL}/trend?offset=5`)
-      .reply(200, response.fellowsSummaryToday)
-      .onGet(`${baseURL}/history`)
-      .reply(200, response.fellowsSummaryTrend);
+      .onGet(`${baseURL}/history?type=current`)
+      .reply(200, PerformanceData)
+      .onGet(`${baseURL}/history?type=trend`)
+      .reply(200, PerformanceData);
 
     const expectedActions = [
       { type: types.FETCH_FELLOWS_SUMMARY_REQUEST },
