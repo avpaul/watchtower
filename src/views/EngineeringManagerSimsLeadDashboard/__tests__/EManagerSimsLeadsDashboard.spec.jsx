@@ -3,6 +3,7 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import EngineeringManagerSimsLeadDashboard from '../index';
 import engineeringManagerSimsLeadData from '../../../__mocks__/engineeringManagerTtls.json';
+
 import EManagerSimsLeadsDashboard from '../EManagerSimsLeadsDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
 import ManagerFellowMap from '../../../components/ManagerFellowMap';
@@ -32,34 +33,32 @@ describe('EManagerSimsLeadsDashboard', () => {
 });
 
 describe('EngineeringDashboard component', () => {
-  const setup = (loggedInRole = 'WATCH_TOWER_EM') => {
-    const spyResolve = jest.fn().mockImplementation(() =>
-      Promise.resolve({
-        error: null,
-        data: {
-          data: engineeringManagerSimsLeadData.data
-        }
-      })
-    );
+  const spyResolve = jest.fn().mockImplementation(() => Promise.resolve({}));
 
+  const defaultProps = {
+    data: {
+      managers: {
+        data: engineeringManagerSimsLeadData.data,
+        totalFellows: 5
+      }
+    },
+    fellowsSummary: {},
+    fetchFellowsSummaryEm: spyResolve,
+    fetchFellowsSummarySl: spyResolve,
+    fetchFellowsSummaryTtl: spyResolve,
+    fetchFellowsSummaryLf: spyResolve,
+    getEmsSimsLeadsActions: spyResolve
+  };
+
+  const setup = (loggedInRole = 'WATCH_TOWER_EM') => {
     const props = {
+      ...defaultProps,
       user: {
         roles: {
           [`${loggedInRole}`]: 'hdkjshdjsdha'
         }
       },
-      data: {
-        managees: engineeringManagerSimsLeadData.data,
-        show: true,
-        managerFellowSortRatio: 'HIGH_TO_LOW',
-        totalFellows: 5
-      },
-      fellowsSummary: {},
-      fetchFellowsSummaryEm: spyResolve,
-      fetchFellowsSummarySl: spyResolve,
-      fetchFellowsSummaryTtl: spyResolve,
-      fetchFellowsSummaryLf: spyResolve,
-      getEmsSimsLeadsActions: spyResolve
+      role: loggedInRole
     };
 
     const wrapper = shallow(<EManagerSimsLeadsDashboard {...props} />);

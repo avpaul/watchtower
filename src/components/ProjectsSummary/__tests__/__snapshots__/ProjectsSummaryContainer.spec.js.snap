@@ -10,7 +10,7 @@ Object {
     "loading": false,
   },
   "manager": Object {
-    "data": Array [],
+    "data": Object {},
     "error": null,
     "loading": false,
   },

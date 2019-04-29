@@ -14,9 +14,8 @@ it('should return the initial state for unknown action type', () => {
 
 it("should trigger loading to true when fetching engineering manager's data", () => {
   const newState = {
-    loading: true,
-    data: [],
-    error: null
+    ...initialState.engineeringManagerSimsLeads,
+    loading: true
   };
   const action = { type: LOAD_EM_SIMSLEADS_REQUEST };
   expect(
@@ -26,8 +25,7 @@ it("should trigger loading to true when fetching engineering manager's data", ()
 
 it("should add the error message on failing to fetch engineering manager's data", () => {
   const newState = {
-    loading: false,
-    data: [],
+    ...initialState.engineeringManagerSimsLeads,
     error: { message: 'failed to fetch' }
   };
   const action = {

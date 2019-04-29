@@ -3,7 +3,13 @@ import initialState from '../../../../redux/reducers/initialState';
 
 describe('FellowsSummaryContainer', () => {
   it('should map state to props', () => {
-    const tree = mapStateToProps(initialState);
+    const managerState = {
+      ...initialState.managers,
+      data: {
+        locations: []
+      }
+    };
+    const tree = mapStateToProps({ ...initialState, manager: managerState });
     expect(tree).toMatchSnapshot();
   });
 });

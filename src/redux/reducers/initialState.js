@@ -55,19 +55,9 @@ export default {
     lmsSubmissions: {},
     error: null
   },
-  ttls: {
-    loading: false,
-    ttls: [],
-    error: null
-  },
   manager: {
     loading: false,
-    data: [],
-    error: null
-  },
-  locations: {
-    loading: false,
-    locations: [],
+    data: {},
     error: null
   },
   opsSummary: {
@@ -132,7 +122,10 @@ export default {
   },
   engineeringManagerSimsLeads: {
     loading: false,
-    data: [],
+    data: {
+      managers: {},
+      locations: []
+    },
     error: null
   },
   lfNotification: {

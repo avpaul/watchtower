@@ -4,6 +4,7 @@ exports[`Tests on EManagerSimsLeadsContainer component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Connect(EManagerSimsLeadsDashboard)
+    role="WATCH_TOWER_EM"
     store={
         Object {
             "clearActions": [Function],
@@ -35,7 +36,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "data": Array [],
+      "data": Object {
+        "locations": Array [],
+        "managers": Object {},
+      },
       "error": null,
       "fellowsSummary": Object {
         "error": "",
@@ -48,6 +52,7 @@ ShallowWrapper {
       "fetchFellowsSummaryTtl": [Function],
       "getEmsSimsLeadsActions": [Function],
       "loading": false,
+      "role": "WATCH_TOWER_EM",
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -91,7 +96,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "data": Array [],
+        "data": Object {
+          "locations": Array [],
+          "managers": Object {},
+        },
         "error": null,
         "fellowsSummary": Object {
           "error": "",
@@ -104,6 +112,7 @@ ShallowWrapper {
         "fetchFellowsSummaryTtl": [Function],
         "getEmsSimsLeadsActions": [Function],
         "loading": false,
+        "role": "WATCH_TOWER_EM",
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
@@ -164,7 +173,10 @@ ShallowWrapper {
 
 exports[`Tests on EManagerSimsLeadsContainer component should map state to props 1`] = `
 Object {
-  "data": Array [],
+  "data": Object {
+    "locations": Array [],
+    "managers": Object {},
+  },
   "error": null,
   "fellowsSummary": Object {
     "error": "",

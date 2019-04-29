@@ -6,8 +6,6 @@ import fellowCountHistoryReducer from './fellowCountHistoryReducer';
 import opsSummaryReducer from './opsSummaryReducer';
 import visibilityFilter from './visibilityFilter';
 import fellowProgressReducer from './fellowProgressReducer';
-import ttlReducer from './ttlReducer';
-import locationReducer from './locationReducer';
 import opsDashboardReducer from './opsDashBoardReducer';
 import managerFellowReducer from './managerFellows';
 import managerProfileReducer from './managerProfileReducer';
@@ -33,8 +31,6 @@ const rootReducer = combineReducers({
   visibilityFilter,
   opsSummary: opsSummaryReducer,
   fellowsProgress: fellowProgressReducer,
-  ttls: ttlReducer,
-  locations: locationReducer,
   opsDashboard: opsDashboardReducer,
   managerFellows: managerFellowReducer,
   manager: managerProfileReducer,

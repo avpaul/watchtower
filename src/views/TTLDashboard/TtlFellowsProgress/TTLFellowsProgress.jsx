@@ -12,8 +12,7 @@ class TTLFellowsProgress extends Component {
   }
 
   componentDidMount() {
-    const { fetchLocations, fetchTTLFellowsProgress } = this.props;
-    fetchLocations();
+    const { fetchTTLFellowsProgress } = this.props;
     fetchTTLFellowsProgress({ role: 'ttl' });
   }
 
@@ -47,7 +46,7 @@ class TTLFellowsProgress extends Component {
   render() {
     const { location } = this.state;
     const { fellowsProgress, locations } = this.props;
-    const locationsAll = ['All', ...locations.locations.sort()];
+    const locationsAll = ['All', ...locations.map(loc => loc.name).sort()];
 
     const fellowDataLoading = fellowsProgress.loading;
     return (
@@ -68,12 +67,17 @@ class TTLFellowsProgress extends Component {
 TTLFellowsProgress.propTypes = {
   fetchTTLFellowsProgress: PropTypes.func.isRequired,
   fellowsProgress: PropTypes.objectOf(
-    PropTypes.oneOfType([PropTypes.bool, PropTypes.objectOf(PropTypes.array)])
+    PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.objectOf(PropTypes.array),
+      PropTypes.string
+    ])
   ).isRequired,
-  fetchLocations: PropTypes.func.isRequired,
-  locations: PropTypes.objectOf(
-    PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
-  ).isRequired
+  locations: PropTypes.instanceOf(Array)
+};
+
+TTLFellowsProgress.defaultProps = {
+  locations: []
 };
 
 export default TTLFellowsProgress;

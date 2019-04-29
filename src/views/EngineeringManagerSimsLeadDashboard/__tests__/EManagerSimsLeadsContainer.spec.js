@@ -22,6 +22,7 @@ describe('Tests on EManagerSimsLeadsContainer component', () => {
         user={{
           roles: { WATCH_TOWER_EM: '34323234Yf-34' }
         }}
+        role="WATCH_TOWER_EM"
       />
     );
   });
@@ -41,7 +42,7 @@ describe('Tests on EManagerSimsLeadsContainer component', () => {
 
   it('should hold initial state for component', () => {
     expect(wrapper.props().loading).toEqual(false);
-    expect(wrapper.props().data).toEqual([]);
+    expect(wrapper.props().data).toEqual({ managers: {}, locations: [] });
     expect(wrapper.props().error).toEqual(null);
   });
 });
