@@ -7,9 +7,9 @@ ShallowWrapper {
     displayByRole={null}
     fellowCountHistory={
         Object {
-            "countSummary": Object {},
-            "error": null,
-            "loading": false,
+            "D0A": 5,
+            "D0B": 5,
+            "Total": 10,
           }
     }
     fellowsSummary={
@@ -28,6 +28,7 @@ ShallowWrapper {
     fetchFellowsSummary={[Function]}
     getFellowCountHistory={[Function]}
     getFellowSummaryOps={[Function]}
+    opsSummaryLoading={false}
     store={
         Object {
             "dispatch": [Function],

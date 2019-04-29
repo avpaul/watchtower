@@ -70,11 +70,19 @@ export default {
     locations: [],
     error: null
   },
-  managers: {
-    ttls: [],
-    lfs: [],
-    averageFellowsPerTtl: 0,
-    averageFellowsPerLf: 0,
+  opsSummary: {
+    data: {
+      managers: {
+        ttls: [],
+        lfs: [],
+        averageFellowsPerTtl: 0,
+        averageFellowsPerLf: 0
+      },
+      fellowsCount: {
+        Total: 0
+      },
+      locations: []
+    },
     loading: false
   },
   managerFellows: {

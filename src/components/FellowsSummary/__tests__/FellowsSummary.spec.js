@@ -5,28 +5,13 @@ import { shallow, mount } from 'enzyme';
 import FellowsSummary from '../FellowsSummary';
 import FilterCard from '../../Filters/FilterCard';
 
-const summary = {
-  data: [{}, {}],
-  keys: ['Total', 'D0A', 'D0B'],
-  latestWeekSummary: {
-    Total: 10,
-    D0A: 5,
-    D0B: 5
-  }
-};
-
 const setup = (propOverrides, mountComponent = false) => {
   const { loggedInRole } = propOverrides;
   const props = {
     fellowsSummary: {
-      loading: false,
-      fellowsSummaryToday: summary,
-      fellowsSummaryTrend: summary,
-      data: {
-        D0AFellowsCount: 2,
-        D0BFellowsCount: 1,
-        allFellowsCount: 3
-      }
+      Total: 10,
+      D0A: 5,
+      D0B: 5
     },
     handleCardClick: jest.fn(),
     displayByRole: {

@@ -38,8 +38,10 @@ ShallowWrapper {
     "props": Object {
       "averageFellowsPerLf": 0,
       "averageFellowsPerTtl": 0,
-      "fetchFellowsSummary": [Function],
-      "getManagers": [Function],
+      "fellowsCount": Object {
+        "Total": 0,
+      },
+      "getOpsSummary": [Function],
       "lfs": Array [],
       "loading": false,
       "store": Object {
@@ -89,8 +91,10 @@ ShallowWrapper {
       "props": Object {
         "averageFellowsPerLf": 0,
         "averageFellowsPerTtl": 0,
-        "fetchFellowsSummary": [Function],
-        "getManagers": [Function],
+        "fellowsCount": Object {
+          "Total": 0,
+        },
+        "getOpsSummary": [Function],
         "lfs": Array [],
         "loading": false,
         "store": Object {
@@ -157,6 +161,9 @@ exports[`OpsDashboardContainer component should map state to props 1`] = `
 Object {
   "averageFellowsPerLf": 0,
   "averageFellowsPerTtl": 0,
+  "fellowsCount": Object {
+    "Total": 0,
+  },
   "lfs": Array [],
   "loading": false,
   "ttls": Array [],

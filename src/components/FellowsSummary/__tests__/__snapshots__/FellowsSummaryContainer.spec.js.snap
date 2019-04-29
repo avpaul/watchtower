@@ -3,15 +3,7 @@
 exports[`FellowsSummaryContainer should map state to props 1`] = `
 Object {
   "fellowsSummary": Object {
-    "data": Object {
-      "D0AFellowsCount": 0,
-      "D0BFellowsCount": 0,
-      "allFellowsCount": 0,
-    },
-    "error": "",
-    "fellowsSummaryToday": Object {},
-    "fellowsSummaryTrend": Object {},
-    "loading": false,
+    "Total": 0,
   },
 }
 `;

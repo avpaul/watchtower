@@ -2,12 +2,12 @@ import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
-import getManagers from '../managerActions';
+import getOpsSummary from '../opsSummaryActions';
 import * as types from '../../constants/managerActionTypes';
 import fellowManagers from '../../../__mocks__/fellowManagers';
 import initialState from '../../reducers/initialState';
 
-describe('Manager Actions', () => {
+describe('Ops Summary Actions', () => {
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
@@ -23,32 +23,35 @@ describe('Manager Actions', () => {
     mock.reset();
   });
 
-  it('dispatches MANAGER_REQUEST and MANAGER_SUCCESS on fetching managers', () => {
-    const data = {
-      data: managers
-    };
-    mock.onGet(`${baseURL}`).reply(200, { ...data });
-    const expectedActions = [
-      { type: types.LOAD_MANAGER_REQUEST },
-      { type: types.LOAD_MANAGER_SUCCESS, managers }
-    ];
-    return store.dispatch(getManagers()).then(() => {
+  /**
+   * Tests the dispatch of the ops summary actions
+   * @param array Expected dispatched actions to test for
+   */
+  const testStoreAction = expectedActions => {
+    store.dispatch(getOpsSummary()).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toMatchObject(expectedActions);
     });
+  };
+
+  it('dispatches MANAGER_REQUEST and MANAGER_SUCCESS on fetching managers', () => {
+    mock.onGet(`${baseURL}`).reply(200, { ...{ data: managers } });
+    const expectedActions = [
+      { type: types.LOAD_OPS_SUMMARY_SUCCESS },
+      { type: types.LOAD_OPS_SUMMARY_SUCCESS, managers }
+    ];
+
+    testStoreAction(expectedActions);
   });
 
   it('dispatches MANAGER_REQUEST and MANAGER_FAILURE on failing to fetch managers', () => {
     const expectedActions = [
-      { type: types.LOAD_MANAGER_REQUEST },
+      { type: types.LOAD_OPS_SUMMARY_REQUEST },
       {
-        type: types.LOAD_MANAGER_FAILURE,
+        type: types.LOAD_OPS_SUMMARY_FAILURE,
         error: 'Request failed with status code 404'
       }
     ];
-    return store.dispatch(getManagers()).then(() => {
-      const dispatchedActions = store.getActions();
-      expect(dispatchedActions).toEqual(expectedActions);
-    });
+    testStoreAction(expectedActions);
   });
 });

@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import emsDashboardReducer from './emsDashBoardReducer';
 import fellowReducer from './fellowReducer';
 import fellowCountHistoryReducer from './fellowCountHistoryReducer';
-import managerReducer from './managerReducer';
+import opsSummaryReducer from './opsSummaryReducer';
 import visibilityFilter from './visibilityFilter';
 import fellowProgressReducer from './fellowProgressReducer';
 import ttlReducer from './ttlReducer';
@@ -31,7 +31,7 @@ const rootReducer = combineReducers({
   fellows: fellowReducer,
   fellowCountHistory: fellowCountHistoryReducer,
   visibilityFilter,
-  managers: managerReducer,
+  opsSummary: opsSummaryReducer,
   fellowsProgress: fellowProgressReducer,
   ttls: ttlReducer,
   locations: locationReducer,

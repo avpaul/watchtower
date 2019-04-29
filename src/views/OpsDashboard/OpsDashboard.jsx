@@ -14,12 +14,8 @@ class OpsDashboardMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ttls: [],
-      lfs: [],
       show: false,
       displayManagers: 'LF',
-      averageFellowsPerLf: '0',
-      averageFellowsPerTtl: '0',
       managerFellowSortRatio: 'HIGH_TO_LOW'
     };
     this.onSelectManagerFellowRatio = this.onSelectManagerFellowRatio.bind(
@@ -28,30 +24,8 @@ class OpsDashboardMain extends Component {
   }
 
   componentDidMount() {
-    const {
-      getManagers,
-      ttls,
-      lfs,
-      fetchFellowsSummary,
-      averageFellowsPerLf,
-      averageFellowsPerTtl
-    } = this.props;
-
-    fetchFellowsSummary();
-    // checks store for ttl/lfs before API call
-    if (ttls[0])
-      this.setState({ lfs, ttls, averageFellowsPerLf, averageFellowsPerTtl });
-    else
-      getManagers().then(data => {
-        if (!data.error) {
-          this.setState({
-            lfs: data.managers.lfs,
-            ttls: data.managers.ttls,
-            averageFellowsPerLf: data.managers.averageFellowsPerLf,
-            averageFellowsPerTtl: data.managers.averageFellowsPerTtl
-          });
-        }
-      });
+    const { getOpsSummary } = this.props;
+    getOpsSummary();
   }
 
   onSelectManagerFellowRatio(type, value) {
@@ -63,7 +37,7 @@ class OpsDashboardMain extends Component {
   }
 
   mapDisplayContent = () => {
-    const { averageFellowsPerLf, averageFellowsPerTtl } = this.state;
+    const { averageFellowsPerLf, averageFellowsPerTtl } = this.props;
     return [
       {
         title: 'LF to FELLOW MAP',
@@ -80,24 +54,18 @@ class OpsDashboardMain extends Component {
     ];
   };
 
-  fellowMapOnClick = event => {
-    if (event.currentTarget.id === '0')
-      this.setState({ displayManagers: 'LF', show: true });
-    else this.setState({ displayManagers: 'TTL', show: true });
-  };
+  fellowMapOnClick = event =>
+    this.setState({
+      displayManagers: event.currentTarget.id === '0' ? 'LF' : 'TTL',
+      show: true
+    });
 
-  handleMapClose = () => {
-    this.setState({ show: false });
-  };
+  handleMapClose = () => this.setState({ show: false });
 
   renderManagerFellowMap = () => {
-    const {
-      show,
-      managerFellowSortRatio,
-      displayManagers,
-      lfs,
-      ttls
-    } = this.state;
+    const { show, managerFellowSortRatio, displayManagers } = this.state;
+    const { lfs, ttls } = this.props;
+
     const [managers, style] =
       displayManagers === 'TTL'
         ? [ttls, { '--arrow-left-margin-style': '31%' }]
@@ -140,12 +108,9 @@ class OpsDashboardMain extends Component {
 }
 
 const managerPropTypes = {
-  id: PropTypes.number.isRequired,
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  roleId: PropTypes.number.isRequired,
-  staffId: PropTypes.string.isRequired,
+  staff_id: PropTypes.string.isRequired,
   fellows: PropTypes.arrayOf(
     PropTypes.objectOf(
       PropTypes.oneOfType([
@@ -170,8 +135,7 @@ OpsDashboardMain.propTypes = {
   ).isRequired,
   averageFellowsPerTtl: PropTypes.number.isRequired,
   averageFellowsPerLf: PropTypes.number.isRequired,
-  getManagers: PropTypes.func.isRequired,
-  fetchFellowsSummary: PropTypes.func.isRequired,
+  getOpsSummary: PropTypes.func.isRequired,
   user: PropTypes.shape().isRequired
 };
 

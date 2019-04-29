@@ -27,10 +27,20 @@ describe('FellowsSummaryChartContainer', () => {
           error: ''
         }
       },
-      fellowCountHistory: {
-        countSummary: {},
-        loading: false,
-        error: null
+      opsSummary: {
+        data: {
+          managers: {
+            ttls: [],
+            lfs: [],
+            averageFellowsPerTtl: 0,
+            averageFellowsPerLf: 0
+          },
+          fellowsCount: {
+            Total: 0
+          },
+          locations: []
+        },
+        loading: false
       }
     };
     const mockStore = configureStore();
