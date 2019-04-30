@@ -6,19 +6,21 @@ import TtlsFellowSummary from './TtlsFellowSummary';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
 import FellowsProgressBar from './FellowsProgressBar';
 
+const emDashboardStyle = {
+  paddingLeft: '0',
+  paddingRight: '0',
+  paddingBottom: '49px'
+};
+
 /**
  * Class representing Engineering Manager dashboard
  * @class
  */
-
 class EManagerSimsLeadsDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      averageFellows: 0,
-      managees: [],
       isEngineeringManager: false,
-      totalFellows: 0,
       show: false,
       showChart: false,
       managerFellowSortRatio: 'HIGH_TO_LOW'
@@ -35,22 +37,9 @@ class EManagerSimsLeadsDashboard extends Component {
       user,
       role
     } = this.props;
-    getEmsSimsLeadsActions().then(managerData => {
-      if (!managerData.error) {
-        const {
-          data,
-          averageFellowsPerManager,
-          totalFellows
-        } = managerData.data;
-        this.setState({
-          managees: data,
-          averageFellows: averageFellowsPerManager,
-          totalFellows,
-          isEngineeringManager: role === 'WATCH_TOWER_EM'
-        });
-      }
-      fetchFellowsSummaryEm(user.email);
-    });
+    getEmsSimsLeadsActions();
+    fetchFellowsSummaryEm(user.email);
+    this.setState({ isEngineeringManager: role === 'WATCH_TOWER_EM' });
   }
 
   onSelectManagerFellowRatioCard = value => {
@@ -129,12 +118,13 @@ class EManagerSimsLeadsDashboard extends Component {
   };
 
   renderManagerFellowMap = () => {
+    const { show, isEngineeringManager, managerFellowSortRatio } = this.state;
     const {
-      show,
-      isEngineeringManager,
-      managerFellowSortRatio,
-      managees
-    } = this.state;
+      data: {
+        managers: { data: managees = [] }
+      }
+    } = this.props;
+
     const [managers, style] = isEngineeringManager
       ? [managees, { '--arrow-left-margin-style': '31%' }]
       : [managees, { '--arrow-left-margin-style': '9%' }];
@@ -153,7 +143,12 @@ class EManagerSimsLeadsDashboard extends Component {
   };
 
   mapDisplayContent = () => {
-    const { averageFellows, isEngineeringManager } = this.state;
+    const { isEngineeringManager } = this.state;
+    const {
+      data: {
+        managers: { averageFellowsPerManager = 0 }
+      }
+    } = this.props;
     return [
       {
         title: isEngineeringManager ? 'TTL to FELLOW MAP' : 'LF to FELLOW MAP',
@@ -161,7 +156,7 @@ class EManagerSimsLeadsDashboard extends Component {
         text: isEngineeringManager
           ? 'Average TTL to Fellow ratio'
           : 'Average LF to Fellow ratio',
-        averageValue: averageFellows
+        averageValue: averageFellowsPerManager
       }
     ];
   };
@@ -190,20 +185,21 @@ class EManagerSimsLeadsDashboard extends Component {
   );
 
   render() {
-    const emDashboardStyle = {
-      paddingLeft: '0',
-      paddingRight: '0',
-      paddingBottom: '49px'
-    };
-
-    const { fellowsSummary, user } = this.props;
-    const { managees, showChart, totalFellows } = this.state;
+    const {
+      fellowsSummary,
+      user,
+      data: { managers }
+    } = this.props;
+    const { showChart } = this.state;
     const chartData = fellowsSummary.summary;
 
     return (
       <div className="container-fluid" style={emDashboardStyle}>
         <TtlsFellowSummary
-          fellowsSummary={this.mapDisplayFellowSummary(managees, totalFellows)}
+          fellowsSummary={this.mapDisplayFellowSummary(
+            managers.data || [],
+            managers.totalFellows || 0
+          )}
           handleCardClick={this.handleCardClick}
         />
         {this.fellowChart(showChart, chartData, user, fellowsSummary)}
@@ -224,7 +220,8 @@ EManagerSimsLeadsDashboard.propTypes = {
   fetchFellowsSummaryTtl: PropTypes.func.isRequired,
   user: PropTypes.shape().isRequired,
   getEmsSimsLeadsActions: PropTypes.func.isRequired,
-  role: PropTypes.string.isRequired
+  role: PropTypes.string.isRequired,
+  data: PropTypes.shape().isRequired
 };
 
 export default EManagerSimsLeadsDashboard;

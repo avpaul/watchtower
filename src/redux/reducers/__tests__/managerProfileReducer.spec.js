@@ -8,7 +8,7 @@ import {
 it('should return the initial state for unknown action type', () => {
   expect(managerProfileReducer(undefined, {})).toEqual({
     loading: false,
-    data: [],
+    data: {},
     error: null
   });
 });
@@ -17,7 +17,7 @@ it('should set loading state on fetching profile data', () => {
   const newState = {
     loading: true,
     error: null,
-    data: []
+    data: {}
   };
   const action = { type: MANAGER_PROFILE_DATA_REQUEST };
   expect(managerProfileReducer(undefined, action)).toMatchObject(newState);
@@ -26,12 +26,12 @@ it('should set loading state on fetching profile data', () => {
 it('should add fetched profile data to state', () => {
   const newState = {
     loading: false,
-    data: [],
+    data: {},
     error: null
   };
   const action = {
     type: MANAGER_PROFILE_DATA_SUCCESS,
-    data: [],
+    data: {},
     error: null
   };
 
@@ -42,7 +42,7 @@ it('should add the error message on failing to fetch manager profile data', () =
   const newState = {
     loading: false,
     error: { message: 'error' },
-    data: []
+    data: {}
   };
   const action = {
     type: MANAGER_PROFILE_DATA_FAILURE,

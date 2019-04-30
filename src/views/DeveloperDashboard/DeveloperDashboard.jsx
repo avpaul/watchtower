@@ -62,7 +62,7 @@ class DeveloperDashboard extends Component {
       switch (true) {
         case !!user.roles.WATCH_TOWER_EM:
         case !!user.roles.WATCH_TOWER_SL: {
-          return this.updateState(data.managerFellowsSummary.data);
+          return this.updateState(data.managerFellowsSummary.managers.data);
         }
         case !!user.roles.WATCH_TOWER_LF:
         case !!user.roles.WATCH_TOWER_TTL:

@@ -5,31 +5,31 @@ import TTLFellowsProgress from '../TTLFellowsProgress';
 import Filter from '../../../OpsDashboard/FellowsProgress/Filter';
 import StackedBarChart from '../../../../components/StackedBarChart';
 
-const setup = propOverrides => {
-  const props = {
-    fellowsProgress: {
-      loading: false,
-      data: {
-        fellowsProgressD0: [
-          {
-            'On Track': 2,
-            'Off Track': 1,
-            PIP: 1,
-            week: '10-Sep-2018'
-          }
-        ]
-      }
-    },
-    fetchTTLFellowsProgress: jest.fn(),
-    fetchLocations: jest.fn(),
-    locations: {
-      loading: false,
-      locations: [],
-      error: null
-    },
-    ...propOverrides
-  };
+const defaultProps = {
+  fellowsProgress: {
+    loading: false,
+    data: {
+      fellowsProgressD0: [
+        {
+          'On Track': 2,
+          'Off Track': 1,
+          PIP: 1,
+          week: '10-Sep-2018'
+        }
+      ]
+    }
+  },
+  fetchTTLFellowsProgress: jest.fn(),
+  locations: [
+    {
+      id: 1,
+      name: 'Lagos'
+    }
+  ]
+};
 
+const setup = propOverrides => {
+  const props = { ...defaultProps, ...propOverrides };
   const getFilterSpy = jest.spyOn(TTLFellowsProgress.prototype, 'handleSelect');
   const wrapper = shallow(<TTLFellowsProgress {...props} />);
 

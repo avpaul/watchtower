@@ -11,10 +11,6 @@ Object {
     "error": null,
     "loading": false,
   },
-  "locations": Object {
-    "error": null,
-    "loading": false,
-    "locations": Array [],
-  },
+  "locations": Array [],
 }
 `;
