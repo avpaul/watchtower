@@ -29,17 +29,6 @@ describe('fellowsProgressService', () => {
     mock.reset();
   });
 
-  it('fetches fellows progress', async () => {
-    const data = {
-      fellowsProgressD0A: [],
-      fellowsProgressD0B: [],
-      fellowsProgressD0: []
-    };
-    mock.onGet(`${baseURL}`).reply(200, []);
-    const response = await fellowsProgressService.fetchFellowsProgress(baseURL);
-    expect(response).toEqual(data);
-  });
-
   it('returns an error when request fails', async () => {
     mock.onGet(`${baseURL}`).reply(500);
     try {

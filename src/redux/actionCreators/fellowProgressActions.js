@@ -18,19 +18,27 @@ const loadFellowProgressFailure = error => dispatch =>
   });
 
 const getFellowProgress = ({
-  ttl = 'all',
+  manager = 'all',
   location = 'all',
-  role = 'ops'
+  cohort = 'all'
 } = {}) => dispatch => {
   dispatch({ type: types.LOAD_FELLOW_PROGRESS_REQUEST });
   const { fetchFellowsProgress } = fellowsProgressService;
-  const requestURL = `${serverURL}/api/v1/fellows/cohorts?location=${location}`;
-  const d0AURL = `${requestURL}&ttl=${ttl}&level=D0A`;
-  const d0BURL = `${requestURL}&ttl=${ttl}&level=D0B`;
-  const url = role === 'ops' ? [d0AURL, d0BURL] : requestURL;
+  const requestURL = `${serverURL}/api/v2/fellows/filter`;
+  let params = '';
 
-  return fetchFellowsProgress(url)
-    .then(data => dispatch(loadFellowProgressSuccess(data)))
+  params +=
+    manager && manager.toLowerCase() !== 'all' ? `manager=${manager}&` : '';
+  params +=
+    location && location.toLowerCase() !== 'all' ? `location=${location}&` : '';
+  params += cohort && cohort.toLowerCase() !== 'all' ? `cohort=${cohort}&` : '';
+
+  params = params ? `?${params.substr(0, params.length - 1)}` : '';
+
+  return fetchFellowsProgress(`${requestURL}${params}`)
+    .then(data => {
+      dispatch(loadFellowProgressSuccess(data || { D0A: [], D0B: [] }));
+    })
     .catch(error => dispatch(loadFellowProgressFailure(error)));
 };
 

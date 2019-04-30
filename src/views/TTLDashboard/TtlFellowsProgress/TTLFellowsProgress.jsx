@@ -13,14 +13,14 @@ class TTLFellowsProgress extends Component {
 
   componentDidMount() {
     const { fetchTTLFellowsProgress } = this.props;
-    fetchTTLFellowsProgress({ role: 'ttl' });
+    fetchTTLFellowsProgress();
   }
 
   handleSelect(type, value) {
     const { fetchTTLFellowsProgress } = this.props;
     if (type === 'location') {
       this.setState({ location: value });
-      fetchTTLFellowsProgress({ role: 'ttl', location: value });
+      fetchTTLFellowsProgress({ location: value });
     }
   }
 
@@ -47,7 +47,10 @@ class TTLFellowsProgress extends Component {
     const { location } = this.state;
     const { fellowsProgress, locations } = this.props;
     const locationsAll = ['All', ...locations.map(loc => loc.name).sort()];
-
+    const cohorts = [
+      ...(fellowsProgress.data.D0A || []),
+      ...(fellowsProgress.data.D0B || [])
+    ];
     const fellowDataLoading = fellowsProgress.loading;
     return (
       <div className="fellow_progress">
@@ -56,7 +59,7 @@ class TTLFellowsProgress extends Component {
           {this.renderLocationFilter(locationsAll, location)}
         </div>
         {this.renderCharts(
-          fellowsProgress.data.fellowsProgressD0,
+          cohorts,
           fellowDataLoading
         )}
       </div>

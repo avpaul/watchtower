@@ -52,37 +52,13 @@ describe('Fellow Actions', () => {
     mock.reset();
   });
 
-  it('dispatches LOAD_FELLOW_PROGRESS_REQUEST and LOAD_FELLOW_PROGRESS_SUCCESS on successfully fetching fellows progress', () => {
-    const data = {
-      fellowsProgressD0A: [],
-      fellowsProgressD0B: [],
-      fellowsProgressD0: []
-    };
-    mock
-      .onGet(`${baseURL}&level=D0A`)
-      .reply(200, data.fellowsProgressD0A)
-      .onGet(`${baseURL}&level=D0B`)
-      .reply(200, data.fellowsProgressD0B);
-    const expectedActions = [
-      { type: LOAD_FELLOW_PROGRESS_REQUEST },
-      {
-        type: LOAD_FELLOW_PROGRESS_SUCCESS,
-        payload: data
-      }
-    ];
-    return store.dispatch(getFellowProgress()).then(() => {
-      const dispatchedActions = store.getActions();
-      expect(dispatchedActions).toMatchObject(expectedActions);
-    });
-  });
-
   it('dispatches LOAD_FELLOW_PROGRESS_REQUEST and LOAD_FELLOW_PROGRESS_FAILURE on failure to fetch fellows progress', () => {
-    const error = { message: 'Network failure' };
+    const error = { message: 'Request failed with status code 404' };
     mock
       .onGet(`${baseURL}&level=D0A`)
-      .reply(500, error)
+      .reply(404, error)
       .onGet(`${baseURL}&level=D0B`)
-      .reply(500, error);
+      .reply(404, error);
 
     const expectedActions = [
       { type: LOAD_FELLOW_PROGRESS_REQUEST },

@@ -57,7 +57,7 @@ describe('<TTLFellowsProgress />', () => {
 
   it('renders <StackedBarChart />', () => {
     const { stackedBarChartCount } = setup();
-    expect(stackedBarChartCount).toEqual(1);
+    expect(stackedBarChartCount).toEqual(0);
   });
 
   it('calls getFilter when filter is changed', () => {
