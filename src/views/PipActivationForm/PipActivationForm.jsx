@@ -34,6 +34,15 @@ class PipActivationForm extends Component {
     };
   }
 
+  redirectToPipForm = encodedDetails => {
+    const backendServer = process.env.REACT_APP_WATCHTOWER_SERVER;
+    setTimeout(
+      () =>
+        redirectToExternalURL(`${backendServer}/pipfeedback/${encodedDetails}`),
+      1000
+    );
+  };
+
   handleChange = (event, attribute = '') => {
     const { name, value } = event.target;
     const { averageRatings } = this.props;
@@ -87,10 +96,11 @@ class PipActivationForm extends Component {
     startDate,
     areasOfConcern,
     fellow,
-    backendServer,
     encodedDetails
   ) => {
     if (dataIncludesAttributes) {
+      // eslint-disable-next-line react/prop-types
+      const component = this;
       const { activatePip } = this.props;
       const { managementSupport, pipPeriod } = this.state;
       const data = {
@@ -101,16 +111,10 @@ class PipActivationForm extends Component {
       };
       activatePip(fellow.fellow_id, data).then(res => {
         if (res.data) {
-          this.setState({
+          component.setState({
             message: 'Pip Activated Successfully. Generating PDF, please wait!!'
           });
-          setTimeout(
-            () =>
-              redirectToExternalURL(
-                `${backendServer}/pipfeedback/${encodedDetails}`
-              ),
-            1000
-          );
+          component.redirectToPipForm(encodedDetails);
         }
       });
     }
@@ -121,7 +125,6 @@ class PipActivationForm extends Component {
 
     const { fellow } = this.props;
     let { startDate } = this.state;
-    const backendServer = process.env.REACT_APP_WATCHTOWER_SERVER;
     const currentFellow = this.state;
     const areasOfConcern = this.getAreasOfConcern(currentFellow);
     startDate = moment(startDate).format('YYYY-MM-DD');
@@ -155,7 +158,6 @@ class PipActivationForm extends Component {
       startDate,
       areasOfConcern,
       fellow,
-      backendServer,
       encodedDetails
     );
   };

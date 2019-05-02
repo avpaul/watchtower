@@ -12,7 +12,14 @@ export const generateFilterCardId = id =>
  *
  * @returns {JSX} React JSX
  */
-const FilterCard = ({ className, onClick, filterId, cardDetails }) => (
+const FilterCard = ({
+  className,
+  onClick,
+  filterId,
+  cardDetails,
+  dataToggle,
+  dataTarget
+}) => (
   <div
     className={className}
     id={filterId}
@@ -20,6 +27,8 @@ const FilterCard = ({ className, onClick, filterId, cardDetails }) => (
     onKeyPress={onClick}
     role="button"
     tabIndex="0"
+    data-toggle={dataToggle}
+    data-target={dataTarget}
   >
     <p className="heading">
       {cardDetails.heading ? cardDetails.heading : cardDetails.title}
@@ -30,7 +39,9 @@ const FilterCard = ({ className, onClick, filterId, cardDetails }) => (
 );
 
 FilterCard.defaultProps = {
-  className: 'filterCard'
+  className: 'filterCard',
+  dataTarget: '',
+  dataToggle: ''
 };
 
 FilterCard.propTypes = {
@@ -43,7 +54,9 @@ FilterCard.propTypes = {
   }).isRequired,
   filterId: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
     .isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  dataTarget: PropTypes.string,
+  dataToggle: PropTypes.string
 };
 
 export default FilterCard;

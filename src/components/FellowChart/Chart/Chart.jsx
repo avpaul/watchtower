@@ -16,7 +16,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-const getChartProps = lineName => {
+export const getChartProps = lineName => {
   switch (lineName) {
     case 'On Track':
       return {

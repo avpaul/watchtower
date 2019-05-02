@@ -7,12 +7,14 @@ import FeedbackInstances from '../../components/FellowFeedback/FeedbackInstances
 import getFellowPrePipFeedback from '../../redux/actionCreators/fellowPrePipFeedbackActions';
 import { getFellowPipFeedback } from '../../redux/actionCreators/fellowPipFeedbackActions';
 import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
+import PipFeedbackModal from './PipFeedbackModal';
 
 import './FellowDashboard.css';
 
 export class FellowPerformance extends Component {
   state = {
-    isTicked: { type: 'Pre-PIP' }
+    isTicked: { type: 'Pre-PIP' },
+    feedbackInstance: null
   };
 
   componentDidMount() {
@@ -28,7 +30,7 @@ export class FellowPerformance extends Component {
     const {
       fellowPrePipFeedback: { data }
     } = this.props;
-
+    // eslint-disable-next-line react/prop-types
     if (data && data !== prevProps.fellowPrePipFeedback.data) {
       this.updateInitialState(data || []);
     }
@@ -37,6 +39,19 @@ export class FellowPerformance extends Component {
   updateInitialState = feedbackInstances => {
     const { paginationWrapper } = this.props;
     paginationWrapper.updateData(feedbackInstances);
+  };
+
+  handleClick = id => {
+    const { feedback, fellowPrePipFeedback } = this.props;
+    const { isTicked } = this.state;
+    const feedbackInstance =
+      isTicked.type === 'Pre-PIP'
+        ? fellowPrePipFeedback.data.filter(fd => fd.id === id)
+        : feedback.payload.filter(fd => fd.id === id);
+
+    this.setState({
+      feedbackInstance: feedbackInstance[0]
+    });
   };
 
   handleClickTickedCard = e => {
@@ -66,7 +81,7 @@ export class FellowPerformance extends Component {
       feedback
     } = this.props;
     const pipTotal = feedback ? feedback.total : 0;
-    const { isTicked } = this.state;
+    const { isTicked, feedbackInstance } = this.state;
     const { paginationWrapper } = this.props;
 
     return (
@@ -83,6 +98,7 @@ export class FellowPerformance extends Component {
               PrePipEntries={paginationWrapper.state.paginatedData}
               handleClick={this.handleClick}
             />
+            <PipFeedbackModal feedback={feedbackInstance} />
             <div className="col-12 mb-4">
               {paginationWrapper.renderPagination()}
             </div>

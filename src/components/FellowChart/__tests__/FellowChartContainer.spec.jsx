@@ -2,7 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import FellowChartContainer, {
-  getRadioCardData
+  getRadioCardData,
+  getFellowCount
 } from '../FellowChartContainer';
 import countSummary from '../../../__mocks__/countSummary';
 
@@ -52,4 +53,16 @@ it('calculates the radio card data', () => {
   expect(getRadioCardData('Today')).toEqual(
     expect.arrayContaining(radioCardData)
   );
+});
+
+describe('test methods in the module', () => {
+  it('should return an empty array if no data is provided', () => {
+    const result = getFellowCount(null, null);
+    expect(result).toEqual([]);
+  });
+
+  it('should return index item onf provided array', () => {
+    const result = getFellowCount([0, 1, 3], 0);
+    expect(typeof result).toEqual('object');
+  });
 });

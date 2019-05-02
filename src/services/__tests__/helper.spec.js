@@ -3,7 +3,8 @@ import {
   DateToday,
   DateYesterday,
   calcNoOfWeeks,
-  getCurrentWeek
+  getCurrentWeek,
+  getDayName
 } from '../helper';
 
 describe('Test for helper functions', () => {
@@ -28,5 +29,9 @@ describe('Test for helper functions', () => {
     const startDate = new Date();
     startDate.setDate(startDate.getDate() - 14);
     expect(getCurrentWeek(startDate)).toEqual(2);
+  });
+  it('Should get the day of the week from data', () => {
+    const date = '2018-10-29 14:34:03';
+    expect(typeof getDayName(date)).toEqual('string');
   });
 });

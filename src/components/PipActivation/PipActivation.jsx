@@ -151,7 +151,9 @@ PipActivation.propTypes = {
   addManagementSupport: PropTypes.func.isRequired,
   handleDateChange: PropTypes.func.isRequired,
   startDate: PropTypes.string.isRequired,
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  handlePipPeriod: PropTypes.func.isRequired,
+  message: PropTypes.string.isRequired
 };
 
 export default PipActivation;

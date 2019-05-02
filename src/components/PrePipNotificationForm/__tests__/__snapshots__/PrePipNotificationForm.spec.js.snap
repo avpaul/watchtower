@@ -425,6 +425,7 @@ ShallowWrapper {
     "props": Object {
       "dispatch": [Function],
       "fellowFeedback": Object {
+        "feedback": Array [],
         "fellowFeedback": Object {},
       },
       "store": Object {
@@ -467,6 +468,7 @@ ShallowWrapper {
       "props": Object {
         "dispatch": [Function],
         "fellowFeedback": Object {
+          "feedback": Array [],
           "fellowFeedback": Object {},
         },
         "store": Object {

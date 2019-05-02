@@ -12,6 +12,21 @@ const props = {
   feedback: { payload: [], total: 10 }
 };
 
+const object = {
+  getFellowPipFeedback: jest.fn(),
+  getFellowPrePipFeedback: jest.fn(),
+  fellowPrePipFeedback: { total: 23, data: [] },
+  feedback: { payload: [], total: 10 },
+  paginationWrapper: {
+    state: {
+      paginatedData: {}
+    },
+    renderPagination: () => {},
+    updateData: () => {}
+  },
+  data: []
+};
+
 /**
  * @description Creates an enzyme instance to test the Feedback Dashboard Page component.
  * @param mountComponent Renders a mounted enzyme wrapper if set to true
@@ -99,6 +114,19 @@ describe('Tests FellowPerformance component component', () => {
 
     expect(fellowPerformanceWrapper.state('isTicked')).toEqual({
       type: 'PIP'
+    });
+  });
+
+  it('should test the handleClick method', () => {
+    const wrapper = shallow(<FellowPerformance {...object} />);
+    expect(wrapper.instance().handleClick(2)).toBe(undefined);
+    const fellowPerformance = new FellowPerformance();
+    expect(typeof fellowPerformance.handleClick).toEqual('function');
+    expect(wrapper.instance().updateInitialState([])).toBe(undefined);
+    expect(typeof fellowPerformance.state).toEqual('object');
+    expect(fellowPerformance.state).toEqual({
+      isTicked: { type: 'Pre-PIP' },
+      feedbackInstance: null
     });
   });
 

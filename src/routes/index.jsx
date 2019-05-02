@@ -22,6 +22,7 @@ export const RouteList = () => (
       {renderRoute('/developers')}
       {renderRoute('/performance')}
       {renderRoute('/feedback')}
+      {renderRoute('/performance')}
       <Route component={NotFoundPage} />
     </Switch>
   </React.Fragment>

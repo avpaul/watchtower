@@ -69,6 +69,11 @@ describe('Dashboard Table ', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should test the sortFellows method', () => {
+    const wrapper = shallow(<DashboardTable {...props} />);
+    expect(typeof wrapper.instance().sortFellows()).toEqual('object');
+  });
+
   it('renders table cell values', () => {
     const wrapper = shallow(<DashboardTable {...props} />);
     wrapper.setState({ sortBy: 'weeksSpent' });

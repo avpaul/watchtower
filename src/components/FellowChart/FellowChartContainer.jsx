@@ -20,7 +20,7 @@ export const getFilterTooltips = filter => {
   return tooltipOptions[filter];
 };
 
-const getFellowCount = (data, filter) =>
+export const getFellowCount = (data, filter) =>
   data ? data.map(elem => elem[filter]) : [];
 
 const FellowChartContainer = ({

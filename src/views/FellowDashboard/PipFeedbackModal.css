@@ -1,0 +1,48 @@
+.modal-content {
+  height: 415px;
+  width: 100%;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 12px;
+  border: 10px;
+}
+
+.modal-head {
+  margin-left: 1em;
+}
+
+.modal-title {
+  margin-top: 1.5em !important;
+  margin-left: 1em;
+  font-size: 130%;
+  font-weight: bold !important;
+  color: #3359db;
+}
+
+.error {
+  color: red !important;
+}
+
+.modal-date {
+  margin-top: 3px;
+  margin-left: 1em;
+  font-size: 130%;
+  font-weight: bold !important;
+}
+
+.modal-body-title {
+  margin-top: 1em !important;
+  font-size: 120%;
+  color: #3876d8;
+}
+
+.modal-body-content {
+  font-size: 105%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 7px 0;
+}
