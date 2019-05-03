@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import translatorTable from '../../utils/TranslatorTable';
 import { displayCellContent } from '../../utils';
 
 export const getCriteriaFilterValues = (type, value, table, status) => {
@@ -111,13 +110,19 @@ const searchFellow = (fellow, search) =>
 
 const checkFellowLevel = (fellow, level) => fellow.level.search(level) >= 0;
 
+const statusTranslation = {
+  onTrack: 'On Track',
+  offTrack: 'Off Track',
+  PIP: 'PIP'
+};
+
 const checkFellowStatus = (fellow, { status, criteria, statusType }) => {
   if (criteria !== 'All') {
     const pulseOrLmsStatus = fellow[statusType];
-    return translatorTable[pulseOrLmsStatus] === status;
+    return pulseOrLmsStatus === status;
   }
   const advancementStatus = fellow.overall_status;
-  return translatorTable[advancementStatus] === status;
+  return statusTranslation[advancementStatus] === status;
 };
 
 /**
