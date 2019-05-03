@@ -31,7 +31,7 @@ export class DashboardPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fellows: [],
+      sortedFellows: [],
       ...defaultState(table)
     };
   }
@@ -43,29 +43,40 @@ export class DashboardPage extends Component {
 
   componentDidUpdate(prevProps) {
     const { fellows } = this.props;
-    if (prevProps.fellows && prevProps.fellows !== fellows)
-      this.updateFellows(formatFellows(fellows));
+    if (prevProps.fellows && prevProps.fellows !== fellows) {
+      const fetchedFellows = formatFellows(fellows);
+      this.updateFellows(fetchedFellows);
+      this.updateSortedFellows(fetchedFellows);
+    }
   }
 
   updateFellows = fellows => {
     const { paginationWrapper } = this.props;
-    this.setState({ filteredFellows: fellows, fellows }, () =>
+    this.setState({ filteredFellows: fellows }, () =>
       paginationWrapper.updateData(fellows)
     );
   };
 
+  updateSortedFellows = (sortedFellows, afterUpdate = () => {}) =>
+    this.setState({ sortedFellows }, afterUpdate);
+
   filterFellows = () => {
-    const { search, level, criteria, statusType, status, fellows } = this.state;
+    const {
+      search,
+      level,
+      criteria,
+      statusType,
+      status,
+      sortedFellows
+    } = this.state;
     const filters = { search, level, statusType, criteria, status };
-    this.updateFellows(filterFellows(fellows, filters));
+    const fellows = filterFellows(sortedFellows, filters);
+    this.updateFellows(fellows);
   };
 
   getCriteriaFilter = (type, value) => {
     const { status } = this.state;
-    this.setState(
-      getCriteriaFilterValues(type, value, table, status),
-      this.filterFellows
-    );
+    this.setState(getCriteriaFilterValues(type, value, table, status));
   };
 
   getStatusFilter = (type, value) => {
