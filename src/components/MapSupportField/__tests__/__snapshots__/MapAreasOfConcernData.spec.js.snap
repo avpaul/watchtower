@@ -33,19 +33,25 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <AreaOfConcern
+          activity="This is the activity"
           attribute={
                     Object {
-                              "Quality": "0.5",
+                              "quality": "0.5",
                             }
           }
+          description="This is the description"
+          details="This is the detail"
           handleChange={[Function]}
 />,
         <AreaOfConcern
+          activity="This is the activity"
           attribute={
                     Object {
-                              "Quantity": "0.5",
+                              "quantity": "0.5",
                             }
           }
+          description="This is the description"
+          details="This is the detail"
           handleChange={[Function]}
 />,
       ],
@@ -54,12 +60,15 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "weak-key-0",
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "activity": "This is the activity",
           "attribute": Object {
-            "Quality": "0.5",
+            "quality": "0.5",
           },
+          "description": "This is the description",
+          "details": "This is the detail",
           "handleChange": [Function],
         },
         "ref": null,
@@ -68,12 +77,15 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "weak-key-1",
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "activity": "This is the activity",
           "attribute": Object {
-            "Quantity": "0.5",
+            "quantity": "0.5",
           },
+          "description": "This is the description",
+          "details": "This is the detail",
           "handleChange": [Function],
         },
         "ref": null,
@@ -91,19 +103,25 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <AreaOfConcern
+            activity="This is the activity"
             attribute={
                         Object {
-                                    "Quality": "0.5",
+                                    "quality": "0.5",
                                   }
             }
+            description="This is the description"
+            details="This is the detail"
             handleChange={[Function]}
 />,
           <AreaOfConcern
+            activity="This is the activity"
             attribute={
                         Object {
-                                    "Quantity": "0.5",
+                                    "quantity": "0.5",
                                   }
             }
+            description="This is the description"
+            details="This is the detail"
             handleChange={[Function]}
 />,
         ],
@@ -112,12 +130,15 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "weak-key-0",
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "activity": "This is the activity",
             "attribute": Object {
-              "Quality": "0.5",
+              "quality": "0.5",
             },
+            "description": "This is the description",
+            "details": "This is the detail",
             "handleChange": [Function],
           },
           "ref": null,
@@ -126,12 +147,15 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "weak-key-1",
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "activity": "This is the activity",
             "attribute": Object {
-              "Quantity": "0.5",
+              "quantity": "0.5",
             },
+            "description": "This is the description",
+            "details": "This is the detail",
             "handleChange": [Function],
           },
           "ref": null,

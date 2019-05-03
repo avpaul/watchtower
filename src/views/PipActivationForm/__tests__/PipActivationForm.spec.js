@@ -3,14 +3,16 @@ import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import DatePicker from 'react-datepicker';
 import PipActivationForm from '../PipActivationForm';
-import MapManagementSupportFields from '../MapManagementSupportFields';
-import ManagementSupportField from '../ManagementSupportField';
-import MapAreasOfConcernData from '../MapAreasOfConcernData';
-import AreaOfConcern from '../AreaOfConcern';
-import AreaOfConcernInput from '../AreaOfConcernInput';
+import PipActivation from '../../../components/PipActivation';
+import MapManagementSupportFields from '../../../components/MapSupportField/MapManagementSupportFields';
+import ManagementSupportField from '../../../components/MapSupportField/ManagementSupportField';
+import MapAreasOfConcernData from '../../../components/MapSupportField/MapAreasOfConcernData';
+import AreaOfConcern from '../../../components/AreaOfConcernInput/AreaOfConcern';
+import AreaOfConcernInput from '../../../components/AreaOfConcernInput/AreaOfConcernInput';
 
 describe('PipActivationForm component', () => {
   const mockStore = configureMockStore();
+  const pipDataForTest = 'Successfully!';
   let wrapper;
   const props = {
     averageRatings: {
@@ -27,15 +29,18 @@ describe('PipActivationForm component', () => {
     handleSubmit: jest.fn(),
     onClick: jest.fn(),
     handleChange: jest.fn(),
+    activatePip: jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        error: false,
+        data: pipDataForTest
+      })
+    ),
     fellow: {
-      id: 10,
+      fellow_id: 'jdjsjdsd',
       picture: null,
       project: 'Watch Tower',
-      email: 'kingsley.obot@andela.com',
-      user: {
-        firstName: 'Kingsley',
-        lastName: 'Obot'
-      }
+      email: 'brian.mboya@andela.com',
+      name: 'Brian Mboya'
     }
   };
 
@@ -49,7 +54,10 @@ describe('PipActivationForm component', () => {
 
   it('should render correctly', () => {
     wrapper.setState(
-      { startDate: new Date('01 Jan 2019 16:00:00 GMT') },
+      {
+        startDate: new Date('01 Jan 2019 16:00:00 GMT'),
+        endDate: '01 Feb 2019'
+      },
       () => {
         expect(wrapper).toMatchSnapshot();
       }
@@ -59,6 +67,8 @@ describe('PipActivationForm component', () => {
   it('should call addManagementSupport() when the addSupport button is clicked', () => {
     wrapper.setState({ mgtSupportFieldCount: 1 });
     wrapper
+      .find(PipActivation)
+      .dive()
       .find('#addSupportButton')
       .simulate('click', { preventDefault() {} });
 
@@ -67,19 +77,27 @@ describe('PipActivationForm component', () => {
 
   it('should call handleSubmit() when the submit button is clicked', () => {
     wrapper
+      .find(PipActivation)
+      .dive()
       .find('#submitFormButton')
-      .simulate('click', { preventDefault() {} });
+      .simulate('submit', { preventDefault() {} });
     expect(props.handleSubmit).not.toBeCalled();
   });
 
   it('should call handleDateChange() when the the calendar is clicked', () => {
     const newDate = new Date('08 Mat 2019 16:00:00 GMT');
-    wrapper.find(DatePicker).simulate('change', newDate);
+    wrapper
+      .find(PipActivation)
+      .dive()
+      .find(DatePicker)
+      .simulate('change', newDate);
     expect(wrapper.state().startDate).toBe(newDate);
   });
 
   it('should update managementSupport array when a new Management Support has been added', () => {
     wrapper
+      .find(PipActivation)
+      .dive()
       .find(MapManagementSupportFields)
       .dive()
       .find(ManagementSupportField)
@@ -99,6 +117,8 @@ describe('PipActivationForm component', () => {
 
   const findAreaOfConcernInput = inputIndex =>
     wrapper
+      .find(PipActivation)
+      .dive()
       .find(MapAreasOfConcernData)
       .dive()
       .find(AreaOfConcern)
@@ -113,6 +133,19 @@ describe('PipActivationForm component', () => {
     findAreaOfConcernInput(input.index).simulate('change', { target });
     expect(wrapper.state()[input.name][target.name]).toBe(target.value);
   };
+
+  it('Should set pip period', () => {
+    wrapper
+      .find(PipActivation)
+      .dive()
+      .find('#pipPeriod')
+      .simulate('change', {
+        target: {
+          value: '3'
+        }
+      });
+    expect(wrapper.state().pipPeriod).toBe('3');
+  });
 
   it('should populate the quality area of concern if AverageRating is < 1  ', () => {
     testAreaOfConcernInput(
@@ -190,15 +223,5 @@ describe('PipActivationForm component', () => {
         value: 'Please improve on your integration skills'
       }
     );
-  });
-
-  it('should update state when Pip Period is updated', () => {
-    wrapper.find('select').simulate('change', {
-      target: {
-        name: 'pipPeriod',
-        value: 4
-      }
-    });
-    expect(wrapper.state('pipPeriod')).toBe(4);
   });
 });

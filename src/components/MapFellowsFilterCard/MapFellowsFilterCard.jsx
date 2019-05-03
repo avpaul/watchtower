@@ -29,8 +29,8 @@ const MapFellowsFilterCard = ({
   let refinedArray;
   if (display === 'status') {
     fellowSummaryDetails.forEach(fellow => {
-      if (fellow.pipStatus) pip += 1;
-      if (`${fellow.overall_status}`.includes('offTrack') && !fellow.pipStatus)
+      if (fellow.is_on_pip) pip += 1;
+      if (`${fellow.overall_status}`.includes('offTrack') && !fellow.is_on_pip)
         offTrack += 1;
       if (`${fellow.overall_status}`.includes('onTrack')) onTrack += 1;
       if (`${fellow.overall_status}`.includes('N/A')) noRatings += 1;

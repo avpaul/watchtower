@@ -156,8 +156,8 @@ class DeveloperDashboard extends Component {
      */
     const filterFellows = tickedCard =>
       allFellows.filter(fellow =>
-        fellow.pipStatus
-          ? fellow.pipStatus === TranslatorTable[tickedCard.status]
+        fellow.is_on_pip
+          ? fellow.is_on_pip === TranslatorTable[tickedCard.status]
           : `${fellow.overall_status}`.includes(
               TranslatorTable[tickedCard.status]
             ) &&

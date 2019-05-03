@@ -199,7 +199,7 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'All Fellows'
       },
-      5
+      6
     );
   });
 
@@ -224,7 +224,7 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'Off Track'
       },
-      3
+      4
     );
   });
 
@@ -238,7 +238,7 @@ describe('Developers dashboard test', () => {
         project: 'All Products',
         status: 'PIP'
       },
-      1
+      0
     );
   });
 

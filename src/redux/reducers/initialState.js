@@ -155,5 +155,10 @@ export default {
   },
   fellowFeedback: {
     fellowFeedback: {}
-  }
+  },
+  pipData: {
+    data: {},
+    loading: false,
+    error: null
+  },
 };

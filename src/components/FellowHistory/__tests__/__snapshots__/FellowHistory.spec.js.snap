@@ -67,6 +67,7 @@ ShallowWrapper {
               "id": 10,
               "picture": null,
               "project": "Watch Tower",
+              "status": "offtack",
               "user": Object {
                 "firstName": "Kingsley",
                 "lastName": "Obot",

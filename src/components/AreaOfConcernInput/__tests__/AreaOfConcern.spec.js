@@ -8,7 +8,8 @@ describe('AreaOfConcern component', () => {
   let wrapper;
   const props = {
     attribute: { quality: 0.8 },
-    handleChange: jest.fn()
+    handleChange: jest.fn(),
+    quality: { description: 'You need to level up on react' }
   };
 
   beforeEach(() => {

@@ -8,6 +8,7 @@ describe('Fellow History Container', () => {
     id: 10,
     picture: null,
     project: 'Watch Tower',
+    status: 'offtack',
     email: 'kingsley.obot@andela.com',
     user: {
       firstName: 'Kingsley',

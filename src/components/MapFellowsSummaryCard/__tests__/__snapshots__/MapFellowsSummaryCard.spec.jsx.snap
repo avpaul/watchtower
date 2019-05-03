@@ -343,7 +343,7 @@ ShallowWrapper {
                 picture="https://lorempixel.com/100/100/people/?59737"
                 product="Watch Tower"
                 started="15-Oct-2018"
-                status="PIP"
+                status="Off-Track"
         />
 </div>,
       "className": "ops-dashboard__fellows-summary",
@@ -431,7 +431,7 @@ ShallowWrapper {
             picture="https://lorempixel.com/100/100/people/?59737"
             product="Watch Tower"
             started="15-Oct-2018"
-            status="PIP"
+            status="Off-Track"
 />,
         ],
         "className": "row",
@@ -558,7 +558,7 @@ ShallowWrapper {
             "picture": "https://lorempixel.com/100/100/people/?59737",
             "product": "Watch Tower",
             "started": "15-Oct-2018",
-            "status": "PIP",
+            "status": "Off-Track",
           },
           "ref": null,
           "rendered": null,
@@ -654,7 +654,7 @@ ShallowWrapper {
                     picture="https://lorempixel.com/100/100/people/?59737"
                     product="Watch Tower"
                     started="15-Oct-2018"
-                    status="PIP"
+                    status="Off-Track"
           />
 </div>,
         "className": "ops-dashboard__fellows-summary",
@@ -742,7 +742,7 @@ ShallowWrapper {
               picture="https://lorempixel.com/100/100/people/?59737"
               product="Watch Tower"
               started="15-Oct-2018"
-              status="PIP"
+              status="Off-Track"
 />,
           ],
           "className": "row",
@@ -869,7 +869,7 @@ ShallowWrapper {
               "picture": "https://lorempixel.com/100/100/people/?59737",
               "product": "Watch Tower",
               "started": "15-Oct-2018",
-              "status": "PIP",
+              "status": "Off-Track",
             },
             "ref": null,
             "rendered": null,

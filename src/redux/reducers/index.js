@@ -21,6 +21,7 @@ import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
 import managerFellowsSummary from './managerFellowsSummaryReducer';
 import managersFeedbackReducer from './managerFeedbackReducer';
+import engineersOnpip from './activatePipReducer';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
 import fellowFeedbackReducer from './fellowFeedbackReducer';
 
@@ -47,7 +48,8 @@ const rootReducer = combineReducers({
   updateManagerNotification,
   managerFellowsSummary,
   feedback: managersFeedbackReducer,
-  fellowFeedback: fellowFeedbackReducer
+  fellowFeedback: fellowFeedbackReducer,
+  pipData: engineersOnpip
 });
 
 export default rootReducer;

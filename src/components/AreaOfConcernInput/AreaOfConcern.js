@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AreaOfConcernInput from './AreaOfConcernInput';
-import './PipActivationForm.css';
 
-const AreaOfConcern = ({ attribute, handleChange }) => {
+const AreaOfConcern = ({ attribute, handleChange, ...props }) => {
   const areaOfConcern = Object.keys(attribute)[0];
+  const attributeName = { ...props };
   return (
     <div>
       <div className="areas-of-concern-title">
@@ -14,20 +14,26 @@ const AreaOfConcern = ({ attribute, handleChange }) => {
         <AreaOfConcernInput
           title="Description"
           id="description"
+          required="required"
+          value={attributeName[areaOfConcern].description}
           handleChange={handleChange}
           areaOfConcern={areaOfConcern}
         />
         <AreaOfConcernInput
           title="Details/Example"
           id="details"
-          handleChange={handleChange}
+          required="required"
           areaOfConcern={areaOfConcern}
+          value={attributeName[areaOfConcern].details}
+          handleChange={handleChange}
         />
         <AreaOfConcernInput
           title="Activity"
           id="activity"
+          required="required"
           handleChange={handleChange}
           areaOfConcern={areaOfConcern}
+          value={attributeName[areaOfConcern].activity}
         />
       </div>
     </div>

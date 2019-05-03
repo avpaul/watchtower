@@ -30,11 +30,12 @@ ShallowWrapper {
 </div>,
         <textarea
           className="form-control area-of-concern-input"
-          id="description"
           name="description"
           onChange={[Function]}
+          required={undefined}
           rows="4"
           type="text"
+          value={undefined}
 />,
       ],
       "className": "form-group col-md-4",
@@ -59,11 +60,12 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control area-of-concern-input",
-          "id": "description",
           "name": "description",
           "onChange": [Function],
+          "required": undefined,
           "rows": "4",
           "type": "text",
+          "value": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -86,11 +88,12 @@ ShallowWrapper {
 </div>,
           <textarea
             className="form-control area-of-concern-input"
-            id="description"
             name="description"
             onChange={[Function]}
+            required={undefined}
             rows="4"
             type="text"
+            value={undefined}
 />,
         ],
         "className": "form-group col-md-4",
@@ -115,11 +118,12 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control area-of-concern-input",
-            "id": "description",
             "name": "description",
             "onChange": [Function],
+            "required": undefined,
             "rows": "4",
             "type": "text",
+            "value": undefined,
           },
           "ref": null,
           "rendered": null,

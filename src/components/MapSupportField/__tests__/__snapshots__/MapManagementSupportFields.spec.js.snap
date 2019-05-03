@@ -35,7 +35,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "weak-key-1",
+        "key": "1",
         "nodeType": "function",
         "props": Object {
           "dataKey": 1,
@@ -47,7 +47,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "weak-key-0",
+        "key": "2",
         "nodeType": "function",
         "props": Object {
           "dataKey": 2,
@@ -81,7 +81,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "weak-key-1",
+          "key": "1",
           "nodeType": "function",
           "props": Object {
             "dataKey": 1,
@@ -93,7 +93,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "weak-key-0",
+          "key": "2",
           "nodeType": "function",
           "props": Object {
             "dataKey": 2,

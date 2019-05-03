@@ -5,7 +5,7 @@ import { withRouter } from 'react-router';
 import { Switch, Route } from 'react-router-dom';
 import HistoryCard from './FellowHistoryCard';
 import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
-import PipActivationForm from '../PipActivationForm/PipActivationForm';
+import PipActivationContainer from '../../views/PipActivationForm';
 import './FellowHistory.css';
 import DevPulseTable from '../DevPulseTable';
 import Table from '../TableComponents/Table';
@@ -19,7 +19,9 @@ export class FellowHistory extends Component {
     super(props);
 
     this.state = {
-      fellow: {},
+      fellow: {
+        status: ''
+      },
       updated: false,
       showDevpulseTable: true,
       showLmsTable: false
@@ -136,15 +138,22 @@ export class FellowHistory extends Component {
     }
   };
 
-  loadPipActivationForm = () => (
-    <button
-      type="submit"
-      className="btn btn-pip-activation"
-      onClick={this.renderPipActivationForm}
-    >
-      ACTIVATE PIP
-    </button>
-  );
+  loadPipActivationForm = () => {
+    const { fellow } = this.state;
+    if (!fellow) return <div />;
+    if (fellow.overall_status === 'offTrack') {
+      return (
+        <button
+          type="submit"
+          className="btn btn-pip-activation"
+          onClick={fellow.is_on_pip ? '' : this.renderPipActivationForm}
+        >
+          {fellow.is_on_pip ? 'STOP PIP' : 'ACTIVATE PIP'}
+        </button>
+      );
+    }
+    return '';
+  };
 
   renderPipActivationForm = () => {
     const { history } = this.props;
@@ -220,7 +229,7 @@ export class FellowHistory extends Component {
         <Route
           path="/developers/pip/activation/:id"
           render={() => (
-            <PipActivationForm
+            <PipActivationContainer
               fellow={fellow}
               averageRatings={formatRollingAveragePerAttribute(
                 fellow.level,

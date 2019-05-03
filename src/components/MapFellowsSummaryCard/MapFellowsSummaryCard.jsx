@@ -32,7 +32,7 @@ const resolveStatus = fellow => {
    ** Renders the fellow's current progress status
    * @param fellow Fellow's details as an object
    */
-  if (fellow.pipStatus) return 'PIP';
+  if (fellow.is_on_pip) return 'PIP';
   return TranslatorTable[fellow.overall_status] || 'N/A';
 };
 

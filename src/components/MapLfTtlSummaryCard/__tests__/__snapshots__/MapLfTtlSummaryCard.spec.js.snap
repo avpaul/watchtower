@@ -170,7 +170,7 @@ ShallowWrapper {
           title=""
 />,
       ],
-      "className": "contain slider",
+      "className": "contain",
       "infinite": false,
       "nextArrow": <NavArrow
         buttonClass="slick-next"
@@ -431,7 +431,7 @@ ShallowWrapper {
             title=""
 />,
         ],
-        "className": "contain slider",
+        "className": "contain",
         "infinite": false,
         "nextArrow": <NavArrow
           buttonClass="slick-next"

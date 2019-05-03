@@ -20,9 +20,9 @@ export const getOutputStatus = output => {
   return outputStatus;
 };
 
-export const carouselOptions = (numDefaultSlides, style) => {
+export const carouselOptions = numDefaultSlides => {
   const options = {
-    className: `${style || 'contain'}`,
+    className: 'contain',
     infinite: false,
     slidesToShow: numDefaultSlides,
     swipeToSlide: true,
@@ -87,5 +87,9 @@ export const formatPerformanceData = performanceData => ({
     return updatedWeekData;
   })
 });
+
+export const redirectToExternalURL = url => {
+  window.open(url, '_blank');
+};
 
 export default truncate;

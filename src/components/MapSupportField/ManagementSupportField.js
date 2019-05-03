@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PipActivationForm.css';
 
 const ManagementSupportField = ({ handleMgtInputChange, dataKey }) => (
   <div>

@@ -105,7 +105,7 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(2)
         .props().numberOfFellows
-    ).toBe(3);
+    ).toBe(4);
   });
   it('should render total number of fellows on pip to be', () => {
     const { mapFellowsFilterCardWrapper } = setup(
@@ -124,6 +124,6 @@ describe('MapFellowsFilterCard tests', () => {
         .find(FellowFilterCard)
         .at(3)
         .props().numberOfFellows
-    ).toBe(1);
+    ).toBe(0);
   });
 });
