@@ -249,6 +249,10 @@
   margin-right: 10px;
 }
 
+.modal button {
+  outline: none;
+}
+
 .handle-close b {
   margin-left: 20px;
   font-size: 90%;
@@ -264,10 +268,12 @@
 .handle-close button {
   float: left;
 }
+
 div.modal-notification {
   padding-bottom: 20px;
   cursor: default;
 }
+
 span.clear {
   float: right;
   margin-right: 4px;
@@ -355,4 +361,53 @@ div.clear {
   #profile-menu {
     margin-right: 5em;
   }
+}
+
+.profile-details {
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 0.1rem solid #f9f9f9;
+  float: left;
+}
+
+.profile-details__image {
+  width: 35%;
+  float: left;
+}
+
+.profile-details__image img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  transform: translateX(-50%);
+  margin-left: 60%;
+  float: left;
+}
+
+.profile-details__right {
+  width: 65%;
+  float: right;
+  margin-bottom: 1rem;
+}
+
+.profile-details__name {
+  float: left;
+  width: 100%;
+  color: #333333;
+  font-weight: 500;
+  padding-right: 1rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  white-space: normal;
+}
+
+.profile-details__role {
+  float: left;
+  width: 100%;
+  color: #999999;
+  font-family: 'DIN Pro';
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  margin-top: 0.5rem;
+  white-space: normal;
 }

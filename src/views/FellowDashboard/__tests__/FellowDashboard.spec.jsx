@@ -18,7 +18,10 @@ describe('FellowDashboard component', () => {
       lastName: 'User',
       email: 'test.user@andela.com',
       name: 'Test User',
-      picture: 'http://'
+      picture: 'http://',
+      roles: {
+        Fellow: ''
+      }
     }
   };
 
