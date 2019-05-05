@@ -7,14 +7,14 @@ import {
   LOAD_READ_NOTIFICATION_SUCCESS,
   LOAD_READ_NOTIFICATION_FAILURE
 } from '../../constants/fellowReadNotifications';
-import getFellowReadNotification from '../fellowNotificationsRead';
+import getFellowReadNotification from '../markNotificationsAsRead';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 describe('Fellow Notifications Actions', () => {
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
-  const url = `${serverURL}/api/v1/notifications/0`;
+  const url = `${serverURL}/api/v2/notifications/read/all`;
   const store = mockStore({
     loading: false,
     readnotification: {},
@@ -55,7 +55,7 @@ describe('Fellow Notifications Actions', () => {
         ...data
       }
     ];
-    return store.dispatch(getFellowReadNotification('trust')).then(() => {
+    return store.dispatch(getFellowReadNotification('all')).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });

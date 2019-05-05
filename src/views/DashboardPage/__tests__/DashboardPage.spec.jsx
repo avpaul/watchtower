@@ -117,6 +117,16 @@ describe('Dashboard Page ', () => {
     });
   });
 
+  it('updates sorted fellows', () => {
+    const { wrapper } = setup();
+    wrapper.instance().updateSortedFellows();
+  });
+
+  it('update props with different array', () => {
+    const { wrapper } = setup();
+    wrapper.setProps({ fellows: [] });
+  });
+
   it("renders the ErrorPage when there's an error", () => {
     const { ErrorPage } = Error;
     const { wrapper } = setup(true, { error });

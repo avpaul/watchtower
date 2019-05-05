@@ -1,24 +1,40 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
+import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import { HeaderConnected, Header } from '../Header';
+import HeaderConnected, { Header } from '../Header';
 
 describe('Header Component Test Suite', () => {
   let role;
   let store;
+
+  const zeroFellows = '12 of your Fellows';
+  const oneFellow = '1 of your Fellows';
+  const pip = '0 of your Fellows';
+  const newNotification = {
+    id: 'b0d97330-6f21-11e9-a538-171f4ed6f0e7',
+    notifiable_id: '-LDetFxSyHMIJqlvwcQH',
+    data:
+      '{"onTrack":"12 of your Fellows","offTrack":"1 of your Fellows","pip":"0 of your Fellows","email":"samuel.kubai@andela.com"}',
+    created_at: '2018-10-29 14:34:03'
+  };
+
   const storeItems = {
     notification: { data: { id: 'KK', status: 'active' } },
     notifications: [
       { data: { id: 'KK', status: 'active' }, createdAt: Date.now() }
     ],
-    unreadnotification: { unreadnotification: {} },
+    unreadnotification: {
+      unreadnotification: [newNotification, newNotification]
+    },
     readnotification: { readnotification: {} },
-    ttlNotification: { ttlNotification: [{ readAt: Date.now() }] },
+    ttlNotification: { ttlNotification: [{ readAt: '2018-10-30 14:34:03' }] },
     lfNotification: { lfNotification: [] },
-    getReadNotification: jest.fn(),
+    markNotificationsAsRead: jest.fn(),
     getUnreadNotification: jest.fn(),
     getTtlNotification: jest.fn(),
     getLfNotification: jest.fn(),
@@ -34,22 +50,11 @@ describe('Header Component Test Suite', () => {
     ttlNotification: storeItems.ttlNotification.ttlNotification
   };
 
-  const zeroFellows = '0 of your Fellows';
-  const oneFellow = '1 of your Fellows';
-  const newNotification = {
-    id: 1,
-    manager: {
-      onTrack: zeroFellows,
-      offTrack: zeroFellows,
-      pip: zeroFellows
-    },
-    createdAt: { date: Date.now() }
-  };
-
   const setup = ({
     user = {
       name: 'Test User',
-      picture: 'http://'
+      picture: 'http://',
+      roles: 'WATCH_TOWER_EM'
     },
     location = { pathname: '/dashboard' },
     setupRole = '',
@@ -59,13 +64,12 @@ describe('Header Component Test Suite', () => {
     if (connectedComponent) {
       const mockStore = configureStore([thunk]);
       store = mockStore({ ...storeItems });
-      wrapper = shallow(
-        <HeaderConnected
-          user={user}
-          role={setupRole}
-          location={location}
-          store={store}
-        />
+      wrapper = mount(
+        <Provider store={store}>
+          <MemoryRouter>
+            <HeaderConnected user={user} role={setupRole} location={location} />
+          </MemoryRouter>
+        </Provider>
       );
     } else {
       wrapper = shallow(
@@ -95,6 +99,33 @@ describe('Header Component Test Suite', () => {
     expect(wrapper).toBeDefined();
   });
 
+  it('responds to click events', () => {
+    const { wrapper } = setup({ setupRole: role, connectedComponent: true });
+    wrapper.setState({ show: true }, () => {
+      wrapper
+        .find('.modal-text button')
+        .at(0)
+        .simulate('click');
+      wrapper
+        .find('.clear-cursor')
+        .at(0)
+        .simulate('click');
+    });
+  });
+
+  it('renders without crashing', () => {
+    const { wrapper } = setup({
+      setupRole: 'WATCH_TOWER_TTL',
+      connectedComponent: true
+    });
+    wrapper.setState({ show: true }, () => {
+      wrapper
+        .find('.clear-cursor')
+        .at(0)
+        .simulate('click');
+    });
+  });
+
   it('renders header top properly', () => {
     const { wrapper } = setup({ setupRole: 'WATCH_TOWER_TTL' });
     expect(wrapper).toBeDefined();
@@ -103,6 +134,33 @@ describe('Header Component Test Suite', () => {
 
   it('should update state when handleMenuClick is called on the inactive element', () => {
     const { wrapper } = setup({ setupRole: 'WATCH_TOWER_LF' });
+
+    wrapper.setState({
+      activeItems: {
+        fellows: true,
+        settings: false
+      }
+    });
+    const event = {
+      preventDefault: jest.fn(),
+      currentTarget: {
+        dataset: {
+          linkKey: 'settings'
+        }
+      }
+    };
+    const handleMenuClickSpy = jest.spyOn(
+      wrapper.instance(),
+      'handleMenuClick'
+    );
+    wrapper.instance().handleMenuClick(event);
+    expect(handleMenuClickSpy).toHaveBeenCalled();
+    expect(wrapper.state('activeItems').settings).toEqual(true);
+    expect(wrapper.state('activeItems').fellows).toEqual(false);
+  });
+
+  it('should update state when handleMenuClick is called on the inactive element', () => {
+    const { wrapper } = setup({ setupRole: 'Fellow' });
 
     wrapper.setState({
       activeItems: {
@@ -175,7 +233,8 @@ describe('Header Component Test Suite', () => {
 
   it('calls handleBack', () => testHeaderAction('handleBack'));
 
-  it('calls clearNotification', () => testHeaderAction('clearNotification'));
+  it('calls renderModal', () =>
+    testHeaderAction('renderModal', [newNotification, newNotification]));
 
   it('renderOrder works as expected', () =>
     testHeaderAction('renderOrder', [storeItems.notifications]));
@@ -184,23 +243,44 @@ describe('Header Component Test Suite', () => {
     testHeaderActionNoMessage('renderOrder', [storeItems.notification]));
 
   it('renderIcons works as expected', () => {
+    const notification1 = {
+      id: 'b0d97330-6f21-11e9-a538-171f4ed6f0e7',
+      notifiable_id: '-LDetFxSyHMIJqlvwcQH',
+      data:
+        '{"onTrack":"12 of your Fellows","offTrack":"1 of your Fellows","pip":"0 of your Fellows","email":"samuel.kubai@andela.com"}',
+      created_at: '2019-05-05 10:31:54'
+    };
+    const notification1Array = [
+      {
+        id: 'b0d97330-6f21-11e9-a538-171f4ed6f0e7',
+        notifiable_id: '-LDetFxSyHMIJqlvwcQH',
+        data:
+          'Hi Abel Beer, your ratings for week ending 03/05/2019 are in. Congratulations! You are on track.',
+        created_at: '2019-05-05 10:31:54'
+      }
+    ];
     const mounted = jest.spyOn(globalWrapper.instance(), 'renderIcons');
-    globalWrapper
-      .instance()
-      .renderIcons(storeItems.notification, storeItems.notifications);
+    globalWrapper.instance().renderIcons(notification1, notification1Array);
     storeItems.notification.data.status = 'onTrack';
-    globalWrapper
-      .instance()
-      .renderIcons(storeItems.notification, storeItems.notifications);
+    globalWrapper.instance().renderIcons(notification1, notification1Array);
     expect(mounted).toHaveBeenCalledTimes(2);
   });
 
   it('renderNotificationModal works as expected', () => {
-    const ordered = { key: [{ id: 'id', data: { status: 'onTrack' } }] };
+    const ordered = { key: [{ id: 'id', data: 'onTrack' }] };
+    const notification2Array = [
+      {
+        id: 'b0d97330-6f21-11e9-a538-171f4ed6f0e7',
+        notifiable_id: '-LDetFxSyHMIJqlvwcQH',
+        data:
+          'Hi Abel Beer, your ratings for week ending 03/05/2019 are in. Congratulations! You are on track.',
+        created_at: '2019-05-05 10:31:54'
+      }
+    ];
     testHeaderAction('renderNotificationModal', [
       ordered,
       true,
-      storeItems.notifications
+      notification2Array
     ]);
   });
 
@@ -210,22 +290,29 @@ describe('Header Component Test Suite', () => {
   });
 
   it('renderArchivesModal works as expected', () => {
-    testHeaderAction('renderArchivesModal', [true, storeItems.notifications]);
+    const notification1Array = [
+      {
+        id: 'b0d97330-6f21-11e9-a538-171f4ed6f0e7',
+        notifiable_id: '-LDetFxSyHMIJqlvwcQH',
+        data:
+          'Hi Abel Beer, your ratings for week ending 03/05/2019 are in. Congratulations! You are on track.',
+        created_at: '2019-05-05 10:31:54'
+      }
+    ];
+    testHeaderAction('renderArchivesModal', [true, notification1Array]);
   });
-
-  it('clearManagerNotification works as expected', () =>
-    testHeaderAction('clearManagerNotification'));
 
   it('displayManagerNotification works as expected', () => {
     const mounted = jest.spyOn(
       globalWrapper.instance(),
       'displayManagerNotification'
     );
+    const parsed = JSON.parse(newNotification.data);
     globalWrapper.instance().displayManagerNotification();
     globalWrapper.instance().displayManagerNotification(newNotification);
-    newNotification.manager.onTrack = oneFellow;
-    newNotification.manager.offTrack = oneFellow;
-    newNotification.manager.pip = oneFellow;
+    parsed.onTrack = zeroFellows;
+    parsed.offTrack = oneFellow;
+    parsed.pip = pip;
     globalWrapper.instance().displayManagerNotification(newNotification);
     expect(mounted).toHaveBeenCalledTimes(3);
   });
@@ -233,10 +320,11 @@ describe('Header Component Test Suite', () => {
   it('managerArchiveModal works as expected', () => {
     const mounted = jest.spyOn(globalWrapper.instance(), 'managerArchiveModal');
     globalWrapper.instance().managerArchiveModal(newNotification);
-    newNotification.readAt = Date.now();
-    newNotification.manager.onTrack = oneFellow;
-    newNotification.manager.offTrack = oneFellow;
-    newNotification.manager.pip = oneFellow;
+    const parsed = JSON.parse(newNotification.data);
+    newNotification.created_at = Date.now();
+    parsed.onTrack = zeroFellows;
+    parsed.offTrack = oneFellow;
+    parsed.pip = pip;
     globalWrapper.instance().managerArchiveModal(newNotification);
     expect(mounted).toHaveBeenCalledTimes(2);
   });
@@ -251,13 +339,13 @@ describe('Header Component Test Suite', () => {
       'displayNotificationModal'
     );
     globalWrapper.instance().displayNotificationModal(true, [newNotification]);
-    delete newNotification.readAt;
+    delete newNotification.created_at;
     globalWrapper.instance().displayNotificationModal(true, [newNotification]);
     expect(mounted).toHaveBeenCalledTimes(2);
   });
 
   it('renderManagerModal works as expected', () => {
-    testHeaderAction('renderManagerModal', [[newNotification]]);
+    testHeaderAction('renderManagerModal', [newNotification, newNotification]);
   });
 
   it('renders header top properly when loading fellow history page', () => {
@@ -280,5 +368,15 @@ describe('Header Component Test Suite', () => {
     });
     expect(wrapper).toBeDefined();
     expect(wrapper.state().activeItems.feedback).toBe(true);
+  });
+  it('renders header top properly when loading developer dashboard', () => {
+    const { wrapper } = setup({
+      location: {
+        pathname: '/developers'
+      },
+      setupRole: 'WATCH_TOWER_TTL'
+    });
+    expect(wrapper).toBeDefined();
+    expect(wrapper.state().activeItems.developers).toBe(true);
   });
 });

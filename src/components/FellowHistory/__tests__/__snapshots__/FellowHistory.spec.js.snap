@@ -65,6 +65,7 @@ ShallowWrapper {
               "email": "kingsley.obot@andela.com",
               "fellow_id": "-LQcqbQzyNpIlfJreeiZ",
               "id": 10,
+              "overall_status": "offTrack",
               "picture": null,
               "project": "Watch Tower",
               "status": "offtack",
