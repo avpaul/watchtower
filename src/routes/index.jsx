@@ -20,6 +20,7 @@ export const RouteList = () => (
       <Route path="/test" component={ConnectedTest} />
       {renderRoute('/dashboard')}
       {renderRoute('/developers')}
+      {renderRoute('/performance')}
       {renderRoute('/feedback')}
       <Route component={NotFoundPage} />
     </Switch>

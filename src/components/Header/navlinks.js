@@ -37,8 +37,9 @@ export const fellowItems = [
     activeIcon: dashboardIconFill
   },
   {
-    key: 'Performance',
+    key: 'performance',
     name: 'My Performance',
+    path: '/performance',
     icon: perfomanceIcon,
     activeIcon: perfomanceFillIcon
   },

@@ -31,6 +31,7 @@ export class Header extends Component {
         fellows: false,
         dashboard: false,
         developers: false,
+        performance: false,
         feedback: false,
         settings: false
       },
@@ -49,6 +50,9 @@ export class Header extends Component {
         break;
       case '/developers':
         this.setState({ activeItems: { developers: true } });
+        break;
+      case '/performance':
+        this.setState({ activeItems: { performance: true } });
         break;
       case '/feedback':
         this.setState({ activeItems: { feedback: true } });
