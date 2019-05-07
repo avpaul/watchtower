@@ -10,9 +10,16 @@ const setup = propOverrides => {
     fellowsSummary: [
       { id: 'testkey1', title: 'Test key 1', totalFellows: 10 },
       { id: 'testkey2', title: 'Test key 2', totalFellows: 5 },
-      { id: 'testkey3', title: 'Test key 3', totalFellows: 5 }
+      { id: 'testyey3', title: 'Test key 3', totalFellows: 5 }
     ],
     handleCardClick: jest.fn(),
+    fellowSummaryCardComponent: {
+      state: {
+        options: {
+          filterCardRefs: []
+        }
+      }
+    },
     ...propOverrides
   };
 

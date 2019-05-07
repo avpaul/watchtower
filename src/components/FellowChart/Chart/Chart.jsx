@@ -57,7 +57,7 @@ const lineChart = data => (
   >
     <XAxis
       dataKey="week"
-      padding={{ left: 25 }}
+      padding={{ left: 0 }}
       tickLine={false}
       angle={-45}
       dy={52}
@@ -78,6 +78,7 @@ const lineChart = data => (
     {renderChartLine('On Track')}
     {renderChartLine('Off Track')}
     {renderChartLine('PIP')}
+    {renderChartLine('')}
   </LineChart>
 );
 

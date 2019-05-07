@@ -8,7 +8,6 @@ export const getRadioCardData = value => [
     value: 'Trend',
     name: `${value} Today`
   }
-  // { value: 'Today', name: `${value} Trend` }
 ];
 
 export const getFilterTooltips = filter => {
@@ -30,19 +29,24 @@ const FellowChartContainer = ({
   user,
   filter,
   handleChartClose,
-  fellowChartTooltipClass
+  fellowChartTooltipClass,
+  title
 }) => {
   const fc = getFellowCount(data, filter);
   const fellowChartTooltip = getFilterTooltips(filter);
+  const radioCardOptions = title
+    ? getRadioCardData(title)
+    : getRadioCardData(filter);
+  const chartToolTip = title ? fellowChartTooltipClass : fellowChartTooltip;
 
   return (
     <Fragment>
       {!loading && fc.length > 0 ? (
         <FellowChart
           fellowsCount={fc}
-          radioCardOptions={getRadioCardData(filter)}
           handleChartClose={handleChartClose}
-          fellowChartTooltip={fellowChartTooltip || fellowChartTooltipClass}
+          radioCardOptions={radioCardOptions}
+          fellowChartTooltip={chartToolTip}
           updateSelected={updateSelected}
           user={user}
         />
@@ -60,7 +64,8 @@ FellowChartContainer.propTypes = {
   updateSelected: PropTypes.func,
   user: PropTypes.shape({}).isRequired,
   filter: PropTypes.string,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 FellowChartContainer.defaultProps = {

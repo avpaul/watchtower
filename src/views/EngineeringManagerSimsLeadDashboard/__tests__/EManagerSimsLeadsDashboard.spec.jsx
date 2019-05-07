@@ -3,6 +3,7 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import EngineeringManagerSimsLeadDashboard from '../index';
 import engineeringManagerSimsLeadData from '../../../__mocks__/engineeringManagerTtls.json';
+import fellowTrends from '../../../__mocks__/fellowTends.json';
 
 import EManagerSimsLeadsDashboard from '../EManagerSimsLeadsDashboard';
 import ManagerFellowSortInput from '../../../components/ManagerFellowMap/ManagerFellowSortInput';
@@ -42,11 +43,10 @@ describe('EngineeringDashboard component', () => {
         totalFellows: 5
       }
     },
-    fellowsSummary: {},
+    fellowsSummary: {
+      summary: fellowTrends.summary
+    },
     fetchFellowsSummaryEm: spyResolve,
-    fetchFellowsSummarySl: spyResolve,
-    fetchFellowsSummaryTtl: spyResolve,
-    fetchFellowsSummaryLf: spyResolve,
     getEmsSimsLeadsActions: spyResolve
   };
 

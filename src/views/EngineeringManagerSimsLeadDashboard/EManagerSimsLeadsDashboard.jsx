@@ -5,6 +5,7 @@ import FellowChart from '../../components/FellowChart';
 import TtlsFellowSummary from './TtlsFellowSummary';
 import ManagerFellowMap from '../../components/ManagerFellowMap';
 import FellowsProgressBar from './FellowsProgressBar';
+import { getCurrentClass } from '../../utils';
 
 const emDashboardStyle = {
   paddingLeft: '0',
@@ -23,7 +24,13 @@ class EManagerSimsLeadsDashboard extends Component {
       isEngineeringManager: false,
       show: false,
       showChart: false,
-      managerFellowSortRatio: 'HIGH_TO_LOW'
+      managerFellowSortRatio: 'HIGH_TO_LOW',
+      options: {
+        chartTitle: 'Total',
+        filter: 'total-fellows-card',
+        filterCardRefs: [],
+        toolTipOption: 'total-fellows-card'
+      }
     };
     this.onSelectManagerFellowRatioCard = this.onSelectManagerFellowRatioCard.bind(
       this
@@ -31,14 +38,9 @@ class EManagerSimsLeadsDashboard extends Component {
   }
 
   componentDidMount() {
-    const {
-      fetchFellowsSummaryEm,
-      getEmsSimsLeadsActions,
-      user,
-      role
-    } = this.props;
+    const { getEmsSimsLeadsActions, fetchFellowsSummaryEm, role } = this.props;
     getEmsSimsLeadsActions();
-    fetchFellowsSummaryEm(user.email);
+    fetchFellowsSummaryEm();
     this.setState({ isEngineeringManager: role === 'WATCH_TOWER_EM' });
   }
 
@@ -61,7 +63,7 @@ class EManagerSimsLeadsDashboard extends Component {
       }
     ];
     managersArray.forEach(manager => {
-      const id = manager.managerName;
+      const id = manager.staff_id;
       const { managerRole } = manager;
       const name = `${manager.managerName}`.split(' ');
       const content = {
@@ -88,29 +90,17 @@ class EManagerSimsLeadsDashboard extends Component {
   };
 
   handleCardClick = event => {
-    const cardId = event.currentTarget.id.replace(/\s+/g, ' ').trim();
-    const {
-      fetchFellowsSummaryTtl,
-      fetchFellowsSummaryLf,
-      fetchFellowsSummarySl,
-      fetchFellowsSummaryEm,
-      user
-    } = this.props;
-
+    let cardId = event.currentTarget.id;
+    const { options } = this.state;
+    options.toolTipOption = cardId;
     if (cardId === 'total-fellows-card') {
-      if (user.roles.WATCH_TOWER_EM) {
-        fetchFellowsSummaryEm(user.email);
-      } else {
-        fetchFellowsSummarySl(user.email);
-      }
-      this.setState({ showChart: true });
-    } else if (user.roles.WATCH_TOWER_EM) {
-      fetchFellowsSummaryTtl(cardId);
-      this.setState({ showChart: true });
-    } else {
-      fetchFellowsSummaryLf(cardId);
-      this.setState({ showChart: true });
+      cardId = 'Total';
     }
+    options.filter = cardId;
+    this.setState({
+      showChart: true,
+      options
+    });
   };
 
   handleChartClose = () => {
@@ -156,18 +146,25 @@ class EManagerSimsLeadsDashboard extends Component {
         text: isEngineeringManager
           ? 'Average TTL to Fellow ratio'
           : 'Average LF to Fellow ratio',
-        averageValue: averageFellowsPerManager
+        averageValue: Math.floor(averageFellowsPerManager)
       }
     ];
   };
 
-  fellowChart = (showChart, chartData, user, fellowsSummary) =>
+  fellowChart = (showChart, user, fellowsSummary, options) =>
     showChart && (
       <FellowChart
         handleChartClose={this.handleChartClose}
-        data={chartData}
+        data={fellowsSummary.summary}
         user={user}
         loading={fellowsSummary.loading || false}
+        filter={options.filter}
+        title={options.chartTitle}
+        fellowChartTooltipClass={
+          options.filterCardRefs
+            ? getCurrentClass(options.toolTipOption, options.filterCardRefs)
+            : ''
+        }
       />
     );
 
@@ -190,8 +187,7 @@ class EManagerSimsLeadsDashboard extends Component {
       user,
       data: { managers }
     } = this.props;
-    const { showChart } = this.state;
-    const chartData = fellowsSummary.summary;
+    const { showChart, options } = this.state;
 
     return (
       <div className="container-fluid" style={emDashboardStyle}>
@@ -201,8 +197,9 @@ class EManagerSimsLeadsDashboard extends Component {
             managers.totalFellows || 0
           )}
           handleCardClick={this.handleCardClick}
+          fellowSummaryCardComponent={this}
         />
-        {this.fellowChart(showChart, chartData, user, fellowsSummary)}
+        {this.fellowChart(showChart, user, fellowsSummary, options)}
         {this.displayCardMap()}
         {this.renderManagerFellowMap()}
         <FellowsProgressBar />
@@ -215,9 +212,6 @@ EManagerSimsLeadsDashboard.propTypes = {
   // required prop-types
   fellowsSummary: PropTypes.shape({}).isRequired,
   fetchFellowsSummaryEm: PropTypes.func.isRequired,
-  fetchFellowsSummarySl: PropTypes.func.isRequired,
-  fetchFellowsSummaryLf: PropTypes.func.isRequired,
-  fetchFellowsSummaryTtl: PropTypes.func.isRequired,
   user: PropTypes.shape().isRequired,
   getEmsSimsLeadsActions: PropTypes.func.isRequired,
   role: PropTypes.string.isRequired,
