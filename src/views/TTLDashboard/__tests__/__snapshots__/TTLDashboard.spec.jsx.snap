@@ -3,13 +3,8 @@
 exports[`<TLLDasboard  /> developers tab route tests renders without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    getTtlProjects={[Function]}
-    ttlProjects={
-        Object {
-            "projects": Object {},
-          }
-    }
+  Symbol(enzyme.__unrendered__): <TTLDashboardMain
+    fetchManagerProfile={[Function]}
     user={
         Object {
             "email": "test@mail.com",
@@ -147,13 +142,8 @@ ShallowWrapper {
 exports[`<TLLDasboard  /> tests renders without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    getTtlProjects={[Function]}
-    ttlProjects={
-        Object {
-            "projects": Object {},
-          }
-    }
+  Symbol(enzyme.__unrendered__): <TTLDashboardMain
+    fetchManagerProfile={[Function]}
     user={
         Object {
             "email": "test@mail.com",

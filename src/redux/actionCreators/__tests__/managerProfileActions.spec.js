@@ -3,7 +3,6 @@ import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import getManagerProfileData from '../managerProfileActions';
-import { formatPerformanceData } from '../../../utils';
 import {
   MANAGER_PROFILE_DATA_REQUEST,
   MANAGER_PROFILE_DATA_SUCCESS,
@@ -13,7 +12,7 @@ import managerProfileMock from '../../../__mocks__/managerProfile';
 
 describe('Manager Profile Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v2/managers/fellows/profile`;
+  const baseURL = `${serverURL}/api/v2/managers/profile`;
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore({
@@ -21,14 +20,6 @@ describe('Manager Profile Actions', () => {
     data: [],
     error: null
   });
-
-  const processedResponseData = {
-    ...managerProfileMock,
-    performance: {
-      today: formatPerformanceData(managerProfileMock.performance.today),
-      trend: formatPerformanceData(managerProfileMock.performance.trend)
-    }
-  };
 
   beforeEach(() => {
     store.clearActions();
@@ -52,7 +43,7 @@ describe('Manager Profile Actions', () => {
       { type: MANAGER_PROFILE_DATA_REQUEST },
       {
         type: MANAGER_PROFILE_DATA_SUCCESS,
-        data: processedResponseData
+        data: managerProfileMock
       }
     ]);
   });

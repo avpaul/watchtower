@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import { TTLDashboardMain } from '../TTLDasboard';
+import TTLDashboardMain from '../TTLDasboard';
 import TTLDasboard from '..';
 
 describe('<TLLDasboard  /> tests', () => {
@@ -29,10 +29,7 @@ describe('<TLLDasboard  /> tests', () => {
 
   it('renders without crashing', () => {
     const props = {
-      getTtlProjects: jest.fn(),
-      ttlProjects: {
-        projects: {}
-      },
+      fetchManagerProfile: jest.fn(),
       user: {
         email: 'test@mail.com'
       }
@@ -67,10 +64,7 @@ describe('<TLLDasboard  /> developers tab route tests', () => {
 
   it('renders without crashing', () => {
     const props = {
-      getTtlProjects: jest.fn(),
-      ttlProjects: {
-        projects: {}
-      },
+      fetchManagerProfile: jest.fn(),
       user: {
         email: 'test@mail.com'
       }

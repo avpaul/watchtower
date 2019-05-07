@@ -161,4 +161,12 @@ export default {
     loading: false,
     error: null
   },
+  performanceData: {
+    loading: false,
+    data: {
+      today: {},
+      trend: {}
+    },
+    error: ''
+  }
 };

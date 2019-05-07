@@ -38,7 +38,6 @@ describe('OpsDashboardMain component', () => {
       ttls: fellowManagers.ttls,
       lfs: fellowManagers.lfs,
       getOpsSummary: jest.fn(),
-      fetchFellowsSummary: jest.fn,
       show: true,
       displayManagers: 'LF',
       managerFellowSortRatio: 'HIGH_TO_LOW',

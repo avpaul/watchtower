@@ -8,16 +8,8 @@ import FellowsSummaryContainer from '../../FellowsSummary';
 
 const setup = propOverrides => {
   const props = {
-    fetchFellowsSummary: jest.fn(),
-    getFellowCountHistory: jest.fn(),
-    getFellowSummaryOps: jest.fn(),
-    fellowsSummary: initialState.opsDashboard.fellowsSummary,
-    opsSummaryLoading: false,
-    fellowCountHistory: {
-      Total: 10,
-      D0A: 5,
-      D0B: 5
-    },
+    fetchPerformanceData: jest.fn(),
+    fellowsPerformanceData: initialState.performanceData,
     user: {
       name: 'Test User',
       picture: 'http://'

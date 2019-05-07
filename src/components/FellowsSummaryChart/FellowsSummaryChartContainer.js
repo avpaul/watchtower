@@ -1,15 +1,14 @@
 import { connect } from 'react-redux';
 import FellowsSummaryChart from './FellowsSummaryChart';
-import { fetchFellowsSummaryOps } from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
+import fetchPerformanceData from '../../redux/actionCreators/performanceActions';
 
-export const mapStateToProps = ({ opsSummary, opsDashboard }) => ({
-  opsSummaryLoading: opsSummary.loading,
-  fellowsSummary: opsDashboard.fellowsSummary
+export const mapStateToProps = ({ performanceData }) => ({
+  fellowsPerformanceData: performanceData
 });
 
 export default connect(
   mapStateToProps,
   {
-    getFellowSummaryOps: fetchFellowsSummaryOps
+    fetchPerformanceData
   }
 )(FellowsSummaryChart);

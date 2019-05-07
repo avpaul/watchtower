@@ -13,16 +13,8 @@ describe('ProjectsSummaryChartContainer', () => {
   });
 
   it('should map dispatch to props', () => {
-    const state = {
-      manager: {
-        loading: false,
-        data: [],
-        error: null
-      }
-    };
-
     const mockStore = configureStore();
-    const store = mockStore({ ...initialState, ...state });
+    const store = mockStore({ ...initialState });
     const wrapper = shallow(
       <ProjectsSummaryChartContainer
         store={store}
@@ -34,6 +26,6 @@ describe('ProjectsSummaryChartContainer', () => {
         }}
       />
     );
-    expect(wrapper.props().fetchManagerProfile).toBeDefined();
+    expect(wrapper.props().fetchPerformanceData).toBeDefined();
   });
 });
