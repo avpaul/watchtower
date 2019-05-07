@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import FeedbackDashboardPaginationWrapped, {
-  FeedbackDashboard
+  FeedbackDashboard,
+  PaginationWrapped
 } from '../FeedbackDashboard';
 import FeedbackDashboardTable from '../FeedbackDashboardTable';
 import feedbackArrayMock from '../../../__mocks__/feedbackSummary.json';
@@ -54,6 +55,12 @@ const setup = (mountComponent = false, propsOverrides = {}) => {
 };
 
 describe('Test Feedback Dashboard', () => {
+  it('should render the feedback pagination wrapped component', () => {
+    const paginatedWrapped = shallow(
+      <PaginationWrapped component={<FeedbackDashboard {...props} />} />
+    );
+    expect(paginatedWrapped).toMatchSnapshot();
+  });
   it('should render feedback dashboard without crashing', () => {
     const { feedbackDashboardWrapper } = setup(false, {
       user: { roles: 'WATCH_TOWER_LF' },
@@ -129,11 +136,6 @@ describe('Test Feedback Dashboard', () => {
       user: { roles: 'WATCH_TOWER_LF' },
       role: 'WATCH_TOWER_LF'
     });
-    const data = [
-      {
-        feedback: []
-      }
-    ];
     feedbackDashboardWrapper.setState({
       feedbackArray: feedbackArrayMock,
       filteredFeedbackData: feedbackArrayMock,
@@ -152,7 +154,6 @@ describe('Test Feedback Dashboard', () => {
     expect(feedbackDashboardWrapper.state('endDate')).toEqual(endDate);
     feedbackDashboardWrapper.instance().handleStartDateChange('2019-03-18');
     expect(feedbackDashboardWrapper.state('startDate')).toEqual('2019-03-18');
-    feedbackDashboardWrapper.instance().processFeedbackData(data);
   });
 
   it('renders FeedbackDashboard Table shallow rendering', () => {
@@ -175,14 +176,110 @@ describe('Test Feedback Dashboard', () => {
     feedbackDashboardWrapper.setState({
       feedbackArray: [
         { attribute: '' },
-        { attribute: 'data', name: 'Random name' }
+        {
+          attribute: 'data',
+          name: 'Random name',
+          fellow_id: '-LU5ayJwwvcPATT1akh5'
+        }
       ]
+    });
+    feedbackDashboardWrapper.setProps({
+      history: [],
+      fellowFeedback: jest.fn(),
+      paginationWrapper: {
+        ...mockPaginationWrapper,
+        state: {
+          ...mockPaginationWrapper.state,
+          paginatedData: [
+            {
+              attribute: '',
+              context: 'Hi Sinmiloluwa',
+              criteria: 'lms',
+              name: 'Sinmiloluwa Oloyede',
+              manager:
+                '{"staff_id":"-LU5ayJwwvcPATT1akh5","name":"Olaolu Akinsete","email":"olaolu.akinsete@andela.com","role":"TTL","manager_id":"-KXGy1MT1oimjQgFim8t"}',
+              recommendation: null,
+              fellow_id: '-LU5ayJwwvcPATT1akh5',
+              start_date: '2019-05-07 11:40:55'
+            },
+            {
+              attribute: '',
+              context: 'Hi Sinmiloluwa',
+              criteria: 'lms',
+              name: 'Sinmiloluwa Oloyede',
+              manager:
+                '{"staff_id":"-LU5ayJwwvcPATT1akh5","name":"Olaolu Akinsete","email":"olaolu.akinsete@andela.com","role":"TTL","manager_id":"-KXGy1MT1oimjQgFim8t"}',
+              recommendation: null,
+              fellow_id: '-LU5ayJwwvcPATT1akh5',
+              start_date: '2019-05-07 11:40:55'
+            }
+          ]
+        }
+      }
     });
     // create custom event
     const event = Object.assign(jest.fn(), {
       preventDefault: () => {},
       target: {
-        getAttribute: x => (x === 'data-key' ? 1 : 0)
+        getAttribute: x => (x === 'data-key' ? 1 : 0),
+        tagName: 'A'
+      }
+    });
+    feedbackDashboardWrapper.instance().handleViewClick(event);
+  });
+
+  it('calls the handleViewClick method when the image is clicked', () => {
+    const { feedbackDashboardWrapper } = setup();
+    feedbackDashboardWrapper.setState({
+      feedbackArray: [
+        { attribute: '' },
+        {
+          attribute: 'data',
+          name: 'Random name',
+          fellow_id: '-LU5ayJwwvcPATT1akh5'
+        }
+      ]
+    });
+    feedbackDashboardWrapper.setProps({
+      history: [],
+      fellowFeedback: jest.fn(),
+      paginationWrapper: {
+        ...mockPaginationWrapper,
+        state: {
+          ...mockPaginationWrapper.state,
+          paginatedData: [
+            {
+              attribute: '',
+              context: 'Hi Sinmiloluwa',
+              criteria: 'lms',
+              name: 'Sinmiloluwa Oloyede',
+              manager:
+                '{"staff_id":"-LU5ayJwwvcPATT1akh5","name":"Olaolu Akinsete","email":"olaolu.akinsete@andela.com","role":"TTL","manager_id":"-KXGy1MT1oimjQgFim8t"}',
+              recommendation: null,
+              fellow_id: '-LU5ayJwwvcPATT1akh5',
+              start_date: '2019-05-07 11:40:55'
+            },
+            {
+              attribute: '',
+              context: 'Hi Sinmiloluwa',
+              criteria: 'lms',
+              name: 'Sinmiloluwa Oloyede',
+              manager:
+                '{"staff_id":"-LU5ayJwwvcPATT1akh5","name":"Olaolu Akinsete","email":"olaolu.akinsete@andela.com","role":"TTL","manager_id":"-KXGy1MT1oimjQgFim8t"}',
+              recommendation: null,
+              fellow_id: '-LU5ayJwwvcPATT1akh5',
+              start_date: '2019-05-07 11:40:55'
+            }
+          ]
+        }
+      }
+    });
+    // create custom event
+    const event = Object.assign(jest.fn(), {
+      preventDefault: () => {},
+      target: {
+        parentElement: { getAttribute: x => (x === 'data-key' ? 1 : 0) },
+        tagName: 'IMG'
       }
     });
     feedbackDashboardWrapper.instance().handleViewClick(event);

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -41,25 +42,16 @@ export class FeedbackDashboard extends Component {
     getManagerFeedback().then(data => {
       if (!data.error) {
         let feedback = [];
-        const managersFeedback = data.managersFeedback.length
-          ? data.managersFeedback
-          : [];
         switch (true) {
-          case !!user.roles.WATCH_TOWER_EM:
-            feedback = this.processFeedbackData(managersFeedback);
-            break;
           case !!user.roles.WATCH_TOWER_SL:
-            feedback = this.processFeedbackData(managersFeedback);
+            feedback = data.managersFeedback;
             this.setState(state => ({
               isTicked: { ...state.isTicked, manager_email: 'All LFs' }
             }));
             break;
-          case !!user.roles.WATCH_TOWER_LF ||
-            !!user.roles.WATCH_TOWER_TTL ||
-            !!user.roles.WATCH_TOWER_OPS:
+          default:
             feedback = data.managersFeedback;
             break;
-          default:
         }
         this.updateInitialState(
           feedback.map((feedbackRecord, key) => ({
@@ -81,19 +73,6 @@ export class FeedbackDashboard extends Component {
       },
       () => paginationWrapper.updateData(feedback)
     );
-  };
-
-  /**
-   * @method updateState
-   * @param {Object} data - the data to be processed
-   * @description - This method updates the state with fellows from data
-   */
-  processFeedbackData = data => {
-    const feedback = [];
-    data.forEach(manager => {
-      feedback.push(...manager.feedback);
-    });
-    return feedback;
   };
 
   /**
@@ -199,18 +178,37 @@ export class FeedbackDashboard extends Component {
 
   handleViewClick = event => {
     event.preventDefault();
-    const { feedbackArray } = this.state;
-    const { history } = this.props;
-    const { fellowFeedback } = this.props;
-    const index = event.target.getAttribute('data-key');
+    let index;
+    const { tagName } = event.target;
+    if (tagName === 'A') {
+      index = event.target.getAttribute('data-key');
+    } else if (tagName === 'IMG') {
+      index = event.target.parentElement.getAttribute('data-key');
+    }
+    this.getFellowFeedback(index);
+  };
+
+  getFellowFeedback = index => {
+    const { history, fellowFeedback, paginationWrapper } = this.props;
     const {
       attribute,
       context,
       criteria,
       name,
       recommendation,
-      manager
-    } = feedbackArray[index];
+      manager,
+      fellow_id,
+      start_date
+    } = paginationWrapper.state.paginatedData[index];
+
+    const { feedbackArray } = this.state;
+    const feedbackDates = [];
+    feedbackArray.forEach(element => {
+      if (element.fellow_id === fellow_id) {
+        feedbackDates.push(element.start_date);
+      }
+    });
+
     const fellowDetails = {
       Attribute: attribute,
       Context: context,
@@ -218,7 +216,9 @@ export class FeedbackDashboard extends Component {
       name,
       Recommendation: recommendation,
       Manager: manager,
-      index
+      index,
+      Instances: feedbackDates,
+      startDate: start_date
     };
     fellowFeedback(fellowDetails);
     history.push(`/feedback/${name.split(' ').join('.')}`);
@@ -380,7 +380,7 @@ FeedbackDashboard.propTypes = {
   fellowFeedback: PropTypes.func.isRequired
 };
 
-const PaginationWrapped = props => (
+export const PaginationWrapped = props => (
   <PaginationFrontendWrapper component={<FeedbackDashboard {...props} />} />
 );
 

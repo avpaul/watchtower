@@ -4,21 +4,25 @@ exports[`Pre pip notification form renders to match shapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PrePipNotificationOutline
+    Instances={
+        Array [
+            "2018-10-29 14:34:03",
+            "2018-10-30 14:34:03",
+          ]
+    }
     fellowFeedback={
         Object {
             "Attribute": null,
             "Context": "Hi Sinmiloluwa",
             "Criteria": "lms",
-            "Manager": Object {
-              "email": "trust.birungi@andela.com",
-              "name": "Trust Birungi",
-            },
+            "Manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Olaolu Akinsete\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
             "Recommendation": null,
             "index": "0",
             "name": "Sinmiloluwa Oloyede",
           }
     }
     serialNumber={0}
+    startDate="2018-10-29 14:34:03"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -137,11 +141,10 @@ ShallowWrapper {
         <p
           className="prepipHtml"
 >
-          Please note that this is the 
-          <b>
-                    insert number instance
-          </b>
-           of feedback you have received since the performance issue was observed. In
+          Please note that this is the
+           
+          0th 
+          feedback you have received since the performance issue was observed. In
           order to meet the Program advancement standard of &gt;=1 on all DevPulse attributes, you may need to exceed expectation in these areas within the coming weeks.
 </p>,
         <p
@@ -156,7 +159,7 @@ ShallowWrapper {
 </p>,
         <p>
           <b>
-                    Trust Birungi
+                    Olaolu Akinsete
                     , Manager
           </b>
 </p>,
@@ -901,30 +904,20 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Please note that this is the ",
-            <b>
-              insert number instance
-</b>,
-            " of feedback you have received since the performance issue was observed. In",
+            "Please note that this is the",
+            " ",
+            "0th ",
+            "feedback you have received since the performance issue was observed. In",
             "order to meet the Program advancement standard of >=1 on all DevPulse attributes, you may need to exceed expectation in these areas within the coming weeks.",
           ],
           "className": "prepipHtml",
         },
         "ref": null,
         "rendered": Array [
-          "Please note that this is the ",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "insert number instance",
-            },
-            "ref": null,
-            "rendered": "insert number instance",
-            "type": "b",
-          },
-          " of feedback you have received since the performance issue was observed. In",
+          "Please note that this is the",
+          " ",
+          "0th ",
+          "feedback you have received since the performance issue was observed. In",
           "order to meet the Program advancement standard of >=1 on all DevPulse attributes, you may need to exceed expectation in these areas within the coming weeks.",
         ],
         "type": "p",
@@ -959,7 +952,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <b>
-            Trust Birungi
+            Olaolu Akinsete
             , Manager
 </b>,
         },
@@ -970,13 +963,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Trust Birungi",
+              "Olaolu Akinsete",
               ", Manager",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Trust Birungi",
+            "Olaolu Akinsete",
             ", Manager",
           ],
           "type": "b",
@@ -1096,11 +1089,10 @@ ShallowWrapper {
           <p
             className="prepipHtml"
 >
-            Please note that this is the 
-            <b>
-                        insert number instance
-            </b>
-             of feedback you have received since the performance issue was observed. In
+            Please note that this is the
+             
+            0th 
+            feedback you have received since the performance issue was observed. In
             order to meet the Program advancement standard of &gt;=1 on all DevPulse attributes, you may need to exceed expectation in these areas within the coming weeks.
 </p>,
           <p
@@ -1115,7 +1107,7 @@ ShallowWrapper {
 </p>,
           <p>
             <b>
-                        Trust Birungi
+                        Olaolu Akinsete
                         , Manager
             </b>
 </p>,
@@ -1860,30 +1852,20 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Please note that this is the ",
-              <b>
-                insert number instance
-</b>,
-              " of feedback you have received since the performance issue was observed. In",
+              "Please note that this is the",
+              " ",
+              "0th ",
+              "feedback you have received since the performance issue was observed. In",
               "order to meet the Program advancement standard of >=1 on all DevPulse attributes, you may need to exceed expectation in these areas within the coming weeks.",
             ],
             "className": "prepipHtml",
           },
           "ref": null,
           "rendered": Array [
-            "Please note that this is the ",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "insert number instance",
-              },
-              "ref": null,
-              "rendered": "insert number instance",
-              "type": "b",
-            },
-            " of feedback you have received since the performance issue was observed. In",
+            "Please note that this is the",
+            " ",
+            "0th ",
+            "feedback you have received since the performance issue was observed. In",
             "order to meet the Program advancement standard of >=1 on all DevPulse attributes, you may need to exceed expectation in these areas within the coming weeks.",
           ],
           "type": "p",
@@ -1918,7 +1900,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <b>
-              Trust Birungi
+              Olaolu Akinsete
               , Manager
 </b>,
           },
@@ -1929,13 +1911,13 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Trust Birungi",
+                "Olaolu Akinsete",
                 ", Manager",
               ],
             },
             "ref": null,
             "rendered": Array [
-              "Trust Birungi",
+              "Olaolu Akinsete",
               ", Manager",
             ],
             "type": "b",
