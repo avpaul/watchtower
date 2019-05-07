@@ -7,7 +7,7 @@ import fellowsProgressService from '../fellowsProgressService';
 describe('fellowsProgressService', () => {
   const mock = new MockAdapter(axios);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/fellows/cohorts?location=all`;
+  const baseURL = `${serverURL}/api/v2/fellows/filter`;
 
   beforeAll(() => {
     const user = {
@@ -27,6 +27,13 @@ describe('fellowsProgressService', () => {
 
   afterEach(() => {
     mock.reset();
+  });
+
+  it('fetches fellows progress', async () => {
+    const data = {};
+    mock.onGet(`${baseURL}`).reply(200, []);
+    const response = await fellowsProgressService.fetchFellowsProgress(baseURL);
+    expect(response).toEqual(data);
   });
 
   it('returns an error when request fails', async () => {

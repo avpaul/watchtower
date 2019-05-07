@@ -1,7 +1,6 @@
 import errorHandler from '../../services/errorHandler';
 import * as types from '../constants/fellowProgressTypes';
 import fellowsProgressService from '../../services/fellowsProgressService';
-import { getFellows } from '../../services/engineeringManagerService';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
@@ -39,16 +38,6 @@ const getFellowProgress = ({
     .then(data => {
       dispatch(loadFellowProgressSuccess(data || { D0A: [], D0B: [] }));
     })
-    .catch(error => dispatch(loadFellowProgressFailure(error)));
-};
-
-export const getEmFellowsProgress = ({
-  ttl = 'all',
-  location = 'all'
-}) => dispatch => {
-  const url = `${serverURL}/api/v1/engineeringmanagers/fellows`;
-  return getFellows({ url, ttl, location })
-    .then(data => dispatch(loadFellowProgressSuccess(data)))
     .catch(error => dispatch(loadFellowProgressFailure(error)));
 };
 

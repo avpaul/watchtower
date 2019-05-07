@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const groupByLevel = cohorts => {
+export const groupByLevel = cohorts => {
   const levelGroups = {};
 
   cohorts.forEach((cohort) => {
@@ -21,4 +21,4 @@ const fetchFellowsProgress = url => axios
       throw error;
     });
 
-export default { fetchFellowsProgress };
+export default { fetchFellowsProgress , groupByLevel };
