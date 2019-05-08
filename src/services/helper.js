@@ -6,6 +6,20 @@ export const splitDate = (date = '2018-10-29 14:34:03') => {
 };
 
 /**
+ * function to get date and return in format "29/10/2018"
+ * @function {@param}
+ */
+export const getDate = (date = '2018-10-29 14:34:03') => {
+  const fullDate = date.split(' ', 1);
+  const splittedDate = fullDate[0].split('-');
+  const year = splittedDate[0];
+  const month = splittedDate[1];
+  const day = splittedDate[2];
+  const newDate = `${day}/${month}/${year}`;
+  return newDate;
+};
+
+/**
  * function to compute the current date
  * @function {@param}
  */
@@ -57,6 +71,25 @@ export const GetMonth = _date => {
     'December'
   ];
   return `${monthNames[mm - 1]} ${dd}`;
+};
+
+/**
+ * function to get any other date and return the day of the week in words
+ * @function {@param}
+ */
+export const getDayName = (dateString = '2018-10-29 14:34:03') => {
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ];
+  const date = new Date(dateString);
+  const dayName = days[date.getDay()];
+  return dayName;
 };
 
 export const calcNoOfWeeks = (start = 0, end = 0) => {

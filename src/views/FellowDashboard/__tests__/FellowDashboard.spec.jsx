@@ -4,11 +4,11 @@ import { MemoryRouter } from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import initialState from '../../../redux/reducers/initialState';
 import jsonwebtoken from 'jsonwebtoken';
 import Cookie from 'js-cookie';
 
 import FellowDashboard from '..';
+import initialState from '../../../redux/reducers/initialState';
 
 describe('FellowDashboard component', () => {
   let wrapper;
@@ -59,6 +59,25 @@ describe('FellowDashboard component', () => {
     const anotherWrapper = mount(
       <Provider store={store}>
         <MemoryRouter initialEntries={['/dashboard']}>
+          <FellowDashboard
+            user={{ ...user.UserInfo }}
+            role="Fellow"
+            location={location}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+    expect(anotherWrapper.length).toEqual(1);
+  });
+  it('renders fellow performance page', () => {
+    const mockStore = configureStore([thunk]);
+    const store = mockStore({ ...initialState });
+    const location = {
+      pathname: '/performance'
+    };
+    const anotherWrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={['/performance']}>
           <FellowDashboard
             user={{ ...user.UserInfo }}
             role="Fellow"

@@ -168,5 +168,15 @@ export default {
       trend: {}
     },
     error: ''
+  },
+  fellowPipFeedback: {
+    loading: false,
+    feedback: [],
+    error: null
+  },
+  fellowPrePipFeedback: {
+    loading: false,
+    feedback: [],
+    error: null
   }
 };

@@ -14,6 +14,7 @@ describe('Ops Summary Actions', () => {
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
   const baseURL = `${serverURL}/api/v2/managers/ops`;
   const managers = fellowManagers;
+  const averageFellowsPerLf = fellowManagers;
 
   beforeEach(() => {
     store.clearActions();
@@ -35,7 +36,9 @@ describe('Ops Summary Actions', () => {
   };
 
   it('dispatches MANAGER_REQUEST and MANAGER_SUCCESS on fetching managers', () => {
-    mock.onGet(`${baseURL}`).reply(200, { ...managers });
+    mock
+      .onGet(`${baseURL}`)
+      .reply(200, { ...{ data: { data: { averageFellowsPerLf } } } });
     const expectedActions = [
       { type: types.LOAD_OPS_SUMMARY_REQUEST },
       { type: types.LOAD_OPS_SUMMARY_SUCCESS, data: managers }
