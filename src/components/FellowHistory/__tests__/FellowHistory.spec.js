@@ -14,7 +14,8 @@ describe('Fellow History Container', () => {
       firstName: 'Kingsley',
       lastName: 'Obot'
     },
-    fellow_id: '-LQcqbQzyNpIlfJreeiZ'
+    fellow_id: '-LQcqbQzyNpIlfJreeiZ',
+    overall_status: 'offTrack'
   };
 
   const fellowDetails = {
@@ -221,6 +222,18 @@ describe('Fellow History Container', () => {
     const instance = wrapper.instance();
     instance.handleCardClick(event);
     expect(wrapper.state().showDevpulseTable).toBe(true);
+  });
+
+  it('should return empty div if no fellows exist', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ fellow: false });
+    expect(wrapper.state().fellow).toBe(false);
+    wrapper.instance().loadPipActivationForm();
+  });
+
+  it('should trigger component update', () => {
+    const { wrapper } = setup();
+    wrapper.setState({ updated: false });
   });
 
   it('sets showDevpulseTable state to false and showLmsTable to true state when the handleCardClick function is called', () => {

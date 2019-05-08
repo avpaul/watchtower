@@ -16,4 +16,24 @@ describe('tests the project card', () => {
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
+  it('renders loading with empty fellow details', () => {
+    const props = {
+      data: {
+        fellow: { details: {} },
+        loading: false
+      }
+    };
+    wrapper = shallow(<ProjectCard {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('renders correctly with fellow details', () => {
+    const props = {
+      data: {
+        fellow: { details: { email: 'john.james@andela.com' } },
+        loading: false
+      }
+    };
+    wrapper = shallow(<ProjectCard {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

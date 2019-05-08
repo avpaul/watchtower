@@ -7,15 +7,11 @@ import {
 } from '../constants/fellowUnreadNotifications';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-const getFellowUnreadNotification = email => dispatch => {
+const getFellowUnreadNotification = () => dispatch => {
   dispatch({ type: LOAD_UNREAD_NOTIFICATION_REQUEST });
-  const emailAdd =
-    email === 'wt-test-fellow@andela.com'
-      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
-      : email;
-  const url = `${serverURL}/api/v1/notifications?filter=unread`;
+  const url = `${serverURL}/api/v2/notifications?filter=unread`;
 
-  return axios.get(url, { headers: { email: emailAdd } }).then(
+  return axios.get(url).then(
     response =>
       dispatch({
         type: LOAD_UNREAD_NOTIFICATION_SUCCESS,

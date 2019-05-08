@@ -164,3 +164,639 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`tests the project card renders correctly with fellow details 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProjectCard
+    data={
+        Object {
+            "fellow": Object {
+              "details": Object {
+                "email": "john.james@andela.com",
+              },
+            },
+            "loading": false,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="my-project"
+>
+          MY PROJECT
+</div>,
+        <div
+          className="card-project"
+          id="fellow-undefined"
+          role="button"
+          tabIndex="0"
+>
+          <Unknown>
+                    <RenderItem
+                              title="Project Name"
+                    />
+                    <RenderItem
+                              title="LF"
+                    />
+                    <RenderItem
+                              title="PM"
+                    >
+                              --
+                    </RenderItem>
+          </Unknown>
+</div>,
+      ],
+      "className": "project",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "MY PROJECT",
+          "className": "my-project",
+        },
+        "ref": null,
+        "rendered": "MY PROJECT",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Unknown>
+            <RenderItem
+                        title="Project Name"
+            />
+            <RenderItem
+                        title="LF"
+            />
+            <RenderItem
+                        title="PM"
+            >
+                        --
+            </RenderItem>
+</Unknown>,
+          "className": "card-project",
+          "id": "fellow-undefined",
+          "role": "button",
+          "tabIndex": "0",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RenderItem
+                title="Project Name"
+/>,
+              <RenderItem
+                title="LF"
+/>,
+              <RenderItem
+                title="PM"
+>
+                --
+</RenderItem>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "",
+                "title": "Project Name",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "",
+                "title": "LF",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "--",
+                "title": "PM",
+              },
+              "ref": null,
+              "rendered": "--",
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="my-project"
+>
+            MY PROJECT
+</div>,
+          <div
+            className="card-project"
+            id="fellow-undefined"
+            role="button"
+            tabIndex="0"
+>
+            <Unknown>
+                        <RenderItem
+                                    title="Project Name"
+                        />
+                        <RenderItem
+                                    title="LF"
+                        />
+                        <RenderItem
+                                    title="PM"
+                        >
+                                    --
+                        </RenderItem>
+            </Unknown>
+</div>,
+        ],
+        "className": "project",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MY PROJECT",
+            "className": "my-project",
+          },
+          "ref": null,
+          "rendered": "MY PROJECT",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Unknown>
+              <RenderItem
+                            title="Project Name"
+              />
+              <RenderItem
+                            title="LF"
+              />
+              <RenderItem
+                            title="PM"
+              >
+                            --
+              </RenderItem>
+</Unknown>,
+            "className": "card-project",
+            "id": "fellow-undefined",
+            "role": "button",
+            "tabIndex": "0",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <RenderItem
+                  title="Project Name"
+/>,
+                <RenderItem
+                  title="LF"
+/>,
+                <RenderItem
+                  title="PM"
+>
+                  --
+</RenderItem>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "",
+                  "title": "Project Name",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "",
+                  "title": "LF",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "--",
+                  "title": "PM",
+                },
+                "ref": null,
+                "rendered": "--",
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`tests the project card renders loading with empty fellow details 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProjectCard
+    data={
+        Object {
+            "fellow": Object {
+              "details": Object {},
+            },
+            "loading": false,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="my-project"
+>
+          MY PROJECT
+</div>,
+        <div
+          className="card-project"
+          id="fellow-undefined"
+          role="button"
+          tabIndex="0"
+>
+          <Unknown>
+                    <RenderItem
+                              title="Project Name"
+                    />
+                    <RenderItem
+                              title="LF"
+                    />
+                    <RenderItem
+                              title="PM"
+                    >
+                              --
+                    </RenderItem>
+          </Unknown>
+</div>,
+      ],
+      "className": "project",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "MY PROJECT",
+          "className": "my-project",
+        },
+        "ref": null,
+        "rendered": "MY PROJECT",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Unknown>
+            <RenderItem
+                        title="Project Name"
+            />
+            <RenderItem
+                        title="LF"
+            />
+            <RenderItem
+                        title="PM"
+            >
+                        --
+            </RenderItem>
+</Unknown>,
+          "className": "card-project",
+          "id": "fellow-undefined",
+          "role": "button",
+          "tabIndex": "0",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RenderItem
+                title="Project Name"
+/>,
+              <RenderItem
+                title="LF"
+/>,
+              <RenderItem
+                title="PM"
+>
+                --
+</RenderItem>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "",
+                "title": "Project Name",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "",
+                "title": "LF",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "--",
+                "title": "PM",
+              },
+              "ref": null,
+              "rendered": "--",
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="my-project"
+>
+            MY PROJECT
+</div>,
+          <div
+            className="card-project"
+            id="fellow-undefined"
+            role="button"
+            tabIndex="0"
+>
+            <Unknown>
+                        <RenderItem
+                                    title="Project Name"
+                        />
+                        <RenderItem
+                                    title="LF"
+                        />
+                        <RenderItem
+                                    title="PM"
+                        >
+                                    --
+                        </RenderItem>
+            </Unknown>
+</div>,
+        ],
+        "className": "project",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MY PROJECT",
+            "className": "my-project",
+          },
+          "ref": null,
+          "rendered": "MY PROJECT",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Unknown>
+              <RenderItem
+                            title="Project Name"
+              />
+              <RenderItem
+                            title="LF"
+              />
+              <RenderItem
+                            title="PM"
+              >
+                            --
+              </RenderItem>
+</Unknown>,
+            "className": "card-project",
+            "id": "fellow-undefined",
+            "role": "button",
+            "tabIndex": "0",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <RenderItem
+                  title="Project Name"
+/>,
+                <RenderItem
+                  title="LF"
+/>,
+                <RenderItem
+                  title="PM"
+>
+                  --
+</RenderItem>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "",
+                  "title": "Project Name",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "",
+                  "title": "LF",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "--",
+                  "title": "PM",
+                },
+                "ref": null,
+                "rendered": "--",
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

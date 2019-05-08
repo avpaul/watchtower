@@ -9,15 +9,12 @@ import OffTrackIcon from '../../static/OffTrack.svg';
 import OnTrackIcon from '../../static/OnTrack.svg';
 import { Modal } from '../Notifications/Modal';
 import { splitDate, groupedDate } from '../../services/helper';
-import getFellowNotification from '../../redux/actionCreators/fellowNotifications';
-import getFellowUnreadNotification from '../../redux/actionCreators/fellowNotificationsUnread';
-import getFellowReadNotification from '../../redux/actionCreators/fellowNotificationsRead';
+import getReadNotifications from '../../redux/actionCreators/getReadNotifications';
+import getUnreadNotifications from '../../redux/actionCreators/getUnreadNotifications';
+import markNotificationAsRead from '../../redux/actionCreators/markNotificationsAsRead';
 import renderArchiveHeader from '../Notifications/ArchiveHeader';
 import renderNotificationHeader from '../Notifications/NotificationHeader';
 import renderMessageHeader from '../Notifications/MessageHeader';
-import getLfNotifications from '../../redux/actionCreators/lfNotificationAction';
-import getTtlNotifications from '../../redux/actionCreators/ttlNotificationActions';
-import updateManagerNotification from '../../redux/actionCreators/managerNotificationReadActions';
 import FellowHeader from './FellowHeader';
 import ManagerHeader from './ManagerHeader';
 
@@ -72,10 +69,9 @@ export class Header extends Component {
     this.setState({ show: false });
   };
 
-  clearNotification = () => {
-    const { getReadNotification, user, getUnreadNotification } = this.props;
-    getReadNotification(user.email);
-    getUnreadNotification(user.email);
+  clearNotification = notificationId => {
+    const { markNotificationsAsRead, getUnreadNotification } = this.props;
+    markNotificationsAsRead(notificationId).then(() => getUnreadNotification());
   };
 
   handleMenuClick = event => {
@@ -89,11 +85,15 @@ export class Header extends Component {
   };
 
   handleClick = () => {
+    const { getNotification } = this.props;
     this.setState({ viewNotifications: false });
+    getNotification();
   };
 
   handleBack = () => {
+    const { getUnreadNotification } = this.props;
     this.setState({ viewNotifications: true });
+    getUnreadNotification();
   };
 
   renderModalHeader = () => {
@@ -129,22 +129,19 @@ export class Header extends Component {
    * @function {@param, @param}
    * @returns
    */
-  renderIcons = (notification, notifications) => {
+  renderIcons = notification => {
     const { viewNotifications } = this.state;
     const statusImage = {
       src: OffTrackIcon,
       alt: 'offTrack' || 'gteWk5OffTrack'
     };
-    const status = !Object.keys(notifications).length
-      ? ' '
-      : notification.data.status;
-    if (status === 'onTrack') {
+    if (notification.data.includes('on track')) {
       statusImage.src = OnTrackIcon;
       statusImage.alt = 'onTrack';
     }
     const message = !Object.keys(notification).length
       ? 'No new notifications yet'
-      : notification.data.message;
+      : notification.data;
     return (
       <div className="text-sizing">
         <img
@@ -158,7 +155,7 @@ export class Header extends Component {
               'MMM Do,YYYY - hh:mm a'
             )}
         <br />
-        {message}
+        {message.split('\\').join('')}
       </div>
     );
   };
@@ -189,15 +186,21 @@ export class Header extends Component {
               <span
                 className="right clear-cursor"
                 aria-hidden="true"
-                onClick={this.clearNotification}
+                onClick={() => this.clearNotification('all')}
               >
                 Clear All{' '}
               </span>
             </div>
             {ordered[key].map(notification => (
               <div key={notification.id} className="modal-text">
-                <div className="message-header">{renderMessageHeader()}</div>
-                <div>{this.renderIcons(notification, unreadnotifications)}</div>
+                <div
+                  className="message-header"
+                  onClick={() => this.clearNotification(notification.id)}
+                  role="presentation"
+                >
+                  {renderMessageHeader()}
+                </div>
+                <div>{this.renderIcons(notification)}</div>
               </div>
             ))}
           </div>
@@ -214,7 +217,7 @@ export class Header extends Component {
           className="modal-text text-sizing"
           key={arrayKey({ notification, index })}
         >
-          <div>{this.renderIcons(notification, notifications)}</div>
+          <div>{this.renderIcons(notification)}</div>
         </div>
       ))}
     </Modal>
@@ -232,19 +235,10 @@ export class Header extends Component {
     );
   };
 
-  clearManagerNotification = () => {
-    const { user, getTtlNotification } = this.props;
-    getTtlNotification(user.email);
-  };
-
   renderNotificationIcon = trackStatus => (
     <div className="modal-text text-sizing">
       <img
-        src={
-          !trackStatus.includes('0 of your Fellows')
-            ? OnTrackIcon
-            : OffTrackIcon
-        }
+        src={trackStatus.includes('On Track') ? OnTrackIcon : OffTrackIcon}
         alt="Notification Archives"
         className="img-padding"
       />
@@ -260,22 +254,16 @@ export class Header extends Component {
         </div>
       );
     }
-
-    const { id } = notification;
-    const { updateNotificationAsRead } = this.props;
-    const { onTrack, offTrack, pip } = notification.manager;
-    updateNotificationAsRead(id);
+    const { onTrack, offTrack, pip } = JSON.parse(notification.data);
     return (
       <div>
         <div className="message-body">
           <div className="message-date" key="date here">
-            <span className="left">
-              {groupedDate(notification.createdAt.date)}
-            </span>
+            <span className="left">{groupedDate(notification.created_at)}</span>
             <span
               className="right clear-cursor"
               aria-hidden="true"
-              onClick={this.clearManagerNotification}
+              onClick={() => this.clearNotification(notification.id)}
             >
               Clear All{' '}
             </span>
@@ -289,14 +277,12 @@ export class Header extends Component {
   };
 
   managerArchiveModal = notification => {
-    if (notification.readAt) {
-      const { onTrack, offTrack, pip } = notification.manager;
+    if (notification.created_at) {
+      const { onTrack, offTrack, pip } = JSON.parse(notification.data);
       return (
         <div>
           <div className="message-date" key="date here">
-            <span className="left">
-              {groupedDate(notification.readAt.date)}
-            </span>
+            <span className="left">{groupedDate(notification.created_at)}</span>
           </div>
           {this.renderNotificationIcon(onTrack)}
           {this.renderNotificationIcon(offTrack)}
@@ -323,8 +309,7 @@ export class Header extends Component {
       'managerArchiveModal'
     );
 
-  displayNotificationModal = (show, notification) => {
-    const unreadNotifications = notification.filter(notif => !notif.readAt);
+  displayNotificationModal = (show, unreadNotifications) => {
     if (!unreadNotifications.length) {
       return (
         <Modal show={show} handleClose={this.hideModal}>
@@ -341,12 +326,13 @@ export class Header extends Component {
     );
   };
 
-  renderManagerModal = notification => {
+  renderManagerModal = (notification, unreadNotifications) => {
     const { show, viewNotifications } = this.state;
 
     return (
       <div>
-        {viewNotifications && this.displayNotificationModal(show, notification)}
+        {viewNotifications &&
+          this.displayNotificationModal(show, unreadNotifications)}
         {!viewNotifications &&
           this.renderManagerArchivesModal(show, notification)}
       </div>
@@ -354,23 +340,18 @@ export class Header extends Component {
   };
 
   switchNotificationsType = role => {
-    const {
-      user,
-      getNotification,
-      getUnreadNotification,
-      getLfNotification,
-      getTtlNotification
-    } = this.props;
+    const { getUnreadNotification } = this.props;
     switch (role) {
       case 'Fellow':
-        getNotification(user.email);
-        getUnreadNotification(user.email);
+        getUnreadNotification();
         break;
       case 'WATCH_TOWER_LF':
-        getLfNotification(user.email);
+        getUnreadNotification();
         break;
       case 'WATCH_TOWER_TTL':
-        getTtlNotification(user.email);
+      case 'WATCH_TOWER_EM':
+      case 'WATCH_TOWER_SL':
+        getUnreadNotification();
         break;
       default:
         return null;
@@ -380,34 +361,21 @@ export class Header extends Component {
 
   switchHeader = userRole => {
     const { activeItems } = this.state;
-    const {
-      user,
-      role,
-      notifications,
-      unreadnotifications,
-      ttlNotification,
-      lfNotification
-    } = this.props;
-    const managerNotification = !ttlNotification
-      ? lfNotification
-      : ttlNotification;
-    const unreadManagerNotification = managerNotification.filter(
-      notif => !notif.readAt
-    );
+    const { user, role, notifications, unreadnotifications } = this.props;
 
     switch (userRole) {
       case 'WATCH_TOWER_LF':
       case 'WATCH_TOWER_TTL':
+      case 'WATCH_TOWER_EM':
+      case 'WATCH_TOWER_SL':
         return (
           <ManagerHeader
             renderManagerModal={this.renderManagerModal}
             showModal={this.showModal}
             handleMenuClick={this.handleMenuClick}
             activeItems={activeItems}
-            notifications={
-              userRole === 'WATCH_TOWER_TTL' ? ttlNotification : lfNotification
-            }
-            unreadnotifications={unreadManagerNotification || []}
+            notifications={notifications}
+            unreadnotifications={unreadnotifications || []}
             user={user}
             role={role}
           />
@@ -442,31 +410,21 @@ Header.propTypes = {
   role: PropTypes.string.isRequired,
   getNotification: PropTypes.func.isRequired,
   getUnreadNotification: PropTypes.func.isRequired,
-  getReadNotification: PropTypes.func.isRequired,
+  markNotificationsAsRead: PropTypes.func.isRequired,
   notifications: PropTypes.instanceOf(Array).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
-  readnotifications: PropTypes.shape({}).isRequired,
-  getTtlNotification: PropTypes.func.isRequired,
-  updateNotificationAsRead: PropTypes.func.isRequired,
-  getLfNotification: PropTypes.func.isRequired,
-  ttlNotification: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  lfNotification: PropTypes.arrayOf(PropTypes.shape()).isRequired
+  readnotifications: PropTypes.shape({}).isRequired
 };
 const mapStateToProps = state => ({
   notifications: state.notification.notification,
   unreadnotifications: state.unreadnotification.unreadnotification,
-  readnotifications: state.readnotification.readnotification,
-  ttlNotification: state.ttlNotification.ttlNotification,
-  lfNotification: state.lfNotification.lfNotification
+  readnotifications: state.readnotification.readnotification
 });
-export const HeaderConnected = connect(
+export default connect(
   mapStateToProps,
   {
-    getNotification: getFellowNotification,
-    getUnreadNotification: getFellowUnreadNotification,
-    getReadNotification: getFellowReadNotification,
-    getLfNotification: getLfNotifications,
-    getTtlNotification: getTtlNotifications,
-    updateNotificationAsRead: updateManagerNotification
+    getNotification: getReadNotifications,
+    getUnreadNotification: getUnreadNotifications,
+    markNotificationsAsRead: markNotificationAsRead
   }
 )(Header);

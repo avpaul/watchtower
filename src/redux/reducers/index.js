@@ -15,8 +15,6 @@ import fellowUnreadNotificationReducer from './fellowUnreadNotificationReducer';
 import fellowReadNotificationReducer from './fellowReadNotificationReducer';
 import fellowLmsSubmissionsReducer from './fellowLmsSubmissionsReducer';
 import emsSimsLeadsReducers from './emsSimsLeadsReducers';
-import lfNotificationReducer from './lfNotificationReducer';
-import ttlNotificationReducer from './ttlNotificationReducer';
 import updateManagerNotification from './managerNotificationReducer';
 import managerFellowsSummary from './managerFellowsSummaryReducer';
 import managersFeedbackReducer from './managerFeedbackReducer';
@@ -42,8 +40,6 @@ const rootReducer = combineReducers({
   fellowLmsSubmissions: fellowLmsSubmissionsReducer,
   fellowsSummary,
   engineeringManagerSimsLeads: emsSimsLeadsReducers,
-  lfNotification: lfNotificationReducer,
-  ttlNotification: ttlNotificationReducer,
   updateManagerNotification,
   managerFellowsSummary,
   feedback: managersFeedbackReducer,

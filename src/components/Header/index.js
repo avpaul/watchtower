@@ -1,3 +1,3 @@
-import { HeaderConnected } from './Header';
+import HeaderConnected from './Header';
 
 export default HeaderConnected;

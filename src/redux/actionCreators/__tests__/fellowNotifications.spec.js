@@ -7,14 +7,14 @@ import {
   LOAD_NOTIFICATION_SUCCESS,
   LOAD_NOTIFICATION_FAILURE
 } from '../../constants/fellowNotificationTypes';
-import getFellowNotification from '../fellowNotifications';
+import getReadNotifications from '../getReadNotifications';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 describe('Fellow Notification Actions', () => {
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
-  const url = `${serverURL}/api/v1/notifications`;
+  const url = `${serverURL}/api/v2/notifications?filter=read`;
   const store = mockStore({
     loading: false,
     notification: {},
@@ -36,7 +36,7 @@ describe('Fellow Notification Actions', () => {
         error: 'Request failed with status code 404'
       }
     ];
-    return store.dispatch(getFellowNotification({ email: '' })).then(() => {
+    return store.dispatch(getReadNotifications({ email: '' })).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });
@@ -55,7 +55,7 @@ describe('Fellow Notification Actions', () => {
         ...data
       }
     ];
-    return store.dispatch(getFellowNotification('trust')).then(() => {
+    return store.dispatch(getReadNotifications('trust')).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });

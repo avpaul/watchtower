@@ -7,14 +7,10 @@ import {
 } from '../constants/fellowNotificationTypes';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-const getFellowNotification = email => dispatch => {
+const getReadNotifications = () => dispatch => {
   dispatch({ type: LOAD_NOTIFICATION_REQUEST });
-  const emailAdd =
-    email === 'wt-test-fellow@andela.com'
-      ? process.env.REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
-      : email;
-  const url = `${serverURL}/api/v1/notifications`;
-  return axios.get(url, { headers: { email: emailAdd } }).then(
+  const url = `${serverURL}/api/v2/notifications?filter=read`;
+  return axios.get(url).then(
     response =>
       dispatch({
         type: LOAD_NOTIFICATION_SUCCESS,
@@ -28,4 +24,4 @@ const getFellowNotification = email => dispatch => {
   );
 };
 
-export default getFellowNotification;
+export default getReadNotifications;
