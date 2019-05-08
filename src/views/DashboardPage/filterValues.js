@@ -100,13 +100,14 @@ export const defaultState = table => {
  * @param {string} search The string used to search through the fellow's details
  * @returns {boolean} Returns true if string is found amongst the fellow's details
  */
-const searchFellow = (fellow, search) =>
-  Object.keys(fellow).find(key => {
-    if (typeof fellow[key] === 'string') return fellow[key].search(search) >= 0;
-    if (typeof fellow[key] === 'number')
-      return fellow[key] === parseInt(search, 10);
-    return false;
-  });
+const searchFellow = (fellow, search) => {
+  const searchValue = search.toLowerCase();
+  return ['managerName', 'name', 'level'].find(key =>
+    fellow[key] && fellow[key].toLowerCase().search(searchValue) >= 0
+      ? fellow
+      : null
+  );
+};
 
 const checkFellowLevel = (fellow, level) => fellow.level.search(level) >= 0;
 
