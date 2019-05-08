@@ -6,7 +6,6 @@ import fellowCountHistoryReducer from './fellowCountHistoryReducer';
 import opsSummaryReducer from './opsSummaryReducer';
 import visibilityFilter from './visibilityFilter';
 import fellowProgressReducer from './fellowProgressReducer';
-import opsDashboardReducer from './opsDashBoardReducer';
 import managerFellowReducer from './managerFellows';
 import managerProfileReducer from './managerProfileReducer';
 import fellowProfileDataReducer from './fellowProfileDataReducer';
@@ -24,6 +23,7 @@ import managersFeedbackReducer from './managerFeedbackReducer';
 import engineersOnpip from './activatePipReducer';
 import fellowDevPulseReducer from './fellowDevPulseReducer';
 import fellowFeedbackReducer from './fellowFeedbackReducer';
+import performanceData from './performanceDataReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -32,7 +32,6 @@ const rootReducer = combineReducers({
   visibilityFilter,
   opsSummary: opsSummaryReducer,
   fellowsProgress: fellowProgressReducer,
-  opsDashboard: opsDashboardReducer,
   managerFellows: managerFellowReducer,
   manager: managerProfileReducer,
   fellow: fellowProfileDataReducer,
@@ -49,7 +48,8 @@ const rootReducer = combineReducers({
   managerFellowsSummary,
   feedback: managersFeedbackReducer,
   fellowFeedback: fellowFeedbackReducer,
-  pipData: engineersOnpip
+  pipData: engineersOnpip,
+  performanceData
 });
 
 export default rootReducer;

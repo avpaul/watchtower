@@ -15,13 +15,12 @@ class ProjectsSummaryChart extends Component {
     super(props);
 
     this.handleCardClick = this.handleCardClick.bind(this);
-
     this.filterCardRefs = [];
   }
 
   componentDidMount() {
-    const { fetchManagerProfile } = this.props;
-    fetchManagerProfile();
+    const { fetchPerformanceData } = this.props;
+    fetchPerformanceData();
   }
 
   updateSelected = selected => this.setState({ selected });
@@ -29,12 +28,11 @@ class ProjectsSummaryChart extends Component {
   handleCardClick = event => {
     const currentCard = event.currentTarget.id;
     const {
-      manager: { data }
+      performanceData: {
+        data: { today }
+      }
     } = this.props;
-    if (!data.performance) return;
-
-    const { today } = data.performance;
-
+    if (!today) return;
     if (today.keys && !(currentCard in today.keys))
       this.setState({ showChart: true, fellowsSummaryFilter: currentCard });
   };
@@ -48,12 +46,10 @@ class ProjectsSummaryChart extends Component {
   updateFellowSummary = () => {
     const { selected } = this.state;
     const {
-      manager: {
-        data: { performance }
-      }
+      performanceData: { data }
     } = this.props;
 
-    return performance[selected.toLowerCase()].data;
+    return data[selected.toLowerCase()].data;
   };
 
   /**
@@ -89,7 +85,7 @@ class ProjectsSummaryChart extends Component {
 
   render() {
     const { fellowsSummaryFilter, showChart } = this.state;
-    const { user, manager } = this.props;
+    const { user, performanceData } = this.props;
 
     return (
       <div>
@@ -105,7 +101,7 @@ class ProjectsSummaryChart extends Component {
             data={this.updateFellowSummary()}
             fellowChartTooltipClass={this.getCurrentClass()}
             user={user}
-            loading={manager.loading}
+            loading={performanceData.loading}
           />
         )}
       </div>
@@ -114,9 +110,9 @@ class ProjectsSummaryChart extends Component {
 }
 
 ProjectsSummaryChart.propTypes = {
-  fetchManagerProfile: PropTypes.func.isRequired,
+  fetchPerformanceData: PropTypes.func.isRequired,
   user: PropTypes.instanceOf(Object).isRequired,
-  manager: PropTypes.instanceOf(Object).isRequired
+  performanceData: PropTypes.instanceOf(Object).isRequired
 };
 
 export default ProjectsSummaryChart;

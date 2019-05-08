@@ -5,30 +5,17 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FellowsSummaryChart
     displayByRole={null}
-    fellowCountHistory={
-        Object {
-            "D0A": 5,
-            "D0B": 5,
-            "Total": 10,
-          }
-    }
-    fellowsSummary={
+    fellowsPerformanceData={
         Object {
             "data": Object {
-              "D0AFellowsCount": 0,
-              "D0BFellowsCount": 0,
-              "allFellowsCount": 0,
+              "today": Object {},
+              "trend": Object {},
             },
             "error": "",
-            "fellowsSummaryToday": Object {},
-            "fellowsSummaryTrend": Object {},
             "loading": false,
           }
     }
-    fetchFellowsSummary={[Function]}
-    getFellowCountHistory={[Function]}
-    getFellowSummaryOps={[Function]}
-    opsSummaryLoading={false}
+    fetchPerformanceData={[Function]}
     store={
         Object {
             "dispatch": [Function],

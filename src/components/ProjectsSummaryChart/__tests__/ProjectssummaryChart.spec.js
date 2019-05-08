@@ -10,15 +10,12 @@ import { formatPerformanceData } from '../../../utils';
 import managerProfileMock from '../../../__mocks__/managerProfile';
 
 const props = {
-  fetchManagerProfile: jest.fn(),
-  manager: {
+  fetchPerformanceData: jest.fn(),
+  performanceData: {
     loading: false,
     data: {
-      ...managerProfileMock,
-      performance: {
-        today: formatPerformanceData(managerProfileMock.performance.today),
-        trend: formatPerformanceData(managerProfileMock.performance.trend)
-      }
+      today: formatPerformanceData(managerProfileMock.performance.today),
+      trend: formatPerformanceData(managerProfileMock.performance.trend)
     }
   },
   user: {

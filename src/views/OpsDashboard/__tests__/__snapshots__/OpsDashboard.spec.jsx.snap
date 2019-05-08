@@ -7,7 +7,6 @@ ShallowWrapper {
     averageFellowsPerLf={22}
     averageFellowsPerTtl={20}
     displayManagers="LF"
-    fetchFellowsSummary={[Function]}
     getOpsSummary={[Function]}
     lfs={
         Array [

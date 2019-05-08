@@ -1,10 +1,15 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
 import FellowsSummaryChartContainer, {
   mapStateToProps
 } from '../FellowsSummaryChartContainer';
 import initialState from '../../../redux/reducers/initialState';
+import managerProfileMock from '../../../__mocks__/managerProfile';
+import { formatPerformanceData } from '../../../utils';
 
 describe('FellowsSummaryChartContainer', () => {
   it('should map state to props', () => {
@@ -14,47 +19,29 @@ describe('FellowsSummaryChartContainer', () => {
 
   it('should map dispatch to props', () => {
     const state = {
-      opsDashboard: {
-        fellowsSummary: {
-          loading: false,
-          fellowsSummaryToday: {},
-          fellowsSummaryTrend: {},
-          data: {
-            allFellowsCount: 0,
-            D0AFellowsCount: 0,
-            D0BFellowsCount: 0
-          },
-          error: ''
-        }
-      },
-      opsSummary: {
+      performanceData: {
+        loading: false,
         data: {
-          managers: {
-            ttls: [],
-            lfs: [],
-            averageFellowsPerTtl: 0,
-            averageFellowsPerLf: 0
-          },
-          fellowsCount: {
-            Total: 0
-          },
-          locations: []
-        },
-        loading: false
+          today: formatPerformanceData(managerProfileMock.performance.today),
+          trend: formatPerformanceData(managerProfileMock.performance.trend)
+        }
       }
     };
-    const mockStore = configureStore();
-    const store = mockStore(state);
-    const wrapper = shallow(
-      <FellowsSummaryChartContainer
-        store={store}
-        {...state}
-        user={{
-          name: 'Test User',
-          picture: 'http://'
-        }}
-      />
+
+    const mockStore = configureStore([thunk]);
+    const store = mockStore({ ...initialState, ...state });
+    const wrapper = mount(
+      <Provider store={store}>
+        <FellowsSummaryChartContainer
+          user={{
+            name: 'Test User',
+            picture: 'http://'
+          }}
+        />
+      </Provider>
     );
-    expect(wrapper.props().fellowsSummary).toBeDefined();
+    expect(
+      wrapper.find('FellowsSummaryChart').props().fellowsPerformanceData
+    ).toBeDefined();
   });
 });

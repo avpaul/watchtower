@@ -11,8 +11,8 @@ class FellowsSummaryChart extends Component {
   };
 
   componentDidMount() {
-    const { getFellowSummaryOps } = this.props;
-    getFellowSummaryOps();
+    const { fetchPerformanceData } = this.props;
+    fetchPerformanceData();
   }
 
   handleChartClose = () => this.setState({ showChart: false });
@@ -23,15 +23,17 @@ class FellowsSummaryChart extends Component {
   };
 
   updateFellowSummary = selected => {
-    const { fellowsSummary } = this.props;
-    return fellowsSummary[`fellowsSummary${selected}`];
+    const {
+      fellowsPerformanceData: { data }
+    } = this.props;
+    return data[`${selected.toLowerCase()}`];
   };
 
   updateSelected = selected => this.setState({ selected });
 
   render() {
     const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { displayByRole, user, fellowsSummary } = this.props;
+    const { displayByRole, user, fellowsPerformanceData } = this.props;
     const { data } = this.updateFellowSummary(selected);
 
     return (
@@ -47,7 +49,7 @@ class FellowsSummaryChart extends Component {
             updateSelected={this.updateSelected}
             data={data}
             user={user}
-            loading={fellowsSummary.loading}
+            loading={fellowsPerformanceData.loading}
           />
         )}
       </Fragment>
@@ -57,8 +59,8 @@ class FellowsSummaryChart extends Component {
 
 FellowsSummaryChart.propTypes = {
   displayByRole: PropTypes.shape({}),
-  fellowsSummary: PropTypes.shape([]).isRequired,
-  getFellowSummaryOps: PropTypes.func.isRequired,
+  fellowsPerformanceData: PropTypes.shape({}).isRequired,
+  fetchPerformanceData: PropTypes.func.isRequired,
   user: PropTypes.shape().isRequired
 };
 

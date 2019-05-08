@@ -3,7 +3,7 @@
 exports[`TTLDashboardContainer component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Component)
+  Symbol(enzyme.__unrendered__): <Connect(TTLDashboardMain)
     store={
         Object {
             "clearActions": [Function],
@@ -34,9 +34,9 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
-      "dispatch": [Function],
+      "fetchManagerProfile": [Function],
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -64,7 +64,6 @@ ShallowWrapper {
         },
         "unsubscribe": [Function],
       },
-      "ttlProjects": undefined,
       "user": Object {
         "email": "ty@andela.com",
         "roles": Object {
@@ -80,9 +79,9 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
-        "dispatch": [Function],
+        "fetchManagerProfile": [Function],
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
@@ -110,7 +109,6 @@ ShallowWrapper {
           },
           "unsubscribe": [Function],
         },
-        "ttlProjects": undefined,
         "user": Object {
           "email": "ty@andela.com",
           "roles": Object {
@@ -143,8 +141,4 @@ ShallowWrapper {
 }
 `;
 
-exports[`TTLDashboardContainer component should map state to props 1`] = `
-Object {
-  "ttlProjects": undefined,
-}
-`;
+exports[`TTLDashboardContainer component should map state to props 1`] = `Object {}`;

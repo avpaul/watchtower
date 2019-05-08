@@ -2,9 +2,12 @@
 
 exports[`ProjectsSummaryChartContainer should map state to props 1`] = `
 Object {
-  "manager": Object {
-    "data": Object {},
-    "error": null,
+  "performanceData": Object {
+    "data": Object {
+      "today": Object {},
+      "trend": Object {},
+    },
+    "error": "",
     "loading": false,
   },
 }
