@@ -335,7 +335,7 @@ ShallowWrapper {
                               <span
                                         className="mr-3"
                               >
-                                        Total Fellow (Filtered)
+                                        Total Fellows (Filtered)
                               </span>
                               <FilterButton
                                         clearFilters={[Function]}
@@ -422,7 +422,7 @@ ShallowWrapper {
                         <span
                                     className="mr-3"
                         >
-                                    Total Fellow (Filtered)
+                                    Total Fellows (Filtered)
                         </span>
                         <FilterButton
                                     clearFilters={[Function]}
@@ -503,7 +503,7 @@ ShallowWrapper {
                 <span
                                 className="mr-3"
                 >
-                                Total Fellow (Filtered)
+                                Total Fellows (Filtered)
                 </span>
                 <FilterButton
                                 clearFilters={[Function]}
@@ -683,7 +683,7 @@ ShallowWrapper {
                   <span
                     className="mr-3"
 >
-                    Total Fellow (Filtered)
+                    Total Fellows (Filtered)
 </span>,
                   <FilterButton
                     clearFilters={[Function]}
@@ -710,11 +710,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Total Fellow (Filtered)",
+                    "children": "Total Fellows (Filtered)",
                     "className": "mr-3",
                   },
                   "ref": null,
-                  "rendered": "Total Fellow (Filtered)",
+                  "rendered": "Total Fellows (Filtered)",
                   "type": "span",
                 },
                 Object {
@@ -830,7 +830,7 @@ ShallowWrapper {
                                     <span
                                                 className="mr-3"
                                     >
-                                                Total Fellow (Filtered)
+                                                Total Fellows (Filtered)
                                     </span>
                                     <FilterButton
                                                 clearFilters={[Function]}
@@ -917,7 +917,7 @@ ShallowWrapper {
                             <span
                                           className="mr-3"
                             >
-                                          Total Fellow (Filtered)
+                                          Total Fellows (Filtered)
                             </span>
                             <FilterButton
                                           clearFilters={[Function]}
@@ -998,7 +998,7 @@ ShallowWrapper {
                   <span
                                     className="mr-3"
                   >
-                                    Total Fellow (Filtered)
+                                    Total Fellows (Filtered)
                   </span>
                   <FilterButton
                                     clearFilters={[Function]}
@@ -1178,7 +1178,7 @@ ShallowWrapper {
                     <span
                       className="mr-3"
 >
-                      Total Fellow (Filtered)
+                      Total Fellows (Filtered)
 </span>,
                     <FilterButton
                       clearFilters={[Function]}
@@ -1205,11 +1205,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Total Fellow (Filtered)",
+                      "children": "Total Fellows (Filtered)",
                       "className": "mr-3",
                     },
                     "ref": null,
-                    "rendered": "Total Fellow (Filtered)",
+                    "rendered": "Total Fellows (Filtered)",
                     "type": "span",
                   },
                   Object {

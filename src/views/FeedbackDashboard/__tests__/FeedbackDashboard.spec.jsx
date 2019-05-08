@@ -19,12 +19,16 @@ const props = {
       managersFeedback: feedbackArrayMock
     })
   ),
+  fellowFeedback: jest.fn(),
   user: {
     roles: { WATCH_TOWER_OPS: '-l1ujhfhjbshwjrn' },
     email: 'wt-test-ops@andela.com'
   },
   currentRole: 'WATCH_TOWER_OPS',
-  role: 'WATCH_TOWER_OPS'
+  role: 'WATCH_TOWER_OPS',
+  history: {
+    push: jest.fn()
+  }
 };
 
 /**
@@ -154,18 +158,15 @@ describe('Test Feedback Dashboard', () => {
   it('renders FeedbackDashboard Table shallow rendering', () => {
     const { feedbackDashboardWrapper } = setup();
     feedbackDashboardWrapper.setState({
-      startDate: 1234564567,
-      endDate: 1467547453,
-      currentDate: 1234564567
+      startDate: '2019-03-18',
+      endDate: '2019-04-15',
+      currentDate: '2019-03-18'
     });
     expect(
-      feedbackDashboardWrapper.find(
-        <FeedbackDashboardTable
-          feedbackArray={feedbackArrayMock}
-          type="pip"
-          currentRole="WATCH_TOWER_OPS"
-        />
-      )
+      feedbackDashboardWrapper
+        .find(FeedbackDashboardTable)
+        .dive()
+        .find('Table')
     ).toBeDefined();
   });
 
@@ -176,10 +177,6 @@ describe('Test Feedback Dashboard', () => {
         { attribute: '' },
         { attribute: 'data', name: 'Random name' }
       ]
-    });
-    feedbackDashboardWrapper.setProps({
-      history: [],
-      fellowFeedback: jest.fn()
     });
     // create custom event
     const event = Object.assign(jest.fn(), {
@@ -200,19 +197,12 @@ describe('Test Feedback Dashboard', () => {
     );
     const { feedbackDashboardWrapper } = setup(false, props);
     expect(
-      feedbackDashboardWrapper.find(
-        <FeedbackDashboardTable
-          {...props}
-          feedbackArray={feedbackArrayMock}
-          type="pip"
-          currentRole="WATCH_TOWER_OPS"
-        />
-      )
+      feedbackDashboardWrapper
+        .find(FeedbackDashboardTable)
+        .dive()
+        .find('Table')
     ).toBeDefined();
-    expect(props.getManagerFeedback).toBeCalledWith(
-      props.user.roles,
-      props.user.email
-    );
+    expect(props.getManagerFeedback).toBeCalled();
   });
 
   it('should clear filtered table of fellows', () => {

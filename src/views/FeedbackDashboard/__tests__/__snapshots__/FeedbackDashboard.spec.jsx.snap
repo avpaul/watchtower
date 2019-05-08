@@ -5,7 +5,13 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
     currentRole="WATCH_TOWER_OPS"
+    fellowFeedback={[Function]}
     getManagerFeedback={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     paginationWrapper={
         Object {
             "handlePaginationPageChange": [Function],
@@ -2925,7 +2931,13 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
     currentRole="WATCH_TOWER_OPS"
+    fellowFeedback={[Function]}
     getManagerFeedback={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     paginationWrapper={
         Object {
             "handlePaginationPageChange": [Function],
@@ -5845,7 +5857,13 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FeedbackDashboard
     currentRole="WATCH_TOWER_OPS"
+    fellowFeedback={[Function]}
     getManagerFeedback={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     paginationWrapper={
         Object {
             "handlePaginationPageChange": [Function],

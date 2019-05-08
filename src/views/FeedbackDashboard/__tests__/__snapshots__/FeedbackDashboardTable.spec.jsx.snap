@@ -102,9 +102,7 @@ ShallowWrapper {
             <Cell
                         addedClass=""
                         title=""
-            >
-                        1
-            </Cell>
+            />
             <Cell
                         addedClass=""
                         title=""
@@ -135,12 +133,12 @@ ShallowWrapper {
             >
                         <Link
                                     className="feedback-share"
-                                    data-key={0}
+                                    data-key={undefined}
                                     onClick={undefined}
                                     replace={false}
                                     to={
                                                 Object {
-                                                            "dataKey": 0,
+                                                            "dataKey": undefined,
                                                             "pathname": "/feedback/Oluseyi.Anani",
                                                           }
                                     }
@@ -159,9 +157,7 @@ ShallowWrapper {
             <Cell
                         addedClass=""
                         title=""
-            >
-                        2
-            </Cell>
+            />
             <Cell
                         addedClass=""
                         title=""
@@ -192,12 +188,12 @@ ShallowWrapper {
             >
                         <Link
                                     className="feedback-share"
-                                    data-key={1}
+                                    data-key={undefined}
                                     onClick={undefined}
                                     replace={false}
                                     to={
                                                 Object {
-                                                            "dataKey": 1,
+                                                            "dataKey": undefined,
                                                             "pathname": "/feedback/Brian.Mboya",
                                                           }
                                     }
@@ -216,9 +212,7 @@ ShallowWrapper {
             <Cell
                         addedClass=""
                         title=""
-            >
-                        3
-            </Cell>
+            />
             <Cell
                         addedClass=""
                         title=""
@@ -249,12 +243,12 @@ ShallowWrapper {
             >
                         <Link
                                     className="feedback-share"
-                                    data-key={2}
+                                    data-key={undefined}
                                     onClick={undefined}
                                     replace={false}
                                     to={
                                                 Object {
-                                                            "dataKey": 2,
+                                                            "dataKey": undefined,
                                                             "pathname": "/feedback/Brian.Mboya",
                                                           }
                                     }
@@ -273,9 +267,7 @@ ShallowWrapper {
             <Cell
                         addedClass=""
                         title=""
-            >
-                        4
-            </Cell>
+            />
             <Cell
                         addedClass=""
                         title=""
@@ -306,12 +298,12 @@ ShallowWrapper {
             >
                         <Link
                                     className="feedback-share"
-                                    data-key={3}
+                                    data-key={undefined}
                                     onClick={undefined}
                                     replace={false}
                                     to={
                                                 Object {
-                                                            "dataKey": 3,
+                                                            "dataKey": undefined,
                                                             "pathname": "/feedback/Brian.Mboya",
                                                           }
                                     }
@@ -349,16 +341,14 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0",
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
             <Cell
               addedClass=""
               title=""
->
-              1
-</Cell>,
+/>,
             <Cell
               addedClass=""
               title=""
@@ -389,12 +379,12 @@ ShallowWrapper {
 >
               <Link
                             className="feedback-share"
-                            data-key={0}
+                            data-key={undefined}
                             onClick={undefined}
                             replace={false}
                             to={
                                           Object {
-                                                        "dataKey": 0,
+                                                        "dataKey": undefined,
                                                         "pathname": "/feedback/Oluseyi.Anani",
                                                       }
                             }
@@ -417,11 +407,11 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": 1,
+              "children": NaN,
               "title": "",
             },
             "ref": null,
-            "rendered": 1,
+            "rendered": NaN,
             "type": [Function],
           },
           Object {
@@ -484,12 +474,12 @@ ShallowWrapper {
               "addedClass": "",
               "children": <Link
                 className="feedback-share"
-                data-key={0}
+                data-key={undefined}
                 onClick={undefined}
                 replace={false}
                 to={
                                 Object {
-                                                "dataKey": 0,
+                                                "dataKey": undefined,
                                                 "pathname": "/feedback/Oluseyi.Anani",
                                               }
                 }
@@ -516,11 +506,11 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "data-key": 0,
+                "data-key": undefined,
                 "onClick": undefined,
                 "replace": false,
                 "to": Object {
-                  "dataKey": 0,
+                  "dataKey": undefined,
                   "pathname": "/feedback/Oluseyi.Anani",
                 },
               },
@@ -549,16 +539,14 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1",
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
             <Cell
               addedClass=""
               title=""
->
-              2
-</Cell>,
+/>,
             <Cell
               addedClass=""
               title=""
@@ -589,12 +577,12 @@ ShallowWrapper {
 >
               <Link
                             className="feedback-share"
-                            data-key={1}
+                            data-key={undefined}
                             onClick={undefined}
                             replace={false}
                             to={
                                           Object {
-                                                        "dataKey": 1,
+                                                        "dataKey": undefined,
                                                         "pathname": "/feedback/Brian.Mboya",
                                                       }
                             }
@@ -617,11 +605,11 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": 2,
+              "children": NaN,
               "title": "",
             },
             "ref": null,
-            "rendered": 2,
+            "rendered": NaN,
             "type": [Function],
           },
           Object {
@@ -684,12 +672,12 @@ ShallowWrapper {
               "addedClass": "",
               "children": <Link
                 className="feedback-share"
-                data-key={1}
+                data-key={undefined}
                 onClick={undefined}
                 replace={false}
                 to={
                                 Object {
-                                                "dataKey": 1,
+                                                "dataKey": undefined,
                                                 "pathname": "/feedback/Brian.Mboya",
                                               }
                 }
@@ -716,11 +704,11 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "data-key": 1,
+                "data-key": undefined,
                 "onClick": undefined,
                 "replace": false,
                 "to": Object {
-                  "dataKey": 1,
+                  "dataKey": undefined,
                   "pathname": "/feedback/Brian.Mboya",
                 },
               },
@@ -749,16 +737,14 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "2",
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
             <Cell
               addedClass=""
               title=""
->
-              3
-</Cell>,
+/>,
             <Cell
               addedClass=""
               title=""
@@ -789,12 +775,12 @@ ShallowWrapper {
 >
               <Link
                             className="feedback-share"
-                            data-key={2}
+                            data-key={undefined}
                             onClick={undefined}
                             replace={false}
                             to={
                                           Object {
-                                                        "dataKey": 2,
+                                                        "dataKey": undefined,
                                                         "pathname": "/feedback/Brian.Mboya",
                                                       }
                             }
@@ -817,11 +803,11 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": 3,
+              "children": NaN,
               "title": "",
             },
             "ref": null,
-            "rendered": 3,
+            "rendered": NaN,
             "type": [Function],
           },
           Object {
@@ -884,12 +870,12 @@ ShallowWrapper {
               "addedClass": "",
               "children": <Link
                 className="feedback-share"
-                data-key={2}
+                data-key={undefined}
                 onClick={undefined}
                 replace={false}
                 to={
                                 Object {
-                                                "dataKey": 2,
+                                                "dataKey": undefined,
                                                 "pathname": "/feedback/Brian.Mboya",
                                               }
                 }
@@ -916,11 +902,11 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "data-key": 2,
+                "data-key": undefined,
                 "onClick": undefined,
                 "replace": false,
                 "to": Object {
-                  "dataKey": 2,
+                  "dataKey": undefined,
                   "pathname": "/feedback/Brian.Mboya",
                 },
               },
@@ -949,16 +935,14 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "3",
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
             <Cell
               addedClass=""
               title=""
->
-              4
-</Cell>,
+/>,
             <Cell
               addedClass=""
               title=""
@@ -989,12 +973,12 @@ ShallowWrapper {
 >
               <Link
                             className="feedback-share"
-                            data-key={3}
+                            data-key={undefined}
                             onClick={undefined}
                             replace={false}
                             to={
                                           Object {
-                                                        "dataKey": 3,
+                                                        "dataKey": undefined,
                                                         "pathname": "/feedback/Brian.Mboya",
                                                       }
                             }
@@ -1017,11 +1001,11 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "addedClass": "",
-              "children": 4,
+              "children": NaN,
               "title": "",
             },
             "ref": null,
-            "rendered": 4,
+            "rendered": NaN,
             "type": [Function],
           },
           Object {
@@ -1084,12 +1068,12 @@ ShallowWrapper {
               "addedClass": "",
               "children": <Link
                 className="feedback-share"
-                data-key={3}
+                data-key={undefined}
                 onClick={undefined}
                 replace={false}
                 to={
                                 Object {
-                                                "dataKey": 3,
+                                                "dataKey": undefined,
                                                 "pathname": "/feedback/Brian.Mboya",
                                               }
                 }
@@ -1116,11 +1100,11 @@ ShallowWrapper {
 />,
                 ],
                 "className": "feedback-share",
-                "data-key": 3,
+                "data-key": undefined,
                 "onClick": undefined,
                 "replace": false,
                 "to": Object {
-                  "dataKey": 3,
+                  "dataKey": undefined,
                   "pathname": "/feedback/Brian.Mboya",
                 },
               },
@@ -1176,9 +1160,7 @@ ShallowWrapper {
               <Cell
                             addedClass=""
                             title=""
-              >
-                            1
-              </Cell>
+              />
               <Cell
                             addedClass=""
                             title=""
@@ -1209,12 +1191,12 @@ ShallowWrapper {
               >
                             <Link
                                           className="feedback-share"
-                                          data-key={0}
+                                          data-key={undefined}
                                           onClick={undefined}
                                           replace={false}
                                           to={
                                                         Object {
-                                                                      "dataKey": 0,
+                                                                      "dataKey": undefined,
                                                                       "pathname": "/feedback/Oluseyi.Anani",
                                                                     }
                                           }
@@ -1233,9 +1215,7 @@ ShallowWrapper {
               <Cell
                             addedClass=""
                             title=""
-              >
-                            2
-              </Cell>
+              />
               <Cell
                             addedClass=""
                             title=""
@@ -1266,12 +1246,12 @@ ShallowWrapper {
               >
                             <Link
                                           className="feedback-share"
-                                          data-key={1}
+                                          data-key={undefined}
                                           onClick={undefined}
                                           replace={false}
                                           to={
                                                         Object {
-                                                                      "dataKey": 1,
+                                                                      "dataKey": undefined,
                                                                       "pathname": "/feedback/Brian.Mboya",
                                                                     }
                                           }
@@ -1290,9 +1270,7 @@ ShallowWrapper {
               <Cell
                             addedClass=""
                             title=""
-              >
-                            3
-              </Cell>
+              />
               <Cell
                             addedClass=""
                             title=""
@@ -1323,12 +1301,12 @@ ShallowWrapper {
               >
                             <Link
                                           className="feedback-share"
-                                          data-key={2}
+                                          data-key={undefined}
                                           onClick={undefined}
                                           replace={false}
                                           to={
                                                         Object {
-                                                                      "dataKey": 2,
+                                                                      "dataKey": undefined,
                                                                       "pathname": "/feedback/Brian.Mboya",
                                                                     }
                                           }
@@ -1347,9 +1325,7 @@ ShallowWrapper {
               <Cell
                             addedClass=""
                             title=""
-              >
-                            4
-              </Cell>
+              />
               <Cell
                             addedClass=""
                             title=""
@@ -1380,12 +1356,12 @@ ShallowWrapper {
               >
                             <Link
                                           className="feedback-share"
-                                          data-key={3}
+                                          data-key={undefined}
                                           onClick={undefined}
                                           replace={false}
                                           to={
                                                         Object {
-                                                                      "dataKey": 3,
+                                                                      "dataKey": undefined,
                                                                       "pathname": "/feedback/Brian.Mboya",
                                                                     }
                                           }
@@ -1423,16 +1399,14 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0",
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
               <Cell
                 addedClass=""
                 title=""
->
-                1
-</Cell>,
+/>,
               <Cell
                 addedClass=""
                 title=""
@@ -1463,12 +1437,12 @@ ShallowWrapper {
 >
                 <Link
                                 className="feedback-share"
-                                data-key={0}
+                                data-key={undefined}
                                 onClick={undefined}
                                 replace={false}
                                 to={
                                                 Object {
-                                                                "dataKey": 0,
+                                                                "dataKey": undefined,
                                                                 "pathname": "/feedback/Oluseyi.Anani",
                                                               }
                                 }
@@ -1491,11 +1465,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": 1,
+                "children": NaN,
                 "title": "",
               },
               "ref": null,
-              "rendered": 1,
+              "rendered": NaN,
               "type": [Function],
             },
             Object {
@@ -1558,12 +1532,12 @@ ShallowWrapper {
                 "addedClass": "",
                 "children": <Link
                   className="feedback-share"
-                  data-key={0}
+                  data-key={undefined}
                   onClick={undefined}
                   replace={false}
                   to={
                                     Object {
-                                                      "dataKey": 0,
+                                                      "dataKey": undefined,
                                                       "pathname": "/feedback/Oluseyi.Anani",
                                                     }
                   }
@@ -1590,11 +1564,11 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "data-key": 0,
+                  "data-key": undefined,
                   "onClick": undefined,
                   "replace": false,
                   "to": Object {
-                    "dataKey": 0,
+                    "dataKey": undefined,
                     "pathname": "/feedback/Oluseyi.Anani",
                   },
                 },
@@ -1623,16 +1597,14 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1",
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
               <Cell
                 addedClass=""
                 title=""
->
-                2
-</Cell>,
+/>,
               <Cell
                 addedClass=""
                 title=""
@@ -1663,12 +1635,12 @@ ShallowWrapper {
 >
                 <Link
                                 className="feedback-share"
-                                data-key={1}
+                                data-key={undefined}
                                 onClick={undefined}
                                 replace={false}
                                 to={
                                                 Object {
-                                                                "dataKey": 1,
+                                                                "dataKey": undefined,
                                                                 "pathname": "/feedback/Brian.Mboya",
                                                               }
                                 }
@@ -1691,11 +1663,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": 2,
+                "children": NaN,
                 "title": "",
               },
               "ref": null,
-              "rendered": 2,
+              "rendered": NaN,
               "type": [Function],
             },
             Object {
@@ -1758,12 +1730,12 @@ ShallowWrapper {
                 "addedClass": "",
                 "children": <Link
                   className="feedback-share"
-                  data-key={1}
+                  data-key={undefined}
                   onClick={undefined}
                   replace={false}
                   to={
                                     Object {
-                                                      "dataKey": 1,
+                                                      "dataKey": undefined,
                                                       "pathname": "/feedback/Brian.Mboya",
                                                     }
                   }
@@ -1790,11 +1762,11 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "data-key": 1,
+                  "data-key": undefined,
                   "onClick": undefined,
                   "replace": false,
                   "to": Object {
-                    "dataKey": 1,
+                    "dataKey": undefined,
                     "pathname": "/feedback/Brian.Mboya",
                   },
                 },
@@ -1823,16 +1795,14 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "2",
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
               <Cell
                 addedClass=""
                 title=""
->
-                3
-</Cell>,
+/>,
               <Cell
                 addedClass=""
                 title=""
@@ -1863,12 +1833,12 @@ ShallowWrapper {
 >
                 <Link
                                 className="feedback-share"
-                                data-key={2}
+                                data-key={undefined}
                                 onClick={undefined}
                                 replace={false}
                                 to={
                                                 Object {
-                                                                "dataKey": 2,
+                                                                "dataKey": undefined,
                                                                 "pathname": "/feedback/Brian.Mboya",
                                                               }
                                 }
@@ -1891,11 +1861,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": 3,
+                "children": NaN,
                 "title": "",
               },
               "ref": null,
-              "rendered": 3,
+              "rendered": NaN,
               "type": [Function],
             },
             Object {
@@ -1958,12 +1928,12 @@ ShallowWrapper {
                 "addedClass": "",
                 "children": <Link
                   className="feedback-share"
-                  data-key={2}
+                  data-key={undefined}
                   onClick={undefined}
                   replace={false}
                   to={
                                     Object {
-                                                      "dataKey": 2,
+                                                      "dataKey": undefined,
                                                       "pathname": "/feedback/Brian.Mboya",
                                                     }
                   }
@@ -1990,11 +1960,11 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "data-key": 2,
+                  "data-key": undefined,
                   "onClick": undefined,
                   "replace": false,
                   "to": Object {
-                    "dataKey": 2,
+                    "dataKey": undefined,
                     "pathname": "/feedback/Brian.Mboya",
                   },
                 },
@@ -2023,16 +1993,14 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "3",
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
               <Cell
                 addedClass=""
                 title=""
->
-                4
-</Cell>,
+/>,
               <Cell
                 addedClass=""
                 title=""
@@ -2063,12 +2031,12 @@ ShallowWrapper {
 >
                 <Link
                                 className="feedback-share"
-                                data-key={3}
+                                data-key={undefined}
                                 onClick={undefined}
                                 replace={false}
                                 to={
                                                 Object {
-                                                                "dataKey": 3,
+                                                                "dataKey": undefined,
                                                                 "pathname": "/feedback/Brian.Mboya",
                                                               }
                                 }
@@ -2091,11 +2059,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "addedClass": "",
-                "children": 4,
+                "children": NaN,
                 "title": "",
               },
               "ref": null,
-              "rendered": 4,
+              "rendered": NaN,
               "type": [Function],
             },
             Object {
@@ -2158,12 +2126,12 @@ ShallowWrapper {
                 "addedClass": "",
                 "children": <Link
                   className="feedback-share"
-                  data-key={3}
+                  data-key={undefined}
                   onClick={undefined}
                   replace={false}
                   to={
                                     Object {
-                                                      "dataKey": 3,
+                                                      "dataKey": undefined,
                                                       "pathname": "/feedback/Brian.Mboya",
                                                     }
                   }
@@ -2190,11 +2158,11 @@ ShallowWrapper {
 />,
                   ],
                   "className": "feedback-share",
-                  "data-key": 3,
+                  "data-key": undefined,
                   "onClick": undefined,
                   "replace": false,
                   "to": Object {
-                    "dataKey": 3,
+                    "dataKey": undefined,
                     "pathname": "/feedback/Brian.Mboya",
                   },
                 },

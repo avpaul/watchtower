@@ -38,7 +38,7 @@ export class FeedbackDashboard extends Component {
 
   componentDidMount() {
     const { getManagerFeedback, user } = this.props;
-    getManagerFeedback(user.roles, user.email).then(data => {
+    getManagerFeedback().then(data => {
       if (!data.error) {
         let feedback = [];
         const managersFeedback = data.managersFeedback.length
@@ -61,7 +61,12 @@ export class FeedbackDashboard extends Component {
             break;
           default:
         }
-        this.updateInitialState(feedback);
+        this.updateInitialState(
+          feedback.map((feedbackRecord, key) => ({
+            ...feedbackRecord,
+            sn: key
+          }))
+        );
       }
     });
   }
@@ -371,7 +376,7 @@ FeedbackDashboard.propTypes = {
   role: PropTypes.string.isRequired,
   getManagerFeedback: PropTypes.func.isRequired,
   paginationWrapper: PropTypes.shape().isRequired,
-  history: PropTypes.func.isRequired,
+  history: PropTypes.shape().isRequired,
   fellowFeedback: PropTypes.func.isRequired
 };
 
