@@ -31,9 +31,9 @@ export default {
   fellowsProgress: {
     loading: false,
     data: {
-      fellowsProgressD0A: [],
-      fellowsProgressD0B: [],
-      fellowsProgressD0: []
+      D0A: [],
+      D0B: [],
+      D0: []
     },
     error: null
   },

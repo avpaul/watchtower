@@ -1,0 +1,202 @@
+{
+    "Class 43 - LOS": {
+        "onTrack": 20,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 3,
+        "cohort": "Class 43 - LOS",
+        "level": "D0B"
+    },
+    "Class 3 - KGL": {
+        "onTrack": 2,
+        "offTrack": 6,
+        "pip": 0,
+        "null": 1,
+        "cohort": "Class 3 - KGL",
+        "level": "D0A"
+    },
+    "Class 37 - NBO": {
+        "onTrack": 0,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 13,
+        "cohort": "Class 37 - NBO",
+        "level": "D0A"
+    },
+    "Class 45 - LOS": {
+        "onTrack": 14,
+        "offTrack": 5,
+        "pip": 0,
+        "null": 4,
+        "cohort": "Class 45 - LOS",
+        "level": "D0A"
+    },
+    "Class 46 - LOS": {
+        "onTrack": 15,
+        "offTrack": 1,
+        "pip": 0,
+        "null": 19,
+        "cohort": "Class 46 - LOS",
+        "level": "D0A"
+    },
+    "Class 42 - LOS": {
+        "onTrack": 26,
+        "offTrack": 1,
+        "pip": 0,
+        "null": 1,
+        "cohort": "Class 42 - LOS",
+        "level": "D0B"
+    },
+    "No Cohort": {
+        "onTrack": 0,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 9,
+        "cohort": "No Cohort",
+        "level": "D0A"
+    },
+    "Class 17 - KLA": {
+        "onTrack": 0,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 10,
+        "cohort": "Class 17 - KLA",
+        "level": "D0A"
+    },
+    "Class 15 - KLA": {
+        "onTrack": 1,
+        "offTrack": 6,
+        "pip": 0,
+        "null": 2,
+        "cohort": "Class 15 - KLA",
+        "level": "D0A"
+    },
+    "Class 44 - LOS": {
+        "onTrack": 14,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 4,
+        "cohort": "Class 44 - LOS",
+        "level": "D0B"
+    },
+    "Class 12 - KLA": {
+        "onTrack": 17,
+        "offTrack": 3,
+        "pip": 0,
+        "null": 1,
+        "cohort": "Class 12 - KLA",
+        "level": "D0B"
+    },
+    "Class 36 - NBO": {
+        "onTrack": 8,
+        "offTrack": 4,
+        "pip": 0,
+        "null": 0,
+        "cohort": "Class 36 - NBO",
+        "level": "D0A"
+    },
+    "Class 33 - NBO": {
+        "onTrack": 25,
+        "offTrack": 1,
+        "pip": 0,
+        "null": 4,
+        "cohort": "Class 33 - NBO",
+        "level": "D0B"
+    },
+    "Class 2 - KGL": {
+        "onTrack": 0,
+        "offTrack": 5,
+        "pip": 0,
+        "null": 5,
+        "cohort": "Class 2 - KGL",
+        "level": "D0A"
+    },
+    "Class 47 - LOS": {
+        "onTrack": 0,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 17,
+        "cohort": "Class 47 - LOS",
+        "level": "D0A"
+    },
+    "Class 13 - KLA": {
+        "onTrack": 18,
+        "offTrack": 1,
+        "pip": 0,
+        "null": 2,
+        "cohort": "Class 13 - KLA",
+        "level": "D0B"
+    },
+    "Class 16 - KLA": {
+        "onTrack": 5,
+        "offTrack": 1,
+        "pip": 0,
+        "null": 1,
+        "cohort": "Class 16 - KLA",
+        "level": "D0A"
+    },
+    "Class 32 - NBO": {
+        "onTrack": 20,
+        "offTrack": 1,
+        "pip": 0,
+        "null": 4,
+        "cohort": "Class 32 - NBO",
+        "level": "D0B"
+    },
+    "Class 35 - NBO": {
+        "onTrack": 8,
+        "offTrack": 3,
+        "pip": 0,
+        "null": 0,
+        "cohort": "Class 35 - NBO",
+        "level": "D0A"
+    },
+    "Class 34 - NBO": {
+        "onTrack": 4,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 4,
+        "cohort": "Class 34 - NBO",
+        "level": "D0B"
+    },
+    "Class 1 - KGL": {
+        "onTrack": 3,
+        "offTrack": 4,
+        "pip": 0,
+        "null": 3,
+        "cohort": "Class 1 - KGL",
+        "level": "D0A"
+    },
+    "Class 4 - KGL": {
+        "onTrack": 0,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 9,
+        "cohort": "Class 4 - KGL",
+        "level": "D0A"
+    },
+    "Class 5 - KGL": {
+        "onTrack": 0,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 2,
+        "cohort": "Class 5 - KGL",
+        "level": "D0A"
+    },
+    "Class 14 - KLA": {
+        "onTrack": 5,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 1,
+        "cohort": "Class 14 - KLA",
+        "level": "D0B"
+    },
+    "Class 31 - NBO": {
+        "onTrack": 1,
+        "offTrack": 0,
+        "pip": 0,
+        "null": 0,
+        "cohort": "Class 31 - NBO",
+        "level": "D0B"
+    }
+}

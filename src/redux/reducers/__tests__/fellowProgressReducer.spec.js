@@ -10,9 +10,9 @@ it('should return the initial state for unknown action type', () => {
   expect(fellowProgressReducer(undefined, {})).toEqual({
     loading: false,
     data: {
-      fellowsProgressD0A: [],
-      fellowsProgressD0B: [],
-      fellowsProgressD0: []
+      D0A: [],
+      D0B: [],
+      D0: []
     },
     error: null
   });
@@ -23,9 +23,9 @@ it('should set loading state on fetching cohort progress data', () => {
     loading: true,
     error: null,
     data: {
-      fellowsProgressD0A: [],
-      fellowsProgressD0B: [],
-      fellowsProgressD0: []
+      D0A: [],
+      D0B: [],
+      D0: []
     }
   };
   const action = { type: LOAD_FELLOW_PROGRESS_REQUEST };
@@ -37,17 +37,17 @@ it('should add fetched  cohort progress to state', () => {
   const newState = {
     loading: false,
     data: {
-      fellowsProgressD0B: [],
-      fellowsProgressD0A: [],
-      fellowsProgressD0: []
+      D0B: [],
+      D0A: [],
+      D0: []
     }
   };
   const action = {
     type: LOAD_FELLOW_PROGRESS_SUCCESS,
     payload: {
-      fellowsProgressD0B: [],
-      fellowsProgressD0A: [],
-      fellowsProgressD0: []
+      D0B: [],
+      D0A: [],
+      D0: []
     }
   };
 
@@ -59,9 +59,9 @@ it('should add the error message on failing to fetch  cohort progres', () => {
     loading: false,
     error: { message: 'error' },
     data: {
-      fellowsProgressD0A: [],
-      fellowsProgressD0B: [],
-      fellowsProgressD0: []
+      D0A: [],
+      D0B: [],
+      D0: []
     }
   };
   const action = {

@@ -9,7 +9,7 @@ import '../FellowsSummary/FellowsSummary.css';
 
 const formatProjects = projects =>
   projects.map(group => ({
-    title: group.project,
+    title: group.project || 'No Project',
     subTitle: 'Click to see details',
     totalFellows: parseInt(group.count, 10)
   }));

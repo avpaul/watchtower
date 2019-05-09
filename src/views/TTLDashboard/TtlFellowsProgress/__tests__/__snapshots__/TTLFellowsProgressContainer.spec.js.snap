@@ -4,9 +4,9 @@ exports[`FellowsSummaryContainer should map state to props 1`] = `
 Object {
   "fellowsProgress": Object {
     "data": Object {
-      "fellowsProgressD0": Array [],
-      "fellowsProgressD0A": Array [],
-      "fellowsProgressD0B": Array [],
+      "D0": Array [],
+      "D0A": Array [],
+      "D0B": Array [],
     },
     "error": null,
     "loading": false,

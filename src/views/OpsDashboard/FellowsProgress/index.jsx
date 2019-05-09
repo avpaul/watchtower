@@ -26,14 +26,14 @@ export class FellowsProgress extends Component {
         const result = ttls.find(ttlitem => `${ttlitem.name}` === value);
         this.setState({ ttl: result || 'All' });
         getFellowProgress({
-          ttl: result ? result.manager_id : 'All',
+          manager: result ? result.staff_id : null,
           location
         });
         break;
       }
       case 'location': {
         this.setState({ location: value });
-        getFellowProgress({ location: value, ttl: ttl.id });
+        getFellowProgress({ location: value, manager: ttl.staff_id });
         break;
       }
       default:
@@ -80,12 +80,12 @@ export class FellowsProgress extends Component {
    */
   renderCharts = (D0, { data, loading }) => (
     <Fragment>
-      {data[`fellowsProgress${D0}`].length === 0 && !loading ? (
+      {(!data[D0] || data[D0].length === 0) && !loading ? (
         <div className="empty_chart">No {D0} Fellows found</div>
       ) : (
         <StackedBarChart
           title={`${D0} Fellows`}
-          data={data[`fellowsProgress${D0}`]}
+          data={data[D0]}
           loading={loading}
         />
       )}
@@ -95,7 +95,6 @@ export class FellowsProgress extends Component {
   render() {
     const { ttl, location } = this.state;
     const { ttls, fellowsProgress, locations } = this.props;
-
     const locationsAll = ['All', ...locations.map(place => place.name).sort()];
     const currentTTL = ttl !== 'All' ? `${ttl.name}` : 'All';
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TTLFellowsProgress from '../TTLDashboard/TtlFellowsProgress/TTLFellowsProgress';
-import { getEmFellowsProgress } from '../../redux/actionCreators/fellowProgressActions';
+import getFellowProgress from '../../redux/actionCreators/fellowProgressActions';
 
 export const mapStateToProps = ({
   fellowsProgress,
@@ -13,6 +13,6 @@ export const mapStateToProps = ({
 export default connect(
   mapStateToProps,
   {
-    fetchTTLFellowsProgress: getEmFellowsProgress
+    fetchTTLFellowsProgress: getFellowProgress
   }
 )(TTLFellowsProgress);
