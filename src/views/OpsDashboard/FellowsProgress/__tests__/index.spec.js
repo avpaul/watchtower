@@ -5,6 +5,7 @@ import fellowManagersMock from '../../../../__mocks__/fellowManagers';
 
 describe('FellowProgress', () => {
   const props = {
+    lfs: fellowManagersMock.lfs,
     ttls: fellowManagersMock.ttls,
     fellowsProgress: {
       data: {
@@ -39,8 +40,8 @@ describe('FellowProgress', () => {
   });
 
   it('Should update state on getFilter', () => {
-    wrapper.instance().getFilter('ttl', props.ttls[0].name);
-    expect(wrapper.state().ttl).toEqual(props.ttls[0]);
+    wrapper.instance().getFilter('lfTtl', props.ttls[0].name);
+    expect(wrapper.state().lfTtl).toEqual(props.ttls[0]);
     wrapper.instance().getFilter('location', 'NOB');
     expect(wrapper.state().location).toEqual('NOB');
     wrapper.instance().getFilter('invalid', 'value');
@@ -49,7 +50,7 @@ describe('FellowProgress', () => {
   });
 
   it('Filter should set All if ttl not found', () => {
-    wrapper.instance().getFilter('ttl', '404');
-    expect(wrapper.state().ttl).toEqual('All');
+    wrapper.instance().getFilter('lfTtl', '404');
+    expect(wrapper.state().lfTtl).toEqual('All');
   });
 });

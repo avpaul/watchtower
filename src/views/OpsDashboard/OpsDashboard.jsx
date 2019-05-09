@@ -116,7 +116,8 @@ const managerPropTypes = {
       PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
-        PropTypes.object
+        PropTypes.object,
+        PropTypes.bool
       ])
     )
   )

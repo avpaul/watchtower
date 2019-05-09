@@ -8,7 +8,7 @@ import getFellowProgressAction from '../../../redux/actionCreators/fellowProgres
 
 export class FellowsProgress extends Component {
   state = {
-    ttl: 'All',
+    lfTtl: 'All',
     location: 'All'
   };
 
@@ -18,13 +18,15 @@ export class FellowsProgress extends Component {
   }
 
   getFilter = (type, value) => {
-    const { getFellowProgress, ttls } = this.props;
-    const { location, ttl } = this.state;
+    const { getFellowProgress, ttls, lfs } = this.props;
+    const { location, lfTtl } = this.state;
 
     switch (type) {
-      case 'ttl': {
-        const result = ttls.find(ttlitem => `${ttlitem.name}` === value);
-        this.setState({ ttl: result || 'All' });
+      case 'lfTtl': {
+        const ttlData = ttls.find(ttlitem => `${ttlitem.name}` === value);
+        const lfData = lfs.find(lfitem => `${lfitem.name}` === value);
+        const result = ttlData || lfData;
+        this.setState({ lfTtl: result || 'All' });
         getFellowProgress({
           manager: result ? result.staff_id : null,
           location
@@ -33,7 +35,7 @@ export class FellowsProgress extends Component {
       }
       case 'location': {
         this.setState({ location: value });
-        getFellowProgress({ location: value, manager: ttl.staff_id });
+        getFellowProgress({ location: value, manager: lfTtl.staff_id });
         break;
       }
       default:
@@ -41,7 +43,7 @@ export class FellowsProgress extends Component {
     }
   };
 
-  renderFilters = (locationsAll, location, currentTTL, ttlsAvilable) => (
+  renderFilters = (locationsAll, location, currentTTL, lfsTtlsAvailable) => (
     <Fragment>
       <div>
         <Filter
@@ -61,9 +63,9 @@ export class FellowsProgress extends Component {
           search
           current={currentTTL}
           title="TTL/LF Filter"
-          items={['All', ...ttlsAvilable.sort()]}
+          items={['All', ...lfsTtlsAvailable.sort()]}
           getFilter={this.getFilter}
-          type="ttl"
+          type="lfTtl"
           characterLength={35}
           width="13rem"
           chevronColor="#808FA3"
@@ -93,21 +95,19 @@ export class FellowsProgress extends Component {
   );
 
   render() {
-    const { ttl, location } = this.state;
-    const { ttls, fellowsProgress, locations } = this.props;
+    const { lfTtl, location } = this.state;
+    const { ttls, lfs, fellowsProgress, locations } = this.props;
+    const ttlsName = ttls.map(ttlName => `${ttlName.name}`);
+    const lfsName = lfs.map(lfName => `${lfName.name}`);
+    const lfsTtls = ttlsName.concat(lfsName);
     const locationsAll = ['All', ...locations.map(place => place.name).sort()];
-    const currentTTL = ttl !== 'All' ? `${ttl.name}` : 'All';
+    const currentTTL = lfTtl !== 'All' ? `${lfTtl.name}` : 'All';
 
     return (
       <div className="fellow_progress">
         <h2 className="fellow_progress__title"> FELLOWS PROGRESS BAR </h2>
         <div className="filters">
-          {this.renderFilters(
-            locationsAll,
-            location,
-            currentTTL,
-            ttls.map(ttla => `${ttla.name}`)
-          )}
+          {this.renderFilters(locationsAll, location, currentTTL, lfsTtls)}
         </div>
         {this.renderCharts('D0A', fellowsProgress)}
         {this.renderCharts('D0B', fellowsProgress)}
@@ -116,10 +116,11 @@ export class FellowsProgress extends Component {
   }
 }
 
-const mapStateToProps = ({ fellowsProgress, opsSummary }) => ({
-  ttls: opsSummary.data.managers.ttls,
+const mapStateToProps = ({ fellowsProgress, opsSummary: { data } }) => ({
+  ttls: data.managers.ttls,
+  lfs: data.managers.lfs,
   fellowsProgress,
-  locations: opsSummary.data.locations
+  locations: data.locations
 });
 
 FellowsProgress.propTypes = {
@@ -129,7 +130,8 @@ FellowsProgress.propTypes = {
     data: PropTypes.objectOf(PropTypes.array)
   }).isRequired,
   locations: PropTypes.instanceOf(Array).isRequired,
-  ttls: PropTypes.instanceOf(Array).isRequired
+  ttls: PropTypes.instanceOf(Array).isRequired,
+  lfs: PropTypes.instanceOf(Array).isRequired
 };
 
 export const FellowsProgressConnected = connect(
