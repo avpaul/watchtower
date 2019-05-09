@@ -152,18 +152,20 @@ class Pagination extends Component {
     const lowerBound = currentPage + 2 > totalPages ? 1 : currentPage;
 
     return (
-      <div className="form-group col align-self-center pg__buttons">
-        {this.renderMiddleButtons(
-          [
-            { value: 'Prev', disable: currentPage === totalPages },
-            { value: lowerBound },
-            { value: lowerBound + 1 },
-            { value: totalPages - 1 },
-            { value: totalPages },
-            { value: 'Next', disable: currentPage <= 1 }
-          ],
-          currentPage
-        )}
+      <div className="row justify-content-center">
+        <div className="form-group pg__buttons col">
+          {this.renderMiddleButtons(
+            [
+              { value: 'Prev', disable: currentPage === totalPages },
+              { value: lowerBound },
+              { value: lowerBound + 1 },
+              { value: totalPages - 1 },
+              { value: totalPages },
+              { value: 'Next', disable: currentPage <= 1 }
+            ],
+            currentPage
+          )}
+        </div>
       </div>
     );
   };
@@ -171,7 +173,7 @@ class Pagination extends Component {
   renderShowing = () => {
     const { totalPages, currentPage } = this.props;
     return (
-      <p className="text-center">
+      <p className="text-center mb-md-4">
         Showing {currentPage} of {totalPages} pages
       </p>
     );
@@ -198,16 +200,25 @@ class Pagination extends Component {
 
   renderPagination = (classNames, isFewPages, totalPages) => (
     <div className={`align-self-center ${classNames.pgFilters}`}>
-      <div className="pg__filters row">
-        <div className={`pg__per-page__label ${classNames.pgPerPageLabel}`}>
-          Per page
+      <div className="pg__filters row justify-content-center">
+        <div
+          className={`pg__per-page col-md-4 col-6 mt-4 mt-md-0 mb-4 mb-md-0 ${
+            classNames.pgPerPage
+          }`}
+        >
+          <div className="row">
+            <div className="pg__per-page__select mt-md-5 col-lg-4 col-6">
+              {this.renderPerPageOptions()}
+            </div>
+            <div className="pg__per-page__label mt-md-5 col-6">Per page</div>
+          </div>
         </div>
-        <div className={`pg__per-page__select ${classNames.pgPerPageSelect}`}>
-          {this.renderPerPageOptions()}
+        <div className={`${classNames.pgButtons}`}>
+          {this.renderShowing()}
+          {isFewPages
+            ? this.renderNumericButtons(totalPages)
+            : this.renderNormal()}
         </div>
-        {isFewPages
-          ? this.renderNumericButtons(totalPages)
-          : this.renderNormal()}
       </div>
     </div>
   );
@@ -219,13 +230,12 @@ class Pagination extends Component {
     const isFewPages = totalPages < 5;
     const classNames = {
       pgFilters: isFewPages ? 'col-md-6 col-lg-5' : 'col-md-9 col-lg-7',
-      pgPerPageLabel: isFewPages ? 'col-md-3' : 'col-md-2',
-      pgPerPageSelect: isFewPages ? 'col-md-2' : 'col-md-1'
+      pgPerPage: isFewPages ? 'col-md-5' : 'col-md-4',
+      pgButtons: isFewPages ? 'col-md-7 col-12' : 'col-md-8 col-12'
     };
 
     return (
       <div className="pg align-self-center">
-        {this.renderShowing()}
         <div className="row d-flex justify-content-center">
           {this.renderPagination(classNames, isFewPages, totalPages)}
         </div>

@@ -195,7 +195,7 @@ export class DashboardPage extends Component {
 
   renderResultCount = () => {
     const { filteredFellows } = this.state;
-    const resultTerm = filteredFellows.length > 1 ? 'Fellows' : 'Fellow';
+    const resultTerm = filteredFellows.length === 1 ? 'Fellow' : 'Fellows';
     return (
       <div className="result-count">
         <span className="border-bottom mr-2 pb-2">

@@ -94,13 +94,18 @@ const FeedbackDuration = ({
   );
 };
 
+const datePropTypes = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.instanceOf(Date)
+]);
+
 FeedbackDuration.propTypes = {
   // feedback proptypes
   handleStartDateChange: PropTypes.func.isRequired,
   handleEndDateChange: PropTypes.func.isRequired,
-  startDate: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  startDate: datePropTypes.isRequired,
+  endDate: datePropTypes.isRequired,
   clearDuration: PropTypes.func.isRequired,
-  currentDate: PropTypes.string.isRequired
+  currentDate: datePropTypes.isRequired
 };
 export default FeedbackDuration;

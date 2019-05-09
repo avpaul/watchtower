@@ -81,8 +81,8 @@ const FeedbackDashboardTable = ({
     <Table>
       <TableHeader headers={headers} />
 
-      {feedbackArray.map((feedback, index) =>
-        feedbackRow(feedback, index, type, handleClick)
+      {feedbackArray.map(feedback =>
+        feedbackRow(feedback, feedback.sn, type, handleClick)
       )}
     </Table>
   );
@@ -100,7 +100,7 @@ FeedbackDashboardTable.propTypes = {
   ).isRequired,
   currentRole: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  handleClick: PropTypes.shape.isRequired
+  handleClick: PropTypes.func.isRequired
 };
 
 export default FeedbackDashboardTable;
