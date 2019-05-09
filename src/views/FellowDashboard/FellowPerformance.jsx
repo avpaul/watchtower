@@ -8,6 +8,8 @@ import getFellowPrePipFeedback from '../../redux/actionCreators/fellowPrePipFeed
 import { getFellowPipFeedback } from '../../redux/actionCreators/fellowPipFeedbackActions';
 import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
 
+import './FellowDashboard.css';
+
 export class FellowPerformance extends Component {
   state = {
     isTicked: { type: 'Pre-PIP' }
@@ -70,18 +72,20 @@ export class FellowPerformance extends Component {
     return (
       <Fragment>
         <div className="container-fluid">
-          <FellowFeedback
-            isTicked={isTicked}
-            handleCardClick={this.handleClickTickedCard}
-            noOfPrePipInstances={total}
-            noOfPipInstances={pipTotal}
-          />
-          <FeedbackInstances
-            PrePipEntries={paginationWrapper.state.paginatedData}
-            handleClick={this.handleClick}
-          />
-          <div className="col-12 mb-4">
-            {paginationWrapper.renderPagination()}
+          <div className="fellow-performance-tab">
+            <FellowFeedback
+              isTicked={isTicked}
+              handleCardClick={this.handleClickTickedCard}
+              noOfPrePipInstances={total}
+              noOfPipInstances={pipTotal}
+            />
+            <FeedbackInstances
+              PrePipEntries={paginationWrapper.state.paginatedData}
+              handleClick={this.handleClick}
+            />
+            <div className="col-12 mb-4">
+              {paginationWrapper.renderPagination()}
+            </div>
           </div>
         </div>
       </Fragment>
@@ -90,7 +94,8 @@ export class FellowPerformance extends Component {
 }
 FellowPerformance.propTypes = {
   fellowPrePipFeedback: PropTypes.shape({
-    payload: PropTypes.shape([]).isRequired
+    payload: PropTypes.shape([]).isRequired,
+    data: PropTypes.shape([]).isRequired
   }).isRequired,
   getFellowPrePipFeedback: PropTypes.func.isRequired,
   getFellowPipFeedback: PropTypes.func.isRequired,

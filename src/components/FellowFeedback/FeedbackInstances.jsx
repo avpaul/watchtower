@@ -32,7 +32,7 @@ const FeedbackInstances = ({ PrePipEntries = [] }) => {
   });
 
   return PrePipEntries.length !== 0 ? (
-    <div>
+    <div className="pip-card-grid">
       <h6 className="page-title-small">
         {PrePipEntries[0].type === 'pre-pip'
           ? 'Pre-PIP instances'
