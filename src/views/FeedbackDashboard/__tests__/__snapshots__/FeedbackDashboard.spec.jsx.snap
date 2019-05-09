@@ -7104,3 +7104,125 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`Test Feedback Dashboard should render the feedback pagination wrapped component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    component={
+        <FeedbackDashboard
+            currentRole="WATCH_TOWER_OPS"
+            fellowFeedback={[Function]}
+            getManagerFeedback={[Function]}
+            history={
+                Object {
+                    "push": [Function],
+                  }
+            }
+            role="WATCH_TOWER_OPS"
+            user={
+                Object {
+                    "email": "wt-test-ops@andela.com",
+                    "roles": Object {
+                      "WATCH_TOWER_OPS": "-l1ujhfhjbshwjrn",
+                    },
+                  }
+            }
+        />
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "component": <FeedbackDashboard
+        component={
+                <FeedbackDashboard
+                        currentRole="WATCH_TOWER_OPS"
+                        fellowFeedback={[Function]}
+                        getManagerFeedback={[Function]}
+                        history={
+                                Object {
+                                        "push": [Function],
+                                      }
+                        }
+                        role="WATCH_TOWER_OPS"
+                        user={
+                                Object {
+                                        "email": "wt-test-ops@andela.com",
+                                        "roles": Object {
+                                          "WATCH_TOWER_OPS": "-l1ujhfhjbshwjrn",
+                                        },
+                                      }
+                        }
+                />
+        }
+/>,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "component": <FeedbackDashboard
+          component={
+                    <FeedbackDashboard
+                              currentRole="WATCH_TOWER_OPS"
+                              fellowFeedback={[Function]}
+                              getManagerFeedback={[Function]}
+                              history={
+                                        Object {
+                                                  "push": [Function],
+                                                }
+                              }
+                              role="WATCH_TOWER_OPS"
+                              user={
+                                        Object {
+                                                  "email": "wt-test-ops@andela.com",
+                                                  "roles": Object {
+                                                    "WATCH_TOWER_OPS": "-l1ujhfhjbshwjrn",
+                                                  },
+                                                }
+                              }
+                    />
+          }
+/>,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
