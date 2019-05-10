@@ -104,7 +104,7 @@ class Pagination extends Component {
     );
 
     return (
-      <div id="form-group" className="col align-self-center">
+      <div id="form-group" className="col align-self-center text-center">
         {elements.map(element => (
           <PaginationButton
             className={`btn btn-default pg__button${
@@ -173,7 +173,7 @@ class Pagination extends Component {
   renderShowing = () => {
     const { totalPages, currentPage } = this.props;
     return (
-      <p className="text-center mb-md-4">
+      <p className="text-center">
         Showing {currentPage} of {totalPages} pages
       </p>
     );
@@ -200,21 +200,21 @@ class Pagination extends Component {
 
   renderPagination = (classNames, isFewPages, totalPages) => (
     <div className={`align-self-center ${classNames.pgFilters}`}>
+      {this.renderShowing()}
       <div className="pg__filters row justify-content-center">
         <div
           className={`pg__per-page col-md-4 col-6 mt-4 mt-md-0 mb-4 mb-md-0 ${
             classNames.pgPerPage
           }`}
         >
-          <div className="row">
-            <div className="pg__per-page__select mt-md-5 col-lg-4 col-6">
+          <div className="row d-flex justify-content-center">
+            <div className="pg__per-page__select col-lg-4 col-6">
               {this.renderPerPageOptions()}
             </div>
-            <div className="pg__per-page__label mt-md-5 col-6">Per page</div>
+            <div className="pg__per-page__label col-6">Per page</div>
           </div>
         </div>
         <div className={`${classNames.pgButtons}`}>
-          {this.renderShowing()}
           {isFewPages
             ? this.renderNumericButtons(totalPages)
             : this.renderNormal()}
