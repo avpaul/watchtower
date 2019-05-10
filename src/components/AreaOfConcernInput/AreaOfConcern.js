@@ -8,7 +8,8 @@ const AreaOfConcern = ({ attribute, handleChange, ...props }) => {
   return (
     <div>
       <div className="areas-of-concern-title">
-        Area of Concern - {areaOfConcern}
+        Area of Concern -{' '}
+        <span className="text-capitalize">{areaOfConcern}</span>
       </div>
       <div className="form-row row">
         <AreaOfConcernInput
