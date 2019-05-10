@@ -41,6 +41,14 @@ describe('Test Feedback Instances component', () => {
     const wrapper = shallow(<FeedbackInstances {...props} />);
     expect(wrapper.find('h6').text()).toBe('PIP instances');
   });
+
+  it('should trigger modal', () => {
+    const container = shallow(<FeedbackInstances {...props} />);
+
+    const overlay = container.find('#pip-feedback-modal');
+    expect(typeof overlay).toEqual('object');
+  });
+
   it('should render the apporpriate message when there are no feedback', () => {
     props = {
       PrePipEntries: undefined

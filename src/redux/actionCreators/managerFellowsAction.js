@@ -8,7 +8,7 @@ import {
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
-const getManagerFellows = ({ email } = {}) => dispatch => {
+const getManagerFellows = email => dispatch => {
   dispatch({ type: LOAD_MANAGERFELLOWS_REQUEST });
   const requestURL = `${serverURL}/api/v1/managers/fellows?email=${email}`;
   return axios.get(requestURL).then(

@@ -154,6 +154,7 @@ export default {
     error: null
   },
   fellowFeedback: {
+    feedback: [],
     fellowFeedback: {}
   },
   pipData: {

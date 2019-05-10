@@ -41,6 +41,8 @@ ShallowWrapper {
                             }
           }
           className="card"
+          dataTarget=""
+          dataToggle=""
           filterId="gteWk5OffTrack"
           onClick={[Function]}
 />,
@@ -53,6 +55,8 @@ ShallowWrapper {
                             }
           }
           className="card"
+          dataTarget=""
+          dataToggle=""
           filterId="ltWk5OffTrack"
           onClick={[Function]}
 />,
@@ -64,6 +68,8 @@ ShallowWrapper {
                             }
           }
           className="card active-card"
+          dataTarget=""
+          dataToggle=""
           filterId="onTrack"
           onClick={[Function]}
 />,
@@ -113,6 +119,8 @@ ShallowWrapper {
             "totalFellows": 2,
           },
           "className": "card",
+          "dataTarget": "",
+          "dataToggle": "",
           "filterId": "gteWk5OffTrack",
           "onClick": [Function],
         },
@@ -131,6 +139,8 @@ ShallowWrapper {
             "totalFellows": 2,
           },
           "className": "card",
+          "dataTarget": "",
+          "dataToggle": "",
           "filterId": "ltWk5OffTrack",
           "onClick": [Function],
         },
@@ -148,6 +158,8 @@ ShallowWrapper {
             "totalFellows": 2,
           },
           "className": "card active-card",
+          "dataTarget": "",
+          "dataToggle": "",
           "filterId": "onTrack",
           "onClick": [Function],
         },
@@ -174,6 +186,8 @@ ShallowWrapper {
                                   }
             }
             className="card"
+            dataTarget=""
+            dataToggle=""
             filterId="gteWk5OffTrack"
             onClick={[Function]}
 />,
@@ -186,6 +200,8 @@ ShallowWrapper {
                                   }
             }
             className="card"
+            dataTarget=""
+            dataToggle=""
             filterId="ltWk5OffTrack"
             onClick={[Function]}
 />,
@@ -197,6 +213,8 @@ ShallowWrapper {
                                   }
             }
             className="card active-card"
+            dataTarget=""
+            dataToggle=""
             filterId="onTrack"
             onClick={[Function]}
 />,
@@ -246,6 +264,8 @@ ShallowWrapper {
               "totalFellows": 2,
             },
             "className": "card",
+            "dataTarget": "",
+            "dataToggle": "",
             "filterId": "gteWk5OffTrack",
             "onClick": [Function],
           },
@@ -264,6 +284,8 @@ ShallowWrapper {
               "totalFellows": 2,
             },
             "className": "card",
+            "dataTarget": "",
+            "dataToggle": "",
             "filterId": "ltWk5OffTrack",
             "onClick": [Function],
           },
@@ -281,6 +303,8 @@ ShallowWrapper {
               "totalFellows": 2,
             },
             "className": "card active-card",
+            "dataTarget": "",
+            "dataToggle": "",
             "filterId": "onTrack",
             "onClick": [Function],
           },

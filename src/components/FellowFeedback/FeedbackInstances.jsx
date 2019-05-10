@@ -5,7 +5,7 @@ import { getDate, getDayName } from '../../services/helper';
 import FilterCard from '../Filters/FilterCard';
 import './FeedbackInstances.css';
 
-const FeedbackInstances = ({ PrePipEntries = [] }) => {
+const FeedbackInstances = ({ PrePipEntries = [], handleClick }) => {
   const displayCardMap = PrePipEntries.map(displayContent => {
     const { type, id } = displayContent;
     const date = getDate(displayContent.updated_at);
@@ -27,6 +27,7 @@ const FeedbackInstances = ({ PrePipEntries = [] }) => {
         dataToggle="modal"
         dataTarget="#pip-feedback-modal"
         type="submit"
+        onClick={() => handleClick(id)}
       />
     );
   });
@@ -48,7 +49,8 @@ const FeedbackInstances = ({ PrePipEntries = [] }) => {
 };
 
 FeedbackInstances.propTypes = {
-  PrePipEntries: PropTypes.shape([]).isRequired
+  PrePipEntries: PropTypes.shape([]).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default FeedbackInstances;

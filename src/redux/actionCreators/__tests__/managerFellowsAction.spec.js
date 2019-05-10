@@ -41,12 +41,10 @@ describe('Manager Fellow Actions', () => {
         }
       }
     ];
-    return store
-      .dispatch(getManagerFellows({ email: 'test.lass@mail.com' }))
-      .then(() => {
-        const dispatchedActions = store.getActions();
-        expect(dispatchedActions).toMatchObject(expectedActions);
-      });
+    return store.dispatch(getManagerFellows('test.lass@mail.com')).then(() => {
+      const dispatchedActions = store.getActions();
+      expect(dispatchedActions).toMatchObject(expectedActions);
+    });
   });
 
   it('dispatches LOAD_MANAGERFELLOWS_REQUEST and  LOAD_MANAGERFELLOWS_FAILURE on failing to fetch managers fellows', () => {
@@ -57,9 +55,14 @@ describe('Manager Fellow Actions', () => {
         error: 'Request failed with status code 404'
       }
     ];
-    return store.dispatch(getManagerFellows({ email: '' })).then(() => {
+    return store.dispatch(getManagerFellows('')).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
     });
+  });
+
+  it('should test the getManagersFellow method', () => {
+    const testMethod = getManagerFellows('test.lass@mail.com');
+    expect(typeof testMethod).toEqual('function');
   });
 });

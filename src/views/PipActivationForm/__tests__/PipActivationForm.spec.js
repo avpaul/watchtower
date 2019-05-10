@@ -9,6 +9,13 @@ import ManagementSupportField from '../../../components/MapSupportField/Manageme
 import MapAreasOfConcernData from '../../../components/MapSupportField/MapAreasOfConcernData';
 import AreaOfConcern from '../../../components/AreaOfConcernInput/AreaOfConcern';
 import AreaOfConcernInput from '../../../components/AreaOfConcernInput/AreaOfConcernInput';
+import FellowsMock from '../../../__mocks__/fellowSummary.json';
+import { redirectToExternalURL } from '../../../utils';
+
+jest.mock('../../../utils', () => ({
+  redirectToExternalURL: jest.fn()
+}));
+jest.useFakeTimers();
 
 describe('PipActivationForm component', () => {
   const mockStore = configureMockStore();
@@ -35,13 +42,7 @@ describe('PipActivationForm component', () => {
         data: pipDataForTest
       })
     ),
-    fellow: {
-      fellow_id: 'jdjsjdsd',
-      picture: null,
-      project: 'Watch Tower',
-      email: 'brian.mboya@andela.com',
-      name: 'Brian Mboya'
-    }
+    fellow: FellowsMock[0]
   };
 
   const store = mockStore({
@@ -81,7 +82,30 @@ describe('PipActivationForm component', () => {
       .dive()
       .find('#submitFormButton')
       .simulate('submit', { preventDefault() {} });
+    jest.runAllTimers();
     expect(props.handleSubmit).not.toBeCalled();
+  });
+
+  it('should call redirectToPipForm() successfully', () => {
+    wrapper.instance().redirectToPipForm();
+    jest.runAllTimers();
+    expect(redirectToExternalURL).toHaveBeenCalled();
+  });
+
+  it('should format areas of concern', () => {
+    const areasOfConcern = {
+      quality: { attribute: 'quality', isUpdated: false, score: '' },
+      integration: { attribute: 'integration', isUpdated: true, score: '' },
+      professionalism: {
+        attribute: 'professionalism',
+        isUpdated: true,
+        score: ''
+      }
+    };
+    const responseData = wrapper
+      .instance()
+      .formatAreasOfConcern(Object.values(areasOfConcern));
+    expect(responseData).not.toBe([]);
   });
 
   it('should call handleDateChange() when the the calendar is clicked', () => {
