@@ -25,4 +25,13 @@ describe('tests the fellow count module', () => {
       '3 TotaltestCountname (Filtered)<FilterButton />'
     );
   });
+  it('should call the FellowCount and TotalFellows', () => {
+    props.count = 3;
+    props.countName = null;
+    const wrapper = shallow(<FellowsCount {...props} />);
+    const container = wrapper.find('.ops-dashboard__fellows-summary');
+    expect(container.text()).toEqual(
+      '3 TotalFellows (Filtered)<FilterButton />'
+    );
+  });
 });

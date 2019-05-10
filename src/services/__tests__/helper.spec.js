@@ -4,7 +4,8 @@ import {
   DateYesterday,
   calcNoOfWeeks,
   getCurrentWeek,
-  getDayName
+  getDayName,
+  truncateNumber
 } from '../helper';
 
 describe('Test for helper functions', () => {
@@ -33,5 +34,9 @@ describe('Test for helper functions', () => {
   it('Should get the day of the week from data', () => {
     const date = '2018-10-29 14:34:03';
     expect(typeof getDayName(date)).toEqual('string');
+  });
+  it('Should return number to 2 decimal places', () => {
+    const num = 1.789;
+    expect(truncateNumber(num)).toEqual(1.79);
   });
 });

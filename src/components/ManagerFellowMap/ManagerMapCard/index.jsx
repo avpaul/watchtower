@@ -30,9 +30,9 @@ const ManagerMapCard = ({ manager }) => {
           className="manager_card__name float-left"
           data-toggle="tooltip"
           data-placement="top"
-          title={manager.name}
+          title={manager.managerName}
         >
-          {manager.name}
+          {manager.managerName}
         </span>
         <span className="manager_card__fellows--number float-right">
           {' '}
@@ -47,7 +47,7 @@ const ManagerMapCard = ({ manager }) => {
 ManagerMapCard.propTypes = {
   manager: PropTypes.shape({
     staff_id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    managerName: PropTypes.string.isRequired,
     fellows: PropTypes.arrayOf(PropTypes.object).isRequired
   }).isRequired
 };

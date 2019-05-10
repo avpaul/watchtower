@@ -17,7 +17,8 @@ const ManagerFellowMap = ({
   sortRatio,
   onSortManagers,
   arrowStyle,
-  handleMapClose
+  handleMapClose,
+  sortLabel
 }) => (
   <div>
     <div className="track-key">
@@ -35,7 +36,10 @@ const ManagerFellowMap = ({
         >
           <i className="far fa-times-circle" aria-hidden="true" />
         </button>
-        <ManagerFellowSortInput onChange={onSortManagers} />
+        <ManagerFellowSortInput
+          onChange={onSortManagers}
+          sortLabel={sortLabel}
+        />
       </div>
       <div className="row" style={{ marginLeft: '1px' }}>
         {sortManagers(managers, sortRatio).map(manager => (
@@ -53,7 +57,8 @@ ManagerFellowMap.propTypes = {
     '--arrow-left-margin-style': PropTypes.string.isRequired
   }).isRequired,
   onSortManagers: PropTypes.func.isRequired,
-  handleMapClose: PropTypes.func.isRequired
+  handleMapClose: PropTypes.func.isRequired,
+  sortLabel: PropTypes.string.isRequired
 };
 
 export default ManagerFellowMap;

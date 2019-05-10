@@ -30,7 +30,8 @@ class EManagerSimsLeadsDashboard extends Component {
         filter: 'total-fellows-card',
         filterCardRefs: [],
         toolTipOption: 'total-fellows-card'
-      }
+      },
+      sortLabel: 'Fellow Ratio, High to Low'
     };
     this.onSelectManagerFellowRatioCard = this.onSelectManagerFellowRatioCard.bind(
       this
@@ -44,13 +45,16 @@ class EManagerSimsLeadsDashboard extends Component {
     this.setState({ isEngineeringManager: role === 'WATCH_TOWER_EM' });
   }
 
-  onSelectManagerFellowRatioCard = value => {
-    this.setState({
-      managerFellowSortRatio: value
-        .slice(-11)
-        .replace(/\s/g, '_')
-        .toUpperCase()
-    });
+  onSelectManagerFellowRatioCard = (type, value) => {
+    if (type === 'lfFellowRatio') {
+      this.setState({
+        managerFellowSortRatio: value
+          .slice(-11)
+          .replace(/\s/g, '_')
+          .toUpperCase(),
+        sortLabel: value
+      });
+    }
   };
 
   mapDisplayFellowSummary = (managersArray, totalFellows) => {
@@ -108,7 +112,12 @@ class EManagerSimsLeadsDashboard extends Component {
   };
 
   renderManagerFellowMap = () => {
-    const { show, isEngineeringManager, managerFellowSortRatio } = this.state;
+    const {
+      show,
+      isEngineeringManager,
+      managerFellowSortRatio,
+      sortLabel
+    } = this.state;
     const {
       data: {
         managers: { data: managees = [] }
@@ -127,6 +136,7 @@ class EManagerSimsLeadsDashboard extends Component {
           onSortManagers={this.onSelectManagerFellowRatioCard}
           sortRatio={managerFellowSortRatio}
           managers={managers}
+          sortLabel={sortLabel}
         />
       )
     );
@@ -146,7 +156,7 @@ class EManagerSimsLeadsDashboard extends Component {
         text: isEngineeringManager
           ? 'Average TTL to Fellow ratio'
           : 'Average LF to Fellow ratio',
-        averageValue: Math.floor(averageFellowsPerManager)
+        averageValue: parseInt(averageFellowsPerManager, 10)
       }
     ];
   };

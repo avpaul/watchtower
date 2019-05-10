@@ -6,7 +6,7 @@ export const splitDate = (date = '2018-10-29 14:34:03') => {
 };
 
 /**
- * function to get date and return in format "29/10/2018" 
+ * function to get date and return in format "29/10/2018"
  * @function {@param}
  */
 export const getDate = (date = '2018-10-29 14:34:03') => {
@@ -115,7 +115,7 @@ export const formatName = name => {
   const formattedName = number =>
     `${`${nameForFormat[number]}`.charAt(0).toUpperCase()}${`${
       nameForFormat[number]
-      }`.substr(1)}`;
+    }`.substr(1)}`;
   return `${formattedName(0)} ${formattedName(1)}`;
 };
 
@@ -176,3 +176,9 @@ export const processArray = (informationArray, objectWithCounts) => {
   ];
   return refinedArray;
 };
+
+/**
+ * function to return a number to 2 decimal places
+ * @function {@param}
+ */
+export const truncateNumber = number => Math.round(number * 100) / 100;

@@ -14,6 +14,7 @@ import {
 } from 'recharts';
 
 import './Chart.css';
+import { truncateNumber } from '../../../services/helper';
 
 const Chart = ({ data, averageRatings }) => (
   <div className="line-chart-card pulse-chart__legend">
@@ -69,32 +70,40 @@ const Chart = ({ data, averageRatings }) => (
         <Legend
           payload={[
             {
-              value: `Quantity - ${averageRatings.quantity}`,
+              value: `Quantity - ${truncateNumber(averageRatings.quantity)}`,
               type: 'circle',
               color: '#FF3030'
             },
             {
-              value: `Quality - ${averageRatings.quality}`,
+              value: `Quality - ${truncateNumber(averageRatings.quality)}`,
               type: 'circle',
               color: '#9C8330'
             },
             {
-              value: `Professionalism - ${averageRatings.professionalism}`,
+              value: `Professionalism - ${truncateNumber(
+                averageRatings.professionalism
+              )}`,
               type: 'circle',
               color: '#000000'
             },
             {
-              value: `Initiative - ${averageRatings.initiative}`,
+              value: `Initiative - ${truncateNumber(
+                averageRatings.initiative
+              )}`,
               type: 'circle',
               color: '#72BCD4'
             },
             {
-              value: `Integration - ${averageRatings.integration}`,
+              value: `Integration - ${truncateNumber(
+                averageRatings.integration
+              )}`,
               type: 'circle',
               color: '#FFAF30'
             },
             {
-              value: `Communication - ${averageRatings.communication}`,
+              value: `Communication - ${truncateNumber(
+                averageRatings.communication
+              )}`,
               type: 'circle',
               color: '#3359DB',
               marginRight: '40px'

@@ -1008,6 +1008,7 @@ ShallowWrapper {
                                 },
                                 "show": false,
                                 "showChart": false,
+                                "sortLabel": "Fellow Ratio, High to Low",
                               },
                               "updater": Updater {
                                 "_callbacks": Array [],
@@ -1511,6 +1512,7 @@ ShallowWrapper {
                                     },
                                     "show": false,
                                     "showChart": false,
+                                    "sortLabel": "Fellow Ratio, High to Low",
                                   },
                                   "_rendered": <div
                                     className="container-fluid"
@@ -2171,6 +2173,7 @@ ShallowWrapper {
               },
               "show": false,
               "showChart": false,
+              "sortLabel": "Fellow Ratio, High to Low",
             },
             "updater": Updater {
               "_callbacks": Array [],
@@ -2674,6 +2677,7 @@ ShallowWrapper {
                   },
                   "show": false,
                   "showChart": false,
+                  "sortLabel": "Fellow Ratio, High to Low",
                 },
                 "_rendered": <div
                   className="container-fluid"
@@ -3368,6 +3372,7 @@ ShallowWrapper {
                                       },
                                       "show": false,
                                       "showChart": false,
+                                      "sortLabel": "Fellow Ratio, High to Low",
                                     },
                                     "updater": Updater {
                                       "_callbacks": Array [],
@@ -3871,6 +3876,7 @@ ShallowWrapper {
                                           },
                                           "show": false,
                                           "showChart": false,
+                                          "sortLabel": "Fellow Ratio, High to Low",
                                         },
                                         "_rendered": <div
                                           className="container-fluid"
@@ -4531,6 +4537,7 @@ ShallowWrapper {
                 },
                 "show": false,
                 "showChart": false,
+                "sortLabel": "Fellow Ratio, High to Low",
               },
               "updater": Updater {
                 "_callbacks": Array [],
@@ -5034,6 +5041,7 @@ ShallowWrapper {
                     },
                     "show": false,
                     "showChart": false,
+                    "sortLabel": "Fellow Ratio, High to Low",
                   },
                   "_rendered": <div
                     className="container-fluid"
