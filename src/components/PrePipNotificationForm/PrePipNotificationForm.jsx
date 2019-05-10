@@ -29,7 +29,8 @@ class PrePipNotificationForm extends Component {
   render() {
     const { fellowFeedback, history } = this.props;
     if (fellowFeedback.fellowFeedback)
-      if(Object.keys(fellowFeedback.fellowFeedback).length === 0) history.push('/feedback');
+      if (Object.keys(fellowFeedback.fellowFeedback).length === 0)
+        history.push('/feedback');
     return (
       <div className="prepipOutline">
         <div className="feedbackDashboard container-fluid">
@@ -46,7 +47,7 @@ class PrePipNotificationForm extends Component {
             className="btn-print-prepip-form"
             onClick={this.printDocument}
           >
-            Print
+            Download as PDF
           </button>
         </div>
       </div>

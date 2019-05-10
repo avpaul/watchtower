@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.pip-card-grid>.map-card-row {
+.pip-card-grid > .map-card-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr;
@@ -38,17 +38,17 @@
   background: #ffffff;
 }
 
-.pip-card>.sub {
+.pip-card > .sub {
   display: none;
 }
 
-.pip-card>.heading {
+.pip-card > .heading {
   font-weight: 900;
   font-size: 20px;
   font-family: 'DIN Pro';
 }
 
-.pip-card>.number {
+.pip-card > .number {
   width: 100%;
   font-size: 17px;
   font-weight: 300;
