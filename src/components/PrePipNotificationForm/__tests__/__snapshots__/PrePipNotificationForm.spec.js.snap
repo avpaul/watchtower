@@ -81,7 +81,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     type="button"
           >
-                    Print
+                    Download as PDF
           </button>
 </div>,
       ],
@@ -185,7 +185,7 @@ ShallowWrapper {
             onClick={[Function]}
             type="button"
 >
-            Print
+            Download as PDF
 </button>,
         },
         "ref": null,
@@ -194,13 +194,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Print",
+            "children": "Download as PDF",
             "className": "btn-print-prepip-form",
             "onClick": [Function],
             "type": "button",
           },
           "ref": null,
-          "rendered": "Print",
+          "rendered": "Download as PDF",
           "type": "button",
         },
         "type": "div",
@@ -247,7 +247,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         type="button"
             >
-                        Print
+                        Download as PDF
             </button>
 </div>,
         ],
@@ -351,7 +351,7 @@ ShallowWrapper {
               onClick={[Function]}
               type="button"
 >
-              Print
+              Download as PDF
 </button>,
           },
           "ref": null,
@@ -360,13 +360,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Print",
+              "children": "Download as PDF",
               "className": "btn-print-prepip-form",
               "onClick": [Function],
               "type": "button",
             },
             "ref": null,
-            "rendered": "Print",
+            "rendered": "Download as PDF",
             "type": "button",
           },
           "type": "div",
