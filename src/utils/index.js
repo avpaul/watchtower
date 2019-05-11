@@ -38,7 +38,7 @@ export const carouselOptions = numDefaultSlides => {
 };
 
 export const setColor = value => {
-  if (value < 1 || value === 'Off Track' || value === 'On PIP')
+  if (value < 1 || ['Off Track', 'Off-Track', 'On PIP'].includes(value))
     return 'off-track';
   if (value === 'N/A') return 'no-track';
   return null;
