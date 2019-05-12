@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import TTLFellowsProgress from '../TTLFellowsProgress';
-import Filter from '../../../OpsDashboard/FellowsProgress/Filter';
+import Filter from '../../../../components/FilterDropdown';
 import StackedBarChart from '../../../../components/StackedBarChart';
 
 const defaultProps = {
@@ -67,7 +67,7 @@ describe('<TTLFellowsProgress />', () => {
       .find(Filter)
       .dive()
       .setState({ open: true })
-      .find('.open__list_item')
+      .find('.filter-dropdown__list__item')
       .first()
       .simulate('click', { target: { innerHTML: 'test ttl' } });
 

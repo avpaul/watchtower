@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-import Filter from '../Filter';
+import Filter from '..';
 
 describe('FellowProgress Filter Test', () => {
   const props = {
@@ -16,6 +16,7 @@ describe('FellowProgress Filter Test', () => {
   };
 
   let wrapper;
+
   beforeEach(() => {
     wrapper = shallow(<Filter {...props} />);
   });
@@ -28,23 +29,23 @@ describe('FellowProgress Filter Test', () => {
   });
 
   it('should dropdown on button click', () => {
-    wrapper.find('.filter_dropdown').simulate('click');
+    wrapper.find('.filter-dropdown__button').simulate('click');
     expect(wrapper.state().open).toEqual(true);
-    wrapper.find('.filter_dropdown').simulate('click');
+    wrapper.find('.filter-dropdown__button').simulate('click');
     expect(wrapper.state().open).toEqual(false);
   });
 
   it('should search', () => {
-    wrapper.find('.filter_dropdown').simulate('click');
+    wrapper.find('.filter-dropdown__button').simulate('click');
     wrapper
       .find('#search_input')
       .simulate('change', { target: { value: 'Lo' } });
   });
 
   it('should select an item', () => {
-    wrapper.find('.filter_dropdown').simulate('click');
+    wrapper.find('.filter-dropdown__button').simulate('click');
     wrapper
-      .find('.open__list_item')
+      .find('.filter-dropdown__list__item')
       .first()
       .simulate('click', { target: { innerHTML: 'NAIROBI' } });
     expect(props.getFilter).toHaveBeenCalled();

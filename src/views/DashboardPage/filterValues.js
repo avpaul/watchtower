@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { displayCellContent } from '../../utils';
 
-export const getCriteriaFilterValues = (type, value, table, status) => {
+export const getCriteriaFilterValues = (value, table, status) => {
   switch (value) {
     case 'DevPulse':
       return {
@@ -28,70 +28,40 @@ export const getCriteriaFilterValues = (type, value, table, status) => {
   }
 };
 
-export const getStatusFilterValues = (type, value, table, criteria) => {
-  let filterValues;
-  if (value === 'PIP' && criteria === 'All') {
-    filterValues = {
+export const getStatusFilterValues = (value, table, criteria) => {
+  if (value === 'PIP' && criteria === 'All')
+    return {
       cellKeys: table.allCriteriaAndPipStatus.cells,
       status: 'PIP',
       headers: table.allCriteriaAndPipStatus.titles
     };
-  } else if (value === 'PIP') {
-    filterValues = { status: 'PIP' };
-  } else if (criteria === 'All') {
-    filterValues = {
+
+  if (value === 'PIP') return { status: 'PIP' };
+
+  if (criteria === 'All')
+    return {
       headers: table.default.titles,
       cellKeys: table.default.cells,
       status: value
     };
-  } else {
-    filterValues = { status: value };
-  }
-  return filterValues;
+
+  return { status: value };
 };
 
-export const clearFilters = () => {
-  const filterValues = {
-    status: 'All',
-    level: 'All',
-    criteria: 'All',
+export const defaultState = table => ({
+  headers: table.default.titles,
+  cellKeys: table.default.cells,
+  filters: {
     search: '',
-    headers: [
-      'Fellow Name',
-      'Level',
-      'Week',
-      'LF/TTL',
-      'DevPulse Status',
-      'LMS Status',
-      'Advancement'
-    ],
-    cellKeys: [
-      'name',
-      'level',
-      'weeksSpent',
-      'ttlName',
-      'devPulseStatus',
-      'lmsStatus',
-      'advanceStatus'
-    ]
-  };
-  return filterValues;
-};
-
-export const defaultState = table => {
-  const initialState = {
-    search: '',
-    headers: table.default.titles,
-    cellKeys: table.default.cells,
     criteria: 'All',
     level: 'All',
     status: 'All',
-    statusType: 'All',
-    downloadFellows: [],
-    filteredFellows: []
-  };
-  return initialState;
-};
+    cohort: 'All',
+    statusType: 'All'
+  },
+  downloadFellows: [],
+  filteredFellows: []
+});
 
 /**
  *
@@ -109,8 +79,6 @@ const searchFellow = (fellow, search) => {
   );
 };
 
-const checkFellowLevel = (fellow, level) => fellow.level.search(level) >= 0;
-
 const statusTranslation = {
   onTrack: 'On Track',
   offTrack: 'Off Track',
@@ -126,6 +94,10 @@ const checkFellowStatus = (fellow, { status, criteria, statusType }) => {
   return statusTranslation[advancementStatus] === status;
 };
 
+const checkIfFellowDoesNotHaveAttribute = (fellow, filters, filterAttr) =>
+  filters[filterAttr].toLowerCase() !== 'all' &&
+  !(fellow[filterAttr] === filters[filterAttr]);
+
 /**
  * @description Checks to see if fellow conforms to the provided filter parameters
  * @param {object} fellow The fellow's details
@@ -133,12 +105,20 @@ const checkFellowStatus = (fellow, { status, criteria, statusType }) => {
  * @returns {boolean} True if the fellow conforms and false otherwise
  */
 const runFellowTroughFilterChecks = (fellow, filters) => {
-  const { search, level, status } = filters;
-  if (search !== '' && !searchFellow(fellow, filters.search)) return false;
-  if (level.toLowerCase() !== 'all' && !checkFellowLevel(fellow, level))
+  const { search, status } = filters;
+
+  if (
+    checkIfFellowDoesNotHaveAttribute(fellow, filters, 'level') ||
+    checkIfFellowDoesNotHaveAttribute(fellow, filters, 'cohort')
+  )
     return false;
-  if (status.toLowerCase() !== 'all' && !checkFellowStatus(fellow, filters))
+
+  if (
+    (search !== '' && !searchFellow(fellow, search)) ||
+    (status.toLowerCase() !== 'all' && !checkFellowStatus(fellow, filters))
+  )
     return false;
+
   return true;
 };
 

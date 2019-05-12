@@ -91,23 +91,9 @@ span.row span.pl-2 {
     width: 15%;
     text-align: left;
   }
-
-  .dashboard-table__container {
-    width: 91.6%;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .dashboard-table__container {
-    width: 91.6%;
-  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .dashboard-table__container {
-    width: 100%;
-  }
-
   .dashboard-table__cell:first-child {
     position: sticky;
     text-align: left;

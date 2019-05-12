@@ -4,7 +4,7 @@ import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import { filter } from 'fuzzaldrin';
 import './index.css';
-import truncate from '../../../utils';
+import truncate from '../../utils';
 
 class Filter extends Component {
   constructor(props) {
@@ -74,7 +74,7 @@ class Filter extends Component {
   renderItems = ({ open, search, items, searchItem, width }) => (
     <Fragment>
       {open && (
-        <div className="open">
+        <div className="filter-dropdown__list">
           {search && (
             <input
               type="text"
@@ -82,15 +82,15 @@ class Filter extends Component {
               value={searchItem}
               id="search_input"
               onChange={this.search}
-              className="filter_search"
+              className="filter-dropdown__search"
             />
           )}
-          <ul className="open__list_items" style={{ width }}>
+          <ul className="filter-dropdown__list__items" style={{ width }}>
             {items &&
               items.map(item => (
                 <li
                   key={item}
-                  className="open__list_item"
+                  className="filter-dropdown__list__item"
                   onClick={this.handleSelect}
                   onKeyPress={this.handleSelect}
                   role="button"
@@ -119,11 +119,11 @@ class Filter extends Component {
 
     return (
       <Fragment>
-        <div ref={this.setWrapperRef} className="">
-          <p className="fellow_progress__filter_title">{title}</p>
+        <div ref={this.setWrapperRef} className="filter-dropdown">
+          <p className="filter-dropdown__title">{title}</p>
           <button
             type="button"
-            className="filter_dropdown"
+            className="filter-dropdown__button"
             onClick={() => this.setState({ open: !open })}
             style={{ width, fontSize }}
           >

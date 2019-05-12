@@ -4,13 +4,6 @@ import { DebounceInput } from 'react-debounce-input';
 import './SearchBar.css';
 
 class SearchBar extends Component {
-  componentDidUpdate(prevProps) {
-    const { getFellows, perPage, filter, search } = this.props;
-    if (prevProps.search !== search) {
-      getFellows({ perPage, filter, search });
-    }
-  }
-
   handleClick = event => {
     const { search, handleSearchChange } = this.props;
     event.preventDefault();
@@ -59,10 +52,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
-  getFellows: PropTypes.func.isRequired,
   handleSearchChange: PropTypes.func.isRequired,
-  perPage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  filter: PropTypes.shape().isRequired,
   search: PropTypes.string.isRequired
 };
 
