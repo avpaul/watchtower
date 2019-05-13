@@ -44,9 +44,12 @@ export const getChartProps = lineName => {
   }
 };
 
-const renderChartLine = lineName => (
-  <Line type="monotone" dataKey={lineName} {...getChartProps(lineName)} />
-);
+const renderChartLine = lineName =>
+  lineName ? (
+    <Line type="monotone" dataKey={lineName} {...getChartProps(lineName)} />
+  ) : (
+    ''
+  );
 
 const lineChart = data => (
   <LineChart
