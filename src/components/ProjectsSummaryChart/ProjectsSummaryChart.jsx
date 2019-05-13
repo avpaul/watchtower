@@ -102,6 +102,7 @@ class ProjectsSummaryChart extends Component {
             fellowChartTooltipClass={this.getCurrentClass()}
             user={user}
             loading={performanceData.loading}
+            title={fellowsSummaryFilter}
           />
         )}
       </div>
