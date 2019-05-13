@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import getFeedbackIndex from '../../utils/formatFeedbackInstance';
 
-const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => {
-  const manager = fellowFeedback.Manager
-    ? JSON.parse(fellowFeedback.Manager)
-    : {};
-  return (
+const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
     <div className="prepipForm" id="prepipForm">
       <table className="feedbackTable">
         <tr>
@@ -95,11 +91,12 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => {
       </p>
       <p className="prepipHtml">TIA, </p>
       <p>
-        <b>{fellowFeedback.Manager && `${manager.name}`}, Manager</b>
+        <b>
+          {fellowFeedback.Manager && `${fellowFeedback.Manager.name},`} Manager
+        </b>
       </p>
     </div>
   );
-};
 
 PrePipNotificationOutline.propTypes = {
   serialNumber: PropTypes.number.isRequired,

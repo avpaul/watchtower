@@ -159,8 +159,8 @@ ShallowWrapper {
 </p>,
         <p>
           <b>
-                    Olaolu Akinsete
-                    , Manager
+                    undefined,
+                     Manager
           </b>
 </p>,
       ],
@@ -952,8 +952,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <b>
-            Olaolu Akinsete
-            , Manager
+            undefined,
+             Manager
 </b>,
         },
         "ref": null,
@@ -963,14 +963,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Olaolu Akinsete",
-              ", Manager",
+              "undefined,",
+              " Manager",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Olaolu Akinsete",
-            ", Manager",
+            "undefined,",
+            " Manager",
           ],
           "type": "b",
         },
@@ -1107,8 +1107,8 @@ ShallowWrapper {
 </p>,
           <p>
             <b>
-                        Olaolu Akinsete
-                        , Manager
+                        undefined,
+                         Manager
             </b>
 </p>,
         ],
@@ -1900,8 +1900,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <b>
-              Olaolu Akinsete
-              , Manager
+              undefined,
+               Manager
 </b>,
           },
           "ref": null,
@@ -1911,14 +1911,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Olaolu Akinsete",
-                ", Manager",
+                "undefined,",
+                " Manager",
               ],
             },
             "ref": null,
             "rendered": Array [
-              "Olaolu Akinsete",
-              ", Manager",
+              "undefined,",
+              " Manager",
             ],
             "type": "b",
           },
