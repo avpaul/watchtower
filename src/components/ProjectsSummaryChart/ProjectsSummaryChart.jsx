@@ -25,6 +25,7 @@ class ProjectsSummaryChart extends Component {
 
   updateSelected = selected => this.setState({ selected });
 
+  // eslint-disable-next-line consistent-return
   handleCardClick = event => {
     const currentCard = event.currentTarget.id;
     const {
@@ -32,7 +33,7 @@ class ProjectsSummaryChart extends Component {
         data: { today }
       }
     } = this.props;
-    if (!today) return;
+    if (!today) return null;
     if (today.keys && !(currentCard in today.keys))
       this.setState({ showChart: true, fellowsSummaryFilter: currentCard });
   };

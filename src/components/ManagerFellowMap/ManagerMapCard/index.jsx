@@ -22,7 +22,7 @@ const ManagerMapCard = ({ manager }) => {
       </li>
     );
   });
-
+  const managerName = manager.managerName ? manager.managerName : manager.name;
   return (
     <div className="card manager_card">
       <div className="card-header">
@@ -30,9 +30,9 @@ const ManagerMapCard = ({ manager }) => {
           className="manager_card__name float-left"
           data-toggle="tooltip"
           data-placement="top"
-          title={manager.managerName}
+          title={managerName}
         >
-          {manager.managerName}
+          {managerName}
         </span>
         <span className="manager_card__fellows--number float-right">
           {' '}
@@ -47,9 +47,15 @@ const ManagerMapCard = ({ manager }) => {
 ManagerMapCard.propTypes = {
   manager: PropTypes.shape({
     staff_id: PropTypes.string.isRequired,
-    managerName: PropTypes.string.isRequired,
+    managerName: PropTypes.string,
     fellows: PropTypes.arrayOf(PropTypes.object).isRequired
   }).isRequired
+};
+
+ManagerMapCard.defaults = {
+  manager: PropTypes.shape({
+    managerName: ''
+  })
 };
 
 export default ManagerMapCard;
