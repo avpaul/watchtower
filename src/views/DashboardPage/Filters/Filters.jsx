@@ -1,71 +1,51 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import arrayKey from 'weak-key';
-import FilterDropdown from '../../OpsDashboard/FellowsProgress/Filter';
+import FilterDropdown from '../../../components/FilterDropdown';
 
-const Filters = ({
-  criteria,
-  status,
-  level,
-  getCriteriaFilter,
-  getLevelFilter,
-  getStatusFilter
-}) => {
-  const FilterValues = [
-    {
-      key: '1',
-      type: 'criteria',
-      title: 'Criteria',
-      items: ['All', 'DevPulse', 'LMS'],
-      current: criteria,
-      getFilter: getCriteriaFilter
-    },
-    {
-      key: '2',
-      type: 'level',
-      title: 'Level',
-      items: ['All', 'D0A', 'D0B'],
-      current: level,
-      getFilter: getLevelFilter
-    },
-    {
-      key: '3',
-      type: 'status',
-      title: 'FellowStatus',
-      items: ['All', 'PIP', 'On Track', 'Off Track'],
-      current: status,
-      getFilter: getStatusFilter
-    }
-  ];
+const defaultFilters = [
+  {
+    key: '1',
+    type: 'criteria',
+    title: 'Criteria',
+    items: ['All', 'DevPulse', 'LMS']
+  },
+  {
+    key: '2',
+    type: 'level',
+    title: 'Level',
+    items: ['All', 'D0A', 'D0B']
+  },
+  {
+    key: '3',
+    type: 'status',
+    title: 'FellowStatus',
+    items: ['All', 'PIP', 'On Track', 'Off Track']
+  },
+  {
+    key: '4',
+    type: 'cohort',
+    title: 'Cohort'
+  }
+];
 
-  const renderFilter = () => (
-    <Fragment>
-      {FilterValues.map(filter => (
-        <div className="developer-filter" key={arrayKey(filter)}>
-          <FilterDropdown
-            key={filter.key}
-            search={false}
-            type={filter.type}
-            title={filter.title}
-            items={filter.items}
-            current={filter.current}
-            getFilter={filter.getFilter}
-            dropdownBackgroundColor="#FFAF30"
-          />
-        </div>
-      ))}
-    </Fragment>
-  );
-  return renderFilter();
-};
+const Filters = ({ values, options, handlers }) =>
+  defaultFilters.map(filter => (
+    <FilterDropdown
+      key={filter.key}
+      search={false}
+      type={filter.type}
+      title={filter.title}
+      items={options[filter.type] || filter.items}
+      current={values[filter.type]}
+      getFilter={handlers[filter.type]}
+      dropdownBackgroundColor="#FFAF30"
+    />
+  ));
 
 Filters.propTypes = {
-  criteria: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  level: PropTypes.string.isRequired,
-  getCriteriaFilter: PropTypes.func.isRequired,
-  getLevelFilter: PropTypes.func.isRequired,
-  getStatusFilter: PropTypes.func.isRequired
+  values: PropTypes.shape().isRequired,
+  options: PropTypes.shape().isRequired,
+  handlers: PropTypes.shape().isRequired
 };
 
 export default Filters;

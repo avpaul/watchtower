@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import StackedBarChart from '../../../components/StackedBarChart';
-import Filter from '../../OpsDashboard/FellowsProgress/Filter';
+import Filter from '../../../components/FilterDropdown';
 import '../../OpsDashboard/FellowsProgress/index.css';
 
 class TTLFellowsProgress extends Component {
@@ -58,10 +58,7 @@ class TTLFellowsProgress extends Component {
         <div className="filters">
           {this.renderLocationFilter(locationsAll, location)}
         </div>
-        {this.renderCharts(
-          cohorts,
-          fellowDataLoading
-        )}
+        {this.renderCharts(cohorts, fellowDataLoading)}
       </div>
     );
   }

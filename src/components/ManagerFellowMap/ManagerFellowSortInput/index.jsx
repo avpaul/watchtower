@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Filter from '../../../views/OpsDashboard/FellowsProgress/Filter';
+import Filter from '../../FilterDropdown';
 
 const ManagerFellowSortInput = ({ onChange }) => {
   const sortKeys = ['Fellow Ratio, High to Low', 'Fellow Ratio, Low to High'];

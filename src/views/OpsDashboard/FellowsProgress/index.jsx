@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import StackedBarChart from '../../../components/StackedBarChart';
 import './index.css';
-import Filter from './Filter';
+import Filter from '../../../components/FilterDropdown';
 import getFellowProgressAction from '../../../redux/actionCreators/fellowProgressActions';
 
 export class FellowsProgress extends Component {

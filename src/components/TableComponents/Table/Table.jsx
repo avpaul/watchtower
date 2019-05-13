@@ -9,19 +9,15 @@ import './table.css';
  * @returns {JSX} React JSX
  */
 const Table = ({ children }) => (
-  <div className="dashboard-table__container">
-    <div className="dashboard-table">
-      {children}
-    </div>
-  </div>
+  <div className="dashboard-table">{children}</div>
 );
 
 Table.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 Table.defaultProps = {
-  children: <div />,
+  children: <div />
 };
 
 export default Table;

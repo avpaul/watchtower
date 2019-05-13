@@ -1,21 +1,18 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import 'jspdf-autotable';
 import jsonToCsv from '../../utils/jsonToCsv';
 import jsonToPdf from '../../utils/jsonToPdf';
 import DashboardTable from '../../components/DashboardTable';
 import Error from '../../components/Error';
 import '../../components/Pagination/Pagination.css';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import FilterDropdown from '../OpsDashboard/FellowsProgress/Filter';
 import './index.css';
-import Filters from './Filters/Filters';
 import FilterButton from '../../components/Buttons/Button';
 import table from './tableHeaders';
+import DashboardFilters from './DashboardFilters';
 
 import {
   getCriteriaFilterValues,
   getStatusFilterValues,
-  clearFilters,
   defaultState,
   defaultPropTypes,
   filterFellows,
@@ -61,38 +58,38 @@ export class DashboardPage extends Component {
     this.setState({ sortedFellows }, afterUpdate);
 
   filterFellows = () => {
-    const {
-      search,
-      level,
-      criteria,
-      statusType,
-      status,
-      sortedFellows
-    } = this.state;
-    const filters = { search, level, statusType, criteria, status };
+    const { filters, sortedFellows } = this.state;
     const fellows = filterFellows(sortedFellows, filters);
     this.updateFellows(fellows);
   };
 
-  getCriteriaFilter = (type, value) => {
-    const { status } = this.state;
-    this.setState(getCriteriaFilterValues(type, value, table, status));
-  };
+  getFilter = (type, value) => {
+    const { status, criteria } = this.state;
+    const { loading } = this.props;
+    if (loading) return;
 
-  getStatusFilter = (type, value) => {
-    const { criteria } = this.state;
+    let values = {};
+
+    if (type === 'criteria')
+      values = getCriteriaFilterValues(value, table, criteria);
+    if (type === 'status') values = getStatusFilterValues(value, table, status);
+
     this.setState(
-      getStatusFilterValues(type, value, table, criteria),
+      state => ({
+        filters: {
+          ...state.filters,
+          statusType: values.statusType || state.filters.statusTypes,
+          [type]: value
+        },
+        headers: values.headers || state.headers,
+        cellKeys: values.cellKeys || state.cellKeys
+      }),
       this.filterFellows
     );
   };
 
-  getLevelFilter = (type, value) =>
-    this.setState({ level: value }, this.filterFellows);
-
   downloadCsvPdf = (type, value) => {
-    const { headers, cellKeys, criteria } = this.state;
-    const { downloadFellows, status, level } = this.state;
+    const { headers, cellKeys, filters, downloadFellows } = this.state;
     const {
       pagination: { results },
       loading
@@ -102,9 +99,9 @@ export class DashboardPage extends Component {
       jsonToPdf(
         headers,
         cellKeys,
-        criteria,
-        status,
-        level,
+        filters.criteria,
+        filters.status,
+        filters.level,
         downloadFellows,
         results
       );
@@ -114,90 +111,41 @@ export class DashboardPage extends Component {
   };
 
   clickDownload = () => {
-    const {
-      paginationWrapper: {
-        state: { paginatedData }
-      }
-    } = this.props;
-    this.setState({ downloadFellows: paginatedData });
+    const { paginationWrapper } = this.props;
+    this.setState({ downloadFellows: paginationWrapper.state.paginatedData });
   };
 
-  clearFilters = () => this.setState(clearFilters(), this.filterFellows);
+  clearFilters = () => {
+    const { filters, headers, cellKeys } = defaultState(table);
+    this.setState({ filters, headers, cellKeys }, this.filterFellows);
+  };
 
   handleSearchBarChange = ({ search }) =>
-    this.setState({ search }, this.filterFellows);
+    this.setState(
+      state => ({ filters: { ...state.filters, search } }),
+      this.filterFellows
+    );
 
-  handleSearchInputChange = event =>
-    this.setState({ search: event.target.value }, this.filterFellows);
-
-  renderSearchBar = () => {
-    const { search } = this.state;
-    const {
-      paginationWrapper: {
-        state: { paginationFilter: filter }
-      }
-    } = this.props;
+  renderFilter = () => {
+    const { filters } = this.state;
+    const { fellows } = this.props;
     return (
-      <SearchBar
-        getFellows={this.handleSearchBarChange}
-        perPage={filter.perPage}
-        filter={filter}
-        search={search}
-        handleSearchChange={this.handleSearchInputChange}
+      <DashboardFilters
+        filters={filters}
+        getFilter={this.getFilter}
+        fellows={fellows}
+        onDownloadDropdownClick={this.clickDownload}
+        onDownloadClick={this.downloadCsvPdf}
+        onSearchBarChange={this.handleSearchBarChange}
       />
     );
   };
-
-  renderDownloadButton() {
-    return (
-      <div
-        className="download-button"
-        onClick={this.clickDownload}
-        onKeyPress={this.clickDownload}
-        role="button"
-        tabIndex={-1}
-      >
-        <FilterDropdown
-          key="4"
-          search={false}
-          type="download"
-          title=""
-          items={['as PDF', 'as CSV']}
-          current="Export"
-          getFilter={this.downloadCsvPdf}
-        />
-      </div>
-    );
-  }
-
-  renderFilter() {
-    const { criteria, status, level } = this.state;
-    const {
-      paginationWrapper: {
-        state: { paginatedData }
-      }
-    } = this.props;
-    return (
-      <Fragment>
-        <Filters
-          criteria={criteria}
-          status={status}
-          level={level}
-          getCriteriaFilter={this.getCriteriaFilter}
-          getLevelFilter={this.getLevelFilter}
-          getStatusFilter={this.getStatusFilter}
-        />
-        <div>{this.renderSearchBar()}</div>
-        {paginatedData.length !== 0 ? this.renderDownloadButton() : null}
-      </Fragment>
-    );
-  }
 
   renderResultCount = () => {
     const { filteredFellows } = this.state;
     const resultTerm = filteredFellows.length === 1 ? 'Fellow' : 'Fellows';
     return (
-      <div className="result-count">
+      <div className="ops-fellows__count">
         <span className="border-bottom mr-2 pb-2">
           {filteredFellows.length || 0}
         </span>
@@ -218,8 +166,8 @@ export class DashboardPage extends Component {
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
-        <Fragment>
-          <div className="filters--dev">{this.renderFilter()}</div>
+        <div className="ops-fellows container-fluid">
+          <div className="ops-fellows__filters row">{this.renderFilter()}</div>
           {this.renderResultCount()}
           <DashboardTable
             headers={headers}
@@ -229,7 +177,7 @@ export class DashboardPage extends Component {
             cellValues={cellKeys}
             handleSortingChange={this.updateFellows}
           />
-        </Fragment>
+        </div>
       </ErrorBoundary>
     );
   }

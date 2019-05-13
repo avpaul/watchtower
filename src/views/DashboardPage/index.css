@@ -1,7 +1,17 @@
-.filters--dev {
-  width: 90%;
-  display: flex;
-  margin: 12vh 3.75em 1em 3.75em;
+.ops-fellows {
+  padding: 12vh 4% 2rem 4%;
+}
+
+.ops-fellows__filters {
+  width: 100%;
+  margin: 0;
+}
+
+.ops-fellows__count {
+  font-family: 'DIN Pro Light', Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  font-weight: 400;
 }
 
 .download-button {
@@ -13,31 +23,27 @@
   padding-top: 21px;
 }
 
-.download-button .filter_dropdown {
+.download-button .filter-dropdown__button {
   border: 1px solid blue;
   border-radius: 5px;
   margin-right: unset;
   width: 120px;
 }
 
-.download-button .open {
+.download-button .filter-dropdown__list {
   right: 0;
   border-radius: 5px;
 }
 
-.download-button .open .open__list_items {
+.download-button .filter-dropdown__list_items {
   border-radius: 5px;
 }
 
-.download-button .filter_dropdown > span:first-child {
+.download-button .filter-dropdown__button > span:first-child {
   margin: auto;
   color: blue;
 }
 
-.download-button .filter_dropdown > span:last-child {
+.download-button .filter-dropdown__button > span:last-child {
   display: none;
-}
-
-.developer-filter .filter_dropdown {
-  margin-right: 25px;
 }

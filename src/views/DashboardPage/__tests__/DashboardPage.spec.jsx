@@ -9,13 +9,11 @@ import fellows from '../../../__mocks__/fellows';
 import pagination from '../../../__mocks__/pagination';
 import mockPaginationWrapper from '../../../components/Pagination/mockPaginationWrapper';
 import Error from '../../../components/Error';
-import {
-  ONTRACK,
-  OFFTRACK_WK4_MINUS
-} from '../../../redux/constants/fellowFilters';
+import { ONTRACK } from '../../../redux/constants/fellowFilters';
 import table from '../tableHeaders';
 import jsonToCsv from '../../../utils/jsonToCsv';
 import jsonToPdf from '../../../utils/jsonToPdf';
+import { defaultState } from '../filterValues';
 
 jest.mock('../../../utils/jsonToPdf');
 jest.mock('../../../utils/jsonToCsv');
@@ -48,25 +46,68 @@ describe('Dashboard Page ', () => {
    * @returns { object } { props, wrapper }
    */
   const setup = (mountComponent = false, propOverrides = {}) => {
+    const newProps = { ...props, ...propOverrides };
     const wrapper = mountComponent
-      ? mount(
-          <DashboardPagePaginationWrapped {...{ ...props, ...propOverrides }} />
-        )
+      ? mount(<DashboardPagePaginationWrapped {...newProps} />)
       : shallow(
-          <DashboardPage {...props} paginationWrapper={mockPaginationWrapper} />
+          <DashboardPage
+            {...newProps}
+            paginationWrapper={mockPaginationWrapper}
+          />
         );
 
     return { props, wrapper };
   };
 
-  const testGetLevelFilter = loading => {
-    const { wrapper } = setup();
-    wrapper.setState({ level: 'All' });
-    wrapper.setProps({ loading });
-    const getLevelFilterSpy = jest.spyOn(wrapper.instance(), 'getLevelFilter');
-    wrapper.instance().getLevelFilter('level', 'D0A');
-    expect(getLevelFilterSpy).toHaveBeenCalled();
-    expect(wrapper.state('level')).toEqual('D0A');
+  const setupForFilterTest = (loading = false) => {
+    const { wrapper } = setup(false, { loading });
+    const updatedState = {
+      headers: ['Name', 'Class'],
+      cellKeys: table.lmsCriteria.cells,
+      filters: {
+        ...wrapper.state('filters'),
+        statusType: 'LMSStatus',
+        criteria: 'All',
+        status: 'All'
+      }
+    };
+
+    return { wrapper, updatedState };
+  };
+
+  const testGetFilter = (
+    filterParams,
+    tablePropsResult = table.default,
+    loading = false,
+    statusType = null,
+    testHeadersAndCells = false
+  ) => {
+    const { wrapper, updatedState } = setupForFilterTest(loading);
+    expect(wrapper.props('loading')).toBeTruthy();
+    wrapper.setState(updatedState, () => {
+      const getFilterSpy = jest.spyOn(wrapper.instance(), 'getFilter');
+      wrapper.instance().getFilter(...filterParams);
+      expect(getFilterSpy).toHaveBeenCalled();
+
+      const filterValue = !loading
+        ? filterParams[1]
+        : updatedState.filters[filterParams[0]];
+      const titles =
+        !loading && testHeadersAndCells
+          ? tablePropsResult.titles
+          : updatedState.headers;
+      const cells =
+        !loading && testHeadersAndCells
+          ? tablePropsResult.cells
+          : updatedState.cellKeys;
+
+      expect(wrapper.state('filters')[filterParams[0]]).toEqual(filterValue);
+      expect(wrapper.state('headers')).toEqual(titles);
+      expect(wrapper.state('cellKeys')).toEqual(cells);
+
+      if (statusType)
+        expect(wrapper.state('filters').statusType).toBe(statusType);
+    });
   };
 
   const testDownload = (type, testWhenLoading = false) => {
@@ -124,7 +165,9 @@ describe('Dashboard Page ', () => {
 
   it('update props with different array', () => {
     const { wrapper } = setup();
-    wrapper.setProps({ fellows: [] });
+    wrapper.setProps({ fellows: [] }, () => {
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
   it("renders the ErrorPage when there's an error", () => {
@@ -133,145 +176,44 @@ describe('Dashboard Page ', () => {
     expect(wrapper.contains(ErrorPage)).toEqual(true);
   });
 
-  it('changes state when getCriteriaFilter is called', () => {
-    const { wrapper } = setup();
-
-    wrapper.setState({
-      headers: ['Name', 'Class'],
-      statusType: 'LMSStatus',
-      cellKeys: table.lmsCriteria.cells,
-      criteria: 'LMS',
-      status: 'All'
-    });
-
-    const getCriteriaFilterSpy = jest.spyOn(
-      wrapper.instance(),
-      'getCriteriaFilter'
-    );
-    wrapper.instance().getCriteriaFilter('criteria', 'DevPulse');
-    expect(getCriteriaFilterSpy).toHaveBeenCalled();
-    expect(wrapper.state('headers')).toEqual([
-      'Fellow Name',
-      'Level',
-      'Week',
-      'LF/TTL',
-      'Quality',
-      'Quantity',
-      'Initiative',
-      'Communication',
-      'Professionalism',
-      'Integration'
-    ]);
-    expect(wrapper.state('statusType')).toEqual('devPulseStatus');
-    expect(wrapper.state('cellKeys')).toEqual([
-      'name',
-      'level',
-      'weeksSpent',
-      'ttlName',
-      'quality',
-      'quantity',
-      'initiative',
-      'communication',
-      'professionalism',
-      'integration'
-    ]);
-    expect(wrapper.state('criteria')).toEqual('DevPulse');
-  });
-
-  it('changes state when getStatusFilter is called', () => {
-    const { wrapper } = setup();
-    wrapper.setProps({ filter: { filter: OFFTRACK_WK4_MINUS } });
-    wrapper.setState({
-      headers: ['Name', 'Class'],
-      statusType: 'LMSStatus',
-      cellKeys: table.lmsCriteria.cells,
-      criteria: 'All',
-      status: 'All'
-    });
-    const getStatusFilterSpy = jest.spyOn(
-      wrapper.instance(),
-      'getStatusFilter'
-    );
-    wrapper.instance().getStatusFilter('status', 'On Track');
-    expect(getStatusFilterSpy).toHaveBeenCalled();
-    expect(wrapper.state('headers')).toEqual([
-      'Fellow Name',
-      'Level',
-      'Week',
-      'LF/TTL',
-      'DevPulse Status',
-      'LMS Status',
-      'Advancement'
-    ]);
-    expect(wrapper.state('statusType')).toEqual('LMSStatus');
-    expect(wrapper.state('cellKeys')).toEqual([
-      'name',
-      'level',
-      'weeksSpent',
-      'ttlName',
+  it('changes state when getFilter by DevPulse criteria is called', () => {
+    testGetFilter(
+      ['criteria', 'DevPulse'],
+      table.devPulseCriteria,
+      false,
       'devPulseStatus',
+      true
+    );
+  });
+
+  it('changes state when getFilter by LMS criteria is called', () => {
+    testGetFilter(
+      ['criteria', 'LMS'],
+      table.lmsCriteria,
+      false,
       'lmsStatus',
-      'advanceStatus'
-    ]);
-    expect(wrapper.state('status')).toEqual('On Track');
-  });
-
-  it('only changes state when getStatusFilter is called and loading prop is true', () => {
-    const { wrapper } = setup();
-    wrapper.setState({
-      headers: ['Name', 'Class'],
-      statusType: 'LMSStatus',
-      cellKeys: table.lmsCriteria.cells,
-      criteria: 'All',
-      status: 'All'
-    });
-    wrapper.setProps({ loading: true });
-    const getStatusFilterSpy = jest.spyOn(
-      wrapper.instance(),
-      'getStatusFilter'
+      true
     );
-    wrapper.instance().getStatusFilter('status', 'On Track');
-    expect(getStatusFilterSpy).toHaveBeenCalled();
-    expect(wrapper.state('statusType')).toEqual('LMSStatus');
-    expect(wrapper.state('status')).toEqual('On Track');
   });
 
-  it('renders paginated data as expected', () => {
-    const { wrapper } = setup();
-    const renderDownloadButtonSpy = jest.spyOn(
-      wrapper.instance(),
-      'renderDownloadButton'
-    );
-    const clickDownloadSpy = jest.spyOn(wrapper.instance(), 'clickDownload');
-
-    const newPaginationWrapper = { ...mockPaginationWrapper };
-    newPaginationWrapper.state.paginatedData = fellows;
-    wrapper.setProps({ paginationWrapper: newPaginationWrapper }, () => {
-      expect(renderDownloadButtonSpy).toHaveBeenCalled();
-      expect(wrapper).toMatchSnapshot();
-
-      wrapper.find('.download-button').simulate('click');
-      expect(clickDownloadSpy).toHaveBeenCalled();
-    });
+  it('changes state when getFilter for status is called', () => {
+    testGetFilter(['status', 'On Track'], table.default, false);
   });
+
+  it('changes state when getFilter for level is called', () =>
+    testGetFilter(['level', 'D0A']));
+
+  it('changes state when getFilter for cohort is called', () =>
+    testGetFilter(['cohort', 'NBO 1']));
+
+  it('does not change state when getFilter is called and the loading prop is true', () =>
+    testGetFilter(['level', 'D0A'], null, true));
 
   it('handleSearchBarChange changes state as expected', () => {
     const { wrapper } = setup();
     wrapper.instance().handleSearchBarChange({ search: 'John' });
-    expect(wrapper.state('search')).toBe('John');
+    expect(wrapper.state('filters').search).toBe('John');
   });
-
-  it('handleSearchInputChange changes state as expected', () => {
-    const { wrapper } = setup();
-    wrapper.instance().handleSearchInputChange({ target: { value: 'John' } });
-    expect(wrapper.state('search')).toBe('John');
-  });
-
-  it('changes state when getLevelFilter is called and the loading prop is false', () =>
-    testGetLevelFilter(true));
-
-  it('does not change state when getLevelFilter is called and the loading prop is true', () =>
-    testGetLevelFilter(true));
 
   it('calls jsonToPdf when value is "as PDF" when downloadCsvPdf is called', () =>
     testDownload('PDF'));
@@ -282,61 +224,17 @@ describe('Dashboard Page ', () => {
   it('does not call jsonToPdf when value is "as CSV"  and loading is true when downloadCsvPdf is called', () =>
     testDownload('CSV', true));
 
-  it('changes state and calls getFellows when clearFilters is called and the loading prop is false', () => {
-    const { wrapper } = setup();
-    wrapper.setState({
-      level: 'All',
-      headers: ['Name', 'Class'],
-      cellKeys: ['gdgd', 'dgdg'],
-      criteria: 'LMS',
-      status: 'All',
-      search: 'kjjk'
-    });
+  it('changes state when clearFilters is called', () => {
+    const { wrapper, updatedState } = setupForFilterTest();
     const clearFiltersSpy = jest.spyOn(wrapper.instance(), 'clearFilters');
-    wrapper.instance().clearFilters();
 
-    wrapper.setProps({ filter: OFFTRACK_WK4_MINUS });
-    expect(clearFiltersSpy).toHaveBeenCalled();
-    expect(wrapper.state('level')).toEqual('All');
-    expect(wrapper.state('status')).toEqual('All');
-    expect(wrapper.state('criteria')).toEqual('All');
-    expect(wrapper.state('search')).toEqual('');
-    expect(wrapper.state('cellKeys')).toEqual([
-      'name',
-      'level',
-      'weeksSpent',
-      'ttlName',
-      'devPulseStatus',
-      'lmsStatus',
-      'advanceStatus'
-    ]);
-    expect(wrapper.state('headers')).toEqual([
-      'Fellow Name',
-      'Level',
-      'Week',
-      'LF/TTL',
-      'DevPulse Status',
-      'LMS Status',
-      'Advancement'
-    ]);
-  });
-
-  it('only changes state when clearFilters is called and the loading prop is true', () => {
-    const { wrapper } = setup();
-    wrapper.setState({
-      level: 'All',
-      headers: ['Name', 'Class'],
-      cellKeys: ['gdgd', 'dgdg'],
-      criteria: 'LMS',
-      status: 'All',
-      search: 'kjjk'
+    wrapper.setState(updatedState, () => {
+      wrapper.instance().clearFilters();
+      const { filters } = defaultState(table);
+      expect(clearFiltersSpy).toHaveBeenCalled();
+      expect(wrapper.state('filters')).toEqual(filters);
+      expect(wrapper.state('cellKeys')).toEqual(table.default.cells);
+      expect(wrapper.state('headers')).toEqual(table.default.titles);
     });
-    wrapper.setProps({ loading: true });
-    const clearFiltersSpy = jest.spyOn(wrapper.instance(), 'clearFilters');
-    wrapper.instance().clearFilters();
-    expect(clearFiltersSpy).toHaveBeenCalled();
-    expect(wrapper.state('level')).toEqual('All');
-    expect(wrapper.state('status')).toEqual('All');
-    expect(wrapper.state('criteria')).toEqual('All');
   });
 });
