@@ -85,10 +85,10 @@ describe('EngineeringDashboard component', () => {
 
     managerFellowSortInput.simulate(
       'change',
-      'LOW_TO_HIGH',
-      'Fellow Ratio, Low to High'
+      'HIGH_TO_LOW',
+      'Fellow Ratio, High to Low'
     );
-    expect(wrapper.state().managerFellowSortRatio).toBe('LOW_TO_HIGH');
+    expect(wrapper.state().managerFellowSortRatio).toBe('HIGH_TO_LOW');
   });
 
   it('closes the map when the close button is clicked', () => {

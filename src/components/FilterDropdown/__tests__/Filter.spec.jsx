@@ -67,4 +67,35 @@ describe('FellowProgress Filter Test', () => {
 
     expect(props.handleClickOutside).not.toHaveBeenCalled();
   });
+
+  it('Should update state due to handleClickOutside called', () => {
+    const map = {};
+
+    document.addEventListener = jest.fn((event, cb) => {
+      map[event] = cb;
+    });
+
+    const wrappermount = mount(<Filter {...props} />);
+    wrappermount.setState({ open: true });
+    map.mousedown({});
+
+    expect(wrappermount.state().open).toEqual(false);
+  });
+
+  it('Should exit if wrapperRef contains event.target', () => {
+    const map = {};
+
+    document.addEventListener = jest.fn((event, cb) => {
+      map[event] = cb;
+    });
+
+    const wrappermount = mount(<Filter {...props} />);
+    wrappermount.setState({ open: true });
+    map.mousedown({
+      // eslint-disable-next-line react/no-find-dom-node
+      target: ReactDOM.findDOMNode(wrappermount.instance())
+    });
+
+    expect(wrappermount.state().open).toEqual(true);
+  });
 });
