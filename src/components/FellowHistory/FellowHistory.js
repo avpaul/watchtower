@@ -104,7 +104,7 @@ export class FellowHistory extends Component {
    * @returns JSX object
    */
   renderCards = fellow => {
-    if (!fellow || !fellow.project) return <div />;
+    if (!fellow || !fellow.name) return <div />;
 
     return (
       <React.Fragment>
@@ -174,7 +174,7 @@ export class FellowHistory extends Component {
     const { fellowDetails, fellowDetailsLoading } = this.props;
     const { showDevpulseTable, showLmsTable, fellow } = this.state;
     return (
-      <div className="col-12 mt-5">
+      <div className="col-12 mt-5 p-0">
         {showDevpulseTable && (
           <Fragment>
             {this.renderAverageRatings(fellow.level, fellowDetails.ratings)}
@@ -215,8 +215,8 @@ export class FellowHistory extends Component {
               <div className="row">{this.renderCards(fellow)}</div>
             </div>
           </div>
+          <div className="fellow-history-data">{this.renderTables()}</div>
         </div>
-        <div className="fellow-history-data">{this.renderTables()}</div>
       </Fragment>
     );
   };
