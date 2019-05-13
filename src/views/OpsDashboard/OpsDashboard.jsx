@@ -16,7 +16,8 @@ class OpsDashboardMain extends Component {
     this.state = {
       show: false,
       displayManagers: 'LF',
-      managerFellowSortRatio: 'HIGH_TO_LOW'
+      managerFellowSortRatio: 'HIGH_TO_LOW',
+      sortLabel: 'Fellow Ratio, High to Low'
     };
     this.onSelectManagerFellowRatio = this.onSelectManagerFellowRatio.bind(
       this
@@ -33,7 +34,7 @@ class OpsDashboardMain extends Component {
       .slice(-11)
       .replace(/\s/g, '_')
       .toUpperCase();
-    this.setState({ managerFellowSortRatio: sortRatio });
+    this.setState({ managerFellowSortRatio: sortRatio, sortLabel: value });
   }
 
   mapDisplayContent = () => {
@@ -63,7 +64,12 @@ class OpsDashboardMain extends Component {
   handleMapClose = () => this.setState({ show: false });
 
   renderManagerFellowMap = () => {
-    const { show, managerFellowSortRatio, displayManagers } = this.state;
+    const {
+      show,
+      managerFellowSortRatio,
+      displayManagers,
+      sortLabel
+    } = this.state;
     const { lfs, ttls } = this.props;
 
     const [managers, style] =
@@ -78,6 +84,7 @@ class OpsDashboardMain extends Component {
           onSortManagers={this.onSelectManagerFellowRatio}
           sortRatio={managerFellowSortRatio}
           managers={managers}
+          sortLabel={sortLabel}
         />
       )
     );
