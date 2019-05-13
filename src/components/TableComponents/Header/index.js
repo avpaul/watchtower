@@ -8,7 +8,12 @@ import Row from '../Row';
 const TableHeader = ({ headers }) => (
   <Row header>
     {headers.map(element => (
-      <Cell key={arrayKey({ element })}>{element}</Cell>
+      <Cell
+        key={arrayKey({ element })}
+        addedClass="dashboard-table__column-stat"
+      >
+        {element}
+      </Cell>
     ))}
   </Row>
 );
