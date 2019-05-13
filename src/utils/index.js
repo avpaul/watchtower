@@ -74,15 +74,24 @@ export const formatPerformanceData = performanceData => ({
   ...performanceData,
   data: Object.values(performanceData.data).map(weekData => {
     const updatedWeekData = {};
-    Object.keys(weekData).forEach(key => {
-      if (key === 'week') updatedWeekData.week = weekData.week;
-      else
-        updatedWeekData[key] = {
-          'On Track': weekData[key].ontrack,
-          'Off Track': weekData[key].offtrack,
-          PIP: weekData[key].pip,
-          week: weekData[key].week
+    const keys = Object.keys(weekData);
+
+    performanceData.keys.forEach(categoryKey => {
+      if (keys.find(key => key === categoryKey)) {
+        updatedWeekData[categoryKey] = {
+          'On Track': weekData[categoryKey].ontrack,
+          'Off Track': weekData[categoryKey].offtrack,
+          PIP: weekData[categoryKey].pip,
+          week: weekData.week
         };
+      } else {
+        updatedWeekData[categoryKey] = {
+          'On Track': 0,
+          'Off Track': 0,
+          PIP: 0,
+          week: weekData.week
+        };
+      }
     });
     return updatedWeekData;
   })
@@ -90,6 +99,34 @@ export const formatPerformanceData = performanceData => ({
 
 export const redirectToExternalURL = url => {
   window.open(url, '_blank');
+};
+
+/**
+ * Retrieves the document related offsets of the card HTML component
+ * @param object cardElement HTML element
+ * @return { top , left } Document related offsets
+ */
+export const getCardOffset = cardElement => {
+  const rect = cardElement.getBoundingClientRect();
+  return {
+    top: rect.top + (window.pageYOffset || document.documentElement.scrollTop),
+    left:
+      rect.left + (window.pageXOffset || document.documentElement.scrollLeft)
+  };
+};
+
+/**
+ * Retrieves the position of the tooltip arrow that points to the card on focus
+ * @return { '--fellow-chart-tooltip' } X-axis position of the tooltip arrow
+ */
+export const getCurrentClass = (cardId, cardRefs) => {
+  if (!cardRefs[cardId]) return 0;
+  const cardElement = cardRefs[cardId].current;
+  const cardOnFocusOffsets = getCardOffset(cardElement);
+  const width = Math.floor(
+    cardOnFocusOffsets.left + cardElement.clientWidth / 2
+  );
+  return { '--fellow-chart-tooltip': `${width}px` };
 };
 
 export default truncate;

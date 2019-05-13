@@ -4,7 +4,11 @@ import '../../components/FellowsSummary/FellowsSummary.css';
 import FellowSummaryLabel from '../../components/FellowSummaryLabel/FellowSummaryLabel';
 import FiltersView from '../../components/Filters/FiltersView';
 
-const FellowsSummary = ({ fellowsSummary, handleCardClick }) => (
+const FellowsSummary = ({
+  fellowsSummary,
+  handleCardClick,
+  fellowSummaryCardComponent
+}) => (
   <div className="ops-dashboard__fellows-summary">
     <FellowSummaryLabel />
     <div className="row ops-dashboard__filter">
@@ -13,6 +17,7 @@ const FellowsSummary = ({ fellowsSummary, handleCardClick }) => (
           handleCardClick={handleCardClick}
           filters={fellowsSummary}
           filterCardClassName="p-1"
+          FellowSummaryCardComponent={fellowSummaryCardComponent}
         />
       </div>
     </div>
@@ -25,7 +30,8 @@ FellowsSummary.propTypes = {
       PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     )
   ).isRequired,
-  handleCardClick: PropTypes.func.isRequired
+  handleCardClick: PropTypes.func.isRequired,
+  fellowSummaryCardComponent: PropTypes.instanceOf(React.Component).isRequired
 };
 
 export default FellowsSummary;

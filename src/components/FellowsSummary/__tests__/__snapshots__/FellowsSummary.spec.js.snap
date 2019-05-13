@@ -125,7 +125,7 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "displayByRole": Object {
               "WATCH_TOWER_OPS": "343242434",
@@ -261,7 +261,7 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "displayByRole": Object {
                 "WATCH_TOWER_OPS": "343242434",

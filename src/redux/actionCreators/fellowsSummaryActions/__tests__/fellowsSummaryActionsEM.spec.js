@@ -7,21 +7,57 @@ import { fetchFellowsSummaryEm } from '../fellowsSummaryActions';
 
 describe('fellowsSummaryActions', () => {
   const initialState = {
-    fellowsSummary: {
-      loading: false,
-      fellowsSummaryToday: {},
-      fellowsSummaryTrend: {},
-      data: {
-        data: []
-      },
-      error: ''
+    emsDashboard: {
+      fellowsSummary: {
+        loading: false,
+        summary: [],
+        error: ''
+      }
     }
   };
   const mockStore = configureStore([thunk]);
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v1/engineeringmanager`;
+  const response = {
+    performance: {
+      today: {
+        keys: [
+          '-KXGy1MT1oimjQgFim8t',
+          '-LDetFxSyHMIJqlvwcQH',
+          '-KmRUHvf0LMutnbAhjp5'
+        ],
+        data: {
+          '2019-01-14': {
+            '-KXGy1MT1oimjQgFim8t': {
+              offtrack: 4,
+              ontrack: 120,
+              pip: 0,
+              week: '2019-01-14'
+            },
+            '-LDetFxSyHMIJqlvwcQH': {
+              ontrack: 13,
+              offtrack: 0,
+              pip: 0,
+              week: '2019-01-14'
+            },
+            '-KmRUHvf0LMutnbAhjp5': {
+              ontrack: 13,
+              offtrack: 2,
+              pip: 0,
+              week: '2019-01-14'
+            },
+            Total: {
+              ontrack: 120,
+              offtrack: 4,
+              pip: 0,
+              week: '2019-01-14'
+            }
+          }
+        }
+      }
+    }
+  };
 
   beforeEach(() => {
     store.clearActions();
@@ -32,11 +68,8 @@ describe('fellowsSummaryActions', () => {
   });
 
   it('creates FETCH_FELLOWS_SUMMARY_SUCCESS when fetching ems fellows summary is done', () => {
-    const response = {
-      summary: {}
-    };
     mock
-      .onGet(`${baseURL}/history?email=bukola.makinwa@andela.com`)
+      .onGet(`${serverURL}/api/v2/managers/fellows/performance`)
       .reply(200, response);
 
     const expectedActions = [
@@ -45,21 +78,16 @@ describe('fellowsSummaryActions', () => {
         type: types.FETCH_EM_SUMMARY_SUCCESS
       }
     ];
-    return store
-      .dispatch(fetchFellowsSummaryEm('bukola.makinwa@andela.com'))
-      .then(() => {
-        const dispatchedActions = store.getActions();
-        expect(dispatchedActions).toMatchObject(expectedActions);
-      });
+    return store.dispatch(fetchFellowsSummaryEm()).then(() => {
+      const dispatchedActions = store.getActions();
+      expect(dispatchedActions).toMatchObject(expectedActions);
+    });
   });
 
   it('creates FETCH_FELLOWS_SUMMARY_ERROR when fetching ems  fellows summary is done', () => {
-    const response = {
-      summary: {}
-    };
     mock
-      .onGet(`${baseURL}/history?email=bukola.makinwa@andela.com`)
-      .reply(500, response);
+      .onGet(`${serverURL}/api/v2/managers/fellows/performance`)
+      .reply(500, {});
 
     const expectedActions = [
       { type: types.FETCH_EM_SUMMARY_REQUEST },
@@ -67,11 +95,9 @@ describe('fellowsSummaryActions', () => {
         type: types.FETCH_EM_SUMMARY_ERROR
       }
     ];
-    return store
-      .dispatch(fetchFellowsSummaryEm('bukola.makinwa@andela.com'))
-      .then(() => {
-        const dispatchedActions = store.getActions();
-        expect(dispatchedActions).toMatchObject(expectedActions);
-      });
+    return store.dispatch(fetchFellowsSummaryEm()).then(() => {
+      const dispatchedActions = store.getActions();
+      expect(dispatchedActions).toMatchObject(expectedActions);
+    });
   });
 });

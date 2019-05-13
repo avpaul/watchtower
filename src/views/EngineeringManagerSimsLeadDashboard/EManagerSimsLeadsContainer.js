@@ -1,11 +1,6 @@
 import { connect } from 'react-redux';
 import EManagerSimsLeadsDashboard from './EManagerSimsLeadsDashboard';
-import {
-  fetchFellowsSummaryEm,
-  fetchFellowsSummarySl,
-  fetchFellowsSummaryLf,
-  fetchFellowsSummaryTtl
-} from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
+import { fetchFellowsSummaryEm } from '../../redux/actionCreators/fellowsSummaryActions/fellowsSummaryActions';
 import getEmsSimsLeadsActions from '../../redux/actionCreators/getEmsSimsLeadsActions';
 
 export const mapStateToProps = ({
@@ -22,9 +17,6 @@ export default connect(
   mapStateToProps,
   {
     fetchFellowsSummaryEm,
-    getEmsSimsLeadsActions,
-    fetchFellowsSummarySl,
-    fetchFellowsSummaryLf,
-    fetchFellowsSummaryTtl
+    getEmsSimsLeadsActions
   }
 )(EManagerSimsLeadsDashboard);
