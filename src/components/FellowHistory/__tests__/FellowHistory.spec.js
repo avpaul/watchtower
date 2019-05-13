@@ -83,6 +83,7 @@ describe('Fellow History Container', () => {
       match: { params: { name: 'kingsley.obot', id: '-LQcqbQzyNpIlfJreeiZ' } },
       fellowSummaryDetails: [fellow],
       getLmsSubmissions: jest.fn(),
+
       lmsSubmissions: {},
       lmsLoading: false,
       ratings: [{}],
@@ -99,6 +100,8 @@ describe('Fellow History Container', () => {
         integration: '0.00'
       },
       getFellow: jest.fn(),
+      deactivatePIPAction: jest.fn(),
+      success: false,
       fellowDetails
     };
 

@@ -179,5 +179,8 @@ export default {
     loading: false,
     feedback: [],
     error: null
+  },
+  pipDeactivation: {
+    success: null
   }
 };

@@ -44,6 +44,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "data": Array [],
+      "deactivatePIPAction": [Function],
       "error": null,
       "getManagerFellowsSummary": [Function],
       "history": Object {
@@ -96,6 +97,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "data": Array [],
+        "deactivatePIPAction": [Function],
         "error": null,
         "getManagerFellowsSummary": [Function],
         "history": Object {

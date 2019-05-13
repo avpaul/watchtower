@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import ConnectedDeveloperDashboard from './DeveloperDashboard';
 import getManagerFellowsSummary from '../../redux/actionCreators/managerFellowsSummaryActions';
+import deactivatePIPAction from '../../redux/actionCreators/pipDeactivationActions';
 
 export const mapStateToProps = ({ managerFellowsSummary }) => ({
   loading: managerFellowsSummary.loading,
@@ -11,5 +12,6 @@ export const mapStateToProps = ({ managerFellowsSummary }) => ({
 
 export default connect(
   mapStateToProps,
-  { getManagerFellowsSummary }
+
+  { getManagerFellowsSummary, deactivatePIPAction }
 )(ConnectedDeveloperDashboard);
