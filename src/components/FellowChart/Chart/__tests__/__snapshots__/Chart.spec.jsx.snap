@@ -418,28 +418,7 @@ ShallowWrapper {
                               xAxisId={0}
                               yAxisId={0}
                     />
-                    <Line
-                              activeDot={true}
-                              animateNewValues={true}
-                              animationBegin={0}
-                              animationDuration={1500}
-                              animationEasing="ease"
-                              connectNulls={false}
-                              dataKey=""
-                              dot={true}
-                              fill="#fff"
-                              hide={false}
-                              isAnimationActive={true}
-                              legendType="line"
-                              onAnimationEnd={[Function]}
-                              onAnimationStart={[Function]}
-                              points={Array []}
-                              stroke="#3182bd"
-                              strokeWidth={1}
-                              type="monotone"
-                              xAxisId={0}
-                              yAxisId={0}
-                    />
+                    
           </LineChart>
 </ResponsiveContainer>,
       ],
@@ -792,28 +771,7 @@ ShallowWrapper {
                         xAxisId={0}
                         yAxisId={0}
             />
-            <Line
-                        activeDot={true}
-                        animateNewValues={true}
-                        animationBegin={0}
-                        animationDuration={1500}
-                        animationEasing="ease"
-                        connectNulls={false}
-                        dataKey=""
-                        dot={true}
-                        fill="#fff"
-                        hide={false}
-                        isAnimationActive={true}
-                        legendType="line"
-                        onAnimationEnd={[Function]}
-                        onAnimationStart={[Function]}
-                        points={Array []}
-                        stroke="#3182bd"
-                        strokeWidth={1}
-                        type="monotone"
-                        xAxisId={0}
-                        yAxisId={0}
-            />
+            
 </LineChart>,
           "debounce": 0,
           "height": 298,
@@ -1042,28 +1000,7 @@ ShallowWrapper {
                 xAxisId={0}
                 yAxisId={0}
 />,
-              <Line
-                activeDot={true}
-                animateNewValues={true}
-                animationBegin={0}
-                animationDuration={1500}
-                animationEasing="ease"
-                connectNulls={false}
-                dataKey=""
-                dot={true}
-                fill="#fff"
-                hide={false}
-                isAnimationActive={true}
-                legendType="line"
-                onAnimationEnd={[Function]}
-                onAnimationStart={[Function]}
-                points={Array []}
-                stroke="#3182bd"
-                strokeWidth={1}
-                type="monotone"
-                xAxisId={0}
-                yAxisId={0}
-/>,
+              "",
             ],
             "data": Array [
               Object {
@@ -1431,36 +1368,7 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "activeDot": true,
-                "animateNewValues": true,
-                "animationBegin": 0,
-                "animationDuration": 1500,
-                "animationEasing": "ease",
-                "connectNulls": false,
-                "dataKey": "",
-                "dot": true,
-                "fill": "#fff",
-                "hide": false,
-                "isAnimationActive": true,
-                "legendType": "line",
-                "onAnimationEnd": [Function],
-                "onAnimationStart": [Function],
-                "points": Array [],
-                "stroke": "#3182bd",
-                "strokeWidth": 1,
-                "type": "monotone",
-                "xAxisId": 0,
-                "yAxisId": 0,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            "",
           ],
           "type": [Function],
         },
@@ -1798,28 +1706,7 @@ ShallowWrapper {
                                     xAxisId={0}
                                     yAxisId={0}
                         />
-                        <Line
-                                    activeDot={true}
-                                    animateNewValues={true}
-                                    animationBegin={0}
-                                    animationDuration={1500}
-                                    animationEasing="ease"
-                                    connectNulls={false}
-                                    dataKey=""
-                                    dot={true}
-                                    fill="#fff"
-                                    hide={false}
-                                    isAnimationActive={true}
-                                    legendType="line"
-                                    onAnimationEnd={[Function]}
-                                    onAnimationStart={[Function]}
-                                    points={Array []}
-                                    stroke="#3182bd"
-                                    strokeWidth={1}
-                                    type="monotone"
-                                    xAxisId={0}
-                                    yAxisId={0}
-                        />
+                        
             </LineChart>
 </ResponsiveContainer>,
         ],
@@ -2172,28 +2059,7 @@ ShallowWrapper {
                             xAxisId={0}
                             yAxisId={0}
               />
-              <Line
-                            activeDot={true}
-                            animateNewValues={true}
-                            animationBegin={0}
-                            animationDuration={1500}
-                            animationEasing="ease"
-                            connectNulls={false}
-                            dataKey=""
-                            dot={true}
-                            fill="#fff"
-                            hide={false}
-                            isAnimationActive={true}
-                            legendType="line"
-                            onAnimationEnd={[Function]}
-                            onAnimationStart={[Function]}
-                            points={Array []}
-                            stroke="#3182bd"
-                            strokeWidth={1}
-                            type="monotone"
-                            xAxisId={0}
-                            yAxisId={0}
-              />
+              
 </LineChart>,
             "debounce": 0,
             "height": 298,
@@ -2422,28 +2288,7 @@ ShallowWrapper {
                   xAxisId={0}
                   yAxisId={0}
 />,
-                <Line
-                  activeDot={true}
-                  animateNewValues={true}
-                  animationBegin={0}
-                  animationDuration={1500}
-                  animationEasing="ease"
-                  connectNulls={false}
-                  dataKey=""
-                  dot={true}
-                  fill="#fff"
-                  hide={false}
-                  isAnimationActive={true}
-                  legendType="line"
-                  onAnimationEnd={[Function]}
-                  onAnimationStart={[Function]}
-                  points={Array []}
-                  stroke="#3182bd"
-                  strokeWidth={1}
-                  type="monotone"
-                  xAxisId={0}
-                  yAxisId={0}
-/>,
+                "",
               ],
               "data": Array [
                 Object {
@@ -2811,36 +2656,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "activeDot": true,
-                  "animateNewValues": true,
-                  "animationBegin": 0,
-                  "animationDuration": 1500,
-                  "animationEasing": "ease",
-                  "connectNulls": false,
-                  "dataKey": "",
-                  "dot": true,
-                  "fill": "#fff",
-                  "hide": false,
-                  "isAnimationActive": true,
-                  "legendType": "line",
-                  "onAnimationEnd": [Function],
-                  "onAnimationStart": [Function],
-                  "points": Array [],
-                  "stroke": "#3182bd",
-                  "strokeWidth": 1,
-                  "type": "monotone",
-                  "xAxisId": 0,
-                  "yAxisId": 0,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+              "",
             ],
             "type": [Function],
           },
