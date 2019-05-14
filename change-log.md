@@ -1,3 +1,17 @@
+# V 2.0.0
+
+## Features
+
+- consume V2 API endpoints that return data from the WatchTower database instead of querying the Andela APIs in real-time
+- PIP activation
+
+## Bug Fixes
+
+- fix inconsistent fellow numbers on users' dashboards
+- improve data retrieval and data loading speed
+- fix styling, indentation and pagination of dashboards.
+
+
 # V1.0.5
 
 ## Features
