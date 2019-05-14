@@ -23,7 +23,8 @@ const ManagerFellowMap = ({
   <div>
     <div className="track-key">
       <p>
-        <span className="dot" /> Off Track <span className="dots" /> On Track
+        <span className="dot" /> Off Track <span className="dots" /> On Track{' '}
+        <span className="grey-dot" /> No Status
       </p>
     </div>
     <div className="manager_list" style={arrowStyle}>
