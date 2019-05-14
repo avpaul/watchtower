@@ -81,8 +81,8 @@ const FeedbackDashboardTable = ({
     <Table>
       <TableHeader headers={headers} />
 
-      {feedbackArray.map(feedback =>
-        feedbackRow(feedback, feedback.sn, type, handleClick)
+      {feedbackArray.map((feedback, index) =>
+        feedbackRow(feedback, index, type, handleClick)
       )}
     </Table>
   );
