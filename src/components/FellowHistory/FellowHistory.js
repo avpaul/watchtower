@@ -141,7 +141,7 @@ export class FellowHistory extends Component {
   loadPipActivationForm = () => {
     const { fellow } = this.state;
     if (!fellow) return <div />;
-    if (fellow.overall_status === 'offTrack') {
+    if (fellow.status.toLowerCase().includes('offtrack')) {
       return (
         <button
           type="submit"
