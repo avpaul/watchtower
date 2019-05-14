@@ -265,7 +265,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="row"
+        className="row m-0"
 >
         <FellowsSummaryCard
                 devPulseAverage="0.66"
@@ -434,7 +434,7 @@ ShallowWrapper {
             status="Off-Track"
 />,
         ],
-        "className": "row",
+        "className": "row m-0",
       },
       "ref": null,
       "rendered": Array [
@@ -576,7 +576,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="row"
+          className="row m-0"
 >
           <FellowsSummaryCard
                     devPulseAverage="0.66"
@@ -745,7 +745,7 @@ ShallowWrapper {
               status="Off-Track"
 />,
           ],
-          "className": "row",
+          "className": "row m-0",
         },
         "ref": null,
         "rendered": Array [

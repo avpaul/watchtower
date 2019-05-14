@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import MapFellowsSummaryCard from '../../components/MapFellowsSummaryCard';
@@ -279,7 +279,7 @@ class DeveloperDashboard extends Component {
     const { user } = this.props;
     const isManager = user.roles.WATCH_TOWER_EM || user.roles.WATCH_TOWER_SL;
     return (
-      <Fragment>
+      <div className="page-content container-fluid">
         <Title
           title={isManager ? 'MANAGERS' : 'PROJECTS'}
           subTitle="Filter by clicking cards"
@@ -295,13 +295,11 @@ class DeveloperDashboard extends Component {
         )}
         {this.renderFilterCards('status')}
         <div>{this.renderResultCount()}</div>
-        <div className="">
-          <MapFellowsSummaryCard
-            handleClick={this.handleCardClick}
-            fellowsSummaryCardDetails={fellowSummaryDetails}
-          />
-        </div>
-      </Fragment>
+        <MapFellowsSummaryCard
+          handleClick={this.handleCardClick}
+          fellowsSummaryCardDetails={fellowSummaryDetails}
+        />
+      </div>
     );
   };
 

@@ -166,7 +166,7 @@ export class DashboardPage extends Component {
     const { ErrorBoundary } = Error;
     return (
       <ErrorBoundary>
-        <div className="ops-fellows container-fluid">
+        <div className="page-content ops-fellows container-fluid">
           <div className="ops-fellows__filters row">{this.renderFilter()}</div>
           {this.renderResultCount()}
           <DashboardTable

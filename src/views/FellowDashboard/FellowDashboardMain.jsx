@@ -20,7 +20,7 @@ export class FellowDashboard extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="page-content container-fluid">
         <FellowBioConnected {...this.props} />
         <ProgressBarConnected />
         <DevPulseChartConnected />

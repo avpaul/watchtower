@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import FiltersView from '../Filters/FiltersView';
-import FellowSummaryLabel from '../FellowSummaryLabel';
+import Title from '../Title';
 import './FellowsSummary.css';
 
 const formatCards = fellowLevels => {
@@ -35,7 +35,7 @@ const FellowsSummary = props => {
   const fellowsSummaryCard = formatCards(fellowsSummary);
   return (
     <div className="ops-dashboard__fellows-summary">
-      <FellowSummaryLabel />
+      <Title title="FELLOWS SUMMARY" />
       <div className="row ops-dashboard__filter">
         <FiltersView
           handleCardClick={handleCardClick}

@@ -9,11 +9,9 @@ describe('Title tests', () => {
   };
   const titleWrapper = shallow(<Title {...props} />);
   it('should render the title correctly', () => {
-    expect(titleWrapper.find('.filter_card_title').text()).toBe(
+    expect(titleWrapper.find('.page-section__subtitle').text()).toBe(
       'filter by clicking cards'
     );
-    expect(
-      titleWrapper.find('.ops-dashboard__fellow-summary-text').text()
-    ).toBe('FEEDBACK');
+    expect(titleWrapper.find('.page-section__title').text()).toBe('FEEDBACK');
   });
 });

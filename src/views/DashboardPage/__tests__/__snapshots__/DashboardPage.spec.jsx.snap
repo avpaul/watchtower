@@ -303,7 +303,7 @@ ShallowWrapper {
       "children": Array [
         <ErrorBoundary>
           <div
-                    className="ops-fellows container-fluid"
+                    className="page-content ops-fellows container-fluid"
           >
                     <div
                               className="ops-fellows__filters row"
@@ -611,7 +611,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <div
-            className="ops-fellows container-fluid"
+            className="page-content ops-fellows container-fluid"
 >
             <div
                         className="ops-fellows__filters row"
@@ -1205,7 +1205,7 @@ ShallowWrapper {
                 loading={false}
 />,
             ],
-            "className": "ops-fellows container-fluid",
+            "className": "page-content ops-fellows container-fluid",
           },
           "ref": null,
           "rendered": Array [
@@ -1832,7 +1832,7 @@ ShallowWrapper {
         "children": Array [
           <ErrorBoundary>
             <div
-                        className="ops-fellows container-fluid"
+                        className="page-content ops-fellows container-fluid"
             >
                         <div
                                     className="ops-fellows__filters row"
@@ -2140,7 +2140,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <div
-              className="ops-fellows container-fluid"
+              className="page-content ops-fellows container-fluid"
 >
               <div
                             className="ops-fellows__filters row"
@@ -2734,7 +2734,7 @@ ShallowWrapper {
                   loading={false}
 />,
               ],
-              "className": "ops-fellows container-fluid",
+              "className": "page-content ops-fellows container-fluid",
             },
             "ref": null,
             "rendered": Array [
@@ -3676,7 +3676,7 @@ ShallowWrapper {
       "children": Array [
         <ErrorBoundary>
           <div
-                    className="ops-fellows container-fluid"
+                    className="page-content ops-fellows container-fluid"
           >
                     <div
                               className="ops-fellows__filters row"
@@ -3984,7 +3984,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <div
-            className="ops-fellows container-fluid"
+            className="page-content ops-fellows container-fluid"
 >
             <div
                         className="ops-fellows__filters row"
@@ -4578,7 +4578,7 @@ ShallowWrapper {
                 loading={true}
 />,
             ],
-            "className": "ops-fellows container-fluid",
+            "className": "page-content ops-fellows container-fluid",
           },
           "ref": null,
           "rendered": Array [
@@ -5205,7 +5205,7 @@ ShallowWrapper {
         "children": Array [
           <ErrorBoundary>
             <div
-                        className="ops-fellows container-fluid"
+                        className="page-content ops-fellows container-fluid"
             >
                         <div
                                     className="ops-fellows__filters row"
@@ -5513,7 +5513,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <div
-              className="ops-fellows container-fluid"
+              className="page-content ops-fellows container-fluid"
 >
               <div
                             className="ops-fellows__filters row"
@@ -6107,7 +6107,7 @@ ShallowWrapper {
                   loading={true}
 />,
               ],
-              "className": "ops-fellows container-fluid",
+              "className": "page-content ops-fellows container-fluid",
             },
             "ref": null,
             "rendered": Array [
@@ -6822,7 +6822,7 @@ ShallowWrapper {
       "children": Array [
         <ErrorBoundary>
           <div
-                    className="ops-fellows container-fluid"
+                    className="page-content ops-fellows container-fluid"
           >
                     <div
                               className="ops-fellows__filters row"
@@ -6903,7 +6903,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <div
-            className="ops-fellows container-fluid"
+            className="page-content ops-fellows container-fluid"
 >
             <div
                         className="ops-fellows__filters row"
@@ -7043,7 +7043,7 @@ ShallowWrapper {
                 loading={false}
 />,
             ],
-            "className": "ops-fellows container-fluid",
+            "className": "page-content ops-fellows container-fluid",
           },
           "ref": null,
           "rendered": Array [
@@ -7218,7 +7218,7 @@ ShallowWrapper {
         "children": Array [
           <ErrorBoundary>
             <div
-                        className="ops-fellows container-fluid"
+                        className="page-content ops-fellows container-fluid"
             >
                         <div
                                     className="ops-fellows__filters row"
@@ -7299,7 +7299,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <div
-              className="ops-fellows container-fluid"
+              className="page-content ops-fellows container-fluid"
 >
               <div
                             className="ops-fellows__filters row"
@@ -7439,7 +7439,7 @@ ShallowWrapper {
                   loading={false}
 />,
               ],
-              "className": "ops-fellows container-fluid",
+              "className": "page-content ops-fellows container-fluid",
             },
             "ref": null,
             "rendered": Array [

@@ -12,7 +12,7 @@ import ProjectCard from './ProjectCard';
 export default function FellowBio({ fellow }) {
   return (
     <Fragment>
-      <div className="row fellow-bio-container justify-content-between">
+      <div className="row m-0 fellow-bio-container justify-content-between">
         <BioCard data={fellow} />
         <ProjectCard data={fellow} />
       </div>

@@ -34,12 +34,7 @@ ShallowWrapper {
 />,
         <Connect(TTLFellowsProgress) />,
       ],
-      "className": "container-fluid",
-      "style": Object {
-        "paddingBottom": "49px",
-        "paddingLeft": "0",
-        "paddingRight": "0",
-      },
+      "className": "page-content container-fluid",
     },
     "ref": null,
     "rendered": Array [
@@ -84,12 +79,7 @@ ShallowWrapper {
 />,
           <Connect(TTLFellowsProgress) />,
         ],
-        "className": "container-fluid",
-        "style": Object {
-          "paddingBottom": "49px",
-          "paddingLeft": "0",
-          "paddingRight": "0",
-        },
+        "className": "page-content container-fluid",
       },
       "ref": null,
       "rendered": Array [
@@ -173,12 +163,7 @@ ShallowWrapper {
 />,
         <Connect(TTLFellowsProgress) />,
       ],
-      "className": "container-fluid",
-      "style": Object {
-        "paddingBottom": "49px",
-        "paddingLeft": "0",
-        "paddingRight": "0",
-      },
+      "className": "page-content container-fluid",
     },
     "ref": null,
     "rendered": Array [
@@ -223,12 +208,7 @@ ShallowWrapper {
 />,
           <Connect(TTLFellowsProgress) />,
         ],
-        "className": "container-fluid",
-        "style": Object {
-          "paddingBottom": "49px",
-          "paddingLeft": "0",
-          "paddingRight": "0",
-        },
+        "className": "page-content container-fluid",
       },
       "ref": null,
       "rendered": Array [

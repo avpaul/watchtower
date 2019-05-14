@@ -69,7 +69,7 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
 
 const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => (
   <div className="ops-dashboard__fellows-summary">
-    <div className="row">
+    <div className="row m-0">
       {fellowsSummaryCardDetails.map((fellow, index) =>
         renderFellow(fellow, index, handleClick)
       )}

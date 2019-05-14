@@ -201,7 +201,7 @@ export class FellowHistory extends Component {
 
     return (
       <Fragment>
-        <div className="fellow-history container-fluid">
+        <div className="page-content container-fluid">
           <div className="fellow-history__top row">
             <div className="btn-pip-container">
               {this.loadPipActivationForm()}
