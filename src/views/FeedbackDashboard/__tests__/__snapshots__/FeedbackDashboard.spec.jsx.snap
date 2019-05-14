@@ -313,7 +313,7 @@ ShallowWrapper {
                                 type=""
                         />
                         <div
-                                className="col-12 mb-4"
+                                className="col-12 mb-4 mt-5"
                         />
                 </Unknown>
         </div>
@@ -583,7 +583,7 @@ ShallowWrapper {
                                     type=""
                         />
                         <div
-                                    className="col-12 mb-4"
+                                    className="col-12 mb-4 mt-5"
                         />
             </Unknown>
 </div>,
@@ -1415,7 +1415,7 @@ ShallowWrapper {
                             type=""
               />
               <div
-                            className="col-12 mb-4"
+                            className="col-12 mb-4 mt-5"
               />
 </Unknown>,
             "className": "row m-0",
@@ -1434,7 +1434,7 @@ ShallowWrapper {
                   type=""
 />,
                 <div
-                  className="col-12 mb-4"
+                  className="col-12 mb-4 mt-5"
 />,
               ],
             },
@@ -1460,7 +1460,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": undefined,
-                  "className": "col-12 mb-4",
+                  "className": "col-12 mb-4 mt-5",
                 },
                 "ref": null,
                 "rendered": null,
@@ -1742,7 +1742,7 @@ ShallowWrapper {
                                         type=""
                               />
                               <div
-                                        className="col-12 mb-4"
+                                        className="col-12 mb-4 mt-5"
                               />
                     </Unknown>
           </div>
@@ -2012,7 +2012,7 @@ ShallowWrapper {
                                           type=""
                             />
                             <div
-                                          className="col-12 mb-4"
+                                          className="col-12 mb-4 mt-5"
                             />
               </Unknown>
 </div>,
@@ -2844,7 +2844,7 @@ ShallowWrapper {
                                 type=""
                 />
                 <div
-                                className="col-12 mb-4"
+                                className="col-12 mb-4 mt-5"
                 />
 </Unknown>,
               "className": "row m-0",
@@ -2863,7 +2863,7 @@ ShallowWrapper {
                     type=""
 />,
                   <div
-                    className="col-12 mb-4"
+                    className="col-12 mb-4 mt-5"
 />,
                 ],
               },
@@ -2889,7 +2889,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
-                    "className": "col-12 mb-4",
+                    "className": "col-12 mb-4 mt-5",
                   },
                   "ref": null,
                   "rendered": null,
@@ -3239,7 +3239,7 @@ ShallowWrapper {
                                 type=""
                         />
                         <div
-                                className="col-12 mb-4"
+                                className="col-12 mb-4 mt-5"
                         />
                 </Unknown>
         </div>
@@ -3509,7 +3509,7 @@ ShallowWrapper {
                                     type=""
                         />
                         <div
-                                    className="col-12 mb-4"
+                                    className="col-12 mb-4 mt-5"
                         />
             </Unknown>
 </div>,
@@ -4341,7 +4341,7 @@ ShallowWrapper {
                             type=""
               />
               <div
-                            className="col-12 mb-4"
+                            className="col-12 mb-4 mt-5"
               />
 </Unknown>,
             "className": "row m-0",
@@ -4360,7 +4360,7 @@ ShallowWrapper {
                   type=""
 />,
                 <div
-                  className="col-12 mb-4"
+                  className="col-12 mb-4 mt-5"
 />,
               ],
             },
@@ -4386,7 +4386,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": undefined,
-                  "className": "col-12 mb-4",
+                  "className": "col-12 mb-4 mt-5",
                 },
                 "ref": null,
                 "rendered": null,
@@ -4668,7 +4668,7 @@ ShallowWrapper {
                                         type=""
                               />
                               <div
-                                        className="col-12 mb-4"
+                                        className="col-12 mb-4 mt-5"
                               />
                     </Unknown>
           </div>
@@ -4938,7 +4938,7 @@ ShallowWrapper {
                                           type=""
                             />
                             <div
-                                          className="col-12 mb-4"
+                                          className="col-12 mb-4 mt-5"
                             />
               </Unknown>
 </div>,
@@ -5770,7 +5770,7 @@ ShallowWrapper {
                                 type=""
                 />
                 <div
-                                className="col-12 mb-4"
+                                className="col-12 mb-4 mt-5"
                 />
 </Unknown>,
               "className": "row m-0",
@@ -5789,7 +5789,7 @@ ShallowWrapper {
                     type=""
 />,
                   <div
-                    className="col-12 mb-4"
+                    className="col-12 mb-4 mt-5"
 />,
                 ],
               },
@@ -5815,7 +5815,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
-                    "className": "col-12 mb-4",
+                    "className": "col-12 mb-4 mt-5",
                   },
                   "ref": null,
                   "rendered": null,
@@ -5995,7 +5995,7 @@ ShallowWrapper {
                                 type=""
                         />
                         <div
-                                className="col-12 mb-4"
+                                className="col-12 mb-4 mt-5"
                         />
                 </Unknown>
         </div>
@@ -6098,7 +6098,7 @@ ShallowWrapper {
                                     type=""
                         />
                         <div
-                                    className="col-12 mb-4"
+                                    className="col-12 mb-4 mt-5"
                         />
             </Unknown>
 </div>,
@@ -6429,7 +6429,7 @@ ShallowWrapper {
                             type=""
               />
               <div
-                            className="col-12 mb-4"
+                            className="col-12 mb-4 mt-5"
               />
 </Unknown>,
             "className": "row m-0",
@@ -6448,7 +6448,7 @@ ShallowWrapper {
                   type=""
 />,
                 <div
-                  className="col-12 mb-4"
+                  className="col-12 mb-4 mt-5"
 />,
               ],
             },
@@ -6474,7 +6474,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": undefined,
-                  "className": "col-12 mb-4",
+                  "className": "col-12 mb-4 mt-5",
                 },
                 "ref": null,
                 "rendered": null,
@@ -6589,7 +6589,7 @@ ShallowWrapper {
                                         type=""
                               />
                               <div
-                                        className="col-12 mb-4"
+                                        className="col-12 mb-4 mt-5"
                               />
                     </Unknown>
           </div>
@@ -6692,7 +6692,7 @@ ShallowWrapper {
                                           type=""
                             />
                             <div
-                                          className="col-12 mb-4"
+                                          className="col-12 mb-4 mt-5"
                             />
               </Unknown>
 </div>,
@@ -7023,7 +7023,7 @@ ShallowWrapper {
                                 type=""
                 />
                 <div
-                                className="col-12 mb-4"
+                                className="col-12 mb-4 mt-5"
                 />
 </Unknown>,
               "className": "row m-0",
@@ -7042,7 +7042,7 @@ ShallowWrapper {
                     type=""
 />,
                   <div
-                    className="col-12 mb-4"
+                    className="col-12 mb-4 mt-5"
 />,
                 ],
               },
@@ -7068,7 +7068,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
-                    "className": "col-12 mb-4",
+                    "className": "col-12 mb-4 mt-5",
                   },
                   "ref": null,
                   "rendered": null,

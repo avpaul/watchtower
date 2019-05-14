@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../../components/FellowsSummary/FellowsSummary.css';
-import FellowSummaryLabel from '../../components/FellowSummaryLabel/FellowSummaryLabel';
+import Title from '../../components/Title';
 import FiltersView from '../../components/Filters/FiltersView';
 
 const FellowsSummary = ({
@@ -10,16 +10,14 @@ const FellowsSummary = ({
   fellowSummaryCardComponent
 }) => (
   <div className="ops-dashboard__fellows-summary">
-    <FellowSummaryLabel />
+    <Title title="FELLOWS SUMMARY" />
     <div className="row ops-dashboard__filter">
-      <div className="scroll-wrapper">
-        <FiltersView
-          handleCardClick={handleCardClick}
-          filters={fellowsSummary}
-          filterCardClassName="p-1"
-          FellowSummaryCardComponent={fellowSummaryCardComponent}
-        />
-      </div>
+      <FiltersView
+        handleCardClick={handleCardClick}
+        filters={fellowsSummary}
+        filterCardClassName="pt-1 pr-2 pb-1"
+        FellowSummaryCardComponent={fellowSummaryCardComponent}
+      />
     </div>
   </div>
 );
