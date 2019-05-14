@@ -11,7 +11,7 @@ export default function LMSProgressSummary(props) {
 
   if (!lmsSubmissions || !lms)
     return (
-      <div className="lms-chart row">
+      <div className="lms-chart">
         <div className="lms-chart__header">LMS</div>
         <div className="lms-chart__wrapper">
           <div className="lms-chart__timeline timeline">No LMS Data</div>

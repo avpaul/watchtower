@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { carouselOptions } from '../../utils';
 import FilterCard, { generateFilterCardId } from '../Filters/FilterCard';
-import FellowSummaryLabel from '../FellowSummaryLabel';
+import Title from '../Title';
 import Loader from '../Loader/Loader';
 import '../FellowsSummary/FellowsSummary.css';
 
@@ -25,7 +25,7 @@ const renderProjectCards = (
     ProjectsSummaryChartComponent.filterCardRefs[cardId] = React.createRef();
     return (
       <div
-        className="p-1"
+        className="pr-1 pt-1 pb-1"
         key={projectCard.title}
         ref={ProjectsSummaryChartComponent.filterCardRefs[cardId]}
       >
@@ -56,7 +56,7 @@ const ProjectsSummary = ({
 
   return (
     <div className="ops-dashboard__fellows-summary">
-      <FellowSummaryLabel />
+      <Title title="FELLOWS SUMMARY" />
       {!loading ? (
         <div className="row ops-dashboard__filter">
           <Slider {...carouselOptions(4)}>

@@ -13,14 +13,8 @@ class TTLDashboardMain extends React.Component {
   render() {
     const { user } = this.props;
 
-    const ttlDashboardStyle = {
-      paddingLeft: '0',
-      paddingRight: '0',
-      paddingBottom: '49px'
-    };
-
     return (
-      <div className="container-fluid" style={ttlDashboardStyle}>
+      <div className="page-content container-fluid">
         <ProjectsSummaryChart user={user} />
         <TTLFellowsProgress />
       </div>

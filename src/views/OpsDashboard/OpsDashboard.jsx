@@ -91,17 +91,11 @@ class OpsDashboardMain extends Component {
   };
 
   render() {
-    const opsDashboardStyle = {
-      paddingLeft: '0',
-      paddingRight: '0',
-      paddingBottom: '49px'
-    };
-
     const { user } = this.props;
 
     // Add components here for opsDashboard
     return (
-      <div className="container-fluid" style={opsDashboardStyle}>
+      <div className="page-content container-fluid">
         <FellowsSummaryChart user={user} />
         <FellowRatio
           mapDisplayContent={this.mapDisplayContent}

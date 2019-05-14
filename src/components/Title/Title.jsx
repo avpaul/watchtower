@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './title.css';
 
 const Title = ({ title, subTitle }) => (
-  <div className="ops-dashboard__fellows-summary">
-    <p className="ops-dashboard__fellow-summary-text mb-2">{title}</p>
-    <p className="filter_card_title">{subTitle}</p>
+  <div className="page-section">
+    <p className="page-section__title mb-0">{title}</p>
+    {subTitle ? (
+      <p className="page-section__subtitle mt-2">{subTitle}</p>
+    ) : null}
   </div>
 );
 
 Title.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired
+  subTitle: PropTypes.string
 };
+
+Title.defaultProps = {
+  subTitle: ''
+};
+
 export default Title;

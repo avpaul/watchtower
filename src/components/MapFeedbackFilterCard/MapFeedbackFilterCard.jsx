@@ -59,7 +59,7 @@ const MapFeedbackFilterCard = ({
     </Slider>
   ) : (
     <div className="ops-dashboard__fellows-summary">
-      <div className="row">{renderedCards}</div>
+      <div className="row m-0">{renderedCards}</div>
     </div>
   );
 };

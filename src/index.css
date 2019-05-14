@@ -38,3 +38,19 @@ body {
 #root {
   overflow-x: hidden;
 }
+
+.page-content {
+  padding: 5vh 4% 2rem 4%;
+}
+
+.page-content .slick-slider {
+  padding: 0;
+}
+
+.page-content .slick-prev {
+  margin-left: -1.875rem;
+}
+
+.page-content .slick-next {
+  margin-right: -1.875rem;
+}

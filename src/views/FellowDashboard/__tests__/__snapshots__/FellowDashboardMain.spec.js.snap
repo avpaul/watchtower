@@ -27,7 +27,7 @@ ShallowWrapper {
         <Connect(Component) />,
         <Connect(LMSProgressSummary) />,
       ],
-      "className": "container-fluid",
+      "className": "page-content container-fluid",
     },
     "ref": null,
     "rendered": Array [
@@ -86,7 +86,7 @@ ShallowWrapper {
           <Connect(Component) />,
           <Connect(LMSProgressSummary) />,
         ],
-        "className": "container-fluid",
+        "className": "page-content container-fluid",
       },
       "ref": null,
       "rendered": Array [

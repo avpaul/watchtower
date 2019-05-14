@@ -86,7 +86,7 @@ export class FellowPerformance extends Component {
 
     return (
       <Fragment>
-        <div className="container-fluid">
+        <div className="page-content container-fluid">
           <div className="fellow-performance-tab">
             <FellowFeedback
               isTicked={isTicked}

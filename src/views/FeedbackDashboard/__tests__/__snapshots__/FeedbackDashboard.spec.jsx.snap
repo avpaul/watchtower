@@ -54,10 +54,10 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <div
-        className="feedbackDashboard container-fluid"
+        className="page-content feedbackDashboard container-fluid"
 >
         <div
-                className="row"
+                className="row m-0"
         >
                 <div
                         className="col-xl-9 p-0"
@@ -290,7 +290,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="row"
+                className="row m-0"
         >
                 <div
                         className="col-xl-12 px-0"
@@ -303,7 +303,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="row"
+                className="row m-0"
         >
                 <Unknown>
                         <FeedbackDashboardTable
@@ -327,7 +327,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="row"
+            className="row m-0"
 >
             <div
                         className="col-xl-9 p-0"
@@ -560,7 +560,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="row"
+            className="row m-0"
 >
             <div
                         className="col-xl-12 px-0"
@@ -573,7 +573,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="row"
+            className="row m-0"
 >
             <Unknown>
                         <FeedbackDashboardTable
@@ -588,7 +588,7 @@ ShallowWrapper {
             </Unknown>
 </div>,
         ],
-        "className": "feedbackDashboard container-fluid",
+        "className": "page-content feedbackDashboard container-fluid",
       },
       "ref": null,
       "rendered": Array [
@@ -828,7 +828,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Array [
@@ -1369,7 +1369,7 @@ ShallowWrapper {
                             countName="Feedback"
               />
 </div>,
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Object {
@@ -1418,7 +1418,7 @@ ShallowWrapper {
                             className="col-12 mb-4"
               />
 </Unknown>,
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Object {
@@ -1483,10 +1483,10 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <div
-          className="feedbackDashboard container-fluid"
+          className="page-content feedbackDashboard container-fluid"
 >
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <div
                               className="col-xl-9 p-0"
@@ -1719,7 +1719,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <div
                               className="col-xl-12 px-0"
@@ -1732,7 +1732,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <Unknown>
                               <FeedbackDashboardTable
@@ -1756,7 +1756,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="row"
+              className="row m-0"
 >
               <div
                             className="col-xl-9 p-0"
@@ -1989,7 +1989,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="row"
+              className="row m-0"
 >
               <div
                             className="col-xl-12 px-0"
@@ -2002,7 +2002,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="row"
+              className="row m-0"
 >
               <Unknown>
                             <FeedbackDashboardTable
@@ -2017,7 +2017,7 @@ ShallowWrapper {
               </Unknown>
 </div>,
           ],
-          "className": "feedbackDashboard container-fluid",
+          "className": "page-content feedbackDashboard container-fluid",
         },
         "ref": null,
         "rendered": Array [
@@ -2257,7 +2257,7 @@ ShallowWrapper {
                   </div>
 </div>,
               ],
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Array [
@@ -2798,7 +2798,7 @@ ShallowWrapper {
                                 countName="Feedback"
                 />
 </div>,
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Object {
@@ -2847,7 +2847,7 @@ ShallowWrapper {
                                 className="col-12 mb-4"
                 />
 </Unknown>,
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Object {
@@ -2980,10 +2980,10 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <div
-        className="feedbackDashboard container-fluid"
+        className="page-content feedbackDashboard container-fluid"
 >
         <div
-                className="row"
+                className="row m-0"
         >
                 <div
                         className="col-xl-9 p-0"
@@ -3216,7 +3216,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="row"
+                className="row m-0"
         >
                 <div
                         className="col-xl-12 px-0"
@@ -3229,7 +3229,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="row"
+                className="row m-0"
         >
                 <Unknown>
                         <FeedbackDashboardTable
@@ -3253,7 +3253,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="row"
+            className="row m-0"
 >
             <div
                         className="col-xl-9 p-0"
@@ -3486,7 +3486,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="row"
+            className="row m-0"
 >
             <div
                         className="col-xl-12 px-0"
@@ -3499,7 +3499,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="row"
+            className="row m-0"
 >
             <Unknown>
                         <FeedbackDashboardTable
@@ -3514,7 +3514,7 @@ ShallowWrapper {
             </Unknown>
 </div>,
         ],
-        "className": "feedbackDashboard container-fluid",
+        "className": "page-content feedbackDashboard container-fluid",
       },
       "ref": null,
       "rendered": Array [
@@ -3754,7 +3754,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Array [
@@ -4295,7 +4295,7 @@ ShallowWrapper {
                             countName="Feedback"
               />
 </div>,
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Object {
@@ -4344,7 +4344,7 @@ ShallowWrapper {
                             className="col-12 mb-4"
               />
 </Unknown>,
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Object {
@@ -4409,10 +4409,10 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <div
-          className="feedbackDashboard container-fluid"
+          className="page-content feedbackDashboard container-fluid"
 >
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <div
                               className="col-xl-9 p-0"
@@ -4645,7 +4645,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <div
                               className="col-xl-12 px-0"
@@ -4658,7 +4658,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <Unknown>
                               <FeedbackDashboardTable
@@ -4682,7 +4682,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="row"
+              className="row m-0"
 >
               <div
                             className="col-xl-9 p-0"
@@ -4915,7 +4915,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="row"
+              className="row m-0"
 >
               <div
                             className="col-xl-12 px-0"
@@ -4928,7 +4928,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="row"
+              className="row m-0"
 >
               <Unknown>
                             <FeedbackDashboardTable
@@ -4943,7 +4943,7 @@ ShallowWrapper {
               </Unknown>
 </div>,
           ],
-          "className": "feedbackDashboard container-fluid",
+          "className": "page-content feedbackDashboard container-fluid",
         },
         "ref": null,
         "rendered": Array [
@@ -5183,7 +5183,7 @@ ShallowWrapper {
                   </div>
 </div>,
               ],
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Array [
@@ -5724,7 +5724,7 @@ ShallowWrapper {
                                 countName="Feedback"
                 />
 </div>,
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Object {
@@ -5773,7 +5773,7 @@ ShallowWrapper {
                                 className="col-12 mb-4"
                 />
 </Unknown>,
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Object {
@@ -5903,10 +5903,10 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <div
-        className="feedbackDashboard container-fluid"
+        className="page-content feedbackDashboard container-fluid"
 >
         <div
-                className="row"
+                className="row m-0"
         >
                 <div
                         className="col-xl-9 p-0"
@@ -5972,7 +5972,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="row"
+                className="row m-0"
         >
                 <div
                         className="col-xl-12 px-0"
@@ -5985,7 +5985,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="row"
+                className="row m-0"
         >
                 <Unknown>
                         <FeedbackDashboardTable
@@ -6009,7 +6009,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="row"
+            className="row m-0"
 >
             <div
                         className="col-xl-9 p-0"
@@ -6075,7 +6075,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="row"
+            className="row m-0"
 >
             <div
                         className="col-xl-12 px-0"
@@ -6088,7 +6088,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="row"
+            className="row m-0"
 >
             <Unknown>
                         <FeedbackDashboardTable
@@ -6103,7 +6103,7 @@ ShallowWrapper {
             </Unknown>
 </div>,
         ],
-        "className": "feedbackDashboard container-fluid",
+        "className": "page-content feedbackDashboard container-fluid",
       },
       "ref": null,
       "rendered": Array [
@@ -6176,7 +6176,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Array [
@@ -6383,7 +6383,7 @@ ShallowWrapper {
                             countName="Feedback"
               />
 </div>,
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Object {
@@ -6432,7 +6432,7 @@ ShallowWrapper {
                             className="col-12 mb-4"
               />
 </Unknown>,
-            "className": "row",
+            "className": "row m-0",
           },
           "ref": null,
           "rendered": Object {
@@ -6497,10 +6497,10 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <div
-          className="feedbackDashboard container-fluid"
+          className="page-content feedbackDashboard container-fluid"
 >
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <div
                               className="col-xl-9 p-0"
@@ -6566,7 +6566,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <div
                               className="col-xl-12 px-0"
@@ -6579,7 +6579,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="row"
+                    className="row m-0"
           >
                     <Unknown>
                               <FeedbackDashboardTable
@@ -6603,7 +6603,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="row"
+              className="row m-0"
 >
               <div
                             className="col-xl-9 p-0"
@@ -6669,7 +6669,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="row"
+              className="row m-0"
 >
               <div
                             className="col-xl-12 px-0"
@@ -6682,7 +6682,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="row"
+              className="row m-0"
 >
               <Unknown>
                             <FeedbackDashboardTable
@@ -6697,7 +6697,7 @@ ShallowWrapper {
               </Unknown>
 </div>,
           ],
-          "className": "feedbackDashboard container-fluid",
+          "className": "page-content feedbackDashboard container-fluid",
         },
         "ref": null,
         "rendered": Array [
@@ -6770,7 +6770,7 @@ ShallowWrapper {
                   </div>
 </div>,
               ],
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Array [
@@ -6977,7 +6977,7 @@ ShallowWrapper {
                                 countName="Feedback"
                 />
 </div>,
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Object {
@@ -7026,7 +7026,7 @@ ShallowWrapper {
                                 className="col-12 mb-4"
                 />
 </Unknown>,
-              "className": "row",
+              "className": "row m-0",
             },
             "ref": null,
             "rendered": Object {

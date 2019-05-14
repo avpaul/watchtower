@@ -60,7 +60,7 @@ const LMSChart = props => {
   const chartOverviewProps = chartOverview(lmsSummary);
 
   return (
-    <div className="lms-chart row">
+    <div className="lms-chart">
       <div className="lms-chart__header">LMS</div>
       <div className="lms-chart__wrapper">
         <div className="lms-chart__timeline">

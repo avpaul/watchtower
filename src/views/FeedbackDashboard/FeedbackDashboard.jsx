@@ -356,15 +356,15 @@ export class FeedbackDashboard extends Component {
     const { startDate, endDate, currentDate } = this.state;
     return (
       <Fragment>
-        <div className="feedbackDashboard container-fluid">
-          <div className="row">
+        <div className="page-content feedbackDashboard container-fluid">
+          <div className="row m-0">
             {this.renderFilter()}
             {this.renderDate(startDate, endDate, currentDate)}
           </div>
-          <div className="row">
+          <div className="row m-0">
             <div className="col-xl-12 px-0">{this.renderResultCount()}</div>
           </div>
-          <div className="row">{this.renderFeedbackDetails()}</div>
+          <div className="row m-0">{this.renderFeedbackDetails()}</div>
         </div>
       </Fragment>
     );

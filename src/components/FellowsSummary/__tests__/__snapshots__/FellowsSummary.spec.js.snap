@@ -33,7 +33,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <FellowSummaryLabel />,
+        <Title
+          subTitle=""
+          title="FELLOWS SUMMARY"
+/>,
         <div
           className="row ops-dashboard__filter"
 >
@@ -78,7 +81,10 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "subTitle": "",
+          "title": "FELLOWS SUMMARY",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -169,7 +175,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <FellowSummaryLabel />,
+          <Title
+            subTitle=""
+            title="FELLOWS SUMMARY"
+/>,
           <div
             className="row ops-dashboard__filter"
 >
@@ -214,7 +223,10 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "subTitle": "",
+            "title": "FELLOWS SUMMARY",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

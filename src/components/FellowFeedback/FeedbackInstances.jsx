@@ -39,7 +39,7 @@ const FeedbackInstances = ({ PrePipEntries = [], handleClick }) => {
           ? 'Pre-PIP instances'
           : 'PIP instances'}
       </h6>
-      <div className="row map-card-row">{displayCardMap}</div>
+      <div className="row map-card-row p-0">{displayCardMap}</div>
     </div>
   ) : (
     <div className="no__feedback">
