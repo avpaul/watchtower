@@ -12,7 +12,7 @@
 
 .dashboard-table__header > .dashboard-table__cell:nth-child(1),
 .dashboard-table__header > .dashboard-table__cell:nth-child(2) {
-  background-color: rgb(244, 248, 249);
+  background-color: #0459e4;
 }
 @media screen and (max-width: 1024px) {
   .dashboard-table__header > .dashboard-table__cell:nth-child(n + 3) {
@@ -25,10 +25,10 @@
 
 .dashboard-table__header {
   display: table-row;
-  color: #606060;
+  color: #ffffff;
   font-size: 14px;
   line-height: 18px;
-  background: transparent;
+  background: #0459e4;
   height: 40px;
 }
 
