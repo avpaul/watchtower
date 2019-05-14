@@ -47,6 +47,7 @@
 .filter-dropdown__button:active {
   outline: none;
   border: inherit;
+  cursor: pointer;
 }
 
 .filter-dropdown__list {

@@ -101,4 +101,5 @@ th {
 
 .btn-print-prepip-form:hover {
   background-color: blue;
+  cursor: pointer;
 }
