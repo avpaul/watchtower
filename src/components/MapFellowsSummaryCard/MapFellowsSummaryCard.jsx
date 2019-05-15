@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import TranslatorTable from '../../utils/TranslatorTable';
 import FellowsSummaryCard from '../FellowsSummaryCard';
+import arrayOfObjectsSorter from '../../utils/sortArray';
 
 const getDateKey = {
   start: {
@@ -69,15 +70,19 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
   );
 };
 
-const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => (
-  <div className="ops-dashboard__fellows-summary">
-    <div className="row m-0">
-      {fellowsSummaryCardDetails.map((fellow, index) =>
-        renderFellow(fellow, index, handleClick)
-      )}
+const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
+  fellowsSummaryCardDetails.sort(arrayOfObjectsSorter('name'));
+
+  return (
+    <div className="ops-dashboard__fellows-summary">
+      <div className="row m-0">
+        {fellowsSummaryCardDetails.map((fellow, index) =>
+          renderFellow(fellow, index, handleClick)
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 MapFellowsSummary.propTypes = {
   fellowsSummaryCardDetails: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
