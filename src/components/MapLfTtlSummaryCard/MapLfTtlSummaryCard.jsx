@@ -47,7 +47,8 @@ MapLfTtlSummaryCard.propTypes = {
   lfTtlSummary: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   filterFellows: PropTypes.func.isRequired,
   lfTtlCheckId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    .isRequired
+    .isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default MapLfTtlSummaryCard;

@@ -491,6 +491,7 @@ ShallowWrapper {
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -1016,6 +1017,20 @@ ShallowWrapper {
                                 "_callbacks": Array [],
                                 "_renderer": ReactShallowRenderer {
                                   "_context": Object {},
+                                  "_didScheduleRenderPhaseUpdate": false,
+                                  "_dispatcher": Object {
+                                    "readContext": [Function],
+                                    "useCallback": [Function],
+                                    "useContext": [Function],
+                                    "useDebugValue": [Function],
+                                    "useEffect": [Function],
+                                    "useImperativeHandle": [Function],
+                                    "useLayoutEffect": [Function],
+                                    "useMemo": [Function],
+                                    "useReducer": [Function],
+                                    "useRef": [Function],
+                                    "useState": [Function],
+                                  },
                                   "_element": <EManagerSimsLeadsDashboard
                                     data={
                                                     Object {
@@ -1502,21 +1517,13 @@ ShallowWrapper {
                                                                   }
                                     }
                     />,
+                                  "_firstWorkInProgressHook": null,
                                   "_forcedUpdate": false,
                                   "_instance": [Circular],
-                                  "_newState": Object {
-                                    "isEngineeringManager": true,
-                                    "managerFellowSortRatio": "HIGH_TO_LOW",
-                                    "options": Object {
-                                      "chartTitle": "Total",
-                                      "filter": "total-fellows-card",
-                                      "filterCardRefs": Array [],
-                                      "toolTipOption": "total-fellows-card",
-                                    },
-                                    "show": false,
-                                    "showChart": false,
-                                    "sortLabel": "Fellow Ratio, High to Low",
-                                  },
+                                  "_isReRender": false,
+                                  "_newState": null,
+                                  "_numberOfReRenders": 0,
+                                  "_renderPhaseUpdates": null,
                                   "_rendered": <div
                                     className="page-content container-fluid"
                     >
@@ -1587,6 +1594,7 @@ ShallowWrapper {
                     </div>,
                                   "_rendering": false,
                                   "_updater": [Circular],
+                                  "_workInProgressHook": null,
                                 },
                               },
                               Symbol(enzyme.__setState__): [Function],
@@ -2177,6 +2185,20 @@ ShallowWrapper {
               "_callbacks": Array [],
               "_renderer": ReactShallowRenderer {
                 "_context": Object {},
+                "_didScheduleRenderPhaseUpdate": false,
+                "_dispatcher": Object {
+                  "readContext": [Function],
+                  "useCallback": [Function],
+                  "useContext": [Function],
+                  "useDebugValue": [Function],
+                  "useEffect": [Function],
+                  "useImperativeHandle": [Function],
+                  "useLayoutEffect": [Function],
+                  "useMemo": [Function],
+                  "useReducer": [Function],
+                  "useRef": [Function],
+                  "useState": [Function],
+                },
                 "_element": <EManagerSimsLeadsDashboard
                   data={
                                     Object {
@@ -2663,21 +2685,13 @@ ShallowWrapper {
                                                     }
                   }
 />,
+                "_firstWorkInProgressHook": null,
                 "_forcedUpdate": false,
                 "_instance": [Circular],
-                "_newState": Object {
-                  "isEngineeringManager": true,
-                  "managerFellowSortRatio": "HIGH_TO_LOW",
-                  "options": Object {
-                    "chartTitle": "Total",
-                    "filter": "total-fellows-card",
-                    "filterCardRefs": Array [],
-                    "toolTipOption": "total-fellows-card",
-                  },
-                  "show": false,
-                  "showChart": false,
-                  "sortLabel": "Fellow Ratio, High to Low",
-                },
+                "_isReRender": false,
+                "_newState": null,
+                "_numberOfReRenders": 0,
+                "_renderPhaseUpdates": null,
                 "_rendered": <div
                   className="page-content container-fluid"
 >
@@ -2748,6 +2762,7 @@ ShallowWrapper {
 </div>,
                 "_rendering": false,
                 "_updater": [Circular],
+                "_workInProgressHook": null,
               },
             },
             Symbol(enzyme.__setState__): [Function],
@@ -3378,6 +3393,20 @@ ShallowWrapper {
                                       "_callbacks": Array [],
                                       "_renderer": ReactShallowRenderer {
                                         "_context": Object {},
+                                        "_didScheduleRenderPhaseUpdate": false,
+                                        "_dispatcher": Object {
+                                          "readContext": [Function],
+                                          "useCallback": [Function],
+                                          "useContext": [Function],
+                                          "useDebugValue": [Function],
+                                          "useEffect": [Function],
+                                          "useImperativeHandle": [Function],
+                                          "useLayoutEffect": [Function],
+                                          "useMemo": [Function],
+                                          "useReducer": [Function],
+                                          "useRef": [Function],
+                                          "useState": [Function],
+                                        },
                                         "_element": <EManagerSimsLeadsDashboard
                                           data={
                                                             Object {
@@ -3864,21 +3893,13 @@ ShallowWrapper {
                                                                             }
                                           }
                         />,
+                                        "_firstWorkInProgressHook": null,
                                         "_forcedUpdate": false,
                                         "_instance": [Circular],
-                                        "_newState": Object {
-                                          "isEngineeringManager": true,
-                                          "managerFellowSortRatio": "HIGH_TO_LOW",
-                                          "options": Object {
-                                            "chartTitle": "Total",
-                                            "filter": "total-fellows-card",
-                                            "filterCardRefs": Array [],
-                                            "toolTipOption": "total-fellows-card",
-                                          },
-                                          "show": false,
-                                          "showChart": false,
-                                          "sortLabel": "Fellow Ratio, High to Low",
-                                        },
+                                        "_isReRender": false,
+                                        "_newState": null,
+                                        "_numberOfReRenders": 0,
+                                        "_renderPhaseUpdates": null,
                                         "_rendered": <div
                                           className="page-content container-fluid"
                         >
@@ -3949,6 +3970,7 @@ ShallowWrapper {
                         </div>,
                                         "_rendering": false,
                                         "_updater": [Circular],
+                                        "_workInProgressHook": null,
                                       },
                                     },
                                     Symbol(enzyme.__setState__): [Function],
@@ -4539,6 +4561,20 @@ ShallowWrapper {
                 "_callbacks": Array [],
                 "_renderer": ReactShallowRenderer {
                   "_context": Object {},
+                  "_didScheduleRenderPhaseUpdate": false,
+                  "_dispatcher": Object {
+                    "readContext": [Function],
+                    "useCallback": [Function],
+                    "useContext": [Function],
+                    "useDebugValue": [Function],
+                    "useEffect": [Function],
+                    "useImperativeHandle": [Function],
+                    "useLayoutEffect": [Function],
+                    "useMemo": [Function],
+                    "useReducer": [Function],
+                    "useRef": [Function],
+                    "useState": [Function],
+                  },
                   "_element": <EManagerSimsLeadsDashboard
                     data={
                                         Object {
@@ -5025,21 +5061,13 @@ ShallowWrapper {
                                                           }
                     }
 />,
+                  "_firstWorkInProgressHook": null,
                   "_forcedUpdate": false,
                   "_instance": [Circular],
-                  "_newState": Object {
-                    "isEngineeringManager": true,
-                    "managerFellowSortRatio": "HIGH_TO_LOW",
-                    "options": Object {
-                      "chartTitle": "Total",
-                      "filter": "total-fellows-card",
-                      "filterCardRefs": Array [],
-                      "toolTipOption": "total-fellows-card",
-                    },
-                    "show": false,
-                    "showChart": false,
-                    "sortLabel": "Fellow Ratio, High to Low",
-                  },
+                  "_isReRender": false,
+                  "_newState": null,
+                  "_numberOfReRenders": 0,
+                  "_renderPhaseUpdates": null,
                   "_rendered": <div
                     className="page-content container-fluid"
 >
@@ -5110,6 +5138,7 @@ ShallowWrapper {
 </div>,
                   "_rendering": false,
                   "_updater": [Circular],
+                  "_workInProgressHook": null,
                 },
               },
               Symbol(enzyme.__setState__): [Function],
@@ -5225,11 +5254,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
           },
-          "getDerivedStateFromProps": true,
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
           "getSnapshotBeforeUpdate": true,
           "setState": Object {
             "skipsComponentDidUpdateOnNullish": true,
@@ -5238,5 +5274,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

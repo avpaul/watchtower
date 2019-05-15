@@ -64,6 +64,7 @@ class FiltersView extends Component {
 }
 
 FiltersView.propTypes = {
+  handleChartClose: PropTypes.func.isRequired,
   handleCardClick: PropTypes.func.isRequired,
   filters: PropTypes.instanceOf(Array).isRequired,
   filterCardClassName: PropTypes.string,

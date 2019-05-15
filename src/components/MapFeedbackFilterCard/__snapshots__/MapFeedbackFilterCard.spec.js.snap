@@ -11,7 +11,7 @@ ShallowWrapper {
               "criteria": "lms",
               "end_date": "null",
               "level": "D0B Apprenticeship",
-              "manager": "Trust birungi",
+              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
               "manager_email": "trust.birungi@andela.com",
               "name": "Oluseyi Anani",
               "project": "Watch Tower",
@@ -23,7 +23,7 @@ ShallowWrapper {
               "criteria": "pulse",
               "end_date": "2018-07-18",
               "level": "D0A Simulations",
-              "manager": "Trust birungi",
+              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
               "manager_email": "trust.birungi@andela.com",
               "name": "Brian Mboya",
               "project": "Noldor",
@@ -35,7 +35,7 @@ ShallowWrapper {
               "criteria": "pulse",
               "end_date": "2018-07-18",
               "level": "D0A Simulations",
-              "manager": "Trust birungi",
+              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
               "manager_email": "trust.birungi@andela.com",
               "name": "Brian Mboya",
               "project": "Noldor",
@@ -47,7 +47,7 @@ ShallowWrapper {
               "criteria": "lms",
               "end_date": "2018-07-18",
               "level": "D0A Simulations",
-              "manager": "Trust birungi",
+              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
               "manager_email": "trust.birungi@andela.com",
               "name": "Brian Mboya",
               "project": "Noldor",
@@ -57,16 +57,19 @@ ShallowWrapper {
           ]
     }
     filterKey="project"
+    filteredFeedbackArray={Array []}
     handleCardClick={[Function]}
     isTicked={
         Object {
-            "project": "",
+            "project": "All Projects",
           }
     }
     title="All Products"
+    useFilterData={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -87,7 +90,7 @@ ShallowWrapper {
           isManager={false}
           isTicked={
                     Object {
-                              "project": "",
+                              "project": "All Projects",
                             }
           }
           loading={false}
@@ -102,7 +105,7 @@ ShallowWrapper {
           isManager={false}
           isTicked={
                     Object {
-                              "project": "",
+                              "project": "All Projects",
                             }
           }
           loading={false}
@@ -117,7 +120,7 @@ ShallowWrapper {
           isManager={false}
           isTicked={
                     Object {
-                              "project": "",
+                              "project": "All Projects",
                             }
           }
           loading={false}
@@ -173,7 +176,7 @@ ShallowWrapper {
           "handleCardClick": [Function],
           "isManager": false,
           "isTicked": Object {
-            "project": "",
+            "project": "All Projects",
           },
           "loading": false,
           "numberOfFellows": 4,
@@ -194,7 +197,7 @@ ShallowWrapper {
           "handleCardClick": [Function],
           "isManager": false,
           "isTicked": Object {
-            "project": "",
+            "project": "All Projects",
           },
           "loading": false,
           "numberOfFellows": 1,
@@ -215,7 +218,7 @@ ShallowWrapper {
           "handleCardClick": [Function],
           "isManager": false,
           "isTicked": Object {
-            "project": "",
+            "project": "All Projects",
           },
           "loading": false,
           "numberOfFellows": 3,
@@ -243,7 +246,7 @@ ShallowWrapper {
             isManager={false}
             isTicked={
                         Object {
-                                    "project": "",
+                                    "project": "All Projects",
                                   }
             }
             loading={false}
@@ -258,7 +261,7 @@ ShallowWrapper {
             isManager={false}
             isTicked={
                         Object {
-                                    "project": "",
+                                    "project": "All Projects",
                                   }
             }
             loading={false}
@@ -273,7 +276,7 @@ ShallowWrapper {
             isManager={false}
             isTicked={
                         Object {
-                                    "project": "",
+                                    "project": "All Projects",
                                   }
             }
             loading={false}
@@ -329,7 +332,7 @@ ShallowWrapper {
             "handleCardClick": [Function],
             "isManager": false,
             "isTicked": Object {
-              "project": "",
+              "project": "All Projects",
             },
             "loading": false,
             "numberOfFellows": 4,
@@ -350,7 +353,7 @@ ShallowWrapper {
             "handleCardClick": [Function],
             "isManager": false,
             "isTicked": Object {
-              "project": "",
+              "project": "All Projects",
             },
             "loading": false,
             "numberOfFellows": 1,
@@ -371,7 +374,7 @@ ShallowWrapper {
             "handleCardClick": [Function],
             "isManager": false,
             "isTicked": Object {
-              "project": "",
+              "project": "All Projects",
             },
             "loading": false,
             "numberOfFellows": 3,
@@ -389,11 +392,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
           },
-          "getDerivedStateFromProps": true,
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
           "getSnapshotBeforeUpdate": true,
           "setState": Object {
             "skipsComponentDidUpdateOnNullish": true,

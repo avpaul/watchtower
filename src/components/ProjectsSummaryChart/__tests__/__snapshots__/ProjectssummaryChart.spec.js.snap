@@ -495,6 +495,7 @@ ShallowWrapper {
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -1015,6 +1016,20 @@ ShallowWrapper {
                                 "_callbacks": Array [],
                                 "_renderer": ReactShallowRenderer {
                                   "_context": Object {},
+                                  "_didScheduleRenderPhaseUpdate": false,
+                                  "_dispatcher": Object {
+                                    "readContext": [Function],
+                                    "useCallback": [Function],
+                                    "useContext": [Function],
+                                    "useDebugValue": [Function],
+                                    "useEffect": [Function],
+                                    "useImperativeHandle": [Function],
+                                    "useLayoutEffect": [Function],
+                                    "useMemo": [Function],
+                                    "useReducer": [Function],
+                                    "useRef": [Function],
+                                    "useState": [Function],
+                                  },
                                   "_element": <ProjectsSummaryChart
                                     fetchPerformanceData={[Function]}
                                     performanceData={
@@ -1505,9 +1520,13 @@ ShallowWrapper {
                                                                   }
                                     }
                     />,
+                                  "_firstWorkInProgressHook": null,
                                   "_forcedUpdate": false,
                                   "_instance": [Circular],
+                                  "_isReRender": false,
                                   "_newState": null,
+                                  "_numberOfReRenders": 0,
+                                  "_renderPhaseUpdates": null,
                                   "_rendered": <div>
                                     <Connect(ProjectsSummary)
                                                     ProjectsSummaryChartComponent={[Circular]}
@@ -1516,6 +1535,7 @@ ShallowWrapper {
                     </div>,
                                   "_rendering": false,
                                   "_updater": [Circular],
+                                  "_workInProgressHook": null,
                                 },
                               },
                               Symbol(enzyme.__setState__): [Function],
@@ -2039,6 +2059,20 @@ ShallowWrapper {
               "_callbacks": Array [],
               "_renderer": ReactShallowRenderer {
                 "_context": Object {},
+                "_didScheduleRenderPhaseUpdate": false,
+                "_dispatcher": Object {
+                  "readContext": [Function],
+                  "useCallback": [Function],
+                  "useContext": [Function],
+                  "useDebugValue": [Function],
+                  "useEffect": [Function],
+                  "useImperativeHandle": [Function],
+                  "useLayoutEffect": [Function],
+                  "useMemo": [Function],
+                  "useReducer": [Function],
+                  "useRef": [Function],
+                  "useState": [Function],
+                },
                 "_element": <ProjectsSummaryChart
                   fetchPerformanceData={[Function]}
                   performanceData={
@@ -2529,9 +2563,13 @@ ShallowWrapper {
                                                     }
                   }
 />,
+                "_firstWorkInProgressHook": null,
                 "_forcedUpdate": false,
                 "_instance": [Circular],
+                "_isReRender": false,
                 "_newState": null,
+                "_numberOfReRenders": 0,
+                "_renderPhaseUpdates": null,
                 "_rendered": <div>
                   <Connect(ProjectsSummary)
                                     ProjectsSummaryChartComponent={[Circular]}
@@ -2540,6 +2578,7 @@ ShallowWrapper {
 </div>,
                 "_rendering": false,
                 "_updater": [Circular],
+                "_workInProgressHook": null,
               },
             },
             Symbol(enzyme.__setState__): [Function],
@@ -3069,6 +3108,20 @@ ShallowWrapper {
                                       "_callbacks": Array [],
                                       "_renderer": ReactShallowRenderer {
                                         "_context": Object {},
+                                        "_didScheduleRenderPhaseUpdate": false,
+                                        "_dispatcher": Object {
+                                          "readContext": [Function],
+                                          "useCallback": [Function],
+                                          "useContext": [Function],
+                                          "useDebugValue": [Function],
+                                          "useEffect": [Function],
+                                          "useImperativeHandle": [Function],
+                                          "useLayoutEffect": [Function],
+                                          "useMemo": [Function],
+                                          "useReducer": [Function],
+                                          "useRef": [Function],
+                                          "useState": [Function],
+                                        },
                                         "_element": <ProjectsSummaryChart
                                           fetchPerformanceData={[Function]}
                                           performanceData={
@@ -3559,9 +3612,13 @@ ShallowWrapper {
                                                                             }
                                           }
                         />,
+                                        "_firstWorkInProgressHook": null,
                                         "_forcedUpdate": false,
                                         "_instance": [Circular],
+                                        "_isReRender": false,
                                         "_newState": null,
+                                        "_numberOfReRenders": 0,
+                                        "_renderPhaseUpdates": null,
                                         "_rendered": <div>
                                           <Connect(ProjectsSummary)
                                                             ProjectsSummaryChartComponent={[Circular]}
@@ -3570,6 +3627,7 @@ ShallowWrapper {
                         </div>,
                                         "_rendering": false,
                                         "_updater": [Circular],
+                                        "_workInProgressHook": null,
                                       },
                                     },
                                     Symbol(enzyme.__setState__): [Function],
@@ -4093,6 +4151,20 @@ ShallowWrapper {
                 "_callbacks": Array [],
                 "_renderer": ReactShallowRenderer {
                   "_context": Object {},
+                  "_didScheduleRenderPhaseUpdate": false,
+                  "_dispatcher": Object {
+                    "readContext": [Function],
+                    "useCallback": [Function],
+                    "useContext": [Function],
+                    "useDebugValue": [Function],
+                    "useEffect": [Function],
+                    "useImperativeHandle": [Function],
+                    "useLayoutEffect": [Function],
+                    "useMemo": [Function],
+                    "useReducer": [Function],
+                    "useRef": [Function],
+                    "useState": [Function],
+                  },
                   "_element": <ProjectsSummaryChart
                     fetchPerformanceData={[Function]}
                     performanceData={
@@ -4583,9 +4655,13 @@ ShallowWrapper {
                                                           }
                     }
 />,
+                  "_firstWorkInProgressHook": null,
                   "_forcedUpdate": false,
                   "_instance": [Circular],
+                  "_isReRender": false,
                   "_newState": null,
+                  "_numberOfReRenders": 0,
+                  "_renderPhaseUpdates": null,
                   "_rendered": <div>
                     <Connect(ProjectsSummary)
                                         ProjectsSummaryChartComponent={[Circular]}
@@ -4594,6 +4670,7 @@ ShallowWrapper {
 </div>,
                   "_rendering": false,
                   "_updater": [Circular],
+                  "_workInProgressHook": null,
                 },
               },
               Symbol(enzyme.__setState__): [Function],
@@ -4613,11 +4690,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
           },
-          "getDerivedStateFromProps": true,
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
           "getSnapshotBeforeUpdate": true,
           "setState": Object {
             "skipsComponentDidUpdateOnNullish": true,
@@ -4626,5 +4710,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
