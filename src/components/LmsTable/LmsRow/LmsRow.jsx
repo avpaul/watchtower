@@ -15,10 +15,10 @@ const formatLmsDetails = lmsSubmission => {
       : 'N/A',
     submission_date: lmsSubmission.submitted_at
       ? moment(lmsSubmission.submitted_at).format('L')
-      : 'N/A',
+      : 'Not yet Submitted',
     graded_date: lmsSubmission.graded_at
       ? moment(lmsSubmission.graded_at).format('L')
-      : 'N/A',
+      : 'Not yet Reviewed',
     score: lmsSubmission.score
   };
   return formatedLmsSubmission;

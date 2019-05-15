@@ -285,7 +285,7 @@ ShallowWrapper {
                 ending="11-Dec-2018"
                 id="-LD3PA3VgP4qvRRORX08"
                 level="D0B"
-                lmsOutputs="N/A"
+                lmsOutputs="0/undefined"
                 name="Burley Hirthe"
                 onClick={[Function]}
                 picture="https://lorempixel.com/100/100/people/?58306"
@@ -337,7 +337,7 @@ ShallowWrapper {
                 ending="16-Jan-2019"
                 id="-LEnW5RRn0IkO8VjnMma"
                 level="D0B"
-                lmsOutputs="N/A"
+                lmsOutputs="0/undefined"
                 name="Maddison Kiehn"
                 onClick={[Function]}
                 picture="https://lorempixel.com/100/100/people/?59737"
@@ -373,7 +373,7 @@ ShallowWrapper {
             ending="11-Dec-2018"
             id="-LD3PA3VgP4qvRRORX08"
             level="D0B"
-            lmsOutputs="N/A"
+            lmsOutputs="0/undefined"
             name="Burley Hirthe"
             onClick={[Function]}
             picture="https://lorempixel.com/100/100/people/?58306"
@@ -425,7 +425,7 @@ ShallowWrapper {
             ending="16-Jan-2019"
             id="-LEnW5RRn0IkO8VjnMma"
             level="D0B"
-            lmsOutputs="N/A"
+            lmsOutputs="0/undefined"
             name="Maddison Kiehn"
             onClick={[Function]}
             picture="https://lorempixel.com/100/100/people/?59737"
@@ -468,7 +468,7 @@ ShallowWrapper {
             "ending": "11-Dec-2018",
             "id": "-LD3PA3VgP4qvRRORX08",
             "level": "D0B",
-            "lmsOutputs": "N/A",
+            "lmsOutputs": "0/undefined",
             "name": "Burley Hirthe",
             "onClick": [Function],
             "picture": "https://lorempixel.com/100/100/people/?58306",
@@ -552,7 +552,7 @@ ShallowWrapper {
             "ending": "16-Jan-2019",
             "id": "-LEnW5RRn0IkO8VjnMma",
             "level": "D0B",
-            "lmsOutputs": "N/A",
+            "lmsOutputs": "0/undefined",
             "name": "Maddison Kiehn",
             "onClick": [Function],
             "picture": "https://lorempixel.com/100/100/people/?59737",
@@ -596,7 +596,7 @@ ShallowWrapper {
                     ending="11-Dec-2018"
                     id="-LD3PA3VgP4qvRRORX08"
                     level="D0B"
-                    lmsOutputs="N/A"
+                    lmsOutputs="0/undefined"
                     name="Burley Hirthe"
                     onClick={[Function]}
                     picture="https://lorempixel.com/100/100/people/?58306"
@@ -648,7 +648,7 @@ ShallowWrapper {
                     ending="16-Jan-2019"
                     id="-LEnW5RRn0IkO8VjnMma"
                     level="D0B"
-                    lmsOutputs="N/A"
+                    lmsOutputs="0/undefined"
                     name="Maddison Kiehn"
                     onClick={[Function]}
                     picture="https://lorempixel.com/100/100/people/?59737"
@@ -684,7 +684,7 @@ ShallowWrapper {
               ending="11-Dec-2018"
               id="-LD3PA3VgP4qvRRORX08"
               level="D0B"
-              lmsOutputs="N/A"
+              lmsOutputs="0/undefined"
               name="Burley Hirthe"
               onClick={[Function]}
               picture="https://lorempixel.com/100/100/people/?58306"
@@ -736,7 +736,7 @@ ShallowWrapper {
               ending="16-Jan-2019"
               id="-LEnW5RRn0IkO8VjnMma"
               level="D0B"
-              lmsOutputs="N/A"
+              lmsOutputs="0/undefined"
               name="Maddison Kiehn"
               onClick={[Function]}
               picture="https://lorempixel.com/100/100/people/?59737"
@@ -779,7 +779,7 @@ ShallowWrapper {
               "ending": "11-Dec-2018",
               "id": "-LD3PA3VgP4qvRRORX08",
               "level": "D0B",
-              "lmsOutputs": "N/A",
+              "lmsOutputs": "0/undefined",
               "name": "Burley Hirthe",
               "onClick": [Function],
               "picture": "https://lorempixel.com/100/100/people/?58306",
@@ -863,7 +863,7 @@ ShallowWrapper {
               "ending": "16-Jan-2019",
               "id": "-LEnW5RRn0IkO8VjnMma",
               "level": "D0B",
-              "lmsOutputs": "N/A",
+              "lmsOutputs": "0/undefined",
               "name": "Maddison Kiehn",
               "onClick": [Function],
               "picture": "https://lorempixel.com/100/100/people/?59737",

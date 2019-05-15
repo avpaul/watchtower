@@ -59,7 +59,9 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
       status={resolveStatus(fellow)}
       ending={refineDate(fellow, 'end')}
       lmsOutputs={
-        fellow.satisfied ? `${fellow.satisfied}/${fellow.total}` : 'N/A'
+        fellow.satisfied
+          ? `${fellow.satisfied}/${fellow.total}`
+          : `0/${fellow.total}`
       }
       picture={fellow.picture}
       onClick={handleClick}
