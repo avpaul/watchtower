@@ -301,6 +301,26 @@ ShallowWrapper {
                               xAxisId={0}
                               yAxisId={0}
                     />
+                    <Bar
+                              animationBegin={0}
+                              animationDuration={400}
+                              animationEasing="ease"
+                              barSize={40}
+                              data={Array []}
+                              dataKey="null"
+                              fill="#D3D3D3"
+                              hide={false}
+                              isAnimationActive={true}
+                              layout="vertical"
+                              legendType="rect"
+                              minPointSize={0}
+                              name="No Status"
+                              onAnimationEnd={[Function]}
+                              onAnimationStart={[Function]}
+                              stackId="a"
+                              xAxisId={0}
+                              yAxisId={0}
+                    />
           </BarChart>
 </ResponsiveContainer>,
       ],
@@ -586,6 +606,26 @@ ShallowWrapper {
                         xAxisId={0}
                         yAxisId={0}
             />
+            <Bar
+                        animationBegin={0}
+                        animationDuration={400}
+                        animationEasing="ease"
+                        barSize={40}
+                        data={Array []}
+                        dataKey="null"
+                        fill="#D3D3D3"
+                        hide={false}
+                        isAnimationActive={true}
+                        layout="vertical"
+                        legendType="rect"
+                        minPointSize={0}
+                        name="No Status"
+                        onAnimationEnd={[Function]}
+                        onAnimationStart={[Function]}
+                        stackId="a"
+                        xAxisId={0}
+                        yAxisId={0}
+            />
 </BarChart>,
           "className": "undefined",
           "debounce": 0,
@@ -807,6 +847,26 @@ ShallowWrapper {
                 legendType="rect"
                 minPointSize={0}
                 name="On Track"
+                onAnimationEnd={[Function]}
+                onAnimationStart={[Function]}
+                stackId="a"
+                xAxisId={0}
+                yAxisId={0}
+/>,
+              <Bar
+                animationBegin={0}
+                animationDuration={400}
+                animationEasing="ease"
+                barSize={40}
+                data={Array []}
+                dataKey="null"
+                fill="#D3D3D3"
+                hide={false}
+                isAnimationActive={true}
+                layout="vertical"
+                legendType="rect"
+                minPointSize={0}
+                name="No Status"
                 onAnimationEnd={[Function]}
                 onAnimationStart={[Function]}
                 stackId="a"
@@ -1068,6 +1128,34 @@ ShallowWrapper {
                 "legendType": "rect",
                 "minPointSize": 0,
                 "name": "On Track",
+                "onAnimationEnd": [Function],
+                "onAnimationStart": [Function],
+                "stackId": "a",
+                "xAxisId": 0,
+                "yAxisId": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "animationBegin": 0,
+                "animationDuration": 400,
+                "animationEasing": "ease",
+                "barSize": 40,
+                "data": Array [],
+                "dataKey": "null",
+                "fill": "#D3D3D3",
+                "hide": false,
+                "isAnimationActive": true,
+                "layout": "vertical",
+                "legendType": "rect",
+                "minPointSize": 0,
+                "name": "No Status",
                 "onAnimationEnd": [Function],
                 "onAnimationStart": [Function],
                 "stackId": "a",
@@ -1349,6 +1437,26 @@ ShallowWrapper {
                                     legendType="rect"
                                     minPointSize={0}
                                     name="On Track"
+                                    onAnimationEnd={[Function]}
+                                    onAnimationStart={[Function]}
+                                    stackId="a"
+                                    xAxisId={0}
+                                    yAxisId={0}
+                        />
+                        <Bar
+                                    animationBegin={0}
+                                    animationDuration={400}
+                                    animationEasing="ease"
+                                    barSize={40}
+                                    data={Array []}
+                                    dataKey="null"
+                                    fill="#D3D3D3"
+                                    hide={false}
+                                    isAnimationActive={true}
+                                    layout="vertical"
+                                    legendType="rect"
+                                    minPointSize={0}
+                                    name="No Status"
                                     onAnimationEnd={[Function]}
                                     onAnimationStart={[Function]}
                                     stackId="a"
@@ -1640,6 +1748,26 @@ ShallowWrapper {
                             xAxisId={0}
                             yAxisId={0}
               />
+              <Bar
+                            animationBegin={0}
+                            animationDuration={400}
+                            animationEasing="ease"
+                            barSize={40}
+                            data={Array []}
+                            dataKey="null"
+                            fill="#D3D3D3"
+                            hide={false}
+                            isAnimationActive={true}
+                            layout="vertical"
+                            legendType="rect"
+                            minPointSize={0}
+                            name="No Status"
+                            onAnimationEnd={[Function]}
+                            onAnimationStart={[Function]}
+                            stackId="a"
+                            xAxisId={0}
+                            yAxisId={0}
+              />
 </BarChart>,
             "className": "undefined",
             "debounce": 0,
@@ -1861,6 +1989,26 @@ ShallowWrapper {
                   legendType="rect"
                   minPointSize={0}
                   name="On Track"
+                  onAnimationEnd={[Function]}
+                  onAnimationStart={[Function]}
+                  stackId="a"
+                  xAxisId={0}
+                  yAxisId={0}
+/>,
+                <Bar
+                  animationBegin={0}
+                  animationDuration={400}
+                  animationEasing="ease"
+                  barSize={40}
+                  data={Array []}
+                  dataKey="null"
+                  fill="#D3D3D3"
+                  hide={false}
+                  isAnimationActive={true}
+                  layout="vertical"
+                  legendType="rect"
+                  minPointSize={0}
+                  name="No Status"
                   onAnimationEnd={[Function]}
                   onAnimationStart={[Function]}
                   stackId="a"
@@ -2122,6 +2270,34 @@ ShallowWrapper {
                   "legendType": "rect",
                   "minPointSize": 0,
                   "name": "On Track",
+                  "onAnimationEnd": [Function],
+                  "onAnimationStart": [Function],
+                  "stackId": "a",
+                  "xAxisId": 0,
+                  "yAxisId": 0,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "animationBegin": 0,
+                  "animationDuration": 400,
+                  "animationEasing": "ease",
+                  "barSize": 40,
+                  "data": Array [],
+                  "dataKey": "null",
+                  "fill": "#D3D3D3",
+                  "hide": false,
+                  "isAnimationActive": true,
+                  "layout": "vertical",
+                  "legendType": "rect",
+                  "minPointSize": 0,
+                  "name": "No Status",
                   "onAnimationEnd": [Function],
                   "onAnimationStart": [Function],
                   "stackId": "a",
