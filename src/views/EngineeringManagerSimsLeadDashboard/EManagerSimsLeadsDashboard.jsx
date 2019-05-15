@@ -7,12 +7,6 @@ import ManagerFellowMap from '../../components/ManagerFellowMap';
 import FellowsProgressBar from './FellowsProgressBar';
 import { getCurrentClass } from '../../utils';
 
-const emDashboardStyle = {
-  paddingLeft: '0',
-  paddingRight: '0',
-  paddingBottom: '49px'
-};
-
 /**
  * Class representing Engineering Manager dashboard
  * @class
@@ -179,7 +173,7 @@ class EManagerSimsLeadsDashboard extends Component {
     );
 
   displayCardMap = () => (
-    <div className="row map-card-row">
+    <div className="row map-card-row m-0">
       {this.mapDisplayContent().map((displayContent, index) => (
         <DisplayCard
           key={displayContent.title}
@@ -200,7 +194,7 @@ class EManagerSimsLeadsDashboard extends Component {
     const { showChart, options } = this.state;
 
     return (
-      <div className="container-fluid" style={emDashboardStyle}>
+      <div className="page-content container-fluid">
         <TtlsFellowSummary
           fellowsSummary={this.mapDisplayFellowSummary(
             managers.data || [],

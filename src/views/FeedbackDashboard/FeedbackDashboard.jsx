@@ -248,7 +248,7 @@ export class FeedbackDashboard extends Component {
           currentRole={role}
           type={TranslatorTable[isTicked.type]}
         />
-        <div className="col-12 mb-4">
+        <div className="col-12 mb-4 mt-5">
           {paginationWrapper.renderPagination()}
         </div>
       </Fragment>

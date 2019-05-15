@@ -1515,14 +1515,7 @@ ShallowWrapper {
                                     "sortLabel": "Fellow Ratio, High to Low",
                                   },
                                   "_rendered": <div
-                                    className="container-fluid"
-                                    style={
-                                                    Object {
-                                                                    "paddingBottom": "49px",
-                                                                    "paddingLeft": "0",
-                                                                    "paddingRight": "0",
-                                                                  }
-                                    }
+                                    className="page-content container-fluid"
                     >
                                     <FellowsSummary
                                                     fellowSummaryCardComponent={[Circular]}
@@ -1569,7 +1562,7 @@ ShallowWrapper {
                                                     handleCardClick={[Function]}
                                     />
                                     <div
-                                                    className="row map-card-row"
+                                                    className="row map-card-row m-0"
                                     >
                                                     <DisplayCard
                                                                     displayContent={
@@ -1637,7 +1630,7 @@ ShallowWrapper {
 />,
         false,
         <div
-          className="row map-card-row"
+          className="row map-card-row m-0"
 >
           <DisplayCard
                     displayContent={
@@ -1655,12 +1648,7 @@ ShallowWrapper {
         false,
         <Connect(TTLFellowsProgress) />,
       ],
-      "className": "container-fluid",
-      "style": Object {
-        "paddingBottom": "49px",
-        "paddingLeft": "0",
-        "paddingRight": "0",
-      },
+      "className": "page-content container-fluid",
     },
     "ref": null,
     "rendered": Array [
@@ -2680,14 +2668,7 @@ ShallowWrapper {
                   "sortLabel": "Fellow Ratio, High to Low",
                 },
                 "_rendered": <div
-                  className="container-fluid"
-                  style={
-                                    Object {
-                                                      "paddingBottom": "49px",
-                                                      "paddingLeft": "0",
-                                                      "paddingRight": "0",
-                                                    }
-                  }
+                  className="page-content container-fluid"
 >
                   <FellowsSummary
                                     fellowSummaryCardComponent={[Circular]}
@@ -2734,7 +2715,7 @@ ShallowWrapper {
                                     handleCardClick={[Function]}
                   />
                   <div
-                                    className="row map-card-row"
+                                    className="row map-card-row m-0"
                   >
                                     <DisplayCard
                                                       displayContent={
@@ -2821,7 +2802,7 @@ ShallowWrapper {
               onClick={[Function]}
 />,
           ],
-          "className": "row map-card-row",
+          "className": "row map-card-row m-0",
         },
         "ref": null,
         "rendered": Array [
@@ -3879,14 +3860,7 @@ ShallowWrapper {
                                           "sortLabel": "Fellow Ratio, High to Low",
                                         },
                                         "_rendered": <div
-                                          className="container-fluid"
-                                          style={
-                                                            Object {
-                                                                              "paddingBottom": "49px",
-                                                                              "paddingLeft": "0",
-                                                                              "paddingRight": "0",
-                                                                            }
-                                          }
+                                          className="page-content container-fluid"
                         >
                                           <FellowsSummary
                                                             fellowSummaryCardComponent={[Circular]}
@@ -3933,7 +3907,7 @@ ShallowWrapper {
                                                             handleCardClick={[Function]}
                                           />
                                           <div
-                                                            className="row map-card-row"
+                                                            className="row map-card-row m-0"
                                           >
                                                             <DisplayCard
                                                                               displayContent={
@@ -4001,7 +3975,7 @@ ShallowWrapper {
 />,
           false,
           <div
-            className="row map-card-row"
+            className="row map-card-row m-0"
 >
             <DisplayCard
                         displayContent={
@@ -4019,12 +3993,7 @@ ShallowWrapper {
           false,
           <Connect(TTLFellowsProgress) />,
         ],
-        "className": "container-fluid",
-        "style": Object {
-          "paddingBottom": "49px",
-          "paddingLeft": "0",
-          "paddingRight": "0",
-        },
+        "className": "page-content container-fluid",
       },
       "ref": null,
       "rendered": Array [
@@ -5044,14 +5013,7 @@ ShallowWrapper {
                     "sortLabel": "Fellow Ratio, High to Low",
                   },
                   "_rendered": <div
-                    className="container-fluid"
-                    style={
-                                        Object {
-                                                            "paddingBottom": "49px",
-                                                            "paddingLeft": "0",
-                                                            "paddingRight": "0",
-                                                          }
-                    }
+                    className="page-content container-fluid"
 >
                     <FellowsSummary
                                         fellowSummaryCardComponent={[Circular]}
@@ -5098,7 +5060,7 @@ ShallowWrapper {
                                         handleCardClick={[Function]}
                     />
                     <div
-                                        className="row map-card-row"
+                                        className="row map-card-row m-0"
                     >
                                         <DisplayCard
                                                             displayContent={
@@ -5185,7 +5147,7 @@ ShallowWrapper {
                 onClick={[Function]}
 />,
             ],
-            "className": "row map-card-row",
+            "className": "row map-card-row m-0",
           },
           "ref": null,
           "rendered": Array [
