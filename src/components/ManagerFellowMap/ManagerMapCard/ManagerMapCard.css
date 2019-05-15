@@ -16,10 +16,12 @@
   border-bottom: none;
   padding-left: 30px;
 }
+
 .card-header {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .manager_card__fellows--number {
   color: #303030;
 }
@@ -31,6 +33,7 @@
   -webkit-overflow-scrolling: touch;
   padding-left: 24px;
 }
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 0.375rem;
@@ -42,6 +45,7 @@
   background-color: #dddbdb;
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
+
 .manager_card .list-group-item {
   color: #303030;
   line-height: 23px;
@@ -60,10 +64,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .manager_card__name:hover {
   max-width: 100%;
   text-align: center;
 }
+
 .manager_card__name:hover + .manager_card__fellows--number {
   display: none;
 }
@@ -80,6 +86,14 @@
   height: 16px;
   width: 16px;
   background-color: #3359db;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.grey-dot {
+  height: 16px;
+  width: 16px;
+  background-color: #808080;
   border-radius: 50%;
   display: inline-block;
 }
