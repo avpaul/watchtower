@@ -101,6 +101,13 @@ class StackedBarChart extends React.Component {
         name="On Track"
         barSize={40}
       />
+      <Bar
+        dataKey="null"
+        fill="#D3D3D3"
+        stackId="a"
+        name="No Status"
+        barSize={40}
+      />
     </BarChart>
   );
 
