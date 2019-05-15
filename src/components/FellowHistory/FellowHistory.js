@@ -69,7 +69,7 @@ export class FellowHistory extends Component {
         title: 'LMS',
         ratings: fellow.satisfied
           ? `${fellow.satisfied}/${fellow.total}`
-          : 'N/A'
+          : `0/${fellow.total}`
       }
     ];
     return fellowsListDisplayData;
