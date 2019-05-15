@@ -39,7 +39,7 @@ const downloadPdf = (
   status,
   level,
   downloadFellows,
-  results
+  results = downloadFellows.length
 ) => {
   const rowsDoc = rowsAndDoc(downloadFellows, cellValues);
   const rows = rowsDoc[0];
