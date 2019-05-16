@@ -117,7 +117,9 @@ ShallowWrapper {
                                                                       <b />
                                                             </td>
                                                             <td>
-                                                                      <b>
+                                                                      <b
+                                                                                className="text-capitalize"
+                                                                      >
                                                                                 lms
                                                                       </b>
                                                             </td>
@@ -409,7 +411,9 @@ ShallowWrapper {
                                                                         <b />
                                                             </td>
                                                             <td>
-                                                                        <b>
+                                                                        <b
+                                                                                    className="text-capitalize"
+                                                                        >
                                                                                     lms
                                                                         </b>
                                                             </td>
@@ -470,7 +474,9 @@ ShallowWrapper {
                                                                       <b />
                                                         </td>
                                                         <td>
-                                                                      <b>
+                                                                      <b
+                                                                                    className="text-capitalize"
+                                                                      >
                                                                                     lms
                                                                       </b>
                                                         </td>
@@ -528,7 +534,9 @@ ShallowWrapper {
                                                                 <b />
                                                 </td>
                                                 <td>
-                                                                <b>
+                                                                <b
+                                                                                className="text-capitalize"
+                                                                >
                                                                                 lms
                                                                 </b>
                                                 </td>
@@ -583,7 +591,9 @@ ShallowWrapper {
                                                             <b />
                                         </td>
                                         <td>
-                                                            <b>
+                                                            <b
+                                                                                className="text-capitalize"
+                                                            >
                                                                                 lms
                                                             </b>
                                         </td>
@@ -727,7 +737,9 @@ ShallowWrapper {
                                             <b />
                       </td>
                       <td>
-                                            <b>
+                                            <b
+                                                                  className="text-capitalize"
+                                            >
                                                                   lms
                                             </b>
                       </td>
@@ -755,7 +767,9 @@ ShallowWrapper {
                           <b />
 </td>,
                         <td>
-                          <b>
+                          <b
+                                                    className="text-capitalize"
+                          >
                                                     lms
                           </b>
 </td>,
@@ -801,7 +815,9 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": <b>
+                          "children": <b
+                            className="text-capitalize"
+>
                             lms
 </b>,
                         },
@@ -812,6 +828,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": "lms",
+                            "className": "text-capitalize",
                           },
                           "ref": null,
                           "rendered": "lms",
@@ -1065,7 +1082,9 @@ ShallowWrapper {
                                                                                     <b />
                                                                         </td>
                                                                         <td>
-                                                                                    <b>
+                                                                                    <b
+                                                                                                className="text-capitalize"
+                                                                                    >
                                                                                                 lms
                                                                                     </b>
                                                                         </td>
@@ -1357,7 +1376,9 @@ ShallowWrapper {
                                                                                     <b />
                                                                       </td>
                                                                       <td>
-                                                                                    <b>
+                                                                                    <b
+                                                                                                  className="text-capitalize"
+                                                                                    >
                                                                                                   lms
                                                                                     </b>
                                                                       </td>
@@ -1418,7 +1439,9 @@ ShallowWrapper {
                                                                                 <b />
                                                                 </td>
                                                                 <td>
-                                                                                <b>
+                                                                                <b
+                                                                                                className="text-capitalize"
+                                                                                >
                                                                                                 lms
                                                                                 </b>
                                                                 </td>
@@ -1476,7 +1499,9 @@ ShallowWrapper {
                                                                         <b />
                                                       </td>
                                                       <td>
-                                                                        <b>
+                                                                        <b
+                                                                                          className="text-capitalize"
+                                                                        >
                                                                                           lms
                                                                         </b>
                                                       </td>
@@ -1531,7 +1556,9 @@ ShallowWrapper {
                                                                   <b />
                                             </td>
                                             <td>
-                                                                  <b>
+                                                                  <b
+                                                                                        className="text-capitalize"
+                                                                  >
                                                                                         lms
                                                                   </b>
                                             </td>
@@ -1675,7 +1702,9 @@ ShallowWrapper {
                                                 <b />
                         </td>
                         <td>
-                                                <b>
+                                                <b
+                                                                        className="text-capitalize"
+                                                >
                                                                         lms
                                                 </b>
                         </td>
@@ -1703,7 +1732,9 @@ ShallowWrapper {
                             <b />
 </td>,
                           <td>
-                            <b>
+                            <b
+                                                        className="text-capitalize"
+                            >
                                                         lms
                             </b>
 </td>,
@@ -1749,7 +1780,9 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": <b>
+                            "children": <b
+                              className="text-capitalize"
+>
                               lms
 </b>,
                           },
@@ -1760,6 +1793,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "lms",
+                              "className": "text-capitalize",
                             },
                             "ref": null,
                             "rendered": "lms",
