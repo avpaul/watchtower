@@ -112,7 +112,7 @@ export class DashboardPage extends Component {
 
   clickDownload = () => {
     const { paginationWrapper } = this.props;
-    this.setState({ downloadFellows: paginationWrapper.state.paginatedData });
+    this.setState({ downloadFellows: paginationWrapper.state.filteredData });
   };
 
   clearFilters = () => {
