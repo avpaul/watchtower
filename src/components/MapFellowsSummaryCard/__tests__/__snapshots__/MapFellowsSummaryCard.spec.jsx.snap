@@ -7,6 +7,40 @@ ShallowWrapper {
     fellowsSummaryCardDetails={
         Array [
             Object {
+              "actualApprenticeshipStartDate": "2018-09-17",
+              "apprenticeshipManager": "Trust Birungi",
+              "apprenticeshipTeam": "Watch Tower",
+              "apprenticeshipTechnology": "PHP/Laravel,  Javascript/PREN",
+              "bio": "Beatae modi ratione earum. Quo eos exercitationem qui totam est dolorem facere. Voluptatibus beatae sit sed provident deserunt fugit quos doloremque. Ea id inventore et totam. Ipsam ipsa similique quidem culpa voluptas.",
+              "cohort": "Class 24 - LOS",
+              "communication": "0",
+              "currentStage": "Apprentice",
+              "devPulseStatus": "gteWk5OffTrack",
+              "email": "burley.hirthe@andela.com",
+              "expectedApprenticeshipCompletionDate": "2018-12-11",
+              "expectedApprenticeshipStartDate": "2018-09-17",
+              "fellow_id": "-LD3PA3VgP4qvRRORX08",
+              "initiative": "1.33333333333333",
+              "integration": "1",
+              "level": "D0B",
+              "managerEmail": "trust.birungi@andela.com",
+              "managerName": "Trust  Birungi",
+              "managerRole": "TTL",
+              "mostRecentAdvancementDate": "---",
+              "name": "Burley Hirthe",
+              "overall_average": "0.791666666666667",
+              "overall_status": "offTrack",
+              "picture": "https://lorempixel.com/100/100/people/?58306",
+              "professionalism": "0",
+              "project": "Watch Tower",
+              "quality": "1",
+              "quantity": "1.41666666666667",
+              "ratings": 12,
+              "startDate": "N/A",
+              "status": "gteWk5OffTrack",
+              "weeksSpent": 30,
+            },
+            Object {
               "actualApprenticeshipStartDate": "2019-01-12",
               "actualSimulationsCompletionDate": "2018-11-05",
               "apprenticeshipManager": "Trust Birungi",
@@ -57,38 +91,39 @@ ShallowWrapper {
               "weeksSpent": 13,
             },
             Object {
-              "actualApprenticeshipStartDate": "2018-09-17",
+              "actualApprenticeshipStartDate": "2018-10-15",
               "apprenticeshipManager": "Trust Birungi",
               "apprenticeshipTeam": "Watch Tower",
-              "apprenticeshipTechnology": "PHP/Laravel,  Javascript/PREN",
-              "bio": "Beatae modi ratione earum. Quo eos exercitationem qui totam est dolorem facere. Voluptatibus beatae sit sed provident deserunt fugit quos doloremque. Ea id inventore et totam. Ipsam ipsa similique quidem culpa voluptas.",
-              "cohort": "Class 24 - LOS",
-              "communication": "0",
+              "apprenticeshipTechnology": "Javascript/PREN,  PHP/Laravel",
+              "bio": "Molestias ipsa corporis impedit repellat. Ut odit cum nihil adipisci rerum consequatur. Consequatur voluptatibus beatae consequatur hic dolore eveniet. Quod architecto quod aut accusantium aspernatur.",
+              "cohort": "Class 38 - LOS",
+              "communication": "1",
               "currentStage": "Apprentice",
-              "devPulseStatus": "gteWk5OffTrack",
-              "email": "burley.hirthe@andela.com",
-              "expectedApprenticeshipCompletionDate": "2018-12-11",
+              "devPulseStatus": "gteWk5OnTrack",
+              "email": "maddison.kiehn@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-01-16",
               "expectedApprenticeshipStartDate": "2018-09-17",
-              "fellow_id": "-LD3PA3VgP4qvRRORX08",
-              "initiative": "1.33333333333333",
-              "integration": "1",
+              "fellow_id": "-LEnW5RRn0IkO8VjnMma",
+              "initiative": "1.2",
+              "integration": "1.1",
               "level": "D0B",
               "managerEmail": "trust.birungi@andela.com",
               "managerName": "Trust  Birungi",
               "managerRole": "TTL",
               "mostRecentAdvancementDate": "---",
-              "name": "Burley Hirthe",
-              "overall_average": "0.791666666666667",
+              "name": "Maddison Kiehn",
+              "overall_average": "1.13333333333333",
               "overall_status": "offTrack",
-              "picture": "https://lorempixel.com/100/100/people/?58306",
-              "professionalism": "0",
+              "picture": "https://lorempixel.com/100/100/people/?59737",
+              "pipStatus": true,
+              "professionalism": "1.1",
               "project": "Watch Tower",
-              "quality": "1",
-              "quantity": "1.41666666666667",
-              "ratings": 12,
+              "quality": "1.1",
+              "quantity": "1.3",
+              "ratings": 10,
               "startDate": "N/A",
-              "status": "gteWk5OffTrack",
-              "weeksSpent": 30,
+              "status": "gteWk5OnTrack",
+              "weeksSpent": 26,
             },
             Object {
               "actualApprenticeshipStartDate": "2018-12-15",
@@ -118,48 +153,6 @@ ShallowWrapper {
               "satisfied": 16,
               "startDate": "N/A",
               "status": "ltWk5OnTrack",
-              "submitted": 16,
-              "total": 16,
-              "unsubmitted": 0,
-              "weeksSpent": 17,
-            },
-            Object {
-              "actualApprenticeshipStartDate": "2018-12-15",
-              "apprenticeshipManager": "Trust Birungi",
-              "apprenticeshipTeam": "Watch Tower",
-              "apprenticeshipTechnology": "Javascript/PREN,  PHP/Laravel",
-              "bio": "Totam rem et quibusdam quasi nulla est tenetur. Rerum quidem accusantium ad cupiditate. Et rerum totam et.",
-              "cohort": "Class 10 - KLA",
-              "communication": "1",
-              "currentStage": "Apprentice",
-              "devPulseStatus": "gteWk5OffTrack",
-              "email": "waldo.schuster@andela.com",
-              "expectedApprenticeshipCompletionDate": "2019-03-11",
-              "expectedApprenticeshipStartDate": "2018-09-17",
-              "fellow_id": "-LJK1qECFdekucrwqqkh",
-              "id": 2,
-              "initiative": "1",
-              "integration": "1.125",
-              "invalid_attempts": 0,
-              "level": "D0B",
-              "lmsStatus": "ltWk5OnTrack",
-              "managerEmail": "trust.birungi@andela.com",
-              "managerName": "Trust  Birungi",
-              "managerRole": "TTL",
-              "missing": 0,
-              "mostRecentAdvancementDate": "---",
-              "name": "Waldo Schuster",
-              "overall_average": "1",
-              "overall_status": "offTrack",
-              "picture": "https://lorempixel.com/100/100/people/?18151",
-              "professionalism": "1",
-              "project": "Watch Tower",
-              "quality": "0.875",
-              "quantity": "1",
-              "ratings": 8,
-              "satisfied": 16,
-              "startDate": "N/A",
-              "status": "gteWk5OffTrack",
               "submitted": 16,
               "total": 16,
               "unsubmitted": 0,
@@ -213,39 +206,46 @@ ShallowWrapper {
               "weeksSpent": 13,
             },
             Object {
-              "actualApprenticeshipStartDate": "2018-10-15",
+              "actualApprenticeshipStartDate": "2018-12-15",
               "apprenticeshipManager": "Trust Birungi",
               "apprenticeshipTeam": "Watch Tower",
               "apprenticeshipTechnology": "Javascript/PREN,  PHP/Laravel",
-              "bio": "Molestias ipsa corporis impedit repellat. Ut odit cum nihil adipisci rerum consequatur. Consequatur voluptatibus beatae consequatur hic dolore eveniet. Quod architecto quod aut accusantium aspernatur.",
-              "cohort": "Class 38 - LOS",
+              "bio": "Totam rem et quibusdam quasi nulla est tenetur. Rerum quidem accusantium ad cupiditate. Et rerum totam et.",
+              "cohort": "Class 10 - KLA",
               "communication": "1",
               "currentStage": "Apprentice",
-              "devPulseStatus": "gteWk5OnTrack",
-              "email": "maddison.kiehn@andela.com",
-              "expectedApprenticeshipCompletionDate": "2019-01-16",
+              "devPulseStatus": "gteWk5OffTrack",
+              "email": "waldo.schuster@andela.com",
+              "expectedApprenticeshipCompletionDate": "2019-03-11",
               "expectedApprenticeshipStartDate": "2018-09-17",
-              "fellow_id": "-LEnW5RRn0IkO8VjnMma",
-              "initiative": "1.2",
-              "integration": "1.1",
+              "fellow_id": "-LJK1qECFdekucrwqqkh",
+              "id": 2,
+              "initiative": "1",
+              "integration": "1.125",
+              "invalid_attempts": 0,
               "level": "D0B",
+              "lmsStatus": "ltWk5OnTrack",
               "managerEmail": "trust.birungi@andela.com",
               "managerName": "Trust  Birungi",
               "managerRole": "TTL",
+              "missing": 0,
               "mostRecentAdvancementDate": "---",
-              "name": "Maddison Kiehn",
-              "overall_average": "1.13333333333333",
+              "name": "Waldo Schuster",
+              "overall_average": "1",
               "overall_status": "offTrack",
-              "picture": "https://lorempixel.com/100/100/people/?59737",
-              "pipStatus": true,
-              "professionalism": "1.1",
+              "picture": "https://lorempixel.com/100/100/people/?18151",
+              "professionalism": "1",
               "project": "Watch Tower",
-              "quality": "1.1",
-              "quantity": "1.3",
-              "ratings": 10,
+              "quality": "0.875",
+              "quantity": "1",
+              "ratings": 8,
+              "satisfied": 16,
               "startDate": "N/A",
-              "status": "gteWk5OnTrack",
-              "weeksSpent": 26,
+              "status": "gteWk5OffTrack",
+              "submitted": 16,
+              "total": 16,
+              "unsubmitted": 0,
+              "weeksSpent": 17,
             },
           ]
     }
@@ -268,6 +268,19 @@ ShallowWrapper {
         className="row m-0"
 >
         <FellowsSummaryCard
+                devPulseAverage="0.79"
+                ending="11-Dec-2018"
+                id="-LD3PA3VgP4qvRRORX08"
+                level="D0B"
+                lmsOutputs="0/undefined"
+                name="Burley Hirthe"
+                onClick={[Function]}
+                picture="https://lorempixel.com/100/100/people/?58306"
+                product="Watch Tower"
+                started="17-Sep-2018"
+                status="Off-Track"
+        />
+        <FellowsSummaryCard
                 devPulseAverage="0.66"
                 ending="13-Apr-2019"
                 id="-LHs4sEcIAVnPeKHTBGd"
@@ -281,16 +294,16 @@ ShallowWrapper {
                 status="Off-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="0.79"
-                ending="11-Dec-2018"
-                id="-LD3PA3VgP4qvRRORX08"
+                devPulseAverage="1.13"
+                ending="16-Jan-2019"
+                id="-LEnW5RRn0IkO8VjnMma"
                 level="D0B"
                 lmsOutputs="0/undefined"
-                name="Burley Hirthe"
+                name="Maddison Kiehn"
                 onClick={[Function]}
-                picture="https://lorempixel.com/100/100/people/?58306"
+                picture="https://lorempixel.com/100/100/people/?59737"
                 product="Watch Tower"
-                started="17-Sep-2018"
+                started="15-Oct-2018"
                 status="Off-Track"
         />
         <FellowsSummaryCard
@@ -307,19 +320,6 @@ ShallowWrapper {
                 status="On-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="1"
-                ending="11-Mar-2019"
-                id="-LJK1qECFdekucrwqqkh"
-                level="D0B"
-                lmsOutputs="16/16"
-                name="Waldo Schuster"
-                onClick={[Function]}
-                picture="https://lorempixel.com/100/100/people/?18151"
-                product="Watch Tower"
-                started="15-Dec-2018"
-                status="Off-Track"
-        />
-        <FellowsSummaryCard
                 devPulseAverage="2"
                 ending="8-Apr-2019"
                 id="-LLUW2BwQiZS0j9KF10j"
@@ -333,16 +333,16 @@ ShallowWrapper {
                 status="On-Track"
         />
         <FellowsSummaryCard
-                devPulseAverage="1.13"
-                ending="16-Jan-2019"
-                id="-LEnW5RRn0IkO8VjnMma"
+                devPulseAverage="1"
+                ending="11-Mar-2019"
+                id="-LJK1qECFdekucrwqqkh"
                 level="D0B"
-                lmsOutputs="0/undefined"
-                name="Maddison Kiehn"
+                lmsOutputs="16/16"
+                name="Waldo Schuster"
                 onClick={[Function]}
-                picture="https://lorempixel.com/100/100/people/?59737"
+                picture="https://lorempixel.com/100/100/people/?18151"
                 product="Watch Tower"
-                started="15-Oct-2018"
+                started="15-Dec-2018"
                 status="Off-Track"
         />
 </div>,
@@ -355,6 +355,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <FellowsSummaryCard
+            devPulseAverage="0.79"
+            ending="11-Dec-2018"
+            id="-LD3PA3VgP4qvRRORX08"
+            level="D0B"
+            lmsOutputs="0/undefined"
+            name="Burley Hirthe"
+            onClick={[Function]}
+            picture="https://lorempixel.com/100/100/people/?58306"
+            product="Watch Tower"
+            started="17-Sep-2018"
+            status="Off-Track"
+/>,
           <FellowsSummaryCard
             devPulseAverage="0.66"
             ending="13-Apr-2019"
@@ -369,16 +382,16 @@ ShallowWrapper {
             status="Off-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="0.79"
-            ending="11-Dec-2018"
-            id="-LD3PA3VgP4qvRRORX08"
+            devPulseAverage="1.13"
+            ending="16-Jan-2019"
+            id="-LEnW5RRn0IkO8VjnMma"
             level="D0B"
             lmsOutputs="0/undefined"
-            name="Burley Hirthe"
+            name="Maddison Kiehn"
             onClick={[Function]}
-            picture="https://lorempixel.com/100/100/people/?58306"
+            picture="https://lorempixel.com/100/100/people/?59737"
             product="Watch Tower"
-            started="17-Sep-2018"
+            started="15-Oct-2018"
             status="Off-Track"
 />,
           <FellowsSummaryCard
@@ -395,19 +408,6 @@ ShallowWrapper {
             status="On-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="1"
-            ending="11-Mar-2019"
-            id="-LJK1qECFdekucrwqqkh"
-            level="D0B"
-            lmsOutputs="16/16"
-            name="Waldo Schuster"
-            onClick={[Function]}
-            picture="https://lorempixel.com/100/100/people/?18151"
-            product="Watch Tower"
-            started="15-Dec-2018"
-            status="Off-Track"
-/>,
-          <FellowsSummaryCard
             devPulseAverage="2"
             ending="8-Apr-2019"
             id="-LLUW2BwQiZS0j9KF10j"
@@ -421,16 +421,16 @@ ShallowWrapper {
             status="On-Track"
 />,
           <FellowsSummaryCard
-            devPulseAverage="1.13"
-            ending="16-Jan-2019"
-            id="-LEnW5RRn0IkO8VjnMma"
+            devPulseAverage="1"
+            ending="11-Mar-2019"
+            id="-LJK1qECFdekucrwqqkh"
             level="D0B"
-            lmsOutputs="0/undefined"
-            name="Maddison Kiehn"
+            lmsOutputs="16/16"
+            name="Waldo Schuster"
             onClick={[Function]}
-            picture="https://lorempixel.com/100/100/people/?59737"
+            picture="https://lorempixel.com/100/100/people/?18151"
             product="Watch Tower"
-            started="15-Oct-2018"
+            started="15-Dec-2018"
             status="Off-Track"
 />,
         ],
@@ -441,27 +441,6 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "0",
-          "nodeType": "function",
-          "props": Object {
-            "devPulseAverage": "0.66",
-            "ending": "13-Apr-2019",
-            "id": "-LHs4sEcIAVnPeKHTBGd",
-            "level": "D0B",
-            "lmsOutputs": "16/16",
-            "name": "Genesis Kohler",
-            "onClick": [Function],
-            "picture": "https://lorempixel.com/100/100/people/?40049",
-            "product": "Watch Tower",
-            "started": "12-Jan-2019",
-            "status": "Off-Track",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "1",
           "nodeType": "function",
           "props": Object {
             "devPulseAverage": "0.79",
@@ -482,7 +461,49 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "0.66",
+            "ending": "13-Apr-2019",
+            "id": "-LHs4sEcIAVnPeKHTBGd",
+            "level": "D0B",
+            "lmsOutputs": "16/16",
+            "name": "Genesis Kohler",
+            "onClick": [Function],
+            "picture": "https://lorempixel.com/100/100/people/?40049",
+            "product": "Watch Tower",
+            "started": "12-Jan-2019",
+            "status": "Off-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
           "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "devPulseAverage": "1.13",
+            "ending": "16-Jan-2019",
+            "id": "-LEnW5RRn0IkO8VjnMma",
+            "level": "D0B",
+            "lmsOutputs": "0/undefined",
+            "name": "Maddison Kiehn",
+            "onClick": [Function],
+            "picture": "https://lorempixel.com/100/100/people/?59737",
+            "product": "Watch Tower",
+            "started": "15-Oct-2018",
+            "status": "Off-Track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
           "nodeType": "function",
           "props": Object {
             "devPulseAverage": "N/A",
@@ -496,27 +517,6 @@ ShallowWrapper {
             "product": "Watch Tower",
             "started": "15-Dec-2018",
             "status": "On-Track",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "3",
-          "nodeType": "function",
-          "props": Object {
-            "devPulseAverage": "1",
-            "ending": "11-Mar-2019",
-            "id": "-LJK1qECFdekucrwqqkh",
-            "level": "D0B",
-            "lmsOutputs": "16/16",
-            "name": "Waldo Schuster",
-            "onClick": [Function],
-            "picture": "https://lorempixel.com/100/100/people/?18151",
-            "product": "Watch Tower",
-            "started": "15-Dec-2018",
-            "status": "Off-Track",
           },
           "ref": null,
           "rendered": null,
@@ -548,16 +548,16 @@ ShallowWrapper {
           "key": "5",
           "nodeType": "function",
           "props": Object {
-            "devPulseAverage": "1.13",
-            "ending": "16-Jan-2019",
-            "id": "-LEnW5RRn0IkO8VjnMma",
+            "devPulseAverage": "1",
+            "ending": "11-Mar-2019",
+            "id": "-LJK1qECFdekucrwqqkh",
             "level": "D0B",
-            "lmsOutputs": "0/undefined",
-            "name": "Maddison Kiehn",
+            "lmsOutputs": "16/16",
+            "name": "Waldo Schuster",
             "onClick": [Function],
-            "picture": "https://lorempixel.com/100/100/people/?59737",
+            "picture": "https://lorempixel.com/100/100/people/?18151",
             "product": "Watch Tower",
-            "started": "15-Oct-2018",
+            "started": "15-Dec-2018",
             "status": "Off-Track",
           },
           "ref": null,
@@ -579,6 +579,19 @@ ShallowWrapper {
           className="row m-0"
 >
           <FellowsSummaryCard
+                    devPulseAverage="0.79"
+                    ending="11-Dec-2018"
+                    id="-LD3PA3VgP4qvRRORX08"
+                    level="D0B"
+                    lmsOutputs="0/undefined"
+                    name="Burley Hirthe"
+                    onClick={[Function]}
+                    picture="https://lorempixel.com/100/100/people/?58306"
+                    product="Watch Tower"
+                    started="17-Sep-2018"
+                    status="Off-Track"
+          />
+          <FellowsSummaryCard
                     devPulseAverage="0.66"
                     ending="13-Apr-2019"
                     id="-LHs4sEcIAVnPeKHTBGd"
@@ -592,16 +605,16 @@ ShallowWrapper {
                     status="Off-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="0.79"
-                    ending="11-Dec-2018"
-                    id="-LD3PA3VgP4qvRRORX08"
+                    devPulseAverage="1.13"
+                    ending="16-Jan-2019"
+                    id="-LEnW5RRn0IkO8VjnMma"
                     level="D0B"
                     lmsOutputs="0/undefined"
-                    name="Burley Hirthe"
+                    name="Maddison Kiehn"
                     onClick={[Function]}
-                    picture="https://lorempixel.com/100/100/people/?58306"
+                    picture="https://lorempixel.com/100/100/people/?59737"
                     product="Watch Tower"
-                    started="17-Sep-2018"
+                    started="15-Oct-2018"
                     status="Off-Track"
           />
           <FellowsSummaryCard
@@ -618,19 +631,6 @@ ShallowWrapper {
                     status="On-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="1"
-                    ending="11-Mar-2019"
-                    id="-LJK1qECFdekucrwqqkh"
-                    level="D0B"
-                    lmsOutputs="16/16"
-                    name="Waldo Schuster"
-                    onClick={[Function]}
-                    picture="https://lorempixel.com/100/100/people/?18151"
-                    product="Watch Tower"
-                    started="15-Dec-2018"
-                    status="Off-Track"
-          />
-          <FellowsSummaryCard
                     devPulseAverage="2"
                     ending="8-Apr-2019"
                     id="-LLUW2BwQiZS0j9KF10j"
@@ -644,16 +644,16 @@ ShallowWrapper {
                     status="On-Track"
           />
           <FellowsSummaryCard
-                    devPulseAverage="1.13"
-                    ending="16-Jan-2019"
-                    id="-LEnW5RRn0IkO8VjnMma"
+                    devPulseAverage="1"
+                    ending="11-Mar-2019"
+                    id="-LJK1qECFdekucrwqqkh"
                     level="D0B"
-                    lmsOutputs="0/undefined"
-                    name="Maddison Kiehn"
+                    lmsOutputs="16/16"
+                    name="Waldo Schuster"
                     onClick={[Function]}
-                    picture="https://lorempixel.com/100/100/people/?59737"
+                    picture="https://lorempixel.com/100/100/people/?18151"
                     product="Watch Tower"
-                    started="15-Oct-2018"
+                    started="15-Dec-2018"
                     status="Off-Track"
           />
 </div>,
@@ -666,6 +666,19 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <FellowsSummaryCard
+              devPulseAverage="0.79"
+              ending="11-Dec-2018"
+              id="-LD3PA3VgP4qvRRORX08"
+              level="D0B"
+              lmsOutputs="0/undefined"
+              name="Burley Hirthe"
+              onClick={[Function]}
+              picture="https://lorempixel.com/100/100/people/?58306"
+              product="Watch Tower"
+              started="17-Sep-2018"
+              status="Off-Track"
+/>,
             <FellowsSummaryCard
               devPulseAverage="0.66"
               ending="13-Apr-2019"
@@ -680,16 +693,16 @@ ShallowWrapper {
               status="Off-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="0.79"
-              ending="11-Dec-2018"
-              id="-LD3PA3VgP4qvRRORX08"
+              devPulseAverage="1.13"
+              ending="16-Jan-2019"
+              id="-LEnW5RRn0IkO8VjnMma"
               level="D0B"
               lmsOutputs="0/undefined"
-              name="Burley Hirthe"
+              name="Maddison Kiehn"
               onClick={[Function]}
-              picture="https://lorempixel.com/100/100/people/?58306"
+              picture="https://lorempixel.com/100/100/people/?59737"
               product="Watch Tower"
-              started="17-Sep-2018"
+              started="15-Oct-2018"
               status="Off-Track"
 />,
             <FellowsSummaryCard
@@ -706,19 +719,6 @@ ShallowWrapper {
               status="On-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="1"
-              ending="11-Mar-2019"
-              id="-LJK1qECFdekucrwqqkh"
-              level="D0B"
-              lmsOutputs="16/16"
-              name="Waldo Schuster"
-              onClick={[Function]}
-              picture="https://lorempixel.com/100/100/people/?18151"
-              product="Watch Tower"
-              started="15-Dec-2018"
-              status="Off-Track"
-/>,
-            <FellowsSummaryCard
               devPulseAverage="2"
               ending="8-Apr-2019"
               id="-LLUW2BwQiZS0j9KF10j"
@@ -732,16 +732,16 @@ ShallowWrapper {
               status="On-Track"
 />,
             <FellowsSummaryCard
-              devPulseAverage="1.13"
-              ending="16-Jan-2019"
-              id="-LEnW5RRn0IkO8VjnMma"
+              devPulseAverage="1"
+              ending="11-Mar-2019"
+              id="-LJK1qECFdekucrwqqkh"
               level="D0B"
-              lmsOutputs="0/undefined"
-              name="Maddison Kiehn"
+              lmsOutputs="16/16"
+              name="Waldo Schuster"
               onClick={[Function]}
-              picture="https://lorempixel.com/100/100/people/?59737"
+              picture="https://lorempixel.com/100/100/people/?18151"
               product="Watch Tower"
-              started="15-Oct-2018"
+              started="15-Dec-2018"
               status="Off-Track"
 />,
           ],
@@ -752,27 +752,6 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "0",
-            "nodeType": "function",
-            "props": Object {
-              "devPulseAverage": "0.66",
-              "ending": "13-Apr-2019",
-              "id": "-LHs4sEcIAVnPeKHTBGd",
-              "level": "D0B",
-              "lmsOutputs": "16/16",
-              "name": "Genesis Kohler",
-              "onClick": [Function],
-              "picture": "https://lorempixel.com/100/100/people/?40049",
-              "product": "Watch Tower",
-              "started": "12-Jan-2019",
-              "status": "Off-Track",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "1",
             "nodeType": "function",
             "props": Object {
               "devPulseAverage": "0.79",
@@ -793,7 +772,49 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "0.66",
+              "ending": "13-Apr-2019",
+              "id": "-LHs4sEcIAVnPeKHTBGd",
+              "level": "D0B",
+              "lmsOutputs": "16/16",
+              "name": "Genesis Kohler",
+              "onClick": [Function],
+              "picture": "https://lorempixel.com/100/100/people/?40049",
+              "product": "Watch Tower",
+              "started": "12-Jan-2019",
+              "status": "Off-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
             "key": "2",
+            "nodeType": "function",
+            "props": Object {
+              "devPulseAverage": "1.13",
+              "ending": "16-Jan-2019",
+              "id": "-LEnW5RRn0IkO8VjnMma",
+              "level": "D0B",
+              "lmsOutputs": "0/undefined",
+              "name": "Maddison Kiehn",
+              "onClick": [Function],
+              "picture": "https://lorempixel.com/100/100/people/?59737",
+              "product": "Watch Tower",
+              "started": "15-Oct-2018",
+              "status": "Off-Track",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "3",
             "nodeType": "function",
             "props": Object {
               "devPulseAverage": "N/A",
@@ -807,27 +828,6 @@ ShallowWrapper {
               "product": "Watch Tower",
               "started": "15-Dec-2018",
               "status": "On-Track",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "3",
-            "nodeType": "function",
-            "props": Object {
-              "devPulseAverage": "1",
-              "ending": "11-Mar-2019",
-              "id": "-LJK1qECFdekucrwqqkh",
-              "level": "D0B",
-              "lmsOutputs": "16/16",
-              "name": "Waldo Schuster",
-              "onClick": [Function],
-              "picture": "https://lorempixel.com/100/100/people/?18151",
-              "product": "Watch Tower",
-              "started": "15-Dec-2018",
-              "status": "Off-Track",
             },
             "ref": null,
             "rendered": null,
@@ -859,16 +859,16 @@ ShallowWrapper {
             "key": "5",
             "nodeType": "function",
             "props": Object {
-              "devPulseAverage": "1.13",
-              "ending": "16-Jan-2019",
-              "id": "-LEnW5RRn0IkO8VjnMma",
+              "devPulseAverage": "1",
+              "ending": "11-Mar-2019",
+              "id": "-LJK1qECFdekucrwqqkh",
               "level": "D0B",
-              "lmsOutputs": "0/undefined",
-              "name": "Maddison Kiehn",
+              "lmsOutputs": "16/16",
+              "name": "Waldo Schuster",
               "onClick": [Function],
-              "picture": "https://lorempixel.com/100/100/people/?59737",
+              "picture": "https://lorempixel.com/100/100/people/?18151",
               "product": "Watch Tower",
-              "started": "15-Oct-2018",
+              "started": "15-Dec-2018",
               "status": "Off-Track",
             },
             "ref": null,
