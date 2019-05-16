@@ -70,38 +70,38 @@ const Chart = ({ data, averageRatings }) => (
         <Legend
           payload={[
             {
-              value: `Quantity - ${truncateNumber(averageRatings.quantity)}`,
+              value: `Quantity : ${truncateNumber(averageRatings.quantity)}`,
               type: 'circle',
               color: '#FF3030'
             },
             {
-              value: `Quality - ${truncateNumber(averageRatings.quality)}`,
+              value: `Quality : ${truncateNumber(averageRatings.quality)}`,
               type: 'circle',
               color: '#9C8330'
             },
             {
-              value: `Professionalism - ${truncateNumber(
+              value: `Professionalism : ${truncateNumber(
                 averageRatings.professionalism
               )}`,
               type: 'circle',
               color: '#000000'
             },
             {
-              value: `Initiative - ${truncateNumber(
+              value: `Initiative : ${truncateNumber(
                 averageRatings.initiative
               )}`,
               type: 'circle',
               color: '#72BCD4'
             },
             {
-              value: `Integration - ${truncateNumber(
+              value: `Integration : ${truncateNumber(
                 averageRatings.integration
               )}`,
               type: 'circle',
               color: '#FFAF30'
             },
             {
-              value: `Communication - ${truncateNumber(
+              value: `Communication : ${truncateNumber(
                 averageRatings.communication
               )}`,
               type: 'circle',

@@ -723,33 +723,33 @@ ShallowWrapper {
                                                   Object {
                                                     "color": "#FF3030",
                                                     "type": "circle",
-                                                    "value": "Quantity - 1.17",
+                                                    "value": "Quantity : 1.17",
                                                   },
                                                   Object {
                                                     "color": "#9C8330",
                                                     "type": "circle",
-                                                    "value": "Quality - 1.11",
+                                                    "value": "Quality : 1.11",
                                                   },
                                                   Object {
                                                     "color": "#000000",
                                                     "type": "circle",
-                                                    "value": "Professionalism - 1.17",
+                                                    "value": "Professionalism : 1.17",
                                                   },
                                                   Object {
                                                     "color": "#72BCD4",
                                                     "type": "circle",
-                                                    "value": "Initiative - 1.05",
+                                                    "value": "Initiative : 1.05",
                                                   },
                                                   Object {
                                                     "color": "#FFAF30",
                                                     "type": "circle",
-                                                    "value": "Integration - 1.23",
+                                                    "value": "Integration : 1.23",
                                                   },
                                                   Object {
                                                     "color": "#3359DB",
                                                     "marginRight": "40px",
                                                     "type": "circle",
-                                                    "value": "Communication - 1.23",
+                                                    "value": "Communication : 1.23",
                                                   },
                                                 ]
                               }
@@ -1373,33 +1373,33 @@ ShallowWrapper {
                                                 Object {
                                                   "color": "#FF3030",
                                                   "type": "circle",
-                                                  "value": "Quantity - 1.17",
+                                                  "value": "Quantity : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#9C8330",
                                                   "type": "circle",
-                                                  "value": "Quality - 1.11",
+                                                  "value": "Quality : 1.11",
                                                 },
                                                 Object {
                                                   "color": "#000000",
                                                   "type": "circle",
-                                                  "value": "Professionalism - 1.17",
+                                                  "value": "Professionalism : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#72BCD4",
                                                   "type": "circle",
-                                                  "value": "Initiative - 1.05",
+                                                  "value": "Initiative : 1.05",
                                                 },
                                                 Object {
                                                   "color": "#FFAF30",
                                                   "type": "circle",
-                                                  "value": "Integration - 1.23",
+                                                  "value": "Integration : 1.23",
                                                 },
                                                 Object {
                                                   "color": "#3359DB",
                                                   "marginRight": "40px",
                                                   "type": "circle",
-                                                  "value": "Communication - 1.23",
+                                                  "value": "Communication : 1.23",
                                                 },
                                               ]
                         }
@@ -1758,33 +1758,33 @@ ShallowWrapper {
                                                 Object {
                                                   "color": "#FF3030",
                                                   "type": "circle",
-                                                  "value": "Quantity - 1.17",
+                                                  "value": "Quantity : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#9C8330",
                                                   "type": "circle",
-                                                  "value": "Quality - 1.11",
+                                                  "value": "Quality : 1.11",
                                                 },
                                                 Object {
                                                   "color": "#000000",
                                                   "type": "circle",
-                                                  "value": "Professionalism - 1.17",
+                                                  "value": "Professionalism : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#72BCD4",
                                                   "type": "circle",
-                                                  "value": "Initiative - 1.05",
+                                                  "value": "Initiative : 1.05",
                                                 },
                                                 Object {
                                                   "color": "#FFAF30",
                                                   "type": "circle",
-                                                  "value": "Integration - 1.23",
+                                                  "value": "Integration : 1.23",
                                                 },
                                                 Object {
                                                   "color": "#3359DB",
                                                   "marginRight": "40px",
                                                   "type": "circle",
-                                                  "value": "Communication - 1.23",
+                                                  "value": "Communication : 1.23",
                                                 },
                                               ]
                 }
@@ -2420,33 +2420,33 @@ ShallowWrapper {
                   Object {
                     "color": "#FF3030",
                     "type": "circle",
-                    "value": "Quantity - 1.17",
+                    "value": "Quantity : 1.17",
                   },
                   Object {
                     "color": "#9C8330",
                     "type": "circle",
-                    "value": "Quality - 1.11",
+                    "value": "Quality : 1.11",
                   },
                   Object {
                     "color": "#000000",
                     "type": "circle",
-                    "value": "Professionalism - 1.17",
+                    "value": "Professionalism : 1.17",
                   },
                   Object {
                     "color": "#72BCD4",
                     "type": "circle",
-                    "value": "Initiative - 1.05",
+                    "value": "Initiative : 1.05",
                   },
                   Object {
                     "color": "#FFAF30",
                     "type": "circle",
-                    "value": "Integration - 1.23",
+                    "value": "Integration : 1.23",
                   },
                   Object {
                     "color": "#3359DB",
                     "marginRight": "40px",
                     "type": "circle",
-                    "value": "Communication - 1.23",
+                    "value": "Communication : 1.23",
                   },
                 ],
                 "verticalAlign": "top",
@@ -3118,33 +3118,33 @@ ShallowWrapper {
                                                             Object {
                                                               "color": "#FF3030",
                                                               "type": "circle",
-                                                              "value": "Quantity - 1.17",
+                                                              "value": "Quantity : 1.17",
                                                             },
                                                             Object {
                                                               "color": "#9C8330",
                                                               "type": "circle",
-                                                              "value": "Quality - 1.11",
+                                                              "value": "Quality : 1.11",
                                                             },
                                                             Object {
                                                               "color": "#000000",
                                                               "type": "circle",
-                                                              "value": "Professionalism - 1.17",
+                                                              "value": "Professionalism : 1.17",
                                                             },
                                                             Object {
                                                               "color": "#72BCD4",
                                                               "type": "circle",
-                                                              "value": "Initiative - 1.05",
+                                                              "value": "Initiative : 1.05",
                                                             },
                                                             Object {
                                                               "color": "#FFAF30",
                                                               "type": "circle",
-                                                              "value": "Integration - 1.23",
+                                                              "value": "Integration : 1.23",
                                                             },
                                                             Object {
                                                               "color": "#3359DB",
                                                               "marginRight": "40px",
                                                               "type": "circle",
-                                                              "value": "Communication - 1.23",
+                                                              "value": "Communication : 1.23",
                                                             },
                                                           ]
                                     }
@@ -3768,33 +3768,33 @@ ShallowWrapper {
                                                         Object {
                                                           "color": "#FF3030",
                                                           "type": "circle",
-                                                          "value": "Quantity - 1.17",
+                                                          "value": "Quantity : 1.17",
                                                         },
                                                         Object {
                                                           "color": "#9C8330",
                                                           "type": "circle",
-                                                          "value": "Quality - 1.11",
+                                                          "value": "Quality : 1.11",
                                                         },
                                                         Object {
                                                           "color": "#000000",
                                                           "type": "circle",
-                                                          "value": "Professionalism - 1.17",
+                                                          "value": "Professionalism : 1.17",
                                                         },
                                                         Object {
                                                           "color": "#72BCD4",
                                                           "type": "circle",
-                                                          "value": "Initiative - 1.05",
+                                                          "value": "Initiative : 1.05",
                                                         },
                                                         Object {
                                                           "color": "#FFAF30",
                                                           "type": "circle",
-                                                          "value": "Integration - 1.23",
+                                                          "value": "Integration : 1.23",
                                                         },
                                                         Object {
                                                           "color": "#3359DB",
                                                           "marginRight": "40px",
                                                           "type": "circle",
-                                                          "value": "Communication - 1.23",
+                                                          "value": "Communication : 1.23",
                                                         },
                                                       ]
                             }
@@ -4153,33 +4153,33 @@ ShallowWrapper {
                                                       Object {
                                                         "color": "#FF3030",
                                                         "type": "circle",
-                                                        "value": "Quantity - 1.17",
+                                                        "value": "Quantity : 1.17",
                                                       },
                                                       Object {
                                                         "color": "#9C8330",
                                                         "type": "circle",
-                                                        "value": "Quality - 1.11",
+                                                        "value": "Quality : 1.11",
                                                       },
                                                       Object {
                                                         "color": "#000000",
                                                         "type": "circle",
-                                                        "value": "Professionalism - 1.17",
+                                                        "value": "Professionalism : 1.17",
                                                       },
                                                       Object {
                                                         "color": "#72BCD4",
                                                         "type": "circle",
-                                                        "value": "Initiative - 1.05",
+                                                        "value": "Initiative : 1.05",
                                                       },
                                                       Object {
                                                         "color": "#FFAF30",
                                                         "type": "circle",
-                                                        "value": "Integration - 1.23",
+                                                        "value": "Integration : 1.23",
                                                       },
                                                       Object {
                                                         "color": "#3359DB",
                                                         "marginRight": "40px",
                                                         "type": "circle",
-                                                        "value": "Communication - 1.23",
+                                                        "value": "Communication : 1.23",
                                                       },
                                                     ]
                   }
@@ -4815,33 +4815,33 @@ ShallowWrapper {
                     Object {
                       "color": "#FF3030",
                       "type": "circle",
-                      "value": "Quantity - 1.17",
+                      "value": "Quantity : 1.17",
                     },
                     Object {
                       "color": "#9C8330",
                       "type": "circle",
-                      "value": "Quality - 1.11",
+                      "value": "Quality : 1.11",
                     },
                     Object {
                       "color": "#000000",
                       "type": "circle",
-                      "value": "Professionalism - 1.17",
+                      "value": "Professionalism : 1.17",
                     },
                     Object {
                       "color": "#72BCD4",
                       "type": "circle",
-                      "value": "Initiative - 1.05",
+                      "value": "Initiative : 1.05",
                     },
                     Object {
                       "color": "#FFAF30",
                       "type": "circle",
-                      "value": "Integration - 1.23",
+                      "value": "Integration : 1.23",
                     },
                     Object {
                       "color": "#3359DB",
                       "marginRight": "40px",
                       "type": "circle",
-                      "value": "Communication - 1.23",
+                      "value": "Communication : 1.23",
                     },
                   ],
                   "verticalAlign": "top",
@@ -5318,33 +5318,33 @@ ShallowWrapper {
                                                   Object {
                                                     "color": "#FF3030",
                                                     "type": "circle",
-                                                    "value": "Quantity - 1.17",
+                                                    "value": "Quantity : 1.17",
                                                   },
                                                   Object {
                                                     "color": "#9C8330",
                                                     "type": "circle",
-                                                    "value": "Quality - 1.11",
+                                                    "value": "Quality : 1.11",
                                                   },
                                                   Object {
                                                     "color": "#000000",
                                                     "type": "circle",
-                                                    "value": "Professionalism - 1.17",
+                                                    "value": "Professionalism : 1.17",
                                                   },
                                                   Object {
                                                     "color": "#72BCD4",
                                                     "type": "circle",
-                                                    "value": "Initiative - 1.05",
+                                                    "value": "Initiative : 1.05",
                                                   },
                                                   Object {
                                                     "color": "#FFAF30",
                                                     "type": "circle",
-                                                    "value": "Integration - 1.23",
+                                                    "value": "Integration : 1.23",
                                                   },
                                                   Object {
                                                     "color": "#3359DB",
                                                     "marginRight": "40px",
                                                     "type": "circle",
-                                                    "value": "Communication - 1.23",
+                                                    "value": "Communication : 1.23",
                                                   },
                                                 ]
                               }
@@ -5729,33 +5729,33 @@ ShallowWrapper {
                                                 Object {
                                                   "color": "#FF3030",
                                                   "type": "circle",
-                                                  "value": "Quantity - 1.17",
+                                                  "value": "Quantity : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#9C8330",
                                                   "type": "circle",
-                                                  "value": "Quality - 1.11",
+                                                  "value": "Quality : 1.11",
                                                 },
                                                 Object {
                                                   "color": "#000000",
                                                   "type": "circle",
-                                                  "value": "Professionalism - 1.17",
+                                                  "value": "Professionalism : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#72BCD4",
                                                   "type": "circle",
-                                                  "value": "Initiative - 1.05",
+                                                  "value": "Initiative : 1.05",
                                                 },
                                                 Object {
                                                   "color": "#FFAF30",
                                                   "type": "circle",
-                                                  "value": "Integration - 1.23",
+                                                  "value": "Integration : 1.23",
                                                 },
                                                 Object {
                                                   "color": "#3359DB",
                                                   "marginRight": "40px",
                                                   "type": "circle",
-                                                  "value": "Communication - 1.23",
+                                                  "value": "Communication : 1.23",
                                                 },
                                               ]
                         }
@@ -6114,33 +6114,33 @@ ShallowWrapper {
                                                 Object {
                                                   "color": "#FF3030",
                                                   "type": "circle",
-                                                  "value": "Quantity - 1.17",
+                                                  "value": "Quantity : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#9C8330",
                                                   "type": "circle",
-                                                  "value": "Quality - 1.11",
+                                                  "value": "Quality : 1.11",
                                                 },
                                                 Object {
                                                   "color": "#000000",
                                                   "type": "circle",
-                                                  "value": "Professionalism - 1.17",
+                                                  "value": "Professionalism : 1.17",
                                                 },
                                                 Object {
                                                   "color": "#72BCD4",
                                                   "type": "circle",
-                                                  "value": "Initiative - 1.05",
+                                                  "value": "Initiative : 1.05",
                                                 },
                                                 Object {
                                                   "color": "#FFAF30",
                                                   "type": "circle",
-                                                  "value": "Integration - 1.23",
+                                                  "value": "Integration : 1.23",
                                                 },
                                                 Object {
                                                   "color": "#3359DB",
                                                   "marginRight": "40px",
                                                   "type": "circle",
-                                                  "value": "Communication - 1.23",
+                                                  "value": "Communication : 1.23",
                                                 },
                                               ]
                 }
@@ -6539,33 +6539,33 @@ ShallowWrapper {
                   Object {
                     "color": "#FF3030",
                     "type": "circle",
-                    "value": "Quantity - 1.17",
+                    "value": "Quantity : 1.17",
                   },
                   Object {
                     "color": "#9C8330",
                     "type": "circle",
-                    "value": "Quality - 1.11",
+                    "value": "Quality : 1.11",
                   },
                   Object {
                     "color": "#000000",
                     "type": "circle",
-                    "value": "Professionalism - 1.17",
+                    "value": "Professionalism : 1.17",
                   },
                   Object {
                     "color": "#72BCD4",
                     "type": "circle",
-                    "value": "Initiative - 1.05",
+                    "value": "Initiative : 1.05",
                   },
                   Object {
                     "color": "#FFAF30",
                     "type": "circle",
-                    "value": "Integration - 1.23",
+                    "value": "Integration : 1.23",
                   },
                   Object {
                     "color": "#3359DB",
                     "marginRight": "40px",
                     "type": "circle",
-                    "value": "Communication - 1.23",
+                    "value": "Communication : 1.23",
                   },
                 ],
                 "verticalAlign": "top",
@@ -6998,33 +6998,33 @@ ShallowWrapper {
                                                             Object {
                                                               "color": "#FF3030",
                                                               "type": "circle",
-                                                              "value": "Quantity - 1.17",
+                                                              "value": "Quantity : 1.17",
                                                             },
                                                             Object {
                                                               "color": "#9C8330",
                                                               "type": "circle",
-                                                              "value": "Quality - 1.11",
+                                                              "value": "Quality : 1.11",
                                                             },
                                                             Object {
                                                               "color": "#000000",
                                                               "type": "circle",
-                                                              "value": "Professionalism - 1.17",
+                                                              "value": "Professionalism : 1.17",
                                                             },
                                                             Object {
                                                               "color": "#72BCD4",
                                                               "type": "circle",
-                                                              "value": "Initiative - 1.05",
+                                                              "value": "Initiative : 1.05",
                                                             },
                                                             Object {
                                                               "color": "#FFAF30",
                                                               "type": "circle",
-                                                              "value": "Integration - 1.23",
+                                                              "value": "Integration : 1.23",
                                                             },
                                                             Object {
                                                               "color": "#3359DB",
                                                               "marginRight": "40px",
                                                               "type": "circle",
-                                                              "value": "Communication - 1.23",
+                                                              "value": "Communication : 1.23",
                                                             },
                                                           ]
                                     }
@@ -7409,33 +7409,33 @@ ShallowWrapper {
                                                         Object {
                                                           "color": "#FF3030",
                                                           "type": "circle",
-                                                          "value": "Quantity - 1.17",
+                                                          "value": "Quantity : 1.17",
                                                         },
                                                         Object {
                                                           "color": "#9C8330",
                                                           "type": "circle",
-                                                          "value": "Quality - 1.11",
+                                                          "value": "Quality : 1.11",
                                                         },
                                                         Object {
                                                           "color": "#000000",
                                                           "type": "circle",
-                                                          "value": "Professionalism - 1.17",
+                                                          "value": "Professionalism : 1.17",
                                                         },
                                                         Object {
                                                           "color": "#72BCD4",
                                                           "type": "circle",
-                                                          "value": "Initiative - 1.05",
+                                                          "value": "Initiative : 1.05",
                                                         },
                                                         Object {
                                                           "color": "#FFAF30",
                                                           "type": "circle",
-                                                          "value": "Integration - 1.23",
+                                                          "value": "Integration : 1.23",
                                                         },
                                                         Object {
                                                           "color": "#3359DB",
                                                           "marginRight": "40px",
                                                           "type": "circle",
-                                                          "value": "Communication - 1.23",
+                                                          "value": "Communication : 1.23",
                                                         },
                                                       ]
                             }
@@ -7794,33 +7794,33 @@ ShallowWrapper {
                                                       Object {
                                                         "color": "#FF3030",
                                                         "type": "circle",
-                                                        "value": "Quantity - 1.17",
+                                                        "value": "Quantity : 1.17",
                                                       },
                                                       Object {
                                                         "color": "#9C8330",
                                                         "type": "circle",
-                                                        "value": "Quality - 1.11",
+                                                        "value": "Quality : 1.11",
                                                       },
                                                       Object {
                                                         "color": "#000000",
                                                         "type": "circle",
-                                                        "value": "Professionalism - 1.17",
+                                                        "value": "Professionalism : 1.17",
                                                       },
                                                       Object {
                                                         "color": "#72BCD4",
                                                         "type": "circle",
-                                                        "value": "Initiative - 1.05",
+                                                        "value": "Initiative : 1.05",
                                                       },
                                                       Object {
                                                         "color": "#FFAF30",
                                                         "type": "circle",
-                                                        "value": "Integration - 1.23",
+                                                        "value": "Integration : 1.23",
                                                       },
                                                       Object {
                                                         "color": "#3359DB",
                                                         "marginRight": "40px",
                                                         "type": "circle",
-                                                        "value": "Communication - 1.23",
+                                                        "value": "Communication : 1.23",
                                                       },
                                                     ]
                   }
@@ -8219,33 +8219,33 @@ ShallowWrapper {
                     Object {
                       "color": "#FF3030",
                       "type": "circle",
-                      "value": "Quantity - 1.17",
+                      "value": "Quantity : 1.17",
                     },
                     Object {
                       "color": "#9C8330",
                       "type": "circle",
-                      "value": "Quality - 1.11",
+                      "value": "Quality : 1.11",
                     },
                     Object {
                       "color": "#000000",
                       "type": "circle",
-                      "value": "Professionalism - 1.17",
+                      "value": "Professionalism : 1.17",
                     },
                     Object {
                       "color": "#72BCD4",
                       "type": "circle",
-                      "value": "Initiative - 1.05",
+                      "value": "Initiative : 1.05",
                     },
                     Object {
                       "color": "#FFAF30",
                       "type": "circle",
-                      "value": "Integration - 1.23",
+                      "value": "Integration : 1.23",
                     },
                     Object {
                       "color": "#3359DB",
                       "marginRight": "40px",
                       "type": "circle",
-                      "value": "Communication - 1.23",
+                      "value": "Communication : 1.23",
                     },
                   ],
                   "verticalAlign": "top",
