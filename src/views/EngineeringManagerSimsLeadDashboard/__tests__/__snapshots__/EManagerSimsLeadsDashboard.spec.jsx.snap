@@ -1560,6 +1560,7 @@ ShallowWrapper {
                                                                                   ]
                                                     }
                                                     handleCardClick={[Function]}
+                                                    handleChartClose={[Function]}
                                     />
                                     <div
                                                     className="row map-card-row m-0"
@@ -1627,6 +1628,7 @@ ShallowWrapper {
                             ]
           }
           handleCardClick={[Function]}
+          handleChartClose={[Function]}
 />,
         false,
         <div
@@ -2713,6 +2715,7 @@ ShallowWrapper {
                                                                       ]
                                     }
                                     handleCardClick={[Function]}
+                                    handleChartClose={[Function]}
                   />
                   <div
                                     className="row map-card-row m-0"
@@ -2777,6 +2780,7 @@ ShallowWrapper {
             },
           ],
           "handleCardClick": [Function],
+          "handleChartClose": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -3905,6 +3909,7 @@ ShallowWrapper {
                                                                                               ]
                                                             }
                                                             handleCardClick={[Function]}
+                                                            handleChartClose={[Function]}
                                           />
                                           <div
                                                             className="row map-card-row m-0"
@@ -3972,6 +3977,7 @@ ShallowWrapper {
                                   ]
             }
             handleCardClick={[Function]}
+            handleChartClose={[Function]}
 />,
           false,
           <div
@@ -5058,6 +5064,7 @@ ShallowWrapper {
                                                                               ]
                                         }
                                         handleCardClick={[Function]}
+                                        handleChartClose={[Function]}
                     />
                     <div
                                         className="row map-card-row m-0"
@@ -5122,6 +5129,7 @@ ShallowWrapper {
               },
             ],
             "handleCardClick": [Function],
+            "handleChartClose": [Function],
           },
           "ref": null,
           "rendered": null,

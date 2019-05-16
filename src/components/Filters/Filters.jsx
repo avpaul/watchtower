@@ -75,7 +75,7 @@ class Filters extends Component {
 
   render() {
     const { filter } = this.props;
-    const settings = carouselOptions(3);
+    const settings = carouselOptions(4);
     return (
       <Slider {...settings}>
         {this.cardArray().map(({ filterId, cardDetails }) => (

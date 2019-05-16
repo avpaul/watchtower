@@ -126,11 +126,13 @@ ShallowWrapper {
       "infinite": false,
       "nextArrow": <NavArrow
         buttonClass="slick-next"
+        handleChartClose="manager-slick"
         iconClass="fa-angle-right"
         onClick={[Function]}
 />,
       "prevArrow": <NavArrow
         buttonClass="slick-prev"
+        handleChartClose="manager-slick"
         iconClass="fa-angle-left"
         onClick={[Function]}
 />,
@@ -151,7 +153,8 @@ ShallowWrapper {
         },
       ],
       "rows": 1,
-      "slidesToShow": 2.9999,
+      "slidesToScroll": 4,
+      "slidesToShow": 4,
       "swipeToSlide": true,
     },
     "ref": null,
@@ -273,11 +276,13 @@ ShallowWrapper {
         "infinite": false,
         "nextArrow": <NavArrow
           buttonClass="slick-next"
+          handleChartClose="manager-slick"
           iconClass="fa-angle-right"
           onClick={[Function]}
 />,
         "prevArrow": <NavArrow
           buttonClass="slick-prev"
+          handleChartClose="manager-slick"
           iconClass="fa-angle-left"
           onClick={[Function]}
 />,
@@ -298,7 +303,8 @@ ShallowWrapper {
           },
         ],
         "rows": 1,
-        "slidesToShow": 2.9999,
+        "slidesToScroll": 4,
+        "slidesToShow": 4,
         "swipeToSlide": true,
       },
       "ref": null,

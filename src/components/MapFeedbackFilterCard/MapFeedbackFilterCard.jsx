@@ -54,7 +54,7 @@ const MapFeedbackFilterCard = ({
   ));
 
   return shouldDisplaySlider ? (
-    <Slider {...carouselOptions(2.9999, `${adjustCarouselStyle}`)}>
+    <Slider {...carouselOptions(4, `${adjustCarouselStyle}`)}>
       {renderedCards}
     </Slider>
   ) : (

@@ -73,7 +73,7 @@ const MapFellowsFilterCard = ({
   ));
 
   return display === 'project' || 'status' ? (
-    <Slider {...carouselOptions(2.9999, 'manager-slick')}>{renderCards}</Slider>
+    <Slider {...carouselOptions(4, 'manager-slick')}>{renderCards}</Slider>
   ) : (
     <div className="ops-dashboard__fellows-summary">
       <div className="row">{renderCards}</div>

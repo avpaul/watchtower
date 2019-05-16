@@ -7,7 +7,8 @@ import FiltersView from '../../components/Filters/FiltersView';
 const FellowsSummary = ({
   fellowsSummary,
   handleCardClick,
-  fellowSummaryCardComponent
+  fellowSummaryCardComponent,
+  handleChartClose
 }) => (
   <div className="ops-dashboard__fellows-summary">
     <Title title="FELLOWS SUMMARY" />
@@ -17,6 +18,7 @@ const FellowsSummary = ({
         filters={fellowsSummary}
         filterCardClassName="pt-1 pr-2 pb-1"
         FellowSummaryCardComponent={fellowSummaryCardComponent}
+        handleChartClose={handleChartClose}
       />
     </div>
   </div>
@@ -29,7 +31,8 @@ FellowsSummary.propTypes = {
     )
   ).isRequired,
   handleCardClick: PropTypes.func.isRequired,
-  fellowSummaryCardComponent: PropTypes.instanceOf(React.Component).isRequired
+  fellowSummaryCardComponent: PropTypes.instanceOf(React.Component).isRequired,
+  handleChartClose: PropTypes.func.isRequired
 };
 
 export default FellowsSummary;

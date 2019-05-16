@@ -40,10 +40,11 @@ class FiltersView extends Component {
       filters,
       filterCardClassName,
       handleCardClick,
-      FellowSummaryCardComponent
+      FellowSummaryCardComponent,
+      handleChartClose
     } = this.props;
     return (
-      <Slider {...carouselOptions(3.99995)}>
+      <Slider {...carouselOptions(4, handleChartClose)}>
         {filters.map(filter => {
           if (FellowSummaryCardComponent) {
             FellowSummaryCardComponent.state.options.filterCardRefs[
