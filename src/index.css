@@ -54,3 +54,6 @@ body {
 .page-content .slick-next {
   margin-right: -1.875rem;
 }
+.react-datepicker__input-container input {
+  padding: 0 10px;
+}
