@@ -13,7 +13,7 @@ import LfTtlSummaryCard from '../LfTtlSummaryCard';
  * the number of fellows under the ttl/lf
  */
 const MapLfTtlSummaryCard = ({ lfTtlSummary, filterFellows, lfTtlCheckId }) => (
-  <Slider {...carouselOptions(3.5, 'contain slider')}>
+  <Slider {...carouselOptions(4, 'contain slider')}>
     {lfTtlSummary.map(lfTtl => (
       <LfTtlSummaryCard
         id={`${lfTtl.id}`}

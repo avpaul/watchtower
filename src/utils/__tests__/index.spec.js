@@ -50,13 +50,22 @@ describe('LMS output status utility', () => {
       className: 'contain',
       infinite: false,
       slidesToShow: 4,
+      slidesToScroll: 4,
       swipeToSlide: true,
       rows: 1,
       nextArrow: (
-        <NavArrow buttonClass="slick-next" iconClass="fa-angle-right" />
+        <NavArrow
+          buttonClass="slick-next"
+          iconClass="fa-angle-right"
+          handleChartClose={null}
+        />
       ),
       prevArrow: (
-        <NavArrow buttonClass="slick-prev" iconClass="fa-angle-left" />
+        <NavArrow
+          buttonClass="slick-prev"
+          iconClass="fa-angle-left"
+          handleChartClose={null}
+        />
       ),
       responsive: [
         { breakpoint: 1000, settings: { slidesToShow: 2, slidesToScroll: 1 } },

@@ -20,15 +20,28 @@ export const getOutputStatus = output => {
   return outputStatus;
 };
 
-export const carouselOptions = numDefaultSlides => {
+export const carouselOptions = (numDefaultSlides, handleChartClose = null) => {
   const options = {
     className: 'contain',
     infinite: false,
     slidesToShow: numDefaultSlides,
+    slidesToScroll: numDefaultSlides,
     swipeToSlide: true,
     rows: 1,
-    nextArrow: <NavArrow buttonClass="slick-next" iconClass="fa-angle-right" />,
-    prevArrow: <NavArrow buttonClass="slick-prev" iconClass="fa-angle-left" />,
+    nextArrow: (
+      <NavArrow
+        buttonClass="slick-next"
+        iconClass="fa-angle-right"
+        handleChartClose={handleChartClose}
+      />
+    ),
+    prevArrow: (
+      <NavArrow
+        buttonClass="slick-prev"
+        iconClass="fa-angle-left"
+        handleChartClose={handleChartClose}
+      />
+    ),
     responsive: [
       { breakpoint: 1000, settings: { slidesToShow: 2, slidesToScroll: 1 } },
       { breakpoint: 700, settings: { slidesToShow: 1, slidesToScroll: 1 } }
@@ -117,6 +130,9 @@ export const getCardOffset = cardElement => {
 
 /**
  * Retrieves the position of the tooltip arrow that points to the card on focus
+ * @param String card id
+ * @param Array a list of card refs
+ *
  * @return { '--fellow-chart-tooltip' } X-axis position of the tooltip arrow
  */
 export const getCurrentClass = (cardId, cardRefs) => {

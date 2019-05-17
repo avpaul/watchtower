@@ -140,6 +140,10 @@
   right: -1px;
 }
 
+.slick-arrow-hide {
+  display: none;
+}
+
 .map-card-row {
   width: 100%;
   margin-left: 0;

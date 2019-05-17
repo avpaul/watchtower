@@ -202,6 +202,7 @@ class EManagerSimsLeadsDashboard extends Component {
           )}
           handleCardClick={this.handleCardClick}
           fellowSummaryCardComponent={this}
+          handleChartClose={this.handleChartClose}
         />
         {this.fellowChart(showChart, user, fellowsSummary, options)}
         {this.displayCardMap()}
