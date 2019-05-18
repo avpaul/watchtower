@@ -2,7 +2,9 @@
 
 exports[`Loader Component Test Suite matches snapshot 1`] = `
 ReactWrapper {
-  Symbol(enzyme.__unrendered__): <Loader />,
+  Symbol(enzyme.__unrendered__): <Loader
+    size=""
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -16,7 +18,9 @@ ReactWrapper {
     "instance": null,
     "key": undefined,
     "nodeType": "function",
-    "props": Object {},
+    "props": Object {
+      "size": "",
+    },
     "ref": null,
     "rendered": Object {
       "instance": <div
@@ -61,7 +65,9 @@ ReactWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
-      "props": Object {},
+      "props": Object {
+        "size": "",
+      },
       "ref": null,
       "rendered": Object {
         "instance": <div

@@ -117,7 +117,6 @@ class EManagerSimsLeadsDashboard extends Component {
         managers: { data: managees = [] }
       }
     } = this.props;
-
     const [managers, style] = isEngineeringManager
       ? [managees, { '--arrow-left-margin-style': '31%' }]
       : [managees, { '--arrow-left-margin-style': '9%' }];
@@ -172,24 +171,29 @@ class EManagerSimsLeadsDashboard extends Component {
       />
     );
 
-  displayCardMap = () => (
-    <div className="row map-card-row m-0">
-      {this.mapDisplayContent().map((displayContent, index) => (
-        <DisplayCard
-          key={displayContent.title}
-          id={index}
-          onClick={this.fellowMapOnClick}
-          displayContent={displayContent}
-        />
-      ))}
-    </div>
-  );
+  displayCardMap = () => {
+    const { loading } = this.props;
+    return (
+      <div className="row map-card-row m-0">
+        {this.mapDisplayContent().map((displayContent, index) => (
+          <DisplayCard
+            key={displayContent.title}
+            id={index}
+            onClick={this.fellowMapOnClick}
+            displayContent={displayContent}
+            loading={loading}
+          />
+        ))}
+      </div>
+    );
+  };
 
   render() {
     const {
       fellowsSummary,
       user,
-      data: { managers }
+      data: { managers },
+      loading
     } = this.props;
     const { showChart, options } = this.state;
 
@@ -203,6 +207,7 @@ class EManagerSimsLeadsDashboard extends Component {
           handleCardClick={this.handleCardClick}
           fellowSummaryCardComponent={this}
           handleChartClose={this.handleChartClose}
+          loading={loading}
         />
         {this.fellowChart(showChart, user, fellowsSummary, options)}
         {this.displayCardMap()}
@@ -220,7 +225,12 @@ EManagerSimsLeadsDashboard.propTypes = {
   user: PropTypes.shape().isRequired,
   getEmsSimsLeadsActions: PropTypes.func.isRequired,
   role: PropTypes.string.isRequired,
-  data: PropTypes.shape().isRequired
+  data: PropTypes.shape().isRequired,
+  loading: PropTypes.bool
+};
+
+EManagerSimsLeadsDashboard.defaultProps = {
+  loading: false
 };
 
 export default EManagerSimsLeadsDashboard;

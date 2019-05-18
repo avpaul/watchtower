@@ -15,6 +15,7 @@ ShallowWrapper {
             "status": "All Fellows",
           }
     }
+    loading={false}
     numberOfFellows={3}
     picture=""
 />,

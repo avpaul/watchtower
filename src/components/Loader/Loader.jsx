@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import './Loader.css';
 
@@ -7,10 +9,20 @@ import './Loader.css';
  *
  * @returns {JSX} React component
  */
-const Loader = () => (
+const Loader = ({ size }) => (
   <div className="loader__center">
-    <div className="loader" />
+    <div
+      className={classnames('loader', {
+        'loader-small': size && size === 'small'
+      })}
+    />
   </div>
 );
 
+Loader.propTypes = {
+  size: PropTypes.string
+};
+Loader.defaultProps = {
+  size: ''
+};
 export default Loader;

@@ -338,14 +338,18 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": <Loader />,
+      "children": <Loader
+        size=""
+/>,
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
-      "props": Object {},
+      "props": Object {
+        "size": "",
+      },
       "ref": null,
       "rendered": null,
       "type": [Function],
@@ -358,14 +362,18 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": <Loader />,
+        "children": <Loader
+          size=""
+/>,
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "size": "",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],

@@ -276,7 +276,7 @@ class DeveloperDashboard extends Component {
    */
   renderFellowsDashboard = () => {
     const { fellowSummaryDetails, managerCardId } = this.state;
-    const { user } = this.props;
+    const { user, loading } = this.props;
     const isManager = user.roles.WATCH_TOWER_EM || user.roles.WATCH_TOWER_SL;
     return (
       <div className="page-content container-fluid">
@@ -289,6 +289,7 @@ class DeveloperDashboard extends Component {
             lfTtlSummary={this.mapLfTtlData()}
             filterFellows={this.filterFellows}
             lfTtlCheckId={managerCardId}
+            loading={loading}
           />
         ) : (
           this.renderFilterCards('project')
@@ -310,6 +311,7 @@ class DeveloperDashboard extends Component {
    */
   renderFilterCards = display => {
     const { allFellows, isTicked } = this.state;
+    const { loading } = this.props;
 
     return (
       <MapFellowsFilterCard
@@ -317,6 +319,7 @@ class DeveloperDashboard extends Component {
         display={display}
         handleCardClick={this.handleFilterCardClick}
         isTicked={isTicked}
+        loading={loading}
       />
     );
   };

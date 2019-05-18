@@ -479,6 +479,7 @@ ShallowWrapper {
     }
     fetchFellowsSummaryEm={[Function]}
     getEmsSimsLeadsActions={[Function]}
+    loading={false}
     role="WATCH_TOWER_EM"
     user={
         Object {
@@ -987,6 +988,7 @@ ShallowWrapper {
                                 },
                                 "fetchFellowsSummaryEm": [Function],
                                 "getEmsSimsLeadsActions": [Function],
+                                "loading": false,
                                 "role": "WATCH_TOWER_EM",
                                 "user": Object {
                                   "roles": Object {
@@ -1490,6 +1492,7 @@ ShallowWrapper {
                                     }
                                     fetchFellowsSummaryEm={[Function]}
                                     getEmsSimsLeadsActions={[Function]}
+                                    loading={false}
                                     role="WATCH_TOWER_EM"
                                     user={
                                                     Object {
@@ -1561,6 +1564,7 @@ ShallowWrapper {
                                                     }
                                                     handleCardClick={[Function]}
                                                     handleChartClose={[Function]}
+                                                    loading={false}
                                     />
                                     <div
                                                     className="row map-card-row m-0"
@@ -1575,6 +1579,7 @@ ShallowWrapper {
                                                                                                   }
                                                                     }
                                                                     id={0}
+                                                                    loading={false}
                                                                     onClick={[Function]}
                                                     />
                                     </div>
@@ -1629,6 +1634,7 @@ ShallowWrapper {
           }
           handleCardClick={[Function]}
           handleChartClose={[Function]}
+          loading={false}
 />,
         false,
         <div
@@ -1644,6 +1650,7 @@ ShallowWrapper {
                                       }
                     }
                     id={0}
+                    loading={false}
                     onClick={[Function]}
           />
 </div>,
@@ -2142,6 +2149,7 @@ ShallowWrapper {
               },
               "fetchFellowsSummaryEm": [Function],
               "getEmsSimsLeadsActions": [Function],
+              "loading": false,
               "role": "WATCH_TOWER_EM",
               "user": Object {
                 "roles": Object {
@@ -2645,6 +2653,7 @@ ShallowWrapper {
                   }
                   fetchFellowsSummaryEm={[Function]}
                   getEmsSimsLeadsActions={[Function]}
+                  loading={false}
                   role="WATCH_TOWER_EM"
                   user={
                                     Object {
@@ -2716,6 +2725,7 @@ ShallowWrapper {
                                     }
                                     handleCardClick={[Function]}
                                     handleChartClose={[Function]}
+                                    loading={false}
                   />
                   <div
                                     className="row map-card-row m-0"
@@ -2730,6 +2740,7 @@ ShallowWrapper {
                                                                                         }
                                                       }
                                                       id={0}
+                                                      loading={false}
                                                       onClick={[Function]}
                                     />
                   </div>
@@ -2781,6 +2792,7 @@ ShallowWrapper {
           ],
           "handleCardClick": [Function],
           "handleChartClose": [Function],
+          "loading": false,
         },
         "ref": null,
         "rendered": null,
@@ -2803,6 +2815,7 @@ ShallowWrapper {
                                         }
               }
               id={0}
+              loading={false}
               onClick={[Function]}
 />,
           ],
@@ -2822,6 +2835,7 @@ ShallowWrapper {
                 "title": "TTL to FELLOW MAP",
               },
               "id": 0,
+              "loading": false,
               "onClick": [Function],
             },
             "ref": null,
@@ -3336,6 +3350,7 @@ ShallowWrapper {
                                       },
                                       "fetchFellowsSummaryEm": [Function],
                                       "getEmsSimsLeadsActions": [Function],
+                                      "loading": false,
                                       "role": "WATCH_TOWER_EM",
                                       "user": Object {
                                         "roles": Object {
@@ -3839,6 +3854,7 @@ ShallowWrapper {
                                           }
                                           fetchFellowsSummaryEm={[Function]}
                                           getEmsSimsLeadsActions={[Function]}
+                                          loading={false}
                                           role="WATCH_TOWER_EM"
                                           user={
                                                             Object {
@@ -3910,6 +3926,7 @@ ShallowWrapper {
                                                             }
                                                             handleCardClick={[Function]}
                                                             handleChartClose={[Function]}
+                                                            loading={false}
                                           />
                                           <div
                                                             className="row map-card-row m-0"
@@ -3924,6 +3941,7 @@ ShallowWrapper {
                                                                                                                 }
                                                                               }
                                                                               id={0}
+                                                                              loading={false}
                                                                               onClick={[Function]}
                                                             />
                                           </div>
@@ -3978,6 +3996,7 @@ ShallowWrapper {
             }
             handleCardClick={[Function]}
             handleChartClose={[Function]}
+            loading={false}
 />,
           false,
           <div
@@ -3993,6 +4012,7 @@ ShallowWrapper {
                                               }
                         }
                         id={0}
+                        loading={false}
                         onClick={[Function]}
             />
 </div>,
@@ -4491,6 +4511,7 @@ ShallowWrapper {
                 },
                 "fetchFellowsSummaryEm": [Function],
                 "getEmsSimsLeadsActions": [Function],
+                "loading": false,
                 "role": "WATCH_TOWER_EM",
                 "user": Object {
                   "roles": Object {
@@ -4994,6 +5015,7 @@ ShallowWrapper {
                     }
                     fetchFellowsSummaryEm={[Function]}
                     getEmsSimsLeadsActions={[Function]}
+                    loading={false}
                     role="WATCH_TOWER_EM"
                     user={
                                         Object {
@@ -5065,6 +5087,7 @@ ShallowWrapper {
                                         }
                                         handleCardClick={[Function]}
                                         handleChartClose={[Function]}
+                                        loading={false}
                     />
                     <div
                                         className="row map-card-row m-0"
@@ -5079,6 +5102,7 @@ ShallowWrapper {
                                                                                                   }
                                                             }
                                                             id={0}
+                                                            loading={false}
                                                             onClick={[Function]}
                                         />
                     </div>
@@ -5130,6 +5154,7 @@ ShallowWrapper {
             ],
             "handleCardClick": [Function],
             "handleChartClose": [Function],
+            "loading": false,
           },
           "ref": null,
           "rendered": null,
@@ -5152,6 +5177,7 @@ ShallowWrapper {
                                               }
                 }
                 id={0}
+                loading={false}
                 onClick={[Function]}
 />,
             ],
@@ -5171,6 +5197,7 @@ ShallowWrapper {
                   "title": "TTL to FELLOW MAP",
                 },
                 "id": 0,
+                "loading": false,
                 "onClick": [Function],
               },
               "ref": null,

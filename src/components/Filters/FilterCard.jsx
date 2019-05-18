@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Filters.css';
+import Loader from '../Loader/Loader';
 
 export const generateFilterCardId = id =>
   `filterCard-${id.toLowerCase().replace(' ', '')}`;
@@ -18,7 +19,8 @@ const FilterCard = ({
   filterId,
   cardDetails,
   dataToggle,
-  dataTarget
+  dataTarget,
+  loading
 }) => (
   <div
     className={className}
@@ -34,14 +36,17 @@ const FilterCard = ({
       {cardDetails.heading ? cardDetails.heading : cardDetails.title}
     </p>
     <p className="sub">{cardDetails.subTitle}</p>
-    <p className="number">{cardDetails.totalFellows}</p>
+    <p className="number" id="num">
+      {loading ? <Loader size="small" /> : cardDetails.totalFellows}
+    </p>
   </div>
 );
 
 FilterCard.defaultProps = {
   className: 'filterCard',
   dataTarget: '',
-  dataToggle: ''
+  dataToggle: '',
+  loading: false
 };
 
 FilterCard.propTypes = {
@@ -56,7 +61,8 @@ FilterCard.propTypes = {
     .isRequired,
   onClick: PropTypes.func.isRequired,
   dataTarget: PropTypes.string,
-  dataToggle: PropTypes.string
+  dataToggle: PropTypes.string,
+  loading: PropTypes.bool
 };
 
 export default FilterCard;

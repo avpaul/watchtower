@@ -78,7 +78,8 @@ export class FellowPerformance extends Component {
   render() {
     const {
       fellowPrePipFeedback: { total },
-      feedback
+      feedback,
+      loading
     } = this.props;
     const pipTotal = feedback ? feedback.total : 0;
     const { isTicked, feedbackInstance } = this.state;
@@ -93,6 +94,7 @@ export class FellowPerformance extends Component {
               handleCardClick={this.handleClickTickedCard}
               noOfPrePipInstances={total}
               noOfPipInstances={pipTotal}
+              loading={loading}
             />
             <FeedbackInstances
               PrePipEntries={paginationWrapper.state.paginatedData}
@@ -116,7 +118,8 @@ FellowPerformance.propTypes = {
   getFellowPrePipFeedback: PropTypes.func.isRequired,
   getFellowPipFeedback: PropTypes.func.isRequired,
   feedback: PropTypes.shape([]).isRequired,
-  paginationWrapper: PropTypes.shape().isRequired
+  paginationWrapper: PropTypes.shape().isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export const PaginationWrapped = props => (

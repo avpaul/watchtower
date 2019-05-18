@@ -20,7 +20,8 @@ const MapFellowsFilterCard = ({
   fellowSummaryDetails,
   display = 'status',
   handleCardClick,
-  isTicked
+  isTicked,
+  loading
 }) => {
   let offTrack = 0;
   let pip = 0;
@@ -69,6 +70,7 @@ const MapFellowsFilterCard = ({
       handleCardClick={handleCardClick}
       filterKey={display}
       key={arrayKey({ fellows })}
+      loading={loading}
     />
   ));
 
@@ -93,11 +95,13 @@ MapFellowsFilterCard.propTypes = {
   fellowSummaryDetails: PropTypes.arrayOf(PropTypes.shape({})),
   display: PropTypes.string.isRequired,
   handleCardClick: PropTypes.func.isRequired,
-  isTicked: PropTypes.shape({}).isRequired
+  isTicked: PropTypes.shape({}).isRequired,
+  loading: PropTypes.bool
 };
 
 MapFellowsFilterCard.defaultProps = {
-  fellowSummaryDetails: undefined
+  fellowSummaryDetails: undefined,
+  loading: false
 };
 
 export default MapFellowsFilterCard;

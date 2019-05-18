@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import check from '../../static/check-mark.svg';
 import defaultPicture from '../../static/profile.svg';
+import Loader from '../Loader/Loader';
 
 /**
  * @method FellowFilterCard
@@ -20,7 +21,8 @@ const FellowFilterCard = ({
   filterKey,
   isManager,
   picture = '',
-  displayPicture
+  displayPicture,
+  loading
 }) => {
   const shouldDisplayTick =
     isTicked.project === cardName ||
@@ -75,7 +77,9 @@ const FellowFilterCard = ({
           </div>
         </div>
       </div>
-      <div className={styleCardNumber}>{numberOfFellows}</div>
+      <div className={styleCardNumber}>
+        {loading ? <Loader size="small" /> : numberOfFellows}
+      </div>
     </div>
   );
 };
@@ -96,13 +100,15 @@ FellowFilterCard.propTypes = {
   filterKey: PropTypes.string.isRequired,
   isManager: PropTypes.bool,
   picture: PropTypes.string,
-  displayPicture: PropTypes.bool
+  displayPicture: PropTypes.bool,
+  loading: PropTypes.bool
 };
 
 FellowFilterCard.defaultProps = {
   picture: '',
   isManager: false,
-  displayPicture: false
+  displayPicture: false,
+  loading: false
 };
 
 export default FellowFilterCard;

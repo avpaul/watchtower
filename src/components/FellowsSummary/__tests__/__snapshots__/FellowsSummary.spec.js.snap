@@ -17,6 +17,7 @@ ShallowWrapper {
           }
     }
     handleCardClick={[Function]}
+    loading={false}
     loggedInRole="WATCH_TOWER_OPS"
 />,
   Symbol(enzyme.__renderer__): Object {

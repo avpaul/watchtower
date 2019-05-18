@@ -39,7 +39,8 @@
 }
 
 .pip-card > .sub {
-  display: none;
+  font-weight: bold;
+  color: black;
 }
 
 .pip-card > .heading {

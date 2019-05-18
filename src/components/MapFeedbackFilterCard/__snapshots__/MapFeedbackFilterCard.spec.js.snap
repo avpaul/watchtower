@@ -90,6 +90,7 @@ ShallowWrapper {
                               "project": "",
                             }
           }
+          loading={false}
           numberOfFellows={4}
           picture=""
 />,
@@ -104,6 +105,7 @@ ShallowWrapper {
                               "project": "",
                             }
           }
+          loading={false}
           numberOfFellows={1}
           picture=""
 />,
@@ -118,6 +120,7 @@ ShallowWrapper {
                               "project": "",
                             }
           }
+          loading={false}
           numberOfFellows={3}
           picture=""
 />,
@@ -172,6 +175,7 @@ ShallowWrapper {
           "isTicked": Object {
             "project": "",
           },
+          "loading": false,
           "numberOfFellows": 4,
           "picture": "",
         },
@@ -192,6 +196,7 @@ ShallowWrapper {
           "isTicked": Object {
             "project": "",
           },
+          "loading": false,
           "numberOfFellows": 1,
           "picture": "",
         },
@@ -212,6 +217,7 @@ ShallowWrapper {
           "isTicked": Object {
             "project": "",
           },
+          "loading": false,
           "numberOfFellows": 3,
           "picture": "",
         },
@@ -240,6 +246,7 @@ ShallowWrapper {
                                     "project": "",
                                   }
             }
+            loading={false}
             numberOfFellows={4}
             picture=""
 />,
@@ -254,6 +261,7 @@ ShallowWrapper {
                                     "project": "",
                                   }
             }
+            loading={false}
             numberOfFellows={1}
             picture=""
 />,
@@ -268,6 +276,7 @@ ShallowWrapper {
                                     "project": "",
                                   }
             }
+            loading={false}
             numberOfFellows={3}
             picture=""
 />,
@@ -322,6 +331,7 @@ ShallowWrapper {
             "isTicked": Object {
               "project": "",
             },
+            "loading": false,
             "numberOfFellows": 4,
             "picture": "",
           },
@@ -342,6 +352,7 @@ ShallowWrapper {
             "isTicked": Object {
               "project": "",
             },
+            "loading": false,
             "numberOfFellows": 1,
             "picture": "",
           },
@@ -362,6 +373,7 @@ ShallowWrapper {
             "isTicked": Object {
               "project": "",
             },
+            "loading": false,
             "numberOfFellows": 3,
             "picture": "",
           },
