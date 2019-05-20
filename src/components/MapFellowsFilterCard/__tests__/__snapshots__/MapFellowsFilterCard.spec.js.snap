@@ -273,7 +273,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <FellowFilterCard
-          cardName="All Products"
+          cardName="Fellows on Products"
           displayPicture={false}
           filterKey="project"
           handleCardClick={[Function]}
@@ -345,7 +345,7 @@ ShallowWrapper {
         "key": "weak-key-5",
         "nodeType": "function",
         "props": Object {
-          "cardName": "All Products",
+          "cardName": "Fellows on Products",
           "displayPicture": false,
           "filterKey": "project",
           "handleCardClick": [Function],
@@ -393,7 +393,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <FellowFilterCard
-            cardName="All Products"
+            cardName="Fellows on Products"
             displayPicture={false}
             filterKey="project"
             handleCardClick={[Function]}
@@ -465,7 +465,7 @@ ShallowWrapper {
           "key": "weak-key-5",
           "nodeType": "function",
           "props": Object {
-            "cardName": "All Products",
+            "cardName": "Fellows on Products",
             "displayPicture": false,
             "filterKey": "project",
             "handleCardClick": [Function],

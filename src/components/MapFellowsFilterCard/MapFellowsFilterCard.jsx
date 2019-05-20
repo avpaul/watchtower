@@ -49,7 +49,7 @@ const MapFellowsFilterCard = ({
    * @fires this code when display is project.
    */
   if (display === 'project') {
-    refinedArray = [{ 'All Products': fellowSummaryDetails.length }];
+    refinedArray = [{ 'Fellows on Products': fellowSummaryDetails.length }];
     const productArray = {};
 
     const { processedCountInformation } = processCountInformation(
