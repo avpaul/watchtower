@@ -814,7 +814,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": null,
+                            "children": undefined,
                           },
                           "ref": null,
                           "rendered": null,
@@ -1731,7 +1731,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": null,
+                              "children": undefined,
                             },
                             "ref": null,
                             "rendered": null,
@@ -2698,7 +2698,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": null,
+                            "children": undefined,
                           },
                           "ref": null,
                           "rendered": null,
@@ -3611,7 +3611,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": null,
+                              "children": undefined,
                             },
                             "ref": null,
                             "rendered": null,
@@ -4578,7 +4578,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": null,
+                            "children": undefined,
                           },
                           "ref": null,
                           "rendered": null,
@@ -5495,7 +5495,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": null,
+                              "children": undefined,
                             },
                             "ref": null,
                             "rendered": null,

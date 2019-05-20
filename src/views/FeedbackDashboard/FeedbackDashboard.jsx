@@ -192,6 +192,7 @@ export class FeedbackDashboard extends Component {
     const { history, fellowFeedback, paginationWrapper } = this.props;
     const {
       attribute,
+      rating,
       context,
       criteria,
       name,
@@ -211,6 +212,7 @@ export class FeedbackDashboard extends Component {
 
     const fellowDetails = {
       Attribute: attribute,
+      Rating: rating ? rating.toString().substring(0, 4) : 'N/A',
       Context: context,
       Criteria: criteria,
       name,

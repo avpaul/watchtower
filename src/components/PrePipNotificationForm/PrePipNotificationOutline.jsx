@@ -6,13 +6,11 @@ import LogoSection from '../Header/LogoSection';
 export const managerName = data => {
   if (data.Manager === 'null') {
     return null;
-  } 
-    if (typeof data.Manager === 'string') {
-      return `${JSON.parse(data.Manager).name}, Manager`;
-    } 
-      return `${data.Manager.name}, Manager`;
-    
-  
+  }
+  if (typeof data.Manager === 'string') {
+    return `${JSON.parse(data.Manager).name}, Manager`;
+  }
+  return `${data.Manager.name}, Manager`;
 };
 
 const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
@@ -64,7 +62,7 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
                   </b>
                 </td>
                 <td>
-                  <b>{fellowFeedback && fellowFeedback.Attribute}</b>
+                  <b>{fellowFeedback && fellowFeedback.Rating}</b>
                 </td>
                 <td>
                   <b>{fellowFeedback && fellowFeedback.Context}</b>
