@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getFeedbackIndex from '../../utils/formatFeedbackInstance';
+import LogoSection from '../Header/LogoSection';
 
 export const managerName = data => {
   if (data.Manager === 'null') {
@@ -20,12 +21,7 @@ const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
       <tr>
         <td>
           <div className="prepipBanner1">
-            <img
-              className="watch-tower__logo"
-              src="/static/media/Logo.355ffce3.svg"
-              alt="watch tower logo"
-            />{' '}
-            WatchTower
+            <LogoSection />
           </div>
         </td>
         <td colSpan="6">

@@ -52,13 +52,7 @@ ShallowWrapper {
                               <div
                                         className="prepipBanner1"
                               >
-                                        <img
-                                                  alt="watch tower logo"
-                                                  className="watch-tower__logo"
-                                                  src="/static/media/Logo.355ffce3.svg"
-                                        />
-                                         
-                                        WatchTower
+                                        <LogoSection />
                               </div>
                     </td>
                     <td
@@ -186,13 +180,7 @@ ShallowWrapper {
                         <div
                                     className="prepipBanner1"
                         >
-                                    <img
-                                                alt="watch tower logo"
-                                                className="watch-tower__logo"
-                                                src="/static/media/Logo.355ffce3.svg"
-                                    />
-                                     
-                                    WatchTower
+                                    <LogoSection />
                         </div>
             </td>
             <td
@@ -218,13 +206,7 @@ ShallowWrapper {
                 <div
                                 className="prepipBanner1"
                 >
-                                <img
-                                                alt="watch tower logo"
-                                                className="watch-tower__logo"
-                                                src="/static/media/Logo.355ffce3.svg"
-                                />
-                                 
-                                WatchTower
+                                <LogoSection />
                 </div>
 </td>,
               <td
@@ -248,13 +230,7 @@ ShallowWrapper {
                 "children": <div
                   className="prepipBanner1"
 >
-                  <img
-                                    alt="watch tower logo"
-                                    className="watch-tower__logo"
-                                    src="/static/media/Logo.355ffce3.svg"
-                  />
-                   
-                  WatchTower
+                  <LogoSection />
 </div>,
               },
               "ref": null,
@@ -263,35 +239,19 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    <img
-                      alt="watch tower logo"
-                      className="watch-tower__logo"
-                      src="/static/media/Logo.355ffce3.svg"
-/>,
-                    " ",
-                    "WatchTower",
-                  ],
+                  "children": <LogoSection />,
                   "className": "prepipBanner1",
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "watch tower logo",
-                      "className": "watch-tower__logo",
-                      "src": "/static/media/Logo.355ffce3.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  " ",
-                  "WatchTower",
-                ],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
                 "type": "div",
               },
               "type": "td",
@@ -1009,13 +969,7 @@ ShallowWrapper {
                                     <div
                                                 className="prepipBanner1"
                                     >
-                                                <img
-                                                            alt="watch tower logo"
-                                                            className="watch-tower__logo"
-                                                            src="/static/media/Logo.355ffce3.svg"
-                                                />
-                                                 
-                                                WatchTower
+                                                <LogoSection />
                                     </div>
                         </td>
                         <td
@@ -1143,13 +1097,7 @@ ShallowWrapper {
                             <div
                                           className="prepipBanner1"
                             >
-                                          <img
-                                                        alt="watch tower logo"
-                                                        className="watch-tower__logo"
-                                                        src="/static/media/Logo.355ffce3.svg"
-                                          />
-                                           
-                                          WatchTower
+                                          <LogoSection />
                             </div>
               </td>
               <td
@@ -1175,13 +1123,7 @@ ShallowWrapper {
                   <div
                                     className="prepipBanner1"
                   >
-                                    <img
-                                                      alt="watch tower logo"
-                                                      className="watch-tower__logo"
-                                                      src="/static/media/Logo.355ffce3.svg"
-                                    />
-                                     
-                                    WatchTower
+                                    <LogoSection />
                   </div>
 </td>,
                 <td
@@ -1205,13 +1147,7 @@ ShallowWrapper {
                   "children": <div
                     className="prepipBanner1"
 >
-                    <img
-                                        alt="watch tower logo"
-                                        className="watch-tower__logo"
-                                        src="/static/media/Logo.355ffce3.svg"
-                    />
-                     
-                    WatchTower
+                    <LogoSection />
 </div>,
                 },
                 "ref": null,
@@ -1220,35 +1156,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      <img
-                        alt="watch tower logo"
-                        className="watch-tower__logo"
-                        src="/static/media/Logo.355ffce3.svg"
-/>,
-                      " ",
-                      "WatchTower",
-                    ],
+                    "children": <LogoSection />,
                     "className": "prepipBanner1",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "watch tower logo",
-                        "className": "watch-tower__logo",
-                        "src": "/static/media/Logo.355ffce3.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    " ",
-                    "WatchTower",
-                  ],
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   "type": "div",
                 },
                 "type": "td",
@@ -2018,13 +1938,7 @@ ShallowWrapper {
                               <div
                                         className="prepipBanner1"
                               >
-                                        <img
-                                                  alt="watch tower logo"
-                                                  className="watch-tower__logo"
-                                                  src="/static/media/Logo.355ffce3.svg"
-                                        />
-                                         
-                                        WatchTower
+                                        <LogoSection />
                               </div>
                     </td>
                     <td
@@ -2150,13 +2064,7 @@ ShallowWrapper {
                         <div
                                     className="prepipBanner1"
                         >
-                                    <img
-                                                alt="watch tower logo"
-                                                className="watch-tower__logo"
-                                                src="/static/media/Logo.355ffce3.svg"
-                                    />
-                                     
-                                    WatchTower
+                                    <LogoSection />
                         </div>
             </td>
             <td
@@ -2182,13 +2090,7 @@ ShallowWrapper {
                 <div
                                 className="prepipBanner1"
                 >
-                                <img
-                                                alt="watch tower logo"
-                                                className="watch-tower__logo"
-                                                src="/static/media/Logo.355ffce3.svg"
-                                />
-                                 
-                                WatchTower
+                                <LogoSection />
                 </div>
 </td>,
               <td
@@ -2212,13 +2114,7 @@ ShallowWrapper {
                 "children": <div
                   className="prepipBanner1"
 >
-                  <img
-                                    alt="watch tower logo"
-                                    className="watch-tower__logo"
-                                    src="/static/media/Logo.355ffce3.svg"
-                  />
-                   
-                  WatchTower
+                  <LogoSection />
 </div>,
               },
               "ref": null,
@@ -2227,35 +2123,19 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    <img
-                      alt="watch tower logo"
-                      className="watch-tower__logo"
-                      src="/static/media/Logo.355ffce3.svg"
-/>,
-                    " ",
-                    "WatchTower",
-                  ],
+                  "children": <LogoSection />,
                   "className": "prepipBanner1",
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "watch tower logo",
-                      "className": "watch-tower__logo",
-                      "src": "/static/media/Logo.355ffce3.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  " ",
-                  "WatchTower",
-                ],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
                 "type": "div",
               },
               "type": "td",
@@ -2971,13 +2851,7 @@ ShallowWrapper {
                                     <div
                                                 className="prepipBanner1"
                                     >
-                                                <img
-                                                            alt="watch tower logo"
-                                                            className="watch-tower__logo"
-                                                            src="/static/media/Logo.355ffce3.svg"
-                                                />
-                                                 
-                                                WatchTower
+                                                <LogoSection />
                                     </div>
                         </td>
                         <td
@@ -3103,13 +2977,7 @@ ShallowWrapper {
                             <div
                                           className="prepipBanner1"
                             >
-                                          <img
-                                                        alt="watch tower logo"
-                                                        className="watch-tower__logo"
-                                                        src="/static/media/Logo.355ffce3.svg"
-                                          />
-                                           
-                                          WatchTower
+                                          <LogoSection />
                             </div>
               </td>
               <td
@@ -3135,13 +3003,7 @@ ShallowWrapper {
                   <div
                                     className="prepipBanner1"
                   >
-                                    <img
-                                                      alt="watch tower logo"
-                                                      className="watch-tower__logo"
-                                                      src="/static/media/Logo.355ffce3.svg"
-                                    />
-                                     
-                                    WatchTower
+                                    <LogoSection />
                   </div>
 </td>,
                 <td
@@ -3165,13 +3027,7 @@ ShallowWrapper {
                   "children": <div
                     className="prepipBanner1"
 >
-                    <img
-                                        alt="watch tower logo"
-                                        className="watch-tower__logo"
-                                        src="/static/media/Logo.355ffce3.svg"
-                    />
-                     
-                    WatchTower
+                    <LogoSection />
 </div>,
                 },
                 "ref": null,
@@ -3180,35 +3036,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      <img
-                        alt="watch tower logo"
-                        className="watch-tower__logo"
-                        src="/static/media/Logo.355ffce3.svg"
-/>,
-                      " ",
-                      "WatchTower",
-                    ],
+                    "children": <LogoSection />,
                     "className": "prepipBanner1",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "watch tower logo",
-                        "className": "watch-tower__logo",
-                        "src": "/static/media/Logo.355ffce3.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    " ",
-                    "WatchTower",
-                  ],
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   "type": "div",
                 },
                 "type": "td",
@@ -3976,13 +3816,7 @@ ShallowWrapper {
                               <div
                                         className="prepipBanner1"
                               >
-                                        <img
-                                                  alt="watch tower logo"
-                                                  className="watch-tower__logo"
-                                                  src="/static/media/Logo.355ffce3.svg"
-                                        />
-                                         
-                                        WatchTower
+                                        <LogoSection />
                               </div>
                     </td>
                     <td
@@ -4110,13 +3944,7 @@ ShallowWrapper {
                         <div
                                     className="prepipBanner1"
                         >
-                                    <img
-                                                alt="watch tower logo"
-                                                className="watch-tower__logo"
-                                                src="/static/media/Logo.355ffce3.svg"
-                                    />
-                                     
-                                    WatchTower
+                                    <LogoSection />
                         </div>
             </td>
             <td
@@ -4142,13 +3970,7 @@ ShallowWrapper {
                 <div
                                 className="prepipBanner1"
                 >
-                                <img
-                                                alt="watch tower logo"
-                                                className="watch-tower__logo"
-                                                src="/static/media/Logo.355ffce3.svg"
-                                />
-                                 
-                                WatchTower
+                                <LogoSection />
                 </div>
 </td>,
               <td
@@ -4172,13 +3994,7 @@ ShallowWrapper {
                 "children": <div
                   className="prepipBanner1"
 >
-                  <img
-                                    alt="watch tower logo"
-                                    className="watch-tower__logo"
-                                    src="/static/media/Logo.355ffce3.svg"
-                  />
-                   
-                  WatchTower
+                  <LogoSection />
 </div>,
               },
               "ref": null,
@@ -4187,35 +4003,19 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": Array [
-                    <img
-                      alt="watch tower logo"
-                      className="watch-tower__logo"
-                      src="/static/media/Logo.355ffce3.svg"
-/>,
-                    " ",
-                    "WatchTower",
-                  ],
+                  "children": <LogoSection />,
                   "className": "prepipBanner1",
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "watch tower logo",
-                      "className": "watch-tower__logo",
-                      "src": "/static/media/Logo.355ffce3.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  " ",
-                  "WatchTower",
-                ],
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
                 "type": "div",
               },
               "type": "td",
@@ -4933,13 +4733,7 @@ ShallowWrapper {
                                     <div
                                                 className="prepipBanner1"
                                     >
-                                                <img
-                                                            alt="watch tower logo"
-                                                            className="watch-tower__logo"
-                                                            src="/static/media/Logo.355ffce3.svg"
-                                                />
-                                                 
-                                                WatchTower
+                                                <LogoSection />
                                     </div>
                         </td>
                         <td
@@ -5067,13 +4861,7 @@ ShallowWrapper {
                             <div
                                           className="prepipBanner1"
                             >
-                                          <img
-                                                        alt="watch tower logo"
-                                                        className="watch-tower__logo"
-                                                        src="/static/media/Logo.355ffce3.svg"
-                                          />
-                                           
-                                          WatchTower
+                                          <LogoSection />
                             </div>
               </td>
               <td
@@ -5099,13 +4887,7 @@ ShallowWrapper {
                   <div
                                     className="prepipBanner1"
                   >
-                                    <img
-                                                      alt="watch tower logo"
-                                                      className="watch-tower__logo"
-                                                      src="/static/media/Logo.355ffce3.svg"
-                                    />
-                                     
-                                    WatchTower
+                                    <LogoSection />
                   </div>
 </td>,
                 <td
@@ -5129,13 +4911,7 @@ ShallowWrapper {
                   "children": <div
                     className="prepipBanner1"
 >
-                    <img
-                                        alt="watch tower logo"
-                                        className="watch-tower__logo"
-                                        src="/static/media/Logo.355ffce3.svg"
-                    />
-                     
-                    WatchTower
+                    <LogoSection />
 </div>,
                 },
                 "ref": null,
@@ -5144,35 +4920,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": Array [
-                      <img
-                        alt="watch tower logo"
-                        className="watch-tower__logo"
-                        src="/static/media/Logo.355ffce3.svg"
-/>,
-                      " ",
-                      "WatchTower",
-                    ],
+                    "children": <LogoSection />,
                     "className": "prepipBanner1",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "watch tower logo",
-                        "className": "watch-tower__logo",
-                        "src": "/static/media/Logo.355ffce3.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    " ",
-                    "WatchTower",
-                  ],
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   "type": "div",
                 },
                 "type": "td",
