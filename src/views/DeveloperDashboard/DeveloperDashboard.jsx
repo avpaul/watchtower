@@ -155,16 +155,28 @@ class DeveloperDashboard extends Component {
      * @description - This method filters fellows based on the ticked card status and product
      */
     const filterFellows = tickedCard =>
-      allFellows.filter(fellow =>
-        fellow.is_on_pip
-          ? fellow.is_on_pip === TranslatorTable[tickedCard.status]
-          : `${fellow.overall_status}`.includes(
-              TranslatorTable[tickedCard.status]
-            ) &&
-            `${fellow.project}`.includes(
-              tickedCard.project === 'All Products' ? '' : tickedCard.project
-            )
-      );
+      allFellows.filter(fellow => {
+        const isManagersFellow = `${fellow.project}`.includes(
+          tickedCard.project === 'All Products' ? '' : tickedCard.project
+        );
+
+        switch (tickedCard.status) {
+          case 'PIP':
+            return fellow.is_on_pip;
+          case 'On Track':
+            return fellow.overall_status === 'onTrack' && isManagersFellow;
+          case 'Off Track':
+            return (
+              !fellow.is_on_pip &&
+              fellow.overall_status === 'offTrack' &&
+              isManagersFellow
+            );
+          case 'No Ratings':
+            return fellow.overall_status === 'N/A' && isManagersFellow;
+          default:
+            return true;
+        }
+      });
 
     /**
      * this updates the state, initiates a callback when the state is updated.
