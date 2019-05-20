@@ -242,7 +242,19 @@ describe('Developers dashboard test', () => {
     );
   });
 
-  it('should filter Fellows given the manager ID', () => {});
+  it('should set status to No Ratings when No Ratings card is clicked', () => {
+    testCardClick(
+      {
+        id: 'No Ratings',
+        value: 'status'
+      },
+      {
+        project: 'All Products',
+        status: 'No Ratings'
+      },
+      0
+    );
+  });
 });
 
 export default getManagerDataByRole;
