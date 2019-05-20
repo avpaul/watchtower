@@ -1,0 +1,218 @@
+pipeline {
+  agent {
+  kubernetes {
+    label 'watchtower-frontend'
+    defaultContainer 'watchtower'
+    yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dind
+spec:
+  containers:
+    - name: watchtower
+      image: "${IMAGE_REGISTRY}/watchtower-frontend"
+      securityContext:
+        privileged: true
+        fsGroup: 1000
+      command:
+      - cat
+      tty: true
+"""
+  }
+}
+  stages {
+      //  installing dependencies to use when running the pipeline
+        stage('Install dependencies') {
+            steps {
+              container('watchtower') {
+                withCredentials([
+                  file(credentialsId: 'watchtower-frontend', variable: 'WATCHTOWER_FRONTEND_ENV')
+                ]) {
+                  load "$WATCHTOWER_FRONTEND_ENV"
+                }
+                sh "yarn install"
+                sh "chmod u+x jenkins/scripts/*"
+              }
+            }
+        }
+        // Running parallel stages 
+        stage('Test and report') {
+          parallel{
+            // checking for any vulnerabilities in the code
+            stage('Check vulnerability'){
+                steps {
+                  container('watchtower') {
+                    sh "yarn check --integrity"
+                    }
+                }
+            }
+            // checking for all linting issues
+            stage('Linting') {
+                steps {
+                  container('watchtower') {
+                    sh "yarn lint"
+                    }
+                }
+            }
+            // Running tests
+            stage('Run tests') {
+                steps {
+                  container('watchtower') {
+                    sh "curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter"
+                    sh "chmod +x ./cc-test-reporter"
+                    sh "./cc-test-reporter before-build"
+                    sh "yarn test --coverage"
+                    sh "./cc-test-reporter format-coverage coverage/lcov.info -t lcov"
+                    sh "./cc-test-reporter upload-coverage"
+                    }
+                }
+            }
+            // Exporting variables to use for staging and building staging
+            stage('Build staging') {
+              when {
+                anyOf{
+                  branch 'develop'
+                }
+              }
+              steps {
+                container('watchtower') {
+                  sh """
+                    export REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$STAGING_REACT_APP_GOOGLE_AUTH_REDIRECT_URL
+                    export REACT_APP_ANDELA_AUTH_HOST=$STAGING_REACT_APP_ANDELA_AUTH_HOST
+                    export REACT_APP_WATCHTOWER_SERVER=$STAGING_REACT_APP_WATCHTOWER_SERVER
+                    export REACT_APP_BUGSNAG_API_KEY=$STAGING_REACT_APP_BUGSNAG_API_KEY
+                    export REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL
+                    export REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME
+                    export REACT_APP_DEFAULT_WATCHTOWER_LF_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_LF_EMAIL
+                    export REACT_APP_DEFAULT_WATCHTOWER_LF_NAME=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_LF_NAME
+                    export REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
+                    export REACT_APP_WATCHTOWER_ROLES=$STAGING_REACT_APP_WATCHTOWER_ROLES
+                    export REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
+                    export REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL
+                  """
+                  sh "yarn build"
+                    }
+                }
+            }
+            // Exporting variables to use for production and building production
+            stage('Build production') {
+              when {
+                anyOf{
+                  branch 'master'
+                }
+              }
+              steps {
+                container('watchtower') {
+                  sh """
+                    export REACT_APP_GOOGLE_AUTH_REDIRECT_URL=$PROD_REACT_APP_GOOGLE_AUTH_REDIRECT_URL
+                    export REACT_APP_ANDELA_AUTH_HOST=$PROD_REACT_APP_ANDELA_AUTH_HOST
+                    export REACT_APP_WATCHTOWER_SERVER=$PROD_REACT_APP_WATCHTOWER_SERVER
+                    export REACT_APP_BUGSNAG_API_KEY=$PROD_REACT_APP_BUGSNAG_API_KEY
+                    export REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_TTL_EMAIL
+                    export REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME=$PROD_REACT_APP_DEFAULT_WATCHTOWER_TTL_NAME
+                    export REACT_APP_DEFAULT_WATCHTOWER_LF_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_LF_EMAIL
+                    export REACT_APP_DEFAULT_WATCHTOWER_LF_NAME=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_LF_NAME
+                    export REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_FELLOW_EMAIL
+                    export REACT_APP_WATCHTOWER_ROLES=$PROD_REACT_APP_WATCHTOWER_ROLES
+                    export REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
+                    export REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL
+                    export REACT_APP_GOOGLE_ANALYTICS_ID=$REACT_APP_GOOGLE_ANALYTICS_ID
+                  """
+                  sh "yarn build"
+                    }
+                }
+            }
+            }
+          }
+        // Configuring and authenticating gcloud
+        stage('Configure gcloud') {
+                when {
+                  anyOf{
+                    branch 'develop'
+                    branch 'master'
+                  }
+                }
+                steps {
+                  container('watchtower') {
+                    sh "echo $GCLOUD_SERVICE_KEY | base64 -d > auth_key.json"
+                    sh "gcloud auth activate-service-account --key-file auth_key.json"
+                    sh "chmod +x jenkins/scripts/gcloud.sh"
+                    sh "jenkins/scripts/gcloud.sh"
+                    }
+                }
+        }
+        // Building and pushing a docker image to GCR
+        stage('Build and push to GCR') {
+                environment {
+                IMG_TAG='\$(echo \$GIT_COMMIT | cut -c -7)'
+                }
+                when {
+                  anyOf{
+                    branch 'develop'
+                    branch 'master'
+                  }
+                }
+                steps {
+                  container('watchtower') {
+                    sh "echo $GCLOUD_SERVICE_KEY | base64 -d > auth_key.json"
+                    sh "gcloud auth activate-service-account --key-file auth_key.json"
+                    sh "docker --version"
+                    sh "service docker start"
+                    sh "docker build -f docker/prod/Dockerfile -t gcr.io/$GCP_PROJECT_ID/$PROJECT_NAME:$IMG_TAG ."
+                    sh "gcloud docker -- push gcr.io/$GCP_PROJECT_ID/$PROJECT_NAME:$IMG_TAG"
+                    }
+                }
+        }
+        // Deploying the application to staging
+        stage('Deploy to staging') {
+                environment {
+                namespace='staging'
+                }   
+                when {
+                  anyOf{
+                    branch 'develop'
+                  }
+                }
+                steps {
+                  container('watchtower') {
+                    sh "chmod +x jenkins/scripts/deploy.sh"
+                    sh "jenkins/scripts/deploy.sh"
+                    }
+                }
+        }
+        // Deploying the application to production
+        stage('Deploy to production') {
+                environment {
+                namespace='production'
+                }   
+                when {
+                  anyOf{
+                    branch 'master'
+                  }
+                }
+                steps {
+                  container('watchtower') {
+                    sh "chmod +x jenkins/scripts/deploy.sh"
+                    sh "jenkins/scripts/deploy.sh"
+                    }
+                }
+        }
+        // Send slack notifications when the application has been deployed 
+        stage('Slack notifications') {
+                when {
+                  anyOf{
+                    branch 'develop'
+                    branch 'master'
+                  }
+                }
+                steps {
+                  container('watchtower') {
+                    sh "chmod +x jenkins/scripts/slack.sh"
+                    sh "jenkins/scripts/slack.sh "
+                    }
+                }
+        }
+    }
+}
+
