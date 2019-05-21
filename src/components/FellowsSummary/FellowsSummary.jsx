@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import FiltersView from '../Filters/FiltersView';
 import Title from '../Title';
 import './FellowsSummary.css';
+import Loader from '../Loader/Loader';
 
 const formatCards = fellowLevels => {
   const keys = fellowLevels ? Object.keys(fellowLevels) : '';
@@ -30,20 +31,24 @@ const filterByRole = (fellowsSummaryCard, displayByRole) =>
   });
 
 const FellowsSummary = props => {
-  const { fellowsSummary, handleCardClick, displayByRole } = props;
+  const { fellowsSummary, handleCardClick, displayByRole, loading } = props;
 
   const fellowsSummaryCard = formatCards(fellowsSummary);
   return (
     <div className="ops-dashboard__fellows-summary">
       <Title title="FELLOWS SUMMARY" />
-      <div className="row ops-dashboard__filter">
-        <FiltersView
-          handleCardClick={handleCardClick}
-          displayByRole={displayByRole}
-          filters={filterByRole(fellowsSummaryCard, displayByRole)}
-          filterCardClassName="p-1"
-        />
-      </div>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="row ops-dashboard__filter">
+          <FiltersView
+            handleCardClick={handleCardClick}
+            displayByRole={displayByRole}
+            filters={filterByRole(fellowsSummaryCard, displayByRole)}
+            filterCardClassName="p-1"
+          />
+        </div>
+      )}
     </div>
   );
 };
@@ -53,11 +58,13 @@ FellowsSummary.propTypes = {
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ),
   fellowsSummary: PropTypes.instanceOf(Object).isRequired,
-  handleCardClick: PropTypes.func.isRequired
+  handleCardClick: PropTypes.func.isRequired,
+  loading: PropTypes.bool
 };
 
 FellowsSummary.defaultProps = {
-  displayByRole: null
+  displayByRole: null,
+  loading: false
 };
 
 export default FellowsSummary;

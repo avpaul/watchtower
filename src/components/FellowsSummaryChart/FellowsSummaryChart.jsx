@@ -33,7 +33,7 @@ class FellowsSummaryChart extends Component {
 
   render() {
     const { fellowsSummaryFilter, showChart, selected } = this.state;
-    const { displayByRole, user, fellowsPerformanceData } = this.props;
+    const { displayByRole, user, fellowsPerformanceData, loading } = this.props;
     const { data } = this.updateFellowSummary(selected);
 
     return (
@@ -41,6 +41,7 @@ class FellowsSummaryChart extends Component {
         <FellowsSummary
           handleCardClick={this.handleCardClick}
           displayByRole={displayByRole}
+          loading={loading}
         />
         {showChart && (
           <FellowChart
@@ -61,11 +62,13 @@ FellowsSummaryChart.propTypes = {
   displayByRole: PropTypes.shape({}),
   fellowsPerformanceData: PropTypes.shape({}).isRequired,
   fetchPerformanceData: PropTypes.func.isRequired,
-  user: PropTypes.shape().isRequired
+  user: PropTypes.shape().isRequired,
+  loading: PropTypes.bool
 };
 
 FellowsSummaryChart.defaultProps = {
-  displayByRole: null
+  displayByRole: null,
+  loading: false
 };
 
 export default FellowsSummaryChart;

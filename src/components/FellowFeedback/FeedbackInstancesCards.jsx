@@ -9,7 +9,8 @@ const FellowFeedback = ({
   noOfPipInstances,
   isTicked,
   handleCardClick,
-  filterKey
+  filterKey,
+  loading
 }) => {
   const prePipCards = [
     {
@@ -33,6 +34,7 @@ const FellowFeedback = ({
             handleCardClick={handleCardClick}
             filterKey={filterKey}
             type={TranslatorTable[isTicked.type]}
+            loading={loading}
           />
         ))}
       </div>
@@ -45,7 +47,8 @@ FellowFeedback.propTypes = {
   noOfPipInstances: PropTypes.number.isRequired,
   isTicked: PropTypes.shape({}).isRequired,
   handleCardClick: PropTypes.func.isRequired,
-  filterKey: PropTypes.string.isRequired
+  filterKey: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default FellowFeedback;

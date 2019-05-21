@@ -11,7 +11,8 @@ const MapFeedbackFilterCard = ({
   title,
   filterKey,
   isTicked = {},
-  handleCardClick
+  handleCardClick,
+  loading
 }) => {
   let refinedArray = [{ [title]: feedbackArray.length || 0 }];
   const feedbackFilters = {};
@@ -50,6 +51,7 @@ const MapFeedbackFilterCard = ({
       isManager={shouldDisplayManager}
       picture={imageInformation[getCardName(fellows)]}
       displayPicture={shouldDisplayPicture(fellows)}
+      loading={loading}
     />
   ));
 

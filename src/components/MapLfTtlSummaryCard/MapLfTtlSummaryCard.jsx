@@ -12,7 +12,12 @@ import LfTtlSummaryCard from '../LfTtlSummaryCard';
  * @returns A rendered version of a clickable lf/ttl card that displays the ttl/lf,
  * the number of fellows under the ttl/lf
  */
-const MapLfTtlSummaryCard = ({ lfTtlSummary, filterFellows, lfTtlCheckId }) => (
+const MapLfTtlSummaryCard = ({
+  lfTtlSummary,
+  filterFellows,
+  lfTtlCheckId,
+  loading
+}) => (
   <Slider {...carouselOptions(4, 'contain slider')}>
     {lfTtlSummary.map(lfTtl => (
       <LfTtlSummaryCard
@@ -25,6 +30,7 @@ const MapLfTtlSummaryCard = ({ lfTtlSummary, filterFellows, lfTtlCheckId }) => (
         styles={lfTtl.styles}
         filterFellows={filterFellows}
         lfTtlCheckId={lfTtlCheckId}
+        loading={loading}
       />
     ))}
   </Slider>

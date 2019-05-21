@@ -8,6 +8,7 @@ ShallowWrapper {
     filterFellows={[Function]}
     id={1}
     lfTtlCheckId={1}
+    loading={false}
     name="Test TTL"
     picture=""
     styles={
@@ -61,6 +62,7 @@ ShallowWrapper {
 >
           8
 </p>,
+        <br />,
       ],
       "className": "ttl-lf-card",
       "onClick": [Function],
@@ -155,6 +157,15 @@ ShallowWrapper {
         "rendered": 8,
         "type": "p",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
     ],
     "type": "div",
   },
@@ -194,6 +205,7 @@ ShallowWrapper {
 >
             8
 </p>,
+          <br />,
         ],
         "className": "ttl-lf-card",
         "onClick": [Function],
@@ -288,6 +300,15 @@ ShallowWrapper {
           "rendered": 8,
           "type": "p",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
       ],
       "type": "div",
     },
@@ -320,6 +341,7 @@ ShallowWrapper {
     filterFellows={[Function]}
     id={1}
     lfTtlCheckId={1}
+    loading={false}
     name="Test TTL"
     picture=""
     styles={
@@ -373,6 +395,7 @@ ShallowWrapper {
 >
           8
 </p>,
+        <br />,
       ],
       "className": "ttl-lf-card",
       "onClick": [Function],
@@ -467,6 +490,15 @@ ShallowWrapper {
         "rendered": 8,
         "type": "p",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
     ],
     "type": "div",
   },
@@ -506,6 +538,7 @@ ShallowWrapper {
 >
             8
 </p>,
+          <br />,
         ],
         "className": "ttl-lf-card",
         "onClick": [Function],
@@ -599,6 +632,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": 8,
           "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
         },
       ],
       "type": "div",

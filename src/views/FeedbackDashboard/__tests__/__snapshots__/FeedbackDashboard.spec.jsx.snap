@@ -12,6 +12,7 @@ ShallowWrapper {
             "push": [Function],
           }
     }
+    loading={false}
     paginationWrapper={
         Object {
             "handlePaginationPageChange": [Function],
@@ -131,6 +132,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="All TTLs"
                         />
                         
@@ -199,6 +201,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="Pre-PIP & PIP"
                         />
                         <MapFeedbackFilterCard
@@ -265,6 +268,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="All Criteria"
                         />
                 </div>
@@ -401,6 +405,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="All TTLs"
                         />
                         
@@ -469,6 +474,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="Pre-PIP & PIP"
                         />
                         <MapFeedbackFilterCard
@@ -535,6 +541,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="All Criteria"
                         />
             </div>
@@ -670,6 +677,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="All TTLs"
                 />
                 
@@ -738,6 +746,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="Pre-PIP & PIP"
                 />
                 <MapFeedbackFilterCard
@@ -804,6 +813,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="All Criteria"
                 />
 </div>,
@@ -907,6 +917,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="All TTLs"
 />,
                   "",
@@ -975,6 +986,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="Pre-PIP & PIP"
 />,
                   <MapFeedbackFilterCard
@@ -1041,6 +1053,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="All Criteria"
 />,
                 ],
@@ -1125,6 +1138,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "All TTLs",
                   },
                   "ref": null,
@@ -1197,6 +1211,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "Pre-PIP & PIP",
                   },
                   "ref": null,
@@ -1267,6 +1282,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "All Criteria",
                   },
                   "ref": null,
@@ -1560,6 +1576,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="All TTLs"
                               />
                               
@@ -1628,6 +1645,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="Pre-PIP & PIP"
                               />
                               <MapFeedbackFilterCard
@@ -1694,6 +1712,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="All Criteria"
                               />
                     </div>
@@ -1830,6 +1849,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="All TTLs"
                             />
                             
@@ -1898,6 +1918,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="Pre-PIP & PIP"
                             />
                             <MapFeedbackFilterCard
@@ -1964,6 +1985,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="All Criteria"
                             />
               </div>
@@ -2099,6 +2121,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="All TTLs"
                   />
                   
@@ -2167,6 +2190,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="Pre-PIP & PIP"
                   />
                   <MapFeedbackFilterCard
@@ -2233,6 +2257,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="All Criteria"
                   />
 </div>,
@@ -2336,6 +2361,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="All TTLs"
 />,
                     "",
@@ -2404,6 +2430,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="Pre-PIP & PIP"
 />,
                     <MapFeedbackFilterCard
@@ -2470,6 +2497,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="All Criteria"
 />,
                   ],
@@ -2554,6 +2582,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "All TTLs",
                     },
                     "ref": null,
@@ -2626,6 +2655,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "Pre-PIP & PIP",
                     },
                     "ref": null,
@@ -2696,6 +2726,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "All Criteria",
                     },
                     "ref": null,
@@ -2938,6 +2969,7 @@ ShallowWrapper {
             "push": [Function],
           }
     }
+    loading={false}
     paginationWrapper={
         Object {
             "handlePaginationPageChange": [Function],
@@ -3056,6 +3088,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="All LFs"
                         />
                         
@@ -3125,6 +3158,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="Pre-PIP & PIP"
                         />
                         <MapFeedbackFilterCard
@@ -3191,6 +3225,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="All Criteria"
                         />
                 </div>
@@ -3326,6 +3361,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="All LFs"
                         />
                         
@@ -3395,6 +3431,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="Pre-PIP & PIP"
                         />
                         <MapFeedbackFilterCard
@@ -3461,6 +3498,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="All Criteria"
                         />
             </div>
@@ -3595,6 +3633,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="All LFs"
                 />
                 
@@ -3664,6 +3703,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="Pre-PIP & PIP"
                 />
                 <MapFeedbackFilterCard
@@ -3730,6 +3770,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="All Criteria"
                 />
 </div>,
@@ -3832,6 +3873,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="All LFs"
 />,
                   "",
@@ -3901,6 +3943,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="Pre-PIP & PIP"
 />,
                   <MapFeedbackFilterCard
@@ -3967,6 +4010,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="All Criteria"
 />,
                 ],
@@ -4050,6 +4094,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "All LFs",
                   },
                   "ref": null,
@@ -4123,6 +4168,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "Pre-PIP & PIP",
                   },
                   "ref": null,
@@ -4193,6 +4239,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "All Criteria",
                   },
                   "ref": null,
@@ -4485,6 +4532,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="All LFs"
                               />
                               
@@ -4554,6 +4602,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="Pre-PIP & PIP"
                               />
                               <MapFeedbackFilterCard
@@ -4620,6 +4669,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="All Criteria"
                               />
                     </div>
@@ -4755,6 +4805,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="All LFs"
                             />
                             
@@ -4824,6 +4875,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="Pre-PIP & PIP"
                             />
                             <MapFeedbackFilterCard
@@ -4890,6 +4942,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="All Criteria"
                             />
               </div>
@@ -5024,6 +5077,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="All LFs"
                   />
                   
@@ -5093,6 +5147,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="Pre-PIP & PIP"
                   />
                   <MapFeedbackFilterCard
@@ -5159,6 +5214,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="All Criteria"
                   />
 </div>,
@@ -5261,6 +5317,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="All LFs"
 />,
                     "",
@@ -5330,6 +5387,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="Pre-PIP & PIP"
 />,
                     <MapFeedbackFilterCard
@@ -5396,6 +5454,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="All Criteria"
 />,
                   ],
@@ -5479,6 +5538,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "All LFs",
                     },
                     "ref": null,
@@ -5552,6 +5612,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "Pre-PIP & PIP",
                     },
                     "ref": null,
@@ -5622,6 +5683,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "All Criteria",
                     },
                     "ref": null,
@@ -5864,6 +5926,7 @@ ShallowWrapper {
             "push": [Function],
           }
     }
+    loading={false}
     paginationWrapper={
         Object {
             "handlePaginationPageChange": [Function],
@@ -5932,6 +5995,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="Pre-PIP & PIP"
                         />
                         <MapFeedbackFilterCard
@@ -5947,6 +6011,7 @@ ShallowWrapper {
                                                 "type": "Pre-PIP & PIP",
                                               }
                                 }
+                                loading={false}
                                 title="All Criteria"
                         />
                 </div>
@@ -6035,6 +6100,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="Pre-PIP & PIP"
                         />
                         <MapFeedbackFilterCard
@@ -6050,6 +6116,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                     }
+                                    loading={false}
                                     title="All Criteria"
                         />
             </div>
@@ -6137,6 +6204,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="Pre-PIP & PIP"
                 />
                 <MapFeedbackFilterCard
@@ -6152,6 +6220,7 @@ ShallowWrapper {
                                                                 "type": "Pre-PIP & PIP",
                                                               }
                                 }
+                                loading={false}
                                 title="All Criteria"
                 />
 </div>,
@@ -6207,6 +6276,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="Pre-PIP & PIP"
 />,
                   <MapFeedbackFilterCard
@@ -6222,6 +6292,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                     }
+                    loading={false}
                     title="All Criteria"
 />,
                 ],
@@ -6260,6 +6331,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "Pre-PIP & PIP",
                   },
                   "ref": null,
@@ -6281,6 +6353,7 @@ ShallowWrapper {
                       "project": "All Projects",
                       "type": "Pre-PIP & PIP",
                     },
+                    "loading": false,
                     "title": "All Criteria",
                   },
                   "ref": null,
@@ -6526,6 +6599,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="Pre-PIP & PIP"
                               />
                               <MapFeedbackFilterCard
@@ -6541,6 +6615,7 @@ ShallowWrapper {
                                                             "type": "Pre-PIP & PIP",
                                                           }
                                         }
+                                        loading={false}
                                         title="All Criteria"
                               />
                     </div>
@@ -6629,6 +6704,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="Pre-PIP & PIP"
                             />
                             <MapFeedbackFilterCard
@@ -6644,6 +6720,7 @@ ShallowWrapper {
                                                                       "type": "Pre-PIP & PIP",
                                                                     }
                                           }
+                                          loading={false}
                                           title="All Criteria"
                             />
               </div>
@@ -6731,6 +6808,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="Pre-PIP & PIP"
                   />
                   <MapFeedbackFilterCard
@@ -6746,6 +6824,7 @@ ShallowWrapper {
                                                                         "type": "Pre-PIP & PIP",
                                                                       }
                                     }
+                                    loading={false}
                                     title="All Criteria"
                   />
 </div>,
@@ -6801,6 +6880,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="Pre-PIP & PIP"
 />,
                     <MapFeedbackFilterCard
@@ -6816,6 +6896,7 @@ ShallowWrapper {
                                                                   "type": "Pre-PIP & PIP",
                                                                 }
                       }
+                      loading={false}
                       title="All Criteria"
 />,
                   ],
@@ -6854,6 +6935,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "Pre-PIP & PIP",
                     },
                     "ref": null,
@@ -6875,6 +6957,7 @@ ShallowWrapper {
                         "project": "All Projects",
                         "type": "Pre-PIP & PIP",
                       },
+                      "loading": false,
                       "title": "All Criteria",
                     },
                     "ref": null,
@@ -7119,6 +7202,7 @@ ShallowWrapper {
                     "push": [Function],
                   }
             }
+            loading={false}
             role="WATCH_TOWER_OPS"
             user={
                 Object {
@@ -7155,6 +7239,7 @@ ShallowWrapper {
                                         "push": [Function],
                                       }
                         }
+                        loading={false}
                         role="WATCH_TOWER_OPS"
                         user={
                                 Object {
@@ -7166,6 +7251,7 @@ ShallowWrapper {
                         }
                 />
         }
+        loading={false}
 />,
     },
     "ref": null,
@@ -7189,6 +7275,7 @@ ShallowWrapper {
                                                   "push": [Function],
                                                 }
                               }
+                              loading={false}
                               role="WATCH_TOWER_OPS"
                               user={
                                         Object {
@@ -7200,6 +7287,7 @@ ShallowWrapper {
                               }
                     />
           }
+          loading={false}
 />,
       },
       "ref": null,

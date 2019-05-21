@@ -44,6 +44,7 @@ ShallowWrapper {
           dataTarget=""
           dataToggle=""
           filterId="gteWk5OffTrack"
+          loading={false}
           onClick={[Function]}
 />,
         <FilterCard
@@ -58,6 +59,7 @@ ShallowWrapper {
           dataTarget=""
           dataToggle=""
           filterId="ltWk5OffTrack"
+          loading={false}
           onClick={[Function]}
 />,
         <FilterCard
@@ -71,6 +73,7 @@ ShallowWrapper {
           dataTarget=""
           dataToggle=""
           filterId="onTrack"
+          loading={false}
           onClick={[Function]}
 />,
       ],
@@ -125,6 +128,7 @@ ShallowWrapper {
           "dataTarget": "",
           "dataToggle": "",
           "filterId": "gteWk5OffTrack",
+          "loading": false,
           "onClick": [Function],
         },
         "ref": null,
@@ -145,6 +149,7 @@ ShallowWrapper {
           "dataTarget": "",
           "dataToggle": "",
           "filterId": "ltWk5OffTrack",
+          "loading": false,
           "onClick": [Function],
         },
         "ref": null,
@@ -164,6 +169,7 @@ ShallowWrapper {
           "dataTarget": "",
           "dataToggle": "",
           "filterId": "onTrack",
+          "loading": false,
           "onClick": [Function],
         },
         "ref": null,
@@ -192,6 +198,7 @@ ShallowWrapper {
             dataTarget=""
             dataToggle=""
             filterId="gteWk5OffTrack"
+            loading={false}
             onClick={[Function]}
 />,
           <FilterCard
@@ -206,6 +213,7 @@ ShallowWrapper {
             dataTarget=""
             dataToggle=""
             filterId="ltWk5OffTrack"
+            loading={false}
             onClick={[Function]}
 />,
           <FilterCard
@@ -219,6 +227,7 @@ ShallowWrapper {
             dataTarget=""
             dataToggle=""
             filterId="onTrack"
+            loading={false}
             onClick={[Function]}
 />,
         ],
@@ -273,6 +282,7 @@ ShallowWrapper {
             "dataTarget": "",
             "dataToggle": "",
             "filterId": "gteWk5OffTrack",
+            "loading": false,
             "onClick": [Function],
           },
           "ref": null,
@@ -293,6 +303,7 @@ ShallowWrapper {
             "dataTarget": "",
             "dataToggle": "",
             "filterId": "ltWk5OffTrack",
+            "loading": false,
             "onClick": [Function],
           },
           "ref": null,
@@ -312,6 +323,7 @@ ShallowWrapper {
             "dataTarget": "",
             "dataToggle": "",
             "filterId": "onTrack",
+            "loading": false,
             "onClick": [Function],
           },
           "ref": null,

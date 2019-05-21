@@ -91,15 +91,16 @@ class OpsDashboardMain extends Component {
   };
 
   render() {
-    const { user } = this.props;
+    const { user, loading } = this.props;
 
     // Add components here for opsDashboard
     return (
       <div className="page-content container-fluid">
-        <FellowsSummaryChart user={user} />
+        <FellowsSummaryChart user={user} loading={loading} />
         <FellowRatio
           mapDisplayContent={this.mapDisplayContent}
           fellowMapOnClick={this.fellowMapOnClick}
+          loading={loading}
         />
         {this.renderManagerFellowMap()}
         <FellowsProgressConnected />
@@ -138,7 +139,12 @@ OpsDashboardMain.propTypes = {
   averageFellowsPerTtl: PropTypes.number.isRequired,
   averageFellowsPerLf: PropTypes.number.isRequired,
   getOpsSummary: PropTypes.func.isRequired,
-  user: PropTypes.shape().isRequired
+  user: PropTypes.shape().isRequired,
+  loading: PropTypes.bool
+};
+
+OpsDashboardMain.defaultProps = {
+  loading: false
 };
 
 export default OpsDashboardMain;

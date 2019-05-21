@@ -19,7 +19,7 @@ const FeedbackInstances = ({ PrePipEntries = [], handleClick }) => {
         cardDetails={{
           title: `${weekDayName}  ,  ${date}`,
           date,
-          totalFellows: `${
+          subTitle: `${
             type === 'pre-pip' ? 'Pre-PIP Feedback' : 'PIP Feedback'
           }`
         }}

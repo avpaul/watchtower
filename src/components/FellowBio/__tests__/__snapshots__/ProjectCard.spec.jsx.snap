@@ -36,7 +36,9 @@ ShallowWrapper {
           role="button"
           tabIndex="0"
 >
-          <Loader />
+          <Loader
+                    size=""
+          />
 </div>,
       ],
       "className": "project",
@@ -60,7 +62,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <Loader />,
+          "children": <Loader
+            size=""
+/>,
           "className": "card-project",
           "id": "fellow-undefined",
           "role": "button",
@@ -71,7 +75,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "size": "",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -99,7 +105,9 @@ ShallowWrapper {
             role="button"
             tabIndex="0"
 >
-            <Loader />
+            <Loader
+                        size=""
+            />
 </div>,
         ],
         "className": "project",
@@ -123,7 +131,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Loader />,
+            "children": <Loader
+              size=""
+/>,
             "className": "card-project",
             "id": "fellow-undefined",
             "role": "button",
@@ -134,7 +144,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
-            "props": Object {},
+            "props": Object {
+              "size": "",
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],

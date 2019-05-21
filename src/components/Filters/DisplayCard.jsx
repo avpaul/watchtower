@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FilterCard from './FilterCard';
 
-const DisplayCard = ({ displayContent, id, onClick }) => {
+const DisplayCard = ({ displayContent, id, onClick, loading }) => {
   const { title, subTitle, text, averageValue } = displayContent;
   return (
     <div className="map-card-wrapper">
@@ -17,6 +17,7 @@ const DisplayCard = ({ displayContent, id, onClick }) => {
         }}
         className="card map-card"
         onClick={onClick}
+        loading={loading}
       />
     </div>
   );
@@ -26,11 +27,13 @@ DisplayCard.propTypes = {
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ).isRequired,
   id: PropTypes.number.isRequired,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  loading: PropTypes.bool
 };
 
 DisplayCard.defaultProps = {
-  onClick: () => {}
+  onClick: () => {},
+  loading: false
 };
 
 export default DisplayCard;

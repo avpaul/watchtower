@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './LfTtlSummaryCard.css';
 import defaultPicture from '../../static/profile.svg';
 import checkMark from '../../static/check-mark.svg';
+import Loader from '../Loader/Loader';
 
 /**
  * @method LfTtlSummaryCard
@@ -25,7 +26,8 @@ const LfTtlSummaryCard = ({
   fellowsCount,
   styles,
   filterFellows,
-  lfTtlCheckId
+  lfTtlCheckId,
+  loading
 }) => {
   const { titleDisplayStyle } = styles;
   const { nameAvatarDisplayStyle } = styles;
@@ -52,7 +54,10 @@ const LfTtlSummaryCard = ({
         src={checkMark}
         alt=""
       />
-      <p className="ttl-lf-card__number">{fellowsCount}</p>
+      <p className="ttl-lf-card__number">
+        {loading ? <Loader size="small" /> : fellowsCount}
+      </p>
+      <br />
     </div>
   );
 };
@@ -77,7 +82,11 @@ LfTtlSummaryCard.propTypes = {
   fellowsCount: PropTypes.number.isRequired,
   filterFellows: PropTypes.func.isRequired,
   lfTtlCheckId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    .isRequired
+    .isRequired,
+  loading: PropTypes.bool
 };
 
+LfTtlSummaryCard.defaultProps = {
+  loading: false
+};
 export default LfTtlSummaryCard;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DisplayCard from '../Filters/DisplayCard';
 
-const FellowRatio = ({ mapDisplayContent, fellowMapOnClick }) => (
+const FellowRatio = ({ mapDisplayContent, fellowMapOnClick, loading }) => (
   <div className="row map-card-row">
     {mapDisplayContent().map((displayContent, index) => (
       <DisplayCard
@@ -10,6 +10,7 @@ const FellowRatio = ({ mapDisplayContent, fellowMapOnClick }) => (
         id={index}
         onClick={fellowMapOnClick}
         displayContent={displayContent}
+        loading={loading}
       />
     ))}
   </div>
@@ -17,6 +18,11 @@ const FellowRatio = ({ mapDisplayContent, fellowMapOnClick }) => (
 
 FellowRatio.propTypes = {
   mapDisplayContent: PropTypes.func.isRequired,
-  fellowMapOnClick: PropTypes.func.isRequired
+  fellowMapOnClick: PropTypes.func.isRequired,
+  loading: PropTypes.bool
+};
+
+FellowRatio.defaultProps = {
+  loading: false
 };
 export default FellowRatio;

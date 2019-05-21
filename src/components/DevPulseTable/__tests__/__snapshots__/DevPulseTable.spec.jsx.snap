@@ -273,7 +273,9 @@ ShallowWrapper {
                     }
           />
 </Table>,
-        <Loader />,
+        <Loader
+          size=""
+/>,
       ],
     },
     "ref": null,
@@ -328,7 +330,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "size": "",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -358,7 +362,9 @@ ShallowWrapper {
                         }
             />
 </Table>,
-          <Loader />,
+          <Loader
+            size=""
+/>,
         ],
       },
       "ref": null,
@@ -413,7 +419,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "size": "",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

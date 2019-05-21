@@ -226,6 +226,7 @@ export class FeedbackDashboard extends Component {
 
   renderFilterCards = (title, filterKey) => {
     const { isTicked, feedbackArray } = this.state;
+    const { loading } = this.props;
     return (
       <MapFeedbackFilterCard
         feedbackArray={feedbackArray}
@@ -233,6 +234,7 @@ export class FeedbackDashboard extends Component {
         filterKey={filterKey}
         isTicked={isTicked}
         handleCardClick={this.handleFilterCardClick}
+        loading={loading}
       />
     );
   };
@@ -377,7 +379,12 @@ FeedbackDashboard.propTypes = {
   getManagerFeedback: PropTypes.func.isRequired,
   paginationWrapper: PropTypes.shape().isRequired,
   history: PropTypes.shape().isRequired,
-  fellowFeedback: PropTypes.func.isRequired
+  fellowFeedback: PropTypes.func.isRequired,
+  loading: PropTypes.bool
+};
+
+FeedbackDashboard.defaultProps = {
+  loading: false
 };
 
 export const PaginationWrapped = props => (

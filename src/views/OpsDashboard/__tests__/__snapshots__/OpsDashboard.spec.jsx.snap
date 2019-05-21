@@ -163,6 +163,7 @@ ShallowWrapper {
             },
           ]
     }
+    loading={false}
     managerFellowSortRatio="HIGH_TO_LOW"
     show={true}
     ttls={
@@ -265,6 +266,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(FellowsSummaryChart)
+          loading={false}
           user={
                     Object {
                               "name": "test",
@@ -274,6 +276,7 @@ ShallowWrapper {
 />,
         <FellowRatio
           fellowMapOnClick={[Function]}
+          loading={false}
           mapDisplayContent={[Function]}
 />,
         false,
@@ -288,6 +291,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "loading": false,
           "user": Object {
             "name": "test",
             "picture": "http://",
@@ -303,6 +307,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "fellowMapOnClick": [Function],
+          "loading": false,
           "mapDisplayContent": [Function],
         },
         "ref": null,
@@ -330,6 +335,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(FellowsSummaryChart)
+            loading={false}
             user={
                         Object {
                                     "name": "test",
@@ -339,6 +345,7 @@ ShallowWrapper {
 />,
           <FellowRatio
             fellowMapOnClick={[Function]}
+            loading={false}
             mapDisplayContent={[Function]}
 />,
           false,
@@ -353,6 +360,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "loading": false,
             "user": Object {
               "name": "test",
               "picture": "http://",
@@ -368,6 +376,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "fellowMapOnClick": [Function],
+            "loading": false,
             "mapDisplayContent": [Function],
           },
           "ref": null,
