@@ -32,144 +32,136 @@ ShallowWrapper {
                 >
                         Start Date
                 </p>
-                <label
-                        htmlFor="start-date"
+                <div
+                        className="input-group fellow-details-input mb-2"
                 >
-                        <div
-                                className="input-group fellow-details-input mb-2"
-                        >
-                                <DatePicker
-                                        allowSameDay={false}
-                                        dateFormat="yyyy-MM-dd"
-                                        dateFormatCalendar="LLLL yyyy"
-                                        disabled={false}
-                                        disabledKeyboardNavigation={true}
-                                        dropdownMode="scroll"
-                                        endDate="2019-03-15"
-                                        id="start-date"
-                                        inlineFocusSelectedMonth={false}
-                                        maxDate="2019-03-15"
-                                        monthsShown={1}
-                                        nextMonthButtonLabel="Next month"
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onClickOutside={[Function]}
-                                        onFocus={[Function]}
-                                        onInputClick={[Function]}
-                                        onInputError={[Function]}
-                                        onKeyDown={[Function]}
-                                        onMonthChange={[Function]}
-                                        onSelect={[Function]}
-                                        onYearChange={[Function]}
-                                        popperModifiers={
-                                                Object {
-                                                        "flip": Object {
-                                                          "behavior": Array [
-                                                            "bottom",
-                                                          ],
-                                                        },
-                                                        "hide": Object {
-                                                          "enabled": false,
-                                                        },
-                                                        "preventOverflow": Object {
-                                                          "enabled": false,
-                                                        },
-                                                      }
-                                        }
-                                        popperPlacement="bottom"
-                                        preventOpenOnFocus={false}
-                                        previousMonthButtonLabel="Previous Month"
-                                        readOnly={false}
-                                        renderDayContents={[Function]}
-                                        selected="2019-03-10"
-                                        selectsStart={true}
-                                        shouldCloseOnSelect={true}
-                                        showTimeSelect={false}
-                                        startDate="2019-03-10"
-                                        timeCaption="Time"
-                                        timeIntervals={30}
-                                        withPortal={false}
-                                />
-                                <CalendarInput />
-                                <input
-                                        className="label-input"
-                                        id="start-date"
-                                        type="text"
-                                />
-                        </div>
-                </label>
+                        <DatePicker
+                                allowSameDay={false}
+                                dateFormat="yyyy-MM-dd"
+                                dateFormatCalendar="LLLL yyyy"
+                                disabled={false}
+                                disabledKeyboardNavigation={true}
+                                dropdownMode="scroll"
+                                endDate="2019-03-15"
+                                id="start-date"
+                                inlineFocusSelectedMonth={false}
+                                maxDate="2019-03-15"
+                                monthsShown={1}
+                                nextMonthButtonLabel="Next month"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onClickOutside={[Function]}
+                                onFocus={[Function]}
+                                onInputClick={[Function]}
+                                onInputError={[Function]}
+                                onKeyDown={[Function]}
+                                onMonthChange={[Function]}
+                                onSelect={[Function]}
+                                onYearChange={[Function]}
+                                popperModifiers={
+                                        Object {
+                                                "flip": Object {
+                                                  "behavior": Array [
+                                                    "bottom",
+                                                  ],
+                                                },
+                                                "hide": Object {
+                                                  "enabled": false,
+                                                },
+                                                "preventOverflow": Object {
+                                                  "enabled": false,
+                                                },
+                                              }
+                                }
+                                popperPlacement="bottom"
+                                preventOpenOnFocus={false}
+                                previousMonthButtonLabel="Previous Month"
+                                readOnly={false}
+                                renderDayContents={[Function]}
+                                selected="2019-03-10"
+                                selectsStart={true}
+                                shouldCloseOnSelect={true}
+                                showTimeSelect={false}
+                                startDate="2019-03-10"
+                                timeCaption="Time"
+                                timeIntervals={30}
+                                withPortal={false}
+                        />
+                        <CalendarInput />
+                        <input
+                                className="label-input"
+                                id="start-date"
+                                type="text"
+                        />
+                </div>
                 <p
                         className="feedback-end-date"
                 >
                         End Date
                 </p>
-                <label
-                        htmlFor="end-date"
+                <div
+                        className="input-group fellow-details-input mb-2"
                 >
-                        <div
-                                className="input-group fellow-details-input mb-2"
-                        >
-                                <DatePicker
-                                        allowSameDay={false}
-                                        dateFormat="yyyy-MM-dd"
-                                        dateFormatCalendar="LLLL yyyy"
-                                        disabled={false}
-                                        disabledKeyboardNavigation={true}
-                                        dropdownMode="scroll"
-                                        endDate="2019-03-15"
-                                        id="end-date"
-                                        inlineFocusSelectedMonth={false}
-                                        maxDate="2019-03-15"
-                                        minDate="2019-03-10"
-                                        monthsShown={1}
-                                        nextMonthButtonLabel="Next month"
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onClickOutside={[Function]}
-                                        onFocus={[Function]}
-                                        onInputClick={[Function]}
-                                        onInputError={[Function]}
-                                        onKeyDown={[Function]}
-                                        onMonthChange={[Function]}
-                                        onSelect={[Function]}
-                                        onYearChange={[Function]}
-                                        popperModifiers={
-                                                Object {
-                                                        "flip": Object {
-                                                          "behavior": Array [
-                                                            "bottom",
-                                                          ],
-                                                        },
-                                                        "hide": Object {
-                                                          "enabled": false,
-                                                        },
-                                                        "preventOverflow": Object {
-                                                          "enabled": false,
-                                                        },
-                                                      }
-                                        }
-                                        popperPlacement="bottom"
-                                        preventOpenOnFocus={false}
-                                        previousMonthButtonLabel="Previous Month"
-                                        readOnly={false}
-                                        renderDayContents={[Function]}
-                                        selected="2019-03-15"
-                                        selectsEnd={true}
-                                        shouldCloseOnSelect={true}
-                                        showTimeSelect={false}
-                                        startDate="2019-03-10"
-                                        timeCaption="Time"
-                                        timeIntervals={30}
-                                        withPortal={false}
-                                />
-                                <CalendarInput />
-                                <input
-                                        className="label-input"
-                                        id="end-date"
-                                        type="text"
-                                />
-                        </div>
-                </label>
+                        <DatePicker
+                                allowSameDay={false}
+                                dateFormat="yyyy-MM-dd"
+                                dateFormatCalendar="LLLL yyyy"
+                                disabled={false}
+                                disabledKeyboardNavigation={true}
+                                dropdownMode="scroll"
+                                endDate="2019-03-15"
+                                id="end-date"
+                                inlineFocusSelectedMonth={false}
+                                maxDate="2019-03-15"
+                                minDate="2019-03-10"
+                                monthsShown={1}
+                                nextMonthButtonLabel="Next month"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onClickOutside={[Function]}
+                                onFocus={[Function]}
+                                onInputClick={[Function]}
+                                onInputError={[Function]}
+                                onKeyDown={[Function]}
+                                onMonthChange={[Function]}
+                                onSelect={[Function]}
+                                onYearChange={[Function]}
+                                popperModifiers={
+                                        Object {
+                                                "flip": Object {
+                                                  "behavior": Array [
+                                                    "bottom",
+                                                  ],
+                                                },
+                                                "hide": Object {
+                                                  "enabled": false,
+                                                },
+                                                "preventOverflow": Object {
+                                                  "enabled": false,
+                                                },
+                                              }
+                                }
+                                popperPlacement="bottom"
+                                preventOpenOnFocus={false}
+                                previousMonthButtonLabel="Previous Month"
+                                readOnly={false}
+                                renderDayContents={[Function]}
+                                selected="2019-03-15"
+                                selectsEnd={true}
+                                shouldCloseOnSelect={true}
+                                showTimeSelect={false}
+                                startDate="2019-03-10"
+                                timeCaption="Time"
+                                timeIntervals={30}
+                                withPortal={false}
+                        />
+                        <CalendarInput />
+                        <input
+                                className="label-input"
+                                id="end-date"
+                                type="text"
+                        />
+                </div>
                 <ActionButton
                         clickHandler={undefined}
                         text="Clear Duration"
@@ -192,144 +184,136 @@ ShallowWrapper {
           >
                     Start Date
           </p>
-          <label
-                    htmlFor="start-date"
+          <div
+                    className="input-group fellow-details-input mb-2"
           >
-                    <div
-                              className="input-group fellow-details-input mb-2"
-                    >
-                              <DatePicker
-                                        allowSameDay={false}
-                                        dateFormat="yyyy-MM-dd"
-                                        dateFormatCalendar="LLLL yyyy"
-                                        disabled={false}
-                                        disabledKeyboardNavigation={true}
-                                        dropdownMode="scroll"
-                                        endDate="2019-03-15"
-                                        id="start-date"
-                                        inlineFocusSelectedMonth={false}
-                                        maxDate="2019-03-15"
-                                        monthsShown={1}
-                                        nextMonthButtonLabel="Next month"
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onClickOutside={[Function]}
-                                        onFocus={[Function]}
-                                        onInputClick={[Function]}
-                                        onInputError={[Function]}
-                                        onKeyDown={[Function]}
-                                        onMonthChange={[Function]}
-                                        onSelect={[Function]}
-                                        onYearChange={[Function]}
-                                        popperModifiers={
-                                                  Object {
-                                                            "flip": Object {
-                                                              "behavior": Array [
-                                                                "bottom",
-                                                              ],
-                                                            },
-                                                            "hide": Object {
-                                                              "enabled": false,
-                                                            },
-                                                            "preventOverflow": Object {
-                                                              "enabled": false,
-                                                            },
-                                                          }
-                                        }
-                                        popperPlacement="bottom"
-                                        preventOpenOnFocus={false}
-                                        previousMonthButtonLabel="Previous Month"
-                                        readOnly={false}
-                                        renderDayContents={[Function]}
-                                        selected="2019-03-10"
-                                        selectsStart={true}
-                                        shouldCloseOnSelect={true}
-                                        showTimeSelect={false}
-                                        startDate="2019-03-10"
-                                        timeCaption="Time"
-                                        timeIntervals={30}
-                                        withPortal={false}
-                              />
-                              <CalendarInput />
-                              <input
-                                        className="label-input"
-                                        id="start-date"
-                                        type="text"
-                              />
-                    </div>
-          </label>
+                    <DatePicker
+                              allowSameDay={false}
+                              dateFormat="yyyy-MM-dd"
+                              dateFormatCalendar="LLLL yyyy"
+                              disabled={false}
+                              disabledKeyboardNavigation={true}
+                              dropdownMode="scroll"
+                              endDate="2019-03-15"
+                              id="start-date"
+                              inlineFocusSelectedMonth={false}
+                              maxDate="2019-03-15"
+                              monthsShown={1}
+                              nextMonthButtonLabel="Next month"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClickOutside={[Function]}
+                              onFocus={[Function]}
+                              onInputClick={[Function]}
+                              onInputError={[Function]}
+                              onKeyDown={[Function]}
+                              onMonthChange={[Function]}
+                              onSelect={[Function]}
+                              onYearChange={[Function]}
+                              popperModifiers={
+                                        Object {
+                                                  "flip": Object {
+                                                    "behavior": Array [
+                                                      "bottom",
+                                                    ],
+                                                  },
+                                                  "hide": Object {
+                                                    "enabled": false,
+                                                  },
+                                                  "preventOverflow": Object {
+                                                    "enabled": false,
+                                                  },
+                                                }
+                              }
+                              popperPlacement="bottom"
+                              preventOpenOnFocus={false}
+                              previousMonthButtonLabel="Previous Month"
+                              readOnly={false}
+                              renderDayContents={[Function]}
+                              selected="2019-03-10"
+                              selectsStart={true}
+                              shouldCloseOnSelect={true}
+                              showTimeSelect={false}
+                              startDate="2019-03-10"
+                              timeCaption="Time"
+                              timeIntervals={30}
+                              withPortal={false}
+                    />
+                    <CalendarInput />
+                    <input
+                              className="label-input"
+                              id="start-date"
+                              type="text"
+                    />
+          </div>
           <p
                     className="feedback-end-date"
           >
                     End Date
           </p>
-          <label
-                    htmlFor="end-date"
+          <div
+                    className="input-group fellow-details-input mb-2"
           >
-                    <div
-                              className="input-group fellow-details-input mb-2"
-                    >
-                              <DatePicker
-                                        allowSameDay={false}
-                                        dateFormat="yyyy-MM-dd"
-                                        dateFormatCalendar="LLLL yyyy"
-                                        disabled={false}
-                                        disabledKeyboardNavigation={true}
-                                        dropdownMode="scroll"
-                                        endDate="2019-03-15"
-                                        id="end-date"
-                                        inlineFocusSelectedMonth={false}
-                                        maxDate="2019-03-15"
-                                        minDate="2019-03-10"
-                                        monthsShown={1}
-                                        nextMonthButtonLabel="Next month"
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onClickOutside={[Function]}
-                                        onFocus={[Function]}
-                                        onInputClick={[Function]}
-                                        onInputError={[Function]}
-                                        onKeyDown={[Function]}
-                                        onMonthChange={[Function]}
-                                        onSelect={[Function]}
-                                        onYearChange={[Function]}
-                                        popperModifiers={
-                                                  Object {
-                                                            "flip": Object {
-                                                              "behavior": Array [
-                                                                "bottom",
-                                                              ],
-                                                            },
-                                                            "hide": Object {
-                                                              "enabled": false,
-                                                            },
-                                                            "preventOverflow": Object {
-                                                              "enabled": false,
-                                                            },
-                                                          }
-                                        }
-                                        popperPlacement="bottom"
-                                        preventOpenOnFocus={false}
-                                        previousMonthButtonLabel="Previous Month"
-                                        readOnly={false}
-                                        renderDayContents={[Function]}
-                                        selected="2019-03-15"
-                                        selectsEnd={true}
-                                        shouldCloseOnSelect={true}
-                                        showTimeSelect={false}
-                                        startDate="2019-03-10"
-                                        timeCaption="Time"
-                                        timeIntervals={30}
-                                        withPortal={false}
-                              />
-                              <CalendarInput />
-                              <input
-                                        className="label-input"
-                                        id="end-date"
-                                        type="text"
-                              />
-                    </div>
-          </label>
+                    <DatePicker
+                              allowSameDay={false}
+                              dateFormat="yyyy-MM-dd"
+                              dateFormatCalendar="LLLL yyyy"
+                              disabled={false}
+                              disabledKeyboardNavigation={true}
+                              dropdownMode="scroll"
+                              endDate="2019-03-15"
+                              id="end-date"
+                              inlineFocusSelectedMonth={false}
+                              maxDate="2019-03-15"
+                              minDate="2019-03-10"
+                              monthsShown={1}
+                              nextMonthButtonLabel="Next month"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClickOutside={[Function]}
+                              onFocus={[Function]}
+                              onInputClick={[Function]}
+                              onInputError={[Function]}
+                              onKeyDown={[Function]}
+                              onMonthChange={[Function]}
+                              onSelect={[Function]}
+                              onYearChange={[Function]}
+                              popperModifiers={
+                                        Object {
+                                                  "flip": Object {
+                                                    "behavior": Array [
+                                                      "bottom",
+                                                    ],
+                                                  },
+                                                  "hide": Object {
+                                                    "enabled": false,
+                                                  },
+                                                  "preventOverflow": Object {
+                                                    "enabled": false,
+                                                  },
+                                                }
+                              }
+                              popperPlacement="bottom"
+                              preventOpenOnFocus={false}
+                              previousMonthButtonLabel="Previous Month"
+                              readOnly={false}
+                              renderDayContents={[Function]}
+                              selected="2019-03-15"
+                              selectsEnd={true}
+                              shouldCloseOnSelect={true}
+                              showTimeSelect={false}
+                              startDate="2019-03-10"
+                              timeCaption="Time"
+                              timeIntervals={30}
+                              withPortal={false}
+                    />
+                    <CalendarInput />
+                    <input
+                              className="label-input"
+                              id="end-date"
+                              type="text"
+                    />
+          </div>
           <ActionButton
                     clickHandler={undefined}
                     text="Clear Duration"
@@ -349,144 +333,136 @@ ShallowWrapper {
 >
               Start Date
 </p>,
-            <label
-              htmlFor="start-date"
+            <div
+              className="input-group fellow-details-input mb-2"
 >
-              <div
-                            className="input-group fellow-details-input mb-2"
-              >
-                            <DatePicker
-                                          allowSameDay={false}
-                                          dateFormat="yyyy-MM-dd"
-                                          dateFormatCalendar="LLLL yyyy"
-                                          disabled={false}
-                                          disabledKeyboardNavigation={true}
-                                          dropdownMode="scroll"
-                                          endDate="2019-03-15"
-                                          id="start-date"
-                                          inlineFocusSelectedMonth={false}
-                                          maxDate="2019-03-15"
-                                          monthsShown={1}
-                                          nextMonthButtonLabel="Next month"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onClickOutside={[Function]}
-                                          onFocus={[Function]}
-                                          onInputClick={[Function]}
-                                          onInputError={[Function]}
-                                          onKeyDown={[Function]}
-                                          onMonthChange={[Function]}
-                                          onSelect={[Function]}
-                                          onYearChange={[Function]}
-                                          popperModifiers={
-                                                        Object {
-                                                                      "flip": Object {
-                                                                        "behavior": Array [
-                                                                          "bottom",
-                                                                        ],
-                                                                      },
-                                                                      "hide": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                      "preventOverflow": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                    }
-                                          }
-                                          popperPlacement="bottom"
-                                          preventOpenOnFocus={false}
-                                          previousMonthButtonLabel="Previous Month"
-                                          readOnly={false}
-                                          renderDayContents={[Function]}
-                                          selected="2019-03-10"
-                                          selectsStart={true}
-                                          shouldCloseOnSelect={true}
-                                          showTimeSelect={false}
-                                          startDate="2019-03-10"
-                                          timeCaption="Time"
-                                          timeIntervals={30}
-                                          withPortal={false}
-                            />
-                            <CalendarInput />
-                            <input
-                                          className="label-input"
-                                          id="start-date"
-                                          type="text"
-                            />
-              </div>
-</label>,
+              <DatePicker
+                            allowSameDay={false}
+                            dateFormat="yyyy-MM-dd"
+                            dateFormatCalendar="LLLL yyyy"
+                            disabled={false}
+                            disabledKeyboardNavigation={true}
+                            dropdownMode="scroll"
+                            endDate="2019-03-15"
+                            id="start-date"
+                            inlineFocusSelectedMonth={false}
+                            maxDate="2019-03-15"
+                            monthsShown={1}
+                            nextMonthButtonLabel="Next month"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClickOutside={[Function]}
+                            onFocus={[Function]}
+                            onInputClick={[Function]}
+                            onInputError={[Function]}
+                            onKeyDown={[Function]}
+                            onMonthChange={[Function]}
+                            onSelect={[Function]}
+                            onYearChange={[Function]}
+                            popperModifiers={
+                                          Object {
+                                                        "flip": Object {
+                                                          "behavior": Array [
+                                                            "bottom",
+                                                          ],
+                                                        },
+                                                        "hide": Object {
+                                                          "enabled": false,
+                                                        },
+                                                        "preventOverflow": Object {
+                                                          "enabled": false,
+                                                        },
+                                                      }
+                            }
+                            popperPlacement="bottom"
+                            preventOpenOnFocus={false}
+                            previousMonthButtonLabel="Previous Month"
+                            readOnly={false}
+                            renderDayContents={[Function]}
+                            selected="2019-03-10"
+                            selectsStart={true}
+                            shouldCloseOnSelect={true}
+                            showTimeSelect={false}
+                            startDate="2019-03-10"
+                            timeCaption="Time"
+                            timeIntervals={30}
+                            withPortal={false}
+              />
+              <CalendarInput />
+              <input
+                            className="label-input"
+                            id="start-date"
+                            type="text"
+              />
+</div>,
             <p
               className="feedback-end-date"
 >
               End Date
 </p>,
-            <label
-              htmlFor="end-date"
+            <div
+              className="input-group fellow-details-input mb-2"
 >
-              <div
-                            className="input-group fellow-details-input mb-2"
-              >
-                            <DatePicker
-                                          allowSameDay={false}
-                                          dateFormat="yyyy-MM-dd"
-                                          dateFormatCalendar="LLLL yyyy"
-                                          disabled={false}
-                                          disabledKeyboardNavigation={true}
-                                          dropdownMode="scroll"
-                                          endDate="2019-03-15"
-                                          id="end-date"
-                                          inlineFocusSelectedMonth={false}
-                                          maxDate="2019-03-15"
-                                          minDate="2019-03-10"
-                                          monthsShown={1}
-                                          nextMonthButtonLabel="Next month"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onClickOutside={[Function]}
-                                          onFocus={[Function]}
-                                          onInputClick={[Function]}
-                                          onInputError={[Function]}
-                                          onKeyDown={[Function]}
-                                          onMonthChange={[Function]}
-                                          onSelect={[Function]}
-                                          onYearChange={[Function]}
-                                          popperModifiers={
-                                                        Object {
-                                                                      "flip": Object {
-                                                                        "behavior": Array [
-                                                                          "bottom",
-                                                                        ],
-                                                                      },
-                                                                      "hide": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                      "preventOverflow": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                    }
-                                          }
-                                          popperPlacement="bottom"
-                                          preventOpenOnFocus={false}
-                                          previousMonthButtonLabel="Previous Month"
-                                          readOnly={false}
-                                          renderDayContents={[Function]}
-                                          selected="2019-03-15"
-                                          selectsEnd={true}
-                                          shouldCloseOnSelect={true}
-                                          showTimeSelect={false}
-                                          startDate="2019-03-10"
-                                          timeCaption="Time"
-                                          timeIntervals={30}
-                                          withPortal={false}
-                            />
-                            <CalendarInput />
-                            <input
-                                          className="label-input"
-                                          id="end-date"
-                                          type="text"
-                            />
-              </div>
-</label>,
+              <DatePicker
+                            allowSameDay={false}
+                            dateFormat="yyyy-MM-dd"
+                            dateFormatCalendar="LLLL yyyy"
+                            disabled={false}
+                            disabledKeyboardNavigation={true}
+                            dropdownMode="scroll"
+                            endDate="2019-03-15"
+                            id="end-date"
+                            inlineFocusSelectedMonth={false}
+                            maxDate="2019-03-15"
+                            minDate="2019-03-10"
+                            monthsShown={1}
+                            nextMonthButtonLabel="Next month"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClickOutside={[Function]}
+                            onFocus={[Function]}
+                            onInputClick={[Function]}
+                            onInputError={[Function]}
+                            onKeyDown={[Function]}
+                            onMonthChange={[Function]}
+                            onSelect={[Function]}
+                            onYearChange={[Function]}
+                            popperModifiers={
+                                          Object {
+                                                        "flip": Object {
+                                                          "behavior": Array [
+                                                            "bottom",
+                                                          ],
+                                                        },
+                                                        "hide": Object {
+                                                          "enabled": false,
+                                                        },
+                                                        "preventOverflow": Object {
+                                                          "enabled": false,
+                                                        },
+                                                      }
+                            }
+                            popperPlacement="bottom"
+                            preventOpenOnFocus={false}
+                            previousMonthButtonLabel="Previous Month"
+                            readOnly={false}
+                            renderDayContents={[Function]}
+                            selected="2019-03-15"
+                            selectsEnd={true}
+                            shouldCloseOnSelect={true}
+                            showTimeSelect={false}
+                            startDate="2019-03-10"
+                            timeCaption="Time"
+                            timeIntervals={30}
+                            withPortal={false}
+              />
+              <CalendarInput />
+              <input
+                            className="label-input"
+                            id="end-date"
+                            type="text"
+              />
+</div>,
             <ActionButton
               clickHandler={undefined}
               text="Clear Duration"
@@ -513,7 +489,657 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div
+              "children": Array [
+                <DatePicker
+                  allowSameDay={false}
+                  dateFormat="yyyy-MM-dd"
+                  dateFormatCalendar="LLLL yyyy"
+                  disabled={false}
+                  disabledKeyboardNavigation={true}
+                  dropdownMode="scroll"
+                  endDate="2019-03-15"
+                  id="start-date"
+                  inlineFocusSelectedMonth={false}
+                  maxDate="2019-03-15"
+                  monthsShown={1}
+                  nextMonthButtonLabel="Next month"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClickOutside={[Function]}
+                  onFocus={[Function]}
+                  onInputClick={[Function]}
+                  onInputError={[Function]}
+                  onKeyDown={[Function]}
+                  onMonthChange={[Function]}
+                  onSelect={[Function]}
+                  onYearChange={[Function]}
+                  popperModifiers={
+                                    Object {
+                                                      "flip": Object {
+                                                        "behavior": Array [
+                                                          "bottom",
+                                                        ],
+                                                      },
+                                                      "hide": Object {
+                                                        "enabled": false,
+                                                      },
+                                                      "preventOverflow": Object {
+                                                        "enabled": false,
+                                                      },
+                                                    }
+                  }
+                  popperPlacement="bottom"
+                  preventOpenOnFocus={false}
+                  previousMonthButtonLabel="Previous Month"
+                  readOnly={false}
+                  renderDayContents={[Function]}
+                  selected="2019-03-10"
+                  selectsStart={true}
+                  shouldCloseOnSelect={true}
+                  showTimeSelect={false}
+                  startDate="2019-03-10"
+                  timeCaption="Time"
+                  timeIntervals={30}
+                  withPortal={false}
+/>,
+                <CalendarInput />,
+                <input
+                  className="label-input"
+                  id="start-date"
+                  type="text"
+/>,
+              ],
+              "className": "input-group fellow-details-input mb-2",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowSameDay": false,
+                  "dateFormat": "yyyy-MM-dd",
+                  "dateFormatCalendar": "LLLL yyyy",
+                  "disabled": false,
+                  "disabledKeyboardNavigation": true,
+                  "dropdownMode": "scroll",
+                  "endDate": "2019-03-15",
+                  "id": "start-date",
+                  "inlineFocusSelectedMonth": false,
+                  "maxDate": "2019-03-15",
+                  "monthsShown": 1,
+                  "nextMonthButtonLabel": "Next month",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onClickOutside": [Function],
+                  "onFocus": [Function],
+                  "onInputClick": [Function],
+                  "onInputError": [Function],
+                  "onKeyDown": [Function],
+                  "onMonthChange": [Function],
+                  "onSelect": [Function],
+                  "onYearChange": [Function],
+                  "popperModifiers": Object {
+                    "flip": Object {
+                      "behavior": Array [
+                        "bottom",
+                      ],
+                    },
+                    "hide": Object {
+                      "enabled": false,
+                    },
+                    "preventOverflow": Object {
+                      "enabled": false,
+                    },
+                  },
+                  "popperPlacement": "bottom",
+                  "preventOpenOnFocus": false,
+                  "previousMonthButtonLabel": "Previous Month",
+                  "readOnly": false,
+                  "renderDayContents": [Function],
+                  "selected": "2019-03-10",
+                  "selectsStart": true,
+                  "shouldCloseOnSelect": true,
+                  "showTimeSelect": false,
+                  "startDate": "2019-03-10",
+                  "timeCaption": "Time",
+                  "timeIntervals": 30,
+                  "withPortal": false,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "label-input",
+                  "id": "start-date",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "End Date",
+              "className": "feedback-end-date",
+            },
+            "ref": null,
+            "rendered": "End Date",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <DatePicker
+                  allowSameDay={false}
+                  dateFormat="yyyy-MM-dd"
+                  dateFormatCalendar="LLLL yyyy"
+                  disabled={false}
+                  disabledKeyboardNavigation={true}
+                  dropdownMode="scroll"
+                  endDate="2019-03-15"
+                  id="end-date"
+                  inlineFocusSelectedMonth={false}
+                  maxDate="2019-03-15"
+                  minDate="2019-03-10"
+                  monthsShown={1}
+                  nextMonthButtonLabel="Next month"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClickOutside={[Function]}
+                  onFocus={[Function]}
+                  onInputClick={[Function]}
+                  onInputError={[Function]}
+                  onKeyDown={[Function]}
+                  onMonthChange={[Function]}
+                  onSelect={[Function]}
+                  onYearChange={[Function]}
+                  popperModifiers={
+                                    Object {
+                                                      "flip": Object {
+                                                        "behavior": Array [
+                                                          "bottom",
+                                                        ],
+                                                      },
+                                                      "hide": Object {
+                                                        "enabled": false,
+                                                      },
+                                                      "preventOverflow": Object {
+                                                        "enabled": false,
+                                                      },
+                                                    }
+                  }
+                  popperPlacement="bottom"
+                  preventOpenOnFocus={false}
+                  previousMonthButtonLabel="Previous Month"
+                  readOnly={false}
+                  renderDayContents={[Function]}
+                  selected="2019-03-15"
+                  selectsEnd={true}
+                  shouldCloseOnSelect={true}
+                  showTimeSelect={false}
+                  startDate="2019-03-10"
+                  timeCaption="Time"
+                  timeIntervals={30}
+                  withPortal={false}
+/>,
+                <CalendarInput />,
+                <input
+                  className="label-input"
+                  id="end-date"
+                  type="text"
+/>,
+              ],
+              "className": "input-group fellow-details-input mb-2",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowSameDay": false,
+                  "dateFormat": "yyyy-MM-dd",
+                  "dateFormatCalendar": "LLLL yyyy",
+                  "disabled": false,
+                  "disabledKeyboardNavigation": true,
+                  "dropdownMode": "scroll",
+                  "endDate": "2019-03-15",
+                  "id": "end-date",
+                  "inlineFocusSelectedMonth": false,
+                  "maxDate": "2019-03-15",
+                  "minDate": "2019-03-10",
+                  "monthsShown": 1,
+                  "nextMonthButtonLabel": "Next month",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onClickOutside": [Function],
+                  "onFocus": [Function],
+                  "onInputClick": [Function],
+                  "onInputError": [Function],
+                  "onKeyDown": [Function],
+                  "onMonthChange": [Function],
+                  "onSelect": [Function],
+                  "onYearChange": [Function],
+                  "popperModifiers": Object {
+                    "flip": Object {
+                      "behavior": Array [
+                        "bottom",
+                      ],
+                    },
+                    "hide": Object {
+                      "enabled": false,
+                    },
+                    "preventOverflow": Object {
+                      "enabled": false,
+                    },
+                  },
+                  "popperPlacement": "bottom",
+                  "preventOpenOnFocus": false,
+                  "previousMonthButtonLabel": "Previous Month",
+                  "readOnly": false,
+                  "renderDayContents": [Function],
+                  "selected": "2019-03-15",
+                  "selectsEnd": true,
+                  "shouldCloseOnSelect": true,
+                  "showTimeSelect": false,
+                  "startDate": "2019-03-10",
+                  "timeCaption": "Time",
+                  "timeIntervals": 30,
+                  "withPortal": false,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "label-input",
+                  "id": "end-date",
+                  "type": "text",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "clickHandler": undefined,
+              "text": "Clear Duration",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="feedback-calendar"
+>
+          <div
+                    className=""
+          >
+                    <p
+                              className="feedback-start-date"
+                    >
+                              Start Date
+                    </p>
+                    <div
+                              className="input-group fellow-details-input mb-2"
+                    >
+                              <DatePicker
+                                        allowSameDay={false}
+                                        dateFormat="yyyy-MM-dd"
+                                        dateFormatCalendar="LLLL yyyy"
+                                        disabled={false}
+                                        disabledKeyboardNavigation={true}
+                                        dropdownMode="scroll"
+                                        endDate="2019-03-15"
+                                        id="start-date"
+                                        inlineFocusSelectedMonth={false}
+                                        maxDate="2019-03-15"
+                                        monthsShown={1}
+                                        nextMonthButtonLabel="Next month"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClickOutside={[Function]}
+                                        onFocus={[Function]}
+                                        onInputClick={[Function]}
+                                        onInputError={[Function]}
+                                        onKeyDown={[Function]}
+                                        onMonthChange={[Function]}
+                                        onSelect={[Function]}
+                                        onYearChange={[Function]}
+                                        popperModifiers={
+                                                  Object {
+                                                            "flip": Object {
+                                                              "behavior": Array [
+                                                                "bottom",
+                                                              ],
+                                                            },
+                                                            "hide": Object {
+                                                              "enabled": false,
+                                                            },
+                                                            "preventOverflow": Object {
+                                                              "enabled": false,
+                                                            },
+                                                          }
+                                        }
+                                        popperPlacement="bottom"
+                                        preventOpenOnFocus={false}
+                                        previousMonthButtonLabel="Previous Month"
+                                        readOnly={false}
+                                        renderDayContents={[Function]}
+                                        selected="2019-03-10"
+                                        selectsStart={true}
+                                        shouldCloseOnSelect={true}
+                                        showTimeSelect={false}
+                                        startDate="2019-03-10"
+                                        timeCaption="Time"
+                                        timeIntervals={30}
+                                        withPortal={false}
+                              />
+                              <CalendarInput />
+                              <input
+                                        className="label-input"
+                                        id="start-date"
+                                        type="text"
+                              />
+                    </div>
+                    <p
+                              className="feedback-end-date"
+                    >
+                              End Date
+                    </p>
+                    <div
+                              className="input-group fellow-details-input mb-2"
+                    >
+                              <DatePicker
+                                        allowSameDay={false}
+                                        dateFormat="yyyy-MM-dd"
+                                        dateFormatCalendar="LLLL yyyy"
+                                        disabled={false}
+                                        disabledKeyboardNavigation={true}
+                                        dropdownMode="scroll"
+                                        endDate="2019-03-15"
+                                        id="end-date"
+                                        inlineFocusSelectedMonth={false}
+                                        maxDate="2019-03-15"
+                                        minDate="2019-03-10"
+                                        monthsShown={1}
+                                        nextMonthButtonLabel="Next month"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClickOutside={[Function]}
+                                        onFocus={[Function]}
+                                        onInputClick={[Function]}
+                                        onInputError={[Function]}
+                                        onKeyDown={[Function]}
+                                        onMonthChange={[Function]}
+                                        onSelect={[Function]}
+                                        onYearChange={[Function]}
+                                        popperModifiers={
+                                                  Object {
+                                                            "flip": Object {
+                                                              "behavior": Array [
+                                                                "bottom",
+                                                              ],
+                                                            },
+                                                            "hide": Object {
+                                                              "enabled": false,
+                                                            },
+                                                            "preventOverflow": Object {
+                                                              "enabled": false,
+                                                            },
+                                                          }
+                                        }
+                                        popperPlacement="bottom"
+                                        preventOpenOnFocus={false}
+                                        previousMonthButtonLabel="Previous Month"
+                                        readOnly={false}
+                                        renderDayContents={[Function]}
+                                        selected="2019-03-15"
+                                        selectsEnd={true}
+                                        shouldCloseOnSelect={true}
+                                        showTimeSelect={false}
+                                        startDate="2019-03-10"
+                                        timeCaption="Time"
+                                        timeIntervals={30}
+                                        withPortal={false}
+                              />
+                              <CalendarInput />
+                              <input
+                                        className="label-input"
+                                        id="end-date"
+                                        type="text"
+                              />
+                    </div>
+                    <ActionButton
+                              clickHandler={undefined}
+                              text="Clear Duration"
+                    />
+          </div>
+</div>,
+        "className": "feedback-calendar-body",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className=""
+>
+            <p
+                        className="feedback-start-date"
+            >
+                        Start Date
+            </p>
+            <div
+                        className="input-group fellow-details-input mb-2"
+            >
+                        <DatePicker
+                                    allowSameDay={false}
+                                    dateFormat="yyyy-MM-dd"
+                                    dateFormatCalendar="LLLL yyyy"
+                                    disabled={false}
+                                    disabledKeyboardNavigation={true}
+                                    dropdownMode="scroll"
+                                    endDate="2019-03-15"
+                                    id="start-date"
+                                    inlineFocusSelectedMonth={false}
+                                    maxDate="2019-03-15"
+                                    monthsShown={1}
+                                    nextMonthButtonLabel="Next month"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClickOutside={[Function]}
+                                    onFocus={[Function]}
+                                    onInputClick={[Function]}
+                                    onInputError={[Function]}
+                                    onKeyDown={[Function]}
+                                    onMonthChange={[Function]}
+                                    onSelect={[Function]}
+                                    onYearChange={[Function]}
+                                    popperModifiers={
+                                                Object {
+                                                            "flip": Object {
+                                                              "behavior": Array [
+                                                                "bottom",
+                                                              ],
+                                                            },
+                                                            "hide": Object {
+                                                              "enabled": false,
+                                                            },
+                                                            "preventOverflow": Object {
+                                                              "enabled": false,
+                                                            },
+                                                          }
+                                    }
+                                    popperPlacement="bottom"
+                                    preventOpenOnFocus={false}
+                                    previousMonthButtonLabel="Previous Month"
+                                    readOnly={false}
+                                    renderDayContents={[Function]}
+                                    selected="2019-03-10"
+                                    selectsStart={true}
+                                    shouldCloseOnSelect={true}
+                                    showTimeSelect={false}
+                                    startDate="2019-03-10"
+                                    timeCaption="Time"
+                                    timeIntervals={30}
+                                    withPortal={false}
+                        />
+                        <CalendarInput />
+                        <input
+                                    className="label-input"
+                                    id="start-date"
+                                    type="text"
+                        />
+            </div>
+            <p
+                        className="feedback-end-date"
+            >
+                        End Date
+            </p>
+            <div
+                        className="input-group fellow-details-input mb-2"
+            >
+                        <DatePicker
+                                    allowSameDay={false}
+                                    dateFormat="yyyy-MM-dd"
+                                    dateFormatCalendar="LLLL yyyy"
+                                    disabled={false}
+                                    disabledKeyboardNavigation={true}
+                                    dropdownMode="scroll"
+                                    endDate="2019-03-15"
+                                    id="end-date"
+                                    inlineFocusSelectedMonth={false}
+                                    maxDate="2019-03-15"
+                                    minDate="2019-03-10"
+                                    monthsShown={1}
+                                    nextMonthButtonLabel="Next month"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClickOutside={[Function]}
+                                    onFocus={[Function]}
+                                    onInputClick={[Function]}
+                                    onInputError={[Function]}
+                                    onKeyDown={[Function]}
+                                    onMonthChange={[Function]}
+                                    onSelect={[Function]}
+                                    onYearChange={[Function]}
+                                    popperModifiers={
+                                                Object {
+                                                            "flip": Object {
+                                                              "behavior": Array [
+                                                                "bottom",
+                                                              ],
+                                                            },
+                                                            "hide": Object {
+                                                              "enabled": false,
+                                                            },
+                                                            "preventOverflow": Object {
+                                                              "enabled": false,
+                                                            },
+                                                          }
+                                    }
+                                    popperPlacement="bottom"
+                                    preventOpenOnFocus={false}
+                                    previousMonthButtonLabel="Previous Month"
+                                    readOnly={false}
+                                    renderDayContents={[Function]}
+                                    selected="2019-03-15"
+                                    selectsEnd={true}
+                                    shouldCloseOnSelect={true}
+                                    showTimeSelect={false}
+                                    startDate="2019-03-10"
+                                    timeCaption="Time"
+                                    timeIntervals={30}
+                                    withPortal={false}
+                        />
+                        <CalendarInput />
+                        <input
+                                    className="label-input"
+                                    id="end-date"
+                                    type="text"
+                        />
+            </div>
+            <ActionButton
+                        clickHandler={undefined}
+                        text="Clear Duration"
+            />
+</div>,
+          "className": "feedback-calendar",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="feedback-start-date"
+>
+                Start Date
+</p>,
+              <div
                 className="input-group fellow-details-input mb-2"
 >
                 <DatePicker
@@ -575,10 +1201,96 @@ ShallowWrapper {
                                 type="text"
                 />
 </div>,
-              "htmlFor": "start-date",
+              <p
+                className="feedback-end-date"
+>
+                End Date
+</p>,
+              <div
+                className="input-group fellow-details-input mb-2"
+>
+                <DatePicker
+                                allowSameDay={false}
+                                dateFormat="yyyy-MM-dd"
+                                dateFormatCalendar="LLLL yyyy"
+                                disabled={false}
+                                disabledKeyboardNavigation={true}
+                                dropdownMode="scroll"
+                                endDate="2019-03-15"
+                                id="end-date"
+                                inlineFocusSelectedMonth={false}
+                                maxDate="2019-03-15"
+                                minDate="2019-03-10"
+                                monthsShown={1}
+                                nextMonthButtonLabel="Next month"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onClickOutside={[Function]}
+                                onFocus={[Function]}
+                                onInputClick={[Function]}
+                                onInputError={[Function]}
+                                onKeyDown={[Function]}
+                                onMonthChange={[Function]}
+                                onSelect={[Function]}
+                                onYearChange={[Function]}
+                                popperModifiers={
+                                                Object {
+                                                                "flip": Object {
+                                                                  "behavior": Array [
+                                                                    "bottom",
+                                                                  ],
+                                                                },
+                                                                "hide": Object {
+                                                                  "enabled": false,
+                                                                },
+                                                                "preventOverflow": Object {
+                                                                  "enabled": false,
+                                                                },
+                                                              }
+                                }
+                                popperPlacement="bottom"
+                                preventOpenOnFocus={false}
+                                previousMonthButtonLabel="Previous Month"
+                                readOnly={false}
+                                renderDayContents={[Function]}
+                                selected="2019-03-15"
+                                selectsEnd={true}
+                                shouldCloseOnSelect={true}
+                                showTimeSelect={false}
+                                startDate="2019-03-10"
+                                timeCaption="Time"
+                                timeIntervals={30}
+                                withPortal={false}
+                />
+                <CalendarInput />
+                <input
+                                className="label-input"
+                                id="end-date"
+                                type="text"
+                />
+</div>,
+              <ActionButton
+                clickHandler={undefined}
+                text="Clear Duration"
+/>,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Start Date",
+                "className": "feedback-start-date",
+              },
+              "ref": null,
+              "rendered": "Start Date",
+              "type": "p",
             },
-            "ref": null,
-            "rendered": Object {
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
@@ -730,92 +1442,19 @@ ShallowWrapper {
               ],
               "type": "div",
             },
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "End Date",
-              "className": "feedback-end-date",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "End Date",
+                "className": "feedback-end-date",
+              },
+              "ref": null,
+              "rendered": "End Date",
+              "type": "p",
             },
-            "ref": null,
-            "rendered": "End Date",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <div
-                className="input-group fellow-details-input mb-2"
->
-                <DatePicker
-                                allowSameDay={false}
-                                dateFormat="yyyy-MM-dd"
-                                dateFormatCalendar="LLLL yyyy"
-                                disabled={false}
-                                disabledKeyboardNavigation={true}
-                                dropdownMode="scroll"
-                                endDate="2019-03-15"
-                                id="end-date"
-                                inlineFocusSelectedMonth={false}
-                                maxDate="2019-03-15"
-                                minDate="2019-03-10"
-                                monthsShown={1}
-                                nextMonthButtonLabel="Next month"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onClickOutside={[Function]}
-                                onFocus={[Function]}
-                                onInputClick={[Function]}
-                                onInputError={[Function]}
-                                onKeyDown={[Function]}
-                                onMonthChange={[Function]}
-                                onSelect={[Function]}
-                                onYearChange={[Function]}
-                                popperModifiers={
-                                                Object {
-                                                                "flip": Object {
-                                                                  "behavior": Array [
-                                                                    "bottom",
-                                                                  ],
-                                                                },
-                                                                "hide": Object {
-                                                                  "enabled": false,
-                                                                },
-                                                                "preventOverflow": Object {
-                                                                  "enabled": false,
-                                                                },
-                                                              }
-                                }
-                                popperPlacement="bottom"
-                                preventOpenOnFocus={false}
-                                previousMonthButtonLabel="Previous Month"
-                                readOnly={false}
-                                renderDayContents={[Function]}
-                                selected="2019-03-15"
-                                selectsEnd={true}
-                                shouldCloseOnSelect={true}
-                                showTimeSelect={false}
-                                startDate="2019-03-10"
-                                timeCaption="Time"
-                                timeIntervals={30}
-                                withPortal={false}
-                />
-                <CalendarInput />
-                <input
-                                className="label-input"
-                                id="end-date"
-                                type="text"
-                />
-</div>,
-              "htmlFor": "end-date",
-            },
-            "ref": null,
-            "rendered": Object {
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
@@ -968,983 +1607,6 @@ ShallowWrapper {
                 },
               ],
               "type": "div",
-            },
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "clickHandler": undefined,
-              "text": "Clear Duration",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="feedback-calendar"
->
-          <div
-                    className=""
-          >
-                    <p
-                              className="feedback-start-date"
-                    >
-                              Start Date
-                    </p>
-                    <label
-                              htmlFor="start-date"
-                    >
-                              <div
-                                        className="input-group fellow-details-input mb-2"
-                              >
-                                        <DatePicker
-                                                  allowSameDay={false}
-                                                  dateFormat="yyyy-MM-dd"
-                                                  dateFormatCalendar="LLLL yyyy"
-                                                  disabled={false}
-                                                  disabledKeyboardNavigation={true}
-                                                  dropdownMode="scroll"
-                                                  endDate="2019-03-15"
-                                                  id="start-date"
-                                                  inlineFocusSelectedMonth={false}
-                                                  maxDate="2019-03-15"
-                                                  monthsShown={1}
-                                                  nextMonthButtonLabel="Next month"
-                                                  onBlur={[Function]}
-                                                  onChange={[Function]}
-                                                  onClickOutside={[Function]}
-                                                  onFocus={[Function]}
-                                                  onInputClick={[Function]}
-                                                  onInputError={[Function]}
-                                                  onKeyDown={[Function]}
-                                                  onMonthChange={[Function]}
-                                                  onSelect={[Function]}
-                                                  onYearChange={[Function]}
-                                                  popperModifiers={
-                                                            Object {
-                                                                      "flip": Object {
-                                                                        "behavior": Array [
-                                                                          "bottom",
-                                                                        ],
-                                                                      },
-                                                                      "hide": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                      "preventOverflow": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                    }
-                                                  }
-                                                  popperPlacement="bottom"
-                                                  preventOpenOnFocus={false}
-                                                  previousMonthButtonLabel="Previous Month"
-                                                  readOnly={false}
-                                                  renderDayContents={[Function]}
-                                                  selected="2019-03-10"
-                                                  selectsStart={true}
-                                                  shouldCloseOnSelect={true}
-                                                  showTimeSelect={false}
-                                                  startDate="2019-03-10"
-                                                  timeCaption="Time"
-                                                  timeIntervals={30}
-                                                  withPortal={false}
-                                        />
-                                        <CalendarInput />
-                                        <input
-                                                  className="label-input"
-                                                  id="start-date"
-                                                  type="text"
-                                        />
-                              </div>
-                    </label>
-                    <p
-                              className="feedback-end-date"
-                    >
-                              End Date
-                    </p>
-                    <label
-                              htmlFor="end-date"
-                    >
-                              <div
-                                        className="input-group fellow-details-input mb-2"
-                              >
-                                        <DatePicker
-                                                  allowSameDay={false}
-                                                  dateFormat="yyyy-MM-dd"
-                                                  dateFormatCalendar="LLLL yyyy"
-                                                  disabled={false}
-                                                  disabledKeyboardNavigation={true}
-                                                  dropdownMode="scroll"
-                                                  endDate="2019-03-15"
-                                                  id="end-date"
-                                                  inlineFocusSelectedMonth={false}
-                                                  maxDate="2019-03-15"
-                                                  minDate="2019-03-10"
-                                                  monthsShown={1}
-                                                  nextMonthButtonLabel="Next month"
-                                                  onBlur={[Function]}
-                                                  onChange={[Function]}
-                                                  onClickOutside={[Function]}
-                                                  onFocus={[Function]}
-                                                  onInputClick={[Function]}
-                                                  onInputError={[Function]}
-                                                  onKeyDown={[Function]}
-                                                  onMonthChange={[Function]}
-                                                  onSelect={[Function]}
-                                                  onYearChange={[Function]}
-                                                  popperModifiers={
-                                                            Object {
-                                                                      "flip": Object {
-                                                                        "behavior": Array [
-                                                                          "bottom",
-                                                                        ],
-                                                                      },
-                                                                      "hide": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                      "preventOverflow": Object {
-                                                                        "enabled": false,
-                                                                      },
-                                                                    }
-                                                  }
-                                                  popperPlacement="bottom"
-                                                  preventOpenOnFocus={false}
-                                                  previousMonthButtonLabel="Previous Month"
-                                                  readOnly={false}
-                                                  renderDayContents={[Function]}
-                                                  selected="2019-03-15"
-                                                  selectsEnd={true}
-                                                  shouldCloseOnSelect={true}
-                                                  showTimeSelect={false}
-                                                  startDate="2019-03-10"
-                                                  timeCaption="Time"
-                                                  timeIntervals={30}
-                                                  withPortal={false}
-                                        />
-                                        <CalendarInput />
-                                        <input
-                                                  className="label-input"
-                                                  id="end-date"
-                                                  type="text"
-                                        />
-                              </div>
-                    </label>
-                    <ActionButton
-                              clickHandler={undefined}
-                              text="Clear Duration"
-                    />
-          </div>
-</div>,
-        "className": "feedback-calendar-body",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className=""
->
-            <p
-                        className="feedback-start-date"
-            >
-                        Start Date
-            </p>
-            <label
-                        htmlFor="start-date"
-            >
-                        <div
-                                    className="input-group fellow-details-input mb-2"
-                        >
-                                    <DatePicker
-                                                allowSameDay={false}
-                                                dateFormat="yyyy-MM-dd"
-                                                dateFormatCalendar="LLLL yyyy"
-                                                disabled={false}
-                                                disabledKeyboardNavigation={true}
-                                                dropdownMode="scroll"
-                                                endDate="2019-03-15"
-                                                id="start-date"
-                                                inlineFocusSelectedMonth={false}
-                                                maxDate="2019-03-15"
-                                                monthsShown={1}
-                                                nextMonthButtonLabel="Next month"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                onClickOutside={[Function]}
-                                                onFocus={[Function]}
-                                                onInputClick={[Function]}
-                                                onInputError={[Function]}
-                                                onKeyDown={[Function]}
-                                                onMonthChange={[Function]}
-                                                onSelect={[Function]}
-                                                onYearChange={[Function]}
-                                                popperModifiers={
-                                                            Object {
-                                                                        "flip": Object {
-                                                                          "behavior": Array [
-                                                                            "bottom",
-                                                                          ],
-                                                                        },
-                                                                        "hide": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                        "preventOverflow": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                      }
-                                                }
-                                                popperPlacement="bottom"
-                                                preventOpenOnFocus={false}
-                                                previousMonthButtonLabel="Previous Month"
-                                                readOnly={false}
-                                                renderDayContents={[Function]}
-                                                selected="2019-03-10"
-                                                selectsStart={true}
-                                                shouldCloseOnSelect={true}
-                                                showTimeSelect={false}
-                                                startDate="2019-03-10"
-                                                timeCaption="Time"
-                                                timeIntervals={30}
-                                                withPortal={false}
-                                    />
-                                    <CalendarInput />
-                                    <input
-                                                className="label-input"
-                                                id="start-date"
-                                                type="text"
-                                    />
-                        </div>
-            </label>
-            <p
-                        className="feedback-end-date"
-            >
-                        End Date
-            </p>
-            <label
-                        htmlFor="end-date"
-            >
-                        <div
-                                    className="input-group fellow-details-input mb-2"
-                        >
-                                    <DatePicker
-                                                allowSameDay={false}
-                                                dateFormat="yyyy-MM-dd"
-                                                dateFormatCalendar="LLLL yyyy"
-                                                disabled={false}
-                                                disabledKeyboardNavigation={true}
-                                                dropdownMode="scroll"
-                                                endDate="2019-03-15"
-                                                id="end-date"
-                                                inlineFocusSelectedMonth={false}
-                                                maxDate="2019-03-15"
-                                                minDate="2019-03-10"
-                                                monthsShown={1}
-                                                nextMonthButtonLabel="Next month"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                onClickOutside={[Function]}
-                                                onFocus={[Function]}
-                                                onInputClick={[Function]}
-                                                onInputError={[Function]}
-                                                onKeyDown={[Function]}
-                                                onMonthChange={[Function]}
-                                                onSelect={[Function]}
-                                                onYearChange={[Function]}
-                                                popperModifiers={
-                                                            Object {
-                                                                        "flip": Object {
-                                                                          "behavior": Array [
-                                                                            "bottom",
-                                                                          ],
-                                                                        },
-                                                                        "hide": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                        "preventOverflow": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                      }
-                                                }
-                                                popperPlacement="bottom"
-                                                preventOpenOnFocus={false}
-                                                previousMonthButtonLabel="Previous Month"
-                                                readOnly={false}
-                                                renderDayContents={[Function]}
-                                                selected="2019-03-15"
-                                                selectsEnd={true}
-                                                shouldCloseOnSelect={true}
-                                                showTimeSelect={false}
-                                                startDate="2019-03-10"
-                                                timeCaption="Time"
-                                                timeIntervals={30}
-                                                withPortal={false}
-                                    />
-                                    <CalendarInput />
-                                    <input
-                                                className="label-input"
-                                                id="end-date"
-                                                type="text"
-                                    />
-                        </div>
-            </label>
-            <ActionButton
-                        clickHandler={undefined}
-                        text="Clear Duration"
-            />
-</div>,
-          "className": "feedback-calendar",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p
-                className="feedback-start-date"
->
-                Start Date
-</p>,
-              <label
-                htmlFor="start-date"
->
-                <div
-                                className="input-group fellow-details-input mb-2"
-                >
-                                <DatePicker
-                                                allowSameDay={false}
-                                                dateFormat="yyyy-MM-dd"
-                                                dateFormatCalendar="LLLL yyyy"
-                                                disabled={false}
-                                                disabledKeyboardNavigation={true}
-                                                dropdownMode="scroll"
-                                                endDate="2019-03-15"
-                                                id="start-date"
-                                                inlineFocusSelectedMonth={false}
-                                                maxDate="2019-03-15"
-                                                monthsShown={1}
-                                                nextMonthButtonLabel="Next month"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                onClickOutside={[Function]}
-                                                onFocus={[Function]}
-                                                onInputClick={[Function]}
-                                                onInputError={[Function]}
-                                                onKeyDown={[Function]}
-                                                onMonthChange={[Function]}
-                                                onSelect={[Function]}
-                                                onYearChange={[Function]}
-                                                popperModifiers={
-                                                                Object {
-                                                                                "flip": Object {
-                                                                                  "behavior": Array [
-                                                                                    "bottom",
-                                                                                  ],
-                                                                                },
-                                                                                "hide": Object {
-                                                                                  "enabled": false,
-                                                                                },
-                                                                                "preventOverflow": Object {
-                                                                                  "enabled": false,
-                                                                                },
-                                                                              }
-                                                }
-                                                popperPlacement="bottom"
-                                                preventOpenOnFocus={false}
-                                                previousMonthButtonLabel="Previous Month"
-                                                readOnly={false}
-                                                renderDayContents={[Function]}
-                                                selected="2019-03-10"
-                                                selectsStart={true}
-                                                shouldCloseOnSelect={true}
-                                                showTimeSelect={false}
-                                                startDate="2019-03-10"
-                                                timeCaption="Time"
-                                                timeIntervals={30}
-                                                withPortal={false}
-                                />
-                                <CalendarInput />
-                                <input
-                                                className="label-input"
-                                                id="start-date"
-                                                type="text"
-                                />
-                </div>
-</label>,
-              <p
-                className="feedback-end-date"
->
-                End Date
-</p>,
-              <label
-                htmlFor="end-date"
->
-                <div
-                                className="input-group fellow-details-input mb-2"
-                >
-                                <DatePicker
-                                                allowSameDay={false}
-                                                dateFormat="yyyy-MM-dd"
-                                                dateFormatCalendar="LLLL yyyy"
-                                                disabled={false}
-                                                disabledKeyboardNavigation={true}
-                                                dropdownMode="scroll"
-                                                endDate="2019-03-15"
-                                                id="end-date"
-                                                inlineFocusSelectedMonth={false}
-                                                maxDate="2019-03-15"
-                                                minDate="2019-03-10"
-                                                monthsShown={1}
-                                                nextMonthButtonLabel="Next month"
-                                                onBlur={[Function]}
-                                                onChange={[Function]}
-                                                onClickOutside={[Function]}
-                                                onFocus={[Function]}
-                                                onInputClick={[Function]}
-                                                onInputError={[Function]}
-                                                onKeyDown={[Function]}
-                                                onMonthChange={[Function]}
-                                                onSelect={[Function]}
-                                                onYearChange={[Function]}
-                                                popperModifiers={
-                                                                Object {
-                                                                                "flip": Object {
-                                                                                  "behavior": Array [
-                                                                                    "bottom",
-                                                                                  ],
-                                                                                },
-                                                                                "hide": Object {
-                                                                                  "enabled": false,
-                                                                                },
-                                                                                "preventOverflow": Object {
-                                                                                  "enabled": false,
-                                                                                },
-                                                                              }
-                                                }
-                                                popperPlacement="bottom"
-                                                preventOpenOnFocus={false}
-                                                previousMonthButtonLabel="Previous Month"
-                                                readOnly={false}
-                                                renderDayContents={[Function]}
-                                                selected="2019-03-15"
-                                                selectsEnd={true}
-                                                shouldCloseOnSelect={true}
-                                                showTimeSelect={false}
-                                                startDate="2019-03-10"
-                                                timeCaption="Time"
-                                                timeIntervals={30}
-                                                withPortal={false}
-                                />
-                                <CalendarInput />
-                                <input
-                                                className="label-input"
-                                                id="end-date"
-                                                type="text"
-                                />
-                </div>
-</label>,
-              <ActionButton
-                clickHandler={undefined}
-                text="Clear Duration"
-/>,
-            ],
-            "className": "",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Start Date",
-                "className": "feedback-start-date",
-              },
-              "ref": null,
-              "rendered": "Start Date",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <div
-                  className="input-group fellow-details-input mb-2"
->
-                  <DatePicker
-                                    allowSameDay={false}
-                                    dateFormat="yyyy-MM-dd"
-                                    dateFormatCalendar="LLLL yyyy"
-                                    disabled={false}
-                                    disabledKeyboardNavigation={true}
-                                    dropdownMode="scroll"
-                                    endDate="2019-03-15"
-                                    id="start-date"
-                                    inlineFocusSelectedMonth={false}
-                                    maxDate="2019-03-15"
-                                    monthsShown={1}
-                                    nextMonthButtonLabel="Next month"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onClickOutside={[Function]}
-                                    onFocus={[Function]}
-                                    onInputClick={[Function]}
-                                    onInputError={[Function]}
-                                    onKeyDown={[Function]}
-                                    onMonthChange={[Function]}
-                                    onSelect={[Function]}
-                                    onYearChange={[Function]}
-                                    popperModifiers={
-                                                      Object {
-                                                                        "flip": Object {
-                                                                          "behavior": Array [
-                                                                            "bottom",
-                                                                          ],
-                                                                        },
-                                                                        "hide": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                        "preventOverflow": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                      }
-                                    }
-                                    popperPlacement="bottom"
-                                    preventOpenOnFocus={false}
-                                    previousMonthButtonLabel="Previous Month"
-                                    readOnly={false}
-                                    renderDayContents={[Function]}
-                                    selected="2019-03-10"
-                                    selectsStart={true}
-                                    shouldCloseOnSelect={true}
-                                    showTimeSelect={false}
-                                    startDate="2019-03-10"
-                                    timeCaption="Time"
-                                    timeIntervals={30}
-                                    withPortal={false}
-                  />
-                  <CalendarInput />
-                  <input
-                                    className="label-input"
-                                    id="start-date"
-                                    type="text"
-                  />
-</div>,
-                "htmlFor": "start-date",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <DatePicker
-                      allowSameDay={false}
-                      dateFormat="yyyy-MM-dd"
-                      dateFormatCalendar="LLLL yyyy"
-                      disabled={false}
-                      disabledKeyboardNavigation={true}
-                      dropdownMode="scroll"
-                      endDate="2019-03-15"
-                      id="start-date"
-                      inlineFocusSelectedMonth={false}
-                      maxDate="2019-03-15"
-                      monthsShown={1}
-                      nextMonthButtonLabel="Next month"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onClickOutside={[Function]}
-                      onFocus={[Function]}
-                      onInputClick={[Function]}
-                      onInputError={[Function]}
-                      onKeyDown={[Function]}
-                      onMonthChange={[Function]}
-                      onSelect={[Function]}
-                      onYearChange={[Function]}
-                      popperModifiers={
-                                            Object {
-                                                                  "flip": Object {
-                                                                    "behavior": Array [
-                                                                      "bottom",
-                                                                    ],
-                                                                  },
-                                                                  "hide": Object {
-                                                                    "enabled": false,
-                                                                  },
-                                                                  "preventOverflow": Object {
-                                                                    "enabled": false,
-                                                                  },
-                                                                }
-                      }
-                      popperPlacement="bottom"
-                      preventOpenOnFocus={false}
-                      previousMonthButtonLabel="Previous Month"
-                      readOnly={false}
-                      renderDayContents={[Function]}
-                      selected="2019-03-10"
-                      selectsStart={true}
-                      shouldCloseOnSelect={true}
-                      showTimeSelect={false}
-                      startDate="2019-03-10"
-                      timeCaption="Time"
-                      timeIntervals={30}
-                      withPortal={false}
-/>,
-                    <CalendarInput />,
-                    <input
-                      className="label-input"
-                      id="start-date"
-                      type="text"
-/>,
-                  ],
-                  "className": "input-group fellow-details-input mb-2",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "allowSameDay": false,
-                      "dateFormat": "yyyy-MM-dd",
-                      "dateFormatCalendar": "LLLL yyyy",
-                      "disabled": false,
-                      "disabledKeyboardNavigation": true,
-                      "dropdownMode": "scroll",
-                      "endDate": "2019-03-15",
-                      "id": "start-date",
-                      "inlineFocusSelectedMonth": false,
-                      "maxDate": "2019-03-15",
-                      "monthsShown": 1,
-                      "nextMonthButtonLabel": "Next month",
-                      "onBlur": [Function],
-                      "onChange": [Function],
-                      "onClickOutside": [Function],
-                      "onFocus": [Function],
-                      "onInputClick": [Function],
-                      "onInputError": [Function],
-                      "onKeyDown": [Function],
-                      "onMonthChange": [Function],
-                      "onSelect": [Function],
-                      "onYearChange": [Function],
-                      "popperModifiers": Object {
-                        "flip": Object {
-                          "behavior": Array [
-                            "bottom",
-                          ],
-                        },
-                        "hide": Object {
-                          "enabled": false,
-                        },
-                        "preventOverflow": Object {
-                          "enabled": false,
-                        },
-                      },
-                      "popperPlacement": "bottom",
-                      "preventOpenOnFocus": false,
-                      "previousMonthButtonLabel": "Previous Month",
-                      "readOnly": false,
-                      "renderDayContents": [Function],
-                      "selected": "2019-03-10",
-                      "selectsStart": true,
-                      "shouldCloseOnSelect": true,
-                      "showTimeSelect": false,
-                      "startDate": "2019-03-10",
-                      "timeCaption": "Time",
-                      "timeIntervals": 30,
-                      "withPortal": false,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "label-input",
-                      "id": "start-date",
-                      "type": "text",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "input",
-                  },
-                ],
-                "type": "div",
-              },
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "End Date",
-                "className": "feedback-end-date",
-              },
-              "ref": null,
-              "rendered": "End Date",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <div
-                  className="input-group fellow-details-input mb-2"
->
-                  <DatePicker
-                                    allowSameDay={false}
-                                    dateFormat="yyyy-MM-dd"
-                                    dateFormatCalendar="LLLL yyyy"
-                                    disabled={false}
-                                    disabledKeyboardNavigation={true}
-                                    dropdownMode="scroll"
-                                    endDate="2019-03-15"
-                                    id="end-date"
-                                    inlineFocusSelectedMonth={false}
-                                    maxDate="2019-03-15"
-                                    minDate="2019-03-10"
-                                    monthsShown={1}
-                                    nextMonthButtonLabel="Next month"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onClickOutside={[Function]}
-                                    onFocus={[Function]}
-                                    onInputClick={[Function]}
-                                    onInputError={[Function]}
-                                    onKeyDown={[Function]}
-                                    onMonthChange={[Function]}
-                                    onSelect={[Function]}
-                                    onYearChange={[Function]}
-                                    popperModifiers={
-                                                      Object {
-                                                                        "flip": Object {
-                                                                          "behavior": Array [
-                                                                            "bottom",
-                                                                          ],
-                                                                        },
-                                                                        "hide": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                        "preventOverflow": Object {
-                                                                          "enabled": false,
-                                                                        },
-                                                                      }
-                                    }
-                                    popperPlacement="bottom"
-                                    preventOpenOnFocus={false}
-                                    previousMonthButtonLabel="Previous Month"
-                                    readOnly={false}
-                                    renderDayContents={[Function]}
-                                    selected="2019-03-15"
-                                    selectsEnd={true}
-                                    shouldCloseOnSelect={true}
-                                    showTimeSelect={false}
-                                    startDate="2019-03-10"
-                                    timeCaption="Time"
-                                    timeIntervals={30}
-                                    withPortal={false}
-                  />
-                  <CalendarInput />
-                  <input
-                                    className="label-input"
-                                    id="end-date"
-                                    type="text"
-                  />
-</div>,
-                "htmlFor": "end-date",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <DatePicker
-                      allowSameDay={false}
-                      dateFormat="yyyy-MM-dd"
-                      dateFormatCalendar="LLLL yyyy"
-                      disabled={false}
-                      disabledKeyboardNavigation={true}
-                      dropdownMode="scroll"
-                      endDate="2019-03-15"
-                      id="end-date"
-                      inlineFocusSelectedMonth={false}
-                      maxDate="2019-03-15"
-                      minDate="2019-03-10"
-                      monthsShown={1}
-                      nextMonthButtonLabel="Next month"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onClickOutside={[Function]}
-                      onFocus={[Function]}
-                      onInputClick={[Function]}
-                      onInputError={[Function]}
-                      onKeyDown={[Function]}
-                      onMonthChange={[Function]}
-                      onSelect={[Function]}
-                      onYearChange={[Function]}
-                      popperModifiers={
-                                            Object {
-                                                                  "flip": Object {
-                                                                    "behavior": Array [
-                                                                      "bottom",
-                                                                    ],
-                                                                  },
-                                                                  "hide": Object {
-                                                                    "enabled": false,
-                                                                  },
-                                                                  "preventOverflow": Object {
-                                                                    "enabled": false,
-                                                                  },
-                                                                }
-                      }
-                      popperPlacement="bottom"
-                      preventOpenOnFocus={false}
-                      previousMonthButtonLabel="Previous Month"
-                      readOnly={false}
-                      renderDayContents={[Function]}
-                      selected="2019-03-15"
-                      selectsEnd={true}
-                      shouldCloseOnSelect={true}
-                      showTimeSelect={false}
-                      startDate="2019-03-10"
-                      timeCaption="Time"
-                      timeIntervals={30}
-                      withPortal={false}
-/>,
-                    <CalendarInput />,
-                    <input
-                      className="label-input"
-                      id="end-date"
-                      type="text"
-/>,
-                  ],
-                  "className": "input-group fellow-details-input mb-2",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "allowSameDay": false,
-                      "dateFormat": "yyyy-MM-dd",
-                      "dateFormatCalendar": "LLLL yyyy",
-                      "disabled": false,
-                      "disabledKeyboardNavigation": true,
-                      "dropdownMode": "scroll",
-                      "endDate": "2019-03-15",
-                      "id": "end-date",
-                      "inlineFocusSelectedMonth": false,
-                      "maxDate": "2019-03-15",
-                      "minDate": "2019-03-10",
-                      "monthsShown": 1,
-                      "nextMonthButtonLabel": "Next month",
-                      "onBlur": [Function],
-                      "onChange": [Function],
-                      "onClickOutside": [Function],
-                      "onFocus": [Function],
-                      "onInputClick": [Function],
-                      "onInputError": [Function],
-                      "onKeyDown": [Function],
-                      "onMonthChange": [Function],
-                      "onSelect": [Function],
-                      "onYearChange": [Function],
-                      "popperModifiers": Object {
-                        "flip": Object {
-                          "behavior": Array [
-                            "bottom",
-                          ],
-                        },
-                        "hide": Object {
-                          "enabled": false,
-                        },
-                        "preventOverflow": Object {
-                          "enabled": false,
-                        },
-                      },
-                      "popperPlacement": "bottom",
-                      "preventOpenOnFocus": false,
-                      "previousMonthButtonLabel": "Previous Month",
-                      "readOnly": false,
-                      "renderDayContents": [Function],
-                      "selected": "2019-03-15",
-                      "selectsEnd": true,
-                      "shouldCloseOnSelect": true,
-                      "showTimeSelect": false,
-                      "startDate": "2019-03-10",
-                      "timeCaption": "Time",
-                      "timeIntervals": 30,
-                      "withPortal": false,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "label-input",
-                      "id": "end-date",
-                      "type": "text",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "input",
-                  },
-                ],
-                "type": "div",
-              },
-              "type": "label",
             },
             Object {
               "instance": null,

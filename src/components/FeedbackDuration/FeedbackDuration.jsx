@@ -27,66 +27,62 @@ const FeedbackDuration = ({
       <div className="feedback-calendar">
         <div className="">
           <p className="feedback-start-date">{startDateText}</p>
-          <label htmlFor="start-date">
-            <div className="input-group fellow-details-input mb-2">
-              <DatePicker
-                popperPlacement="bottom"
-                disabledKeyboardNavigation
-                selected={startDate}
-                startDate={startDate}
-                endDate={endDate}
-                maxDate={currentDate}
-                selectsStart
-                popperModifiers={{
-                  flip: {
-                    behavior: ['bottom']
-                  },
-                  preventOverflow: {
-                    enabled: false
-                  },
-                  hide: {
-                    enabled: false
-                  }
-                }}
-                onChange={handleStartDateChange}
-                dateFormat="yyyy-MM-dd"
-                id="start-date"
-              />
-              <CalendarInput />
-              <input type="text" id="start-date" className="label-input" />
-            </div>
-          </label>
+          <div className="input-group fellow-details-input mb-2">
+            <DatePicker
+              popperPlacement="bottom"
+              disabledKeyboardNavigation
+              selected={startDate}
+              startDate={startDate}
+              endDate={endDate}
+              maxDate={currentDate}
+              selectsStart
+              popperModifiers={{
+                flip: {
+                  behavior: ['bottom']
+                },
+                preventOverflow: {
+                  enabled: false
+                },
+                hide: {
+                  enabled: false
+                }
+              }}
+              onChange={handleStartDateChange}
+              dateFormat="yyyy-MM-dd"
+              id="start-date"
+            />
+            <CalendarInput />
+            <input type="text" id="start-date" className="label-input" />
+          </div>
           <p className="feedback-end-date">{endDateText}</p>
-          <label htmlFor="end-date">
-            <div className="input-group fellow-details-input mb-2">
-              <DatePicker
-                popperPlacement="bottom"
-                selected={endDate}
-                startDate={startDate}
-                disabledKeyboardNavigation
-                maxDate={currentDate}
-                endDate={endDate}
-                minDate={startDate}
-                selectsEnd
-                popperModifiers={{
-                  flip: {
-                    behavior: ['bottom']
-                  },
-                  preventOverflow: {
-                    enabled: false
-                  },
-                  hide: {
-                    enabled: false
-                  }
-                }}
-                onChange={handleEndDateChange}
-                dateFormat="yyyy-MM-dd"
-                id="end-date"
-              />
-              <CalendarInput />
-              <input type="text" id="end-date" className="label-input" />
-            </div>
-          </label>
+          <div className="input-group fellow-details-input mb-2">
+            <DatePicker
+              popperPlacement="bottom"
+              selected={endDate}
+              startDate={startDate}
+              disabledKeyboardNavigation
+              maxDate={currentDate}
+              endDate={endDate}
+              minDate={startDate}
+              selectsEnd
+              popperModifiers={{
+                flip: {
+                  behavior: ['bottom']
+                },
+                preventOverflow: {
+                  enabled: false
+                },
+                hide: {
+                  enabled: false
+                }
+              }}
+              onChange={handleEndDateChange}
+              dateFormat="yyyy-MM-dd"
+              id="end-date"
+            />
+            <CalendarInput />
+            <input type="text" id="end-date" className="label-input" />
+          </div>
           <ActionButton clickHandler={clearDuration} text="Clear Duration" />
         </div>
       </div>
