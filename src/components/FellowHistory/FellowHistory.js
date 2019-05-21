@@ -13,6 +13,7 @@ import DevPulseRow from '../DevPulseTable/DevPulseRow/DevPulseRow';
 import getFellowData from '../../redux/actionCreators/fellowProfileDataActions';
 import LmsTable from '../LmsTable';
 import { formatRollingAveragePerAttribute } from '../../utils/pulse';
+import lmsResult from '../../utils/lmsOverall';
 
 export class FellowHistory extends Component {
   constructor(props) {
@@ -67,9 +68,7 @@ export class FellowHistory extends Component {
       {
         checkedBydefault: showLmsTable,
         title: 'LMS',
-        ratings: fellow.satisfied
-          ? `${fellow.satisfied}/${fellow.total}`
-          : `0/${fellow.total}`
+        ratings: lmsResult(fellow)
       }
     ];
     return fellowsListDisplayData;
@@ -105,7 +104,6 @@ export class FellowHistory extends Component {
    */
   renderCards = fellow => {
     if (!fellow || !fellow.name) return <div />;
-
     return (
       <React.Fragment>
         <div className="col-md-6 col-xl-3 mb-3">
@@ -113,7 +111,7 @@ export class FellowHistory extends Component {
             user={{
               name: `${fellow.name}`,
               picture: fellow.picture,
-              detail: fellow.apprenticeshipTeam
+              detail: fellow.apprenticeshipTeam ? fellow.apprenticeshipTeam : ''
             }}
           />
         </div>
