@@ -170,6 +170,7 @@ export class Header extends Component {
    * @returns
    */
   renderNotificationModal = (ordered, show, unreadnotifications) => {
+    const { loading } = this.props;
     if (show && !unreadnotifications.length) {
       return (
         <Modal show={show} handleClose={this.hideModal}>
@@ -192,7 +193,7 @@ export class Header extends Component {
                 aria-hidden="true"
                 onClick={() => this.clearNotification('all')}
               >
-                Clear All{' '}
+                {loading ? 'Loading' : 'Clear All'}
               </span>
             </div>
             {ordered[key].map(notification => (
@@ -251,6 +252,7 @@ export class Header extends Component {
   );
 
   displayManagerNotification = notification => {
+    const { loading } = this.props;
     if (!notification) {
       return (
         <div className="modal-text text-sizing">
@@ -269,7 +271,7 @@ export class Header extends Component {
               aria-hidden="true"
               onClick={() => this.clearNotification(notification.id)}
             >
-              Clear All{' '}
+              {loading ? 'Loading' : 'Clear All'}
             </span>
           </div>
         </div>
@@ -417,9 +419,11 @@ Header.propTypes = {
   markNotificationsAsRead: PropTypes.func.isRequired,
   notifications: PropTypes.instanceOf(Array).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
-  readnotifications: PropTypes.shape({}).isRequired
+  readnotifications: PropTypes.shape({}).isRequired,
+  loading: PropTypes.bool.isRequired
 };
 const mapStateToProps = state => ({
+  loading: state.readnotification.loading,
   notifications: state.notification.notification,
   unreadnotifications: state.unreadnotification.unreadnotification,
   readnotifications: state.readnotification.readnotification
