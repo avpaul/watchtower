@@ -9,12 +9,14 @@ import FellowHistoryContainer from '../../components/FellowHistory';
 import MapLfTtlSummaryCard from '../../components/MapLfTtlSummaryCard';
 import Title from '../../components/Title';
 import TranslatorTable from '../../utils/TranslatorTable';
+import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
+import arrayOfObjectsSorter from '../../utils/sortArray';
 
 /**
  * Class DeveloperDashboard - this component renders the DeveloperDashboard component
  * @extends Component
  */
-class DeveloperDashboard extends Component {
+export class DeveloperDashboard extends Component {
   /**
    * Creates the DeveloperDashboard Component and initializes state
    * @constructor
@@ -48,7 +50,18 @@ class DeveloperDashboard extends Component {
     const { getManagerFellowsSummary, user } = this.props;
     getManagerFellowsSummary(user.roles, user.email)
       .then(data => this.updateFellowsState(data))
-      .catch(() => {});
+      .catch(() => { });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { fellowSummaryDetails } = this.state;
+    const { paginationWrapper } = this.props;
+    if (prevState.fellowSummaryDetails !== fellowSummaryDetails) {
+      const sortedFellowSummaryDetails = fellowSummaryDetails.sort(
+        arrayOfObjectsSorter('name')
+      );
+      paginationWrapper.updateData(sortedFellowSummaryDetails, { page: 1 });
+    }
   }
 
   /**
@@ -164,7 +177,11 @@ class DeveloperDashboard extends Component {
           case 'PIP':
             return fellow.is_on_pip;
           case 'On Track':
-            return fellow.overall_status === 'onTrack' && isManagersFellow;
+            return (
+              !fellow.is_on_pip &&
+              fellow.overall_status === 'onTrack' &&
+              isManagersFellow
+            );
           case 'Off Track':
             return (
               !fellow.is_on_pip &&
@@ -240,13 +257,13 @@ class DeveloperDashboard extends Component {
     const filterFellowsbyStatus = (allFellows, status) =>
       allFellows
         ? allFellows.filter(fellow => {
-            switch (status) {
-              case '':
-                return true;
-              default:
-                return fellow ? fellow.overall_status === status : false;
-            }
-          })
+          switch (status) {
+            case '':
+              return true;
+            default:
+              return fellow ? fellow.overall_status === status : false;
+          }
+        })
         : [];
     const status = TranslatorTable[isTicked.status];
     this.setState({ managerCardId: filterKey });
@@ -287,9 +304,10 @@ class DeveloperDashboard extends Component {
    * on '/developers/fellows' route
    */
   renderFellowsDashboard = () => {
-    const { fellowSummaryDetails, managerCardId } = this.state;
-    const { user, loading } = this.props;
+    const { managerCardId } = this.state;
+    const { user, loading, paginationWrapper } = this.props;
     const isManager = user.roles.WATCH_TOWER_EM || user.roles.WATCH_TOWER_SL;
+
     return (
       <div className="page-content container-fluid">
         <Title
@@ -304,14 +322,17 @@ class DeveloperDashboard extends Component {
             loading={loading}
           />
         ) : (
-          this.renderFilterCards('project')
-        )}
+            this.renderFilterCards('project')
+          )}
         {this.renderFilterCards('status')}
         <div>{this.renderResultCount()}</div>
         <MapFellowsSummaryCard
           handleClick={this.handleCardClick}
-          fellowsSummaryCardDetails={fellowSummaryDetails}
+          fellowsSummaryCardDetails={paginationWrapper.state.paginatedData}
         />
+        <div className="col-12 mb-4">
+          {paginationWrapper.renderPagination()}
+        </div>
       </div>
     );
   };
@@ -375,7 +396,12 @@ DeveloperDashboard.propTypes = {
   getManagerFellowsSummary: PropTypes.func.isRequired,
   user: PropTypes.shape({}).isRequired,
   role: PropTypes.string.isRequired,
-  history: PropTypes.shape({}).isRequired
+  history: PropTypes.shape({}).isRequired,
+  paginationWrapper: PropTypes.shape().isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
-export default DeveloperDashboard;
+export const PaginatedDeveloperDashboard = props => (
+  <PaginationFrontendWrapper component={<DeveloperDashboard {...props} />} />
+);
+export default PaginatedDeveloperDashboard;

@@ -3,6 +3,24 @@ import PropTypes from 'prop-types';
 import './FellowsSummaryCard.css';
 import defaultPicture from '../../static/profile.svg';
 
+const renderPIPStatus = () => (
+  <React.Fragment>
+    <span className="color-on-pip">PIP </span>
+    <span>& </span>
+  </React.Fragment>
+);
+
+const getStatusColor = fellowStatus => {
+  switch (fellowStatus) {
+    case 'On-Track':
+      return 'color-on-track';
+    case 'Off-Track':
+      return 'color-off-track';
+    default:
+      return '';
+  }
+};
+
 const FellowsSummaryCard = ({
   name,
   product,
@@ -16,22 +34,8 @@ const FellowsSummaryCard = ({
   onClick,
   id
 }) => {
-  const getStatusColor = fellowStatus => {
-    let style;
-    switch (fellowStatus) {
-      case 'PIP':
-        style = 'color-on-pip';
-        break;
-      case 'On-Track':
-        style = 'color-on-track';
-        break;
-      case 'Off-Track':
-        style = 'color-off-track';
-        break;
-      default:
-    }
-    return style;
-  };
+  const fellowStatus = status.split('&');
+  const fellowOverallStatus = fellowStatus[1] || fellowStatus[0];
   return (
     <div
       className="fellow-summary-card"
@@ -78,11 +82,11 @@ const FellowsSummaryCard = ({
         </div>
         <div className="float-right right">
           <p className="status-header offset-margin-bottom">Status</p>
-          <p
-            className={`status-description 
-                ${getStatusColor(status)}`}
-          >
-            {status}
+          <p className="status-description">
+          {fellowStatus.length === 2 ? renderPIPStatus() : null}
+          <span className={`${getStatusColor(fellowOverallStatus)}`}>
+            {fellowOverallStatus}
+          </span>
           </p>
           <p className="ending-header offset-margin-bottom">Ending</p>
           <p className="ending-description">{ending}</p>

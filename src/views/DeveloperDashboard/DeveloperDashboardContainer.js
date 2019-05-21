@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import DeveloperDashboard from './DeveloperDashboard';
+import ConnectedDeveloperDashboard from './DeveloperDashboard';
 import getManagerFellowsSummary from '../../redux/actionCreators/managerFellowsSummaryActions';
 
 export const mapStateToProps = ({ managerFellowsSummary }) => ({
@@ -12,4 +12,4 @@ export const mapStateToProps = ({ managerFellowsSummary }) => ({
 export default connect(
   mapStateToProps,
   { getManagerFellowsSummary }
-)(DeveloperDashboard);
+)(ConnectedDeveloperDashboard);

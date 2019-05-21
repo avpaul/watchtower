@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import TranslatorTable from '../../utils/TranslatorTable';
 import FellowsSummaryCard from '../FellowsSummaryCard';
-import arrayOfObjectsSorter from '../../utils/sortArray';
 
 const getDateKey = {
   start: {
@@ -28,14 +27,13 @@ const refineDate = (fellow, dateKey) => {
   return !date ? 'No date' : moment(date).format('D-MMM-YYYY');
 };
 
-const resolveStatus = fellow => {
-  /**
-   ** Renders the fellow's current progress status
-   * @param fellow Fellow's details as an object
-   */
-  if (fellow.is_on_pip) return 'PIP';
-  return TranslatorTable[fellow.overall_status] || 'N/A';
-};
+/**
+ ** Renders the fellow's current progress status
+ * @param fellow Fellow's details as an object
+ */
+const resolveStatus = fellow =>
+  `${fellow.is_on_pip ? 'PIP&' : ''}${TranslatorTable[fellow.overall_status] ||
+    'N/A'}`;
 
 const renderFellow = (fellow, fellowIndex, handleClick) => {
   /**
@@ -70,10 +68,7 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
   );
 };
 
-const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
-  fellowsSummaryCardDetails.sort(arrayOfObjectsSorter('name'));
-
-  return (
+const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => (
     <div className="ops-dashboard__fellows-summary">
       <div className="row m-0">
         {fellowsSummaryCardDetails.map((fellow, index) =>
@@ -82,7 +77,6 @@ const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => {
       </div>
     </div>
   );
-};
 
 MapFellowsSummary.propTypes = {
   fellowsSummaryCardDetails: PropTypes.arrayOf(PropTypes.shape({})).isRequired,

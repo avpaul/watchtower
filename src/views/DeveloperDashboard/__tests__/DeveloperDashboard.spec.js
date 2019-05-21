@@ -1,13 +1,14 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import DeveloperDashboard from '../DeveloperDashboard';
+import { DeveloperDashboard, PaginatedDeveloperDashboard } from '../DeveloperDashboard';
 import FellowSummaryData from '../../../__mocks__/fellowSummary.json';
 import SimulationLeadData from '../../../__mocks__/simulationsLeadLf.json';
 import EngineeringManagerDeveloperSummary from '../../../__mocks__/emDeveloperSummery.json';
 import FilterButton from '../../../components/Buttons/Button';
 import FellowFilterCard from '../../../components/FellowFilterCard';
 import MapFellowsFilterCard from '../../../components/MapFellowsFilterCard';
+import mockPaginationWrapper from '../../../components/Pagination/mockPaginationWrapper';
 import FellowsCount from '../../../components/FellowsCount';
 
 const getManagerDataByRole = loggedInRole => {
@@ -31,7 +32,7 @@ const getManagerDataByRole = loggedInRole => {
  * @param urlPath The test url used to render the components accordingly.
  * @return { developerDashboardWrapper, props }
  */
-const setup = (loggedInRole, urlPath = '/developers') => {
+const setup = (loggedInRole, urlPath = '/developers', mountComponent = false) => {
   const managerDataForTest = getManagerDataByRole(loggedInRole);
 
   const props = {
@@ -46,19 +47,35 @@ const setup = (loggedInRole, urlPath = '/developers') => {
         error: false,
         managerFellowsSummary: managerDataForTest
       })
-    )
+    ),
+    paginationWrapper: {
+      state: {
+        paginatedData: {}
+      },
+      renderPagination: () => { },
+      updateData: () => { }
+    },
   };
 
-  const developerDashboardWrapper = shallow(<DeveloperDashboard {...props} />);
+  const developerDashboardWrapper = mountComponent
+    ? shallow(
+      <PaginatedDeveloperDashboard  {...props} />
+    )
+    : shallow(<DeveloperDashboard {...props} paginationWrapper={mockPaginationWrapper} />);
 
-  const developerDashboardMountWrapper = shallow(
+  const developerDashboardMountWrapper = mountComponent ? mount(
+    <MemoryRouter initialEntries={[urlPath]}>
+      {developerDashboardWrapper
+        .prop('component')}
+    </MemoryRouter>
+  ) : shallow(
     <MemoryRouter initialEntries={[urlPath]}>
       {developerDashboardWrapper
         .find('Route[path="/developers"]')
         .prop('render')()}
     </MemoryRouter>
   );
-  developerDashboardWrapper.setState({ fellowSummaryDetails: [] });
+
   return { developerDashboardWrapper, props, developerDashboardMountWrapper };
 };
 
@@ -135,6 +152,11 @@ describe('Developers dashboard test', () => {
   it('should render developers dashboard without crashing', () => {
     const { developerDashboardWrapper } = setup('WATCH_TOWER_SL');
     expect(developerDashboardWrapper).toMatchSnapshot();
+  });
+
+  it('should render paginated developers dashboard without crashing', () => {
+    const { developerDashboardWrapper } = setup('WATCH_TOWER_LF', undefined, true);
+    expect(developerDashboardWrapper).toMatchSnapshot()
   });
 
   it('should call the getManagerFellowsAction when developers dashboard mounts', () => {
