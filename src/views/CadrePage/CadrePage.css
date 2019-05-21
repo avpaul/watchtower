@@ -1,62 +1,60 @@
 .cadre-welcome__name {
-    height: 31px;
-    color: #344c5a;
-    font-family: 'DIN Pro';
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: -0.69px;
-    line-height: 31px;
+  height: 31px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.69px;
+  line-height: 31px;
 }
 
 .illustration {
-    height: 246px;
-    width: 557px;
+  height: 246px;
+  width: 557px;
 }
 
 .cadre-welcome__text {
-    height: 27px;
-    width: 250px;
-    color: rgba(52, 76, 90, 0.43);
-    /* font-family: 'Apple Color Emoji'; */
-    font-family: 'DIN Pro';
-    font-size: 17px;
-    /* letter-spacing: -0.6px; */
-    line-height: 27px;
+  height: 27px;
+  width: 250px;
+  color: rgba(52, 76, 90, 0.43);
+  font-family: 'DIN Pro';
+  font-size: 17px;
+  line-height: 27px;
 }
 
 .cadre-welcome__message {
-    height: 66px;
-    width: 390px;
-    color: #344c5a;
-    font-family: 'DIN Pro';
-    font-size: 17px;
-    letter-spacing: -0.6px;
-    line-height: 22px;
-    text-align: center;
+  height: 66px;
+  width: 390px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 17px;
+  letter-spacing: -0.6px;
+  line-height: 22px;
+  text-align: center;
 }
 
 .cadrerectangle {
-    height: 39px;
-    width: 177px;
-    border-radius: 5px;
-    background-color: #10a36d;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  height: 39px;
+  width: 177px;
+  border-radius: 5px;
+  background-color: #10a36d;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
 }
 
 .cader-link {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .cader-link:hover {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .cadre-engineer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 155px;
 }
