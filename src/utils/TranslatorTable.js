@@ -18,6 +18,7 @@ const TranslatorTable = {
   'All Products': '',
   'All Fellows': '',
   'All TTLs': '',
+  'All Feedback': '',
   'All LFs': '',
   'On Track': 'onTrack',
   'Off Track': 'offTrack',

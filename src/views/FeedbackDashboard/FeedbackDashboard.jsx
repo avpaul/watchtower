@@ -22,7 +22,7 @@ export class FeedbackDashboard extends Component {
       type: 'Pre-PIP & PIP',
       criteria: 'All Criteria',
       project: 'All Projects',
-      manager_email: 'All TTLs'
+      manager_email: 'All Feedback'
     };
 
     this.state = {
@@ -60,19 +60,25 @@ export class FeedbackDashboard extends Component {
             sn: key
           }))
         );
+        const { feedbackArray } = this.state;
+        this.setDefaultStartDate(feedbackArray);
       }
     });
   }
 
   updateInitialState = feedback => {
     const { paginationWrapper } = this.props;
+    const { feedbackArray } = this.state;
     this.setState(
       {
         feedbackArray: feedback,
         filteredFeedbackData: feedback,
         cachedDurationData: feedback
       },
-      () => paginationWrapper.updateData(feedback)
+      () => {
+        paginationWrapper.updateData(feedback);
+        this.setDefaultStartDate(feedbackArray);
+      }
     );
   };
 
@@ -89,11 +95,10 @@ export class FeedbackDashboard extends Component {
   };
 
   handleStartDateChange = date => {
-    const { endDate } = this.state;
     this.setState(
       state => ({
         startDate: date,
-        endDate: date > endDate ? this.defaultDate() : state.endDate
+        endDate: date > state.endDate ? this.defaultDate() : state.endDate
       }),
       this.updateFeedbackData
     );
@@ -109,7 +114,7 @@ export class FeedbackDashboard extends Component {
    */
   clearDuration = () => {
     const { paginationWrapper } = this.props;
-    const { cachedDurationData } = this.state;
+    const { cachedDurationData, feedbackArray } = this.state;
     this.setState(
       {
         startDate: this.defaultDate(),
@@ -118,6 +123,7 @@ export class FeedbackDashboard extends Component {
       },
       () => paginationWrapper.updateData(cachedDurationData)
     );
+    return this.setDefaultStartDate(feedbackArray);
   };
 
   /**
@@ -284,7 +290,7 @@ export class FeedbackDashboard extends Component {
           ? this.renderFilterCards('All LFs', 'manager_email')
           : ''}
         {isEngineeringManager
-          ? this.renderFilterCards('All TTLs', 'manager_email')
+          ? this.renderFilterCards('All Feedback', 'manager_email')
           : ''}
         {isManager ? this.renderFilterCards('All Projects', 'project') : ''}
         {isOperationsTeam ? this.renderFilterCards('All Levels', 'level') : ''}
@@ -310,6 +316,22 @@ export class FeedbackDashboard extends Component {
       </div>
     </div>
   );
+  /**
+   * @method setDefaultStartDate
+   * @description - it sets the default start date in the date picker to the oldest date in the array.
+   */
+
+  setDefaultStartDate = feedbackData => {
+    if (feedbackData.length !== 0) {
+      const oldestDate = feedbackData.sort((a, b) => {
+        const date1 = new Date(a.start_date);
+        const date2 = new Date(b.start_date);
+        return date1 - date2;
+      });
+      return this.setState({ startDate: new Date(oldestDate[0].start_date) });
+    }
+    return false;
+  };
 
   filterFeedback = (isTicked, feedbackArray) => {
     const { role } = this.props;
@@ -337,27 +359,34 @@ export class FeedbackDashboard extends Component {
           ? TranslatorTable[isTicked[filterKey]]
           : processIsTick(filterKey)
       );
+    const filterUsingDatePicker = feedbackUnit => {
+      const { startDate, endDate } = this.state;
+      const date = new Date(feedbackUnit.start_date);
+      return date >= startDate && date <= endDate;
+    };
 
     return feedbackArray.filter(
       feedbackUnit =>
         filterUnit(feedbackUnit, switchFilterByRolesTable[role]) &&
         filterUnit(feedbackUnit, 'criteria') &&
-        filterUnit(feedbackUnit, 'type')
+        filterUnit(feedbackUnit, 'type') &&
+        filterUsingDatePicker(feedbackUnit)
     );
   };
 
-  handleFilterCardClick = event => {
+  handleFilterCardClick = async event => {
     const { isTicked, feedbackArray } = this.state;
     const { paginationWrapper } = this.props;
     const updatedIsTicked = {
       ...isTicked,
       [event.currentTarget.attributes[2].value]: event.currentTarget.id
     };
+    console.log(updatedIsTicked, 'updatedIsTicked>>>>');
     const filteredFeedbackArray = feedbackArray.filter(
       obj =>
-        updatedIsTicked.manager_email === JSON.parse(obj.manager).name ||
+        updatedIsTicked.manager_email === obj.manager_email ||
         updatedIsTicked.project === obj.project ||
-        updatedIsTicked.level === updatedIsTicked.level.split(' ')[0]
+        updatedIsTicked.level === obj.level.split(' ')[0]
     );
     const filteredFeedbackData = this.filterFeedback(
       updatedIsTicked,

@@ -229,7 +229,7 @@ class PipActivationForm extends Component {
 
 PipActivationForm.propTypes = {
   fellow: PropTypes.shape([]).isRequired,
-  activatePip: PropTypes.func.isRequired,
-  averageRatings: PropTypes.shape({}).isRequired
+  averageRatings: PropTypes.shape({}).isRequired,
+  activatePip: PropTypes.func.isRequired
 };
 export default PipActivationForm;
