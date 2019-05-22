@@ -12,6 +12,7 @@ describe('tests the LmsRow', () => {
         due_date: '2018-12-14T13:59:00Z',
         submitted_at: '2018-12-14T13:59:00Z',
         graded_at: '2018-12-14T13:59:00Z',
+        resubmitted: 'True',
         score: 2
       }
     };

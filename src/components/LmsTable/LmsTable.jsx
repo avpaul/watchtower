@@ -21,6 +21,7 @@ const LmsTable = ({ lmsSubmissions, loading, fellow }) => {
     'Due Date',
     'Submission Date',
     'Review Date',
+    'Resubmitted',
     'Score'
   ];
   return (
