@@ -116,10 +116,13 @@ ShallowWrapper {
                               Status
                     </p>
                     <p
-                              className="status-description 
-                                    color-off-track"
+                              className="status-description"
                     >
-                              Off-Track
+                              <span
+                                        className="color-off-track"
+                              >
+                                        Off-Track
+                              </span>
                     </p>
                     <p
                               className="ending-header offset-margin-bottom"
@@ -390,10 +393,13 @@ ShallowWrapper {
                             Status
               </p>
               <p
-                            className="status-description 
-                              color-off-track"
+                            className="status-description"
               >
-                            Off-Track
+                            <span
+                                          className="color-off-track"
+                            >
+                                          Off-Track
+                            </span>
               </p>
               <p
                             className="ending-header offset-margin-bottom"
@@ -549,10 +555,13 @@ ShallowWrapper {
                   Status
 </p>,
                 <p
-                  className="status-description 
-                color-off-track"
+                  className="status-description"
 >
-                  Off-Track
+                  <span
+                                    className="color-off-track"
+                  >
+                                    Off-Track
+                  </span>
 </p>,
                 <p
                   className="ending-header offset-margin-bottom"
@@ -596,12 +605,32 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Off-Track",
-                  "className": "status-description 
-                color-off-track",
+                  "children": Array [
+                    null,
+                    <span
+                      className="color-off-track"
+>
+                      Off-Track
+</span>,
+                  ],
+                  "className": "status-description",
                 },
                 "ref": null,
-                "rendered": "Off-Track",
+                "rendered": Array [
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Off-Track",
+                      "className": "color-off-track",
+                    },
+                    "ref": null,
+                    "rendered": "Off-Track",
+                    "type": "span",
+                  },
+                ],
                 "type": "p",
               },
               Object {
@@ -753,10 +782,13 @@ ShallowWrapper {
                                     Status
                         </p>
                         <p
-                                    className="status-description 
-                                        color-off-track"
+                                    className="status-description"
                         >
-                                    Off-Track
+                                    <span
+                                                className="color-off-track"
+                                    >
+                                                Off-Track
+                                    </span>
                         </p>
                         <p
                                     className="ending-header offset-margin-bottom"
@@ -1027,10 +1059,13 @@ ShallowWrapper {
                                 Status
                 </p>
                 <p
-                                className="status-description 
-                                color-off-track"
+                                className="status-description"
                 >
-                                Off-Track
+                                <span
+                                                className="color-off-track"
+                                >
+                                                Off-Track
+                                </span>
                 </p>
                 <p
                                 className="ending-header offset-margin-bottom"
@@ -1186,10 +1221,13 @@ ShallowWrapper {
                     Status
 </p>,
                   <p
-                    className="status-description 
-                color-off-track"
+                    className="status-description"
 >
-                    Off-Track
+                    <span
+                                        className="color-off-track"
+                    >
+                                        Off-Track
+                    </span>
 </p>,
                   <p
                     className="ending-header offset-margin-bottom"
@@ -1233,12 +1271,32 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Off-Track",
-                    "className": "status-description 
-                color-off-track",
+                    "children": Array [
+                      null,
+                      <span
+                        className="color-off-track"
+>
+                        Off-Track
+</span>,
+                    ],
+                    "className": "status-description",
                   },
                   "ref": null,
-                  "rendered": "Off-Track",
+                  "rendered": Array [
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Off-Track",
+                        "className": "color-off-track",
+                      },
+                      "ref": null,
+                      "rendered": "Off-Track",
+                      "type": "span",
+                    },
+                  ],
                   "type": "p",
                 },
                 Object {
@@ -1435,10 +1493,13 @@ ShallowWrapper {
                               Status
                     </p>
                     <p
-                              className="status-description 
-                                    color-on-track"
+                              className="status-description"
                     >
-                              On-Track
+                              <span
+                                        className="color-on-track"
+                              >
+                                        On-Track
+                              </span>
                     </p>
                     <p
                               className="ending-header offset-margin-bottom"
@@ -1709,10 +1770,13 @@ ShallowWrapper {
                             Status
               </p>
               <p
-                            className="status-description 
-                              color-on-track"
+                            className="status-description"
               >
-                            On-Track
+                            <span
+                                          className="color-on-track"
+                            >
+                                          On-Track
+                            </span>
               </p>
               <p
                             className="ending-header offset-margin-bottom"
@@ -1868,10 +1932,13 @@ ShallowWrapper {
                   Status
 </p>,
                 <p
-                  className="status-description 
-                color-on-track"
+                  className="status-description"
 >
-                  On-Track
+                  <span
+                                    className="color-on-track"
+                  >
+                                    On-Track
+                  </span>
 </p>,
                 <p
                   className="ending-header offset-margin-bottom"
@@ -1915,12 +1982,32 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "On-Track",
-                  "className": "status-description 
-                color-on-track",
+                  "children": Array [
+                    null,
+                    <span
+                      className="color-on-track"
+>
+                      On-Track
+</span>,
+                  ],
+                  "className": "status-description",
                 },
                 "ref": null,
-                "rendered": "On-Track",
+                "rendered": Array [
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "On-Track",
+                      "className": "color-on-track",
+                    },
+                    "ref": null,
+                    "rendered": "On-Track",
+                    "type": "span",
+                  },
+                ],
                 "type": "p",
               },
               Object {
@@ -2072,10 +2159,13 @@ ShallowWrapper {
                                     Status
                         </p>
                         <p
-                                    className="status-description 
-                                        color-on-track"
+                                    className="status-description"
                         >
-                                    On-Track
+                                    <span
+                                                className="color-on-track"
+                                    >
+                                                On-Track
+                                    </span>
                         </p>
                         <p
                                     className="ending-header offset-margin-bottom"
@@ -2346,10 +2436,13 @@ ShallowWrapper {
                                 Status
                 </p>
                 <p
-                                className="status-description 
-                                color-on-track"
+                                className="status-description"
                 >
-                                On-Track
+                                <span
+                                                className="color-on-track"
+                                >
+                                                On-Track
+                                </span>
                 </p>
                 <p
                                 className="ending-header offset-margin-bottom"
@@ -2505,10 +2598,13 @@ ShallowWrapper {
                     Status
 </p>,
                   <p
-                    className="status-description 
-                color-on-track"
+                    className="status-description"
 >
-                    On-Track
+                    <span
+                                        className="color-on-track"
+                    >
+                                        On-Track
+                    </span>
 </p>,
                   <p
                     className="ending-header offset-margin-bottom"
@@ -2552,12 +2648,32 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "On-Track",
-                    "className": "status-description 
-                color-on-track",
+                    "children": Array [
+                      null,
+                      <span
+                        className="color-on-track"
+>
+                        On-Track
+</span>,
+                    ],
+                    "className": "status-description",
                   },
                   "ref": null,
-                  "rendered": "On-Track",
+                  "rendered": Array [
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "On-Track",
+                        "className": "color-on-track",
+                      },
+                      "ref": null,
+                      "rendered": "On-Track",
+                      "type": "span",
+                    },
+                  ],
                   "type": "p",
                 },
                 Object {
@@ -2754,10 +2870,13 @@ ShallowWrapper {
                               Status
                     </p>
                     <p
-                              className="status-description 
-                                    color-on-pip"
+                              className="status-description"
                     >
-                              PIP
+                              <span
+                                        className=""
+                              >
+                                        PIP
+                              </span>
                     </p>
                     <p
                               className="ending-header offset-margin-bottom"
@@ -3028,10 +3147,13 @@ ShallowWrapper {
                             Status
               </p>
               <p
-                            className="status-description 
-                              color-on-pip"
+                            className="status-description"
               >
-                            PIP
+                            <span
+                                          className=""
+                            >
+                                          PIP
+                            </span>
               </p>
               <p
                             className="ending-header offset-margin-bottom"
@@ -3187,10 +3309,13 @@ ShallowWrapper {
                   Status
 </p>,
                 <p
-                  className="status-description 
-                color-on-pip"
+                  className="status-description"
 >
-                  PIP
+                  <span
+                                    className=""
+                  >
+                                    PIP
+                  </span>
 </p>,
                 <p
                   className="ending-header offset-margin-bottom"
@@ -3234,12 +3359,32 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "PIP",
-                  "className": "status-description 
-                color-on-pip",
+                  "children": Array [
+                    null,
+                    <span
+                      className=""
+>
+                      PIP
+</span>,
+                  ],
+                  "className": "status-description",
                 },
                 "ref": null,
-                "rendered": "PIP",
+                "rendered": Array [
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "PIP",
+                      "className": "",
+                    },
+                    "ref": null,
+                    "rendered": "PIP",
+                    "type": "span",
+                  },
+                ],
                 "type": "p",
               },
               Object {
@@ -3391,10 +3536,13 @@ ShallowWrapper {
                                     Status
                         </p>
                         <p
-                                    className="status-description 
-                                        color-on-pip"
+                                    className="status-description"
                         >
-                                    PIP
+                                    <span
+                                                className=""
+                                    >
+                                                PIP
+                                    </span>
                         </p>
                         <p
                                     className="ending-header offset-margin-bottom"
@@ -3665,10 +3813,13 @@ ShallowWrapper {
                                 Status
                 </p>
                 <p
-                                className="status-description 
-                                color-on-pip"
+                                className="status-description"
                 >
-                                PIP
+                                <span
+                                                className=""
+                                >
+                                                PIP
+                                </span>
                 </p>
                 <p
                                 className="ending-header offset-margin-bottom"
@@ -3824,10 +3975,13 @@ ShallowWrapper {
                     Status
 </p>,
                   <p
-                    className="status-description 
-                color-on-pip"
+                    className="status-description"
 >
-                    PIP
+                    <span
+                                        className=""
+                    >
+                                        PIP
+                    </span>
 </p>,
                   <p
                     className="ending-header offset-margin-bottom"
@@ -3871,12 +4025,32 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "PIP",
-                    "className": "status-description 
-                color-on-pip",
+                    "children": Array [
+                      null,
+                      <span
+                        className=""
+>
+                        PIP
+</span>,
+                    ],
+                    "className": "status-description",
                   },
                   "ref": null,
-                  "rendered": "PIP",
+                  "rendered": Array [
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "PIP",
+                        "className": "",
+                      },
+                      "ref": null,
+                      "rendered": "PIP",
+                      "type": "span",
+                    },
+                  ],
                   "type": "p",
                 },
                 Object {
