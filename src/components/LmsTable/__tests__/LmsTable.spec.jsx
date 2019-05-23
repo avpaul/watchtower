@@ -16,6 +16,7 @@ describe('tests the LmsTable', () => {
     const props2 = {
       lmsSubmissions: [],
       loading: false,
+      attempts: 1,
       fellow: {
         actualApprenticeshipStartDate: '2019-03-18',
         actualSimulationsCompletionDate: '2019-03-15',

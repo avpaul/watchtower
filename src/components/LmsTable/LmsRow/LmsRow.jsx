@@ -19,6 +19,7 @@ const formatLmsDetails = lmsSubmission => {
     graded_date: lmsSubmission.graded_at
       ? moment(lmsSubmission.graded_at).format('L')
       : 'Not yet Reviewed',
+    resubmitted: lmsSubmission.attempts > 1 ? 'True' : 'False',
     score: lmsSubmission.score
   };
   return formatedLmsSubmission;

@@ -12,6 +12,7 @@ ShallowWrapper {
             "course_id": 132,
             "due_date": "2018-12-14T13:59:00Z",
             "graded_at": "2018-12-14T13:59:00Z",
+            "resubmitted": "True",
             "score": 2,
             "submitted_at": "2018-12-14T13:59:00Z",
           }
@@ -60,6 +61,12 @@ ShallowWrapper {
           title=""
 >
           12/14/2018
+</Cell>,
+        <Cell
+          addedClass=""
+          title=""
+>
+          False
 </Cell>,
         <Cell
           addedClass=""
@@ -143,6 +150,19 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "addedClass": "",
+          "children": "False",
+          "title": "",
+        },
+        "ref": null,
+        "rendered": "False",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "weak-key-6",
+        "nodeType": "function",
+        "props": Object {
+          "addedClass": "",
           "children": 2,
           "title": "",
         },
@@ -189,6 +209,12 @@ ShallowWrapper {
             title=""
 >
             12/14/2018
+</Cell>,
+          <Cell
+            addedClass=""
+            title=""
+>
+            False
 </Cell>,
           <Cell
             addedClass=""
@@ -269,6 +295,19 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "weak-key-5",
+          "nodeType": "function",
+          "props": Object {
+            "addedClass": "",
+            "children": "False",
+            "title": "",
+          },
+          "ref": null,
+          "rendered": "False",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "weak-key-6",
           "nodeType": "function",
           "props": Object {
             "addedClass": "",

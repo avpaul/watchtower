@@ -34,6 +34,7 @@ ShallowWrapper {
                                                   "Due Date",
                                                   "Submission Date",
                                                   "Review Date",
+                                                  "Resubmitted",
                                                   "Score",
                                                 ]
                               }
@@ -61,6 +62,7 @@ ShallowWrapper {
                                                 "Due Date",
                                                 "Submission Date",
                                                 "Review Date",
+                                                "Resubmitted",
                                                 "Score",
                                               ]
                         }
@@ -83,6 +85,7 @@ ShallowWrapper {
                                                 "Due Date",
                                                 "Submission Date",
                                                 "Review Date",
+                                                "Resubmitted",
                                                 "Score",
                                               ]
                 }
@@ -103,6 +106,7 @@ ShallowWrapper {
                   "Due Date",
                   "Submission Date",
                   "Review Date",
+                  "Resubmitted",
                   "Score",
                 ],
               },
@@ -148,6 +152,7 @@ ShallowWrapper {
                                                             "Due Date",
                                                             "Submission Date",
                                                             "Review Date",
+                                                            "Resubmitted",
                                                             "Score",
                                                           ]
                                     }
@@ -175,6 +180,7 @@ ShallowWrapper {
                                                         "Due Date",
                                                         "Submission Date",
                                                         "Review Date",
+                                                        "Resubmitted",
                                                         "Score",
                                                       ]
                             }
@@ -197,6 +203,7 @@ ShallowWrapper {
                                                       "Due Date",
                                                       "Submission Date",
                                                       "Review Date",
+                                                      "Resubmitted",
                                                       "Score",
                                                     ]
                   }
@@ -217,6 +224,7 @@ ShallowWrapper {
                     "Due Date",
                     "Submission Date",
                     "Review Date",
+                    "Resubmitted",
                     "Score",
                   ],
                 },
@@ -268,6 +276,7 @@ exports[`tests the LmsTable renders correctly 2`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LmsTable
+    attempts={1}
     fellow={
         Object {
             "actualApprenticeshipStartDate": "2019-03-18",
@@ -310,6 +319,7 @@ ShallowWrapper {
                                                   "Due Date",
                                                   "Submission Date",
                                                   "Review Date",
+                                                  "Resubmitted",
                                                   "Score",
                                                 ]
                               }
@@ -335,6 +345,7 @@ ShallowWrapper {
                                                 "Due Date",
                                                 "Submission Date",
                                                 "Review Date",
+                                                "Resubmitted",
                                                 "Score",
                                               ]
                         }
@@ -357,6 +368,7 @@ ShallowWrapper {
                                                 "Due Date",
                                                 "Submission Date",
                                                 "Review Date",
+                                                "Resubmitted",
                                                 "Score",
                                               ]
                 }
@@ -377,6 +389,7 @@ ShallowWrapper {
                   "Due Date",
                   "Submission Date",
                   "Review Date",
+                  "Resubmitted",
                   "Score",
                 ],
               },
@@ -412,6 +425,7 @@ ShallowWrapper {
                                                             "Due Date",
                                                             "Submission Date",
                                                             "Review Date",
+                                                            "Resubmitted",
                                                             "Score",
                                                           ]
                                     }
@@ -437,6 +451,7 @@ ShallowWrapper {
                                                         "Due Date",
                                                         "Submission Date",
                                                         "Review Date",
+                                                        "Resubmitted",
                                                         "Score",
                                                       ]
                             }
@@ -459,6 +474,7 @@ ShallowWrapper {
                                                       "Due Date",
                                                       "Submission Date",
                                                       "Review Date",
+                                                      "Resubmitted",
                                                       "Score",
                                                     ]
                   }
@@ -479,6 +495,7 @@ ShallowWrapper {
                     "Due Date",
                     "Submission Date",
                     "Review Date",
+                    "Resubmitted",
                     "Score",
                   ],
                 },
@@ -566,6 +583,7 @@ ShallowWrapper {
                                                   "Due Date",
                                                   "Submission Date",
                                                   "Review Date",
+                                                  "Resubmitted",
                                                   "Score",
                                                 ]
                               }
@@ -596,6 +614,7 @@ ShallowWrapper {
                                                 "Due Date",
                                                 "Submission Date",
                                                 "Review Date",
+                                                "Resubmitted",
                                                 "Score",
                                               ]
                         }
@@ -621,6 +640,7 @@ ShallowWrapper {
                                                 "Due Date",
                                                 "Submission Date",
                                                 "Review Date",
+                                                "Resubmitted",
                                                 "Score",
                                               ]
                 }
@@ -645,6 +665,7 @@ ShallowWrapper {
                   "Due Date",
                   "Submission Date",
                   "Review Date",
+                  "Resubmitted",
                   "Score",
                 ],
               },
@@ -701,6 +722,7 @@ ShallowWrapper {
                                                             "Due Date",
                                                             "Submission Date",
                                                             "Review Date",
+                                                            "Resubmitted",
                                                             "Score",
                                                           ]
                                     }
@@ -731,6 +753,7 @@ ShallowWrapper {
                                                         "Due Date",
                                                         "Submission Date",
                                                         "Review Date",
+                                                        "Resubmitted",
                                                         "Score",
                                                       ]
                             }
@@ -756,6 +779,7 @@ ShallowWrapper {
                                                       "Due Date",
                                                       "Submission Date",
                                                       "Review Date",
+                                                      "Resubmitted",
                                                       "Score",
                                                     ]
                   }
@@ -780,6 +804,7 @@ ShallowWrapper {
                     "Due Date",
                     "Submission Date",
                     "Review Date",
+                    "Resubmitted",
                     "Score",
                   ],
                 },
