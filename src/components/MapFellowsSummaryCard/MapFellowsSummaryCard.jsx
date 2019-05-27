@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import TranslatorTable from '../../utils/TranslatorTable';
 import FellowsSummaryCard from '../FellowsSummaryCard';
+import lmsResult from '../../utils/lmsOverall';
 
 const getDateKey = {
   start: {
@@ -57,11 +58,7 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
       devPulseAverage={`${fellow.overall_average || 'N/A'}`.substr(0, 4)}
       status={resolveStatus(fellow)}
       ending={refineDate(fellow, 'end')}
-      lmsOutputs={
-        fellow.satisfied
-          ? `${fellow.satisfied}/${fellow.total}`
-          : `0/${fellow.total}`
-      }
+      lmsOutputs={lmsResult(fellow)}
       picture={fellow.picture}
       onClick={handleClick}
     />
@@ -69,14 +66,14 @@ const renderFellow = (fellow, fellowIndex, handleClick) => {
 };
 
 const MapFellowsSummary = ({ fellowsSummaryCardDetails, handleClick }) => (
-    <div className="ops-dashboard__fellows-summary">
-      <div className="row m-0">
-        {fellowsSummaryCardDetails.map((fellow, index) =>
-          renderFellow(fellow, index, handleClick)
-        )}
-      </div>
+  <div className="ops-dashboard__fellows-summary">
+    <div className="row m-0">
+      {fellowsSummaryCardDetails.map((fellow, index) =>
+        renderFellow(fellow, index, handleClick)
+      )}
     </div>
-  );
+  </div>
+);
 
 MapFellowsSummary.propTypes = {
   fellowsSummaryCardDetails: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
