@@ -68,6 +68,7 @@ ShallowWrapper {
                                 title="FEEDBACK"
                         />
                         
+                        
                         <MapFeedbackFilterCard
                                 feedbackArray={
                                         Array [
@@ -341,6 +342,7 @@ ShallowWrapper {
                                     title="FEEDBACK"
                         />
                         
+                        
                         <MapFeedbackFilterCard
                                     feedbackArray={
                                                 Array [
@@ -613,6 +615,7 @@ ShallowWrapper {
                                 title="FEEDBACK"
                 />
                 
+                
                 <MapFeedbackFilterCard
                                 feedbackArray={
                                                 Array [
@@ -853,6 +856,7 @@ ShallowWrapper {
                     title="FEEDBACK"
 />,
                   "",
+                  "",
                   <MapFeedbackFilterCard
                     feedbackArray={
                                         Array [
@@ -1073,6 +1077,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": [Function],
                 },
+                "",
                 "",
                 Object {
                   "instance": null,
@@ -1512,6 +1517,7 @@ ShallowWrapper {
                                         title="FEEDBACK"
                               />
                               
+                              
                               <MapFeedbackFilterCard
                                         feedbackArray={
                                                   Array [
@@ -1785,6 +1791,7 @@ ShallowWrapper {
                                           title="FEEDBACK"
                             />
                             
+                            
                             <MapFeedbackFilterCard
                                           feedbackArray={
                                                         Array [
@@ -2057,6 +2064,7 @@ ShallowWrapper {
                                     title="FEEDBACK"
                   />
                   
+                  
                   <MapFeedbackFilterCard
                                     feedbackArray={
                                                       Array [
@@ -2297,6 +2305,7 @@ ShallowWrapper {
                       title="FEEDBACK"
 />,
                     "",
+                    "",
                     <MapFeedbackFilterCard
                       feedbackArray={
                                             Array [
@@ -2517,6 +2526,7 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
+                  "",
                   "",
                   Object {
                     "instance": null,
@@ -3024,6 +3034,7 @@ ShallowWrapper {
                                 subTitle="Filter by clicking cards"
                                 title="FEEDBACK"
                         />
+                        
                         <MapFeedbackFilterCard
                                 feedbackArray={
                                         Array [
@@ -3297,6 +3308,7 @@ ShallowWrapper {
                                     subTitle="Filter by clicking cards"
                                     title="FEEDBACK"
                         />
+                        
                         <MapFeedbackFilterCard
                                     feedbackArray={
                                                 Array [
@@ -3569,6 +3581,7 @@ ShallowWrapper {
                                 subTitle="Filter by clicking cards"
                                 title="FEEDBACK"
                 />
+                
                 <MapFeedbackFilterCard
                                 feedbackArray={
                                                 Array [
@@ -3809,6 +3822,7 @@ ShallowWrapper {
                     subTitle="Filter by clicking cards"
                     title="FEEDBACK"
 />,
+                  "",
                   <MapFeedbackFilterCard
                     feedbackArray={
                                         Array [
@@ -4030,6 +4044,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": [Function],
                 },
+                "",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -4468,6 +4483,7 @@ ShallowWrapper {
                                         subTitle="Filter by clicking cards"
                                         title="FEEDBACK"
                               />
+                              
                               <MapFeedbackFilterCard
                                         feedbackArray={
                                                   Array [
@@ -4741,6 +4757,7 @@ ShallowWrapper {
                                           subTitle="Filter by clicking cards"
                                           title="FEEDBACK"
                             />
+                            
                             <MapFeedbackFilterCard
                                           feedbackArray={
                                                         Array [
@@ -5013,6 +5030,7 @@ ShallowWrapper {
                                     subTitle="Filter by clicking cards"
                                     title="FEEDBACK"
                   />
+                  
                   <MapFeedbackFilterCard
                                     feedbackArray={
                                                       Array [
@@ -5253,6 +5271,7 @@ ShallowWrapper {
                       subTitle="Filter by clicking cards"
                       title="FEEDBACK"
 />,
+                    "",
                     <MapFeedbackFilterCard
                       feedbackArray={
                                             Array [
@@ -5474,6 +5493,7 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
+                  "",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -5978,6 +5998,11 @@ ShallowWrapper {
                                 subTitle="Filter by clicking cards"
                                 title="FEEDBACK"
                         />
+                        <p
+                                className="text-center alert-danger"
+                        >
+                                No Fellow Feedback at the moment
+                        </p>
                         
                         
                         
@@ -6083,6 +6108,11 @@ ShallowWrapper {
                                     subTitle="Filter by clicking cards"
                                     title="FEEDBACK"
                         />
+                        <p
+                                    className="text-center alert-danger"
+                        >
+                                    No Fellow Feedback at the moment
+                        </p>
                         
                         
                         
@@ -6187,6 +6217,11 @@ ShallowWrapper {
                                 subTitle="Filter by clicking cards"
                                 title="FEEDBACK"
                 />
+                <p
+                                className="text-center alert-danger"
+                >
+                                No Fellow Feedback at the moment
+                </p>
                 
                 
                 
@@ -6259,6 +6294,11 @@ ShallowWrapper {
                     subTitle="Filter by clicking cards"
                     title="FEEDBACK"
 />,
+                  <p
+                    className="text-center alert-danger"
+>
+                    No Fellow Feedback at the moment
+</p>,
                   "",
                   "",
                   "",
@@ -6311,6 +6351,18 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "No Fellow Feedback at the moment",
+                    "className": "text-center alert-danger",
+                  },
+                  "ref": null,
+                  "rendered": "No Fellow Feedback at the moment",
+                  "type": "p",
                 },
                 "",
                 "",
@@ -6582,6 +6634,11 @@ ShallowWrapper {
                                         subTitle="Filter by clicking cards"
                                         title="FEEDBACK"
                               />
+                              <p
+                                        className="text-center alert-danger"
+                              >
+                                        No Fellow Feedback at the moment
+                              </p>
                               
                               
                               
@@ -6687,6 +6744,11 @@ ShallowWrapper {
                                           subTitle="Filter by clicking cards"
                                           title="FEEDBACK"
                             />
+                            <p
+                                          className="text-center alert-danger"
+                            >
+                                          No Fellow Feedback at the moment
+                            </p>
                             
                             
                             
@@ -6791,6 +6853,11 @@ ShallowWrapper {
                                     subTitle="Filter by clicking cards"
                                     title="FEEDBACK"
                   />
+                  <p
+                                    className="text-center alert-danger"
+                  >
+                                    No Fellow Feedback at the moment
+                  </p>
                   
                   
                   
@@ -6863,6 +6930,11 @@ ShallowWrapper {
                       subTitle="Filter by clicking cards"
                       title="FEEDBACK"
 />,
+                    <p
+                      className="text-center alert-danger"
+>
+                      No Fellow Feedback at the moment
+</p>,
                     "",
                     "",
                     "",
@@ -6915,6 +6987,18 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": null,
                     "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "No Fellow Feedback at the moment",
+                      "className": "text-center alert-danger",
+                    },
+                    "ref": null,
+                    "rendered": "No Fellow Feedback at the moment",
+                    "type": "p",
                   },
                   "",
                   "",

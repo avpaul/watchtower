@@ -261,6 +261,7 @@ export class FeedbackDashboard extends Component {
 
   renderFilter = () => {
     const { user } = this.props;
+    const { feedbackArray } = this.state;
     const isManager =
       !!user.roles.WATCH_TOWER_TTL || !!user.roles.WATCH_TOWER_LF;
     const isEngineeringManager = !!user.roles.WATCH_TOWER_EM;
@@ -269,6 +270,13 @@ export class FeedbackDashboard extends Component {
     return (
       <div className="col-xl-9 p-0">
         <Title title="FEEDBACK" subTitle="Filter by clicking cards" />
+        {feedbackArray.length === 0 ? (
+          <p className="text-center alert-danger">
+            No Fellow Feedback at the moment
+          </p>
+        ) : (
+          ''
+        )}
         {isSimulationsLead
           ? this.renderFilterCards('All LFs', 'manager_email')
           : ''}
