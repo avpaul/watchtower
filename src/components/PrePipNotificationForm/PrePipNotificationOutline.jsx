@@ -4,13 +4,10 @@ import getFeedbackIndex from '../../utils/formatFeedbackInstance';
 import LogoSection from '../Header/LogoSection';
 
 export const managerName = data => {
-  if (data.Manager === 'null') {
-    return null;
-  }
-  if (typeof data.Manager === 'string') {
-    return `${JSON.parse(data.Manager).name}, Manager`;
-  }
-  return `${data.Manager.name}, Manager`;
+  if (!data.Manager) return null;
+  return typeof data.Manager === 'string'
+    ? `${JSON.parse(data.Manager).name}, Manager`
+    : `${data.Manager.name}, Manager`;
 };
 
 const PrePipNotificationOutline = ({ fellowFeedback, serialNumber }) => (
