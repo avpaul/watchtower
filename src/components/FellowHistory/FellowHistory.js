@@ -9,6 +9,7 @@ import PipActivationContainer from '../../views/PipActivationForm';
 import './FellowHistory.css';
 import DevPulseTable from '../DevPulseTable';
 import Table from '../TableComponents/Table';
+import PIPDeactivationModal from '../PIPDeactivationModal/PIPDeactivationModal';
 import DevPulseRow from '../DevPulseTable/DevPulseRow/DevPulseRow';
 import getFellowData from '../../redux/actionCreators/fellowProfileDataActions';
 import LmsTable from '../LmsTable';
@@ -143,6 +144,8 @@ export class FellowHistory extends Component {
       return (
         <button
           type="submit"
+          data-toggle={fellow.is_on_pip ? 'modal' : ' '}
+          data-target={fellow.is_on_pip ? '#pipDeactivation-modal' : ' '}
           className="btn btn-pip-activation"
           onClick={fellow.is_on_pip ? '' : this.renderPipActivationForm}
         >
@@ -196,7 +199,7 @@ export class FellowHistory extends Component {
 
   renderFellowHistory = () => {
     const { fellow } = this.state;
-
+    const { deactivatePIPAction, history } = this.props;
     return (
       <Fragment>
         <div className="page-content container-fluid">
@@ -215,6 +218,11 @@ export class FellowHistory extends Component {
           </div>
           <div className="fellow-history-data">{this.renderTables()}</div>
         </div>
+        <PIPDeactivationModal
+          fellowId={fellow.fellow_id}
+          deactivatePIPAction={deactivatePIPAction}
+          history={history}
+        />
       </Fragment>
     );
   };
@@ -251,6 +259,7 @@ FellowHistory.propTypes = {
   history: PropTypes.shape().isRequired,
   lmsSubmissions: PropTypes.PropTypes.shape({}).isRequired,
   getFellow: PropTypes.func.isRequired,
+  deactivatePIPAction: PropTypes.func.isRequired,
   averageRatings: PropTypes.shape({}).isRequired,
   fellowDetails: PropTypes.PropTypes.shape({}).isRequired,
   fellowDetailsLoading: PropTypes.bool.isRequired

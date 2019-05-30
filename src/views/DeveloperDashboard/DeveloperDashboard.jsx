@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import MapFellowsSummaryCard from '../../components/MapFellowsSummaryCard';
 import MapFellowsFilterCard from '../../components/MapFellowsFilterCard';
 import Error from '../../components/Error';
@@ -50,7 +51,7 @@ export class DeveloperDashboard extends Component {
     const { getManagerFellowsSummary, user } = this.props;
     getManagerFellowsSummary(user.roles, user.email)
       .then(data => this.updateFellowsState(data))
-      .catch(() => { });
+      .catch(() => {});
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -257,13 +258,13 @@ export class DeveloperDashboard extends Component {
     const filterFellowsbyStatus = (allFellows, status) =>
       allFellows
         ? allFellows.filter(fellow => {
-          switch (status) {
-            case '':
-              return true;
-            default:
-              return fellow ? fellow.overall_status === status : false;
-          }
-        })
+            switch (status) {
+              case '':
+                return true;
+              default:
+                return fellow ? fellow.overall_status === status : false;
+            }
+          })
         : [];
     const status = TranslatorTable[isTicked.status];
     this.setState({ managerCardId: filterKey });
@@ -310,6 +311,7 @@ export class DeveloperDashboard extends Component {
 
     return (
       <div className="page-content container-fluid">
+        <ToastContainer />
         <Title
           title={isManager ? 'MANAGERS' : 'PROJECTS'}
           subTitle="Filter by clicking cards"
@@ -322,8 +324,8 @@ export class DeveloperDashboard extends Component {
             loading={loading}
           />
         ) : (
-            this.renderFilterCards('project')
-          )}
+          this.renderFilterCards('project')
+        )}
         {this.renderFilterCards('status')}
         <div>{this.renderResultCount()}</div>
         <MapFellowsSummaryCard
@@ -358,7 +360,7 @@ export class DeveloperDashboard extends Component {
   };
 
   renderRoute = urlPath => {
-    const { role, user } = this.props;
+    const { role, user, deactivatePIPAction } = this.props;
     const { fellowSummaryDetails } = this.state;
     return (
       <Route
@@ -369,6 +371,7 @@ export class DeveloperDashboard extends Component {
             user={user}
             {...newProps}
             fellowSummaryDetails={fellowSummaryDetails}
+            deactivatePIPAction={deactivatePIPAction}
           />
         )}
       />

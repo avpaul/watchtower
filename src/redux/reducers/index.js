@@ -24,6 +24,7 @@ import fellowFeedbackReducer from './fellowFeedbackReducer';
 import performanceData from './performanceDataReducer';
 import fellowPrePipFeedbackReducer from './fellowPrePipFeedbackReducer';
 import fellowPipFeedbackReducer from './fellowPipFeedbackReducer';
+import deactivatePipReducer from './pipDeactivationReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -49,7 +50,8 @@ const rootReducer = combineReducers({
   pipData: engineersOnpip,
   performanceData,
   fellowPrePipFeedback: fellowPrePipFeedbackReducer,
-  fellowPipFeedback: fellowPipFeedbackReducer
+  fellowPipFeedback: fellowPipFeedbackReducer,
+  deactivatePipReducer
 });
 
 export default rootReducer;

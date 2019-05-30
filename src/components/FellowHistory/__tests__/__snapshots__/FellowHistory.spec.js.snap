@@ -14,6 +14,7 @@ ShallowWrapper {
             "quantity": "0.41",
           }
     }
+    deactivatePIPAction={[Function]}
     fellowDetails={
         Object {
             "bio": "Sed quo voluptatum ducimus sunt labore eos totam. Sit corporis est voluptates commodi occaecati. Modi harum assumenda quod voluptatem.",
@@ -101,6 +102,7 @@ ShallowWrapper {
           ]
     }
     ratingsLoading={false}
+    success={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
