@@ -1907,7 +1907,7 @@ ShallowWrapper {
             "Attribute": null,
             "Context": "Hi Sinmiloluwa",
             "Criteria": "lms",
-            "Manager": "null",
+            "Manager": null,
             "Recommendation": null,
             "index": "0",
             "name": "Sinmiloluwa Oloyede",

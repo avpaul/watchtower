@@ -72,7 +72,7 @@ describe('Manager name will be null', () => {
         Context: 'Hi Sinmiloluwa',
         Criteria: 'lms',
         name: 'Sinmiloluwa Oloyede',
-        Manager: 'null',
+        Manager: null,
         Recommendation: null,
         index: '0'
       },
@@ -101,7 +101,7 @@ describe('should test the managersName method', () => {
   };
 
   const data2 = {
-    Manager: 'null'
+    Manager: null
   };
 
   const data3 = {
