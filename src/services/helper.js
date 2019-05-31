@@ -152,7 +152,6 @@ export const processCountInformation = (
       filterKey === 'manager_email'
         ? formatName(information[filterKey])
         : information[filterKey];
-
     if (!processedCountInformation[determineDisplay]) {
       processedCountInformation[determineDisplay] = 1;
     } else {

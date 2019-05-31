@@ -27,6 +27,7 @@ export class FeedbackDashboard extends Component {
 
     this.state = {
       feedbackArray: [],
+      filteredFeedbackArray: [],
       filteredFeedbackData: [],
       cachedDurationData: [],
       startDate: this.defaultDate(),
@@ -226,12 +227,14 @@ export class FeedbackDashboard extends Component {
     history.push(`/feedback/${name.split(' ').join('.')}`);
   };
 
-  renderFilterCards = (title, filterKey) => {
-    const { isTicked, feedbackArray } = this.state;
+  renderFilterCards = (title, filterKey, useFilterData = false) => {
     const { loading } = this.props;
+    const { isTicked, feedbackArray, filteredFeedbackArray } = this.state;
     return (
       <MapFeedbackFilterCard
         feedbackArray={feedbackArray}
+        filteredFeedbackArray={filteredFeedbackArray}
+        useFilterData={useFilterData}
         title={title}
         filterKey={filterKey}
         isTicked={isTicked}
@@ -285,8 +288,8 @@ export class FeedbackDashboard extends Component {
           : ''}
         {isManager ? this.renderFilterCards('All Projects', 'project') : ''}
         {isOperationsTeam ? this.renderFilterCards('All Levels', 'level') : ''}
-        {this.renderFilterCards('Pre-PIP & PIP', 'type')}
-        {this.renderFilterCards('All Criteria', 'criteria')}
+        {this.renderFilterCards('Pre-PIP & PIP', 'type', true)}
+        {this.renderFilterCards('All Criteria', 'criteria', true)}
       </div>
     );
   };
@@ -350,12 +353,19 @@ export class FeedbackDashboard extends Component {
       ...isTicked,
       [event.currentTarget.attributes[2].value]: event.currentTarget.id
     };
+    const filteredFeedbackArray = feedbackArray.filter(
+      obj =>
+        updatedIsTicked.manager_email === JSON.parse(obj.manager).name ||
+        updatedIsTicked.project === obj.project ||
+        updatedIsTicked.level === updatedIsTicked.level.split(' ')[0]
+    );
     const filteredFeedbackData = this.filterFeedback(
       updatedIsTicked,
       feedbackArray
     );
     this.setState(
       {
+        filteredFeedbackArray,
         isTicked: updatedIsTicked,
         filteredFeedbackData,
         cachedDurationData: filteredFeedbackData

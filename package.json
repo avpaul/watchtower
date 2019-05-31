@@ -65,6 +65,9 @@
     "underscore": "^1.9.1",
     "weak-key": "^1.0.1"
   },
+  "optionalDependencies": {
+    "fsevents": "^1.2.2"
+  },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
