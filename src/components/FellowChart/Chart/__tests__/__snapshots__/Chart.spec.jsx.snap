@@ -309,7 +309,6 @@ ShallowWrapper {
                               cursorStyle={Object {}}
                               filterNull={true}
                               isAnimationActive={true}
-                              itemSorter={[Function]}
                               itemStyle={Object {}}
                               labelStyle={Object {}}
                               offset={10}
@@ -662,7 +661,6 @@ ShallowWrapper {
                         cursorStyle={Object {}}
                         filterNull={true}
                         isAnimationActive={true}
-                        itemSorter={[Function]}
                         itemStyle={Object {}}
                         labelStyle={Object {}}
                         offset={10}
@@ -891,7 +889,6 @@ ShallowWrapper {
                 cursorStyle={Object {}}
                 filterNull={true}
                 isAnimationActive={true}
-                itemSorter={[Function]}
                 itemStyle={Object {}}
                 labelStyle={Object {}}
                 offset={10}
@@ -1233,7 +1230,6 @@ ShallowWrapper {
                 "cursorStyle": Object {},
                 "filterNull": true,
                 "isAnimationActive": true,
-                "itemSorter": [Function],
                 "itemStyle": Object {},
                 "labelStyle": Object {},
                 "offset": 10,
@@ -1597,7 +1593,6 @@ ShallowWrapper {
                                     cursorStyle={Object {}}
                                     filterNull={true}
                                     isAnimationActive={true}
-                                    itemSorter={[Function]}
                                     itemStyle={Object {}}
                                     labelStyle={Object {}}
                                     offset={10}
@@ -1950,7 +1945,6 @@ ShallowWrapper {
                             cursorStyle={Object {}}
                             filterNull={true}
                             isAnimationActive={true}
-                            itemSorter={[Function]}
                             itemStyle={Object {}}
                             labelStyle={Object {}}
                             offset={10}
@@ -2179,7 +2173,6 @@ ShallowWrapper {
                   cursorStyle={Object {}}
                   filterNull={true}
                   isAnimationActive={true}
-                  itemSorter={[Function]}
                   itemStyle={Object {}}
                   labelStyle={Object {}}
                   offset={10}
@@ -2521,7 +2514,6 @@ ShallowWrapper {
                   "cursorStyle": Object {},
                   "filterNull": true,
                   "isAnimationActive": true,
-                  "itemSorter": [Function],
                   "itemStyle": Object {},
                   "labelStyle": Object {},
                   "offset": 10,

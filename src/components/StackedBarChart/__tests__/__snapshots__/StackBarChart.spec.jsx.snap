@@ -223,7 +223,6 @@ ShallowWrapper {
                               cursorStyle={Object {}}
                               filterNull={true}
                               isAnimationActive={true}
-                              itemSorter={[Function]}
                               itemStyle={
                                         Object {
                                                   "padding": "5px 21px",
@@ -528,7 +527,6 @@ ShallowWrapper {
                         cursorStyle={Object {}}
                         filterNull={true}
                         isAnimationActive={true}
-                        itemSorter={[Function]}
                         itemStyle={
                                     Object {
                                                 "padding": "5px 21px",
@@ -775,7 +773,6 @@ ShallowWrapper {
                 cursorStyle={Object {}}
                 filterNull={true}
                 isAnimationActive={true}
-                itemSorter={[Function]}
                 itemStyle={
                                 Object {
                                                 "padding": "5px 21px",
@@ -1040,7 +1037,6 @@ ShallowWrapper {
                 "cursorStyle": Object {},
                 "filterNull": true,
                 "isAnimationActive": true,
-                "itemSorter": [Function],
                 "itemStyle": Object {
                   "padding": "5px 21px",
                   "textAlign": "center",
@@ -1365,7 +1361,6 @@ ShallowWrapper {
                                     cursorStyle={Object {}}
                                     filterNull={true}
                                     isAnimationActive={true}
-                                    itemSorter={[Function]}
                                     itemStyle={
                                                 Object {
                                                             "padding": "5px 21px",
@@ -1670,7 +1665,6 @@ ShallowWrapper {
                             cursorStyle={Object {}}
                             filterNull={true}
                             isAnimationActive={true}
-                            itemSorter={[Function]}
                             itemStyle={
                                           Object {
                                                         "padding": "5px 21px",
@@ -1917,7 +1911,6 @@ ShallowWrapper {
                   cursorStyle={Object {}}
                   filterNull={true}
                   isAnimationActive={true}
-                  itemSorter={[Function]}
                   itemStyle={
                                     Object {
                                                       "padding": "5px 21px",
@@ -2182,7 +2175,6 @@ ShallowWrapper {
                   "cursorStyle": Object {},
                   "filterNull": true,
                   "isAnimationActive": true,
-                  "itemSorter": [Function],
                   "itemStyle": Object {
                     "padding": "5px 21px",
                     "textAlign": "center",

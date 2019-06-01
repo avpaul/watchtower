@@ -24,7 +24,7 @@ class NavArrow extends Component {
         : '';
     }
     return (currentSlide === slideCount - 1 ||
-      currentSlide === slideCount - 2) &&
+      currentSlide === slideCount - 3) &&
       btnClass === 'slick-next'
       ? 'slick-arrow-hide'
       : '';
