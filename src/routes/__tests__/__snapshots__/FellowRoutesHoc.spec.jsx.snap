@@ -57,6 +57,7 @@ ShallowWrapper {
         },
       ],
       "getCadreEngineers": [Function],
+      "loading": false,
       "role": Object {
         "Andelan": "jey",
       },
@@ -112,6 +113,7 @@ ShallowWrapper {
           },
         ],
         "getCadreEngineers": [Function],
+        "loading": false,
         "role": Object {
           "Andelan": "jey",
         },
