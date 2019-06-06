@@ -33,7 +33,8 @@ export class Header extends Component {
         developers: false,
         performance: false,
         feedback: false,
-        settings: false
+        settings: false,
+        cadre: false
       },
       show: false,
       viewNotifications: true
@@ -56,6 +57,9 @@ export class Header extends Component {
         break;
       case '/feedback':
         this.setState({ activeItems: { feedback: true } });
+        break;
+      case '/cadre':
+        this.setState({ activeItems: { cadre: true } });
         break;
       default: {
         if (location.pathname.search('/developers/') === 0) {
