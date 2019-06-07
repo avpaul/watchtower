@@ -49,7 +49,8 @@ describe('Test the cadre Fellow dashboard', () => {
         CadreFellow: ''
       }
     }
-  };
+  }
+
   beforeAll(() => {
     const token = jsonwebtoken.sign(user, 'shhhhh');
     Cookie.set = jest.fn(() => token);

@@ -28,6 +28,8 @@ const Dashboards = props => {
     case 'WATCH_TOWER_EM':
     case 'WATCH_TOWER_SL':
       return <EngineeringManagerSimsLeadDashboard {...props} role={role} />;
+    // case 'Fellow':
+    //   return <FellowDashboard {...props} role={role} />;
     case 'Fellow':
       return <FellowRoutesHoc {...props} role={role} user={user} />;
     case 'WATCH_TOWER_OPS':

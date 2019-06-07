@@ -12,20 +12,20 @@ const renderRoute = url => (
 );
 
 export const RouteList = () => (
-    <React.Fragment>
-        <Route component={Analytics}/>
-        <Switch>
-            <Route exact path="/" component={LoginPage}/>
-            <Route path="/login" component={LoginPage}/>
-            <Route path="/test" component={ConnectedTest}/>
-            {renderRoute('/dashboard')}
-            {renderRoute('/developers')}
-            {renderRoute('/performance')}
-            {renderRoute('/feedback')}
-            {renderRoute('/cadre')}
-            <Route component={NotFoundPage}/>
-        </Switch>
-    </React.Fragment>
+  <React.Fragment>
+    <Route component={Analytics} />
+    <Switch>
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/login" component={LoginPage} />
+      <Route path="/test" component={ConnectedTest} />
+      {renderRoute('/dashboard')}
+      {renderRoute('/developers')}
+      {renderRoute('/performance')}
+      {renderRoute('/feedback')}
+      {renderRoute('/cadre')}
+      <Route component={NotFoundPage} />
+    </Switch>
+  </React.Fragment>
 );
 /**
  * Defines application routes

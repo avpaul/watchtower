@@ -40,6 +40,7 @@ const isAuthorized = () => {
         ? roleEnv.split(' ')
         : [
             'Fellow',
+            'WATCH_TOWER_CADRE',
             'WATCH_TOWER_TTL',
             'WATCH_TOWER_LF',
             'WATCH_TOWER_EM',
