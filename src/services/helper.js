@@ -181,3 +181,30 @@ export const processArray = (informationArray, objectWithCounts) => {
  * @function {@param}
  */
 export const truncateNumber = number => Math.round(number * 100) / 100;
+/**
+ * function to return an array of indexes for an element in an array or string
+ * @function {@param}
+ */
+export const getAllIndexesOfElement = (arr, val) => {
+  const indexes = [];
+  let i;
+  for (i = 0; i < arr.length; i += 1) if (arr[i] === val) indexes.push(i);
+  return indexes;
+};
+/**
+ * function to format texts into two paragraphs
+ * @function {@param}
+ */
+export const formatText = text => {
+  if (text) {
+    const periods =
+      text.match(/\./g, ' ') !== null ? text.match(/\./g, ' ').length : 1;
+    const divisor = Math.round(periods / 2);
+    const textindexes = getAllIndexesOfElement(text, '.');
+    const paragraph1 = text.slice(0, textindexes[divisor - 1] + 1);
+    let paragraph2 = text.slice(textindexes[divisor - 1]);
+    paragraph2 = paragraph2.substring(1).trim();
+    return { paragraph1, paragraph2 };
+  }
+  return false;
+};

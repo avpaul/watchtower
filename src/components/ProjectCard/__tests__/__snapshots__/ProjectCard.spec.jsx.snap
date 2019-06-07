@@ -4,6 +4,17 @@ exports[`Test Project Card component should render correcctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProjectCard
+    handleClick={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    match={
+        Object {
+            "url": "/cadre/projects/details/1",
+          }
+    }
     project={
         Object {
             "about": "This is a test description",
@@ -90,6 +101,10 @@ ShallowWrapper {
 </div>,
       ],
       "className": "project-card",
+      "onClick": [Function],
+      "onKeyDown": true,
+      "role": "menu",
+      "tabIndex": "0",
     },
     "ref": null,
     "rendered": Array [
@@ -352,6 +367,10 @@ ShallowWrapper {
 </div>,
         ],
         "className": "project-card",
+        "onClick": [Function],
+        "onKeyDown": true,
+        "role": "menu",
+        "tabIndex": "0",
       },
       "ref": null,
       "rendered": Array [
@@ -581,5 +600,6 @@ ShallowWrapper {
     Symbol(enzyme.__providerValues__): undefined,
   },
   Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
 }
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ProjectCard from '../ProjectCard';
+import { ProjectCard } from '../ProjectCard';
 
 let props;
 let wrapper;
@@ -22,11 +22,18 @@ describe('Test Project Card component', () => {
         logo: null,
         created_at: '2019-06-04 04:56:39',
         updated_at: '2019-06-04 04:56:39'
-      }
+      },
+      match: { url: '/cadre/projects/details/1' },
+      history: { push: jest.fn() }
     };
-    wrapper = shallow(<ProjectCard {...props} />);
+    const handleClick = jest.fn();
+    wrapper = shallow(<ProjectCard {...props} handleClick={handleClick} />);
   });
   it('should render correcctly', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+  it('call the handleClick function', () => {
+    wrapper.instance().handleClick();
+    expect(props.history.push).toHaveBeenCalled();
   });
 });

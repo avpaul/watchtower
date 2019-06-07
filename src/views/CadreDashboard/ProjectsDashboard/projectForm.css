@@ -65,7 +65,7 @@
   min-height: 23rem;
 }
 
-.project-form__back {
+.project-form .wt-return-button {
   position: absolute;
   margin: 0.5rem 0 0 -2rem;
   height: 1.25rem;

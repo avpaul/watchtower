@@ -98,7 +98,11 @@
           .split(' ');
         if (cellContent.length < 2) {
           const level =
-            cellContent[0] == 'D0A' ? 'D0A Simulations' : 'D0B Apprenticeship';
+            cellContent[0] == 'D0A'
+              ? 'D0A Simulations'
+              : cellContent[0] !== 'D0A'
+              ? cellContent[0]
+              : 'D0B Apprenticeship';
           $(value).text(level);
         }
       };
