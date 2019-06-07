@@ -28,7 +28,7 @@ describe('OpsDashboard', () => {
         .find(OpsDashboard)
         .dive()
         .name()
-    ).toBe('Route');
+    ).toBe('Fragment');
   });
 });
 

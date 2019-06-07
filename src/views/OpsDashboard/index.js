@@ -6,43 +6,41 @@ import OpsDashboardContainer from './OpsDashboardContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 import CadreDashboardContainer from '../CadreDashboard';
+
 /**
  * Defines routes for the opsdashboard
  * @function
  */
 const OpsDashboard = props => (
-  <Route path="/dashboard">
-    <React.Fragment>
-      <Header {...props} />
-      <Switch>
-        <Route
-          exact
-          path="/dashboard"
-          component={() => <OpsDashboardContainer {...props} />}
-        />
-        <Route
-          exact
-          path="/developers"
-          component={() => <DashboardPage {...props} />}
-        />
-        <Route
-          exact
-          path="/feedback"
-          component={() => <FeedbackDashboardContainer {...props} />}
-        />
-        <Route
-          exact
-          path="/feedback/:fellowName"
-          component={() => <PrePipNotificationForm {...props} />}
-        />
-        <Route
-          exact
-          path="/cadre"
-          component={() => <CadreDashboardContainer {...props} />}
-        />
-      </Switch>
-    </React.Fragment>
-  </Route>
+  <React.Fragment>
+    <Header {...props} />
+    <Switch>
+      <Route
+        exact
+        path="/dashboard"
+        component={() => <OpsDashboardContainer {...props} />}
+      />
+      <Route
+        exact
+        path="/developers"
+        component={() => <DashboardPage {...props} />}
+      />
+      <Route
+        exact
+        path="/feedback"
+        component={() => <FeedbackDashboardContainer {...props} />}
+      />
+      <Route
+        exact
+        path="/feedback/:fellowName"
+        component={() => <PrePipNotificationForm {...props} />}
+      />
+      <Route
+        path="/cadre"
+        component={() => <CadreDashboardContainer {...props} />}
+      />
+    </Switch>
+  </React.Fragment>
 );
 
 export default OpsDashboard;

@@ -1,11 +1,8 @@
-export default (error) => {
-  let errorMessage;
+export default error => {
   if (error.response && error.response.data) {
-    errorMessage = error.response.data.message;
-  } else if (error.message) {
-    errorMessage = error.message;
-  } else {
-    errorMessage = 'Request was not sent';
+    if (error.response.data.errors) return error.response.data.errors;
+    return error.response.data.message;
   }
-  return errorMessage;
+  if (error.message) return error.message;
+  return 'Request was not sent';
 };

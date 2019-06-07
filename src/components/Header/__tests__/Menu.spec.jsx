@@ -28,7 +28,7 @@ const links = [
 const props = {
   items: links,
   handleMenuClick: jest.fn(),
-  activeItems: { fellows: false, dashboard: true, settings: true },
+  activeItem: 'dashboard',
   role: 'WATCH_TOWER_LF'
 };
 
@@ -51,17 +51,7 @@ it('renders MenuLink child components', () => {
 describe('Menu Component Test Suite', () => {
   it('renders witout error', () => {
     const items = getMenuItems('Fellow');
-    const activeItems = [
-      {
-        key: 'dashboard',
-        name: 'Dashboard',
-        path: '/dashboard'
-      }
-    ];
-
-    const snap = shallow(
-      <Menu items={items} role="Fellow" activeItems={activeItems} {...props} />
-    );
+    const snap = shallow(<Menu items={items} role="Fellow" {...props} />);
     expect(snap).toMatchSnapshot();
   });
 });

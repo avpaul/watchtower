@@ -1,19 +1,13 @@
-import {
-  getMenuItems,
-  fellowItems,
-  ttlItems,
-  managerItems,
-  opsItems
-} from '../navlinks';
+import { getMenuItems, fellowItems, managerItems, opsItems } from '../navlinks';
 
 describe('Navlinks Test Suite', () => {
   it('gets the right menu items', () => {
     let menu = getMenuItems('Fellow');
     expect(menu).toEqual(fellowItems);
     menu = getMenuItems('WATCH_TOWER_TTL');
-    expect(menu).toEqual(ttlItems);
+    expect(menu).toEqual(managerItems);
     menu = getMenuItems('WATCH_TOWER_LF');
-    expect(menu).toEqual(ttlItems);
+    expect(menu).toEqual(managerItems);
     menu = getMenuItems('WATCH_TOWER_EM');
     expect(menu).toEqual(managerItems);
     menu = getMenuItems('WATCH_TOWER_SL');

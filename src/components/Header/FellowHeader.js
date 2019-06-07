@@ -15,7 +15,7 @@ const FellowHeader = props => {
     showModal,
     user,
     handleMenuClick,
-    activeItems,
+    activeItem,
     role
   } = props;
   return (
@@ -50,7 +50,7 @@ const FellowHeader = props => {
         role={role}
         items={getMenuItems(role)}
         handleMenuClick={handleMenuClick}
-        activeItems={activeItems}
+        activeItem={activeItem}
       />
     </div>
   );
@@ -60,7 +60,7 @@ FellowHeader.propTypes = {
   renderModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
-  activeItems: PropTypes.shape({}).isRequired,
+  activeItem: PropTypes.string.isRequired,
   notifications: PropTypes.shape({}).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
   user: PropTypes.shape({

@@ -6,8 +6,8 @@
   margin: auto;
 }
 
-.sidebar-submenu {
-  border-right: 1px solid rgba(216, 216, 216, 0.45);
+.cadre__page {
+  border-left: 1px solid rgba(216, 216, 216, 0.45);
 }
 
 /*
@@ -88,7 +88,7 @@ Media queries - Responsiveness
   }
 }
 
-@media (min-width: 1100px) and (max-width: 1365px;) {
+@media (min-width: 1100px) and (max-width: 1365px) {
   .nav-stacked {
     display: table;
     margin: 0 auto;

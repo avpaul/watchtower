@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Switch, Route } from 'react-router-dom';
 import CadreSubmenu from '../../components/CadreSubmenu';
+import ProjectsDashboard from './ProjectsDashboard';
 import './CadreDashboard.css';
 
 class CadreDashboard extends Component {
@@ -11,7 +14,12 @@ class CadreDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeItem: '0'
+      routes: [
+        `${props.match.url}/projects`,
+        `${props.match.url}/vacancies`,
+        `${props.match.url}/roles`,
+        `${props.match.url}/reports`
+      ]
     };
   }
 
@@ -20,30 +28,47 @@ class CadreDashboard extends Component {
    *  @param {*} event
    */
   handleCardclick = e => {
+    const { history } = this.props;
+    const { routes } = this.state;
     const id = e.target.getAttribute('data-key');
-
-    this.setState({ activeItem: id });
+    if (routes[id]) history.replace(routes[id]);
   };
 
+  renderSubMenu = () => {
+    const { routes } = this.state;
+    const { location } = this.props;
+    const routeIndex = routes.findIndex(
+      route => location.pathname.search(route) === 0
+    );
+    return (
+      <div className="col-sm-3 sidebar-submenu">
+        <CadreSubmenu
+          handleCardclick={this.handleCardclick}
+          activeItem={`${routeIndex}`}
+        />
+      </div>
+    );
+  };
+
+  renderRoute = (RouteComponent, url) => (
+    <Route
+      path={url}
+      component={newProps => (
+        <RouteComponent {...{ ...this.props, match: newProps.match }} />
+      )}
+    />
+  );
+
   render() {
-    const { activeItem } = this.state;
+    const { routes } = this.state;
 
     return (
       <Fragment>
         <div className="container-fluid page-content">
           <div className="row">
-            <div className="col-sm-3 sidebar-submenu">
-              <CadreSubmenu
-                handleCardclick={this.handleCardclick}
-                activeItem={activeItem}
-              />
-            </div>
+            {this.renderSubMenu()}
             <div className="col-sm-9">
-              <div className="tab-content">
-                <div role="tabpanel" className="tab-pane active" id="tab1">
-                  <h1>Content</h1>
-                </div>
-              </div>
+              <Switch>{this.renderRoute(ProjectsDashboard, routes[0])}</Switch>
             </div>
           </div>
         </div>
@@ -51,5 +76,11 @@ class CadreDashboard extends Component {
     );
   }
 }
+
+CadreDashboard.propTypes = {
+  history: PropTypes.shape().isRequired,
+  match: PropTypes.shape().isRequired,
+  location: PropTypes.shape().isRequired
+};
 
 export default CadreDashboard;

@@ -1,0 +1,102 @@
+.wt-dropdown {
+  float: left;
+  width: 100%;
+}
+
+.wt-dropdown select {
+  outline: none;
+  width: 100%;
+  transition: all 0.2s;
+  height: 46px;
+  border: 1px solid #e9eff4;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0 0.5rem;
+  color: #808fa3;
+  font-family: 'DIN Pro';
+  font-size: 13px;
+  letter-spacing: -0.16px;
+  line-height: 27px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.wt-dropdown label {
+  color: #333e44;
+  font-family: 'DIN Pro';
+  font-size: 13px;
+  letter-spacing: 0.12px;
+  line-height: 17px;
+}
+
+/*To remove button from IE11 */
+.wt-dropdown select::-ms-expand {
+  display: none;
+}
+
+.wt-dropdown__select {
+  position: relative;
+}
+
+.wt-dropdown__select::after {
+  content: '';
+  background-image: url('../../static/chevron.png');
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  right: 0;
+  border-bottom: 1px solid #999;
+  height: 45px;
+  width: 45.5px;
+  border: 1px solid #e9eff4;
+  border-radius: 4px;
+  background-color: rgba(244, 247, 249, 0.4);
+  position: absolute;
+  pointer-events: none;
+}
+
+.wt-dropdown--normal {
+  color: #111111;
+}
+
+.wt-dropdown--loading select,
+.wt-dropdown--warning select {
+  color: #ffd900;
+}
+
+.wt-dropdown--fail select {
+  color: #d84d47;
+}
+
+.wt-dropdown--success select {
+  color: #00a84f;
+}
+
+.wt-dropdown--danger select {
+  color: #b33030;
+}
+
+.wt-dropdown__comment {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-indent: 0 !important;
+}
+
+.wt-dropdown__comment {
+  width: 100%;
+  float: left;
+  color: #cccccc;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.wt-dropdown__label {
+  display: none;
+}

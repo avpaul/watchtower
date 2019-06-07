@@ -10,7 +10,7 @@ import MenuLink from './MenuLink';
  *
  * @returns {JSX} React JSX
  */
-const Menu = ({ items, handleMenuClick, activeItems, role }) => (
+const Menu = ({ items, handleMenuClick, activeItem, role }) => (
   <div className="header--bottom d-flex justify-content-center">
     {items.map(item => (
       <MenuLink
@@ -18,7 +18,7 @@ const Menu = ({ items, handleMenuClick, activeItems, role }) => (
         key={arrayKey(item)}
         link={item}
         handleMenuClick={handleMenuClick}
-        isActive={activeItems[item.key]}
+        isActive={activeItem === item.key}
       />
     ))}
   </div>
@@ -28,10 +28,7 @@ Menu.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   role: PropTypes.string.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
-  activeItems: PropTypes.shape({
-    fellows: PropTypes.bool,
-    settings: PropTypes.bool
-  }).isRequired
+  activeItem: PropTypes.string.isRequired
 };
 
 export default Menu;

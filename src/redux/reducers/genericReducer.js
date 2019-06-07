@@ -8,6 +8,7 @@ const genericReducer = (types, state, action) => {
     case types[1]:
       return {
         ...state,
+        error: null,
         loading: false,
         data: action.successData
       };

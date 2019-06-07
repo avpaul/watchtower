@@ -63,6 +63,7 @@
     "slick-carousel": "^1.8.1",
     "source-map-explorer": "^1.6.0",
     "underscore": "^1.9.1",
+    "wait-for-expect": "^1.2.0",
     "weak-key": "^1.0.1"
   },
   "optionalDependencies": {
