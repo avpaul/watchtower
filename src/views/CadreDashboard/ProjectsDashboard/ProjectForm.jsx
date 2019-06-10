@@ -40,7 +40,7 @@ class ProjectForm extends Component {
       !createProject.loading &&
       !createProject.error
     )
-      history.replace('/cadre/projects/view');
+      history.replace('/cadre/projects');
   }
 
   handleSubmissionError = error => {

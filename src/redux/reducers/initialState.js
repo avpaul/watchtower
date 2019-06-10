@@ -189,5 +189,6 @@ export default {
   pipDeactivation: {
     success: null
   },
-  createProject: genericAPIState
+  createProject: genericAPIState,
+  fetchAllProjects: genericAPIState
 };

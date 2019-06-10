@@ -1,0 +1,51 @@
+.project-card {
+  box-sizing: border-box;
+  height: 257px;
+  width: 304px;
+  border: 1px solid rgba(221, 224, 228, 0.31);
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.project-card:hover {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.project-card__icon {
+  height: 11px;
+  width: 3px;
+  float: right;
+  margin-right: 1em;
+}
+.project-card__image {
+  height: 85px;
+  width: 85px;
+  border-radius: 8px;
+}
+.project-card__image img {
+  width: 100%;
+  height: auto;
+}
+.project-card__name {
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+}
+.project-card__description {
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  width: 254px;
+}
+.project-card__engineers {
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
