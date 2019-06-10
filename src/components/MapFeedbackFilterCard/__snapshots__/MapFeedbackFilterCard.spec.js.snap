@@ -146,7 +146,7 @@ ShallowWrapper {
         Object {
           "breakpoint": 1000,
           "settings": Object {
-            "slidesToScroll": 1,
+            "slidesToScroll": 2,
             "slidesToShow": 2,
           },
         },
@@ -302,7 +302,7 @@ ShallowWrapper {
           Object {
             "breakpoint": 1000,
             "settings": Object {
-              "slidesToScroll": 1,
+              "slidesToScroll": 2,
               "slidesToShow": 2,
             },
           },
