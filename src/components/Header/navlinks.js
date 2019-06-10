@@ -10,6 +10,8 @@ import perfomanceIcon from '../../static/Perfomance.svg';
 import perfomanceFillIcon from '../../static/PerfomanceFill.svg';
 import historyIcon from '../../static/History.svg';
 import historyFillIcon from '../../static/HistoryFill.svg';
+import cadreProgramIcon from '../../static/cadreProgramIcon.svg';
+import cadreProgramIconFill from '../../static/cadreProgramIconFill.svg';
 
 export const items = [
   {
@@ -120,6 +122,13 @@ export const opsItems = [
     path: '/feedback',
     icon: feedbackIcon,
     activeIcon: feedbackIconFill
+  },
+  {
+    key: 'cadre',
+    name: 'Cadre Program',
+    path: '/cadre',
+    icon: cadreProgramIcon,
+    activeIcon: cadreProgramIconFill
   }
 ];
 
