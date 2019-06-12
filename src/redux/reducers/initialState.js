@@ -175,5 +175,10 @@ export default {
   },
   addProjectTechnology: {
     technology: ''
+  },
+  d1Engineers: {
+    loading: false,
+    cadreEngineers: [],
+    error: ''
   }
 };

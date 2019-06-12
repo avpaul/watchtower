@@ -63,7 +63,7 @@ describe('<Dashboards />', () => {
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
-    expect(item.name()).toEqual('FellowDashboard');
+    expect(item.name()).toEqual('Connect(FellowDashboards)');
   });
 
   it('should render appropriate dashboards LF', () => {
