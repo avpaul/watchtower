@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Cadre Welcome page should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="hey-david"
+>
+          Hey, name!
+</p>,
+        <p
+          className="welcome-to-the-cadr"
+>
+          Welcome, to Cadre Program
+           
+          <span
+                    aria-label="Celebration"
+                    className="welcome-to-the-cadr"
+                    role="img"
+          >
+                    🎉
+          </span>
+</p>,
+        ",",
+        <img
+          alt="cadre-illustration"
+          className="cadreIllustration"
+          src="cadre-engineer-illustration.svg"
+/>,
+        <p
+          className="we-are-glad-you-made"
+>
+          We are glad you made it to the stage.Here, you'd be able to select your Engineering path.
+</p>,
+        <button
+          className="rectangle"
+          type="submit"
+>
+          <Link
+                    className="cader-link"
+                    replace={false}
+                    to="/dashboard"
+          >
+                    CONTINUE
+          </Link>
+</button>,
+      ],
+      "className": "cadre-engineer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Hey, name!",
+          "className": "hey-david",
+        },
+        "ref": null,
+        "rendered": "Hey, name!",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Welcome, to Cadre Program",
+            " ",
+            <span
+              aria-label="Celebration"
+              className="welcome-to-the-cadr"
+              role="img"
+>
+              🎉
+</span>,
+          ],
+          "className": "welcome-to-the-cadr",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Welcome, to Cadre Program",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "Celebration",
+              "children": "🎉",
+              "className": "welcome-to-the-cadr",
+              "role": "img",
+            },
+            "ref": null,
+            "rendered": "🎉",
+            "type": "span",
+          },
+        ],
+        "type": "p",
+      },
+      ",",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "cadre-illustration",
+          "className": "cadreIllustration",
+          "src": "cadre-engineer-illustration.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "We are glad you made it to the stage.Here, you'd be able to select your Engineering path.",
+          "className": "we-are-glad-you-made",
+        },
+        "ref": null,
+        "rendered": "We are glad you made it to the stage.Here, you'd be able to select your Engineering path.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            className="cader-link"
+            replace={false}
+            to="/dashboard"
+>
+            CONTINUE
+</Link>,
+          "className": "rectangle",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "CONTINUE",
+            "className": "cader-link",
+            "replace": false,
+            "to": "/dashboard",
+          },
+          "ref": null,
+          "rendered": "CONTINUE",
+          "type": [Function],
+        },
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="hey-david"
+>
+            Hey, name!
+</p>,
+          <p
+            className="welcome-to-the-cadr"
+>
+            Welcome, to Cadre Program
+             
+            <span
+                        aria-label="Celebration"
+                        className="welcome-to-the-cadr"
+                        role="img"
+            >
+                        🎉
+            </span>
+</p>,
+          ",",
+          <img
+            alt="cadre-illustration"
+            className="cadreIllustration"
+            src="cadre-engineer-illustration.svg"
+/>,
+          <p
+            className="we-are-glad-you-made"
+>
+            We are glad you made it to the stage.Here, you'd be able to select your Engineering path.
+</p>,
+          <button
+            className="rectangle"
+            type="submit"
+>
+            <Link
+                        className="cader-link"
+                        replace={false}
+                        to="/dashboard"
+            >
+                        CONTINUE
+            </Link>
+</button>,
+        ],
+        "className": "cadre-engineer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Hey, name!",
+            "className": "hey-david",
+          },
+          "ref": null,
+          "rendered": "Hey, name!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Welcome, to Cadre Program",
+              " ",
+              <span
+                aria-label="Celebration"
+                className="welcome-to-the-cadr"
+                role="img"
+>
+                🎉
+</span>,
+            ],
+            "className": "welcome-to-the-cadr",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Welcome, to Cadre Program",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "Celebration",
+                "children": "🎉",
+                "className": "welcome-to-the-cadr",
+                "role": "img",
+              },
+              "ref": null,
+              "rendered": "🎉",
+              "type": "span",
+            },
+          ],
+          "type": "p",
+        },
+        ",",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "cadre-illustration",
+            "className": "cadreIllustration",
+            "src": "cadre-engineer-illustration.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "We are glad you made it to the stage.Here, you'd be able to select your Engineering path.",
+            "className": "we-are-glad-you-made",
+          },
+          "ref": null,
+          "rendered": "We are glad you made it to the stage.Here, you'd be able to select your Engineering path.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              className="cader-link"
+              replace={false}
+              to="/dashboard"
+>
+              CONTINUE
+</Link>,
+            "className": "rectangle",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "CONTINUE",
+              "className": "cader-link",
+              "replace": false,
+              "to": "/dashboard",
+            },
+            "ref": null,
+            "rendered": "CONTINUE",
+            "type": [Function],
+          },
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
