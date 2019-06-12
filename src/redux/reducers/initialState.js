@@ -113,35 +113,12 @@ export default {
     data: {},
     error: ''
   },
-  opsDashboard: {
-    fellowsSummary: {
-      loading: false,
-      fellowsSummaryToday: {},
-      fellowsSummaryTrend: {},
-      data: {
-        allFellowsCount: 0,
-        D0AFellowsCount: 0,
-        D0BFellowsCount: 0
-      },
-      error: ''
-    }
-  },
   engineeringManagerSimsLeads: {
     loading: false,
     data: {
       managers: {},
       locations: []
     },
-    error: null
-  },
-  lfNotification: {
-    loading: false,
-    lfNotification: [],
-    error: null
-  },
-  ttlNotification: {
-    loading: false,
-    ttlNotification: [],
     error: null
   },
   updateManagerNotification: {
@@ -190,5 +167,13 @@ export default {
     success: null
   },
   createProject: genericAPIState,
-  fetchAllProjects: genericAPIState
+  fetchAllProjects: genericAPIState,
+  fetchProjectManagers: genericAPIState,
+  fetchProjectTechnologies: genericAPIState,
+  addProjectManager: {
+    manager: {}
+  },
+  addProjectTechnology: {
+    technology: ''
+  }
 };

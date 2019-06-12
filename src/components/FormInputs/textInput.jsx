@@ -56,6 +56,7 @@ class TextInput extends Component {
       lastTyped: Date.now(),
       inputValue: e.target.value.substr(0, length || 999)
     });
+
     setTimeout(() => {
       const { inputValue, lastTyped } = this.state;
       const lastChanged =
@@ -147,7 +148,7 @@ class TextInput extends Component {
       <div
         className={`input-group ${className} ${className}--${
           COMPONENT_STATUS_CLASS[status]
-        } mb-4`}
+        } mb-3`}
       >
         <label htmlFor={finalLabel}>{label}</label>
         {this.renderInput(finalLabel)}

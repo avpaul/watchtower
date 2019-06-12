@@ -100,3 +100,47 @@
 .wt-dropdown__label {
   display: none;
 }
+
+.wt-dropdown__selections {
+  float: left;
+  color: #cccccc;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.wt-dropdown__selection {
+  color: #3359db;
+  font-family: 'DIN Pro';
+  font-size: 11px;
+  letter-spacing: -0.16px;
+  line-height: 27px;
+  background: #edf4fd;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
+  float: left;
+}
+
+.wt-dropdown__selection span {
+  color: #3359db;
+  font-family: 'DIN Pro';
+  font-size: 13px;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.wt-dropdown .alert,
+.wt-dropdown .alert--disabled {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.wt-dropdown .alert--disabled {
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  clear: both;
+}

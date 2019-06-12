@@ -43,6 +43,8 @@ ShallowWrapper {
         "error": null,
         "loading": false,
       },
+      "manager": Object {},
+      "newTechnology": "",
       "project": Object {},
       "store": Object {
         "clearActions": [Function],
@@ -94,6 +96,8 @@ ShallowWrapper {
           "error": null,
           "loading": false,
         },
+        "manager": Object {},
+        "newTechnology": "",
         "project": Object {},
         "store": Object {
           "clearActions": [Function],
@@ -171,5 +175,7 @@ Object {
     "error": null,
     "loading": false,
   },
+  "manager": Object {},
+  "newTechnology": "",
 }
 `;
