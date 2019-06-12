@@ -1,34 +1,47 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import waitForExpect from 'wait-for-expect';
 import CadreDashboard from '../CadreDashboard';
-import CadreSubmenu from '../../../components/CadreSubmenu';
 
 describe('Tests the CadreDashboard component', () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = shallow(<CadreDashboard />);
-  });
+  const defaultProps = {
+    match: {
+      url: '/cadre'
+    },
+    history: {
+      replace: jest.fn()
+    },
+    location: {
+      pathname: '/cadre/projects'
+    }
+  };
 
   it('should render without crushing', () => {
+    const wrapper = shallow(<CadreDashboard {...defaultProps} />);
     expect(wrapper.exists()).toBe(true);
   });
 
   it('should execute handleCardclick method', () => {
-    wrapper.setState({ activeItem: '0' });
+    const wrapper = mount(
+      <MemoryRouter keyLength={0} initialEntries={['/cadre/reports']}>
+        <CadreDashboard {...defaultProps} />
+      </MemoryRouter>
+    );
 
     const event = {
       target: {
-        getAttribute: () => '1'
+        getAttribute: () => '0'
       }
     };
+
     wrapper
-      .find(CadreSubmenu)
-      .dive()
       .find('.cadre-submenu-cards')
       .first()
       .simulate('click', event);
 
-    expect(wrapper.state('activeItem')).toEqual('1');
+    waitForExpect(() => {
+      expect(wrapper.find('ProjectsDashboard').exists()).toBeTruthy();
+    });
   });
 });

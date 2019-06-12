@@ -90,6 +90,59 @@ describe('Header Component Test Suite', () => {
 
   const { wrapper: globalWrapper } = setup({ setupRole: 'WATCH_TOWER_TTL' });
 
+  /**
+   * Tests the setting of the active tab
+   *
+   * @param string path The path to be tested
+   */
+  const testMenuRouteCheck = path => {
+    const { wrapper } = setup({
+      location: {
+        pathname: `/${path}`
+      },
+      setupRole: 'WATCH_TOWER_OPS'
+    });
+    expect(wrapper).toBeDefined();
+    expect(wrapper.state('activeItem')).toBe(path);
+  };
+
+  /**
+   * Tests the handleMenuClick
+   *
+   * @param string Role A user role
+   * @param string linkKey A key to one of the header menu options
+   */
+  const testHandleMenuClickOnInactiveItem = (setupRole, linkKey) => {
+    const { wrapper } = setup({ setupRole });
+    const event = {
+      preventDefault: jest.fn(),
+      currentTarget: {
+        dataset: {
+          linkKey
+        }
+      }
+    };
+    const handleMenuClickSpy = jest.spyOn(
+      wrapper.instance(),
+      'handleMenuClick'
+    );
+    wrapper.instance().handleMenuClick(event);
+    expect(handleMenuClickSpy).toHaveBeenCalled();
+    expect(wrapper.state('activeItem')).toEqual(linkKey);
+  };
+
+  /**
+   * Tests a header component action
+   *
+   * @param string action A name of a header component class method
+   * @param array actionParams A list of parameters for testing the header action
+   */
+  const testHeaderAction = (action, actionParams = []) => {
+    const mounted = jest.spyOn(globalWrapper.instance(), action);
+    globalWrapper.instance()[action](...actionParams);
+    expect(mounted).toHaveBeenCalled();
+  };
+
   beforeAll(() => {
     role = 'WATCH_TOWER_OPS';
   });
@@ -133,97 +186,16 @@ describe('Header Component Test Suite', () => {
   });
 
   it('should update state when handleMenuClick is called on the inactive element', () => {
-    const { wrapper } = setup({ setupRole: 'WATCH_TOWER_LF' });
-
-    wrapper.setState({
-      activeItems: {
-        fellows: true,
-        settings: false
-      }
-    });
-    const event = {
-      preventDefault: jest.fn(),
-      currentTarget: {
-        dataset: {
-          linkKey: 'settings'
-        }
-      }
-    };
-    const handleMenuClickSpy = jest.spyOn(
-      wrapper.instance(),
-      'handleMenuClick'
-    );
-    wrapper.instance().handleMenuClick(event);
-    expect(handleMenuClickSpy).toHaveBeenCalled();
-    expect(wrapper.state('activeItems').settings).toEqual(true);
-    expect(wrapper.state('activeItems').fellows).toEqual(false);
+    testHandleMenuClickOnInactiveItem('WATCH_TOWER_LF', 'settings');
   });
 
   it('should update state when handleMenuClick is called on the inactive element', () => {
-    const { wrapper } = setup({ setupRole: 'Fellow' });
-
-    wrapper.setState({
-      activeItems: {
-        fellows: true,
-        settings: false
-      }
-    });
-    const event = {
-      preventDefault: jest.fn(),
-      currentTarget: {
-        dataset: {
-          linkKey: 'settings'
-        }
-      }
-    };
-    const handleMenuClickSpy = jest.spyOn(
-      wrapper.instance(),
-      'handleMenuClick'
-    );
-    wrapper.instance().handleMenuClick(event);
-    expect(handleMenuClickSpy).toHaveBeenCalled();
-    expect(wrapper.state('activeItems').settings).toEqual(true);
-    expect(wrapper.state('activeItems').fellows).toEqual(false);
+    testHandleMenuClickOnInactiveItem('Fellow', 'settings');
   });
 
   it('should not update state when handleMenuClick is called on the active element', () => {
-    const { wrapper } = setup({ setupRole: role });
-
-    wrapper.setState({
-      activeItems: {
-        fellows: true,
-        settings: false
-      }
-    });
-    const event = {
-      preventDefault: jest.fn(),
-      currentTarget: {
-        dataset: {
-          linkKey: 'fellows'
-        }
-      }
-    };
-    const handleMenuClickSpy = jest.spyOn(
-      wrapper.instance(),
-      'handleMenuClick'
-    );
-    wrapper.instance().handleMenuClick(event);
-    expect(handleMenuClickSpy).toHaveBeenCalled();
-    expect(wrapper.state('activeItems').settings).toEqual(false);
-    expect(wrapper.state('activeItems').fellows).toEqual(true);
+    testHandleMenuClickOnInactiveItem(role, 'fellows');
   });
-
-  const testHeaderAction = (action, actionParams = []) => {
-    const mounted = jest.spyOn(globalWrapper.instance(), action);
-    globalWrapper.instance()[action](...actionParams);
-    expect(mounted).toHaveBeenCalled();
-  };
-
-  const testHeaderActionNoMessage = (action, actionParams = []) => {
-    const mounted = jest.spyOn(globalWrapper.instance(), action);
-    globalWrapper.instance()[action](...actionParams);
-    expect(mounted).toHaveBeenCalled();
-  };
 
   it('calls hide modal', () => testHeaderAction('hideModal'));
 
@@ -240,7 +212,7 @@ describe('Header Component Test Suite', () => {
     testHeaderAction('renderOrder', [storeItems.notifications]));
 
   it('renders feedback when no new notification', () =>
-    testHeaderActionNoMessage('renderOrder', [storeItems.notification]));
+    testHeaderAction('renderOrder', [storeItems.notification]));
 
   it('renderIcons works as expected', () => {
     const notification1 = {
@@ -286,7 +258,7 @@ describe('Header Component Test Suite', () => {
 
   it('renderNotificationModal works as expected when no new notification', () => {
     const ordered = { key: [{ id: 'id', data: { status: 'onTrack' } }] };
-    testHeaderActionNoMessage('renderNotificationModal', [ordered, true, {}]);
+    testHeaderAction('renderNotificationModal', [ordered, true, {}]);
   });
 
   it('renderArchivesModal works as expected', () => {
@@ -359,24 +331,9 @@ describe('Header Component Test Suite', () => {
     expect(wrapper.find('ManagerHeader').exists()).toBe(true);
   });
 
-  it('renders header top properly when loading feedback dashboard', () => {
-    const { wrapper } = setup({
-      location: {
-        pathname: '/feedback'
-      },
-      setupRole: 'WATCH_TOWER_OPS'
-    });
-    expect(wrapper).toBeDefined();
-    expect(wrapper.state().activeItems.feedback).toBe(true);
-  });
-  it('renders header top properly when loading developer dashboard', () => {
-    const { wrapper } = setup({
-      location: {
-        pathname: '/developers'
-      },
-      setupRole: 'WATCH_TOWER_TTL'
-    });
-    expect(wrapper).toBeDefined();
-    expect(wrapper.state().activeItems.developers).toBe(true);
-  });
+  it('renders header top properly when loading feedback dashboard', () =>
+    testMenuRouteCheck('feedback'));
+
+  it('renders header top properly when loading developer dashboard', () =>
+    testMenuRouteCheck('developers'));
 });

@@ -1,5 +1,11 @@
 import { ALL } from '../constants/fellowFilters';
 
+const genericAPIState = {
+  loading: false,
+  data: [],
+  error: null
+};
+
 export default {
   emsDashboard: {
     fellowsSummary: {
@@ -182,5 +188,6 @@ export default {
   },
   pipDeactivation: {
     success: null
-  }
+  },
+  createProject: genericAPIState
 };

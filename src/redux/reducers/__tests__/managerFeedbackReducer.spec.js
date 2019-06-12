@@ -38,42 +38,27 @@ it('should add the error message on failing to fetch developers feedback data', 
 });
 
 it("should add fetched developers's data to state on success", () => {
+  const fellow = {
+    first_name: 'Oluseyi',
+    last_name: 'Anani',
+    level: 'D0B Apprenticeship',
+    type: 'pre-pip',
+    context: 'Your quality is below expectation, you are off-track',
+    criteria: 'lms',
+    manager: 'Trust birungi',
+    manager_email: 'trust.birungi@andela.com',
+    start_date: '2019-01-01',
+    end_date: 'null',
+    project: 'Watch Tower'
+  };
   const newState = {
     loading: false,
-    data: [
-      {
-        first_name: 'Oluseyi',
-        last_name: 'Anani',
-        level: 'D0B Apprenticeship',
-        type: 'pre-pip',
-        context: 'Your quality is below expectation, you are off-track',
-        criteria: 'lms',
-        manager: 'Trust birungi',
-        manager_email: 'trust.birungi@andela.com',
-        start_date: '2019-01-01',
-        end_date: 'null',
-        project: 'Watch Tower'
-      }
-    ],
+    data: [fellow],
     error: null
   };
   const action = {
     type: FEEDBACK_REQUEST_SUCCESS,
-    feedback: [
-      {
-        first_name: 'Oluseyi',
-        last_name: 'Anani',
-        level: 'D0B Apprenticeship',
-        type: 'pre-pip',
-        context: 'Your quality is below expectation, you are off-track',
-        criteria: 'lms',
-        manager: 'Trust birungi',
-        manager_email: 'trust.birungi@andela.com',
-        start_date: '2019-01-01',
-        end_date: 'null',
-        project: 'Watch Tower'
-      }
-    ]
+    feedback: [fellow]
   };
   expect(managerFeedbackReducer(initialState.feedback, action)).toEqual(
     newState

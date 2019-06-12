@@ -12,7 +12,7 @@ const ManagerHeader = props => {
     renderManagerModal,
     showModal,
     handleMenuClick,
-    activeItems,
+    activeItem,
     notifications,
     unreadnotifications,
     user,
@@ -51,7 +51,7 @@ const ManagerHeader = props => {
         role={role}
         items={getMenuItems(role)}
         handleMenuClick={handleMenuClick}
-        activeItems={activeItems}
+        activeItem={activeItem}
       />
     </div>
   );
@@ -61,7 +61,7 @@ ManagerHeader.propTypes = {
   renderManagerModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
-  activeItems: PropTypes.shape({}).isRequired,
+  activeItem: PropTypes.string.isRequired,
   notifications: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   unreadnotifications: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   user: PropTypes.shape({

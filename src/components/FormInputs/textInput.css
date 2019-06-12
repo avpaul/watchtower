@@ -1,0 +1,101 @@
+.wt-text-input {
+  float: left;
+  width: 100%;
+}
+
+.wt-text-input input,
+.wt-text-input textarea {
+  outline: none;
+  width: 100%;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  height: 46px;
+  border: 1px solid #e9eff4;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.wt-text-input label {
+  color: #333e44;
+  font-family: 'DIN Pro';
+  font-size: 13px;
+  letter-spacing: 0.12px;
+  line-height: 17px;
+}
+
+.wt-text-input input {
+  padding: 0 0.5rem;
+}
+
+.wt-text-input textarea {
+  padding: 0.5rem;
+}
+
+.wt-text-input input::placeholder {
+  color: #cccccc;
+}
+
+.wt-text-input--normal {
+  color: #111111;
+}
+
+.wt-text-input--loading input,
+.wt-text-input--warning input {
+  color: #ffd900;
+}
+
+.wt-text-input--fail input {
+  color: #d84d47;
+}
+
+.wt-text-input--success input {
+  color: #00a84f;
+}
+
+.wt-text-input--danger input {
+  color: #b33030;
+}
+
+.wt-text-input .alert,
+.wt-text-input .alert--disabled {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.wt-text-input .alert--disabled {
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  clear: both;
+}
+
+.wt-text-input__comment--active,
+.wt-text-input__comment--disabled {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-indent: 0 !important;
+}
+
+.wt-text-input__comment--active {
+  width: 100%;
+  float: left;
+  color: #cccccc;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.wt-text-input__comment--disabled {
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.wt-text-input__label {
+  display: none;
+}

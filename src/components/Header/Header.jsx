@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import mapValues from 'lodash.mapvalues';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
 import './Header.css';
@@ -17,6 +16,7 @@ import renderNotificationHeader from '../Notifications/NotificationHeader';
 import renderMessageHeader from '../Notifications/MessageHeader';
 import FellowHeader from './FellowHeader';
 import ManagerHeader from './ManagerHeader';
+import { menuOptions } from './navlinks';
 
 /**
  * Header UI Component
@@ -27,15 +27,7 @@ export class Header extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      activeItems: {
-        fellows: false,
-        dashboard: false,
-        developers: false,
-        performance: false,
-        feedback: false,
-        settings: false,
-        cadre: false
-      },
+      activeItem: '',
       show: false,
       viewNotifications: true
     };
@@ -45,29 +37,13 @@ export class Header extends Component {
     const { role, location } = this.props;
     this.switchNotificationsType(role);
 
-    switch (location.pathname) {
-      case '/dashboard':
-        this.setState({ activeItems: { dashboard: true } });
-        break;
-      case '/developers':
-        this.setState({ activeItems: { developers: true } });
-        break;
-      case '/performance':
-        this.setState({ activeItems: { performance: true } });
-        break;
-      case '/feedback':
-        this.setState({ activeItems: { feedback: true } });
-        break;
-      case '/cadre':
-        this.setState({ activeItems: { cadre: true } });
-        break;
-      default: {
-        if (location.pathname.search('/developers/') === 0) {
-          this.setState({ activeItems: { developers: true } });
-        }
-      }
-    }
+    const activeItem = Object.keys(menuOptions).find(route =>
+      this.checkPathName(location, route)
+    );
+    if (activeItem) this.setState({ activeItem });
   }
+
+  checkPathName = (location, path) => location.pathname.search(path) === 1;
 
   showModal = () => {
     this.setState({ show: true });
@@ -84,12 +60,7 @@ export class Header extends Component {
 
   handleMenuClick = event => {
     const key = event.currentTarget.dataset.linkKey;
-    const { activeItems } = this.state;
-    if (!activeItems[key]) {
-      const newactiveItems = mapValues(activeItems, () => false);
-      newactiveItems[key] = true;
-      this.setState({ activeItems: newactiveItems });
-    }
+    if (key) this.setState({ activeItem: key });
   };
 
   handleClick = () => {
@@ -370,7 +341,7 @@ export class Header extends Component {
   };
 
   switchHeader = userRole => {
-    const { activeItems } = this.state;
+    const { activeItem } = this.state;
     const { user, role, notifications, unreadnotifications } = this.props;
 
     switch (userRole) {
@@ -383,7 +354,7 @@ export class Header extends Component {
             renderManagerModal={this.renderManagerModal}
             showModal={this.showModal}
             handleMenuClick={this.handleMenuClick}
-            activeItems={activeItems}
+            activeItem={activeItem}
             notifications={notifications}
             unreadnotifications={unreadnotifications || []}
             user={user}
@@ -396,7 +367,7 @@ export class Header extends Component {
             renderModal={this.renderModal}
             showModal={this.showModal}
             handleMenuClick={this.handleMenuClick}
-            activeItems={activeItems}
+            activeItem={activeItem}
             notifications={notifications}
             unreadnotifications={unreadnotifications || []}
             user={user}
