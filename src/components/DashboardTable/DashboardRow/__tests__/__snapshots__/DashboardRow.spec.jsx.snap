@@ -2,48 +2,6 @@
 
 exports[`renders to match snapshot 1`] = `
 ReactWrapper {
-  Symbol(enzyme.__unrendered__): <DashboardRow
-    fellow={
-        Object {
-            "actual apprenticeship start date": "2018-12-10",
-            "advanceStatus": "N/A",
-            "cohort": "Class 1 - NBO",
-            "communication": "1.00",
-            "devPulseStatus": "On Track",
-            "email": "abbey.maddy@andela.com",
-            "fellow_id": "-LMKN5flPv4R7LCZs0lh",
-            "firstName": "Abbey",
-            "initiative": "1.00",
-            "integration": "1.00",
-            "isBeforeWk5": true,
-            "lastName": "Maddy",
-            "level": "D0A Simulations",
-            "lmsStatus": "N/A",
-            "professionalism": "1.00",
-            "quality": "1.00",
-            "quantity": "1.00",
-            "simulation start date": "2018-11-01",
-            "staffId": null,
-            "status": "onTrack",
-            "submitterFirstName": "",
-            "submitterLastName": "",
-            "weeksSpent": 23,
-          }
-    }
-    fellowCells={
-        Array [
-            Object {
-              "key": "element",
-              "value": "James",
-            },
-            Object {
-              "color": "off-track",
-              "key": "element",
-              "value": "N/A",
-            },
-          ]
-    }
-/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -428,5 +386,49 @@ ReactWrapper {
       },
     },
   },
+  Symbol(enzyme.__linkedRoots__): Array [],
+  Symbol(enzyme.__unrendered__): <DashboardRow
+    fellow={
+        Object {
+            "actual apprenticeship start date": "2018-12-10",
+            "advanceStatus": "N/A",
+            "cohort": "Class 1 - NBO",
+            "communication": "1.00",
+            "devPulseStatus": "On Track",
+            "email": "abbey.maddy@andela.com",
+            "fellow_id": "-LMKN5flPv4R7LCZs0lh",
+            "firstName": "Abbey",
+            "initiative": "1.00",
+            "integration": "1.00",
+            "isBeforeWk5": true,
+            "lastName": "Maddy",
+            "level": "D0A Simulations",
+            "lmsStatus": "N/A",
+            "professionalism": "1.00",
+            "quality": "1.00",
+            "quantity": "1.00",
+            "simulation start date": "2018-11-01",
+            "staffId": null,
+            "status": "onTrack",
+            "submitterFirstName": "",
+            "submitterLastName": "",
+            "weeksSpent": 23,
+          }
+    }
+    fellowCells={
+        Array [
+            Object {
+              "key": "element",
+              "value": "James",
+            },
+            Object {
+              "color": "off-track",
+              "key": "element",
+              "value": "N/A",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__updatedBy__): null,
 }
 `;

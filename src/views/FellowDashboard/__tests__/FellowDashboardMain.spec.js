@@ -7,7 +7,8 @@ import LMSProgressSummary from '../../../components/LMSProgressSummary/LMSProgre
 describe('Tests FellowDashboardMain component', () => {
   let wrapper;
   const props = {
-    getFellowProfileData: jest.fn()
+    getFellowProfileData: jest.fn(),
+    getD1FellowProfileData: jest.fn()
   };
 
   beforeEach(() => {

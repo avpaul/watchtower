@@ -16,7 +16,8 @@ export class FellowDashboards extends Component {
     const d1Engineer = d1EngineerData.filter(
       engineer => engineer.email === user.email
     );
-    const cadreRole = "CadreFellow";
+
+    const cadreRole = 'CadreFellow';
 
     return d1Engineer.length === 0 ? (
       <FellowDashboard {...this.props} role={role} />
