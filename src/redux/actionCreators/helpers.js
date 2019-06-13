@@ -39,6 +39,19 @@ export const genericAPIPostRequest = (url, actionTypes, postData) =>
     data: postData
   });
 
+/**
+ * A generic action creator for making GET requests
+ * @param string The url path to make the request to
+ * @param array actionTypes A list of action types
+ * @return object An instance of a Promise
+ */
+export const genericAPIGetRequest = (url, actionTypes) =>
+  genericAPIRequest(actionTypes, {
+    method: 'GET',
+    url: `${serverURL}/api/v2/${url}`
+  });
+
 export default {
-  genericAPIPostRequest
+  genericAPIPostRequest,
+  genericAPIGetRequest
 };

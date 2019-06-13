@@ -1,0 +1,1031 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Map Project cards Should render more than one project correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MapProjectCards
+    projectData={
+        Array [
+            Object {
+              "channels": null,
+              "id": 1,
+              "manager": "-LAmk78f7GyBWkt2UWpb",
+              "name": "test project",
+              "technologies": "NodeJs,Laravel",
+              "type": "internal",
+            },
+            Object {
+              "channels": null,
+              "id": 1,
+              "manager": "-LAmk78f7GyBWkt2UWpb",
+              "name": "test project",
+              "technologies": "NodeJs,Laravel",
+              "type": "internal",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="row"
+>
+          <div
+                    className="col-9"
+          >
+                    <p
+                              className="project-grid__count"
+                    >
+                              <p>
+                                        2 Projects
+                              </p>
+                    </p>
+          </div>
+          <div
+                    className="col-3"
+          >
+                    <Link
+                              className="project-grid__add"
+                              replace={false}
+                              to="/cadre/projects/create"
+                    >
+                              ADD NEW PROJECT
+                    </Link>
+          </div>
+</div>,
+        <div
+          className="project-card__grid"
+>
+          <ProjectCard
+                    project={
+                              Object {
+                                        "channels": null,
+                                        "id": 1,
+                                        "manager": "-LAmk78f7GyBWkt2UWpb",
+                                        "name": "test project",
+                                        "technologies": "NodeJs,Laravel",
+                                        "type": "internal",
+                                      }
+                    }
+          />
+          <ProjectCard
+                    project={
+                              Object {
+                                        "channels": null,
+                                        "id": 1,
+                                        "manager": "-LAmk78f7GyBWkt2UWpb",
+                                        "name": "test project",
+                                        "technologies": "NodeJs,Laravel",
+                                        "type": "internal",
+                                      }
+                    }
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-9"
+>
+              <p
+                            className="project-grid__count"
+              >
+                            <p>
+                                          2 Projects
+                            </p>
+              </p>
+</div>,
+            <div
+              className="col-3"
+>
+              <Link
+                            className="project-grid__add"
+                            replace={false}
+                            to="/cadre/projects/create"
+              >
+                            ADD NEW PROJECT
+              </Link>
+</div>,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p
+                className="project-grid__count"
+>
+                <p>
+                                2 Projects
+                </p>
+</p>,
+              "className": "col-9",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                  2 Projects
+</p>,
+                "className": "project-grid__count",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2 Projects",
+                },
+                "ref": null,
+                "rendered": "2 Projects",
+                "type": "p",
+              },
+              "type": "p",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                className="project-grid__add"
+                replace={false}
+                to="/cadre/projects/create"
+>
+                ADD NEW PROJECT
+</Link>,
+              "className": "col-3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "ADD NEW PROJECT",
+                "className": "project-grid__add",
+                "replace": false,
+                "to": "/cadre/projects/create",
+              },
+              "ref": null,
+              "rendered": "ADD NEW PROJECT",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ProjectCard
+              project={
+                            Object {
+                                          "channels": null,
+                                          "id": 1,
+                                          "manager": "-LAmk78f7GyBWkt2UWpb",
+                                          "name": "test project",
+                                          "technologies": "NodeJs,Laravel",
+                                          "type": "internal",
+                                        }
+              }
+/>,
+            <ProjectCard
+              project={
+                            Object {
+                                          "channels": null,
+                                          "id": 1,
+                                          "manager": "-LAmk78f7GyBWkt2UWpb",
+                                          "name": "test project",
+                                          "technologies": "NodeJs,Laravel",
+                                          "type": "internal",
+                                        }
+              }
+/>,
+          ],
+          "className": "project-card__grid",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "project": Object {
+                "channels": null,
+                "id": 1,
+                "manager": "-LAmk78f7GyBWkt2UWpb",
+                "name": "test project",
+                "technologies": "NodeJs,Laravel",
+                "type": "internal",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "project": Object {
+                "channels": null,
+                "id": 1,
+                "manager": "-LAmk78f7GyBWkt2UWpb",
+                "name": "test project",
+                "technologies": "NodeJs,Laravel",
+                "type": "internal",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="row"
+>
+            <div
+                        className="col-9"
+            >
+                        <p
+                                    className="project-grid__count"
+                        >
+                                    <p>
+                                                2 Projects
+                                    </p>
+                        </p>
+            </div>
+            <div
+                        className="col-3"
+            >
+                        <Link
+                                    className="project-grid__add"
+                                    replace={false}
+                                    to="/cadre/projects/create"
+                        >
+                                    ADD NEW PROJECT
+                        </Link>
+            </div>
+</div>,
+          <div
+            className="project-card__grid"
+>
+            <ProjectCard
+                        project={
+                                    Object {
+                                                "channels": null,
+                                                "id": 1,
+                                                "manager": "-LAmk78f7GyBWkt2UWpb",
+                                                "name": "test project",
+                                                "technologies": "NodeJs,Laravel",
+                                                "type": "internal",
+                                              }
+                        }
+            />
+            <ProjectCard
+                        project={
+                                    Object {
+                                                "channels": null,
+                                                "id": 1,
+                                                "manager": "-LAmk78f7GyBWkt2UWpb",
+                                                "name": "test project",
+                                                "technologies": "NodeJs,Laravel",
+                                                "type": "internal",
+                                              }
+                        }
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-9"
+>
+                <p
+                                className="project-grid__count"
+                >
+                                <p>
+                                                2 Projects
+                                </p>
+                </p>
+</div>,
+              <div
+                className="col-3"
+>
+                <Link
+                                className="project-grid__add"
+                                replace={false}
+                                to="/cadre/projects/create"
+                >
+                                ADD NEW PROJECT
+                </Link>
+</div>,
+            ],
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p
+                  className="project-grid__count"
+>
+                  <p>
+                                    2 Projects
+                  </p>
+</p>,
+                "className": "col-9",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    2 Projects
+</p>,
+                  "className": "project-grid__count",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2 Projects",
+                  },
+                  "ref": null,
+                  "rendered": "2 Projects",
+                  "type": "p",
+                },
+                "type": "p",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  className="project-grid__add"
+                  replace={false}
+                  to="/cadre/projects/create"
+>
+                  ADD NEW PROJECT
+</Link>,
+                "className": "col-3",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "ADD NEW PROJECT",
+                  "className": "project-grid__add",
+                  "replace": false,
+                  "to": "/cadre/projects/create",
+                },
+                "ref": null,
+                "rendered": "ADD NEW PROJECT",
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ProjectCard
+                project={
+                                Object {
+                                                "channels": null,
+                                                "id": 1,
+                                                "manager": "-LAmk78f7GyBWkt2UWpb",
+                                                "name": "test project",
+                                                "technologies": "NodeJs,Laravel",
+                                                "type": "internal",
+                                              }
+                }
+/>,
+              <ProjectCard
+                project={
+                                Object {
+                                                "channels": null,
+                                                "id": 1,
+                                                "manager": "-LAmk78f7GyBWkt2UWpb",
+                                                "name": "test project",
+                                                "technologies": "NodeJs,Laravel",
+                                                "type": "internal",
+                                              }
+                }
+/>,
+            ],
+            "className": "project-card__grid",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "project": Object {
+                  "channels": null,
+                  "id": 1,
+                  "manager": "-LAmk78f7GyBWkt2UWpb",
+                  "name": "test project",
+                  "technologies": "NodeJs,Laravel",
+                  "type": "internal",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "project": Object {
+                  "channels": null,
+                  "id": 1,
+                  "manager": "-LAmk78f7GyBWkt2UWpb",
+                  "name": "test project",
+                  "technologies": "NodeJs,Laravel",
+                  "type": "internal",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Test Map Project cards should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MapProjectCards
+    projectData={
+        Array [
+            Object {
+              "channels": null,
+              "id": 1,
+              "manager": "-LAmk78f7GyBWkt2UWpb",
+              "name": "test project",
+              "technologies": "NodeJs,Laravel",
+              "type": "internal",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="row"
+>
+          <div
+                    className="col-9"
+          >
+                    <p
+                              className="project-grid__count"
+                    >
+                              <p>
+                                        1 Project
+                              </p>
+                    </p>
+          </div>
+          <div
+                    className="col-3"
+          >
+                    <Link
+                              className="project-grid__add"
+                              replace={false}
+                              to="/cadre/projects/create"
+                    >
+                              ADD NEW PROJECT
+                    </Link>
+          </div>
+</div>,
+        <div
+          className="project-card__grid"
+>
+          <ProjectCard
+                    project={
+                              Object {
+                                        "channels": null,
+                                        "id": 1,
+                                        "manager": "-LAmk78f7GyBWkt2UWpb",
+                                        "name": "test project",
+                                        "technologies": "NodeJs,Laravel",
+                                        "type": "internal",
+                                      }
+                    }
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-9"
+>
+              <p
+                            className="project-grid__count"
+              >
+                            <p>
+                                          1 Project
+                            </p>
+              </p>
+</div>,
+            <div
+              className="col-3"
+>
+              <Link
+                            className="project-grid__add"
+                            replace={false}
+                            to="/cadre/projects/create"
+              >
+                            ADD NEW PROJECT
+              </Link>
+</div>,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p
+                className="project-grid__count"
+>
+                <p>
+                                1 Project
+                </p>
+</p>,
+              "className": "col-9",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p>
+                  1 Project
+</p>,
+                "className": "project-grid__count",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "1 Project",
+                },
+                "ref": null,
+                "rendered": "1 Project",
+                "type": "p",
+              },
+              "type": "p",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                className="project-grid__add"
+                replace={false}
+                to="/cadre/projects/create"
+>
+                ADD NEW PROJECT
+</Link>,
+              "className": "col-3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "ADD NEW PROJECT",
+                "className": "project-grid__add",
+                "replace": false,
+                "to": "/cadre/projects/create",
+              },
+              "ref": null,
+              "rendered": "ADD NEW PROJECT",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ProjectCard
+              project={
+                            Object {
+                                          "channels": null,
+                                          "id": 1,
+                                          "manager": "-LAmk78f7GyBWkt2UWpb",
+                                          "name": "test project",
+                                          "technologies": "NodeJs,Laravel",
+                                          "type": "internal",
+                                        }
+              }
+/>,
+          ],
+          "className": "project-card__grid",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "project": Object {
+                "channels": null,
+                "id": 1,
+                "manager": "-LAmk78f7GyBWkt2UWpb",
+                "name": "test project",
+                "technologies": "NodeJs,Laravel",
+                "type": "internal",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="row"
+>
+            <div
+                        className="col-9"
+            >
+                        <p
+                                    className="project-grid__count"
+                        >
+                                    <p>
+                                                1 Project
+                                    </p>
+                        </p>
+            </div>
+            <div
+                        className="col-3"
+            >
+                        <Link
+                                    className="project-grid__add"
+                                    replace={false}
+                                    to="/cadre/projects/create"
+                        >
+                                    ADD NEW PROJECT
+                        </Link>
+            </div>
+</div>,
+          <div
+            className="project-card__grid"
+>
+            <ProjectCard
+                        project={
+                                    Object {
+                                                "channels": null,
+                                                "id": 1,
+                                                "manager": "-LAmk78f7GyBWkt2UWpb",
+                                                "name": "test project",
+                                                "technologies": "NodeJs,Laravel",
+                                                "type": "internal",
+                                              }
+                        }
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-9"
+>
+                <p
+                                className="project-grid__count"
+                >
+                                <p>
+                                                1 Project
+                                </p>
+                </p>
+</div>,
+              <div
+                className="col-3"
+>
+                <Link
+                                className="project-grid__add"
+                                replace={false}
+                                to="/cadre/projects/create"
+                >
+                                ADD NEW PROJECT
+                </Link>
+</div>,
+            ],
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p
+                  className="project-grid__count"
+>
+                  <p>
+                                    1 Project
+                  </p>
+</p>,
+                "className": "col-9",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    1 Project
+</p>,
+                  "className": "project-grid__count",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1 Project",
+                  },
+                  "ref": null,
+                  "rendered": "1 Project",
+                  "type": "p",
+                },
+                "type": "p",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  className="project-grid__add"
+                  replace={false}
+                  to="/cadre/projects/create"
+>
+                  ADD NEW PROJECT
+</Link>,
+                "className": "col-3",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "ADD NEW PROJECT",
+                  "className": "project-grid__add",
+                  "replace": false,
+                  "to": "/cadre/projects/create",
+                },
+                "ref": null,
+                "rendered": "ADD NEW PROJECT",
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ProjectCard
+                project={
+                                Object {
+                                                "channels": null,
+                                                "id": 1,
+                                                "manager": "-LAmk78f7GyBWkt2UWpb",
+                                                "name": "test project",
+                                                "technologies": "NodeJs,Laravel",
+                                                "type": "internal",
+                                              }
+                }
+/>,
+            ],
+            "className": "project-card__grid",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "project": Object {
+                  "channels": null,
+                  "id": 1,
+                  "manager": "-LAmk78f7GyBWkt2UWpb",
+                  "name": "test project",
+                  "technologies": "NodeJs,Laravel",
+                  "type": "internal",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
