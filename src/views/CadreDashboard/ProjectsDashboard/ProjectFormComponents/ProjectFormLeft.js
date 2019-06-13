@@ -48,19 +48,21 @@ class ProjectFormLeft extends Component {
   };
 
   renderManagerInput = () => {
-    const { project, newManager, fetchProjectManagers } = this.props;
+    const { project, newManager } = this.props;
+    let {
+      fetchProjectManagers: { data }
+    } = this.props;
+    if (newManager.name) data = [...data, newManager];
     return this.renderInputWithAddition(
       {
         name: 'manager',
         label: 'Team Manager',
-        options: newManager.name
-          ? []
-          : fetchProjectManagers.data.map(manager => ({
-              ...manager,
-              label: manager.name
-            })),
-        placeholder: newManager.name || 'Select Team Manager',
-        inputValue: project.manager
+        options: data.map(manager => ({
+          ...manager,
+          label: manager.name
+        })),
+        placeholder: 'Select Team Manager',
+        inputValue: newManager.name || project.manager
       },
       '#addManagerModal'
     );
@@ -101,7 +103,7 @@ class ProjectFormLeft extends Component {
   render() {
     const { project, renderTextInput } = this.props;
     return (
-      <div className="col-6">
+      <div className="col-12 col-lg-6">
         <div className="row mr-0 ml-0">
           {this.renderTopInputs()}
           {this.renderManagerInput()}

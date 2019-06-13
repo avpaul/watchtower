@@ -74,6 +74,7 @@ ShallowWrapper {
                               handleClose={[Function]}
                               handleSubmit={[Function]}
                               id="addTechnologyModal"
+                              successMessage="The project technology has been added to the project form!"
                               title="Add Technology"
                 >
                               <TextInput
@@ -106,6 +107,7 @@ ShallowWrapper {
       "handleClose": [Function],
       "handleSubmit": [Function],
       "id": "addTechnologyModal",
+      "successMessage": "The project technology has been added to the project form!",
       "title": "Add Technology",
     },
     "ref": null,
@@ -166,6 +168,7 @@ ShallowWrapper {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addTechnologyModal"
+                successMessage="The project technology has been added to the project form!"
                 title="Add Technology"
 >
                 <TextInput
@@ -260,6 +263,7 @@ ShallowWrapper {
                                     handleClose={[Function]}
                                     handleSubmit={[Function]}
                                     id="addTechnologyModal"
+                                    successMessage="The project technology has been added to the project form!"
                                     title="Add Technology"
                     >
                                     <TextInput
@@ -292,6 +296,7 @@ ShallowWrapper {
         "handleClose": [Function],
         "handleSubmit": [Function],
         "id": "addTechnologyModal",
+        "successMessage": "The project technology has been added to the project form!",
         "title": "Add Technology",
       },
       "ref": null,
@@ -352,6 +357,7 @@ ShallowWrapper {
                   handleClose={[Function]}
                   handleSubmit={[Function]}
                   id="addTechnologyModal"
+                  successMessage="The project technology has been added to the project form!"
                   title="Add Technology"
 >
                   <TextInput

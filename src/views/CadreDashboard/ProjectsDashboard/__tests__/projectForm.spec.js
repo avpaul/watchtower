@@ -162,6 +162,22 @@ describe('Project Form', () => {
     expect(defaultProps.createNewProject).toHaveBeenCalledTimes(result);
   };
 
+  /**
+   * A mock object mimicking the crucial properties of the TextInput and DropdownInput components
+   *
+   * @param string name Component name
+   * @param string value The input value of the component
+   * @return object A mock input component object
+   */
+  const inputComponentMock = (name, value) => ({
+    [name]: {
+      getValue: () => `${value}`,
+      isValid: () => true,
+      setStatus: () => true,
+      props: { name }
+    }
+  });
+
   it('renders correctly', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
@@ -227,7 +243,6 @@ describe('Project Form', () => {
       .find('ProjectForm')
       .state('inputs')
       .technologies.addSelection(projectDetails.technologies);
-
     testSubmission(button, 0);
 
     addInputValue(wrapper, '#type', projectDetails.type);
@@ -235,6 +250,31 @@ describe('Project Form', () => {
 
     addInputValue(wrapper, '#mockups', projectDetails.mockups);
     testSubmission(button, 2);
+  });
+
+  it('tests the submission using a new project manager', async () => {
+    const createNewProject = jest.fn();
+    const { wrapper } = setup({ createNewProject });
+    wrapper.setState({
+      inputs: {
+        ...inputComponentMock('name', projectDetails.name),
+        ...inputComponentMock('type', projectDetails.type),
+        ...inputComponentMock('tagline', projectDetails.tagline),
+        ...inputComponentMock('about', projectDetails.about),
+        ...inputComponentMock('mockups', projectDetails.mockups),
+        ...inputComponentMock('technologies', projectDetails.technologies),
+        ...inputComponentMock('manager', 0)
+      }
+    });
+    wrapper.setProps(
+      {
+        manager: { id: 0, name: 'Team Manager' }
+      },
+      () => {
+        wrapper.instance().handleSubmit({ preventDefault: () => {} });
+        expect(createNewProject).toHaveBeenCalledTimes(1);
+      }
+    );
   });
 
   it('tests the project form redirection', async () => {

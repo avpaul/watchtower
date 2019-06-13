@@ -41,79 +41,255 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="project-form row ml-0 ml-0"
+      "children": Array [
+        <div
+          className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0"
 >
-        <button
-                className="project-form__back"
-                onClick={[Function]}
-                type="button"
-        >
-                <img
-                        alt="Return Icon"
-                        src="BackIcon.png"
-                />
-        </button>
-        <div
-                className="col-12 mb-4"
-        >
-                <Title
-                        subTitle=""
-                        title="Add New Project"
-                />
-        </div>
-        <Unknown>
-                <Connect(ProjectFormLeft)
-                        project={Object {}}
-                        renderDropdown={[Function]}
-                        renderTextInput={[Function]}
-                />
-                <ProjectFormRight
-                        project={Object {}}
-                        renderDropdown={[Function]}
-                        renderTextInput={[Function]}
-                />
-        </Unknown>
-        <div
-                className="col-12"
-        >
-                <div
-                        className="row justify-content-end mr-0 mt-3"
-                >
-                        <button
-                                className="col-2 btn btn-primary project-form__submit"
-                                id="submit"
-                                onClick={[Function]}
-                                type="button"
-                        >
-                                SUBMIT
-                        </button>
-                </div>
-        </div>
+          <button
+                    className="project-form__back"
+                    onClick={[Function]}
+                    type="button"
+          >
+                    <img
+                              alt="Return Icon"
+                              src="BackIcon.png"
+                    />
+          </button>
+          <Title
+                    subTitle=""
+                    title="Add New Project"
+          />
 </div>,
+        <Unknown>
+          <Connect(ProjectFormLeft)
+                    project={Object {}}
+                    renderDropdown={[Function]}
+                    renderTextInput={[Function]}
+          />
+          <ProjectFormRight
+                    project={Object {}}
+                    renderDropdown={[Function]}
+                    renderTextInput={[Function]}
+          />
+</Unknown>,
+        <div
+          className="col-12"
+>
+          <div
+                    className="row justify-content-end mr-0 mt-3"
+          >
+                    <button
+                              className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
+                              id="submit"
+                              onClick={[Function]}
+                              type="button"
+                    >
+                              SUBMIT
+                    </button>
+          </div>
+</div>,
+      ],
+      "className": "project-form row ml-0 ml-0 pl-2 pl-md-5 pr-2 pr-md-5",
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="project-form__back"
+              onClick={[Function]}
+              type="button"
+>
+              <img
+                            alt="Return Icon"
+                            src="BackIcon.png"
+              />
+</button>,
+            <Title
+              subTitle=""
+              title="Add New Project"
+/>,
+          ],
+          "className": "col-11 col-lg-12 mb-4 ml-4 ml-lg-0",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="Return Icon"
+                src="BackIcon.png"
+/>,
+              "className": "project-form__back",
+              "onClick": [Function],
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Return Icon",
+                "src": "BackIcon.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "subTitle": "",
+              "title": "Add New Project",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Connect(ProjectFormLeft)
+              project={Object {}}
+              renderDropdown={[Function]}
+              renderTextInput={[Function]}
+/>,
+            <ProjectFormRight
+              project={Object {}}
+              renderDropdown={[Function]}
+              renderTextInput={[Function]}
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "project": Object {},
+              "renderDropdown": [Function],
+              "renderTextInput": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "project": Object {},
+              "renderDropdown": [Function],
+              "renderTextInput": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": Symbol(react.fragment),
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="row justify-content-end mr-0 mt-3"
+>
+            <button
+                        className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
+                        id="submit"
+                        onClick={[Function]}
+                        type="button"
+            >
+                        SUBMIT
+            </button>
+</div>,
+          "className": "col-12",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
+              id="submit"
+              onClick={[Function]}
+              type="button"
+>
+              SUBMIT
+</button>,
+            "className": "row justify-content-end mr-0 mt-3",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "SUBMIT",
+              "className": "col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit",
+              "id": "submit",
+              "onClick": [Function],
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": "SUBMIT",
+            "type": "button",
+          },
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button
-            className="project-form__back"
-            onClick={[Function]}
-            type="button"
->
-            <img
-                        alt="Return Icon"
-                        src="BackIcon.png"
-            />
-</button>,
           <div
-            className="col-12 mb-4"
+            className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0"
 >
+            <button
+                        className="project-form__back"
+                        onClick={[Function]}
+                        type="button"
+            >
+                        <img
+                                    alt="Return Icon"
+                                    src="BackIcon.png"
+                        />
+            </button>
             <Title
                         subTitle=""
                         title="Add New Project"
@@ -138,7 +314,7 @@ ShallowWrapper {
                         className="row justify-content-end mr-0 mt-3"
             >
                         <button
-                                    className="col-2 btn btn-primary project-form__submit"
+                                    className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
                                     id="submit"
                                     onClick={[Function]}
                                     type="button"
@@ -148,7 +324,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "project-form row ml-0 ml-0",
+        "className": "project-form row ml-0 ml-0 pl-2 pl-md-5 pr-2 pr-md-5",
       },
       "ref": null,
       "rendered": Array [
@@ -157,53 +333,67 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <img
-              alt="Return Icon"
-              src="BackIcon.png"
+            "children": Array [
+              <button
+                className="project-form__back"
+                onClick={[Function]}
+                type="button"
+>
+                <img
+                                alt="Return Icon"
+                                src="BackIcon.png"
+                />
+</button>,
+              <Title
+                subTitle=""
+                title="Add New Project"
 />,
-            "className": "project-form__back",
-            "onClick": [Function],
-            "type": "button",
+            ],
+            "className": "col-11 col-lg-12 mb-4 ml-4 ml-lg-0",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "Return Icon",
-              "src": "BackIcon.png",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <Title
-              subTitle=""
-              title="Add New Project"
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="Return Icon"
+                  src="BackIcon.png"
 />,
-            "className": "col-12 mb-4",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "subTitle": "",
-              "title": "Add New Project",
+                "className": "project-form__back",
+                "onClick": [Function],
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Return Icon",
+                  "src": "BackIcon.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "button",
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "subTitle": "",
+                "title": "Add New Project",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -264,7 +454,7 @@ ShallowWrapper {
               className="row justify-content-end mr-0 mt-3"
 >
               <button
-                            className="col-2 btn btn-primary project-form__submit"
+                            className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
                             id="submit"
                             onClick={[Function]}
                             type="button"
@@ -281,7 +471,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <button
-                className="col-2 btn btn-primary project-form__submit"
+                className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
                 id="submit"
                 onClick={[Function]}
                 type="button"
@@ -297,7 +487,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "SUBMIT",
-                "className": "col-2 btn btn-primary project-form__submit",
+                "className": "col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit",
                 "id": "submit",
                 "onClick": [Function],
                 "type": "button",
@@ -312,286 +502,6 @@ ShallowWrapper {
         },
       ],
       "type": "div",
-    },
-    "type": Symbol(react.fragment),
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": <div
-          className="project-form row ml-0 ml-0"
->
-          <button
-                    className="project-form__back"
-                    onClick={[Function]}
-                    type="button"
-          >
-                    <img
-                              alt="Return Icon"
-                              src="BackIcon.png"
-                    />
-          </button>
-          <div
-                    className="col-12 mb-4"
-          >
-                    <Title
-                              subTitle=""
-                              title="Add New Project"
-                    />
-          </div>
-          <Unknown>
-                    <Connect(ProjectFormLeft)
-                              project={Object {}}
-                              renderDropdown={[Function]}
-                              renderTextInput={[Function]}
-                    />
-                    <ProjectFormRight
-                              project={Object {}}
-                              renderDropdown={[Function]}
-                              renderTextInput={[Function]}
-                    />
-          </Unknown>
-          <div
-                    className="col-12"
-          >
-                    <div
-                              className="row justify-content-end mr-0 mt-3"
-                    >
-                              <button
-                                        className="col-2 btn btn-primary project-form__submit"
-                                        id="submit"
-                                        onClick={[Function]}
-                                        type="button"
-                              >
-                                        SUBMIT
-                              </button>
-                    </div>
-          </div>
-</div>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <button
-              className="project-form__back"
-              onClick={[Function]}
-              type="button"
->
-              <img
-                            alt="Return Icon"
-                            src="BackIcon.png"
-              />
-</button>,
-            <div
-              className="col-12 mb-4"
->
-              <Title
-                            subTitle=""
-                            title="Add New Project"
-              />
-</div>,
-            <Unknown>
-              <Connect(ProjectFormLeft)
-                            project={Object {}}
-                            renderDropdown={[Function]}
-                            renderTextInput={[Function]}
-              />
-              <ProjectFormRight
-                            project={Object {}}
-                            renderDropdown={[Function]}
-                            renderTextInput={[Function]}
-              />
-</Unknown>,
-            <div
-              className="col-12"
->
-              <div
-                            className="row justify-content-end mr-0 mt-3"
-              >
-                            <button
-                                          className="col-2 btn btn-primary project-form__submit"
-                                          id="submit"
-                                          onClick={[Function]}
-                                          type="button"
-                            >
-                                          SUBMIT
-                            </button>
-              </div>
-</div>,
-          ],
-          "className": "project-form row ml-0 ml-0",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <img
-                alt="Return Icon"
-                src="BackIcon.png"
-/>,
-              "className": "project-form__back",
-              "onClick": [Function],
-              "type": "button",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Return Icon",
-                "src": "BackIcon.png",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <Title
-                subTitle=""
-                title="Add New Project"
-/>,
-              "className": "col-12 mb-4",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "subTitle": "",
-                "title": "Add New Project",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": Array [
-                <Connect(ProjectFormLeft)
-                  project={Object {}}
-                  renderDropdown={[Function]}
-                  renderTextInput={[Function]}
-/>,
-                <ProjectFormRight
-                  project={Object {}}
-                  renderDropdown={[Function]}
-                  renderTextInput={[Function]}
-/>,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "project": Object {},
-                  "renderDropdown": [Function],
-                  "renderTextInput": [Function],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "project": Object {},
-                  "renderDropdown": [Function],
-                  "renderTextInput": [Function],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": Symbol(react.fragment),
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <div
-                className="row justify-content-end mr-0 mt-3"
->
-                <button
-                                className="col-2 btn btn-primary project-form__submit"
-                                id="submit"
-                                onClick={[Function]}
-                                type="button"
-                >
-                                SUBMIT
-                </button>
-</div>,
-              "className": "col-12",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <button
-                  className="col-2 btn btn-primary project-form__submit"
-                  id="submit"
-                  onClick={[Function]}
-                  type="button"
->
-                  SUBMIT
-</button>,
-                "className": "row justify-content-end mr-0 mt-3",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "SUBMIT",
-                  "className": "col-2 btn btn-primary project-form__submit",
-                  "id": "submit",
-                  "onClick": [Function],
-                  "type": "button",
-                },
-                "ref": null,
-                "rendered": "SUBMIT",
-                "type": "button",
-              },
-              "type": "div",
-            },
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

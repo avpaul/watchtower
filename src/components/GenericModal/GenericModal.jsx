@@ -45,14 +45,14 @@ class GenericModal extends Component {
   };
 
   renderBody = () => {
-    const { children } = this.props;
+    const { children, successMessage } = this.props;
     const { success } = this.state;
     return (
       <div className="row mr-0 ml-0">
         {children}
         {success ? (
           <span className="alert alert-success" role="alert">
-            The project technology has been added to the project form!
+            {successMessage}
           </span>
         ) : null}
       </div>
@@ -91,11 +91,13 @@ GenericModal.propTypes = {
   children: PropTypes.shape().isRequired,
   title: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func,
+  successMessage: PropTypes.string
 };
 
 GenericModal.defaultProps = {
-  handleClose: () => {}
+  handleClose: () => {},
+  successMessage: 'Success!'
 };
 
 export default GenericModal;
