@@ -27,6 +27,10 @@ import fellowPipFeedbackReducer from './fellowPipFeedbackReducer';
 import deactivatePipReducer from './pipDeactivationReducer';
 import createProject from './createProjectReducer';
 import fetchProjectsReducer from './viewAllProjectsReducer';
+import addProjectManager from './addProjectManagerReducer';
+import addProjectTechnology from './addProjectTechnologyReducer';
+import fetchProjectManagers from './getProjectManagersReducer';
+import fetchProjectTechnologies from './getProjectTechnologiesReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -55,7 +59,11 @@ const rootReducer = combineReducers({
   fellowPipFeedback: fellowPipFeedbackReducer,
   deactivatePipReducer,
   createProject,
-  allProjects: fetchProjectsReducer
+  allProjects: fetchProjectsReducer,
+  addProjectManager,
+  addProjectTechnology,
+  fetchProjectManagers,
+  fetchProjectTechnologies
 });
 
 export default rootReducer;

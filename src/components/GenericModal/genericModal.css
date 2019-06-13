@@ -1,0 +1,14 @@
+.generic-modal .modal-content {
+  padding: 2rem;
+  overflow: scroll;
+}
+
+.generic-modal h1 {
+  font-size: 130%;
+  font-weight: bold !important;
+  color: #3359db;
+}
+
+.generic-modal .modal-footer {
+  padding: 0 1rem;
+}

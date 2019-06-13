@@ -15,7 +15,7 @@ const genericAPIRequest = (actionTypes, axiosConfig) => dispatch => {
     .then(response => {
       dispatch({
         type: actionTypes[1],
-        data: response.data
+        data: response.data.data || response.data
       });
     })
     .catch(error =>
@@ -30,6 +30,7 @@ const genericAPIRequest = (actionTypes, axiosConfig) => dispatch => {
  * A generic action creator for making post requests
  * @param string The url path to make the request to
  * @param array actionTypes A list of action types
+ * @param object postData A list of action types
  * @return object An instance of a Promise
  */
 export const genericAPIPostRequest = (url, actionTypes, postData) =>

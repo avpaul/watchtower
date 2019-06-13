@@ -2,7 +2,12 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import waitForExpect from 'wait-for-expect';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import Thunk from 'redux-thunk';
+
 import CadreDashboard from '../CadreDashboard';
+import initialState from '../../../redux/reducers/initialState';
 
 describe('Tests the CadreDashboard component', () => {
   const defaultProps = {
@@ -23,10 +28,15 @@ describe('Tests the CadreDashboard component', () => {
   });
 
   it('should execute handleCardclick method', () => {
+    const mockStore = configureStore([Thunk]);
+    const store = mockStore(initialState);
+
     const wrapper = mount(
-      <MemoryRouter keyLength={0} initialEntries={['/cadre/reports']}>
-        <CadreDashboard {...defaultProps} />
-      </MemoryRouter>
+      <Provider store={store}>
+        <MemoryRouter keyLength={0} initialEntries={['/cadre/reports']}>
+          <CadreDashboard {...defaultProps} />
+        </MemoryRouter>
+      </Provider>
     );
 
     const event = {

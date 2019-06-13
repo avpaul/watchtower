@@ -59,7 +59,7 @@ ShallowWrapper {
           No comment
 </div>,
       ],
-      "className": "input-group wt-text-input wt-text-input--normal mb-4",
+      "className": "input-group wt-text-input wt-text-input--normal mb-3",
     },
     "ref": null,
     "rendered": Array [
@@ -149,7 +149,7 @@ ShallowWrapper {
             No comment
 </div>,
         ],
-        "className": "input-group wt-text-input wt-text-input--normal mb-4",
+        "className": "input-group wt-text-input wt-text-input--normal mb-3",
       },
       "ref": null,
       "rendered": Array [
@@ -300,7 +300,7 @@ ShallowWrapper {
           No comment
 </div>,
       ],
-      "className": "input-group wt-text-input wt-text-input--normal mb-4",
+      "className": "input-group wt-text-input wt-text-input--normal mb-3",
     },
     "ref": null,
     "rendered": Array [
@@ -394,7 +394,7 @@ ShallowWrapper {
             No comment
 </div>,
         ],
-        "className": "input-group wt-text-input wt-text-input--normal mb-4",
+        "className": "input-group wt-text-input wt-text-input--normal mb-3",
       },
       "ref": null,
       "rendered": Array [
@@ -541,7 +541,7 @@ ShallowWrapper {
           className="null__comment--active"
 />,
       ],
-      "className": "input-group null null--normal mb-4",
+      "className": "input-group null null--normal mb-3",
     },
     "ref": null,
     "rendered": Array [
@@ -627,7 +627,7 @@ ShallowWrapper {
             className="null__comment--active"
 />,
         ],
-        "className": "input-group null null--normal mb-4",
+        "className": "input-group null null--normal mb-3",
       },
       "ref": null,
       "rendered": Array [

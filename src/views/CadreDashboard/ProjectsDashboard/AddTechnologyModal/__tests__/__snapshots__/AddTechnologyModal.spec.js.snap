@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Technology Modal renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddTechnologyModal
+    addProjectTechnology={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <TextInput
+        className="wt-text-input"
+        comment=""
+        componentStateKey="inputs"
+        defaultStatus={0}
+        inputValue=""
+        label="Technology"
+        length={999}
+        name="technology"
+        parent={
+                AddTechnologyModal {
+                        "context": Object {},
+                        "handleClick": [Function],
+                        "handleClose": [Function],
+                        "props": Object {
+                          "addProjectTechnology": [Function],
+                        },
+                        "refs": Object {},
+                        "setState": [Function],
+                        "state": Object {
+                          "inputs": Object {},
+                        },
+                        "updater": Updater {
+                          "_callbacks": Array [],
+                          "_renderer": ReactShallowRenderer {
+                            "_context": Object {},
+                            "_didScheduleRenderPhaseUpdate": false,
+                            "_dispatcher": Object {
+                              "readContext": [Function],
+                              "useCallback": [Function],
+                              "useContext": [Function],
+                              "useDebugValue": [Function],
+                              "useEffect": [Function],
+                              "useImperativeHandle": [Function],
+                              "useLayoutEffect": [Function],
+                              "useMemo": [Function],
+                              "useReducer": [Function],
+                              "useRef": [Function],
+                              "useState": [Function],
+                            },
+                            "_element": <AddTechnologyModal
+                              addProjectTechnology={[Function]}
+                />,
+                            "_firstWorkInProgressHook": null,
+                            "_forcedUpdate": false,
+                            "_instance": [Circular],
+                            "_isReRender": false,
+                            "_newState": null,
+                            "_numberOfReRenders": 0,
+                            "_renderPhaseUpdates": null,
+                            "_rendered": <GenericModal
+                              handleClose={[Function]}
+                              handleSubmit={[Function]}
+                              id="addTechnologyModal"
+                              title="Add Technology"
+                >
+                              <TextInput
+                                            className="wt-text-input"
+                                            comment=""
+                                            componentStateKey="inputs"
+                                            defaultStatus={0}
+                                            inputValue=""
+                                            label="Technology"
+                                            length={999}
+                                            name="technology"
+                                            parent={[Circular]}
+                                            placeholder=""
+                                            testInput={[Function]}
+                                            type="text"
+                              />
+                </GenericModal>,
+                            "_rendering": false,
+                            "_updater": [Circular],
+                            "_workInProgressHook": null,
+                          },
+                        },
+                        Symbol(enzyme.__setState__): [Function],
+                      }
+        }
+        placeholder=""
+        testInput={[Function]}
+        type="text"
+/>,
+      "handleClose": [Function],
+      "handleSubmit": [Function],
+      "id": "addTechnologyModal",
+      "title": "Add Technology",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "className": "wt-text-input",
+        "comment": "",
+        "componentStateKey": "inputs",
+        "defaultStatus": 0,
+        "inputValue": "",
+        "label": "Technology",
+        "length": 999,
+        "name": "technology",
+        "parent": AddTechnologyModal {
+          "context": Object {},
+          "handleClick": [Function],
+          "handleClose": [Function],
+          "props": Object {
+            "addProjectTechnology": [Function],
+          },
+          "refs": Object {},
+          "setState": [Function],
+          "state": Object {
+            "inputs": Object {},
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <AddTechnologyModal
+                addProjectTechnology={[Function]}
+/>,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <GenericModal
+                handleClose={[Function]}
+                handleSubmit={[Function]}
+                id="addTechnologyModal"
+                title="Add Technology"
+>
+                <TextInput
+                                className="wt-text-input"
+                                comment=""
+                                componentStateKey="inputs"
+                                defaultStatus={0}
+                                inputValue=""
+                                label="Technology"
+                                length={999}
+                                name="technology"
+                                parent={[Circular]}
+                                placeholder=""
+                                testInput={[Function]}
+                                type="text"
+                />
+</GenericModal>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+          Symbol(enzyme.__setState__): [Function],
+        },
+        "placeholder": "",
+        "testInput": [Function],
+        "type": "text",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <TextInput
+          className="wt-text-input"
+          comment=""
+          componentStateKey="inputs"
+          defaultStatus={0}
+          inputValue=""
+          label="Technology"
+          length={999}
+          name="technology"
+          parent={
+                    AddTechnologyModal {
+                              "context": Object {},
+                              "handleClick": [Function],
+                              "handleClose": [Function],
+                              "props": Object {
+                                "addProjectTechnology": [Function],
+                              },
+                              "refs": Object {},
+                              "setState": [Function],
+                              "state": Object {
+                                "inputs": Object {},
+                              },
+                              "updater": Updater {
+                                "_callbacks": Array [],
+                                "_renderer": ReactShallowRenderer {
+                                  "_context": Object {},
+                                  "_didScheduleRenderPhaseUpdate": false,
+                                  "_dispatcher": Object {
+                                    "readContext": [Function],
+                                    "useCallback": [Function],
+                                    "useContext": [Function],
+                                    "useDebugValue": [Function],
+                                    "useEffect": [Function],
+                                    "useImperativeHandle": [Function],
+                                    "useLayoutEffect": [Function],
+                                    "useMemo": [Function],
+                                    "useReducer": [Function],
+                                    "useRef": [Function],
+                                    "useState": [Function],
+                                  },
+                                  "_element": <AddTechnologyModal
+                                    addProjectTechnology={[Function]}
+                    />,
+                                  "_firstWorkInProgressHook": null,
+                                  "_forcedUpdate": false,
+                                  "_instance": [Circular],
+                                  "_isReRender": false,
+                                  "_newState": null,
+                                  "_numberOfReRenders": 0,
+                                  "_renderPhaseUpdates": null,
+                                  "_rendered": <GenericModal
+                                    handleClose={[Function]}
+                                    handleSubmit={[Function]}
+                                    id="addTechnologyModal"
+                                    title="Add Technology"
+                    >
+                                    <TextInput
+                                                    className="wt-text-input"
+                                                    comment=""
+                                                    componentStateKey="inputs"
+                                                    defaultStatus={0}
+                                                    inputValue=""
+                                                    label="Technology"
+                                                    length={999}
+                                                    name="technology"
+                                                    parent={[Circular]}
+                                                    placeholder=""
+                                                    testInput={[Function]}
+                                                    type="text"
+                                    />
+                    </GenericModal>,
+                                  "_rendering": false,
+                                  "_updater": [Circular],
+                                  "_workInProgressHook": null,
+                                },
+                              },
+                              Symbol(enzyme.__setState__): [Function],
+                            }
+          }
+          placeholder=""
+          testInput={[Function]}
+          type="text"
+/>,
+        "handleClose": [Function],
+        "handleSubmit": [Function],
+        "id": "addTechnologyModal",
+        "title": "Add Technology",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "wt-text-input",
+          "comment": "",
+          "componentStateKey": "inputs",
+          "defaultStatus": 0,
+          "inputValue": "",
+          "label": "Technology",
+          "length": 999,
+          "name": "technology",
+          "parent": AddTechnologyModal {
+            "context": Object {},
+            "handleClick": [Function],
+            "handleClose": [Function],
+            "props": Object {
+              "addProjectTechnology": [Function],
+            },
+            "refs": Object {},
+            "setState": [Function],
+            "state": Object {
+              "inputs": Object {},
+            },
+            "updater": Updater {
+              "_callbacks": Array [],
+              "_renderer": ReactShallowRenderer {
+                "_context": Object {},
+                "_didScheduleRenderPhaseUpdate": false,
+                "_dispatcher": Object {
+                  "readContext": [Function],
+                  "useCallback": [Function],
+                  "useContext": [Function],
+                  "useDebugValue": [Function],
+                  "useEffect": [Function],
+                  "useImperativeHandle": [Function],
+                  "useLayoutEffect": [Function],
+                  "useMemo": [Function],
+                  "useReducer": [Function],
+                  "useRef": [Function],
+                  "useState": [Function],
+                },
+                "_element": <AddTechnologyModal
+                  addProjectTechnology={[Function]}
+/>,
+                "_firstWorkInProgressHook": null,
+                "_forcedUpdate": false,
+                "_instance": [Circular],
+                "_isReRender": false,
+                "_newState": null,
+                "_numberOfReRenders": 0,
+                "_renderPhaseUpdates": null,
+                "_rendered": <GenericModal
+                  handleClose={[Function]}
+                  handleSubmit={[Function]}
+                  id="addTechnologyModal"
+                  title="Add Technology"
+>
+                  <TextInput
+                                    className="wt-text-input"
+                                    comment=""
+                                    componentStateKey="inputs"
+                                    defaultStatus={0}
+                                    inputValue=""
+                                    label="Technology"
+                                    length={999}
+                                    name="technology"
+                                    parent={[Circular]}
+                                    placeholder=""
+                                    testInput={[Function]}
+                                    type="text"
+                  />
+</GenericModal>,
+                "_rendering": false,
+                "_updater": [Circular],
+                "_workInProgressHook": null,
+              },
+            },
+            Symbol(enzyme.__setState__): [Function],
+          },
+          "placeholder": "",
+          "testInput": [Function],
+          "type": "text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

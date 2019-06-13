@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import CadreSubmenu from '../../components/CadreSubmenu';
 import ProjectsDashboard from './ProjectsDashboard';
+import AddManagerModal from './ProjectsDashboard/AddManagerModal';
+import AddTechnologyModal from './ProjectsDashboard/AddTechnologyModal';
+
 import './CadreDashboard.css';
 
 class CadreDashboard extends Component {
@@ -65,6 +68,8 @@ class CadreDashboard extends Component {
     return (
       <Fragment>
         <div className="container-fluid page-content">
+          <AddManagerModal />
+          <AddTechnologyModal />
           <div className="row">
             {this.renderSubMenu()}
             <div className="col-sm-9">

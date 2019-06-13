@@ -1,6 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Thunk from 'redux-thunk';
 
 import configureStore from 'redux-mock-store';
 import initialState from '../../../../redux/reducers/initialState';
@@ -13,6 +15,7 @@ describe('Projects Dashboard', () => {
     },
     history: {}
   };
+
   /**
    * Creates an enzyme instance to test the projectForm component.
    *
@@ -20,13 +23,15 @@ describe('Projects Dashboard', () => {
    * @returns { wrapper, props }
    */
   const setup = (testURL = '/cadre/projects/create') => {
-    const mockStore = configureStore();
+    const mockStore = configureStore([Thunk]);
     const store = mockStore(initialState);
 
     const wrapper = mount(
-      <MemoryRouter keyLength={0} initialEntries={[testURL]}>
-        <ProjectsDashboard store={store} {...defaultProps} />
-      </MemoryRouter>
+      <Provider store={store}>
+        <MemoryRouter keyLength={0} initialEntries={[testURL]}>
+          <ProjectsDashboard {...defaultProps} />
+        </MemoryRouter>
+      </Provider>
     );
     return { wrapper };
   };

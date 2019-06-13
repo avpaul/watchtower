@@ -16,6 +16,32 @@
   border-color: #10a36d;
 }
 
+.project-form__add-input {
+  width: 100%;
+}
+
+.project-form__add-input button {
+  margin-top: 2.3rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #dae2e6;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.project-form__add-input button img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
 .project-form textarea {
   min-height: 23rem;
 }

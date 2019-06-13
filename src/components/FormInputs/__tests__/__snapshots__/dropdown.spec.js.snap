@@ -10,6 +10,7 @@ ShallowWrapper {
     defaultStatus={0}
     inputValue=""
     label="Type"
+    multipleSelection={false}
     name="Name"
     options={
         Array [
@@ -66,24 +67,29 @@ ShallowWrapper {
                               -- Select --
                     </option>
                     <option
-                              value="internal"
+                              value={undefined}
                     >
                               Internal
                     </option>
                     <option
-                              value="external"
+                              value={undefined}
                     >
                               External
                     </option>
           </select>
 </div>,
+        null,
+        <div
+          className="alert--disabled"
+          role="alert"
+/>,
         <div
           className="wt-dropdown__comment"
 >
           No comment
 </div>,
       ],
-      "className": "wt-dropdown wt-dropdown--undefined mb-4",
+      "className": "wt-dropdown wt-dropdown--normal mb-4",
     },
     "ref": null,
     "rendered": Array [
@@ -116,12 +122,12 @@ ShallowWrapper {
                         -- Select --
             </option>
             <option
-                        value="internal"
+                        value={undefined}
             >
                         Internal
             </option>
             <option
-                        value="external"
+                        value={undefined}
             >
                         External
             </option>
@@ -142,12 +148,12 @@ ShallowWrapper {
 </option>,
               Array [
                 <option
-                  value="internal"
+                  value={undefined}
 >
                   Internal
 </option>,
                 <option
-                  value="external"
+                  value={undefined}
 >
                   External
 </option>,
@@ -180,7 +186,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Internal",
-                "value": "internal",
+                "value": undefined,
               },
               "ref": null,
               "rendered": "Internal",
@@ -192,7 +198,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "External",
-                "value": "external",
+                "value": undefined,
               },
               "ref": null,
               "rendered": "External",
@@ -201,6 +207,20 @@ ShallowWrapper {
           ],
           "type": "select",
         },
+        "type": "div",
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": "alert--disabled",
+          "role": "alert",
+        },
+        "ref": null,
+        "rendered": "",
         "type": "div",
       },
       Object {
@@ -245,24 +265,29 @@ ShallowWrapper {
                                     -- Select --
                         </option>
                         <option
-                                    value="internal"
+                                    value={undefined}
                         >
                                     Internal
                         </option>
                         <option
-                                    value="external"
+                                    value={undefined}
                         >
                                     External
                         </option>
             </select>
 </div>,
+          null,
+          <div
+            className="alert--disabled"
+            role="alert"
+/>,
           <div
             className="wt-dropdown__comment"
 >
             No comment
 </div>,
         ],
-        "className": "wt-dropdown wt-dropdown--undefined mb-4",
+        "className": "wt-dropdown wt-dropdown--normal mb-4",
       },
       "ref": null,
       "rendered": Array [
@@ -295,12 +320,12 @@ ShallowWrapper {
                             -- Select --
               </option>
               <option
-                            value="internal"
+                            value={undefined}
               >
                             Internal
               </option>
               <option
-                            value="external"
+                            value={undefined}
               >
                             External
               </option>
@@ -321,12 +346,12 @@ ShallowWrapper {
 </option>,
                 Array [
                   <option
-                    value="internal"
+                    value={undefined}
 >
                     Internal
 </option>,
                   <option
-                    value="external"
+                    value={undefined}
 >
                     External
 </option>,
@@ -359,7 +384,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Internal",
-                  "value": "internal",
+                  "value": undefined,
                 },
                 "ref": null,
                 "rendered": "Internal",
@@ -371,7 +396,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "External",
-                  "value": "external",
+                  "value": undefined,
                 },
                 "ref": null,
                 "rendered": "External",
@@ -380,6 +405,20 @@ ShallowWrapper {
             ],
             "type": "select",
           },
+          "type": "div",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "alert--disabled",
+            "role": "alert",
+          },
+          "ref": null,
+          "rendered": "",
           "type": "div",
         },
         Object {
@@ -436,6 +475,7 @@ ShallowWrapper {
     defaultStatus={0}
     inputValue=""
     label=""
+    multipleSelection={false}
     name="Name"
     options={
         Array [
@@ -485,22 +525,27 @@ ShallowWrapper {
                     value=""
           >
                     <option
-                              value="internal"
+                              value={undefined}
                     >
                               Internal
                     </option>
                     <option
-                              value="external"
+                              value={undefined}
                     >
                               External
                     </option>
           </select>
 </div>,
+        null,
+        <div
+          className="alert--disabled"
+          role="alert"
+/>,
         <div
           className="null__comment"
 />,
       ],
-      "className": "null null--undefined mb-4",
+      "className": "null null--normal mb-4",
     },
     "ref": null,
     "rendered": Array [
@@ -528,12 +573,12 @@ ShallowWrapper {
             value=""
 >
             <option
-                        value="internal"
+                        value={undefined}
             >
                         Internal
             </option>
             <option
-                        value="external"
+                        value={undefined}
             >
                         External
             </option>
@@ -550,12 +595,12 @@ ShallowWrapper {
               null,
               Array [
                 <option
-                  value="internal"
+                  value={undefined}
 >
                   Internal
 </option>,
                 <option
-                  value="external"
+                  value={undefined}
 >
                   External
 </option>,
@@ -577,7 +622,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Internal",
-                "value": "internal",
+                "value": undefined,
               },
               "ref": null,
               "rendered": "Internal",
@@ -589,7 +634,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "External",
-                "value": "external",
+                "value": undefined,
               },
               "ref": null,
               "rendered": "External",
@@ -598,6 +643,20 @@ ShallowWrapper {
           ],
           "type": "select",
         },
+        "type": "div",
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": "alert--disabled",
+          "role": "alert",
+        },
+        "ref": null,
+        "rendered": "",
         "type": "div",
       },
       Object {
@@ -635,22 +694,27 @@ ShallowWrapper {
                         value=""
             >
                         <option
-                                    value="internal"
+                                    value={undefined}
                         >
                                     Internal
                         </option>
                         <option
-                                    value="external"
+                                    value={undefined}
                         >
                                     External
                         </option>
             </select>
 </div>,
+          null,
+          <div
+            className="alert--disabled"
+            role="alert"
+/>,
           <div
             className="null__comment"
 />,
         ],
-        "className": "null null--undefined mb-4",
+        "className": "null null--normal mb-4",
       },
       "ref": null,
       "rendered": Array [
@@ -678,12 +742,12 @@ ShallowWrapper {
               value=""
 >
               <option
-                            value="internal"
+                            value={undefined}
               >
                             Internal
               </option>
               <option
-                            value="external"
+                            value={undefined}
               >
                             External
               </option>
@@ -700,12 +764,12 @@ ShallowWrapper {
                 null,
                 Array [
                   <option
-                    value="internal"
+                    value={undefined}
 >
                     Internal
 </option>,
                   <option
-                    value="external"
+                    value={undefined}
 >
                     External
 </option>,
@@ -727,7 +791,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Internal",
-                  "value": "internal",
+                  "value": undefined,
                 },
                 "ref": null,
                 "rendered": "Internal",
@@ -739,7 +803,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "External",
-                  "value": "external",
+                  "value": undefined,
                 },
                 "ref": null,
                 "rendered": "External",
@@ -748,6 +812,20 @@ ShallowWrapper {
             ],
             "type": "select",
           },
+          "type": "div",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "alert--disabled",
+            "role": "alert",
+          },
+          "ref": null,
+          "rendered": "",
           "type": "div",
         },
         Object {
