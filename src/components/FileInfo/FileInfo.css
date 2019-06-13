@@ -1,0 +1,24 @@
+.document-info {
+  border-radius: 4px;
+  width: 100%;
+  padding: 0.5rem 0;
+  border: 1px solid #e9eff4;
+  background-color: #e9eff4;
+  cursor: pointer;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.document-info a {
+  text-decoration: none;
+  color: #333e44;
+  letter-spacing: 0.12px;
+  line-height: 17px;
+  font-size: 13px;
+}
+
+.document-info img {
+  float: right;
+  padding: 0.5rem 0;
+  margin-right: 10%;
+}

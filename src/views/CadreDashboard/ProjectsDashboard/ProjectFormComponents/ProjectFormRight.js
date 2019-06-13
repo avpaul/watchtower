@@ -8,7 +8,7 @@ class ProjectFormRight extends Component {
   }
 
   render() {
-    const { project, renderTextInput } = this.props;
+    const { project, renderTextInput, renderUploadInput } = this.props;
     return (
       <div className="col-12 col-lg-6">
         <div className="row ml-0 mr-0">
@@ -24,6 +24,14 @@ class ProjectFormRight extends Component {
             inputValue: project.about,
             type: 'textarea'
           })}
+          {renderUploadInput({
+            name: 'logo',
+            label: 'Project Logo',
+            documents: project.logo ? [project.logo] : [],
+            count: 1,
+            type: 'images',
+            buttonLabel: 'Upload Logo'
+          })}
         </div>
       </div>
     );
@@ -32,7 +40,8 @@ class ProjectFormRight extends Component {
 
 ProjectFormRight.propTypes = {
   project: PropTypes.shape().isRequired,
-  renderTextInput: PropTypes.func.isRequired
+  renderTextInput: PropTypes.func.isRequired,
+  renderUploadInput: PropTypes.func.isRequired
 };
 
 export default ProjectFormRight;

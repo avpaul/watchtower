@@ -113,4 +113,23 @@ describe('Dropdown Input ', () => {
       defaultProps.options[1].id
     );
   });
+
+  it('executes the deSelect function', () => {
+    const { wrapper } = setup();
+    wrapper.setState({
+      selections: [{ id: Date.now() }]
+    });
+    wrapper.instance().deSelect({ id: 'id' });
+    expect(wrapper.state('selections')).toBeTruthy();
+  });
+
+  it('trigger the deSelect function when the "X" icon is clicked', () => {
+    const { wrapper } = setup();
+    wrapper.setState({
+      selections: [{ id: Date.now(), label: 'randomlabel' }]
+    });
+    const deSelectSpy = jest.spyOn(wrapper.instance(), 'deSelect');
+    wrapper.find('span').simulate('click');
+    expect(deSelectSpy).toHaveBeenCalled();
+  });
 });
