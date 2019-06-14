@@ -63,7 +63,6 @@ class ProjectForm extends Component {
     const invalidInput = Object.values(inputs).find(input => {
       if (input.props.name === 'mockups' && input.getValue() === '')
         return false;
-      if (input.props.name === 'manager' && manager.name) return false;
       return !input.isValid();
     });
 
@@ -78,7 +77,9 @@ class ProjectForm extends Component {
       if (input.getValue()) projectDetails[input.props.name] = input.getValue();
     });
 
-    if (manager.name) projectDetails.manager = JSON.stringify(manager);
+    if (`${manager.id}` === projectDetails.manager)
+      projectDetails.manager = JSON.stringify(manager);
+
     projectDetails.technologies = JSON.stringify(projectDetails.technologies);
     return !project.name ? createNewProject(projectDetails) : true;
   };
@@ -143,7 +144,7 @@ class ProjectForm extends Component {
           <button
             id="submit"
             type="button"
-            className="col-2 btn btn-primary project-form__submit"
+            className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
             onClick={this.handleSubmit}
           >
             SUBMIT
@@ -158,16 +159,14 @@ class ProjectForm extends Component {
     const title = project.name ? 'Edit Project' : 'Add New Project';
 
     return (
-      <React.Fragment>
-        <div className="project-form row ml-0 ml-0">
+      <div className="project-form row ml-0 ml-0 pl-2 pl-md-5 pr-2 pr-md-5">
+        <div className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0">
           {this.renderReturnButton()}
-          <div className="col-12 mb-4">
-            <Title title={title} />
-          </div>
-          {this.renderForm()}
-          {this.renderSubmitButton(createProject)}
+          <Title title={title} />
         </div>
-      </React.Fragment>
+        {this.renderForm()}
+        {this.renderSubmitButton(createProject)}
+      </div>
     );
   }
 }

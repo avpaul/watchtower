@@ -10,7 +10,7 @@ class ProjectFormRight extends Component {
   render() {
     const { project, renderTextInput } = this.props;
     return (
-      <div className="col-6">
+      <div className="col-12 col-lg-6">
         <div className="row ml-0 mr-0">
           {renderTextInput({
             name: 'tagline',

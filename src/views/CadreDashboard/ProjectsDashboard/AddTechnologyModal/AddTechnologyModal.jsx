@@ -42,12 +42,16 @@ class AddTechnologyModal extends Component {
   };
 
   render() {
+    const message =
+      'The project technology has been added to the project form!';
+
     return (
       <GenericModal
         id="addTechnologyModal"
         title="Add Technology"
         handleSubmit={this.handleClick}
         handleClose={this.handleClose}
+        successMessage={message}
       >
         <FormInputs.TextInput
           parent={this}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FormInputs from '../../../../components/FormInputs';
 import GenericModal from '../../../../components/GenericModal';
+import { emailRegex } from '../../../../utils/regex';
 
 class AddManagerModal extends Component {
   constructor(props) {
@@ -23,12 +24,13 @@ class AddManagerModal extends Component {
 
     const invalidInput = Object.values(inputs).find(input => !input.isValid());
     if (invalidInput) {
-      invalidInput.setStatus('invalid', 'Input is empty!');
+      invalidInput.setStatus('invalid', 'Input is invalid!');
       invalidInput.focus();
       return false;
     }
 
     addProjectManager({
+      id: 0,
       name: inputs.managerName.getValue(),
       email: inputs.managerEmail.getValue()
     });
@@ -68,7 +70,8 @@ class AddManagerModal extends Component {
       })}
       {this.renderTextInput({
         name: 'managerEmail',
-        label: 'Email'
+        label: 'Email',
+        testInput: input => emailRegex.test(input)
       })}
     </React.Fragment>
   );
