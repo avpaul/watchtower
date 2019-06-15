@@ -31,6 +31,7 @@ import addProjectManager from './addProjectManagerReducer';
 import addProjectTechnology from './addProjectTechnologyReducer';
 import fetchProjectManagers from './getProjectManagersReducer';
 import fetchProjectTechnologies from './getProjectTechnologiesReducer';
+import cadreEngineersReducer from './cadreEngineersReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -63,7 +64,8 @@ const rootReducer = combineReducers({
   addProjectManager,
   addProjectTechnology,
   fetchProjectManagers,
-  fetchProjectTechnologies
+  fetchProjectTechnologies,
+  cadreEngineers: cadreEngineersReducer
 });
 
 export default rootReducer;

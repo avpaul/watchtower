@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 import OpsDashboard from '../views/OpsDashboard';
 import NotFoundPage from '../views/NotFoundPage';
 import TTLDashboard from '../views/TTLDashboard';
-import FellowDashboard from '../views/FellowDashboard';
 import EngineeringManagerSimsLeadDashboard from '../views/EngineeringManagerSimsLeadDashboard';
+import FellowRoutesHoc from './FellowRoutesHoc';
 
 /**
  * Defines wrapper function that switch users dashboard context
  * @function
  */
 const Dashboards = props => {
-  const { user } = props;
-  delete user.roles.Andelan;
-  delete user.roles.Technology;
-  const roles = Object.keys(user.roles);
-  let role = roles.filter(s => s.includes('WATCH_TOWER'))[0];
-  if (!role) {
-    [role] = roles;
-  }
+    const {user} = props;
+    delete user.roles.Andelan;
+    delete user.roles.Technology;
+    const roles = Object.keys(user.roles);
+    let role = roles.filter(s => s.includes('WATCH_TOWER'))[0];
+    if (!role) {
+        [role] = roles;
+    }
 
   switch (role) {
     case 'WATCH_TOWER_TTL':
@@ -29,7 +29,7 @@ const Dashboards = props => {
     case 'WATCH_TOWER_SL':
       return <EngineeringManagerSimsLeadDashboard {...props} role={role} />;
     case 'Fellow':
-      return <FellowDashboard {...props} role={role} />;
+      return <FellowRoutesHoc {...props} role={role} user={user} />;
     case 'WATCH_TOWER_OPS':
       return <OpsDashboard {...props} role={role} />;
     default:
@@ -38,7 +38,7 @@ const Dashboards = props => {
 };
 
 Dashboards.propTypes = {
-  user: PropTypes.instanceOf(Object).isRequired
+    user: PropTypes.instanceOf(Object).isRequired
 };
 
 export default Dashboards;
