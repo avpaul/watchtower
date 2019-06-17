@@ -50,7 +50,13 @@ describe('Project Form', () => {
       email: 'johndoe@andela.com'
     }
   ];
-
+  const channels = [
+    {
+      id: 'CK7V1DJ8Z',
+      name: 'peace_test',
+      label: 'peace_test'
+    }
+  ];
   const projectDetails = {
     name: 'project',
     type: 'internal',
@@ -58,7 +64,8 @@ describe('Project Form', () => {
     manager: '1',
     tagline: 'project tagline',
     about: 'project about',
-    mockups: 'https://projects.invisionapp.com'
+    mockups: 'https://projects.invisionapp.com',
+    channels: channels[0].id
   };
 
   /**
@@ -79,6 +86,10 @@ describe('Project Form', () => {
       fetchProjectManagers: {
         ...initialState.fetchProjectManagers,
         data: managers
+      },
+      fetchSlackChannels: {
+        ...initialState.fetchSlackChannels,
+        data: channels
       }
     };
     const store = mockStore(newState);
@@ -174,7 +185,7 @@ describe('Project Form', () => {
       getValue: () => `${value}`,
       isValid: () => true,
       setStatus: () => true,
-      props: { name }
+      props: { name, options: channels }
     }
   });
 
@@ -239,6 +250,7 @@ describe('Project Form', () => {
     addInputValue(wrapper, '#tagline', projectDetails.tagline);
     addInputValue(wrapper, '#about', projectDetails.about);
     addInputValue(wrapper, '#manager', projectDetails.manager);
+    addInputValue(wrapper, '#channels', projectDetails.channels);
     wrapper
       .find('ProjectForm')
       .state('inputs')
@@ -263,6 +275,7 @@ describe('Project Form', () => {
         ...inputComponentMock('about', projectDetails.about),
         ...inputComponentMock('mockups', projectDetails.mockups),
         ...inputComponentMock('technologies', projectDetails.technologies),
+        ...inputComponentMock('channels', projectDetails.channels),
         ...inputComponentMock('manager', 0)
       }
     });

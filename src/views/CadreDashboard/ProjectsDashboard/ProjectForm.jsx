@@ -52,6 +52,17 @@ class ProjectForm extends Component {
     if (error === errorMessage[0]) inputs.manager.setStatus('invalid', error);
   };
 
+  getSlackChannel = () => {
+    const {
+      inputs: { channels }
+    } = this.state;
+    const slackChannel = channels.props.options.find(
+      option => option.id === channels.getValue()
+    );
+    delete slackChannel.label;
+    return slackChannel;
+  };
+
   /**
    * Handles the validation and submission of project details
    */
@@ -81,6 +92,7 @@ class ProjectForm extends Component {
       projectDetails.manager = JSON.stringify(manager);
 
     projectDetails.technologies = JSON.stringify(projectDetails.technologies);
+    projectDetails.channels = JSON.stringify(this.getSlackChannel());
     return !project.name ? createNewProject(projectDetails) : true;
   };
 

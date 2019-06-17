@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 import AddIcon from '../../../../static/plus.png';
 import { urlRegex } from '../../../../utils/regex';
 import { projectTypes } from '../helpers';
+import arrayOfObjectsSorter from '../../../../utils/sortArray';
 
 class ProjectFormLeft extends Component {
   componentDidMount() {
-    const { fetchAllProjectTechnologies, fetchAllProjectManagers } = this.props;
+    const {
+      fetchAllProjectTechnologies,
+      fetchAllProjectManagers,
+      fetchAllSlackChannels
+    } = this.props;
 
     fetchAllProjectManagers();
     fetchAllProjectTechnologies();
+    fetchAllSlackChannels();
   }
 
   renderInputWithAddition = (props, modalTarget) => {
@@ -76,7 +82,7 @@ class ProjectFormLeft extends Component {
         label: 'Technologies',
         inputValue: project.technologies,
         options: fetchProjectTechnologies.data
-          .sort(this.sortTechnologies)
+          .sort(arrayOfObjectsSorter('name'))
           .map(tech => ({ ...tech, label: tech.name })),
         multipleSelection: true,
         placeholder: 'Add Technologies'
@@ -85,19 +91,26 @@ class ProjectFormLeft extends Component {
     );
   };
 
-  /**
-   * Sorts an array of technologies according to the name
-   *
-   * @param string a
-   * @param string b
-   * @return integer
-   */
-  sortTechnologies = (a, b) => {
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) return -1;
-    if (nameA > nameB) return 1;
-    return 0;
+  renderSlackChannelInput = () => {
+    const { project, renderDropdown, fetchSlackChannels } = this.props;
+
+    return (
+      <React.Fragment>
+        {renderDropdown({
+          name: 'channels',
+          label: 'Slack Channel',
+          inputValue: project.slackChannel,
+          options: fetchSlackChannels.data
+            .sort(arrayOfObjectsSorter('name'))
+            .map(channel => ({
+              ...channel,
+              id: channel.id,
+              label: channel.name
+            })),
+          placeholder: 'Add Slack Channel'
+        })}
+      </React.Fragment>
+    );
   };
 
   render() {
@@ -108,6 +121,7 @@ class ProjectFormLeft extends Component {
           {this.renderTopInputs()}
           {this.renderManagerInput()}
           {this.renderTechnologiesInput()}
+          {this.renderSlackChannelInput()}
           {renderTextInput({
             name: 'mockups',
             label: 'Invision Link',
@@ -128,7 +142,9 @@ ProjectFormLeft.propTypes = {
   fetchAllProjectManagers: PropTypes.func.isRequired,
   fetchAllProjectTechnologies: PropTypes.func.isRequired,
   fetchProjectTechnologies: PropTypes.shape().isRequired,
-  fetchProjectManagers: PropTypes.shape().isRequired
+  fetchProjectManagers: PropTypes.shape().isRequired,
+  fetchAllSlackChannels: PropTypes.func.isRequired,
+  fetchSlackChannels: PropTypes.shape().isRequired
 };
 
 export default ProjectFormLeft;
