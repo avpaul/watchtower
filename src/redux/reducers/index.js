@@ -26,12 +26,12 @@ import fellowPrePipFeedbackReducer from './fellowPrePipFeedbackReducer';
 import fellowPipFeedbackReducer from './fellowPipFeedbackReducer';
 import deactivatePipReducer from './pipDeactivationReducer';
 import createProject from './createProjectReducer';
+import cadreEngineersReducer from './cadreEngineersReducer';
 import fetchProjectsReducer from './viewAllProjectsReducer';
 import addProjectManager from './addProjectManagerReducer';
 import addProjectTechnology from './addProjectTechnologyReducer';
 import fetchProjectManagers from './getProjectManagersReducer';
 import fetchProjectTechnologies from './getProjectTechnologiesReducer';
-import cadreEngineersReducer from './cadreEngineersReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -60,12 +60,12 @@ const rootReducer = combineReducers({
   fellowPipFeedback: fellowPipFeedbackReducer,
   deactivatePipReducer,
   createProject,
+  cadreEngineers: cadreEngineersReducer,
   allProjects: fetchProjectsReducer,
   addProjectManager,
   addProjectTechnology,
   fetchProjectManagers,
-  fetchProjectTechnologies,
-  cadreEngineers: cadreEngineersReducer
+  fetchProjectTechnologies
 });
 
 export default rootReducer;

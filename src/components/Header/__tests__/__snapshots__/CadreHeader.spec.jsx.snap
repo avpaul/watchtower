@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test cadre header component should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CadreHeader
+    notifications={Array []}
+    renderModal={[Function]}
+    showModal={[Function]}
+    unreadnotifications={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <LogOutPage />,
+        undefined,
+        <div
+          className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between"
+>
+          <CadreLogoSection />
+          <div
+                    className="d-flex flex-row"
+          >
+                    <span
+                              className="notification"
+                              onClick={[Function]}
+                              role="presentation"
+                    >
+                              <img
+                                        alt="notificationIcon"
+                                        className="notification__icon"
+                                        src="Notification.svg"
+                              />
+                              <i
+                                        className=""
+                              />
+                    </span>
+                    <CadreLogout />
+          </div>
+</div>,
+      ],
+      "className": "cadre-navbar",
+      "id": "nav",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <CadreLogoSection />,
+            <div
+              className="d-flex flex-row"
+>
+              <span
+                            className="notification"
+                            onClick={[Function]}
+                            role="presentation"
+              >
+                            <img
+                                          alt="notificationIcon"
+                                          className="notification__icon"
+                                          src="Notification.svg"
+                            />
+                            <i
+                                          className=""
+                            />
+              </span>
+              <CadreLogout />
+</div>,
+          ],
+          "className": "navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="notification"
+                  onClick={[Function]}
+                  role="presentation"
+>
+                  <img
+                                    alt="notificationIcon"
+                                    className="notification__icon"
+                                    src="Notification.svg"
+                  />
+                  <i
+                                    className=""
+                  />
+</span>,
+                <CadreLogout />,
+              ],
+              "className": "d-flex flex-row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="notificationIcon"
+                      className="notification__icon"
+                      src="Notification.svg"
+/>,
+                    <i
+                      className=""
+/>,
+                  ],
+                  "className": "notification",
+                  "onClick": [Function],
+                  "role": "presentation",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "notificationIcon",
+                      "className": "notification__icon",
+                      "src": "Notification.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "i",
+                  },
+                ],
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <LogOutPage />,
+          undefined,
+          <div
+            className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between"
+>
+            <CadreLogoSection />
+            <div
+                        className="d-flex flex-row"
+            >
+                        <span
+                                    className="notification"
+                                    onClick={[Function]}
+                                    role="presentation"
+                        >
+                                    <img
+                                                alt="notificationIcon"
+                                                className="notification__icon"
+                                                src="Notification.svg"
+                                    />
+                                    <i
+                                                className=""
+                                    />
+                        </span>
+                        <CadreLogout />
+            </div>
+</div>,
+        ],
+        "className": "cadre-navbar",
+        "id": "nav",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <CadreLogoSection />,
+              <div
+                className="d-flex flex-row"
+>
+                <span
+                                className="notification"
+                                onClick={[Function]}
+                                role="presentation"
+                >
+                                <img
+                                                alt="notificationIcon"
+                                                className="notification__icon"
+                                                src="Notification.svg"
+                                />
+                                <i
+                                                className=""
+                                />
+                </span>
+                <CadreLogout />
+</div>,
+            ],
+            "className": "navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="notification"
+                    onClick={[Function]}
+                    role="presentation"
+>
+                    <img
+                                        alt="notificationIcon"
+                                        className="notification__icon"
+                                        src="Notification.svg"
+                    />
+                    <i
+                                        className=""
+                    />
+</span>,
+                  <CadreLogout />,
+                ],
+                "className": "d-flex flex-row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="notificationIcon"
+                        className="notification__icon"
+                        src="Notification.svg"
+/>,
+                      <i
+                        className=""
+/>,
+                    ],
+                    "className": "notification",
+                    "onClick": [Function],
+                    "role": "presentation",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "notificationIcon",
+                        "className": "notification__icon",
+                        "src": "Notification.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "i",
+                    },
+                  ],
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

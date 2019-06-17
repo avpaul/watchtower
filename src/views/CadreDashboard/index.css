@@ -1,0 +1,26 @@
+/* Cadre Dashboard */
+.cadre-content {
+  background: #dae7f8;
+}
+
+.cadre-side-card {
+  height: 7.4rem;
+  width: 7.4rem;
+  border-radius: 1.25rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.1rem 0.7rem 0 rgba(0, 0, 0, 0.03);
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.cadre-side-card:hover {
+  cursor: pointer;
+}
+
+.cadre-side-card .cadre-side-card-icon {
+  height: 63px;
+  width: 63px;
+  border-radius: 31.5px;
+  background-color: #edf4fd;
+  margin: 1.6rem 1.9rem 1.9rem 1.6rem;
+}

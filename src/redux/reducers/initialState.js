@@ -167,6 +167,11 @@ export default {
     success: null
   },
   createProject: genericAPIState,
+  d1Engineers: {
+    loading: false,
+    cadreEngineers: [],
+    error: ''
+  },
   fetchAllProjects: genericAPIState,
   fetchProjectManagers: genericAPIState,
   fetchProjectTechnologies: genericAPIState,
@@ -175,10 +180,5 @@ export default {
   },
   addProjectTechnology: {
     technology: ''
-  },
-  d1Engineers: {
-    loading: false,
-    cadreEngineers: [],
-    error: ''
   }
 };

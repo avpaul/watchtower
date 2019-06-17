@@ -64,7 +64,8 @@
     "source-map-explorer": "^1.6.0",
     "underscore": "^1.9.1",
     "wait-for-expect": "^1.2.0",
-    "weak-key": "^1.0.1"
+    "weak-key": "^1.0.1",
+    "whet.extend": "^0.9.9"
   },
   "optionalDependencies": {
     "fsevents": "^1.2.2"
