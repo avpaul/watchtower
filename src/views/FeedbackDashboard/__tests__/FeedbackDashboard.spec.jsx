@@ -86,6 +86,7 @@ describe('Test Feedback Dashboard', () => {
     feedbackDashboardWrapper.setState({
       feedbackArray: feedbackArrayMock,
       filteredFeedbackData: feedbackArrayMock,
+      startDate: new Date('2019-03-05'),
       isTicked: {
         level: 'All Levels',
         type: 'Pre-PIP & PIP',
@@ -321,6 +322,7 @@ describe('Test Feedback Dashboard', () => {
 });
 
 describe('Feedback simslead and engineering dashboard tests', () => {
+  beforeEach(() => {});
   const managersFeedback = [
     {
       firstName: 'Bukola',
@@ -344,8 +346,8 @@ describe('Feedback simslead and engineering dashboard tests', () => {
       project: 'All Projects',
       manager_email: 'All LFs'
     },
-    startDate: '2019-03-10',
-    endDate: '2019-3-15',
+    startDate: new Date('2019-03-05'),
+    endDate: new Date('2019-08-05 14:34:03'),
     currentDate: '2019-3-15'
   };
 
