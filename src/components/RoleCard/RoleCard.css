@@ -1,0 +1,62 @@
+.role-card {
+  box-sizing: border-box;
+  padding: 8px;
+  height: auto;
+  width: 302px;
+  border: 1px solid rgba(221, 224, 228, 0.31);
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
+}
+.role-card:hover {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.role-card__icon {
+  height: 11px;
+  width: 3px;
+  float: right;
+  margin-right: 1em;
+}
+.role-card__title {
+  color: #333e44;
+  font-family: 'DIN Pro';
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 23px;
+}
+.role-card__attributes {
+  color: #606060;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}
+.role-card__attributes-sm {
+  color: #606060;
+  font-family: 'DIN Pro';
+  font-size: 12px;
+}
+.role-card__attributes-count {
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.role-card__attributes-count-sm {
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 12px;
+}
+.role-card__description-title {
+  color: #606060;
+  font-family: 'DIN Pro';
+  font-size: 16px;
+  line-height: 18px;
+}
+.role-card__description {
+  color: #666;
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  line-height: 18px;
+}

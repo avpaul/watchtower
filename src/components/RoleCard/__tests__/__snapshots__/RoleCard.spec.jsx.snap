@@ -1,0 +1,899 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Role Card component should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RoleCard
+    role={
+        Object {
+            "created_at": "2019-06-04 04:56:39",
+            "description": "test role description",
+            "id": 1,
+            "name": "test role",
+            "updated_at": "2019-06-04 04:56:39",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="row"
+>
+          <div
+                    className="col-12"
+          >
+                    <div
+                              className="role-card__icon p-2"
+                    >
+                              <img
+                                        alt=""
+                                        src="More.svg"
+                              />
+                    </div>
+          </div>
+</div>,
+        <div
+          className="role-card__title"
+>
+          <p />
+</div>,
+        <p
+          className="role-card__attributes-sm"
+>
+          Vacancies
+          <span
+                    className="role-card__attributes-count-sm"
+          >
+                    24
+          </span>
+</p>,
+        <hr />,
+        <div
+          className="row"
+>
+          <div
+                    className="col-6"
+          >
+                    <p
+                              className="role-card__attributes text-center"
+                    >
+                              Applicants
+                              <span
+                                        className="role-card__attributes-count"
+                              >
+                                        6
+                              </span>
+                    </p>
+          </div>
+          <div
+                    className="col-6"
+          >
+                    <p
+                              className="role-card__attributes text-center"
+                    >
+                              Active Engrs.
+                              <span
+                                        className="role-card__attributes-count"
+                              >
+                                        24
+                              </span>
+                    </p>
+          </div>
+</div>,
+        <div>
+          <p
+                    className="role-card__description-title"
+          >
+                    Description
+          </p>
+          <p
+                    className="role-card__description"
+          >
+                    test role description
+                    ...
+          </p>
+</div>,
+      ],
+      "className": "role-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="col-12"
+>
+            <div
+                        className="role-card__icon p-2"
+            >
+                        <img
+                                    alt=""
+                                    src="More.svg"
+                        />
+            </div>
+</div>,
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="role-card__icon p-2"
+>
+              <img
+                            alt=""
+                            src="More.svg"
+              />
+</div>,
+            "className": "col-12",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt=""
+                src="More.svg"
+/>,
+              "className": "role-card__icon p-2",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "",
+                "src": "More.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p />,
+          "className": "role-card__title",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Vacancies",
+            <span
+              className="role-card__attributes-count-sm"
+>
+              24
+</span>,
+          ],
+          "className": "role-card__attributes-sm",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Vacancies",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "24",
+              "className": "role-card__attributes-count-sm",
+            },
+            "ref": null,
+            "rendered": "24",
+            "type": "span",
+          },
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-6"
+>
+              <p
+                            className="role-card__attributes text-center"
+              >
+                            Applicants
+                            <span
+                                          className="role-card__attributes-count"
+                            >
+                                          6
+                            </span>
+              </p>
+</div>,
+            <div
+              className="col-6"
+>
+              <p
+                            className="role-card__attributes text-center"
+              >
+                            Active Engrs.
+                            <span
+                                          className="role-card__attributes-count"
+                            >
+                                          24
+                            </span>
+              </p>
+</div>,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p
+                className="role-card__attributes text-center"
+>
+                Applicants
+                <span
+                                className="role-card__attributes-count"
+                >
+                                6
+                </span>
+</p>,
+              "className": "col-6",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Applicants",
+                  <span
+                    className="role-card__attributes-count"
+>
+                    6
+</span>,
+                ],
+                "className": "role-card__attributes text-center",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Applicants",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "6",
+                    "className": "role-card__attributes-count",
+                  },
+                  "ref": null,
+                  "rendered": "6",
+                  "type": "span",
+                },
+              ],
+              "type": "p",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p
+                className="role-card__attributes text-center"
+>
+                Active Engrs.
+                <span
+                                className="role-card__attributes-count"
+                >
+                                24
+                </span>
+</p>,
+              "className": "col-6",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Active Engrs.",
+                  <span
+                    className="role-card__attributes-count"
+>
+                    24
+</span>,
+                ],
+                "className": "role-card__attributes text-center",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Active Engrs.",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "24",
+                    "className": "role-card__attributes-count",
+                  },
+                  "ref": null,
+                  "rendered": "24",
+                  "type": "span",
+                },
+              ],
+              "type": "p",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="role-card__description-title"
+>
+              Description
+</p>,
+            <p
+              className="role-card__description"
+>
+              test role description
+              ...
+</p>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Description",
+              "className": "role-card__description-title",
+            },
+            "ref": null,
+            "rendered": "Description",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "test role description",
+                "...",
+              ],
+              "className": "role-card__description",
+            },
+            "ref": null,
+            "rendered": Array [
+              "test role description",
+              "...",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="row"
+>
+            <div
+                        className="col-12"
+            >
+                        <div
+                                    className="role-card__icon p-2"
+                        >
+                                    <img
+                                                alt=""
+                                                src="More.svg"
+                                    />
+                        </div>
+            </div>
+</div>,
+          <div
+            className="role-card__title"
+>
+            <p />
+</div>,
+          <p
+            className="role-card__attributes-sm"
+>
+            Vacancies
+            <span
+                        className="role-card__attributes-count-sm"
+            >
+                        24
+            </span>
+</p>,
+          <hr />,
+          <div
+            className="row"
+>
+            <div
+                        className="col-6"
+            >
+                        <p
+                                    className="role-card__attributes text-center"
+                        >
+                                    Applicants
+                                    <span
+                                                className="role-card__attributes-count"
+                                    >
+                                                6
+                                    </span>
+                        </p>
+            </div>
+            <div
+                        className="col-6"
+            >
+                        <p
+                                    className="role-card__attributes text-center"
+                        >
+                                    Active Engrs.
+                                    <span
+                                                className="role-card__attributes-count"
+                                    >
+                                                24
+                                    </span>
+                        </p>
+            </div>
+</div>,
+          <div>
+            <p
+                        className="role-card__description-title"
+            >
+                        Description
+            </p>
+            <p
+                        className="role-card__description"
+            >
+                        test role description
+                        ...
+            </p>
+</div>,
+        ],
+        "className": "role-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="col-12"
+>
+              <div
+                            className="role-card__icon p-2"
+              >
+                            <img
+                                          alt=""
+                                          src="More.svg"
+                            />
+              </div>
+</div>,
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="role-card__icon p-2"
+>
+                <img
+                                alt=""
+                                src="More.svg"
+                />
+</div>,
+              "className": "col-12",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt=""
+                  src="More.svg"
+/>,
+                "className": "role-card__icon p-2",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "",
+                  "src": "More.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p />,
+            "className": "role-card__title",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Vacancies",
+              <span
+                className="role-card__attributes-count-sm"
+>
+                24
+</span>,
+            ],
+            "className": "role-card__attributes-sm",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Vacancies",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "24",
+                "className": "role-card__attributes-count-sm",
+              },
+              "ref": null,
+              "rendered": "24",
+              "type": "span",
+            },
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-6"
+>
+                <p
+                                className="role-card__attributes text-center"
+                >
+                                Applicants
+                                <span
+                                                className="role-card__attributes-count"
+                                >
+                                                6
+                                </span>
+                </p>
+</div>,
+              <div
+                className="col-6"
+>
+                <p
+                                className="role-card__attributes text-center"
+                >
+                                Active Engrs.
+                                <span
+                                                className="role-card__attributes-count"
+                                >
+                                                24
+                                </span>
+                </p>
+</div>,
+            ],
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p
+                  className="role-card__attributes text-center"
+>
+                  Applicants
+                  <span
+                                    className="role-card__attributes-count"
+                  >
+                                    6
+                  </span>
+</p>,
+                "className": "col-6",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Applicants",
+                    <span
+                      className="role-card__attributes-count"
+>
+                      6
+</span>,
+                  ],
+                  "className": "role-card__attributes text-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Applicants",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "6",
+                      "className": "role-card__attributes-count",
+                    },
+                    "ref": null,
+                    "rendered": "6",
+                    "type": "span",
+                  },
+                ],
+                "type": "p",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <p
+                  className="role-card__attributes text-center"
+>
+                  Active Engrs.
+                  <span
+                                    className="role-card__attributes-count"
+                  >
+                                    24
+                  </span>
+</p>,
+                "className": "col-6",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Active Engrs.",
+                    <span
+                      className="role-card__attributes-count"
+>
+                      24
+</span>,
+                  ],
+                  "className": "role-card__attributes text-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Active Engrs.",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "24",
+                      "className": "role-card__attributes-count",
+                    },
+                    "ref": null,
+                    "rendered": "24",
+                    "type": "span",
+                  },
+                ],
+                "type": "p",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="role-card__description-title"
+>
+                Description
+</p>,
+              <p
+                className="role-card__description"
+>
+                test role description
+                ...
+</p>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Description",
+                "className": "role-card__description-title",
+              },
+              "ref": null,
+              "rendered": "Description",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "test role description",
+                  "...",
+                ],
+                "className": "role-card__description",
+              },
+              "ref": null,
+              "rendered": Array [
+                "test role description",
+                "...",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
