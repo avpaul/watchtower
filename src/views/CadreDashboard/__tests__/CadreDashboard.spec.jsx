@@ -27,11 +27,6 @@ describe('Tests the CadreDashboard component', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  it('should render properly', () => {
-    const wrapper = shallow(<CadreDashboard {...defaultProps} />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should execute handleCardclick method', () => {
     const mockStore = configureStore([Thunk]);
     const store = mockStore(initialState);
