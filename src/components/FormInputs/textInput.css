@@ -13,6 +13,7 @@
   border: 1px solid #e9eff4;
   border-radius: 4px;
   background-color: #ffffff;
+  color: #808fa3;
 }
 
 .wt-text-input label {
@@ -33,32 +34,6 @@
 
 .wt-text-input input::placeholder {
   color: #cccccc;
-}
-
-.wt-text-input--normal {
-  color: #111111;
-}
-
-.wt-text-input--loading input,
-.wt-text-input--warning input,
-.wt-text-input--loading textarea,
-.wt-text-input--warning textarea {
-  color: #ffd900;
-}
-
-.wt-text-input--fail input,
-.wt-text-input--fail textarea {
-  color: #d84d47;
-}
-
-.wt-text-input--success input,
-.wt-text-input--success textarea {
-  color: #00a84f;
-}
-
-.wt-text-input--danger input,
-.wt-text-input--danger textarea {
-  color: #b33030;
 }
 
 .wt-text-input .alert,

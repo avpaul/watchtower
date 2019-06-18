@@ -18,18 +18,27 @@ class ProjectFormLeft extends Component {
     fetchAllSlackChannels();
   }
 
-  renderInputWithAddition = (props, modalTarget) => {
+  renderInputWithAddition = (props, modalTarget, addButtonName) => {
     const { renderDropdown } = this.props;
     return (
-      <div className="project-form__add-input col-12 p-0">
-        <div className="row mr-0 ml-0">
-          <div className="col-10 pl-0">{renderDropdown(props)}</div>
-          <div className="col-2 pr-0">
-            <button type="button" data-toggle="modal" data-target={modalTarget}>
-              <img src={AddIcon} alt="Return Icon" />
-            </button>
-          </div>
-        </div>
+      <div className="col-12 p-0">
+        {renderDropdown({
+          ...props,
+          extras: (
+            <div className="wt-dropdown__list__item project-form__add-input">
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target={modalTarget}
+              >
+                <span>
+                  <img src={AddIcon} alt="Add Icon" />
+                </span>
+                <p>{addButtonName}</p>
+              </button>
+            </div>
+          )
+        })}
       </div>
     );
   };
@@ -46,7 +55,7 @@ class ProjectFormLeft extends Component {
         {renderDropdown({
           name: 'type',
           label: 'Project Type',
-          inputValue: project.type || projectTypes[0].id,
+          inputValue: project.type || projectTypes[0],
           options: projectTypes
         })}
       </React.Fragment>
@@ -63,14 +72,16 @@ class ProjectFormLeft extends Component {
       {
         name: 'manager',
         label: 'Team Manager',
-        options: data.map(manager => ({
+        options: data.sort(arrayOfObjectsSorter('name')).map(manager => ({
           ...manager,
           label: manager.name
         })),
         placeholder: 'Select Team Manager',
-        inputValue: newManager.name || project.manager
+        inputValue: project.manager,
+        enableSearch: data.length !== 0
       },
-      '#addManagerModal'
+      '#addManagerModal',
+      'Add team manager'
     );
   };
 
@@ -85,9 +96,11 @@ class ProjectFormLeft extends Component {
           .sort(arrayOfObjectsSorter('name'))
           .map(tech => ({ ...tech, label: tech.name })),
         multipleSelection: true,
-        placeholder: 'Add Technologies'
+        placeholder: 'Add Technologies',
+        enableSearch: fetchProjectTechnologies.data.length !== 0
       },
-      '#addTechnologyModal'
+      '#addTechnologyModal',
+      'Add project technology'
     );
   };
 
@@ -102,12 +115,9 @@ class ProjectFormLeft extends Component {
           inputValue: project.slackChannel,
           options: fetchSlackChannels.data
             .sort(arrayOfObjectsSorter('name'))
-            .map(channel => ({
-              ...channel,
-              id: channel.id,
-              label: channel.name
-            })),
-          placeholder: 'Add Slack Channel'
+            .map(channel => ({ ...channel, label: channel.name })),
+          placeholder: 'Add Slack Channel',
+          enableSearch: fetchSlackChannels.data.length !== 0
         })}
       </React.Fragment>
     );
@@ -126,7 +136,8 @@ class ProjectFormLeft extends Component {
             name: 'mockups',
             label: 'Invision Link',
             inputValue: project.mockups,
-            testInput: input => urlRegex.test(input)
+            testInput: input => urlRegex.test(input),
+            alertText: 'Please provide a link!'
           })}
         </div>
       </div>

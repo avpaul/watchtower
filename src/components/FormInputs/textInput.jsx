@@ -2,11 +2,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  COMPONENT_STATUS,
   COMPONENT_STATUS_CLASS,
   defaultReactiveUIDefaultProps,
   defaultReactiveUIProps,
-  attachToParentComponent
+  attachToParentComponent,
+  setStatusHandler
 } from './helpers';
 
 import './textInput.css';
@@ -51,7 +51,7 @@ class TextInput extends Component {
    * @param object event An event object
    */
   handleValueChange = e => {
-    const { length, testInput } = this.props;
+    const { length, testInput, alertText } = this.props;
     this.setState({
       lastTyped: Date.now(),
       inputValue: e.target.value.substr(0, length || 999)
@@ -64,7 +64,10 @@ class TextInput extends Component {
       if (lastChanged >= 1000) {
         let status = 0;
         if (inputValue !== '') status = testInput(inputValue) ? 6 : 5;
-        this.setState({ status, alertText: '' });
+        this.setState({
+          status,
+          alertText: status === 5 ? alertText : ''
+        });
       }
     }, 1000);
   };
@@ -81,13 +84,8 @@ class TextInput extends Component {
    * @param string alertText Alert info to notify the user why the input is invalid.
    * This is optional.
    */
-  setStatus = (status, alertText = '') => {
-    const statusIndex = COMPONENT_STATUS.findIndex(string => string === status);
-    this.setState({
-      status: statusIndex > 0 ? statusIndex : 0,
-      alertText
-    });
-  };
+  setStatus = (status, alertText = '') =>
+    setStatusHandler(this, status, alertText);
 
   /**
    * Checks if the component has a valid input value
@@ -171,7 +169,8 @@ TextInput.propTypes = {
   comment: PropTypes.string,
   inputValue: PropTypes.string,
   length: PropTypes.number,
-  testInput: PropTypes.func
+  testInput: PropTypes.func,
+  alertText: PropTypes.string
 };
 
 TextInput.defaultProps = {
@@ -181,6 +180,7 @@ TextInput.defaultProps = {
   label: '',
   comment: '',
   inputValue: '',
+  alertText: '',
   placeholder: '',
   length: 999,
   testInput: () => true

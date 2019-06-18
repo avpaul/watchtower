@@ -20,6 +20,7 @@ describe('ProjectFormContainer component', () => {
           roles: { WATCH_TOWER_OPS: '34323234Yf-34' },
           email: 'ty@andela.com'
         }}
+        history={{ replace: jest.fn() }}
       />
     );
 

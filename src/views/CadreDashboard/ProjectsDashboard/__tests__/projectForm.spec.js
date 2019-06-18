@@ -161,6 +161,21 @@ describe('Project Form', () => {
     wrapper.find(input).simulate('change', { target: { value } });
 
   /**
+   * Simulates an input into a project form dropdown input
+   *
+   * @param object wrapper An instance of enzyme
+   * @param string input An identifier for an input eg. id, class
+   * @param string value The value to simulate an input with
+   */
+  const addDropdownValue = (wrapper, input, value) => {
+    wrapper.find(`${input} button`).simulate('click');
+    wrapper
+      .find(`${input} .wt-dropdown__list__item`)
+      .at(0)
+      .simulate('click', { target: { id: value } });
+  };
+
+  /**
    * Simulates the submission of the project form
    *
    * @param object button A ReactWrapper pointing to the submission button
@@ -235,7 +250,7 @@ describe('Project Form', () => {
       wrapper.find(ProjectForm).instance(),
       'handleSubmit'
     );
-    addInputValue(wrapper, '#technologies', 'python');
+    addDropdownValue(wrapper, '#technologies', `${technologies[0].id}`);
     jest.runAllTimers();
     button.simulate('click');
     expect(handleSubmitSpy).not.toHaveBeenCalled();
@@ -246,18 +261,18 @@ describe('Project Form', () => {
     const button = wrapper.find('.project-form__submit');
 
     addInputValue(wrapper, '#name', projectDetails.name);
-    addInputValue(wrapper, '#type', '');
+    addDropdownValue(wrapper, '#type', '');
     addInputValue(wrapper, '#tagline', projectDetails.tagline);
     addInputValue(wrapper, '#about', projectDetails.about);
-    addInputValue(wrapper, '#manager', projectDetails.manager);
-    addInputValue(wrapper, '#channels', projectDetails.channels);
+    addDropdownValue(wrapper, '#channels', projectDetails.channels);
+    addDropdownValue(wrapper, '#manager', projectDetails.manager);
     wrapper
       .find('ProjectForm')
       .state('inputs')
       .technologies.addSelection(projectDetails.technologies);
     testSubmission(button, 0);
 
-    addInputValue(wrapper, '#type', projectDetails.type);
+    addDropdownValue(wrapper, '#type', projectDetails.type);
     testSubmission(button, 1);
 
     addInputValue(wrapper, '#mockups', projectDetails.mockups);

@@ -4,6 +4,7 @@ exports[`TextInput  renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TextInput
+    alertText=""
     className="wt-text-input"
     comment="No comment"
     componentStateKey="inputs"
@@ -243,6 +244,7 @@ exports[`TextInput  renders textarea input 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TextInput
+    alertText=""
     className="wt-text-input"
     comment="No comment"
     componentStateKey="inputs"
@@ -490,6 +492,7 @@ exports[`TextInput  renders with minimal config props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TextInput
+    alertText=""
     className={null}
     comment={null}
     componentStateKey="inputs"

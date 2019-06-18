@@ -39,7 +39,7 @@ class GenericModal extends Component {
               label: 'Add',
               buttonProps: { onClick: this.handleSubmit }
             })
-          : this.renderButton({ label: 'Return', buttonProps })}
+          : this.renderButton({ label: 'Save', buttonProps })}
       </div>
     );
   };
@@ -48,13 +48,15 @@ class GenericModal extends Component {
     const { children, successMessage } = this.props;
     const { success } = this.state;
     return (
-      <div className="row mr-0 ml-0">
-        {children}
-        {success ? (
-          <span className="alert alert-success" role="alert">
-            {successMessage}
-          </span>
-        ) : null}
+      <div className="modal-body">
+        <div className="row mr-0 ml-0">
+          {children}
+          {success ? (
+            <span className="alert alert-success" role="alert">
+              {successMessage}
+            </span>
+          ) : null}
+        </div>
       </div>
     );
   };
@@ -69,15 +71,12 @@ class GenericModal extends Component {
         aria-labelledby={id}
         aria-hidden="true"
       >
-        <div
-          className="modal-dialog modal-dialog-scrollable modal-dialog-centered"
-          role="document"
-        >
+        <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h1>{title}</h1>
             </div>
-            <div className="modal-body">{this.renderBody()}</div>
+            {this.renderBody()}
             {this.renderModalFooter()}
           </div>
         </div>
