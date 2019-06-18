@@ -13,6 +13,7 @@ exports[`CadreViewRolesContainer component renders correctly 1`] = `
   fetchAllRoles={[Function]}
   getActiveRoleEngineer={[Function]}
   loading={false}
+  setDeleteTarget={[Function]}
   store={
     Object {
       "clearActions": [Function],

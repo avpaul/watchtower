@@ -1,6 +1,9 @@
 import { connect } from 'react-redux';
 import CadreViewRoles from './CadreViewRoles';
-import { fetchAllRoles } from '../../../../redux/actionCreators/cadreProjectRoleActions';
+import {
+  fetchAllRoles,
+  setDeleteTarget
+} from '../../../../redux/actionCreators/cadreProjectRoleActions';
 import { getActiveRoleEngineer } from '../../../../redux/actionCreators/fellowActiveRoleActions';
 
 export const mapStateToProps = ({ allRoles, fetchActiveRole }) => ({
@@ -13,6 +16,7 @@ export default connect(
   mapStateToProps,
   {
     fetchAllRoles,
-    getActiveRoleEngineer
+    getActiveRoleEngineer,
+    setDeleteTarget
   }
 )(CadreViewRoles);

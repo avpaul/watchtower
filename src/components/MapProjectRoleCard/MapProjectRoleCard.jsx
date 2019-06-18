@@ -8,7 +8,8 @@ function MapProjectRoleCard({
   type,
   fetchActiveEngineers,
   loading,
-  activeEngineers
+  activeEngineers,
+  setDeleteTarget
 }) {
   return (
     <div>
@@ -55,8 +56,9 @@ function MapProjectRoleCard({
                   fetcher: fetchActiveEngineers,
                   loading,
                   activeParticipants: activeEngineers,
-                  type
+                  type,
                 }}
+                focusRole={setDeleteTarget}
               />
             </div>
           ))
@@ -71,6 +73,7 @@ export default MapProjectRoleCard;
 MapProjectRoleCard.propTypes = {
   roleData: PropTypes.instanceOf(Array),
   fetchActiveEngineers: PropTypes.func.isRequired,
+  setDeleteTarget: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   activeEngineers: PropTypes.oneOfType([
     PropTypes.instanceOf(Array),

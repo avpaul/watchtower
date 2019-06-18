@@ -52,6 +52,11 @@ class Card extends React.Component {
     }
   };
 
+  handleFocusRole = () => {
+    const {focusRole, cardProps: { details }} = this.props;
+    focusRole(details);
+  }
+
   renderFullDescription = () => {
     const { showMore } = this.state;
     const {
@@ -155,29 +160,47 @@ class Card extends React.Component {
     );
   };
 
-  renderDropdown = type => (
-    <div className="dropdown-menu dropdown-menu-right">
-      {type === 'role' ? (
-        <button
-          type="button"
-          data-toggle="modal"
-          data-target="#editRoleModal"
-          className="dropdown-item"
-          onClick={this.handleFocusRole}
-        >
-          Edit Role
-        </button>
-      ) : (
-        <button
-          type="button"
-          className="dropdown-item"
-          onClick={this.openCertificationModal}
-        >
-          Edit Certification
-        </button>
-      )}
-    </div>
-  );
+  renderDropdown = type => {
+    const {
+      cardProps: { details }
+    } = this.props;
+
+    return (
+      <div className="dropdown-menu dropdown-menu-right">
+        {type === 'role' ? (
+          <>
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#editRoleModal"
+              className="dropdown-item"
+              onClick={this.handleFocusRole}
+            >
+              Edit Role
+            </button>
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#delete-role-modal"
+              className="dropdown-item"
+              onClick={this.handleFocusRole}
+              disabled={details.active_engineers_count}
+            >
+              Delete Role
+            </button>
+          </>
+        ) : (
+          <button
+            type="button"
+            className="dropdown-item"
+            onClick={this.openCertificationModal}
+          >
+            Edit Certification
+          </button>
+        )}
+      </div>
+    );
+  }
 
   renderEditCertificationModal = () => {
     const {
@@ -232,6 +255,7 @@ class Card extends React.Component {
 }
 
 Card.propTypes = {
-  cardProps: PropTypes.shape({}).isRequired
+  cardProps: PropTypes.shape({}).isRequired,
+  focusRole: PropTypes.func.isRequired,
 };
 export default Card;
