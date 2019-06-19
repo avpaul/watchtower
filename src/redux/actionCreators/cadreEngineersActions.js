@@ -27,4 +27,18 @@ const getCadreEngineers = () => dispatch => {
     .catch(error => dispatch(getCadreEngineersFailure(errorHandler(error))));
 };
 
+export const activateCadreEngineerAccountRequest = () => ({
+  type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST
+});
+
+export const activateCadreEngineerAccountSuccess = engineer => ({
+  type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_SUCCESS,
+  engineer
+});
+
+export const activateCadreEngineerAccountFailure = error => ({
+  type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_FAILURE,
+  error
+});
+
 export default getCadreEngineers;
