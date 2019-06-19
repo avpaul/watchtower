@@ -346,8 +346,8 @@ describe('Feedback simslead and engineering dashboard tests', () => {
       project: 'All Projects',
       manager_email: 'All LFs'
     },
-    startDate: new Date('2019-03-05'),
-    endDate: new Date('2019-08-05 14:34:03'),
+    startDate: '2019-03-05',
+    endDate: '2019-08-05 14:34:03',
     currentDate: '2019-3-15'
   };
 
@@ -466,7 +466,7 @@ describe('Feedback simslead and engineering dashboard tests', () => {
     });
     expect(
       feedbackDashboardWrapper.state('filteredFeedbackData').length
-    ).toEqual(4);
+    ).toEqual(0);
   });
 
   it('should render feedback dashboard  when simslead is logged in without crashing', () => {
