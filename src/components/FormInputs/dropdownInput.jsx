@@ -1,17 +1,19 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/label-has-for */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
 import {
   COMPONENT_STATUS_CLASS,
-  COMPONENT_STATUS,
   defaultReactiveUIProps,
   defaultReactiveUIDefaultProps,
-  attachToParentComponent
+  attachToParentComponent,
+  setStatusHandler
 } from './helpers';
 
 import './dropdownInput.css';
+
+// Used to ensure a single dropdown is opened
+let dropdownOnFocus = {};
 
 class DropdownInput extends Component {
   constructor(props) {
@@ -21,7 +23,9 @@ class DropdownInput extends Component {
       status: props.defaultStatus,
       alertText: '',
       inputValue: props.inputValue,
-      selections: []
+      selections: [],
+      show: false,
+      searchValue: ''
     };
 
     this.dropdownInputRef = React.createRef();
@@ -39,15 +43,11 @@ class DropdownInput extends Component {
   handleValueChange = e => {
     const { multipleSelection, options, defaultStatus } = this.props;
     const { selections } = this.state;
-
-    if (multipleSelection) {
-      const selectedOption = options.find(
-        option => `${option.id}` === e.target.value
-      );
-      if (selectedOption) selections.push(selectedOption);
-    }
+    const value = options.find(option => `${option.id}` === e.target.id);
+    if (multipleSelection && value) selections.push(value);
     return this.setState({
-      inputValue: e.target.value,
+      inputValue: value || {},
+      show: false,
       selections,
       status: defaultStatus,
       alertText: ''
@@ -67,7 +67,7 @@ class DropdownInput extends Component {
   isValid = () => {
     const { inputValue, selections } = this.state;
     const { multipleSelection } = this.props;
-    return multipleSelection ? selections.length !== 0 : inputValue !== '';
+    return multipleSelection ? selections.length !== 0 : !!inputValue.label;
   };
 
   /**
@@ -82,14 +82,23 @@ class DropdownInput extends Component {
   };
 
   filterOptions = () => {
-    const { selections } = this.state;
+    const { selections, searchValue } = this.state;
     const { options } = this.props;
 
-    return options.filter(
-      option => !selections.find(selection => selection.id === option.id)
-    );
+    return options.filter(option => {
+      if (selections.find(selection => selection.id === option.id))
+        return false;
+      if (searchValue && !(option.label.toLowerCase().search(searchValue) >= 0))
+        return false;
+      return true;
+    });
   };
 
+  /**
+   * Deselect a selected option. This is enabled when this component allows multiple selections.
+   *
+   * @param object item The selected option to remove
+   */
   deSelect = item => {
     const { selections } = this.state;
     this.setState({
@@ -97,6 +106,11 @@ class DropdownInput extends Component {
     });
   };
 
+  /**
+   * Adds an option. This is enabled when this component allows multiple selections.
+   *
+   * @param object item The selected option to add
+   */
   addSelection = item => {
     const { selections } = this.state;
     const id =
@@ -118,34 +132,97 @@ class DropdownInput extends Component {
    * @param string alertText Alert info to notify the user why the input is invalid.
    * This is optional.
    */
-  setStatus = (status, alertText = '') => {
-    const statusIndex = COMPONENT_STATUS.findIndex(string => string === status);
-    this.setState({
-      status: statusIndex > 0 ? statusIndex : 0,
-      alertText
-    });
+  setStatus = (status, alertText = '') =>
+    setStatusHandler(this, status, alertText);
+
+  /**
+   * Toggles the dropdown list
+   */
+  toggleDropdown = () =>
+    this.setState(
+      state => ({ show: !state.show }),
+      () => {
+        const { name } = this.props;
+        if (dropdownOnFocus.props && dropdownOnFocus.props.name !== name)
+          dropdownOnFocus.setState({ show: false });
+        dropdownOnFocus = this;
+      }
+    );
+
+  /**
+   * Handles the change of the search input
+   *
+   * @param object e Event object
+   */
+  handleSearchChange = e => this.setState({ searchValue: e.target.value });
+
+  renderSearchInput = searchValue => {
+    const { enableSearch } = this.props;
+    if (!enableSearch) return null;
+
+    return (
+      <input
+        type="text"
+        placeholder="Search ..."
+        value={searchValue}
+        onChange={this.handleSearchChange}
+      />
+    );
+  };
+
+  renderOptions = (className, searchValue) => (
+    <div className={`${className}__list`}>
+      {this.renderSearchInput(searchValue)}
+      <div className={`${className}__list__items`}>
+        {this.filterOptions().map(item => (
+          <div
+            id={item.id}
+            key={arrayKey(item)}
+            className={`${className}__list__item`}
+            onClick={this.handleValueChange}
+            onKeyPress={this.handleValueChange}
+            tabIndex="-1"
+            role="button"
+          >
+            {item.label}
+          </div>
+        ))}
+      </div>
+      {this.getExtras()}
+    </div>
+  );
+
+  /**
+   * Clones all the components passed in the extras props and attaches an onClick event handler to close the dropdown.
+   * This is necessary to enable any additions to the dropdown to behave the same way as the default dropdown options
+   */
+  getExtras = () => {
+    const { extras } = this.props;
+    return React.Children.map(extras, extra =>
+      React.cloneElement(extra, { onClick: this.toggleDropdown })
+    );
   };
 
   renderDropdown = () => {
-    const { inputValue } = this.state;
-    const { placeholder, name, className } = this.props;
-
+    const { inputValue, show, searchValue } = this.state;
+    const { placeholder, className, name } = this.props;
     return (
-      <div className={`${className}__select`}>
-        <select
-          id={name}
-          ref={this.dropdownInputRef}
-          name={name}
-          onChange={this.handleValueChange}
-          value={inputValue}
-        >
-          {placeholder !== '' ? <option value="">{placeholder}</option> : null}
-          {this.filterOptions().map(item => (
-            <option value={item.id} key={arrayKey(item)}>
-              {item.label}
-            </option>
-          ))}
-        </select>
+      <div
+        id={name}
+        ref={this.dropdownInputRef}
+        className={`${className}__select col-12 p-0`}
+      >
+        <div className={`${className}__select__value`}>
+          <div className={`${className}__value`}>
+            {inputValue.label || placeholder}
+          </div>
+          <button
+            type="button"
+            className={`${className}__select__button`}
+            onClick={this.toggleDropdown}
+          />
+        </div>
+        {show ? this.renderOptions(className, searchValue) : null}
       </div>
     );
   };
@@ -165,8 +242,11 @@ class DropdownInput extends Component {
               onClick={() => {
                 this.deSelect(item);
               }}
+              onKeyPress={() => {
+                this.deSelect(item);
+              }}
               role="button"
-              tabIndex={-1}
+              tabIndex="-1"
             >
               x
             </span>
@@ -186,7 +266,7 @@ class DropdownInput extends Component {
       <div
         className={`${className} ${className}--${
           COMPONENT_STATUS_CLASS[status]
-        } mb-4`}
+        } mb-4 row mr-0 ml-0`}
       >
         <label htmlFor={name}>{label}</label>
         {this.renderDropdown()}
@@ -195,7 +275,9 @@ class DropdownInput extends Component {
         <div className={errorClass} role="alert">
           {alertText}
         </div>
-        <div className={`${className}__comment`}>{comment}</div>
+        {comment ? (
+          <div className={`${className}__comment`}>{comment}</div>
+        ) : null}
       </div>
     );
   }
@@ -209,7 +291,9 @@ DropdownInput.propTypes = {
   comment: PropTypes.string,
   inputValue: PropTypes.string,
   options: PropTypes.instanceOf(Array),
-  multipleSelection: PropTypes.bool
+  multipleSelection: PropTypes.bool,
+  extras: PropTypes.shape(),
+  enableSearch: PropTypes.bool
 };
 
 DropdownInput.defaultProps = {
@@ -220,7 +304,9 @@ DropdownInput.defaultProps = {
   inputValue: '',
   placeholder: '',
   options: [],
-  multipleSelection: false
+  multipleSelection: false,
+  extras: null,
+  enableSearch: false
 };
 
 export default DropdownInput;

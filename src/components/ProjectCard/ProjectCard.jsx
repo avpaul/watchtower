@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => (
     </div>
     <div className="row justify-content-center">
       <div className="project-card__image pt-3">
-        <img src={projectIcon} alt="" />
+        <img src={project.logo || projectIcon} alt="" />
       </div>
     </div>
     <div className="project-card__name">

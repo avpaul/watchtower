@@ -48,19 +48,11 @@ class ProjectForm extends Component {
    */
   handleSubmissionError = error => {
     const { inputs } = this.state;
-    if (error.name) inputs.name.setStatus('invalid', error.name[0]);
+    if (typeof error === 'object')
+      Object.keys(error).forEach(key =>
+        inputs[key].setStatus('invalid', error[key][0])
+      );
     if (error === errorMessage[0]) inputs.manager.setStatus('invalid', error);
-  };
-
-  getSlackChannel = () => {
-    const {
-      inputs: { channels }
-    } = this.state;
-    const slackChannel = channels.props.options.find(
-      option => option.id === channels.getValue()
-    );
-    delete slackChannel.label;
-    return slackChannel;
   };
 
   /**
@@ -88,11 +80,13 @@ class ProjectForm extends Component {
       if (input.getValue()) projectDetails[input.props.name] = input.getValue();
     });
 
-    if (`${manager.id}` === projectDetails.manager)
+    if (manager.id === projectDetails.manager.id)
       projectDetails.manager = JSON.stringify(manager);
+    else projectDetails.manager = projectDetails.manager.id;
 
     projectDetails.technologies = JSON.stringify(projectDetails.technologies);
-    projectDetails.channels = JSON.stringify(this.getSlackChannel());
+    projectDetails.channels = JSON.stringify(projectDetails.channels);
+    projectDetails.type = projectDetails.type.id;
     return !project.name ? createNewProject(projectDetails) : true;
   };
 
@@ -186,7 +180,7 @@ class ProjectForm extends Component {
 ProjectForm.propTypes = {
   project: PropTypes.shape(),
   manager: PropTypes.shape().isRequired,
-  newTechnology: PropTypes.shape().isRequired,
+  newTechnology: PropTypes.string.isRequired,
   createProject: PropTypes.shape().isRequired,
   createNewProject: PropTypes.func.isRequired,
   history: PropTypes.shape().isRequired

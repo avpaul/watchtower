@@ -5,6 +5,19 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AddManagerModal
     addProjectManager={[Function]}
+    fetchProjectManagers={
+        Object {
+            "data": Array [
+              Object {
+                "email": "johndoe@andela.com",
+                "id": 1,
+                "name": "John Doe",
+              },
+            ],
+            "error": null,
+            "loading": false,
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -22,6 +35,7 @@ ShallowWrapper {
     "props": Object {
       "children": <Unknown>
         <TextInput
+                alertText=""
                 className="wt-text-input"
                 comment=""
                 componentStateKey="inputs"
@@ -37,6 +51,17 @@ ShallowWrapper {
                                 "handleClose": [Function],
                                 "props": Object {
                                   "addProjectManager": [Function],
+                                  "fetchProjectManagers": Object {
+                                    "data": Array [
+                                      Object {
+                                        "email": "johndoe@andela.com",
+                                        "id": 1,
+                                        "name": "John Doe",
+                                      },
+                                    ],
+                                    "error": null,
+                                    "loading": false,
+                                  },
                                 },
                                 "refs": Object {},
                                 "renderModalBody": [Function],
@@ -66,6 +91,19 @@ ShallowWrapper {
                                     },
                                     "_element": <AddManagerModal
                                       addProjectManager={[Function]}
+                                      fetchProjectManagers={
+                                                    Object {
+                                                                  "data": Array [
+                                                                    Object {
+                                                                      "email": "johndoe@andela.com",
+                                                                      "id": 1,
+                                                                      "name": "John Doe",
+                                                                    },
+                                                                  ],
+                                                                  "error": null,
+                                                                  "loading": false,
+                                                                }
+                                      }
                         />,
                                     "_firstWorkInProgressHook": null,
                                     "_forcedUpdate": false,
@@ -78,11 +116,12 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addManagerModal"
-                                      successMessage="The project manager has been added to the project form!"
-                                      title="Add Project Manager"
+                                      successMessage="This team manager has been added to the project form!"
+                                      title="Add Team Manager"
                         >
                                       <Unknown>
                                                     <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -97,6 +136,7 @@ ShallowWrapper {
                                                                   type="text"
                                                     />
                                                     <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -125,6 +165,7 @@ ShallowWrapper {
                 type="text"
         />
         <TextInput
+                alertText=""
                 className="wt-text-input"
                 comment=""
                 componentStateKey="inputs"
@@ -140,6 +181,17 @@ ShallowWrapper {
                                 "handleClose": [Function],
                                 "props": Object {
                                   "addProjectManager": [Function],
+                                  "fetchProjectManagers": Object {
+                                    "data": Array [
+                                      Object {
+                                        "email": "johndoe@andela.com",
+                                        "id": 1,
+                                        "name": "John Doe",
+                                      },
+                                    ],
+                                    "error": null,
+                                    "loading": false,
+                                  },
                                 },
                                 "refs": Object {},
                                 "renderModalBody": [Function],
@@ -169,6 +221,19 @@ ShallowWrapper {
                                     },
                                     "_element": <AddManagerModal
                                       addProjectManager={[Function]}
+                                      fetchProjectManagers={
+                                                    Object {
+                                                                  "data": Array [
+                                                                    Object {
+                                                                      "email": "johndoe@andela.com",
+                                                                      "id": 1,
+                                                                      "name": "John Doe",
+                                                                    },
+                                                                  ],
+                                                                  "error": null,
+                                                                  "loading": false,
+                                                                }
+                                      }
                         />,
                                     "_firstWorkInProgressHook": null,
                                     "_forcedUpdate": false,
@@ -181,11 +246,12 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addManagerModal"
-                                      successMessage="The project manager has been added to the project form!"
-                                      title="Add Project Manager"
+                                      successMessage="This team manager has been added to the project form!"
+                                      title="Add Team Manager"
                         >
                                       <Unknown>
                                                     <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -200,6 +266,7 @@ ShallowWrapper {
                                                                   type="text"
                                                     />
                                                     <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -231,8 +298,8 @@ ShallowWrapper {
       "handleClose": [Function],
       "handleSubmit": [Function],
       "id": "addManagerModal",
-      "successMessage": "The project manager has been added to the project form!",
-      "title": "Add Project Manager",
+      "successMessage": "This team manager has been added to the project form!",
+      "title": "Add Team Manager",
     },
     "ref": null,
     "rendered": Object {
@@ -242,6 +309,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <TextInput
+            alertText=""
             className="wt-text-input"
             comment=""
             componentStateKey="inputs"
@@ -257,6 +325,17 @@ ShallowWrapper {
                                     "handleClose": [Function],
                                     "props": Object {
                                       "addProjectManager": [Function],
+                                      "fetchProjectManagers": Object {
+                                        "data": Array [
+                                          Object {
+                                            "email": "johndoe@andela.com",
+                                            "id": 1,
+                                            "name": "John Doe",
+                                          },
+                                        ],
+                                        "error": null,
+                                        "loading": false,
+                                      },
                                     },
                                     "refs": Object {},
                                     "renderModalBody": [Function],
@@ -286,6 +365,19 @@ ShallowWrapper {
                                         },
                                         "_element": <AddManagerModal
                                           addProjectManager={[Function]}
+                                          fetchProjectManagers={
+                                                            Object {
+                                                                              "data": Array [
+                                                                                Object {
+                                                                                  "email": "johndoe@andela.com",
+                                                                                  "id": 1,
+                                                                                  "name": "John Doe",
+                                                                                },
+                                                                              ],
+                                                                              "error": null,
+                                                                              "loading": false,
+                                                                            }
+                                          }
                         />,
                                         "_firstWorkInProgressHook": null,
                                         "_forcedUpdate": false,
@@ -298,11 +390,12 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addManagerModal"
-                                          successMessage="The project manager has been added to the project form!"
-                                          title="Add Project Manager"
+                                          successMessage="This team manager has been added to the project form!"
+                                          title="Add Team Manager"
                         >
                                           <Unknown>
                                                             <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -317,6 +410,7 @@ ShallowWrapper {
                                                                               type="text"
                                                             />
                                                             <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -345,6 +439,7 @@ ShallowWrapper {
             type="text"
 />,
           <TextInput
+            alertText=""
             className="wt-text-input"
             comment=""
             componentStateKey="inputs"
@@ -360,6 +455,17 @@ ShallowWrapper {
                                     "handleClose": [Function],
                                     "props": Object {
                                       "addProjectManager": [Function],
+                                      "fetchProjectManagers": Object {
+                                        "data": Array [
+                                          Object {
+                                            "email": "johndoe@andela.com",
+                                            "id": 1,
+                                            "name": "John Doe",
+                                          },
+                                        ],
+                                        "error": null,
+                                        "loading": false,
+                                      },
                                     },
                                     "refs": Object {},
                                     "renderModalBody": [Function],
@@ -389,6 +495,19 @@ ShallowWrapper {
                                         },
                                         "_element": <AddManagerModal
                                           addProjectManager={[Function]}
+                                          fetchProjectManagers={
+                                                            Object {
+                                                                              "data": Array [
+                                                                                Object {
+                                                                                  "email": "johndoe@andela.com",
+                                                                                  "id": 1,
+                                                                                  "name": "John Doe",
+                                                                                },
+                                                                              ],
+                                                                              "error": null,
+                                                                              "loading": false,
+                                                                            }
+                                          }
                         />,
                                         "_firstWorkInProgressHook": null,
                                         "_forcedUpdate": false,
@@ -401,11 +520,12 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addManagerModal"
-                                          successMessage="The project manager has been added to the project form!"
-                                          title="Add Project Manager"
+                                          successMessage="This team manager has been added to the project form!"
+                                          title="Add Team Manager"
                         >
                                           <Unknown>
                                                             <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -420,6 +540,7 @@ ShallowWrapper {
                                                                               type="text"
                                                             />
                                                             <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -456,6 +577,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "alertText": "",
             "className": "wt-text-input",
             "comment": "",
             "componentStateKey": "inputs",
@@ -470,6 +592,17 @@ ShallowWrapper {
               "handleClose": [Function],
               "props": Object {
                 "addProjectManager": [Function],
+                "fetchProjectManagers": Object {
+                  "data": Array [
+                    Object {
+                      "email": "johndoe@andela.com",
+                      "id": 1,
+                      "name": "John Doe",
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                },
               },
               "refs": Object {},
               "renderModalBody": [Function],
@@ -499,6 +632,19 @@ ShallowWrapper {
                   },
                   "_element": <AddManagerModal
                     addProjectManager={[Function]}
+                    fetchProjectManagers={
+                                        Object {
+                                                            "data": Array [
+                                                              Object {
+                                                                "email": "johndoe@andela.com",
+                                                                "id": 1,
+                                                                "name": "John Doe",
+                                                              },
+                                                            ],
+                                                            "error": null,
+                                                            "loading": false,
+                                                          }
+                    }
 />,
                   "_firstWorkInProgressHook": null,
                   "_forcedUpdate": false,
@@ -511,11 +657,12 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addManagerModal"
-                    successMessage="The project manager has been added to the project form!"
-                    title="Add Project Manager"
+                    successMessage="This team manager has been added to the project form!"
+                    title="Add Team Manager"
 >
                     <Unknown>
                                         <TextInput
+                                                            alertText=""
                                                             className="wt-text-input"
                                                             comment=""
                                                             componentStateKey="inputs"
@@ -530,6 +677,7 @@ ShallowWrapper {
                                                             type="text"
                                         />
                                         <TextInput
+                                                            alertText=""
                                                             className="wt-text-input"
                                                             comment=""
                                                             componentStateKey="inputs"
@@ -565,6 +713,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "alertText": "",
             "className": "wt-text-input",
             "comment": "",
             "componentStateKey": "inputs",
@@ -579,6 +728,17 @@ ShallowWrapper {
               "handleClose": [Function],
               "props": Object {
                 "addProjectManager": [Function],
+                "fetchProjectManagers": Object {
+                  "data": Array [
+                    Object {
+                      "email": "johndoe@andela.com",
+                      "id": 1,
+                      "name": "John Doe",
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                },
               },
               "refs": Object {},
               "renderModalBody": [Function],
@@ -608,6 +768,19 @@ ShallowWrapper {
                   },
                   "_element": <AddManagerModal
                     addProjectManager={[Function]}
+                    fetchProjectManagers={
+                                        Object {
+                                                            "data": Array [
+                                                              Object {
+                                                                "email": "johndoe@andela.com",
+                                                                "id": 1,
+                                                                "name": "John Doe",
+                                                              },
+                                                            ],
+                                                            "error": null,
+                                                            "loading": false,
+                                                          }
+                    }
 />,
                   "_firstWorkInProgressHook": null,
                   "_forcedUpdate": false,
@@ -620,11 +793,12 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addManagerModal"
-                    successMessage="The project manager has been added to the project form!"
-                    title="Add Project Manager"
+                    successMessage="This team manager has been added to the project form!"
+                    title="Add Team Manager"
 >
                     <Unknown>
                                         <TextInput
+                                                            alertText=""
                                                             className="wt-text-input"
                                                             comment=""
                                                             componentStateKey="inputs"
@@ -639,6 +813,7 @@ ShallowWrapper {
                                                             type="text"
                                         />
                                         <TextInput
+                                                            alertText=""
                                                             className="wt-text-input"
                                                             comment=""
                                                             componentStateKey="inputs"
@@ -682,6 +857,7 @@ ShallowWrapper {
       "props": Object {
         "children": <Unknown>
           <TextInput
+                    alertText=""
                     className="wt-text-input"
                     comment=""
                     componentStateKey="inputs"
@@ -697,6 +873,17 @@ ShallowWrapper {
                                         "handleClose": [Function],
                                         "props": Object {
                                           "addProjectManager": [Function],
+                                          "fetchProjectManagers": Object {
+                                            "data": Array [
+                                              Object {
+                                                "email": "johndoe@andela.com",
+                                                "id": 1,
+                                                "name": "John Doe",
+                                              },
+                                            ],
+                                            "error": null,
+                                            "loading": false,
+                                          },
                                         },
                                         "refs": Object {},
                                         "renderModalBody": [Function],
@@ -726,6 +913,19 @@ ShallowWrapper {
                                             },
                                             "_element": <AddManagerModal
                                               addProjectManager={[Function]}
+                                              fetchProjectManagers={
+                                                              Object {
+                                                                              "data": Array [
+                                                                                Object {
+                                                                                  "email": "johndoe@andela.com",
+                                                                                  "id": 1,
+                                                                                  "name": "John Doe",
+                                                                                },
+                                                                              ],
+                                                                              "error": null,
+                                                                              "loading": false,
+                                                                            }
+                                              }
                               />,
                                             "_firstWorkInProgressHook": null,
                                             "_forcedUpdate": false,
@@ -738,11 +938,12 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addManagerModal"
-                                              successMessage="The project manager has been added to the project form!"
-                                              title="Add Project Manager"
+                                              successMessage="This team manager has been added to the project form!"
+                                              title="Add Team Manager"
                               >
                                               <Unknown>
                                                               <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -757,6 +958,7 @@ ShallowWrapper {
                                                                               type="text"
                                                               />
                                                               <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -785,6 +987,7 @@ ShallowWrapper {
                     type="text"
           />
           <TextInput
+                    alertText=""
                     className="wt-text-input"
                     comment=""
                     componentStateKey="inputs"
@@ -800,6 +1003,17 @@ ShallowWrapper {
                                         "handleClose": [Function],
                                         "props": Object {
                                           "addProjectManager": [Function],
+                                          "fetchProjectManagers": Object {
+                                            "data": Array [
+                                              Object {
+                                                "email": "johndoe@andela.com",
+                                                "id": 1,
+                                                "name": "John Doe",
+                                              },
+                                            ],
+                                            "error": null,
+                                            "loading": false,
+                                          },
                                         },
                                         "refs": Object {},
                                         "renderModalBody": [Function],
@@ -829,6 +1043,19 @@ ShallowWrapper {
                                             },
                                             "_element": <AddManagerModal
                                               addProjectManager={[Function]}
+                                              fetchProjectManagers={
+                                                              Object {
+                                                                              "data": Array [
+                                                                                Object {
+                                                                                  "email": "johndoe@andela.com",
+                                                                                  "id": 1,
+                                                                                  "name": "John Doe",
+                                                                                },
+                                                                              ],
+                                                                              "error": null,
+                                                                              "loading": false,
+                                                                            }
+                                              }
                               />,
                                             "_firstWorkInProgressHook": null,
                                             "_forcedUpdate": false,
@@ -841,11 +1068,12 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addManagerModal"
-                                              successMessage="The project manager has been added to the project form!"
-                                              title="Add Project Manager"
+                                              successMessage="This team manager has been added to the project form!"
+                                              title="Add Team Manager"
                               >
                                               <Unknown>
                                                               <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -860,6 +1088,7 @@ ShallowWrapper {
                                                                               type="text"
                                                               />
                                                               <TextInput
+                                                                              alertText=""
                                                                               className="wt-text-input"
                                                                               comment=""
                                                                               componentStateKey="inputs"
@@ -891,8 +1120,8 @@ ShallowWrapper {
         "handleClose": [Function],
         "handleSubmit": [Function],
         "id": "addManagerModal",
-        "successMessage": "The project manager has been added to the project form!",
-        "title": "Add Project Manager",
+        "successMessage": "This team manager has been added to the project form!",
+        "title": "Add Team Manager",
       },
       "ref": null,
       "rendered": Object {
@@ -902,6 +1131,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <TextInput
+              alertText=""
               className="wt-text-input"
               comment=""
               componentStateKey="inputs"
@@ -917,6 +1147,17 @@ ShallowWrapper {
                                           "handleClose": [Function],
                                           "props": Object {
                                             "addProjectManager": [Function],
+                                            "fetchProjectManagers": Object {
+                                              "data": Array [
+                                                Object {
+                                                  "email": "johndoe@andela.com",
+                                                  "id": 1,
+                                                  "name": "John Doe",
+                                                },
+                                              ],
+                                              "error": null,
+                                              "loading": false,
+                                            },
                                           },
                                           "refs": Object {},
                                           "renderModalBody": [Function],
@@ -946,6 +1187,19 @@ ShallowWrapper {
                                               },
                                               "_element": <AddManagerModal
                                                 addProjectManager={[Function]}
+                                                fetchProjectManagers={
+                                                                    Object {
+                                                                                        "data": Array [
+                                                                                          Object {
+                                                                                            "email": "johndoe@andela.com",
+                                                                                            "id": 1,
+                                                                                            "name": "John Doe",
+                                                                                          },
+                                                                                        ],
+                                                                                        "error": null,
+                                                                                        "loading": false,
+                                                                                      }
+                                                }
                             />,
                                               "_firstWorkInProgressHook": null,
                                               "_forcedUpdate": false,
@@ -958,11 +1212,12 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addManagerModal"
-                                                successMessage="The project manager has been added to the project form!"
-                                                title="Add Project Manager"
+                                                successMessage="This team manager has been added to the project form!"
+                                                title="Add Team Manager"
                             >
                                                 <Unknown>
                                                                     <TextInput
+                                                                                        alertText=""
                                                                                         className="wt-text-input"
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
@@ -977,6 +1232,7 @@ ShallowWrapper {
                                                                                         type="text"
                                                                     />
                                                                     <TextInput
+                                                                                        alertText=""
                                                                                         className="wt-text-input"
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
@@ -1005,6 +1261,7 @@ ShallowWrapper {
               type="text"
 />,
             <TextInput
+              alertText=""
               className="wt-text-input"
               comment=""
               componentStateKey="inputs"
@@ -1020,6 +1277,17 @@ ShallowWrapper {
                                           "handleClose": [Function],
                                           "props": Object {
                                             "addProjectManager": [Function],
+                                            "fetchProjectManagers": Object {
+                                              "data": Array [
+                                                Object {
+                                                  "email": "johndoe@andela.com",
+                                                  "id": 1,
+                                                  "name": "John Doe",
+                                                },
+                                              ],
+                                              "error": null,
+                                              "loading": false,
+                                            },
                                           },
                                           "refs": Object {},
                                           "renderModalBody": [Function],
@@ -1049,6 +1317,19 @@ ShallowWrapper {
                                               },
                                               "_element": <AddManagerModal
                                                 addProjectManager={[Function]}
+                                                fetchProjectManagers={
+                                                                    Object {
+                                                                                        "data": Array [
+                                                                                          Object {
+                                                                                            "email": "johndoe@andela.com",
+                                                                                            "id": 1,
+                                                                                            "name": "John Doe",
+                                                                                          },
+                                                                                        ],
+                                                                                        "error": null,
+                                                                                        "loading": false,
+                                                                                      }
+                                                }
                             />,
                                               "_firstWorkInProgressHook": null,
                                               "_forcedUpdate": false,
@@ -1061,11 +1342,12 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addManagerModal"
-                                                successMessage="The project manager has been added to the project form!"
-                                                title="Add Project Manager"
+                                                successMessage="This team manager has been added to the project form!"
+                                                title="Add Team Manager"
                             >
                                                 <Unknown>
                                                                     <TextInput
+                                                                                        alertText=""
                                                                                         className="wt-text-input"
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
@@ -1080,6 +1362,7 @@ ShallowWrapper {
                                                                                         type="text"
                                                                     />
                                                                     <TextInput
+                                                                                        alertText=""
                                                                                         className="wt-text-input"
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
@@ -1116,6 +1399,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "alertText": "",
               "className": "wt-text-input",
               "comment": "",
               "componentStateKey": "inputs",
@@ -1130,6 +1414,17 @@ ShallowWrapper {
                 "handleClose": [Function],
                 "props": Object {
                   "addProjectManager": [Function],
+                  "fetchProjectManagers": Object {
+                    "data": Array [
+                      Object {
+                        "email": "johndoe@andela.com",
+                        "id": 1,
+                        "name": "John Doe",
+                      },
+                    ],
+                    "error": null,
+                    "loading": false,
+                  },
                 },
                 "refs": Object {},
                 "renderModalBody": [Function],
@@ -1159,6 +1454,19 @@ ShallowWrapper {
                     },
                     "_element": <AddManagerModal
                       addProjectManager={[Function]}
+                      fetchProjectManagers={
+                                            Object {
+                                                                  "data": Array [
+                                                                    Object {
+                                                                      "email": "johndoe@andela.com",
+                                                                      "id": 1,
+                                                                      "name": "John Doe",
+                                                                    },
+                                                                  ],
+                                                                  "error": null,
+                                                                  "loading": false,
+                                                                }
+                      }
 />,
                     "_firstWorkInProgressHook": null,
                     "_forcedUpdate": false,
@@ -1171,11 +1479,12 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addManagerModal"
-                      successMessage="The project manager has been added to the project form!"
-                      title="Add Project Manager"
+                      successMessage="This team manager has been added to the project form!"
+                      title="Add Team Manager"
 >
                       <Unknown>
                                             <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -1190,6 +1499,7 @@ ShallowWrapper {
                                                                   type="text"
                                             />
                                             <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -1225,6 +1535,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "alertText": "",
               "className": "wt-text-input",
               "comment": "",
               "componentStateKey": "inputs",
@@ -1239,6 +1550,17 @@ ShallowWrapper {
                 "handleClose": [Function],
                 "props": Object {
                   "addProjectManager": [Function],
+                  "fetchProjectManagers": Object {
+                    "data": Array [
+                      Object {
+                        "email": "johndoe@andela.com",
+                        "id": 1,
+                        "name": "John Doe",
+                      },
+                    ],
+                    "error": null,
+                    "loading": false,
+                  },
                 },
                 "refs": Object {},
                 "renderModalBody": [Function],
@@ -1268,6 +1590,19 @@ ShallowWrapper {
                     },
                     "_element": <AddManagerModal
                       addProjectManager={[Function]}
+                      fetchProjectManagers={
+                                            Object {
+                                                                  "data": Array [
+                                                                    Object {
+                                                                      "email": "johndoe@andela.com",
+                                                                      "id": 1,
+                                                                      "name": "John Doe",
+                                                                    },
+                                                                  ],
+                                                                  "error": null,
+                                                                  "loading": false,
+                                                                }
+                      }
 />,
                     "_firstWorkInProgressHook": null,
                     "_forcedUpdate": false,
@@ -1280,11 +1615,12 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addManagerModal"
-                      successMessage="The project manager has been added to the project form!"
-                      title="Add Project Manager"
+                      successMessage="This team manager has been added to the project form!"
+                      title="Add Team Manager"
 >
                       <Unknown>
                                             <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"
@@ -1299,6 +1635,7 @@ ShallowWrapper {
                                                                   type="text"
                                             />
                                             <TextInput
+                                                                  alertText=""
                                                                   className="wt-text-input"
                                                                   comment=""
                                                                   componentStateKey="inputs"

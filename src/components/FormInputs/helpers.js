@@ -30,6 +30,22 @@ export const attachToParentComponent = component => {
   }));
 };
 
+/**
+ * A generic helper function to update the status of a reactive component
+ *
+ * @param object component The input component
+ * @param string status A status option pre-defined for the input component
+ * @param string alertText Alert info to notify the user why the input is invalid.
+ * This is optional.
+ */
+export const setStatusHandler = (component, status, alertText = '') => {
+  const statusIndex = COMPONENT_STATUS.findIndex(string => string === status);
+  component.setState({
+    status: statusIndex > 0 ? statusIndex : 0,
+    alertText
+  });
+};
+
 export const defaultReactiveUIProps = {
   defaultStatus: PropTypes.number,
   componentStateKey: PropTypes.string,

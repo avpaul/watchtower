@@ -3,12 +3,23 @@ import { shallow, mount } from 'enzyme';
 import waitForExpect from 'wait-for-expect';
 import AddManagerModal from '../AddManagerModal';
 import AddIcon from '../../../../../static/plus.png';
+import initialState from '../../../../../redux/reducers/initialState';
 
 jest.useFakeTimers();
 
 describe('Add Manager Modal', () => {
   const defaultProps = {
-    addProjectManager: jest.fn()
+    addProjectManager: jest.fn(),
+    fetchProjectManagers: {
+      ...initialState.fetchProjectManagers,
+      data: [
+        {
+          id: 1,
+          name: 'John Doe',
+          email: 'johndoe@andela.com'
+        }
+      ]
+    }
   };
 
   const managerDetails = {
@@ -76,6 +87,13 @@ describe('Add Manager Modal', () => {
     buttons.at(0).simulate('click');
 
     addInputValue(wrapper, '#managerName', managerDetails.name);
+    testSubmission(buttons.at(2), 0);
+
+    addInputValue(
+      wrapper,
+      '#managerEmail',
+      defaultProps.fetchProjectManagers.data[0].email
+    );
     testSubmission(buttons.at(2), 0);
 
     addInputValue(wrapper, '#managerEmail', managerDetails.email);

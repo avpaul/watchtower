@@ -21,6 +21,7 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": <TextInput
+        alertText=""
         className="wt-text-input"
         comment=""
         componentStateKey="inputs"
@@ -78,6 +79,7 @@ ShallowWrapper {
                               title="Add Technology"
                 >
                               <TextInput
+                                            alertText=""
                                             className="wt-text-input"
                                             comment=""
                                             componentStateKey="inputs"
@@ -116,6 +118,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "alertText": "",
         "className": "wt-text-input",
         "comment": "",
         "componentStateKey": "inputs",
@@ -172,6 +175,7 @@ ShallowWrapper {
                 title="Add Technology"
 >
                 <TextInput
+                                alertText=""
                                 className="wt-text-input"
                                 comment=""
                                 componentStateKey="inputs"
@@ -210,6 +214,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <TextInput
+          alertText=""
           className="wt-text-input"
           comment=""
           componentStateKey="inputs"
@@ -267,6 +272,7 @@ ShallowWrapper {
                                     title="Add Technology"
                     >
                                     <TextInput
+                                                    alertText=""
                                                     className="wt-text-input"
                                                     comment=""
                                                     componentStateKey="inputs"
@@ -305,6 +311,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "alertText": "",
           "className": "wt-text-input",
           "comment": "",
           "componentStateKey": "inputs",
@@ -361,6 +368,7 @@ ShallowWrapper {
                   title="Add Technology"
 >
                   <TextInput
+                                    alertText=""
                                     className="wt-text-input"
                                     comment=""
                                     componentStateKey="inputs"

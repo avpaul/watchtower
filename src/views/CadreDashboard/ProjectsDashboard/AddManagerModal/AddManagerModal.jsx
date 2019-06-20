@@ -29,6 +29,8 @@ class AddManagerModal extends Component {
       return false;
     }
 
+    if (this.checkForExistingManager()) return false;
+
     addProjectManager({
       id: 0,
       name: inputs.managerName.getValue(),
@@ -48,6 +50,23 @@ class AddManagerModal extends Component {
     inputs.managerName.setStatus('normal');
     inputs.managerEmail.setStatus('normal');
   };
+
+  /**
+   * Checks for the existence of a manager with the currently inputted email. The form should not allow
+   * the creation of the project manager with an existing email.
+   */
+  checkForExistingManager() {
+    const { inputs } = this.state;
+    const { fetchProjectManagers } = this.props;
+    const emailExists = fetchProjectManagers.data.find(
+      manager => manager.email === inputs.managerEmail.getValue()
+    );
+    if (emailExists) {
+      inputs.managerEmail.setStatus('invalid', 'Manager email already exists!');
+      inputs.managerEmail.focus();
+    }
+    return !!emailExists;
+  }
 
   /**
    * Renders a text input
@@ -87,11 +106,11 @@ class AddManagerModal extends Component {
   );
 
   render() {
-    const message = 'The project manager has been added to the project form!';
+    const message = 'This team manager has been added to the project form!';
     return (
       <GenericModal
         id="addManagerModal"
-        title="Add Project Manager"
+        title="Add Team Manager"
         handleSubmit={this.handleClick}
         handleClose={this.handleClose}
         successMessage={message}
@@ -103,7 +122,8 @@ class AddManagerModal extends Component {
 }
 
 AddManagerModal.propTypes = {
-  addProjectManager: PropTypes.func.isRequired
+  addProjectManager: PropTypes.func.isRequired,
+  fetchProjectManagers: PropTypes.shape().isRequired
 };
 
 export default AddManagerModal;

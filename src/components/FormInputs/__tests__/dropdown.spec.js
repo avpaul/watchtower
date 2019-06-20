@@ -16,11 +16,11 @@ describe('Dropdown Input ', () => {
     comment: 'No comment',
     options: [
       {
-        value: 'internal',
+        id: 'internal',
         label: 'Internal'
       },
       {
-        value: 'external',
+        id: 'external',
         label: 'External'
       }
     ]
@@ -39,6 +39,33 @@ describe('Dropdown Input ', () => {
       ? mount(<DropdownInput {...newProps} />)
       : shallow(<DropdownInput {...newProps} />);
     return { wrapper, props: newProps };
+  };
+
+  /**
+   * Simulates a user clicking one of the dropdown inputs
+   *
+   * @param object wrapper An enzyme instance
+   * @param var value A value used to simulate an option clicked
+   * @param number optionIndex The index of the option amongst a list of options
+   */
+  const addDropdownValue = (wrapper, value, optionIndex = 0) => {
+    const input = wrapper.find('.wt-dropdown__select__button');
+    input.simulate('click');
+    const option = wrapper.find('.wt-dropdown__list__item');
+    option.at(optionIndex).simulate('click', {
+      target: { id: value }
+    });
+  };
+
+  /**
+   * Simulates a user cancelling one of the selected options
+   *
+   * @param object wrapper An enzyme instance
+   * @param number selectionIndex The index of the option amongst a list of options
+   */
+  const deSelectADropdownOption = (wrapper, selectionIndex) => {
+    const selections = wrapper.find(`.wt-dropdown__selection span`);
+    selections.at(selectionIndex).simulate('click');
   };
 
   it('renders as expected', () => {
@@ -68,11 +95,22 @@ describe('Dropdown Input ', () => {
 
   it('tests the retrieval of input value', () => {
     const { wrapper } = setup();
-    const input = wrapper.find('select');
-    input.simulate('change', {
-      target: { value: defaultProps.options[0].value }
-    });
+    addDropdownValue(wrapper, defaultProps.options[0].id);
     expect(wrapper.instance().isValid()).toBe(true);
-    expect(wrapper.instance().getValue()).toBe(defaultProps.options[0].value);
+    expect(wrapper.instance().getValue()).toBe(defaultProps.options[0]);
+  });
+
+  it('tests the selection of multiple inputs', () => {
+    const { wrapper } = setup({ multipleSelection: true });
+    addDropdownValue(wrapper, defaultProps.options[0].id);
+    addDropdownValue(wrapper, defaultProps.options[1].id);
+    expect(wrapper.instance().isValid()).toBe(true);
+    expect(wrapper.instance().getValue().length).toBe(2);
+
+    deSelectADropdownOption(wrapper, 0);
+    expect(wrapper.instance().isValid()).toBe(true);
+    expect(wrapper.instance().getValue()[0].id).toBe(
+      defaultProps.options[1].id
+    );
   });
 });

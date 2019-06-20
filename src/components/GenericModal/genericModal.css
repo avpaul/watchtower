@@ -1,6 +1,6 @@
 .generic-modal .modal-content {
   padding: 2rem;
-  overflow: scroll;
+  height: auto;
 }
 
 .generic-modal h1 {
@@ -10,5 +10,5 @@
 }
 
 .generic-modal .modal-footer {
-  padding: 0 1rem;
+  padding: 1rem;
 }

@@ -4,6 +4,11 @@ exports[`ProjectFormContainer component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Connect(ProjectForm)
+    history={
+        Object {
+            "replace": [Function],
+          }
+    }
     store={
         Object {
             "clearActions": [Function],
@@ -42,6 +47,9 @@ ShallowWrapper {
         "data": Array [],
         "error": null,
         "loading": false,
+      },
+      "history": Object {
+        "replace": [Function],
       },
       "manager": Object {},
       "newTechnology": "",
@@ -95,6 +103,9 @@ ShallowWrapper {
           "data": Array [],
           "error": null,
           "loading": false,
+        },
+        "history": Object {
+          "replace": [Function],
         },
         "manager": Object {},
         "newTechnology": "",
