@@ -6,10 +6,7 @@ import * as types from '../../constants/cadreEngineersTypes';
 import getCadreEngineers, {
   getCadreEngineersRequest,
   getCadreEngineersSuccess,
-  getCadreEngineersFailure,
-  activateCadreEngineerAccountRequest,
-  activateCadreEngineerAccountSuccess,
-  activateCadreEngineerAccountFailure
+  getCadreEngineersFailure
 } from '../cadreEngineersActions';
 
 const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
@@ -80,34 +77,5 @@ describe('should fetch cadre engineers and succeed', () => {
       })
       .then(done)
       .catch(done.fail);
-  });
-});
-
-describe('Cadre Engineer Account Activation', () => {
-  describe('Action Creators', () => {
-    it('should start Cadre account activation process', () => {
-      const expectedAction = {
-        type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST
-      };
-      expect(activateCadreEngineerAccountRequest()).toEqual(expectedAction);
-    });
-
-    it('should activate a Cadre engineer account successfully', () => {
-      const expectedAction = {
-        type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_SUCCESS,
-        engineer: {}
-      };
-      expect(activateCadreEngineerAccountSuccess({})).toEqual(expectedAction);
-    });
-
-    it('should fail to activate a Cadre engineer account', () => {
-      const expectedAction = {
-        type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_FAILURE,
-        error: 'Something bad happened'
-      };
-      expect(
-        activateCadreEngineerAccountFailure('Something bad happened')
-      ).toEqual(expectedAction);
-    });
   });
 });
