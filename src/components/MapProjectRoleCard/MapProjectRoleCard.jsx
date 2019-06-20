@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RoleCard from '../RoleCard/RoleCard';
 
 function MapProjectRoleCard({ roleData }) {
   return (
     <div>
       <div className="row">
         {roleData.map(role => (
-          <div className="col-md-4" key={role.id}>
-            <h3>{role.name}</h3>
-            <p>{role.description}</p>
-            <p>Actibve Engineers {role.active_engineers_count}</p>
-            <p>Vacancies {role.vacancies[0].available_slots}</p>
+          <div className="col-4 mb-4" key={role.id}>
+            <RoleCard role={role} />
           </div>
         ))}
       </div>

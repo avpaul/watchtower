@@ -6,11 +6,17 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <RoleCard
     role={
         Object {
+            "active_engineers_count": 1,
             "created_at": "2019-06-04 04:56:39",
             "description": "test role description",
             "id": 1,
             "name": "test role",
             "updated_at": "2019-06-04 04:56:39",
+            "vacancies": Array [
+              Object {
+                "available_slots": 2,
+              },
+            ],
           }
     }
 />,
@@ -36,7 +42,7 @@ ShallowWrapper {
                     className="col-12"
           >
                     <div
-                              className="role-card__icon p-2"
+                              className="role-card__icon"
                     >
                               <img
                                         alt=""
@@ -48,16 +54,17 @@ ShallowWrapper {
         <div
           className="role-card__title"
 >
-          <p />
+          test role
 </div>,
         <p
           className="role-card__attributes-sm"
 >
           Vacancies
+           
           <span
                     className="role-card__attributes-count-sm"
           >
-                    24
+                    2
           </span>
 </p>,
         <hr />,
@@ -68,44 +75,64 @@ ShallowWrapper {
                     className="col-6"
           >
                     <p
-                              className="role-card__attributes text-center"
+                              className="role-card__attributes"
                     >
-                              Applicants
-                              <span
-                                        className="role-card__attributes-count"
+                              Applicants 
+                              <br />
+                               
+                              <div
+                                        className="text-left"
                               >
-                                        6
-                              </span>
+                                        <span
+                                                  className="role-card__attributes-count"
+                                        >
+                                                  0
+                                        </span>
+                              </div>
                     </p>
           </div>
           <div
                     className="col-6"
           >
                     <p
-                              className="role-card__attributes text-center"
+                              className="role-card__attributes"
                     >
-                              Active Engrs.
-                              <span
-                                        className="role-card__attributes-count"
+                              Active Engrs. 
+                              <br />
+                               
+                              <div
+                                        className="text-left"
                               >
-                                        24
-                              </span>
+                                        <span
+                                                  className="role-card__attributes-count"
+                                        >
+                                                  1
+                                        </span>
+                              </div>
                     </p>
           </div>
 </div>,
-        <div>
+        <Unknown>
           <p
-                    className="role-card__description-title"
+                    className="role-card__description-title mt-2 mb-1"
           >
                     Description
           </p>
           <p
                     className="role-card__description"
           >
-                    test role description
-                    ...
+                    test role description...
+                    <span
+                              className="role-card__attributes-seemore"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                              role="button"
+                              tabIndex="-1"
+                    >
+                               see more
+                    </span>
           </p>
-</div>,
+</Unknown>,
       ],
       "className": "role-card",
     },
@@ -120,7 +147,7 @@ ShallowWrapper {
             className="col-12"
 >
             <div
-                        className="role-card__icon p-2"
+                        className="role-card__icon"
             >
                         <img
                                     alt=""
@@ -137,7 +164,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="role-card__icon p-2"
+              className="role-card__icon"
 >
               <img
                             alt=""
@@ -156,7 +183,7 @@ ShallowWrapper {
                 alt=""
                 src="More.svg"
 />,
-              "className": "role-card__icon p-2",
+              "className": "role-card__icon",
             },
             "ref": null,
             "rendered": Object {
@@ -182,21 +209,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <p />,
+          "children": "test role",
           "className": "role-card__title",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
+        "rendered": "test role",
         "type": "div",
       },
       Object {
@@ -206,10 +223,11 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "Vacancies",
+            " ",
             <span
               className="role-card__attributes-count-sm"
 >
-              24
+              2
 </span>,
           ],
           "className": "role-card__attributes-sm",
@@ -217,16 +235,17 @@ ShallowWrapper {
         "ref": null,
         "rendered": Array [
           "Vacancies",
+          " ",
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "24",
+              "children": 2,
               "className": "role-card__attributes-count-sm",
             },
             "ref": null,
-            "rendered": "24",
+            "rendered": 2,
             "type": "span",
           },
         ],
@@ -251,28 +270,40 @@ ShallowWrapper {
               className="col-6"
 >
               <p
-                            className="role-card__attributes text-center"
+                            className="role-card__attributes"
               >
-                            Applicants
-                            <span
-                                          className="role-card__attributes-count"
+                            Applicants 
+                            <br />
+                             
+                            <div
+                                          className="text-left"
                             >
-                                          6
-                            </span>
+                                          <span
+                                                        className="role-card__attributes-count"
+                                          >
+                                                        0
+                                          </span>
+                            </div>
               </p>
 </div>,
             <div
               className="col-6"
 >
               <p
-                            className="role-card__attributes text-center"
+                            className="role-card__attributes"
               >
-                            Active Engrs.
-                            <span
-                                          className="role-card__attributes-count"
+                            Active Engrs. 
+                            <br />
+                             
+                            <div
+                                          className="text-left"
                             >
-                                          24
-                            </span>
+                                          <span
+                                                        className="role-card__attributes-count"
+                                          >
+                                                        1
+                                          </span>
+                            </div>
               </p>
 </div>,
           ],
@@ -286,14 +317,20 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <p
-                className="role-card__attributes text-center"
+                className="role-card__attributes"
 >
-                Applicants
-                <span
-                                className="role-card__attributes-count"
+                Applicants 
+                <br />
+                 
+                <div
+                                className="text-left"
                 >
-                                6
-                </span>
+                                <span
+                                                className="role-card__attributes-count"
+                                >
+                                                0
+                                </span>
+                </div>
 </p>,
               "className": "col-6",
             },
@@ -304,29 +341,60 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Applicants",
-                  <span
-                    className="role-card__attributes-count"
+                  "Applicants ",
+                  <br />,
+                  " ",
+                  <div
+                    className="text-left"
 >
-                    6
-</span>,
+                    <span
+                                        className="role-card__attributes-count"
+                    >
+                                        0
+                    </span>
+</div>,
                 ],
-                "className": "role-card__attributes text-center",
+                "className": "role-card__attributes",
               },
               "ref": null,
               "rendered": Array [
-                "Applicants",
+                "Applicants ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "6",
-                    "className": "role-card__attributes-count",
+                    "children": <span
+                      className="role-card__attributes-count"
+>
+                      0
+</span>,
+                    "className": "text-left",
                   },
                   "ref": null,
-                  "rendered": "6",
-                  "type": "span",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "0",
+                      "className": "role-card__attributes-count",
+                    },
+                    "ref": null,
+                    "rendered": "0",
+                    "type": "span",
+                  },
+                  "type": "div",
                 },
               ],
               "type": "p",
@@ -339,14 +407,20 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <p
-                className="role-card__attributes text-center"
+                className="role-card__attributes"
 >
-                Active Engrs.
-                <span
-                                className="role-card__attributes-count"
+                Active Engrs. 
+                <br />
+                 
+                <div
+                                className="text-left"
                 >
-                                24
-                </span>
+                                <span
+                                                className="role-card__attributes-count"
+                                >
+                                                1
+                                </span>
+                </div>
 </p>,
               "className": "col-6",
             },
@@ -357,29 +431,60 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Active Engrs.",
-                  <span
-                    className="role-card__attributes-count"
+                  "Active Engrs. ",
+                  <br />,
+                  " ",
+                  <div
+                    className="text-left"
 >
-                    24
-</span>,
+                    <span
+                                        className="role-card__attributes-count"
+                    >
+                                        1
+                    </span>
+</div>,
                 ],
-                "className": "role-card__attributes text-center",
+                "className": "role-card__attributes",
               },
               "ref": null,
               "rendered": Array [
-                "Active Engrs.",
+                "Active Engrs. ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "24",
-                    "className": "role-card__attributes-count",
+                    "children": <span
+                      className="role-card__attributes-count"
+>
+                      1
+</span>,
+                    "className": "text-left",
                   },
                   "ref": null,
-                  "rendered": "24",
-                  "type": "span",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 1,
+                      "className": "role-card__attributes-count",
+                    },
+                    "ref": null,
+                    "rendered": 1,
+                    "type": "span",
+                  },
+                  "type": "div",
                 },
               ],
               "type": "p",
@@ -392,19 +497,27 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
           "children": Array [
             <p
-              className="role-card__description-title"
+              className="role-card__description-title mt-2 mb-1"
 >
               Description
 </p>,
             <p
               className="role-card__description"
 >
-              test role description
-              ...
+              test role description...
+              <span
+                            className="role-card__attributes-seemore"
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            tabIndex="-1"
+              >
+                             see more
+              </span>
 </p>,
           ],
         },
@@ -416,7 +529,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Description",
-              "className": "role-card__description-title",
+              "className": "role-card__description-title mt-2 mb-1",
             },
             "ref": null,
             "rendered": "Description",
@@ -428,20 +541,43 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "test role description",
-                "...",
+                "test role description...",
+                <span
+                  className="role-card__attributes-seemore"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex="-1"
+>
+                   see more
+</span>,
               ],
               "className": "role-card__description",
             },
             "ref": null,
             "rendered": Array [
-              "test role description",
-              "...",
+              "test role description...",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " see more",
+                  "className": "role-card__attributes-seemore",
+                  "onClick": [Function],
+                  "onKeyPress": [Function],
+                  "role": "button",
+                  "tabIndex": "-1",
+                },
+                "ref": null,
+                "rendered": " see more",
+                "type": "span",
+              },
             ],
             "type": "p",
           },
         ],
-        "type": "div",
+        "type": Symbol(react.fragment),
       },
     ],
     "type": "div",
@@ -460,7 +596,7 @@ ShallowWrapper {
                         className="col-12"
             >
                         <div
-                                    className="role-card__icon p-2"
+                                    className="role-card__icon"
                         >
                                     <img
                                                 alt=""
@@ -472,16 +608,17 @@ ShallowWrapper {
           <div
             className="role-card__title"
 >
-            <p />
+            test role
 </div>,
           <p
             className="role-card__attributes-sm"
 >
             Vacancies
+             
             <span
                         className="role-card__attributes-count-sm"
             >
-                        24
+                        2
             </span>
 </p>,
           <hr />,
@@ -492,44 +629,64 @@ ShallowWrapper {
                         className="col-6"
             >
                         <p
-                                    className="role-card__attributes text-center"
+                                    className="role-card__attributes"
                         >
-                                    Applicants
-                                    <span
-                                                className="role-card__attributes-count"
+                                    Applicants 
+                                    <br />
+                                     
+                                    <div
+                                                className="text-left"
                                     >
-                                                6
-                                    </span>
+                                                <span
+                                                            className="role-card__attributes-count"
+                                                >
+                                                            0
+                                                </span>
+                                    </div>
                         </p>
             </div>
             <div
                         className="col-6"
             >
                         <p
-                                    className="role-card__attributes text-center"
+                                    className="role-card__attributes"
                         >
-                                    Active Engrs.
-                                    <span
-                                                className="role-card__attributes-count"
+                                    Active Engrs. 
+                                    <br />
+                                     
+                                    <div
+                                                className="text-left"
                                     >
-                                                24
-                                    </span>
+                                                <span
+                                                            className="role-card__attributes-count"
+                                                >
+                                                            1
+                                                </span>
+                                    </div>
                         </p>
             </div>
 </div>,
-          <div>
+          <Unknown>
             <p
-                        className="role-card__description-title"
+                        className="role-card__description-title mt-2 mb-1"
             >
                         Description
             </p>
             <p
                         className="role-card__description"
             >
-                        test role description
-                        ...
+                        test role description...
+                        <span
+                                    className="role-card__attributes-seemore"
+                                    onClick={[Function]}
+                                    onKeyPress={[Function]}
+                                    role="button"
+                                    tabIndex="-1"
+                        >
+                                     see more
+                        </span>
             </p>
-</div>,
+</Unknown>,
         ],
         "className": "role-card",
       },
@@ -544,7 +701,7 @@ ShallowWrapper {
               className="col-12"
 >
               <div
-                            className="role-card__icon p-2"
+                            className="role-card__icon"
               >
                             <img
                                           alt=""
@@ -561,7 +718,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <div
-                className="role-card__icon p-2"
+                className="role-card__icon"
 >
                 <img
                                 alt=""
@@ -580,7 +737,7 @@ ShallowWrapper {
                   alt=""
                   src="More.svg"
 />,
-                "className": "role-card__icon p-2",
+                "className": "role-card__icon",
               },
               "ref": null,
               "rendered": Object {
@@ -606,21 +763,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <p />,
+            "children": "test role",
             "className": "role-card__title",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
-          },
+          "rendered": "test role",
           "type": "div",
         },
         Object {
@@ -630,10 +777,11 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "Vacancies",
+              " ",
               <span
                 className="role-card__attributes-count-sm"
 >
-                24
+                2
 </span>,
             ],
             "className": "role-card__attributes-sm",
@@ -641,16 +789,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [
             "Vacancies",
+            " ",
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "24",
+                "children": 2,
                 "className": "role-card__attributes-count-sm",
               },
               "ref": null,
-              "rendered": "24",
+              "rendered": 2,
               "type": "span",
             },
           ],
@@ -675,28 +824,40 @@ ShallowWrapper {
                 className="col-6"
 >
                 <p
-                                className="role-card__attributes text-center"
+                                className="role-card__attributes"
                 >
-                                Applicants
-                                <span
-                                                className="role-card__attributes-count"
+                                Applicants 
+                                <br />
+                                 
+                                <div
+                                                className="text-left"
                                 >
-                                                6
-                                </span>
+                                                <span
+                                                                className="role-card__attributes-count"
+                                                >
+                                                                0
+                                                </span>
+                                </div>
                 </p>
 </div>,
               <div
                 className="col-6"
 >
                 <p
-                                className="role-card__attributes text-center"
+                                className="role-card__attributes"
                 >
-                                Active Engrs.
-                                <span
-                                                className="role-card__attributes-count"
+                                Active Engrs. 
+                                <br />
+                                 
+                                <div
+                                                className="text-left"
                                 >
-                                                24
-                                </span>
+                                                <span
+                                                                className="role-card__attributes-count"
+                                                >
+                                                                1
+                                                </span>
+                                </div>
                 </p>
 </div>,
             ],
@@ -710,14 +871,20 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <p
-                  className="role-card__attributes text-center"
+                  className="role-card__attributes"
 >
-                  Applicants
-                  <span
-                                    className="role-card__attributes-count"
+                  Applicants 
+                  <br />
+                   
+                  <div
+                                    className="text-left"
                   >
-                                    6
-                  </span>
+                                    <span
+                                                      className="role-card__attributes-count"
+                                    >
+                                                      0
+                                    </span>
+                  </div>
 </p>,
                 "className": "col-6",
               },
@@ -728,29 +895,60 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Applicants",
-                    <span
-                      className="role-card__attributes-count"
+                    "Applicants ",
+                    <br />,
+                    " ",
+                    <div
+                      className="text-left"
 >
-                      6
-</span>,
+                      <span
+                                            className="role-card__attributes-count"
+                      >
+                                            0
+                      </span>
+</div>,
                   ],
-                  "className": "role-card__attributes text-center",
+                  "className": "role-card__attributes",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Applicants",
+                  "Applicants ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "6",
-                      "className": "role-card__attributes-count",
+                      "children": <span
+                        className="role-card__attributes-count"
+>
+                        0
+</span>,
+                      "className": "text-left",
                     },
                     "ref": null,
-                    "rendered": "6",
-                    "type": "span",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "0",
+                        "className": "role-card__attributes-count",
+                      },
+                      "ref": null,
+                      "rendered": "0",
+                      "type": "span",
+                    },
+                    "type": "div",
                   },
                 ],
                 "type": "p",
@@ -763,14 +961,20 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <p
-                  className="role-card__attributes text-center"
+                  className="role-card__attributes"
 >
-                  Active Engrs.
-                  <span
-                                    className="role-card__attributes-count"
+                  Active Engrs. 
+                  <br />
+                   
+                  <div
+                                    className="text-left"
                   >
-                                    24
-                  </span>
+                                    <span
+                                                      className="role-card__attributes-count"
+                                    >
+                                                      1
+                                    </span>
+                  </div>
 </p>,
                 "className": "col-6",
               },
@@ -781,29 +985,60 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Active Engrs.",
-                    <span
-                      className="role-card__attributes-count"
+                    "Active Engrs. ",
+                    <br />,
+                    " ",
+                    <div
+                      className="text-left"
 >
-                      24
-</span>,
+                      <span
+                                            className="role-card__attributes-count"
+                      >
+                                            1
+                      </span>
+</div>,
                   ],
-                  "className": "role-card__attributes text-center",
+                  "className": "role-card__attributes",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Active Engrs.",
+                  "Active Engrs. ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "24",
-                      "className": "role-card__attributes-count",
+                      "children": <span
+                        className="role-card__attributes-count"
+>
+                        1
+</span>,
+                      "className": "text-left",
                     },
                     "ref": null,
-                    "rendered": "24",
-                    "type": "span",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": 1,
+                        "className": "role-card__attributes-count",
+                      },
+                      "ref": null,
+                      "rendered": 1,
+                      "type": "span",
+                    },
+                    "type": "div",
                   },
                 ],
                 "type": "p",
@@ -816,19 +1051,27 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
             "children": Array [
               <p
-                className="role-card__description-title"
+                className="role-card__description-title mt-2 mb-1"
 >
                 Description
 </p>,
               <p
                 className="role-card__description"
 >
-                test role description
-                ...
+                test role description...
+                <span
+                                className="role-card__attributes-seemore"
+                                onClick={[Function]}
+                                onKeyPress={[Function]}
+                                role="button"
+                                tabIndex="-1"
+                >
+                                 see more
+                </span>
 </p>,
             ],
           },
@@ -840,7 +1083,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Description",
-                "className": "role-card__description-title",
+                "className": "role-card__description-title mt-2 mb-1",
               },
               "ref": null,
               "rendered": "Description",
@@ -852,20 +1095,43 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "test role description",
-                  "...",
+                  "test role description...",
+                  <span
+                    className="role-card__attributes-seemore"
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    role="button"
+                    tabIndex="-1"
+>
+                     see more
+</span>,
                 ],
                 "className": "role-card__description",
               },
               "ref": null,
               "rendered": Array [
-                "test role description",
-                "...",
+                "test role description...",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " see more",
+                    "className": "role-card__attributes-seemore",
+                    "onClick": [Function],
+                    "onKeyPress": [Function],
+                    "role": "button",
+                    "tabIndex": "-1",
+                  },
+                  "ref": null,
+                  "rendered": " see more",
+                  "type": "span",
+                },
               ],
               "type": "p",
             },
           ],
-          "type": "div",
+          "type": Symbol(react.fragment),
         },
       ],
       "type": "div",
@@ -895,5 +1161,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

@@ -199,5 +199,6 @@ export default {
       perPageOptions: INDEX_PAGE_SIZE_OPTIONS,
       total: 0
     }
-  }
+  },
+  fetchAllRoles: genericAPIState
 };

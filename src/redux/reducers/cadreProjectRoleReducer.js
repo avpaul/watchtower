@@ -2,7 +2,7 @@ import initialState from './initialState';
 import * as types from '../constants/cadreProjectRolesTypes';
 import genericReducer from './genericReducer';
 
-const fetchProjectsReducer = (state = initialState.fetchAllProjects, action) =>
+const fetchRolesReducer = (state = initialState.fetchAllRoles, action) =>
   genericReducer(
     [
       types.FETCH_PROJECT_ROLES_REQUEST,
@@ -16,4 +16,4 @@ const fetchProjectsReducer = (state = initialState.fetchAllProjects, action) =>
     }
   );
 
-export default fetchProjectsReducer;
+export default fetchRolesReducer;
