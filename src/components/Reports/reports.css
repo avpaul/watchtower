@@ -1,0 +1,280 @@
+/*
+  Table css
+ */
+
+.name-column {
+  max-width: 80%;
+  padding-top: 1em;
+}
+
+.initials {
+  display: none;
+}
+
+.image-column {
+  max-width: 20%;
+  margin: 0 auto;
+  padding-top: 0.5em;
+}
+
+.img-responsive {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+.profilePlaceHolder {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #512da8;
+  font-size: 15px;
+  color: #fff;
+  line-height: 2.1em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+table.stats-table {
+  border-collapse: collapse;
+  font-family: arial, sans-serif;
+  width: 100%;
+}
+
+.table-overflow {
+  overflow-x: auto;
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
+}
+
+@media (min-width: 316px) and (max-width: 1440px) {
+  .name-column {
+    display: none;
+  }
+
+  .initials {
+    display: block;
+    max-width: 50%;
+    padding-top: 1em;
+    font-size: 12px;
+    margin: 0 auto;
+  }
+
+  .image-column {
+    max-width: 50%;
+    padding-top: -0.5em;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1023px) {
+  .initials {
+    display: none;
+  }
+
+  .image-column {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 316px) and (max-width: 1024px) {
+  .col-xs-6 {
+    min-width: 100%;
+  }
+  .search_input {
+    min-width: 100%;
+  }
+  .searchbar {
+    min-width: 100%;
+    border-radius: none;
+  }
+  .search_icon {
+    margin-top: -1.8em;
+  }
+  .sort-btn {
+    margin-top: 1em;
+  }
+  .filter-btn {
+    margin-right: 1em;
+  }
+  .btn-default {
+    background: white;
+  }
+}
+
+th,
+td {
+  padding: 8px;
+  border: none;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+}
+
+.sort-btn {
+  margin-right: 2em;
+}
+
+.filter-btn {
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
+  margin-left: 2em;
+  border: 1px solid #0459e4;
+}
+
+.export-btn {
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
+  border: 1px solid #0459e4;
+}
+
+.header-title {
+  color: rgba(51, 62, 68, 0.51);
+}
+
+.status-color .color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 50%;
+}
+
+.inactive {
+  background: yellow;
+}
+
+.is-active {
+  background: green;
+}
+
+/*
+  Panel Css
+ */
+.panel {
+  padding-bottom: 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  border-top: 5px solid #0459e4;
+  padding-top: 15px;
+  border-radius: 6px;
+  padding-left: 7px;
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
+}
+
+.filter-chevron {
+  margin-left: 8px;
+}
+
+/*
+ Search bar
+ */
+
+.searchbar {
+  background-color: rgb(244, 248, 249);
+  border-radius: 30px;
+  width: 80%;
+  padding: 10px;
+}
+
+.search_input {
+  padding: 0 10px;
+  color: rgba(51, 62, 68, 0.51);
+  border: 0;
+  outline: 0;
+  width: 90%;
+  background: none;
+  caret-color: rgba(51, 62, 68, 0.51);
+  line-height: 25px;
+}
+
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  caret-color: #000000;
+}
+
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #000000;
+}
+
+.search_icon {
+  height: 25px;
+  width: 25px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgba(51, 62, 68, 0.51);
+}
+
+/*
+  Cards css
+ */
+
+.card-tile {
+  margin-bottom: 45px;
+  text-align: center;
+}
+.card-tile-heading {
+  border: 1px solid #f2f2f2;
+  border-radius: 100%;
+  color: #000000;
+  height: 60px;
+  margin: 0 auto -40px;
+  position: relative;
+  transition: all 0.3s ease-in-out 0s;
+  width: 60px;
+  background-color: #ffffff;
+}
+.card-tile-heading {
+  line-height: 50px;
+}
+.card-tile-content {
+  padding-top: 50px;
+}
+.card-tile-body {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
+}
+
+.card-tile-number {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 5px 0 15px;
+}
+.card-tile-description {
+  text-transform: uppercase;
+}
+.card-tile-footer {
+  background-color: #ffffff;
+  color: #10a36d;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 5px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.card-tile-footer:hover {
+  color: #0b6121;
+  text-decoration: none;
+}
+
+.more-info {
+  padding-left: 5px;
+}
+
+.text-title {
+  color: black;
+}
+
+/*
+ Pagination css
+ */
+
+.paginator {
+  margin-top: 3em;
+  text-align: center;
+}

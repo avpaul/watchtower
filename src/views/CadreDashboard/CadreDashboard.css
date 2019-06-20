@@ -22,7 +22,7 @@
   margin-bottom: 22px;
   border-radius: 6px;
   background-color: #ffffff;
-  box-shadow: 2px 4px 10px 0 rgba(51, 89, 219, 0.04);
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
 }
 
 .project-badge {
