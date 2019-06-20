@@ -293,10 +293,10 @@ ShallowWrapper {
                                 <FeedbackDuration
                                         clearDuration={[Function]}
                                         currentDate="2019-3-15"
-                                        endDate={2019-08-05T13:34:03.000Z}
+                                        endDate="2019-08-05 14:34:03"
                                         handleEndDateChange={[Function]}
                                         handleStartDateChange={[Function]}
-                                        startDate={2019-03-05T00:00:00.000Z}
+                                        startDate="2019-03-05"
                                 />
                         </div>
                 </div>
@@ -573,10 +573,10 @@ ShallowWrapper {
                                     <FeedbackDuration
                                                 clearDuration={[Function]}
                                                 currentDate="2019-3-15"
-                                                endDate={2019-08-05T13:34:03.000Z}
+                                                endDate="2019-08-05 14:34:03"
                                                 handleEndDateChange={[Function]}
                                                 handleStartDateChange={[Function]}
-                                                startDate={2019-03-05T00:00:00.000Z}
+                                                startDate="2019-03-05"
                                     />
                         </div>
             </div>
@@ -852,10 +852,10 @@ ShallowWrapper {
                                 <FeedbackDuration
                                                 clearDuration={[Function]}
                                                 currentDate="2019-3-15"
-                                                endDate={2019-08-05T13:34:03.000Z}
+                                                endDate="2019-08-05 14:34:03"
                                                 handleEndDateChange={[Function]}
                                                 handleStartDateChange={[Function]}
-                                                startDate={2019-03-05T00:00:00.000Z}
+                                                startDate="2019-03-05"
                                 />
                 </div>
 </div>,
@@ -1344,10 +1344,10 @@ ShallowWrapper {
                     <FeedbackDuration
                                         clearDuration={[Function]}
                                         currentDate="2019-3-15"
-                                        endDate={2019-08-05T13:34:03.000Z}
+                                        endDate="2019-08-05 14:34:03"
                                         handleEndDateChange={[Function]}
                                         handleStartDateChange={[Function]}
-                                        startDate={2019-03-05T00:00:00.000Z}
+                                        startDate="2019-03-05"
                     />
 </div>,
                 ],
@@ -1375,10 +1375,10 @@ ShallowWrapper {
                     "children": <FeedbackDuration
                       clearDuration={[Function]}
                       currentDate="2019-3-15"
-                      endDate={2019-08-05T13:34:03.000Z}
+                      endDate="2019-08-05 14:34:03"
                       handleEndDateChange={[Function]}
                       handleStartDateChange={[Function]}
-                      startDate={2019-03-05T00:00:00.000Z}
+                      startDate="2019-03-05"
 />,
                     "className": "ops-dashboard__fellows-summary",
                   },
@@ -1390,10 +1390,10 @@ ShallowWrapper {
                     "props": Object {
                       "clearDuration": [Function],
                       "currentDate": "2019-3-15",
-                      "endDate": 2019-08-05T13:34:03.000Z,
+                      "endDate": "2019-08-05 14:34:03",
                       "handleEndDateChange": [Function],
                       "handleStartDateChange": [Function],
-                      "startDate": 2019-03-05T00:00:00.000Z,
+                      "startDate": "2019-03-05",
                     },
                     "ref": null,
                     "rendered": null,
@@ -1772,10 +1772,10 @@ ShallowWrapper {
                                         <FeedbackDuration
                                                   clearDuration={[Function]}
                                                   currentDate="2019-3-15"
-                                                  endDate={2019-08-05T13:34:03.000Z}
+                                                  endDate="2019-08-05 14:34:03"
                                                   handleEndDateChange={[Function]}
                                                   handleStartDateChange={[Function]}
-                                                  startDate={2019-03-05T00:00:00.000Z}
+                                                  startDate="2019-03-05"
                                         />
                               </div>
                     </div>
@@ -2052,10 +2052,10 @@ ShallowWrapper {
                                           <FeedbackDuration
                                                         clearDuration={[Function]}
                                                         currentDate="2019-3-15"
-                                                        endDate={2019-08-05T13:34:03.000Z}
+                                                        endDate="2019-08-05 14:34:03"
                                                         handleEndDateChange={[Function]}
                                                         handleStartDateChange={[Function]}
-                                                        startDate={2019-03-05T00:00:00.000Z}
+                                                        startDate="2019-03-05"
                                           />
                             </div>
               </div>
@@ -2331,10 +2331,10 @@ ShallowWrapper {
                                     <FeedbackDuration
                                                       clearDuration={[Function]}
                                                       currentDate="2019-3-15"
-                                                      endDate={2019-08-05T13:34:03.000Z}
+                                                      endDate="2019-08-05 14:34:03"
                                                       handleEndDateChange={[Function]}
                                                       handleStartDateChange={[Function]}
-                                                      startDate={2019-03-05T00:00:00.000Z}
+                                                      startDate="2019-03-05"
                                     />
                   </div>
 </div>,
@@ -2823,10 +2823,10 @@ ShallowWrapper {
                       <FeedbackDuration
                                             clearDuration={[Function]}
                                             currentDate="2019-3-15"
-                                            endDate={2019-08-05T13:34:03.000Z}
+                                            endDate="2019-08-05 14:34:03"
                                             handleEndDateChange={[Function]}
                                             handleStartDateChange={[Function]}
-                                            startDate={2019-03-05T00:00:00.000Z}
+                                            startDate="2019-03-05"
                       />
 </div>,
                   ],
@@ -2854,10 +2854,10 @@ ShallowWrapper {
                       "children": <FeedbackDuration
                         clearDuration={[Function]}
                         currentDate="2019-3-15"
-                        endDate={2019-08-05T13:34:03.000Z}
+                        endDate="2019-08-05 14:34:03"
                         handleEndDateChange={[Function]}
                         handleStartDateChange={[Function]}
-                        startDate={2019-03-05T00:00:00.000Z}
+                        startDate="2019-03-05"
 />,
                       "className": "ops-dashboard__fellows-summary",
                     },
@@ -2869,10 +2869,10 @@ ShallowWrapper {
                       "props": Object {
                         "clearDuration": [Function],
                         "currentDate": "2019-3-15",
-                        "endDate": 2019-08-05T13:34:03.000Z,
+                        "endDate": "2019-08-05 14:34:03",
                         "handleEndDateChange": [Function],
                         "handleStartDateChange": [Function],
-                        "startDate": 2019-03-05T00:00:00.000Z,
+                        "startDate": "2019-03-05",
                       },
                       "ref": null,
                       "rendered": null,
@@ -3329,10 +3329,10 @@ ShallowWrapper {
                                 <FeedbackDuration
                                         clearDuration={[Function]}
                                         currentDate="2019-3-15"
-                                        endDate={2019-08-05T13:34:03.000Z}
+                                        endDate="2019-08-05 14:34:03"
                                         handleEndDateChange={[Function]}
                                         handleStartDateChange={[Function]}
-                                        startDate={2019-03-05T00:00:00.000Z}
+                                        startDate="2019-03-05"
                                 />
                         </div>
                 </div>
@@ -3609,10 +3609,10 @@ ShallowWrapper {
                                     <FeedbackDuration
                                                 clearDuration={[Function]}
                                                 currentDate="2019-3-15"
-                                                endDate={2019-08-05T13:34:03.000Z}
+                                                endDate="2019-08-05 14:34:03"
                                                 handleEndDateChange={[Function]}
                                                 handleStartDateChange={[Function]}
-                                                startDate={2019-03-05T00:00:00.000Z}
+                                                startDate="2019-03-05"
                                     />
                         </div>
             </div>
@@ -3888,10 +3888,10 @@ ShallowWrapper {
                                 <FeedbackDuration
                                                 clearDuration={[Function]}
                                                 currentDate="2019-3-15"
-                                                endDate={2019-08-05T13:34:03.000Z}
+                                                endDate="2019-08-05 14:34:03"
                                                 handleEndDateChange={[Function]}
                                                 handleStartDateChange={[Function]}
-                                                startDate={2019-03-05T00:00:00.000Z}
+                                                startDate="2019-03-05"
                                 />
                 </div>
 </div>,
@@ -4380,10 +4380,10 @@ ShallowWrapper {
                     <FeedbackDuration
                                         clearDuration={[Function]}
                                         currentDate="2019-3-15"
-                                        endDate={2019-08-05T13:34:03.000Z}
+                                        endDate="2019-08-05 14:34:03"
                                         handleEndDateChange={[Function]}
                                         handleStartDateChange={[Function]}
-                                        startDate={2019-03-05T00:00:00.000Z}
+                                        startDate="2019-03-05"
                     />
 </div>,
                 ],
@@ -4411,10 +4411,10 @@ ShallowWrapper {
                     "children": <FeedbackDuration
                       clearDuration={[Function]}
                       currentDate="2019-3-15"
-                      endDate={2019-08-05T13:34:03.000Z}
+                      endDate="2019-08-05 14:34:03"
                       handleEndDateChange={[Function]}
                       handleStartDateChange={[Function]}
-                      startDate={2019-03-05T00:00:00.000Z}
+                      startDate="2019-03-05"
 />,
                     "className": "ops-dashboard__fellows-summary",
                   },
@@ -4426,10 +4426,10 @@ ShallowWrapper {
                     "props": Object {
                       "clearDuration": [Function],
                       "currentDate": "2019-3-15",
-                      "endDate": 2019-08-05T13:34:03.000Z,
+                      "endDate": "2019-08-05 14:34:03",
                       "handleEndDateChange": [Function],
                       "handleStartDateChange": [Function],
-                      "startDate": 2019-03-05T00:00:00.000Z,
+                      "startDate": "2019-03-05",
                     },
                     "ref": null,
                     "rendered": null,
@@ -4808,10 +4808,10 @@ ShallowWrapper {
                                         <FeedbackDuration
                                                   clearDuration={[Function]}
                                                   currentDate="2019-3-15"
-                                                  endDate={2019-08-05T13:34:03.000Z}
+                                                  endDate="2019-08-05 14:34:03"
                                                   handleEndDateChange={[Function]}
                                                   handleStartDateChange={[Function]}
-                                                  startDate={2019-03-05T00:00:00.000Z}
+                                                  startDate="2019-03-05"
                                         />
                               </div>
                     </div>
@@ -5088,10 +5088,10 @@ ShallowWrapper {
                                           <FeedbackDuration
                                                         clearDuration={[Function]}
                                                         currentDate="2019-3-15"
-                                                        endDate={2019-08-05T13:34:03.000Z}
+                                                        endDate="2019-08-05 14:34:03"
                                                         handleEndDateChange={[Function]}
                                                         handleStartDateChange={[Function]}
-                                                        startDate={2019-03-05T00:00:00.000Z}
+                                                        startDate="2019-03-05"
                                           />
                             </div>
               </div>
@@ -5367,10 +5367,10 @@ ShallowWrapper {
                                     <FeedbackDuration
                                                       clearDuration={[Function]}
                                                       currentDate="2019-3-15"
-                                                      endDate={2019-08-05T13:34:03.000Z}
+                                                      endDate="2019-08-05 14:34:03"
                                                       handleEndDateChange={[Function]}
                                                       handleStartDateChange={[Function]}
-                                                      startDate={2019-03-05T00:00:00.000Z}
+                                                      startDate="2019-03-05"
                                     />
                   </div>
 </div>,
@@ -5859,10 +5859,10 @@ ShallowWrapper {
                       <FeedbackDuration
                                             clearDuration={[Function]}
                                             currentDate="2019-3-15"
-                                            endDate={2019-08-05T13:34:03.000Z}
+                                            endDate="2019-08-05 14:34:03"
                                             handleEndDateChange={[Function]}
                                             handleStartDateChange={[Function]}
-                                            startDate={2019-03-05T00:00:00.000Z}
+                                            startDate="2019-03-05"
                       />
 </div>,
                   ],
@@ -5890,10 +5890,10 @@ ShallowWrapper {
                       "children": <FeedbackDuration
                         clearDuration={[Function]}
                         currentDate="2019-3-15"
-                        endDate={2019-08-05T13:34:03.000Z}
+                        endDate="2019-08-05 14:34:03"
                         handleEndDateChange={[Function]}
                         handleStartDateChange={[Function]}
-                        startDate={2019-03-05T00:00:00.000Z}
+                        startDate="2019-03-05"
 />,
                       "className": "ops-dashboard__fellows-summary",
                     },
@@ -5905,10 +5905,10 @@ ShallowWrapper {
                       "props": Object {
                         "clearDuration": [Function],
                         "currentDate": "2019-3-15",
-                        "endDate": 2019-08-05T13:34:03.000Z,
+                        "endDate": "2019-08-05 14:34:03",
                         "handleEndDateChange": [Function],
                         "handleStartDateChange": [Function],
-                        "startDate": 2019-03-05T00:00:00.000Z,
+                        "startDate": "2019-03-05",
                       },
                       "ref": null,
                       "rendered": null,

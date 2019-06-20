@@ -17,6 +17,7 @@ import renderMessageHeader from '../Notifications/MessageHeader';
 import FellowHeader from './FellowHeader';
 import ManagerHeader from './ManagerHeader';
 import { menuOptions } from './navlinks';
+import CadreHeader from './CadreHeader';
 
 /**
  * Header UI Component
@@ -334,6 +335,8 @@ export class Header extends Component {
       case 'WATCH_TOWER_SL':
         getUnreadNotification();
         break;
+      case 'CadreFellow':
+        return null;
       default:
         return null;
     }
@@ -352,6 +355,19 @@ export class Header extends Component {
         return (
           <ManagerHeader
             renderManagerModal={this.renderManagerModal}
+            showModal={this.showModal}
+            handleMenuClick={this.handleMenuClick}
+            activeItem={activeItem}
+            notifications={notifications}
+            unreadnotifications={unreadnotifications || []}
+            user={user}
+            role={role}
+          />
+        );
+      case 'CadreFellow':
+        return (
+          <CadreHeader
+            renderModal={this.renderModal}
             showModal={this.showModal}
             handleMenuClick={this.handleMenuClick}
             activeItem={activeItem}

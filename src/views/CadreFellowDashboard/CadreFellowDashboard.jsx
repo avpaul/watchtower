@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import CadrePage from '../CadrePage';
+import CadreDashboardMain from '../CadreDashboard/CadreDashboardMain';
+import { Header } from '../../components/Header/Header';
 
 const CadreFellowDashboard = props => {
   const { location, d1Engineer } = props;
@@ -9,15 +11,23 @@ const CadreFellowDashboard = props => {
     return <Redirect to="/cadre/welcome" />;
   }
   return (
-    <Fragment>
-      <Switch>
-        <Route
-          exact
-          path="/cadre/welcome"
-          component={() => <CadrePage {...props} />}
-        />
-      </Switch>
-    </Fragment>
+    <Route path="/dashboard">
+      <Fragment>
+        <Header {...props} />
+        <Switch>
+          <Route
+            exact
+            path="/cadre/welcome"
+            component={() => <CadrePage {...props} />}
+          />
+          <Route
+            exact
+            path="/dashboard"
+            component={() => <CadreDashboardMain {...props} />}
+          />
+        </Switch>
+      </Fragment>
+    </Route>
   );
 };
 
