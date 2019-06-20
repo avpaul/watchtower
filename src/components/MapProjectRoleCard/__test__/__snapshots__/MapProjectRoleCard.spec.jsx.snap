@@ -4,30 +4,33 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MapProjectRoleCard
-    activeEngineers={Object {}}
-    fetchActiveEngineers={[Function]}
-    loading={true}
     roleData={
         Array [
             Object {
               "active_engineers_count": 1,
-              "applications_count": 2,
               "created_at": "2019-06-04 04:56:39",
               "description": "test role description",
               "id": 1,
               "name": "test role",
               "updated_at": "2019-06-04 04:56:39",
-              "vacancies_count": 3,
+              "vacancies": Array [
+                Object {
+                  "available_slots": 2,
+                },
+              ],
             },
             Object {
               "active_engineers_count": 1,
-              "applications_count": 2,
               "created_at": "2019-06-04 04:56:39",
               "description": "test role description",
               "id": 1,
               "name": "test role",
               "updated_at": "2019-06-04 04:56:39",
-              "vacancies_count": 3,
+              "vacancies": Array [
+                Object {
+                  "available_slots": 2,
+                },
+              ],
             },
           ]
     }
@@ -53,19 +56,19 @@ ShallowWrapper {
                 className="col-4 mb-4"
         >
                 <RoleCard
-                        activeEngineers={Object {}}
-                        fetchActiveEngineers={[Function]}
-                        loading={true}
                         role={
                                 Object {
                                         "active_engineers_count": 1,
-                                        "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
                                         "description": "test role description",
                                         "id": 1,
                                         "name": "test role",
                                         "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies_count": 3,
+                                        "vacancies": Array [
+                                          Object {
+                                            "available_slots": 2,
+                                          },
+                                        ],
                                       }
                         }
                 />
@@ -74,19 +77,19 @@ ShallowWrapper {
                 className="col-4 mb-4"
         >
                 <RoleCard
-                        activeEngineers={Object {}}
-                        fetchActiveEngineers={[Function]}
-                        loading={true}
                         role={
                                 Object {
                                         "active_engineers_count": 1,
-                                        "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
                                         "description": "test role description",
                                         "id": 1,
                                         "name": "test role",
                                         "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies_count": 3,
+                                        "vacancies": Array [
+                                          Object {
+                                            "available_slots": 2,
+                                          },
+                                        ],
                                       }
                         }
                 />
@@ -104,19 +107,19 @@ ShallowWrapper {
             className="col-4 mb-4"
 >
             <RoleCard
-                        activeEngineers={Object {}}
-                        fetchActiveEngineers={[Function]}
-                        loading={true}
                         role={
                                     Object {
                                                 "active_engineers_count": 1,
-                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
+                                                "vacancies": Array [
+                                                  Object {
+                                                    "available_slots": 2,
+                                                  },
+                                                ],
                                               }
                         }
             />
@@ -125,19 +128,19 @@ ShallowWrapper {
             className="col-4 mb-4"
 >
             <RoleCard
-                        activeEngineers={Object {}}
-                        fetchActiveEngineers={[Function]}
-                        loading={true}
                         role={
                                     Object {
                                                 "active_engineers_count": 1,
-                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
+                                                "vacancies": Array [
+                                                  Object {
+                                                    "available_slots": 2,
+                                                  },
+                                                ],
                                               }
                         }
             />
@@ -153,19 +156,19 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <RoleCard
-              activeEngineers={Object {}}
-              fetchActiveEngineers={[Function]}
-              loading={true}
               role={
                             Object {
                                           "active_engineers_count": 1,
-                                          "applications_count": 2,
                                           "created_at": "2019-06-04 04:56:39",
                                           "description": "test role description",
                                           "id": 1,
                                           "name": "test role",
                                           "updated_at": "2019-06-04 04:56:39",
-                                          "vacancies_count": 3,
+                                          "vacancies": Array [
+                                            Object {
+                                              "available_slots": 2,
+                                            },
+                                          ],
                                         }
               }
 />,
@@ -177,18 +180,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "activeEngineers": Object {},
-              "fetchActiveEngineers": [Function],
-              "loading": true,
               "role": Object {
                 "active_engineers_count": 1,
-                "applications_count": 2,
                 "created_at": "2019-06-04 04:56:39",
                 "description": "test role description",
                 "id": 1,
                 "name": "test role",
                 "updated_at": "2019-06-04 04:56:39",
-                "vacancies_count": 3,
+                "vacancies": Array [
+                  Object {
+                    "available_slots": 2,
+                  },
+                ],
               },
             },
             "ref": null,
@@ -203,19 +206,19 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <RoleCard
-              activeEngineers={Object {}}
-              fetchActiveEngineers={[Function]}
-              loading={true}
               role={
                             Object {
                                           "active_engineers_count": 1,
-                                          "applications_count": 2,
                                           "created_at": "2019-06-04 04:56:39",
                                           "description": "test role description",
                                           "id": 1,
                                           "name": "test role",
                                           "updated_at": "2019-06-04 04:56:39",
-                                          "vacancies_count": 3,
+                                          "vacancies": Array [
+                                            Object {
+                                              "available_slots": 2,
+                                            },
+                                          ],
                                         }
               }
 />,
@@ -227,18 +230,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "activeEngineers": Object {},
-              "fetchActiveEngineers": [Function],
-              "loading": true,
               "role": Object {
                 "active_engineers_count": 1,
-                "applications_count": 2,
                 "created_at": "2019-06-04 04:56:39",
                 "description": "test role description",
                 "id": 1,
                 "name": "test role",
                 "updated_at": "2019-06-04 04:56:39",
-                "vacancies_count": 3,
+                "vacancies": Array [
+                  Object {
+                    "available_slots": 2,
+                  },
+                ],
               },
             },
             "ref": null,
@@ -265,19 +268,19 @@ ShallowWrapper {
                     className="col-4 mb-4"
           >
                     <RoleCard
-                              activeEngineers={Object {}}
-                              fetchActiveEngineers={[Function]}
-                              loading={true}
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
-                                                  "applications_count": 2,
                                                   "created_at": "2019-06-04 04:56:39",
                                                   "description": "test role description",
                                                   "id": 1,
                                                   "name": "test role",
                                                   "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies_count": 3,
+                                                  "vacancies": Array [
+                                                    Object {
+                                                      "available_slots": 2,
+                                                    },
+                                                  ],
                                                 }
                               }
                     />
@@ -286,19 +289,19 @@ ShallowWrapper {
                     className="col-4 mb-4"
           >
                     <RoleCard
-                              activeEngineers={Object {}}
-                              fetchActiveEngineers={[Function]}
-                              loading={true}
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
-                                                  "applications_count": 2,
                                                   "created_at": "2019-06-04 04:56:39",
                                                   "description": "test role description",
                                                   "id": 1,
                                                   "name": "test role",
                                                   "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies_count": 3,
+                                                  "vacancies": Array [
+                                                    Object {
+                                                      "available_slots": 2,
+                                                    },
+                                                  ],
                                                 }
                               }
                     />
@@ -316,19 +319,19 @@ ShallowWrapper {
               className="col-4 mb-4"
 >
               <RoleCard
-                            activeEngineers={Object {}}
-                            fetchActiveEngineers={[Function]}
-                            loading={true}
                             role={
                                           Object {
                                                         "active_engineers_count": 1,
-                                                        "applications_count": 2,
                                                         "created_at": "2019-06-04 04:56:39",
                                                         "description": "test role description",
                                                         "id": 1,
                                                         "name": "test role",
                                                         "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
+                                                        "vacancies": Array [
+                                                          Object {
+                                                            "available_slots": 2,
+                                                          },
+                                                        ],
                                                       }
                             }
               />
@@ -337,19 +340,19 @@ ShallowWrapper {
               className="col-4 mb-4"
 >
               <RoleCard
-                            activeEngineers={Object {}}
-                            fetchActiveEngineers={[Function]}
-                            loading={true}
                             role={
                                           Object {
                                                         "active_engineers_count": 1,
-                                                        "applications_count": 2,
                                                         "created_at": "2019-06-04 04:56:39",
                                                         "description": "test role description",
                                                         "id": 1,
                                                         "name": "test role",
                                                         "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
+                                                        "vacancies": Array [
+                                                          Object {
+                                                            "available_slots": 2,
+                                                          },
+                                                        ],
                                                       }
                             }
               />
@@ -365,19 +368,19 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <RoleCard
-                activeEngineers={Object {}}
-                fetchActiveEngineers={[Function]}
-                loading={true}
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
-                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
+                                                "vacancies": Array [
+                                                  Object {
+                                                    "available_slots": 2,
+                                                  },
+                                                ],
                                               }
                 }
 />,
@@ -389,18 +392,18 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "activeEngineers": Object {},
-                "fetchActiveEngineers": [Function],
-                "loading": true,
                 "role": Object {
                   "active_engineers_count": 1,
-                  "applications_count": 2,
                   "created_at": "2019-06-04 04:56:39",
                   "description": "test role description",
                   "id": 1,
                   "name": "test role",
                   "updated_at": "2019-06-04 04:56:39",
-                  "vacancies_count": 3,
+                  "vacancies": Array [
+                    Object {
+                      "available_slots": 2,
+                    },
+                  ],
                 },
               },
               "ref": null,
@@ -415,19 +418,19 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <RoleCard
-                activeEngineers={Object {}}
-                fetchActiveEngineers={[Function]}
-                loading={true}
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
-                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
+                                                "vacancies": Array [
+                                                  Object {
+                                                    "available_slots": 2,
+                                                  },
+                                                ],
                                               }
                 }
 />,
@@ -439,18 +442,18 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "activeEngineers": Object {},
-                "fetchActiveEngineers": [Function],
-                "loading": true,
                 "role": Object {
                   "active_engineers_count": 1,
-                  "applications_count": 2,
                   "created_at": "2019-06-04 04:56:39",
                   "description": "test role description",
                   "id": 1,
                   "name": "test role",
                   "updated_at": "2019-06-04 04:56:39",
-                  "vacancies_count": 3,
+                  "vacancies": Array [
+                    Object {
+                      "available_slots": 2,
+                    },
+                  ],
                 },
               },
               "ref": null,
@@ -488,9 +491,7 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__providerValues__): undefined,
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
 
@@ -498,20 +499,20 @@ exports[`Test Map Role cards should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MapProjectRoleCard
-    activeEngineers={Object {}}
-    fetchActiveEngineers={[Function]}
-    loading={true}
     roleData={
         Array [
             Object {
               "active_engineers_count": 1,
-              "applications_count": 2,
               "created_at": "2019-06-04 04:56:39",
               "description": "test role description",
               "id": 1,
               "name": "test role",
               "updated_at": "2019-06-04 04:56:39",
-              "vacancies_count": 3,
+              "vacancies": Array [
+                Object {
+                  "available_slots": 2,
+                },
+              ],
             },
           ]
     }
@@ -537,19 +538,19 @@ ShallowWrapper {
                 className="col-4 mb-4"
         >
                 <RoleCard
-                        activeEngineers={Object {}}
-                        fetchActiveEngineers={[Function]}
-                        loading={true}
                         role={
                                 Object {
                                         "active_engineers_count": 1,
-                                        "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
                                         "description": "test role description",
                                         "id": 1,
                                         "name": "test role",
                                         "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies_count": 3,
+                                        "vacancies": Array [
+                                          Object {
+                                            "available_slots": 2,
+                                          },
+                                        ],
                                       }
                         }
                 />
@@ -567,19 +568,19 @@ ShallowWrapper {
             className="col-4 mb-4"
 >
             <RoleCard
-                        activeEngineers={Object {}}
-                        fetchActiveEngineers={[Function]}
-                        loading={true}
                         role={
                                     Object {
                                                 "active_engineers_count": 1,
-                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
+                                                "vacancies": Array [
+                                                  Object {
+                                                    "available_slots": 2,
+                                                  },
+                                                ],
                                               }
                         }
             />
@@ -595,19 +596,19 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <RoleCard
-              activeEngineers={Object {}}
-              fetchActiveEngineers={[Function]}
-              loading={true}
               role={
                             Object {
                                           "active_engineers_count": 1,
-                                          "applications_count": 2,
                                           "created_at": "2019-06-04 04:56:39",
                                           "description": "test role description",
                                           "id": 1,
                                           "name": "test role",
                                           "updated_at": "2019-06-04 04:56:39",
-                                          "vacancies_count": 3,
+                                          "vacancies": Array [
+                                            Object {
+                                              "available_slots": 2,
+                                            },
+                                          ],
                                         }
               }
 />,
@@ -619,18 +620,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "activeEngineers": Object {},
-              "fetchActiveEngineers": [Function],
-              "loading": true,
               "role": Object {
                 "active_engineers_count": 1,
-                "applications_count": 2,
                 "created_at": "2019-06-04 04:56:39",
                 "description": "test role description",
                 "id": 1,
                 "name": "test role",
                 "updated_at": "2019-06-04 04:56:39",
-                "vacancies_count": 3,
+                "vacancies": Array [
+                  Object {
+                    "available_slots": 2,
+                  },
+                ],
               },
             },
             "ref": null,
@@ -657,19 +658,19 @@ ShallowWrapper {
                     className="col-4 mb-4"
           >
                     <RoleCard
-                              activeEngineers={Object {}}
-                              fetchActiveEngineers={[Function]}
-                              loading={true}
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
-                                                  "applications_count": 2,
                                                   "created_at": "2019-06-04 04:56:39",
                                                   "description": "test role description",
                                                   "id": 1,
                                                   "name": "test role",
                                                   "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies_count": 3,
+                                                  "vacancies": Array [
+                                                    Object {
+                                                      "available_slots": 2,
+                                                    },
+                                                  ],
                                                 }
                               }
                     />
@@ -687,19 +688,19 @@ ShallowWrapper {
               className="col-4 mb-4"
 >
               <RoleCard
-                            activeEngineers={Object {}}
-                            fetchActiveEngineers={[Function]}
-                            loading={true}
                             role={
                                           Object {
                                                         "active_engineers_count": 1,
-                                                        "applications_count": 2,
                                                         "created_at": "2019-06-04 04:56:39",
                                                         "description": "test role description",
                                                         "id": 1,
                                                         "name": "test role",
                                                         "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
+                                                        "vacancies": Array [
+                                                          Object {
+                                                            "available_slots": 2,
+                                                          },
+                                                        ],
                                                       }
                             }
               />
@@ -715,19 +716,19 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <RoleCard
-                activeEngineers={Object {}}
-                fetchActiveEngineers={[Function]}
-                loading={true}
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
-                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
+                                                "vacancies": Array [
+                                                  Object {
+                                                    "available_slots": 2,
+                                                  },
+                                                ],
                                               }
                 }
 />,
@@ -739,18 +740,18 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "activeEngineers": Object {},
-                "fetchActiveEngineers": [Function],
-                "loading": true,
                 "role": Object {
                   "active_engineers_count": 1,
-                  "applications_count": 2,
                   "created_at": "2019-06-04 04:56:39",
                   "description": "test role description",
                   "id": 1,
                   "name": "test role",
                   "updated_at": "2019-06-04 04:56:39",
-                  "vacancies_count": 3,
+                  "vacancies": Array [
+                    Object {
+                      "available_slots": 2,
+                    },
+                  ],
                 },
               },
               "ref": null,
@@ -788,8 +789,6 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__providerValues__): undefined,
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
