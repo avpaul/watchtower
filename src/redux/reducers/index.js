@@ -32,6 +32,7 @@ import addProjectTechnology from './addProjectTechnologyReducer';
 import fetchProjectManagers from './getProjectManagersReducer';
 import fetchProjectTechnologies from './getProjectTechnologiesReducer';
 import cadreEngineersReducer from './cadreEngineersReducer';
+import fetchSlackChannels from './slackChannelReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -65,7 +66,8 @@ const rootReducer = combineReducers({
   addProjectTechnology,
   fetchProjectManagers,
   fetchProjectTechnologies,
-  cadreEngineers: cadreEngineersReducer
+  cadreEngineers: cadreEngineersReducer,
+  fetchSlackChannels
 });
 
 export default rootReducer;

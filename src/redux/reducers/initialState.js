@@ -176,6 +176,7 @@ export default {
   addProjectTechnology: {
     technology: ''
   },
+  fetchSlackChannels: genericAPIState,
   d1Engineers: {
     loading: false,
     cadreEngineers: [],
