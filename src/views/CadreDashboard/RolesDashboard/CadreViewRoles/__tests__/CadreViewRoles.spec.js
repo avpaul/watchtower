@@ -22,7 +22,10 @@ describe('Test view roles', () => {
           }
         ]
       },
-      fetchAllRoles: jest.fn()
+      fetchAllRoles: jest.fn(),
+      loading: true,
+      getActiveRoleEngineer: jest.fn(),
+      activeEngineers: {}
     };
     wrapper = shallow(<CadreViewRoles {...props} />);
   });

@@ -13,15 +13,23 @@ export default class CadreViewRoles extends Component {
 
   render() {
     const {
-      allRoles: { data, loading }
+      allRoles: { data, loading },
+      getActiveRoleEngineer,
+      loading: loadActiveEngrs,
+      activeEngineers
     } = this.props;
     return loading ? (
       <div className="role-dashboard__loader">
         <Loader />
       </div>
     ) : (
-      <div className="cadre__page">
-        <MapProjectRoleCard roleData={data} />
+      <div>
+        <MapProjectRoleCard
+          roleData={data}
+          fetchActiveEngineers={getActiveRoleEngineer}
+          loading={loadActiveEngrs}
+          activeEngineers={activeEngineers}
+        />
       </div>
     );
   }
@@ -29,9 +37,16 @@ export default class CadreViewRoles extends Component {
 
 CadreViewRoles.propTypes = {
   allRoles: PropTypes.shape(),
-  fetchAllRoles: PropTypes.func.isRequired
+  fetchAllRoles: PropTypes.func.isRequired,
+  getActiveRoleEngineer: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  activeEngineers: PropTypes.oneOfType([
+    PropTypes.instanceOf(Array),
+    PropTypes.shape()
+  ])
 };
 
 CadreViewRoles.defaultProps = {
-  allRoles: {}
+  allRoles: {},
+  activeEngineers: []
 };

@@ -201,5 +201,6 @@ export default {
     }
   },
   allRoles: genericAPIState,
-  fetchAllRoles: genericAPIState
+  fetchAllRoles: genericAPIState,
+  fetchActiveRole: genericAPIState
 };

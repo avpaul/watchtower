@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import More from '../../static/More.svg';
+import Modal from '../LargeModal/LargeModal';
+import MapRoleActiveEngineers from '../MapRoleActiveEngineers';
+import Loader from '../Loader/Loader';
+import { pluralizeCheck } from '../../utils';
 
 import './RoleCard.css';
 
@@ -8,12 +12,27 @@ class RoleCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showMore: false
+      showMore: false,
+      openModal: false
     };
   }
 
   handleShowMoreClick = () =>
     this.setState(state => ({ showMore: !state.showMore }));
+
+  roleActiveEngineer = () => {
+    const { role, fetchActiveEngineers } = this.props;
+    const { openModal } = this.state;
+
+    this.setState({ openModal: !openModal });
+
+    return fetchActiveEngineers(role.id);
+  };
+
+  closeModal = () => {
+    const { openModal } = this.state;
+    this.setState({ openModal: !openModal });
+  };
 
   renderFullDescription = () => {
     const { showMore } = this.state;
@@ -50,6 +69,20 @@ class RoleCard extends React.Component {
     </React.Fragment>
   );
 
+  renderCount = (count, event) => (
+    <div className="text-left">
+      <span
+        className="role-card__attributes-count"
+        onClick={count > 0 ? event : ''}
+        onKeyPress={count > 0 ? event : ''}
+        role="button"
+        tabIndex="-1"
+      >
+        {count}
+      </span>
+    </div>
+  );
+
   renderPositionsCount = role => (
     <div className="row">
       <div className="col-6">
@@ -63,21 +96,39 @@ class RoleCard extends React.Component {
         </div>
       </div>
       <div className="col-6">
-        <div className="role-card__attributes">
-          Active Engrs. <br />{' '}
-          <div className="text-left">
-            <span className="role-card__attributes-count">
-              {role.active_engineers_count}
-            </span>
-          </div>
-        </div>
+        <p className="role-card__attributes">
+          Active Engrs. <br />
+          {this.renderCount(
+            role.active_engineers_count,
+            this.roleActiveEngineer
+          )}
+        </p>
       </div>
     </div>
   );
 
+  renderModal = (role, open, loading, data) => (
+    <Modal
+      show={open}
+      handleClose={this.closeModal}
+      title={`${role.active_engineers_count} ${pluralizeCheck(
+        role.name,
+        role.active_engineers_count
+      )}`}
+    >
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="modal__body-card">
+          <MapRoleActiveEngineers roleData={data} />
+        </div>
+      )}
+    </Modal>
+  );
+
   render() {
-    const { role } = this.props;
-    const { showMore } = this.state;
+    const { role, loading, activeEngineers } = this.props;
+    const { showMore, openModal } = this.state;
     return (
       <div className="role-card">
         <div className="row">
@@ -97,12 +148,16 @@ class RoleCard extends React.Component {
         <hr />
         {this.renderPositionsCount(role)}
         {this.renderDescription(showMore)}
+        {this.renderModal(role, openModal, loading, activeEngineers)}
       </div>
     );
   }
 }
 
 RoleCard.propTypes = {
-  role: PropTypes.shape({}).isRequired
+  role: PropTypes.shape({}).isRequired,
+  fetchActiveEngineers: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  activeEngineers: PropTypes.shape({}).isRequired
 };
 export default RoleCard;
