@@ -8,29 +8,23 @@ ShallowWrapper {
         Array [
             Object {
               "active_engineers_count": 1,
+              "applications_count": 2,
               "created_at": "2019-06-04 04:56:39",
               "description": "test role description",
               "id": 1,
               "name": "test role",
               "updated_at": "2019-06-04 04:56:39",
-              "vacancies": Array [
-                Object {
-                  "available_slots": 2,
-                },
-              ],
+              "vacancies_count": 3,
             },
             Object {
               "active_engineers_count": 1,
+              "applications_count": 2,
               "created_at": "2019-06-04 04:56:39",
               "description": "test role description",
               "id": 1,
               "name": "test role",
               "updated_at": "2019-06-04 04:56:39",
-              "vacancies": Array [
-                Object {
-                  "available_slots": 2,
-                },
-              ],
+              "vacancies_count": 3,
             },
           ]
     }
@@ -59,16 +53,13 @@ ShallowWrapper {
                         role={
                                 Object {
                                         "active_engineers_count": 1,
+                                        "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
                                         "description": "test role description",
                                         "id": 1,
                                         "name": "test role",
                                         "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies": Array [
-                                          Object {
-                                            "available_slots": 2,
-                                          },
-                                        ],
+                                        "vacancies_count": 3,
                                       }
                         }
                 />
@@ -80,16 +71,13 @@ ShallowWrapper {
                         role={
                                 Object {
                                         "active_engineers_count": 1,
+                                        "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
                                         "description": "test role description",
                                         "id": 1,
                                         "name": "test role",
                                         "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies": Array [
-                                          Object {
-                                            "available_slots": 2,
-                                          },
-                                        ],
+                                        "vacancies_count": 3,
                                       }
                         }
                 />
@@ -110,16 +98,13 @@ ShallowWrapper {
                         role={
                                     Object {
                                                 "active_engineers_count": 1,
+                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies": Array [
-                                                  Object {
-                                                    "available_slots": 2,
-                                                  },
-                                                ],
+                                                "vacancies_count": 3,
                                               }
                         }
             />
@@ -131,16 +116,13 @@ ShallowWrapper {
                         role={
                                     Object {
                                                 "active_engineers_count": 1,
+                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies": Array [
-                                                  Object {
-                                                    "available_slots": 2,
-                                                  },
-                                                ],
+                                                "vacancies_count": 3,
                                               }
                         }
             />
@@ -159,16 +141,13 @@ ShallowWrapper {
               role={
                             Object {
                                           "active_engineers_count": 1,
+                                          "applications_count": 2,
                                           "created_at": "2019-06-04 04:56:39",
                                           "description": "test role description",
                                           "id": 1,
                                           "name": "test role",
                                           "updated_at": "2019-06-04 04:56:39",
-                                          "vacancies": Array [
-                                            Object {
-                                              "available_slots": 2,
-                                            },
-                                          ],
+                                          "vacancies_count": 3,
                                         }
               }
 />,
@@ -182,16 +161,13 @@ ShallowWrapper {
             "props": Object {
               "role": Object {
                 "active_engineers_count": 1,
+                "applications_count": 2,
                 "created_at": "2019-06-04 04:56:39",
                 "description": "test role description",
                 "id": 1,
                 "name": "test role",
                 "updated_at": "2019-06-04 04:56:39",
-                "vacancies": Array [
-                  Object {
-                    "available_slots": 2,
-                  },
-                ],
+                "vacancies_count": 3,
               },
             },
             "ref": null,
@@ -209,16 +185,13 @@ ShallowWrapper {
               role={
                             Object {
                                           "active_engineers_count": 1,
+                                          "applications_count": 2,
                                           "created_at": "2019-06-04 04:56:39",
                                           "description": "test role description",
                                           "id": 1,
                                           "name": "test role",
                                           "updated_at": "2019-06-04 04:56:39",
-                                          "vacancies": Array [
-                                            Object {
-                                              "available_slots": 2,
-                                            },
-                                          ],
+                                          "vacancies_count": 3,
                                         }
               }
 />,
@@ -232,16 +205,13 @@ ShallowWrapper {
             "props": Object {
               "role": Object {
                 "active_engineers_count": 1,
+                "applications_count": 2,
                 "created_at": "2019-06-04 04:56:39",
                 "description": "test role description",
                 "id": 1,
                 "name": "test role",
                 "updated_at": "2019-06-04 04:56:39",
-                "vacancies": Array [
-                  Object {
-                    "available_slots": 2,
-                  },
-                ],
+                "vacancies_count": 3,
               },
             },
             "ref": null,
@@ -271,16 +241,13 @@ ShallowWrapper {
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
+                                                  "applications_count": 2,
                                                   "created_at": "2019-06-04 04:56:39",
                                                   "description": "test role description",
                                                   "id": 1,
                                                   "name": "test role",
                                                   "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies": Array [
-                                                    Object {
-                                                      "available_slots": 2,
-                                                    },
-                                                  ],
+                                                  "vacancies_count": 3,
                                                 }
                               }
                     />
@@ -292,16 +259,13 @@ ShallowWrapper {
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
+                                                  "applications_count": 2,
                                                   "created_at": "2019-06-04 04:56:39",
                                                   "description": "test role description",
                                                   "id": 1,
                                                   "name": "test role",
                                                   "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies": Array [
-                                                    Object {
-                                                      "available_slots": 2,
-                                                    },
-                                                  ],
+                                                  "vacancies_count": 3,
                                                 }
                               }
                     />
@@ -322,16 +286,13 @@ ShallowWrapper {
                             role={
                                           Object {
                                                         "active_engineers_count": 1,
+                                                        "applications_count": 2,
                                                         "created_at": "2019-06-04 04:56:39",
                                                         "description": "test role description",
                                                         "id": 1,
                                                         "name": "test role",
                                                         "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies": Array [
-                                                          Object {
-                                                            "available_slots": 2,
-                                                          },
-                                                        ],
+                                                        "vacancies_count": 3,
                                                       }
                             }
               />
@@ -343,16 +304,13 @@ ShallowWrapper {
                             role={
                                           Object {
                                                         "active_engineers_count": 1,
+                                                        "applications_count": 2,
                                                         "created_at": "2019-06-04 04:56:39",
                                                         "description": "test role description",
                                                         "id": 1,
                                                         "name": "test role",
                                                         "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies": Array [
-                                                          Object {
-                                                            "available_slots": 2,
-                                                          },
-                                                        ],
+                                                        "vacancies_count": 3,
                                                       }
                             }
               />
@@ -371,16 +329,13 @@ ShallowWrapper {
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
+                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies": Array [
-                                                  Object {
-                                                    "available_slots": 2,
-                                                  },
-                                                ],
+                                                "vacancies_count": 3,
                                               }
                 }
 />,
@@ -394,16 +349,13 @@ ShallowWrapper {
               "props": Object {
                 "role": Object {
                   "active_engineers_count": 1,
+                  "applications_count": 2,
                   "created_at": "2019-06-04 04:56:39",
                   "description": "test role description",
                   "id": 1,
                   "name": "test role",
                   "updated_at": "2019-06-04 04:56:39",
-                  "vacancies": Array [
-                    Object {
-                      "available_slots": 2,
-                    },
-                  ],
+                  "vacancies_count": 3,
                 },
               },
               "ref": null,
@@ -421,16 +373,13 @@ ShallowWrapper {
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
+                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies": Array [
-                                                  Object {
-                                                    "available_slots": 2,
-                                                  },
-                                                ],
+                                                "vacancies_count": 3,
                                               }
                 }
 />,
@@ -444,16 +393,13 @@ ShallowWrapper {
               "props": Object {
                 "role": Object {
                   "active_engineers_count": 1,
+                  "applications_count": 2,
                   "created_at": "2019-06-04 04:56:39",
                   "description": "test role description",
                   "id": 1,
                   "name": "test role",
                   "updated_at": "2019-06-04 04:56:39",
-                  "vacancies": Array [
-                    Object {
-                      "available_slots": 2,
-                    },
-                  ],
+                  "vacancies_count": 3,
                 },
               },
               "ref": null,
@@ -491,7 +437,9 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
 
@@ -503,16 +451,13 @@ ShallowWrapper {
         Array [
             Object {
               "active_engineers_count": 1,
+              "applications_count": 2,
               "created_at": "2019-06-04 04:56:39",
               "description": "test role description",
               "id": 1,
               "name": "test role",
               "updated_at": "2019-06-04 04:56:39",
-              "vacancies": Array [
-                Object {
-                  "available_slots": 2,
-                },
-              ],
+              "vacancies_count": 3,
             },
           ]
     }
@@ -541,16 +486,13 @@ ShallowWrapper {
                         role={
                                 Object {
                                         "active_engineers_count": 1,
+                                        "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
                                         "description": "test role description",
                                         "id": 1,
                                         "name": "test role",
                                         "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies": Array [
-                                          Object {
-                                            "available_slots": 2,
-                                          },
-                                        ],
+                                        "vacancies_count": 3,
                                       }
                         }
                 />
@@ -571,16 +513,13 @@ ShallowWrapper {
                         role={
                                     Object {
                                                 "active_engineers_count": 1,
+                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies": Array [
-                                                  Object {
-                                                    "available_slots": 2,
-                                                  },
-                                                ],
+                                                "vacancies_count": 3,
                                               }
                         }
             />
@@ -599,16 +538,13 @@ ShallowWrapper {
               role={
                             Object {
                                           "active_engineers_count": 1,
+                                          "applications_count": 2,
                                           "created_at": "2019-06-04 04:56:39",
                                           "description": "test role description",
                                           "id": 1,
                                           "name": "test role",
                                           "updated_at": "2019-06-04 04:56:39",
-                                          "vacancies": Array [
-                                            Object {
-                                              "available_slots": 2,
-                                            },
-                                          ],
+                                          "vacancies_count": 3,
                                         }
               }
 />,
@@ -622,16 +558,13 @@ ShallowWrapper {
             "props": Object {
               "role": Object {
                 "active_engineers_count": 1,
+                "applications_count": 2,
                 "created_at": "2019-06-04 04:56:39",
                 "description": "test role description",
                 "id": 1,
                 "name": "test role",
                 "updated_at": "2019-06-04 04:56:39",
-                "vacancies": Array [
-                  Object {
-                    "available_slots": 2,
-                  },
-                ],
+                "vacancies_count": 3,
               },
             },
             "ref": null,
@@ -661,16 +594,13 @@ ShallowWrapper {
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
+                                                  "applications_count": 2,
                                                   "created_at": "2019-06-04 04:56:39",
                                                   "description": "test role description",
                                                   "id": 1,
                                                   "name": "test role",
                                                   "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies": Array [
-                                                    Object {
-                                                      "available_slots": 2,
-                                                    },
-                                                  ],
+                                                  "vacancies_count": 3,
                                                 }
                               }
                     />
@@ -691,16 +621,13 @@ ShallowWrapper {
                             role={
                                           Object {
                                                         "active_engineers_count": 1,
+                                                        "applications_count": 2,
                                                         "created_at": "2019-06-04 04:56:39",
                                                         "description": "test role description",
                                                         "id": 1,
                                                         "name": "test role",
                                                         "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies": Array [
-                                                          Object {
-                                                            "available_slots": 2,
-                                                          },
-                                                        ],
+                                                        "vacancies_count": 3,
                                                       }
                             }
               />
@@ -719,16 +646,13 @@ ShallowWrapper {
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
+                                                "applications_count": 2,
                                                 "created_at": "2019-06-04 04:56:39",
                                                 "description": "test role description",
                                                 "id": 1,
                                                 "name": "test role",
                                                 "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies": Array [
-                                                  Object {
-                                                    "available_slots": 2,
-                                                  },
-                                                ],
+                                                "vacancies_count": 3,
                                               }
                 }
 />,
@@ -742,16 +666,13 @@ ShallowWrapper {
               "props": Object {
                 "role": Object {
                   "active_engineers_count": 1,
+                  "applications_count": 2,
                   "created_at": "2019-06-04 04:56:39",
                   "description": "test role description",
                   "id": 1,
                   "name": "test role",
                   "updated_at": "2019-06-04 04:56:39",
-                  "vacancies": Array [
-                    Object {
-                      "available_slots": 2,
-                    },
-                  ],
+                  "vacancies_count": 3,
                 },
               },
               "ref": null,
@@ -789,6 +710,8 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

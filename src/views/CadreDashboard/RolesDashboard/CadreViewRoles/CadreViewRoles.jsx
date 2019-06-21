@@ -13,12 +13,8 @@ export default class CadreViewRoles extends Component {
 
   render() {
     const {
-      allRoles: { data, loading },
-      getActiveRoleEngineer,
-      loading: loadActiveEngrs,
-      activeEngineers
+      allRoles: { data, loading }
     } = this.props;
-
     return loading ? (
       <div className="cadre__page">
         <PMloader />
@@ -40,16 +36,9 @@ export default class CadreViewRoles extends Component {
 
 CadreViewRoles.propTypes = {
   allRoles: PropTypes.shape(),
-  fetchAllRoles: PropTypes.func.isRequired,
-  getActiveRoleEngineer: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  activeEngineers: PropTypes.oneOfType([
-    PropTypes.instanceOf(Array),
-    PropTypes.shape()
-  ])
+  fetchAllRoles: PropTypes.func.isRequired
 };
 
 CadreViewRoles.defaultProps = {
-  allRoles: {},
-  activeEngineers: []
+  allRoles: {}
 };
