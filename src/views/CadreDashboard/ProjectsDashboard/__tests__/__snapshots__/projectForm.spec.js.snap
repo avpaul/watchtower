@@ -65,13 +65,17 @@ ShallowWrapper {
         <Unknown>
           <Connect(ProjectFormLeft)
                     project={Object {}}
+                    renderAddLinksInput={[Function]}
                     renderDropdown={[Function]}
                     renderTextInput={[Function]}
+                    renderUploadInput={[Function]}
           />
           <ProjectFormRight
                     project={Object {}}
+                    renderAddLinksInput={[Function]}
                     renderDropdown={[Function]}
                     renderTextInput={[Function]}
+                    renderUploadInput={[Function]}
           />
 </Unknown>,
         <div
@@ -171,13 +175,17 @@ ShallowWrapper {
           "children": Array [
             <Connect(ProjectFormLeft)
               project={Object {}}
+              renderAddLinksInput={[Function]}
               renderDropdown={[Function]}
               renderTextInput={[Function]}
+              renderUploadInput={[Function]}
 />,
             <ProjectFormRight
               project={Object {}}
+              renderAddLinksInput={[Function]}
               renderDropdown={[Function]}
               renderTextInput={[Function]}
+              renderUploadInput={[Function]}
 />,
           ],
         },
@@ -189,8 +197,10 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "project": Object {},
+              "renderAddLinksInput": [Function],
               "renderDropdown": [Function],
               "renderTextInput": [Function],
+              "renderUploadInput": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -202,8 +212,10 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "project": Object {},
+              "renderAddLinksInput": [Function],
               "renderDropdown": [Function],
               "renderTextInput": [Function],
+              "renderUploadInput": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -298,13 +310,17 @@ ShallowWrapper {
           <Unknown>
             <Connect(ProjectFormLeft)
                         project={Object {}}
+                        renderAddLinksInput={[Function]}
                         renderDropdown={[Function]}
                         renderTextInput={[Function]}
+                        renderUploadInput={[Function]}
             />
             <ProjectFormRight
                         project={Object {}}
+                        renderAddLinksInput={[Function]}
                         renderDropdown={[Function]}
                         renderTextInput={[Function]}
+                        renderUploadInput={[Function]}
             />
 </Unknown>,
           <div
@@ -404,13 +420,17 @@ ShallowWrapper {
             "children": Array [
               <Connect(ProjectFormLeft)
                 project={Object {}}
+                renderAddLinksInput={[Function]}
                 renderDropdown={[Function]}
                 renderTextInput={[Function]}
+                renderUploadInput={[Function]}
 />,
               <ProjectFormRight
                 project={Object {}}
+                renderAddLinksInput={[Function]}
                 renderDropdown={[Function]}
                 renderTextInput={[Function]}
+                renderUploadInput={[Function]}
 />,
             ],
           },
@@ -422,8 +442,10 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "project": Object {},
+                "renderAddLinksInput": [Function],
                 "renderDropdown": [Function],
                 "renderTextInput": [Function],
+                "renderUploadInput": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -435,8 +457,10 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "project": Object {},
+                "renderAddLinksInput": [Function],
                 "renderDropdown": [Function],
                 "renderTextInput": [Function],
+                "renderUploadInput": [Function],
               },
               "ref": null,
               "rendered": null,

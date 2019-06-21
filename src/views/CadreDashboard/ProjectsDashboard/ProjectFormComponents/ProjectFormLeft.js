@@ -124,7 +124,12 @@ class ProjectFormLeft extends Component {
   };
 
   render() {
-    const { project, renderTextInput } = this.props;
+    const {
+      project,
+      renderTextInput,
+      renderUploadInput,
+      renderAddLinksInput
+    } = this.props;
     return (
       <div className="col-12 col-lg-6">
         <div className="row mr-0 ml-0">
@@ -138,6 +143,18 @@ class ProjectFormLeft extends Component {
             inputValue: project.mockups,
             testInput: input => urlRegex.test(input),
             alertText: 'Please provide a link!'
+          })}
+          {renderUploadInput({
+            name: 'documents',
+            label: 'Relevant Documents',
+            documents: project.documents,
+            buttonLabel: 'Upload Document'
+          })}
+          {renderAddLinksInput({
+            name: 'links',
+            label: 'Level-Up Links',
+            documents: project.links,
+            buttonLabel: 'Manage Links'
           })}
         </div>
       </div>
@@ -155,7 +172,9 @@ ProjectFormLeft.propTypes = {
   fetchProjectTechnologies: PropTypes.shape().isRequired,
   fetchProjectManagers: PropTypes.shape().isRequired,
   fetchAllSlackChannels: PropTypes.func.isRequired,
-  fetchSlackChannels: PropTypes.shape().isRequired
+  fetchSlackChannels: PropTypes.shape().isRequired,
+  renderUploadInput: PropTypes.func.isRequired,
+  renderAddLinksInput: PropTypes.func.isRequired
 };
 
 export default ProjectFormLeft;

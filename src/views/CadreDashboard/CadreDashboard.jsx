@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import CadreSubmenu from '../../components/CadreSubmenu';
@@ -66,18 +66,16 @@ class CadreDashboard extends Component {
     const { routes } = this.state;
 
     return (
-      <Fragment>
-        <div className="container-fluid page-content">
-          <AddManagerModal />
-          <AddTechnologyModal />
-          <div className="row">
-            {this.renderSubMenu()}
-            <div className="col-sm-12 col-lg-9">
-              <Switch>{this.renderRoute(ProjectsDashboard, routes[0])}</Switch>
-            </div>
+      <div className="container-fluid page-content">
+        <AddManagerModal />
+        <AddTechnologyModal />
+        <div className="row">
+          {this.renderSubMenu()}
+          <div className="col-sm-12 col-lg-9">
+            <Switch>{this.renderRoute(ProjectsDashboard, routes[0])}</Switch>
           </div>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

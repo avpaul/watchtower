@@ -14,3 +14,18 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: () => {}
   })
 });
+const result = {
+  event: 'success',
+  info: {
+    original_filename: 'name',
+    url: 'url',
+    public_id: 'id',
+    format: 'format'
+  }
+};
+
+window.cloudinary = {
+  createUploadWidget: jest
+    .fn()
+    .mockImplementationOnce((params, callback) => callback(false, result))
+};

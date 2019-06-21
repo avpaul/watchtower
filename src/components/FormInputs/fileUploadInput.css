@@ -1,0 +1,52 @@
+.upload-input {
+  float: left;
+  width: 100%;
+}
+
+.upload-input button {
+  border: 1px solid #0459e4;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 0 0.5rem;
+  color: #0459e4;
+  text-align: center;
+  font-size: 13px;
+}
+
+.upload-input label {
+  color: #333e44;
+  font-family: 'DIN Pro';
+  font-size: 13px;
+  letter-spacing: 0.12px;
+  line-height: 17px;
+}
+
+.upload-input__comment--active,
+.upload-input__comment--disabled {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-indent: 0 !important;
+}
+
+.upload-input__comment--active {
+  width: 100%;
+  float: left;
+  color: #cccccc;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.upload-input__comment--disabled {
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}

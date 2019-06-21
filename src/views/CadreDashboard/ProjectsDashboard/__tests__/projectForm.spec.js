@@ -65,7 +65,15 @@ describe('Project Form', () => {
     tagline: 'project tagline',
     about: 'project about',
     mockups: 'https://projects.invisionapp.com',
-    channels: channels[0].id
+    channels: channels[0].id,
+    logo:
+      'http://res.cloudinary.com/watchtowercloud/image/upload/v1560326497/c5of3nczopwykhgodslz.svg',
+    documents: [
+      {
+        name: 'name',
+        url: 'https://krypton-ah-stage.herokuapp.com/api/v1/articles'
+      }
+    ]
   };
 
   /**
@@ -199,6 +207,7 @@ describe('Project Form', () => {
     [name]: {
       getValue: () => `${value}`,
       isValid: () => true,
+      hasContent: () => true,
       setStatus: () => true,
       props: { name, options: channels }
     }
@@ -291,6 +300,7 @@ describe('Project Form', () => {
         ...inputComponentMock('mockups', projectDetails.mockups),
         ...inputComponentMock('technologies', projectDetails.technologies),
         ...inputComponentMock('channels', projectDetails.channels),
+        ...inputComponentMock('logo', projectDetails.logo),
         ...inputComponentMock('manager', 0)
       }
     });

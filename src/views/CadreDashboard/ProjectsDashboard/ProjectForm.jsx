@@ -61,19 +61,48 @@ class ProjectForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { inputs } = this.state;
-    const { project, createNewProject, manager } = this.props;
+    const { project, createNewProject } = this.props;
 
-    const invalidInput = Object.values(inputs).find(input => {
-      if (input.props.name === 'mockups' && input.getValue() === '')
-        return false;
-      return !input.isValid();
-    });
+    const textInputs = this.getTextInputs(inputs);
+    const invalidInput = this.checkInputs(textInputs);
 
     if (invalidInput) {
       invalidInput.focus();
       return invalidInput.setStatus('invalid', 'Please provide an input!');
     }
 
+    const projectDetails = this.processFormData(inputs);
+    return !project.name ? createNewProject(projectDetails) : true;
+  };
+
+  /**
+   * Checks the required form inputs for input values and returns a required input with no value
+   * which is an invalid input
+   *
+   * @param object inputs The form inputs
+   * @param object filter The filter parameters
+   * @return Component Invalid input component
+   */
+  checkInputs = inputs =>
+    Object.values(inputs).find(input => {
+      if (input.props.name === 'mockups' && input.getValue() === '')
+        return false;
+      return !input.isValid();
+    });
+
+  getTextInputs = inputs => {
+    const { documents, logo, links, ...textInputs } = inputs;
+    return textInputs;
+  };
+
+  /**
+   * Goes through all the form inputs and extracts the input values into an object
+   *
+   * @param object inputs The form inputs
+   * @return object An object containing the input values
+   */
+  processFormData = inputs => {
+    const { manager } = this.props;
     const projectDetails = {};
 
     Object.values(inputs).forEach(input => {
@@ -84,10 +113,13 @@ class ProjectForm extends Component {
       projectDetails.manager = JSON.stringify(manager);
     else projectDetails.manager = projectDetails.manager.id;
 
+    if (inputs.logo.hasContent())
+      projectDetails.logo = projectDetails.logo[0].url;
+
     projectDetails.technologies = JSON.stringify(projectDetails.technologies);
     projectDetails.channels = JSON.stringify(projectDetails.channels);
     projectDetails.type = projectDetails.type.id;
-    return !project.name ? createNewProject(projectDetails) : true;
+    return projectDetails;
   };
 
   renderInput = (InputComponent, props) => (
@@ -112,6 +144,24 @@ class ProjectForm extends Component {
    */
   renderDropdown = props => this.renderInput(FormInputs.DropdownInput, props);
 
+  /**
+   * Renders a upload input
+   * @param object props UploadInput props
+   * @return JSX
+   */
+  renderUploadInput = props => (
+    <FormInputs.FileUploadInput parent={this} {...props} />
+  );
+
+  /**
+   * Renders a upload input
+   * @param object props UploadInput props
+   * @return JSX
+   */
+  renderAddLinksInput = props => (
+    <FormInputs.LinksUploadInput parent={this} {...props} />
+  );
+
   renderReturnButton = () => {
     const { history } = this.props;
     return (
@@ -130,7 +180,9 @@ class ProjectForm extends Component {
     const props = {
       project,
       renderTextInput: this.renderTextInput,
-      renderDropdown: this.renderDropdown
+      renderDropdown: this.renderDropdown,
+      renderUploadInput: this.renderUploadInput,
+      renderAddLinksInput: this.renderAddLinksInput
     };
 
     return (
