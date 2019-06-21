@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import { FellowBioConnected } from '../../components/FellowBio';
 import { DevPulseChartConnected } from '../../components/DevPulseChart/DevPulseChart';
-import { EngineerBioConnected } from '../../components/EngineerBio';
 import LMSProgressSummary from '../../components/LMSProgressSummary/LMSProgressSummaryContainer';
 import ProgressBarConnected from '../../components/ProgressBar/ProgressBarConnected';
 import getFellowProfileDataAction from '../../redux/actionCreators/fellowProfileDataActions';
@@ -25,7 +24,6 @@ export class FellowDashboard extends Component {
     return (
       <div className="page-content container-fluid">
         <FellowBioConnected {...this.props} />
-        <EngineerBioConnected {...this.props} />
         <ProgressBarConnected />
         <DevPulseChartConnected />
         <LMSProgressSummary />
