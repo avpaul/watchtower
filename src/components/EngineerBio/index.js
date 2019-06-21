@@ -12,8 +12,10 @@ import EngineerCard from './EngineerCard';
 export default function EngineerBio({ d1Fellow }) {
   return (
     <Fragment>
-      <div className="row m-0">
-        <EngineerCard data={d1Fellow} />
+      <div>
+        <div className="row m-0">
+          <EngineerCard data={d1Fellow} />
+        </div>
       </div>
     </Fragment>
   );

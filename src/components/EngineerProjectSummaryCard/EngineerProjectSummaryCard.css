@@ -1,0 +1,238 @@
+.header-span {
+  height: 20px;
+  color: rgba(52, 76, 90, 0.43);
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.53px;
+  line-height: 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  height: 571px;
+  width: 353px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  margin-top: 16px;
+}
+
+.loader-container {
+  align-self: center;
+  background-color: #ffffff;
+  height: 571px;
+  width: 353px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  margin-top: 16px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+
+.product-logo {
+  height: 69px;
+  width: 69px;
+  border-radius: 8px;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  height: 23px;
+  width: 245px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product-mission {
+  height: 36px;
+  width: 245px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.product-technologies {
+  display: flex;
+  margin-top: 15px;
+}
+
+.language-rectangle {
+  height: 28px;
+  margin: 10px;
+  padding: 2px 10px 3px 10px;
+  border-radius: 5px;
+  background-color: #ebeff3;
+}
+
+.language {
+  height: 18px;
+  width: 61px;
+  color: #333e44;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 363px;
+  border: 1px solid rgba(130, 145, 153, 0.08);
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 300px;
+  padding-left: 35px;
+  margin-top: 20px;
+}
+
+.manager-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.manager-header {
+  height: 18px;
+  width: 115px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.manager-row {
+  display: flex;
+  margin-top: 10px;
+}
+
+.manager-image {
+  height: 54px;
+  width: 54px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.mgr-name-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.manager-name {
+  height: 21px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.manager-email {
+  height: 18px;
+  width: 123px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.my-role {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.role-header {
+  height: 18px;
+  width: 50px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.role {
+  height: 20px;
+  width: 187px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.date-header {
+  height: 18px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.start-date {
+  height: 20px;
+  color: #344c5a;
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.no-project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  height: 571px;
+  width: 363px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+}
+
+.no-project-container > span {
+  margin-top: 10px;
+  height: 18px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
 import CadrePage from '../CadrePage';
 import CadreDashboardMain from '../CadreDashboard/CadreDashboardMain';
 import { Header } from '../../components/Header/Header';
