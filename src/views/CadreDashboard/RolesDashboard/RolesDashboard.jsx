@@ -1,15 +1,25 @@
-import React, { Fragment } from 'react';
-import WorkInProgress from '../../../components/WorkInProgress';
-import Header from '../Header';
-import './RolesDashboard.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Route, Switch } from 'react-router-dom';
+import CadreViewRoles from './CadreViewRoles';
 
-const RolesDashboard = () => (
-  <Fragment>
+const RolesDashboard = props => {
+  const { match } = props;
+  return (
     <div className="roles-dashboard">
-      <Header link="roles" text="Role" />
-      <WorkInProgress />
+      <Switch>
+      <Route
+        exact
+        path={`${match.url}`}
+        component={() => <CadreViewRoles {...props} />}
+      />
+    </Switch>
     </div>
-  </Fragment>
-);
+  );
+};
+
+RolesDashboard.propTypes = {
+  match: PropTypes.shape().isRequired
+};
 
 export default RolesDashboard;

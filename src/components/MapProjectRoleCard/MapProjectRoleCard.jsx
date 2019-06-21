@@ -19,7 +19,7 @@ function MapProjectRoleCard({ roleData }) {
 export default MapProjectRoleCard;
 
 MapProjectRoleCard.propTypes = {
-  roleData: PropTypes.shape()
+  roleData: PropTypes.instanceOf(Array)
 };
 
 MapProjectRoleCard.defaultProps = {

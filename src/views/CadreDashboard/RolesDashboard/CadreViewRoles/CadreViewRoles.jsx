@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import MapProjectRoleCard from '../../components/MapProjectRoleCard';
-import Loader from '../../components/Loader/Loader';
+import MapProjectRoleCard from '../../../../components/MapProjectRoleCard';
+import Loader from '../../../../components/Loader/Loader';
 
 import './CadreViewRoles.css';
 
@@ -20,7 +20,7 @@ export default class CadreViewRoles extends Component {
         <Loader />
       </div>
     ) : (
-      <div>
+      <div className="cadre__page">
         <MapProjectRoleCard roleData={data} />
       </div>
     );

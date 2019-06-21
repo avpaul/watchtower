@@ -47,7 +47,9 @@ class RoleCard extends React.Component {
         <p className="role-card__attributes">
           Applicants <br />{' '}
           <div className="text-left">
-            <span className="role-card__attributes-count">0</span>
+            <span className="role-card__attributes-count">
+              {role.applications_count}
+            </span>
           </div>
         </p>
       </div>
@@ -80,7 +82,7 @@ class RoleCard extends React.Component {
         <p className="role-card__attributes-sm">
           Vacancies{' '}
           <span className="role-card__attributes-count-sm">
-            {role.vacancies[0].available_slots}
+            {role.vacancies_count}
           </span>
         </p>
         <hr />

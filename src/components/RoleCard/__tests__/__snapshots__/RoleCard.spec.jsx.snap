@@ -7,16 +7,13 @@ ShallowWrapper {
     role={
         Object {
             "active_engineers_count": 1,
+            "applications_count": 2,
             "created_at": "2019-06-04 04:56:39",
             "description": "test role description",
             "id": 1,
             "name": "test role",
             "updated_at": "2019-06-04 04:56:39",
-            "vacancies": Array [
-              Object {
-                "available_slots": 2,
-              },
-            ],
+            "vacancies_count": 3,
           }
     }
 />,
@@ -64,7 +61,7 @@ ShallowWrapper {
           <span
                     className="role-card__attributes-count-sm"
           >
-                    2
+                    3
           </span>
 </p>,
         <hr />,
@@ -86,7 +83,7 @@ ShallowWrapper {
                                         <span
                                                   className="role-card__attributes-count"
                                         >
-                                                  0
+                                                  2
                                         </span>
                               </div>
                     </p>
@@ -227,7 +224,7 @@ ShallowWrapper {
             <span
               className="role-card__attributes-count-sm"
 >
-              2
+              3
 </span>,
           ],
           "className": "role-card__attributes-sm",
@@ -241,11 +238,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 2,
+              "children": 3,
               "className": "role-card__attributes-count-sm",
             },
             "ref": null,
-            "rendered": 2,
+            "rendered": 3,
             "type": "span",
           },
         ],
@@ -281,7 +278,7 @@ ShallowWrapper {
                                           <span
                                                         className="role-card__attributes-count"
                                           >
-                                                        0
+                                                        2
                                           </span>
                             </div>
               </p>
@@ -328,7 +325,7 @@ ShallowWrapper {
                                 <span
                                                 className="role-card__attributes-count"
                                 >
-                                                0
+                                                2
                                 </span>
                 </div>
 </p>,
@@ -350,7 +347,7 @@ ShallowWrapper {
                     <span
                                         className="role-card__attributes-count"
                     >
-                                        0
+                                        2
                     </span>
 </div>,
                 ],
@@ -377,7 +374,7 @@ ShallowWrapper {
                     "children": <span
                       className="role-card__attributes-count"
 >
-                      0
+                      2
 </span>,
                     "className": "text-left",
                   },
@@ -387,11 +384,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "0",
+                      "children": 2,
                       "className": "role-card__attributes-count",
                     },
                     "ref": null,
-                    "rendered": "0",
+                    "rendered": 2,
                     "type": "span",
                   },
                   "type": "div",
@@ -618,7 +615,7 @@ ShallowWrapper {
             <span
                         className="role-card__attributes-count-sm"
             >
-                        2
+                        3
             </span>
 </p>,
           <hr />,
@@ -640,7 +637,7 @@ ShallowWrapper {
                                                 <span
                                                             className="role-card__attributes-count"
                                                 >
-                                                            0
+                                                            2
                                                 </span>
                                     </div>
                         </p>
@@ -781,7 +778,7 @@ ShallowWrapper {
               <span
                 className="role-card__attributes-count-sm"
 >
-                2
+                3
 </span>,
             ],
             "className": "role-card__attributes-sm",
@@ -795,11 +792,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 2,
+                "children": 3,
                 "className": "role-card__attributes-count-sm",
               },
               "ref": null,
-              "rendered": 2,
+              "rendered": 3,
               "type": "span",
             },
           ],
@@ -835,7 +832,7 @@ ShallowWrapper {
                                                 <span
                                                                 className="role-card__attributes-count"
                                                 >
-                                                                0
+                                                                2
                                                 </span>
                                 </div>
                 </p>
@@ -882,7 +879,7 @@ ShallowWrapper {
                                     <span
                                                       className="role-card__attributes-count"
                                     >
-                                                      0
+                                                      2
                                     </span>
                   </div>
 </p>,
@@ -904,7 +901,7 @@ ShallowWrapper {
                       <span
                                             className="role-card__attributes-count"
                       >
-                                            0
+                                            2
                       </span>
 </div>,
                   ],
@@ -931,7 +928,7 @@ ShallowWrapper {
                       "children": <span
                         className="role-card__attributes-count"
 >
-                        0
+                        2
 </span>,
                       "className": "text-left",
                     },
@@ -941,11 +938,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "0",
+                        "children": 2,
                         "className": "role-card__attributes-count",
                       },
                       "ref": null,
-                      "rendered": "0",
+                      "rendered": 2,
                       "type": "span",
                     },
                     "type": "div",
@@ -1160,7 +1157,9 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
   Symbol(enzyme.__childContext__): null,
 }
 `;
