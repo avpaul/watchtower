@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MapProjectCards from '../../components/MapProjectCards';
+import PMloader from '../../components/CustomLoader/PMLoader';
 
 class ViewProjects extends Component {
   componentDidMount() {
@@ -12,7 +13,11 @@ class ViewProjects extends Component {
     const { allProjects } = this.props;
     return (
       <div className="cadre__page">
-        <MapProjectCards projectData={allProjects.data} />
+        {allProjects.loading ? (
+          <PMloader />
+        ) : (
+          <MapProjectCards projectData={allProjects.data} />
+        )}
       </div>
     );
   }
