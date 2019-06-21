@@ -12,7 +12,6 @@ import initialState from './redux/reducers/initialState';
 const bugsnagClient = bugsnag(process.env.REACT_APP_BUGSNAG_API_KEY);
 const ErrorBoundary = bugsnagClient.use(createPlugin(React));
 const store = configureStore(initialState);
-
 ReactDOM.render(
   <ErrorBoundary>
     <Provider store={store}>

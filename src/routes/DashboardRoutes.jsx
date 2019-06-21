@@ -11,14 +11,14 @@ import FellowRoutesHoc from './FellowRoutesHoc';
  * @function
  */
 const Dashboards = props => {
-    const {user} = props;
-    delete user.roles.Andelan;
-    delete user.roles.Technology;
-    const roles = Object.keys(user.roles);
-    let role = roles.filter(s => s.includes('WATCH_TOWER'))[0];
-    if (!role) {
-        [role] = roles;
-    }
+  const { user } = props;
+  delete user.roles.Andelan;
+  delete user.roles.Technology;
+  const roles = Object.keys(user.roles);
+  let role = roles.filter(s => s.includes('WATCH_TOWER'))[0];
+  if (!role) {
+    [role] = roles;
+  }
 
   switch (role) {
     case 'WATCH_TOWER_TTL':
@@ -38,7 +38,7 @@ const Dashboards = props => {
 };
 
 Dashboards.propTypes = {
-    user: PropTypes.instanceOf(Object).isRequired
+  user: PropTypes.instanceOf(Object).isRequired
 };
 
 export default Dashboards;

@@ -20,7 +20,6 @@ const renderBioDetails = fellow => (
 
 const BioCard = ({ data }) => {
   const { fellow, loading } = data;
-
   return (
     <div className="bio">
       <div className="my-bio">MY PROFILE</div>

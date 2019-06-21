@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginPage from '../views/LoginPage';
 import NotFoundPage from '../views/NotFoundPage';
 import ConnectedTest from '../components/Test/Test';
@@ -8,7 +8,7 @@ import Analytics from '../components/Analytics';
 import Dashboards from './DashboardRoutes';
 
 const renderRoute = url => (
-    <Route path={url} component={Authorization(Dashboards)}/>
+  <Route path={url} component={Authorization(Dashboards)} />
 );
 
 export const RouteList = () => (
@@ -32,9 +32,9 @@ export const RouteList = () => (
  * @function
  */
 const Routes = () => (
-    <Router>
-        <RouteList/>
-    </Router>
+  <Router>
+    <RouteList />
+  </Router>
 );
 
 export default Routes;

@@ -9,6 +9,7 @@ import fellowProgressReducer from './fellowProgressReducer';
 import managerFellowReducer from './managerFellows';
 import managerProfileReducer from './managerProfileReducer';
 import fellowProfileDataReducer from './fellowProfileDataReducer';
+import d1FellowProfileDataReducer from './d1FellowProfileDataReducer';
 import fellowsSummary from './fellowsummary';
 import fellowNotificationReducer from './fellowNotificationReducer';
 import fellowUnreadNotificationReducer from './fellowUnreadNotificationReducer';
@@ -44,6 +45,7 @@ const rootReducer = combineReducers({
   managerFellows: managerFellowReducer,
   manager: managerProfileReducer,
   fellow: fellowProfileDataReducer,
+  d1Fellow: d1FellowProfileDataReducer,
   notification: fellowNotificationReducer,
   unreadnotification: fellowUnreadNotificationReducer,
   readnotification: fellowReadNotificationReducer,

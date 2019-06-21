@@ -91,6 +91,11 @@ export default {
     fellow: {},
     error: ''
   },
+  d1Fellow: {
+    loading: false,
+    fellow: {},
+    error: ''
+  },
   notification: {
     loading: false,
     notification: [],

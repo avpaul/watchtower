@@ -4,6 +4,7 @@ exports[`Tests FellowDashboardMain component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FellowDashboard
+    getD1FellowProfileData={[Function]}
     getFellowProfileData={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -22,6 +23,11 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(FellowBio)
+          getD1FellowProfileData={[Function]}
+          getFellowProfileData={[Function]}
+/>,
+        <Connect(EngineerBio)
+          getD1FellowProfileData={[Function]}
           getFellowProfileData={[Function]}
 />,
         <Connect(ProgressContainer) />,
@@ -37,6 +43,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "getD1FellowProfileData": [Function],
+          "getFellowProfileData": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "getD1FellowProfileData": [Function],
           "getFellowProfileData": [Function],
         },
         "ref": null,
@@ -81,6 +100,11 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(FellowBio)
+            getD1FellowProfileData={[Function]}
+            getFellowProfileData={[Function]}
+/>,
+          <Connect(EngineerBio)
+            getD1FellowProfileData={[Function]}
             getFellowProfileData={[Function]}
 />,
           <Connect(ProgressContainer) />,
@@ -96,6 +120,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "getD1FellowProfileData": [Function],
+            "getFellowProfileData": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "getD1FellowProfileData": [Function],
             "getFellowProfileData": [Function],
           },
           "ref": null,
@@ -156,7 +193,9 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
   Symbol(enzyme.__childContext__): null,
 }
 `;
