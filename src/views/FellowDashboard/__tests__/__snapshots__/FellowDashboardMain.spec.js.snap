@@ -26,10 +26,6 @@ ShallowWrapper {
           getD1FellowProfileData={[Function]}
           getFellowProfileData={[Function]}
 />,
-        <Connect(EngineerBio)
-          getD1FellowProfileData={[Function]}
-          getFellowProfileData={[Function]}
-/>,
         <Connect(ProgressContainer) />,
         <Connect(Component) />,
         <Connect(LMSProgressSummary) />,
@@ -38,18 +34,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "getD1FellowProfileData": [Function],
-          "getFellowProfileData": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -103,10 +87,6 @@ ShallowWrapper {
             getD1FellowProfileData={[Function]}
             getFellowProfileData={[Function]}
 />,
-          <Connect(EngineerBio)
-            getD1FellowProfileData={[Function]}
-            getFellowProfileData={[Function]}
-/>,
           <Connect(ProgressContainer) />,
           <Connect(Component) />,
           <Connect(LMSProgressSummary) />,
@@ -115,18 +95,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "getD1FellowProfileData": [Function],
-            "getFellowProfileData": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
         Object {
           "instance": null,
           "key": undefined,
