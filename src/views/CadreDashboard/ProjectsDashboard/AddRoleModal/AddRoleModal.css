@@ -1,0 +1,84 @@
+#addSkillsInput {
+  width: 89%;
+}
+
+#addSkillsButton {
+  background-color: transparent;
+  position: relative;
+  top: 0.4rem;
+  border: none;
+  outline: none;
+}
+
+#addSkillsButtonImage {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #dae2e6;
+  box-sizing: border-box;
+  position: relative;
+  float: right;
+}
+
+#addSkillsButtonImage img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#addRoleModal .add-skills:hover {
+  background-color: #fff;
+}
+
+#addRoleModal .add-skills:hover input {
+  color: #000;
+}
+
+.generic-modal textarea {
+  height: 9rem;
+  resize: none;
+}
+
+#saveRoleButton,
+#closeRoleModal {
+  background-color: #10a36d;
+  border: #10a36d;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  font-size: 90%;
+}
+#addRoleModal .modal-header {
+  padding-bottom: 0;
+}
+
+#addRoleModal .modal-footer {
+  padding-top: 0;
+}
+
+#addRoleModal h1 {
+  font-size: 150%;
+  font-weight: 400 !important;
+  color: black;
+  margin-bottom: 0.3rem;
+}
+
+.modal-lg {
+  width: 37rem;
+}
+
+@media (max-width: 554px) {
+  .modal-lg {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #addSkillsInput {
+    width: 65%;
+  }
+}

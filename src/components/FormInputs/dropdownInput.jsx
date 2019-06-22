@@ -177,6 +177,7 @@ class DropdownInput extends Component {
       <div className={`${className}__list__items`}>
         {this.filterOptions().map(item => (
           <div
+            name={item.label}
             id={item.id}
             key={arrayKey(item)}
             className={`${className}__list__item`}
@@ -194,13 +195,15 @@ class DropdownInput extends Component {
   );
 
   /**
-   * Clones all the components passed in the extras props and attaches an onClick event handler to close the dropdown.
+   * Clones all the components passed in the extras props and attaches an onClick event handler to close the dropdown if its not a skills dropdown.
    * This is necessary to enable any additions to the dropdown to behave the same way as the default dropdown options
    */
   getExtras = () => {
-    const { extras } = this.props;
+    const { extras, dropDownFor } = this.props;
     return React.Children.map(extras, extra =>
-      React.cloneElement(extra, { onClick: this.toggleDropdown })
+      React.cloneElement(extra, {
+        onClick: dropDownFor === 'skills' ? '' : this.toggleDropdown
+      })
     );
   };
 
@@ -298,7 +301,8 @@ DropdownInput.propTypes = {
   multipleSelection: PropTypes.bool,
   extras: PropTypes.shape(),
   enableSearch: PropTypes.bool,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  dropDownFor: PropTypes.string
 };
 
 DropdownInput.defaultProps = {
@@ -312,7 +316,8 @@ DropdownInput.defaultProps = {
   multipleSelection: false,
   extras: null,
   enableSearch: false,
-  loading: false
+  loading: false,
+  dropDownFor: ''
 };
 
 export default DropdownInput;

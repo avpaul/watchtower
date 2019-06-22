@@ -32,8 +32,10 @@
   padding: 0.5rem;
 }
 
-.wt-text-input input::placeholder {
+.wt-text-input input::placeholder,
+.wt-text-input textarea::placeholder {
   color: #cccccc;
+  font-size: 13px;
 }
 
 .wt-text-input .alert,

@@ -1,11 +1,23 @@
-.project-grid__count {
+.role-grid__count {
   color: #333e44;
   font-family: 'DIN Pro';
   font-size: 24px;
   letter-spacing: -1.1px;
   line-height: 31px;
+  margin-bottom: 3px;
 }
-.project-grid__add {
+#title {
+  margin-bottom: 60px;
+}
+#title > span {
+  height: 18px;
+  width: 245px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}
+.role-grid__add {
   border-radius: 5px;
   background-color: #10a36d;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
@@ -16,10 +28,10 @@
   letter-spacing: 0.58px;
   line-height: 18px;
   padding: 10px 20px;
-  float: right;
   outline: none !important;
+  float: right;
 }
-.project-grid__add:hover {
+.role-grid__add:hover {
   text-decoration: none;
   color: #ffffff;
 }

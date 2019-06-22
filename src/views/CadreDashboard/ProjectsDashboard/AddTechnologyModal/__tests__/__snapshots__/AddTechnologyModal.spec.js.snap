@@ -76,7 +76,9 @@ ShallowWrapper {
                               handleClose={[Function]}
                               handleSubmit={[Function]}
                               id="addTechnologyModal"
+                              isLoading={false}
                               submitLoading={false}
+                              succeeded={false}
                               success={false}
                               successMessage="The project technology has been added to the project form!"
                               title="Add Technology"
@@ -113,7 +115,9 @@ ShallowWrapper {
       "handleClose": [Function],
       "handleSubmit": [Function],
       "id": "addTechnologyModal",
+      "isLoading": false,
       "submitLoading": false,
+      "succeeded": false,
       "success": false,
       "successMessage": "The project technology has been added to the project form!",
       "title": "Add Technology",
@@ -178,7 +182,9 @@ ShallowWrapper {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addTechnologyModal"
+                isLoading={false}
                 submitLoading={false}
+                succeeded={false}
                 success={false}
                 successMessage="The project technology has been added to the project form!"
                 title="Add Technology"
@@ -278,7 +284,9 @@ ShallowWrapper {
                                     handleClose={[Function]}
                                     handleSubmit={[Function]}
                                     id="addTechnologyModal"
+                                    isLoading={false}
                                     submitLoading={false}
+                                    succeeded={false}
                                     success={false}
                                     successMessage="The project technology has been added to the project form!"
                                     title="Add Technology"
@@ -315,7 +323,9 @@ ShallowWrapper {
         "handleClose": [Function],
         "handleSubmit": [Function],
         "id": "addTechnologyModal",
+        "isLoading": false,
         "submitLoading": false,
+        "succeeded": false,
         "success": false,
         "successMessage": "The project technology has been added to the project form!",
         "title": "Add Technology",
@@ -380,7 +390,9 @@ ShallowWrapper {
                   handleClose={[Function]}
                   handleSubmit={[Function]}
                   id="addTechnologyModal"
+                  isLoading={false}
                   submitLoading={false}
+                  succeeded={false}
                   success={false}
                   successMessage="The project technology has been added to the project form!"
                   title="Add Technology"

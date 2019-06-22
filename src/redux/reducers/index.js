@@ -40,6 +40,8 @@ import fellowActiveRoleReducer from './fellowActiveRoleReducer';
 import createProjectVacancies from './createProjectVacanciesReducer';
 import editProjectReducer from './editProjectReducer';
 import getAProjectReducer from './getAProjectReducer';
+import createRoleReducer from './createRoleReducer';
+import getRoleSkillsReducer from './getRoleSkillsReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -81,7 +83,9 @@ const rootReducer = combineReducers({
   fetchActiveRole: fellowActiveRoleReducer,
   createProjectVacancies,
   editSingleProject: editProjectReducer,
-  singleProject: getAProjectReducer
+  singleProject: getAProjectReducer,
+  createRole: createRoleReducer,
+  roleSkills: getRoleSkillsReducer,
 });
 
 export default rootReducer;

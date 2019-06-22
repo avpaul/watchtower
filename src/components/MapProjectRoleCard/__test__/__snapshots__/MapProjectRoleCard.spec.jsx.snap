@@ -4,6 +4,9 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MapProjectRoleCard
+    activeEngineers={Object {}}
+    fetchActiveEngineers={[Function]}
+    loading={true}
     roleData={
         Array [
             Object {
@@ -47,9 +50,40 @@ ShallowWrapper {
         className="row"
 >
         <div
+                className="col-9"
+                id="title"
+        >
+                <p
+                        className="role-grid__count"
+                >
+                        Roles
+                </p>
+                <span>
+                        2
+                         Vacant, 
+                        2
+                         Active
+                </span>
+        </div>
+        <div
+                className="col-3"
+        >
+                <button
+                        className="role-grid__add"
+                        data-target="#addRoleModal"
+                        data-toggle="modal"
+                        type="button"
+                >
+                        NEW ROLE
+                </button>
+        </div>
+        <div
                 className="col-4 mb-4"
         >
                 <RoleCard
+                        activeEngineers={Object {}}
+                        fetchActiveEngineers={[Function]}
+                        loading={true}
                         role={
                                 Object {
                                         "active_engineers_count": 1,
@@ -68,6 +102,9 @@ ShallowWrapper {
                 className="col-4 mb-4"
         >
                 <RoleCard
+                        activeEngineers={Object {}}
+                        fetchActiveEngineers={[Function]}
+                        loading={true}
                         role={
                                 Object {
                                         "active_engineers_count": 1,
@@ -92,41 +129,77 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="col-4 mb-4"
+            className="col-9"
+            id="title"
 >
-            <RoleCard
-                        role={
-                                    Object {
-                                                "active_engineers_count": 1,
-                                                "applications_count": 2,
-                                                "created_at": "2019-06-04 04:56:39",
-                                                "description": "test role description",
-                                                "id": 1,
-                                                "name": "test role",
-                                                "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
-                                              }
-                        }
-            />
+            <p
+                        className="role-grid__count"
+            >
+                        Roles
+            </p>
+            <span>
+                        2
+                         Vacant, 
+                        2
+                         Active
+            </span>
 </div>,
           <div
-            className="col-4 mb-4"
+            className="col-3"
 >
-            <RoleCard
-                        role={
-                                    Object {
-                                                "active_engineers_count": 1,
-                                                "applications_count": 2,
-                                                "created_at": "2019-06-04 04:56:39",
-                                                "description": "test role description",
-                                                "id": 1,
-                                                "name": "test role",
-                                                "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
-                                              }
-                        }
-            />
+            <button
+                        className="role-grid__add"
+                        data-target="#addRoleModal"
+                        data-toggle="modal"
+                        type="button"
+            >
+                        NEW ROLE
+            </button>
 </div>,
+          Array [
+            <div
+              className="col-4 mb-4"
+>
+              <RoleCard
+                            activeEngineers={Object {}}
+                            fetchActiveEngineers={[Function]}
+                            loading={true}
+                            role={
+                                          Object {
+                                                        "active_engineers_count": 1,
+                                                        "applications_count": 2,
+                                                        "created_at": "2019-06-04 04:56:39",
+                                                        "description": "test role description",
+                                                        "id": 1,
+                                                        "name": "test role",
+                                                        "updated_at": "2019-06-04 04:56:39",
+                                                        "vacancies_count": 3,
+                                                      }
+                            }
+              />
+</div>,
+            <div
+              className="col-4 mb-4"
+>
+              <RoleCard
+                            activeEngineers={Object {}}
+                            fetchActiveEngineers={[Function]}
+                            loading={true}
+                            role={
+                                          Object {
+                                                        "active_engineers_count": 1,
+                                                        "applications_count": 2,
+                                                        "created_at": "2019-06-04 04:56:39",
+                                                        "description": "test role description",
+                                                        "id": 1,
+                                                        "name": "test role",
+                                                        "updated_at": "2019-06-04 04:56:39",
+                                                        "vacancies_count": 3,
+                                                      }
+                            }
+              />
+</div>,
+          ],
         ],
         "className": "row",
       },
@@ -134,10 +207,105 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="role-grid__count"
+>
+                Roles
+</p>,
+              <span>
+                2
+                 Vacant, 
+                2
+                 Active
+</span>,
+            ],
+            "className": "col-9",
+            "id": "title",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Roles",
+                "className": "role-grid__count",
+              },
+              "ref": null,
+              "rendered": "Roles",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  2,
+                  " Vacant, ",
+                  2,
+                  " Active",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                2,
+                " Vacant, ",
+                2,
+                " Active",
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="role-grid__add"
+              data-target="#addRoleModal"
+              data-toggle="modal"
+              type="button"
+>
+              NEW ROLE
+</button>,
+            "className": "col-3",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "NEW ROLE",
+              "className": "role-grid__add",
+              "data-target": "#addRoleModal",
+              "data-toggle": "modal",
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": "NEW ROLE",
+            "type": "button",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
           "key": "1",
           "nodeType": "host",
           "props": Object {
             "children": <RoleCard
+              activeEngineers={Object {}}
+              fetchActiveEngineers={[Function]}
+              loading={true}
               role={
                             Object {
                                           "active_engineers_count": 1,
@@ -159,6 +327,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "activeEngineers": Object {},
+              "fetchActiveEngineers": [Function],
+              "loading": true,
               "role": Object {
                 "active_engineers_count": 1,
                 "applications_count": 2,
@@ -182,6 +353,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <RoleCard
+              activeEngineers={Object {}}
+              fetchActiveEngineers={[Function]}
+              loading={true}
               role={
                             Object {
                                           "active_engineers_count": 1,
@@ -203,6 +377,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "activeEngineers": Object {},
+              "fetchActiveEngineers": [Function],
+              "loading": true,
               "role": Object {
                 "active_engineers_count": 1,
                 "applications_count": 2,
@@ -235,9 +412,40 @@ ShallowWrapper {
           className="row"
 >
           <div
+                    className="col-9"
+                    id="title"
+          >
+                    <p
+                              className="role-grid__count"
+                    >
+                              Roles
+                    </p>
+                    <span>
+                              2
+                               Vacant, 
+                              2
+                               Active
+                    </span>
+          </div>
+          <div
+                    className="col-3"
+          >
+                    <button
+                              className="role-grid__add"
+                              data-target="#addRoleModal"
+                              data-toggle="modal"
+                              type="button"
+                    >
+                              NEW ROLE
+                    </button>
+          </div>
+          <div
                     className="col-4 mb-4"
           >
                     <RoleCard
+                              activeEngineers={Object {}}
+                              fetchActiveEngineers={[Function]}
+                              loading={true}
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
@@ -256,6 +464,9 @@ ShallowWrapper {
                     className="col-4 mb-4"
           >
                     <RoleCard
+                              activeEngineers={Object {}}
+                              fetchActiveEngineers={[Function]}
+                              loading={true}
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
@@ -280,41 +491,77 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="col-4 mb-4"
+              className="col-9"
+              id="title"
 >
-              <RoleCard
-                            role={
-                                          Object {
-                                                        "active_engineers_count": 1,
-                                                        "applications_count": 2,
-                                                        "created_at": "2019-06-04 04:56:39",
-                                                        "description": "test role description",
-                                                        "id": 1,
-                                                        "name": "test role",
-                                                        "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
-                                                      }
-                            }
-              />
+              <p
+                            className="role-grid__count"
+              >
+                            Roles
+              </p>
+              <span>
+                            2
+                             Vacant, 
+                            2
+                             Active
+              </span>
 </div>,
             <div
-              className="col-4 mb-4"
+              className="col-3"
 >
-              <RoleCard
-                            role={
-                                          Object {
-                                                        "active_engineers_count": 1,
-                                                        "applications_count": 2,
-                                                        "created_at": "2019-06-04 04:56:39",
-                                                        "description": "test role description",
-                                                        "id": 1,
-                                                        "name": "test role",
-                                                        "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
-                                                      }
-                            }
-              />
+              <button
+                            className="role-grid__add"
+                            data-target="#addRoleModal"
+                            data-toggle="modal"
+                            type="button"
+              >
+                            NEW ROLE
+              </button>
 </div>,
+            Array [
+              <div
+                className="col-4 mb-4"
+>
+                <RoleCard
+                                activeEngineers={Object {}}
+                                fetchActiveEngineers={[Function]}
+                                loading={true}
+                                role={
+                                                Object {
+                                                                "active_engineers_count": 1,
+                                                                "applications_count": 2,
+                                                                "created_at": "2019-06-04 04:56:39",
+                                                                "description": "test role description",
+                                                                "id": 1,
+                                                                "name": "test role",
+                                                                "updated_at": "2019-06-04 04:56:39",
+                                                                "vacancies_count": 3,
+                                                              }
+                                }
+                />
+</div>,
+              <div
+                className="col-4 mb-4"
+>
+                <RoleCard
+                                activeEngineers={Object {}}
+                                fetchActiveEngineers={[Function]}
+                                loading={true}
+                                role={
+                                                Object {
+                                                                "active_engineers_count": 1,
+                                                                "applications_count": 2,
+                                                                "created_at": "2019-06-04 04:56:39",
+                                                                "description": "test role description",
+                                                                "id": 1,
+                                                                "name": "test role",
+                                                                "updated_at": "2019-06-04 04:56:39",
+                                                                "vacancies_count": 3,
+                                                              }
+                                }
+                />
+</div>,
+            ],
           ],
           "className": "row",
         },
@@ -322,10 +569,105 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="role-grid__count"
+>
+                  Roles
+</p>,
+                <span>
+                  2
+                   Vacant, 
+                  2
+                   Active
+</span>,
+              ],
+              "className": "col-9",
+              "id": "title",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Roles",
+                  "className": "role-grid__count",
+                },
+                "ref": null,
+                "rendered": "Roles",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    2,
+                    " Vacant, ",
+                    2,
+                    " Active",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  2,
+                  " Vacant, ",
+                  2,
+                  " Active",
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                className="role-grid__add"
+                data-target="#addRoleModal"
+                data-toggle="modal"
+                type="button"
+>
+                NEW ROLE
+</button>,
+              "className": "col-3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "NEW ROLE",
+                "className": "role-grid__add",
+                "data-target": "#addRoleModal",
+                "data-toggle": "modal",
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": "NEW ROLE",
+              "type": "button",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
             "key": "1",
             "nodeType": "host",
             "props": Object {
               "children": <RoleCard
+                activeEngineers={Object {}}
+                fetchActiveEngineers={[Function]}
+                loading={true}
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
@@ -347,6 +689,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "activeEngineers": Object {},
+                "fetchActiveEngineers": [Function],
+                "loading": true,
                 "role": Object {
                   "active_engineers_count": 1,
                   "applications_count": 2,
@@ -370,6 +715,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <RoleCard
+                activeEngineers={Object {}}
+                fetchActiveEngineers={[Function]}
+                loading={true}
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
@@ -391,6 +739,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "activeEngineers": Object {},
+                "fetchActiveEngineers": [Function],
+                "loading": true,
                 "role": Object {
                   "active_engineers_count": 1,
                   "applications_count": 2,
@@ -447,6 +798,9 @@ exports[`Test Map Role cards should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MapProjectRoleCard
+    activeEngineers={Object {}}
+    fetchActiveEngineers={[Function]}
+    loading={true}
     roleData={
         Array [
             Object {
@@ -480,9 +834,40 @@ ShallowWrapper {
         className="row"
 >
         <div
+                className="col-9"
+                id="title"
+        >
+                <p
+                        className="role-grid__count"
+                >
+                        Roles
+                </p>
+                <span>
+                        1
+                         Vacant, 
+                        1
+                         Active
+                </span>
+        </div>
+        <div
+                className="col-3"
+        >
+                <button
+                        className="role-grid__add"
+                        data-target="#addRoleModal"
+                        data-toggle="modal"
+                        type="button"
+                >
+                        NEW ROLE
+                </button>
+        </div>
+        <div
                 className="col-4 mb-4"
         >
                 <RoleCard
+                        activeEngineers={Object {}}
+                        fetchActiveEngineers={[Function]}
+                        loading={true}
                         role={
                                 Object {
                                         "active_engineers_count": 1,
@@ -507,23 +892,56 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="col-4 mb-4"
+            className="col-9"
+            id="title"
 >
-            <RoleCard
-                        role={
-                                    Object {
-                                                "active_engineers_count": 1,
-                                                "applications_count": 2,
-                                                "created_at": "2019-06-04 04:56:39",
-                                                "description": "test role description",
-                                                "id": 1,
-                                                "name": "test role",
-                                                "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
-                                              }
-                        }
-            />
+            <p
+                        className="role-grid__count"
+            >
+                        Roles
+            </p>
+            <span>
+                        1
+                         Vacant, 
+                        1
+                         Active
+            </span>
 </div>,
+          <div
+            className="col-3"
+>
+            <button
+                        className="role-grid__add"
+                        data-target="#addRoleModal"
+                        data-toggle="modal"
+                        type="button"
+            >
+                        NEW ROLE
+            </button>
+</div>,
+          Array [
+            <div
+              className="col-4 mb-4"
+>
+              <RoleCard
+                            activeEngineers={Object {}}
+                            fetchActiveEngineers={[Function]}
+                            loading={true}
+                            role={
+                                          Object {
+                                                        "active_engineers_count": 1,
+                                                        "applications_count": 2,
+                                                        "created_at": "2019-06-04 04:56:39",
+                                                        "description": "test role description",
+                                                        "id": 1,
+                                                        "name": "test role",
+                                                        "updated_at": "2019-06-04 04:56:39",
+                                                        "vacancies_count": 3,
+                                                      }
+                            }
+              />
+</div>,
+          ],
         ],
         "className": "row",
       },
@@ -531,10 +949,105 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="role-grid__count"
+>
+                Roles
+</p>,
+              <span>
+                1
+                 Vacant, 
+                1
+                 Active
+</span>,
+            ],
+            "className": "col-9",
+            "id": "title",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Roles",
+                "className": "role-grid__count",
+              },
+              "ref": null,
+              "rendered": "Roles",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  1,
+                  " Vacant, ",
+                  1,
+                  " Active",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                1,
+                " Vacant, ",
+                1,
+                " Active",
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="role-grid__add"
+              data-target="#addRoleModal"
+              data-toggle="modal"
+              type="button"
+>
+              NEW ROLE
+</button>,
+            "className": "col-3",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "NEW ROLE",
+              "className": "role-grid__add",
+              "data-target": "#addRoleModal",
+              "data-toggle": "modal",
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": "NEW ROLE",
+            "type": "button",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
           "key": "1",
           "nodeType": "host",
           "props": Object {
             "children": <RoleCard
+              activeEngineers={Object {}}
+              fetchActiveEngineers={[Function]}
+              loading={true}
               role={
                             Object {
                                           "active_engineers_count": 1,
@@ -556,6 +1069,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "activeEngineers": Object {},
+              "fetchActiveEngineers": [Function],
+              "loading": true,
               "role": Object {
                 "active_engineers_count": 1,
                 "applications_count": 2,
@@ -588,9 +1104,40 @@ ShallowWrapper {
           className="row"
 >
           <div
+                    className="col-9"
+                    id="title"
+          >
+                    <p
+                              className="role-grid__count"
+                    >
+                              Roles
+                    </p>
+                    <span>
+                              1
+                               Vacant, 
+                              1
+                               Active
+                    </span>
+          </div>
+          <div
+                    className="col-3"
+          >
+                    <button
+                              className="role-grid__add"
+                              data-target="#addRoleModal"
+                              data-toggle="modal"
+                              type="button"
+                    >
+                              NEW ROLE
+                    </button>
+          </div>
+          <div
                     className="col-4 mb-4"
           >
                     <RoleCard
+                              activeEngineers={Object {}}
+                              fetchActiveEngineers={[Function]}
+                              loading={true}
                               role={
                                         Object {
                                                   "active_engineers_count": 1,
@@ -615,23 +1162,56 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="col-4 mb-4"
+              className="col-9"
+              id="title"
 >
-              <RoleCard
-                            role={
-                                          Object {
-                                                        "active_engineers_count": 1,
-                                                        "applications_count": 2,
-                                                        "created_at": "2019-06-04 04:56:39",
-                                                        "description": "test role description",
-                                                        "id": 1,
-                                                        "name": "test role",
-                                                        "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
-                                                      }
-                            }
-              />
+              <p
+                            className="role-grid__count"
+              >
+                            Roles
+              </p>
+              <span>
+                            1
+                             Vacant, 
+                            1
+                             Active
+              </span>
 </div>,
+            <div
+              className="col-3"
+>
+              <button
+                            className="role-grid__add"
+                            data-target="#addRoleModal"
+                            data-toggle="modal"
+                            type="button"
+              >
+                            NEW ROLE
+              </button>
+</div>,
+            Array [
+              <div
+                className="col-4 mb-4"
+>
+                <RoleCard
+                                activeEngineers={Object {}}
+                                fetchActiveEngineers={[Function]}
+                                loading={true}
+                                role={
+                                                Object {
+                                                                "active_engineers_count": 1,
+                                                                "applications_count": 2,
+                                                                "created_at": "2019-06-04 04:56:39",
+                                                                "description": "test role description",
+                                                                "id": 1,
+                                                                "name": "test role",
+                                                                "updated_at": "2019-06-04 04:56:39",
+                                                                "vacancies_count": 3,
+                                                              }
+                                }
+                />
+</div>,
+            ],
           ],
           "className": "row",
         },
@@ -639,10 +1219,105 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="role-grid__count"
+>
+                  Roles
+</p>,
+                <span>
+                  1
+                   Vacant, 
+                  1
+                   Active
+</span>,
+              ],
+              "className": "col-9",
+              "id": "title",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Roles",
+                  "className": "role-grid__count",
+                },
+                "ref": null,
+                "rendered": "Roles",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    1,
+                    " Vacant, ",
+                    1,
+                    " Active",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  1,
+                  " Vacant, ",
+                  1,
+                  " Active",
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                className="role-grid__add"
+                data-target="#addRoleModal"
+                data-toggle="modal"
+                type="button"
+>
+                NEW ROLE
+</button>,
+              "className": "col-3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "NEW ROLE",
+                "className": "role-grid__add",
+                "data-target": "#addRoleModal",
+                "data-toggle": "modal",
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": "NEW ROLE",
+              "type": "button",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
             "key": "1",
             "nodeType": "host",
             "props": Object {
               "children": <RoleCard
+                activeEngineers={Object {}}
+                fetchActiveEngineers={[Function]}
+                loading={true}
                 role={
                                 Object {
                                                 "active_engineers_count": 1,
@@ -664,6 +1339,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "activeEngineers": Object {},
+                "fetchActiveEngineers": [Function],
+                "loading": true,
                 "role": Object {
                   "active_engineers_count": 1,
                   "applications_count": 2,
