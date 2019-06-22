@@ -41,6 +41,11 @@ describe('Projects Dashboard', () => {
     expect(wrapper.find('ProjectForm').exists()).toBeTruthy();
   });
 
+  it('renders the ProjectDetails page correctly', () => {
+    const { wrapper } = setup('/cadre/projects/details/1');
+    expect(wrapper.find('ProjectDetails').exists()).toBeTruthy();
+  });
+
   it('renders correctly using invalid path location', () => {
     const { wrapper } = setup('/cadre/projects/invalid');
     expect(wrapper.find('ProjectForm').exists()).not.toBeTruthy();

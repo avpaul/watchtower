@@ -1,3 +1,24 @@
 .btn:focus {
   box-shadow: none;
 }
+
+.wt-return-button {
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #dae2e6;
+  border-radius: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+}
+
+.wt-return-button img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  outline: none;
+}

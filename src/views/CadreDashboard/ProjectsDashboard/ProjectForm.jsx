@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Loader from '../../../components/Loader/Loader';
-import ReturnIcon from '../../../static/BackIcon.png';
 import Title from '../../../components/Title';
 import FormInputs from '../../../components/FormInputs';
 import { ProjectFormLeft, ProjectFormRight } from './ProjectFormComponents';
+import ReturnButton from '../../../components/Buttons/ReturnButton';
 import { errorMessage } from './helpers';
 
 import './projectForm.css';
@@ -162,19 +162,6 @@ class ProjectForm extends Component {
     <FormInputs.LinksUploadInput parent={this} {...props} />
   );
 
-  renderReturnButton = () => {
-    const { history } = this.props;
-    return (
-      <button
-        type="button"
-        className="project-form__back"
-        onClick={() => history.goBack()}
-      >
-        <img src={ReturnIcon} alt="Return Icon" />
-      </button>
-    );
-  };
-
   renderForm = () => {
     const { project } = this.props;
     const props = {
@@ -213,13 +200,13 @@ class ProjectForm extends Component {
   );
 
   render() {
-    const { project, createProject } = this.props;
+    const { project, createProject, history } = this.props;
     const title = project.name ? 'Edit Project' : 'Add New Project';
 
     return (
       <div className="project-form row ml-0 ml-0 pl-2 pl-md-5 pr-2 pr-md-5">
         <div className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0">
-          {this.renderReturnButton()}
+          <ReturnButton history={history} />
           <Title title={title} />
         </div>
         {this.renderForm()}

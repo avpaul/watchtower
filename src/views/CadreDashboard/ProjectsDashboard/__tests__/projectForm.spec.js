@@ -240,12 +240,6 @@ describe('Project Form', () => {
     });
   });
 
-  it('successfully calls the history goBack method', () => {
-    const { wrapper } = setup({}, true);
-    wrapper.find('.project-form__back').simulate('click');
-    expect(defaultProps.history.goBack).toHaveBeenCalled();
-  });
-
   it('successfully calls the test method for the inVision link inputs', async () => {
     const { wrapper } = setup({}, true);
     await testMockupsInput(wrapper, 'Link', 5);

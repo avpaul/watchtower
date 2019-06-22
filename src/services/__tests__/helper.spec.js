@@ -5,7 +5,8 @@ import {
   calcNoOfWeeks,
   getCurrentWeek,
   getDayName,
-  truncateNumber
+  truncateNumber,
+  formatText
 } from '../helper';
 
 describe('Test for helper functions', () => {
@@ -38,5 +39,11 @@ describe('Test for helper functions', () => {
   it('Should return number to 2 decimal places', () => {
     const num = 1.789;
     expect(truncateNumber(num)).toEqual(1.79);
+  });
+  it('Should format text to two paragraphs', () => {
+    const longText = 'This is a long text. This is another long text.';
+    const { paragraph1, paragraph2 } = formatText(longText);
+    expect(paragraph1).toEqual('This is a long text.');
+    expect(paragraph2).toEqual('This is another long text.');
   });
 });

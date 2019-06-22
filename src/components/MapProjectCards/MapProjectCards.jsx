@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import ProjectCard from '../ProjectCard/ProjectCard';
+import Projectcard from '../ProjectCard/ProjectCard';
 
 import './MapProjectCards.css';
 
@@ -25,7 +25,7 @@ const MapProjectCards = ({ projectData }) => (
     </div>
     <div className="project-card__grid">
       {projectData.map(project => (
-        <ProjectCard project={project} key={project.id} />
+        <Projectcard project={project} key={project.id} />
       ))}
     </div>
   </div>
