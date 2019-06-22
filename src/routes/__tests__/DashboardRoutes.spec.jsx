@@ -42,30 +42,6 @@ describe('<Dashboards />', () => {
     expect(item.name()).toEqual('OpsDashboard');
   });
 
-  // it('should render appropriate dashboards', () => {
-  //   const mockStore = configureStore();
-  //   const store = mockStore({
-  //     setVisibilityFilter: () => {},
-  //     fellows,
-  //     pagination: {
-  //       page: 1,
-  //       perPage: 25
-  //     },
-  //     loading: false,
-  //     getFellows: () => {},
-  //     filter: '',
-  //     user: {
-  //       name: 'Test User',
-  //       picture: 'http://',
-  //       roles: { Andelan: 'key', Fellow: 'key' }
-  //     },
-  //     role: 'Fellow'
-  //   });
-
-  //   const item = shallow(<Dashboards {...store.getState()} store={store} />);
-  //   expect(item.name()).toEqual('FellowDashboard');
-  // });
-
   it('should render appropriate dashboards', () => {
     const mockStore = configureStore();
     const store = mockStore({

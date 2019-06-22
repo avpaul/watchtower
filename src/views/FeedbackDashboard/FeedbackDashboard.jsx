@@ -381,7 +381,6 @@ export class FeedbackDashboard extends Component {
       ...isTicked,
       [event.currentTarget.attributes[2].value]: event.currentTarget.id
     };
-    console.log(updatedIsTicked, 'updatedIsTicked>>>>');
     const filteredFeedbackArray = feedbackArray.filter(
       obj =>
         updatedIsTicked.manager_email === obj.manager_email ||
