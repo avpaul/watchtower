@@ -26,10 +26,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="w3-address-grid"
+        className="project-card-grid"
 >
         <div
-                className="w3-address-left"
+                className="project-card-left"
         >
                 <img
                         alt="project logo"
@@ -37,7 +37,7 @@ ShallowWrapper {
                 />
         </div>
         <div
-                className="w3-address-right"
+                className="project-card-right"
         >
                 <h6>
                         WatchTower
@@ -61,9 +61,6 @@ ShallowWrapper {
                         </span>
                 </p>
         </div>
-        <div
-                className="clearfix"
-        />
 </div>,
       "className": "profile_card",
     },
@@ -75,7 +72,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="w3-address-left"
+            className="project-card-left"
 >
             <img
                         alt="project logo"
@@ -83,7 +80,7 @@ ShallowWrapper {
             />
 </div>,
           <div
-            className="w3-address-right"
+            className="project-card-right"
 >
             <h6>
                         WatchTower
@@ -107,11 +104,8 @@ ShallowWrapper {
                         </span>
             </p>
 </div>,
-          <div
-            className="clearfix"
-/>,
         ],
-        "className": "w3-address-grid",
+        "className": "project-card-grid",
       },
       "ref": null,
       "rendered": Array [
@@ -124,7 +118,7 @@ ShallowWrapper {
               alt="project logo"
               src="projectIcon.png"
 />,
-            "className": "w3-address-left",
+            "className": "project-card-left",
           },
           "ref": null,
           "rendered": Object {
@@ -169,7 +163,7 @@ ShallowWrapper {
                 </span>
 </p>,
             ],
-            "className": "w3-address-right",
+            "className": "project-card-right",
           },
           "ref": null,
           "rendered": Array [
@@ -259,17 +253,6 @@ ShallowWrapper {
           ],
           "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "clearfix",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
       ],
       "type": "div",
     },
@@ -282,10 +265,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="w3-address-grid"
+          className="project-card-grid"
 >
           <div
-                    className="w3-address-left"
+                    className="project-card-left"
           >
                     <img
                               alt="project logo"
@@ -293,7 +276,7 @@ ShallowWrapper {
                     />
           </div>
           <div
-                    className="w3-address-right"
+                    className="project-card-right"
           >
                     <h6>
                               WatchTower
@@ -317,9 +300,6 @@ ShallowWrapper {
                               </span>
                     </p>
           </div>
-          <div
-                    className="clearfix"
-          />
 </div>,
         "className": "profile_card",
       },
@@ -331,7 +311,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="w3-address-left"
+              className="project-card-left"
 >
               <img
                             alt="project logo"
@@ -339,7 +319,7 @@ ShallowWrapper {
               />
 </div>,
             <div
-              className="w3-address-right"
+              className="project-card-right"
 >
               <h6>
                             WatchTower
@@ -363,11 +343,8 @@ ShallowWrapper {
                             </span>
               </p>
 </div>,
-            <div
-              className="clearfix"
-/>,
           ],
-          "className": "w3-address-grid",
+          "className": "project-card-grid",
         },
         "ref": null,
         "rendered": Array [
@@ -380,7 +357,7 @@ ShallowWrapper {
                 alt="project logo"
                 src="projectIcon.png"
 />,
-              "className": "w3-address-left",
+              "className": "project-card-left",
             },
             "ref": null,
             "rendered": Object {
@@ -425,7 +402,7 @@ ShallowWrapper {
                   </span>
 </p>,
               ],
-              "className": "w3-address-right",
+              "className": "project-card-right",
             },
             "ref": null,
             "rendered": Array [
@@ -513,17 +490,6 @@ ShallowWrapper {
                 "type": "p",
               },
             ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "clearfix",
-            },
-            "ref": null,
-            "rendered": null,
             "type": "div",
           },
         ],
