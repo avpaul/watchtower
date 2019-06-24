@@ -44,18 +44,22 @@ class ProjectFormLeft extends Component {
   };
 
   renderTopInputs = () => {
-    const { project, renderTextInput, renderDropdown } = this.props;
+    const { projectDetails, renderTextInput, renderDropdown } = this.props;
+
     return (
       <React.Fragment>
         {renderTextInput({
           name: 'name',
           label: 'Project Name',
-          inputValue: project.name
+          inputValue: projectDetails.name
         })}
         {renderDropdown({
           name: 'type',
           label: 'Project Type',
-          inputValue: project.type || projectTypes[0],
+          inputValue:
+            projectDetails && projectDetails.type === 'external'
+              ? projectTypes[1]
+              : projectTypes[0],
           options: projectTypes
         })}
       </React.Fragment>
@@ -63,7 +67,7 @@ class ProjectFormLeft extends Component {
   };
 
   renderManagerInput = () => {
-    const { project, newManager } = this.props;
+    const { projectDetails, newManager } = this.props;
     const {
       fetchProjectManagers: { loading }
     } = this.props;
@@ -77,7 +81,9 @@ class ProjectFormLeft extends Component {
         label: 'Team Manager',
         options: processDropdownOptions(data, 'name'),
         placeholder: 'Select Team Manager',
-        inputValue: project.manager,
+        inputValue: projectDetails.manager
+          ? { ...projectDetails.manager, label: projectDetails.manager.name }
+          : {},
         enableSearch: data.length !== 0,
         loading
       },
@@ -88,14 +94,16 @@ class ProjectFormLeft extends Component {
 
   renderTechnologiesInput = () => {
     const {
-      project,
+      projectDetails,
       fetchProjectTechnologies: { data, loading }
     } = this.props;
     return this.renderInputWithAddition(
       {
         name: 'technologies',
         label: 'Technologies',
-        inputValue: project.technologies,
+        inputValue: projectDetails.technologies
+          ? processDropdownOptions(projectDetails.technologies, 'name')
+          : [],
         options: processDropdownOptions(data, 'name'),
         multipleSelection: true,
         placeholder: 'Add Technologies',
@@ -109,7 +117,7 @@ class ProjectFormLeft extends Component {
 
   renderSlackChannelInput = () => {
     const {
-      project,
+      projectDetails,
       renderDropdown,
       fetchSlackChannels: { loading, data }
     } = this.props;
@@ -119,7 +127,12 @@ class ProjectFormLeft extends Component {
         {renderDropdown({
           name: 'channels',
           label: 'Slack Channel',
-          inputValue: project.slackChannel,
+          inputValue: projectDetails.channels
+            ? {
+                ...projectDetails.channels,
+                label: projectDetails.channels.name
+              }
+            : {},
           options: processDropdownOptions(data, 'name'),
           placeholder: 'Add Slack Channel',
           enableSearch: data.length !== 0,
@@ -130,19 +143,23 @@ class ProjectFormLeft extends Component {
   };
 
   renderUploadInputs = () => {
-    const { project, renderUploadInput, renderAddLinksInput } = this.props;
+    const {
+      projectDetails,
+      renderUploadInput,
+      renderAddLinksInput
+    } = this.props;
     return (
       <React.Fragment>
         {renderUploadInput({
           name: 'documents',
           label: 'Relevant Documents',
-          documents: project.documents,
+          documents: projectDetails.documents,
           buttonLabel: 'Upload Document'
         })}
         {renderAddLinksInput({
           name: 'links',
           label: 'Relevant Links',
-          documents: project.links,
+          documents: projectDetails.links,
           buttonLabel: 'Manage Links'
         })}
       </React.Fragment>
@@ -150,7 +167,7 @@ class ProjectFormLeft extends Component {
   };
 
   render() {
-    const { project, renderTextInput } = this.props;
+    const { projectDetails, renderTextInput } = this.props;
     return (
       <div className="col-12 col-lg-6">
         <div className="row mr-0 ml-0">
@@ -161,7 +178,9 @@ class ProjectFormLeft extends Component {
           {renderTextInput({
             name: 'mockups',
             label: 'Invision Link',
-            inputValue: project.mockups,
+            inputValue: projectDetails
+              ? projectDetails.mockups
+              : projectDetails.mockups,
             testInput: input => urlRegex.test(input),
             alertText: 'Please provide a link!'
           })}
@@ -173,7 +192,6 @@ class ProjectFormLeft extends Component {
 }
 
 ProjectFormLeft.propTypes = {
-  project: PropTypes.shape().isRequired,
   newManager: PropTypes.shape().isRequired,
   renderTextInput: PropTypes.func.isRequired,
   renderDropdown: PropTypes.func.isRequired,
@@ -184,7 +202,8 @@ ProjectFormLeft.propTypes = {
   fetchAllSlackChannels: PropTypes.func.isRequired,
   fetchSlackChannels: PropTypes.shape().isRequired,
   renderUploadInput: PropTypes.func.isRequired,
-  renderAddLinksInput: PropTypes.func.isRequired
+  renderAddLinksInput: PropTypes.func.isRequired,
+  projectDetails: PropTypes.shape().isRequired
 };
 
 export default ProjectFormLeft;

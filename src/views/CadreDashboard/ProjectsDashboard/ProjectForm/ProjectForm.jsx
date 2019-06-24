@@ -22,33 +22,51 @@ class ProjectForm extends Component {
     };
   }
 
+  componentDidMount() {
+    const { location, match, history } = this.props;
+
+    if (!location.projectDetails && location.pathname.includes('edit')) {
+      return history.push(`/cadre/projects/${match.params.id}`);
+    }
+
+    return true;
+  }
+
   componentDidUpdate(prevProps) {
-    const { newTechnology, manager } = this.props;
+    const {
+      newTechnology,
+      manager,
+      location,
+      editSingleProject,
+      createProject
+    } = this.props;
     const { inputs } = this.state;
 
-    this.checkForSubmissionStatus(prevProps);
+    if (location.projectDetails)
+      this.handleAPISubmissionStatus(
+        prevProps.editSingleProject,
+        editSingleProject
+      );
+    else this.handleAPISubmissionStatus(prevProps.createProject, createProject);
 
     if (prevProps.newTechnology !== newTechnology)
       inputs.technologies.addSelection(newTechnology);
     if (prevProps.manager !== manager) inputs.manager.setStatus('normal', '');
   }
 
-  /**
-   * Checks for any change in the create project API post request
-   *
-   * @param object prevProps The component's previous props
-   */
-  checkForSubmissionStatus = prevProps => {
-    const { createProject, history } = this.props;
-
-    if (prevProps.createProject.loading && !createProject.loading) {
-      if (
-        createProject.error &&
-        prevProps.createNewProject.error !== createProject.error
-      )
-        this.handleSubmissionError(createProject.error);
-      else history.replace('/cadre/projects');
+  handleAPISubmissionStatus = (oldState, newState) => {
+    const { history } = this.props;
+    if (oldState.loading && !newState.loading) {
+      if (newState.error && oldState.error !== newState.error)
+        this.handleSubmissionError(newState.error);
+      else {
+        let projectId;
+        if (newState.data.id) projectId = newState.data.id;
+        if (typeof projectId === 'number')
+          return history.push(`/cadre/projects/${projectId}`);
+      }
     }
+    return true;
   };
 
   /**
@@ -71,7 +89,7 @@ class ProjectForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { inputs } = this.state;
-    const { project, createNewProject } = this.props;
+    const { createNewProject, editProject, location } = this.props;
 
     const textInputs = this.getTextInputs(inputs);
     const invalidInput = this.checkInputs(textInputs);
@@ -82,7 +100,9 @@ class ProjectForm extends Component {
     }
 
     const projectDetails = this.processFormData(inputs);
-    return !project.name ? createNewProject(projectDetails) : true;
+    return !location.projectDetails
+      ? createNewProject(projectDetails)
+      : editProject(projectDetails, this.props);
   };
 
   /**
@@ -112,24 +132,31 @@ class ProjectForm extends Component {
    * @return object An object containing the input values
    */
   processFormData = inputs => {
-    const { manager } = this.props;
-    const projectDetails = {};
+    const { manager, location } = this.props;
+    const projectId = location.projectDetails
+      ? location.projectDetails.id
+      : null;
+    const projectInformation = {};
 
     Object.values(inputs).forEach(input => {
-      if (input.getValue()) projectDetails[input.props.name] = input.getValue();
+      if (input.getValue())
+        projectInformation[input.props.name] = input.getValue();
     });
 
-    if (manager.id === projectDetails.manager.id)
-      projectDetails.manager = JSON.stringify(manager);
-    else projectDetails.manager = projectDetails.manager.id;
+    if (manager.id === projectInformation.manager.id)
+      projectInformation.manager = JSON.stringify(manager);
+    else projectInformation.manager = projectInformation.manager.id;
 
     if (inputs.logo.hasContent())
-      projectDetails.logo = projectDetails.logo[0].url;
+      projectInformation.logo = projectInformation.logo[0].url;
 
-    projectDetails.technologies = JSON.stringify(projectDetails.technologies);
-    projectDetails.channels = JSON.stringify(projectDetails.channels);
-    projectDetails.type = projectDetails.type.id;
-    return projectDetails;
+    projectInformation.technologies = JSON.stringify(
+      projectInformation.technologies
+    );
+    projectInformation.channels = JSON.stringify(projectInformation.channels);
+    projectInformation.type = projectInformation.type.id;
+    projectInformation.id = projectId || null;
+    return projectInformation;
   };
 
   renderInput = (InputComponent, props) => (
@@ -172,10 +199,9 @@ class ProjectForm extends Component {
     <FormInputs.LinksUploadInput parent={this} {...props} />
   );
 
-  renderForm = () => {
-    const { project } = this.props;
+  renderForm = (projectDetails = null) => {
     const props = {
-      project,
+      projectDetails,
       renderTextInput: this.renderTextInput,
       renderDropdown: this.renderDropdown,
       renderUploadInput: this.renderUploadInput,
@@ -190,28 +216,37 @@ class ProjectForm extends Component {
     );
   };
 
-  renderSubmitButton = createProject => (
-    <div className="col-12">
-      <div className="row justify-content-end mr-0 mt-3">
-        {createProject.loading ? (
-          <Loader size="small" />
-        ) : (
-          <button
-            id="submit"
-            type="button"
-            className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
-            onClick={this.handleSubmit}
-          >
-            SUBMIT
-          </button>
-        )}
+  renderSubmitButton = createProject => {
+    const { location } = this.props;
+    const currentPath = location.pathname;
+    const buttonName = currentPath.includes('create') ? 'SUBMIT' : 'SAVE';
+
+    return (
+      <div className="col-12">
+        <div className="row justify-content-end mr-0 mt-3">
+          {createProject.loading ? (
+            <Loader size="small" />
+          ) : (
+            <button
+              id="submit"
+              type="button"
+              className="col-6 col-md-4 col-lg-2 btn btn-primary project-form__submit"
+              onClick={this.handleSubmit}
+            >
+              {buttonName}
+            </button>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   render() {
-    const { project, createProject, history } = this.props;
-    const title = project.name ? 'Edit Project' : 'Add New Project';
+    const { createProject, history, location } = this.props;
+    const projectDetails = location.projectDetails
+      ? location.projectDetails
+      : {};
+    const title = projectDetails.name ? 'Edit Project' : 'Add New Project';
 
     return (
       <div className="project-form row ml-0 ml-0 pl-2 pl-md-5 pr-2 pr-md-5">
@@ -221,7 +256,7 @@ class ProjectForm extends Component {
           <ReturnButton history={history} />
           <Title title={title} />
         </div>
-        {this.renderForm()}
+        {this.renderForm(projectDetails)}
         {this.renderSubmitButton(createProject)}
       </div>
     );
@@ -229,16 +264,15 @@ class ProjectForm extends Component {
 }
 
 ProjectForm.propTypes = {
-  project: PropTypes.shape(),
   manager: PropTypes.shape().isRequired,
   newTechnology: PropTypes.string.isRequired,
   createProject: PropTypes.shape().isRequired,
   createNewProject: PropTypes.func.isRequired,
-  history: PropTypes.shape().isRequired
-};
-
-ProjectForm.defaultProps = {
-  project: {}
+  history: PropTypes.shape().isRequired,
+  match: PropTypes.shape().isRequired,
+  editProject: PropTypes.func.isRequired,
+  editSingleProject: PropTypes.shape().isRequired,
+  location: PropTypes.shape().isRequired
 };
 
 export default ProjectForm;

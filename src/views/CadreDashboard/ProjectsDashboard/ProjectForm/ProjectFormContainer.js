@@ -1,20 +1,30 @@
 import { connect } from 'react-redux';
 import ProjectForm from './ProjectForm';
-import { createNewProject } from '../../../../redux/actionCreators/projectsActions';
+import {
+  createNewProject,
+  editProject,
+  getAProject
+} from '../../../../redux/actionCreators/projectsActions';
 
 export const mapStateToProps = ({
   createProject,
   addProjectManager: { manager },
-  addProjectTechnology: { technology }
+  addProjectTechnology: { technology },
+  editSingleProject,
+  getProject
 }) => ({
   createProject,
   manager,
-  newTechnology: technology
+  newTechnology: technology,
+  editSingleProject,
+  getProject
 });
 
 export default connect(
   mapStateToProps,
   {
-    createNewProject
+    createNewProject,
+    editProject,
+    getAProject
   }
 )(ProjectForm);

@@ -44,16 +44,23 @@ ShallowWrapper {
     "props": Object {
       "createNewProject": [Function],
       "createProject": Object {
-        "data": Array [],
+        "data": Object {},
         "error": null,
         "loading": false,
       },
+      "editProject": [Function],
+      "editSingleProject": Object {
+        "data": Object {},
+        "error": null,
+        "loading": false,
+      },
+      "getAProject": [Function],
+      "getProject": undefined,
       "history": Object {
         "replace": [Function],
       },
       "manager": Object {},
       "newTechnology": "",
-      "project": Object {},
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -100,16 +107,23 @@ ShallowWrapper {
       "props": Object {
         "createNewProject": [Function],
         "createProject": Object {
-          "data": Array [],
+          "data": Object {},
           "error": null,
           "loading": false,
         },
+        "editProject": [Function],
+        "editSingleProject": Object {
+          "data": Object {},
+          "error": null,
+          "loading": false,
+        },
+        "getAProject": [Function],
+        "getProject": undefined,
         "history": Object {
           "replace": [Function],
         },
         "manager": Object {},
         "newTechnology": "",
-        "project": Object {},
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
@@ -184,10 +198,16 @@ ShallowWrapper {
 exports[`ProjectFormContainer component should map state to props 1`] = `
 Object {
   "createProject": Object {
-    "data": Array [],
+    "data": Object {},
     "error": null,
     "loading": false,
   },
+  "editSingleProject": Object {
+    "data": Object {},
+    "error": null,
+    "loading": false,
+  },
+  "getProject": undefined,
   "manager": Object {},
   "newTechnology": "",
 }

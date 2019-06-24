@@ -14,7 +14,12 @@ describe('Projects Dashboard', () => {
     match: {
       url: '/cadre/projects'
     },
-    history: {}
+    history: {},
+    location: {
+      projectDetails: {
+        name: 'Watch Tower'
+      }
+    }
   };
 
   /**
@@ -23,7 +28,10 @@ describe('Projects Dashboard', () => {
    * @param propOverrides Used to edit the props passed to the component when being mounted
    * @returns { wrapper, props }
    */
-  const setup = (testURL = '/cadre/projects/create') => {
+  const setup = (
+    testURL = '/cadre/projects/create',
+    optionalProps = defaultProps
+  ) => {
     const mockStore = configureStore([Thunk]);
     const store = mockStore({
       ...initialState,
@@ -36,7 +44,7 @@ describe('Projects Dashboard', () => {
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter keyLength={0} initialEntries={[testURL]}>
-          <ProjectsDashboard {...defaultProps} />
+          <ProjectsDashboard {...optionalProps} />
         </MemoryRouter>
       </Provider>
     );
@@ -44,17 +52,49 @@ describe('Projects Dashboard', () => {
   };
 
   it('renders correctly using valid location path', () => {
-    const { wrapper } = setup();
+    const createProps = {
+      match: {
+        url: '/cadre/projects'
+      },
+      history: {},
+      location: {
+        pathname: '/cadre/projects/create'
+      }
+    };
+    const { wrapper } = setup('/cadre/projects/create', createProps);
     expect(wrapper.find('ProjectForm').exists()).toBeTruthy();
   });
 
   it('renders the ProjectDetails page correctly', () => {
-    const { wrapper } = setup('/cadre/projects/details/1');
+    const { wrapper } = setup('/cadre/projects/1');
     expect(wrapper.find('ProjectDetails').exists()).toBeTruthy();
   });
 
-  it('renders correctly using invalid path location', () => {
-    const { wrapper } = setup('/cadre/projects/invalid');
-    expect(wrapper.find('ProjectForm').exists()).not.toBeTruthy();
+  it('renders the edit form correctly', () => {
+    const editProps = {
+      match: {
+        param: {
+          id: 1
+        },
+        url: '/cadre/projects'
+      },
+      history: {
+        push: jest.fn()
+      },
+      location: {
+        projectDetails: {
+          name: 'Watch Tower'
+        },
+        pathname: '/cadre/projects/1/edit',
+        allProjects: [mockProject]
+      }
+    };
+    const { wrapper } = setup('/cadre/projects/1/edit', editProps);
+    expect(wrapper.find('ProjectForm').exists()).toBeTruthy();
+  });
+
+  it('renders view projects correctly', () => {
+    const { wrapper } = setup('/cadre/projects/');
+    expect(wrapper.find('ProjectCard').exists()).toBeTruthy();
   });
 });

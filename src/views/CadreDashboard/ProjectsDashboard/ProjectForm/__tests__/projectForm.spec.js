@@ -4,12 +4,18 @@ import { Provider } from 'react-redux';
 import Thunk from 'redux-thunk';
 import waitForExpect from 'wait-for-expect';
 import configureStore from 'redux-mock-store';
+import * as actions from '../../../../../redux/actionCreators/projectsActions';
 
 import ProjectForm from '../ProjectForm';
 import initialState from '../../../../../redux/reducers/initialState';
 import { errorMessage } from '../helpers';
 
 jest.useFakeTimers();
+jest.spyOn(actions, 'editProject');
+actions.editProject.mockImplementation(() => ({ data: { id: 1 } }));
+
+jest.spyOn(actions, 'createNewProject');
+actions.createNewProject.mockImplementation(() => ({ data: { id: 1 } }));
 
 describe('Project Form', () => {
   const defaultProps = {
@@ -19,12 +25,21 @@ describe('Project Form', () => {
       name: 'Kingsley Obot'
     },
     createNewProject: jest.fn(),
+    editProject: jest.fn(),
     createProject: initialState.createProject,
+    editSingleProject: initialState.editSingleProject,
     manager: {},
     newTechnology: '',
     history: {
       goBack: jest.fn(),
-      replace: jest.fn()
+      replace: jest.fn(),
+      push: jest.fn()
+    },
+    match: {
+      url: ''
+    },
+    location: {
+      pathname: '/cadre/projects/create'
     }
   };
 
@@ -48,6 +63,11 @@ describe('Project Form', () => {
       id: 1,
       name: 'John Doe',
       email: 'johndoe@andela.com'
+    },
+    {
+      id: 2,
+      name: 'Jane Doe',
+      email: 'janedoe@andela.com'
     }
   ];
   const channels = [
@@ -55,14 +75,39 @@ describe('Project Form', () => {
       id: 'CK7V1DJ8Z',
       name: 'peace_test',
       label: 'peace_test'
+    },
+    {
+      id: 'CK7V1DJ8E',
+      name: 'general',
+      label: 'general'
     }
   ];
   const projectDetails = {
     name: 'project',
     type: 'internal',
-    technologies: 'laravel',
+    technologies: [{ id: 1, name: 'laravel' }],
     manager: '1',
     tagline: 'project tagline',
+    about: 'project about',
+    mockups: 'https://projects.invisionapp.com',
+    channels: channels[0].id,
+    logo:
+      'http://res.cloudinary.com/watchtowercloud/image/upload/v1560326497/c5of3nczopwykhgodslz.svg',
+    documents: [
+      {
+        name: 'name',
+        url: 'https://krypton-ah-stage.herokuapp.com/api/v1/articles'
+      }
+    ]
+  };
+
+  const editableProjectDetails = {
+    id: 1,
+    name: 'Edited project',
+    type: 'external',
+    technologies: [{ id: 1, name: 'php' }],
+    manager: '1',
+    tagline: 'Editted project tagline',
     about: 'project about',
     mockups: 'https://projects.invisionapp.com',
     channels: channels[0].id,
@@ -274,7 +319,7 @@ describe('Project Form', () => {
     wrapper
       .find('ProjectForm')
       .state('inputs')
-      .technologies.addSelection(projectDetails.technologies);
+      .technologies.addSelection(projectDetails.technologies[0].name);
     testSubmission(button, 0);
 
     addDropdownValue(wrapper, '#type', projectDetails.type);
@@ -316,8 +361,14 @@ describe('Project Form', () => {
       createProject: { ...initialState.createProject, loading: true }
     });
     wrapper.setProps(
-      { createProject: { ...initialState.createProject, loading: false } },
-      () => expect(defaultProps.history.replace).toHaveBeenCalled()
+      {
+        createProject: {
+          ...initialState.createProject,
+          loading: false,
+          data: { id: 1 }
+        }
+      },
+      () => expect(defaultProps.history.push).toHaveBeenCalled()
     );
   });
 
@@ -333,5 +384,59 @@ describe('Project Form', () => {
     wrapper.setState({ inputs: { technologies: input } });
     wrapper.setProps({ newTechnology: 'Laravel' });
     await waitForExpect(() => expect(addSelectionSpy).toEqual('Laravel'));
+  });
+
+  it('editing project details', () => {
+    const { wrapper } = setup(
+      {
+        user: {
+          picture: null,
+          detail: 'Watch Tower',
+          name: 'Kingsley Obot'
+        },
+        createNewProject: jest.fn(),
+        editProject: jest.fn(),
+        createProject: initialState.createProject,
+        editSingleProject: initialState.editSingleProject,
+        manager: {},
+        newTechnology: '',
+        history: {
+          goBack: jest.fn(),
+          replace: jest.fn(),
+          push: jest.fn()
+        },
+        location: {
+          pathname: '/cadre/projects/1/edit',
+          projectDetails
+        },
+        match: {
+          params: 1
+        }
+      },
+      true
+    );
+    const button = wrapper.find('.project-form__submit');
+
+    addInputValue(wrapper, '#name', editableProjectDetails.name);
+    addDropdownValue(wrapper, '#type', '');
+    addInputValue(wrapper, '#tagline', editableProjectDetails.tagline);
+    addInputValue(wrapper, '#about', editableProjectDetails.about);
+    addDropdownValue(wrapper, '#channels', editableProjectDetails.channels);
+    addDropdownValue(wrapper, '#manager', editableProjectDetails.manager);
+
+    wrapper
+      .find('ProjectForm')
+      .state('inputs')
+      .technologies.addSelection(editableProjectDetails.technologies[0].name);
+    testSubmission(button, 2);
+
+    addDropdownValue(wrapper, '#type', projectDetails.type);
+    testSubmission(button, 2);
+
+    addInputValue(wrapper, '#mockups', projectDetails.mockups);
+    testSubmission(button, 2);
+
+    const input = wrapper.find('#tagline');
+    expect(input.getDOMNode().value).toEqual(editableProjectDetails.tagline);
   });
 });

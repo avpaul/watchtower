@@ -9,7 +9,7 @@ import initialState from '../initialState';
 it('should return the initial state for unknown action type', () => {
   expect(createProjectVacanciesReducer(undefined, {})).toEqual({
     loading: false,
-    data: initialState.createProject.data,
+    data: initialState.createProjectVacancies.data,
     error: null
   });
 });
@@ -17,7 +17,7 @@ it('should return the initial state for unknown action type', () => {
 it('should set loading state on posting a new project', () => {
   const action = { type: CREATE_PROJECT_VACANCIES_REQUEST };
   expect(createProjectVacanciesReducer(undefined, action)).toMatchObject({
-    ...initialState.createProject,
+    ...initialState.createProjectVacancies,
     loading: true
   });
 });
@@ -29,7 +29,7 @@ it('should execute the success action type case on successful post', () => {
   };
 
   const newState = {
-    ...initialState.createProject,
+    ...initialState.createProjectVacancies,
     data: action.data
   };
 
@@ -45,7 +45,7 @@ it('should execute the failure action type case on failed post', () => {
   };
 
   const newState = {
-    ...initialState.createProject,
+    ...initialState.createProjectVacancies,
     error: action.error
   };
 

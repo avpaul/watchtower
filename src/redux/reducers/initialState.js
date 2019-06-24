@@ -3,9 +3,15 @@ import { ALL } from '../constants/fellowFilters';
 export const INDEX_PAGE_SIZE_DEFAULT = 20;
 export const INDEX_PAGE_SIZE_OPTIONS = ['5', '10', '19', '30', '50', '100'];
 
-const genericAPIState = {
+const genericAPIStateArray = {
   loading: false,
   data: [],
+  error: null
+};
+
+const genericAPIStateObject = {
+  loading: false,
+  data: {},
   error: null
 };
 
@@ -174,18 +180,20 @@ export default {
   pipDeactivation: {
     success: null
   },
-  createProject: genericAPIState,
-  createProjectVacancies: genericAPIState,
-  allProjects: genericAPIState,
-  fetchProjectManagers: genericAPIState,
-  fetchProjectTechnologies: genericAPIState,
+  createProject: genericAPIStateObject,
+  createProjectVacancies: genericAPIStateObject,
+  allProjects: genericAPIStateArray,
+  fetchProjectManagers: genericAPIStateArray,
+  fetchProjectTechnologies: genericAPIStateArray,
+  editSingleProject: genericAPIStateObject,
+  singleProject: genericAPIStateObject,
   addProjectManager: {
     manager: {}
   },
   addProjectTechnology: {
     technology: ''
   },
-  fetchSlackChannels: genericAPIState,
+  fetchSlackChannels: genericAPIStateArray,
   cadreEngineers: {
     loading: false,
     cadreEngineers: [],
@@ -201,7 +209,7 @@ export default {
       total: 0
     }
   },
-  allRoles: genericAPIState,
-  fetchAllRoles: genericAPIState,
-  fetchActiveRole: genericAPIState
+  allRoles: genericAPIStateArray,
+  fetchAllRoles: genericAPIStateArray,
+  fetchActiveRole: genericAPIStateArray
 };
