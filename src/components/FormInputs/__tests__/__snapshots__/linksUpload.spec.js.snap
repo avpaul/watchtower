@@ -7,12 +7,7 @@ ShallowWrapper {
     buttonLabel="Select"
     componentStateKey="inputs"
     label="Level-Up Links"
-    links={
-        Array [
-            "https://www.mmm.com",
-            "randomstring",
-          ]
-    }
+    links={Array []}
     name="links"
     parent={
         Object {
@@ -67,7 +62,7 @@ ShallowWrapper {
                                         className="modal-header"
                               >
                                         <h1>
-                                                  Add level-up links
+                                                  Add Relevant links
                                         </h1>
                               </div>
                               <div
@@ -78,9 +73,12 @@ ShallowWrapper {
                                                   projectLinks={
                                                             Array [
                                                                       "",
+                                                                      "",
+                                                                      "",
+                                                                      "",
+                                                                      "",
                                                                     ]
                                                   }
-                                                  success={true}
                                                   textInputChange={[Function]}
                                                   tooltipMessage="Add New Link"
                                         />
@@ -168,7 +166,7 @@ ShallowWrapper {
                                     className="modal-header"
                         >
                                     <h1>
-                                                Add level-up links
+                                                Add Relevant links
                                     </h1>
                         </div>
                         <div
@@ -179,9 +177,12 @@ ShallowWrapper {
                                                 projectLinks={
                                                             Array [
                                                                         "",
+                                                                        "",
+                                                                        "",
+                                                                        "",
+                                                                        "",
                                                                       ]
                                                 }
-                                                success={true}
                                                 textInputChange={[Function]}
                                                 tooltipMessage="Add New Link"
                                     />
@@ -227,7 +228,7 @@ ShallowWrapper {
                             className="modal-header"
               >
                             <h1>
-                                          Add level-up links
+                                          Add Relevant links
                             </h1>
               </div>
               <div
@@ -238,9 +239,12 @@ ShallowWrapper {
                                           projectLinks={
                                                         Array [
                                                                       "",
+                                                                      "",
+                                                                      "",
+                                                                      "",
+                                                                      "",
                                                                     ]
                                           }
-                                          success={true}
                                           textInputChange={[Function]}
                                           tooltipMessage="Add New Link"
                             />
@@ -282,7 +286,7 @@ ShallowWrapper {
                   className="modal-header"
 >
                   <h1>
-                                    Add level-up links
+                                    Add Relevant links
                   </h1>
 </div>,
                 <div
@@ -293,9 +297,12 @@ ShallowWrapper {
                                     projectLinks={
                                                       Array [
                                                                         "",
+                                                                        "",
+                                                                        "",
+                                                                        "",
+                                                                        "",
                                                                       ]
                                     }
-                                    success={true}
                                     textInputChange={[Function]}
                                     tooltipMessage="Add New Link"
                   />
@@ -333,7 +340,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <h1>
-                    Add level-up links
+                    Add Relevant links
 </h1>,
                   "className": "modal-header",
                 },
@@ -343,10 +350,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Add level-up links",
+                    "children": "Add Relevant links",
                   },
                   "ref": null,
-                  "rendered": "Add level-up links",
+                  "rendered": "Add Relevant links",
                   "type": "h1",
                 },
                 "type": "div",
@@ -361,9 +368,12 @@ ShallowWrapper {
                     projectLinks={
                                         Array [
                                                             "",
+                                                            "",
+                                                            "",
+                                                            "",
+                                                            "",
                                                           ]
                     }
-                    success={true}
                     textInputChange={[Function]}
                     tooltipMessage="Add New Link"
 />,
@@ -378,8 +388,11 @@ ShallowWrapper {
                     "addNewProjectLink": [Function],
                     "projectLinks": Array [
                       "",
+                      "",
+                      "",
+                      "",
+                      "",
                     ],
-                    "success": true,
                     "textInputChange": [Function],
                     "tooltipMessage": "Add New Link",
                   },
@@ -501,7 +514,7 @@ ShallowWrapper {
                                                 className="modal-header"
                                     >
                                                 <h1>
-                                                            Add level-up links
+                                                            Add Relevant links
                                                 </h1>
                                     </div>
                                     <div
@@ -512,9 +525,12 @@ ShallowWrapper {
                                                             projectLinks={
                                                                         Array [
                                                                                     "",
+                                                                                    "",
+                                                                                    "",
+                                                                                    "",
+                                                                                    "",
                                                                                   ]
                                                             }
-                                                            success={true}
                                                             textInputChange={[Function]}
                                                             tooltipMessage="Add New Link"
                                                 />
@@ -602,7 +618,7 @@ ShallowWrapper {
                                           className="modal-header"
                             >
                                           <h1>
-                                                        Add level-up links
+                                                        Add Relevant links
                                           </h1>
                             </div>
                             <div
@@ -613,9 +629,12 @@ ShallowWrapper {
                                                         projectLinks={
                                                                       Array [
                                                                                     "",
+                                                                                    "",
+                                                                                    "",
+                                                                                    "",
+                                                                                    "",
                                                                                   ]
                                                         }
-                                                        success={true}
                                                         textInputChange={[Function]}
                                                         tooltipMessage="Add New Link"
                                           />
@@ -661,7 +680,7 @@ ShallowWrapper {
                                 className="modal-header"
                 >
                                 <h1>
-                                                Add level-up links
+                                                Add Relevant links
                                 </h1>
                 </div>
                 <div
@@ -672,9 +691,12 @@ ShallowWrapper {
                                                 projectLinks={
                                                                 Array [
                                                                                 "",
+                                                                                "",
+                                                                                "",
+                                                                                "",
+                                                                                "",
                                                                               ]
                                                 }
-                                                success={true}
                                                 textInputChange={[Function]}
                                                 tooltipMessage="Add New Link"
                                 />
@@ -716,7 +738,7 @@ ShallowWrapper {
                     className="modal-header"
 >
                     <h1>
-                                        Add level-up links
+                                        Add Relevant links
                     </h1>
 </div>,
                   <div
@@ -727,9 +749,12 @@ ShallowWrapper {
                                         projectLinks={
                                                             Array [
                                                                                 "",
+                                                                                "",
+                                                                                "",
+                                                                                "",
+                                                                                "",
                                                                               ]
                                         }
-                                        success={true}
                                         textInputChange={[Function]}
                                         tooltipMessage="Add New Link"
                     />
@@ -767,7 +792,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <h1>
-                      Add level-up links
+                      Add Relevant links
 </h1>,
                     "className": "modal-header",
                   },
@@ -777,10 +802,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Add level-up links",
+                      "children": "Add Relevant links",
                     },
                     "ref": null,
-                    "rendered": "Add level-up links",
+                    "rendered": "Add Relevant links",
                     "type": "h1",
                   },
                   "type": "div",
@@ -795,9 +820,12 @@ ShallowWrapper {
                       projectLinks={
                                             Array [
                                                                   "",
+                                                                  "",
+                                                                  "",
+                                                                  "",
+                                                                  "",
                                                                 ]
                       }
-                      success={true}
                       textInputChange={[Function]}
                       tooltipMessage="Add New Link"
 />,
@@ -812,8 +840,11 @@ ShallowWrapper {
                       "addNewProjectLink": [Function],
                       "projectLinks": Array [
                         "",
+                        "",
+                        "",
+                        "",
+                        "",
                       ],
-                      "success": true,
                       "textInputChange": [Function],
                       "tooltipMessage": "Add New Link",
                     },

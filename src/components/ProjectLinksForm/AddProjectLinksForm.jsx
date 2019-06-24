@@ -2,23 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../FormInputs/textInput.css';
 import AddIcon from '../../static/plus.png';
+import { urlRegex } from '../../utils/regex';
 
 const AddProjectLinksForm = ({
   projectLinks,
   textInputChange,
   addNewProjectLink,
-  tooltipMessage,
-  success
+  tooltipMessage
 }) => (
   <div className="form-container">
-    <button
-      type="button"
-      onClick={addNewProjectLink}
-      className="url-upload-button"
-    >
-      <span className="tooltiptext">{tooltipMessage}</span>
-      <img src={AddIcon} alt="Add icon" />
-    </button>
     <form className="url-upload">
       {projectLinks.map((projectLink, index) => (
         <div className="input-group wt-text-input wt-text-input--normal mb-3">
@@ -29,7 +21,7 @@ const AddProjectLinksForm = ({
             onChange={textInputChange(index)}
             required
           />
-          {success === false && index === 0 ? (
+          {!urlRegex.test(projectLink) && projectLink !== '' ? (
             <span className="visible-error">Please enter a valid URL</span>
           ) : (
             <span />
@@ -37,6 +29,14 @@ const AddProjectLinksForm = ({
         </div>
       ))}
     </form>
+    <button
+      type="button"
+      onClick={addNewProjectLink}
+      className="url-upload-button"
+    >
+      <span className="tooltiptext">{tooltipMessage}</span>
+      <img src={AddIcon} alt="Add icon" />
+    </button>
   </div>
 );
 
@@ -44,13 +44,11 @@ AddProjectLinksForm.propTypes = {
   projectLinks: PropTypes.instanceOf(Array).isRequired,
   textInputChange: PropTypes.func.isRequired,
   addNewProjectLink: PropTypes.func.isRequired,
-  tooltipMessage: PropTypes.string,
-  success: PropTypes.bool
+  tooltipMessage: PropTypes.string
 };
 
 AddProjectLinksForm.defaultProps = {
-  tooltipMessage: '',
-  success: true
+  tooltipMessage: ''
 };
 
 export default AddProjectLinksForm;
