@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import CadreSubmenu from '../../components/CadreSubmenu';
@@ -8,7 +8,6 @@ import AddTechnologyModal from './ProjectsDashboard/AddTechnologyModal';
 import VacanciesDashboard from './VacanciesDashboard';
 import RolesDashboard from './RolesDashboard';
 import ReportsDashboard from './ReportsDashboard';
-
 import './CadreDashboard.css';
 
 class CadreDashboard extends Component {
@@ -70,7 +69,7 @@ class CadreDashboard extends Component {
   render() {
     const { routes } = this.state;
     return (
-      <Fragment>
+      <div>
         <div className="container-fluid page-content">
           <AddManagerModal />
           <AddTechnologyModal />
@@ -84,7 +83,7 @@ class CadreDashboard extends Component {
             </div>
           </div>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RoleCard from '../RoleCard/RoleCard';
+import './MapProjectRoleCard.css';
 
 function MapProjectRoleCard({ roleData }) {
   return (
-    <div>
-      <div className="row">
-        {roleData.map(role => (
-          <div className="col-4 mb-4" key={role.id}>
-            <RoleCard role={role} />
-          </div>
-        ))}
-      </div>
+    <div className="row">
+      {roleData.map(role => (
+        <div
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
+          key={role.id}
+        >
+          <RoleCard role={role} />
+        </div>
+      ))}
     </div>
   );
 }

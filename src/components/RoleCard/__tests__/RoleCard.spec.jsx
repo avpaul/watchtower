@@ -11,7 +11,7 @@ describe('Test Role Card component', () => {
       role: {
         id: 1,
         name: 'test role',
-        description: 'test role description',
+        description: 'test role description should render role card instance properly should render role card instance properly',
         active_engineers_count: 1,
         vacancies_count: 3,
         applications_count: 2,

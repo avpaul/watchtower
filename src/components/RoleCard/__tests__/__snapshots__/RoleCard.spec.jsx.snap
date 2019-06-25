@@ -9,7 +9,7 @@ ShallowWrapper {
             "active_engineers_count": 1,
             "applications_count": 2,
             "created_at": "2019-06-04 04:56:39",
-            "description": "test role description",
+            "description": "test role description should render role card instance properly should render role card instance properly",
             "id": 1,
             "name": "test role",
             "updated_at": "2019-06-04 04:56:39",
@@ -71,7 +71,7 @@ ShallowWrapper {
           <div
                     className="col-6"
           >
-                    <p
+                    <div
                               className="role-card__attributes"
                     >
                               Applicants 
@@ -86,12 +86,12 @@ ShallowWrapper {
                                                   2
                                         </span>
                               </div>
-                    </p>
+                    </div>
           </div>
           <div
                     className="col-6"
           >
-                    <p
+                    <div
                               className="role-card__attributes"
                     >
                               Active Engrs. 
@@ -106,7 +106,7 @@ ShallowWrapper {
                                                   1
                                         </span>
                               </div>
-                    </p>
+                    </div>
           </div>
 </div>,
         <Unknown>
@@ -118,7 +118,7 @@ ShallowWrapper {
           <p
                     className="role-card__description"
           >
-                    test role description...
+                    test role description should render role card instance properly should render role card instance properly
                     <span
                               className="role-card__attributes-seemore"
                               onClick={[Function]}
@@ -126,6 +126,7 @@ ShallowWrapper {
                               role="button"
                               tabIndex="-1"
                     >
+                              ...
                                see more
                     </span>
           </p>
@@ -266,7 +267,7 @@ ShallowWrapper {
             <div
               className="col-6"
 >
-              <p
+              <div
                             className="role-card__attributes"
               >
                             Applicants 
@@ -281,12 +282,12 @@ ShallowWrapper {
                                                         2
                                           </span>
                             </div>
-              </p>
+              </div>
 </div>,
             <div
               className="col-6"
 >
-              <p
+              <div
                             className="role-card__attributes"
               >
                             Active Engrs. 
@@ -301,7 +302,7 @@ ShallowWrapper {
                                                         1
                                           </span>
                             </div>
-              </p>
+              </div>
 </div>,
           ],
           "className": "row",
@@ -313,7 +314,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <p
+              "children": <div
                 className="role-card__attributes"
 >
                 Applicants 
@@ -328,7 +329,7 @@ ShallowWrapper {
                                                 2
                                 </span>
                 </div>
-</p>,
+</div>,
               "className": "col-6",
             },
             "ref": null,
@@ -394,7 +395,7 @@ ShallowWrapper {
                   "type": "div",
                 },
               ],
-              "type": "p",
+              "type": "div",
             },
             "type": "div",
           },
@@ -403,7 +404,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <p
+              "children": <div
                 className="role-card__attributes"
 >
                 Active Engrs. 
@@ -418,7 +419,7 @@ ShallowWrapper {
                                                 1
                                 </span>
                 </div>
-</p>,
+</div>,
               "className": "col-6",
             },
             "ref": null,
@@ -484,7 +485,7 @@ ShallowWrapper {
                   "type": "div",
                 },
               ],
-              "type": "p",
+              "type": "div",
             },
             "type": "div",
           },
@@ -505,7 +506,7 @@ ShallowWrapper {
             <p
               className="role-card__description"
 >
-              test role description...
+              test role description should render role card instance properly should render role card instance properly
               <span
                             className="role-card__attributes-seemore"
                             onClick={[Function]}
@@ -513,6 +514,7 @@ ShallowWrapper {
                             role="button"
                             tabIndex="-1"
               >
+                            ...
                              see more
               </span>
 </p>,
@@ -538,7 +540,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "test role description...",
+                "test role description should render role card instance properly should render role card instance properly",
                 <span
                   className="role-card__attributes-seemore"
                   onClick={[Function]}
@@ -546,6 +548,7 @@ ShallowWrapper {
                   role="button"
                   tabIndex="-1"
 >
+                  ...
                    see more
 </span>,
               ],
@@ -553,13 +556,16 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              "test role description...",
+              "test role description should render role card instance properly should render role card instance properly",
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": " see more",
+                  "children": Array [
+                    "...",
+                    " see more",
+                  ],
                   "className": "role-card__attributes-seemore",
                   "onClick": [Function],
                   "onKeyPress": [Function],
@@ -567,7 +573,10 @@ ShallowWrapper {
                   "tabIndex": "-1",
                 },
                 "ref": null,
-                "rendered": " see more",
+                "rendered": Array [
+                  "...",
+                  " see more",
+                ],
                 "type": "span",
               },
             ],
@@ -625,7 +634,7 @@ ShallowWrapper {
             <div
                         className="col-6"
             >
-                        <p
+                        <div
                                     className="role-card__attributes"
                         >
                                     Applicants 
@@ -640,12 +649,12 @@ ShallowWrapper {
                                                             2
                                                 </span>
                                     </div>
-                        </p>
+                        </div>
             </div>
             <div
                         className="col-6"
             >
-                        <p
+                        <div
                                     className="role-card__attributes"
                         >
                                     Active Engrs. 
@@ -660,7 +669,7 @@ ShallowWrapper {
                                                             1
                                                 </span>
                                     </div>
-                        </p>
+                        </div>
             </div>
 </div>,
           <Unknown>
@@ -672,7 +681,7 @@ ShallowWrapper {
             <p
                         className="role-card__description"
             >
-                        test role description...
+                        test role description should render role card instance properly should render role card instance properly
                         <span
                                     className="role-card__attributes-seemore"
                                     onClick={[Function]}
@@ -680,6 +689,7 @@ ShallowWrapper {
                                     role="button"
                                     tabIndex="-1"
                         >
+                                    ...
                                      see more
                         </span>
             </p>
@@ -820,7 +830,7 @@ ShallowWrapper {
               <div
                 className="col-6"
 >
-                <p
+                <div
                                 className="role-card__attributes"
                 >
                                 Applicants 
@@ -835,12 +845,12 @@ ShallowWrapper {
                                                                 2
                                                 </span>
                                 </div>
-                </p>
+                </div>
 </div>,
               <div
                 className="col-6"
 >
-                <p
+                <div
                                 className="role-card__attributes"
                 >
                                 Active Engrs. 
@@ -855,7 +865,7 @@ ShallowWrapper {
                                                                 1
                                                 </span>
                                 </div>
-                </p>
+                </div>
 </div>,
             ],
             "className": "row",
@@ -867,7 +877,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <p
+                "children": <div
                   className="role-card__attributes"
 >
                   Applicants 
@@ -882,7 +892,7 @@ ShallowWrapper {
                                                       2
                                     </span>
                   </div>
-</p>,
+</div>,
                 "className": "col-6",
               },
               "ref": null,
@@ -948,7 +958,7 @@ ShallowWrapper {
                     "type": "div",
                   },
                 ],
-                "type": "p",
+                "type": "div",
               },
               "type": "div",
             },
@@ -957,7 +967,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <p
+                "children": <div
                   className="role-card__attributes"
 >
                   Active Engrs. 
@@ -972,7 +982,7 @@ ShallowWrapper {
                                                       1
                                     </span>
                   </div>
-</p>,
+</div>,
                 "className": "col-6",
               },
               "ref": null,
@@ -1038,7 +1048,7 @@ ShallowWrapper {
                     "type": "div",
                   },
                 ],
-                "type": "p",
+                "type": "div",
               },
               "type": "div",
             },
@@ -1059,7 +1069,7 @@ ShallowWrapper {
               <p
                 className="role-card__description"
 >
-                test role description...
+                test role description should render role card instance properly should render role card instance properly
                 <span
                                 className="role-card__attributes-seemore"
                                 onClick={[Function]}
@@ -1067,6 +1077,7 @@ ShallowWrapper {
                                 role="button"
                                 tabIndex="-1"
                 >
+                                ...
                                  see more
                 </span>
 </p>,
@@ -1092,7 +1103,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "test role description...",
+                  "test role description should render role card instance properly should render role card instance properly",
                   <span
                     className="role-card__attributes-seemore"
                     onClick={[Function]}
@@ -1100,6 +1111,7 @@ ShallowWrapper {
                     role="button"
                     tabIndex="-1"
 >
+                    ...
                      see more
 </span>,
                 ],
@@ -1107,13 +1119,16 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                "test role description...",
+                "test role description should render role card instance properly should render role card instance properly",
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": " see more",
+                    "children": Array [
+                      "...",
+                      " see more",
+                    ],
                     "className": "role-card__attributes-seemore",
                     "onClick": [Function],
                     "onKeyPress": [Function],
@@ -1121,7 +1136,10 @@ ShallowWrapper {
                     "tabIndex": "-1",
                   },
                   "ref": null,
-                  "rendered": " see more",
+                  "rendered": Array [
+                    "...",
+                    " see more",
+                  ],
                   "type": "span",
                 },
               ],

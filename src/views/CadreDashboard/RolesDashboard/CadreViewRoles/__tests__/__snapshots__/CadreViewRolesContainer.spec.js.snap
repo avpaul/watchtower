@@ -37,7 +37,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "allRoles": Object {},
+      "allRoles": Object {
+        "data": Array [],
+        "error": null,
+        "loading": false,
+      },
       "fetchAllRoles": [Function],
       "store": Object {
         "clearActions": [Function],
@@ -83,7 +87,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "allRoles": Object {},
+        "allRoles": Object {
+          "data": Array [],
+          "error": null,
+          "loading": false,
+        },
         "fetchAllRoles": [Function],
         "store": Object {
           "clearActions": [Function],
@@ -158,6 +166,10 @@ ShallowWrapper {
 
 exports[`CadreViewRolesContainer component should map state to props 1`] = `
 Object {
-  "allRoles": undefined,
+  "allRoles": Object {
+    "data": Array [],
+    "error": null,
+    "loading": false,
+  },
 }
 `;

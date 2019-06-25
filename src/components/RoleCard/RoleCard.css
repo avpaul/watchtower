@@ -1,7 +1,7 @@
 .role-card {
   box-sizing: border-box;
   padding: 15px;
-  height: auto;
+  min-height: 325px;
   width: 302px;
   border: 1px solid rgba(216, 216, 216, 0.35);
   border-radius: 9px;

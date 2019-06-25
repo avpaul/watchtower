@@ -20,7 +20,24 @@ class RoleCard extends React.Component {
     const { role } = this.props;
     return showMore
       ? role.description
-      : `${role.description.substring(0, 150)}...`;
+      : `${role.description.substring(0, 150)}`;
+  };
+
+  renderShowMoreButton = showMore => {
+    const { role } = this.props;
+    return role.description.length < 100 ? (
+      ''
+    ) : (
+      <span
+        className="role-card__attributes-seemore"
+        onClick={this.handleShowMoreClick}
+        onKeyPress={this.handleShowMoreClick}
+        role="button"
+        tabIndex="-1"
+      >
+        ...{showMore ? ' hide' : ' see more'}
+      </span>
+    );
   };
 
   renderDescription = showMore => (
@@ -28,15 +45,7 @@ class RoleCard extends React.Component {
       <p className="role-card__description-title mt-2 mb-1">Description</p>
       <p className="role-card__description">
         {this.renderFullDescription()}
-        <span
-          className="role-card__attributes-seemore"
-          onClick={this.handleShowMoreClick}
-          onKeyPress={this.handleShowMoreClick}
-          role="button"
-          tabIndex="-1"
-        >
-          {showMore ? ' hide' : ' see more'}
-        </span>
+        {this.renderShowMoreButton(showMore)}
       </p>
     </React.Fragment>
   );
@@ -44,24 +53,24 @@ class RoleCard extends React.Component {
   renderPositionsCount = role => (
     <div className="row">
       <div className="col-6">
-        <p className="role-card__attributes">
+        <div className="role-card__attributes">
           Applicants <br />{' '}
           <div className="text-left">
             <span className="role-card__attributes-count">
               {role.applications_count}
             </span>
           </div>
-        </p>
+        </div>
       </div>
       <div className="col-6">
-        <p className="role-card__attributes">
+        <div className="role-card__attributes">
           Active Engrs. <br />{' '}
           <div className="text-left">
             <span className="role-card__attributes-count">
               {role.active_engineers_count}
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
   );

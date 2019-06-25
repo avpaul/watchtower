@@ -43,15 +43,14 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="row"
+      "children": Array [
+        <div
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
 >
-        <div
-                className="col-4 mb-4"
-        >
-                <RoleCard
-                        role={
-                                Object {
+          <RoleCard
+                    role={
+                              Object {
                                         "active_engineers_count": 1,
                                         "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
@@ -61,38 +60,136 @@ ShallowWrapper {
                                         "updated_at": "2019-06-04 04:56:39",
                                         "vacancies_count": 3,
                                       }
-                        }
-                />
-        </div>
-        <div
-                className="col-4 mb-4"
-        >
-                <RoleCard
-                        role={
-                                Object {
-                                        "active_engineers_count": 1,
-                                        "applications_count": 2,
-                                        "created_at": "2019-06-04 04:56:39",
-                                        "description": "test role description",
-                                        "id": 1,
-                                        "name": "test role",
-                                        "updated_at": "2019-06-04 04:56:39",
-                                        "vacancies_count": 3,
-                                      }
-                        }
-                />
-        </div>
+                    }
+          />
 </div>,
+        <div
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
+>
+          <RoleCard
+                    role={
+                              Object {
+                                        "active_engineers_count": 1,
+                                        "applications_count": 2,
+                                        "created_at": "2019-06-04 04:56:39",
+                                        "description": "test role description",
+                                        "id": 1,
+                                        "name": "test role",
+                                        "updated_at": "2019-06-04 04:56:39",
+                                        "vacancies_count": 3,
+                                      }
+                    }
+          />
+</div>,
+      ],
+      "className": "row",
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <RoleCard
+            role={
+                        Object {
+                                    "active_engineers_count": 1,
+                                    "applications_count": 2,
+                                    "created_at": "2019-06-04 04:56:39",
+                                    "description": "test role description",
+                                    "id": 1,
+                                    "name": "test role",
+                                    "updated_at": "2019-06-04 04:56:39",
+                                    "vacancies_count": 3,
+                                  }
+            }
+/>,
+          "className": "role-card__grid mb-4 mr-4",
+          "id": "large-screen",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "role": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <RoleCard
+            role={
+                        Object {
+                                    "active_engineers_count": 1,
+                                    "applications_count": 2,
+                                    "created_at": "2019-06-04 04:56:39",
+                                    "description": "test role description",
+                                    "id": 1,
+                                    "name": "test role",
+                                    "updated_at": "2019-06-04 04:56:39",
+                                    "vacancies_count": 3,
+                                  }
+            }
+/>,
+          "className": "role-card__grid mb-4 mr-4",
+          "id": "large-screen",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "role": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
-            className="col-4 mb-4"
+            className="role-card__grid mb-4 mr-4"
+            id="large-screen"
 >
             <RoleCard
                         role={
@@ -110,7 +207,8 @@ ShallowWrapper {
             />
 </div>,
           <div
-            className="col-4 mb-4"
+            className="role-card__grid mb-4 mr-4"
+            id="large-screen"
 >
             <RoleCard
                         role={
@@ -151,7 +249,8 @@ ShallowWrapper {
                                         }
               }
 />,
-            "className": "col-4 mb-4",
+            "className": "role-card__grid mb-4 mr-4",
+            "id": "large-screen",
           },
           "ref": null,
           "rendered": Object {
@@ -195,7 +294,8 @@ ShallowWrapper {
                                         }
               }
 />,
-            "className": "col-4 mb-4",
+            "className": "role-card__grid mb-4 mr-4",
+            "id": "large-screen",
           },
           "ref": null,
           "rendered": Object {
@@ -221,196 +321,6 @@ ShallowWrapper {
           "type": "div",
         },
       ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="row"
->
-          <div
-                    className="col-4 mb-4"
-          >
-                    <RoleCard
-                              role={
-                                        Object {
-                                                  "active_engineers_count": 1,
-                                                  "applications_count": 2,
-                                                  "created_at": "2019-06-04 04:56:39",
-                                                  "description": "test role description",
-                                                  "id": 1,
-                                                  "name": "test role",
-                                                  "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies_count": 3,
-                                                }
-                              }
-                    />
-          </div>
-          <div
-                    className="col-4 mb-4"
-          >
-                    <RoleCard
-                              role={
-                                        Object {
-                                                  "active_engineers_count": 1,
-                                                  "applications_count": 2,
-                                                  "created_at": "2019-06-04 04:56:39",
-                                                  "description": "test role description",
-                                                  "id": 1,
-                                                  "name": "test role",
-                                                  "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies_count": 3,
-                                                }
-                              }
-                    />
-          </div>
-</div>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="col-4 mb-4"
->
-              <RoleCard
-                            role={
-                                          Object {
-                                                        "active_engineers_count": 1,
-                                                        "applications_count": 2,
-                                                        "created_at": "2019-06-04 04:56:39",
-                                                        "description": "test role description",
-                                                        "id": 1,
-                                                        "name": "test role",
-                                                        "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
-                                                      }
-                            }
-              />
-</div>,
-            <div
-              className="col-4 mb-4"
->
-              <RoleCard
-                            role={
-                                          Object {
-                                                        "active_engineers_count": 1,
-                                                        "applications_count": 2,
-                                                        "created_at": "2019-06-04 04:56:39",
-                                                        "description": "test role description",
-                                                        "id": 1,
-                                                        "name": "test role",
-                                                        "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
-                                                      }
-                            }
-              />
-</div>,
-          ],
-          "className": "row",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "1",
-            "nodeType": "host",
-            "props": Object {
-              "children": <RoleCard
-                role={
-                                Object {
-                                                "active_engineers_count": 1,
-                                                "applications_count": 2,
-                                                "created_at": "2019-06-04 04:56:39",
-                                                "description": "test role description",
-                                                "id": 1,
-                                                "name": "test role",
-                                                "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
-                                              }
-                }
-/>,
-              "className": "col-4 mb-4",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "role": Object {
-                  "active_engineers_count": 1,
-                  "applications_count": 2,
-                  "created_at": "2019-06-04 04:56:39",
-                  "description": "test role description",
-                  "id": 1,
-                  "name": "test role",
-                  "updated_at": "2019-06-04 04:56:39",
-                  "vacancies_count": 3,
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": "1",
-            "nodeType": "host",
-            "props": Object {
-              "children": <RoleCard
-                role={
-                                Object {
-                                                "active_engineers_count": 1,
-                                                "applications_count": 2,
-                                                "created_at": "2019-06-04 04:56:39",
-                                                "description": "test role description",
-                                                "id": 1,
-                                                "name": "test role",
-                                                "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
-                                              }
-                }
-/>,
-              "className": "col-4 mb-4",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "role": Object {
-                  "active_engineers_count": 1,
-                  "applications_count": 2,
-                  "created_at": "2019-06-04 04:56:39",
-                  "description": "test role description",
-                  "id": 1,
-                  "name": "test role",
-                  "updated_at": "2019-06-04 04:56:39",
-                  "vacancies_count": 3,
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
       "type": "div",
     },
   ],
@@ -476,15 +386,14 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="row"
->
+      "children": Array [
         <div
-                className="col-4 mb-4"
-        >
-                <RoleCard
-                        role={
-                                Object {
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
+>
+          <RoleCard
+                    role={
+                              Object {
                                         "active_engineers_count": 1,
                                         "applications_count": 2,
                                         "created_at": "2019-06-04 04:56:39",
@@ -494,20 +403,72 @@ ShallowWrapper {
                                         "updated_at": "2019-06-04 04:56:39",
                                         "vacancies_count": 3,
                                       }
-                        }
-                />
-        </div>
+                    }
+          />
 </div>,
+      ],
+      "className": "row",
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <RoleCard
+            role={
+                        Object {
+                                    "active_engineers_count": 1,
+                                    "applications_count": 2,
+                                    "created_at": "2019-06-04 04:56:39",
+                                    "description": "test role description",
+                                    "id": 1,
+                                    "name": "test role",
+                                    "updated_at": "2019-06-04 04:56:39",
+                                    "vacancies_count": 3,
+                                  }
+            }
+/>,
+          "className": "role-card__grid mb-4 mr-4",
+          "id": "large-screen",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "role": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
-            className="col-4 mb-4"
+            className="role-card__grid mb-4 mr-4"
+            id="large-screen"
 >
             <RoleCard
                         role={
@@ -548,7 +509,8 @@ ShallowWrapper {
                                         }
               }
 />,
-            "className": "col-4 mb-4",
+            "className": "role-card__grid mb-4 mr-4",
+            "id": "large-screen",
           },
           "ref": null,
           "rendered": Object {
@@ -574,116 +536,6 @@ ShallowWrapper {
           "type": "div",
         },
       ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="row"
->
-          <div
-                    className="col-4 mb-4"
-          >
-                    <RoleCard
-                              role={
-                                        Object {
-                                                  "active_engineers_count": 1,
-                                                  "applications_count": 2,
-                                                  "created_at": "2019-06-04 04:56:39",
-                                                  "description": "test role description",
-                                                  "id": 1,
-                                                  "name": "test role",
-                                                  "updated_at": "2019-06-04 04:56:39",
-                                                  "vacancies_count": 3,
-                                                }
-                              }
-                    />
-          </div>
-</div>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="col-4 mb-4"
->
-              <RoleCard
-                            role={
-                                          Object {
-                                                        "active_engineers_count": 1,
-                                                        "applications_count": 2,
-                                                        "created_at": "2019-06-04 04:56:39",
-                                                        "description": "test role description",
-                                                        "id": 1,
-                                                        "name": "test role",
-                                                        "updated_at": "2019-06-04 04:56:39",
-                                                        "vacancies_count": 3,
-                                                      }
-                            }
-              />
-</div>,
-          ],
-          "className": "row",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "1",
-            "nodeType": "host",
-            "props": Object {
-              "children": <RoleCard
-                role={
-                                Object {
-                                                "active_engineers_count": 1,
-                                                "applications_count": 2,
-                                                "created_at": "2019-06-04 04:56:39",
-                                                "description": "test role description",
-                                                "id": 1,
-                                                "name": "test role",
-                                                "updated_at": "2019-06-04 04:56:39",
-                                                "vacancies_count": 3,
-                                              }
-                }
-/>,
-              "className": "col-4 mb-4",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "role": Object {
-                  "active_engineers_count": 1,
-                  "applications_count": 2,
-                  "created_at": "2019-06-04 04:56:39",
-                  "description": "test role description",
-                  "id": 1,
-                  "name": "test role",
-                  "updated_at": "2019-06-04 04:56:39",
-                  "vacancies_count": 3,
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
       "type": "div",
     },
   ],

@@ -184,7 +184,7 @@ export default {
   addProjectTechnology: {
     technology: ''
   },
-  fetchSlackChannels: genericAPIState,  
+  fetchSlackChannels: genericAPIState,
   d1Engineers: {
     loading: false,
     cadreEngineers: [],
@@ -200,5 +200,5 @@ export default {
       total: 0
     }
   },
-  fetchAllRoles: genericAPIState
+  allRoles: genericAPIState
 };
