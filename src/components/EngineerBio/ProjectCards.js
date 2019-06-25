@@ -12,11 +12,11 @@ const ProjectCards = ({
   projectName
 }) => (
   <div className="profile_card">
-    <div className="w3-address-grid">
-      <div className="w3-address-left">
+    <div className="project-card-grid">
+      <div className="project-card-left">
         <img src={projectIcon} alt="project logo" />
       </div>
-      <div className="w3-address-right">
+      <div className="project-card-right">
         <h6>{projectName}</h6>
         <p>{projectLevel}</p>
         <p>
@@ -26,7 +26,6 @@ const ProjectCards = ({
           {technologies ? RenderStackTechnologies(technologies) : null}
         </p>
       </div>
-      <div className="clearfix" />
     </div>
   </div>
 );

@@ -13,20 +13,20 @@ const renderEngineerDetails = fellow => (
       picture={fellow.picture}
     />
     <ProjectCards
-      startDate={fellow.sims_start_date}
-      endDate={fellow.sims_end_date}
-      projectLevel="Simulations"
-      picture={fellow.picture}
-      projectName={fellow.sims_project}
-      technologies={fellow.sims_project_technology}
-    />
-    <ProjectCards
       startDate={fellow.apprenticeship_start_date}
       projectName={fellow.apprenticeship_project}
       endDate={fellow.apprenticeship_end_date}
       picture={fellow.picture}
       projectLevel="Apprenticeship"
       technologies={fellow.apprenticeship_technology}
+    />
+    <ProjectCards
+      startDate={fellow.sims_start_date}
+      endDate={fellow.sims_end_date}
+      projectLevel="Simulations"
+      picture={fellow.picture}
+      projectName={fellow.sims_project}
+      technologies={fellow.sims_project_technology}
     />
   </React.Fragment>
 );

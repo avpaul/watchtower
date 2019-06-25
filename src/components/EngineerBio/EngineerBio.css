@@ -21,7 +21,7 @@
 
 /* New CSS files*/
 .profile_card {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 h3.tittle.two {
@@ -30,7 +30,7 @@ h3.tittle.two {
 }
 
 .profile_card_details {
-  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.5em;
 }
 
 .profile_card_details img {
@@ -49,7 +49,6 @@ h3.tittle.two {
   font-family: 'DIN Pro';
   font-size: 14px;
   font-weight: 500;
-  padding-bottom: 20px;
 }
 
 .profile_card h3 {
@@ -66,51 +65,51 @@ h3.tittle.two {
 }
 
 /*Projects card css*/
-.w3-address-grid {
-  padding: 1em;
-  border-bottom: 1px solid #f0f0f0;
+.project-card-grid {
+  padding-top: 1.5em;
+  border-top: 1px solid #f0f0f0;
 }
 
-.w3-address-left {
+.project-card-left {
   float: left;
   width: 30%;
 }
 
-.w3-address-left img {
+.project-card-left img {
   width: 50%;
   border-radius: 30%;
 }
 
-.w3-address-right {
+.project-card-right {
   float: right;
   width: 70%;
   text-align: left;
 }
 
-.w3-address-right h6 {
+.project-card-right h6 {
   color: #344c5a;
   font-family: 'DIN Pro';
-  font-size: 1em;
+  font-size: 14px;
   margin: 0;
   font-weight: 500;
 }
 
-.w3-address-right p {
+.project-card-right p {
   color: rgba(52, 76, 90, 0.62);
-  margin: 1em 0 0 0;
-  font-size: 13px;
+  margin: 4px 0 0 0;
+  font-size: 14px;
   font-family: 'DIN Pro';
 }
 
-.w3-address-right p.projects {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.project-card-right p.projects {
+  margin-top: 25px;
 }
 
-.w3-address-right p span {
+.project-card-right p span {
   height: 18px;
   width: 61px;
   color: #333e44;
+  font-family: 'DIN Pro';
   font-size: 14px;
   line-height: 18px;
   margin-right: 20px;

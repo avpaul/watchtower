@@ -56,18 +56,18 @@ ShallowWrapper {
                     <ProjectCards
                               endDate=""
                               picture={undefined}
-                              projectLevel="Simulations"
-                              projectName="AuthorsHaven"
-                              startDate=""
-                              technologies="Python/Django"
-                    />
-                    <ProjectCards
-                              endDate=""
-                              picture={undefined}
                               projectLevel="Apprenticeship"
                               projectName="WatchTower"
                               startDate=""
                               technologies="PHP/JavaScript"
+                    />
+                    <ProjectCards
+                              endDate=""
+                              picture={undefined}
+                              projectLevel="Simulations"
+                              projectName="AuthorsHaven"
+                              startDate=""
+                              technologies="Python/Django"
                     />
           </Unknown>
 </div>,
@@ -101,18 +101,18 @@ ShallowWrapper {
             <ProjectCards
                         endDate=""
                         picture={undefined}
-                        projectLevel="Simulations"
-                        projectName="AuthorsHaven"
-                        startDate=""
-                        technologies="Python/Django"
-            />
-            <ProjectCards
-                        endDate=""
-                        picture={undefined}
                         projectLevel="Apprenticeship"
                         projectName="WatchTower"
                         startDate=""
                         technologies="PHP/JavaScript"
+            />
+            <ProjectCards
+                        endDate=""
+                        picture={undefined}
+                        projectLevel="Simulations"
+                        projectName="AuthorsHaven"
+                        startDate=""
+                        technologies="Python/Django"
             />
 </Unknown>,
           "className": "bio-card text-center",
@@ -132,18 +132,18 @@ ShallowWrapper {
               <ProjectCards
                 endDate=""
                 picture={undefined}
-                projectLevel="Simulations"
-                projectName="AuthorsHaven"
-                startDate=""
-                technologies="Python/Django"
-/>,
-              <ProjectCards
-                endDate=""
-                picture={undefined}
                 projectLevel="Apprenticeship"
                 projectName="WatchTower"
                 startDate=""
                 technologies="PHP/JavaScript"
+/>,
+              <ProjectCards
+                endDate=""
+                picture={undefined}
+                projectLevel="Simulations"
+                projectName="AuthorsHaven"
+                startDate=""
+                technologies="Python/Django"
 />,
             ],
           },
@@ -169,10 +169,10 @@ ShallowWrapper {
               "props": Object {
                 "endDate": "",
                 "picture": undefined,
-                "projectLevel": "Simulations",
-                "projectName": "AuthorsHaven",
+                "projectLevel": "Apprenticeship",
+                "projectName": "WatchTower",
                 "startDate": "",
-                "technologies": "Python/Django",
+                "technologies": "PHP/JavaScript",
               },
               "ref": null,
               "rendered": null,
@@ -185,10 +185,10 @@ ShallowWrapper {
               "props": Object {
                 "endDate": "",
                 "picture": undefined,
-                "projectLevel": "Apprenticeship",
-                "projectName": "WatchTower",
+                "projectLevel": "Simulations",
+                "projectName": "AuthorsHaven",
                 "startDate": "",
-                "technologies": "PHP/JavaScript",
+                "technologies": "Python/Django",
               },
               "ref": null,
               "rendered": null,
@@ -226,18 +226,18 @@ ShallowWrapper {
                         <ProjectCards
                                     endDate=""
                                     picture={undefined}
-                                    projectLevel="Simulations"
-                                    projectName="AuthorsHaven"
-                                    startDate=""
-                                    technologies="Python/Django"
-                        />
-                        <ProjectCards
-                                    endDate=""
-                                    picture={undefined}
                                     projectLevel="Apprenticeship"
                                     projectName="WatchTower"
                                     startDate=""
                                     technologies="PHP/JavaScript"
+                        />
+                        <ProjectCards
+                                    endDate=""
+                                    picture={undefined}
+                                    projectLevel="Simulations"
+                                    projectName="AuthorsHaven"
+                                    startDate=""
+                                    technologies="Python/Django"
                         />
             </Unknown>
 </div>,
@@ -271,18 +271,18 @@ ShallowWrapper {
               <ProjectCards
                             endDate=""
                             picture={undefined}
-                            projectLevel="Simulations"
-                            projectName="AuthorsHaven"
-                            startDate=""
-                            technologies="Python/Django"
-              />
-              <ProjectCards
-                            endDate=""
-                            picture={undefined}
                             projectLevel="Apprenticeship"
                             projectName="WatchTower"
                             startDate=""
                             technologies="PHP/JavaScript"
+              />
+              <ProjectCards
+                            endDate=""
+                            picture={undefined}
+                            projectLevel="Simulations"
+                            projectName="AuthorsHaven"
+                            startDate=""
+                            technologies="Python/Django"
               />
 </Unknown>,
             "className": "bio-card text-center",
@@ -302,18 +302,18 @@ ShallowWrapper {
                 <ProjectCards
                   endDate=""
                   picture={undefined}
-                  projectLevel="Simulations"
-                  projectName="AuthorsHaven"
-                  startDate=""
-                  technologies="Python/Django"
-/>,
-                <ProjectCards
-                  endDate=""
-                  picture={undefined}
                   projectLevel="Apprenticeship"
                   projectName="WatchTower"
                   startDate=""
                   technologies="PHP/JavaScript"
+/>,
+                <ProjectCards
+                  endDate=""
+                  picture={undefined}
+                  projectLevel="Simulations"
+                  projectName="AuthorsHaven"
+                  startDate=""
+                  technologies="Python/Django"
 />,
               ],
             },
@@ -339,10 +339,10 @@ ShallowWrapper {
                 "props": Object {
                   "endDate": "",
                   "picture": undefined,
-                  "projectLevel": "Simulations",
-                  "projectName": "AuthorsHaven",
+                  "projectLevel": "Apprenticeship",
+                  "projectName": "WatchTower",
                   "startDate": "",
-                  "technologies": "Python/Django",
+                  "technologies": "PHP/JavaScript",
                 },
                 "ref": null,
                 "rendered": null,
@@ -355,10 +355,10 @@ ShallowWrapper {
                 "props": Object {
                   "endDate": "",
                   "picture": undefined,
-                  "projectLevel": "Apprenticeship",
-                  "projectName": "WatchTower",
+                  "projectLevel": "Simulations",
+                  "projectName": "AuthorsHaven",
                   "startDate": "",
-                  "technologies": "PHP/JavaScript",
+                  "technologies": "Python/Django",
                 },
                 "ref": null,
                 "rendered": null,
