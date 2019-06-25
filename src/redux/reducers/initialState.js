@@ -175,7 +175,8 @@ export default {
     success: null
   },
   createProject: genericAPIState,
-  fetchAllProjects: genericAPIState,
+  createProjectVacancies: genericAPIState,
+  allProjects: genericAPIState,
   fetchProjectManagers: genericAPIState,
   fetchProjectTechnologies: genericAPIState,
   addProjectManager: {
@@ -185,7 +186,7 @@ export default {
     technology: ''
   },
   fetchSlackChannels: genericAPIState,
-  d1Engineers: {
+  cadreEngineers: {
     loading: false,
     cadreEngineers: [],
     error: ''

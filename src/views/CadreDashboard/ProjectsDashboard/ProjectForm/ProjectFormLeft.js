@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AddIcon from '../../../../static/plus.png';
 import { urlRegex } from '../../../../utils/regex';
-import { projectTypes } from '../helpers';
-import arrayOfObjectsSorter from '../../../../utils/sortArray';
+import { projectTypes } from './helpers';
+import { processDropdownOptions } from '../../../../components/FormInputs/helpers';
 
 class ProjectFormLeft extends Component {
   componentDidMount() {
@@ -64,6 +64,9 @@ class ProjectFormLeft extends Component {
 
   renderManagerInput = () => {
     const { project, newManager } = this.props;
+    const {
+      fetchProjectManagers: { loading }
+    } = this.props;
     let {
       fetchProjectManagers: { data }
     } = this.props;
@@ -72,13 +75,11 @@ class ProjectFormLeft extends Component {
       {
         name: 'manager',
         label: 'Team Manager',
-        options: data.sort(arrayOfObjectsSorter('name')).map(manager => ({
-          ...manager,
-          label: manager.name
-        })),
+        options: processDropdownOptions(data, 'name'),
         placeholder: 'Select Team Manager',
         inputValue: project.manager,
-        enableSearch: data.length !== 0
+        enableSearch: data.length !== 0,
+        loading
       },
       '#addManagerModal',
       'Add team manager'
@@ -86,18 +87,20 @@ class ProjectFormLeft extends Component {
   };
 
   renderTechnologiesInput = () => {
-    const { project, fetchProjectTechnologies } = this.props;
+    const {
+      project,
+      fetchProjectTechnologies: { data, loading }
+    } = this.props;
     return this.renderInputWithAddition(
       {
         name: 'technologies',
         label: 'Technologies',
         inputValue: project.technologies,
-        options: fetchProjectTechnologies.data
-          .sort(arrayOfObjectsSorter('name'))
-          .map(tech => ({ ...tech, label: tech.name })),
+        options: processDropdownOptions(data, 'name'),
         multipleSelection: true,
         placeholder: 'Add Technologies',
-        enableSearch: fetchProjectTechnologies.data.length !== 0
+        enableSearch: data.length !== 0,
+        loading
       },
       '#addTechnologyModal',
       'Add project technology'
@@ -105,7 +108,11 @@ class ProjectFormLeft extends Component {
   };
 
   renderSlackChannelInput = () => {
-    const { project, renderDropdown, fetchSlackChannels } = this.props;
+    const {
+      project,
+      renderDropdown,
+      fetchSlackChannels: { loading, data }
+    } = this.props;
 
     return (
       <React.Fragment>
@@ -113,23 +120,37 @@ class ProjectFormLeft extends Component {
           name: 'channels',
           label: 'Slack Channel',
           inputValue: project.slackChannel,
-          options: fetchSlackChannels.data
-            .sort(arrayOfObjectsSorter('name'))
-            .map(channel => ({ ...channel, label: channel.name })),
+          options: processDropdownOptions(data, 'name'),
           placeholder: 'Add Slack Channel',
-          enableSearch: fetchSlackChannels.data.length !== 0
+          enableSearch: data.length !== 0,
+          loading
+        })}
+      </React.Fragment>
+    );
+  };
+
+  renderUploadInputs = () => {
+    const { project, renderUploadInput, renderAddLinksInput } = this.props;
+    return (
+      <React.Fragment>
+        {renderUploadInput({
+          name: 'documents',
+          label: 'Relevant Documents',
+          documents: project.documents,
+          buttonLabel: 'Upload Document'
+        })}
+        {renderAddLinksInput({
+          name: 'links',
+          label: 'Relevant Links',
+          documents: project.links,
+          buttonLabel: 'Manage Links'
         })}
       </React.Fragment>
     );
   };
 
   render() {
-    const {
-      project,
-      renderTextInput,
-      renderUploadInput,
-      renderAddLinksInput
-    } = this.props;
+    const { project, renderTextInput } = this.props;
     return (
       <div className="col-12 col-lg-6">
         <div className="row mr-0 ml-0">
@@ -144,18 +165,7 @@ class ProjectFormLeft extends Component {
             testInput: input => urlRegex.test(input),
             alertText: 'Please provide a link!'
           })}
-          {renderUploadInput({
-            name: 'documents',
-            label: 'Relevant Documents',
-            documents: project.documents,
-            buttonLabel: 'Upload Document'
-          })}
-          {renderAddLinksInput({
-            name: 'links',
-            label: 'Relevant Links',
-            documents: project.links,
-            buttonLabel: 'Manage Links'
-          })}
+          {this.renderUploadInputs()}
         </div>
       </div>
     );

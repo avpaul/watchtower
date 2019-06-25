@@ -7,31 +7,31 @@
   padding-left: 12px;
 }
 
-.modal-header .close span {
+#logout-modal .modal-header .close span {
   font-size: 190% !important;
 }
 
-.modal-title {
+#logout-modal .modal-title {
   margin-top: 1.5em !important;
   margin-left: 1em;
   font-size: 130%;
   font-weight: bold !important;
 }
 
-.modal-body {
+#logout-modal .modal-body {
   margin-left: 1.5em;
 }
 
-.modal-title img {
+#logout-modal .modal-title img {
   margin-right: 13px;
 }
 
-.modal-header,
-.modal-footer {
+#logout-modal .modal-header,
+#logout-modal .modal-footer {
   border: none;
 }
 
-.modal-footer button:first-child {
+#logout-modal .modal-footer button:first-child {
   height: 39px;
   width: 90px;
   border: 1px solid #3359db;
@@ -40,7 +40,7 @@
   color: #3359db;
 }
 
-.modal-footer button:last-child {
+#logout-modal .modal-footer button:last-child {
   background-color: #3359db;
   border-radius: 4px;
   color: white;

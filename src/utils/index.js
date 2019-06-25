@@ -1,6 +1,7 @@
 import React from 'react';
 import NavArrow from '../components/Carousel/NavArrow';
 import TranslatorTable from './TranslatorTable';
+import WorkInProgress from '../components/WorkInProgress';
 
 const truncate = (str, length) => {
   const dots = str.length > length ? '...' : '';
@@ -146,5 +147,18 @@ export const getCurrentClass = (cardId, cardRefs) => {
   );
   return { '--fellow-chart-tooltip': `${width}px` };
 };
+
+/**
+ * Conditionally render a component in development
+ *
+ * @param JSX component The component under development
+ * @return JSX
+ */
+export const underDevelopment = component =>
+  ['production'].includes(process.env.NODE_ENV) ? (
+    <WorkInProgress />
+  ) : (
+    component
+  );
 
 export default truncate;

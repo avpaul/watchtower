@@ -7,6 +7,7 @@ import Thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import initialState from '../../../../redux/reducers/initialState';
 import ProjectsDashboard from '../ProjectsDashboard';
+import mockProject from '../../../../__mocks__/projectDetails';
 
 describe('Projects Dashboard', () => {
   const defaultProps = {
@@ -24,7 +25,13 @@ describe('Projects Dashboard', () => {
    */
   const setup = (testURL = '/cadre/projects/create') => {
     const mockStore = configureStore([Thunk]);
-    const store = mockStore(initialState);
+    const store = mockStore({
+      ...initialState,
+      allProjects: {
+        ...initialState.allProjects,
+        data: [mockProject]
+      }
+    });
 
     const wrapper = mount(
       <Provider store={store}>

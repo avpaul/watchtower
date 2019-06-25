@@ -19,7 +19,7 @@ ShallowWrapper {
           }
     }
     manager={Object {}}
-    newTechnology={Object {}}
+    newTechnology=""
     project={Object {}}
     user={
         Object {
@@ -44,6 +44,8 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <Connect(AddManagerModal) />,
+        <Connect(AddTechnologyModal) />,
         <div
           className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0"
 >
@@ -97,6 +99,24 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -271,6 +291,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <Connect(AddManagerModal) />,
+          <Connect(AddTechnologyModal) />,
           <div
             className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0"
 >
@@ -324,6 +346,24 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,

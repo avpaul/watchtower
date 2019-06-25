@@ -8,12 +8,12 @@ const RolesDashboard = props => {
   return (
     <div className="roles-dashboard">
       <Switch>
-      <Route
-        exact
-        path={`${match.url}`}
-        component={() => <CadreViewRoles {...props} />}
-      />
-    </Switch>
+        <Route
+          exact
+          path={`${match.url}`}
+          component={() => <CadreViewRoles {...props} />}
+        />
+      </Switch>
     </div>
   );
 };

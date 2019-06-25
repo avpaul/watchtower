@@ -7,23 +7,29 @@ class ProjectFormRight extends Component {
     this.state = {};
   }
 
+  renderTextInputs = (renderTextInput, project) => (
+    <React.Fragment>
+      {renderTextInput({
+        name: 'tagline',
+        label: 'Tagline',
+        inputValue: project.tagline,
+        length: 120
+      })}
+      {renderTextInput({
+        name: 'about',
+        label: 'About',
+        inputValue: project.about,
+        type: 'textarea'
+      })}
+    </React.Fragment>
+  );
+
   render() {
     const { project, renderTextInput, renderUploadInput } = this.props;
     return (
       <div className="col-12 col-lg-6">
         <div className="row ml-0 mr-0">
-          {renderTextInput({
-            name: 'tagline',
-            label: 'Tagline',
-            inputValue: project.tagline,
-            length: 120
-          })}
-          {renderTextInput({
-            name: 'about',
-            label: 'About',
-            inputValue: project.about,
-            type: 'textarea'
-          })}
+          {this.renderTextInputs(renderTextInput, project)}
           {renderUploadInput({
             name: 'logo',
             label: 'Project Logo',

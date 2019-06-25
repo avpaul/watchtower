@@ -16,6 +16,7 @@
   letter-spacing: 0.58px;
   line-height: 18px;
   padding: 10px;
+  float: right;
 }
 .project-grid__add:hover {
   text-decoration: none;

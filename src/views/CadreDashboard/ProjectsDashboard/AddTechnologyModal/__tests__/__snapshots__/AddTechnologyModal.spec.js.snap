@@ -72,9 +72,12 @@ ShallowWrapper {
                             "_numberOfReRenders": 0,
                             "_renderPhaseUpdates": null,
                             "_rendered": <GenericModal
+                              footer={null}
                               handleClose={[Function]}
                               handleSubmit={[Function]}
                               id="addTechnologyModal"
+                              submitLoading={false}
+                              success={false}
                               successMessage="The project technology has been added to the project form!"
                               title="Add Technology"
                 >
@@ -106,9 +109,12 @@ ShallowWrapper {
         testInput={[Function]}
         type="text"
 />,
+      "footer": null,
       "handleClose": [Function],
       "handleSubmit": [Function],
       "id": "addTechnologyModal",
+      "submitLoading": false,
+      "success": false,
       "successMessage": "The project technology has been added to the project form!",
       "title": "Add Technology",
     },
@@ -168,9 +174,12 @@ ShallowWrapper {
               "_numberOfReRenders": 0,
               "_renderPhaseUpdates": null,
               "_rendered": <GenericModal
+                footer={null}
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addTechnologyModal"
+                submitLoading={false}
+                success={false}
                 successMessage="The project technology has been added to the project form!"
                 title="Add Technology"
 >
@@ -265,9 +274,12 @@ ShallowWrapper {
                                   "_numberOfReRenders": 0,
                                   "_renderPhaseUpdates": null,
                                   "_rendered": <GenericModal
+                                    footer={null}
                                     handleClose={[Function]}
                                     handleSubmit={[Function]}
                                     id="addTechnologyModal"
+                                    submitLoading={false}
+                                    success={false}
                                     successMessage="The project technology has been added to the project form!"
                                     title="Add Technology"
                     >
@@ -299,9 +311,12 @@ ShallowWrapper {
           testInput={[Function]}
           type="text"
 />,
+        "footer": null,
         "handleClose": [Function],
         "handleSubmit": [Function],
         "id": "addTechnologyModal",
+        "submitLoading": false,
+        "success": false,
         "successMessage": "The project technology has been added to the project form!",
         "title": "Add Technology",
       },
@@ -361,9 +376,12 @@ ShallowWrapper {
                 "_numberOfReRenders": 0,
                 "_renderPhaseUpdates": null,
                 "_rendered": <GenericModal
+                  footer={null}
                   handleClose={[Function]}
                   handleSubmit={[Function]}
                   id="addTechnologyModal"
+                  submitLoading={false}
+                  success={false}
                   successMessage="The project technology has been added to the project form!"
                   title="Add Technology"
 >

@@ -22,3 +22,25 @@
   left: 50%;
   outline: none;
 }
+
+.cadre-main-button {
+  border-radius: 5px;
+  background-color: #10a36d;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  color: #ffffff;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.58px;
+  line-height: 18px;
+  padding: 10px;
+  outline: none !important;
+  transition: 0.2s ease all;
+}
+
+.cadre-main-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: -0.1rem;
+  box-shadow: 0 5px 1rem 0.2rem rgba(0, 0, 0, 0.11);
+}

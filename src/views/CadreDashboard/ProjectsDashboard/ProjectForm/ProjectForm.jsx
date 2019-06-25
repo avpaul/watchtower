@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Loader from '../../../components/Loader/Loader';
-import Title from '../../../components/Title';
-import FormInputs from '../../../components/FormInputs';
-import { ProjectFormLeft, ProjectFormRight } from './ProjectFormComponents';
-import ReturnButton from '../../../components/Buttons/ReturnButton';
+import Loader from '../../../../components/Loader/Loader';
+import Title from '../../../../components/Title';
+import FormInputs from '../../../../components/FormInputs';
+import ProjectFormLeft from './ProjectFormLeftContainer';
+import ProjectFormRight from './ProjectFormRight';
+import ReturnButton from '../../../../components/Buttons/ReturnButton';
 import { errorMessage } from './helpers';
+import AddManagerModal from '../AddManagerModal';
+import AddTechnologyModal from '../AddTechnologyModal';
 
 import './projectForm.css';
 
@@ -20,26 +23,33 @@ class ProjectForm extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { createProject, history, newTechnology, manager } = this.props;
+    const { newTechnology, manager } = this.props;
     const { inputs } = this.state;
 
-    if (
-      createProject.error &&
-      prevProps.createNewProject.error !== createProject.error
-    )
-      this.handleSubmissionError(createProject.error);
-
-    if (
-      prevProps.createProject.loading &&
-      !createProject.loading &&
-      !createProject.error
-    )
-      history.replace('/cadre/projects');
+    this.checkForSubmissionStatus(prevProps);
 
     if (prevProps.newTechnology !== newTechnology)
       inputs.technologies.addSelection(newTechnology);
     if (prevProps.manager !== manager) inputs.manager.setStatus('normal', '');
   }
+
+  /**
+   * Checks for any change in the create project API post request
+   *
+   * @param object prevProps The component's previous props
+   */
+  checkForSubmissionStatus = prevProps => {
+    const { createProject, history } = this.props;
+
+    if (prevProps.createProject.loading && !createProject.loading) {
+      if (
+        createProject.error &&
+        prevProps.createNewProject.error !== createProject.error
+      )
+        this.handleSubmissionError(createProject.error);
+      else history.replace('/cadre/projects');
+    }
+  };
 
   /**
    * Handles the submission response errors
@@ -205,6 +215,8 @@ class ProjectForm extends Component {
 
     return (
       <div className="project-form row ml-0 ml-0 pl-2 pl-md-5 pr-2 pr-md-5">
+        <AddManagerModal />
+        <AddTechnologyModal />
         <div className="col-11 col-lg-12 mb-4 ml-4 ml-lg-0">
           <ReturnButton history={history} />
           <Title title={title} />

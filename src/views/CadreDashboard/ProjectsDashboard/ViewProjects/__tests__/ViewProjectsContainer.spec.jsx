@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
-import initialState from '../../../redux/reducers/initialState';
+import initialState from '../../../../../redux/reducers/initialState';
 import ViewProjectsContainer, {
   mapStateToProps
 } from '../ViewProjectsContainer';

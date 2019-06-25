@@ -1,7 +1,9 @@
+/* eslint-disable react/no-did-update-set-state */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import './genericModal.css';
+import Loader from '../Loader/Loader';
 
 class GenericModal extends Component {
   constructor(props) {
@@ -10,6 +12,12 @@ class GenericModal extends Component {
     this.state = {
       success: false
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    const { success } = this.props;
+
+    if (prevProps.success !== success) this.setState({ success });
   }
 
   renderButton = ({ label, buttonProps = {} }) => (
@@ -30,16 +38,30 @@ class GenericModal extends Component {
 
   renderModalFooter = () => {
     const { success } = this.state;
+    const { submitLoading, footer } = this.props;
+
+    if (footer) return footer;
+
     const buttonProps = { 'data-dismiss': 'modal', onClick: this.handleClose };
+    let button = null;
+    switch (true) {
+      case submitLoading:
+        button = <Loader size="small" />;
+        break;
+      case success:
+        button = this.renderButton({ label: 'Save', buttonProps });
+        break;
+      default:
+        button = this.renderButton({
+          label: 'Add',
+          buttonProps: { onClick: this.handleSubmit }
+        });
+    }
+
     return (
       <div className="modal-footer">
         {this.renderButton({ label: 'Cancel', buttonProps })}
-        {!success
-          ? this.renderButton({
-              label: 'Add',
-              buttonProps: { onClick: this.handleSubmit }
-            })
-          : this.renderButton({ label: 'Save', buttonProps })}
+        {button}
       </div>
     );
   };
@@ -91,12 +113,18 @@ GenericModal.propTypes = {
   title: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   handleClose: PropTypes.func,
-  successMessage: PropTypes.string
+  successMessage: PropTypes.string,
+  success: PropTypes.bool,
+  submitLoading: PropTypes.bool,
+  footer: PropTypes.shape()
 };
 
 GenericModal.defaultProps = {
   handleClose: () => {},
-  successMessage: 'Success!'
+  successMessage: 'Success!',
+  success: false,
+  submitLoading: false,
+  footer: null
 };
 
 export default GenericModal;

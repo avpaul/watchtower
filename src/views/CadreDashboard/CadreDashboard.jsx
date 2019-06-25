@@ -1,13 +1,12 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import CadreSubmenu from '../../components/CadreSubmenu';
 import ProjectsDashboard from './ProjectsDashboard';
-import AddManagerModal from './ProjectsDashboard/AddManagerModal';
-import AddTechnologyModal from './ProjectsDashboard/AddTechnologyModal';
-import VacanciesDashboard from './VacanciesDashboard';
 import RolesDashboard from './RolesDashboard';
 import ReportsDashboard from './ReportsDashboard';
+import VacanciesDashboard from './VacanciesDashboard';
+
 import './CadreDashboard.css';
 
 class CadreDashboard extends Component {
@@ -64,26 +63,22 @@ class CadreDashboard extends Component {
     />
   );
 
-  Vancany = () => 'heelo';
-
   render() {
     const { routes } = this.state;
     return (
-      <Fragment>
-        <div className="container-fluid page-content">
-          <AddManagerModal />
-          <AddTechnologyModal />
-          <div className="row">
-            {this.renderSubMenu()}
-            <div className="col-sm-12 col-sm-9">
-              <Switch>{this.renderRoute(ProjectsDashboard, routes[0])}</Switch>
-              <Switch>{this.renderRoute(VacanciesDashboard, routes[1])}</Switch>
-              <Switch>{this.renderRoute(RolesDashboard, routes[2])}</Switch>
-              <Switch>{this.renderRoute(ReportsDashboard, routes[3])}</Switch>
-            </div>
+      <div className="container-fluid page-content">
+        <div className="row">
+          {this.renderSubMenu()}
+          <div className="col-sm-12 col-lg-9">
+            <Switch>
+              {this.renderRoute(ProjectsDashboard, routes[0])}
+              {this.renderRoute(VacanciesDashboard, routes[1])}
+              {this.renderRoute(RolesDashboard, routes[2])}
+              {this.renderRoute(ReportsDashboard, routes[3])}
+            </Switch>
           </div>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

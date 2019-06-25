@@ -1,0 +1,10 @@
+#addProjectVacanciesModal .modal-header h1 {
+  color: #333e44;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#addProjectVacanciesModal .modal-footer button {
+  background-color: #10a36d;
+  border-color: #10a36d;
+}

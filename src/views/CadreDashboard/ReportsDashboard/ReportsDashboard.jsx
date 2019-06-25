@@ -117,16 +117,14 @@ class ReportsDashboard extends Component {
     const options = metaData.perPageOptions.filter(this.isLessThanTotal);
 
     return (
-      <React.Fragment>
-        <Reports
-          engineers={this.fuzzySearch()}
-          handleSearchChange={this.handleSearchChange}
-          handleShowSizeChange={this.handleShowSizeChange}
-          handlePageChange={this.handlePageChange}
-          pageSizeOptions={options}
-          total={Number.parseInt(total, 10)}
-        />
-      </React.Fragment>
+      <Reports
+        engineers={this.fuzzySearch()}
+        handleSearchChange={this.handleSearchChange}
+        handleShowSizeChange={this.handleShowSizeChange}
+        handlePageChange={this.handlePageChange}
+        pageSizeOptions={options}
+        total={Number.parseInt(total, 10)}
+      />
     );
   }
 }

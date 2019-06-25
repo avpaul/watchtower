@@ -11,6 +11,7 @@ import {
 } from './helpers';
 
 import './dropdownInput.css';
+import Loader from '../Loader/Loader';
 
 // Used to ensure a single dropdown is opened
 let dropdownOnFocus = {};
@@ -205,7 +206,7 @@ class DropdownInput extends Component {
 
   renderDropdown = () => {
     const { inputValue, show, searchValue } = this.state;
-    const { placeholder, className, name } = this.props;
+    const { placeholder, className, name, loading } = this.props;
     return (
       <div
         id={name}
@@ -216,11 +217,17 @@ class DropdownInput extends Component {
           <div className={`${className}__value`}>
             {inputValue.label || placeholder}
           </div>
-          <button
-            type="button"
-            className={`${className}__select__button`}
-            onClick={this.toggleDropdown}
-          />
+          {loading ? (
+            <div className="wt-dropdown__loader">
+              <Loader size="small" />
+            </div>
+          ) : (
+            <button
+              type="button"
+              className={`${className}__select__button`}
+              onClick={this.toggleDropdown}
+            />
+          )}
         </div>
         {show ? this.renderOptions(className, searchValue) : null}
       </div>
@@ -239,12 +246,8 @@ class DropdownInput extends Component {
           <div className={`${className}__selection`} key={arrayKey(item)}>
             {item.label}
             <span
-              onClick={() => {
-                this.deSelect(item);
-              }}
-              onKeyPress={() => {
-                this.deSelect(item);
-              }}
+              onClick={() => this.deSelect(item)}
+              onKeyPress={() => this.deSelect(item)}
               role="button"
               tabIndex="-1"
             >
@@ -264,9 +267,7 @@ class DropdownInput extends Component {
     }`;
     return (
       <div
-        className={`${className} ${className}--${
-          COMPONENT_STATUS_CLASS[status]
-        } mb-4 row mr-0 ml-0`}
+        className={`${className} ${className}--${COMPONENT_STATUS_CLASS[status]} mb-4 row mr-0 ml-0`}
       >
         <label htmlFor={name}>{label}</label>
         {this.renderDropdown()}
@@ -293,7 +294,8 @@ DropdownInput.propTypes = {
   options: PropTypes.instanceOf(Array),
   multipleSelection: PropTypes.bool,
   extras: PropTypes.shape(),
-  enableSearch: PropTypes.bool
+  enableSearch: PropTypes.bool,
+  loading: PropTypes.bool
 };
 
 DropdownInput.defaultProps = {
@@ -306,7 +308,8 @@ DropdownInput.defaultProps = {
   options: [],
   multipleSelection: false,
   extras: null,
-  enableSearch: false
+  enableSearch: false,
+  loading: false
 };
 
 export default DropdownInput;

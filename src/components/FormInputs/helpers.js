@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import arrayOfObjectsSorter from '../../utils/sortArray';
 
 export const COMPONENT_STATUS = [
   'normal',
@@ -45,6 +46,20 @@ export const setStatusHandler = (component, status, alertText = '') => {
     alertText
   });
 };
+
+/**
+ * Processes the list of options in order to append a label to each new element
+ * and sort the options.
+ *
+ * @param array data A list of dropdown options
+ * @param string sortKey The option value key to use to sort and append a label with
+ * @return array Sorted list of options
+ */
+export const processDropdownOptions = (data, sortKey) =>
+  data.sort(arrayOfObjectsSorter(sortKey)).map(option => ({
+    ...option,
+    label: option[sortKey]
+  }));
 
 export const defaultReactiveUIProps = {
   defaultStatus: PropTypes.number,

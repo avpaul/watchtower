@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
-import ProjectForm from './ProjectFormContainer';
-import ViewProjects from '../../ViewProjects';
+import ProjectForm from './ProjectForm';
+import ViewProjects from './ViewProjects';
 import ProjectDetailsPage from '../../../components/CadreProjectDetails';
 
 const ProjectsDashboard = props => {

@@ -173,3 +173,16 @@
   border: solid 1px #3359db;
   outline: none;
 }
+
+.wt-dropdown__loader {
+  right: 0;
+  top: 0;
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  z-index: 50;
+}
+
+.wt-dropdown__loader .loader {
+  margin: 5px;
+}
