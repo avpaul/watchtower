@@ -1,6 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import authService from '../../services/auth';
+import Error from '../Error';
+
+const { ErrorBoundary } = Error;
 
 const redirectLogin = location => (
   <Redirect
@@ -20,7 +23,11 @@ const Authorization = WrappedComponent => {
     const { location } = props;
     if (authService.isAuthorized() && authService.isServerTokenSet()) {
       const user = authService.loadUserFromToken();
-      return <WrappedComponent {...props} user={user} />;
+      return (
+        <ErrorBoundary>
+          <WrappedComponent {...props} user={user} />
+        </ErrorBoundary>
+      );
     }
 
     return redirectLogin(location);

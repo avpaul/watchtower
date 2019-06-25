@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ErrorPage from './ErrorPage';
+import ApplicationCrash from '../ApplicationCrash';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -19,14 +19,14 @@ class ErrorBoundary extends Component {
 
     if (hasError) {
       // You can render any custom fallback UI
-      return <ErrorPage />;
+      return <ApplicationCrash />;
     }
     return children;
   }
 }
 
 ErrorBoundary.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default ErrorBoundary;

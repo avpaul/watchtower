@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component it should render without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    link="reports"
+    text="report"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="col-md-3 col-12 text-center"
+>
+        <Link
+                className="add-button text-uppercase"
+                replace={false}
+                to="/cadre/reports/create"
+        >
+                Add New 
+                report
+        </Link>
+</div>,
+      "className": "row justify-content-md-end",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Link
+          className="add-button text-uppercase"
+          replace={false}
+          to="/cadre/reports/create"
+>
+          Add New 
+          report
+</Link>,
+        "className": "col-md-3 col-12 text-center",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            "Add New ",
+            "report",
+          ],
+          "className": "add-button text-uppercase",
+          "replace": false,
+          "to": "/cadre/reports/create",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Add New ",
+          "report",
+        ],
+        "type": [Function],
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="col-md-3 col-12 text-center"
+>
+          <Link
+                    className="add-button text-uppercase"
+                    replace={false}
+                    to="/cadre/reports/create"
+          >
+                    Add New 
+                    report
+          </Link>
+</div>,
+        "className": "row justify-content-md-end",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            className="add-button text-uppercase"
+            replace={false}
+            to="/cadre/reports/create"
+>
+            Add New 
+            report
+</Link>,
+          "className": "col-md-3 col-12 text-center",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              "Add New ",
+              "report",
+            ],
+            "className": "add-button text-uppercase",
+            "replace": false,
+            "to": "/cadre/reports/create",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Add New ",
+            "report",
+          ],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;
