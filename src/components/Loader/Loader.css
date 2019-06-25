@@ -20,7 +20,7 @@
 .loader__center {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .loader-small {
@@ -31,4 +31,10 @@
   height: 35px;
   animation: spin 1s linear infinite;
   margin: 10px 10px;
+}
+
+.loader-overlay {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }

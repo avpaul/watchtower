@@ -58,15 +58,10 @@ ShallowWrapper {
 </p>,
         <button
           className="cadrerectangle"
+          onClick={undefined}
           type="submit"
 >
-          <Link
-                    className="cader-link"
-                    replace={false}
-                    to="/dashboard"
-          >
-                    CONTINUE
-          </Link>
+          CONTINUE
 </button>,
       ],
       "className": "cadre-engineer",
@@ -163,31 +158,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <Link
-            className="cader-link"
-            replace={false}
-            to="/dashboard"
->
-            CONTINUE
-</Link>,
+          "children": "CONTINUE",
           "className": "cadrerectangle",
+          "onClick": undefined,
           "type": "submit",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "CONTINUE",
-            "className": "cader-link",
-            "replace": false,
-            "to": "/dashboard",
-          },
-          "ref": null,
-          "rendered": "CONTINUE",
-          "type": [Function],
-        },
+        "rendered": "CONTINUE",
         "type": "button",
       },
     ],
@@ -233,15 +210,10 @@ ShallowWrapper {
 </p>,
           <button
             className="cadrerectangle"
+            onClick={undefined}
             type="submit"
 >
-            <Link
-                        className="cader-link"
-                        replace={false}
-                        to="/dashboard"
-            >
-                        CONTINUE
-            </Link>
+            CONTINUE
 </button>,
         ],
         "className": "cadre-engineer",
@@ -338,31 +310,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Link
-              className="cader-link"
-              replace={false}
-              to="/dashboard"
->
-              CONTINUE
-</Link>,
+            "children": "CONTINUE",
             "className": "cadrerectangle",
+            "onClick": undefined,
             "type": "submit",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "CONTINUE",
-              "className": "cader-link",
-              "replace": false,
-              "to": "/dashboard",
-            },
-            "ref": null,
-            "rendered": "CONTINUE",
-            "type": [Function],
-          },
+          "rendered": "CONTINUE",
           "type": "button",
         },
       ],
