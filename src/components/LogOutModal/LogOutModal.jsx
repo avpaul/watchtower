@@ -21,7 +21,7 @@ class LogOutPage extends Component {
       <div className="modal-header">
         <span className="modal-title">
           <img src={cautionMark} alt="logout warning icon" />
-          Logout ?
+          Logout?
         </span>
         <button
           type="button"
@@ -33,7 +33,7 @@ class LogOutPage extends Component {
         </button>
       </div>
       <div className="modal-body">
-        Are you sure you want to logout of WatchTower ?
+        Are you sure you want to logout of WatchTower?
       </div>
       <div className="modal-footer">
         <button type="button" className="btn" data-dismiss="modal">
