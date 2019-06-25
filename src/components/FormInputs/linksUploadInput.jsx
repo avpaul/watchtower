@@ -13,15 +13,27 @@ class LinksUploadInput extends Component {
     super(props);
 
     this.state = {
-      links: [''],
-      tooltipMessage: 'Add New Link',
-      success: true
+      links: ['', '', '', '', ''],
+      tooltipMessage: 'Add New Link'
     };
   }
 
   componentDidMount() {
     attachToParentComponent(this);
   }
+
+  /**
+   * get number of invalid links
+   * @return array invalidLinks
+   * @memberof LinksUploadInput
+   */
+  getInvalidLinks = () => {
+    const { links } = this.state;
+    const invalidLinks = links.filter(
+      link => !urlRegex.test(link) && link !== ''
+    );
+    return invalidLinks;
+  };
 
   /**
    * get value that will be sent to the server
@@ -74,13 +86,12 @@ class LinksUploadInput extends Component {
 
   /**
    * parameters gotten from the state
-   * @param success
    * @param links
    * @param tooltipMessage
    * @memberof LinksUploadInput
    * @returns Modal
    */
-  renderLinksUploadModal = (success, links, tooltipMessage) => (
+  renderLinksUploadModal = (links, tooltipMessage) => (
     <div
       className="modal fade links-upload"
       id="add-links-modal"
@@ -94,12 +105,12 @@ class LinksUploadInput extends Component {
       >
         <div className="modal-content">
           <div className="modal-header">
-            <h1>Add level-up links</h1>
+            <h1>Add Relevant links</h1>
           </div>
           <div className="modal-body">
-            {this.renderModalBody(links, tooltipMessage, success)}
+            {this.renderModalBody(links, tooltipMessage)}
           </div>
-          {this.renderModalFooter(links)}
+          {this.renderModalFooter()}
         </div>
       </div>
     </div>
@@ -108,17 +119,15 @@ class LinksUploadInput extends Component {
   /**
    * @param links
    * @param tooltipMessage
-   * @param success
    * @memberof LinksUploadInput
    * @returns AddProjectLinksForm component
    */
-  renderModalBody = (links, tooltipMessage, success) => (
+  renderModalBody = (links, tooltipMessage) => (
     <AddProjectLinksForm
       textInputChange={this.handleTextInputChange}
       addNewProjectLink={this.handleAddNewProjectLink}
       projectLinks={links}
       tooltipMessage={tooltipMessage}
-      success={success}
     />
   );
 
@@ -128,7 +137,7 @@ class LinksUploadInput extends Component {
    * @memberof LinksUploadInput
    * @returns Modal footer
    */
-  renderModalFooter = links => {
+  renderModalFooter = () => {
     const buttonProps = {
       onClick: this.handleCancelButton,
       label: 'Cancel'
@@ -139,8 +148,7 @@ class LinksUploadInput extends Component {
         {this.renderButton({
           label: 'Done',
           onClick: () => this.validateLastInput(true),
-          'data-dismiss':
-            urlRegex.test(links[0]) || links[0] === '' ? 'modal' : null
+          'data-dismiss': this.getInvalidLinks().length === 0 ? 'modal' : null
         })}
       </div>
     );
@@ -167,9 +175,8 @@ class LinksUploadInput extends Component {
     if (this.validateLastInput()) {
       const { links } = this.state;
       this.setState({
-        links: ['', ...links],
-        tooltipMessage: 'Add New Link',
-        success: true
+        links: [...links, ''],
+        tooltipMessage: 'Add New Link'
       });
     }
   };
@@ -197,22 +204,19 @@ class LinksUploadInput extends Component {
    */
   validateLastInput = doneButton => {
     const { links } = this.state;
-    if (links[0] === '' && !doneButton) {
+    if (links.includes('') && !doneButton) {
       this.setState({
         tooltipMessage: 'please fill all inputs before adding a new one'
       });
       return false;
     }
-    if (!urlRegex.test(links[0]) && links[0] !== '') {
+
+    if (this.getInvalidLinks().length > 0) {
       this.setState({
-        tooltipMessage: 'please enter a valid URL',
-        success: false
+        tooltipMessage: 'please enter a valid URL'
       });
       return false;
     }
-    this.setState({
-      success: true
-    });
     return true;
   };
 
@@ -223,15 +227,14 @@ class LinksUploadInput extends Component {
    */
   handleCancelButton = () => {
     this.setState({
-      links: [''],
-      tooltipMessage: 'Add New Link',
-      success: true
+      links: ['', '', '', '', ''],
+      tooltipMessage: 'Add New Link'
     });
   };
 
   render() {
     const { name, label, buttonLabel } = this.props;
-    const { success, links, tooltipMessage } = this.state;
+    const { links, tooltipMessage } = this.state;
     let finalLabel = name || label;
     finalLabel = finalLabel.replace(' ', '');
 
@@ -240,7 +243,7 @@ class LinksUploadInput extends Component {
         <label htmlFor={finalLabel}>{label}</label>
         {this.displayTinyLinksContainer()}
         {this.displayLinkUploadInput(buttonLabel, '#add-links-modal')}
-        {this.renderLinksUploadModal(success, links, tooltipMessage)}
+        {this.renderLinksUploadModal(links, tooltipMessage)}
       </div>
     );
   }

@@ -152,7 +152,7 @@ class ProjectFormLeft extends Component {
           })}
           {renderAddLinksInput({
             name: 'links',
-            label: 'Level-Up Links',
+            label: 'Relevant Links',
             documents: project.links,
             buttonLabel: 'Manage Links'
           })}

@@ -29,21 +29,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <button
-          className="url-upload-button"
-          onClick={[Function]}
-          type="button"
->
-          <span
-                    className="tooltiptext"
-          >
-                    Add New Link
-          </span>
-          <img
-                    alt="Add icon"
-                    src="plus.png"
-          />
-</button>,
         <form
           className="url-upload"
 >
@@ -60,60 +45,26 @@ ShallowWrapper {
                     <span />
           </div>
 </form>,
+        <button
+          className="url-upload-button"
+          onClick={[Function]}
+          type="button"
+>
+          <span
+                    className="tooltiptext"
+          >
+                    Add New Link
+          </span>
+          <img
+                    alt="Add icon"
+                    src="plus.png"
+          />
+</button>,
       ],
       "className": "form-container",
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <span
-              className="tooltiptext"
->
-              Add New Link
-</span>,
-            <img
-              alt="Add icon"
-              src="plus.png"
-/>,
-          ],
-          "className": "url-upload-button",
-          "onClick": [Function],
-          "type": "button",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Add New Link",
-              "className": "tooltiptext",
-            },
-            "ref": null,
-            "rendered": "Add New Link",
-            "type": "span",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "Add icon",
-              "src": "plus.png",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-        ],
-        "type": "button",
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -186,6 +137,55 @@ ShallowWrapper {
         ],
         "type": "form",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="tooltiptext"
+>
+              Add New Link
+</span>,
+            <img
+              alt="Add icon"
+              src="plus.png"
+/>,
+          ],
+          "className": "url-upload-button",
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add New Link",
+              "className": "tooltiptext",
+            },
+            "ref": null,
+            "rendered": "Add New Link",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Add icon",
+              "src": "plus.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "button",
+      },
     ],
     "type": "div",
   },
@@ -196,21 +196,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button
-            className="url-upload-button"
-            onClick={[Function]}
-            type="button"
->
-            <span
-                        className="tooltiptext"
-            >
-                        Add New Link
-            </span>
-            <img
-                        alt="Add icon"
-                        src="plus.png"
-            />
-</button>,
           <form
             className="url-upload"
 >
@@ -227,60 +212,26 @@ ShallowWrapper {
                         <span />
             </div>
 </form>,
+          <button
+            className="url-upload-button"
+            onClick={[Function]}
+            type="button"
+>
+            <span
+                        className="tooltiptext"
+            >
+                        Add New Link
+            </span>
+            <img
+                        alt="Add icon"
+                        src="plus.png"
+            />
+</button>,
         ],
         "className": "form-container",
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <span
-                className="tooltiptext"
->
-                Add New Link
-</span>,
-              <img
-                alt="Add icon"
-                src="plus.png"
-/>,
-            ],
-            "className": "url-upload-button",
-            "onClick": [Function],
-            "type": "button",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Add New Link",
-                "className": "tooltiptext",
-              },
-              "ref": null,
-              "rendered": "Add New Link",
-              "type": "span",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Add icon",
-                "src": "plus.png",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-          ],
-          "type": "button",
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -352,6 +303,55 @@ ShallowWrapper {
             },
           ],
           "type": "form",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="tooltiptext"
+>
+                Add New Link
+</span>,
+              <img
+                alt="Add icon"
+                src="plus.png"
+/>,
+            ],
+            "className": "url-upload-button",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add New Link",
+                "className": "tooltiptext",
+              },
+              "ref": null,
+              "rendered": "Add New Link",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Add icon",
+                "src": "plus.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "button",
         },
       ],
       "type": "div",
