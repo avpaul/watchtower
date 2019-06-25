@@ -234,7 +234,7 @@ jobs:
           name: Run watch-tower Test Suites
           command: |
             ./cc-test-reporter before-build
-            yarn test --coverage
+            yarn test -w 2
             ./cc-test-reporter format-coverage coverage/lcov.info -t lcov
             ./cc-test-reporter upload-coverage
 
