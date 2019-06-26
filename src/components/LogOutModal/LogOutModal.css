@@ -1,5 +1,5 @@
-.modal-content {
-  height: 280px !important;
+#logout-modal .modal-content {
+  height: 280px;
   width: 100%;
   background-color: #ffffff;
   padding-bottom: 20px;
