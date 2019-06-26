@@ -75,7 +75,7 @@ class CadreDashboard extends Component {
           <AddTechnologyModal />
           <div className="row">
             {this.renderSubMenu()}
-            <div className="col-sm-12 col-lg-9">
+            <div className="col-sm-12 col-sm-9">
               <Switch>{this.renderRoute(ProjectsDashboard, routes[0])}</Switch>
               <Switch>{this.renderRoute(VacanciesDashboard, routes[1])}</Switch>
               <Switch>{this.renderRoute(RolesDashboard, routes[2])}</Switch>

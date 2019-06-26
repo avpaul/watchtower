@@ -33,6 +33,7 @@ import addProjectTechnology from './addProjectTechnologyReducer';
 import fetchProjectManagers from './getProjectManagersReducer';
 import fetchProjectTechnologies from './getProjectTechnologiesReducer';
 import cadreEngineersReducer from './cadreEngineersReducer';
+import fetchEngineerReportReducer from './engineersReportReducer';
 import fetchSlackChannels from './slackChannelReducer';
 
 const rootReducer = combineReducers({
@@ -69,6 +70,7 @@ const rootReducer = combineReducers({
   fetchProjectManagers,
   fetchProjectTechnologies,
   cadreEngineers: cadreEngineersReducer,
+  reports: fetchEngineerReportReducer,
   fetchSlackChannels
 });
 

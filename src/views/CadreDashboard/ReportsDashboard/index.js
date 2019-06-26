@@ -1,3 +1,3 @@
-import ReportsDashboard from './ReportsDashboard';
+import ReportsDashboardContainer from './ReportsDashboardContainer';
 
-export default ReportsDashboard;
+export default ReportsDashboardContainer;

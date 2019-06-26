@@ -1,5 +1,8 @@
 import { ALL } from '../constants/fellowFilters';
 
+export const INDEX_PAGE_SIZE_DEFAULT = 20;
+export const INDEX_PAGE_SIZE_OPTIONS = ['5', '10', '19', '30', '50', '100'];
+
 const genericAPIState = {
   loading: false,
   data: [],
@@ -186,5 +189,15 @@ export default {
     loading: false,
     cadreEngineers: [],
     error: ''
+  },
+  reports: {
+    loading: false,
+    error: '',
+    meta: {
+      page: 1,
+      perPage: INDEX_PAGE_SIZE_DEFAULT,
+      perPageOptions: INDEX_PAGE_SIZE_OPTIONS,
+      total: 0
+    }
   }
 };

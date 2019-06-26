@@ -52,6 +52,16 @@ export const genericAPIGetRequest = (url, actionTypes) =>
     url: `${serverURL}/api/v2/${url}`
   });
 
+/**
+ * Serialize the query paramaters
+ * @param  {object} query
+ * @return {object}
+ */
+export const serializeQuery = query =>
+  Object.keys(query)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(query[key])}`)
+    .join('&');
+
 export default {
   genericAPIPostRequest,
   genericAPIGetRequest
