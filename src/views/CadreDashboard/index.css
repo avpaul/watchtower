@@ -2,12 +2,21 @@
   display: flex;
 }
 
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-greeting {
+  padding-left: 13px;
+  margin-top: 40px;
+}
+
 .fellow-dashboard-main {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 0.7rem;
-  padding-top: 5rem;
+  padding-top: 1rem;
   padding-left: 13px;
   margin-bottom: 25px;
 }
