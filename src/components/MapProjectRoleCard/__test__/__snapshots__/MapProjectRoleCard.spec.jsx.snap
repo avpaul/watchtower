@@ -1,0 +1,569 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Map Role cards Should render more than one role correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MapProjectRoleCard
+    roleData={
+        Array [
+            Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+            Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
+>
+          <RoleCard
+                    role={
+                              Object {
+                                        "active_engineers_count": 1,
+                                        "applications_count": 2,
+                                        "created_at": "2019-06-04 04:56:39",
+                                        "description": "test role description",
+                                        "id": 1,
+                                        "name": "test role",
+                                        "updated_at": "2019-06-04 04:56:39",
+                                        "vacancies_count": 3,
+                                      }
+                    }
+          />
+</div>,
+        <div
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
+>
+          <RoleCard
+                    role={
+                              Object {
+                                        "active_engineers_count": 1,
+                                        "applications_count": 2,
+                                        "created_at": "2019-06-04 04:56:39",
+                                        "description": "test role description",
+                                        "id": 1,
+                                        "name": "test role",
+                                        "updated_at": "2019-06-04 04:56:39",
+                                        "vacancies_count": 3,
+                                      }
+                    }
+          />
+</div>,
+      ],
+      "className": "row",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <RoleCard
+            role={
+                        Object {
+                                    "active_engineers_count": 1,
+                                    "applications_count": 2,
+                                    "created_at": "2019-06-04 04:56:39",
+                                    "description": "test role description",
+                                    "id": 1,
+                                    "name": "test role",
+                                    "updated_at": "2019-06-04 04:56:39",
+                                    "vacancies_count": 3,
+                                  }
+            }
+/>,
+          "className": "role-card__grid mb-4 mr-4",
+          "id": "large-screen",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "role": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <RoleCard
+            role={
+                        Object {
+                                    "active_engineers_count": 1,
+                                    "applications_count": 2,
+                                    "created_at": "2019-06-04 04:56:39",
+                                    "description": "test role description",
+                                    "id": 1,
+                                    "name": "test role",
+                                    "updated_at": "2019-06-04 04:56:39",
+                                    "vacancies_count": 3,
+                                  }
+            }
+/>,
+          "className": "role-card__grid mb-4 mr-4",
+          "id": "large-screen",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "role": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="role-card__grid mb-4 mr-4"
+            id="large-screen"
+>
+            <RoleCard
+                        role={
+                                    Object {
+                                                "active_engineers_count": 1,
+                                                "applications_count": 2,
+                                                "created_at": "2019-06-04 04:56:39",
+                                                "description": "test role description",
+                                                "id": 1,
+                                                "name": "test role",
+                                                "updated_at": "2019-06-04 04:56:39",
+                                                "vacancies_count": 3,
+                                              }
+                        }
+            />
+</div>,
+          <div
+            className="role-card__grid mb-4 mr-4"
+            id="large-screen"
+>
+            <RoleCard
+                        role={
+                                    Object {
+                                                "active_engineers_count": 1,
+                                                "applications_count": 2,
+                                                "created_at": "2019-06-04 04:56:39",
+                                                "description": "test role description",
+                                                "id": 1,
+                                                "name": "test role",
+                                                "updated_at": "2019-06-04 04:56:39",
+                                                "vacancies_count": 3,
+                                              }
+                        }
+            />
+</div>,
+        ],
+        "className": "row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": <RoleCard
+              role={
+                            Object {
+                                          "active_engineers_count": 1,
+                                          "applications_count": 2,
+                                          "created_at": "2019-06-04 04:56:39",
+                                          "description": "test role description",
+                                          "id": 1,
+                                          "name": "test role",
+                                          "updated_at": "2019-06-04 04:56:39",
+                                          "vacancies_count": 3,
+                                        }
+              }
+/>,
+            "className": "role-card__grid mb-4 mr-4",
+            "id": "large-screen",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "role": Object {
+                "active_engineers_count": 1,
+                "applications_count": 2,
+                "created_at": "2019-06-04 04:56:39",
+                "description": "test role description",
+                "id": 1,
+                "name": "test role",
+                "updated_at": "2019-06-04 04:56:39",
+                "vacancies_count": 3,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": <RoleCard
+              role={
+                            Object {
+                                          "active_engineers_count": 1,
+                                          "applications_count": 2,
+                                          "created_at": "2019-06-04 04:56:39",
+                                          "description": "test role description",
+                                          "id": 1,
+                                          "name": "test role",
+                                          "updated_at": "2019-06-04 04:56:39",
+                                          "vacancies_count": 3,
+                                        }
+              }
+/>,
+            "className": "role-card__grid mb-4 mr-4",
+            "id": "large-screen",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "role": Object {
+                "active_engineers_count": 1,
+                "applications_count": 2,
+                "created_at": "2019-06-04 04:56:39",
+                "description": "test role description",
+                "id": 1,
+                "name": "test role",
+                "updated_at": "2019-06-04 04:56:39",
+                "vacancies_count": 3,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;
+
+exports[`Test Map Role cards should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MapProjectRoleCard
+    roleData={
+        Array [
+            Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="role-card__grid mb-4 mr-4"
+          id="large-screen"
+>
+          <RoleCard
+                    role={
+                              Object {
+                                        "active_engineers_count": 1,
+                                        "applications_count": 2,
+                                        "created_at": "2019-06-04 04:56:39",
+                                        "description": "test role description",
+                                        "id": 1,
+                                        "name": "test role",
+                                        "updated_at": "2019-06-04 04:56:39",
+                                        "vacancies_count": 3,
+                                      }
+                    }
+          />
+</div>,
+      ],
+      "className": "row",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <RoleCard
+            role={
+                        Object {
+                                    "active_engineers_count": 1,
+                                    "applications_count": 2,
+                                    "created_at": "2019-06-04 04:56:39",
+                                    "description": "test role description",
+                                    "id": 1,
+                                    "name": "test role",
+                                    "updated_at": "2019-06-04 04:56:39",
+                                    "vacancies_count": 3,
+                                  }
+            }
+/>,
+          "className": "role-card__grid mb-4 mr-4",
+          "id": "large-screen",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "role": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="role-card__grid mb-4 mr-4"
+            id="large-screen"
+>
+            <RoleCard
+                        role={
+                                    Object {
+                                                "active_engineers_count": 1,
+                                                "applications_count": 2,
+                                                "created_at": "2019-06-04 04:56:39",
+                                                "description": "test role description",
+                                                "id": 1,
+                                                "name": "test role",
+                                                "updated_at": "2019-06-04 04:56:39",
+                                                "vacancies_count": 3,
+                                              }
+                        }
+            />
+</div>,
+        ],
+        "className": "row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": <RoleCard
+              role={
+                            Object {
+                                          "active_engineers_count": 1,
+                                          "applications_count": 2,
+                                          "created_at": "2019-06-04 04:56:39",
+                                          "description": "test role description",
+                                          "id": 1,
+                                          "name": "test role",
+                                          "updated_at": "2019-06-04 04:56:39",
+                                          "vacancies_count": 3,
+                                        }
+              }
+/>,
+            "className": "role-card__grid mb-4 mr-4",
+            "id": "large-screen",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "role": Object {
+                "active_engineers_count": 1,
+                "applications_count": 2,
+                "created_at": "2019-06-04 04:56:39",
+                "description": "test role description",
+                "id": 1,
+                "name": "test role",
+                "updated_at": "2019-06-04 04:56:39",
+                "vacancies_count": 3,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;
