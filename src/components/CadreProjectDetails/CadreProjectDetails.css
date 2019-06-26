@@ -50,7 +50,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: end;
 }
 .project-details__card-big .relevant-documents-card {
   height: 86px;
@@ -191,7 +191,7 @@
 .project-details__card-small .project-manager-details {
   display: flex;
   height: 50px;
-  justify-content: center;
+  justify-content: end;
 }
 .project-details__card-small .manager-details {
   display: flex;
