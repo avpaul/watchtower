@@ -1,4 +1,7 @@
-.vacancies-dashboard {
+.vacancies-dashboard .page-section__title {
+  color: #333e44;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 .vacancies-dashboard .add-button {
@@ -12,4 +15,8 @@
   letter-spacing: 0.58px;
   line-height: 18px;
   padding: 10px;
+}
+
+.vacancies-dashboard .cadre-main-button {
+  float: right;
 }

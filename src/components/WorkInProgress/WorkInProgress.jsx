@@ -13,7 +13,7 @@ const WorkInProgress = () => (
         </div>
         <div className="row mt-5 justify-content-center">
           <div className="col-md-8 text-center">
-            <h4 className="font-weight-lighter">Work in progress</h4>
+            <h4 className="font-weight-lighter">Work in Progress</h4>
           </div>
         </div>
       </div>

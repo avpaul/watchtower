@@ -1,3 +1,3 @@
-import VacanciesDashboard from './VacanciesDashboard';
+import VacancyDashboard from './VacanciesDashboardContainer';
 
-export default VacanciesDashboard;
+export default VacancyDashboard;

@@ -5,7 +5,8 @@
 
 .generic-modal h1 {
   font-size: 130%;
-  font-weight: bold !important;
+  font-weight: bold;
+  font-family: 'DIN Pro';
   color: #3359db;
 }
 

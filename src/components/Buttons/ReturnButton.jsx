@@ -13,6 +13,6 @@ const ReturnButton = ({ history }) => (
   </button>
 );
 ReturnButton.propTypes = {
-  history: PropTypes.func.isRequired
+  history: PropTypes.shape().isRequired
 };
 export default ReturnButton;

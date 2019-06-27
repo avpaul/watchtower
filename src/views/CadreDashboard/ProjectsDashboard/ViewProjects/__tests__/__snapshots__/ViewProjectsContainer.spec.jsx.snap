@@ -37,7 +37,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "allProjects": Object {},
+      "allProjects": Object {
+        "data": Array [],
+        "error": null,
+        "loading": false,
+      },
       "fetchAllProjects": [Function],
       "store": Object {
         "clearActions": [Function],
@@ -83,7 +87,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "allProjects": Object {},
+        "allProjects": Object {
+          "data": Array [],
+          "error": null,
+          "loading": false,
+        },
         "fetchAllProjects": [Function],
         "store": Object {
           "clearActions": [Function],
@@ -158,6 +166,10 @@ ShallowWrapper {
 
 exports[`ViewProjectsContainer component should map state to props 1`] = `
 Object {
-  "allProjects": undefined,
+  "allProjects": Object {
+    "data": Array [],
+    "error": null,
+    "loading": false,
+  },
 }
 `;

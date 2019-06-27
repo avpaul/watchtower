@@ -6,7 +6,7 @@ import waitForExpect from 'wait-for-expect';
 import configureStore from 'redux-mock-store';
 
 import ProjectForm from '../ProjectForm';
-import initialState from '../../../../redux/reducers/initialState';
+import initialState from '../../../../../redux/reducers/initialState';
 import { errorMessage } from '../helpers';
 
 jest.useFakeTimers();
@@ -21,7 +21,7 @@ describe('Project Form', () => {
     createNewProject: jest.fn(),
     createProject: initialState.createProject,
     manager: {},
-    newTechnology: {},
+    newTechnology: '',
     history: {
       goBack: jest.fn(),
       replace: jest.fn()
@@ -119,7 +119,9 @@ describe('Project Form', () => {
    * @param object result The expected component name and alert text to be displayed
    */
   const testHandleSubmissionError = async (error, result) => {
-    const { wrapper } = setup();
+    const { wrapper } = setup({
+      createProject: { ...initialState.createProject, loading: true }
+    });
     let mockSetStatus = result.alertText ? {} : '';
     const input = {
       setStatus: jest.fn().mockImplementation((status, text) => {

@@ -5,7 +5,7 @@ import initialState from '../initialState';
 describe('fetch cadre engineers', () => {
   it('should return the initial state', () => {
     expect(cadreEngineersReducer(undefined, {})).toEqual(
-      initialState.d1Engineers
+      initialState.cadreEngineers
     );
   });
 
@@ -31,7 +31,7 @@ describe('fetch cadre engineers', () => {
         }
       ]
     };
-    expect(cadreEngineersReducer(initialState.d1Engineers, action)).toEqual(
+    expect(cadreEngineersReducer(initialState.cadreEngineers, action)).toEqual(
       newState
     );
   });
@@ -47,7 +47,7 @@ describe('fetch cadre engineers', () => {
       type: types.FETCH_CADRE_FAILURE,
       error: 'Network error'
     };
-    expect(cadreEngineersReducer(initialState.d1Engineers, action)).toEqual(
+    expect(cadreEngineersReducer(initialState.cadreEngineers, action)).toEqual(
       newState
     );
   });
@@ -62,7 +62,7 @@ describe('fetch cadre engineers', () => {
       type: types.FETCH_CADRE_REQUEST,
       error: 'Network error'
     };
-    expect(cadreEngineersReducer(initialState.d1Engineers, action)).toEqual(
+    expect(cadreEngineersReducer(initialState.cadreEngineers, action)).toEqual(
       newState
     );
   });
@@ -71,7 +71,7 @@ describe('fetch cadre engineers', () => {
 describe('Activate Cadre engineer account', () => {
   it('should return the initial state', () => {
     expect(cadreEngineersReducer(undefined, {})).toEqual(
-      initialState.d1Engineers
+      initialState.cadreEngineers
     );
   });
 
@@ -86,7 +86,7 @@ describe('Activate Cadre engineer account', () => {
       error: ''
     };
 
-    expect(cadreEngineersReducer(initialState.d1Engineers, action)).toEqual(
+    expect(cadreEngineersReducer(initialState.cadreEngineers, action)).toEqual(
       newState
     );
   });

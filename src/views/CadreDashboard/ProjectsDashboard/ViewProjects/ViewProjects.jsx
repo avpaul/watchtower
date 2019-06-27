@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import MapProjectCards from '../../components/MapProjectCards';
-import PMloader from '../../components/CustomLoader/PMLoader';
+import PMloader from '../../../../components/CustomLoader/PMLoader';
+import MapProjectCards from '../../../../components/MapProjectCards';
 
 class ViewProjects extends Component {
   componentDidMount() {

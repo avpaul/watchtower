@@ -46,7 +46,7 @@ ShallowWrapper {
                                 <h4
                                         className="font-weight-lighter"
                                 >
-                                        Work in progress
+                                        Work in Progress
                                 </h4>
                         </div>
                 </div>
@@ -84,7 +84,7 @@ ShallowWrapper {
                               <h4
                                         className="font-weight-lighter"
                               >
-                                        Work in progress
+                                        Work in Progress
                               </h4>
                     </div>
           </div>
@@ -120,7 +120,7 @@ ShallowWrapper {
                             <h4
                                           className="font-weight-lighter"
                             >
-                                          Work in progress
+                                          Work in Progress
                             </h4>
               </div>
 </div>,
@@ -187,7 +187,7 @@ ShallowWrapper {
                 <h4
                                 className="font-weight-lighter"
                 >
-                                Work in progress
+                                Work in Progress
                 </h4>
 </div>,
               "className": "row mt-5 justify-content-center",
@@ -201,7 +201,7 @@ ShallowWrapper {
                 "children": <h4
                   className="font-weight-lighter"
 >
-                  Work in progress
+                  Work in Progress
 </h4>,
                 "className": "col-md-8 text-center",
               },
@@ -211,11 +211,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Work in progress",
+                  "children": "Work in Progress",
                   "className": "font-weight-lighter",
                 },
                 "ref": null,
-                "rendered": "Work in progress",
+                "rendered": "Work in Progress",
                 "type": "h4",
               },
               "type": "div",
@@ -263,7 +263,7 @@ ShallowWrapper {
                                         <h4
                                                   className="font-weight-lighter"
                                         >
-                                                  Work in progress
+                                                  Work in Progress
                                         </h4>
                               </div>
                     </div>
@@ -301,7 +301,7 @@ ShallowWrapper {
                                     <h4
                                                 className="font-weight-lighter"
                                     >
-                                                Work in progress
+                                                Work in Progress
                                     </h4>
                         </div>
             </div>
@@ -337,7 +337,7 @@ ShallowWrapper {
                                 <h4
                                                 className="font-weight-lighter"
                                 >
-                                                Work in progress
+                                                Work in Progress
                                 </h4>
                 </div>
 </div>,
@@ -404,7 +404,7 @@ ShallowWrapper {
                   <h4
                                     className="font-weight-lighter"
                   >
-                                    Work in progress
+                                    Work in Progress
                   </h4>
 </div>,
                 "className": "row mt-5 justify-content-center",
@@ -418,7 +418,7 @@ ShallowWrapper {
                   "children": <h4
                     className="font-weight-lighter"
 >
-                    Work in progress
+                    Work in Progress
 </h4>,
                   "className": "col-md-8 text-center",
                 },
@@ -428,11 +428,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Work in progress",
+                    "children": "Work in Progress",
                     "className": "font-weight-lighter",
                   },
                   "ref": null,
-                  "rendered": "Work in progress",
+                  "rendered": "Work in Progress",
                   "type": "h4",
                 },
                 "type": "div",

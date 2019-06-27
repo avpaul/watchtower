@@ -12,6 +12,7 @@ ShallowWrapper {
     extras={null}
     inputValue=""
     label="Type"
+    loading={false}
     multipleSelection={false}
     name="Name"
     options={
@@ -423,6 +424,7 @@ ShallowWrapper {
     extras={null}
     inputValue=""
     label=""
+    loading={false}
     multipleSelection={false}
     name="Name"
     options={

@@ -29,14 +29,14 @@ export const submenus = [
   },
   {
     title: 'Roles',
-    subtitle: 'Open or close allocations',
+    subtitle: 'Set Engineer Roles',
     icon: rolesIcon,
     id: '2',
     activeIcon: rolesIconActive
   },
   {
     title: 'Reports',
-    subtitle: 'Open or close allocations',
+    subtitle: 'Program Progress',
     icon: reportIcon,
     id: '3',
     activeIcon: reportIconActive

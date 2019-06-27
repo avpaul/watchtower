@@ -2,7 +2,7 @@ import initialState from './initialState';
 import * as types from '../constants/projectsTypes';
 import genericReducer from './genericReducer';
 
-const fetchProjectsReducer = (state = initialState.fetchAllProjects, action) =>
+const fetchProjectsReducer = (state = initialState.allProjects, action) =>
   genericReducer(
     [
       types.FETCH_PROJECTS_REQUEST,

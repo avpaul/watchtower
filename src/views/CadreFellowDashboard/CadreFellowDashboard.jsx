@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { ToastContainer } from 'react-toastify';
-import CadrePage from '../CadrePage';
+import CadrePage from './CadrePage';
 import CadreDashboardMain from '../CadreDashboard/CadreDashboardMain';
 import { Header } from '../../components/Header/Header';
 

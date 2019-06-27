@@ -25,7 +25,7 @@ import fellowFeedbackReducer from './fellowFeedbackReducer';
 import performanceData from './performanceDataReducer';
 import fellowPrePipFeedbackReducer from './fellowPrePipFeedbackReducer';
 import fellowPipFeedbackReducer from './fellowPipFeedbackReducer';
-import deactivatePipReducer from './pipDeactivationReducer';
+import pipDeactivation from './pipDeactivationReducer';
 import createProject from './createProjectReducer';
 import fetchProjectsReducer from './viewAllProjectsReducer';
 import addProjectManager from './addProjectManagerReducer';
@@ -37,6 +37,7 @@ import fetchEngineerReportReducer from './engineersReportReducer';
 import fetchSlackChannels from './slackChannelReducer';
 import cadreProjectRolereducer from './cadreProjectRoleReducer';
 import fellowActiveRoleReducer from './fellowActiveRoleReducer';
+import createProjectVacancies from './createProjectVacanciesReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -64,7 +65,7 @@ const rootReducer = combineReducers({
   performanceData,
   fellowPrePipFeedback: fellowPrePipFeedbackReducer,
   fellowPipFeedback: fellowPipFeedbackReducer,
-  deactivatePipReducer,
+  pipDeactivation,
   createProject,
   allProjects: fetchProjectsReducer,
   addProjectManager,
@@ -75,7 +76,8 @@ const rootReducer = combineReducers({
   reports: fetchEngineerReportReducer,
   fetchSlackChannels,
   allRoles: cadreProjectRolereducer,
-  fetchActiveRole: fellowActiveRoleReducer
+  fetchActiveRole: fellowActiveRoleReducer,
+  createProjectVacancies
 });
 
 export default rootReducer;

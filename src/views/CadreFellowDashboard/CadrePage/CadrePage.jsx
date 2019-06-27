@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CadrePage.css';
-import illustration from '../../static/cadre-engineer-illustration.svg';
+import illustration from '../../../static/cadre-engineer-illustration.svg';
 
 const CadrePage = ({ user, activateAccount }) => (
   <div className="cadre-engineer">

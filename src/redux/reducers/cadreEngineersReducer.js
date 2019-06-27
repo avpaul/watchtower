@@ -10,7 +10,7 @@ const updateActivationStatus = (cadreEngineers, activatedAccount) => {
   return existingEngineers;
 };
 
-const cadreEngineersReducer = (state = initialState.d1Engineers, action) => {
+const cadreEngineersReducer = (state = initialState.cadreEngineers, action) => {
   switch (action.type) {
     case types.FETCH_CADRE_REQUEST:
     case types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST:

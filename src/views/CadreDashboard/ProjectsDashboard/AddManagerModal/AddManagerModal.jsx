@@ -95,16 +95,6 @@ class AddManagerModal extends Component {
     </React.Fragment>
   );
 
-  renderModalContent = () => (
-    <div className="modal-content">
-      <div className="modal-header">
-        <h1>Add Project Manager</h1>
-      </div>
-      {}
-      {this.renderModalFooter()}
-    </div>
-  );
-
   render() {
     const message = 'This team manager has been added to the project form!';
     return (
