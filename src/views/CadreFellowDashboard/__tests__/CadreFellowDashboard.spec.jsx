@@ -20,6 +20,7 @@ describe('Test the cadre Fellow dashboard', () => {
     },
     user: {
       name: 'test',
+      first_name: 'Erick',
       picture: 'test'
     },
     location: {
@@ -49,7 +50,7 @@ describe('Test the cadre Fellow dashboard', () => {
         CadreFellow: ''
       }
     }
-  }
+  };
 
   beforeAll(() => {
     const token = jsonwebtoken.sign(user, 'shhhhh');
@@ -124,6 +125,9 @@ describe('Test the cadre Fellow dashboard', () => {
       <Provider store={store}>
         <MemoryRouter initialEntries={['/dashboard']}>
           <CadreDashboardMain
+            user={{
+              first_name: 'Erick'
+            }}
             d1Fellow={props}
             role="CadreFellow"
             location={location}

@@ -27,15 +27,26 @@ ShallowWrapper {
           <CadreSideCard />
 </div>,
         <div
-          className="fellow-dashboard-main"
+          className="dashboard-wrapper"
 >
-          <Connect(EngineerBio)
-                    getD1FellowProfileData={[Function]}
-          />
-          <ProjectSummary
-                    loading={undefined}
-                    profile={undefined}
-          />
+          <div
+                    className="dashboard-greeting"
+          >
+                    <WelcomeMessage
+                              getD1FellowProfileData={[Function]}
+                    />
+          </div>
+          <div
+                    className="fellow-dashboard-main"
+          >
+                    <Connect(EngineerBio)
+                              getD1FellowProfileData={[Function]}
+                    />
+                    <ProjectSummary
+                              loading={undefined}
+                              profile={undefined}
+                    />
+          </div>
 </div>,
       ],
       "className": "cadre-content",
@@ -68,40 +79,96 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Connect(EngineerBio)
-              getD1FellowProfileData={[Function]}
-/>,
-            <ProjectSummary
-              loading={undefined}
-              profile={undefined}
-/>,
+            <div
+              className="dashboard-greeting"
+>
+              <WelcomeMessage
+                            getD1FellowProfileData={[Function]}
+              />
+</div>,
+            <div
+              className="fellow-dashboard-main"
+>
+              <Connect(EngineerBio)
+                            getD1FellowProfileData={[Function]}
+              />
+              <ProjectSummary
+                            loading={undefined}
+                            profile={undefined}
+              />
+</div>,
           ],
-          "className": "fellow-dashboard-main",
+          "className": "dashboard-wrapper",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "getD1FellowProfileData": [Function],
+              "children": <WelcomeMessage
+                getD1FellowProfileData={[Function]}
+/>,
+              "className": "dashboard-greeting",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "getD1FellowProfileData": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "host",
             "props": Object {
-              "loading": undefined,
-              "profile": undefined,
+              "children": Array [
+                <Connect(EngineerBio)
+                  getD1FellowProfileData={[Function]}
+/>,
+                <ProjectSummary
+                  loading={undefined}
+                  profile={undefined}
+/>,
+              ],
+              "className": "fellow-dashboard-main",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "getD1FellowProfileData": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "loading": undefined,
+                  "profile": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
@@ -122,15 +189,26 @@ ShallowWrapper {
             <CadreSideCard />
 </div>,
           <div
-            className="fellow-dashboard-main"
+            className="dashboard-wrapper"
 >
-            <Connect(EngineerBio)
-                        getD1FellowProfileData={[Function]}
-            />
-            <ProjectSummary
-                        loading={undefined}
-                        profile={undefined}
-            />
+            <div
+                        className="dashboard-greeting"
+            >
+                        <WelcomeMessage
+                                    getD1FellowProfileData={[Function]}
+                        />
+            </div>
+            <div
+                        className="fellow-dashboard-main"
+            >
+                        <Connect(EngineerBio)
+                                    getD1FellowProfileData={[Function]}
+                        />
+                        <ProjectSummary
+                                    loading={undefined}
+                                    profile={undefined}
+                        />
+            </div>
 </div>,
         ],
         "className": "cadre-content",
@@ -163,40 +241,96 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Connect(EngineerBio)
-                getD1FellowProfileData={[Function]}
-/>,
-              <ProjectSummary
-                loading={undefined}
-                profile={undefined}
-/>,
+              <div
+                className="dashboard-greeting"
+>
+                <WelcomeMessage
+                                getD1FellowProfileData={[Function]}
+                />
+</div>,
+              <div
+                className="fellow-dashboard-main"
+>
+                <Connect(EngineerBio)
+                                getD1FellowProfileData={[Function]}
+                />
+                <ProjectSummary
+                                loading={undefined}
+                                profile={undefined}
+                />
+</div>,
             ],
-            "className": "fellow-dashboard-main",
+            "className": "dashboard-wrapper",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "getD1FellowProfileData": [Function],
+                "children": <WelcomeMessage
+                  getD1FellowProfileData={[Function]}
+/>,
+                "className": "dashboard-greeting",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "getD1FellowProfileData": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "loading": undefined,
-                "profile": undefined,
+                "children": Array [
+                  <Connect(EngineerBio)
+                    getD1FellowProfileData={[Function]}
+/>,
+                  <ProjectSummary
+                    loading={undefined}
+                    profile={undefined}
+/>,
+                ],
+                "className": "fellow-dashboard-main",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "getD1FellowProfileData": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "loading": undefined,
+                    "profile": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
