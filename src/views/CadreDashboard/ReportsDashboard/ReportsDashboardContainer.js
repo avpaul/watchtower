@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ReportsDashboard from './ReportsDashboard';
 import fetchEngineersReportActions from '../../../redux/actionCreators/engineersReportActions';
+import { fetchAllRoles } from '../../../redux/actionCreators/cadreProjectRoleActions';
 import { $perPage, $page } from '../../../redux/actionCreators/paginate';
 
 /**
@@ -10,9 +11,11 @@ import { $perPage, $page } from '../../../redux/actionCreators/paginate';
  * @param  {*} object
  * @return {void}
  */
-const mapStateToProps = ({ reports }) => ({
+const mapStateToProps = ({ reports, allRoles }) => ({
   engineersReport: reports,
-  metaData: reports.meta
+  metaData: reports.meta,
+  cadreroles: allRoles.data,
+  loading: reports.loading
 });
 
 /**
@@ -21,6 +24,7 @@ const mapStateToProps = ({ reports }) => ({
 export default connect(
   mapStateToProps,
   {
+    fetchAllRoles,
     fetchEngineersReportActions,
     $perPage,
     $page

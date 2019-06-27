@@ -47,23 +47,23 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "engineers": Array [],
-      "handlePageChange": [Function],
-      "handleSearchChange": [Function],
-      "handleShowSizeChange": [Function],
-      "pageSizeOptions": Array [],
-      "total": NaN,
+      "children": <ReportSummary
+        cadreroles={undefined}
+        engineers={Array []}
+        handlePageChange={[Function]}
+        handleSearchChange={[Function]}
+        handleShowSizeChange={[Function]}
+        pageSizeOptions={Array []}
+        total={NaN}
+/>,
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "cadreroles": undefined,
         "engineers": Array [],
         "handlePageChange": [Function],
         "handleSearchChange": [Function],
@@ -74,6 +74,44 @@ ShallowWrapper {
       "ref": null,
       "rendered": null,
       "type": [Function],
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ReportSummary
+          cadreroles={undefined}
+          engineers={Array []}
+          handlePageChange={[Function]}
+          handleSearchChange={[Function]}
+          handleShowSizeChange={[Function]}
+          pageSizeOptions={Array []}
+          total={NaN}
+/>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "cadreroles": undefined,
+          "engineers": Array [],
+          "handlePageChange": [Function],
+          "handleSearchChange": [Function],
+          "handleShowSizeChange": [Function],
+          "pageSizeOptions": Array [],
+          "total": NaN,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

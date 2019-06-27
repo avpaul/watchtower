@@ -59,8 +59,8 @@ export const tableRow = (item, initials) => (
   <tr key={item.id} className="table-row">
     {username(item, initials)}
     <td data-th=" Price">{item.email}</td>
-    <td className="">{!item.role ? '-' : item.role}</td>
-    <td className="">{!item.project ? '-' : item.project}</td>
+    <td className="">{!item.role ? '-' : item.role.name}</td>
+    <td className="">{!item.project ? '-' : item.project.name}</td>
     {status(item)}
     <td className="">{!item.cohort ? '-' : item.cohort}</td>
     <td className="text-center">

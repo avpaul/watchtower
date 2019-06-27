@@ -1,23 +1,3 @@
-/**
- * An algorithm to map through the data
- * and return all instance of the role passed is found
- * @param  {array} data The data to be mapped
- * @param  {string} role Role keyword eg TC
- * @return {array} Array that has all instance of the role key
- */
-export const countRoles = (data, role) => {
-  if (!data || data.length === 0) return '';
-  const roleArr = [];
-  for (let index = 0; index < data.length; index += 1) {
-    Object.values(data[index]).forEach(item => {
-      if (item === role) {
-        roleArr.push(item);
-      }
-    });
-  }
-  return roleArr;
-};
-
 export const roles = [
   {
     id: 0,
