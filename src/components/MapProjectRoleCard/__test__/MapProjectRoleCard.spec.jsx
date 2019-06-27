@@ -15,7 +15,10 @@ const role = {
 describe('Test Map Role cards', () => {
   it('should render correctly', () => {
     const props = {
-      roleData: [role]
+      roleData: [role],
+      fetchActiveEngineers: jest.fn(),
+      loading: true,
+      activeEngineers: {}
     };
     const wrapper = shallow(<MapProjectRoleCard {...props} />);
     expect(wrapper).toMatchSnapshot();
@@ -23,7 +26,10 @@ describe('Test Map Role cards', () => {
 
   it('Should render more than one role correctly', () => {
     const props = {
-      roleData: [role, role]
+      roleData: [role, role],
+      fetchActiveEngineers: jest.fn(),
+      loading: true,
+      activeEngineers: {}
     };
     const wrapper = shallow(<MapProjectRoleCard {...props} />);
     expect(wrapper).toMatchSnapshot();

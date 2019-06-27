@@ -7,6 +7,8 @@ const truncate = (str, length) => {
   return str.substring(0, length) + dots;
 };
 
+export const pluralizeCheck = (word, count) => (count > 1 ? `${word}'s` : word);
+
 export const getScoreStatus = score => (score > 1 ? 'green' : 'red');
 
 export const getReviewStatus = (isReviewed, score) =>

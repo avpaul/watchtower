@@ -4,6 +4,7 @@ exports[`Test view roles should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CadreViewRoles
+    activeEngineers={Object {}}
     allRoles={
         Object {
             "data": Array [
@@ -21,6 +22,8 @@ ShallowWrapper {
           }
     }
     fetchAllRoles={[Function]}
+    getActiveRoleEngineer={[Function]}
+    loading={true}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -37,6 +40,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <MapProjectRoleCard
+        activeEngineers={Object {}}
+        fetchActiveEngineers={[Function]}
+        loading={true}
         roleData={
                 Array [
                         Object {
@@ -52,7 +58,6 @@ ShallowWrapper {
                       ]
         }
 />,
-      "className": "cadre__page",
     },
     "ref": null,
     "rendered": Object {
@@ -60,6 +65,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "activeEngineers": Object {},
+        "fetchActiveEngineers": [Function],
+        "loading": true,
         "roleData": Array [
           Object {
             "active_engineers_count": 1,
@@ -86,6 +94,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <MapProjectRoleCard
+          activeEngineers={Object {}}
+          fetchActiveEngineers={[Function]}
+          loading={true}
           roleData={
                     Array [
                               Object {
@@ -101,7 +112,6 @@ ShallowWrapper {
                             ]
           }
 />,
-        "className": "cadre__page",
       },
       "ref": null,
       "rendered": Object {
@@ -109,6 +119,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "activeEngineers": Object {},
+          "fetchActiveEngineers": [Function],
+          "loading": true,
           "roleData": Array [
             Object {
               "active_engineers_count": 1,
