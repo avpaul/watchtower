@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MapProjectRoleCard from '../../../../components/MapProjectRoleCard';
-import Loader from '../../../../components/Loader/Loader';
+import PMloader from '../../../../components/CustomLoader/PMLoader';
 
 import './CadreViewRoles.css';
 import { underDevelopment } from '../../../../utils';
@@ -22,8 +22,8 @@ export default class CadreViewRoles extends Component {
     } = this.props;
 
     return loading ? (
-      <div className="role-dashboard__loader">
-        <Loader />
+      <div className="cadre__page">
+        <PMloader />
       </div>
     ) : (
       <div className="cadre__page">

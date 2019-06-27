@@ -15,7 +15,7 @@ const engineerCells = engineer => [
       {engineer.first_name} {engineer.last_name}
     </span>
   </div>,
-  engineer.project_role_name,
+  'Engineer',
   engineer.cohort,
   getDate(engineer.apprenticeship_end_date),
   getDate(engineer.apprenticeship_start_date)
