@@ -51,7 +51,7 @@ ShallowWrapper {
                                              
                                   </span>
                         </div>,
-                                undefined,
+                                "Engineer",
                                 undefined,
                                 "29/10/2018",
                                 "29/10/2018",
@@ -92,7 +92,7 @@ ShallowWrapper {
                                                              
                                             </span>
                             </div>,
-                                          undefined,
+                                          "Engineer",
                                           undefined,
                                           "29/10/2018",
                                           "29/10/2018",
@@ -137,7 +137,7 @@ ShallowWrapper {
                                  
                 </span>
 </div>,
-              undefined,
+              "Engineer",
               undefined,
               "29/10/2018",
               "29/10/2018",
@@ -183,7 +183,7 @@ ShallowWrapper {
                                                        
                                           </span>
                               </div>,
-                                        undefined,
+                                        "Engineer",
                                         undefined,
                                         "29/10/2018",
                                         "29/10/2018",
@@ -224,7 +224,7 @@ ShallowWrapper {
                                                                      
                                                   </span>
                                 </div>,
-                                                undefined,
+                                                "Engineer",
                                                 undefined,
                                                 "29/10/2018",
                                                 "29/10/2018",
@@ -269,7 +269,7 @@ ShallowWrapper {
                                      
                   </span>
 </div>,
-                undefined,
+                "Engineer",
                 undefined,
                 "29/10/2018",
                 "29/10/2018",

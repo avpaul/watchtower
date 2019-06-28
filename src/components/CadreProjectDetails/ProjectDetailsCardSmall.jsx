@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './CadreProjectDetails.css';
 import DefaultManagerIcon from '../../static/profile.svg';
+import DefaultProjectIcon from '../../static/projectIcon.png';
 import ProjectLinks from './ProjectLinks';
 
 const formatStacks = (technologies = []) =>
@@ -19,7 +20,10 @@ const ProjectDetailsCardSmall = ({
           <div>{projectDetails.type.toUpperCase()}</div>
         </div>
         <div className="project-logo">
-          <img src={projectDetails.logo} alt="project-logo" />
+          <img
+            src={projectDetails.logo || DefaultProjectIcon}
+            alt="project-logo"
+          />
           <h3>{projectDetails.name && projectDetails.name.toUpperCase()}</h3>
         </div>
         <div className="project-theme">

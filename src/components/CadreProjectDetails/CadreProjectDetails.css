@@ -251,7 +251,9 @@
 }
 .project-details__engineers {
   padding: 1rem;
+  width: 108%;
 }
+
 .project-details__engineers h3 {
   color: #344c5a;
   font-family: 'DIN Pro';
@@ -269,7 +271,7 @@
   font-size: 14px;
   line-height: 18px;
 }
-.project-engineers .dashboard-table__row .dashboard-table__cell img {
+.project-details__engineers .dashboard-table__row .dashboard-table__cell img {
   height: 25px;
   width: 25px;
   border-radius: 10rem;
