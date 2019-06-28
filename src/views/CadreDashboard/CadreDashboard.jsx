@@ -69,7 +69,7 @@ class CadreDashboard extends Component {
       <div className="container-fluid page-content">
         <div className="row">
           {this.renderSubMenu()}
-          <div className="col-sm-12 col-lg-9">
+          <div className="col-sm-12 col-sm-9">
             <Switch>
               {this.renderRoute(ProjectsDashboard, routes[0])}
               {this.renderRoute(VacanciesDashboard, routes[1])}

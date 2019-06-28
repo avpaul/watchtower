@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import fuzzy from 'fuzzy';
 import Reports from '../../../components/Reports';
+import PMloader from '../../../components/CustomLoader/PMLoader';
 
 class ReportsDashboard extends Component {
   /**
@@ -24,15 +25,18 @@ class ReportsDashboard extends Component {
    * Lifecycle implementation
    */
   componentDidMount() {
-    const { fetchEngineersReportActions, metaData } = this.props;
+    const { fetchEngineersReportActions, metaData, fetchAllRoles } = this.props;
 
     fetchEngineersReportActions().then(res => {
       if (!res.error) {
-        this.setState({
-          engineers: res.data.data.data,
-          total: res.data.data.total,
-          pageTotal: Math.ceil(res.data.data.total / metaData.perPage)
-        });
+        this.setState(
+          {
+            engineers: res.data.data.data,
+            total: res.data.data.total,
+            pageTotal: Math.ceil(res.data.data.total / metaData.perPage)
+          },
+          () => fetchAllRoles()
+        );
       }
     });
   }
@@ -57,8 +61,7 @@ class ReportsDashboard extends Component {
     const options = {
       pre: '<b>',
       post: '</b>',
-      extract: el =>
-        `${el.first_name}${el.last_name}${el.role}${el.project}${el.cohort}${el.email}`
+      extract: el => `${el.first_name}${el.last_name}${el.cohort}${el.email}`
     };
     const results = fuzzy.filter(searchWord, engineers, options);
     const searchResults = results.map(item => item.original);
@@ -113,27 +116,37 @@ class ReportsDashboard extends Component {
 
   render() {
     const { total } = this.state;
-    const { metaData } = this.props;
+    const { metaData, cadreroles, loading } = this.props;
     const options = metaData.perPageOptions.filter(this.isLessThanTotal);
 
     return (
-      <Reports
-        engineers={this.fuzzySearch()}
-        handleSearchChange={this.handleSearchChange}
-        handleShowSizeChange={this.handleShowSizeChange}
-        handlePageChange={this.handlePageChange}
-        pageSizeOptions={options}
-        total={Number.parseInt(total, 10)}
-      />
+      <React.Fragment>
+        {loading ? (
+          <PMloader />
+        ) : (
+          <Reports
+            engineers={this.fuzzySearch()}
+            handleSearchChange={this.handleSearchChange}
+            handleShowSizeChange={this.handleShowSizeChange}
+            handlePageChange={this.handlePageChange}
+            pageSizeOptions={options}
+            total={Number.parseInt(total, 10)}
+            cadreroles={cadreroles}
+          />
+        )}
+      </React.Fragment>
     );
   }
 }
 
 ReportsDashboard.propTypes = {
   fetchEngineersReportActions: PropTypes.func.isRequired,
+  fetchAllRoles: PropTypes.func.isRequired,
   $page: PropTypes.func.isRequired,
   $perPage: PropTypes.func.isRequired,
-  metaData: PropTypes.shape().isRequired
+  metaData: PropTypes.shape().isRequired,
+  cadreroles: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default ReportsDashboard;
