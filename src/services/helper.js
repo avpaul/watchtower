@@ -113,9 +113,9 @@ export const groupedDate = date =>
 export const formatName = name => {
   const nameForFormat = `${name}`.split('@')[0].split('.');
   const formattedName = number =>
-    `${`${nameForFormat[number]}`.charAt(0).toUpperCase()}${`${
-      nameForFormat[number]
-    }`.substr(1)}`;
+    `${`${nameForFormat[number]}`
+      .charAt(0)
+      .toUpperCase()}${`${nameForFormat[number]}`.substr(1)}`;
   return `${formattedName(0)} ${formattedName(1)}`;
 };
 
@@ -196,13 +196,18 @@ export const getAllIndexesOfElement = (arr, val) => {
  * @function {@param}
  */
 export const formatText = text => {
+  let paragraph1;
+  let paragraph2;
   if (text) {
     const periods =
-      text.match(/\./g, ' ') !== null ? text.match(/\./g, ' ').length : 1;
+      text.match(/\./g, ' ') !== null ? text.match(/\./g, ' ').length : 0;
+    if (periods === 0) {
+      return { paragraph1: text };
+    }
     const divisor = Math.round(periods / 2);
     const textindexes = getAllIndexesOfElement(text, '.');
-    const paragraph1 = text.slice(0, textindexes[divisor - 1] + 1);
-    let paragraph2 = text.slice(textindexes[divisor - 1]);
+    paragraph1 = text.slice(0, textindexes[divisor - 1] + 1);
+    paragraph2 = text.slice(textindexes[divisor - 1]);
     paragraph2 = paragraph2.substring(1).trim();
     return { paragraph1, paragraph2 };
   }

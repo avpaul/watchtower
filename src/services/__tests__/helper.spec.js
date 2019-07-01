@@ -46,4 +46,9 @@ describe('Test for helper functions', () => {
     expect(paragraph1).toEqual('This is a long text.');
     expect(paragraph2).toEqual('This is another long text.');
   });
+  it('Should return normal text if there is no full stop', () => {
+    const text = 'This is a long text';
+    const { paragraph1 } = formatText(text);
+    expect(paragraph1).toEqual('This is a long text');
+  });
 });
