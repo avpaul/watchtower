@@ -1,5 +1,5 @@
 .links-upload .modal-content {
-  height: 600px;
+  height: 580px;
 }
 
 form {
@@ -14,6 +14,7 @@ form {
 .links-upload h1 {
   font-size: 130%;
   font-weight: bold !important;
+  font-family: 'DIN Pro';
   color: #3359db;
   margin-left: 5%;
   padding-top: 5%;
@@ -69,6 +70,10 @@ form {
   visibility: visible;
 }
 
+.modal-header {
+  padding-bottom: 0.1rem;
+}
+
 .modal-footer .done-btn {
   height: 39px;
   width: 90px;
@@ -97,7 +102,10 @@ form {
   display: none;
 }
 .microlink_card {
-  width: 45%;
-  margin: 0.2em;
-  margin-bottom: 0.5em;
+  width: 49.3%;
+  margin: 0.2em 0.2em 0.5em 0;
+}
+
+.microlink_card:nth-child(even) {
+  margin: 0.2em 0 0.5em 0.2em;
 }

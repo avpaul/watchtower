@@ -80,7 +80,7 @@ class LinksUploadInput extends Component {
    */
   displayLinkUploadInput = (label, modalTarget) => (
     <button type="button" data-toggle="modal" data-target={modalTarget}>
-      {label}
+      {this.getValue() ? label : 'Add Links'}
     </button>
   );
 
