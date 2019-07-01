@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
+
 import './reports.css';
+import arrayOfObjectsSorter from '../../utils/sortArray';
 
 /**
  * Display user user name and picture in the cadre program
@@ -120,7 +122,7 @@ const Table = ({ tableHeaders, handleChange, engineers }) => (
           ))}
         </tr>
         <tbody>
-          {engineers.map(item =>
+          {engineers.sort(arrayOfObjectsSorter('first_name')).map(item =>
             tableRow(
               item,
               `${item.first_name.charAt(0)}${item.last_name.charAt(0)}`
