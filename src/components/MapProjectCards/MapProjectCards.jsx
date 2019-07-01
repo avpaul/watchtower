@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Projectcard from '../ProjectCard/ProjectCard';
+import arrayOfObjectsSorter from '../../utils/sortArray';
 
 import './MapProjectCards.css';
 
@@ -24,7 +25,7 @@ const MapProjectCards = ({ projectData }) => (
       </div>
     </div>
     <div className="project-card__grid">
-      {projectData.map(project => (
+      {projectData.sort(arrayOfObjectsSorter('name')).map(project => (
         <Projectcard project={project} key={project.id} />
       ))}
     </div>
