@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'DIN Pro Black';
+  src: url('static/fonts/FontFont - DINPro-Black.otf');
+}
+@font-face {
+  font-family: 'DIN Pro Bold';
+  src: url('static/fonts/FontFont - DINPro-Bold.otf');
+}
+@font-face {
+  font-family: 'DIN Pro Extlight';
+  src: url('static/fonts/FontFont - DINPro-Extlight.otf');
+}
+@font-face {
+  font-family: 'DIN Pro Light';
+  src: url('static/fonts/FontFont\ -\ DINPro-Light.otf');
+}
+@font-face {
+  font-family: 'DIN Pro Light Italic';
+  src: url('static/fonts/FontFont - DINPro-LightItalic.otf');
+}
+@font-face {
+  font-family: 'DIN Pro Medium';
+  src: url('static/fonts/FontFont - DINPro-Medium.otf');
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('static/fonts/FontFont - DINPro.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'DIN Pro', sans-serif;
+  min-height: 100%;
+  background-color: rgb(244, 248, 249) !important;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+.page-content {
+  padding: 5vh 4% 2rem 4%;
+  margin-top: 9rem;
+}
+
+.page-content .slick-slider {
+  padding: 0;
+}
+
+.page-content .slick-prev {
+  margin-left: -1.875rem;
+}
+
+.page-content .slick-next {
+  margin-right: -1.875rem;
+}
+.react-datepicker__input-container input {
+  padding: 0 10px;
+}
+
+.t-20 {
+  top: 20%;
+}
+
+.z-index-10 {
+  z-index: 1000;
+}

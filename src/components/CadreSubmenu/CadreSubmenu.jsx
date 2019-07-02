@@ -70,7 +70,6 @@ const subtitle = (submenu, activeItem) => (
  */
 const CadreSubmenu = props => {
   const { handleCardclick, activeItem } = props;
-
   return (
     <ul className="nav nav-pills nav-stacked">
       {submenus.map(submenu => (

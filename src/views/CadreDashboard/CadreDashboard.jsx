@@ -68,10 +68,13 @@ class CadreDashboard extends Component {
   render() {
     const { routes } = this.state;
     return (
-      <div className="container-fluid page-content">
+      <div
+        id="cadre-dashboard-container"
+        className="container-fluid page-content"
+      >
         <div className="row">
           {this.renderSubMenu()}
-          <div className="col-sm-9">
+          <div className="col-sm-9 main-content">
             <div>
               <Switch>
                 {this.renderRoute(ProjectsDashboard, routes[0])}

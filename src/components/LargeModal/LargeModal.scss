@@ -8,7 +8,6 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-
 .modal__body {
   position: fixed;
   background-color: #f4f8f9;
@@ -44,7 +43,6 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
-
 .close__modal {
   display: none;
   -webkit-transform: scale(0.1);
@@ -52,11 +50,7 @@
   -ms-transform: scale(0.1);
   transform: scale(0.1);
   top: 300px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
 }
-
 .modal__title {
   color: #333e44 !important;
   font-family: $font-primary;
@@ -66,7 +60,6 @@
   margin-bottom: 32.5px;
 }
 /* Add modal specific classes */
-
 .modal__body-card {
   display: flex;
   flex-direction: row;
@@ -74,34 +67,31 @@
   overflow: scroll;
   max-height: 90%;
 }
-
 .modal__body-card::-webkit-scrollbar {
   width: 2px;
   height: 5px;
 }
-
 .modal__body-card::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   height: 20px;
   border: 3px solid #979797;
 }
-
 .close {
   position: absolute;
-  top: 21px;
+  top: 25px;
   right: 30px;
-  width: 26px;
-  height: 26px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  outline: none;
+  padding: 0 !important;
 }
+
 button.close {
   background-color: rgb(190, 190, 190);
   font-size: 18px;
   color: #333e44;
   font-weight: 600;
 }
-
 @media screen and (max-width: 575px) {
   .modal-title {
     color: #333e44;

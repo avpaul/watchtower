@@ -1,33 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test cadre header should render properly 1`] = `
-<div
-  className="cadre-navbar"
-  id="nav"
->
+<div>
   <LogOutPage />
   <div
-    className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between"
+    className="cadre-navbar position-fixed w-100 z-index-10"
+    id="nav"
   >
-    <CadreLogoSection />
     <div
-      className="d-flex flex-row"
+      className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between"
     >
-      <span
-        className="notification"
-        onClick={[MockFunction]}
-        role="presentation"
+      <CadreLogoSection />
+      <div
+        className="d-flex flex-row"
       >
-        <img
-          alt="notificationIcon"
-          className="notification__icon"
-          src="Notification.svg"
-        />
-        <i
-          className=""
-        />
-      </span>
-      <CadreLogout />
+        <span
+          className="notification"
+          onClick={[MockFunction]}
+          role="presentation"
+        >
+          <img
+            alt="notificationIcon"
+            className="notification__icon"
+            src="Notification.svg"
+          />
+          <i
+            className=""
+          />
+        </span>
+        <CadreLogout />
+      </div>
     </div>
   </div>
 </div>
