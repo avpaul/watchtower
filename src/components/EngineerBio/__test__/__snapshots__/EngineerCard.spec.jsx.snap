@@ -436,9 +436,29 @@ ShallowWrapper {
         <div
           className="bio-card text-center"
 >
-          <Loader
-                    size=""
-          />
+          <Unknown>
+                    <ProfileCard
+                              firstName={undefined}
+                              lastName={undefined}
+                              picture={undefined}
+                    />
+                    <ProjectCards
+                              endDate={undefined}
+                              picture={undefined}
+                              projectLevel="Apprenticeship"
+                              projectName={undefined}
+                              startDate={undefined}
+                              technologies={undefined}
+                    />
+                    <ProjectCards
+                              endDate={undefined}
+                              picture={undefined}
+                              projectLevel="Simulations"
+                              projectName={undefined}
+                              startDate={undefined}
+                              technologies={undefined}
+                    />
+          </Unknown>
 </div>,
       ],
     },
@@ -461,9 +481,29 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <Loader
-            size=""
-/>,
+          "children": <Unknown>
+            <ProfileCard
+                        firstName={undefined}
+                        lastName={undefined}
+                        picture={undefined}
+            />
+            <ProjectCards
+                        endDate={undefined}
+                        picture={undefined}
+                        projectLevel="Apprenticeship"
+                        projectName={undefined}
+                        startDate={undefined}
+                        technologies={undefined}
+            />
+            <ProjectCards
+                        endDate={undefined}
+                        picture={undefined}
+                        projectLevel="Simulations"
+                        projectName={undefined}
+                        startDate={undefined}
+                        technologies={undefined}
+            />
+</Unknown>,
           "className": "bio-card text-center",
         },
         "ref": null,
@@ -472,11 +512,79 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "size": "",
+            "children": Array [
+              <ProfileCard
+                firstName={undefined}
+                lastName={undefined}
+                picture={undefined}
+/>,
+              <ProjectCards
+                endDate={undefined}
+                picture={undefined}
+                projectLevel="Apprenticeship"
+                projectName={undefined}
+                startDate={undefined}
+                technologies={undefined}
+/>,
+              <ProjectCards
+                endDate={undefined}
+                picture={undefined}
+                projectLevel="Simulations"
+                projectName={undefined}
+                startDate={undefined}
+                technologies={undefined}
+/>,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "firstName": undefined,
+                "lastName": undefined,
+                "picture": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "endDate": undefined,
+                "picture": undefined,
+                "projectLevel": "Apprenticeship",
+                "projectName": undefined,
+                "startDate": undefined,
+                "technologies": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "endDate": undefined,
+                "picture": undefined,
+                "projectLevel": "Simulations",
+                "projectName": undefined,
+                "startDate": undefined,
+                "technologies": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
         },
         "type": "div",
       },
@@ -498,9 +606,29 @@ ShallowWrapper {
           <div
             className="bio-card text-center"
 >
-            <Loader
-                        size=""
-            />
+            <Unknown>
+                        <ProfileCard
+                                    firstName={undefined}
+                                    lastName={undefined}
+                                    picture={undefined}
+                        />
+                        <ProjectCards
+                                    endDate={undefined}
+                                    picture={undefined}
+                                    projectLevel="Apprenticeship"
+                                    projectName={undefined}
+                                    startDate={undefined}
+                                    technologies={undefined}
+                        />
+                        <ProjectCards
+                                    endDate={undefined}
+                                    picture={undefined}
+                                    projectLevel="Simulations"
+                                    projectName={undefined}
+                                    startDate={undefined}
+                                    technologies={undefined}
+                        />
+            </Unknown>
 </div>,
         ],
       },
@@ -523,9 +651,29 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Loader
-              size=""
-/>,
+            "children": <Unknown>
+              <ProfileCard
+                            firstName={undefined}
+                            lastName={undefined}
+                            picture={undefined}
+              />
+              <ProjectCards
+                            endDate={undefined}
+                            picture={undefined}
+                            projectLevel="Apprenticeship"
+                            projectName={undefined}
+                            startDate={undefined}
+                            technologies={undefined}
+              />
+              <ProjectCards
+                            endDate={undefined}
+                            picture={undefined}
+                            projectLevel="Simulations"
+                            projectName={undefined}
+                            startDate={undefined}
+                            technologies={undefined}
+              />
+</Unknown>,
             "className": "bio-card text-center",
           },
           "ref": null,
@@ -534,11 +682,79 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "size": "",
+              "children": Array [
+                <ProfileCard
+                  firstName={undefined}
+                  lastName={undefined}
+                  picture={undefined}
+/>,
+                <ProjectCards
+                  endDate={undefined}
+                  picture={undefined}
+                  projectLevel="Apprenticeship"
+                  projectName={undefined}
+                  startDate={undefined}
+                  technologies={undefined}
+/>,
+                <ProjectCards
+                  endDate={undefined}
+                  picture={undefined}
+                  projectLevel="Simulations"
+                  projectName={undefined}
+                  startDate={undefined}
+                  technologies={undefined}
+/>,
+              ],
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "firstName": undefined,
+                  "lastName": undefined,
+                  "picture": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "endDate": undefined,
+                  "picture": undefined,
+                  "projectLevel": "Apprenticeship",
+                  "projectName": undefined,
+                  "startDate": undefined,
+                  "technologies": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "endDate": undefined,
+                  "picture": undefined,
+                  "projectLevel": "Simulations",
+                  "projectName": undefined,
+                  "startDate": undefined,
+                  "technologies": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
           },
           "type": "div",
         },

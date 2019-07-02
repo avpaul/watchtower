@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CadreSideCard from './CadreSideCard';
@@ -6,6 +6,7 @@ import { EngineerBioConnected } from '../../components/EngineerBio';
 import ProjectSummary from '../../components/EngineerProjectSummaryCard/EngineerProjectSummaryCard';
 import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
 import WelcomeMessage from '../../components/WelcomeMessage';
+import CadreLoader from '../../components/CustomLoader/CadreLoader';
 import './index.css';
 import './CadreDashboard.css';
 
@@ -18,20 +19,26 @@ export class D1FellowDashboardMain extends Component {
   render() {
     const { profile, loading } = this.props;
     return (
-      <div className="cadre-content">
-        <div className="cadre-side-card-dashboard">
-          <CadreSideCard />
-        </div>
-        <div className="dashboard-wrapper">
-          <div className="dashboard-greeting">
-            <WelcomeMessage {...this.props} />
+      <Fragment>
+        {loading ? (
+          <CadreLoader />
+        ) : (
+          <div className="cadre-content">
+            <div className="cadre-side-card-dashboard">
+              <CadreSideCard />
+            </div>
+            <div className="dashboard-wrapper">
+              <div className="dashboard-greeting">
+                <WelcomeMessage {...this.props} />
+              </div>
+              <div className="fellow-dashboard-main">
+                <EngineerBioConnected {...this.props} />
+                <ProjectSummary profile={profile} />
+              </div>
+            </div>
           </div>
-          <div className="fellow-dashboard-main">
-            <EngineerBioConnected {...this.props} />
-            <ProjectSummary profile={profile} loading={loading} />
-          </div>
-        </div>
-      </div>
+        )}
+      </Fragment>
     );
   }
 }

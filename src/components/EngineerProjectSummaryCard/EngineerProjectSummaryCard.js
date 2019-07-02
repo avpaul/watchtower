@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Loader from '../Loader/Loader';
 import './EngineerProjectSummaryCard.css';
 import project from '../../static/Project.svg';
 import projectIcon from '../../static/projectIcon.png';
@@ -9,7 +8,7 @@ import userIcon from '../../static/User.svg';
 
 const renderProjectTechnologies = technologies => {
   const mappedStacks = technologies.map(stack => (
-    <div className="language-rectangle ">
+    <div className="language-rectangle" key={stack.name}>
       <span className="language"> {stack.name}</span>
     </div>
   ));
@@ -62,24 +61,17 @@ const renderD1ProjectSummary = profile =>
   );
 
 const ProjectSummary = props => {
-  const { profile, loading } = props;
+  const { profile } = props;
   return (
     <div className="card-wrapper">
       <span className="header-span">My Project</span>
-      {loading ? (
-        <div className="loader-container">
-          <Loader />
-        </div>
-      ) : (
-        renderD1ProjectSummary(profile)
-      )}
+      {renderD1ProjectSummary(profile)}
     </div>
   );
 };
 
 ProjectSummary.propTypes = {
-  profile: PropTypes.shape().isRequired,
-  loading: PropTypes.bool.isRequired
+  profile: PropTypes.shape().isRequired
 };
 
 export default ProjectSummary;

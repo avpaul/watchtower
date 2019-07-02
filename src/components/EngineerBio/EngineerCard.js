@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
 import './EngineerBio.css';
 import ProfileCard from './profileCard';
 import ProjectCards from './ProjectCards';
@@ -32,12 +31,12 @@ const renderEngineerDetails = fellow => (
 );
 
 const EngineerCard = ({ data }) => {
-  const { fellow, loading } = data;
+  const { fellow } = data;
   return (
     <div>
       <h3 className="profile-card-header">My Profile</h3>
       <div className="bio-card text-center">
-        {!loading && fellow ? renderEngineerDetails(fellow) : <Loader />}
+        {fellow ? renderEngineerDetails(fellow) : null}
       </div>
     </div>
   );
