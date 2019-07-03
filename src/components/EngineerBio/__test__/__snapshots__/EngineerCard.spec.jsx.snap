@@ -72,6 +72,7 @@ ShallowWrapper {
           </Unknown>
 </div>,
       ],
+      "className": "engineer-bio-wrapper",
     },
     "ref": null,
     "rendered": Array [
@@ -242,6 +243,7 @@ ShallowWrapper {
             </Unknown>
 </div>,
         ],
+        "className": "engineer-bio-wrapper",
       },
       "ref": null,
       "rendered": Array [
@@ -461,6 +463,7 @@ ShallowWrapper {
           </Unknown>
 </div>,
       ],
+      "className": "engineer-bio-wrapper",
     },
     "ref": null,
     "rendered": Array [
@@ -631,6 +634,7 @@ ShallowWrapper {
             </Unknown>
 </div>,
         ],
+        "className": "engineer-bio-wrapper",
       },
       "ref": null,
       "rendered": Array [

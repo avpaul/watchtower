@@ -33,7 +33,7 @@ const renderEngineerDetails = fellow => (
 const EngineerCard = ({ data }) => {
   const { fellow } = data;
   return (
-    <div>
+    <div className="engineer-bio-wrapper">
       <h3 className="profile-card-header">My Profile</h3>
       <div className="bio-card text-center">
         {fellow ? renderEngineerDetails(fellow) : null}

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CadreSideCard from './CadreSideCard';
 import { EngineerBioConnected } from '../../components/EngineerBio';
 import ProjectSummary from '../../components/EngineerProjectSummaryCard/EngineerProjectSummaryCard';
+import EngineerVacancyCard from '../../components/EngineerVacanciesCard/EngineerVacancyCard';
 import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
 import WelcomeMessage from '../../components/WelcomeMessage';
 import CadreLoader from '../../components/CustomLoader/CadreLoader';
@@ -34,6 +35,7 @@ export class D1FellowDashboardMain extends Component {
               <div className="fellow-dashboard-main">
                 <EngineerBioConnected {...this.props} />
                 <ProjectSummary profile={profile} />
+                <EngineerVacancyCard />
               </div>
             </div>
           </div>
