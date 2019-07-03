@@ -8,7 +8,7 @@ import cadreProgramIconFill from '../../static/cadreProgramIconFill.svg';
 import Table from './Table';
 
 const cards = role => (
-  <div key={role.id} className="col-md-3 col-sm-6">
+  <div key={role.id} className="col-sm-3 col-sm-6">
     <div className="card-tile">
       <div className="card-tile-heading">
         <img src={cadreProgramIconFill} alt="..." />
@@ -36,7 +36,8 @@ const ReportSummary = ({
   handlePageChange,
   pageSizeOptions,
   total,
-  cadreroles
+  cadreroles,
+  loading
 }) => {
   const allroles = !cadreroles ? roles : cadreroles;
 
@@ -48,18 +49,23 @@ const ReportSummary = ({
           tableHeaders={headers}
           engineers={engineers}
           handleChange={handleSearchChange}
+          loading={loading}
         />
         <div className="paginator">
-          <Pagination
-            showSizeChanger
-            showQuickJumper
-            defaultCurrent={1}
-            defaultPageSize={20}
-            pageSizeOptions={pageSizeOptions}
-            onShowSizeChange={handleShowSizeChange}
-            onChange={handlePageChange}
-            total={total}
-          />
+          {!engineers || engineers.length === 0 ? (
+            ''
+          ) : (
+            <Pagination
+              showSizeChanger
+              showQuickJumper
+              defaultCurrent={1}
+              defaultPageSize={20}
+              pageSizeOptions={pageSizeOptions}
+              onShowSizeChange={handleShowSizeChange}
+              onChange={handlePageChange}
+              total={total}
+            />
+          )}
         </div>
       </div>
     </React.Fragment>
@@ -73,7 +79,8 @@ ReportSummary.propTypes = {
   handlePageChange: PropTypes.func.isRequired,
   pageSizeOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
   total: PropTypes.number,
-  cadreroles: PropTypes.arrayOf(PropTypes.shape()).isRequired
+  cadreroles: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 ReportSummary.defaultProps = {
