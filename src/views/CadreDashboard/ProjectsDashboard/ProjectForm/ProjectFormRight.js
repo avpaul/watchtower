@@ -25,15 +25,17 @@ class ProjectFormRight extends Component {
   );
 
   render() {
-    const { project, renderTextInput, renderUploadInput } = this.props;
+    const { projectDetails, renderTextInput, renderUploadInput } = this.props;
+    const projectInfomation = projectDetails || {};
+
     return (
       <div className="col-12 col-lg-6">
         <div className="row ml-0 mr-0">
-          {this.renderTextInputs(renderTextInput, project)}
+          {this.renderTextInputs(renderTextInput, projectInfomation)}
           {renderUploadInput({
             name: 'logo',
             label: 'Project Logo',
-            documents: project.logo ? [project.logo] : [],
+            documents: projectInfomation.logo ? [projectInfomation.logo] : [],
             count: 1,
             type: 'images',
             buttonLabel: 'Upload Logo'
@@ -45,9 +47,9 @@ class ProjectFormRight extends Component {
 }
 
 ProjectFormRight.propTypes = {
-  project: PropTypes.shape().isRequired,
   renderTextInput: PropTypes.func.isRequired,
-  renderUploadInput: PropTypes.func.isRequired
+  renderUploadInput: PropTypes.func.isRequired,
+  projectDetails: PropTypes.shape().isRequired
 };
 
 export default ProjectFormRight;

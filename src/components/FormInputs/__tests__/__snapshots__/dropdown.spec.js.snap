@@ -10,7 +10,7 @@ ShallowWrapper {
     defaultStatus={0}
     enableSearch={false}
     extras={null}
-    inputValue=""
+    inputValue={Array []}
     label="Type"
     loading={false}
     multipleSelection={false}
@@ -422,7 +422,7 @@ ShallowWrapper {
     defaultStatus={0}
     enableSearch={false}
     extras={null}
-    inputValue=""
+    inputValue={Array []}
     label=""
     loading={false}
     multipleSelection={false}

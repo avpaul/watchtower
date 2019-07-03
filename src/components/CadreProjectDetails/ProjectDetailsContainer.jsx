@@ -1,8 +1,17 @@
 import { connect } from 'react-redux';
 import ProjectDetails from './ProjectDetails';
+import { getAProject } from '../../redux/actionCreators/projectsActions';
 
-export const mapStateToProps = ({ allProjects }) => ({
-  allProjects
+export const mapStateToProps = ({ allProjects, singleProject }) => ({
+  allProjects,
+  singleProject
 });
 
-export default connect(mapStateToProps)(ProjectDetails);
+const mapDispatchToProps = dispatch => ({
+  getProject: id => dispatch(getAProject(id))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProjectDetails);

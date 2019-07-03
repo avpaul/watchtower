@@ -7,7 +7,15 @@ ShallowWrapper {
     createNewProject={[Function]}
     createProject={
         Object {
-            "data": Array [],
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          }
+    }
+    editProject={[Function]}
+    editSingleProject={
+        Object {
+            "data": Object {},
             "error": null,
             "loading": false,
           }
@@ -15,12 +23,22 @@ ShallowWrapper {
     history={
         Object {
             "goBack": [Function],
+            "push": [Function],
             "replace": [Function],
           }
     }
+    location={
+        Object {
+            "pathname": "/cadre/projects/create",
+          }
+    }
     manager={Object {}}
+    match={
+        Object {
+            "url": "",
+          }
+    }
     newTechnology=""
-    project={Object {}}
     user={
         Object {
             "detail": "Watch Tower",
@@ -53,6 +71,7 @@ ShallowWrapper {
                     history={
                               Object {
                                         "goBack": [Function],
+                                        "push": [Function],
                                         "replace": [Function],
                                       }
                     }
@@ -64,14 +83,14 @@ ShallowWrapper {
 </div>,
         <Unknown>
           <Connect(ProjectFormLeft)
-                    project={Object {}}
+                    projectDetails={Object {}}
                     renderAddLinksInput={[Function]}
                     renderDropdown={[Function]}
                     renderTextInput={[Function]}
                     renderUploadInput={[Function]}
           />
           <ProjectFormRight
-                    project={Object {}}
+                    projectDetails={Object {}}
                     renderAddLinksInput={[Function]}
                     renderDropdown={[Function]}
                     renderTextInput={[Function]}
@@ -127,6 +146,7 @@ ShallowWrapper {
               history={
                             Object {
                                           "goBack": [Function],
+                                          "push": [Function],
                                           "replace": [Function],
                                         }
               }
@@ -147,6 +167,7 @@ ShallowWrapper {
             "props": Object {
               "history": Object {
                 "goBack": [Function],
+                "push": [Function],
                 "replace": [Function],
               },
             },
@@ -176,14 +197,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Connect(ProjectFormLeft)
-              project={Object {}}
+              projectDetails={Object {}}
               renderAddLinksInput={[Function]}
               renderDropdown={[Function]}
               renderTextInput={[Function]}
               renderUploadInput={[Function]}
 />,
             <ProjectFormRight
-              project={Object {}}
+              projectDetails={Object {}}
               renderAddLinksInput={[Function]}
               renderDropdown={[Function]}
               renderTextInput={[Function]}
@@ -198,7 +219,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "project": Object {},
+              "projectDetails": Object {},
               "renderAddLinksInput": [Function],
               "renderDropdown": [Function],
               "renderTextInput": [Function],
@@ -213,7 +234,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "project": Object {},
+              "projectDetails": Object {},
               "renderAddLinksInput": [Function],
               "renderDropdown": [Function],
               "renderTextInput": [Function],
@@ -300,6 +321,7 @@ ShallowWrapper {
                         history={
                                     Object {
                                                 "goBack": [Function],
+                                                "push": [Function],
                                                 "replace": [Function],
                                               }
                         }
@@ -311,14 +333,14 @@ ShallowWrapper {
 </div>,
           <Unknown>
             <Connect(ProjectFormLeft)
-                        project={Object {}}
+                        projectDetails={Object {}}
                         renderAddLinksInput={[Function]}
                         renderDropdown={[Function]}
                         renderTextInput={[Function]}
                         renderUploadInput={[Function]}
             />
             <ProjectFormRight
-                        project={Object {}}
+                        projectDetails={Object {}}
                         renderAddLinksInput={[Function]}
                         renderDropdown={[Function]}
                         renderTextInput={[Function]}
@@ -374,6 +396,7 @@ ShallowWrapper {
                 history={
                                 Object {
                                                 "goBack": [Function],
+                                                "push": [Function],
                                                 "replace": [Function],
                                               }
                 }
@@ -394,6 +417,7 @@ ShallowWrapper {
               "props": Object {
                 "history": Object {
                   "goBack": [Function],
+                  "push": [Function],
                   "replace": [Function],
                 },
               },
@@ -423,14 +447,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Connect(ProjectFormLeft)
-                project={Object {}}
+                projectDetails={Object {}}
                 renderAddLinksInput={[Function]}
                 renderDropdown={[Function]}
                 renderTextInput={[Function]}
                 renderUploadInput={[Function]}
 />,
               <ProjectFormRight
-                project={Object {}}
+                projectDetails={Object {}}
                 renderAddLinksInput={[Function]}
                 renderDropdown={[Function]}
                 renderTextInput={[Function]}
@@ -445,7 +469,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "project": Object {},
+                "projectDetails": Object {},
                 "renderAddLinksInput": [Function],
                 "renderDropdown": [Function],
                 "renderTextInput": [Function],
@@ -460,7 +484,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "project": Object {},
+                "projectDetails": Object {},
                 "renderAddLinksInput": [Function],
                 "renderDropdown": [Function],
                 "renderTextInput": [Function],

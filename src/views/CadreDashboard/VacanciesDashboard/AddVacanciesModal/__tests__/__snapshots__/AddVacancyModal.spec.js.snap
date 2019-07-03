@@ -29,7 +29,7 @@ ShallowWrapper {
     createNewProjectVacancies={[Function]}
     createProjectVacancies={
         Object {
-            "data": Array [],
+            "data": Object {},
             "error": null,
             "loading": false,
           }
@@ -59,7 +59,7 @@ ShallowWrapper {
                 defaultStatus={0}
                 enableSearch={true}
                 extras={null}
-                inputValue=""
+                inputValue={Array []}
                 label="Select Project"
                 loading={false}
                 multipleSelection={false}
@@ -99,7 +99,7 @@ ShallowWrapper {
                                   },
                                   "createNewProjectVacancies": [Function],
                                   "createProjectVacancies": Object {
-                                    "data": Array [],
+                                    "data": Object {},
                                     "error": null,
                                     "loading": false,
                                   },
@@ -161,7 +161,7 @@ ShallowWrapper {
                                       createNewProjectVacancies={[Function]}
                                       createProjectVacancies={
                                                     Object {
-                                                                  "data": Array [],
+                                                                  "data": Object {},
                                                                   "error": null,
                                                                   "loading": false,
                                                                 }
@@ -207,7 +207,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={true}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Project"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -231,7 +231,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={false}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Role"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -282,7 +282,7 @@ ShallowWrapper {
                 defaultStatus={0}
                 enableSearch={false}
                 extras={null}
-                inputValue=""
+                inputValue={Array []}
                 label="Select Role"
                 loading={false}
                 multipleSelection={false}
@@ -322,7 +322,7 @@ ShallowWrapper {
                                   },
                                   "createNewProjectVacancies": [Function],
                                   "createProjectVacancies": Object {
-                                    "data": Array [],
+                                    "data": Object {},
                                     "error": null,
                                     "loading": false,
                                   },
@@ -384,7 +384,7 @@ ShallowWrapper {
                                       createNewProjectVacancies={[Function]}
                                       createProjectVacancies={
                                                     Object {
-                                                                  "data": Array [],
+                                                                  "data": Object {},
                                                                   "error": null,
                                                                   "loading": false,
                                                                 }
@@ -430,7 +430,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={true}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Project"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -454,7 +454,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={false}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Role"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -534,7 +534,7 @@ ShallowWrapper {
                                   },
                                   "createNewProjectVacancies": [Function],
                                   "createProjectVacancies": Object {
-                                    "data": Array [],
+                                    "data": Object {},
                                     "error": null,
                                     "loading": false,
                                   },
@@ -596,7 +596,7 @@ ShallowWrapper {
                                       createNewProjectVacancies={[Function]}
                                       createProjectVacancies={
                                                     Object {
-                                                                  "data": Array [],
+                                                                  "data": Object {},
                                                                   "error": null,
                                                                   "loading": false,
                                                                 }
@@ -642,7 +642,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={true}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Project"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -666,7 +666,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={false}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Role"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -747,7 +747,7 @@ ShallowWrapper {
             defaultStatus={0}
             enableSearch={true}
             extras={null}
-            inputValue=""
+            inputValue={Array []}
             label="Select Project"
             loading={false}
             multipleSelection={false}
@@ -787,7 +787,7 @@ ShallowWrapper {
                                       },
                                       "createNewProjectVacancies": [Function],
                                       "createProjectVacancies": Object {
-                                        "data": Array [],
+                                        "data": Object {},
                                         "error": null,
                                         "loading": false,
                                       },
@@ -849,7 +849,7 @@ ShallowWrapper {
                                           createNewProjectVacancies={[Function]}
                                           createProjectVacancies={
                                                             Object {
-                                                                              "data": Array [],
+                                                                              "data": Object {},
                                                                               "error": null,
                                                                               "loading": false,
                                                                             }
@@ -895,7 +895,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={true}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Project"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -919,7 +919,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={false}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Role"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -970,7 +970,7 @@ ShallowWrapper {
             defaultStatus={0}
             enableSearch={false}
             extras={null}
-            inputValue=""
+            inputValue={Array []}
             label="Select Role"
             loading={false}
             multipleSelection={false}
@@ -1010,7 +1010,7 @@ ShallowWrapper {
                                       },
                                       "createNewProjectVacancies": [Function],
                                       "createProjectVacancies": Object {
-                                        "data": Array [],
+                                        "data": Object {},
                                         "error": null,
                                         "loading": false,
                                       },
@@ -1072,7 +1072,7 @@ ShallowWrapper {
                                           createNewProjectVacancies={[Function]}
                                           createProjectVacancies={
                                                             Object {
-                                                                              "data": Array [],
+                                                                              "data": Object {},
                                                                               "error": null,
                                                                               "loading": false,
                                                                             }
@@ -1118,7 +1118,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={true}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Project"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -1142,7 +1142,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={false}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Role"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -1222,7 +1222,7 @@ ShallowWrapper {
                                       },
                                       "createNewProjectVacancies": [Function],
                                       "createProjectVacancies": Object {
-                                        "data": Array [],
+                                        "data": Object {},
                                         "error": null,
                                         "loading": false,
                                       },
@@ -1284,7 +1284,7 @@ ShallowWrapper {
                                           createNewProjectVacancies={[Function]}
                                           createProjectVacancies={
                                                             Object {
-                                                                              "data": Array [],
+                                                                              "data": Object {},
                                                                               "error": null,
                                                                               "loading": false,
                                                                             }
@@ -1330,7 +1330,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={true}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Project"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -1354,7 +1354,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={false}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Role"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -1415,7 +1415,7 @@ ShallowWrapper {
             "defaultStatus": 0,
             "enableSearch": true,
             "extras": null,
-            "inputValue": "",
+            "inputValue": Array [],
             "label": "Select Project",
             "loading": false,
             "multipleSelection": false,
@@ -1452,7 +1452,7 @@ ShallowWrapper {
                 },
                 "createNewProjectVacancies": [Function],
                 "createProjectVacancies": Object {
-                  "data": Array [],
+                  "data": Object {},
                   "error": null,
                   "loading": false,
                 },
@@ -1514,7 +1514,7 @@ ShallowWrapper {
                     createNewProjectVacancies={[Function]}
                     createProjectVacancies={
                                         Object {
-                                                            "data": Array [],
+                                                            "data": Object {},
                                                             "error": null,
                                                             "loading": false,
                                                           }
@@ -1560,7 +1560,7 @@ ShallowWrapper {
                                                             defaultStatus={0}
                                                             enableSearch={true}
                                                             extras={null}
-                                                            inputValue=""
+                                                            inputValue={Array []}
                                                             label="Select Project"
                                                             loading={false}
                                                             multipleSelection={false}
@@ -1584,7 +1584,7 @@ ShallowWrapper {
                                                             defaultStatus={0}
                                                             enableSearch={false}
                                                             extras={null}
-                                                            inputValue=""
+                                                            inputValue={Array []}
                                                             label="Select Role"
                                                             loading={false}
                                                             multipleSelection={false}
@@ -1642,7 +1642,7 @@ ShallowWrapper {
             "defaultStatus": 0,
             "enableSearch": false,
             "extras": null,
-            "inputValue": "",
+            "inputValue": Array [],
             "label": "Select Role",
             "loading": false,
             "multipleSelection": false,
@@ -1679,7 +1679,7 @@ ShallowWrapper {
                 },
                 "createNewProjectVacancies": [Function],
                 "createProjectVacancies": Object {
-                  "data": Array [],
+                  "data": Object {},
                   "error": null,
                   "loading": false,
                 },
@@ -1741,7 +1741,7 @@ ShallowWrapper {
                     createNewProjectVacancies={[Function]}
                     createProjectVacancies={
                                         Object {
-                                                            "data": Array [],
+                                                            "data": Object {},
                                                             "error": null,
                                                             "loading": false,
                                                           }
@@ -1787,7 +1787,7 @@ ShallowWrapper {
                                                             defaultStatus={0}
                                                             enableSearch={true}
                                                             extras={null}
-                                                            inputValue=""
+                                                            inputValue={Array []}
                                                             label="Select Project"
                                                             loading={false}
                                                             multipleSelection={false}
@@ -1811,7 +1811,7 @@ ShallowWrapper {
                                                             defaultStatus={0}
                                                             enableSearch={false}
                                                             extras={null}
-                                                            inputValue=""
+                                                            inputValue={Array []}
                                                             label="Select Role"
                                                             loading={false}
                                                             multipleSelection={false}
@@ -1897,7 +1897,7 @@ ShallowWrapper {
                 },
                 "createNewProjectVacancies": [Function],
                 "createProjectVacancies": Object {
-                  "data": Array [],
+                  "data": Object {},
                   "error": null,
                   "loading": false,
                 },
@@ -1959,7 +1959,7 @@ ShallowWrapper {
                     createNewProjectVacancies={[Function]}
                     createProjectVacancies={
                                         Object {
-                                                            "data": Array [],
+                                                            "data": Object {},
                                                             "error": null,
                                                             "loading": false,
                                                           }
@@ -2005,7 +2005,7 @@ ShallowWrapper {
                                                             defaultStatus={0}
                                                             enableSearch={true}
                                                             extras={null}
-                                                            inputValue=""
+                                                            inputValue={Array []}
                                                             label="Select Project"
                                                             loading={false}
                                                             multipleSelection={false}
@@ -2029,7 +2029,7 @@ ShallowWrapper {
                                                             defaultStatus={0}
                                                             enableSearch={false}
                                                             extras={null}
-                                                            inputValue=""
+                                                            inputValue={Array []}
                                                             label="Select Role"
                                                             loading={false}
                                                             multipleSelection={false}
@@ -2097,7 +2097,7 @@ ShallowWrapper {
                     defaultStatus={0}
                     enableSearch={true}
                     extras={null}
-                    inputValue=""
+                    inputValue={Array []}
                     label="Select Project"
                     loading={false}
                     multipleSelection={false}
@@ -2137,7 +2137,7 @@ ShallowWrapper {
                                           },
                                           "createNewProjectVacancies": [Function],
                                           "createProjectVacancies": Object {
-                                            "data": Array [],
+                                            "data": Object {},
                                             "error": null,
                                             "loading": false,
                                           },
@@ -2199,7 +2199,7 @@ ShallowWrapper {
                                               createNewProjectVacancies={[Function]}
                                               createProjectVacancies={
                                                               Object {
-                                                                              "data": Array [],
+                                                                              "data": Object {},
                                                                               "error": null,
                                                                               "loading": false,
                                                                             }
@@ -2245,7 +2245,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={true}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Project"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -2269,7 +2269,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={false}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Role"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -2320,7 +2320,7 @@ ShallowWrapper {
                     defaultStatus={0}
                     enableSearch={false}
                     extras={null}
-                    inputValue=""
+                    inputValue={Array []}
                     label="Select Role"
                     loading={false}
                     multipleSelection={false}
@@ -2360,7 +2360,7 @@ ShallowWrapper {
                                           },
                                           "createNewProjectVacancies": [Function],
                                           "createProjectVacancies": Object {
-                                            "data": Array [],
+                                            "data": Object {},
                                             "error": null,
                                             "loading": false,
                                           },
@@ -2422,7 +2422,7 @@ ShallowWrapper {
                                               createNewProjectVacancies={[Function]}
                                               createProjectVacancies={
                                                               Object {
-                                                                              "data": Array [],
+                                                                              "data": Object {},
                                                                               "error": null,
                                                                               "loading": false,
                                                                             }
@@ -2468,7 +2468,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={true}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Project"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -2492,7 +2492,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={false}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Role"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -2572,7 +2572,7 @@ ShallowWrapper {
                                           },
                                           "createNewProjectVacancies": [Function],
                                           "createProjectVacancies": Object {
-                                            "data": Array [],
+                                            "data": Object {},
                                             "error": null,
                                             "loading": false,
                                           },
@@ -2634,7 +2634,7 @@ ShallowWrapper {
                                               createNewProjectVacancies={[Function]}
                                               createProjectVacancies={
                                                               Object {
-                                                                              "data": Array [],
+                                                                              "data": Object {},
                                                                               "error": null,
                                                                               "loading": false,
                                                                             }
@@ -2680,7 +2680,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={true}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Project"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -2704,7 +2704,7 @@ ShallowWrapper {
                                                                               defaultStatus={0}
                                                                               enableSearch={false}
                                                                               extras={null}
-                                                                              inputValue=""
+                                                                              inputValue={Array []}
                                                                               label="Select Role"
                                                                               loading={false}
                                                                               multipleSelection={false}
@@ -2785,7 +2785,7 @@ ShallowWrapper {
               defaultStatus={0}
               enableSearch={true}
               extras={null}
-              inputValue=""
+              inputValue={Array []}
               label="Select Project"
               loading={false}
               multipleSelection={false}
@@ -2825,7 +2825,7 @@ ShallowWrapper {
                                             },
                                             "createNewProjectVacancies": [Function],
                                             "createProjectVacancies": Object {
-                                              "data": Array [],
+                                              "data": Object {},
                                               "error": null,
                                               "loading": false,
                                             },
@@ -2887,7 +2887,7 @@ ShallowWrapper {
                                                 createNewProjectVacancies={[Function]}
                                                 createProjectVacancies={
                                                                     Object {
-                                                                                        "data": Array [],
+                                                                                        "data": Object {},
                                                                                         "error": null,
                                                                                         "loading": false,
                                                                                       }
@@ -2933,7 +2933,7 @@ ShallowWrapper {
                                                                                         defaultStatus={0}
                                                                                         enableSearch={true}
                                                                                         extras={null}
-                                                                                        inputValue=""
+                                                                                        inputValue={Array []}
                                                                                         label="Select Project"
                                                                                         loading={false}
                                                                                         multipleSelection={false}
@@ -2957,7 +2957,7 @@ ShallowWrapper {
                                                                                         defaultStatus={0}
                                                                                         enableSearch={false}
                                                                                         extras={null}
-                                                                                        inputValue=""
+                                                                                        inputValue={Array []}
                                                                                         label="Select Role"
                                                                                         loading={false}
                                                                                         multipleSelection={false}
@@ -3008,7 +3008,7 @@ ShallowWrapper {
               defaultStatus={0}
               enableSearch={false}
               extras={null}
-              inputValue=""
+              inputValue={Array []}
               label="Select Role"
               loading={false}
               multipleSelection={false}
@@ -3048,7 +3048,7 @@ ShallowWrapper {
                                             },
                                             "createNewProjectVacancies": [Function],
                                             "createProjectVacancies": Object {
-                                              "data": Array [],
+                                              "data": Object {},
                                               "error": null,
                                               "loading": false,
                                             },
@@ -3110,7 +3110,7 @@ ShallowWrapper {
                                                 createNewProjectVacancies={[Function]}
                                                 createProjectVacancies={
                                                                     Object {
-                                                                                        "data": Array [],
+                                                                                        "data": Object {},
                                                                                         "error": null,
                                                                                         "loading": false,
                                                                                       }
@@ -3156,7 +3156,7 @@ ShallowWrapper {
                                                                                         defaultStatus={0}
                                                                                         enableSearch={true}
                                                                                         extras={null}
-                                                                                        inputValue=""
+                                                                                        inputValue={Array []}
                                                                                         label="Select Project"
                                                                                         loading={false}
                                                                                         multipleSelection={false}
@@ -3180,7 +3180,7 @@ ShallowWrapper {
                                                                                         defaultStatus={0}
                                                                                         enableSearch={false}
                                                                                         extras={null}
-                                                                                        inputValue=""
+                                                                                        inputValue={Array []}
                                                                                         label="Select Role"
                                                                                         loading={false}
                                                                                         multipleSelection={false}
@@ -3260,7 +3260,7 @@ ShallowWrapper {
                                             },
                                             "createNewProjectVacancies": [Function],
                                             "createProjectVacancies": Object {
-                                              "data": Array [],
+                                              "data": Object {},
                                               "error": null,
                                               "loading": false,
                                             },
@@ -3322,7 +3322,7 @@ ShallowWrapper {
                                                 createNewProjectVacancies={[Function]}
                                                 createProjectVacancies={
                                                                     Object {
-                                                                                        "data": Array [],
+                                                                                        "data": Object {},
                                                                                         "error": null,
                                                                                         "loading": false,
                                                                                       }
@@ -3368,7 +3368,7 @@ ShallowWrapper {
                                                                                         defaultStatus={0}
                                                                                         enableSearch={true}
                                                                                         extras={null}
-                                                                                        inputValue=""
+                                                                                        inputValue={Array []}
                                                                                         label="Select Project"
                                                                                         loading={false}
                                                                                         multipleSelection={false}
@@ -3392,7 +3392,7 @@ ShallowWrapper {
                                                                                         defaultStatus={0}
                                                                                         enableSearch={false}
                                                                                         extras={null}
-                                                                                        inputValue=""
+                                                                                        inputValue={Array []}
                                                                                         label="Select Role"
                                                                                         loading={false}
                                                                                         multipleSelection={false}
@@ -3453,7 +3453,7 @@ ShallowWrapper {
               "defaultStatus": 0,
               "enableSearch": true,
               "extras": null,
-              "inputValue": "",
+              "inputValue": Array [],
               "label": "Select Project",
               "loading": false,
               "multipleSelection": false,
@@ -3490,7 +3490,7 @@ ShallowWrapper {
                   },
                   "createNewProjectVacancies": [Function],
                   "createProjectVacancies": Object {
-                    "data": Array [],
+                    "data": Object {},
                     "error": null,
                     "loading": false,
                   },
@@ -3552,7 +3552,7 @@ ShallowWrapper {
                       createNewProjectVacancies={[Function]}
                       createProjectVacancies={
                                             Object {
-                                                                  "data": Array [],
+                                                                  "data": Object {},
                                                                   "error": null,
                                                                   "loading": false,
                                                                 }
@@ -3598,7 +3598,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={true}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Project"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -3622,7 +3622,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={false}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Role"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -3680,7 +3680,7 @@ ShallowWrapper {
               "defaultStatus": 0,
               "enableSearch": false,
               "extras": null,
-              "inputValue": "",
+              "inputValue": Array [],
               "label": "Select Role",
               "loading": false,
               "multipleSelection": false,
@@ -3717,7 +3717,7 @@ ShallowWrapper {
                   },
                   "createNewProjectVacancies": [Function],
                   "createProjectVacancies": Object {
-                    "data": Array [],
+                    "data": Object {},
                     "error": null,
                     "loading": false,
                   },
@@ -3779,7 +3779,7 @@ ShallowWrapper {
                       createNewProjectVacancies={[Function]}
                       createProjectVacancies={
                                             Object {
-                                                                  "data": Array [],
+                                                                  "data": Object {},
                                                                   "error": null,
                                                                   "loading": false,
                                                                 }
@@ -3825,7 +3825,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={true}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Project"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -3849,7 +3849,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={false}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Role"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -3935,7 +3935,7 @@ ShallowWrapper {
                   },
                   "createNewProjectVacancies": [Function],
                   "createProjectVacancies": Object {
-                    "data": Array [],
+                    "data": Object {},
                     "error": null,
                     "loading": false,
                   },
@@ -3997,7 +3997,7 @@ ShallowWrapper {
                       createNewProjectVacancies={[Function]}
                       createProjectVacancies={
                                             Object {
-                                                                  "data": Array [],
+                                                                  "data": Object {},
                                                                   "error": null,
                                                                   "loading": false,
                                                                 }
@@ -4043,7 +4043,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={true}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Project"
                                                                   loading={false}
                                                                   multipleSelection={false}
@@ -4067,7 +4067,7 @@ ShallowWrapper {
                                                                   defaultStatus={0}
                                                                   enableSearch={false}
                                                                   extras={null}
-                                                                  inputValue=""
+                                                                  inputValue={Array []}
                                                                   label="Select Role"
                                                                   loading={false}
                                                                   multipleSelection={false}

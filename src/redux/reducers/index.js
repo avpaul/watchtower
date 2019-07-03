@@ -38,6 +38,8 @@ import fetchSlackChannels from './slackChannelReducer';
 import cadreProjectRolereducer from './cadreProjectRoleReducer';
 import fellowActiveRoleReducer from './fellowActiveRoleReducer';
 import createProjectVacancies from './createProjectVacanciesReducer';
+import editProjectReducer from './editProjectReducer';
+import getAProjectReducer from './getAProjectReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -77,7 +79,9 @@ const rootReducer = combineReducers({
   fetchSlackChannels,
   allRoles: cadreProjectRolereducer,
   fetchActiveRole: fellowActiveRoleReducer,
-  createProjectVacancies
+  createProjectVacancies,
+  editSingleProject: editProjectReducer,
+  singleProject: getAProjectReducer
 });
 
 export default rootReducer;

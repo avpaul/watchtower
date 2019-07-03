@@ -23,8 +23,8 @@ class DropdownInput extends Component {
     this.state = {
       status: props.defaultStatus,
       alertText: '',
-      inputValue: props.inputValue,
-      selections: [],
+      inputValue: props.multipleSelection ? {} : props.inputValue,
+      selections: props.multipleSelection ? props.inputValue : [],
       show: false,
       searchValue: ''
     };
@@ -290,7 +290,10 @@ DropdownInput.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   comment: PropTypes.string,
-  inputValue: PropTypes.string,
+  inputValue: PropTypes.oneOfType([
+    PropTypes.shape(),
+    PropTypes.instanceOf(Array)
+  ]),
   options: PropTypes.instanceOf(Array),
   multipleSelection: PropTypes.bool,
   extras: PropTypes.shape(),
@@ -303,7 +306,7 @@ DropdownInput.defaultProps = {
   className: 'wt-dropdown',
   label: '',
   comment: '',
-  inputValue: '',
+  inputValue: [],
   placeholder: '',
   options: [],
   multipleSelection: false,

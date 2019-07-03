@@ -14,7 +14,7 @@ export class ProjectCard extends React.Component {
       history,
       project
     } = this.props;
-    return history.push({ pathname: `${url}/details/${id}`, state: project });
+    return history.push({ pathname: `${url}/${id}`, state: project });
   };
 
   render() {

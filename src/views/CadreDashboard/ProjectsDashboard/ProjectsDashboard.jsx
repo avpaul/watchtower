@@ -21,9 +21,16 @@ const ProjectsDashboard = props => {
       />
       <Route
         exact
-        path={`${match.url}/details/:id`}
+        path={`${match.url}/:id`}
         component={newProps => (
           <ProjectDetailsPage {...props} match={newProps.match} />
+        )}
+      />
+      <Route
+        exact
+        path={`${match.url}/:id/edit`}
+        component={newProps => (
+          <ProjectForm {...props} match={newProps.match} />
         )}
       />
     </Switch>

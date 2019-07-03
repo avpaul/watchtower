@@ -52,17 +52,32 @@ export const genericAPIGetRequest = (url, actionTypes) =>
     url: `${serverURL}/api/v2/${url}`
   });
 
+
 /**
  * Serialize the query paramaters
  * @param  {object} query
  * @return {object}
  */
 export const serializeQuery = query =>
-  Object.keys(query)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(query[key])}`)
-    .join('&');
+Object.keys(query)
+  .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(query[key])}`)
+  .join('&');
+
+/**
+ * A generic action creator for making PUT requests
+ * @param string The url path to make the request to
+ * @param array actionTypes A list of action types
+ * @return object An instance of a Promise
+ */
+export const genericAPIPutRequest = (url, actionTypes, putData) =>
+  genericAPIRequest(actionTypes, {
+    method: 'PUT',
+    url: `${serverURL}/api/v2/${url}`,
+    data: putData
+  });
 
 export default {
   genericAPIPostRequest,
-  genericAPIGetRequest
+  genericAPIGetRequest,
+  genericAPIPutRequest
 };
