@@ -35,10 +35,17 @@ export const submenus = [
     activeIcon: rolesIconActive
   },
   {
+    title: 'Certifications',
+    subtitle: 'Engineer Certifications',
+    icon: rolesIcon,
+    id: '3',
+    activeIcon: rolesIconActive
+  },
+  {
     title: 'Reports',
     subtitle: 'Program Progress',
     icon: reportIcon,
-    id: '3',
+    id: '4',
     activeIcon: reportIconActive
   }
 ];

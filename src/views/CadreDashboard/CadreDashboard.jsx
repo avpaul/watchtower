@@ -6,6 +6,7 @@ import ProjectsDashboard from './ProjectsDashboard';
 import RolesDashboard from './RolesDashboard';
 import ReportsDashboard from './ReportsDashboard';
 import VacanciesDashboard from './VacanciesDashboard';
+import CertificationsDashboard from './CertificationsDashboard';
 
 import './CadreDashboard.css';
 
@@ -22,6 +23,7 @@ class CadreDashboard extends Component {
         `${props.match.url}/projects`,
         `${props.match.url}/vacancies`,
         `${props.match.url}/roles`,
+        `${props.match.url}/certifications`,
         `${props.match.url}/reports`
       ]
     };
@@ -74,7 +76,8 @@ class CadreDashboard extends Component {
               {this.renderRoute(ProjectsDashboard, routes[0])}
               {this.renderRoute(VacanciesDashboard, routes[1])}
               {this.renderRoute(RolesDashboard, routes[2])}
-              {this.renderRoute(ReportsDashboard, routes[3])}
+              {this.renderRoute(CertificationsDashboard, routes[3])}
+              {this.renderRoute(ReportsDashboard, routes[4])}
             </Switch>
           </div>
         </div>
