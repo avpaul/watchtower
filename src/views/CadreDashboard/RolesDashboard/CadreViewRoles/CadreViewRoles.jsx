@@ -4,13 +4,11 @@ import MapProjectRoleCard from '../../../../components/MapProjectRoleCard';
 import PMloader from '../../../../components/CustomLoader/PMLoader';
 
 import './CadreViewRoles.css';
-import { underDevelopment } from '../../../../utils';
 
 export default class CadreViewRoles extends Component {
   componentDidMount() {
     const { fetchAllRoles } = this.props;
-    if (!['production', 'staging'].includes(process.env.NODE_ENV))
-      fetchAllRoles();
+    fetchAllRoles();
   }
 
   render() {
@@ -27,14 +25,14 @@ export default class CadreViewRoles extends Component {
       </div>
     ) : (
       <div className="cadre__page">
-        {underDevelopment(
+        {
           <MapProjectRoleCard
             roleData={data}
             fetchActiveEngineers={getActiveRoleEngineer}
             loading={loadActiveEngrs}
             activeEngineers={activeEngineers}
           />
-        )}
+        }
       </div>
     );
   }
