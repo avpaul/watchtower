@@ -9,7 +9,9 @@ exports[`Test Large modal component should render component correctly 1`] = `
   >
     <p
       className="modal__title"
-    />
+    >
+      This is a title
+    </p>
     <button
       className="close"
       onClick={[MockFunction]}
@@ -40,9 +42,6 @@ exports[`Test Large modal component should render large modal 1`] = `
   <section
     className="modal__body"
   >
-    <p
-      className="modal__title"
-    />
     <button
       className="close"
       onClick={
@@ -71,6 +70,76 @@ exports[`Test Large modal component should render large modal 1`] = `
         Close
       </span>
     </button>
+    <div>
+      Hello
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Test Large modal component should render large modal without cancel button 1`] = `
+<div
+  className="modal display__modal"
+>
+  <section
+    className="modal__body"
+  >
+    <div>
+      Hello
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Test Large modal component should render medium modal 1`] = `
+<div
+  className="modal display__modal"
+>
+  <section
+    className="modal-body__md"
+  >
+    <button
+      className="close"
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+      <span
+        className="sr-only"
+      >
+        Close
+      </span>
+    </button>
+    <div>
+      Hello
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Test Large modal component should render medium modal 2`] = `
+<div
+  className="modal display__modal"
+>
+  <section
+    className="modal-body__md"
+  >
     <div>
       Hello
     </div>

@@ -5,6 +5,7 @@ import Modal from '../LargeModal/LargeModal';
 import MapRoleActiveEngineers from '../MapRoleActiveEngineers';
 import Loader from '../Loader/Loader';
 import { pluralizeCheck } from '../../utils';
+import EditCertificationModal from '../EditCertificationModal/EditCertificationModalContainer';
 
 import './Card.scss';
 
@@ -13,7 +14,8 @@ class Card extends React.Component {
     super(props);
     this.state = {
       showMore: false,
-      openModal: false
+      openModal: false,
+      openCertification: false
     };
   }
 
@@ -31,9 +33,23 @@ class Card extends React.Component {
     return fetcher(details.id);
   };
 
+  openCertificationModal = () => {
+    const { openCertification } = this.state;
+
+    this.setState({ openCertification: !openCertification });
+  };
+
   closeModal = () => {
-    const { openModal } = this.state;
-    this.setState({ openModal: !openModal });
+    const { openModal, openCertification } = this.state;
+    const {
+      cardProps: { type }
+    } = this.props;
+
+    if (type === 'role') {
+      this.setState({ openModal: !openModal });
+    } else {
+      this.setState({ openCertification: !openCertification });
+    }
   };
 
   renderFullDescription = () => {
@@ -139,6 +155,32 @@ class Card extends React.Component {
     );
   };
 
+  renderDropdown = () => (
+    <div className="dropdown-menu dropdown-menu-right">
+      <button
+        type="button"
+        className="dropdown-item"
+        onClick={this.openCertificationModal}
+      >
+        Edit Certification
+      </button>
+    </div>
+  );
+
+  renderEditCertificationModal = () => {
+    const {
+      cardProps: { details }
+    } = this.props;
+    const { openCertification } = this.state;
+    return (
+      <EditCertificationModal
+        open={openCertification}
+        data={details}
+        toggle={this.closeModal}
+      />
+    );
+  };
+
   render() {
     const {
       cardProps: { details, loading, activeParticipants, type }
@@ -148,9 +190,10 @@ class Card extends React.Component {
       <div className="role-card">
         <div className="row">
           <div className="col-12">
-            <div className="role-card__icon">
+            <div className="role-card__icon" data-toggle="dropdown">
               <img src={More} alt="" />
             </div>
+            {this.renderDropdown()}
           </div>
         </div>
         <div className="role-card__title">{details.name}</div>
@@ -170,6 +213,7 @@ class Card extends React.Component {
           activeParticipants,
           type
         )}
+        {this.renderEditCertificationModal()}
       </div>
     );
   }

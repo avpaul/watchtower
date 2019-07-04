@@ -1,0 +1,21 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input label {
+  margin: 0 0 10.9px 0;
+  text-transform: capitalize;
+}
+.form-input__textarea {
+  height: 130px;
+  width: 100%;
+  border: 1px solid #e9eff4;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin: 0 0 16px 0;
+  outline: none;
+  font-size: 100%;
+  padding: 10px 10px;
+  resize: none;
+}

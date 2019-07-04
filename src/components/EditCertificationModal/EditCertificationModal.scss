@@ -1,0 +1,45 @@
+.form-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: 'DIN Pro';
+}
+
+.modal__title-md {
+  color: #333e44 !important;
+  font-family: 'DIN Pro';
+  font-size: 24px;
+  letter-spacing: -1.1px;
+  line-height: 31px;
+  margin: 0 0 20px 0;
+}
+
+.form-input-inline {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 0 0 10.9px 0;
+}
+
+.form-submit {
+  height: 39px;
+  width: 97px;
+  margin: 35px 0px 0 5px;
+  border-radius: 5px;
+  background-color: #10a36d;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.58px;
+  font-family: 'DIN Pro';
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  cursor: pointer;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
