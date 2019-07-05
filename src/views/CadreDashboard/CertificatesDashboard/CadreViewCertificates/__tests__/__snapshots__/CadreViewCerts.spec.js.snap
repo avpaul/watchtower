@@ -5,9 +5,7 @@ exports[`Test view roles should render correctly 1`] = `
   className="cadre__page"
 >
   <MapProjectRoleCard
-    activeEngineers={Object {}}
-    fetchActiveEngineers={[MockFunction]}
-    loading={true}
+    activeEngineers={Array []}
     roleData={
       Array [
         Object {
@@ -22,7 +20,7 @@ exports[`Test view roles should render correctly 1`] = `
         },
       ]
     }
-    type="role"
+    type="certificates"
   />
 </div>
 `;

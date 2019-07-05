@@ -18,7 +18,8 @@ describe('Test Map Role cards', () => {
       roleData: [role],
       fetchActiveEngineers: jest.fn(),
       loading: true,
-      activeEngineers: {}
+      activeEngineers: {},
+      type: 'role'
     };
     const wrapper = shallow(<MapProjectRoleCard {...props} />);
     expect(wrapper).toMatchSnapshot();
@@ -29,7 +30,8 @@ describe('Test Map Role cards', () => {
       roleData: [role, role],
       fetchActiveEngineers: jest.fn(),
       loading: true,
-      activeEngineers: {}
+      activeEngineers: {},
+      type: 'role'
     };
     const wrapper = shallow(<MapProjectRoleCard {...props} />);
     expect(wrapper).toMatchSnapshot();

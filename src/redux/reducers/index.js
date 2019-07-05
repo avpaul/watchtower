@@ -36,6 +36,7 @@ import cadreEngineersReducer from './cadreEngineersReducer';
 import fetchEngineerReportReducer from './engineersReportReducer';
 import fetchSlackChannels from './slackChannelReducer';
 import cadreProjectRolereducer from './cadreProjectRoleReducer';
+import cadreCertificationreducer from './cadreCertificationReducer';
 import fellowActiveRoleReducer from './fellowActiveRoleReducer';
 import createProjectVacancies from './createProjectVacanciesReducer';
 import editProjectReducer from './editProjectReducer';
@@ -81,6 +82,7 @@ const rootReducer = combineReducers({
   reports: fetchEngineerReportReducer,
   fetchSlackChannels,
   allRoles: cadreProjectRolereducer,
+  allCertifications: cadreCertificationreducer,
   fetchActiveRole: fellowActiveRoleReducer,
   createProjectVacancies,
   editSingleProject: editProjectReducer,

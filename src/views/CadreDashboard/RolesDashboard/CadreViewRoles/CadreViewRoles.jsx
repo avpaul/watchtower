@@ -27,6 +27,7 @@ export default class CadreViewRoles extends Component {
         {
           <MapProjectRoleCard
             roleData={data}
+            type="role"
             fetchActiveEngineers={getActiveRoleEngineer}
             loading={loadActiveEngrs}
             activeEngineers={activeEngineers}
