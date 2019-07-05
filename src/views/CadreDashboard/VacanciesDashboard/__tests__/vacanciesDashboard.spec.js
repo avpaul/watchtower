@@ -6,7 +6,7 @@ import Thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import initialState from '../../../../redux/reducers/initialState';
 import VacancyDashboard from '../VacanciesDashboard';
-import VacanciesDashboardContainer from '../VacanciesDashboardContainer';
+import { generateVacancyGroups } from '../../../../__mocks__/projectVacancy';
 
 describe('Vacancy Dashboard', () => {
   const defaultProps = {
@@ -14,36 +14,7 @@ describe('Vacancy Dashboard', () => {
     getAllVacancies: {
       ...initialState.getAllVacancies,
       data: {
-        projectVacancies: [
-          {
-            project: {
-              id: 7,
-              name: 'Corrupti non.'
-            },
-            role: {
-              id: 1,
-              name: 'Engineer'
-            },
-            vacancies: [
-              {
-                id: 99,
-                project_id: 7,
-                project_role_id: 1,
-                fellow_id: null,
-                is_active: false
-              },
-
-              {
-                id: 105,
-                project_id: 7,
-                project_role_id: 1,
-                fellow_id: null,
-                is_active: false
-              }
-            ],
-            available_slots: 2
-          }
-        ],
+        projectVacancies: generateVacancyGroups(2, 2),
         certificationVacancies: [
           {
             "certification": {
@@ -72,30 +43,39 @@ describe('Vacancy Dashboard', () => {
           }
         ]
       }
-    }
+    },
+    setProjectVacanciesOnFocus: jest.fn()
   };
+
   /**
    * Creates an enzyme instance to test the VacancyDashboard component.
    *
    * @param propOverrides Used to edit the props passed to the component when being mounted
    * @returns { wrapper, props }
    */
-  const setup = (isMounted = false) => {
+  const setup = (propOverrides = {}, isMounted = false) => {
     const mockStore = configureStore([Thunk]);
     const store = mockStore(initialState);
+    const newProps = { ...defaultProps, ...propOverrides };
 
     const wrapper = isMounted
       ? mount(
-        <Provider store={store}>
-          <VacanciesDashboardContainer />
-        </Provider>
-      )
-      : shallow(<VacancyDashboard {...defaultProps} />);
+          <Provider store={store}>
+            <VacancyDashboard {...newProps} />
+          </Provider>
+        )
+      : shallow(<VacancyDashboard {...newProps} />);
     return { wrapper };
   };
 
   it('renders correctly', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should be able to click the add project vacancies button', () => {
+    const { wrapper } = setup({}, true);
+    wrapper.find('#cadre-button-add-vacancies').simulate('click');
+    expect(defaultProps.setProjectVacanciesOnFocus).toHaveBeenCalledTimes(1);
   });
 });

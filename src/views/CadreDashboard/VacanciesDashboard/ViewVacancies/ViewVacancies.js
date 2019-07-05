@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TDDOPsVacancyCard from '../../../../components/TDDOpsVacancyCard/TDDOPsVacancyCard';
+import arrayKey from 'weak-key';
+import TDDOPsVacancyCard from '../../../../components/TDDOpsVacancyCard';
 import './ViewVacancies.scss';
 
 const renderVacancies = (vacancies, vacanciesToDisplay) => {
   const mappedVacancies =
     vacancies.length !== 0 ? (
-      vacancies.map(vacancy =>
+      vacancies.map(vacancy => (
         <TDDOPsVacancyCard
+          key={arrayKey(vacancy)}
           vacancy={vacancy}
           vacanciesToDisplay={vacanciesToDisplay}
-        />)
+        />
+      ))
     ) : (
         <div className="ops-no-vacancies">No Vacancies</div>
       );
@@ -29,4 +32,5 @@ ViewRoleVacancies.propTypes = {
 ViewRoleVacancies.defaultProps = {
   vacancies: []
 };
+
 export default ViewRoleVacancies;

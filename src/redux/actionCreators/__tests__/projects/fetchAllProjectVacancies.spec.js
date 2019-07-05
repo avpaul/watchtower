@@ -7,7 +7,7 @@ import { getAllVacancies } from '../../projectVacancyActions';
 import initialState from '../../../reducers/initialState';
 
 import {
-  GET_ALL_VACANCIES_SUCCESSS,
+  GET_ALL_VACANCIES_SUCCESS,
   GET_ALL_VACANCIES_REQUEST,
   GET_ALL_VACANCIES_FAILURE
 } from '../../../constants/projectsTypes';
@@ -54,7 +54,7 @@ describe('Get all project vacancies action', () => {
     const expectedActions = [
       { type: GET_ALL_VACANCIES_REQUEST },
       {
-        type: GET_ALL_VACANCIES_SUCCESSS,
+        type: GET_ALL_VACANCIES_SUCCESS,
         data: vacancies
       }
     ];

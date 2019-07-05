@@ -29,9 +29,14 @@ class TextInput extends Component {
     attachToParentComponent(this);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     const component = this;
     const { status } = component.state;
+    const { inputValue } = this.props;
+
+    if (prevProps.inputValue !== inputValue)
+      component.setState({ inputValue, status: 6 });
+
     if ([1, 2].includes(status)) {
       const { defaultStatus } = component.props;
       setTimeout(

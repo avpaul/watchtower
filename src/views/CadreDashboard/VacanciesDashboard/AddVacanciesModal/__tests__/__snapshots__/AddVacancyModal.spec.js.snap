@@ -28,11 +28,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
     className="wt-dropdown"
     comment=""
     componentStateKey="inputs"
-    defaultStatus={0}
+    defaultStatus={6}
     dropDownFor=""
     enableSearch={true}
     extras={null}
-    inputValue={Array []}
+    inputValue={Object {}}
     label="Select Project"
     loading={false}
     multipleSelection={false}
@@ -48,14 +48,16 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
     }
     parent={
       AddVacanciesModal {
+        "checkSubmitState": [Function],
         "context": Object {},
+        "filterPayload": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "props": Object {
           "allProjectRoles": Object {
             "data": Array [
               Object {
-                "id": 1,
+                "id": 2,
                 "name": "Scrum Master",
               },
             ],
@@ -76,20 +78,29 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
             "error": null,
             "loading": false,
           },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
           "fetchAllProjects": [MockFunction],
           "fetchAllRoles": [MockFunction],
+          "projectVacanciesOnFocus": Object {},
         },
         "refs": Object {},
         "renderButton": [Function],
         "renderDropdown": [Function],
+        "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
         "setState": [Function],
         "state": Object {
+          "error": "",
           "inputs": Object {},
           "success": false,
         },
-        "updateSubmitState": [Function],
         "updater": Updater {
           "_callbacks": Array [],
           "_renderer": ReactShallowRenderer {
@@ -113,7 +124,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                 Object {
                   "data": Array [
                     Object {
-                      "id": 1,
+                      "id": 2,
                       "name": "Scrum Master",
                     },
                   ],
@@ -139,8 +150,18 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   "loading": false,
                 }
               }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
               fetchAllProjects={[MockFunction]}
               fetchAllRoles={[MockFunction]}
+              projectVacanciesOnFocus={Object {}}
             />,
             "_firstWorkInProgressHook": null,
             "_forcedUpdate": false,
@@ -177,11 +198,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   className="wt-dropdown"
                   comment=""
                   componentStateKey="inputs"
-                  defaultStatus={0}
+                  defaultStatus={6}
                   dropDownFor=""
                   enableSearch={true}
                   extras={null}
-                  inputValue={Array []}
+                  inputValue={Object {}}
                   label="Select Project"
                   loading={false}
                   multipleSelection={false}
@@ -202,11 +223,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   className="wt-dropdown"
                   comment=""
                   componentStateKey="inputs"
-                  defaultStatus={0}
+                  defaultStatus={6}
                   dropDownFor=""
                   enableSearch={false}
                   extras={null}
-                  inputValue={Array []}
+                  inputValue={Object {}}
                   label="Select Role"
                   loading={false}
                   multipleSelection={false}
@@ -214,7 +235,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   options={
                     Array [
                       Object {
-                        "id": 1,
+                        "id": 2,
                         "label": "Scrum Master",
                         "name": "Scrum Master",
                       },
@@ -253,11 +274,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
     className="wt-dropdown"
     comment=""
     componentStateKey="inputs"
-    defaultStatus={0}
+    defaultStatus={6}
     dropDownFor=""
     enableSearch={false}
     extras={null}
-    inputValue={Array []}
+    inputValue={Object {}}
     label="Select Role"
     loading={false}
     multipleSelection={false}
@@ -265,7 +286,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
     options={
       Array [
         Object {
-          "id": 1,
+          "id": 2,
           "label": "Scrum Master",
           "name": "Scrum Master",
         },
@@ -273,14 +294,16 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
     }
     parent={
       AddVacanciesModal {
+        "checkSubmitState": [Function],
         "context": Object {},
+        "filterPayload": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "props": Object {
           "allProjectRoles": Object {
             "data": Array [
               Object {
-                "id": 1,
+                "id": 2,
                 "name": "Scrum Master",
               },
             ],
@@ -301,20 +324,29 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
             "error": null,
             "loading": false,
           },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
           "fetchAllProjects": [MockFunction],
           "fetchAllRoles": [MockFunction],
+          "projectVacanciesOnFocus": Object {},
         },
         "refs": Object {},
         "renderButton": [Function],
         "renderDropdown": [Function],
+        "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
         "setState": [Function],
         "state": Object {
+          "error": "",
           "inputs": Object {},
           "success": false,
         },
-        "updateSubmitState": [Function],
         "updater": Updater {
           "_callbacks": Array [],
           "_renderer": ReactShallowRenderer {
@@ -338,7 +370,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                 Object {
                   "data": Array [
                     Object {
-                      "id": 1,
+                      "id": 2,
                       "name": "Scrum Master",
                     },
                   ],
@@ -364,8 +396,18 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   "loading": false,
                 }
               }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
               fetchAllProjects={[MockFunction]}
               fetchAllRoles={[MockFunction]}
+              projectVacanciesOnFocus={Object {}}
             />,
             "_firstWorkInProgressHook": null,
             "_forcedUpdate": false,
@@ -402,11 +444,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   className="wt-dropdown"
                   comment=""
                   componentStateKey="inputs"
-                  defaultStatus={0}
+                  defaultStatus={6}
                   dropDownFor=""
                   enableSearch={true}
                   extras={null}
-                  inputValue={Array []}
+                  inputValue={Object {}}
                   label="Select Project"
                   loading={false}
                   multipleSelection={false}
@@ -427,11 +469,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   className="wt-dropdown"
                   comment=""
                   componentStateKey="inputs"
-                  defaultStatus={0}
+                  defaultStatus={6}
                   dropDownFor=""
                   enableSearch={false}
                   extras={null}
-                  inputValue={Array []}
+                  inputValue={Object {}}
                   label="Select Role"
                   loading={false}
                   multipleSelection={false}
@@ -439,7 +481,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   options={
                     Array [
                       Object {
-                        "id": 1,
+                        "id": 2,
                         "label": "Scrum Master",
                         "name": "Scrum Master",
                       },
@@ -486,14 +528,16 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
     name="slots"
     parent={
       AddVacanciesModal {
+        "checkSubmitState": [Function],
         "context": Object {},
+        "filterPayload": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "props": Object {
           "allProjectRoles": Object {
             "data": Array [
               Object {
-                "id": 1,
+                "id": 2,
                 "name": "Scrum Master",
               },
             ],
@@ -514,20 +558,29 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
             "error": null,
             "loading": false,
           },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
           "fetchAllProjects": [MockFunction],
           "fetchAllRoles": [MockFunction],
+          "projectVacanciesOnFocus": Object {},
         },
         "refs": Object {},
         "renderButton": [Function],
         "renderDropdown": [Function],
+        "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
         "setState": [Function],
         "state": Object {
+          "error": "",
           "inputs": Object {},
           "success": false,
         },
-        "updateSubmitState": [Function],
         "updater": Updater {
           "_callbacks": Array [],
           "_renderer": ReactShallowRenderer {
@@ -551,7 +604,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                 Object {
                   "data": Array [
                     Object {
-                      "id": 1,
+                      "id": 2,
                       "name": "Scrum Master",
                     },
                   ],
@@ -577,8 +630,18 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   "loading": false,
                 }
               }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
               fetchAllProjects={[MockFunction]}
               fetchAllRoles={[MockFunction]}
+              projectVacanciesOnFocus={Object {}}
             />,
             "_firstWorkInProgressHook": null,
             "_forcedUpdate": false,
@@ -615,11 +678,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   className="wt-dropdown"
                   comment=""
                   componentStateKey="inputs"
-                  defaultStatus={0}
+                  defaultStatus={6}
                   dropDownFor=""
                   enableSearch={true}
                   extras={null}
-                  inputValue={Array []}
+                  inputValue={Object {}}
                   label="Select Project"
                   loading={false}
                   multipleSelection={false}
@@ -640,11 +703,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   className="wt-dropdown"
                   comment=""
                   componentStateKey="inputs"
-                  defaultStatus={0}
+                  defaultStatus={6}
                   dropDownFor=""
                   enableSearch={false}
                   extras={null}
-                  inputValue={Array []}
+                  inputValue={Object {}}
                   label="Select Role"
                   loading={false}
                   multipleSelection={false}
@@ -652,12 +715,787 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   options={
                     Array [
                       Object {
-                        "id": 1,
+                        "id": 2,
                         "label": "Scrum Master",
                         "name": "Scrum Master",
                       },
                     ]
                   }
+                  parent={[Circular]}
+                  placeholder="Select Role"
+                />
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder=""
+                  testInput={[Function]}
+                  type="text"
+                />
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder=""
+    testInput={[Function]}
+    type="text"
+  />
+</GenericModal>
+`;
+
+exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
+<GenericModal
+  footer={
+    <div
+      className="modal-footer"
+    >
+      <CadreMainButton
+        buttonProps={
+          Object {
+            "onClick": [Function],
+          }
+        }
+        label="CREATE"
+      />
+    </div>
+  }
+  handleClose={[Function]}
+  handleSubmit={[Function]}
+  id="addProjectVacanciesModal"
+  submitLoading={false}
+  success={false}
+  successMessage="New project vacancies have been created!"
+  title="Create Vacancies"
+>
+  <DropdownInput
+    className="wt-dropdown"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={6}
+    dropDownFor=""
+    enableSearch={false}
+    extras={null}
+    inputValue={Object {}}
+    label="Select Project"
+    loading={false}
+    multipleSelection={false}
+    name="project"
+    options={Array []}
+    parent={
+      AddVacanciesModal {
+        "checkSubmitState": [Function],
+        "context": Object {},
+        "filterPayload": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "createNewProjectVacancies": [MockFunction],
+          "createProjectVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllProjects": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "projectVacanciesOnFocus": Object {},
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "setState": [Function],
+        "state": Object {
+          "error": "",
+          "inputs": Object {},
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <AddVacanciesModal
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createNewProjectVacancies={[MockFunction]}
+              createProjectVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllProjects={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              projectVacanciesOnFocus={Object {}}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="CREATE"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="addProjectVacanciesModal"
+              submitLoading={false}
+              success={false}
+              successMessage="New project vacancies have been created!"
+              title="Create Vacancies"
+            >
+              <React.Fragment>
+                <DropdownInput
+                  className="wt-dropdown"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={6}
+                  dropDownFor=""
+                  enableSearch={false}
+                  extras={null}
+                  inputValue={Object {}}
+                  label="Select Project"
+                  loading={false}
+                  multipleSelection={false}
+                  name="project"
+                  options={Array []}
+                  parent={[Circular]}
+                  placeholder="Select Project"
+                />
+                <DropdownInput
+                  className="wt-dropdown"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={6}
+                  dropDownFor=""
+                  enableSearch={false}
+                  extras={null}
+                  inputValue={Object {}}
+                  label="Select Role"
+                  loading={false}
+                  multipleSelection={false}
+                  name="role"
+                  options={Array []}
+                  parent={[Circular]}
+                  placeholder="Select Role"
+                />
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder=""
+                  testInput={[Function]}
+                  type="text"
+                />
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Select Project"
+  />
+  <DropdownInput
+    className="wt-dropdown"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={6}
+    dropDownFor=""
+    enableSearch={false}
+    extras={null}
+    inputValue={Object {}}
+    label="Select Role"
+    loading={false}
+    multipleSelection={false}
+    name="role"
+    options={Array []}
+    parent={
+      AddVacanciesModal {
+        "checkSubmitState": [Function],
+        "context": Object {},
+        "filterPayload": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "createNewProjectVacancies": [MockFunction],
+          "createProjectVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllProjects": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "projectVacanciesOnFocus": Object {},
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "setState": [Function],
+        "state": Object {
+          "error": "",
+          "inputs": Object {},
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <AddVacanciesModal
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createNewProjectVacancies={[MockFunction]}
+              createProjectVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllProjects={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              projectVacanciesOnFocus={Object {}}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="CREATE"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="addProjectVacanciesModal"
+              submitLoading={false}
+              success={false}
+              successMessage="New project vacancies have been created!"
+              title="Create Vacancies"
+            >
+              <React.Fragment>
+                <DropdownInput
+                  className="wt-dropdown"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={6}
+                  dropDownFor=""
+                  enableSearch={false}
+                  extras={null}
+                  inputValue={Object {}}
+                  label="Select Project"
+                  loading={false}
+                  multipleSelection={false}
+                  name="project"
+                  options={Array []}
+                  parent={[Circular]}
+                  placeholder="Select Project"
+                />
+                <DropdownInput
+                  className="wt-dropdown"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={6}
+                  dropDownFor=""
+                  enableSearch={false}
+                  extras={null}
+                  inputValue={Object {}}
+                  label="Select Role"
+                  loading={false}
+                  multipleSelection={false}
+                  name="role"
+                  options={Array []}
+                  parent={[Circular]}
+                  placeholder="Select Role"
+                />
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder=""
+                  testInput={[Function]}
+                  type="text"
+                />
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Select Role"
+  />
+  <TextInput
+    alertText="Please input a valid number of slots!"
+    className="wt-text-input"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    inputValue=""
+    label="Vacancy Slots"
+    length={999}
+    name="slots"
+    parent={
+      AddVacanciesModal {
+        "checkSubmitState": [Function],
+        "context": Object {},
+        "filterPayload": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "createNewProjectVacancies": [MockFunction],
+          "createProjectVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllProjects": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "projectVacanciesOnFocus": Object {},
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "setState": [Function],
+        "state": Object {
+          "error": "",
+          "inputs": Object {},
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <AddVacanciesModal
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createNewProjectVacancies={[MockFunction]}
+              createProjectVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllProjects={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              projectVacanciesOnFocus={Object {}}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="CREATE"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="addProjectVacanciesModal"
+              submitLoading={false}
+              success={false}
+              successMessage="New project vacancies have been created!"
+              title="Create Vacancies"
+            >
+              <React.Fragment>
+                <DropdownInput
+                  className="wt-dropdown"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={6}
+                  dropDownFor=""
+                  enableSearch={false}
+                  extras={null}
+                  inputValue={Object {}}
+                  label="Select Project"
+                  loading={false}
+                  multipleSelection={false}
+                  name="project"
+                  options={Array []}
+                  parent={[Circular]}
+                  placeholder="Select Project"
+                />
+                <DropdownInput
+                  className="wt-dropdown"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={6}
+                  dropDownFor=""
+                  enableSearch={false}
+                  extras={null}
+                  inputValue={Object {}}
+                  label="Select Role"
+                  loading={false}
+                  multipleSelection={false}
+                  name="role"
+                  options={Array []}
                   parent={[Circular]}
                   placeholder="Select Role"
                 />

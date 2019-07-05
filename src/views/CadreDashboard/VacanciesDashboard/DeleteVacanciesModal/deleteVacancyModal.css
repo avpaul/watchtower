@@ -1,0 +1,10 @@
+#deleteProjectVacanciesModal .modal-header h1 {
+  color: #333e44;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#deleteProjectVacanciesModal #cadre-button-delete {
+  background-color: #ce1919;
+  border-color: #ce1919;
+}

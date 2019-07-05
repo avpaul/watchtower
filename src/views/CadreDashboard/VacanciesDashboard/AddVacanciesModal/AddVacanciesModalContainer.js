@@ -1,17 +1,25 @@
 import { connect } from 'react-redux';
 import AddVacanciesModal from './AddVacanciesModal';
 import { fetchAllProjects } from '../../../../redux/actionCreators/projectsActions';
-import { createNewProjectVacancies } from '../../../../redux/actionCreators/projectVacancyActions';
+import {
+  createNewProjectVacancies,
+  editProjectVacancies
+} from '../../../../redux/actionCreators/projectVacancyActions';
 import { fetchAllRoles } from '../../../../redux/actionCreators/cadreProjectRoleActions';
 
 export const mapStateToProps = ({
   allProjects,
   createProjectVacancies,
-  allRoles
+  allRoles,
+  projectVacanciesOnFocus,
+  editProjectVacancies: editProjectVacanciesState
 }) => ({
   allProjects,
   allProjectRoles: allRoles,
-  createProjectVacancies
+  createProjectVacancies,
+  projectVacanciesOnFocus,
+  editProjectVacanciesState,
+  editMode: !!projectVacanciesOnFocus.project
 });
 
 export default connect(
@@ -19,6 +27,7 @@ export default connect(
   {
     fetchAllProjects,
     fetchAllRoles,
-    createNewProjectVacancies
+    createNewProjectVacancies,
+    editProjectVacancies
   }
 )(AddVacanciesModal);

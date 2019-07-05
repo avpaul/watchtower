@@ -15,7 +15,8 @@ class AddVacanciesModal extends Component {
 
     this.state = {
       inputs: {},
-      success: false
+      success: false,
+      error: ''
     };
   }
 
@@ -32,15 +33,28 @@ class AddVacanciesModal extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { createProjectVacancies } = this.props;
-    if (
-      prevProps.createProjectVacancies.loading &&
-      !createProjectVacancies.loading
-    )
-      this.updateSubmitState(createProjectVacancies.error);
+    const {
+      editMode,
+      editProjectVacanciesState,
+      createProjectVacancies
+    } = this.props;
+
+    if (editMode)
+      this.checkSubmitState(
+        prevProps.editProjectVacanciesState,
+        editProjectVacanciesState
+      );
+    else
+      this.checkSubmitState(
+        prevProps.createProjectVacancies,
+        createProjectVacancies
+      );
   }
 
-  updateSubmitState = error => this.setState({ success: error === null });
+  checkSubmitState = (oldState, newState) => {
+    if (oldState.loading && !newState.loading)
+      this.setState({ success: newState.error === null });
+  };
 
   /**
    * The onClick handler for the modal submit button
@@ -48,20 +62,53 @@ class AddVacanciesModal extends Component {
    * @return boolean
    */
   handleClick = () => {
-    const { createNewProjectVacancies } = this.props;
+    const {
+      createNewProjectVacancies,
+      projectVacanciesOnFocus,
+      editMode,
+      editProjectVacancies
+    } = this.props;
     const { inputs } = this.state;
     const invalidInput = Object.values(inputs).find(input => !input.isValid());
+
     if (invalidInput) {
       invalidInput.setStatus('invalid', 'Input is invalid!');
       invalidInput.focus();
       return false;
     }
-    createNewProjectVacancies({
+
+    const newDetails = {
       project_id: inputs.project.getValue().id,
       project_role_id: inputs.role.getValue().id,
       slots: parseInt(inputs.slots.getValue(), 10)
-    });
+    };
+
+    if (editMode) {
+      const details = this.filterPayload(projectVacanciesOnFocus, newDetails);
+      if (Object.keys(details).length === 2)
+        return this.setState({
+          error:
+            'No updated information has been provided. Please provide an updated input!'
+        });
+      editProjectVacancies(details);
+    } else createNewProjectVacancies(newDetails);
     return false;
+  };
+
+  filterPayload = (oldDetails, newDetails) => {
+    const details = {
+      old_project_id: oldDetails.project.id,
+      old_project_role_id: oldDetails.role.id
+    };
+
+    if (details.old_project_id !== newDetails.project_id)
+      details.project_id = newDetails.project_id;
+    if (details.old_project_role_id !== newDetails.project_role_id)
+      details.project_role_id = newDetails.project_role_id;
+    if (oldDetails.vacancies.length !== newDetails.slots)
+      details.slots = newDetails.slots;
+
+    return details;
   };
 
   /**
@@ -79,7 +126,7 @@ class AddVacanciesModal extends Component {
     inputs.slots.setState({ inputValue: '' });
     inputs.slots.setStatus('normal');
 
-    this.setState({ success: false });
+    this.setState({ success: false, error: '' });
   };
 
   /**
@@ -95,8 +142,22 @@ class AddVacanciesModal extends Component {
     />
   );
 
+  renderError = () => {
+    const { error, success } = this.state;
+    return error !== '' && !success ? (
+      <span className="alert alert-danger" role="alert">
+        {error}
+      </span>
+    ) : null;
+  };
+
   renderModalBody = () => {
-    const { allProjects, allProjectRoles } = this.props;
+    const {
+      allProjects,
+      allProjectRoles,
+      projectVacanciesOnFocus
+    } = this.props;
+    const { vacancies } = projectVacanciesOnFocus;
     return (
       <React.Fragment>
         {this.renderDropdown({
@@ -105,22 +166,37 @@ class AddVacanciesModal extends Component {
           options: processDropdownOptions(allProjects.data, 'name'),
           placeholder: 'Select Project',
           enableSearch: allProjects.data.length !== 0,
-          loading: allProjects.loading
+          loading: allProjects.loading,
+          inputValue: projectVacanciesOnFocus.project
+            ? {
+                ...projectVacanciesOnFocus.project,
+                label: projectVacanciesOnFocus.project.name
+              }
+            : {}
         })}
         {this.renderDropdown({
           name: 'role',
           label: 'Select Role',
           options: processDropdownOptions(allProjectRoles.data, 'name'),
           placeholder: 'Select Role',
-          loading: allProjectRoles.loading
+          loading: allProjectRoles.loading,
+          inputValue: projectVacanciesOnFocus.role
+            ? {
+                ...projectVacanciesOnFocus.role,
+                label: projectVacanciesOnFocus.role.name
+              }
+            : {}
         })}
         <FormInputs.TextInput
           parent={this}
           name="slots"
           label="Vacancy Slots"
+          defaultStatus={vacancies ? 6 : 0}
           testInput={input => numberRegex.test(input) && input !== '0'}
           alertText="Please input a valid number of slots!"
+          inputValue={vacancies ? `${vacancies.length}` : ''}
         />
+        {this.renderError()}
       </React.Fragment>
     );
   };
@@ -131,21 +207,28 @@ class AddVacanciesModal extends Component {
 
   renderFooter = () => {
     const {
-      createProjectVacancies: { loading }
+      createProjectVacancies: add,
+      editProjectVacanciesState: edit,
+      editMode
     } = this.props;
     const { success } = this.state;
-    const buttonProps = { 'data-dismiss': 'modal', onClick: this.handleClose };
     let button = null;
     switch (true) {
-      case loading:
+      case add.loading || edit.loading:
         button = <Loader size="small" />;
         break;
       case success:
-        button = this.renderButton({ label: 'CLOSE', buttonProps });
+        button = this.renderButton({
+          label: 'CLOSE',
+          buttonProps: {
+            'data-dismiss': 'modal',
+            onClick: this.handleClose
+          }
+        });
         break;
       default:
         button = this.renderButton({
-          label: 'CREATE',
+          label: editMode ? 'UPDATE' : 'CREATE',
           buttonProps: { onClick: this.handleClick }
         });
     }
@@ -155,16 +238,18 @@ class AddVacanciesModal extends Component {
 
   render() {
     const {
-      createProjectVacancies: { loading }
+      createProjectVacancies: { loading },
+      editMode
     } = this.props;
     const { success } = this.state;
-    const message = 'New project vacancies have been created!';
+    const message = editMode
+      ? 'Project vacancies have been updated!'
+      : 'New project vacancies have been created!';
+    const title = `${editMode ? 'Update' : 'Create'} Vacancies`;
     return (
       <GenericModal
         id="addProjectVacanciesModal"
-        title="Create Vacancies"
-        handleSubmit={this.handleClick}
-        handleClose={this.handleClose}
+        title={title}
         successMessage={message}
         success={success}
         submitLoading={loading}
@@ -182,7 +267,11 @@ AddVacanciesModal.propTypes = {
   fetchAllRoles: PropTypes.func.isRequired,
   createProjectVacancies: PropTypes.shape().isRequired,
   allProjects: PropTypes.shape().isRequired,
-  allProjectRoles: PropTypes.shape().isRequired
+  allProjectRoles: PropTypes.shape().isRequired,
+  projectVacanciesOnFocus: PropTypes.shape().isRequired,
+  editProjectVacanciesState: PropTypes.shape().isRequired,
+  editProjectVacancies: PropTypes.func.isRequired,
+  editMode: PropTypes.bool.isRequired
 };
 
 export default AddVacanciesModal;

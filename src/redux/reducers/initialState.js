@@ -219,5 +219,8 @@ export default {
   allCetifications: genericAPIStateArray,
   editCertification: genericAPIStateObject,
   certifications: genericAPIStateArray,
-  getCertification: genericAPIStateObject
+  getCertification: genericAPIStateObject,
+  editProjectVacancies: genericAPIStateObject,
+  deleteProjectVacancies: genericAPIStateObject,
+  projectVacanciesOnFocus: {}
 };
