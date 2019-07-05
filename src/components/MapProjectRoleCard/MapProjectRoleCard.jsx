@@ -35,7 +35,7 @@ function MapProjectRoleCard({
             <button
               type="button"
               data-toggle="modal"
-              data-target="#addRoleModal"
+              data-target="#addCertificationModal"
               className="role-grid__add"
             >
               NEW CERTIFICATE

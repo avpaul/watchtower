@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests AddCertificationModal should Render Components 1`] = `
+Object {
+  "props": Object {
+    "addCertification": [MockFunction],
+    "certifications": Object {
+      "data": Array [],
+      "error": Object {},
+      "loading": false,
+    },
+    "history": Object {
+      "replace": [MockFunction],
+    },
+  },
+  "wrapper": <GenericModal
+    footer={
+      <div
+        className="modal-footer"
+      >
+        <button
+          className="btn"
+          id="saveCertificationButton"
+          onClick={[Function]}
+          type="button"
+        >
+          CREATE
+        </button>
+      </div>
+    }
+    handleClose={[Function]}
+    handleSubmit={[Function]}
+    id="addCertificationModal"
+    submitLoading={false}
+    success={false}
+    successMessage="New Certification created Successfully"
+    title="Create Certification"
+  >
+    <TextInput
+      alertText=""
+      className="wt-text-input"
+      comment=""
+      componentStateKey="inputs"
+      defaultStatus={0}
+      inputValue=""
+      label="Certification Name"
+      length={999}
+      name="name"
+      parent={
+        AddCertificationModal {
+          "context": Object {},
+          "createCertificationStatus": [Function],
+          "handleChange": [Function],
+          "handleClose": [Function],
+          "handleSubmissionError": [Function],
+          "handleSubmit": [Function],
+          "props": Object {
+            "addCertification": [MockFunction],
+            "certifications": Object {
+              "data": Array [],
+              "error": Object {},
+              "loading": false,
+            },
+            "history": Object {
+              "replace": [MockFunction],
+            },
+          },
+          "refs": Object {},
+          "renderBody": [Function],
+          "renderRadioButton": [Function],
+          "saveCertificationButton": [Function],
+          "setState": [Function],
+          "state": Object {
+            "exclusive": false,
+            "inputs": Object {},
+            "success": false,
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <AddCertificationModal
+                addCertification={[MockFunction]}
+                certifications={
+                  Object {
+                    "data": Array [],
+                    "error": Object {},
+                    "loading": false,
+                  }
+                }
+                history={
+                  Object {
+                    "replace": [MockFunction],
+                  }
+                }
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <GenericModal
+                footer={
+                  <div
+                    className="modal-footer"
+                  >
+                    <button
+                      className="btn"
+                      id="saveCertificationButton"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      CREATE
+                    </button>
+                  </div>
+                }
+                handleClose={[Function]}
+                handleSubmit={[Function]}
+                id="addCertificationModal"
+                submitLoading={false}
+                success={false}
+                successMessage="New Certification created Successfully"
+                title="Create Certification"
+              >
+                <React.Fragment>
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Certification Name"
+                    length={999}
+                    name="name"
+                    parent={[Circular]}
+                    placeholder="Certification Name"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Certification Description"
+                    length={999}
+                    name="description"
+                    parent={[Circular]}
+                    placeholder="Description"
+                    testInput={[Function]}
+                    type="textarea"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Duration"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Days"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <Radio
+                    handleChange={[Function]}
+                    name="exclusive"
+                    options="Certicicate is not Exclusive"
+                    placeholder={false}
+                    title=""
+                    value={false}
+                  />
+                </React.Fragment>
+              </GenericModal>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      placeholder="Certification Name"
+      testInput={[Function]}
+      type="text"
+    />
+    <TextInput
+      alertText=""
+      className="wt-text-input"
+      comment=""
+      componentStateKey="inputs"
+      defaultStatus={0}
+      inputValue=""
+      label="Certification Description"
+      length={999}
+      name="description"
+      parent={
+        AddCertificationModal {
+          "context": Object {},
+          "createCertificationStatus": [Function],
+          "handleChange": [Function],
+          "handleClose": [Function],
+          "handleSubmissionError": [Function],
+          "handleSubmit": [Function],
+          "props": Object {
+            "addCertification": [MockFunction],
+            "certifications": Object {
+              "data": Array [],
+              "error": Object {},
+              "loading": false,
+            },
+            "history": Object {
+              "replace": [MockFunction],
+            },
+          },
+          "refs": Object {},
+          "renderBody": [Function],
+          "renderRadioButton": [Function],
+          "saveCertificationButton": [Function],
+          "setState": [Function],
+          "state": Object {
+            "exclusive": false,
+            "inputs": Object {},
+            "success": false,
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <AddCertificationModal
+                addCertification={[MockFunction]}
+                certifications={
+                  Object {
+                    "data": Array [],
+                    "error": Object {},
+                    "loading": false,
+                  }
+                }
+                history={
+                  Object {
+                    "replace": [MockFunction],
+                  }
+                }
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <GenericModal
+                footer={
+                  <div
+                    className="modal-footer"
+                  >
+                    <button
+                      className="btn"
+                      id="saveCertificationButton"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      CREATE
+                    </button>
+                  </div>
+                }
+                handleClose={[Function]}
+                handleSubmit={[Function]}
+                id="addCertificationModal"
+                submitLoading={false}
+                success={false}
+                successMessage="New Certification created Successfully"
+                title="Create Certification"
+              >
+                <React.Fragment>
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Certification Name"
+                    length={999}
+                    name="name"
+                    parent={[Circular]}
+                    placeholder="Certification Name"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Certification Description"
+                    length={999}
+                    name="description"
+                    parent={[Circular]}
+                    placeholder="Description"
+                    testInput={[Function]}
+                    type="textarea"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Duration"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Days"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <Radio
+                    handleChange={[Function]}
+                    name="exclusive"
+                    options="Certicicate is not Exclusive"
+                    placeholder={false}
+                    title=""
+                    value={false}
+                  />
+                </React.Fragment>
+              </GenericModal>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      placeholder="Description"
+      testInput={[Function]}
+      type="textarea"
+    />
+    <TextInput
+      alertText=""
+      className="wt-text-input"
+      comment=""
+      componentStateKey="inputs"
+      defaultStatus={0}
+      inputValue=""
+      label="Duration"
+      length={999}
+      name="duration"
+      parent={
+        AddCertificationModal {
+          "context": Object {},
+          "createCertificationStatus": [Function],
+          "handleChange": [Function],
+          "handleClose": [Function],
+          "handleSubmissionError": [Function],
+          "handleSubmit": [Function],
+          "props": Object {
+            "addCertification": [MockFunction],
+            "certifications": Object {
+              "data": Array [],
+              "error": Object {},
+              "loading": false,
+            },
+            "history": Object {
+              "replace": [MockFunction],
+            },
+          },
+          "refs": Object {},
+          "renderBody": [Function],
+          "renderRadioButton": [Function],
+          "saveCertificationButton": [Function],
+          "setState": [Function],
+          "state": Object {
+            "exclusive": false,
+            "inputs": Object {},
+            "success": false,
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <AddCertificationModal
+                addCertification={[MockFunction]}
+                certifications={
+                  Object {
+                    "data": Array [],
+                    "error": Object {},
+                    "loading": false,
+                  }
+                }
+                history={
+                  Object {
+                    "replace": [MockFunction],
+                  }
+                }
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <GenericModal
+                footer={
+                  <div
+                    className="modal-footer"
+                  >
+                    <button
+                      className="btn"
+                      id="saveCertificationButton"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      CREATE
+                    </button>
+                  </div>
+                }
+                handleClose={[Function]}
+                handleSubmit={[Function]}
+                id="addCertificationModal"
+                submitLoading={false}
+                success={false}
+                successMessage="New Certification created Successfully"
+                title="Create Certification"
+              >
+                <React.Fragment>
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Certification Name"
+                    length={999}
+                    name="name"
+                    parent={[Circular]}
+                    placeholder="Certification Name"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Certification Description"
+                    length={999}
+                    name="description"
+                    parent={[Circular]}
+                    placeholder="Description"
+                    testInput={[Function]}
+                    type="textarea"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Duration"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Days"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <Radio
+                    handleChange={[Function]}
+                    name="exclusive"
+                    options="Certicicate is not Exclusive"
+                    placeholder={false}
+                    title=""
+                    value={false}
+                  />
+                </React.Fragment>
+              </GenericModal>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      placeholder="Days"
+      testInput={[Function]}
+      type="text"
+    />
+    <Radio
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certicicate is not Exclusive"
+      placeholder={false}
+      title=""
+      value={false}
+    />
+  </GenericModal>,
+}
+`;

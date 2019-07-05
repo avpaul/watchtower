@@ -217,5 +217,6 @@ export default {
   roleSkills: genericAPIStateArray,
   getAllVacancies: genericAPIStateArray,
   allCetifications: genericAPIStateArray,
-  editCertification: genericAPIStateObject
+  editCertification: genericAPIStateObject,
+  certifications: genericAPIStateArray
 };

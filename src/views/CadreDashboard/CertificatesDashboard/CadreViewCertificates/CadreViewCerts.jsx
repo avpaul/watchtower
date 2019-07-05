@@ -4,6 +4,7 @@ import MapProjectCertCard from '../../../../components/MapProjectRoleCard';
 import PMloader from '../../../../components/CustomLoader/PMLoader';
 
 import '../../RolesDashboard/CadreViewRoles/CadreViewRoles.scss';
+import AddCertificationModal from '../CadreAddCertification/AddCertificationModal';
 
 export default class CadreViewCerts extends Component {
   componentDidMount() {
@@ -14,7 +15,8 @@ export default class CadreViewCerts extends Component {
 
   render() {
     const {
-      allCertifications: { data, loading }
+      allCertifications: { data, loading },
+      history
     } = this.props;
 
     return loading ? (
@@ -23,6 +25,7 @@ export default class CadreViewCerts extends Component {
       </div>
     ) : (
       <div className="cadre__page">
+        <AddCertificationModal history={history} />
         <MapProjectCertCard roleData={data} type="certificates" />
       </div>
     );
@@ -31,7 +34,8 @@ export default class CadreViewCerts extends Component {
 
 CadreViewCerts.propTypes = {
   allCertifications: PropTypes.shape(),
-  fetchAllCertifications: PropTypes.func.isRequired
+  fetchAllCertifications: PropTypes.func.isRequired,
+  history: PropTypes.shape().isRequired
 };
 
 CadreViewCerts.defaultProps = {
