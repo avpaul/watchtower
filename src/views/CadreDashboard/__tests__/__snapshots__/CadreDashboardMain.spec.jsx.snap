@@ -47,6 +47,7 @@ ShallowWrapper {
                         <ProjectSummary
                                 profile={undefined}
                         />
+                        <EngineerVacancyCard />
                 </div>
         </div>
 </div>,
@@ -82,6 +83,7 @@ ShallowWrapper {
                         <ProjectSummary
                                     profile={undefined}
                         />
+                        <EngineerVacancyCard />
             </div>
 </div>,
         ],
@@ -131,6 +133,7 @@ ShallowWrapper {
                 <ProjectSummary
                                 profile={undefined}
                 />
+                <EngineerVacancyCard />
 </div>,
             ],
             "className": "dashboard-wrapper",
@@ -173,6 +176,7 @@ ShallowWrapper {
                   <ProjectSummary
                     profile={undefined}
 />,
+                  <EngineerVacancyCard />,
                 ],
                 "className": "fellow-dashboard-main",
               },
@@ -196,6 +200,15 @@ ShallowWrapper {
                   "props": Object {
                     "profile": undefined,
                   },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
@@ -244,6 +257,7 @@ ShallowWrapper {
                               <ProjectSummary
                                         profile={undefined}
                               />
+                              <EngineerVacancyCard />
                     </div>
           </div>
 </div>,
@@ -279,6 +293,7 @@ ShallowWrapper {
                             <ProjectSummary
                                           profile={undefined}
                             />
+                            <EngineerVacancyCard />
               </div>
 </div>,
           ],
@@ -328,6 +343,7 @@ ShallowWrapper {
                   <ProjectSummary
                                     profile={undefined}
                   />
+                  <EngineerVacancyCard />
 </div>,
               ],
               "className": "dashboard-wrapper",
@@ -370,6 +386,7 @@ ShallowWrapper {
                     <ProjectSummary
                       profile={undefined}
 />,
+                    <EngineerVacancyCard />,
                   ],
                   "className": "fellow-dashboard-main",
                 },
@@ -393,6 +410,15 @@ ShallowWrapper {
                     "props": Object {
                       "profile": undefined,
                     },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
                     "ref": null,
                     "rendered": null,
                     "type": [Function],

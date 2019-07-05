@@ -1,0 +1,102 @@
+.project-vacancies-container,
+.project-vacancies-container--empty {
+  max-height: 571px;
+  min-height: 571px;
+  width: 363px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 19px;
+  margin-top: 16px;
+}
+
+.project-vacancies-container--empty {
+  overflow: hidden;
+}
+.project-vacancies-container img {
+  height: 63px;
+  width: 63px;
+}
+.project-vacancies__number {
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  padding: 1.2rem 0 0.5rem 0;
+}
+
+.header-span {
+  height: 20px;
+  color: rgba(52, 76, 90, 0.43);
+  font-family: 'DIN Pro';
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.53px;
+  line-height: 20px;
+}
+
+.single-vacancy {
+  min-height: 102px;
+  width: 325px;
+  border-radius: 14px;
+  background-color: #edf4fd;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  position: relative;
+  display: flex;
+  padding: 0 17px;
+  margin: 0.6rem 0;
+}
+.single-vacancy .single-vacancy__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-vacancy__details {
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.single-vacancy__details h4 {
+  margin: 0;
+  color: #333e44;
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.single-vacancy__details p {
+  margin: 0;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  line-height: 18px;
+}
+.single-vacancy__details a {
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  font-size: 13px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.no-vacancies {
+  max-height: 572px;
+  min-height: 572px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-vacancies > p {
+  color: rgba(52, 76, 90, 0.62);
+  font-family: 'DIN Pro';
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
