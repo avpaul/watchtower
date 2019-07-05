@@ -50,7 +50,6 @@ class AddVacanciesModal extends Component {
   handleClick = () => {
     const { createNewProjectVacancies } = this.props;
     const { inputs } = this.state;
-
     const invalidInput = Object.values(inputs).find(input => !input.isValid());
     if (invalidInput) {
       invalidInput.setStatus('invalid', 'Input is invalid!');

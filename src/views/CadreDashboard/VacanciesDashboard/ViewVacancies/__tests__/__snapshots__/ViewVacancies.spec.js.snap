@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vacancy Dashboard renders correctly 1`] = `
+<div
+  className="ops-vacancies-container"
+>
+  <TDDOPsVacancyCard
+    vacanciesToDisplay="project"
+    vacancy={
+      Object {
+        "available_slots": 2,
+        "project": Object {
+          "id": 7,
+          "name": "Corrupti non.",
+        },
+        "role": Object {
+          "id": 1,
+          "name": "Engineer",
+        },
+        "vacancies": Array [
+          Object {
+            "fellow_id": null,
+            "id": 99,
+            "is_active": false,
+            "project_id": 7,
+            "project_role_id": 1,
+          },
+          Object {
+            "fellow_id": null,
+            "id": 105,
+            "is_active": false,
+            "project_id": 7,
+            "project_role_id": 1,
+          },
+        ],
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Vacancy Dashboard renders no vacancies when array is empty 1`] = `
+<div
+  className="ops-vacancies-container"
+>
+  <div
+    className="ops-no-vacancies"
+  >
+    No Vacancies
+  </div>
+</div>
+`;

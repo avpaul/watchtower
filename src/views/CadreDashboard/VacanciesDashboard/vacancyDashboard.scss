@@ -22,3 +22,24 @@
 .vacancies-dashboard .cadre-main-button {
   float: right;
 }
+
+.toogle-container {
+  margin-top: 1rem;
+}
+
+.vacancy-toggle-button {
+  background-color: #ffffff;
+  border: 1px solid #0459e4;
+  border-radius: 5px;
+  height: 2rem;
+  width: 11rem;
+  color: #0459e4;
+  font-family: "DIN Pro";
+  outline: none !important;
+
+  &--active {
+    @extend .vacancy-toggle-button;
+    color: white;
+    background-color: #0459e4;
+  }
+}

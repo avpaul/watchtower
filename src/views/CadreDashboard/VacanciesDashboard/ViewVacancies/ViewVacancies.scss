@@ -1,0 +1,11 @@
+.ops-vacancies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 0fr));
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  margin-top: 1rem;
+}
+
+.ops-no-vacancies {
+  font-size: 24px;
+}
