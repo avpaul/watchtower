@@ -8,6 +8,7 @@ ShallowWrapper {
     comment="No comment"
     componentStateKey="inputs"
     defaultStatus={0}
+    dropDownFor=""
     enableSearch={false}
     extras={null}
     inputValue={Array []}
@@ -420,6 +421,7 @@ ShallowWrapper {
     comment={null}
     componentStateKey="inputs"
     defaultStatus={0}
+    dropDownFor=""
     enableSearch={false}
     extras={null}
     inputValue={Array []}

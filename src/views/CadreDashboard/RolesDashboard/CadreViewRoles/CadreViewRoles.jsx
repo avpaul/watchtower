@@ -18,7 +18,6 @@ export default class CadreViewRoles extends Component {
       loading: loadActiveEngrs,
       activeEngineers
     } = this.props;
-
     return loading ? (
       <div className="cadre__page">
         <PMloader />

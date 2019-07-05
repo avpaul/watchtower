@@ -57,6 +57,7 @@ ShallowWrapper {
                 comment=""
                 componentStateKey="inputs"
                 defaultStatus={0}
+                dropDownFor=""
                 enableSearch={true}
                 extras={null}
                 inputValue={Array []}
@@ -194,7 +195,9 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addProjectVacanciesModal"
+                                      isLoading={false}
                                       submitLoading={false}
+                                      succeeded={false}
                                       success={false}
                                       successMessage="New project vacancies have been created!"
                                       title="Create Vacancies"
@@ -205,6 +208,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={true}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -229,6 +233,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={false}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -280,6 +285,7 @@ ShallowWrapper {
                 comment=""
                 componentStateKey="inputs"
                 defaultStatus={0}
+                dropDownFor=""
                 enableSearch={false}
                 extras={null}
                 inputValue={Array []}
@@ -417,7 +423,9 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addProjectVacanciesModal"
+                                      isLoading={false}
                                       submitLoading={false}
+                                      succeeded={false}
                                       success={false}
                                       successMessage="New project vacancies have been created!"
                                       title="Create Vacancies"
@@ -428,6 +436,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={true}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -452,6 +461,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={false}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -629,7 +639,9 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addProjectVacanciesModal"
+                                      isLoading={false}
                                       submitLoading={false}
+                                      succeeded={false}
                                       success={false}
                                       successMessage="New project vacancies have been created!"
                                       title="Create Vacancies"
@@ -640,6 +652,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={true}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -664,6 +677,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={false}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -728,7 +742,9 @@ ShallowWrapper {
       "handleClose": [Function],
       "handleSubmit": [Function],
       "id": "addProjectVacanciesModal",
+      "isLoading": false,
       "submitLoading": false,
+      "succeeded": false,
       "success": false,
       "successMessage": "New project vacancies have been created!",
       "title": "Create Vacancies",
@@ -745,6 +761,7 @@ ShallowWrapper {
             comment=""
             componentStateKey="inputs"
             defaultStatus={0}
+            dropDownFor=""
             enableSearch={true}
             extras={null}
             inputValue={Array []}
@@ -882,7 +899,9 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addProjectVacanciesModal"
+                                          isLoading={false}
                                           submitLoading={false}
+                                          succeeded={false}
                                           success={false}
                                           successMessage="New project vacancies have been created!"
                                           title="Create Vacancies"
@@ -893,6 +912,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={true}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -917,6 +937,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={false}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -968,6 +989,7 @@ ShallowWrapper {
             comment=""
             componentStateKey="inputs"
             defaultStatus={0}
+            dropDownFor=""
             enableSearch={false}
             extras={null}
             inputValue={Array []}
@@ -1105,7 +1127,9 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addProjectVacanciesModal"
+                                          isLoading={false}
                                           submitLoading={false}
+                                          succeeded={false}
                                           success={false}
                                           successMessage="New project vacancies have been created!"
                                           title="Create Vacancies"
@@ -1116,6 +1140,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={true}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -1140,6 +1165,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={false}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -1317,7 +1343,9 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addProjectVacanciesModal"
+                                          isLoading={false}
                                           submitLoading={false}
+                                          succeeded={false}
                                           success={false}
                                           successMessage="New project vacancies have been created!"
                                           title="Create Vacancies"
@@ -1328,6 +1356,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={true}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -1352,6 +1381,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={false}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -1413,6 +1443,7 @@ ShallowWrapper {
             "comment": "",
             "componentStateKey": "inputs",
             "defaultStatus": 0,
+            "dropDownFor": "",
             "enableSearch": true,
             "extras": null,
             "inputValue": Array [],
@@ -1547,7 +1578,9 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addProjectVacanciesModal"
+                    isLoading={false}
                     submitLoading={false}
+                    succeeded={false}
                     success={false}
                     successMessage="New project vacancies have been created!"
                     title="Create Vacancies"
@@ -1558,6 +1591,7 @@ ShallowWrapper {
                                                             comment=""
                                                             componentStateKey="inputs"
                                                             defaultStatus={0}
+                                                            dropDownFor=""
                                                             enableSearch={true}
                                                             extras={null}
                                                             inputValue={Array []}
@@ -1582,6 +1616,7 @@ ShallowWrapper {
                                                             comment=""
                                                             componentStateKey="inputs"
                                                             defaultStatus={0}
+                                                            dropDownFor=""
                                                             enableSearch={false}
                                                             extras={null}
                                                             inputValue={Array []}
@@ -1640,6 +1675,7 @@ ShallowWrapper {
             "comment": "",
             "componentStateKey": "inputs",
             "defaultStatus": 0,
+            "dropDownFor": "",
             "enableSearch": false,
             "extras": null,
             "inputValue": Array [],
@@ -1774,7 +1810,9 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addProjectVacanciesModal"
+                    isLoading={false}
                     submitLoading={false}
+                    succeeded={false}
                     success={false}
                     successMessage="New project vacancies have been created!"
                     title="Create Vacancies"
@@ -1785,6 +1823,7 @@ ShallowWrapper {
                                                             comment=""
                                                             componentStateKey="inputs"
                                                             defaultStatus={0}
+                                                            dropDownFor=""
                                                             enableSearch={true}
                                                             extras={null}
                                                             inputValue={Array []}
@@ -1809,6 +1848,7 @@ ShallowWrapper {
                                                             comment=""
                                                             componentStateKey="inputs"
                                                             defaultStatus={0}
+                                                            dropDownFor=""
                                                             enableSearch={false}
                                                             extras={null}
                                                             inputValue={Array []}
@@ -1992,7 +2032,9 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addProjectVacanciesModal"
+                    isLoading={false}
                     submitLoading={false}
+                    succeeded={false}
                     success={false}
                     successMessage="New project vacancies have been created!"
                     title="Create Vacancies"
@@ -2003,6 +2045,7 @@ ShallowWrapper {
                                                             comment=""
                                                             componentStateKey="inputs"
                                                             defaultStatus={0}
+                                                            dropDownFor=""
                                                             enableSearch={true}
                                                             extras={null}
                                                             inputValue={Array []}
@@ -2027,6 +2070,7 @@ ShallowWrapper {
                                                             comment=""
                                                             componentStateKey="inputs"
                                                             defaultStatus={0}
+                                                            dropDownFor=""
                                                             enableSearch={false}
                                                             extras={null}
                                                             inputValue={Array []}
@@ -2095,6 +2139,7 @@ ShallowWrapper {
                     comment=""
                     componentStateKey="inputs"
                     defaultStatus={0}
+                    dropDownFor=""
                     enableSearch={true}
                     extras={null}
                     inputValue={Array []}
@@ -2232,7 +2277,9 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addProjectVacanciesModal"
+                                              isLoading={false}
                                               submitLoading={false}
+                                              succeeded={false}
                                               success={false}
                                               successMessage="New project vacancies have been created!"
                                               title="Create Vacancies"
@@ -2243,6 +2290,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={true}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -2267,6 +2315,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={false}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -2318,6 +2367,7 @@ ShallowWrapper {
                     comment=""
                     componentStateKey="inputs"
                     defaultStatus={0}
+                    dropDownFor=""
                     enableSearch={false}
                     extras={null}
                     inputValue={Array []}
@@ -2455,7 +2505,9 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addProjectVacanciesModal"
+                                              isLoading={false}
                                               submitLoading={false}
+                                              succeeded={false}
                                               success={false}
                                               successMessage="New project vacancies have been created!"
                                               title="Create Vacancies"
@@ -2466,6 +2518,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={true}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -2490,6 +2543,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={false}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -2667,7 +2721,9 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addProjectVacanciesModal"
+                                              isLoading={false}
                                               submitLoading={false}
+                                              succeeded={false}
                                               success={false}
                                               successMessage="New project vacancies have been created!"
                                               title="Create Vacancies"
@@ -2678,6 +2734,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={true}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -2702,6 +2759,7 @@ ShallowWrapper {
                                                                               comment=""
                                                                               componentStateKey="inputs"
                                                                               defaultStatus={0}
+                                                                              dropDownFor=""
                                                                               enableSearch={false}
                                                                               extras={null}
                                                                               inputValue={Array []}
@@ -2766,7 +2824,9 @@ ShallowWrapper {
         "handleClose": [Function],
         "handleSubmit": [Function],
         "id": "addProjectVacanciesModal",
+        "isLoading": false,
         "submitLoading": false,
+        "succeeded": false,
         "success": false,
         "successMessage": "New project vacancies have been created!",
         "title": "Create Vacancies",
@@ -2783,6 +2843,7 @@ ShallowWrapper {
               comment=""
               componentStateKey="inputs"
               defaultStatus={0}
+              dropDownFor=""
               enableSearch={true}
               extras={null}
               inputValue={Array []}
@@ -2920,7 +2981,9 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addProjectVacanciesModal"
+                                                isLoading={false}
                                                 submitLoading={false}
+                                                succeeded={false}
                                                 success={false}
                                                 successMessage="New project vacancies have been created!"
                                                 title="Create Vacancies"
@@ -2931,6 +2994,7 @@ ShallowWrapper {
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
                                                                                         defaultStatus={0}
+                                                                                        dropDownFor=""
                                                                                         enableSearch={true}
                                                                                         extras={null}
                                                                                         inputValue={Array []}
@@ -2955,6 +3019,7 @@ ShallowWrapper {
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
                                                                                         defaultStatus={0}
+                                                                                        dropDownFor=""
                                                                                         enableSearch={false}
                                                                                         extras={null}
                                                                                         inputValue={Array []}
@@ -3006,6 +3071,7 @@ ShallowWrapper {
               comment=""
               componentStateKey="inputs"
               defaultStatus={0}
+              dropDownFor=""
               enableSearch={false}
               extras={null}
               inputValue={Array []}
@@ -3143,7 +3209,9 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addProjectVacanciesModal"
+                                                isLoading={false}
                                                 submitLoading={false}
+                                                succeeded={false}
                                                 success={false}
                                                 successMessage="New project vacancies have been created!"
                                                 title="Create Vacancies"
@@ -3154,6 +3222,7 @@ ShallowWrapper {
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
                                                                                         defaultStatus={0}
+                                                                                        dropDownFor=""
                                                                                         enableSearch={true}
                                                                                         extras={null}
                                                                                         inputValue={Array []}
@@ -3178,6 +3247,7 @@ ShallowWrapper {
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
                                                                                         defaultStatus={0}
+                                                                                        dropDownFor=""
                                                                                         enableSearch={false}
                                                                                         extras={null}
                                                                                         inputValue={Array []}
@@ -3355,7 +3425,9 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addProjectVacanciesModal"
+                                                isLoading={false}
                                                 submitLoading={false}
+                                                succeeded={false}
                                                 success={false}
                                                 successMessage="New project vacancies have been created!"
                                                 title="Create Vacancies"
@@ -3366,6 +3438,7 @@ ShallowWrapper {
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
                                                                                         defaultStatus={0}
+                                                                                        dropDownFor=""
                                                                                         enableSearch={true}
                                                                                         extras={null}
                                                                                         inputValue={Array []}
@@ -3390,6 +3463,7 @@ ShallowWrapper {
                                                                                         comment=""
                                                                                         componentStateKey="inputs"
                                                                                         defaultStatus={0}
+                                                                                        dropDownFor=""
                                                                                         enableSearch={false}
                                                                                         extras={null}
                                                                                         inputValue={Array []}
@@ -3451,6 +3525,7 @@ ShallowWrapper {
               "comment": "",
               "componentStateKey": "inputs",
               "defaultStatus": 0,
+              "dropDownFor": "",
               "enableSearch": true,
               "extras": null,
               "inputValue": Array [],
@@ -3585,7 +3660,9 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addProjectVacanciesModal"
+                      isLoading={false}
                       submitLoading={false}
+                      succeeded={false}
                       success={false}
                       successMessage="New project vacancies have been created!"
                       title="Create Vacancies"
@@ -3596,6 +3673,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={true}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -3620,6 +3698,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={false}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -3678,6 +3757,7 @@ ShallowWrapper {
               "comment": "",
               "componentStateKey": "inputs",
               "defaultStatus": 0,
+              "dropDownFor": "",
               "enableSearch": false,
               "extras": null,
               "inputValue": Array [],
@@ -3812,7 +3892,9 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addProjectVacanciesModal"
+                      isLoading={false}
                       submitLoading={false}
+                      succeeded={false}
                       success={false}
                       successMessage="New project vacancies have been created!"
                       title="Create Vacancies"
@@ -3823,6 +3905,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={true}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -3847,6 +3930,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={false}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -4030,7 +4114,9 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addProjectVacanciesModal"
+                      isLoading={false}
                       submitLoading={false}
+                      succeeded={false}
                       success={false}
                       successMessage="New project vacancies have been created!"
                       title="Create Vacancies"
@@ -4041,6 +4127,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={true}
                                                                   extras={null}
                                                                   inputValue={Array []}
@@ -4065,6 +4152,7 @@ ShallowWrapper {
                                                                   comment=""
                                                                   componentStateKey="inputs"
                                                                   defaultStatus={0}
+                                                                  dropDownFor=""
                                                                   enableSearch={false}
                                                                   extras={null}
                                                                   inputValue={Array []}

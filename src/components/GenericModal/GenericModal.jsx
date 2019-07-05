@@ -16,7 +16,6 @@ class GenericModal extends Component {
 
   componentDidUpdate(prevProps) {
     const { success } = this.props;
-
     if (prevProps.success !== success) this.setState({ success });
   }
 
@@ -85,6 +84,7 @@ class GenericModal extends Component {
 
   render() {
     const { id, title } = this.props;
+
     return (
       <div
         className="modal fade generic-modal"
@@ -93,7 +93,12 @@ class GenericModal extends Component {
         aria-labelledby={id}
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-dialog-centered" role="document">
+        <div
+          className={`modal-dialog modal-dialog-centered ${
+            id === 'addRoleModal' ? 'modal-lg' : ''
+          }`}
+          role="document"
+        >
           <div className="modal-content">
             <div className="modal-header">
               <h1>{title}</h1>
@@ -111,20 +116,25 @@ GenericModal.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.shape().isRequired,
   title: PropTypes.string.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func,
   handleClose: PropTypes.func,
   successMessage: PropTypes.string,
   success: PropTypes.bool,
   submitLoading: PropTypes.bool,
-  footer: PropTypes.shape()
+  footer: PropTypes.shape(),
+  isLoading: PropTypes.bool,
+  succeeded: PropTypes.bool
 };
 
 GenericModal.defaultProps = {
   handleClose: () => {},
+  handleSubmit: () => {},
   successMessage: 'Success!',
   success: false,
   submitLoading: false,
-  footer: null
+  footer: null,
+  isLoading: false,
+  succeeded: false
 };
 
 export default GenericModal;

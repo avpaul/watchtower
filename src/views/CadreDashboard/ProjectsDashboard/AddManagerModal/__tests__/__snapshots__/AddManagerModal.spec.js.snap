@@ -116,7 +116,9 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addManagerModal"
+                                      isLoading={false}
                                       submitLoading={false}
+                                      succeeded={false}
                                       success={false}
                                       successMessage="This team manager has been added to the project form!"
                                       title="Add Team Manager"
@@ -248,7 +250,9 @@ ShallowWrapper {
                                       handleClose={[Function]}
                                       handleSubmit={[Function]}
                                       id="addManagerModal"
+                                      isLoading={false}
                                       submitLoading={false}
+                                      succeeded={false}
                                       success={false}
                                       successMessage="This team manager has been added to the project form!"
                                       title="Add Team Manager"
@@ -303,7 +307,9 @@ ShallowWrapper {
       "handleClose": [Function],
       "handleSubmit": [Function],
       "id": "addManagerModal",
+      "isLoading": false,
       "submitLoading": false,
+      "succeeded": false,
       "success": false,
       "successMessage": "This team manager has been added to the project form!",
       "title": "Add Team Manager",
@@ -397,7 +403,9 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addManagerModal"
+                                          isLoading={false}
                                           submitLoading={false}
+                                          succeeded={false}
                                           success={false}
                                           successMessage="This team manager has been added to the project form!"
                                           title="Add Team Manager"
@@ -529,7 +537,9 @@ ShallowWrapper {
                                           handleClose={[Function]}
                                           handleSubmit={[Function]}
                                           id="addManagerModal"
+                                          isLoading={false}
                                           submitLoading={false}
+                                          succeeded={false}
                                           success={false}
                                           successMessage="This team manager has been added to the project form!"
                                           title="Add Team Manager"
@@ -668,7 +678,9 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addManagerModal"
+                    isLoading={false}
                     submitLoading={false}
+                    succeeded={false}
                     success={false}
                     successMessage="This team manager has been added to the project form!"
                     title="Add Team Manager"
@@ -806,7 +818,9 @@ ShallowWrapper {
                     handleClose={[Function]}
                     handleSubmit={[Function]}
                     id="addManagerModal"
+                    isLoading={false}
                     submitLoading={false}
+                    succeeded={false}
                     success={false}
                     successMessage="This team manager has been added to the project form!"
                     title="Add Team Manager"
@@ -953,7 +967,9 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addManagerModal"
+                                              isLoading={false}
                                               submitLoading={false}
+                                              succeeded={false}
                                               success={false}
                                               successMessage="This team manager has been added to the project form!"
                                               title="Add Team Manager"
@@ -1085,7 +1101,9 @@ ShallowWrapper {
                                               handleClose={[Function]}
                                               handleSubmit={[Function]}
                                               id="addManagerModal"
+                                              isLoading={false}
                                               submitLoading={false}
+                                              succeeded={false}
                                               success={false}
                                               successMessage="This team manager has been added to the project form!"
                                               title="Add Team Manager"
@@ -1140,7 +1158,9 @@ ShallowWrapper {
         "handleClose": [Function],
         "handleSubmit": [Function],
         "id": "addManagerModal",
+        "isLoading": false,
         "submitLoading": false,
+        "succeeded": false,
         "success": false,
         "successMessage": "This team manager has been added to the project form!",
         "title": "Add Team Manager",
@@ -1234,7 +1254,9 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addManagerModal"
+                                                isLoading={false}
                                                 submitLoading={false}
+                                                succeeded={false}
                                                 success={false}
                                                 successMessage="This team manager has been added to the project form!"
                                                 title="Add Team Manager"
@@ -1366,7 +1388,9 @@ ShallowWrapper {
                                                 handleClose={[Function]}
                                                 handleSubmit={[Function]}
                                                 id="addManagerModal"
+                                                isLoading={false}
                                                 submitLoading={false}
+                                                succeeded={false}
                                                 success={false}
                                                 successMessage="This team manager has been added to the project form!"
                                                 title="Add Team Manager"
@@ -1505,7 +1529,9 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addManagerModal"
+                      isLoading={false}
                       submitLoading={false}
+                      succeeded={false}
                       success={false}
                       successMessage="This team manager has been added to the project form!"
                       title="Add Team Manager"
@@ -1643,7 +1669,9 @@ ShallowWrapper {
                       handleClose={[Function]}
                       handleSubmit={[Function]}
                       id="addManagerModal"
+                      isLoading={false}
                       submitLoading={false}
+                      succeeded={false}
                       success={false}
                       successMessage="This team manager has been added to the project form!"
                       title="Add Team Manager"
