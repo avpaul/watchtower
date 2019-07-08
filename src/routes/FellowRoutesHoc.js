@@ -20,9 +20,8 @@ export class FellowDashboards extends Component {
   };
 
   renderDashboard = (role, user, d1EngineerData) => {
-    const d1Engineer = d1EngineerData.filter(
-      engineer => engineer.email === user.email
-    );
+    const data = !d1EngineerData.data ? [] : d1EngineerData.data;
+    const d1Engineer = data.filter(engineer => engineer.email === user.email);
 
     const cadreRole = 'CadreFellow';
 

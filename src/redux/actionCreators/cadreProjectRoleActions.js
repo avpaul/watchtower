@@ -6,7 +6,7 @@ import * as types from '../constants/cadreProjectRolesTypes';
  * @return object An instance of a Promise
  */
 export const fetchAllRoles = () =>
-  genericAPIGetRequest('ops/roles', [
+  genericAPIGetRequest('projects/roles', [
     types.FETCH_PROJECT_ROLES_REQUEST,
     types.FETCH_PROJECT_ROLES_SUCCESS,
     types.FETCH_PROJECT_ROLES_FAILURE
@@ -18,7 +18,7 @@ export const fetchAllRoles = () =>
  */
 export const createNewRole = roleData =>
   genericAPIPostRequest(
-    'ops/roles',
+    'projects/roles',
     [
       types.CREATE_PROJECT_ROLE_REQUEST,
       types.CREATE_PROJECT_ROLE_SUCCESS,
@@ -32,7 +32,7 @@ export const createNewRole = roleData =>
  * @return object An instance of a Promise
  */
 export const getRoleSkills = () =>
-  genericAPIGetRequest('ops/roles/skills', [
+  genericAPIGetRequest('projects/roles/skills', [
     types.FETCH_ROLE_SKILLS_REQUEST,
     types.FETCH_ROLE_SKILLS_SUCCESS,
     types.FETCH_ROLE_SKILLS_FAILURE

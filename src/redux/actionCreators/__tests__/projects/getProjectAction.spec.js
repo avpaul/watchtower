@@ -24,7 +24,7 @@ describe('Fetch all projects action', () => {
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v2/ops/projects`;
+  const baseURL = `${serverURL}/api/v2/projects`;
 
   beforeEach(() => {
     store.clearActions();

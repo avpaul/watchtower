@@ -30,7 +30,7 @@ const fetchEngineersReportActions = () => (dispatch, getState) => {
     page: meta.page,
     limit: meta.perPage
   };
-  const url = `${serverURL}/api/v2/reports/fellows?${serializeQuery(
+  const url = `${serverURL}/api/v2/ops/reports/engineers?${serializeQuery(
     queryParams
   )}`;
 

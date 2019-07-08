@@ -25,7 +25,9 @@ describe('should fetch cadre engineers and succeed', () => {
     mock = new MockAdapter(axios);
     const { meta } = store.getState().reports;
     queryParams = { page: meta.page, limit: meta.perPage };
-    url = `${serverURL}/api/v2/reports/fellows?${serializeQuery(queryParams)}`;
+    url = `${serverURL}/api/v2/ops/reports/engineers?${serializeQuery(
+      queryParams
+    )}`;
   });
 
   afterEach(() => {
