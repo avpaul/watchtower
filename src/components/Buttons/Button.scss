@@ -1,0 +1,48 @@
+@import '../../assets/sass/abstract/variables';
+@import '../../assets/sass/abstract/mixins';
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.wt-return-button {
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #dae2e6;
+  border-radius: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  img {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    outline: none;
+  }
+}
+
+.cadre-main-button {
+  border-radius: 5px;
+  background-color: #10a36d;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  color: #ffffff;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.58px;
+  line-height: 18px;
+  padding: 10px;
+  outline: none !important;
+  transition: 0.2s ease all;
+}
+
+.cadre-main-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: -0.1rem;
+  box-shadow: 0 5px 1rem 0.2rem rgba(0, 0, 0, 0.11);
+}

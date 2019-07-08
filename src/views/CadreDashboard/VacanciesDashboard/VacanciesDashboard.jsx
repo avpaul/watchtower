@@ -4,7 +4,7 @@ import { CadreMainButton } from '../../../components/Buttons';
 import AddVacanciesModal from './AddVacanciesModal';
 import { underDevelopment } from '../../../utils';
 
-import './vacancyDashboard.css';
+import './vacancyDashboard.scss';
 import WorkInProgress from '../../../components/WorkInProgress';
 
 class VacanciesDashboard extends Component {

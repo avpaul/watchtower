@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import './FellowBio.css';
+import './FellowBio.scss';
 import BioCard from './BioCard';
 import ProjectCard from './ProjectCard';
 /**

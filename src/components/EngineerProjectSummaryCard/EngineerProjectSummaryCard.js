@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './EngineerProjectSummaryCard.css';
+import './EngineerProjectSummaryCard.scss';
 import project from '../../static/Project.svg';
 import projectIcon from '../../static/projectIcon.png';
 import userIcon from '../../static/User.svg';

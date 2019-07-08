@@ -5,7 +5,7 @@ import { carouselOptions } from '../../utils';
 import FilterCard, { generateFilterCardId } from '../Filters/FilterCard';
 import Title from '../Title';
 import Loader from '../Loader/Loader';
-import '../FellowsSummary/FellowsSummary.css';
+import '../FellowsSummary/FellowsSummary.scss';
 
 const formatProjects = projects =>
   projects.map(group => ({

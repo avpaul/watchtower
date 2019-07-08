@@ -1,0 +1,40 @@
+/*
+Typography
+------------------------------------
+This file is used to store the global typography classes.
+*/
+
+@font-face {
+  font-family: 'DIN Pro Black';
+  src: url('../../static/fonts/FontFont - DINPro-Black.otf');
+}
+
+@font-face {
+  font-family: 'DIN Pro Bold';
+  src: url('../../static/fonts/FontFont - DINPro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'DIN Pro Extlight';
+  src: url('../../static/fonts/FontFont - DINPro-Extlight.otf');
+}
+
+@font-face {
+  font-family: 'DIN Pro Light';
+  src: url('../../static/fonts/FontFont - DINPro-Light.otf');
+}
+
+@font-face {
+  font-family: 'DIN Pro Light Italic';
+  src: url('../../static/fonts/FontFont - DINPro-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'DIN Pro Medium';
+  src: url('../../static/fonts/FontFont - DINPro-Medium.otf');
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../../static/fonts/FontFont - DINPro.otf');
+}

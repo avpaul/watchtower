@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './PipFeedbackModal.css';
+import './PipFeedbackModal.scss';
 import { getDate, getDayName } from '../../services/helper';
 import PopupModal from '../../components/Modal/PopupModal';
 

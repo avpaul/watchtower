@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './EngineerBio.css';
 import ProfileCard from './profileCard';
 import ProjectCards from './ProjectCards';
+
+import './EngineerBio.scss';
 
 const renderEngineerDetails = fellow => (
   <React.Fragment>

@@ -1,4 +1,4 @@
-import './FellowSummaryBreakdown.css';
+import './FellowSummaryBreakdown.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';

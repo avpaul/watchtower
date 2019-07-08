@@ -1,727 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput  renders as expected 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TextInput
-    alertText=""
-    className="wt-text-input"
-    comment="No comment"
-    componentStateKey="inputs"
-    defaultStatus={0}
-    inputValue=""
-    label="Name"
-    length={30}
-    name="Name"
-    parent={
-        Object {
-            "setState": [Function],
-            "state": Object {},
-          }
-    }
+<div
+  className="input-group wt-text-input wt-text-input--normal mb-3"
+>
+  <label
+    htmlFor="Name"
+  >
+    Name
+  </label>
+  <input
+    id="Name"
+    onChange={[Function]}
     placeholder="Name Surname"
-    testInput={[Function]}
     type="text"
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <label
-          htmlFor="Name"
->
-          Name
-</label>,
-        <input
-          id="Name"
-          onChange={[Function]}
-          placeholder="Name Surname"
-          type="text"
-          value=""
-/>,
-        <div
-          className="alert--disabled"
-          role="alert"
-/>,
-        <div
-          className="wt-text-input__comment--active"
->
-          No comment
-</div>,
-      ],
-      "className": "input-group wt-text-input wt-text-input--normal mb-3",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Name",
-          "htmlFor": "Name",
-        },
-        "ref": null,
-        "rendered": "Name",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "id": "Name",
-          "onChange": [Function],
-          "placeholder": "Name Surname",
-          "type": "text",
-          "value": "",
-        },
-        "ref": Object {
-          "current": null,
-        },
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-          "className": "alert--disabled",
-          "role": "alert",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "No comment",
-          "className": "wt-text-input__comment--active",
-        },
-        "ref": null,
-        "rendered": "No comment",
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <label
-            htmlFor="Name"
->
-            Name
-</label>,
-          <input
-            id="Name"
-            onChange={[Function]}
-            placeholder="Name Surname"
-            type="text"
-            value=""
-/>,
-          <div
-            className="alert--disabled"
-            role="alert"
-/>,
-          <div
-            className="wt-text-input__comment--active"
->
-            No comment
-</div>,
-        ],
-        "className": "input-group wt-text-input wt-text-input--normal mb-3",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Name",
-            "htmlFor": "Name",
-          },
-          "ref": null,
-          "rendered": "Name",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "id": "Name",
-            "onChange": [Function],
-            "placeholder": "Name Surname",
-            "type": "text",
-            "value": "",
-          },
-          "ref": Object {
-            "current": null,
-          },
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-            "className": "alert--disabled",
-            "role": "alert",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "No comment",
-            "className": "wt-text-input__comment--active",
-          },
-          "ref": null,
-          "rendered": "No comment",
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+    value=""
+  />
+  <div
+    className="alert--disabled"
+    role="alert"
+  />
+  <div
+    className="wt-text-input__comment--active"
+  >
+    No comment
+  </div>
+</div>
 `;
 
 exports[`TextInput  renders textarea input 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TextInput
-    alertText=""
-    className="wt-text-input"
-    comment="No comment"
-    componentStateKey="inputs"
-    defaultStatus={0}
-    inputValue=""
-    label="Name"
-    length={30}
-    name="Name"
-    parent={
-        Object {
-            "setState": [Function],
-            "state": Object {},
-          }
-    }
+<div
+  className="input-group wt-text-input wt-text-input--normal mb-3"
+>
+  <label
+    htmlFor="Name"
+  >
+    Name
+  </label>
+  <textarea
+    id="Name"
+    onChange={[Function]}
     placeholder="Name Surname"
-    testInput={[Function]}
-    type="textarea"
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <label
-          htmlFor="Name"
->
-          Name
-</label>,
-        <textarea
-          id="Name"
-          onChange={[Function]}
-          placeholder="Name Surname"
-          required={true}
-          rows="4"
-          type="text"
-          value=""
-/>,
-        <div
-          className="alert--disabled"
-          role="alert"
-/>,
-        <div
-          className="wt-text-input__comment--active"
->
-          No comment
-</div>,
-      ],
-      "className": "input-group wt-text-input wt-text-input--normal mb-3",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Name",
-          "htmlFor": "Name",
-        },
-        "ref": null,
-        "rendered": "Name",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "id": "Name",
-          "onChange": [Function],
-          "placeholder": "Name Surname",
-          "required": true,
-          "rows": "4",
-          "type": "text",
-          "value": "",
-        },
-        "ref": Object {
-          "current": null,
-        },
-        "rendered": null,
-        "type": "textarea",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-          "className": "alert--disabled",
-          "role": "alert",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "No comment",
-          "className": "wt-text-input__comment--active",
-        },
-        "ref": null,
-        "rendered": "No comment",
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <label
-            htmlFor="Name"
->
-            Name
-</label>,
-          <textarea
-            id="Name"
-            onChange={[Function]}
-            placeholder="Name Surname"
-            required={true}
-            rows="4"
-            type="text"
-            value=""
-/>,
-          <div
-            className="alert--disabled"
-            role="alert"
-/>,
-          <div
-            className="wt-text-input__comment--active"
->
-            No comment
-</div>,
-        ],
-        "className": "input-group wt-text-input wt-text-input--normal mb-3",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Name",
-            "htmlFor": "Name",
-          },
-          "ref": null,
-          "rendered": "Name",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "id": "Name",
-            "onChange": [Function],
-            "placeholder": "Name Surname",
-            "required": true,
-            "rows": "4",
-            "type": "text",
-            "value": "",
-          },
-          "ref": Object {
-            "current": null,
-          },
-          "rendered": null,
-          "type": "textarea",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-            "className": "alert--disabled",
-            "role": "alert",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "No comment",
-            "className": "wt-text-input__comment--active",
-          },
-          "ref": null,
-          "rendered": "No comment",
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+    required={true}
+    rows="4"
+    type="text"
+    value=""
+  />
+  <div
+    className="alert--disabled"
+    role="alert"
+  />
+  <div
+    className="wt-text-input__comment--active"
+  >
+    No comment
+  </div>
+</div>
 `;
 
 exports[`TextInput  renders with minimal config props 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TextInput
-    alertText=""
-    className={null}
-    comment={null}
-    componentStateKey="inputs"
-    defaultStatus={0}
-    inputValue=""
-    label={null}
-    length={null}
-    name="Name"
-    parent={
-        Object {
-            "setState": [Function],
-            "state": Object {},
-          }
-    }
+<div
+  className="input-group null null--normal mb-3"
+>
+  <label
+    htmlFor="Name"
+  />
+  <input
+    id="Name"
+    onChange={[Function]}
     placeholder={null}
-    testInput={null}
-    type={null}
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <label
-          htmlFor="Name"
-/>,
-        <input
-          id="Name"
-          onChange={[Function]}
-          placeholder={null}
-          type="text"
-          value=""
-/>,
-        <div
-          className="alert--disabled"
-          role="alert"
-/>,
-        <div
-          className="null__comment--active"
-/>,
-      ],
-      "className": "input-group null null--normal mb-3",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-          "htmlFor": "Name",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "id": "Name",
-          "onChange": [Function],
-          "placeholder": null,
-          "type": "text",
-          "value": "",
-        },
-        "ref": Object {
-          "current": null,
-        },
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-          "className": "alert--disabled",
-          "role": "alert",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-          "className": "null__comment--active",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <label
-            htmlFor="Name"
-/>,
-          <input
-            id="Name"
-            onChange={[Function]}
-            placeholder={null}
-            type="text"
-            value=""
-/>,
-          <div
-            className="alert--disabled"
-            role="alert"
-/>,
-          <div
-            className="null__comment--active"
-/>,
-        ],
-        "className": "input-group null null--normal mb-3",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-            "htmlFor": "Name",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "id": "Name",
-            "onChange": [Function],
-            "placeholder": null,
-            "type": "text",
-            "value": "",
-          },
-          "ref": Object {
-            "current": null,
-          },
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-            "className": "alert--disabled",
-            "role": "alert",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-            "className": "null__comment--active",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+    type="text"
+    value=""
+  />
+  <div
+    className="alert--disabled"
+    role="alert"
+  />
+  <div
+    className="null__comment--active"
+  />
+</div>
 `;

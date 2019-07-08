@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './Loader.css';
+import './Loader.scss';
 
 /**
  * Loader UI Component

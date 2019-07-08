@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './FileInfo.css';
+import './FileInfo.scss';
 import deleteIcon from '../../static/delete.svg';
 
 const FileInfo = ({ name, url, format, removeSelectedFile }) => (

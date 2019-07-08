@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './FellowsSummaryCard.css';
+import './FellowsSummaryCard.scss';
 import defaultPicture from '../../static/profile.svg';
 
 const renderPIPStatus = () => (
@@ -83,10 +83,10 @@ const FellowsSummaryCard = ({
         <div className="float-right right">
           <p className="status-header offset-margin-bottom">Status</p>
           <p className="status-description">
-          {fellowStatus.length === 2 ? renderPIPStatus() : null}
-          <span className={`${getStatusColor(fellowOverallStatus)}`}>
-            {fellowOverallStatus}
-          </span>
+            {fellowStatus.length === 2 ? renderPIPStatus() : null}
+            <span className={`${getStatusColor(fellowOverallStatus)}`}>
+              {fellowOverallStatus}
+            </span>
           </p>
           <p className="ending-header offset-margin-bottom">Ending</p>
           <p className="ending-description">{ending}</p>

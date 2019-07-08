@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './RadioCard.css';
+import './RadioCard.scss';
 
 const RadioCard = ({ name, handleRadioClick, value, current }) => (
   <div className="radio-card form-check form-check-inline">

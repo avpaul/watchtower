@@ -3,7 +3,7 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import { filter } from 'fuzzaldrin';
-import './index.css';
+import './index.scss';
 import truncate from '../../utils';
 
 class Filter extends Component {

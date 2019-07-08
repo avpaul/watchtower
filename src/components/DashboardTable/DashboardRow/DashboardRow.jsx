@@ -4,7 +4,7 @@ import arrayKey from 'weak-key';
 
 import Cell from '../../TableComponents/Cell';
 import Row from '../../TableComponents/Row';
-import './DashboardRow.css';
+import './DashboardRow.scss';
 
 const DashboardRow = ({ fellow, fellowCells }) => (
   <Row key={fellow.fellow_id}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './LfTtlSummaryCard.css';
+import './LfTtlSummaryCard.scss';
 import defaultPicture from '../../static/profile.svg';
 import checkMark from '../../static/check-mark.svg';
 import Loader from '../Loader/Loader';

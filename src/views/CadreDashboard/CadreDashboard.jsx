@@ -8,7 +8,7 @@ import ReportsDashboard from './ReportsDashboard';
 import VacanciesDashboard from './VacanciesDashboard';
 import CertificationsDashboard from './CertificationsDashboard';
 
-import './CadreDashboard.css';
+import './CadreDashboard.scss';
 
 class CadreDashboard extends Component {
   /**

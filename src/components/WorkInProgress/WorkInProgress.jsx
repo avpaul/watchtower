@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import icon from '../../static/construction_new_color_loop.svg';
-import './WorkInProgress.css';
+import './WorkInProgress.scss';
 
 const WorkInProgress = () => (
   <Fragment>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TTLFellowsProgress from './TtlFellowsProgress';
-import './index.css';
+import './index.scss';
 import ProjectsSummaryChart from '../../components/ProjectsSummaryChart';
 
 class TTLDashboardMain extends React.Component {

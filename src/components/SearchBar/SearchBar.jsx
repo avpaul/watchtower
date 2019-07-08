@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { DebounceInput } from 'react-debounce-input';
-import './SearchBar.css';
+import './SearchBar.scss';
 
 class SearchBar extends Component {
   handleClick = event => {

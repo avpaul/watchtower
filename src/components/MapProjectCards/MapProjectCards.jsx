@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Projectcard from '../ProjectCard/ProjectCard';
 import arrayOfObjectsSorter from '../../utils/sortArray';
 
-import './MapProjectCards.css';
+import './MapProjectCards.scss';
 
 const MapProjectCards = ({ projectData }) => (
   <div>

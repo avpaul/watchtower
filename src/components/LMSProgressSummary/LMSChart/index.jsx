@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LMSChartOverview from './LMSChartOverview';
 import Timeline from './Timeline';
-import './LMSChart.css';
+import './LMSChart.scss';
 
 export const chartOverview = lmsSummary => {
   const numOfOutputsSubmitted = lmsSummary ? lmsSummary.submitted : 0;

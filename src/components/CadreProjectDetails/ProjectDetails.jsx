@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import ProjectDetailsCardBig from './ProjectDetailsCardBig';
 import ProjectDetailsCardSmall from './ProjectDetailsCardSmall';
 import ProjectEngineersTable from '../ProjectEngineersTable';
-import './CadreProjectDetails.css';
+import './CadreProjectDetails.scss';
 import ReturnButton from '../Buttons/ReturnButton';
 
 class ProjectDetails extends Component {

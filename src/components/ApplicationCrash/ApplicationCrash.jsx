@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import icon from '../../static/undraw_notify_88a4_ani_new.svg';
-import './ApplicationCrash.css';
+import './ApplicationCrash.scss';
 
 const ApplicationCrash = () => (
   <Fragment>

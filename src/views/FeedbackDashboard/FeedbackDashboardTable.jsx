@@ -8,7 +8,7 @@ import Table from '../../components/TableComponents/Table';
 import TableHeader from '../../components/TableComponents/Header';
 import renderHeader from './feedbackHeader';
 import share from '../../static/share.svg';
-import './feedbackDashboard.css';
+import './feedbackDashboard.scss';
 import { formatName } from '../../services/helper';
 
 const formatFeedback = (feedback, index, type) => {

@@ -9,7 +9,7 @@ import { getFellowPipFeedback } from '../../redux/actionCreators/fellowPipFeedba
 import PaginationFrontendWrapper from '../../components/Pagination/PaginationWrapper';
 import PipFeedbackModal from './PipFeedbackModal';
 
-import './FellowDashboard.css';
+import './FellowDashboard.scss';
 
 export class FellowPerformance extends Component {
   state = {

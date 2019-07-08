@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import getTimeMessage from '../../utils/getTimeMessage';
-import './index.css';
+import './index.scss';
 
 const WelcomeMessage = props => {
   const { user } = props;

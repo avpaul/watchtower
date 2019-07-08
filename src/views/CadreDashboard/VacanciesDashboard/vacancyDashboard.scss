@@ -1,0 +1,24 @@
+@import '../../../assets/sass/abstract/variables';
+
+.vacancies-dashboard .page-section__title {
+  color: #333e44;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.vacancies-dashboard .add-button {
+  border-radius: 5px;
+  background-color: #10a36d;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  color: #ffffff;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.58px;
+  line-height: 18px;
+  padding: 10px;
+}
+
+.vacancies-dashboard .cadre-main-button {
+  float: right;
+}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import fellowOfftrackStatusIcon from '../../../static/fellowOfftrackStatus.svg';
 import fellowOntrackStatusIcon from '../../../static/fellowOntrackStatus.svg';
 import fellowNoStatusIcon from '../../../static/fellowNoStatusIcon.svg';
-import './ManagerMapCard.css';
+import './ManagerMapCard.scss';
 
 const getIcon = status => {
   switch (status) {

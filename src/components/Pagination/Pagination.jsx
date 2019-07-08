@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
 
-import './Pagination.css';
+import './Pagination.scss';
 import PaginationButton from './PaginationButton';
 
 /**
@@ -203,9 +203,7 @@ class Pagination extends Component {
       {this.renderShowing()}
       <div className="pg__filters row justify-content-center">
         <div
-          className={`pg__per-page col-md-4 col-6 mt-4 mt-md-0 mb-4 mb-md-0 ${
-            classNames.pgPerPage
-          }`}
+          className={`pg__per-page col-md-4 col-6 mt-4 mt-md-0 mb-4 mb-md-0 ${classNames.pgPerPage}`}
         >
           <div className="row d-flex justify-content-center">
             <div className="pg__per-page__select col-lg-4 col-6">

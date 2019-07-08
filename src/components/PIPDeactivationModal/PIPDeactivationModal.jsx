@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PIPDeactivationModal.css';
+import './PIPDeactivationModal.scss';
 import PropTypes from 'prop-types';
 
 class PIPDeactivationModal extends Component {

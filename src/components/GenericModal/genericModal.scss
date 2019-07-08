@@ -1,0 +1,17 @@
+@import '../../assets/sass/abstract/variables';
+
+.generic-modal .modal-content {
+  padding: 2rem;
+  height: auto;
+}
+
+.generic-modal h1 {
+  font-size: 130%;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #3359db;
+}
+
+.generic-modal .modal-footer {
+  padding: 1rem;
+}

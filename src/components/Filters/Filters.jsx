@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import classnames from 'classnames';
 import arrayKey from 'weak-key';
 import { carouselOptions } from '../../utils';
-import './Filters.css';
+import './Filters.scss';
 import FilterCard from './FilterCard';
 import * as filterTypes from '../../redux/constants/fellowFilters';
 

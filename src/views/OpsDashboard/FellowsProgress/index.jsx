@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import StackedBarChart from '../../../components/StackedBarChart';
-import './index.css';
+import './index.scss';
 import Filter from '../../../components/FilterDropdown';
 import getFellowProgressAction from '../../../redux/actionCreators/fellowProgressActions';
 

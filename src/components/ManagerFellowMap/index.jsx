@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ManagerMapCard from './ManagerMapCard';
 import ManagerFellowSortInput from './ManagerFellowSortInput';
 
-import './ManagerFellowMap.css';
+import './ManagerFellowMap.scss';
 
 const sortManagers = (managers, sortRatio) => {
   if (sortRatio === 'HIGH_TO_LOW') {

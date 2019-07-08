@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './Header.css';
+import './Header.scss';
 
 const Header = ({ link, text }) => (
   <div className="row justify-content-md-end">

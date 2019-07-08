@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LMSChart from './LMSChart';
-import './LMSChart/LMSChart.css';
+import './LMSChart/LMSChart.scss';
 
 export default function LMSProgressSummary(props) {
   const {

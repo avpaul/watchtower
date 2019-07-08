@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import './CadreProjectDetails.css';
+import './CadreProjectDetails.scss';
 import DefaultManagerIcon from '../../static/profile.svg';
 import DefaultProjectIcon from '../../static/projectIcon.png';
 import ProjectLinks from './ProjectLinks';

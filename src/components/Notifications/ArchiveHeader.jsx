@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Header/Header.css';
+import '../Header/Header.scss';
 
 const renderArchiveHeader = (hideModal, handleBack) => (
   <div className="handle-close-archive">

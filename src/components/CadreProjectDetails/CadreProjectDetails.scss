@@ -1,0 +1,304 @@
+@import '../../assets/sass/abstract/variables';
+
+.project-details__main {
+  display: flex;
+  justify-content: space-between;
+  width: 1024px;
+  position: relative;
+}
+
+.project-details__card-big {
+  box-sizing: border-box;
+  padding: 1rem 50px;
+  max-height: 570px;
+  min-height: 570px;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 700px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+}
+
+.project-details__card-big a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-details__card-big h2 {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.69px;
+  line-height: 31px;
+  margin: 1.5rem 0;
+  text-transform: capitalize;
+}
+
+.project-details__card-big p {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 1rem 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.project-details__card-big .relevant-documents {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.project-details__card-big .relevant-documents-card {
+  height: 86px;
+  width: 280px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+  margin: 0.3rem 0;
+}
+
+.project-details__card-small {
+  box-sizing: border-box;
+  max-height: 570px;
+  min-height: 570px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  max-width: 300px;
+}
+
+.project-details__card-small a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-details__card-small .project-logo-details {
+  width: 100%;
+  display: flex;
+}
+.project-details__card-small .project-details {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.project-details__card-small .project-type div {
+  background: #ebeff3;
+  padding: 0.3rem;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: $font-primary;
+  font-size: 12px;
+  border-radius: 3px;
+  letter-spacing: 2px;
+}
+.project-details__card-small .project-logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+}
+.project-details__card-small .project-logo img {
+  height: 50px;
+  width: 60px;
+}
+.project-details__card-small .project-logo h3 {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  margin: 0;
+}
+
+.project-details__card-small .project-type {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: rgba(51, 62, 68, 0.71);
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 15px;
+}
+
+.project-details__card-small .project-type div {
+  color: rgba(51, 62, 68, 0.71);
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 15px;
+}
+
+.project-details__card-small .project-theme p {
+  color: rgba(52, 76, 90, 0.62);
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.project-details__card-small .project-stacks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.project-details__card-small .project-stacks .stack {
+  background: #ebeff3;
+  border: 0px solid #ebeff3;
+  padding: 0.1rem 0.8rem;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  font-weight: lighter;
+}
+
+.project-details__card-small .project-team {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details__card-small .project-team h4 {
+  color: rgba(52, 76, 90, 0.62);
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 18px;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.project-details__card-small .project-manager-details {
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+}
+.project-details__card-small .manager-details {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: baseline;
+}
+.project-details__card-small .manager-details h4,
+.project-details__card-small .manager-details p {
+  margin: 0;
+}
+.project-details__card-small .manager-details p {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.project-details__card-small .manager-details h4 {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.project-details__card-small .manager-photo {
+  height: 50px;
+  width: 50px;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.project-details__card-small .project-links {
+  display: flex;
+  flex-direction: column;
+  height: 9rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.project-details__card-small .project-links .links {
+  box-sizing: border-box;
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1rem;
+  width: 257px;
+  border: 1px solid #e4e8ea;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+}
+.project-details__card-small .project-links .links img {
+  height: 25px;
+  width: 25px;
+}
+.project-details__engineers {
+  padding: 1rem;
+  width: 108%;
+}
+
+.project-details__engineers h3 {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.69px;
+  line-height: 31px;
+  text-transform: capitalize;
+}
+.project-details__engineers .dashboard-table__header .dashboard-table__cell,
+.project-deatils__engineers .dashboard-table__header {
+  background: #f4f8f9 !important;
+  color: #606060;
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 18px;
+}
+.project-details__engineers .dashboard-table__row .dashboard-table__cell img {
+  height: 25px;
+  width: 25px;
+  border-radius: 10rem;
+  object-fit: cover;
+  margin: 0 0.8rem 0 0;
+}
+.dashboard-table__row > .dashboard-table__cell:nth-child(1) {
+  width: 14rem;
+}
+
+.project-details .wt-return-button {
+  position: relative;
+  margin: 0 0 0 1rem;
+}
+
+.project-details .project-details__edit-btn {
+  border-radius: 5px;
+  background-color: #f5a623;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  color: #ffffff;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.58px;
+  line-height: 18px;
+  padding: 10px;
+  margin: 0 0 0 1rem;
+}

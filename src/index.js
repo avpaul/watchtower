@@ -3,11 +3,12 @@ import bugsnag from 'bugsnag-js';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import createPlugin from 'bugsnag-react';
-import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './redux/store/configureStore';
 import Routes from './routes';
 import initialState from './redux/reducers/initialState';
+
+import './assets/sass/index.scss';
 
 const bugsnagClient = bugsnag(process.env.REACT_APP_BUGSNAG_API_KEY);
 const ErrorBoundary = bugsnagClient.use(createPlugin(React));

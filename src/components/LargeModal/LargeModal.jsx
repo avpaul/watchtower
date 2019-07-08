@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './LargeModal.css';
+import './LargeModal.scss';
 
 const Modal = ({ handleClose, show, children, title }) => {
   const showHideClassName = show

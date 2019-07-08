@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Chart from './Chart/Chart';
-import './FellowChart.css';
+import './FellowChart.scss';
 
 class FellowChart extends Component {
   constructor(props) {

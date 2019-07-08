@@ -1,0 +1,76 @@
+/*
+Mixins
+-----------------------------------------
+This file is used to store the all the mixins.
+
+*/
+
+@mixin transition-quick {
+  @include transition(all 0.2s ease);
+}
+
+@mixin transition($args...) {
+  transition: $args;
+}
+
+/**
+ This is used to generate a media query according to the type of device. It shall wrap the content
+ with this media query.
+ 
+ @param $breakpoint type of device
+
+ When making use of this mixin, ensure the breakpoints are in descending order
+ of the screen size, from biggest to smallest. This is because this mixin makes use of the max-width
+ media query, so the first media query satisfied will have its properties take highest priority.
+
+ Please note, its not required to make use of all breakpoints when making a component responsive
+
+ Eg.
+ @include respond(desk-small){
+
+ }
+
+ @include respond(phone){
+   
+ }
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==mini {
+    //320px - All mini screen devices between 3-4 inch
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==phone {
+    //600px -  All normal sized mobile devices
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-port {
+    //900px - All tablet-sized screen in portrait mode
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-land {
+    //1200px - All tablet-sized screen in landscape mode
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desk-small {
+    //1500px - Includes normal-sized laptop screens and small-sized desktop monitors
+    @media (max-width: 1500px) {
+      @content;
+    }
+  }
+
+  // (> 1500px) - All large screens such as desktop monitors. These will take the default CSS properties defined
+  // without using media queries.
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './title.css';
+import './title.scss';
 
 const Title = ({ title, subTitle }) => (
   <div className="page-section">

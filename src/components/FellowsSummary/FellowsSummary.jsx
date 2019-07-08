@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import FiltersView from '../Filters/FiltersView';
 import Title from '../Title';
-import './FellowsSummary.css';
+import './FellowsSummary.scss';
 import Loader from '../Loader/Loader';
 
 const formatCards = fellowLevels => {

@@ -1,0 +1,127 @@
+@import '../../assets/sass/abstract/variables';
+
+.profile-card-header {
+  font-size: 15px;
+  font-family: $font-primary;
+  text-align: left;
+  color: rgba(52, 76, 90, 0.43);
+  font-weight: 500;
+}
+
+.engineer-bio-wrapper {
+  width: 100%;
+}
+
+.bio-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #fff;
+  height: 571px;
+  border: 0;
+  margin-top: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* New CSS files*/
+.profile_card {
+  margin-top: 1.5em;
+}
+
+h3.tittle.two {
+  color: #fff;
+  text-align: center;
+}
+
+.profile_card_details {
+  padding-bottom: 0.5em;
+  margin-top: 20px;
+}
+
+.profile_card_details img {
+  width: 20%;
+  border-radius: 10%;
+}
+
+.c-img i {
+  color: #fff;
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+
+.profile_card h4 {
+  color: #0459e4;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile_card h3 {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.profile_card p {
+  color: rgba(52, 76, 90, 0.62);
+  font-size: 14px;
+}
+
+/*Projects card css*/
+.project-card-grid {
+  padding-top: 1.5em;
+  border-top: 1px solid #f0f0f0;
+}
+
+.project-card-left {
+  float: left;
+  width: 30%;
+}
+
+.project-card-left img {
+  width: 50%;
+  border-radius: 30%;
+}
+
+.project-card-right {
+  float: right;
+  width: 70%;
+  text-align: left;
+}
+
+.project-card-right h6 {
+  color: #344c5a;
+  font-family: $font-primary;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.project-card-right p {
+  color: rgba(52, 76, 90, 0.62);
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  font-family: $font-primary;
+}
+
+.project-card-right p.projects {
+  margin-top: 25px;
+}
+
+.project-card-right p span {
+  height: 18px;
+  width: 61px;
+  color: #333e44;
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 20px;
+  border-radius: 10%;
+  padding: 5px 5px;
+  background-color: #ebeff3;
+}

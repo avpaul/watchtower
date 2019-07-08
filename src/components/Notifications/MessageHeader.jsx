@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Header/Header.css';
+import '../Header/Header.scss';
 
 /**
  * function to return the message header

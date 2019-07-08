@@ -1,0 +1,39 @@
+@import '../../assets/sass/abstract/variables';
+
+.feedback-share {
+  color: #0459e4;
+  font-size: 15px;
+  height: 20px;
+  width: 32px;
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+.feedback-share:hover {
+  text-decoration: none;
+}
+
+.feedbackDashboard .col-xl-9 {
+  max-width: 72% !important;
+}
+
+.feedbackDashboard .ops-dashboard__fellows-summary {
+  padding-right: 0 !important;
+}
+
+.feedbackDashboard__title {
+  color: #0459e4;
+  font-family: $font-primary;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.625rem;
+  margin-top: 3.75rem;
+}
+
+.feedbackDashboard .contain {
+  width: 95%;
+}
+
+.feedbackDashboard .feedback-calendar-body {
+  margin-top: 2.5rem;
+}

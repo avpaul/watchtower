@@ -14,6 +14,9 @@
       "!src/utils/jsonToPdf.js",
       "!src/views/DashboardPage/filterValues.js",
       "!src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "prettier": {
@@ -55,7 +58,7 @@
     "react-ga": "^2.5.7",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "3.0.1",
     "react-slick": "^0.23.2",
     "react-toastify": "^4.4.3",
     "recharts": "^1.3.5",
@@ -66,6 +69,7 @@
     "slick-carousel": "^1.8.1",
     "source-map-explorer": "^1.6.0",
     "styled-components": "^4.3.1",
+    "stylelint-scss": "^3.8.0",
     "underscore": "^1.9.1",
     "wait-for-expect": "^1.2.0",
     "weak-key": "^1.0.1"
@@ -77,12 +81,12 @@
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --coverage",
-    "test:coverage": "react-scripts test --env=jsdom --silent --coverage",
-    "test:debug": "react-scripts test --env=jsdom --runInBand --verbose --expand --debug",
+    "test": "react-scripts test --coverage",
+    "test:coverage": "react-scripts test --silent --coverage",
+    "test:debug": "react-scripts test --runInBand --verbose --expand --debug",
     "eject": "react-scripts eject",
     "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
-    "lint": "eslint 'src/**' -c .eslintrc.json",
+    "lint": "eslint 'src/**/*.{js,jsx}' -c .eslintrc.json",
     "galen": "galen",
     "pretest:galen": "pm2 start -n watch-tower ./node_modules/react-scripts/scripts/start.js",
     "posttest:galen": "pm2 stop watch-tower",
@@ -114,5 +118,17 @@
     "redux-mock-store": "^1.5.3",
     "stylelint": "^9.7.1",
     "stylelint-config-recommended": "^2.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

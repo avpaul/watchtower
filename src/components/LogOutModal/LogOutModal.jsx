@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import cautionMark from '../../static/Mark.svg';
 import authService from '../../services/auth';
 import analytics from '../../services/analytics';
-import './LogOutModal.css';
+import './LogOutModal.scss';
 
 class LogOutPage extends Component {
   state = {

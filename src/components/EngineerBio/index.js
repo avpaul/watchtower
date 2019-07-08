@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import '../FellowBio/FellowBio.css';
-import './EngineerBio.css';
+import '../FellowBio/FellowBio.scss';
+import './EngineerBio.scss';
 import EngineerCard from './EngineerCard';
 /**
  * Class representing the dashboard page

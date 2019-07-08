@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MapProjectRoleCard from '../../../../components/MapProjectRoleCard';
 import PMloader from '../../../../components/CustomLoader/PMLoader';
 
-import './CadreViewRoles.css';
+import './CadreViewRoles.scss';
 
 export default class CadreViewRoles extends Component {
   componentDidMount() {

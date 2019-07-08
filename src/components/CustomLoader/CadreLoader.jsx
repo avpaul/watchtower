@@ -1,6 +1,6 @@
 import React from 'react';
 import cadreLoaderGif from '../../static/engineerLoaderGif.gif';
-import './CustomLoaders.css';
+import './CustomLoaders.scss';
 import LoaderComponent from './LoaderComponent';
 
 const Cadreloader = () => <LoaderComponent img={cadreLoaderGif} />;

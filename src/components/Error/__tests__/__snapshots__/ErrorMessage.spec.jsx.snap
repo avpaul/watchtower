@@ -1,82 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ErrorMessage
-    customStyle={Object {}}
-    message="test"
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": "test",
-      "style": Object {
-        "fontSize": "2rem",
-        "margin": "1rem auto",
-        "textAlign": "center",
-        "width": "100%",
-      },
-    },
-    "ref": null,
-    "rendered": "test",
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
+<div
+  style={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "test",
-        "style": Object {
-          "fontSize": "2rem",
-          "margin": "1rem auto",
-          "textAlign": "center",
-          "width": "100%",
-        },
-      },
-      "ref": null,
-      "rendered": "test",
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+      "fontSize": "2rem",
+      "margin": "1rem auto",
+      "textAlign": "center",
+      "width": "100%",
+    }
+  }
+>
+  test
+</div>
 `;

@@ -1,254 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PipActivationForm component should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PipActivationForm
-    activatePip={[Function]}
-    addManagementSupport={[Function]}
-    averageRatings={
-        Object {
-            "communication": "0.00",
-            "initiative": "0.33",
-            "integration": "0.00",
-            "professionalism": "0.00",
-            "quality": "0.1",
-            "quantity": "0.41",
-          }
-    }
-    fellow={
-        Object {
-            "actualApprenticeshipStartDate": "2019-01-12",
-            "actualSimulationsCompletionDate": "2018-11-05",
-            "apprenticeshipManager": "Trust Birungi",
-            "apprenticeshipTeam": "Watch Tower",
-            "apprenticeshipTechnology": "Javascript/PREN,  PHP/Laravel",
-            "bio": "Voluptas ad rem sunt sint laboriosam. Fugiat ut officiis voluptas consectetur quaerat placeat. Praesentium sunt voluptate iusto possimus at rerum sed architecto. Laboriosam illo ut aspernatur autem inventore a voluptate. Harum et voluptas molestiae consequatur.",
-            "cohort": "Class 39 - LOS",
-            "communication": "1",
-            "currentStage": "Apprentice",
-            "devPulseStatus": "gteWk5OffTrack",
-            "email": "genesis.kohler@andela.com",
-            "expectedApprenticeshipCompletionDate": "2019-04-13",
-            "expectedApprenticeshipStartDate": "2018-11-12",
-            "expectedSimulationsCompletionDate": "2018-11-05",
-            "fellow_id": "-LHs4sEcIAVnPeKHTBGd",
-            "id": 1,
-            "initiative": "1",
-            "integration": "0",
-            "invalid_attempts": 0,
-            "launchDate": "2022-08-06",
-            "level": "D0B",
-            "lmsStatus": "ltWk5OnTrack",
-            "m1Facilitator": "Muthoni Muigai",
-            "managerEmail": "trust.birungi@andela.com",
-            "managerName": "Trust  Birungi",
-            "managerRole": "TTL",
-            "missing": 0,
-            "mostRecentAdvancementDate": "---",
-            "name": "Genesis Kohler",
-            "overall_average": "0.666666666666667",
-            "overall_status": "offTrack",
-            "picture": "https://lorempixel.com/100/100/people/?40049",
-            "professionalism": "1",
-            "project": "Watch Tower",
-            "quality": "0",
-            "quantity": "1",
-            "ratings": 5,
-            "satisfied": 16,
-            "simulationStartDate": "2018-08-20",
-            "simulationsPM": "Victoria Offoma",
-            "simulationsStack": "Javascript/MEAN",
-            "simulationsTeam": "Prometheus",
-            "startDate": "2018-08-06",
-            "status": "gteWk5OffTrack",
-            "submitted": 16,
-            "total": 16,
-            "unsubmitted": 0,
-            "weeksSpent": 13,
-          }
-    }
-    getFellowHistoryData={[Function]}
-    handleChange={[Function]}
-    handleMgtInputChange={[Function]}
-    handleSubmit={[Function]}
-    onClick={[Function]}
-    store={
-        Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "addManagementSupport": [Function],
-      "communication": Object {
-        "attribute": "communication",
-        "isUpdated": false,
-        "score": "",
-      },
-      "department": "TDD",
-      "endDate": "01 Feb 2019",
-      "fellowName": "Genesis Kohler",
-      "handleChange": [Function],
-      "handleDateChange": [Function],
-      "handleMgtInputChange": [Function],
-      "handlePipPeriod": [Function],
-      "handleSubmit": [Function],
-      "initiative": Object {
-        "attribute": "initiative",
-        "isUpdated": false,
-        "score": "",
-      },
-      "integration": Object {
-        "attribute": "integration",
-        "isUpdated": false,
-        "score": "",
-      },
-      "managementSupport": Object {},
-      "message": "",
-      "mgtSupportFieldCount": 1,
-      "pipPeriod": 2,
-      "professionalism": Object {
-        "attribute": "professionalism",
-        "isUpdated": false,
-        "score": "",
-      },
-      "quality": Object {
-        "attribute": "quality",
-        "isUpdated": false,
-        "score": "",
-      },
-      "quantity": Object {
-        "attribute": "quantity",
-        "isUpdated": false,
-        "score": "",
-      },
-      "ratings": Object {
-        "communication": "0.00",
-        "initiative": "0.33",
-        "integration": "0.00",
-        "professionalism": "0.00",
-        "quality": "0.1",
-        "quantity": "0.41",
-      },
-      "score": "",
-      "startDate": 2019-01-01T16:00:00.000Z,
-      "status": "offTrack",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+<PipActivation
+  addManagementSupport={[Function]}
+  communication={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "addManagementSupport": [Function],
-        "communication": Object {
-          "attribute": "communication",
-          "isUpdated": false,
-          "score": "",
-        },
-        "department": "TDD",
-        "endDate": "01 Feb 2019",
-        "fellowName": "Genesis Kohler",
-        "handleChange": [Function],
-        "handleDateChange": [Function],
-        "handleMgtInputChange": [Function],
-        "handlePipPeriod": [Function],
-        "handleSubmit": [Function],
-        "initiative": Object {
-          "attribute": "initiative",
-          "isUpdated": false,
-          "score": "",
-        },
-        "integration": Object {
-          "attribute": "integration",
-          "isUpdated": false,
-          "score": "",
-        },
-        "managementSupport": Object {},
-        "message": "",
-        "mgtSupportFieldCount": 1,
-        "pipPeriod": 2,
-        "professionalism": Object {
-          "attribute": "professionalism",
-          "isUpdated": false,
-          "score": "",
-        },
-        "quality": Object {
-          "attribute": "quality",
-          "isUpdated": false,
-          "score": "",
-        },
-        "quantity": Object {
-          "attribute": "quantity",
-          "isUpdated": false,
-          "score": "",
-        },
-        "ratings": Object {
-          "communication": "0.00",
-          "initiative": "0.33",
-          "integration": "0.00",
-          "professionalism": "0.00",
-          "quality": "0.1",
-          "quantity": "0.41",
-        },
-        "score": "",
-        "startDate": 2019-01-01T16:00:00.000Z,
-        "status": "offTrack",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+      "attribute": "communication",
+      "isUpdated": false,
+      "score": "",
+    }
+  }
+  department="TDD"
+  endDate="01 Feb 2019"
+  fellowName="Genesis Kohler"
+  handleChange={[Function]}
+  handleDateChange={[Function]}
+  handleMgtInputChange={[Function]}
+  handlePipPeriod={[Function]}
+  handleSubmit={[Function]}
+  initiative={
+    Object {
+      "attribute": "initiative",
+      "isUpdated": false,
+      "score": "",
+    }
+  }
+  integration={
+    Object {
+      "attribute": "integration",
+      "isUpdated": false,
+      "score": "",
+    }
+  }
+  managementSupport={Object {}}
+  message=""
+  mgtSupportFieldCount={1}
+  pipPeriod={2}
+  professionalism={
+    Object {
+      "attribute": "professionalism",
+      "isUpdated": false,
+      "score": "",
+    }
+  }
+  quality={
+    Object {
+      "attribute": "quality",
+      "isUpdated": false,
+      "score": "",
+    }
+  }
+  quantity={
+    Object {
+      "attribute": "quantity",
+      "isUpdated": false,
+      "score": "",
+    }
+  }
+  ratings={
+    Object {
+      "communication": "0.00",
+      "initiative": "0.33",
+      "integration": "0.00",
+      "professionalism": "0.00",
+      "quality": "0.1",
+      "quantity": "0.41",
+    }
+  }
+  score=""
+  startDate={2019-01-01T16:00:00.000Z}
+  status="offTrack"
+/>
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReturnIcon from '../../static/BackIcon.png';
-import './Button.css';
+import './Button.scss';
 
 const ReturnButton = ({ history }) => (
   <button

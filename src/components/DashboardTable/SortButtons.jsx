@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './SortButtons.css';
+import './SortButtons.scss';
 
 const SortButtons = ({
   arrowUpClick,

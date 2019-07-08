@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
-import './PipActivationForm.css';
+import './PipActivationForm.scss';
 import PipActivation from '../../components/PipActivation';
 import { redirectToExternalURL } from '../../utils';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class PipActivationForm extends Component {
   constructor(props) {

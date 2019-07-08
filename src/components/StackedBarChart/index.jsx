@@ -11,7 +11,7 @@ import {
   Legend,
   ResponsiveContainer
 } from 'recharts';
-import './index.css';
+import './index.scss';
 
 class StackedBarChart extends React.Component {
   state = {

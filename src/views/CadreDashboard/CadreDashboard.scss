@@ -1,0 +1,126 @@
+@import '../../assets/sass/abstract/variables';
+
+/*
+ Container
+ */
+
+.cadre-submenu {
+  margin: auto;
+}
+
+.cadre__page {
+  border-left: 1px solid rgba(216, 216, 216, 0.45);
+  padding-left: 25px;
+  min-height: 70vh;
+}
+
+/*
+  Card css
+ */
+
+.cadre-submenu-cards {
+  cursor: pointer;
+  height: 108px;
+  width: 240px;
+  margin-bottom: 22px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 2px 4px 10px 0 #d8d8d8;
+}
+
+.project-badge {
+  height: 31px;
+  margin-left: 0.3em;
+  text-align: center;
+  width: 31px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.submenu-title {
+  height: 23px;
+  width: 80px;
+  margin-left: 0.3em;
+  color: #333e44;
+  font-family: $font-primary;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.submenu-subtitle {
+  height: 21px;
+  width: 200px;
+  color: rgba(51, 62, 68, 0.51);
+  font-family: $font-primary;
+  font-size: 16px;
+  padding-left: 20px;
+  line-height: 21px;
+}
+
+.cards-header {
+  padding-top: 21px;
+  padding-left: 18px;
+}
+.cadre-page-content {
+  padding-top: 10%;
+  padding-left: 0;
+  padding-right: 9%;
+  margin-left: 0;
+}
+.iconImage {
+  height: 17px;
+  width: 17px;
+}
+
+/*
+Media queries - Responsiveness
+ */
+
+@media (min-width: 300px) and (max-width: 540px) {
+  .nav-stacked {
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1365px) {
+  .nav-stacked {
+    display: table;
+    margin: 0 auto;
+  }
+
+  .col-sm-3 {
+    max-width: 20%;
+  }
+
+  .col-sm-9 {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1365px) {
+  .nav-stacked {
+    display: table;
+    margin: 0 auto;
+  }
+
+  .col-sm-3 {
+    max-width: 25%;
+  }
+
+  .col-sm-9 {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 575px) {
+  .cadre-submenu-cards {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 576px) {
+  [class*='col-'] {
+    max-width: 100%;
+  }
+}

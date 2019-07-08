@@ -6,7 +6,7 @@ import GenericModal from '../../../../components/GenericModal';
 import { CadreMainButton } from '../../../../components/Buttons';
 import { numberRegex } from '../../../../utils/regex';
 
-import './addVacancyModal.css';
+import './addVacancyModal.scss';
 import Loader from '../../../../components/Loader/Loader';
 
 class AddVacanciesModal extends Component {

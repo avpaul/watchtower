@@ -10,7 +10,7 @@ import {
   setStatusHandler
 } from './helpers';
 
-import './dropdownInput.css';
+import './dropdownInput.scss';
 import Loader from '../Loader/Loader';
 
 // Used to ensure a single dropdown is opened

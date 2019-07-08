@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { attachToParentComponent } from './helpers';
 import FileInfo from '../FileInfo';
-import './fileUploadInput.css';
+import './fileUploadInput.scss';
 
 const uploadTypes = {
   images: ['png', 'jpg', 'jpeg', 'svg', 'svgz'],

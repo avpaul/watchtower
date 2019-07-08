@@ -1,656 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test fellowsSummaryCard snapshots fellowSummaryCard should render properly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MapLfTtlSummaryCard
-    filterFellows={[Function]}
+<Slider
+  className="contain"
+  infinite={false}
+  nextArrow={
+    <NavArrow
+      buttonClass="slick-next"
+      handleChartClose="contain slider"
+      iconClass="fa-angle-right"
+      onClick={[Function]}
+    />
+  }
+  prevArrow={
+    <NavArrow
+      buttonClass="slick-prev"
+      handleChartClose="contain slider"
+      iconClass="fa-angle-left"
+      onClick={[Function]}
+    />
+  }
+  responsive={
+    Array [
+      Object {
+        "breakpoint": 1000,
+        "settings": Object {
+          "slidesToScroll": 2,
+          "slidesToShow": 2,
+        },
+      },
+      Object {
+        "breakpoint": 700,
+        "settings": Object {
+          "slidesToScroll": 1,
+          "slidesToShow": 1,
+        },
+      },
+    ]
+  }
+  rows={1}
+  slidesToScroll={4}
+  slidesToShow={4}
+  swipeToSlide={true}
+>
+  <LfTtlSummaryCard
+    fellowsCount={6}
+    filterFellows={[MockFunction]}
+    id="main"
+    key="main"
     lfTtlCheckId={21}
-    lfTtlSummary={
-        Array [
-            Object {
-              "fellowsCount": 6,
-              "id": "main",
-              "styles": Object {
-                "nameAvatarDisplayStyle": "d-none",
-                "titleDisplayStyle": "",
-              },
-              "title": "All TTLs",
-            },
-            Object {
-              "fellowsCount": 0,
-              "id": 2,
-              "name": "Kesiena Akpobome",
-              "styles": Object {
-                "nameAvatarDisplayStyle": "",
-                "titleDisplayStyle": "d-none",
-              },
-            },
-            Object {
-              "fellowsCount": 0,
-              "id": 6,
-              "name": "Olaoluwa Faniyi",
-              "styles": Object {
-                "nameAvatarDisplayStyle": "",
-                "titleDisplayStyle": "d-none",
-              },
-            },
-            Object {
-              "fellowsCount": 0,
-              "id": 7,
-              "name": "Olaolu Akinsete",
-              "styles": Object {
-                "nameAvatarDisplayStyle": "",
-                "titleDisplayStyle": "d-none",
-              },
-            },
-            Object {
-              "fellowsCount": 0,
-              "id": 10,
-              "name": "Samuel Kubai",
-              "styles": Object {
-                "nameAvatarDisplayStyle": "",
-                "titleDisplayStyle": "d-none",
-              },
-            },
-            Object {
-              "fellowsCount": 6,
-              "id": 11,
-              "name": "Trust  Birungi",
-              "styles": Object {
-                "nameAvatarDisplayStyle": "",
-                "titleDisplayStyle": "d-none",
-              },
-            },
-          ]
+    loading={false}
+    name=""
+    picture=""
+    styles={
+      Object {
+        "nameAvatarDisplayStyle": "d-none",
+        "titleDisplayStyle": "",
+      }
     }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <LfTtlSummaryCard
-          fellowsCount={6}
-          filterFellows={[Function]}
-          id="main"
-          lfTtlCheckId={21}
-          loading={false}
-          name=""
-          picture=""
-          styles={
-                    Object {
-                              "nameAvatarDisplayStyle": "d-none",
-                              "titleDisplayStyle": "",
-                            }
-          }
-          title="All TTLs"
-/>,
-        <LfTtlSummaryCard
-          fellowsCount={0}
-          filterFellows={[Function]}
-          id="2"
-          lfTtlCheckId={21}
-          loading={false}
-          name="Kesiena Akpobome"
-          picture=""
-          styles={
-                    Object {
-                              "nameAvatarDisplayStyle": "",
-                              "titleDisplayStyle": "d-none",
-                            }
-          }
-          title=""
-/>,
-        <LfTtlSummaryCard
-          fellowsCount={0}
-          filterFellows={[Function]}
-          id="6"
-          lfTtlCheckId={21}
-          loading={false}
-          name="Olaoluwa Faniyi"
-          picture=""
-          styles={
-                    Object {
-                              "nameAvatarDisplayStyle": "",
-                              "titleDisplayStyle": "d-none",
-                            }
-          }
-          title=""
-/>,
-        <LfTtlSummaryCard
-          fellowsCount={0}
-          filterFellows={[Function]}
-          id="7"
-          lfTtlCheckId={21}
-          loading={false}
-          name="Olaolu Akinsete"
-          picture=""
-          styles={
-                    Object {
-                              "nameAvatarDisplayStyle": "",
-                              "titleDisplayStyle": "d-none",
-                            }
-          }
-          title=""
-/>,
-        <LfTtlSummaryCard
-          fellowsCount={0}
-          filterFellows={[Function]}
-          id="10"
-          lfTtlCheckId={21}
-          loading={false}
-          name="Samuel Kubai"
-          picture=""
-          styles={
-                    Object {
-                              "nameAvatarDisplayStyle": "",
-                              "titleDisplayStyle": "d-none",
-                            }
-          }
-          title=""
-/>,
-        <LfTtlSummaryCard
-          fellowsCount={6}
-          filterFellows={[Function]}
-          id="11"
-          lfTtlCheckId={21}
-          loading={false}
-          name="Trust  Birungi"
-          picture=""
-          styles={
-                    Object {
-                              "nameAvatarDisplayStyle": "",
-                              "titleDisplayStyle": "d-none",
-                            }
-          }
-          title=""
-/>,
-      ],
-      "className": "contain",
-      "infinite": false,
-      "nextArrow": <NavArrow
-        buttonClass="slick-next"
-        handleChartClose="contain slider"
-        iconClass="fa-angle-right"
-        onClick={[Function]}
-/>,
-      "prevArrow": <NavArrow
-        buttonClass="slick-prev"
-        handleChartClose="contain slider"
-        iconClass="fa-angle-left"
-        onClick={[Function]}
-/>,
-      "responsive": Array [
-        Object {
-          "breakpoint": 1000,
-          "settings": Object {
-            "slidesToScroll": 2,
-            "slidesToShow": 2,
-          },
-        },
-        Object {
-          "breakpoint": 700,
-          "settings": Object {
-            "slidesToScroll": 1,
-            "slidesToShow": 1,
-          },
-        },
-      ],
-      "rows": 1,
-      "slidesToScroll": 4,
-      "slidesToShow": 4,
-      "swipeToSlide": true,
-    },
-    "ref": null,
-    "rendered": Array [
+    title="All TTLs"
+  />
+  <LfTtlSummaryCard
+    fellowsCount={0}
+    filterFellows={[MockFunction]}
+    id="2"
+    key="2"
+    lfTtlCheckId={21}
+    loading={false}
+    name="Kesiena Akpobome"
+    picture=""
+    styles={
       Object {
-        "instance": null,
-        "key": "main",
-        "nodeType": "function",
-        "props": Object {
-          "fellowsCount": 6,
-          "filterFellows": [Function],
-          "id": "main",
-          "lfTtlCheckId": 21,
-          "loading": false,
-          "name": "",
-          "picture": "",
-          "styles": Object {
-            "nameAvatarDisplayStyle": "d-none",
-            "titleDisplayStyle": "",
-          },
-          "title": "All TTLs",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+        "nameAvatarDisplayStyle": "",
+        "titleDisplayStyle": "d-none",
+      }
+    }
+    title=""
+  />
+  <LfTtlSummaryCard
+    fellowsCount={0}
+    filterFellows={[MockFunction]}
+    id="6"
+    key="6"
+    lfTtlCheckId={21}
+    loading={false}
+    name="Olaoluwa Faniyi"
+    picture=""
+    styles={
       Object {
-        "instance": null,
-        "key": "2",
-        "nodeType": "function",
-        "props": Object {
-          "fellowsCount": 0,
-          "filterFellows": [Function],
-          "id": "2",
-          "lfTtlCheckId": 21,
-          "loading": false,
-          "name": "Kesiena Akpobome",
-          "picture": "",
-          "styles": Object {
-            "nameAvatarDisplayStyle": "",
-            "titleDisplayStyle": "d-none",
-          },
-          "title": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+        "nameAvatarDisplayStyle": "",
+        "titleDisplayStyle": "d-none",
+      }
+    }
+    title=""
+  />
+  <LfTtlSummaryCard
+    fellowsCount={0}
+    filterFellows={[MockFunction]}
+    id="7"
+    key="7"
+    lfTtlCheckId={21}
+    loading={false}
+    name="Olaolu Akinsete"
+    picture=""
+    styles={
       Object {
-        "instance": null,
-        "key": "6",
-        "nodeType": "function",
-        "props": Object {
-          "fellowsCount": 0,
-          "filterFellows": [Function],
-          "id": "6",
-          "lfTtlCheckId": 21,
-          "loading": false,
-          "name": "Olaoluwa Faniyi",
-          "picture": "",
-          "styles": Object {
-            "nameAvatarDisplayStyle": "",
-            "titleDisplayStyle": "d-none",
-          },
-          "title": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+        "nameAvatarDisplayStyle": "",
+        "titleDisplayStyle": "d-none",
+      }
+    }
+    title=""
+  />
+  <LfTtlSummaryCard
+    fellowsCount={0}
+    filterFellows={[MockFunction]}
+    id="10"
+    key="10"
+    lfTtlCheckId={21}
+    loading={false}
+    name="Samuel Kubai"
+    picture=""
+    styles={
       Object {
-        "instance": null,
-        "key": "7",
-        "nodeType": "function",
-        "props": Object {
-          "fellowsCount": 0,
-          "filterFellows": [Function],
-          "id": "7",
-          "lfTtlCheckId": 21,
-          "loading": false,
-          "name": "Olaolu Akinsete",
-          "picture": "",
-          "styles": Object {
-            "nameAvatarDisplayStyle": "",
-            "titleDisplayStyle": "d-none",
-          },
-          "title": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+        "nameAvatarDisplayStyle": "",
+        "titleDisplayStyle": "d-none",
+      }
+    }
+    title=""
+  />
+  <LfTtlSummaryCard
+    fellowsCount={6}
+    filterFellows={[MockFunction]}
+    id="11"
+    key="11"
+    lfTtlCheckId={21}
+    loading={false}
+    name="Trust  Birungi"
+    picture=""
+    styles={
       Object {
-        "instance": null,
-        "key": "10",
-        "nodeType": "function",
-        "props": Object {
-          "fellowsCount": 0,
-          "filterFellows": [Function],
-          "id": "10",
-          "lfTtlCheckId": 21,
-          "loading": false,
-          "name": "Samuel Kubai",
-          "picture": "",
-          "styles": Object {
-            "nameAvatarDisplayStyle": "",
-            "titleDisplayStyle": "d-none",
-          },
-          "title": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "11",
-        "nodeType": "function",
-        "props": Object {
-          "fellowsCount": 6,
-          "filterFellows": [Function],
-          "id": "11",
-          "lfTtlCheckId": 21,
-          "loading": false,
-          "name": "Trust  Birungi",
-          "picture": "",
-          "styles": Object {
-            "nameAvatarDisplayStyle": "",
-            "titleDisplayStyle": "d-none",
-          },
-          "title": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <LfTtlSummaryCard
-            fellowsCount={6}
-            filterFellows={[Function]}
-            id="main"
-            lfTtlCheckId={21}
-            loading={false}
-            name=""
-            picture=""
-            styles={
-                        Object {
-                                    "nameAvatarDisplayStyle": "d-none",
-                                    "titleDisplayStyle": "",
-                                  }
-            }
-            title="All TTLs"
-/>,
-          <LfTtlSummaryCard
-            fellowsCount={0}
-            filterFellows={[Function]}
-            id="2"
-            lfTtlCheckId={21}
-            loading={false}
-            name="Kesiena Akpobome"
-            picture=""
-            styles={
-                        Object {
-                                    "nameAvatarDisplayStyle": "",
-                                    "titleDisplayStyle": "d-none",
-                                  }
-            }
-            title=""
-/>,
-          <LfTtlSummaryCard
-            fellowsCount={0}
-            filterFellows={[Function]}
-            id="6"
-            lfTtlCheckId={21}
-            loading={false}
-            name="Olaoluwa Faniyi"
-            picture=""
-            styles={
-                        Object {
-                                    "nameAvatarDisplayStyle": "",
-                                    "titleDisplayStyle": "d-none",
-                                  }
-            }
-            title=""
-/>,
-          <LfTtlSummaryCard
-            fellowsCount={0}
-            filterFellows={[Function]}
-            id="7"
-            lfTtlCheckId={21}
-            loading={false}
-            name="Olaolu Akinsete"
-            picture=""
-            styles={
-                        Object {
-                                    "nameAvatarDisplayStyle": "",
-                                    "titleDisplayStyle": "d-none",
-                                  }
-            }
-            title=""
-/>,
-          <LfTtlSummaryCard
-            fellowsCount={0}
-            filterFellows={[Function]}
-            id="10"
-            lfTtlCheckId={21}
-            loading={false}
-            name="Samuel Kubai"
-            picture=""
-            styles={
-                        Object {
-                                    "nameAvatarDisplayStyle": "",
-                                    "titleDisplayStyle": "d-none",
-                                  }
-            }
-            title=""
-/>,
-          <LfTtlSummaryCard
-            fellowsCount={6}
-            filterFellows={[Function]}
-            id="11"
-            lfTtlCheckId={21}
-            loading={false}
-            name="Trust  Birungi"
-            picture=""
-            styles={
-                        Object {
-                                    "nameAvatarDisplayStyle": "",
-                                    "titleDisplayStyle": "d-none",
-                                  }
-            }
-            title=""
-/>,
-        ],
-        "className": "contain",
-        "infinite": false,
-        "nextArrow": <NavArrow
-          buttonClass="slick-next"
-          handleChartClose="contain slider"
-          iconClass="fa-angle-right"
-          onClick={[Function]}
-/>,
-        "prevArrow": <NavArrow
-          buttonClass="slick-prev"
-          handleChartClose="contain slider"
-          iconClass="fa-angle-left"
-          onClick={[Function]}
-/>,
-        "responsive": Array [
-          Object {
-            "breakpoint": 1000,
-            "settings": Object {
-              "slidesToScroll": 2,
-              "slidesToShow": 2,
-            },
-          },
-          Object {
-            "breakpoint": 700,
-            "settings": Object {
-              "slidesToScroll": 1,
-              "slidesToShow": 1,
-            },
-          },
-        ],
-        "rows": 1,
-        "slidesToScroll": 4,
-        "slidesToShow": 4,
-        "swipeToSlide": true,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "main",
-          "nodeType": "function",
-          "props": Object {
-            "fellowsCount": 6,
-            "filterFellows": [Function],
-            "id": "main",
-            "lfTtlCheckId": 21,
-            "loading": false,
-            "name": "",
-            "picture": "",
-            "styles": Object {
-              "nameAvatarDisplayStyle": "d-none",
-              "titleDisplayStyle": "",
-            },
-            "title": "All TTLs",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "2",
-          "nodeType": "function",
-          "props": Object {
-            "fellowsCount": 0,
-            "filterFellows": [Function],
-            "id": "2",
-            "lfTtlCheckId": 21,
-            "loading": false,
-            "name": "Kesiena Akpobome",
-            "picture": "",
-            "styles": Object {
-              "nameAvatarDisplayStyle": "",
-              "titleDisplayStyle": "d-none",
-            },
-            "title": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "6",
-          "nodeType": "function",
-          "props": Object {
-            "fellowsCount": 0,
-            "filterFellows": [Function],
-            "id": "6",
-            "lfTtlCheckId": 21,
-            "loading": false,
-            "name": "Olaoluwa Faniyi",
-            "picture": "",
-            "styles": Object {
-              "nameAvatarDisplayStyle": "",
-              "titleDisplayStyle": "d-none",
-            },
-            "title": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "7",
-          "nodeType": "function",
-          "props": Object {
-            "fellowsCount": 0,
-            "filterFellows": [Function],
-            "id": "7",
-            "lfTtlCheckId": 21,
-            "loading": false,
-            "name": "Olaolu Akinsete",
-            "picture": "",
-            "styles": Object {
-              "nameAvatarDisplayStyle": "",
-              "titleDisplayStyle": "d-none",
-            },
-            "title": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "10",
-          "nodeType": "function",
-          "props": Object {
-            "fellowsCount": 0,
-            "filterFellows": [Function],
-            "id": "10",
-            "lfTtlCheckId": 21,
-            "loading": false,
-            "name": "Samuel Kubai",
-            "picture": "",
-            "styles": Object {
-              "nameAvatarDisplayStyle": "",
-              "titleDisplayStyle": "d-none",
-            },
-            "title": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "11",
-          "nodeType": "function",
-          "props": Object {
-            "fellowsCount": 6,
-            "filterFellows": [Function],
-            "id": "11",
-            "lfTtlCheckId": 21,
-            "loading": false,
-            "name": "Trust  Birungi",
-            "picture": "",
-            "styles": Object {
-              "nameAvatarDisplayStyle": "",
-              "titleDisplayStyle": "d-none",
-            },
-            "title": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+        "nameAvatarDisplayStyle": "",
+        "titleDisplayStyle": "d-none",
+      }
+    }
+    title=""
+  />
+</Slider>
 `;

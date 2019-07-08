@@ -1,366 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Filters
-    filter="onTrack"
-    getFellows={[Function]}
-    loading={false}
-    perPage={25}
-    search=""
-    setFilter={[Function]}
-    summary={
-        Object {
-            "gteWk5OffTrack": 2,
-            "ltWk5OffTrack": 2,
-            "onTrack": 2,
-          }
+<Slider
+  className="contain"
+  infinite={false}
+  nextArrow={
+    <NavArrow
+      buttonClass="slick-next"
+      handleChartClose={null}
+      iconClass="fa-angle-right"
+      onClick={[Function]}
+    />
+  }
+  prevArrow={
+    <NavArrow
+      buttonClass="slick-prev"
+      handleChartClose={null}
+      iconClass="fa-angle-left"
+      onClick={[Function]}
+    />
+  }
+  responsive={
+    Array [
+      Object {
+        "breakpoint": 1000,
+        "settings": Object {
+          "slidesToScroll": 2,
+          "slidesToShow": 2,
+        },
+      },
+      Object {
+        "breakpoint": 700,
+        "settings": Object {
+          "slidesToScroll": 1,
+          "slidesToShow": 1,
+        },
+      },
+    ]
+  }
+  rows={1}
+  slidesToScroll={4}
+  slidesToShow={4}
+  swipeToSlide={true}
+>
+  <FilterCard
+    cardDetails={
+      Object {
+        "subTitle": "Post week 5",
+        "title": "Fellows Off Track",
+        "totalFellows": 2,
+      }
     }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <FilterCard
-          cardDetails={
-                    Object {
-                              "subTitle": "Post week 5",
-                              "title": "Fellows Off Track",
-                              "totalFellows": 2,
-                            }
-          }
-          className="card"
-          dataTarget=""
-          dataToggle=""
-          filterId="gteWk5OffTrack"
-          loading={false}
-          onClick={[Function]}
-/>,
-        <FilterCard
-          cardDetails={
-                    Object {
-                              "subTitle": "Pre week 5",
-                              "title": "Fellows Off Track",
-                              "totalFellows": 2,
-                            }
-          }
-          className="card"
-          dataTarget=""
-          dataToggle=""
-          filterId="ltWk5OffTrack"
-          loading={false}
-          onClick={[Function]}
-/>,
-        <FilterCard
-          cardDetails={
-                    Object {
-                              "title": "Fellows On Track",
-                              "totalFellows": 2,
-                            }
-          }
-          className="card active-card"
-          dataTarget=""
-          dataToggle=""
-          filterId="onTrack"
-          loading={false}
-          onClick={[Function]}
-/>,
-      ],
-      "className": "contain",
-      "infinite": false,
-      "nextArrow": <NavArrow
-        buttonClass="slick-next"
-        handleChartClose={null}
-        iconClass="fa-angle-right"
-        onClick={[Function]}
-/>,
-      "prevArrow": <NavArrow
-        buttonClass="slick-prev"
-        handleChartClose={null}
-        iconClass="fa-angle-left"
-        onClick={[Function]}
-/>,
-      "responsive": Array [
-        Object {
-          "breakpoint": 1000,
-          "settings": Object {
-            "slidesToScroll": 2,
-            "slidesToShow": 2,
-          },
-        },
-        Object {
-          "breakpoint": 700,
-          "settings": Object {
-            "slidesToScroll": 1,
-            "slidesToShow": 1,
-          },
-        },
-      ],
-      "rows": 1,
-      "slidesToScroll": 4,
-      "slidesToShow": 4,
-      "swipeToSlide": true,
-    },
-    "ref": null,
-    "rendered": Array [
+    className="card"
+    dataTarget=""
+    dataToggle=""
+    filterId="gteWk5OffTrack"
+    key="weak-key-0"
+    loading={false}
+    onClick={[Function]}
+  />
+  <FilterCard
+    cardDetails={
       Object {
-        "instance": null,
-        "key": "weak-key-0",
-        "nodeType": "function",
-        "props": Object {
-          "cardDetails": Object {
-            "subTitle": "Post week 5",
-            "title": "Fellows Off Track",
-            "totalFellows": 2,
-          },
-          "className": "card",
-          "dataTarget": "",
-          "dataToggle": "",
-          "filterId": "gteWk5OffTrack",
-          "loading": false,
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+        "subTitle": "Pre week 5",
+        "title": "Fellows Off Track",
+        "totalFellows": 2,
+      }
+    }
+    className="card"
+    dataTarget=""
+    dataToggle=""
+    filterId="ltWk5OffTrack"
+    key="weak-key-1"
+    loading={false}
+    onClick={[Function]}
+  />
+  <FilterCard
+    cardDetails={
       Object {
-        "instance": null,
-        "key": "weak-key-1",
-        "nodeType": "function",
-        "props": Object {
-          "cardDetails": Object {
-            "subTitle": "Pre week 5",
-            "title": "Fellows Off Track",
-            "totalFellows": 2,
-          },
-          "className": "card",
-          "dataTarget": "",
-          "dataToggle": "",
-          "filterId": "ltWk5OffTrack",
-          "loading": false,
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-2",
-        "nodeType": "function",
-        "props": Object {
-          "cardDetails": Object {
-            "title": "Fellows On Track",
-            "totalFellows": 2,
-          },
-          "className": "card active-card",
-          "dataTarget": "",
-          "dataToggle": "",
-          "filterId": "onTrack",
-          "loading": false,
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <FilterCard
-            cardDetails={
-                        Object {
-                                    "subTitle": "Post week 5",
-                                    "title": "Fellows Off Track",
-                                    "totalFellows": 2,
-                                  }
-            }
-            className="card"
-            dataTarget=""
-            dataToggle=""
-            filterId="gteWk5OffTrack"
-            loading={false}
-            onClick={[Function]}
-/>,
-          <FilterCard
-            cardDetails={
-                        Object {
-                                    "subTitle": "Pre week 5",
-                                    "title": "Fellows Off Track",
-                                    "totalFellows": 2,
-                                  }
-            }
-            className="card"
-            dataTarget=""
-            dataToggle=""
-            filterId="ltWk5OffTrack"
-            loading={false}
-            onClick={[Function]}
-/>,
-          <FilterCard
-            cardDetails={
-                        Object {
-                                    "title": "Fellows On Track",
-                                    "totalFellows": 2,
-                                  }
-            }
-            className="card active-card"
-            dataTarget=""
-            dataToggle=""
-            filterId="onTrack"
-            loading={false}
-            onClick={[Function]}
-/>,
-        ],
-        "className": "contain",
-        "infinite": false,
-        "nextArrow": <NavArrow
-          buttonClass="slick-next"
-          handleChartClose={null}
-          iconClass="fa-angle-right"
-          onClick={[Function]}
-/>,
-        "prevArrow": <NavArrow
-          buttonClass="slick-prev"
-          handleChartClose={null}
-          iconClass="fa-angle-left"
-          onClick={[Function]}
-/>,
-        "responsive": Array [
-          Object {
-            "breakpoint": 1000,
-            "settings": Object {
-              "slidesToScroll": 2,
-              "slidesToShow": 2,
-            },
-          },
-          Object {
-            "breakpoint": 700,
-            "settings": Object {
-              "slidesToScroll": 1,
-              "slidesToShow": 1,
-            },
-          },
-        ],
-        "rows": 1,
-        "slidesToScroll": 4,
-        "slidesToShow": 4,
-        "swipeToSlide": true,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "weak-key-0",
-          "nodeType": "function",
-          "props": Object {
-            "cardDetails": Object {
-              "subTitle": "Post week 5",
-              "title": "Fellows Off Track",
-              "totalFellows": 2,
-            },
-            "className": "card",
-            "dataTarget": "",
-            "dataToggle": "",
-            "filterId": "gteWk5OffTrack",
-            "loading": false,
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-1",
-          "nodeType": "function",
-          "props": Object {
-            "cardDetails": Object {
-              "subTitle": "Pre week 5",
-              "title": "Fellows Off Track",
-              "totalFellows": 2,
-            },
-            "className": "card",
-            "dataTarget": "",
-            "dataToggle": "",
-            "filterId": "ltWk5OffTrack",
-            "loading": false,
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-2",
-          "nodeType": "function",
-          "props": Object {
-            "cardDetails": Object {
-              "title": "Fellows On Track",
-              "totalFellows": 2,
-            },
-            "className": "card active-card",
-            "dataTarget": "",
-            "dataToggle": "",
-            "filterId": "onTrack",
-            "loading": false,
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+        "title": "Fellows On Track",
+        "totalFellows": 2,
+      }
+    }
+    className="card active-card"
+    dataTarget=""
+    dataToggle=""
+    filterId="onTrack"
+    key="weak-key-2"
+    loading={false}
+    onClick={[Function]}
+  />
+</Slider>
 `;

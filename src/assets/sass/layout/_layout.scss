@@ -1,0 +1,25 @@
+/*
+Layouts
+---------------------------------
+This folder is responsible for storing all the CSS that handles the layouts applied globally
+to my project, such as the page container, header, footer as well as any grid systems.
+
+*/
+
+.page-content {
+  padding: 5vh 4% 2rem 4%;
+
+  .slider {
+    &-slider {
+      padding: 0;
+    }
+
+    &-prev {
+      margin-left: -1.875rem;
+    }
+
+    &-next {
+      margin-right: -1.875rem;
+    }
+  }
+}

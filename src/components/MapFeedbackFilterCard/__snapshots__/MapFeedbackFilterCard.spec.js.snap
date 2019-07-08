@@ -1,418 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MapFeedbackFilter card tests should render MapFeedbackFilter card without crashing 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MapFeedbackFilterCard
-    feedbackArray={
-        Array [
-            Object {
-              "context": "Your quality is below expectation, you are off-track",
-              "criteria": "lms",
-              "end_date": "2019-04-05",
-              "level": "D0B Apprenticeship",
-              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
-              "manager_email": "trust.birungi@andela.com",
-              "name": "Oluseyi Anani",
-              "project": "Watch Tower",
-              "start_date": "2019-03-05",
-              "type": "pre-pip",
-            },
-            Object {
-              "context": "Your quality is below expectation",
-              "criteria": "pulse",
-              "end_date": "2019-05-18",
-              "level": "D0A Simulations",
-              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
-              "manager_email": "trust.birungi@andela.com",
-              "name": "Brian Mboya",
-              "project": "Noldor",
-              "start_date": "2019-03-06",
-              "type": "pip",
-            },
-            Object {
-              "context": "Your quality is below expectation",
-              "criteria": "pulse",
-              "end_date": "2019-06-18",
-              "level": "D0A Simulations",
-              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
-              "manager_email": "trust.birungi@andela.com",
-              "name": "Brian Mboya",
-              "project": "Noldor",
-              "start_date": "2019-03-08",
-              "type": "pip",
-            },
-            Object {
-              "context": "Your quality is below expectation",
-              "criteria": "lms",
-              "end_date": "2019-05-18",
-              "level": "D0A Simulations",
-              "manager": "{\\"staff_id\\":\\"-LU5ayJwwvcPATT1akh5\\",\\"name\\":\\"Trust birungi\\",\\"email\\":\\"olaolu.akinsete@andela.com\\",\\"role\\":\\"TTL\\",\\"manager_id\\":\\"-KXGy1MT1oimjQgFim8t\\"}",
-              "manager_email": "trust.birungi@andela.com",
-              "name": "Brian Mboya",
-              "project": "Noldor",
-              "start_date": "2019-03-10",
-              "type": "pip",
-            },
-          ]
-    }
+<Slider
+  className="contain"
+  infinite={false}
+  nextArrow={
+    <NavArrow
+      buttonClass="slick-next"
+      handleChartClose="manager-slick"
+      iconClass="fa-angle-right"
+      onClick={[Function]}
+    />
+  }
+  prevArrow={
+    <NavArrow
+      buttonClass="slick-prev"
+      handleChartClose="manager-slick"
+      iconClass="fa-angle-left"
+      onClick={[Function]}
+    />
+  }
+  responsive={
+    Array [
+      Object {
+        "breakpoint": 1000,
+        "settings": Object {
+          "slidesToScroll": 2,
+          "slidesToShow": 2,
+        },
+      },
+      Object {
+        "breakpoint": 700,
+        "settings": Object {
+          "slidesToScroll": 1,
+          "slidesToShow": 1,
+        },
+      },
+    ]
+  }
+  rows={1}
+  slidesToScroll={4}
+  slidesToShow={4}
+  swipeToSlide={true}
+>
+  <FellowFilterCard
+    cardName="All Products"
+    displayPicture={true}
     filterKey="project"
-    filteredFeedbackArray={Array []}
-    handleCardClick={[Function]}
+    handleCardClick={[MockFunction]}
+    isManager={false}
     isTicked={
-        Object {
-            "project": "All Projects",
-          }
+      Object {
+        "project": "All Projects",
+      }
     }
-    title="All Products"
-    useFilterData={false}
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <FellowFilterCard
-          cardName="All Products"
-          displayPicture={true}
-          filterKey="project"
-          handleCardClick={[Function]}
-          isManager={false}
-          isTicked={
-                    Object {
-                              "project": "All Projects",
-                            }
-          }
-          loading={false}
-          numberOfFellows={4}
-          picture=""
-/>,
-        <FellowFilterCard
-          cardName="Watch Tower"
-          displayPicture={true}
-          filterKey="project"
-          handleCardClick={[Function]}
-          isManager={false}
-          isTicked={
-                    Object {
-                              "project": "All Projects",
-                            }
-          }
-          loading={false}
-          numberOfFellows={1}
-          picture=""
-/>,
-        <FellowFilterCard
-          cardName="Noldor"
-          displayPicture={true}
-          filterKey="project"
-          handleCardClick={[Function]}
-          isManager={false}
-          isTicked={
-                    Object {
-                              "project": "All Projects",
-                            }
-          }
-          loading={false}
-          numberOfFellows={3}
-          picture=""
-/>,
-      ],
-      "className": "contain",
-      "infinite": false,
-      "nextArrow": <NavArrow
-        buttonClass="slick-next"
-        handleChartClose="manager-slick"
-        iconClass="fa-angle-right"
-        onClick={[Function]}
-/>,
-      "prevArrow": <NavArrow
-        buttonClass="slick-prev"
-        handleChartClose="manager-slick"
-        iconClass="fa-angle-left"
-        onClick={[Function]}
-/>,
-      "responsive": Array [
-        Object {
-          "breakpoint": 1000,
-          "settings": Object {
-            "slidesToScroll": 2,
-            "slidesToShow": 2,
-          },
-        },
-        Object {
-          "breakpoint": 700,
-          "settings": Object {
-            "slidesToScroll": 1,
-            "slidesToShow": 1,
-          },
-        },
-      ],
-      "rows": 1,
-      "slidesToScroll": 4,
-      "slidesToShow": 4,
-      "swipeToSlide": true,
-    },
-    "ref": null,
-    "rendered": Array [
+    key="All Products"
+    loading={false}
+    numberOfFellows={4}
+    picture=""
+  />
+  <FellowFilterCard
+    cardName="Watch Tower"
+    displayPicture={true}
+    filterKey="project"
+    handleCardClick={[MockFunction]}
+    isManager={false}
+    isTicked={
       Object {
-        "instance": null,
-        "key": "All Products",
-        "nodeType": "function",
-        "props": Object {
-          "cardName": "All Products",
-          "displayPicture": true,
-          "filterKey": "project",
-          "handleCardClick": [Function],
-          "isManager": false,
-          "isTicked": Object {
-            "project": "All Projects",
-          },
-          "loading": false,
-          "numberOfFellows": 4,
-          "picture": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+        "project": "All Projects",
+      }
+    }
+    key="Watch Tower"
+    loading={false}
+    numberOfFellows={1}
+    picture=""
+  />
+  <FellowFilterCard
+    cardName="Noldor"
+    displayPicture={true}
+    filterKey="project"
+    handleCardClick={[MockFunction]}
+    isManager={false}
+    isTicked={
       Object {
-        "instance": null,
-        "key": "Watch Tower",
-        "nodeType": "function",
-        "props": Object {
-          "cardName": "Watch Tower",
-          "displayPicture": true,
-          "filterKey": "project",
-          "handleCardClick": [Function],
-          "isManager": false,
-          "isTicked": Object {
-            "project": "All Projects",
-          },
-          "loading": false,
-          "numberOfFellows": 1,
-          "picture": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "Noldor",
-        "nodeType": "function",
-        "props": Object {
-          "cardName": "Noldor",
-          "displayPicture": true,
-          "filterKey": "project",
-          "handleCardClick": [Function],
-          "isManager": false,
-          "isTicked": Object {
-            "project": "All Projects",
-          },
-          "loading": false,
-          "numberOfFellows": 3,
-          "picture": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <FellowFilterCard
-            cardName="All Products"
-            displayPicture={true}
-            filterKey="project"
-            handleCardClick={[Function]}
-            isManager={false}
-            isTicked={
-                        Object {
-                                    "project": "All Projects",
-                                  }
-            }
-            loading={false}
-            numberOfFellows={4}
-            picture=""
-/>,
-          <FellowFilterCard
-            cardName="Watch Tower"
-            displayPicture={true}
-            filterKey="project"
-            handleCardClick={[Function]}
-            isManager={false}
-            isTicked={
-                        Object {
-                                    "project": "All Projects",
-                                  }
-            }
-            loading={false}
-            numberOfFellows={1}
-            picture=""
-/>,
-          <FellowFilterCard
-            cardName="Noldor"
-            displayPicture={true}
-            filterKey="project"
-            handleCardClick={[Function]}
-            isManager={false}
-            isTicked={
-                        Object {
-                                    "project": "All Projects",
-                                  }
-            }
-            loading={false}
-            numberOfFellows={3}
-            picture=""
-/>,
-        ],
-        "className": "contain",
-        "infinite": false,
-        "nextArrow": <NavArrow
-          buttonClass="slick-next"
-          handleChartClose="manager-slick"
-          iconClass="fa-angle-right"
-          onClick={[Function]}
-/>,
-        "prevArrow": <NavArrow
-          buttonClass="slick-prev"
-          handleChartClose="manager-slick"
-          iconClass="fa-angle-left"
-          onClick={[Function]}
-/>,
-        "responsive": Array [
-          Object {
-            "breakpoint": 1000,
-            "settings": Object {
-              "slidesToScroll": 2,
-              "slidesToShow": 2,
-            },
-          },
-          Object {
-            "breakpoint": 700,
-            "settings": Object {
-              "slidesToScroll": 1,
-              "slidesToShow": 1,
-            },
-          },
-        ],
-        "rows": 1,
-        "slidesToScroll": 4,
-        "slidesToShow": 4,
-        "swipeToSlide": true,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "All Products",
-          "nodeType": "function",
-          "props": Object {
-            "cardName": "All Products",
-            "displayPicture": true,
-            "filterKey": "project",
-            "handleCardClick": [Function],
-            "isManager": false,
-            "isTicked": Object {
-              "project": "All Projects",
-            },
-            "loading": false,
-            "numberOfFellows": 4,
-            "picture": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "Watch Tower",
-          "nodeType": "function",
-          "props": Object {
-            "cardName": "Watch Tower",
-            "displayPicture": true,
-            "filterKey": "project",
-            "handleCardClick": [Function],
-            "isManager": false,
-            "isTicked": Object {
-              "project": "All Projects",
-            },
-            "loading": false,
-            "numberOfFellows": 1,
-            "picture": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "Noldor",
-          "nodeType": "function",
-          "props": Object {
-            "cardName": "Noldor",
-            "displayPicture": true,
-            "filterKey": "project",
-            "handleCardClick": [Function],
-            "isManager": false,
-            "isTicked": Object {
-              "project": "All Projects",
-            },
-            "loading": false,
-            "numberOfFellows": 3,
-            "picture": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+        "project": "All Projects",
+      }
+    }
+    key="Noldor"
+    loading={false}
+    numberOfFellows={3}
+    picture=""
+  />
+</Slider>
 `;

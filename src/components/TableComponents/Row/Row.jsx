@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './row.css';
+import './row.scss';
 /**
  * @param {Object} props
  *
@@ -10,21 +10,17 @@ import './row.css';
 const Row = ({ header, children }) => {
   const classList = header ? 'dashboard-table__header' : 'dashboard-table__row';
 
-  return (
-    <div className={classList}>
-      {children}
-    </div>
-  );
+  return <div className={classList}>{children}</div>;
 };
 
 Row.propTypes = {
   children: PropTypes.node,
-  header: PropTypes.bool,
+  header: PropTypes.bool
 };
 
 Row.defaultProps = {
   header: false,
-  children: <div />,
+  children: <div />
 };
 
 export default Row;

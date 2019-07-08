@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import html2canvas from 'html2canvas';
 import JsPdf from 'jspdf';
 import PrePipNotificationOutline from './PrePipNotificationOutline';
-import './PrePipNotificationForm.css';
+import './PrePipNotificationForm.scss';
 
 class PrePipNotificationForm extends Component {
   constructor() {

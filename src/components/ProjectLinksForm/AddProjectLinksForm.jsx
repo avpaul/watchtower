@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../FormInputs/textInput.css';
+import '../FormInputs/textInput.scss';
 import AddIcon from '../../static/plus.png';
 import { urlRegex } from '../../utils/regex';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Chart from './Chart/Chart';
-import './DevPulseChart.css';
+import './DevPulseChart.scss';
 
 const defaultDevPulseAverages = {
   quality: 0,

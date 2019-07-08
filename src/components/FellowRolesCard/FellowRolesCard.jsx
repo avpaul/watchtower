@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import './FellowRolesCard.css';
+import './FellowRolesCard.scss';
 import truncate from '../../utils';
 
 const FellowRolesCard = ({ role }) => {

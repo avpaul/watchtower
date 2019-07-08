@@ -13,7 +13,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-import './Chart.css';
+import './Chart.scss';
 import { truncateNumber } from '../../../services/helper';
 
 const Chart = ({ data, averageRatings }) => (

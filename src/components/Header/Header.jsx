@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
-import './Header.css';
+import './Header.scss';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import OffTrackIcon from '../../static/OffTrack.svg';

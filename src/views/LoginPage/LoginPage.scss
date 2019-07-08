@@ -1,0 +1,211 @@
+@import '../../assets/sass/abstract/variables';
+
+.login-page {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1d66de;
+  background-image: url(../../static/Landing-Image.png);
+  background-size: 700px 450px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: 95% 100%;
+  &__logo {
+    padding: 15% 5% 0 25%;
+  }
+
+  &__tagline {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 10% 5%;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  &__btn {
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #3359db;
+    font-family: $font-primary;
+    font-size: 1rem;
+    line-height: 22px;
+    padding: 4%;
+    box-shadow: 0 5px 12px 0 rgba(83, 89, 98, 0.12);
+    cursor: pointer;
+    &-logo {
+      height: 15px;
+      padding-right: 4%;
+      border-radius: 4px 0 0 4px;
+      background-color: #ffffff;
+    }
+
+    &-text {
+      padding-left: 1.5%;
+      color: #000;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &-container {
+      margin: 10% auto;
+      margin-left: 15%;
+    }
+  }
+
+  @media only screen and (min-width: 425px) {
+    &__btn-container {
+      margin-left: 25%;
+    }
+
+    & {
+      background-position: 100% 100%;
+    }
+  }
+
+  @media only screen and (min-width: 450px) {
+    .page-info__container {
+      width: 100%;
+      margin: 9% 2%;
+    }
+
+    &__tagline {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 3% 5%;
+    }
+
+    &__btn {
+      padding: 4%;
+
+      &-logo {
+        padding-right: unset;
+      }
+
+      &-text {
+        padding-left: 1.5%;
+      }
+      &-container {
+        width: 50%;
+        margin: 15% auto;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    & {
+      background-size: 1000px 750px;
+      background-position: 100% 100%;
+    }
+
+    .page-info__container {
+      width: 100%;
+      margin: 9% -15%;
+    }
+
+    &__tagline {
+      font-size: 2rem;
+      line-height: 3.5rem;
+      width: 50%;
+      text-align: left;
+      margin-left: 25%;
+    }
+
+    &__btn-container {
+      margin: 10% auto;
+    }
+  }
+
+  @media only screen and (min-width: 801px) {
+    & {
+      background-size: 1000px 800px;
+      background-position: 80% -120%;
+    }
+
+    .page-info__container {
+      margin: 9% -22%;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    & {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-info__container {
+      width: 60%;
+      margin: 10% -5%;
+    }
+
+    &__tagline {
+      margin-left: 20%;
+    }
+
+    &__btn {
+      &-text {
+        height: 41px;
+        width: 160px;
+        color: #000000;
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 40px;
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+
+      &-logo {
+        height: 21px;
+        padding-left: 1.5%;
+        margin-bottom: 0.5%;
+      }
+
+      &-container {
+        margin-top: 5%;
+        margin-left: 20%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    &__tagline {
+      height: 158px;
+      width: 507px;
+      color: #ffffff;
+      font-family: $font-primary;
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 66px;
+      letter-spacing: 1.5px;
+      margin-bottom: -3%;
+      margin-left: 5%;
+    }
+
+    &__header {
+      margin-top: -13%;
+    }
+
+    .page-info__container {
+      width: 100%;
+      margin-left: 10%;
+    }
+
+    &__logo {
+      padding-left: 5%;
+      margin-bottom: 3%;
+    }
+
+    &__btn {
+      padding: 2%;
+    }
+
+    &__btn-container {
+      margin-left: 5%;
+    }
+  }
+}
+
+.toaster {
+  background-color: #ffa550;
+  color: white;
+}

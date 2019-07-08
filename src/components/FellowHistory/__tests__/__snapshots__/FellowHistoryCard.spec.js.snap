@@ -1,273 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Fellow History Card renders to match shapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <HistoryCard
-    user={
-        Object {
-            "detail": "Watch Tower",
-            "name": "Kingsley Obot",
-            "picture": null,
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <div
-          className="fellow-history-card__image"
+<div
+  className="fellow-history-card"
 >
-          <img
-                    alt="Kingsley Obot profile pic"
-                    src="profile.svg"
-          />
-</div>,
-        <div
-          className="fellow-history-card__right"
->
-          <div
-                    className="fellow-history-card__name"
-          >
-                    Kingsley Obot
-          </div>
-          <div
-                    className="fellow-history-card__detail"
-          >
-                    Watch Tower
-          </div>
-</div>,
-      ],
-      "className": "fellow-history-card",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <img
-            alt="Kingsley Obot profile pic"
-            src="profile.svg"
-/>,
-          "className": "fellow-history-card__image",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "Kingsley Obot profile pic",
-            "src": "profile.svg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="fellow-history-card__name"
->
-              Kingsley Obot
-</div>,
-            <div
-              className="fellow-history-card__detail"
->
-              Watch Tower
-</div>,
-          ],
-          "className": "fellow-history-card__right",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Kingsley Obot",
-              "className": "fellow-history-card__name",
-            },
-            "ref": null,
-            "rendered": "Kingsley Obot",
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Watch Tower",
-              "className": "fellow-history-card__detail",
-            },
-            "ref": null,
-            "rendered": "Watch Tower",
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="fellow-history-card__image"
->
-            <img
-                        alt="Kingsley Obot profile pic"
-                        src="profile.svg"
-            />
-</div>,
-          <div
-            className="fellow-history-card__right"
->
-            <div
-                        className="fellow-history-card__name"
-            >
-                        Kingsley Obot
-            </div>
-            <div
-                        className="fellow-history-card__detail"
-            >
-                        Watch Tower
-            </div>
-</div>,
-        ],
-        "className": "fellow-history-card",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <img
-              alt="Kingsley Obot profile pic"
-              src="profile.svg"
-/>,
-            "className": "fellow-history-card__image",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "Kingsley Obot profile pic",
-              "src": "profile.svg",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="fellow-history-card__name"
->
-                Kingsley Obot
-</div>,
-              <div
-                className="fellow-history-card__detail"
->
-                Watch Tower
-</div>,
-            ],
-            "className": "fellow-history-card__right",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Kingsley Obot",
-                "className": "fellow-history-card__name",
-              },
-              "ref": null,
-              "rendered": "Kingsley Obot",
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Watch Tower",
-                "className": "fellow-history-card__detail",
-              },
-              "ref": null,
-              "rendered": "Watch Tower",
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+  <div
+    className="fellow-history-card__image"
+  >
+    <img
+      alt="Kingsley Obot profile pic"
+      src="profile.svg"
+    />
+  </div>
+  <div
+    className="fellow-history-card__right"
+  >
+    <div
+      className="fellow-history-card__name"
+    >
+      Kingsley Obot
+    </div>
+    <div
+      className="fellow-history-card__detail"
+    >
+      Watch Tower
+    </div>
+  </div>
+</div>
 `;

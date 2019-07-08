@@ -6,7 +6,7 @@ import MapRoleActiveEngineers from '../MapRoleActiveEngineers';
 import Loader from '../Loader/Loader';
 import { pluralizeCheck } from '../../utils';
 
-import './RoleCard.css';
+import './RoleCard.scss';
 
 class RoleCard extends React.Component {
   constructor(props) {

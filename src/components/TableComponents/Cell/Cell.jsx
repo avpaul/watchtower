@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './cell.css';
+import './cell.scss';
 /**
  * @param {Object} props Component props
  *

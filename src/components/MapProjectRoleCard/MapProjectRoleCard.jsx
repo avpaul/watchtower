@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RoleCard from '../RoleCard/RoleCard';
-import './MapProjectRoleCard.css';
 import './MapRoleCards.css';
+import './MapProjectRoleCard.scss';
 
 function MapProjectRoleCard({
   roleData,

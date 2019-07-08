@@ -1,0 +1,18 @@
+// Folder Structure Info: https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4
+@import './abstract/mixins';
+@import './abstract/variables';
+
+@import './base/base';
+@import './base/typography';
+
+@import './layout/_layout';
+
+@import './libs/libs';
+
+.react-datepicker {
+  &__input-container {
+    input {
+      padding: 0 10px;
+    }
+  }
+}

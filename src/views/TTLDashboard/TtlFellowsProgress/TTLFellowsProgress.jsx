@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import StackedBarChart from '../../../components/StackedBarChart';
 import Filter from '../../../components/FilterDropdown';
-import '../../OpsDashboard/FellowsProgress/index.css';
+import '../../OpsDashboard/FellowsProgress/index.scss';
 
 class TTLFellowsProgress extends Component {
   constructor(props) {

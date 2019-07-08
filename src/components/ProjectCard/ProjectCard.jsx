@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import More from '../../static/More.svg';
 import projectIcon from '../../static/projectIcon.png';
 
-import './ProjectCard.css';
+import './ProjectCard.scss';
 
 export class ProjectCard extends React.Component {
   handleClick = () => {

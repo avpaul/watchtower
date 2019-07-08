@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../components/FellowsSummary/FellowsSummary.css';
+import '../../components/FellowsSummary/FellowsSummary.scss';
 import Title from '../../components/Title';
 import FiltersView from '../../components/Filters/FiltersView';
 import Loader from '../../components/Loader/Loader';
@@ -19,12 +19,12 @@ const FellowsSummary = ({
     ) : (
       <div className="row ops-dashboard__filter">
         <FiltersView
-        handleCardClick={handleCardClick}
-        filters={fellowsSummary}
-        filterCardClassName="pt-1 pr-2 pb-1"
-        FellowSummaryCardComponent={fellowSummaryCardComponent}
-        handleChartClose={handleChartClose}
-      />
+          handleCardClick={handleCardClick}
+          filters={fellowsSummary}
+          filterCardClassName="pt-1 pr-2 pb-1"
+          FellowSummaryCardComponent={fellowSummaryCardComponent}
+          handleChartClose={handleChartClose}
+        />
       </div>
     )}
   </div>
@@ -44,7 +44,6 @@ FellowsSummary.propTypes = {
 
 FellowsSummary.defaultProps = {
   loading: false
-
 };
 
 export default FellowsSummary;

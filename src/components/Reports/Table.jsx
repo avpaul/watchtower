@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-import './reports.css';
 import arrayOfObjectsSorter from '../../utils/sortArray';
+import './reports.scss';
 
 /**
  * Display user user name and picture in the cadre program

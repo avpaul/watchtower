@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { getDate, getDayName } from '../../services/helper';
 import FilterCard from '../Filters/FilterCard';
-import './FeedbackInstances.css';
+import './FeedbackInstances.scss';
 
 const FeedbackInstances = ({ PrePipEntries = [], handleClick }) => {
   const displayCardMap = PrePipEntries.map(displayContent => {

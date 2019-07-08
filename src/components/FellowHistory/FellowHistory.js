@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import HistoryCard from './FellowHistoryCard';
 import FellowSummaryBreakdown from '../FellowSummaryBreakdown';
 import PipActivationContainer from '../../views/PipActivationForm';
-import './FellowHistory.css';
+import './FellowHistory.scss';
 import DevPulseTable from '../DevPulseTable';
 import Table from '../TableComponents/Table';
 import PIPDeactivationModal from '../PIPDeactivationModal/PIPDeactivationModal';

@@ -1,883 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Developers dashboard test should render developers dashboard as WATCH_TOWER_TTL without crashing 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <DeveloperDashboard
-    getManagerFellowsSummary={[Function]}
-    history={
-        Object {
-            "push": [Function],
-          }
-    }
-    paginationWrapper={
-        Object {
-            "handlePaginationPageChange": [Function],
-            "paginateData": [Function],
-            "processData": [Function],
-            "renderPagination": [Function],
-            "state": Object {
-              "filteredData": Array [],
-              "paginatedData": Array [],
-              "paginationFilter": Object {
-                "page": 1,
-                "perPage": 25,
-                "totalPages": 0,
-              },
-            },
-            "updateData": [Function],
-          }
-    }
-    role="WATCH_TOWER_TTL"
-    user={
-        Object {
-            "email": "ty@andela.com",
-            "roles": Object {
-              "WATCH_TOWER_TTL": "34323234Yf-34",
-            },
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Switch>
-        <Route
-                path="/developers/pip/activation/:id"
-                render={[Function]}
-        />
-        <Route
-                path="/developers/:id"
-                render={[Function]}
-        />
-        <Route
-                path="/developers"
-                render={[Function]}
-        />
-</Switch>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Route
-            path="/developers/pip/activation/:id"
-            render={[Function]}
-/>,
-          <Route
-            path="/developers/:id"
-            render={[Function]}
-/>,
-          <Route
-            path="/developers"
-            render={[Function]}
-/>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers/pip/activation/:id",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers/:id",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Switch>
-          <Route
-                    path="/developers/pip/activation/:id"
-                    render={[Function]}
-          />
-          <Route
-                    path="/developers/:id"
-                    render={[Function]}
-          />
-          <Route
-                    path="/developers"
-                    render={[Function]}
-          />
-</Switch>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Route
-              path="/developers/pip/activation/:id"
-              render={[Function]}
-/>,
-            <Route
-              path="/developers/:id"
-              render={[Function]}
-/>,
-            <Route
-              path="/developers"
-              render={[Function]}
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers/pip/activation/:id",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers/:id",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+<ErrorBoundary>
+  <Switch>
+    <Route
+      path="/developers/pip/activation/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/developers/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/developers"
+      render={[Function]}
+    />
+  </Switch>
+</ErrorBoundary>
 `;
 
 exports[`Developers dashboard test should render developers dashboard without crashing 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <DeveloperDashboard
-    getManagerFellowsSummary={[Function]}
-    history={
-        Object {
-            "push": [Function],
-          }
-    }
-    paginationWrapper={
-        Object {
-            "handlePaginationPageChange": [Function],
-            "paginateData": [Function],
-            "processData": [Function],
-            "renderPagination": [Function],
-            "state": Object {
-              "filteredData": Array [],
-              "paginatedData": Array [],
-              "paginationFilter": Object {
-                "page": 1,
-                "perPage": 25,
-                "totalPages": 0,
-              },
-            },
-            "updateData": [Function],
-          }
-    }
-    role="WATCH_TOWER_LF"
-    user={
-        Object {
-            "email": "ty@andela.com",
-            "roles": Object {
-              "WATCH_TOWER_LF": "34323234Yf-34",
-            },
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Switch>
-        <Route
-                path="/developers/pip/activation/:id"
-                render={[Function]}
-        />
-        <Route
-                path="/developers/:id"
-                render={[Function]}
-        />
-        <Route
-                path="/developers"
-                render={[Function]}
-        />
-</Switch>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Route
-            path="/developers/pip/activation/:id"
-            render={[Function]}
-/>,
-          <Route
-            path="/developers/:id"
-            render={[Function]}
-/>,
-          <Route
-            path="/developers"
-            render={[Function]}
-/>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers/pip/activation/:id",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers/:id",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Switch>
-          <Route
-                    path="/developers/pip/activation/:id"
-                    render={[Function]}
-          />
-          <Route
-                    path="/developers/:id"
-                    render={[Function]}
-          />
-          <Route
-                    path="/developers"
-                    render={[Function]}
-          />
-</Switch>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Route
-              path="/developers/pip/activation/:id"
-              render={[Function]}
-/>,
-            <Route
-              path="/developers/:id"
-              render={[Function]}
-/>,
-            <Route
-              path="/developers"
-              render={[Function]}
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers/pip/activation/:id",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers/:id",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+<ErrorBoundary>
+  <Switch>
+    <Route
+      path="/developers/pip/activation/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/developers/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/developers"
+      render={[Function]}
+    />
+  </Switch>
+</ErrorBoundary>
 `;
 
 exports[`Developers dashboard test should render developers dashboard without crashing 2`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <DeveloperDashboard
-    getManagerFellowsSummary={[Function]}
-    history={
-        Object {
-            "push": [Function],
-          }
-    }
-    paginationWrapper={
-        Object {
-            "handlePaginationPageChange": [Function],
-            "paginateData": [Function],
-            "processData": [Function],
-            "renderPagination": [Function],
-            "state": Object {
-              "filteredData": Array [],
-              "paginatedData": Array [],
-              "paginationFilter": Object {
-                "page": 1,
-                "perPage": 25,
-                "totalPages": 0,
-              },
-            },
-            "updateData": [Function],
-          }
-    }
-    role="WATCH_TOWER_SL"
-    user={
-        Object {
-            "email": "ty@andela.com",
-            "roles": Object {
-              "WATCH_TOWER_SL": "34323234Yf-34",
-            },
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": <Switch>
-        <Route
-                path="/developers/pip/activation/:id"
-                render={[Function]}
-        />
-        <Route
-                path="/developers/:id"
-                render={[Function]}
-        />
-        <Route
-                path="/developers"
-                render={[Function]}
-        />
-</Switch>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Route
-            path="/developers/pip/activation/:id"
-            render={[Function]}
-/>,
-          <Route
-            path="/developers/:id"
-            render={[Function]}
-/>,
-          <Route
-            path="/developers"
-            render={[Function]}
-/>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers/pip/activation/:id",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers/:id",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/developers",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Switch>
-          <Route
-                    path="/developers/pip/activation/:id"
-                    render={[Function]}
-          />
-          <Route
-                    path="/developers/:id"
-                    render={[Function]}
-          />
-          <Route
-                    path="/developers"
-                    render={[Function]}
-          />
-</Switch>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Route
-              path="/developers/pip/activation/:id"
-              render={[Function]}
-/>,
-            <Route
-              path="/developers/:id"
-              render={[Function]}
-/>,
-            <Route
-              path="/developers"
-              render={[Function]}
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers/pip/activation/:id",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers/:id",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/developers",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-  Symbol(enzyme.__childContext__): null,
-}
+<ErrorBoundary>
+  <Switch>
+    <Route
+      path="/developers/pip/activation/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/developers/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/developers"
+      render={[Function]}
+    />
+  </Switch>
+</ErrorBoundary>
 `;
 
 exports[`Developers dashboard test should render paginated developers dashboard without crashing 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    getManagerFellowsSummary={[Function]}
-    history={
-        Object {
-            "push": [Function],
-          }
-    }
-    paginationWrapper={
-        Object {
-            "renderPagination": [Function],
-            "state": Object {
-              "paginatedData": Object {},
+<PaginationFrontendWrapper
+  component={
+    <DeveloperDashboard
+      getManagerFellowsSummary={
+        [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "WATCH_TOWER_LF": "34323234Yf-34",
+              },
+              "ty@andela.com",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Promise {},
             },
-            "updateData": [Function],
-          }
-    }
-    role="WATCH_TOWER_LF"
-    user={
+          ],
+        }
+      }
+      history={
         Object {
-            "email": "ty@andela.com",
-            "roles": Object {
-              "WATCH_TOWER_LF": "34323234Yf-34",
-            },
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "component": <DeveloperDashboard
-        getManagerFellowsSummary={[Function]}
-        history={
-                Object {
-                        "push": [Function],
-                      }
+          "push": [MockFunction],
         }
-        paginationWrapper={
-                Object {
-                        "renderPagination": [Function],
-                        "state": Object {
-                          "paginatedData": Object {},
-                        },
-                        "updateData": [Function],
-                      }
+      }
+      paginationWrapper={
+        Object {
+          "renderPagination": [Function],
+          "state": Object {
+            "paginatedData": Object {},
+          },
+          "updateData": [Function],
         }
-        role="WATCH_TOWER_LF"
-        user={
-                Object {
-                        "email": "ty@andela.com",
-                        "roles": Object {
-                          "WATCH_TOWER_LF": "34323234Yf-34",
-                        },
-                      }
+      }
+      role="WATCH_TOWER_LF"
+      user={
+        Object {
+          "email": "ty@andela.com",
+          "roles": Object {
+            "WATCH_TOWER_LF": "34323234Yf-34",
+          },
         }
-/>,
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "component": <DeveloperDashboard
-          getManagerFellowsSummary={[Function]}
-          history={
-                    Object {
-                              "push": [Function],
-                            }
-          }
-          paginationWrapper={
-                    Object {
-                              "renderPagination": [Function],
-                              "state": Object {
-                                "paginatedData": Object {},
-                              },
-                              "updateData": [Function],
-                            }
-          }
-          role="WATCH_TOWER_LF"
-          user={
-                    Object {
-                              "email": "ty@andela.com",
-                              "roles": Object {
-                                "WATCH_TOWER_LF": "34323234Yf-34",
-                              },
-                            }
-          }
-/>,
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+      }
+    />
+  }
+/>
 `;

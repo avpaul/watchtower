@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import arrayKey from 'weak-key';
-import './ProgressBar.css';
+import './ProgressBar.scss';
 
 /**
   Progress UI component

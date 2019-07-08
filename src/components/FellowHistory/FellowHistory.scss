@@ -1,0 +1,105 @@
+@import '../../assets/sass/abstract/variables';
+
+.fellow-history {
+  padding: 0 4.166666%;
+}
+@media (min-width: 1600px) {
+  .fellow-history {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .fellow-history__top {
+    width: 80% !important;
+  }
+}
+
+.fellow-history__top {
+  float: left;
+  width: 100%;
+}
+
+.fellow-history-data {
+  float: left;
+  width: 100%;
+}
+
+.fellow-history__header {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #0459e4;
+  font-family: $font-primary;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.63rem;
+}
+
+.fellow-history-card {
+  box-sizing: border-box;
+  height: 7.5rem;
+  border: 0.06rem solid rgba(101, 110, 114, 0.12);
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.25rem 0.44rem 0 rgba(35, 47, 73, 0.06);
+  transition: 0.2s ease all;
+  position: relative;
+}
+
+.fellow-history-card:hover {
+  box-shadow: rgba(35, 47, 73, 0.15) 0 0.25rem 0.63rem 0.06rem;
+}
+
+.fellow-history-card__image {
+  transform: translateY(-50%);
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.fellow-history-card__image img {
+  border-radius: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  transform: translateX(-50%);
+  margin-left: 60%;
+  float: left;
+}
+
+.fellow-history-card__right {
+  width: 60%;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.fellow-history-card__name {
+  float: left;
+  width: 100%;
+  color: #333333;
+  font-weight: 500;
+  padding-right: 1rem;
+  line-height: 1.7rem;
+  font-size: 1.5rem;
+}
+
+.fellow-history-card__detail {
+  float: left;
+  width: 100%;
+  color: #999999;
+  font-family: $font-primary;
+  font-size: 0.88rem;
+  line-height: 1.13rem;
+  margin-top: 0.5rem;
+}
+
+.fellow-history__not-found {
+  color: #999999;
+  font-family: $font-primary;
+  font-size: 0.88rem;
+  line-height: 1.13rem;
+}
+
+.card-scroll-wrapper {
+  float: left;
+}

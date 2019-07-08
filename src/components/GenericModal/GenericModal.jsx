@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './genericModal.css';
+import './genericModal.scss';
 import Loader from '../Loader/Loader';
 
 class GenericModal extends Component {
@@ -121,9 +121,7 @@ GenericModal.propTypes = {
   successMessage: PropTypes.string,
   success: PropTypes.bool,
   submitLoading: PropTypes.bool,
-  footer: PropTypes.shape(),
-  isLoading: PropTypes.bool,
-  succeeded: PropTypes.bool
+  footer: PropTypes.shape()
 };
 
 GenericModal.defaultProps = {
@@ -132,9 +130,7 @@ GenericModal.defaultProps = {
   successMessage: 'Success!',
   success: false,
   submitLoading: false,
-  footer: null,
-  isLoading: false,
-  succeeded: false
+  footer: null
 };
 
 export default GenericModal;

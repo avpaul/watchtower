@@ -8,8 +8,9 @@ import EngineerVacancyCard from '../../components/EngineerVacanciesCard/Engineer
 import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
 import WelcomeMessage from '../../components/WelcomeMessage';
 import CadreLoader from '../../components/CustomLoader/CadreLoader';
-import './index.css';
-import './CadreDashboard.css';
+
+import './index.scss';
+import './CadreDashboard.scss';
 
 export class D1FellowDashboardMain extends Component {
   componentDidMount() {

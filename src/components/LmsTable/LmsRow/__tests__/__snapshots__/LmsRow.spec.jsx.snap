@@ -1,353 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests the LmsRow renders correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <LmsRow
-    lmsSubmission={
-        Object {
-            "assignment": Object {
-              "name": "test course",
-            },
-            "course_id": 132,
-            "due_date": "2018-12-14T13:59:00Z",
-            "graded_at": "2018-12-14T13:59:00Z",
-            "resubmitted": "True",
-            "score": 2,
-            "submitted_at": "2018-12-14T13:59:00Z",
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": Array [
-        <Cell
-          addedClass=""
-          title=""
+<Row
+  header={false}
 >
-          132
-</Cell>,
-        <Cell
-          addedClass=""
-          title=""
->
-          test course
-</Cell>,
-        <Cell
-          addedClass=""
-          title=""
->
-          12/14/2018
-</Cell>,
-        <Cell
-          addedClass=""
-          title=""
->
-          12/14/2018
-</Cell>,
-        <Cell
-          addedClass=""
-          title=""
->
-          12/14/2018
-</Cell>,
-        <Cell
-          addedClass=""
-          title=""
->
-          False
-</Cell>,
-        <Cell
-          addedClass=""
-          title=""
->
-          2
-</Cell>,
-      ],
-      "header": false,
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "weak-key-0",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": 132,
-          "title": "",
-        },
-        "ref": null,
-        "rendered": 132,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-1",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": "test course",
-          "title": "",
-        },
-        "ref": null,
-        "rendered": "test course",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-2",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": "12/14/2018",
-          "title": "",
-        },
-        "ref": null,
-        "rendered": "12/14/2018",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-3",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": "12/14/2018",
-          "title": "",
-        },
-        "ref": null,
-        "rendered": "12/14/2018",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-4",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": "12/14/2018",
-          "title": "",
-        },
-        "ref": null,
-        "rendered": "12/14/2018",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-5",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": "False",
-          "title": "",
-        },
-        "ref": null,
-        "rendered": "False",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "weak-key-6",
-        "nodeType": "function",
-        "props": Object {
-          "addedClass": "",
-          "children": 2,
-          "title": "",
-        },
-        "ref": null,
-        "rendered": 2,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Cell
-            addedClass=""
-            title=""
->
-            132
-</Cell>,
-          <Cell
-            addedClass=""
-            title=""
->
-            test course
-</Cell>,
-          <Cell
-            addedClass=""
-            title=""
->
-            12/14/2018
-</Cell>,
-          <Cell
-            addedClass=""
-            title=""
->
-            12/14/2018
-</Cell>,
-          <Cell
-            addedClass=""
-            title=""
->
-            12/14/2018
-</Cell>,
-          <Cell
-            addedClass=""
-            title=""
->
-            False
-</Cell>,
-          <Cell
-            addedClass=""
-            title=""
->
-            2
-</Cell>,
-        ],
-        "header": false,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "weak-key-0",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": 132,
-            "title": "",
-          },
-          "ref": null,
-          "rendered": 132,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-1",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": "test course",
-            "title": "",
-          },
-          "ref": null,
-          "rendered": "test course",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-2",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": "12/14/2018",
-            "title": "",
-          },
-          "ref": null,
-          "rendered": "12/14/2018",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-3",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": "12/14/2018",
-            "title": "",
-          },
-          "ref": null,
-          "rendered": "12/14/2018",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-4",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": "12/14/2018",
-            "title": "",
-          },
-          "ref": null,
-          "rendered": "12/14/2018",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-5",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": "False",
-            "title": "",
-          },
-          "ref": null,
-          "rendered": "False",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "weak-key-6",
-          "nodeType": "function",
-          "props": Object {
-            "addedClass": "",
-            "children": 2,
-            "title": "",
-          },
-          "ref": null,
-          "rendered": 2,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+  <Cell
+    addedClass=""
+    key="weak-key-0"
+    title=""
+  >
+    132
+  </Cell>
+  <Cell
+    addedClass=""
+    key="weak-key-1"
+    title=""
+  >
+    test course
+  </Cell>
+  <Cell
+    addedClass=""
+    key="weak-key-2"
+    title=""
+  >
+    12/14/2018
+  </Cell>
+  <Cell
+    addedClass=""
+    key="weak-key-3"
+    title=""
+  >
+    12/14/2018
+  </Cell>
+  <Cell
+    addedClass=""
+    key="weak-key-4"
+    title=""
+  >
+    12/14/2018
+  </Cell>
+  <Cell
+    addedClass=""
+    key="weak-key-5"
+    title=""
+  >
+    False
+  </Cell>
+  <Cell
+    addedClass=""
+    key="weak-key-6"
+    title=""
+  >
+    2
+  </Cell>
+</Row>
 `;

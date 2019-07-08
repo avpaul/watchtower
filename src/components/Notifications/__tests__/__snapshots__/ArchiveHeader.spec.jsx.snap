@@ -1,346 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests the archive header renders correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <renderArchiveHeader
-    HandleBack=""
-    hideModal=""
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <button
-          aria-label="Close"
-          className="close"
-          onClick={
-                    Object {
-                              "HandleBack": "",
-                              "hideModal": "",
-                            }
-          }
-          type="button"
+<div
+  className="handle-close-archive"
 >
-          <span
-                    aria-hidden="true"
-                    className="cross"
-                    onClick={Object {}}
-          >
-                    <b>
-                              ×
-                    </b>
-          </span>
-</button>,
-        <div
-          className="modal-notification"
->
-          <b>
-                    Archives
-          </b>
-          <span
-                    aria-hidden="true"
-                    className="clear"
-                    onClick={Object {}}
-          >
-                    Go back
-          </span>
-</div>,
-      ],
-      "className": "handle-close-archive",
-    },
-    "ref": null,
-    "rendered": Array [
+  <button
+    aria-label="Close"
+    className="close"
+    onClick={
       Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "aria-label": "Close",
-          "children": <span
-            aria-hidden="true"
-            className="cross"
-            onClick={Object {}}
->
-            <b>
-                        ×
-            </b>
-</span>,
-          "className": "close",
-          "onClick": Object {
-            "HandleBack": "",
-            "hideModal": "",
-          },
-          "type": "button",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "aria-hidden": "true",
-            "children": <b>
-              ×
-</b>,
-            "className": "cross",
-            "onClick": Object {},
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "×",
-            },
-            "ref": null,
-            "rendered": "×",
-            "type": "b",
-          },
-          "type": "span",
-        },
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <b>
-              Archives
-</b>,
-            <span
-              aria-hidden="true"
-              className="clear"
-              onClick={Object {}}
->
-              Go back
-</span>,
-          ],
-          "className": "modal-notification",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Archives",
-            },
-            "ref": null,
-            "rendered": "Archives",
-            "type": "b",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "aria-hidden": "true",
-              "children": "Go back",
-              "className": "clear",
-              "onClick": Object {},
-            },
-            "ref": null,
-            "rendered": "Go back",
-            "type": "span",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <button
-            aria-label="Close"
-            className="close"
-            onClick={
-                        Object {
-                                    "HandleBack": "",
-                                    "hideModal": "",
-                                  }
-            }
-            type="button"
->
-            <span
-                        aria-hidden="true"
-                        className="cross"
-                        onClick={Object {}}
-            >
-                        <b>
-                                    ×
-                        </b>
-            </span>
-</button>,
-          <div
-            className="modal-notification"
->
-            <b>
-                        Archives
-            </b>
-            <span
-                        aria-hidden="true"
-                        className="clear"
-                        onClick={Object {}}
-            >
-                        Go back
-            </span>
-</div>,
-        ],
-        "className": "handle-close-archive",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "aria-label": "Close",
-            "children": <span
-              aria-hidden="true"
-              className="cross"
-              onClick={Object {}}
->
-              <b>
-                            ×
-              </b>
-</span>,
-            "className": "close",
-            "onClick": Object {
-              "HandleBack": "",
-              "hideModal": "",
-            },
-            "type": "button",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "aria-hidden": "true",
-              "children": <b>
-                ×
-</b>,
-              "className": "cross",
-              "onClick": Object {},
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "×",
-              },
-              "ref": null,
-              "rendered": "×",
-              "type": "b",
-            },
-            "type": "span",
-          },
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <b>
-                Archives
-</b>,
-              <span
-                aria-hidden="true"
-                className="clear"
-                onClick={Object {}}
->
-                Go back
-</span>,
-            ],
-            "className": "modal-notification",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Archives",
-              },
-              "ref": null,
-              "rendered": "Archives",
-              "type": "b",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "aria-hidden": "true",
-                "children": "Go back",
-                "className": "clear",
-                "onClick": Object {},
-              },
-              "ref": null,
-              "rendered": "Go back",
-              "type": "span",
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+        "HandleBack": "",
+        "hideModal": "",
+      }
+    }
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      className="cross"
+      onClick={Object {}}
+    >
+      <b>
+        ×
+      </b>
+    </span>
+  </button>
+  <div
+    className="modal-notification"
+  >
+    <b>
+      Archives
+    </b>
+    <span
+      aria-hidden="true"
+      className="clear"
+      onClick={Object {}}
+    >
+      Go back
+    </span>
+  </div>
+</div>
 `;

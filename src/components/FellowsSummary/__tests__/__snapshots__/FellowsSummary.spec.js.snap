@@ -1,343 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FellowsSummary /> renders to match snapshots 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <FellowsSummary
-    displayByRole={
-        Object {
-            "WATCH_TOWER_OPS": "343242434",
-          }
-    }
-    fellowsSummary={
-        Object {
-            "D0A": 5,
-            "D0B": 5,
-            "Total": 10,
-          }
-    }
-    handleCardClick={[Function]}
-    loading={false}
-    loggedInRole="WATCH_TOWER_OPS"
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <Title
-          subTitle=""
-          title="FELLOWS SUMMARY"
-/>,
-        <div
-          className="row ops-dashboard__filter"
+<div
+  className="ops-dashboard__fellows-summary"
 >
-          <FiltersView
-                    displayByRole={
-                              Object {
-                                        "WATCH_TOWER_OPS": "343242434",
-                                      }
-                    }
-                    filterCardClassName="p-1"
-                    filters={
-                              Array [
-                                        Object {
-                                          "heading": "Total D0 Fellows",
-                                          "subTitle": "Click to see details",
-                                          "title": "Total",
-                                          "totalFellows": 10,
-                                        },
-                                        Object {
-                                          "heading": "Total D0A Fellows",
-                                          "subTitle": "Click to see details",
-                                          "title": "D0A",
-                                          "totalFellows": 5,
-                                        },
-                                        Object {
-                                          "heading": "Total D0B Fellows",
-                                          "subTitle": "Click to see details",
-                                          "title": "D0B",
-                                          "totalFellows": 5,
-                                        },
-                                      ]
-                    }
-                    handleCardClick={[Function]}
-          />
-</div>,
-      ],
-      "className": "ops-dashboard__fellows-summary",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "subTitle": "",
-          "title": "FELLOWS SUMMARY",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <FiltersView
-            displayByRole={
-                        Object {
-                                    "WATCH_TOWER_OPS": "343242434",
-                                  }
-            }
-            filterCardClassName="p-1"
-            filters={
-                        Array [
-                                    Object {
-                                      "heading": "Total D0 Fellows",
-                                      "subTitle": "Click to see details",
-                                      "title": "Total",
-                                      "totalFellows": 10,
-                                    },
-                                    Object {
-                                      "heading": "Total D0A Fellows",
-                                      "subTitle": "Click to see details",
-                                      "title": "D0A",
-                                      "totalFellows": 5,
-                                    },
-                                    Object {
-                                      "heading": "Total D0B Fellows",
-                                      "subTitle": "Click to see details",
-                                      "title": "D0B",
-                                      "totalFellows": 5,
-                                    },
-                                  ]
-            }
-            handleCardClick={[Function]}
-/>,
-          "className": "row ops-dashboard__filter",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "displayByRole": Object {
-              "WATCH_TOWER_OPS": "343242434",
-            },
-            "filterCardClassName": "p-1",
-            "filters": Array [
-              Object {
-                "heading": "Total D0 Fellows",
-                "subTitle": "Click to see details",
-                "title": "Total",
-                "totalFellows": 10,
-              },
-              Object {
-                "heading": "Total D0A Fellows",
-                "subTitle": "Click to see details",
-                "title": "D0A",
-                "totalFellows": 5,
-              },
-              Object {
-                "heading": "Total D0B Fellows",
-                "subTitle": "Click to see details",
-                "title": "D0B",
-                "totalFellows": 5,
-              },
-            ],
-            "handleCardClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Title
-            subTitle=""
-            title="FELLOWS SUMMARY"
-/>,
-          <div
-            className="row ops-dashboard__filter"
->
-            <FiltersView
-                        displayByRole={
-                                    Object {
-                                                "WATCH_TOWER_OPS": "343242434",
-                                              }
-                        }
-                        filterCardClassName="p-1"
-                        filters={
-                                    Array [
-                                                Object {
-                                                  "heading": "Total D0 Fellows",
-                                                  "subTitle": "Click to see details",
-                                                  "title": "Total",
-                                                  "totalFellows": 10,
-                                                },
-                                                Object {
-                                                  "heading": "Total D0A Fellows",
-                                                  "subTitle": "Click to see details",
-                                                  "title": "D0A",
-                                                  "totalFellows": 5,
-                                                },
-                                                Object {
-                                                  "heading": "Total D0B Fellows",
-                                                  "subTitle": "Click to see details",
-                                                  "title": "D0B",
-                                                  "totalFellows": 5,
-                                                },
-                                              ]
-                        }
-                        handleCardClick={[Function]}
-            />
-</div>,
-        ],
-        "className": "ops-dashboard__fellows-summary",
-      },
-      "ref": null,
-      "rendered": Array [
+  <Title
+    subTitle=""
+    title="FELLOWS SUMMARY"
+  />
+  <div
+    className="row ops-dashboard__filter"
+  >
+    <FiltersView
+      displayByRole={
         Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "subTitle": "",
-            "title": "FELLOWS SUMMARY",
+          "WATCH_TOWER_OPS": "343242434",
+        }
+      }
+      filterCardClassName="p-1"
+      filters={
+        Array [
+          Object {
+            "heading": "Total D0 Fellows",
+            "subTitle": "Click to see details",
+            "title": "Total",
+            "totalFellows": 10,
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <FiltersView
-              displayByRole={
-                            Object {
-                                          "WATCH_TOWER_OPS": "343242434",
-                                        }
-              }
-              filterCardClassName="p-1"
-              filters={
-                            Array [
-                                          Object {
-                                            "heading": "Total D0 Fellows",
-                                            "subTitle": "Click to see details",
-                                            "title": "Total",
-                                            "totalFellows": 10,
-                                          },
-                                          Object {
-                                            "heading": "Total D0A Fellows",
-                                            "subTitle": "Click to see details",
-                                            "title": "D0A",
-                                            "totalFellows": 5,
-                                          },
-                                          Object {
-                                            "heading": "Total D0B Fellows",
-                                            "subTitle": "Click to see details",
-                                            "title": "D0B",
-                                            "totalFellows": 5,
-                                          },
-                                        ]
-              }
-              handleCardClick={[Function]}
-/>,
-            "className": "row ops-dashboard__filter",
+          Object {
+            "heading": "Total D0A Fellows",
+            "subTitle": "Click to see details",
+            "title": "D0A",
+            "totalFellows": 5,
           },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "displayByRole": Object {
-                "WATCH_TOWER_OPS": "343242434",
-              },
-              "filterCardClassName": "p-1",
-              "filters": Array [
-                Object {
-                  "heading": "Total D0 Fellows",
-                  "subTitle": "Click to see details",
-                  "title": "Total",
-                  "totalFellows": 10,
-                },
-                Object {
-                  "heading": "Total D0A Fellows",
-                  "subTitle": "Click to see details",
-                  "title": "D0A",
-                  "totalFellows": 5,
-                },
-                Object {
-                  "heading": "Total D0B Fellows",
-                  "subTitle": "Click to see details",
-                  "title": "D0B",
-                  "totalFellows": 5,
-                },
-              ],
-              "handleCardClick": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+          Object {
+            "heading": "Total D0B Fellows",
+            "subTitle": "Click to see details",
+            "title": "D0B",
+            "totalFellows": 5,
           },
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+        ]
+      }
+      handleCardClick={[MockFunction]}
+    />
+  </div>
+</div>
 `;

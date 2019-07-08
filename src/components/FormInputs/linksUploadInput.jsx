@@ -6,7 +6,7 @@ import Microlink from '@microlink/react';
 import { attachToParentComponent } from './helpers';
 import AddProjectLinksForm from '../ProjectLinksForm';
 import { urlRegex } from '../../utils/regex';
-import './linksUploadInput.css';
+import './linksUploadInput.scss';
 
 class LinksUploadInput extends Component {
   constructor(props) {

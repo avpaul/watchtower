@@ -9,7 +9,7 @@ import {
   setStatusHandler
 } from './helpers';
 
-import './textInput.css';
+import './textInput.scss';
 
 class TextInput extends Component {
   constructor(props) {
@@ -144,9 +144,7 @@ class TextInput extends Component {
     }`;
     return (
       <div
-        className={`input-group ${className} ${className}--${
-          COMPONENT_STATUS_CLASS[status]
-        } mb-3`}
+        className={`input-group ${className} ${className}--${COMPONENT_STATUS_CLASS[status]} mb-3`}
       >
         <label htmlFor={finalLabel}>{label}</label>
         {this.renderInput(finalLabel)}

@@ -1,413 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Error />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <div
-        className="text-center"
-        style={
-                Object {
-                        "minHeight": "calc(100vh - 145px)",
-                        "padding": "1rem",
-                      }
+<main>
+  <div
+    className="text-center"
+    style={
+      Object {
+        "minHeight": "calc(100vh - 145px)",
+        "padding": "1rem",
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "margin": "5rem auto 3rem auto",
         }
->
-        <h1
-                style={
-                        Object {
-                                "margin": "5rem auto 3rem auto",
-                              }
-                }
-        >
-                <i
-                        className="fas fa-exclamation-circle"
-                        style={
-                                Object {
-                                        "color": "#0459E4",
-                                        "fontSize": "7rem",
-                                      }
-                        }
-                />
-        </h1>
-        <h3
-                style={
-                        Object {
-                                "margin": "3rem auto",
-                              }
-                }
-        >
-                Oops! Something went wrong. We are working on it.
-                <p
-                        style={
-                                Object {
-                                        "marginTop": "1rem",
-                                      }
-                        }
-                >
-                        Please reload the page.
-                </p>
-        </h3>
-</div>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <h1
-            style={
-                        Object {
-                                    "margin": "5rem auto 3rem auto",
-                                  }
-            }
->
-            <i
-                        className="fas fa-exclamation-circle"
-                        style={
-                                    Object {
-                                                "color": "#0459E4",
-                                                "fontSize": "7rem",
-                                              }
-                        }
-            />
-</h1>,
-          <h3
-            style={
-                        Object {
-                                    "margin": "3rem auto",
-                                  }
-            }
->
-            Oops! Something went wrong. We are working on it.
-            <p
-                        style={
-                                    Object {
-                                                "marginTop": "1rem",
-                                              }
-                        }
-            >
-                        Please reload the page.
-            </p>
-</h3>,
-        ],
-        "className": "text-center",
-        "style": Object {
-          "minHeight": "calc(100vh - 145px)",
-          "padding": "1rem",
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <i
-              className="fas fa-exclamation-circle"
-              style={
-                            Object {
-                                          "color": "#0459E4",
-                                          "fontSize": "7rem",
-                                        }
-              }
-/>,
-            "style": Object {
-              "margin": "5rem auto 3rem auto",
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "fas fa-exclamation-circle",
-              "style": Object {
-                "color": "#0459E4",
-                "fontSize": "7rem",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "i",
-          },
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Oops! Something went wrong. We are working on it.",
-              <p
-                style={
-                                Object {
-                                                "marginTop": "1rem",
-                                              }
-                }
->
-                Please reload the page.
-</p>,
-            ],
-            "style": Object {
-              "margin": "3rem auto",
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            "Oops! Something went wrong. We are working on it.",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Please reload the page.",
-                "style": Object {
-                  "marginTop": "1rem",
-                },
-              },
-              "ref": null,
-              "rendered": "Please reload the page.",
-              "type": "p",
-            },
-          ],
-          "type": "h3",
-        },
-      ],
-      "type": "div",
-    },
-    "type": "main",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="text-center"
-          style={
-                    Object {
-                              "minHeight": "calc(100vh - 145px)",
-                              "padding": "1rem",
-                            }
+      }
+    >
+      <i
+        className="fas fa-exclamation-circle"
+        style={
+          Object {
+            "color": "#0459E4",
+            "fontSize": "7rem",
           }
->
-          <h1
-                    style={
-                              Object {
-                                        "margin": "5rem auto 3rem auto",
-                                      }
-                    }
-          >
-                    <i
-                              className="fas fa-exclamation-circle"
-                              style={
-                                        Object {
-                                                  "color": "#0459E4",
-                                                  "fontSize": "7rem",
-                                                }
-                              }
-                    />
-          </h1>
-          <h3
-                    style={
-                              Object {
-                                        "margin": "3rem auto",
-                                      }
-                    }
-          >
-                    Oops! Something went wrong. We are working on it.
-                    <p
-                              style={
-                                        Object {
-                                                  "marginTop": "1rem",
-                                                }
-                              }
-                    >
-                              Please reload the page.
-                    </p>
-          </h3>
-</div>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h1
-              style={
-                            Object {
-                                          "margin": "5rem auto 3rem auto",
-                                        }
-              }
->
-              <i
-                            className="fas fa-exclamation-circle"
-                            style={
-                                          Object {
-                                                        "color": "#0459E4",
-                                                        "fontSize": "7rem",
-                                                      }
-                            }
-              />
-</h1>,
-            <h3
-              style={
-                            Object {
-                                          "margin": "3rem auto",
-                                        }
-              }
->
-              Oops! Something went wrong. We are working on it.
-              <p
-                            style={
-                                          Object {
-                                                        "marginTop": "1rem",
-                                                      }
-                            }
-              >
-                            Please reload the page.
-              </p>
-</h3>,
-          ],
-          "className": "text-center",
-          "style": Object {
-            "minHeight": "calc(100vh - 145px)",
-            "padding": "1rem",
-          },
-        },
-        "ref": null,
-        "rendered": Array [
+        }
+      />
+    </h1>
+    <h3
+      style={
+        Object {
+          "margin": "3rem auto",
+        }
+      }
+    >
+      Oops! Something went wrong. We are working on it.
+      <p
+        style={
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <i
-                className="fas fa-exclamation-circle"
-                style={
-                                Object {
-                                                "color": "#0459E4",
-                                                "fontSize": "7rem",
-                                              }
-                }
-/>,
-              "style": Object {
-                "margin": "5rem auto 3rem auto",
-              },
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "fas fa-exclamation-circle",
-                "style": Object {
-                  "color": "#0459E4",
-                  "fontSize": "7rem",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "i",
-            },
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Oops! Something went wrong. We are working on it.",
-                <p
-                  style={
-                                    Object {
-                                                      "marginTop": "1rem",
-                                                    }
-                  }
->
-                  Please reload the page.
-</p>,
-              ],
-              "style": Object {
-                "margin": "3rem auto",
-              },
-            },
-            "ref": null,
-            "rendered": Array [
-              "Oops! Something went wrong. We are working on it.",
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Please reload the page.",
-                  "style": Object {
-                    "marginTop": "1rem",
-                  },
-                },
-                "ref": null,
-                "rendered": "Please reload the page.",
-                "type": "p",
-              },
-            ],
-            "type": "h3",
-          },
-        ],
-        "type": "div",
-      },
-      "type": "main",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+            "marginTop": "1rem",
+          }
+        }
+      >
+        Please reload the page.
+      </p>
+    </h3>
+  </div>
+</main>
 `;

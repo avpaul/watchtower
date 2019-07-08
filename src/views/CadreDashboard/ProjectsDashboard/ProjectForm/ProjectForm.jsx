@@ -11,7 +11,7 @@ import { errorMessage } from './helpers';
 import AddManagerModal from '../AddManagerModal';
 import AddTechnologyModal from '../AddTechnologyModal';
 
-import './projectForm.css';
+import './projectForm.scss';
 
 class ProjectForm extends Component {
   constructor(props) {
