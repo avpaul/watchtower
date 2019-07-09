@@ -199,6 +199,7 @@ export default {
     cadreEngineers: [],
     error: ''
   },
+  cadreVacancies: genericAPIStateObject,
   reports: {
     loading: false,
     error: '',

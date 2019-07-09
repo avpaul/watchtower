@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput  renders as expected with required props 1`] = `
+<div
+  className="vacancy-card"
+>
+  <div
+    className="vacancy-card__inner"
+  >
+    <img
+      alt="vacancy-card__inner icon"
+      src="projectdown.svg"
+    />
+    <ul
+      className="vacancy-card__inner__list"
+    >
+      <li>
+        Technical Coordinator
+      </li>
+      <li>
+        Watchtower
+      </li>
+      <li>
+        Apply
+      </li>
+    </ul>
+  </div>
+</div>
+`;

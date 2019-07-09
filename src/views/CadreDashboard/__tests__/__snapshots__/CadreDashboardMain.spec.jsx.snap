@@ -71,7 +71,11 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
           }
         />
         <ProjectSummary />
-        <EngineerVacancyCard />
+        <EngineerDashboardCard
+          header="Vacancies"
+        >
+          <Connect(EngineerVacancies) />
+        </EngineerDashboardCard>
       </div>
     </div>
   </div>

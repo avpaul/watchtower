@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FellowDashboard from '../views/FellowDashboard';
 import getCadreEngineers from '../redux/actionCreators/cadreEngineersActions';
+import { fetchAllVacancies } from '../redux/actionCreators/getCadreVacanciesAction';
 import { activateCadreEngineerAccount } from '../redux/actionCreators/activateCadreEngineerActions';
 import CadreFellowDashboard from '../views/CadreFellowDashboard/CadreFellowDashboard';
 import Cadreloader from '../components/CustomLoader/CadreLoader';
 
 export class FellowDashboards extends Component {
   componentDidMount() {
-    const { getCadreEngineers } = this.props;
+    const { getCadreEngineers, fetchAllVacancies } = this.props;
     getCadreEngineers();
+    fetchAllVacancies();
   }
 
   activateAccount = () => {
@@ -59,6 +61,7 @@ FellowDashboards.propTypes = {
   user: PropTypes.instanceOf(Object).isRequired,
   d1EngineerData: PropTypes.instanceOf(Object).isRequired,
   getCadreEngineers: PropTypes.func.isRequired,
+  fetchAllVacancies: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   history: PropTypes.instanceOf(Object).isRequired,
   activateCadreEngineerAccount: PropTypes.func.isRequired
@@ -70,5 +73,5 @@ const mapStateToProps = ({ cadreEngineers }) => ({
 });
 export default connect(
   mapStateToProps,
-  { getCadreEngineers, activateCadreEngineerAccount }
+  { getCadreEngineers, fetchAllVacancies, activateCadreEngineerAccount }
 )(FellowDashboards);

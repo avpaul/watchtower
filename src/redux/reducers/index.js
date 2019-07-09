@@ -38,6 +38,7 @@ import fetchSlackChannels from './slackChannelReducer';
 import cadreProjectRolereducer from './cadreProjectRoleReducer';
 import fellowActiveRoleReducer from './fellowActiveRoleReducer';
 import createProjectVacancies from './createProjectVacanciesReducer';
+import cadreVacancies from './cadreVacanciesReducer';
 import editProjectReducer from './editProjectReducer';
 import getAProjectReducer from './getAProjectReducer';
 import createRoleReducer from './createRoleReducer';
@@ -87,7 +88,8 @@ const rootReducer = combineReducers({
   singleProject: getAProjectReducer,
   createRole: createRoleReducer,
   roleSkills: getRoleSkillsReducer,
-  getAllVacancies
+  getAllVacancies,
+  cadreVacancies
 });
 
 export default rootReducer;

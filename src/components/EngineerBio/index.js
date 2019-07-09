@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import '../FellowBio/FellowBio.scss';
@@ -11,13 +11,9 @@ import EngineerCard from './EngineerCard';
 
 export default function EngineerBio({ d1Fellow }) {
   return (
-    <Fragment>
-      <div>
-        <div className="row m-0">
-          <EngineerCard data={d1Fellow} />
-        </div>
-      </div>
-    </Fragment>
+    <div>
+      <EngineerCard data={d1Fellow} />
+    </div>
   );
 }
 
