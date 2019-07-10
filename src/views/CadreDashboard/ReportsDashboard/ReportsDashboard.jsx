@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import fuzzy from 'fuzzy';
 import Reports from '../../../components/Reports';
-import PMloader from '../../../components/CustomLoader/PMLoader';
 
 class ReportsDashboard extends Component {
   /**
@@ -61,7 +60,7 @@ class ReportsDashboard extends Component {
     const options = {
       pre: '<b>',
       post: '</b>',
-      extract: el => `${el.first_name}${el.last_name}${el.cohort}${el.email}`
+      extract: el => `${el.first_name}${el.last_name}`
     };
     const results = fuzzy.filter(searchWord, engineers, options);
     const searchResults = results.map(item => item.original);
@@ -79,13 +78,10 @@ class ReportsDashboard extends Component {
     const { total } = this.state;
     $perPage(perPage);
     fetchEngineersReportActions().then(res => {
-      this.setState(
-        {
-          engineers: res.data.data.data,
-          pageTotal: Math.ceil(total / perPage)
-        },
-        () => window.scrollTo(0, 0)
-      );
+      this.setState({
+        engineers: res.data.data.data,
+        pageTotal: Math.ceil(total / perPage)
+      });
     });
   };
 
@@ -100,12 +96,7 @@ class ReportsDashboard extends Component {
     const { pageTotal } = this.state;
     $page(pageNumber, pageTotal);
     fetchEngineersReportActions().then(res => {
-      this.setState(
-        {
-          engineers: res.data.data.data
-        },
-        () => window.scrollTo(0, 0)
-      );
+      this.setState({ engineers: res.data.data.data });
     });
   };
 
@@ -121,19 +112,16 @@ class ReportsDashboard extends Component {
 
     return (
       <React.Fragment>
-        {loading ? (
-          <PMloader />
-        ) : (
-          <Reports
-            engineers={this.fuzzySearch()}
-            handleSearchChange={this.handleSearchChange}
-            handleShowSizeChange={this.handleShowSizeChange}
-            handlePageChange={this.handlePageChange}
-            pageSizeOptions={options}
-            total={Number.parseInt(total, 10)}
-            cadreroles={cadreroles}
-          />
-        )}
+        <Reports
+          engineers={this.fuzzySearch()}
+          handleSearchChange={this.handleSearchChange}
+          handleShowSizeChange={this.handleShowSizeChange}
+          handlePageChange={this.handlePageChange}
+          pageSizeOptions={options}
+          total={Number.parseInt(total, 10)}
+          cadreroles={cadreroles}
+          loading={loading}
+        />
       </React.Fragment>
     );
   }

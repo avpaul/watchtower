@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-
+import Loader from '../Loader/Loader';
 import arrayOfObjectsSorter from '../../utils/sortArray';
 import './reports.scss';
 
@@ -104,7 +104,7 @@ export const panel = handleChange => (
   </div>
 );
 
-const Table = ({ tableHeaders, handleChange, engineers }) => (
+const Table = ({ tableHeaders, handleChange, engineers, loading }) => (
   <React.Fragment>
     <div className="panel">
       <div className="panel-heading">
@@ -112,32 +112,37 @@ const Table = ({ tableHeaders, handleChange, engineers }) => (
         <br />
       </div>
     </div>
-    <div className="table-overflow">
-      <table className="stats-table">
-        <tr>
-          {tableHeaders.map(title => (
-            <th key={title} className=" header-title">
-              {title}
-            </th>
-          ))}
-        </tr>
-        <tbody>
-          {engineers.sort(arrayOfObjectsSorter('first_name')).map(item =>
-            tableRow(
-              item,
-              `${item.first_name.charAt(0)}${item.last_name.charAt(0)}`
-            )
-          )}
-        </tbody>
-      </table>
-    </div>
+    {loading ? (
+      <Loader />
+    ) : (
+      <div className="table-overflow">
+        <table className="stats-table">
+          <tr>
+            {tableHeaders.map(title => (
+              <th key={title} className=" header-title">
+                {title}
+              </th>
+            ))}
+          </tr>
+          <tbody>
+            {engineers.sort(arrayOfObjectsSorter('first_name')).map(item =>
+              tableRow(
+                item,
+                `${item.first_name.charAt(0)}${item.last_name.charAt(0)}`
+              )
+            )}
+          </tbody>
+        </table>
+      </div>
+    )}
   </React.Fragment>
 );
 
 Table.propTypes = {
   handleChange: PropTypes.func.isRequired,
   engineers: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  tableHeaders: PropTypes.arrayOf(PropTypes.string).isRequired
+  tableHeaders: PropTypes.arrayOf(PropTypes.string).isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default Table;
