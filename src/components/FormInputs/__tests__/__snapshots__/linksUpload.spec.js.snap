@@ -15,7 +15,7 @@ exports[`TextInput  renders as expected 1`] = `
     data-toggle="modal"
     type="button"
   >
-    Select
+    Add Links
   </button>
   <div
     aria-hidden="true"
