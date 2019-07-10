@@ -25,7 +25,7 @@ export const getFellowRoleActiveFailure = error => ({
 export const getActiveRoleEngineer = roleId => dispatch => {
   dispatch(getFellowRoleActiveRequest());
 
-  const requestUrl = `${serverURL}/api/v2/ops/roles/${roleId}`;
+  const requestUrl = `${serverURL}/api/v2/projects/roles/${roleId}`;
 
   return axios
     .get(requestUrl)

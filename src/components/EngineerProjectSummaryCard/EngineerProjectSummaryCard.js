@@ -45,7 +45,7 @@ const renderD1ProjectSummary = profile =>
         </div>
         <div className="my-role">
           <span className="role-header">My Role</span>
-          <span className="role">{profile.role.name}</span>
+          <span className="role">{!profile.role ? '' : profile.role.name}</span>
         </div>
         <div className="date">
           <span className="date-header">Start Date</span>

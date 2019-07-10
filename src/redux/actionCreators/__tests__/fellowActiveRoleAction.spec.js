@@ -28,7 +28,7 @@ describe('should fetch role active engineers', () => {
     store = mockStore({});
     mock = new MockAdapter(axios);
     roleId = '1';
-    url = `${serverUrl}/api/v2/ops/roles/${roleId}`;
+    url = `${serverUrl}/api/v2/projects/roles/${roleId}`;
   });
 
   afterEach(() => {

@@ -12,7 +12,7 @@ import * as types from '../constants/projectsTypes';
  */
 export const createNewProject = projectData =>
   genericAPIPostRequest(
-    'ops/projects',
+    'projects',
     [
       types.CREATE_PROJECT_REQUEST,
       types.CREATE_PROJECT_SUCCESS,
@@ -28,7 +28,7 @@ export const createNewProject = projectData =>
  */
 export const editProject = projectData =>
   genericAPIPutRequest(
-    `ops/projects/${projectData.id}`,
+    `projects/${projectData.id}`,
     [
       types.EDIT_PROJECT_REQUEST,
       types.EDIT_PROJECT_SUCCESS,
@@ -42,7 +42,7 @@ export const editProject = projectData =>
  * @return object An instance of a Promise
  */
 export const getAProject = projectId =>
-  genericAPIGetRequest(`ops/projects/${projectId}`, [
+  genericAPIGetRequest(`projects/${projectId}`, [
     types.GET_SINGLE_PROJECT_REQUEST,
     types.GET_SINGLE_PROJECT_SUCCESS,
     types.GET_SINGLE_PROJECT_FAILURE
@@ -53,7 +53,7 @@ export const getAProject = projectId =>
  * @return object An instance of a Promise
  */
 export const fetchAllProjects = () =>
-  genericAPIGetRequest('ops/projects', [
+  genericAPIGetRequest('projects', [
     types.FETCH_PROJECTS_REQUEST,
     types.FETCH_PROJECTS_SUCCESS,
     types.FETCH_PROJECTS_FAILURE

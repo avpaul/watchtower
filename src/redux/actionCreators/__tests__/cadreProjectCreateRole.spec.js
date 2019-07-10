@@ -20,7 +20,7 @@ describe('create roles action', () => {
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v2/ops/roles`;
+  const baseURL = `${serverURL}/api/v2/projects/roles`;
 
   beforeEach(() => {
     store.clearActions();
