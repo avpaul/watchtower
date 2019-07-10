@@ -44,7 +44,11 @@ const ReportSummary = ({
   return (
     <React.Fragment>
       <div className="reports-container">
-        <div className="row">{allroles.map(role => cards(role))}</div>
+        <div className="container-fluid overflow-x-auto">
+          <div className="row flex-row flex-nowrap justify-content-around">
+            {allroles.map(role => cards(role))}
+          </div>
+        </div>
         <Table
           tableHeaders={headers}
           engineers={engineers}

@@ -24,7 +24,7 @@ const ProjectDetailsCardSmall = ({
             src={projectDetails.logo || DefaultProjectIcon}
             alt="project-logo"
           />
-          <h3>{projectDetails.name && projectDetails.name.toUpperCase()}</h3>
+          <h3>{projectDetails.name}</h3>
         </div>
         <div className="project-theme">
           <p>Empowering Devs through life-long learning</p>
