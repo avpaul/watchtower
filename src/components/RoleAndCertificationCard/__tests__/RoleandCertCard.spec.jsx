@@ -113,4 +113,8 @@ describe('Test Certification Card component', () => {
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should handle click of edit certification button', () => {
+    wrapper.find('.dropdown-item').simulate('click');
+  });
 });

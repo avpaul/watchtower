@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit Textarea should render component correctly 1`] = `
+<div
+  className="form-input"
+>
+  <label
+    className="form-label"
+    htmlFor="title"
+  >
+    Form title
+  </label>
+  <textarea
+    className="form-input__textarea"
+    id="title"
+    name="title"
+    onChange={[MockFunction]}
+    rows="4"
+    value="title"
+  />
+</div>
+`;

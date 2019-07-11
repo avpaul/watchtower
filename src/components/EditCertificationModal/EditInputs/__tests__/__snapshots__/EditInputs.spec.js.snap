@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit Input Text should render component correctly 1`] = `
+<div
+  className="form-input"
+>
+  <label
+    className="form-label"
+    htmlFor="title"
+  >
+    Form title
+  </label>
+  <input
+    className="form-input__text"
+    handleChange={[MockFunction]}
+    id="title"
+    inputType="text"
+    name="title"
+    onChange={[MockFunction]}
+    required={true}
+    title="Form title"
+    type="text"
+    value="title"
+  />
+</div>
+`;
