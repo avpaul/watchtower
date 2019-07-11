@@ -25,12 +25,6 @@ describe('Test Role Card component', () => {
       type: 'role'
     }
   };
-  // it('should render role card instance properly', () => {
-  //   wrapper = shallow(<Card {...props} />);
-  // });
-  // it('should set loading state to true', () => {
-  //   wrapper = shallow(<Card {...props} />);
-  // });
   it('should render correctly', () => {
     wrapper = shallow(<Card {...props} />);
     expect(wrapper).toMatchSnapshot();
@@ -80,9 +74,6 @@ describe('Test Certification Card component', () => {
       type: 'certificates'
     }
   };
-  // it('should render certificates card instance properly', () => {
-  //   wrapper = shallow(<Card {...props} />);
-  // });
   it('should render correctly', () => {
     wrapper = shallow(<Card {...props} />);
     expect(wrapper).toMatchSnapshot();
