@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EngineerDashboardCard  renders as expected with required props 1`] = `
+<div
+  className="dasboardcard-wrapper"
+>
+  <span
+    className="dasboardcard-wrapper__span"
+  >
+    Vacancies
+  </span>
+  <div
+    className="dasboardcard-wrapper__info"
+  >
+    <div>
+      child component
+    </div>
+  </div>
+</div>
+`;

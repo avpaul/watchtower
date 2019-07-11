@@ -5,9 +5,10 @@
   color: rgba(52, 76, 90, 0.43);
   font-family: $font-primary;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: -0.53px;
   line-height: 20px;
+  margin-left: 16%;
 }
 
 .card-wrapper {
@@ -25,6 +26,7 @@
   background-color: #ffffff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
   margin-top: 16px;
+  margin-left: 38px;
 }
 
 .loader-container {
@@ -225,10 +227,11 @@
   border-radius: 12px;
   background-color: #ffffff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+  margin-left: 15%;
 }
 
 .no-project-container > span {
-  margin-top: 10px;
+  margin-top: 30px;
   height: 18px;
   color: rgba(52, 76, 90, 0.62);
   font-family: $font-primary;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EngineerVacancies  renders as expected with required props 1`] = `
+<Loader
+  size=""
+/>
+`;
+
+exports[`EngineerVacancies  renders as expected with required props 2`] = `
+<div
+  className="vacancies-container--all-vacancies"
+>
+  <span
+    className="vacancies-container--all-vacancies__span"
+  >
+    2 Available Vacancies
+  </span>
+  <EngineerVacancyCard
+    projectName="Voluptate excepturi."
+    role="QA Engineer"
+  />
+  <EngineerVacancyCard
+    projectName="Certification"
+    role="Colt Anderson"
+  />
+</div>
+`;

@@ -21,6 +21,19 @@ exports[`<FellowDashboards /> should call activate account 1`] = `
       }
     }
     d1EngineerData={Array []}
+    fetchAllVacancies={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     getCadreEngineers={
       [MockFunction] {
         "calls": Array [
@@ -79,6 +92,7 @@ exports[`<FellowDashboards /> should render well 1`] = `
       },
     ]
   }
+  fetchAllVacancies={[Function]}
   getCadreEngineers={[Function]}
   history={
     Object {

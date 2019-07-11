@@ -21,6 +21,15 @@ describe('<FellowDashboards />', () => {
           }
         ],
         error: ''
+      },
+      cadreVacancies: {
+        loading: false,
+        data: {
+          message: 'successfully retrieved all vacancies',
+          projectVacancies: [],
+          certificationVacancies: []
+        },
+        error: null
       }
     });
     const props = {
@@ -37,7 +46,8 @@ describe('<FellowDashboards />', () => {
       history: {
         push: jest.fn()
       },
-      activateCadreEngineerAccount: jest.fn()
+      activateCadreEngineerAccount: jest.fn(),
+      fetchAllVacancies: jest.fn()
     };
     wrapper = shallow(<FellowDashboard {...props} store={store} />);
   });
@@ -59,8 +69,13 @@ describe('<FellowDashboards />', () => {
           email: 'collins.muru@andela.com'
         }
       ],
+      history: {
+        push: jest.fn()
+      },
       loading: false,
-      getCadreEngineers: jest.fn()
+      activateCadreEngineerAccount: jest.fn(),
+      getCadreEngineers: jest.fn(),
+      fetchAllVacancies: jest.fn()
     };
 
     const wrapper2 = shallow(<FellowDashboards {...props} store={store} />);
@@ -89,7 +104,8 @@ describe('<FellowDashboards />', () => {
       history: {
         push: jest.fn()
       },
-      activateCadreEngineerAccount: jest.fn()
+      activateCadreEngineerAccount: jest.fn(),
+      fetchAllVacancies: jest.fn()
     };
 
     wrapper = shallow(<FellowDashboards {...props} store={store} />);
