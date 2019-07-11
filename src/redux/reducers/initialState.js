@@ -218,5 +218,6 @@ export default {
   getAllVacancies: genericAPIStateArray,
   allCetifications: genericAPIStateArray,
   editCertification: genericAPIStateObject,
-  certifications: genericAPIStateArray
+  certifications: genericAPIStateArray,
+  getCertification: genericAPIStateObject
 };

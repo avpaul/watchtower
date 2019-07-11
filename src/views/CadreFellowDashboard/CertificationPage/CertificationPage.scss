@@ -1,0 +1,65 @@
+.certification-page {
+  .back-icon {
+    padding: 5px;
+    background-color: #dae2e6;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .back-icon-text {
+    font-family: 'DIN Pro';
+    color: #333e44;
+    font-size: 17px;
+    letter-spacing: -0.6px;
+  }
+  .certification-card {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border-radius: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+    border: none;
+    .certification-header {
+      border-bottom: 1px solid #f7f9fa;
+    }
+  }
+  .certification-title {
+    margin-top: 7px;
+    color: #0459e4;
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+  .certification-title-sub-heading {
+    color: rgba(52, 76, 90, 0.8);
+    font-family: 'DIN Pro';
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .apply-btn {
+    height: 39px;
+    border-radius: 5px;
+    background-color: #0459e4;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+    color: #ffffff;
+    font-family: 'DIN Pro';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.58px;
+  }
+  .certification-description-title {
+    color: #344c5a;
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.52px;
+    line-height: 23px;
+  }
+  .certification-description {
+    color: rgba(52, 76, 90, 0.8);
+    font-family: 'DIN Pro';
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
