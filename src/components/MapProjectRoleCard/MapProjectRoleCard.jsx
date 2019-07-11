@@ -42,19 +42,25 @@ function MapProjectRoleCard({
             </button>
           )}
         </div>
-        {roleData.map(role => (
-          <div className="col-4 mb-4" key={role.id}>
-            <Card
-              cardProps={{
-                details: role,
-                fetcher: fetchActiveEngineers,
-                loading,
-                activeParticipants: activeEngineers,
-                type
-              }}
-            />
+        {roleData.length === 0 ? (
+          <div className="no-roles-certifications">
+            {type === 'role' ? 'No Roles' : 'No Certifications'}
           </div>
-        ))}
+        ) : (
+          roleData.map(role => (
+            <div className="col-4 mb-4" key={role.id}>
+              <Card
+                cardProps={{
+                  details: role,
+                  fetcher: fetchActiveEngineers,
+                  loading,
+                  activeParticipants: activeEngineers,
+                  type
+                }}
+              />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
