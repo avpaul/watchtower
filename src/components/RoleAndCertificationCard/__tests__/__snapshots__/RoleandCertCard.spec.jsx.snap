@@ -1,0 +1,937 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Certification Card component should handle click count correctly 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       hide
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={true}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Certification Card component should handle close modal correctly 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       hide
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Certification Card component should render correctly 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       see more
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Certification Card component should render modal 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       see more
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Role Card component should handle click count correctly 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       hide
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={true}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Role Card component should handle close modal correctly 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       hide
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Role Card component should render correctly 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       see more
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;
+
+exports[`Test Role Card component should render modal 1`] = `
+<div
+  className="role-card"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="role-card__icon"
+      >
+        <img
+          alt=""
+          src="More.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="role-card__title"
+  >
+    test role
+  </div>
+  <p
+    className="role-card__attributes-sm"
+  >
+    Vacancies
+     
+    <span
+      className="role-card__attributes-count-sm"
+    />
+  </p>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="role-card__attributes"
+      >
+        Applicants 
+        <br />
+         
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <p
+        className="role-card__attributes"
+      >
+        Certified Engrs.
+         
+        <br />
+        <div
+          className="text-left"
+        >
+          <span
+            className="role-card__attributes-count"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex="-1"
+          >
+            2
+          </span>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p
+    className="role-card__description-title mt-2 mb-1"
+  >
+    Description
+  </p>
+  <p
+    className="role-card__description"
+  >
+    test role description should render role card instance properly should render role card instance properly
+    <span
+      className="role-card__attributes-seemore"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      ...
+       see more
+    </span>
+  </p>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    title="2 test role's"
+  >
+    <div
+      className="modal__body-card"
+    >
+      <MapRoleActiveEngineers />
+    </div>
+  </Modal>
+</div>
+`;

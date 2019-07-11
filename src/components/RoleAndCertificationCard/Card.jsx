@@ -6,9 +6,9 @@ import MapRoleActiveEngineers from '../MapRoleActiveEngineers';
 import Loader from '../Loader/Loader';
 import { pluralizeCheck } from '../../utils';
 
-import './RoleCard.scss';
+import './Card.scss';
 
-class RoleCard extends React.Component {
+class Card extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,12 +21,14 @@ class RoleCard extends React.Component {
     this.setState(state => ({ showMore: !state.showMore }));
 
   roleActiveEngineer = () => {
-    const { role, fetchActiveEngineers } = this.props;
+    const {
+      cardProps: { details, fetcher }
+    } = this.props;
     const { openModal } = this.state;
 
     this.setState({ openModal: !openModal });
 
-    return fetchActiveEngineers(role.id);
+    return fetcher(details.id);
   };
 
   closeModal = () => {
@@ -36,15 +38,19 @@ class RoleCard extends React.Component {
 
   renderFullDescription = () => {
     const { showMore } = this.state;
-    const { role } = this.props;
+    const {
+      cardProps: { details }
+    } = this.props;
     return showMore
-      ? role.description
-      : `${role.description.substring(0, 150)}`;
+      ? details.description
+      : `${details.description.substring(0, 150)}`;
   };
 
   renderShowMoreButton = showMore => {
-    const { role } = this.props;
-    return role.description.length < 100 ? (
+    const {
+      cardProps: { details }
+    } = this.props;
+    return details.description.length < 100 ? (
       ''
     ) : (
       <span
@@ -83,51 +89,60 @@ class RoleCard extends React.Component {
     </div>
   );
 
-  renderPositionsCount = role => (
-    <div className="row">
-      <div className="col-6">
-        <div className="role-card__attributes">
-          Applicants <br />{' '}
-          <div className="text-left">
-            <span className="role-card__attributes-count">
-              {role.applications_count}
-            </span>
+  renderPositionsCount = (details, type) => {
+    const count =
+      type === 'role'
+        ? details.active_engineers_count
+        : details.certified_engineers;
+
+    return (
+      <div className="row">
+        <div className="col-6">
+          <div className="role-card__attributes">
+            Applicants <br />{' '}
+            <div className="text-left">
+              <span className="role-card__attributes-count">
+                {details.applications_count}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-6">
-        <p className="role-card__attributes">
-          Active Engrs. <br />
-          {this.renderCount(
-            role.active_engineers_count,
-            this.roleActiveEngineer
-          )}
-        </p>
-      </div>
-    </div>
-  );
-
-  renderModal = (role, open, loading, data) => (
-    <Modal
-      show={open}
-      handleClose={this.closeModal}
-      title={`${role.active_engineers_count} ${pluralizeCheck(
-        role.name,
-        role.active_engineers_count
-      )}`}
-    >
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="modal__body-card">
-          <MapRoleActiveEngineers roleData={data} />
+        <div className="col-6">
+          <p className="role-card__attributes">
+            {type === 'role' ? 'Active Engrs.' : 'Certified Engrs.'} <br />
+            {this.renderCount(count, this.roleActiveEngineer)}
+          </p>
         </div>
-      )}
-    </Modal>
-  );
+      </div>
+    );
+  };
+
+  renderModal = (details, open, loading, data, type) => {
+    const count =
+      type === 'role'
+        ? details.active_engineers_count
+        : details.certified_engineers;
+    return (
+      <Modal
+        show={open}
+        handleClose={this.closeModal}
+        title={`${count} ${pluralizeCheck(details.name, count)}`}
+      >
+        {loading ? (
+          <Loader />
+        ) : (
+          <div className="modal__body-card">
+            <MapRoleActiveEngineers roleData={data} />
+          </div>
+        )}
+      </Modal>
+    );
+  };
 
   render() {
-    const { role, loading, activeEngineers } = this.props;
+    const {
+      cardProps: { details, loading, activeParticipants, type }
+    } = this.props;
     const { showMore, openModal } = this.state;
     return (
       <div className="role-card">
@@ -138,26 +153,29 @@ class RoleCard extends React.Component {
             </div>
           </div>
         </div>
-        <div className="role-card__title">{role.name}</div>
+        <div className="role-card__title">{details.name}</div>
         <p className="role-card__attributes-sm">
           Vacancies{' '}
           <span className="role-card__attributes-count-sm">
-            {role.vacancies_count}
+            {details.vacancies_count}
           </span>
         </p>
         <hr />
-        {this.renderPositionsCount(role)}
+        {this.renderPositionsCount(details, type)}
         {this.renderDescription(showMore)}
-        {this.renderModal(role, openModal, loading, activeEngineers)}
+        {this.renderModal(
+          details,
+          openModal,
+          loading,
+          activeParticipants,
+          type
+        )}
       </div>
     );
   }
 }
 
-RoleCard.propTypes = {
-  role: PropTypes.shape({}).isRequired,
-  fetchActiveEngineers: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  activeEngineers: PropTypes.shape({}).isRequired
+Card.propTypes = {
+  cardProps: PropTypes.shape({}).isRequired
 };
-export default RoleCard;
+export default Card;

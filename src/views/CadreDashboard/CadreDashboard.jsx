@@ -6,7 +6,7 @@ import ProjectsDashboard from './ProjectsDashboard';
 import RolesDashboard from './RolesDashboard';
 import ReportsDashboard from './ReportsDashboard';
 import VacanciesDashboard from './VacanciesDashboard';
-import CertificationsDashboard from './CertificationsDashboard';
+import CertificationsDashboard from './CertificatesDashboard';
 
 import './CadreDashboard.scss';
 

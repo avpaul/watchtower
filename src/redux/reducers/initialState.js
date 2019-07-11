@@ -214,5 +214,6 @@ export default {
   fetchActiveRole: genericAPIStateArray,
   createRole: genericAPIStateArray,
   roleSkills: genericAPIStateArray,
-  getAllVacancies: genericAPIStateArray
+  getAllVacancies: genericAPIStateArray,
+  allCetifications: genericAPIStateArray
 };

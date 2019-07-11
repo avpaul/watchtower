@@ -1,4 +1,49 @@
+@import '../../assets/sass/abstract/variables';
+
 .role-card__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(303px, 1fr));
+  grid-row-gap: 15px;
+  grid-column-gap: 9px;
+}
+.role-grid__count {
+  color: #333e44;
+  font-family: $font-primary;
+  font-size: 24px;
+  letter-spacing: -1.1px;
+  line-height: 31px;
+  margin-bottom: 3px;
+}
+#title {
+  margin-bottom: 20px;
+}
+#title > span {
+  height: 18px;
+  width: 245px;
+  color: rgba(52, 76, 90, 0.62);
+  font-family: $font-primary;
+  font-size: 14px;
+  line-height: 18px;
+}
+.role-grid__add {
+  border-radius: 5px;
+  background-color: #10a36d;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+  color: #ffffff;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.58px;
+  line-height: 18px;
+  padding: 10px 20px;
+  outline: none !important;
+  float: right;
+}
+.role-grid__add:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.project-card__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(303px, 1fr));
   grid-row-gap: 15px;

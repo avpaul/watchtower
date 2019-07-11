@@ -6,9 +6,9 @@ import Thunk from 'redux-thunk';
 
 import configureStore from 'redux-mock-store';
 import initialState from '../../../../redux/reducers/initialState';
-import CertificationDashboard from '../CertificationDashboard';
+import CertificationsDashboard from '..';
 
-describe('CertificationDashboard Dashboard', () => {
+describe('Certification Dashboard', () => {
   const defaultProps = {
     match: {
       url: '/cadre/certifications'
@@ -17,7 +17,7 @@ describe('CertificationDashboard Dashboard', () => {
   };
 
   /**
-   * Creates an enzyme instance to test the CertificationDashboard component.
+   * Creates an enzyme instance to test the projectForm component.
    *
    * @param propOverrides Used to edit the props passed to the component when being mounted
    * @returns { wrapper, props }
@@ -29,7 +29,7 @@ describe('CertificationDashboard Dashboard', () => {
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter initialEntries={[testURL]}>
-          <CertificationDashboard {...defaultProps} />
+          <CertificationsDashboard {...defaultProps} />
         </MemoryRouter>
       </Provider>
     );
@@ -38,6 +38,6 @@ describe('CertificationDashboard Dashboard', () => {
 
   it('renders correctly using valid location path', () => {
     const { wrapper } = setup();
-    expect(wrapper.find('WorkInProgress').exists()).toBeTruthy();
+    expect(wrapper.find('CadreViewCerts').exists()).toBeTruthy();
   });
 });

@@ -37,20 +37,23 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
       className="col-4 mb-4"
       key="1"
     >
-      <RoleCard
-        activeEngineers={Object {}}
-        fetchActiveEngineers={[MockFunction]}
-        loading={true}
-        role={
+      <Card
+        cardProps={
           Object {
-            "active_engineers_count": 1,
-            "applications_count": 2,
-            "created_at": "2019-06-04 04:56:39",
-            "description": "test role description",
-            "id": 1,
-            "name": "test role",
-            "updated_at": "2019-06-04 04:56:39",
-            "vacancies_count": 3,
+            "activeParticipants": Object {},
+            "details": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+            "fetcher": [MockFunction],
+            "loading": true,
+            "type": "role",
           }
         }
       />
@@ -59,20 +62,23 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
       className="col-4 mb-4"
       key="1"
     >
-      <RoleCard
-        activeEngineers={Object {}}
-        fetchActiveEngineers={[MockFunction]}
-        loading={true}
-        role={
+      <Card
+        cardProps={
           Object {
-            "active_engineers_count": 1,
-            "applications_count": 2,
-            "created_at": "2019-06-04 04:56:39",
-            "description": "test role description",
-            "id": 1,
-            "name": "test role",
-            "updated_at": "2019-06-04 04:56:39",
-            "vacancies_count": 3,
+            "activeParticipants": Object {},
+            "details": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+            "fetcher": [MockFunction],
+            "loading": true,
+            "type": "role",
           }
         }
       />
@@ -118,20 +124,23 @@ exports[`Test Map Role cards should render correctly 1`] = `
       className="col-4 mb-4"
       key="1"
     >
-      <RoleCard
-        activeEngineers={Object {}}
-        fetchActiveEngineers={[MockFunction]}
-        loading={true}
-        role={
+      <Card
+        cardProps={
           Object {
-            "active_engineers_count": 1,
-            "applications_count": 2,
-            "created_at": "2019-06-04 04:56:39",
-            "description": "test role description",
-            "id": 1,
-            "name": "test role",
-            "updated_at": "2019-06-04 04:56:39",
-            "vacancies_count": 3,
+            "activeParticipants": Object {},
+            "details": Object {
+              "active_engineers_count": 1,
+              "applications_count": 2,
+              "created_at": "2019-06-04 04:56:39",
+              "description": "test role description",
+              "id": 1,
+              "name": "test role",
+              "updated_at": "2019-06-04 04:56:39",
+              "vacancies_count": 3,
+            },
+            "fetcher": [MockFunction],
+            "loading": true,
+            "type": "role",
           }
         }
       />

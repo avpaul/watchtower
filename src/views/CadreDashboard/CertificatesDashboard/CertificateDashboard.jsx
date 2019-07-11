@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
-import WorkInProgress from '../../../components/WorkInProgress';
+import CadreViewCertificates from './CadreViewCertificates';
 
 const CertificationDashboard = props => {
   const { match } = props;
   return (
-    <div>
+    <div className="certificates-dashboard">
       <Switch>
         <Route
           exact
           path={`${match.url}`}
-          component={() => <WorkInProgress />}
+          component={() => <CadreViewCertificates {...props} />}
         />
       </Switch>
     </div>
