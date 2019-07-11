@@ -6,7 +6,9 @@ import EngineerVacancyCard from '../EngineerVacancyCard';
 describe('TextInput ', () => {
   const defaultProps = {
     role: 'Technical Coordinator',
-    projectName: 'Watchtower'
+    roleId: 1,
+    projectName: 'Watchtower',
+    projectId: 1
   };
 
   const setup = propsOverride => {

@@ -6,6 +6,7 @@ import CadrePage from './CadrePage';
 import CadreDashboardMain from '../CadreDashboard/CadreDashboardMain';
 import { Header } from '../../components/Header/Header';
 import CertificationPage from './CertificationPage';
+import RolePage from './ProjectRoleDetails';
 
 const CadreFellowDashboard = props => {
   const { location, d1Engineer } = props;
@@ -22,6 +23,11 @@ const CadreFellowDashboard = props => {
             exact
             path="/cadre/welcome"
             component={() => <CadrePage {...props} />}
+          />
+          <Route
+            exact
+            path="/dashboard/project/:projectId/role/:roleId"
+            component={() => <RolePage {...props} />}
           />
           <Route
             exact

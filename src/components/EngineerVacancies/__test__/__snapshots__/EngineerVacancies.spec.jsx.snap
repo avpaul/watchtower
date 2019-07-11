@@ -9,12 +9,16 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
       className="render-vacancies__div"
     >
       <EngineerVacancyCard
+        projectId={1}
         projectName="Dolorum suscipit molestiae."
         role="Engineer"
+        roleId={1}
       />
       <EngineerVacancyCard
+        projectId={null}
         projectName="Certification"
         role="Mrs. Alanna Ziemann"
+        roleId={1}
       />
     </div>
   </div>

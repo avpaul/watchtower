@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
@@ -96,7 +97,9 @@ describe('Tests the CadreDashboard component', () => {
 
     const wrapper = mount(
       <Provider store={store}>
-        <D1FellowDashboardMain {...passedProps} />
+        <MemoryRouter>
+          <D1FellowDashboardMain {...passedProps} />
+        </MemoryRouter>
       </Provider>
     );
     return wrapper;
