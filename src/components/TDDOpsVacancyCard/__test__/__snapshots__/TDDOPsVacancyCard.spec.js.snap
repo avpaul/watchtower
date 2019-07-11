@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test TDD Ops vacancy card renders certification vacancy correctly 1`] = `
+<div
+  className="ops-vacancy-card"
+>
+  <div
+    className="ops-vacancy-card__role-name"
+  >
+    Wava Wehner MD
+  </div>
+  <div
+    className="ops-vacancy-card__project-slots"
+  >
+    2
+     
+    available slots
+  </div>
+  <div
+    className="ops-vacancy-card__project"
+  >
+    20 weeks
+  </div>
+  <div
+    className="ops-vacancy-card__applications"
+  >
+    0
+     
+    applications
+  </div>
+</div>
+`;
+
+exports[`Test TDD Ops vacancy card renders project vacancy correctly 1`] = `
+<div
+  className="ops-vacancy-card"
+>
+  <div
+    className="ops-vacancy-card__role-name"
+  >
+    Engineer
+  </div>
+  <div
+    className="ops-vacancy-card__project-slots"
+  >
+    2
+     
+    available slots
+  </div>
+  <div
+    className="ops-vacancy-card__project"
+  >
+    Corrupti non.
+  </div>
+  <div
+    className="ops-vacancy-card__applications"
+  >
+    0
+     
+    applications
+  </div>
+</div>
+`;

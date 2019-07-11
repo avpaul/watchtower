@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import AddManagerModal from './AddVacanciesModal';
+import AddVacanciesModal from './AddVacanciesModal';
 import { fetchAllProjects } from '../../../../redux/actionCreators/projectsActions';
-import createNewProjectVacancies from '../../../../redux/actionCreators/projectVacancyActions';
+import { createNewProjectVacancies } from '../../../../redux/actionCreators/projectVacancyActions';
 import { fetchAllRoles } from '../../../../redux/actionCreators/cadreProjectRoleActions';
 
 export const mapStateToProps = ({
@@ -21,4 +21,4 @@ export default connect(
     fetchAllRoles,
     createNewProjectVacancies
   }
-)(AddManagerModal);
+)(AddVacanciesModal);

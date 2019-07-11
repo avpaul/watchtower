@@ -13,7 +13,7 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
     >
       <Title
         subTitle=""
-        title="0 Vacancies"
+        title="2 Vacancies (1 Project, 1 Certification)"
       />
     </div>
     <div
@@ -30,6 +30,61 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
       />
     </div>
   </div>
-  <WorkInProgress />
+  <div>
+    <div
+      className="toogle-container"
+    >
+      <button
+        className="vacancy-toggle-button--active"
+        onClick={[Function]}
+        type="button"
+        value="project"
+      >
+        Project Vacancies
+      </button>
+      <button
+        className="vacancy-toggle-button"
+        onClick={[Function]}
+        type="button"
+        value="certification"
+      >
+        Certification Vacancies
+      </button>
+    </div>
+  </div>
+  <ViewRoleVacancies
+    vacancies={
+      Array [
+        Object {
+          "available_slots": 2,
+          "project": Object {
+            "id": 7,
+            "name": "Corrupti non.",
+          },
+          "role": Object {
+            "id": 1,
+            "name": "Engineer",
+          },
+          "vacancies": Array [
+            Object {
+              "fellow_id": null,
+              "id": 99,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+            },
+            Object {
+              "fellow_id": null,
+              "id": 105,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+            },
+          ],
+        },
+      ]
+    }
+    vacanciesToDisplay="project"
+  />
 </div>
 `;

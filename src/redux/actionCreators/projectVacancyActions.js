@@ -1,4 +1,4 @@
-import { genericAPIPostRequest } from './helpers';
+import { genericAPIPostRequest, genericAPIGetRequest } from './helpers';
 import * as types from '../constants/projectsTypes';
 
 /**
@@ -6,7 +6,7 @@ import * as types from '../constants/projectsTypes';
  * @param object vacancies The details of the new vacancies
  * @return object An instance of a Promise
  */
-const createNewProjectVacancies = vacancies =>
+export const createNewProjectVacancies = vacancies =>
   genericAPIPostRequest(
     'projects/vacancies',
     [
@@ -17,4 +17,9 @@ const createNewProjectVacancies = vacancies =>
     vacancies
   );
 
-export { createNewProjectVacancies as default };
+export const getAllVacancies = () =>
+  genericAPIGetRequest('cadre/vacancies', [
+    types.GET_ALL_VACANCIES_REQUEST,
+    types.GET_ALL_VACANCIES_SUCCESSS,
+    types.GET_ALL_VACANCIES_FAILURE
+  ]);
