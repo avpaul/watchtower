@@ -2,6 +2,10 @@
   Table css
  */
 
+.table-content__body {
+  margin-top: 0.5em;
+}
+
 .name-column {
   max-width: 80%;
   padding-top: 1em;
@@ -66,6 +70,11 @@ table.stats-table {
   }
 }
 
+.flex-row {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
 @media only screen and (min-width: 576px) and (max-width: 1023px) {
   .initials {
     display: none;
@@ -75,6 +84,18 @@ table.stats-table {
     max-width: 50%;
     margin: 0 auto;
     padding: 0;
+  }
+}
+
+@media (min-width: 316px) and (max-width: 575px) {
+  .container-fluid.roles-details {
+    overflow-x: inherit;
+  }
+  .flex-nowrap {
+    flex-wrap: wrap !important;
+  }
+  .card-reports:nth-child(1) {
+    margin-left: 0 !important;
   }
 }
 
@@ -118,12 +139,14 @@ td {
 .filter-btn {
   box-shadow: 2px 4px 10px 0 #d8d8d8;
   margin-left: 2em;
-  border: 1px solid #0459e4;
+  color: #ffffff;
+  background-color: #0459e4;
 }
 
 .export-btn {
   box-shadow: 2px 4px 10px 0 #d8d8d8;
-  border: 1px solid #0459e4;
+  color: #ffffff;
+  background-color: #0459e4;
 }
 
 .header-title {
@@ -151,7 +174,6 @@ td {
   Panel Css
  */
 .panel {
-  padding-bottom: 15px;
   background-color: #ffffff;
   border-bottom: 1px solid #dddddd;
   border-top: 5px solid #0459e4;
@@ -192,6 +214,14 @@ td {
   caret-color: #000000;
 }
 
+.no-search__items {
+  text-align: center;
+  color: rgba(51, 62, 68, 0.51);
+  font-family: 'DIN Pro', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-top: 1em;
+}
+
 .searchbar:hover > .search_icon {
   background: white;
   color: #000000;
@@ -211,6 +241,9 @@ td {
 /*
   Cards css
  */
+.card-reports:nth-child(1) {
+  margin-left: -14.3px;
+}
 
 .card-tile {
   margin-bottom: 45px;

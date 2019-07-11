@@ -21,10 +21,9 @@ describe('should fetch cadre engineers and succeed', () => {
   let queryParams;
 
   beforeEach(() => {
-    store = mockStore({ reports: { meta: { page: 1, perPage: 10 } } });
+    store = mockStore({});
     mock = new MockAdapter(axios);
-    const { meta } = store.getState().reports;
-    queryParams = { page: meta.page, limit: meta.perPage };
+    queryParams = { page: 1, limit: 10 };
     url = `${serverURL}/api/v2/ops/reports/engineers?${serializeQuery(
       queryParams
     )}`;
@@ -69,7 +68,7 @@ describe('should fetch cadre engineers and succeed', () => {
       }
     ];
     store
-      .dispatch(fetchEngineersReportActions())
+      .dispatch(fetchEngineersReportActions({ pageSize: 10 }))
       .then(() => {
         expect(store.getActions()).toEqual(expectedAction);
       })
@@ -83,15 +82,12 @@ describe('should fetch cadre engineers and succeed', () => {
     const expectedAction = [
       { type: types.FETCH_ENGINEER_REPORT_REQUEST },
       {
-        data: {
-          data: res,
-          meta: { page: 1, perPage: 10 }
-        },
+        data: { data: res },
         type: types.FETCH_ENGINEER_REPORT_SUCCESS
       }
     ];
     store
-      .dispatch(fetchEngineersReportActions())
+      .dispatch(fetchEngineersReportActions({ pageSize: 10 }))
       .then(() => {
         expect(store.getActions()).toEqual(expectedAction);
       })

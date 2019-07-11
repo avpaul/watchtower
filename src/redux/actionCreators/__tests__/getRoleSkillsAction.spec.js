@@ -24,7 +24,7 @@ describe('Fetch all role skills', () => {
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v2/ops/roles/skills`;
+  const baseURL = `${serverURL}/api/v2/projects/roles/skills`;
 
   beforeEach(() => {
     store.clearActions();

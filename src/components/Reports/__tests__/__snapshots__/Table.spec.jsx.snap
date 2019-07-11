@@ -42,16 +42,13 @@ exports[`Table should render correctly 1`] = `
             className="btn export-btn btn-sm btn-default"
             type="button"
           >
-            Export
+            Export Csv
           </button>
           <button
             className="btn filter-btn btn-sm btn-default"
             type="button"
           >
-            Filter By
-            <i
-              className="fas fa-chevron-down filter-chevron"
-            />
+            Export Pdf
           </button>
         </div>
       </div>

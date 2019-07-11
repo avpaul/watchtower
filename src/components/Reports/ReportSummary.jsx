@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Pagination from 'antd/lib/pagination';
-import 'antd/dist/antd.css';
 import { Link } from 'react-router-dom';
 import { roles, headers } from './helpers';
 import cadreProgramIconFill from '../../static/cadreProgramIconFill.svg';
 import Table from './Table';
+import PMloader from '../CustomLoader/PMLoader';
 
 const cards = role => (
-  <div key={role.id} className="col-sm-3 col-sm-6">
+  <div key={role.id} className="card-reports col-sm-3 col-sm-6">
     <div className="card-tile">
       <div className="card-tile-heading">
         <img src={cadreProgramIconFill} alt="..." />
@@ -32,46 +31,42 @@ const cards = role => (
 const ReportSummary = ({
   engineers,
   handleSearchChange,
-  handleShowSizeChange,
-  handlePageChange,
-  pageSizeOptions,
-  total,
   cadreroles,
-  loading
+  loading,
+  paginationWrapper,
+  searching
 }) => {
   const allroles = !cadreroles ? roles : cadreroles;
 
   return (
     <React.Fragment>
-      <div className="reports-container">
-        <div className="container-fluid overflow-x-auto">
-          <div className="row flex-row flex-nowrap justify-content-around">
-            {allroles.map(role => cards(role))}
+      {loading ? (
+        <PMloader />
+      ) : (
+        <div className="reports-container">
+          <div className="container-fluid roles-details overflow-x-auto">
+            <div className="row flex-row flex-nowrap justify-content-flex-start">
+              {allroles.map(role => cards(role))}
+            </div>
+          </div>
+          <div className="table-content__body">
+            <Table
+              tableHeaders={headers}
+              engineers={engineers}
+              handleChange={handleSearchChange}
+            />
+            <div className="paginator">
+              {!engineers || engineers.length === 0 || searching ? (
+                ''
+              ) : (
+                <div className="mb-5">
+                  {paginationWrapper.renderPagination()}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-        <Table
-          tableHeaders={headers}
-          engineers={engineers}
-          handleChange={handleSearchChange}
-          loading={loading}
-        />
-        <div className="paginator">
-          {!engineers || engineers.length === 0 ? (
-            ''
-          ) : (
-            <Pagination
-              showSizeChanger
-              showQuickJumper
-              defaultCurrent={1}
-              defaultPageSize={20}
-              pageSizeOptions={pageSizeOptions}
-              onShowSizeChange={handleShowSizeChange}
-              onChange={handlePageChange}
-              total={total}
-            />
-          )}
-        </div>
-      </div>
+      )}
     </React.Fragment>
   );
 };
@@ -79,16 +74,10 @@ const ReportSummary = ({
 ReportSummary.propTypes = {
   handleSearchChange: PropTypes.func.isRequired,
   engineers: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  handleShowSizeChange: PropTypes.func.isRequired,
-  handlePageChange: PropTypes.func.isRequired,
-  pageSizeOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-  total: PropTypes.number,
+  paginationWrapper: PropTypes.func.isRequired,
   cadreroles: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  loading: PropTypes.bool.isRequired
-};
-
-ReportSummary.defaultProps = {
-  total: 50
+  loading: PropTypes.bool.isRequired,
+  searching: PropTypes.bool.isRequired
 };
 
 export default ReportSummary;

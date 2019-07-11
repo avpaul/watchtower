@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import Loader from '../Loader/Loader';
 import arrayOfObjectsSorter from '../../utils/sortArray';
 import './reports.scss';
 
@@ -94,17 +93,16 @@ export const panel = handleChange => (
     </div>
     <div className="col sort-btn col-xs-6 text-right">
       <button type="button" className="btn export-btn btn-sm btn-default">
-        Export
+        Export Csv
       </button>
       <button type="button" className="btn filter-btn btn-sm btn-default">
-        Filter By
-        <i className="fas fa-chevron-down filter-chevron" />
+        Export Pdf
       </button>
     </div>
   </div>
 );
 
-const Table = ({ tableHeaders, handleChange, engineers, loading }) => (
+const Table = ({ tableHeaders, handleChange, engineers }) => (
   <React.Fragment>
     <div className="panel">
       <div className="panel-heading">
@@ -112,8 +110,10 @@ const Table = ({ tableHeaders, handleChange, engineers, loading }) => (
         <br />
       </div>
     </div>
-    {loading ? (
-      <Loader />
+    {!engineers || engineers.length === 0 ? (
+      <div className="no-search__items">
+        <p>No search result</p>
+      </div>
     ) : (
       <div className="table-overflow">
         <table className="stats-table">
@@ -125,12 +125,14 @@ const Table = ({ tableHeaders, handleChange, engineers, loading }) => (
             ))}
           </tr>
           <tbody>
-            {engineers.sort(arrayOfObjectsSorter('first_name')).map(item =>
-              tableRow(
-                item,
-                `${item.first_name.charAt(0)}${item.last_name.charAt(0)}`
-              )
-            )}
+            {engineers
+              .sort(arrayOfObjectsSorter('first_name'))
+              .map(item =>
+                tableRow(
+                  item,
+                  `${item.first_name.charAt(0)}${item.last_name.charAt(0)}`
+                )
+              )}
           </tbody>
         </table>
       </div>
@@ -141,8 +143,7 @@ const Table = ({ tableHeaders, handleChange, engineers, loading }) => (
 Table.propTypes = {
   handleChange: PropTypes.func.isRequired,
   engineers: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  tableHeaders: PropTypes.arrayOf(PropTypes.string).isRequired,
-  loading: PropTypes.bool.isRequired
+  tableHeaders: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default Table;

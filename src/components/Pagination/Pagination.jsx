@@ -258,6 +258,6 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   totalPages: 10,
   perPage: 25,
-  perPageOptions: [25, 50, 100],
+  perPageOptions: [10, 20, 25, 30, 50, 100],
   hasData: false
 };

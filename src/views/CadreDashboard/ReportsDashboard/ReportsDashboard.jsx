@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import fuzzy from 'fuzzy';
 import Reports from '../../../components/Reports';
+import PaginationFrontendWrapper from '../../../components/Pagination/PaginationWrapper';
 
-class ReportsDashboard extends Component {
+export class ReportsDashboard extends Component {
   /**
    * Creates the ShoppingCart Component and initializes state
    * @constructor
@@ -12,10 +13,8 @@ class ReportsDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      engineers: [],
       searchWord: '',
-      total: '',
-      pageTotal: 1
+      searching: false
     };
   }
 
@@ -24,20 +23,16 @@ class ReportsDashboard extends Component {
    * Lifecycle implementation
    */
   componentDidMount() {
-    const { fetchEngineersReportActions, metaData, fetchAllRoles } = this.props;
+    const { fetchEngineersReportActions, fetchAllRoles } = this.props;
+    fetchEngineersReportActions({ pageSize: 'all' });
+    fetchAllRoles();
+  }
 
-    fetchEngineersReportActions().then(res => {
-      if (!res.error) {
-        this.setState(
-          {
-            engineers: res.data.data.data,
-            total: res.data.data.total,
-            pageTotal: Math.ceil(res.data.data.total / metaData.perPage)
-          },
-          () => fetchAllRoles()
-        );
-      }
-    });
+  componentDidUpdate(prevProps) {
+    const { engineers, paginationWrapper } = this.props;
+    if (engineers !== prevProps.engineers) {
+      paginationWrapper.updateData(engineers.data.data);
+    }
   }
 
   /**
@@ -47,7 +42,14 @@ class ReportsDashboard extends Component {
    */
   handleSearchChange = e => {
     const { value } = e.target;
-    this.setState({ searchWord: value.replace(/\s/g, '') });
+    if (value) {
+      this.setState({
+        searchWord: value.replace(/\s/g, ''),
+        searching: true
+      });
+    } else {
+      this.setState({ searching: false });
+    }
   };
 
   /**
@@ -55,8 +57,8 @@ class ReportsDashboard extends Component {
    * making use of fuzzy javascript library
    * @return {array} search results
    */
-  fuzzySearch = () => {
-    const { searchWord, engineers } = this.state;
+  fuzzySearch = engineers => {
+    const { searchWord } = this.state;
     const options = {
       pre: '<b>',
       post: '</b>',
@@ -67,59 +69,28 @@ class ReportsDashboard extends Component {
     return searchResults;
   };
 
-  /**
-   * handles changes that happen on size of the page or the page limit
-   * and updates the relevant items the should be displayed
-   * @param  {*}
-   * @return {array}
-   */
-  handleShowSizeChange = (_, perPage) => {
-    const { fetchEngineersReportActions, $perPage } = this.props;
-    const { total } = this.state;
-    $perPage(perPage);
-    fetchEngineersReportActions().then(res => {
-      this.setState({
-        engineers: res.data.data.data,
-        pageTotal: Math.ceil(total / perPage)
-      });
-    });
-  };
-
-  /**
-   * handles changes that happen on number of the page
-   * and updates the relevant items the should be displayed
-   * @param  {number} pageNumber
-   * @return {array}
-   */
-  handlePageChange = pageNumber => {
-    const { fetchEngineersReportActions, $page } = this.props;
-    const { pageTotal } = this.state;
-    $page(pageNumber, pageTotal);
-    fetchEngineersReportActions().then(res => {
-      this.setState({ engineers: res.data.data.data });
-    });
-  };
-
-  isLessThanTotal = element => {
-    const { total } = this.state;
-    return element <= total + 10;
-  };
-
   render() {
-    const { total } = this.state;
-    const { metaData, cadreroles, loading } = this.props;
-    const options = metaData.perPageOptions.filter(this.isLessThanTotal);
+    const {
+      cadreroles,
+      loading,
+      paginationWrapper: {
+        state: { paginatedData }
+      },
+      paginationWrapper,
+      engineers
+    } = this.props;
+    const { searching } = this.state;
 
     return (
       <React.Fragment>
         <Reports
-          engineers={this.fuzzySearch()}
-          handleSearchChange={this.handleSearchChange}
-          handleShowSizeChange={this.handleShowSizeChange}
-          handlePageChange={this.handlePageChange}
-          pageSizeOptions={options}
-          total={Number.parseInt(total, 10)}
+          engineers={
+            searching ? this.fuzzySearch(engineers.data.data) : paginatedData
+          }
+          paginationWrapper={paginationWrapper}
           cadreroles={cadreroles}
+          searching={searching}
+          handleSearchChange={this.handleSearchChange}
           loading={loading}
         />
       </React.Fragment>
@@ -130,11 +101,14 @@ class ReportsDashboard extends Component {
 ReportsDashboard.propTypes = {
   fetchEngineersReportActions: PropTypes.func.isRequired,
   fetchAllRoles: PropTypes.func.isRequired,
-  $page: PropTypes.func.isRequired,
-  $perPage: PropTypes.func.isRequired,
-  metaData: PropTypes.shape().isRequired,
+  engineers: PropTypes.func.isRequired,
+  paginationWrapper: PropTypes.func.isRequired,
   cadreroles: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   loading: PropTypes.bool.isRequired
 };
 
-export default ReportsDashboard;
+const PaginationWrapped = props => (
+  <PaginationFrontendWrapper component={<ReportsDashboard {...props} />} />
+);
+
+export default PaginationWrapped;
