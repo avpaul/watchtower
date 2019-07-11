@@ -46,6 +46,7 @@ import createRoleReducer from './createRoleReducer';
 import getRoleSkillsReducer from './getRoleSkillsReducer';
 import getAllVacancies from './getAllVacanciesReducer';
 import editCertification from './opsEditCertificationReducer';
+import cadreAddCertificationReducer from './cadreAddCertificationReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -85,6 +86,7 @@ const rootReducer = combineReducers({
   fetchSlackChannels,
   allRoles: cadreProjectRolereducer,
   allCertifications: cadreCertificationreducer,
+  certifications: cadreAddCertificationReducer,
   fetchActiveRole: fellowActiveRoleReducer,
   createProjectVacancies,
   editSingleProject: editProjectReducer,

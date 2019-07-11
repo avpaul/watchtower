@@ -7,7 +7,7 @@ import Loader from '../Loader/Loader';
 import { pluralizeCheck } from '../../utils';
 import EditCertificationModal from '../EditCertificationModal/EditCertificationModalContainer';
 
-import './Card.scss';
+import './Card.css';
 
 class Card extends React.Component {
   constructor(props) {

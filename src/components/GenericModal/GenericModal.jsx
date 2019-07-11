@@ -85,6 +85,8 @@ class GenericModal extends Component {
   render() {
     const { id, title } = this.props;
 
+    const namedId = 'addCertificationModal' || 'addRoleModal';
+
     return (
       <div
         className="modal fade generic-modal"
@@ -95,7 +97,7 @@ class GenericModal extends Component {
       >
         <div
           className={`modal-dialog modal-dialog-centered ${
-            id === 'addRoleModal' ? 'modal-lg' : ''
+            id === namedId ? 'modal-lg' : ''
           }`}
           role="document"
         >
