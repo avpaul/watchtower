@@ -47,6 +47,7 @@ import getRoleSkillsReducer from './getRoleSkillsReducer';
 import getAllVacancies from './getAllVacanciesReducer';
 import editCertification from './opsEditCertificationReducer';
 import cadreAddCertificationReducer from './cadreAddCertificationReducer';
+import getCertificationReducer from './getCertificationReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -95,7 +96,8 @@ const rootReducer = combineReducers({
   roleSkills: getRoleSkillsReducer,
   getAllVacancies,
   cadreVacancies,
-  editCertification
+  editCertification,
+  getCertification: getCertificationReducer
 });
 
 export default rootReducer;

@@ -103,18 +103,20 @@ describe('Activate Cadre engineer account', () => {
 
     const oldState = {
       loading: false,
-      cadreEngineers: [
-        {
-          id: 1,
-          email: 'test@example.com',
-          account_active: false
-        },
-        {
-          id: 2,
-          email: 'test2@example.com',
-          account_active: false
-        }
-      ],
+      cadreEngineers: {
+        data: [
+          {
+            id: 1,
+            email: 'test@example.com',
+            account_active: false
+          },
+          {
+            id: 2,
+            email: 'test2@example.com',
+            account_active: false
+          }
+        ]
+      },
       error: ''
     };
 

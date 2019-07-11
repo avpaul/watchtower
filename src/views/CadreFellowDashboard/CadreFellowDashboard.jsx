@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import CadrePage from './CadrePage';
 import CadreDashboardMain from '../CadreDashboard/CadreDashboardMain';
 import { Header } from '../../components/Header/Header';
+import CertificationPage from './CertificationPage';
 
 const CadreFellowDashboard = props => {
   const { location, d1Engineer } = props;
@@ -26,6 +27,11 @@ const CadreFellowDashboard = props => {
             exact
             path="/dashboard"
             component={() => <CadreDashboardMain {...props} />}
+          />
+          <Route
+            exact
+            path="/dashboard/certification/:certificationId"
+            component={() => <CertificationPage />}
           />
         </Switch>
       </Fragment>

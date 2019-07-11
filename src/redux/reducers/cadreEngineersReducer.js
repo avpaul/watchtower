@@ -24,7 +24,7 @@ const cadreEngineersReducer = (state = initialState.cadreEngineers, action) => {
         ...state,
         loading: false,
         cadreEngineers: updateActivationStatus(
-          state.cadreEngineers,
+          state.cadreEngineers.data,
           action.engineer
         ),
         error: ''
