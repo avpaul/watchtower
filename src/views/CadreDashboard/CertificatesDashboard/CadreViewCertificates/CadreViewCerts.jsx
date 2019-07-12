@@ -9,8 +9,7 @@ import AddCertificationModal from '../CadreAddCertification/AddCertificationModa
 export default class CadreViewCerts extends Component {
   componentDidMount() {
     const { fetchAllCertifications } = this.props;
-    if (!['production', 'staging'].includes(process.env.NODE_ENV))
-      fetchAllCertifications();
+    fetchAllCertifications();
   }
 
   render() {
