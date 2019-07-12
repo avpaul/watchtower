@@ -1,43 +1,45 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import ReportsDashboard from '../ReportsDashboard';
+import ReportsDashboardWrapped, { ReportsDashboard } from '../ReportsDashboard';
 import Reports from '../../../../components/Reports';
 import Table from '../../../../components/Reports/Table';
+import mockPaginationWrapper from '../../../../components/Pagination/mockPaginationWrapper';
 import cadreEngineers from '../../../../__mocks__/cadreEngineersSummary.json';
 
 describe('test ReportsDashboard component', () => {
-  let wrapper;
   const mockStore = configureMockStore();
   const props = {
-    fetchEngineersReportActions: jest.fn().mockImplementation(() =>
-      Promise.resolve({
-        error: false,
-        data: cadreEngineers
-      })
-    ),
-    metaData: {
-      page: 1,
-      perPage: 20,
-      perPageOptions: ['5', '10', '19', '30', '50', '100'],
-      total: 0
-    },
-    $perPage: jest.fn(),
-    $page: jest.fn()
+    fetchEngineersReportActions: jest.fn(),
+    paginationWrapper: jest.fn(),
+    fetchAllRoles: jest.fn(),
+    engineers: { data: cadreEngineers }
   };
   const store = mockStore({
     searchWord: ''
   });
 
-  beforeEach(() => {
-    wrapper = shallow(<ReportsDashboard {...props} store={store} />);
-  });
+  const setup = (mountComponent = false, propOverrides = {}) => {
+    const newProps = { ...props, ...propOverrides };
+    const wrapper = mountComponent
+      ? mount(<ReportsDashboardWrapped {...newProps} store={store} />)
+      : shallow(
+          <ReportsDashboard
+            {...newProps}
+            paginationWrapper={mockPaginationWrapper}
+          />
+        );
+
+    return { props, wrapper };
+  };
 
   it('should render correctly', () => {
+    const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should test handleSearchChange', () => {
+  it('should test handleSearchChange when seraching state is true', () => {
+    const { wrapper } = setup();
     wrapper
       .find(Reports)
       .dive()
@@ -46,26 +48,32 @@ describe('test ReportsDashboard component', () => {
       .find('input')
       .simulate('change', {
         target: {
-          value: 'brian mboya'
+          value: 'brian ashiundu'
         }
       });
-    expect(wrapper.state().searchWord).toBe('brianmboya');
+    expect(wrapper.state().searchWord).toBe('brianashiundu');
   });
 
-  it('should test handleShowSizeChange functionality', () => {
-    wrapper.setState({
-      engineers: cadreEngineers.data,
-      total: cadreEngineers.data.length
-    });
-    wrapper.instance().handleShowSizeChange(1, 20);
-    expect(wrapper.state().engineers.length).toEqual(20);
+  it('should test handleSearchChange when searching state is false', () => {
+    const { wrapper } = setup();
+    wrapper
+      .find(Reports)
+      .dive()
+      .find(Table)
+      .dive()
+      .find('input')
+      .simulate('change', {
+        target: {
+          value: ''
+        }
+      });
+    expect(wrapper.state().searching).toBe(false);
   });
 
-  it('should test handlePageChange functionality', () => {
-    wrapper.setState({
-      engineers: cadreEngineers.data
+  it('update props with different array', () => {
+    const { wrapper } = setup();
+    wrapper.setProps({ engineers: { data: cadreEngineers } }, () => {
+      expect(wrapper).toMatchSnapshot();
     });
-    wrapper.instance().handlePageChange(1);
-    expect(wrapper.state().engineers.length).toEqual(20);
   });
 });

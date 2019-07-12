@@ -1,6 +1,5 @@
 import fetchEngineerReportReducer from '../engineersReportReducer';
 import * as types from '../../constants/engineersReportTypes';
-import DATA_PAGINATE_META_DATA from '../../constants/paginateTypes';
 import initialState from '../initialState';
 
 describe('fetch cadre engineers', () => {
@@ -39,31 +38,9 @@ describe('fetch cadre engineers', () => {
     );
   });
 
-  it('should update state pagination state on queryParams change', () => {
-    const newState = {
-      error: '',
-      loading: false,
-      meta: {
-        page: 2,
-        perPage: 10,
-        perPageOptions: ['5', '10', '19', '30', '50', '100'],
-        total: 0
-      }
-    };
-    const action = {
-      type: DATA_PAGINATE_META_DATA,
-      meta: {
-        page: 2,
-        perPage: 10
-      }
-    };
-    expect(fetchEngineerReportReducer(initialState.reports, action)).toEqual(
-      newState
-    );
-  });
-
   it('should update error if request fails', () => {
     const newState = {
+      data: [],
       error: 'Network error',
       loading: false,
       meta: initialState.reports.meta
@@ -80,6 +57,7 @@ describe('fetch cadre engineers', () => {
 
   it('should update error if request fails', () => {
     const newState = {
+      data: [],
       error: '',
       loading: true,
       meta: initialState.reports.meta

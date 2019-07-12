@@ -4,11 +4,54 @@ exports[`test ReportsDashboard component should render correctly 1`] = `
 <Fragment>
   <ReportSummary
     engineers={Array []}
-    handlePageChange={[Function]}
     handleSearchChange={[Function]}
-    handleShowSizeChange={[Function]}
-    pageSizeOptions={Array []}
-    total={NaN}
+    paginationWrapper={
+      Object {
+        "handlePaginationPageChange": [Function],
+        "paginateData": [Function],
+        "processData": [Function],
+        "renderPagination": [Function],
+        "state": Object {
+          "filteredData": Array [],
+          "paginatedData": Array [],
+          "paginationFilter": Object {
+            "page": 1,
+            "perPage": 25,
+            "totalPages": 0,
+          },
+        },
+        "updateData": [Function],
+      }
+    }
+    searching={false}
+  />
+</Fragment>
+`;
+
+exports[`test ReportsDashboard component update props with different array 1`] = `
+<Fragment>
+  <ReportSummary
+    engineers={Array []}
+    handleSearchChange={[Function]}
+    paginationWrapper={
+      Object {
+        "handlePaginationPageChange": [Function],
+        "paginateData": [Function],
+        "processData": [Function],
+        "renderPagination": [Function],
+        "state": Object {
+          "filteredData": Array [],
+          "paginatedData": Array [],
+          "paginationFilter": Object {
+            "page": 1,
+            "perPage": 25,
+            "totalPages": 0,
+          },
+        },
+        "updateData": [Function],
+      }
+    }
+    searching={false}
   />
 </Fragment>
 `;

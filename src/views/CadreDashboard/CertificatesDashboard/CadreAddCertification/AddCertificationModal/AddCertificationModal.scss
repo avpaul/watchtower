@@ -1,40 +1,39 @@
-.generic-modal textarea{
-    height: 9rem;
-    resize: none;
+.generic-modal textarea {
+  height: 9rem;
+  resize: none;
 }
 
 #saveCertificationButton,
-#closeCertificationModal{
-    background-color: #10a36d;
-    border: #10a36d;
-    border-radius: 0.3rem;
-    font-weight: bold;
-    font-size: 90%;
+#closeCertificationModal {
+  background-color: #10a36d;
+  border: #10a36d;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  font-size: 90%;
 }
 
 #addCertificationModal .modal-header {
-    padding-bottom: 0;
-  }
-  
+  padding-bottom: 0;
+}
+
 #addCertificationModal .modal-footer {
-    padding-top: 0;
-  }
-  
+  padding-top: 0;
+}
+
 #addCertificationModal h1 {
-    font-size: 150%;
-    font-weight: 400 !important;
-    color: black;
-    margin-bottom: 0.3rem;
-  }
+  font-size: 150%;
+  font-weight: 400 !important;
+  color: black;
+  margin-bottom: 0.3rem;
+}
 
 .modal-lg {
-    width: 37rem;
-  }
-  
+  width: 37rem;
+}
+
 @media (max-width: 554px) {
-    .modal-lg {
-      width: 90%;
-      margin: 0 auto;
-    
-    }
+  .modal-lg {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

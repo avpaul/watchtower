@@ -203,6 +203,7 @@ export default {
   reports: {
     loading: false,
     error: '',
+    data: [],
     meta: {
       page: 1,
       perPage: INDEX_PAGE_SIZE_DEFAULT,

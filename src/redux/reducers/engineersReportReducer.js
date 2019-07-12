@@ -1,5 +1,4 @@
 import * as types from '../constants/engineersReportTypes';
-import DATA_PAGINATE_META_DATA from '../constants/paginateTypes';
 import initialState from './initialState';
 
 /**
@@ -13,16 +12,10 @@ const fetchEngineerReportReducer = (state = initialState.reports, action) => {
   switch (action.type) {
     case types.FETCH_ENGINEER_REPORT_REQUEST:
       return { ...state, loading: true };
-    case DATA_PAGINATE_META_DATA:
-      return {
-        ...state,
-        meta: { ...state.meta, ...action.meta }
-      };
     case types.FETCH_ENGINEER_REPORT_SUCCESS:
       return {
         ...state,
         data: action.data,
-        meta: { ...state.meta, ...action.meta },
         loading: false
       };
     case types.FETCH_ENGINEER_REPORT_FAILURE:
