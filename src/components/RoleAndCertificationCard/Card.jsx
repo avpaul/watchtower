@@ -155,15 +155,27 @@ class Card extends React.Component {
     );
   };
 
-  renderDropdown = () => (
+  renderDropdown = type => (
     <div className="dropdown-menu dropdown-menu-right">
-      <button
-        type="button"
-        className="dropdown-item"
-        onClick={this.openCertificationModal}
-      >
-        Edit Certification
-      </button>
+      {type === 'role' ? (
+        <button
+          type="button"
+          data-toggle="modal"
+          data-target="#editRoleModal"
+          className="dropdown-item"
+          onClick={this.handleFocusRole}
+        >
+          Edit Role
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="dropdown-item"
+          onClick={this.openCertificationModal}
+        >
+          Edit Certification
+        </button>
+      )}
     </div>
   );
 
@@ -193,7 +205,7 @@ class Card extends React.Component {
             <div className="role-card__icon" data-toggle="dropdown">
               <img src={More} alt="" />
             </div>
-            {this.renderDropdown()}
+            {this.renderDropdown(type)}
           </div>
         </div>
         <div className="role-card__title">{details.name}</div>
