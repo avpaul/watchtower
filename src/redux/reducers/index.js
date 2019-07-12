@@ -48,6 +48,9 @@ import getAllVacancies from './getAllVacanciesReducer';
 import editCertification from './opsEditCertificationReducer';
 import cadreAddCertificationReducer from './cadreAddCertificationReducer';
 import getCertificationReducer from './getCertificationReducer';
+import editProjectVacancies from './editProjectVacanciesReducer';
+import deleteProjectVacancies from './deleteProjectVacanciesReducer';
+import projectVacanciesOnFocus from './setProjectVacanciesOnFocusReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -97,7 +100,10 @@ const rootReducer = combineReducers({
   getAllVacancies,
   cadreVacancies,
   editCertification,
-  getCertification: getCertificationReducer
+  getCertification: getCertificationReducer,
+  editProjectVacancies,
+  deleteProjectVacancies,
+  projectVacanciesOnFocus
 });
 
 export default rootReducer;

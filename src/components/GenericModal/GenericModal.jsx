@@ -127,8 +127,8 @@ GenericModal.propTypes = {
 };
 
 GenericModal.defaultProps = {
-  handleClose: () => {},
   handleSubmit: () => {},
+  handleClose: () => {},
   successMessage: 'Success!',
   success: false,
   submitLoading: false,

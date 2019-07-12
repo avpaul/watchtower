@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vacancies Dashboard container renders correctly 1`] = `
+<VacanciesDashboard
+  getAllVacancies={
+    Object {
+      "data": Array [],
+      "error": null,
+      "loading": false,
+    }
+  }
+  getAllVacanciesAction={[Function]}
+  setProjectVacanciesOnFocus={[Function]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": [Function],
+    }
+  }
+/>
+`;
+
+exports[`Vacancies Dashboard container should map state to props 1`] = `
+Object {
+  "getAllVacancies": Object {
+    "data": Array [],
+    "error": null,
+    "loading": false,
+  },
+}
+`;

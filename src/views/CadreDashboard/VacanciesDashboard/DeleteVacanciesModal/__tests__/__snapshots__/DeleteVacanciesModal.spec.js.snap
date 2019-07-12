@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete Vacancies Modal renders correctly 1`] = `
+<GenericModal
+  footer={
+    <div
+      className="modal-footer"
+    >
+      <CadreMainButton
+        buttonProps={
+          Object {
+            "onClick": [Function],
+          }
+        }
+        label="DELETE"
+      />
+    </div>
+  }
+  handleClose={[Function]}
+  handleSubmit={[Function]}
+  id="deleteProjectVacanciesModal"
+  submitLoading={false}
+  success={false}
+  successMessage="Project vacancies have been deleted!"
+  title="Delete Project Vacancies"
+>
+  <p>
+    Are you sure you want to delete these project vacancies?
+  </p>
+</GenericModal>
+`;

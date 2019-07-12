@@ -4,7 +4,7 @@ import './Button.scss';
 
 const CadreMainButton = ({ buttonProps, label }) => (
   <button
-    id={`cadre-button-${label.toLowerCase()}`}
+    id={`cadre-button-${label.toLowerCase().replace(' ', '-')}`}
     className="cadre-main-button"
     type="button"
     {...buttonProps}

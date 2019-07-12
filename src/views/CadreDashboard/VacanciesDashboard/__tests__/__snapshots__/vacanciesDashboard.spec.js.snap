@@ -5,6 +5,7 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
   className="vacancies-dashboard cadre__page"
 >
   <Connect(AddVacanciesModal) />
+  <Connect(DeleteVacanciesModal) />
   <div
     className="row"
   >
@@ -13,7 +14,7 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
     >
       <Title
         subTitle=""
-        title="2 Vacancies (1 Project, 1 Certification)"
+        title="3 Vacancies (2 Project, 1 Certification)"
       />
     </div>
     <div
@@ -24,6 +25,7 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
           Object {
             "data-target": "#addProjectVacanciesModal",
             "data-toggle": "modal",
+            "onClick": [Function],
           }
         }
         label="ADD VACANCIES"
@@ -68,14 +70,41 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
           "vacancies": Array [
             Object {
               "fellow_id": null,
-              "id": 99,
+              "id": 1,
               "is_active": false,
               "project_id": 7,
               "project_role_id": 1,
             },
             Object {
               "fellow_id": null,
-              "id": 105,
+              "id": 2,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+            },
+          ],
+        },
+        Object {
+          "available_slots": 2,
+          "project": Object {
+            "id": 7,
+            "name": "Corrupti non.",
+          },
+          "role": Object {
+            "id": 1,
+            "name": "Engineer",
+          },
+          "vacancies": Array [
+            Object {
+              "fellow_id": null,
+              "id": 1,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+            },
+            Object {
+              "fellow_id": null,
+              "id": 2,
               "is_active": false,
               "project_id": 7,
               "project_role_id": 1,

@@ -9,7 +9,12 @@ const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
  * @param object axiosConfig Axios configurations
  * @return object An instance of a Promise
  */
-const genericAPIRequest = (actionTypes, axiosConfig) => dispatch => {
+const genericAPIRequest = (
+  actionTypes,
+  axiosConfig,
+  onSuccess = () => {},
+  onFailure = () => {}
+) => dispatch => {
   dispatch({ type: actionTypes[0] });
   return axios(axiosConfig)
     .then(response => {
@@ -17,13 +22,15 @@ const genericAPIRequest = (actionTypes, axiosConfig) => dispatch => {
         type: actionTypes[1],
         data: response.data.data || response.data
       });
+      onSuccess(dispatch, response);
     })
-    .catch(error =>
+    .catch(error => {
       dispatch({
         type: actionTypes[2],
         error: errorHandler(error)
-      })
-    );
+      });
+      onFailure(dispatch, error);
+    });
 };
 
 /**
@@ -33,12 +40,21 @@ const genericAPIRequest = (actionTypes, axiosConfig) => dispatch => {
  * @param object postData A list of action types
  * @return object An instance of a Promise
  */
-export const genericAPIPostRequest = (url, actionTypes, postData) =>
-  genericAPIRequest(actionTypes, {
-    method: 'POST',
-    url: `${serverURL}/api/v2/${url}`,
-    data: postData
-  });
+export const genericAPIPostRequest = (
+  url,
+  actionTypes,
+  postData,
+  onSuccess = () => {}
+) =>
+  genericAPIRequest(
+    actionTypes,
+    {
+      method: 'POST',
+      url: `${serverURL}/api/v2/${url}`,
+      data: postData
+    },
+    onSuccess
+  );
 
 /**
  * A generic action creator for making GET requests
@@ -52,16 +68,15 @@ export const genericAPIGetRequest = (url, actionTypes) =>
     url: `${serverURL}/api/v2/${url}`
   });
 
-
 /**
- * Serialize the query paramaters
+ * Serialize the query parameters
  * @param  {object} query
  * @return {object}
  */
 export const serializeQuery = query =>
-Object.keys(query)
-  .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(query[key])}`)
-  .join('&');
+  Object.keys(query)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(query[key])}`)
+    .join('&');
 
 /**
  * A generic action creator for making PUT requests
@@ -69,15 +84,45 @@ Object.keys(query)
  * @param array actionTypes A list of action types
  * @return object An instance of a Promise
  */
-export const genericAPIPutRequest = (url, actionTypes, putData) =>
-  genericAPIRequest(actionTypes, {
-    method: 'PUT',
-    url: `${serverURL}/api/v2/${url}`,
-    data: putData
-  });
+export const genericAPIPutRequest = (
+  url,
+  actionTypes,
+  putData,
+  onSuccess = () => {}
+) =>
+  genericAPIRequest(
+    actionTypes,
+    {
+      method: 'PUT',
+      url: `${serverURL}/api/v2/${url}`,
+      data: putData
+    },
+    onSuccess
+  );
+
+/**
+ * A generic action creator for making DELETE requests
+ * @param string The url path to make the request to
+ * @param array actionTypes A list of action types
+ * @return object An instance of a Promise
+ */
+export const genericAPIDeleteRequest = (
+  url,
+  actionTypes,
+  onSuccess = () => {}
+) =>
+  genericAPIRequest(
+    actionTypes,
+    {
+      method: 'DELETE',
+      url: `${serverURL}/api/v2/${url}`
+    },
+    onSuccess
+  );
 
 export default {
   genericAPIPostRequest,
   genericAPIGetRequest,
-  genericAPIPutRequest
+  genericAPIPutRequest,
+  genericAPIDeleteRequest
 };

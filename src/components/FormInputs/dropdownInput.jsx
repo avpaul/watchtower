@@ -36,6 +36,12 @@ class DropdownInput extends Component {
     attachToParentComponent(this);
   }
 
+  componentDidUpdate(prevProps) {
+    const { inputValue } = this.props;
+    // eslint-disable-next-line react/no-did-update-set-state
+    if (prevProps.inputValue !== inputValue) this.setState({ inputValue });
+  }
+
   /**
    * Handles the change of value in the input.
    *

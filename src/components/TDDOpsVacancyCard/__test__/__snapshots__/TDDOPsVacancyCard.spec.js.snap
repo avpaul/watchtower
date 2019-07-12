@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test TDD Ops vacancy card renders certification vacancy correctly 1`] = `
+exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
 <div
   className="ops-vacancy-card"
 >
@@ -31,10 +31,45 @@ exports[`Test TDD Ops vacancy card renders certification vacancy correctly 1`] =
 </div>
 `;
 
-exports[`Test TDD Ops vacancy card renders project vacancy correctly 1`] = `
+exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
 <div
   className="ops-vacancy-card"
 >
+  <div
+    className="ops-vacancy-card__icon"
+    data-toggle="dropdown"
+  >
+    <div
+      className="d-flex pr-3 align-items-center"
+    >
+      <img
+        alt=""
+        src="More.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="dropdown-menu dropdown-menu-right"
+  >
+    <button
+      className="dropdown-item"
+      data-target="#addProjectVacanciesModal"
+      data-toggle="modal"
+      onClick={[Function]}
+      type="button"
+    >
+      Edit
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#deleteProjectVacanciesModal"
+      data-toggle="modal"
+      onClick={[Function]}
+      type="button"
+    >
+      Delete
+    </button>
+  </div>
   <div
     className="ops-vacancy-card__role-name"
   >
@@ -43,7 +78,7 @@ exports[`Test TDD Ops vacancy card renders project vacancy correctly 1`] = `
   <div
     className="ops-vacancy-card__project-slots"
   >
-    2
+    5
      
     available slots
   </div>

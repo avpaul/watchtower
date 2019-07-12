@@ -1,39 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ViewVacancies from '../ViewVacancies';
+import { generateVacancyGroups } from '../../../../../__mocks__/projectVacancy';
 
 describe('Vacancy Dashboard', () => {
   const vacanciesToDisplay = "project";
-  const allVacancies = [
-    {
-      project: {
-        id: 7,
-        name: 'Corrupti non.'
-      },
-      role: {
-        id: 1,
-        name: 'Engineer'
-      },
-      vacancies: [
-        {
-          id: 99,
-          project_id: 7,
-          project_role_id: 1,
-          fellow_id: null,
-          is_active: false
-        },
+  const allVacancies = generateVacancyGroups(5, 2);
 
-        {
-          id: 105,
-          project_id: 7,
-          project_role_id: 1,
-          fellow_id: null,
-          is_active: false
-        }
-      ],
-      available_slots: 2
-    }
-  ];
   /**
    * Creates an enzyme instance to test the VacancyDashboard component.
    *

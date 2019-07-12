@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
 import VacancyDashboard from './VacanciesDashboard';
+import {
+  getAllVacancies as getAllVacanciesAction,
+  setProjectVacanciesOnFocus
+} from '../../../redux/actionCreators/projectVacancyActions';
 
-import { getAllVacancies as getAllVacanciesAction } from '../../../redux/actionCreators/projectVacancyActions';
-
-const mapStateToProps = ({ getAllVacancies }) => ({
+export const mapStateToProps = ({ getAllVacancies }) => ({
   getAllVacancies
 });
 
 export default connect(
   mapStateToProps,
   {
-    getAllVacanciesAction
+    getAllVacanciesAction,
+    setProjectVacanciesOnFocus
   }
 )(VacancyDashboard);

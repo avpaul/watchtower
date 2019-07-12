@@ -3,8 +3,10 @@ import { shallow, mount } from 'enzyme';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import cases from 'jest-in-case';
 import AddVacanciesModal from '../AddVacanciesModal';
 import initialState from '../../../../../redux/reducers/initialState';
+import projectVacanciesGroupMock from '../../../../../__mocks__/projectVacancy';
 
 jest.useFakeTimers();
 
@@ -25,7 +27,7 @@ describe('Add Vacancy Modal', () => {
       ...initialState.allProjectRoles,
       data: [
         {
-          id: 1,
+          id: 2,
           name: 'Scrum Master'
         }
       ]
@@ -35,16 +37,20 @@ describe('Add Vacancy Modal', () => {
   const store = buildStore(reduxState);
   const defaultProps = {
     createNewProjectVacancies: jest.fn(),
+    editProjectVacancies: jest.fn(),
     fetchAllProjects: jest.fn(),
     fetchAllRoles: jest.fn(),
     createProjectVacancies: initialState.createProjectVacancies,
+    editProjectVacanciesState: initialState.editProjectVacancies,
     allProjects: reduxState.allProjects,
-    allProjectRoles: reduxState.allProjectRoles
+    allProjectRoles: reduxState.allProjectRoles,
+    projectVacanciesOnFocus: initialState.projectVacanciesOnFocus,
+    editMode: false
   };
 
   const newVacanciesDetails = {
     project: '1',
-    role: '1',
+    role: '2',
     slots: '3'
   };
 
@@ -113,6 +119,14 @@ describe('Add Vacancy Modal', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders correctly with no projects and roles', () => {
+    const { wrapper } = setup({
+      allProjects: initialState.allProjects,
+      allProjectRoles: initialState.allRoles
+    });
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('calls the handleSubmit successfully', () => {
     const spy = jest.fn();
     const { wrapper } = setup({ createNewProjectVacancies: spy }, true);
@@ -130,6 +144,40 @@ describe('Add Vacancy Modal', () => {
       .simulate('change', { target: { value: newVacanciesDetails.slots } });
     testSubmission(button, 1, spy);
   });
+
+  cases(
+    'calls the handleSubmit successfully on editMode',
+    testCase => {
+      const props = {
+        editProjectVacancies: jest.fn(),
+        editMode: true,
+        projectVacanciesOnFocus: projectVacanciesGroupMock
+      };
+
+      const { wrapper } = setup(props, true);
+      const button = wrapper.find('.cadre-main-button');
+      button.simulate('click');
+
+      testSubmission(button, 0, props.editProjectVacancies);
+      if (testCase.isDropdown) {
+        addDropdownValue(
+          wrapper,
+          `#${testCase.field}`,
+          newVacanciesDetails[testCase.field]
+        );
+      } else {
+        wrapper
+          .find(`#${testCase.field}`)
+          .simulate('change', { target: { value: newVacanciesDetails.slots } });
+      }
+      testSubmission(button, 1, props.editProjectVacancies);
+    },
+    [
+      { field: 'project', isDropdown: true },
+      { field: 'role', isDropdown: true },
+      { field: 'slots', isDropdown: false }
+    ]
+  );
 
   it('calls the handleClose successfully', async () => {
     const spy = jest.fn();

@@ -1,3 +1,5 @@
+@import '../../assets/sass/abstract/variables';
+
 .ops-vacancy-card {
   box-sizing: border-box;
   height: 182px;
@@ -7,43 +9,55 @@
   background-color: #ffffff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
   padding-left: 25px;
-}
+  position: relative;
 
-.grey-vacancy-card {
-  background-color: #eaeaea;
-}
+  &--grey {
+    @extend .ops-vacancy-card;
+    background-color: #eaeaea;
+  }
 
-.ops-vacancy-card__role-name {
-  height: 23px;
-  width: 90%;
-  color: #344c5a;
-  font-family: 'DIN Pro';
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 23px;
-  margin-top: 1.7rem;
-  margin-bottom: 0.2rem;
-}
+  &__role-name {
+    height: 23px;
+    width: 90%;
+    color: #344c5a;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-top: 1.7rem;
+    margin-bottom: 0.2rem;
+  }
 
-.ops-vacancy-card__project-slots {
-  margin-bottom: 1rem;
-}
+  &__project-slots {
+    margin-bottom: 1rem;
+  }
 
-.ops-vacancy-card__project {
-  height: 36px;
-  width: 85%;
-  color: rgba(52, 76, 90, 0.62);
-  font-family: 'DIN Pro';
-  font-size: 14px;
-  line-height: 18px;
-}
+  &__project {
+    height: 36px;
+    width: 85%;
+    color: rgba(52, 76, 90, 0.62);
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-.ops-vacancy-card__applications {
-  height: 18px;
-  width: 100%;
-  color: #0459e4;
-  font-family: 'DIN Pro';
-  font-size: 14px;
-  line-height: 18px;
-  margin-top: 0.7rem;
+  &__applications {
+    height: 18px;
+    width: 100%;
+    color: #0459e4;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0.7rem;
+  }
+
+  &__icon {
+    height: 11px;
+    width: 3px;
+    float: right;
+    padding: 1rem 1.3rem 1rem 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
