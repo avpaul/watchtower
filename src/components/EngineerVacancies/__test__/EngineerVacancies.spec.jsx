@@ -8,6 +8,65 @@ describe('EngineerVacancies ', () => {
       data: {},
       error: null
     },
+    vacanciesArray: [
+      {
+        project: {
+          id: 1,
+          name: 'Dolorum suscipit molestiae.'
+        },
+        role: {
+          id: 1,
+          name: 'Engineer'
+        },
+        vacancies: [
+          {
+            id: 4,
+            project_id: 1,
+            project_role_id: 1,
+            fellow_id: null,
+            is_active: false,
+            project: {
+              id: 1,
+              name: 'Dolorum suscipit molestiae.'
+            },
+            role: {
+              id: 1,
+              name: 'Engineer'
+            }
+          }
+        ],
+        available_slots: 1
+      }
+    ],
+    certificationsArray: [
+      {
+        certification: {
+          '0': {
+            id: 2,
+            certification_id: 1,
+            fellow_id: null,
+            is_active: false,
+            created_at: '2019-07-09 17:22:58',
+            updated_at: '2019-07-09 17:22:58',
+            certification: {
+              id: 1,
+              name: 'Mrs. Alanna Ziemann',
+              description:
+                'Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.',
+              exclusive: false,
+              duration: 20
+            }
+          },
+          id: 1,
+          name: 'Mrs. Alanna Ziemann',
+          description:
+            'Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.',
+          exclusive: false,
+          duration: 20
+        },
+        available_slots: 2
+      }
+    ],
     loading: false
   };
 
@@ -24,25 +83,9 @@ describe('EngineerVacancies ', () => {
 
   it('renders as expected with required props', () => {
     const props = {
-      cadreVacancies: {
-        data: {
-          message: 'successfully retrieved all vacancies',
-          projectVacancies: [
-            {
-              project: { name: 'Voluptate excepturi.' },
-              role: { name: 'QA Engineer' }
-            }
-          ],
-          certificationVacancies: [
-            {
-              certification: {
-                name: 'Colt Anderson'
-              }
-            }
-          ]
-        },
-        error: null
-      }
+      vacanciesArray: [],
+      certificationsArray: [],
+      error: null
     };
     const wrapper = setup({ ...props });
     expect(wrapper).toMatchSnapshot();

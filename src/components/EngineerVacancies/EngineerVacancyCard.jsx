@@ -6,7 +6,7 @@ import './EngineerVacancies.scss';
 const EngineerVacancyCard = ({ role, projectName }) => (
   <div className="vacancy-card">
     <div className="vacancy-card__inner">
-      <img src={vacancyIcon} alt="vacancy-card__inner icon" />
+      <img src={vacancyIcon} alt="vacancy-card__inner icon" className="icon" />
       <ul className="vacancy-card__inner__list">
         <li>{role}</li>
         <li>{projectName}</li>

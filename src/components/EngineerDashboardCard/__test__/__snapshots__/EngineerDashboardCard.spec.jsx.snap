@@ -9,8 +9,22 @@ exports[`EngineerDashboardCard  renders as expected with required props 1`] = `
   >
     Vacancies
   </span>
+  <div>
+    <input
+      className="search-input"
+      placeholder="Search..."
+      type="text"
+    />
+  </div>
   <div
-    className="dasboardcard-wrapper__info"
+    className="dasboardcard-wrapper__available-engineers"
+  >
+     
+    undefined Available Vacancies
+     
+  </div>
+  <div
+    className="dasboardcard-wrapper__info vacancy-wrapper__search"
   >
     <div>
       child component

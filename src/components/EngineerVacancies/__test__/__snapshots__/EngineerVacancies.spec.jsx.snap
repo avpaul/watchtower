@@ -1,27 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EngineerVacancies  renders as expected with required props 1`] = `
-<Loader
-  size=""
-/>
+<div>
+  <div
+    className="vacancies-container--all-vacancies"
+  >
+    <div
+      className="render-vacancies__div"
+    >
+      <EngineerVacancyCard
+        projectName="Dolorum suscipit molestiae."
+        role="Engineer"
+      />
+      <EngineerVacancyCard
+        projectName="Certification"
+        role="Mrs. Alanna Ziemann"
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`EngineerVacancies  renders as expected with required props 2`] = `
-<div
-  className="vacancies-container--all-vacancies"
->
-  <span
-    className="vacancies-container--all-vacancies__span"
+<div>
+  <div
+    className="vacancies-container--no-vacancies"
   >
-    2 Available Vacancies
-  </span>
-  <EngineerVacancyCard
-    projectName="Voluptate excepturi."
-    role="QA Engineer"
-  />
-  <EngineerVacancyCard
-    projectName="Certification"
-    role="Colt Anderson"
-  />
+    <div
+      className="vacancies-container--no-vacancies"
+    >
+      <img
+        alt="vacancies-container--no-vacancies__icon"
+        src="projectdown.svg"
+      />
+      <span
+        className="vacancies-container--no-vacancies__span"
+      >
+        No Vacancy "" Available
+      </span>
+    </div>
+  </div>
 </div>
 `;
