@@ -1,9 +1,10 @@
 import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
+import moxios from 'moxios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
-import { fetchAllRoles } from '../cadreProjectRoleActions';
+import { fetchAllRoles, deleteRoleRequest } from '../cadreProjectRoleActions';
 
 import * as types from '../../constants/cadreProjectRolesTypes';
 
@@ -13,6 +14,9 @@ describe('Fetch all roles action', () => {
       loading: false,
       data: [],
       error: null
+    },
+    allRoles: {
+      deleteTarget: 1
     }
   };
 
@@ -24,10 +28,12 @@ describe('Fetch all roles action', () => {
 
   beforeEach(() => {
     store.clearActions();
+    moxios.install();
   });
 
   afterEach(() => {
     mock.reset();
+    moxios.uninstall();
   });
 
   /**
@@ -68,5 +74,45 @@ describe('Fetch all roles action', () => {
       },
       [500, { message: 'Internal Server Error!' }]
     );
+  });
+
+  it('creates DELETE_PROJECT_ROLE when the DELETE role request completes successfully', async done => {
+    moxios.stubRequest(`${baseURL}/1`, {
+      status: 204,
+      response: {}
+    });
+
+    const expectedActions = [
+      {
+        type: types.DELETE_PROJECT_ROLE,
+        data: { role: 1 }
+      }
+    ];
+
+    await store.dispatch(deleteRoleRequest()).then(() => {
+      expect(store.getActions()).toEqual(expectedActions);
+    });
+    done();
+  });
+
+  it('creates DELETE_PROJECT_ROLE_FAILURE when the DELETE role request fails', async done => {
+    moxios.stubRequest(`${baseURL}/1`, {
+      status: 404,
+      response: {
+        message: 'some cool error message'
+      }
+    });
+
+    const expectedActions = [
+      {
+        type: types.DELETE_PROJECT_ROLE_FAILURE,
+        error: 'some cool error message'
+      }
+    ];
+
+    await store.dispatch(deleteRoleRequest()).then(() => {
+      expect(store.getActions()).toEqual(expectedActions);
+    });
+    done();
   });
 });

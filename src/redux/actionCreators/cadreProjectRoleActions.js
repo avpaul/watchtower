@@ -1,5 +1,9 @@
+
+import axios from 'axios';
 import { genericAPIGetRequest, genericAPIPostRequest } from './helpers';
 import * as types from '../constants/cadreProjectRolesTypes';
+
+const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 /**
  * An action creator responsible for fetching all projects
@@ -37,3 +41,31 @@ export const getRoleSkills = () =>
     types.FETCH_ROLE_SKILLS_SUCCESS,
     types.FETCH_ROLE_SKILLS_FAILURE
   ]);
+
+export const setDeleteTarget = role => ({
+  type: types.SET_PROJECT_ROLE_DELETE_TARGET,
+  data: role.id
+});
+
+export const deleteRole = role => ({
+  type: types.DELETE_PROJECT_ROLE,
+  data: { role }
+});
+
+export const deleteRoleFailure = error => ({
+  type: types.DELETE_PROJECT_ROLE_FAILURE,
+  error
+});
+
+export const deleteRoleRequest = () => (dispatch, getState) => {
+  const { allRoles } = getState();
+
+  return axios
+    .delete(`${serverUrl}/api/v2/projects/roles/${allRoles.deleteTarget}`)
+    .then(() => {
+      dispatch(deleteRole(allRoles.deleteTarget));
+    })
+    .catch(error => {
+      dispatch(deleteRoleFailure(error.response.data.message));
+    });
+};

@@ -4,6 +4,7 @@ import MapProjectRoleCard from '../../../../components/MapProjectRoleCard';
 import PMloader from '../../../../components/CustomLoader/PMLoader';
 
 import './CadreViewRoles.scss';
+import DeleteRoleModal from '../../../../components/DeleteRoleModal';
 
 export default class CadreViewRoles extends Component {
   componentDidMount() {
@@ -15,6 +16,7 @@ export default class CadreViewRoles extends Component {
     const {
       allRoles: { data, loading },
       getActiveRoleEngineer,
+      setDeleteTarget,
       loading: loadActiveEngrs,
       activeEngineers
     } = this.props;
@@ -31,8 +33,10 @@ export default class CadreViewRoles extends Component {
             fetchActiveEngineers={getActiveRoleEngineer}
             loading={loadActiveEngrs}
             activeEngineers={activeEngineers}
+            setDeleteTarget={setDeleteTarget}
           />
         }
+        <DeleteRoleModal />
       </div>
     );
   }
@@ -42,6 +46,7 @@ CadreViewRoles.propTypes = {
   allRoles: PropTypes.shape(),
   fetchAllRoles: PropTypes.func.isRequired,
   getActiveRoleEngineer: PropTypes.func.isRequired,
+  setDeleteTarget: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   activeEngineers: PropTypes.oneOfType([
     PropTypes.instanceOf(Array),

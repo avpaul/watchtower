@@ -1,0 +1,21 @@
+@import "../../assets/sass/abstract/variables";
+
+.modal-title {
+    &.text-danger {
+        color: $color-danger;
+    }
+
+    img {
+        width: 2rem;
+    }
+}
+
+.modal-footer {
+    &.delete-footer button:last-child {
+        background-color: $color-danger !important;
+    }
+}
+
+.text-danger {
+  color: $color-danger !important;
+}

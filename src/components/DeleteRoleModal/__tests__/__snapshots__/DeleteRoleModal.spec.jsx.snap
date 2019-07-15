@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete Role Component Test Suite should render properly 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    aria-labelledby="deleteRole"
+    className="modal fade"
+    id="delete-role-modal"
+    roled="dialog"
+  >
+    <div
+      className="modal-dialog modal-dialog-centered"
+      role="document"
+    >
+      <div
+        className="modal-content h-auto"
+      >
+        <div
+          className="modal-header"
+        >
+          <span
+            className="modal-title text-danger"
+          >
+            <img
+              alt="delete role warning icon"
+              src="MarkDanger.svg"
+            />
+            Delete Role ?
+          </span>
+          <button
+            aria-label="Close"
+            className="close"
+            data-dismiss="modal"
+            type="button"
+          >
+            <span
+              aria-hidden="false"
+            >
+              ×
+            </span>
+          </button>
+        </div>
+        <div
+          className="modal-body"
+        >
+          Are you sure you want to delete this role?
+        </div>
+        <div
+          className="modal-footer delete-footer"
+        >
+          <button
+            className="btn"
+            data-dismiss="modal"
+            type="button"
+          >
+            No
+          </button>
+          <button
+            className="btn deleteBtn"
+            data-dismiss="modal"
+            onClick={[Function]}
+            type="button"
+          >
+            Yes, Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
