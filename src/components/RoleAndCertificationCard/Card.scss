@@ -1,67 +1,79 @@
+@import '../../assets/sass/abstract/variables';
+
 .role-card {
   box-sizing: border-box;
-  padding: 15px;
+  padding: 1.5rem;
   min-height: 325px;
   width: 302px;
   border: 1px solid rgba(216, 216, 216, 0.35);
   border-radius: 9px;
   background-color: #ffffff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
-}
-.role-card:hover {
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
-.role-card__icon {
-  height: 11px;
-  width: 3px;
-  float: right;
-  margin-right: 1em;
-}
-.role-card__title {
-  color: #333e44;
-  font-family: 'DIN Pro';
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-}
-.role-card__attributes {
-  color: #606060;
-  font-family: 'DIN Pro';
-  font-size: 14px;
-  line-height: 18px;
-  margin: 0;
-}
-.role-card__attributes-sm {
-  color: #606060;
-  font-family: 'DIN Pro';
-  font-size: 12px;
-  margin: 0;
-}
-.role-card__attributes-count,
-.role-card__attributes-seemore {
-  color: #0459e4;
-  font-family: 'DIN Pro';
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 20px;
-  margin: 0;
-}
-.role-card__attributes-count-sm {
-  color: #0459e4;
-  font-family: 'DIN Pro';
-  font-size: 12px;
-  margin: 0;
-}
-.role-card__description-title {
-  color: #606060;
-  font-family: 'DIN Pro';
-  font-size: 16px;
-  line-height: 18px;
-}
-.role-card__description {
-  color: #666;
-  font-family: 'DIN Pro';
-  font-size: 15px;
-  line-height: 18px;
+  position: relative;
+  &:hover {
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+  &__icon {
+    float: right;
+    background-image: url('../../static/More.svg');
+    background-position: center;
+    background-size: 3px;
+    background-repeat: no-repeat;
+    margin-top: -0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    transform: translateX(50%);
+    z-index: 50;
+    cursor: pointer;
+    outline: none !important;
+  }
+  &__title {
+    color: #333e44;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  &__attributes {
+    color: #606060;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    &-sm {
+      color: #606060;
+      font-family: $font-primary;
+      font-size: 12px;
+      margin: 0;
+    }
+    &-count,
+    &-seemore {
+      color: #0459e4;
+      font-family: $font-primary;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+      margin: 0;
+    }
+    &-count-sm {
+      color: #0459e4;
+      font-family: $font-primary;
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+  &__description-title {
+    color: #606060;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  &__description {
+    color: #666;
+    font-family: $font-primary;
+    font-size: 15px;
+    line-height: 18px;
+  }
 }

@@ -12,8 +12,10 @@ const removeVacancy = (vacancies, vacancy) =>
   vacancies.filter(
     vacancyGroup =>
       !(
-        vacancyGroup.project.id === vacancy.project.id &&
-        vacancyGroup.role.id === vacancy.role.id
+        (vacancyGroup.project.id === vacancy.old_project_id ||
+          vacancyGroup.project.id === vacancy.project.id) &&
+        (vacancyGroup.role.id === vacancy.old_project_role_id ||
+          vacancyGroup.role.id === vacancy.role.id)
       )
   );
 

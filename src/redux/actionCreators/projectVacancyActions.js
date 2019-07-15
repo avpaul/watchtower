@@ -62,7 +62,11 @@ const editProjectVacancies = vacancies =>
     (dispatch, response) =>
       dispatch({
         type: types.UPDATE_PROJECT_VACANCIES_ON_FOCUS,
-        data: response.data.data
+        data: {
+          ...response.data.data,
+          old_project_id: vacancies.old_project_id,
+          old_project_role_id: vacancies.old_project_role_id
+        }
       })
   );
 
@@ -82,7 +86,11 @@ const deleteProjectVacancies = vacanciesGroup =>
     dispatch =>
       dispatch({
         type: types.REMOVE_PROJECT_VACANCIES_ON_FOCUS,
-        data: vacanciesGroup
+        data: {
+          ...vacanciesGroup,
+          old_project_id: vacanciesGroup.project.id,
+          old_project_role_id: vacanciesGroup.role.id
+        }
       })
   );
 

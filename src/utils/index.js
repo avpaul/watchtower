@@ -161,4 +161,4 @@ export const underDevelopment = component =>
     component
   );
 
-export default truncate;
+export { truncate };
