@@ -31,6 +31,9 @@
   }
   textarea {
     padding: 0.5rem;
+    &::placeholder {
+      color: #cccccc;
+    }
   }
   .alert {
     &,

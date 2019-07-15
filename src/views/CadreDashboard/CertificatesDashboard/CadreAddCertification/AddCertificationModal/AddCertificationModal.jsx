@@ -142,7 +142,9 @@ class AddCertificationModal extends Component {
       handleChange={this.handleChange}
       placeholder={exclusive}
       options={
-        exclusive ? 'Certicicate is Exclusive' : 'Certicicate is not Exclusive'
+        exclusive
+          ? 'Certification is Exclusive'
+          : 'Certification is not Exclusive'
       }
     />
   );

@@ -19,7 +19,7 @@ class VacanciesDashboard extends Component {
     getAllVacanciesAction();
   }
 
-  toggleVacanciesToDisplay = (e) => {
+  toggleVacanciesToDisplay = e => {
     this.setState({
       vacanciesToDisplay: e.target.value
     });
@@ -33,9 +33,9 @@ class VacanciesDashboard extends Component {
           type="button"
           value="project"
           className={
-            vacanciesToDisplay === "project"
-              ? "vacancy-toggle-button--active"
-              : "vacancy-toggle-button"
+            vacanciesToDisplay === 'project'
+              ? 'vacancy-toggle-button--active'
+              : 'vacancy-toggle-button'
           }
           onClick={this.toggleVacanciesToDisplay}
         >
@@ -45,18 +45,18 @@ class VacanciesDashboard extends Component {
           type="button"
           value="certification"
           className={
-            vacanciesToDisplay === "certification"
-              ? "vacancy-toggle-button--active"
-              : "vacancy-toggle-button"
+            vacanciesToDisplay === 'certification'
+              ? 'vacancy-toggle-button--active'
+              : 'vacancy-toggle-button'
           }
           onClick={this.toggleVacanciesToDisplay}
         >
           Certification Vacancies
         </button>
       </div>
-    )
+    );
   };
-  
+
   clearProjectVacanciesOnFocus = () => {
     const { setProjectVacanciesOnFocus } = this.props;
     setProjectVacanciesOnFocus({});
@@ -67,7 +67,7 @@ class VacanciesDashboard extends Component {
     let projectVacanciesCount = 0;
     let certificationVacanciesCount = 0;
     if (data.length !== 0) {
-      projectVacanciesCount = data.projectVacancies.length
+      projectVacanciesCount = data.projectVacancies.length;
       certificationVacanciesCount = data.certificationVacancies.length;
       totalCount = projectVacanciesCount + certificationVacanciesCount;
     }
@@ -75,7 +75,13 @@ class VacanciesDashboard extends Component {
       <React.Fragment>
         <div className="col-9">
           <Title
-            title={`${totalCount} Vacancies (${projectVacanciesCount} Project, ${certificationVacanciesCount} Certification)`}
+            title={`${totalCount} Vacanc${
+              totalCount === 1 ? 'y' : 'ies'
+            } (${projectVacanciesCount} Project${
+              projectVacanciesCount === 1 ? '' : 's'
+            }, ${certificationVacanciesCount} Certification${
+              certificationVacanciesCount === 1 ? '' : 's'
+            })`}
           />
         </div>
         <div className="col-3">
