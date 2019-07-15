@@ -1,47 +1,55 @@
 @import '../../assets/sass/abstract/variables';
 
-.ops-fellows__filters {
-  width: 100%;
-  margin: 0;
-}
+.ops-fellows {
+  &__filters {
+    width: 100%;
+    margin: 0;
+  }
 
-.ops-fellows__count {
-  font-family: $font-primary-light;
-  font-size: 1.25em;
-  line-height: 1.2em;
-  font-weight: 400;
+  &__count {
+    font-family: $font-primary-light;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    font-weight: 400;
+  }
+
+  .loader {
+    margin-top: 10rem;
+  }
 }
 
 .download-button {
   right: 5.8%;
   position: absolute;
-}
 
-.download-button > div {
-  padding-top: 21px;
-}
+  > div {
+    padding-top: 21px;
+  }
 
-.download-button .filter-dropdown__button {
-  border: 1px solid blue;
-  border-radius: 5px;
-  margin-right: unset;
-  width: 120px;
-}
+  .filter-dropdown {
+    &__button {
+      border: 1px solid blue;
+      border-radius: 5px;
+      margin-right: unset;
+      width: 120px;
 
-.download-button .filter-dropdown__list {
-  right: 0;
-  border-radius: 5px;
-}
+      > span:first-child {
+        margin: auto;
+        color: blue;
+      }
 
-.download-button .filter-dropdown__list_items {
-  border-radius: 5px;
-}
+      > span:last-child {
+        display: none;
+      }
+    }
 
-.download-button .filter-dropdown__button > span:first-child {
-  margin: auto;
-  color: blue;
-}
+    &__list {
+      right: 0;
+      border-radius: 5px;
+    }
 
-.download-button .filter-dropdown__button > span:last-child {
-  display: none;
+    &__list_items {
+      border-radius: 5px;
+    }
+  }
 }
