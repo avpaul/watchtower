@@ -27,7 +27,7 @@ const ProjectDetailsCardSmall = ({
           <h3>{projectDetails.name}</h3>
         </div>
         <div className="project-theme">
-          <p>Empowering Devs through life-long learning</p>
+          <p>{projectDetails.tagline}</p>
         </div>
         <div className="project-stacks">{formatStacks(technologies)}</div>
       </div>

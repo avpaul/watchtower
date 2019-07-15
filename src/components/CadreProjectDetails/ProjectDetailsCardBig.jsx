@@ -19,7 +19,9 @@ const ProjectDetailsCardBig = ({ projectDetails }) => {
               <a href={document.url} download>
                 <div className="relevant-documents-card">
                   <img src={DocLogo} alt="doc-logo" />
-                  {document.name}
+                  <span className="text-left w-75">
+                    {document.name.substring(0, 20)}...
+                  </span>
                 </div>
               </a>
             ))}
