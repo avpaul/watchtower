@@ -1,185 +1,180 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Vacancy Dashboard render paginated view correctly 1`] = `
+<PaginationFrontendWrapper
+  component={
+    <ViewRoleVacancies
+      component={
+        <ViewRoleVacancies
+          paginationWrapper={
+            Object {
+              "handlePaginationPageChange": [Function],
+              "paginateData": [Function],
+              "processData": [Function],
+              "renderPagination": [Function],
+              "state": Object {
+                "filteredData": Array [],
+                "paginatedData": Array [],
+                "paginationFilter": Object {
+                  "page": 1,
+                  "perPage": 25,
+                  "totalPages": 0,
+                },
+              },
+              "updateData": [Function],
+            }
+          }
+          vacancies={
+            Object {
+              "certificationVacancies": Array [
+                Object {
+                  "available_slots": 2,
+                  "certification": Object {
+                    "0": Object {
+                      "certification": Object {
+                        "description": "Ut aut et incidunt temporibus.",
+                        "duration": 20,
+                        "exclusive": true,
+                        "id": 1,
+                        "name": "Lyric Strosin",
+                      },
+                      "certification_id": 1,
+                      "created_at": "2019-07-11 06:54:50",
+                      "fellow_id": null,
+                      "id": 2,
+                      "is_active": false,
+                      "updated_at": "2019-07-11 06:54:50",
+                    },
+                    "description": "Ut aut et incidunt officiis repudiandae temporibus.",
+                    "duration": 20,
+                    "exclusive": true,
+                    "id": 1,
+                    "name": "Lyric Strosin",
+                  },
+                },
+              ],
+              "projectVacancies": Array [
+                Object {
+                  "available_slots": 1,
+                  "project": Object {
+                    "id": 1,
+                    "name": "A et.",
+                  },
+                  "role": Object {
+                    "active_engineers": Array [],
+                    "description": "Neque aut modi minima dolorem quia itaque.",
+                    "id": 6,
+                    "name": "FPC",
+                  },
+                  "vacancies": Array [
+                    Object {
+                      "fellow_id": null,
+                      "id": 1,
+                      "is_active": false,
+                      "project": Object {
+                        "id": 1,
+                        "name": "A et.",
+                      },
+                      "project_id": 1,
+                      "project_role_id": 6,
+                      "role": Object {
+                        "active_engineers": Array [],
+                        "description": "Neque aut modi minima dolorem quia itaque.",
+                        "id": 6,
+                        "name": "FPC",
+                      },
+                    },
+                  ],
+                },
+              ],
+            }
+          }
+        />
+      }
+      vacancies={Array []}
+    />
+  }
+/>
+`;
+
 exports[`Vacancy Dashboard renders correctly 1`] = `
-<div
-  className="ops-vacancies-container"
->
-  <Connect(TDDOPsVacancyCard)
-    key="weak-key-0"
-    vacanciesToDisplay="project"
-    vacancy={
-      Object {
-        "available_slots": 2,
-        "project": Object {
-          "id": 2,
-          "name": "Corrupti non.",
-        },
-        "role": Object {
-          "id": 1,
-          "name": "Engineer",
-        },
-        "vacancies": Array [
-          Object {
-            "fellow_id": null,
-            "id": 1,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-          Object {
-            "fellow_id": null,
-            "id": 2,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-        ],
-      }
-    }
-  />
-  <Connect(TDDOPsVacancyCard)
-    key="weak-key-1"
-    vacanciesToDisplay="project"
-    vacancy={
-      Object {
-        "available_slots": 2,
-        "project": Object {
-          "id": 4,
-          "name": "Corrupti non.",
-        },
-        "role": Object {
-          "id": 2,
-          "name": "Engineer",
-        },
-        "vacancies": Array [
-          Object {
-            "fellow_id": null,
-            "id": 1,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-          Object {
-            "fellow_id": null,
-            "id": 2,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-        ],
-      }
-    }
-  />
-  <Connect(TDDOPsVacancyCard)
-    key="weak-key-2"
-    vacanciesToDisplay="project"
-    vacancy={
-      Object {
-        "available_slots": 2,
-        "project": Object {
-          "id": 6,
-          "name": "Corrupti non.",
-        },
-        "role": Object {
-          "id": 3,
-          "name": "Engineer",
-        },
-        "vacancies": Array [
-          Object {
-            "fellow_id": null,
-            "id": 1,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-          Object {
-            "fellow_id": null,
-            "id": 2,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-        ],
-      }
-    }
-  />
-  <Connect(TDDOPsVacancyCard)
-    key="weak-key-3"
-    vacanciesToDisplay="project"
-    vacancy={
-      Object {
-        "available_slots": 2,
-        "project": Object {
-          "id": 8,
-          "name": "Corrupti non.",
-        },
-        "role": Object {
-          "id": 4,
-          "name": "Engineer",
-        },
-        "vacancies": Array [
-          Object {
-            "fellow_id": null,
-            "id": 1,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-          Object {
-            "fellow_id": null,
-            "id": 2,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-        ],
-      }
-    }
-  />
-  <Connect(TDDOPsVacancyCard)
-    key="weak-key-4"
-    vacanciesToDisplay="project"
-    vacancy={
-      Object {
-        "available_slots": 2,
-        "project": Object {
-          "id": 10,
-          "name": "Corrupti non.",
-        },
-        "role": Object {
-          "id": 5,
-          "name": "Engineer",
-        },
-        "vacancies": Array [
-          Object {
-            "fellow_id": null,
-            "id": 1,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-          Object {
-            "fellow_id": null,
-            "id": 2,
-            "is_active": false,
-            "project_id": 7,
-            "project_role_id": 1,
-          },
-        ],
-      }
-    }
+<div>
+  <div>
+    <div
+      className="toogle-container"
+    >
+      <button
+        className="vacancy-toggle-button--active"
+        id="project-button"
+        onClick={[Function]}
+        type="button"
+        value="project"
+      >
+        Project Vacancies
+      </button>
+      <button
+        className="vacancy-toggle-button"
+        id="certification-button"
+        onClick={[Function]}
+        type="button"
+        value="certification"
+      >
+        Certification Vacancies
+      </button>
+    </div>
+  </div>
+  <div
+    className="ops-vacancies-container"
+  >
+    <div
+      className="ops-no-vacancies"
+    >
+      No Vacancies
+    </div>
+  </div>
+  <div
+    className=""
   />
 </div>
 `;
 
 exports[`Vacancy Dashboard renders no vacancies when array is empty 1`] = `
-<div
-  className="ops-vacancies-container"
->
-  <div
-    className="ops-no-vacancies"
-  >
-    No Vacancies
+<div>
+  <div>
+    <div
+      className="toogle-container"
+    >
+      <button
+        className="vacancy-toggle-button--active"
+        id="project-button"
+        onClick={[Function]}
+        type="button"
+        value="project"
+      >
+        Project Vacancies
+      </button>
+      <button
+        className="vacancy-toggle-button"
+        id="certification-button"
+        onClick={[Function]}
+        type="button"
+        value="certification"
+      >
+        Certification Vacancies
+      </button>
+    </div>
   </div>
+  <div
+    className="ops-vacancies-container"
+  >
+    <div
+      className="ops-no-vacancies"
+    >
+      No Vacancies
+    </div>
+  </div>
+  <div
+    className=""
+  />
 </div>
 `;

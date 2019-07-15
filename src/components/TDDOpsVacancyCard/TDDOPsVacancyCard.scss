@@ -8,7 +8,7 @@
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
-  padding-left: 25px;
+  padding-left: 30px;
   position: relative;
 
   &--grey {
@@ -28,8 +28,18 @@
     margin-bottom: 0.2rem;
   }
 
-  &__project-slots {
-    margin-bottom: 1rem;
+  &__project-slot {
+    &__label {
+      margin-bottom: 1rem;
+      color: #606060;
+      font-size: 13px;
+    }
+
+    &__number {
+      margin-bottom: 1rem;
+      color: #0459e4;
+      font-size: 13px;
+    }
   }
 
   &__project {
@@ -37,7 +47,7 @@
     width: 85%;
     color: rgba(52, 76, 90, 0.62);
     font-family: $font-primary;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 18px;
   }
 
@@ -46,7 +56,7 @@
     width: 100%;
     color: #0459e4;
     font-family: $font-primary;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 18px;
     margin-top: 0.7rem;
   }

@@ -38,44 +38,52 @@ const renderDropdownSection = (vacancy, setVacanciesOnFocus) => (
   </>
 );
 
-const getName = name => (name.length > 20 ? `${name.substr(0, 18)} ...` : name);
+const getName = name => (name.length > 20 ? `${name.substr(0, 16)}...` : name);
 
 const TDDOPsVacancyCard = ({
   vacancy,
   setVacanciesOnFocus,
   vacanciesToDisplay
-}) => (
-  <div
-    className={`ops-vacancy-card${
-      vacancy.available_slots === 0 ? '---grey' : ''
-    }`}
-    key={vacancy.id}
-  >
-    {vacanciesToDisplay === 'project'
-      ? renderDropdownSection(vacancy, setVacanciesOnFocus)
-      : null}
-    <div className="ops-vacancy-card__role-name">
-      {getName(
-        vacanciesToDisplay === 'project'
-          ? vacancy.role.name
-          : vacancy.certification.name
-      )}
-    </div>
-    <div className="ops-vacancy-card__project-slots">
-      {vacancy.available_slots}{' '}
-      {vacancy.available_slots === 1 ? 'available slot' : 'available slots'}
-    </div>
-    <div className="ops-vacancy-card__project">
+}) => {
+  if (vacanciesToDisplay === 'project' && !vacancy.project) return null;
+  if (vacanciesToDisplay === 'certification' && !vacancy.certification)
+    return null;
+
+  return (
+    <div
+      className={`ops-vacancy-card${
+        vacancy.available_slots === 0 ? '---grey' : ''
+      }`}
+      key={vacancy.id}
+    >
       {vacanciesToDisplay === 'project'
-        ? vacancy.project.name
-        : `${vacancy.certification.duration} weeks`}
+        ? renderDropdownSection(vacancy, setVacanciesOnFocus)
+        : null}
+      <div className="ops-vacancy-card__role-name">
+        {getName(
+          vacanciesToDisplay === 'project'
+            ? vacancy.role.name
+            : vacancy.certification.name
+        )}
+      </div>
+      <div>
+        <span className="ops-vacancy-card__project-slot__label">Slots: </span>
+        <span className="ops-vacancy-card__project-slot__number">
+          {vacancy.available_slots}
+        </span>
+      </div>
+      <div className="ops-vacancy-card__project">
+        {vacanciesToDisplay === 'project'
+          ? vacancy.project.name
+          : `${vacancy.certification.duration} days    `}
+      </div>
+      <div className="ops-vacancy-card__applications">
+        {vacancy.applications || '0'}{' '}
+        {vacancy.applications === 1 ? 'application' : 'applications'}
+      </div>
     </div>
-    <div className="ops-vacancy-card__applications">
-      {vacancy.applications || '0'}{' '}
-      {vacancy.applications === 1 ? 'application' : 'applications'}
-    </div>
-  </div>
-);
+  );
+};
 
 TDDOPsVacancyCard.propTypes = {
   vacancy: PropTypes.shape({}).isRequired,
