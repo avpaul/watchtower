@@ -184,7 +184,7 @@ Object {
                     testInput={[Function]}
                     type="text"
                   />
-                  <Radio
+                  <CheckBox
                     handleChange={[Function]}
                     name="exclusive"
                     options="Certicicate is not Exclusive"
@@ -353,7 +353,7 @@ Object {
                     testInput={[Function]}
                     type="text"
                   />
-                  <Radio
+                  <CheckBox
                     handleChange={[Function]}
                     name="exclusive"
                     options="Certicicate is not Exclusive"
@@ -522,7 +522,7 @@ Object {
                     testInput={[Function]}
                     type="text"
                   />
-                  <Radio
+                  <CheckBox
                     handleChange={[Function]}
                     name="exclusive"
                     options="Certicicate is not Exclusive"
@@ -543,7 +543,7 @@ Object {
       testInput={[Function]}
       type="text"
     />
-    <Radio
+    <CheckBox
       handleChange={[Function]}
       name="exclusive"
       options="Certicicate is not Exclusive"
