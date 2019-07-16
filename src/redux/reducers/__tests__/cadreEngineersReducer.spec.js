@@ -143,7 +143,7 @@ describe('Activate Cadre engineer account', () => {
   it('updates the store when cadre engineer account activation fails', () => {
     const action = {
       type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_FAILURE,
-      error: 'You did something bad now'
+      error: 'You messed up. Congratulations'
     };
 
     const oldState = {
@@ -155,7 +155,7 @@ describe('Activate Cadre engineer account', () => {
           account_active: false
         }
       ],
-      error: 'You did something bad now'
+      error: 'You messed up. Congratulations'
     };
 
     expect(cadreEngineersReducer(oldState, action)).toEqual(oldState);
