@@ -3,10 +3,10 @@ import { shallow } from 'enzyme';
 import Card from '../Card';
 import Modal from '../../LargeModal/LargeModal';
 
-let props;
 let wrapper;
+
 describe('Test Role Card component', () => {
-  props = {
+  const defaultProps = {
     cardProps: {
       details: {
         id: 1,
@@ -23,23 +23,25 @@ describe('Test Role Card component', () => {
       loading: false,
       activeParticipants: {},
       type: 'role'
-    }
+    },
+    focusRole: jest.fn()
   };
+
   it('should render correctly', () => {
-    wrapper = shallow(<Card {...props} />);
+    wrapper = shallow(<Card {...defaultProps} />);
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should render modal', () => {
-    props = { ...props, loading: true };
-
-    wrapper = shallow(<Card {...props} />);
-
+    wrapper = shallow(<Card {...{ ...defaultProps, loading: true }} />);
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should handle click correctly', () => {
     wrapper.find('.role-card__attributes-seemore').simulate('click');
     expect(wrapper.state('showMore')).toBeTruthy();
   });
+
   it('should handle click count correctly', () => {
     wrapper
       .find('.role-card__attributes-count')
@@ -47,6 +49,7 @@ describe('Test Role Card component', () => {
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should handle close modal correctly', () => {
     wrapper
       .find(Modal)
@@ -55,9 +58,25 @@ describe('Test Role Card component', () => {
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should call focus role when dropdown option is clicked', () => {
+    const spy = jest.fn();
+    const cardWrapper = shallow(
+      <Card {...{ ...defaultProps, focusRole: spy }} />
+    );
+    cardWrapper.find('.role-card__icon').simulate('click');
+
+    cardWrapper
+      .find('.dropdown-item')
+      .at(0)
+      .simulate('click');
+
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
 });
+
 describe('Test Certification Card component', () => {
-  props = {
+  const props = {
     cardProps: {
       details: {
         id: 1,
@@ -71,24 +90,27 @@ describe('Test Certification Card component', () => {
         updated_at: '2019-06-04 04:56:39'
       },
       fetcher: jest.fn(),
-      type: 'certificates'
-    }
+      type: 'certificates',
+      activeParticipants: {}
+    },
+    focusRole: jest.fn()
   };
+
   it('should render correctly', () => {
     wrapper = shallow(<Card {...props} />);
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should render modal', () => {
-    props = { ...props, loading: true };
-
-    wrapper = shallow(<Card {...props} />);
-
+    wrapper = shallow(<Card {...{ ...props, loading: true }} />);
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should handle click correctly', () => {
     wrapper.find('.role-card__attributes-seemore').simulate('click');
     expect(wrapper.state('showMore')).toBeTruthy();
   });
+
   it('should handle click count correctly', () => {
     wrapper
       .find('.role-card__attributes-count')
@@ -96,6 +118,7 @@ describe('Test Certification Card component', () => {
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
+
   it('should handle close modal correctly', () => {
     wrapper
       .find(Modal)

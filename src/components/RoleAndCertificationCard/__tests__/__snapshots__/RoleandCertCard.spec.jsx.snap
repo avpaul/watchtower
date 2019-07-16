@@ -5,32 +5,19 @@ exports[`Test Certification Card component should handle click count correctly 1
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Certification
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -125,7 +112,9 @@ exports[`Test Certification Card component should handle click count correctly 1
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -152,32 +141,19 @@ exports[`Test Certification Card component should handle close modal correctly 1
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Certification
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -272,7 +248,9 @@ exports[`Test Certification Card component should handle close modal correctly 1
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -299,32 +277,19 @@ exports[`Test Certification Card component should render correctly 1`] = `
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Certification
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -419,7 +384,9 @@ exports[`Test Certification Card component should render correctly 1`] = `
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -446,32 +413,19 @@ exports[`Test Certification Card component should render modal 1`] = `
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Certification
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -566,7 +520,9 @@ exports[`Test Certification Card component should render modal 1`] = `
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -593,32 +549,31 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      data-target="#editRoleModal"
+      data-toggle="modal"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Role
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#delete-role-modal"
+      data-toggle="modal"
+      disabled={1}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Role
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -632,7 +587,9 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
      
     <span
       className="role-card__attributes-count-sm"
-    />
+    >
+      3
+    </span>
   </p>
   <hr />
   <div
@@ -664,7 +621,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
       <p
         className="role-card__attributes"
       >
-        Certified Engrs.
+        Active Engrs.
          
         <br />
         <div
@@ -677,7 +634,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
             role="button"
             tabIndex="-1"
           >
-            2
+            1
           </span>
         </div>
       </p>
@@ -708,12 +665,14 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
     show={true}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="1 test role"
   >
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -721,12 +680,12 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
       Object {
         "active_engineers_count": 1,
         "applications_count": 2,
-        "certified_engineers": 2,
         "created_at": "2019-06-04 04:56:39",
         "description": "test role description should render role card instance properly should render role card instance properly",
         "id": 1,
         "name": "test role",
         "updated_at": "2019-06-04 04:56:39",
+        "vacancies_count": 3,
       }
     }
     open={false}
@@ -740,32 +699,31 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      data-target="#editRoleModal"
+      data-toggle="modal"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Role
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#delete-role-modal"
+      data-toggle="modal"
+      disabled={1}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Role
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -779,7 +737,9 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
      
     <span
       className="role-card__attributes-count-sm"
-    />
+    >
+      3
+    </span>
   </p>
   <hr />
   <div
@@ -811,7 +771,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
       <p
         className="role-card__attributes"
       >
-        Certified Engrs.
+        Active Engrs.
          
         <br />
         <div
@@ -824,7 +784,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
             role="button"
             tabIndex="-1"
           >
-            2
+            1
           </span>
         </div>
       </p>
@@ -852,15 +812,17 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   </p>
   <Modal
     handleClose={[Function]}
-    show={true}
+    show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="1 test role"
   >
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -868,15 +830,15 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
       Object {
         "active_engineers_count": 1,
         "applications_count": 2,
-        "certified_engineers": 2,
         "created_at": "2019-06-04 04:56:39",
         "description": "test role description should render role card instance properly should render role card instance properly",
         "id": 1,
         "name": "test role",
         "updated_at": "2019-06-04 04:56:39",
+        "vacancies_count": 3,
       }
     }
-    open={true}
+    open={false}
     toggle={[Function]}
   />
 </div>
@@ -887,32 +849,31 @@ exports[`Test Role Card component should render correctly 1`] = `
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      data-target="#editRoleModal"
+      data-toggle="modal"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Role
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#delete-role-modal"
+      data-toggle="modal"
+      disabled={1}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Role
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -926,7 +887,9 @@ exports[`Test Role Card component should render correctly 1`] = `
      
     <span
       className="role-card__attributes-count-sm"
-    />
+    >
+      3
+    </span>
   </p>
   <hr />
   <div
@@ -958,7 +921,7 @@ exports[`Test Role Card component should render correctly 1`] = `
       <p
         className="role-card__attributes"
       >
-        Certified Engrs.
+        Active Engrs.
          
         <br />
         <div
@@ -971,7 +934,7 @@ exports[`Test Role Card component should render correctly 1`] = `
             role="button"
             tabIndex="-1"
           >
-            2
+            1
           </span>
         </div>
       </p>
@@ -1002,12 +965,14 @@ exports[`Test Role Card component should render correctly 1`] = `
     show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="1 test role"
   >
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -1015,12 +980,12 @@ exports[`Test Role Card component should render correctly 1`] = `
       Object {
         "active_engineers_count": 1,
         "applications_count": 2,
-        "certified_engineers": 2,
         "created_at": "2019-06-04 04:56:39",
         "description": "test role description should render role card instance properly should render role card instance properly",
         "id": 1,
         "name": "test role",
         "updated_at": "2019-06-04 04:56:39",
+        "vacancies_count": 3,
       }
     }
     open={false}
@@ -1034,32 +999,31 @@ exports[`Test Role Card component should render modal 1`] = `
   className="role-card"
 >
   <div
-    className="row"
+    className="role-card__icon"
+    data-toggle="dropdown"
+  />
+  <div
+    className="dropdown-menu dropdown-menu-right"
   >
-    <div
-      className="col-12"
+    <button
+      className="dropdown-item"
+      data-target="#editRoleModal"
+      data-toggle="modal"
+      onClick={[Function]}
+      type="button"
     >
-      <div
-        className="role-card__icon"
-        data-toggle="dropdown"
-      >
-        <img
-          alt=""
-          src="More.svg"
-        />
-      </div>
-      <div
-        className="dropdown-menu dropdown-menu-right"
-      >
-        <button
-          className="dropdown-item"
-          onClick={[Function]}
-          type="button"
-        >
-          Edit Certification
-        </button>
-      </div>
-    </div>
+      Edit Role
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#delete-role-modal"
+      data-toggle="modal"
+      disabled={1}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete Role
+    </button>
   </div>
   <div
     className="role-card__title"
@@ -1073,7 +1037,9 @@ exports[`Test Role Card component should render modal 1`] = `
      
     <span
       className="role-card__attributes-count-sm"
-    />
+    >
+      3
+    </span>
   </p>
   <hr />
   <div
@@ -1105,7 +1071,7 @@ exports[`Test Role Card component should render modal 1`] = `
       <p
         className="role-card__attributes"
       >
-        Certified Engrs.
+        Active Engrs.
          
         <br />
         <div
@@ -1118,7 +1084,7 @@ exports[`Test Role Card component should render modal 1`] = `
             role="button"
             tabIndex="-1"
           >
-            2
+            1
           </span>
         </div>
       </p>
@@ -1149,12 +1115,14 @@ exports[`Test Role Card component should render modal 1`] = `
     show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="1 test role"
   >
     <div
       className="modal__body-card"
     >
-      <MapRoleActiveEngineers />
+      <MapRoleActiveEngineers
+        roleData={Object {}}
+      />
     </div>
   </Modal>
   <Connect(withRouter(EditCertificationModal))
@@ -1162,12 +1130,12 @@ exports[`Test Role Card component should render modal 1`] = `
       Object {
         "active_engineers_count": 1,
         "applications_count": 2,
-        "certified_engineers": 2,
         "created_at": "2019-06-04 04:56:39",
         "description": "test role description should render role card instance properly should render role card instance properly",
         "id": 1,
         "name": "test role",
         "updated_at": "2019-06-04 04:56:39",
+        "vacancies_count": 3,
       }
     }
     open={false}

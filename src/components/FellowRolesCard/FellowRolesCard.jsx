@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './FellowRolesCard.scss';
-import truncate from '../../utils';
+import { truncate } from '../../utils';
 
 const FellowRolesCard = ({ role }) => {
   const renderStacks = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import NavArrow from '../../components/Carousel/NavArrow';
-import truncate, { getOutputStatus, carouselOptions } from '..';
+import { getOutputStatus, carouselOptions, truncate } from '..';
 
 describe('Truncate string', () => {
   it('trabcates a string', () => {

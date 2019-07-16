@@ -3,70 +3,78 @@ import PropTypes from 'prop-types';
 import './MapProjectRoleCard.scss';
 import Card from '../RoleAndCertificationCard';
 
-function MapProjectRoleCard({
+const renderButtons = type => (
+  <div className="col-3">
+    {type === 'role' ? (
+      <button
+        type="button"
+        data-toggle="modal"
+        data-target="#addRoleModal"
+        className="role-grid__add"
+      >
+        NEW ROLE
+      </button>
+    ) : (
+      <button
+        type="button"
+        data-toggle="modal"
+        data-target="#addCertificationModal"
+        className="role-grid__add"
+      >
+        NEW CERTIFICATE
+      </button>
+    )}
+  </div>
+);
+
+const renderHeader = (type, roleData) => (
+  <>
+    <div className="col-9" id="title">
+      <p className="role-grid__count">
+        {type === 'role' ? 'Roles' : 'Certifications'}
+      </p>
+      <span>
+        {roleData.length} Vacant, {roleData.length} Active
+      </span>
+    </div>
+    {renderButtons(type)}
+  </>
+);
+
+const MapProjectRoleCard = ({
   roleData,
   type,
   fetchActiveEngineers,
   loading,
   activeEngineers,
   setDeleteTarget
-}) {
-  return (
-    <div>
-      <div className="row">
-        <div className="col-9" id="title">
-          <p className="role-grid__count">
-            {type === 'role' ? 'Roles' : 'Certifications'}
-          </p>
-          <span>
-            {roleData.length} Vacant, {roleData.length} Active
-          </span>
+}) => (
+  <div>
+    <div className="row">
+      {renderHeader(type, roleData)}
+      {roleData.length === 0 ? (
+        <div className="no-roles-certifications">
+          {type === 'role' ? 'No Roles' : 'No Certifications'}
         </div>
-        <div className="col-3">
-          {type === 'role' ? (
-            <button
-              type="button"
-              data-toggle="modal"
-              data-target="#addRoleModal"
-              className="role-grid__add"
-            >
-              NEW ROLE
-            </button>
-          ) : (
-            <button
-              type="button"
-              data-toggle="modal"
-              data-target="#addCertificationModal"
-              className="role-grid__add"
-            >
-              NEW CERTIFICATE
-            </button>
-          )}
-        </div>
-        {roleData.length === 0 ? (
-          <div className="no-roles-certifications">
-            {type === 'role' ? 'No Roles' : 'No Certifications'}
+      ) : (
+        roleData.map(role => (
+          <div className="col-4 mb-4" key={role.id}>
+            <Card
+              cardProps={{
+                details: role,
+                fetcher: fetchActiveEngineers,
+                loading,
+                activeParticipants: activeEngineers,
+                type
+              }}
+              focusRole={setDeleteTarget}
+            />
           </div>
-        ) : (
-          roleData.map(role => (
-            <div className="col-4 mb-4" key={role.id}>
-              <Card
-                cardProps={{
-                  details: role,
-                  fetcher: fetchActiveEngineers,
-                  loading,
-                  activeParticipants: activeEngineers,
-                  type,
-                }}
-                focusRole={setDeleteTarget}
-              />
-            </div>
-          ))
-        )}
-      </div>
+        ))
+      )}
     </div>
-  );
-}
+  </div>
+);
 
 export default MapProjectRoleCard;
 

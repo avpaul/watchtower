@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ProfileDropdown from './ProfileDropDown';
-import truncate from '../../utils';
+import { truncate } from '../../utils';
 
 const ProfileSection = ({ user }) => (
   <div id="profile-menu" className="dropdown">

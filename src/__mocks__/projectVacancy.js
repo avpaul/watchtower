@@ -43,7 +43,14 @@ export const generateVacancyGroups = (count, vacancyCount, start = 0) => {
   const vacancies = [];
   for (let index = start; index < count; index += 1) {
     vacancies.push({
-      ...vacanciesGroupMock,
+      project: {
+        id: (index + 1) * 2,
+        name: 'Corrupti non.'
+      },
+      role: {
+        id: index + 1,
+        name: 'Engineer'
+      },
       vacancies: generateVacancies(vacancyCount),
       available_slots: vacancyCount
     });

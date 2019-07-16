@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import More from '../../static/More.svg';
 import Modal from '../LargeModal/LargeModal';
 import MapRoleActiveEngineers from '../MapRoleActiveEngineers';
 import Loader from '../Loader/Loader';
-import { pluralizeCheck } from '../../utils';
+import { pluralizeCheck, truncate } from '../../utils';
 import EditCertificationModal from '../EditCertificationModal/EditCertificationModalContainer';
 
-import './Card.css';
+import './Card.scss';
 
 class Card extends React.Component {
   constructor(props) {
@@ -29,13 +28,11 @@ class Card extends React.Component {
     const { openModal } = this.state;
 
     this.setState({ openModal: !openModal });
-
     return fetcher(details.id);
   };
 
   openCertificationModal = () => {
     const { openCertification } = this.state;
-
     this.setState({ openCertification: !openCertification });
   };
 
@@ -45,17 +42,17 @@ class Card extends React.Component {
       cardProps: { type }
     } = this.props;
 
-    if (type === 'role') {
-      this.setState({ openModal: !openModal });
-    } else {
-      this.setState({ openCertification: !openCertification });
-    }
+    if (type === 'role') this.setState({ openModal: !openModal });
+    else this.setState({ openCertification: !openCertification });
   };
 
   handleFocusRole = () => {
-    const {focusRole, cardProps: { details }} = this.props;
+    const {
+      focusRole,
+      cardProps: { details }
+    } = this.props;
     focusRole(details);
-  }
+  };
 
   renderFullDescription = () => {
     const { showMore } = this.state;
@@ -160,6 +157,42 @@ class Card extends React.Component {
     );
   };
 
+  renderProjectCardOptions = details => (
+    <>
+      <button
+        type="button"
+        data-toggle="modal"
+        data-target="#editRoleModal"
+        className="dropdown-item"
+        onClick={this.handleFocusRole}
+      >
+        Edit Role
+      </button>
+      <button
+        type="button"
+        data-toggle="modal"
+        data-target="#delete-role-modal"
+        className="dropdown-item"
+        onClick={this.handleFocusRole}
+        disabled={details.active_engineers_count}
+      >
+        Delete Role
+      </button>
+    </>
+  );
+
+  renderCertificationCardOptions = () => (
+    <>
+      <button
+        type="button"
+        className="dropdown-item"
+        onClick={this.openCertificationModal}
+      >
+        Edit Certification
+      </button>
+    </>
+  );
+
   renderDropdown = type => {
     const {
       cardProps: { details }
@@ -167,40 +200,12 @@ class Card extends React.Component {
 
     return (
       <div className="dropdown-menu dropdown-menu-right">
-        {type === 'role' ? (
-          <>
-            <button
-              type="button"
-              data-toggle="modal"
-              data-target="#editRoleModal"
-              className="dropdown-item"
-              onClick={this.handleFocusRole}
-            >
-              Edit Role
-            </button>
-            <button
-              type="button"
-              data-toggle="modal"
-              data-target="#delete-role-modal"
-              className="dropdown-item"
-              onClick={this.handleFocusRole}
-              disabled={details.active_engineers_count}
-            >
-              Delete Role
-            </button>
-          </>
-        ) : (
-          <button
-            type="button"
-            className="dropdown-item"
-            onClick={this.openCertificationModal}
-          >
-            Edit Certification
-          </button>
-        )}
+        {type === 'role'
+          ? this.renderProjectCardOptions(details)
+          : this.renderCertificationCardOptions()}
       </div>
     );
-  }
+  };
 
   renderEditCertificationModal = () => {
     const {
@@ -223,15 +228,9 @@ class Card extends React.Component {
     const { showMore, openModal } = this.state;
     return (
       <div className="role-card">
-        <div className="row">
-          <div className="col-12">
-            <div className="role-card__icon" data-toggle="dropdown">
-              <img src={More} alt="" />
-            </div>
-            {this.renderDropdown(type)}
-          </div>
-        </div>
-        <div className="role-card__title">{details.name}</div>
+        <div className="role-card__icon" data-toggle="dropdown" />
+        {this.renderDropdown(type)}
+        <div className="role-card__title">{truncate(details.name, 22)}</div>
         <p className="role-card__attributes-sm">
           Vacancies{' '}
           <span className="role-card__attributes-count-sm">
@@ -256,6 +255,7 @@ class Card extends React.Component {
 
 Card.propTypes = {
   cardProps: PropTypes.shape({}).isRequired,
-  focusRole: PropTypes.func.isRequired,
+  focusRole: PropTypes.func.isRequired
 };
+
 export default Card;

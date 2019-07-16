@@ -60,7 +60,7 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
         Object {
           "available_slots": 2,
           "project": Object {
-            "id": 7,
+            "id": 2,
             "name": "Corrupti non.",
           },
           "role": Object {
@@ -87,11 +87,11 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
         Object {
           "available_slots": 2,
           "project": Object {
-            "id": 7,
+            "id": 4,
             "name": "Corrupti non.",
           },
           "role": Object {
-            "id": 1,
+            "id": 2,
             "name": "Engineer",
           },
           "vacancies": Array [
