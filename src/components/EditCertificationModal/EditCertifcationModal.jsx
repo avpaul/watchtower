@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from '../LargeModal/LargeModal';
 import EditInput from './EditInputs/EditInput';
-import RadioButton from '../RadioButton/RadioButton';
+import CheckButton from '../RadioButton/RadioButton';
 import EditTextArea from './EditTextarea/EditTextarea';
 import Loader from '../Loader/Loader';
 import './EditCertificationModal.scss';
@@ -52,8 +52,8 @@ class EditCertificationModal extends Component {
     toggle();
   };
 
-  renderRadio = exclusive => (
-    <RadioButton
+  renderCheckBox = exclusive => (
+    <CheckButton
       name="exclusive"
       value={exclusive}
       handleChange={this.handleSwitch}
@@ -146,7 +146,6 @@ class EditCertificationModal extends Component {
         <div className="form-body">
           <p className="modal__title-md">Edit Certification</p>
           {this.renderInput('Name', 'name', 'text', name, this.handleInput)}
-          {this.renderRadio(exclusive)}
           {this.renderInput(
             'Duration',
             'duration',
@@ -160,6 +159,7 @@ class EditCertificationModal extends Component {
             description,
             this.handleInput
           )}
+          {this.renderCheckBox(exclusive)}
           {this.renderFooter(this.handleSuccess, 'Update')}
         </div>
       </Modal>

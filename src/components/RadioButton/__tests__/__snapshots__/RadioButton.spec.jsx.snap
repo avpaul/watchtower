@@ -16,7 +16,7 @@ exports[`Radio Button should render component correctly 1`] = `
     <div>
       <input
         checked="title"
-        className="form-radio"
+        className="form-checkbox"
         handleChange={[MockFunction]}
         id="title"
         inputType="text"
@@ -25,7 +25,7 @@ exports[`Radio Button should render component correctly 1`] = `
         options="Certicicate is Exclusive"
         placeholder="title"
         title="Form title"
-        type="radio"
+        type="checkbox"
         value="title"
       />
       Certicicate is Exclusive

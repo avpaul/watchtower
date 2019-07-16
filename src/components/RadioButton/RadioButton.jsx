@@ -3,7 +3,7 @@ import React from 'react';
 import PropsTypes from 'prop-types';
 import './RadioButton.scss';
 
-const Radio = props => {
+const CheckBox = props => {
   const { title, name, value, handleChange, options } = props;
   return (
     <div className="form-input">
@@ -15,10 +15,10 @@ const Radio = props => {
       <div className="form-input-inline">
         <div>
           <input
-            className="form-radio"
+            className="form-checkbox"
             id={name}
             name={name}
-            type="radio"
+            type="checkbox"
             value={`${value}`}
             onClick={handleChange}
             checked={value}
@@ -31,7 +31,7 @@ const Radio = props => {
   );
 };
 
-Radio.propTypes = {
+CheckBox.propTypes = {
   name: PropsTypes.string.isRequired,
   title: PropsTypes.string,
   value: PropsTypes.bool.isRequired,
@@ -39,8 +39,8 @@ Radio.propTypes = {
   options: PropsTypes.string.isRequired
 };
 
-Radio.defaultProps = {
+CheckBox.defaultProps = {
   title: ''
 };
 
-export default Radio;
+export default CheckBox;

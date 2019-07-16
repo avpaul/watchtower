@@ -48,14 +48,6 @@ exports[`Edit Certification Modal should render component correctly 1`] = `
       title="Name"
       value="name"
     />
-    <Radio
-      handleChange={[Function]}
-      name="exclusive"
-      options="Certicicate is not Exclusive"
-      placeholder={false}
-      title=""
-      value={false}
-    />
     <Input
       handleChange={[Function]}
       inputType="number"
@@ -69,6 +61,14 @@ exports[`Edit Certification Modal should render component correctly 1`] = `
       name="description"
       title="Description"
       value="description value"
+    />
+    <CheckBox
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certicicate is not Exclusive"
+      placeholder={false}
+      title=""
+      value={false}
     />
     <div
       className="form-footer"
@@ -133,14 +133,6 @@ exports[`Edit Certification Modal should return on change value for Description 
       title="Name"
       value="name"
     />
-    <Radio
-      handleChange={[Function]}
-      name="exclusive"
-      options="Certicicate is not Exclusive"
-      placeholder={false}
-      title=""
-      value={false}
-    />
     <Input
       handleChange={[Function]}
       inputType="number"
@@ -154,6 +146,14 @@ exports[`Edit Certification Modal should return on change value for Description 
       name="description"
       title="Description"
       value="description value"
+    />
+    <CheckBox
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certicicate is not Exclusive"
+      placeholder={false}
+      title=""
+      value={false}
     />
     <div
       className="form-footer"
@@ -218,14 +218,6 @@ exports[`Edit Certification Modal should return on change value for Duration inp
       title="Name"
       value="name"
     />
-    <Radio
-      handleChange={[Function]}
-      name="exclusive"
-      options="Certicicate is not Exclusive"
-      placeholder={false}
-      title=""
-      value={false}
-    />
     <Input
       handleChange={[Function]}
       inputType="number"
@@ -239,6 +231,14 @@ exports[`Edit Certification Modal should return on change value for Duration inp
       name="description"
       title="Description"
       value="description value"
+    />
+    <CheckBox
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certicicate is not Exclusive"
+      placeholder={false}
+      title=""
+      value={false}
     />
     <div
       className="form-footer"
@@ -303,14 +303,6 @@ exports[`Edit Certification Modal should return on change value for Name input 1
       title="Name"
       value="name"
     />
-    <Radio
-      handleChange={[Function]}
-      name="exclusive"
-      options="Certicicate is not Exclusive"
-      placeholder={false}
-      title=""
-      value={false}
-    />
     <Input
       handleChange={[Function]}
       inputType="number"
@@ -324,6 +316,14 @@ exports[`Edit Certification Modal should return on change value for Name input 1
       name="description"
       title="Description"
       value="description value"
+    />
+    <CheckBox
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certicicate is not Exclusive"
+      placeholder={false}
+      title=""
+      value={false}
     />
     <div
       className="form-footer"
@@ -388,14 +388,6 @@ exports[`Edit Certification Modal should return on click for exclusive value 1`]
       title="Name"
       value="name"
     />
-    <Radio
-      handleChange={[Function]}
-      name="exclusive"
-      options="Certicicate is Exclusive"
-      placeholder={true}
-      title=""
-      value={true}
-    />
     <Input
       handleChange={[Function]}
       inputType="number"
@@ -409,6 +401,14 @@ exports[`Edit Certification Modal should return on click for exclusive value 1`]
       name="description"
       title="Description"
       value="description value"
+    />
+    <CheckBox
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certicicate is Exclusive"
+      placeholder={true}
+      title=""
+      value={true}
     />
     <div
       className="form-footer"
