@@ -65,7 +65,7 @@ exports[`Edit Certification Modal should render component correctly 1`] = `
     <CheckBox
       handleChange={[Function]}
       name="exclusive"
-      options="Certicicate is not Exclusive"
+      options="Certification is not Exclusive"
       placeholder={false}
       title=""
       value={false}
@@ -150,7 +150,7 @@ exports[`Edit Certification Modal should return on change value for Description 
     <CheckBox
       handleChange={[Function]}
       name="exclusive"
-      options="Certicicate is not Exclusive"
+      options="Certification is not Exclusive"
       placeholder={false}
       title=""
       value={false}
@@ -235,7 +235,7 @@ exports[`Edit Certification Modal should return on change value for Duration inp
     <CheckBox
       handleChange={[Function]}
       name="exclusive"
-      options="Certicicate is not Exclusive"
+      options="Certification is not Exclusive"
       placeholder={false}
       title=""
       value={false}
@@ -320,7 +320,7 @@ exports[`Edit Certification Modal should return on change value for Name input 1
     <CheckBox
       handleChange={[Function]}
       name="exclusive"
-      options="Certicicate is not Exclusive"
+      options="Certification is not Exclusive"
       placeholder={false}
       title=""
       value={false}
@@ -405,7 +405,7 @@ exports[`Edit Certification Modal should return on click for exclusive value 1`]
     <CheckBox
       handleChange={[Function]}
       name="exclusive"
-      options="Certicicate is Exclusive"
+      options="Certification is Exclusive"
       placeholder={true}
       title=""
       value={true}

@@ -14,7 +14,7 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
     >
       <Title
         subTitle=""
-        title="3 Vacancies (2 Project, 1 Certification)"
+        title="3 Vacancies (2 Projects, 1 Certification)"
       />
     </div>
     <div

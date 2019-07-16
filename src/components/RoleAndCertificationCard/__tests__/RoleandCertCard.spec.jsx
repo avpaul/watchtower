@@ -58,7 +58,7 @@ describe('Test Role Card component', () => {
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
-
+  
   it('should call focus role when dropdown option is clicked', () => {
     const spy = jest.fn();
     const cardWrapper = shallow(
