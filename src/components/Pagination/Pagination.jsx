@@ -103,23 +103,19 @@ class Pagination extends Component {
       (element, index) => index + 1
     );
 
-    return (
-      <div id="form-group" className="col align-self-center text-center">
-        {elements.map(element => (
-          <PaginationButton
-            className={`btn btn-default pg__button${
-              element === page ? '--active' : ''
-            }`}
-            name="previous"
-            value={element}
-            onClick={this.onValueChange}
-            key={element}
-            buttonText={`${element}`}
-            disabledButton={disabledButton}
-          />
-        ))}
-      </div>
-    );
+    return elements.map(element => (
+      <PaginationButton
+        className={`btn btn-default pg__button${
+          element === page ? '--active' : ''
+        }`}
+        name="previous"
+        value={element}
+        onClick={this.onValueChange}
+        key={element}
+        buttonText={`${element}`}
+        disabledButton={disabledButton}
+      />
+    ));
   };
 
   renderMiddleButtons = (buttons, activePage) =>
@@ -151,29 +147,23 @@ class Pagination extends Component {
     const { page: currentPage } = this.state;
     const lowerBound = currentPage + 2 > totalPages ? 1 : currentPage;
 
-    return (
-      <div className="row justify-content-center">
-        <div className="form-group pg__buttons col">
-          {this.renderMiddleButtons(
-            [
-              { value: 'Prev', disable: currentPage === totalPages },
-              { value: lowerBound },
-              { value: lowerBound + 1 },
-              { value: totalPages - 1 },
-              { value: totalPages },
-              { value: 'Next', disable: currentPage <= 1 }
-            ],
-            currentPage
-          )}
-        </div>
-      </div>
+    return this.renderMiddleButtons(
+      [
+        { value: 'Prev', disable: currentPage === totalPages },
+        { value: lowerBound },
+        { value: lowerBound + 1 },
+        { value: totalPages - 1 },
+        { value: totalPages },
+        { value: 'Next', disable: currentPage <= 1 }
+      ],
+      currentPage
     );
   };
 
   renderShowing = () => {
     const { totalPages, currentPage } = this.props;
     return (
-      <p className="text-center">
+      <p className="pg__showing text-center">
         Showing {currentPage} of {totalPages} pages
       </p>
     );
@@ -185,7 +175,7 @@ class Pagination extends Component {
 
     return (
       <select
-        className="form-control d-flex justify-content-center pg__per-page"
+        className="form-control"
         value={perPage}
         onChange={this.onPerPageChange}
       >
@@ -198,45 +188,32 @@ class Pagination extends Component {
     );
   };
 
-  renderPagination = (classNames, isFewPages, totalPages) => (
-    <div className={`align-self-center ${classNames.pgFilters}`}>
+  renderPagination = (isFewPages, totalPages) => (
+    <>
       {this.renderShowing()}
-      <div className="pg__filters row justify-content-center">
-        <div
-          className={`pg__per-page col-md-4 col-6 mt-4 mt-md-0 mb-4 mb-md-0 ${classNames.pgPerPage}`}
-        >
-          <div className="row d-flex justify-content-center">
-            <div className="pg__per-page__select col-lg-4 col-6">
-              {this.renderPerPageOptions()}
-            </div>
-            <div className="pg__per-page__label col-6">Per page</div>
-          </div>
+      <div className="pg__per-page">
+        <div className="pg__per-page__select">
+          {this.renderPerPageOptions()}
         </div>
-        <div className={`${classNames.pgButtons}`}>
+        <div className="pg__per-page__label">Per page</div>
+      </div>
+      <div className={`pg__buttons${isFewPages ? '' : '--multiple'}`}>
+        <div className="pg__buttons__list">
           {isFewPages
             ? this.renderNumericButtons(totalPages)
             : this.renderNormal()}
         </div>
       </div>
-    </div>
+    </>
   );
 
   render() {
     const { hasData, totalPages } = this.props;
     if (!hasData) return <div />;
 
-    const isFewPages = totalPages < 5;
-    const classNames = {
-      pgFilters: isFewPages ? 'col-md-6 col-lg-5' : 'col-md-9 col-lg-7',
-      pgPerPage: isFewPages ? 'col-md-5' : 'col-md-4',
-      pgButtons: isFewPages ? 'col-md-7 col-12' : 'col-md-8 col-12'
-    };
-
     return (
-      <div className="pg align-self-center">
-        <div className="row d-flex justify-content-center">
-          {this.renderPagination(classNames, isFewPages, totalPages)}
-        </div>
+      <div className="pg">
+        {this.renderPagination(totalPages < 5, totalPages)}
       </div>
     );
   }
