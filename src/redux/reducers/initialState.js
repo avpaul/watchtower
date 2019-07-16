@@ -216,7 +216,7 @@ export default {
   fetchActiveRole: genericAPIStateArray,
   createRole: genericAPIStateArray,
   roleSkills: genericAPIStateArray,
-  getAllVacancies: genericAPIStateArray,
+  getAllVacancies: genericAPIStateObject,
   allCetifications: genericAPIStateArray,
   editCertification: genericAPIStateObject,
   certifications: genericAPIStateArray,

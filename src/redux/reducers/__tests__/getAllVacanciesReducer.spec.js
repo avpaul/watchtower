@@ -24,7 +24,7 @@ describe('Get all vacancies reducer', () => {
   it('should return the initial state for unknown action type', () => {
     expect(getAllVacanciesReducer(undefined, {})).toEqual({
       loading: false,
-      data: [],
+      data: {},
       error: null
     });
   });
@@ -33,7 +33,7 @@ describe('Get all vacancies reducer', () => {
     const newState = {
       loading: true,
       error: null,
-      data: []
+      data: {}
     };
     const action = { type: GET_ALL_VACANCIES_REQUEST };
     expect(getAllVacanciesReducer(undefined, action)).toMatchObject(newState);
@@ -42,11 +42,11 @@ describe('Get all vacancies reducer', () => {
   it('should add fetched vacancies to state', () => {
     const newState = {
       loading: false,
-      data: []
+      data: {}
     };
     const action = {
       type: GET_ALL_VACANCIES_SUCCESS,
-      data: []
+      data: {}
     };
 
     expect(getAllVacanciesReducer(undefined, action)).toMatchObject(newState);
@@ -56,7 +56,7 @@ describe('Get all vacancies reducer', () => {
     const newState = {
       loading: false,
       error: { message: 'error when fetching vacancies' },
-      data: []
+      data: {}
     };
     const action = {
       type: GET_ALL_VACANCIES_FAILURE,
