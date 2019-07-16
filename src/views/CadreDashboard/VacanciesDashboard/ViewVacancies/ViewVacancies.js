@@ -18,6 +18,44 @@ export class ViewRoleVacancies extends Component {
     this.updateInitialState(projectVacancies || []);
   }
 
+  filterProjectArray = (vacancyArray, text) => {
+    const filteredArrayByProject = vacancyArray.filter(vacancy => {
+      const projectVacancyName = vacancy.project.name.toLowerCase();
+      return projectVacancyName.indexOf(text.toLowerCase()) !== -1;
+    });
+
+    const filteredArrayByRole = vacancyArray.filter(vacancy => {
+      const roleVacancyName = vacancy.role.name.toLowerCase();
+      return roleVacancyName.indexOf(text.toLowerCase()) !== -1;
+    });
+    const filteredArray = filteredArrayByProject.concat(filteredArrayByRole);
+    return filteredArray;
+  };
+
+  filterCertificationVacancy = (vacancyArray, text) => {
+    const filteredArray = vacancyArray.filter(vacancy => {
+      const certificationVacancyName = vacancy.certification.name.toLowerCase();
+      return certificationVacancyName.indexOf(text.toLowerCase()) !== -1;
+    });
+    return filteredArray;
+  };
+
+  handleSearchTextChange = e => {
+    const { vacanciesToDisplay } = this.state;
+    const { vacancies } = this.props;
+    const vacancyArray =
+      vacanciesToDisplay === 'project'
+        ? vacancies.projectVacancies
+        : vacancies.certificationVacancies;
+
+    const filteredArray =
+      vacanciesToDisplay === 'project'
+        ? this.filterProjectArray(vacancyArray, e.target.value)
+        : this.filterCertificationVacancy(vacancyArray, e.target.value);
+
+    this.updateInitialState(filteredArray || []);
+  };
+
   updateInitialState = vacancies => {
     const { paginationWrapper } = this.props;
     paginationWrapper.updateData(vacancies, { perPage: 20 });
@@ -29,7 +67,7 @@ export class ViewRoleVacancies extends Component {
       toDisplay === 'project'
         ? vacancies.projectVacancies
         : vacancies.certificationVacancies;
-    paginationWrapper.updateData(vacanciesArray || []);
+    paginationWrapper.updateData(vacanciesArray || [], { page: 1 });
   };
 
   toggleVacanciesToDisplay = e => {
@@ -73,6 +111,24 @@ export class ViewRoleVacancies extends Component {
     );
   };
 
+  renderSearchDiv = () => {
+    const { vacanciesToDisplay } = this.state;
+    const searchPlaceholder =
+      vacanciesToDisplay === 'project'
+        ? `Search by Project/Role Name`
+        : `Search by Cert... Name`;
+    return (
+      <div className="vacancy-search-div">
+        <input
+          type="text"
+          placeholder={searchPlaceholder}
+          className="vacancy-search-input"
+          onChange={this.handleSearchTextChange}
+        />
+      </div>
+    );
+  };
+
   renderVacancies = (vacancies, vacanciesToDisplay) => {
     const mappedVacancies =
       vacancies.length !== 0 ? (
@@ -84,8 +140,8 @@ export class ViewRoleVacancies extends Component {
           />
         ))
       ) : (
-        <div className="ops-no-vacancies">No Vacancies</div>
-      );
+          <div className="ops-no-vacancies">No Vacancies</div>
+        );
     return mappedVacancies;
   };
 
@@ -93,9 +149,12 @@ export class ViewRoleVacancies extends Component {
     const { paginationWrapper } = this.props;
     const { vacanciesToDisplay } = this.state;
     return (
-      <div>
-        <div>{this.renderToggleButtons()}</div>
-        <div className="ops-vacancies-container">
+      <div className="ops-vacancies__wrapper">
+        <div className="ops-vacancies__filter">
+          {this.renderToggleButtons()}
+          {this.renderSearchDiv()}
+        </div>
+        <div className="ops-vacancies__container">
           {this.renderVacancies(
             paginationWrapper.state.paginatedData,
             vacanciesToDisplay

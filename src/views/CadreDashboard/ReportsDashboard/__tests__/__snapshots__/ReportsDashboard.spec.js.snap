@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test ReportsDashboard component should render correctly 1`] = `
-<Fragment>
+<div
+  className="tdd-cadre"
+>
   <ReportSummary
     engineers={Array []}
     handleSearchChange={[Function]}
@@ -25,11 +27,13 @@ exports[`test ReportsDashboard component should render correctly 1`] = `
     }
     searching={false}
   />
-</Fragment>
+</div>
 `;
 
 exports[`test ReportsDashboard component update props with different array 1`] = `
-<Fragment>
+<div
+  className="tdd-cadre"
+>
   <ReportSummary
     engineers={Array []}
     handleSearchChange={[Function]}
@@ -53,5 +57,5 @@ exports[`test ReportsDashboard component update props with different array 1`] =
     }
     searching={false}
   />
-</Fragment>
+</div>
 `;

@@ -15,44 +15,6 @@ class VacanciesDashboard extends Component {
     getAllVacanciesAction();
   }
 
-  toggleVacanciesToDisplay = e => {
-    this.setState({
-      vacanciesToDisplay: e.target.value
-    });
-  };
-
-  renderToggleButtons = () => {
-    const { vacanciesToDisplay } = this.state;
-    return (
-      <div className="toogle-container">
-        <button
-          type="button"
-          value="project"
-          className={
-            vacanciesToDisplay === 'project'
-              ? 'vacancy-toggle-button--active'
-              : 'vacancy-toggle-button'
-          }
-          onClick={this.toggleVacanciesToDisplay}
-        >
-          Project Vacancies
-        </button>
-        <button
-          type="button"
-          value="certification"
-          className={
-            vacanciesToDisplay === 'certification'
-              ? 'vacancy-toggle-button--active'
-              : 'vacancy-toggle-button'
-          }
-          onClick={this.toggleVacanciesToDisplay}
-        >
-          Certification Vacancies
-        </button>
-      </div>
-    );
-  };
-
   clearProjectVacanciesOnFocus = () => {
     const { setProjectVacanciesOnFocus } = this.props;
     setProjectVacanciesOnFocus({});
@@ -67,7 +29,6 @@ class VacanciesDashboard extends Component {
       certificationVacanciesCount = data.certificationVacancies.length;
       totalCount = projectVacanciesCount + certificationVacanciesCount;
     }
-
     return (
       <React.Fragment>
         <div className="col-9">
@@ -106,10 +67,10 @@ class VacanciesDashboard extends Component {
         {loading ? (
           <PMloader />
         ) : (
-            <React.Fragment>
-              <div className="row">{this.renderTopBar(!data ? [] : data)}</div>
+            <div className="ops-vacancies tdd-cadre">
+              <div className="row ops-vacancies__header">{this.renderTopBar(!data ? [] : data)}</div>
               <ViewVacancies vacancies={data} />
-            </React.Fragment>
+            </div>
           )}
       </React.Fragment>
     );

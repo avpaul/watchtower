@@ -14,6 +14,7 @@
   box-sizing: border-box;
   cursor: pointer;
   outline: none;
+
   img {
     width: 50%;
     height: 50%;
@@ -38,11 +39,13 @@
   padding: 10px;
   outline: none !important;
   transition: 0.2s ease all;
-}
 
-.cadre-main-button:hover {
-  text-decoration: none;
-  color: #ffffff;
-  margin-top: -0.1rem;
-  box-shadow: 0 5px 1rem 0.2rem rgba(0, 0, 0, 0.11);
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: -0.1rem;
+    margin-bottom: 0.1rem;
+    box-shadow: 0 5px 1rem 0.2rem rgba(0, 0, 0, 0.11);
+  }
+
 }
