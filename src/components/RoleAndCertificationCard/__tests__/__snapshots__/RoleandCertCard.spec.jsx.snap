@@ -5,147 +5,154 @@ exports[`Test Certification Card component should handle click count correctly 1
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target={null}
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Edit Certification
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#deleteCertificationModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Delete  Certification
-    </button>
-  </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
     />
-  </p>
+    <div
+      className="dropdown-menu dropdown-menu-right"
+    >
+      <button
+        className="dropdown-item"
+        data-target={null}
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Certification
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#deleteCertificationModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete  Certification
+      </button>
+    </div>
+    <div
+      className="role-card__title"
+    >
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      />
+    </p>
+  </div>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Certified Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Certified Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              2
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       hide
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={true}
-    showBtn={true}
-    size="large"
-    title="2 test role's"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "certified_engineers": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
+      test role description should render role card instance properly should render role card instance properly
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         hide
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={true}
+      showBtn={true}
+      size="large"
+      title="2 test role's"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "certified_engineers": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -154,147 +161,154 @@ exports[`Test Certification Card component should handle close modal correctly 1
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target={null}
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Edit Certification
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#deleteCertificationModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Delete  Certification
-    </button>
-  </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
     />
-  </p>
+    <div
+      className="dropdown-menu dropdown-menu-right"
+    >
+      <button
+        className="dropdown-item"
+        data-target={null}
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Certification
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#deleteCertificationModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete  Certification
+      </button>
+    </div>
+    <div
+      className="role-card__title"
+    >
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      />
+    </p>
+  </div>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Certified Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Certified Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              2
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       hide
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={true}
-    showBtn={true}
-    size="large"
-    title="2 test role's"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "certified_engineers": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
+      test role description should render role card instance properly should render role card instance properly
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         hide
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={true}
+      showBtn={true}
+      size="large"
+      title="2 test role's"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "certified_engineers": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+        }
       }
-    }
-    open={true}
-    toggle={[Function]}
-  />
+      open={true}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -303,147 +317,154 @@ exports[`Test Certification Card component should render correctly 1`] = `
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target={null}
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Edit Certification
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#deleteCertificationModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Delete  Certification
-    </button>
-  </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
     />
-  </p>
+    <div
+      className="dropdown-menu dropdown-menu-right"
+    >
+      <button
+        className="dropdown-item"
+        data-target={null}
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Certification
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#deleteCertificationModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete  Certification
+      </button>
+    </div>
+    <div
+      className="role-card__title"
+    >
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      />
+    </p>
+  </div>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Certified Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Certified Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              2
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       see more
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={false}
-    showBtn={true}
-    size="large"
-    title="2 test role's"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "certified_engineers": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
+      test role description should render role card instance properly should render role card instance pro
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         ...see more
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={false}
+      showBtn={true}
+      size="large"
+      title="2 test role's"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "certified_engineers": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -452,147 +473,154 @@ exports[`Test Certification Card component should render modal 1`] = `
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target={null}
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Edit Certification
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#deleteCertificationModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
-    >
-      Delete  Certification
-    </button>
-  </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
     />
-  </p>
+    <div
+      className="dropdown-menu dropdown-menu-right"
+    >
+      <button
+        className="dropdown-item"
+        data-target={null}
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Certification
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#deleteCertificationModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete  Certification
+      </button>
+    </div>
+    <div
+      className="role-card__title"
+    >
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      />
+    </p>
+  </div>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Certified Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Certified Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              2
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       see more
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={false}
-    showBtn={true}
-    size="large"
-    title="2 test role's"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "certified_engineers": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
+      test role description should render role card instance properly should render role card instance pro
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         ...see more
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={false}
+      showBtn={true}
+      size="large"
+      title="2 test role's"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "certified_engineers": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -601,149 +629,156 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target="#editRoleModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
+    />
+    <div
+      className="dropdown-menu dropdown-menu-right"
     >
-      Edit Role
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#delete-role-modal"
-      data-toggle="modal"
-      disabled={1}
-      onClick={[Function]}
-      type="button"
+      <button
+        className="dropdown-item"
+        data-target="#editRoleModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Role
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#delete-role-modal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete Role
+      </button>
+    </div>
+    <div
+      className="role-card__title"
     >
-      Delete Role
-    </button>
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      >
+        3
+      </span>
+    </p>
   </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
-    >
-      3
-    </span>
-  </p>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Active Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Active Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            1
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              1
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       hide
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={true}
-    showBtn={true}
-    size="large"
-    title="1 test role"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
-        "vacancies_count": 3,
+      test role description should render role card instance properly should render role card instance properly
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         hide
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={true}
+      showBtn={true}
+      size="large"
+      title="1 test role"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+          "vacancies_count": 3,
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -752,149 +787,156 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target="#editRoleModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
+    />
+    <div
+      className="dropdown-menu dropdown-menu-right"
     >
-      Edit Role
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#delete-role-modal"
-      data-toggle="modal"
-      disabled={1}
-      onClick={[Function]}
-      type="button"
+      <button
+        className="dropdown-item"
+        data-target="#editRoleModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Role
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#delete-role-modal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete Role
+      </button>
+    </div>
+    <div
+      className="role-card__title"
     >
-      Delete Role
-    </button>
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      >
+        3
+      </span>
+    </p>
   </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
-    >
-      3
-    </span>
-  </p>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Active Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Active Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            1
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              1
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       hide
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={false}
-    showBtn={true}
-    size="large"
-    title="1 test role"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
-        "vacancies_count": 3,
+      test role description should render role card instance properly should render role card instance properly
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         hide
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={false}
+      showBtn={true}
+      size="large"
+      title="1 test role"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+          "vacancies_count": 3,
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -903,149 +945,156 @@ exports[`Test Role Card component should render correctly 1`] = `
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target="#editRoleModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
+    />
+    <div
+      className="dropdown-menu dropdown-menu-right"
     >
-      Edit Role
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#delete-role-modal"
-      data-toggle="modal"
-      disabled={1}
-      onClick={[Function]}
-      type="button"
+      <button
+        className="dropdown-item"
+        data-target="#editRoleModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Role
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#delete-role-modal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete Role
+      </button>
+    </div>
+    <div
+      className="role-card__title"
     >
-      Delete Role
-    </button>
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      >
+        3
+      </span>
+    </p>
   </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
-    >
-      3
-    </span>
-  </p>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Active Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Active Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            1
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              1
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       see more
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={false}
-    showBtn={true}
-    size="large"
-    title="1 test role"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
-        "vacancies_count": 3,
+      test role description should render role card instance properly should render role card instance pro
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         ...see more
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={false}
+      showBtn={true}
+      size="large"
+      title="1 test role"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+          "vacancies_count": 3,
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -1054,148 +1103,155 @@ exports[`Test Role Card component should render modal 1`] = `
   className="role-card"
 >
   <div
-    className="role-card__icon"
-    data-toggle="dropdown"
-  />
-  <div
-    className="dropdown-menu dropdown-menu-right"
+    className="px-4"
   >
-    <button
-      className="dropdown-item"
-      data-target="#editRoleModal"
-      data-toggle="modal"
-      disabled={null}
-      onClick={[Function]}
-      type="button"
+    <div
+      className="role-card__icon"
+      data-toggle="dropdown"
+    />
+    <div
+      className="dropdown-menu dropdown-menu-right"
     >
-      Edit Role
-    </button>
-    <button
-      className="dropdown-item"
-      data-target="#delete-role-modal"
-      data-toggle="modal"
-      disabled={1}
-      onClick={[Function]}
-      type="button"
+      <button
+        className="dropdown-item"
+        data-target="#editRoleModal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Edit Role
+      </button>
+      <button
+        className="dropdown-item"
+        data-target="#delete-role-modal"
+        data-toggle="modal"
+        disabled={null}
+        onClick={[Function]}
+        type="button"
+      >
+        Delete Role
+      </button>
+    </div>
+    <div
+      className="role-card__title"
     >
-      Delete Role
-    </button>
+      test role
+    </div>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Vacancies
+       
+      <span
+        className="role-card__attributes-count-sm"
+      >
+        3
+      </span>
+    </p>
   </div>
-  <div
-    className="role-card__title"
-  >
-    test role
-  </div>
-  <p
-    className="role-card__attributes-sm"
-  >
-    Vacancies
-     
-    <span
-      className="role-card__attributes-count-sm"
-    >
-      3
-    </span>
-  </p>
   <hr />
   <div
-    className="row"
+    className="px-4"
   >
     <div
-      className="col-6"
+      className="row"
     >
       <div
-        className="role-card__attributes"
+        className="col-6"
       >
-        Applicants 
-        <br />
-         
         <div
-          className="text-left"
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
+          Applicants 
+          <br />
+           
+          <div
+            className="text-left pt-2"
           >
-            2
-          </span>
+            <span
+              className="role-card__attributes-count"
+            >
+              2
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-6"
-    >
-      <p
-        className="role-card__attributes"
+      <div
+        className="col-6"
       >
-        Active Engrs.
-         
-        <br />
-        <div
-          className="text-left"
+        <p
+          className="role-card__attributes"
         >
-          <span
-            className="role-card__attributes-count"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex="-1"
+          Active Engrs.
+           
+          <br />
+          <div
+            className="text-left pt-2"
           >
-            1
-          </span>
-        </div>
-      </p>
+            <span
+              className="role-card__attributes-count"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              1
+            </span>
+          </div>
+        </p>
+      </div>
     </div>
-  </div>
-  <p
-    className="role-card__description-title mt-2 mb-1"
-  >
-    Description
-  </p>
-  <p
-    className="role-card__description"
-  >
-    test role description should render role card instance properly should render role card instance properly
-    <span
-      className="role-card__attributes-seemore"
-      onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      tabIndex="-1"
+    <p
+      className="role-card__description-title mt-3 mb-2"
     >
-      ...
-       see more
-    </span>
-  </p>
-  <Modal
-    handleClose={[Function]}
-    show={false}
-    showBtn={true}
-    size="large"
-    title="1 test role"
-  >
-    <div
-      className="modal__body-card"
+      Description
+    </p>
+    <p
+      className="role-card__description"
     >
-      <MapRoleActiveEngineers
-        roleData={Object {}}
-      />
-    </div>
-  </Modal>
-  <Connect(withRouter(EditCertificationModal))
-    data={
-      Object {
-        "active_engineers_count": 1,
-        "applications_count": 2,
-        "created_at": "2019-06-04 04:56:39",
-        "description": "test role description should render role card instance properly should render role card instance properly",
-        "id": 1,
-        "name": "test role",
-        "updated_at": "2019-06-04 04:56:39",
-        "vacancies_count": 3,
+      test role description should render role card instance properly should render role card instance pro
+      <span
+        className="role-card__attributes-seemore"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+         ...see more
+      </span>
+    </p>
+    <Modal
+      handleClose={[Function]}
+      show={false}
+      showBtn={true}
+      size="large"
+      title="1 test role"
+    >
+      <div
+        className="modal__body-card"
+      >
+        <MapRoleActiveEngineers
+          roleData={Object {}}
+        />
+      </div>
+    </Modal>
+    <Connect(withRouter(EditCertificationModal))
+      data={
+        Object {
+          "active_engineers_count": 1,
+          "applications_count": 2,
+          "created_at": "2019-06-04 04:56:39",
+          "description": "test role description should render role card instance properly should render role card instance properly",
+          "id": 1,
+          "name": "test role",
+          "updated_at": "2019-06-04 04:56:39",
+          "vacancies_count": 3,
+        }
       }
-    }
-    open={false}
-    toggle={[Function]}
-  />
+      open={false}
+      toggle={[Function]}
+    />
+  </div>
 </div>
 `;

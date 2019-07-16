@@ -64,7 +64,7 @@ class Card extends React.Component {
     } = this.props;
     return showMore
       ? details.description
-      : `${details.description.substring(0, 150)}`;
+      : `${details.description.substring(0, 100)}`;
   };
 
   renderShowMoreButton = showMore => {
@@ -81,14 +81,14 @@ class Card extends React.Component {
         role="button"
         tabIndex="-1"
       >
-        ...{showMore ? ' hide' : ' see more'}
+        {showMore ? ' hide' : ' ...see more'}
       </span>
     );
   };
 
   renderDescription = showMore => (
     <React.Fragment>
-      <p className="role-card__description-title mt-2 mb-1">Description</p>
+      <p className="role-card__description-title mt-3 mb-2">Description</p>
       <p className="role-card__description">
         {this.renderFullDescription()}
         {this.renderShowMoreButton(showMore)}
@@ -97,7 +97,7 @@ class Card extends React.Component {
   );
 
   renderCount = (count, event) => (
-    <div className="text-left">
+    <div className="text-left pt-2">
       <span
         className="role-card__attributes-count"
         onClick={count > 0 ? event : ''}
@@ -121,7 +121,7 @@ class Card extends React.Component {
         <div className="col-6">
           <div className="role-card__attributes">
             Applicants <br />{' '}
-            <div className="text-left">
+            <div className="text-left pt-2">
               <span className="role-card__attributes-count">
                 {details.applications_count}
               </span>
@@ -227,26 +227,30 @@ class Card extends React.Component {
     const { showMore, openModal } = this.state;
     return (
       <div className="role-card">
-        <div className="role-card__icon" data-toggle="dropdown" />
-        {this.renderDropdown(type, details)}
-        <div className="role-card__title">{truncate(details.name, 22)}</div>
-        <p className="role-card__attributes-sm">
-          Vacancies{' '}
-          <span className="role-card__attributes-count-sm">
-            {details.vacancies_count}
-          </span>
-        </p>
+        <div className="px-4">
+          <div className="role-card__icon" data-toggle="dropdown" />
+          {this.renderDropdown(type)}
+          <div className="role-card__title">{truncate(details.name, 22)}</div>
+          <p className="role-card__attributes-sm">
+            Vacancies{' '}
+            <span className="role-card__attributes-count-sm">
+              {details.vacancies_count}
+            </span>
+          </p>
+        </div>
         <hr />
-        {this.renderPositionsCount(details, type)}
-        {this.renderDescription(showMore)}
-        {this.renderModal(
-          details,
-          openModal,
-          loading,
-          activeParticipants,
-          type
-        )}
-        {this.renderEditCertificationModal()}
+        <div className="px-4">
+          {this.renderPositionsCount(details, type)}
+          {this.renderDescription(showMore)}
+          {this.renderModal(
+            details,
+            openModal,
+            loading,
+            activeParticipants,
+            type
+          )}
+          {this.renderEditCertificationModal()}
+        </div>
       </div>
     );
   }
