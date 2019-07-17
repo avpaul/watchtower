@@ -9,17 +9,22 @@ exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
   >
     Wava Wehner MD
   </div>
-  <div
-    className="ops-vacancy-card__project-slots"
-  >
-    2
-     
-    available slots
+  <div>
+    <span
+      className="ops-vacancy-card__project-slot__label"
+    >
+      Slots: 
+    </span>
+    <span
+      className="ops-vacancy-card__project-slot__number"
+    >
+      2
+    </span>
   </div>
   <div
     className="ops-vacancy-card__project"
   >
-    20 weeks
+    20 days    
   </div>
   <div
     className="ops-vacancy-card__applications"
@@ -75,12 +80,17 @@ exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
   >
     Engineer
   </div>
-  <div
-    className="ops-vacancy-card__project-slots"
-  >
-    5
-     
-    available slots
+  <div>
+    <span
+      className="ops-vacancy-card__project-slot__label"
+    >
+      Slots: 
+    </span>
+    <span
+      className="ops-vacancy-card__project-slot__number"
+    >
+      5
+    </span>
   </div>
   <div
     className="ops-vacancy-card__project"

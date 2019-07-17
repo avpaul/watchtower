@@ -32,88 +32,94 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
       />
     </div>
   </div>
-  <div>
-    <div
-      className="toogle-container"
-    >
-      <button
-        className="vacancy-toggle-button--active"
-        onClick={[Function]}
-        type="button"
-        value="project"
-      >
-        Project Vacancies
-      </button>
-      <button
-        className="vacancy-toggle-button"
-        onClick={[Function]}
-        type="button"
-        value="certification"
-      >
-        Certification Vacancies
-      </button>
-    </div>
-  </div>
-  <ViewRoleVacancies
+  <PaginatedVacanciesDashboard
     vacancies={
-      Array [
-        Object {
-          "available_slots": 2,
-          "project": Object {
-            "id": 2,
-            "name": "Corrupti non.",
-          },
-          "role": Object {
-            "id": 1,
-            "name": "Engineer",
-          },
-          "vacancies": Array [
-            Object {
-              "fellow_id": null,
+      Object {
+        "certificationVacancies": Array [
+          Object {
+            "available_slots": 2,
+            "certification": Object {
+              "0": Object {
+                "certification": Object {
+                  "description": "Harum sit molestias.",
+                  "duration": 20,
+                  "exclusive": true,
+                  "id": 1,
+                  "name": "Wava Wehner MD",
+                },
+                "certification_id": 1,
+                "created_at": "2019-07-10 07:58:34",
+                "fellow_id": null,
+                "id": 2,
+                "is_active": false,
+                "updated_at": "2019-07-10 07:58:34",
+              },
+              "description": "Harum sit reiciendis sint delectus aspernatur omnis.,",
+              "duration": 20,
+              "exclusive": true,
               "id": 1,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
+              "name": "Wava Wehner MD",
             },
-            Object {
-              "fellow_id": null,
+          },
+        ],
+        "projectVacancies": Array [
+          Object {
+            "available_slots": 2,
+            "project": Object {
               "id": 2,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
+              "name": "Corrupti non.",
             },
-          ],
-        },
-        Object {
-          "available_slots": 2,
-          "project": Object {
-            "id": 4,
-            "name": "Corrupti non.",
-          },
-          "role": Object {
-            "id": 2,
-            "name": "Engineer",
-          },
-          "vacancies": Array [
-            Object {
-              "fellow_id": null,
+            "role": Object {
               "id": 1,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
+              "name": "Engineer",
             },
-            Object {
-              "fellow_id": null,
+            "vacancies": Array [
+              Object {
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+              },
+              Object {
+                "fellow_id": null,
+                "id": 2,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+              },
+            ],
+          },
+          Object {
+            "available_slots": 2,
+            "project": Object {
+              "id": 4,
+              "name": "Corrupti non.",
+            },
+            "role": Object {
               "id": 2,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
+              "name": "Engineer",
             },
-          ],
-        },
-      ]
+            "vacancies": Array [
+              Object {
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+              },
+              Object {
+                "fellow_id": null,
+                "id": 2,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+              },
+            ],
+          },
+        ],
+      }
     }
-    vacanciesToDisplay="project"
   />
 </div>
 `;

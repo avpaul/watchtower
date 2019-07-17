@@ -10,10 +10,6 @@ import PMloader from '../../../components/CustomLoader/PMLoader';
 import './vacancyDashboard.scss';
 
 class VacanciesDashboard extends Component {
-  state = {
-    vacanciesToDisplay: 'project'
-  };
-
   componentDidMount() {
     const { getAllVacanciesAction } = this.props;
     getAllVacanciesAction();
@@ -71,17 +67,18 @@ class VacanciesDashboard extends Component {
       certificationVacanciesCount = data.certificationVacancies.length;
       totalCount = projectVacanciesCount + certificationVacanciesCount;
     }
+
     return (
       <React.Fragment>
         <div className="col-9">
           <Title
             title={`${totalCount} Vacanc${
               totalCount === 1 ? 'y' : 'ies'
-            } (${projectVacanciesCount} Project${
+              } (${projectVacanciesCount} Project${
               projectVacanciesCount === 1 ? '' : 's'
-            }, ${certificationVacanciesCount} Certification${
+              }, ${certificationVacanciesCount} Certification${
               certificationVacanciesCount === 1 ? '' : 's'
-            })`}
+              })`}
           />
         </div>
         <div className="col-3">
@@ -102,7 +99,6 @@ class VacanciesDashboard extends Component {
     const {
       getAllVacancies: { data, loading }
     } = this.props;
-    const { vacanciesToDisplay } = this.state;
     return (
       <React.Fragment>
         <AddVacanciesModal />
@@ -110,19 +106,11 @@ class VacanciesDashboard extends Component {
         {loading ? (
           <PMloader />
         ) : (
-          <React.Fragment>
-            <div className="row">{this.renderTopBar(!data ? [] : data)}</div>
-            <div>{this.renderToggleButtons()}</div>
-            <ViewVacancies
-              vacancies={
-                vacanciesToDisplay === 'project'
-                  ? data.projectVacancies
-                  : data.certificationVacancies
-              }
-              vacanciesToDisplay={vacanciesToDisplay}
-            />
-          </React.Fragment>
-        )}
+            <React.Fragment>
+              <div className="row">{this.renderTopBar(!data ? [] : data)}</div>
+              <ViewVacancies vacancies={data} />
+            </React.Fragment>
+          )}
       </React.Fragment>
     );
   };

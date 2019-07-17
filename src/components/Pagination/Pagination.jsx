@@ -21,11 +21,15 @@ class Pagination extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { perPage } = this.props;
+    const { perPage, currentPage } = this.props;
     if (prevProps.perPage !== perPage) this.updatePerPage(perPage);
+    if (prevProps.currentPage !== currentPage)
+      this.updateCurrentPage(currentPage);
   }
 
   updatePerPage = perPage => this.setState({ perPage });
+
+  updateCurrentPage = page => this.setState({ page });
 
   /**
    * changes page based on next or previous click

@@ -24,14 +24,13 @@ export default class PaginationFrontendWrapper extends Component {
         filteredData: data,
         paginationFilter: {
           ...state.paginationFilter,
-          ...{
-            ...filters,
-            totalPages: Math.ceil(data.length / state.paginationFilter.perPage)
-          }
+          ...filters,
+          totalPages: Math.ceil(data.length / state.paginationFilter.perPage)
         }
       }),
       this.paginateData
     );
+    return true;
   };
 
   paginateData = () => {
@@ -80,7 +79,7 @@ export default class PaginationFrontendWrapper extends Component {
         handlePageChange={this.handlePaginationPageChange}
         handleValueChange={this.handlePaginationPageChange}
         currentPage={paginationFilter.page}
-        filter={paginationFilter}
+        perPage={paginationFilter.perPage}
         hasData={filteredData.length > 0}
       />
     );
