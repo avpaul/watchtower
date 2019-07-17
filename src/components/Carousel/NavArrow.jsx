@@ -18,14 +18,19 @@ class NavArrow extends Component {
   };
 
   getArrowHideClass = (btnClass, currentSlide, slideCount) => {
+    const { perPage } = this.props;
+
     if (currentSlide === 0) {
       return currentSlide === 0 && btnClass === 'slick-prev'
         ? 'slick-arrow-hide'
         : '';
     }
-    return (currentSlide === slideCount - 1 ||
-      currentSlide === slideCount - 3) &&
-      btnClass === 'slick-next'
+
+    const remainingPagesCount = Math.ceil(
+      (slideCount - (currentSlide + perPage)) / perPage
+    );
+
+    return remainingPagesCount === 0 && btnClass === 'slick-next'
       ? 'slick-arrow-hide'
       : '';
   };
@@ -40,7 +45,7 @@ class NavArrow extends Component {
           buttonClass,
           currentSlide,
           slideCount
-        ) || this.getArrowHideClass(buttonClass, currentSlide, slideCount)}`}
+        )}`}
         onClick={this.handleArrowClick}
       >
         <span role="presentation" className={`fa ${iconClass}`} />
@@ -55,11 +60,13 @@ NavArrow.propTypes = {
   onClick: PropTypes.func,
   currentSlide: PropTypes.number.isRequired,
   slideCount: PropTypes.number.isRequired,
-  handleChartClose: PropTypes.func.isRequired
+  handleChartClose: PropTypes.func.isRequired,
+  perPage: PropTypes.number
 };
 
 NavArrow.defaultProps = {
-  onClick: () => {}
+  onClick: () => {},
+  perPage: 4
 };
 
 export default NavArrow;
