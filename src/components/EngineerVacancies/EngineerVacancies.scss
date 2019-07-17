@@ -24,6 +24,7 @@
   justify-content: flex-start;
   width: 90%;
   margin: auto;
+
   &__span {
     height: 18px;
     color: rgba(52, 76, 90, 0.62);
@@ -34,6 +35,7 @@
     margin-left: 2%;
     margin-bottom: 2%;
   }
+
   > * {
     margin-top: 5%;
   }
@@ -45,18 +47,22 @@
   border-radius: 14px;
   background-color: #edf4fd;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+
   &__inner {
     display: flex;
     flex-direction: row;
     margin: 7% 0 0 5%;
     align-items: flex-start;
+
     .icon {
       padding-top: 15px;
     }
+
     ul {
       margin-left: 7px;
       padding-top: 15px;
     }
+
     &__list {
       li:nth-child(1) {
         height: 18px;
@@ -67,6 +73,7 @@
         line-height: 18px;
         text-transform: capitalize;
       }
+
       li:nth-child(2) {
         height: 18px;
         color: rgba(52, 76, 90, 0.62);
@@ -76,6 +83,7 @@
         margin-top: 2%;
         text-transform: capitalize;
       }
+
       li:nth-child(3) {
         height: 17px;
         width: 44px;
@@ -97,7 +105,8 @@
   border-top-left-radius: 12px;
   color: rgba(30, 64, 82, 0.51);
   background-color: #edf4fd;
-  width: 353px;
+  width: 100%;
+  max-width: 353px;
   margin-top: 16px;
   line-height: 40px;
 
