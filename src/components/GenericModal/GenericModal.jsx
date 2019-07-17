@@ -83,7 +83,7 @@ class GenericModal extends Component {
   };
 
   render() {
-    const { id, title } = this.props;
+    const { id, title, size } = this.props;
 
     const namedId = 'addCertificationModal' || 'addRoleModal';
 
@@ -97,7 +97,7 @@ class GenericModal extends Component {
       >
         <div
           className={`modal-dialog modal-dialog-centered ${
-            id === namedId ? 'modal-lg' : ''
+            id === namedId ? 'modal-lg' : size
           }`}
           role="document"
         >
@@ -123,7 +123,8 @@ GenericModal.propTypes = {
   successMessage: PropTypes.string,
   success: PropTypes.bool,
   submitLoading: PropTypes.bool,
-  footer: PropTypes.shape()
+  footer: PropTypes.shape(),
+  size: PropTypes.string
 };
 
 GenericModal.defaultProps = {
@@ -132,7 +133,8 @@ GenericModal.defaultProps = {
   successMessage: 'Success!',
   success: false,
   submitLoading: false,
-  footer: null
+  footer: null,
+  size: ''
 };
 
 export default GenericModal;

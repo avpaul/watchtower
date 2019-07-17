@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Card from '../Card';
 import Modal from '../../LargeModal/LargeModal';
+import ViewCertificationApplicantsModal from '../../../views/CadreDashboard/CertificatesDashboard/ViewCertificationApplicants/ViewCertificationApplicantsModal';
 
 let wrapper;
 
@@ -141,5 +142,19 @@ describe('Test Certification Card component', () => {
       .find('.dropdown-item')
       .at(1)
       .simulate('click');
+  });
+
+  it('should show the certification Applicants Modal when user clicks on the button', () => {
+    wrapper.find('#certification_applicants_count').simulate('click');
+    const modalProps = {
+      open: jest.fn(),
+      toggle: jest.fn(),
+      certificationId: 1,
+      title: 'hello certification here'
+    };
+    const applicantsModal = wrapper.find(
+      <ViewCertificationApplicantsModal {...modalProps} />
+    );
+    expect(applicantsModal).toMatchSnapshot();
   });
 });

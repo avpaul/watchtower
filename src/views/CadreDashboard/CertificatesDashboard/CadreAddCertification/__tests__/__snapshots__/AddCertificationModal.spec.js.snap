@@ -31,6 +31,7 @@ Object {
     handleClose={[Function]}
     handleSubmit={[Function]}
     id="addCertificationModal"
+    size=""
     submitLoading={false}
     success={false}
     successMessage="New Certification created Successfully"
@@ -133,6 +134,7 @@ Object {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addCertificationModal"
+                size=""
                 submitLoading={false}
                 success={false}
                 successMessage="New Certification created Successfully"
@@ -302,6 +304,7 @@ Object {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addCertificationModal"
+                size=""
                 submitLoading={false}
                 success={false}
                 successMessage="New Certification created Successfully"
@@ -471,6 +474,7 @@ Object {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addCertificationModal"
+                size=""
                 submitLoading={false}
                 success={false}
                 successMessage="New Certification created Successfully"

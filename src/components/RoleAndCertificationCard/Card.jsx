@@ -7,6 +7,7 @@ import { pluralizeCheck, truncate } from '../../utils';
 import EditCertificationModal from '../EditCertificationModal/EditCertificationModalContainer';
 
 import './Card.scss';
+import ViewCertificationApplicantsModal from '../../views/CadreDashboard/CertificatesDashboard/ViewCertificationApplicants';
 
 class Card extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class Card extends React.Component {
     this.state = {
       showMore: false,
       openModal: false,
-      openCertification: false
+      openCertification: false,
+      showCertificationApplicants: false
     };
   }
 
@@ -34,6 +36,18 @@ class Card extends React.Component {
   openCertificationModal = () => {
     const { openCertification } = this.state;
     this.setState({ openCertification: !openCertification });
+  };
+
+  certificationApplicantsModalHandler = () => {
+    const {
+      cardProps: { details }
+    } = this.props;
+    if (details.applications_count) {
+      const { showCertificationApplicants } = this.state;
+      this.setState({
+        showCertificationApplicants: !showCertificationApplicants
+      });
+    }
   };
 
   closeModal = () => {
@@ -122,7 +136,14 @@ class Card extends React.Component {
           <div className="role-card__attributes">
             Applicants <br />{' '}
             <div className="text-left pt-2">
-              <span className="role-card__attributes-count">
+              <span
+                className="role-card__attributes-count"
+                tabIndex="0"
+                role="button"
+                id="certification_applicants_count"
+                onClick={this.certificationApplicantsModalHandler}
+                onKeyPress={this.certificationApplicantsModalHandler}
+              >
                 {details.applications_count}
               </span>
             </div>
@@ -211,6 +232,7 @@ class Card extends React.Component {
       cardProps: { details }
     } = this.props;
     const { openCertification } = this.state;
+
     return (
       <EditCertificationModal
         open={openCertification}
@@ -220,11 +242,34 @@ class Card extends React.Component {
     );
   };
 
+  renderViewCertificationApplicantsModal = () => {
+    const {
+      cardProps: {
+        details: { id, name }
+      }
+    } = this.props;
+    const { showCertificationApplicants } = this.state;
+
+    return (
+      <ViewCertificationApplicantsModal
+        open={showCertificationApplicants}
+        toggle={this.certificationApplicantsModalHandler}
+        certificationId={id}
+        title={name}
+      />
+    );
+  };
+
   render() {
     const {
       cardProps: { details, loading, activeParticipants, type }
     } = this.props;
-    const { showMore, openModal } = this.state;
+    const {
+      showMore,
+      openModal,
+      openCertification,
+      showCertificationApplicants
+    } = this.state;
     return (
       <div className="role-card">
         <div className="px-4">
@@ -239,18 +284,18 @@ class Card extends React.Component {
           </p>
         </div>
         <hr />
-        <div className="px-4">
-          {this.renderPositionsCount(details, type)}
-          {this.renderDescription(showMore)}
-          {this.renderModal(
-            details,
-            openModal,
-            loading,
-            activeParticipants,
-            type
-          )}
-          {this.renderEditCertificationModal()}
-        </div>
+        {this.renderPositionsCount(details, type)}
+        {this.renderDescription(showMore)}
+        {this.renderModal(
+          details,
+          openModal,
+          loading,
+          activeParticipants,
+          type
+        )}
+        {openCertification && this.renderEditCertificationModal()}
+        {showCertificationApplicants &&
+          this.renderViewCertificationApplicantsModal()}
       </div>
     );
   }

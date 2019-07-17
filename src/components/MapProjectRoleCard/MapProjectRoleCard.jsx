@@ -80,16 +80,16 @@ const MapProjectRoleCard = ({
 );
 
 MapProjectRoleCard.propTypes = {
-  roleData: PropTypes.instanceOf(Array),
-  fetchActiveEngineers: PropTypes.func.isRequired,
-  setDeleteTarget: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
   activeEngineers: PropTypes.oneOfType([
     PropTypes.instanceOf(Array),
     PropTypes.shape()
   ]),
   type: PropTypes.string.isRequired,
-  setCertificationOnFocus: PropTypes.func.isRequired
+  setCertificationOnFocus: PropTypes.func.isRequired,
+  fetchActiveEngineers: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  roleData: PropTypes.instanceOf(Array),
+  setDeleteTarget: PropTypes.func.isRequired,
 };
 MapProjectRoleCard.defaultProps = {
   roleData: [],

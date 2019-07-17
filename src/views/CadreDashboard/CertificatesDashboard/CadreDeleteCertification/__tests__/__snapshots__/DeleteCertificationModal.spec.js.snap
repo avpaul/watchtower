@@ -19,6 +19,7 @@ exports[`Delete Certification Modal renders correctly 1`] = `
   handleClose={[Function]}
   handleSubmit={[Function]}
   id="deleteCertificationModal"
+  size=""
   submitLoading={false}
   success={false}
   successMessage="Project certification have been deleted!"
