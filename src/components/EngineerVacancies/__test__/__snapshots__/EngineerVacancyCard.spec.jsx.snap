@@ -9,6 +9,7 @@ exports[`TextInput  renders as expected with required props 1`] = `
   >
     <img
       alt="vacancy-card__inner icon"
+      className="icon"
       src="projectdown.svg"
     />
     <ul

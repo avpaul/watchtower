@@ -17,6 +17,69 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
         className="dashboard-greeting"
       >
         <WelcomeMessage
+          cadreVacancies={
+            Object {
+              "data": Object {
+                "certificationsVacancies": Array [
+                  Object {
+                    "available_slots": 2,
+                    "certification": Object {
+                      "0": Object {
+                        "certification": Object {
+                          "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                          "duration": 20,
+                          "exclusive": false,
+                          "id": 1,
+                          "name": "Mrs. Alanna Ziemann",
+                        },
+                        "certification_id": 1,
+                        "created_at": "2019-07-09 17:22:58",
+                        "fellow_id": null,
+                        "id": 2,
+                        "is_active": false,
+                        "updated_at": "2019-07-09 17:22:58",
+                      },
+                      "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                      "duration": 20,
+                      "exclusive": false,
+                      "id": 1,
+                      "name": "Mrs. Alanna Ziemann",
+                    },
+                  },
+                ],
+                "projectVacancies": Array [
+                  Object {
+                    "available_slots": 1,
+                    "project": Object {
+                      "id": 1,
+                      "name": "Dolorum suscipit molestiae.",
+                    },
+                    "role": Object {
+                      "id": 1,
+                      "name": "Engineer",
+                    },
+                    "vacancies": Array [
+                      Object {
+                        "fellow_id": null,
+                        "id": 4,
+                        "is_active": false,
+                        "project": Object {
+                          "id": 1,
+                          "name": "Dolorum suscipit molestiae.",
+                        },
+                        "project_id": 1,
+                        "project_role_id": 1,
+                        "role": Object {
+                          "id": 1,
+                          "name": "Engineer",
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+            }
+          }
           getD1FellowProfileData={
             [MockFunction] {
               "calls": Array [
@@ -38,6 +101,28 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                   "value": undefined,
                 },
               ],
+            }
+          }
+          profile={
+            Object {
+              "project": Object {
+                "manager": Object {
+                  "email": "janet.doe@andela.com",
+                  "name": "Janet Doe",
+                },
+                "name": "watchTower",
+                "tagline": "Let the watch begin",
+                "technologies": Array [
+                  "php",
+                  "flutter",
+                  "dart",
+                ],
+              },
+            }
+          }
+          user={
+            Object {
+              "first_name": "Test User",
             }
           }
         />
@@ -46,6 +131,69 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
         className="fellow-dashboard-main"
       >
         <Connect(EngineerBio)
+          cadreVacancies={
+            Object {
+              "data": Object {
+                "certificationsVacancies": Array [
+                  Object {
+                    "available_slots": 2,
+                    "certification": Object {
+                      "0": Object {
+                        "certification": Object {
+                          "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                          "duration": 20,
+                          "exclusive": false,
+                          "id": 1,
+                          "name": "Mrs. Alanna Ziemann",
+                        },
+                        "certification_id": 1,
+                        "created_at": "2019-07-09 17:22:58",
+                        "fellow_id": null,
+                        "id": 2,
+                        "is_active": false,
+                        "updated_at": "2019-07-09 17:22:58",
+                      },
+                      "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                      "duration": 20,
+                      "exclusive": false,
+                      "id": 1,
+                      "name": "Mrs. Alanna Ziemann",
+                    },
+                  },
+                ],
+                "projectVacancies": Array [
+                  Object {
+                    "available_slots": 1,
+                    "project": Object {
+                      "id": 1,
+                      "name": "Dolorum suscipit molestiae.",
+                    },
+                    "role": Object {
+                      "id": 1,
+                      "name": "Engineer",
+                    },
+                    "vacancies": Array [
+                      Object {
+                        "fellow_id": null,
+                        "id": 4,
+                        "is_active": false,
+                        "project": Object {
+                          "id": 1,
+                          "name": "Dolorum suscipit molestiae.",
+                        },
+                        "project_id": 1,
+                        "project_role_id": 1,
+                        "role": Object {
+                          "id": 1,
+                          "name": "Engineer",
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+            }
+          }
           getD1FellowProfileData={
             [MockFunction] {
               "calls": Array [
@@ -69,12 +217,152 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
               ],
             }
           }
+          profile={
+            Object {
+              "project": Object {
+                "manager": Object {
+                  "email": "janet.doe@andela.com",
+                  "name": "Janet Doe",
+                },
+                "name": "watchTower",
+                "tagline": "Let the watch begin",
+                "technologies": Array [
+                  "php",
+                  "flutter",
+                  "dart",
+                ],
+              },
+            }
+          }
+          user={
+            Object {
+              "first_name": "Test User",
+            }
+          }
         />
-        <ProjectSummary />
+        <ProjectSummary
+          profile={
+            Object {
+              "project": Object {
+                "manager": Object {
+                  "email": "janet.doe@andela.com",
+                  "name": "Janet Doe",
+                },
+                "name": "watchTower",
+                "tagline": "Let the watch begin",
+                "technologies": Array [
+                  "php",
+                  "flutter",
+                  "dart",
+                ],
+              },
+            }
+          }
+        />
         <EngineerDashboardCard
+          handleSearch={[Function]}
           header="Vacancies"
+          vacancyLength={1}
         >
-          <Connect(EngineerVacancies) />
+          <EngineerVacancies
+            cadreVacancies={
+              Object {
+                "data": Object {
+                  "certificationsVacancies": Array [
+                    Object {
+                      "available_slots": 2,
+                      "certification": Object {
+                        "0": Object {
+                          "certification": Object {
+                            "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                            "duration": 20,
+                            "exclusive": false,
+                            "id": 1,
+                            "name": "Mrs. Alanna Ziemann",
+                          },
+                          "certification_id": 1,
+                          "created_at": "2019-07-09 17:22:58",
+                          "fellow_id": null,
+                          "id": 2,
+                          "is_active": false,
+                          "updated_at": "2019-07-09 17:22:58",
+                        },
+                        "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                        "duration": 20,
+                        "exclusive": false,
+                        "id": 1,
+                        "name": "Mrs. Alanna Ziemann",
+                      },
+                    },
+                  ],
+                  "projectVacancies": Array [
+                    Object {
+                      "available_slots": 1,
+                      "project": Object {
+                        "id": 1,
+                        "name": "Dolorum suscipit molestiae.",
+                      },
+                      "role": Object {
+                        "id": 1,
+                        "name": "Engineer",
+                      },
+                      "vacancies": Array [
+                        Object {
+                          "fellow_id": null,
+                          "id": 4,
+                          "is_active": false,
+                          "project": Object {
+                            "id": 1,
+                            "name": "Dolorum suscipit molestiae.",
+                          },
+                          "project_id": 1,
+                          "project_role_id": 1,
+                          "role": Object {
+                            "id": 1,
+                            "name": "Engineer",
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                },
+              }
+            }
+            certificationsArray={Array []}
+            searchWord=""
+            vacanciesArray={
+              Array [
+                Object {
+                  "available_slots": 1,
+                  "project": Object {
+                    "id": 1,
+                    "name": "Dolorum suscipit molestiae.",
+                  },
+                  "role": Object {
+                    "id": 1,
+                    "name": "Engineer",
+                  },
+                  "vacancies": Array [
+                    Object {
+                      "fellow_id": null,
+                      "id": 4,
+                      "is_active": false,
+                      "project": Object {
+                        "id": 1,
+                        "name": "Dolorum suscipit molestiae.",
+                      },
+                      "project_id": 1,
+                      "project_role_id": 1,
+                      "role": Object {
+                        "id": 1,
+                        "name": "Engineer",
+                      },
+                    },
+                  ],
+                },
+              ]
+            }
+          />
         </EngineerDashboardCard>
       </div>
     </div>
