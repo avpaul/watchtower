@@ -1,11 +1,11 @@
-import reportIcon from '../../static/report.png';
+import reportIcon from '../../static/grph.svg';
 import reportIconActive from '../../static/reportActive.png';
-import vacanciesIcon from '../../static/vacancies.png';
-import vacanciesIconActive from '../../static/vacanciesActive.png';
-import rolesIcon from '../../static/newroles.png';
+import vacanciesIcon from '../../static/vacancies1.svg';
+import vacanciesIconActive from '../../static/vacanciesActive.svg';
+import rolesIcon from '../../static/newroles1.svg';
 import rolesIconActive from '../../static/newrolesActive.png';
 import projectsIcon from '../../static/projects.png';
-import projectsIconActive from '../../static/projectsActive.png';
+import projectsIconActive from '../../static/projectsActive1.svg';
 
 /**
  * Array data structure that holds details
