@@ -3,24 +3,22 @@
 
 .pg {
   position: relative;
-  width: 100%;
-  padding: 0 30%;
   display: grid;
+  min-width: 60%;
   grid-template-columns: 30% 70%;
   grid-template-areas:
     '. showing'
     'pp buttons';
 
   @include respond(desk-small) {
-    padding: 0 25%;
+    min-width: 70%;
   }
 
   @include respond(tab-land) {
-    padding: 0 15%;
+    min-width: 80%;
   }
 
   @include respond(tab-port) {
-    padding: 0 5%;
     grid-template-columns: 25% 75%;
   }
 
@@ -30,6 +28,12 @@
       'showing'
       'buttons'
       'pp';
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   &__per-page {
@@ -42,16 +46,19 @@
       line-height: 2rem;
       float: left;
     }
+
     &__select {
       width: 5rem;
       float: left;
     }
+
     @include respond(phone) {
       margin-top: 2rem;
 
       &__label {
         font-size: 12px;
       }
+
       &__select select {
         font-size: 12px;
       }
@@ -59,6 +66,7 @@
   }
 
   &__buttons {
+
     &,
     &--multiple {
       grid-area: buttons;
@@ -81,6 +89,7 @@
     }
 
     @include respond(phone) {
+
       &,
       &--multiple {
         display: grid;
@@ -107,6 +116,7 @@
       box-shadow: 0 1px 1px 0 rgba(221, 221, 221, 0.5);
       color: #000000;
       font-family: $font-primary;
+
       @include respond(phone) {
         height: 2rem;
         width: 2.5rem;

@@ -98,8 +98,12 @@ exports[`Vacancy Dashboard render paginated view correctly 1`] = `
 `;
 
 exports[`Vacancy Dashboard renders correctly 1`] = `
-<div>
-  <div>
+<div
+  className="ops-vacancies__wrapper"
+>
+  <div
+    className="ops-vacancies__filter"
+  >
     <div
       className="toogle-container"
     >
@@ -122,9 +126,19 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
         Certification Vacancies
       </button>
     </div>
+    <div
+      className="vacancy-search-div"
+    >
+      <input
+        className="vacancy-search-input"
+        onChange={[Function]}
+        placeholder="Search by Project/Role Name"
+        type="text"
+      />
+    </div>
   </div>
   <div
-    className="ops-vacancies-container"
+    className="ops-vacancies__container"
   >
     <div
       className="ops-no-vacancies"
@@ -139,8 +153,12 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
 `;
 
 exports[`Vacancy Dashboard renders no vacancies when array is empty 1`] = `
-<div>
-  <div>
+<div
+  className="ops-vacancies__wrapper"
+>
+  <div
+    className="ops-vacancies__filter"
+  >
     <div
       className="toogle-container"
     >
@@ -163,9 +181,19 @@ exports[`Vacancy Dashboard renders no vacancies when array is empty 1`] = `
         Certification Vacancies
       </button>
     </div>
+    <div
+      className="vacancy-search-div"
+    >
+      <input
+        className="vacancy-search-input"
+        onChange={[Function]}
+        placeholder="Search by Project/Role Name"
+        type="text"
+      />
+    </div>
   </div>
   <div
-    className="ops-vacancies-container"
+    className="ops-vacancies__container"
   >
     <div
       className="ops-no-vacancies"

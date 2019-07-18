@@ -71,13 +71,6 @@ describe('Vacancy Dashboard', () => {
     ]
   };
 
-  const props = {
-    paginationWrapper: {
-      state: {
-        paginatedData: allVacancies.projectVacancies
-      }
-    }
-  };
   /**
    * Creates an enzyme instance to test the VacancyDashboard component.
    *
@@ -87,23 +80,21 @@ describe('Vacancy Dashboard', () => {
   const setup = (vacancies, paginated = false) => {
     const wrapper = paginated
       ? shallow(
-          <PaginatedVacanciesDashboard
-            component={
-              <ViewRoleVacancies
-                {...props}
-                vacancies={vacancies}
-                paginationWrapper={mockPaginationWrapper}
-              />
-            }
-          />
-        )
+        <PaginatedVacanciesDashboard
+          component={
+            <ViewRoleVacancies
+              vacancies={vacancies}
+              paginationWrapper={mockPaginationWrapper}
+            />
+          }
+        />
+      )
       : shallow(
-          <ViewRoleVacancies
-            {...props}
-            vacancies={vacancies}
-            paginationWrapper={mockPaginationWrapper}
-          />
-        );
+        <ViewRoleVacancies
+          vacancies={vacancies}
+          paginationWrapper={mockPaginationWrapper}
+        />
+      );
 
     return { wrapper };
   };
@@ -144,4 +135,32 @@ describe('Vacancy Dashboard', () => {
     });
     expect(wrapper.state('vacanciesToDisplay')).toEqual('project');
   });
+
+  it('renders search text input', () => {
+    const { wrapper } = setup(allVacancies, false);
+    wrapper.setState({ vacanciesToDisplay: 'project' });
+
+    expect(wrapper.find('.vacancy-search-input').type()).toEqual('input');
+
+  });
+
+  it('renders certification search text input', () => {
+    const { wrapper } = setup(allVacancies, false);
+    wrapper.setState({ vacanciesToDisplay: 'project' });
+    const textInput = wrapper.find('.vacancy-search-input');
+    textInput.simulate('change', { target: { value: 'My Project' } });
+
+    expect(wrapper.exists('.ops-vacancies__container')).toEqual(true);
+  });
+
+  it('renders project search text input', () => {
+    const { wrapper } = setup(allVacancies, false);
+    wrapper.setState({ vacanciesToDisplay: 'certification' });
+    const textInput = wrapper.find('.vacancy-search-input');
+    textInput.simulate('change', { target: { value: 'My Certification' } });
+
+    expect(textInput.exists()).toEqual(true);
+    expect(wrapper.exists('.ops-vacancies__container')).toEqual(true);
+  });
 });
+

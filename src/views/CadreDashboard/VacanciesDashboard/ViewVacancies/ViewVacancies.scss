@@ -1,12 +1,71 @@
-.ops-vacancies-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(232px, 0fr));
-  grid-row-gap: 20px;
-  grid-column-gap: 10px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+@import '../../../../assets/sass/abstract/variables';
+@import '../../../../assets/sass/abstract/mixins';
+
+.ops-vacancies {
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__filter {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(232px, 0fr));
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+  }
 }
 
 .ops-no-vacancies {
   font-size: 24px;
+}
+
+.toogle-container {
+  display: inline;
+}
+
+.vacancy-toggle-button {
+  background-color: #ffffff;
+  border: 1px solid #0459e4;
+  height: 2rem;
+  width: 11rem;
+  color: #0459e4;
+  font-family: $font-primary;
+  outline: none !important;
+  font: 400 13px system-ui;
+
+  &--active {
+    @extend .vacancy-toggle-button;
+    color: white;
+    background-color: #0459e4;
+  }
+}
+
+.vacancy-search-div {
+  float: right;
+}
+
+.vacancy-search-input {
+  border: none;
+  margin-left: 2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #0459e4;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #0459e4;
+  font-family: 'DIN Pro';
+  outline: none;
+  height: 2rem;
+  width: 16rem;
+  text-align: center;
+
+  &::placeholder {
+    color: rgba(7, 14, 17, 0.51);
+  }
 }

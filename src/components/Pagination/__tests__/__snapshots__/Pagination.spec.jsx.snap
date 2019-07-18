@@ -2,135 +2,139 @@
 
 exports[`Tests Pagination component matches snapshot 1`] = `
 <div
-  className="pg"
+  className="pg__wrapper"
 >
-  <p
-    className="pg__showing text-center"
-  >
-    Showing 
-    1
-     of 
-    10
-     pages
-  </p>
   <div
-    className="pg__per-page"
+    className="pg"
   >
-    <div
-      className="pg__per-page__select"
+    <p
+      className="pg__showing text-center"
     >
-      <select
-        className="form-control"
-        onChange={[Function]}
-        value={10}
+      Showing 
+      1
+       of 
+      10
+       pages
+    </p>
+    <div
+      className="pg__per-page"
+    >
+      <div
+        className="pg__per-page__select"
       >
-        <option
-          key="10"
+        <select
+          className="form-control"
+          onChange={[Function]}
           value={10}
         >
-          10
-        </option>
-        <option
-          key="20"
-          value={20}
-        >
-          20
-        </option>
-        <option
-          key="25"
-          value={25}
-        >
-          25
-        </option>
-        <option
-          key="30"
-          value={30}
-        >
-          30
-        </option>
-        <option
-          key="50"
-          value={50}
-        >
-          50
-        </option>
-        <option
-          key="100"
-          value={100}
-        >
-          100
-        </option>
-      </select>
-    </div>
-    <div
-      className="pg__per-page__label"
-    >
-      Per page
-    </div>
-  </div>
-  <div
-    className="pg__buttons--multiple"
-  >
-    <div
-      className="pg__buttons__list"
-    >
-      <PaginationButton
-        buttonText="Prev"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        disabledButton={false}
-        name="previous"
-        onClick={[Function]}
-        value="Prev"
-      />
-      <PaginationButton
-        buttonText="1"
-        className="btn btn-default pg__button--active"
-        disableBool={false}
-        name="previous"
-        onClick={[Function]}
-        value={1}
-      />
-      <PaginationButton
-        buttonText="2"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        name="previous"
-        onClick={[Function]}
-        value={2}
-      />
-      <button
-        className="btn btn-default pg__button"
-        type="button"
-        value=""
+          <option
+            key="10"
+            value={10}
+          >
+            10
+          </option>
+          <option
+            key="20"
+            value={20}
+          >
+            20
+          </option>
+          <option
+            key="25"
+            value={25}
+          >
+            25
+          </option>
+          <option
+            key="30"
+            value={30}
+          >
+            30
+          </option>
+          <option
+            key="50"
+            value={50}
+          >
+            50
+          </option>
+          <option
+            key="100"
+            value={100}
+          >
+            100
+          </option>
+        </select>
+      </div>
+      <div
+        className="pg__per-page__label"
       >
-        ...
-      </button>
-      <PaginationButton
-        buttonText="9"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        name="next"
-        onClick={[Function]}
-        value={9}
-      />
-      <PaginationButton
-        buttonText="10"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        name="next"
-        onClick={[Function]}
-        value={10}
-      />
-      <PaginationButton
-        buttonText="Next"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        disabledButton={true}
-        name="next"
-        onClick={[Function]}
-        value="Next"
-      />
+        Per page
+      </div>
+    </div>
+    <div
+      className="pg__buttons--multiple"
+    >
+      <div
+        className="pg__buttons__list"
+      >
+        <PaginationButton
+          buttonText="Prev"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          disabledButton={false}
+          name="previous"
+          onClick={[Function]}
+          value="Prev"
+        />
+        <PaginationButton
+          buttonText="1"
+          className="btn btn-default pg__button--active"
+          disableBool={false}
+          name="previous"
+          onClick={[Function]}
+          value={1}
+        />
+        <PaginationButton
+          buttonText="2"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          name="previous"
+          onClick={[Function]}
+          value={2}
+        />
+        <button
+          className="btn btn-default pg__button"
+          type="button"
+          value=""
+        >
+          ...
+        </button>
+        <PaginationButton
+          buttonText="9"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          name="next"
+          onClick={[Function]}
+          value={9}
+        />
+        <PaginationButton
+          buttonText="10"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          name="next"
+          onClick={[Function]}
+          value={10}
+        />
+        <PaginationButton
+          buttonText="Next"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          disabledButton={true}
+          name="next"
+          onClick={[Function]}
+          value="Next"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -152,108 +156,112 @@ exports[`Tests Pagination component renders pagination button to match snapshots
 
 exports[`Tests Pagination component renders pagination button with totalpages as 3 1`] = `
 <div
-  className="pg"
+  className="pg__wrapper"
 >
-  <p
-    className="pg__showing text-center"
-  >
-    Showing 
-    1
-     of 
-    3
-     pages
-  </p>
   <div
-    className="pg__per-page"
+    className="pg"
   >
-    <div
-      className="pg__per-page__select"
+    <p
+      className="pg__showing text-center"
     >
-      <select
-        className="form-control"
-        onChange={[Function]}
-        value={1}
+      Showing 
+      1
+       of 
+      3
+       pages
+    </p>
+    <div
+      className="pg__per-page"
+    >
+      <div
+        className="pg__per-page__select"
       >
-        <option
-          key="10"
-          value={10}
+        <select
+          className="form-control"
+          onChange={[Function]}
+          value={1}
         >
-          10
-        </option>
-        <option
-          key="20"
-          value={20}
-        >
-          20
-        </option>
-        <option
-          key="25"
-          value={25}
-        >
-          25
-        </option>
-        <option
-          key="30"
-          value={30}
-        >
-          30
-        </option>
-        <option
-          key="50"
-          value={50}
-        >
-          50
-        </option>
-        <option
-          key="100"
-          value={100}
-        >
-          100
-        </option>
-      </select>
+          <option
+            key="10"
+            value={10}
+          >
+            10
+          </option>
+          <option
+            key="20"
+            value={20}
+          >
+            20
+          </option>
+          <option
+            key="25"
+            value={25}
+          >
+            25
+          </option>
+          <option
+            key="30"
+            value={30}
+          >
+            30
+          </option>
+          <option
+            key="50"
+            value={50}
+          >
+            50
+          </option>
+          <option
+            key="100"
+            value={100}
+          >
+            100
+          </option>
+        </select>
+      </div>
+      <div
+        className="pg__per-page__label"
+      >
+        Per page
+      </div>
     </div>
     <div
-      className="pg__per-page__label"
+      className="pg__buttons"
     >
-      Per page
-    </div>
-  </div>
-  <div
-    className="pg__buttons"
-  >
-    <div
-      className="pg__buttons__list"
-    >
-      <PaginationButton
-        buttonText="1"
-        className="btn btn-default pg__button--active"
-        disableBool={false}
-        disabledButton={false}
-        key="1"
-        name="previous"
-        onClick={[Function]}
-        value={1}
-      />
-      <PaginationButton
-        buttonText="2"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        disabledButton={false}
-        key="2"
-        name="previous"
-        onClick={[Function]}
-        value={2}
-      />
-      <PaginationButton
-        buttonText="3"
-        className="btn btn-default pg__button"
-        disableBool={false}
-        disabledButton={false}
-        key="3"
-        name="previous"
-        onClick={[Function]}
-        value={3}
-      />
+      <div
+        className="pg__buttons__list"
+      >
+        <PaginationButton
+          buttonText="1"
+          className="btn btn-default pg__button--active"
+          disableBool={false}
+          disabledButton={false}
+          key="1"
+          name="previous"
+          onClick={[Function]}
+          value={1}
+        />
+        <PaginationButton
+          buttonText="2"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          disabledButton={false}
+          key="2"
+          name="previous"
+          onClick={[Function]}
+          value={2}
+        />
+        <PaginationButton
+          buttonText="3"
+          className="btn btn-default pg__button"
+          disableBool={false}
+          disabledButton={false}
+          key="3"
+          name="previous"
+          onClick={[Function]}
+          value={3}
+        />
+      </div>
     </div>
   </div>
 </div>

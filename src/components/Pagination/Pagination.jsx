@@ -111,7 +111,7 @@ class Pagination extends Component {
       <PaginationButton
         className={`btn btn-default pg__button${
           element === page ? '--active' : ''
-        }`}
+          }`}
         name="previous"
         value={element}
         onClick={this.onValueChange}
@@ -128,7 +128,7 @@ class Pagination extends Component {
         <PaginationButton
           className={`btn btn-default pg__button${
             activePage === button.value ? '--active' : ''
-          }`}
+            }`}
           name={index > 2 ? 'next' : 'previous'}
           value={button.value}
           onClick={
@@ -216,8 +216,8 @@ class Pagination extends Component {
     if (!hasData) return <div />;
 
     return (
-      <div className="pg">
-        {this.renderPagination(totalPages < 5, totalPages)}
+      <div className="pg__wrapper">
+        <div className="pg">{this.renderPagination(totalPages < 5, totalPages)}</div>
       </div>
     );
   }

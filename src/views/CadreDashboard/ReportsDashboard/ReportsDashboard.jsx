@@ -82,7 +82,7 @@ export class ReportsDashboard extends Component {
     const { searching } = this.state;
 
     return (
-      <React.Fragment>
+      <div className="tdd-cadre">
         <Reports
           engineers={
             searching ? this.fuzzySearch(engineers.data.data) : paginatedData
@@ -93,7 +93,7 @@ export class ReportsDashboard extends Component {
           handleSearchChange={this.handleSearchChange}
           loading={loading}
         />
-      </React.Fragment>
+      </div>
     );
   }
 }
