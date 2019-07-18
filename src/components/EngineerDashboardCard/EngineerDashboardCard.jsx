@@ -10,14 +10,12 @@ const EngineerDashboardCard = ({
 }) => (
   <div className="dasboardcard-wrapper">
     <span className="dasboardcard-wrapper__span">{header}</span>
-    <div>
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Search..."
-        onChange={handleSearch}
-      />
-    </div>
+    <input
+      className="search-input"
+      type="text"
+      placeholder="Search..."
+      onChange={handleSearch}
+    />
     <div className="dasboardcard-wrapper__available-engineers">
       {' '}
       {`${vacancyLength} Available Vacancies`}{' '}

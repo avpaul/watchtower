@@ -10,11 +10,7 @@ import EngineerCard from './EngineerCard';
  */
 
 export default function EngineerBio({ d1Fellow }) {
-  return (
-    <div>
-      <EngineerCard data={d1Fellow} />
-    </div>
-  );
+  return <EngineerCard data={d1Fellow} />;
 }
 
 EngineerBio.propTypes = {

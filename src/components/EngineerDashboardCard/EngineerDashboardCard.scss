@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 38px;
+  width: 30%;
+
   &__span {
     height: 20px;
     color: rgba(52, 76, 90, 0.43);
@@ -14,18 +15,22 @@
     letter-spacing: -0.53px;
     line-height: 20px;
   }
+
   &__info {
     height: 499px;
-    width: 353px;
+    width: 100%;
+    max-width: 353px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     background-color: #ffffff;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
     overflow: auto;
   }
+
   &__available-engineers {
     background-color: #ffffff;
-    width: 353px;
+    width: 100%;
+    max-width: 353px;
     padding: 0px 0px 5px 20px;
     display: flex;
     justify-content: flex-start;

@@ -9,13 +9,11 @@ exports[`EngineerDashboardCard  renders as expected with required props 1`] = `
   >
     Vacancies
   </span>
-  <div>
-    <input
-      className="search-input"
-      placeholder="Search..."
-      type="text"
-    />
-  </div>
+  <input
+    className="search-input"
+    placeholder="Search..."
+    type="text"
+  />
   <div
     className="dasboardcard-wrapper__available-engineers"
   >
