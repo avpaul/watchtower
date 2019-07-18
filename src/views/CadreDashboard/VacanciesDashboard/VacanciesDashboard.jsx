@@ -6,6 +6,7 @@ import AddVacanciesModal from './AddVacanciesModal';
 import DeleteVacanciesModal from './DeleteVacanciesModal';
 import ViewVacancies from './ViewVacancies/ViewVacancies';
 import PMloader from '../../../components/CustomLoader/PMLoader';
+import arrayOfObjectsSorter from '../../../utils/sortArray';
 
 import './vacancyDashboard.scss';
 
@@ -24,7 +25,7 @@ class VacanciesDashboard extends Component {
     let totalCount = 0;
     let projectVacanciesCount = 0;
     let certificationVacanciesCount = 0;
-    if (data.length !== 0) {
+    if (data.projectVacancies) {
       projectVacanciesCount = data.projectVacancies.length;
       certificationVacanciesCount = data.certificationVacancies.length;
       totalCount = projectVacanciesCount + certificationVacanciesCount;
@@ -35,11 +36,11 @@ class VacanciesDashboard extends Component {
           <Title
             title={`${totalCount} Vacanc${
               totalCount === 1 ? 'y' : 'ies'
-              } (${projectVacanciesCount} Project${
+            } (${projectVacanciesCount} Project${
               projectVacanciesCount === 1 ? '' : 's'
-              }, ${certificationVacanciesCount} Certification${
+            }, ${certificationVacanciesCount} Certification${
               certificationVacanciesCount === 1 ? '' : 's'
-              })`}
+            })`}
           />
         </div>
         <div className="col-3">
@@ -57,9 +58,22 @@ class VacanciesDashboard extends Component {
   };
 
   renderBody = () => {
-    const {
-      getAllVacancies: { data, loading }
+    let {
+      getAllVacancies: { data }
     } = this.props;
+    const {
+      getAllVacancies: { loading }
+    } = this.props;
+    if (data.projectVacancies) {
+      data = {
+        projectVacancies: data.projectVacancies.sort(
+          arrayOfObjectsSorter('project.name')
+        ),
+        certificationVacancies: data.certificationVacancies.sort(
+          arrayOfObjectsSorter('certification.name')
+        )
+      };
+    }
     return (
       <React.Fragment>
         <AddVacanciesModal />
@@ -67,11 +81,11 @@ class VacanciesDashboard extends Component {
         {loading ? (
           <PMloader />
         ) : (
-            <div className="ops-vacancies tdd-cadre">
-              <div className="row ops-vacancies__header">{this.renderTopBar(!data ? [] : data)}</div>
-              <ViewVacancies vacancies={data} />
-            </div>
-          )}
+          <React.Fragment>
+            <div className="row">{this.renderTopBar(!data ? {} : data)}</div>
+            <ViewVacancies vacancies={data} />
+          </React.Fragment>
+        )}
       </React.Fragment>
     );
   };

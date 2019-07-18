@@ -122,3 +122,118 @@ describe.only('Test sortArray Function', () => {
     expect(array.sort(descendingSorter)).toEqual(sortedDescendingArray);
   });
 });
+
+describe.only('Test sortArray Function with nested objects', () => {
+  it('should work as expected', () => {
+    const array = [
+      {
+        project: {
+          id: 50,
+          manager: {
+            name: 'Roy'
+          }
+        }
+      },
+      {
+        project: {
+          id: 31,
+          manager: {
+            name: 'Brian'
+          }
+        }
+      },
+      {
+        project: {
+          id: 56,
+          manager: {
+            name: 'Oluseyi'
+          }
+        }
+      },
+      {
+        project: {
+          id: 32,
+          manager: {
+            name: 'Grace'
+          }
+        }
+      }
+    ];
+
+    const sortedAscendingArray = [
+      {
+        project: {
+          id: 31,
+          manager: {
+            name: 'Brian'
+          }
+        }
+      },
+      {
+        project: {
+          id: 32,
+          manager: {
+            name: 'Grace'
+          }
+        }
+      },
+      {
+        project: {
+          id: 56,
+          manager: {
+            name: 'Oluseyi'
+          }
+        }
+      },
+      {
+        project: {
+          id: 50,
+          manager: {
+            name: 'Roy'
+          }
+        }
+      }
+    ];
+
+    const ascendingSorter = arrayOfObjectsSorter('project.manager.name');
+
+    expect(array.sort(ascendingSorter)).toEqual(sortedAscendingArray);
+  });
+
+  it('should work as expected', () => {
+    const array = [
+      {
+        project: {
+          id: 50,
+          name: 'Est accusamus.'
+        },
+        role: {},
+        vacancies: [],
+        available_slots: 2
+      }
+    ];
+
+    const sortedAscendingArray = [
+      {
+        project: {
+          id: 50,
+          name: 'Est accusamus.'
+        },
+        role: {},
+        vacancies: [],
+        available_slots: 2
+      }
+    ];
+
+    const ascendingSorter = arrayOfObjectsSorter('project.name');
+
+    expect(array.sort(ascendingSorter)).toEqual(sortedAscendingArray);
+  });
+
+  it('should work as expected', () => {
+    const array = [];
+
+    const ascendingSorter = arrayOfObjectsSorter('project.name.certification');
+    expect(array.sort(ascendingSorter)).toEqual([]);
+  });
+});

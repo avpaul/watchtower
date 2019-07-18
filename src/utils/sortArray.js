@@ -1,4 +1,20 @@
 /**
+ * Function to access nested objects.
+ */
+export const accessProperty = (data, keys) => {
+  if (keys.length === 1) return data[keys[0]];
+
+  const sortValue = keys.reduce((result, value, index) => {
+    if (index === 1) {
+      return data[result][value];
+    }
+    return result[value];
+  });
+
+  return sortValue;
+};
+
+/**
  * Function to sort alphabetically an array of objects by some specific key.
  *
  * @param {String} property Key of the object to sort.
@@ -6,18 +22,22 @@
  */
 const arrayOfObjectsSorter = property => {
   let sortOrder = 1;
-  let data = property;
+  const properties = property.split('.');
 
-  if (data[0] === '-') {
+  if (properties[0][0] === '-') {
     sortOrder = -1;
-    data = data.substr(1);
+    properties[0] = properties[0].substr(1);
   }
 
   return (a, b) => {
     if (sortOrder === -1) {
-      return b[data].localeCompare(a[data]);
+      return accessProperty(b, properties).localeCompare(
+        accessProperty(a, properties)
+      );
     }
-    return a[data].localeCompare(b[data]);
+    return accessProperty(a, properties).localeCompare(
+      accessProperty(b, properties)
+    );
   };
 };
 

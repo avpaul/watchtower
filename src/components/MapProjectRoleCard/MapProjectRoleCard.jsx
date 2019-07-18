@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MapProjectRoleCard.scss';
 import Card from '../RoleAndCertificationCard';
+import arrayOfObjectsSorter from '../../utils/sortArray';
 
 const renderButtons = type => (
   <div className="col-3">
@@ -57,7 +58,7 @@ const MapProjectRoleCard = ({
           {type === 'role' ? 'No Roles' : 'No Certifications'}
         </div>
       ) : (
-        roleData.map(role => (
+        roleData.sort(arrayOfObjectsSorter('name')).map(role => (
           <div className="col-4 mb-4" key={role.id}>
             <Card
               cardProps={{
