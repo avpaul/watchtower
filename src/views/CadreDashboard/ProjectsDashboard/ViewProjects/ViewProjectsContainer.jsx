@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ViewProjects from './ViewProjects';
-import { fetchAllProjects } from '../../../../redux/actionCreators/projectsActions';
+import { fetchAllProjects, setDeleteTarget } from '../../../../redux/actionCreators/projectsActions';
 
 export const mapStateToProps = ({ allProjects }) => ({
   allProjects
@@ -9,6 +9,7 @@ export const mapStateToProps = ({ allProjects }) => ({
 export default connect(
   mapStateToProps,
   {
-    fetchAllProjects
+    fetchAllProjects,
+    setDeleteTarget
   }
 )(ViewProjects);

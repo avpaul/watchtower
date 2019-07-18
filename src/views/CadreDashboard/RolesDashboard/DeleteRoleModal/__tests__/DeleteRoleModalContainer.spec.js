@@ -1,7 +1,7 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
-import initialState from '../../../redux/reducers/initialState';
+import initialState from '../../../../../redux/reducers/initialState';
 import DeleteRoleModalContainer from '../DeleteRoleModalContainer';
 
 describe('Delete Role Container Component Test Suite', () => {

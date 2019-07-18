@@ -23,6 +23,7 @@ describe('Test Project Card component', () => {
         created_at: '2019-06-04 04:56:39',
         updated_at: '2019-06-04 04:56:39'
       },
+      focusProject: jest.fn(),
       match: { url: '/cadre/projects/details/1' },
       history: { push: jest.fn() }
     };

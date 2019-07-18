@@ -4,7 +4,7 @@ import MapProjectRoleCard from '../../../../components/MapProjectRoleCard';
 import PMloader from '../../../../components/CustomLoader/PMLoader';
 
 import './CadreViewRoles.scss';
-import DeleteRoleModal from '../../../../components/DeleteRoleModal';
+import DeleteRoleModal from '../DeleteRoleModal';
 
 export default class CadreViewRoles extends Component {
   componentDidMount() {
@@ -36,6 +36,7 @@ export default class CadreViewRoles extends Component {
             setDeleteTarget={setDeleteTarget}
           />
         }
+
         <DeleteRoleModal />
       </div>
     );

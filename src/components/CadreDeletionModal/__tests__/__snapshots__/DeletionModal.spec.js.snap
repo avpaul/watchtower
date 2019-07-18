@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Delete Role Component Test Suite should render properly 1`] = `
+exports[`DeletionModal Component Test Suite should render properly 1`] = `
 <div>
   <div
     aria-hidden="true"
-    aria-labelledby="deleteRole"
+    aria-labelledby="deleteTarget"
     className="modal fade"
-    id="delete-role-modal"
+    id="delete-target-modal"
     roled="dialog"
   >
     <div
@@ -23,10 +23,12 @@ exports[`Delete Role Component Test Suite should render properly 1`] = `
             className="modal-title text-danger"
           >
             <img
-              alt="delete role warning icon"
+              alt="delete target warning icon"
               src="MarkDanger.svg"
             />
-            Delete Role ?
+            Delete 
+            Target
+             ?
           </span>
           <button
             aria-label="Close"
@@ -40,7 +42,9 @@ exports[`Delete Role Component Test Suite should render properly 1`] = `
         <div
           className="modal-body"
         >
-          Are you sure you want to delete this role?
+          Are you sure you want to delete this 
+          target
+          ?
         </div>
         <div
           className="modal-footer delete-footer"
@@ -55,7 +59,7 @@ exports[`Delete Role Component Test Suite should render properly 1`] = `
           <button
             className="btn deleteBtn"
             data-dismiss="modal"
-            onClick={[Function]}
+            onClick={[MockFunction]}
             type="button"
           >
             Yes, Delete

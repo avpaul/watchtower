@@ -3,10 +3,6 @@
 exports[`Test Project Card component should render correcctly 1`] = `
 <div
   className="project-card"
-  onClick={[Function]}
-  onKeyDown={true}
-  role="menu"
-  tabIndex="0"
 >
   <div
     className="row"
@@ -15,49 +11,79 @@ exports[`Test Project Card component should render correcctly 1`] = `
       className="col-12"
     >
       <div
-        className="project-card__icon p-2"
+        className="project-card__icon p-3"
+        data-toggle="dropdown"
       >
         <img
           alt=""
           src="More.svg"
         />
       </div>
+      <div
+        className="dropdown-menu dropdown-menu-right"
+      >
+        <button
+          className="dropdown-item"
+          onClick={[Function]}
+          type="button"
+        >
+          Edit Project
+        </button>
+        <button
+          className="dropdown-item"
+          data-target="#delete-project-modal"
+          data-toggle="modal"
+          disabled={0}
+          onClick={[Function]}
+          type="button"
+        >
+          Delete Project
+        </button>
+      </div>
     </div>
   </div>
   <div
-    className="row justify-content-center"
+    className="content-wrapper"
+    onClick={[Function]}
+    onKeyDown={true}
+    role="menu"
+    tabIndex="0"
   >
     <div
-      className="project-card__image pt-3"
+      className="row justify-content-center"
     >
-      <img
-        alt=""
-        src="projectIcon.png"
-      />
+      <div
+        className="project-card__image pt-3"
+      >
+        <img
+          alt=""
+          src="projectIcon.png"
+        />
+      </div>
     </div>
-  </div>
-  <div
-    className="project-card__name"
-  >
-    <p>
-      test project
-    </p>
-  </div>
-  <div
-    className="project-card__description mx-auto"
-  >
-    <p>
-      This is a test description
-      ...
-    </p>
-  </div>
-  <div
-    className="project-card__engineers"
-  >
-    <p>
-      0
-       engineers
-    </p>
+    <div
+      className="project-card__name"
+    >
+      <p>
+        test project
+      </p>
+    </div>
+    <div
+      className="project-card__description mx-auto"
+    >
+      <p>
+        This is a test description
+        ...
+      </p>
+    </div>
+    <div
+      className="project-card__engineers"
+    >
+      <p>
+        0
+         engineers
+      </p>
+    </div>
   </div>
 </div>
 `;

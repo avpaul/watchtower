@@ -15,7 +15,8 @@ describe('Test Map Project cards', () => {
     const props = {
         projectData: [
           project
-        ]
+        ],
+        setDeleteTarget: jest.fn()
       };
     const wrapper = shallow(<MapProjectCards {...props} />);
     expect(wrapper).toMatchSnapshot();
@@ -26,7 +27,8 @@ describe('Test Map Project cards', () => {
         projectData: [
           project,
           project
-        ]
+        ],
+        setDeleteTarget: jest.fn()
       };
     const wrapper = shallow(<MapProjectCards {...props} />);
     expect(wrapper).toMatchSnapshot();
