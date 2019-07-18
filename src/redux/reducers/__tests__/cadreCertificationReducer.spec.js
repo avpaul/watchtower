@@ -3,7 +3,8 @@ import cadreCertificationReducer from '../cadreCertificationReducer';
 import {
   FETCH_CERTIFICATION_REQUEST,
   FETCH_CERTIFICATION_SUCCESS,
-  FETCH_CERTIFICATION_FAILURE
+  FETCH_CERTIFICATION_FAILURE,
+  REMOVE_CERTIFICATION_ON_FOCUS
 } from '../../constants/cadreCertificationTypes';
 
 it('should return the initial state for unknown action type', () => {
@@ -47,6 +48,20 @@ it('should add the error message on failing to fetch fellow', () => {
   };
   const action = {
     type: FETCH_CERTIFICATION_FAILURE,
+    error: { message: 'error' }
+  };
+
+  expect(cadreCertificationReducer(undefined, action)).toMatchObject(newState);
+});
+
+it('should remove certification when delete certification is successful', () => {
+  const newState = {
+    loading: false,
+    error: null,
+    data: []
+  };
+  const action = {
+    type: REMOVE_CERTIFICATION_ON_FOCUS,
     error: { message: 'error' }
   };
 

@@ -1,6 +1,9 @@
 import { connect } from 'react-redux';
 import CadreViewCerts from './CadreViewCerts';
-import { fetchAllCertifications } from '../../../../redux/actionCreators/cadreCertificationAction';
+import {
+  fetchAllCertifications,
+  setCertificationOnFocus
+} from '../../../../redux/actionCreators/cadreCertificationAction';
 
 export const mapStateToProps = ({ allCertifications }) => ({
   allCertifications
@@ -9,6 +12,7 @@ export const mapStateToProps = ({ allCertifications }) => ({
 export default connect(
   mapStateToProps,
   {
-    fetchAllCertifications
+    fetchAllCertifications,
+    setCertificationOnFocus
   }
 )(CadreViewCerts);

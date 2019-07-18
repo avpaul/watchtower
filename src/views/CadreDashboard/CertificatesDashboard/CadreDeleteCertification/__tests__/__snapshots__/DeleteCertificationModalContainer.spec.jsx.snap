@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CadreViewCertsContainer component renders correctly 1`] = `
-<CadreViewCerts
-  allCertifications={Object {}}
-  fetchAllCertifications={[Function]}
+exports[`Delete Certification Modal container renders correctly 1`] = `
+<DeleteCertificationModal
+  certificationOnFocus={Object {}}
+  deleteCertification={[Function]}
+  error={null}
+  loading={false}
   setCertificationOnFocus={[Function]}
   store={
     Object {
@@ -36,19 +38,13 @@ exports[`CadreViewCertsContainer component renders correctly 1`] = `
       "unsubscribe": [Function],
     }
   }
-  user={
-    Object {
-      "email": "ty@andela.com",
-      "roles": Object {
-        "WATCH_TOWER_OPS": "34323234Yf-34",
-      },
-    }
-  }
 />
 `;
 
-exports[`CadreViewCertsContainer component should map state to props 1`] = `
+exports[`Delete Certification Modal container should map state to props 1`] = `
 Object {
-  "allCertifications": undefined,
+  "certificationOnFocus": Object {},
+  "error": null,
+  "loading": false,
 }
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './MapProjectRoleCard.scss';
 import Card from '../RoleAndCertificationCard';
@@ -29,7 +29,7 @@ const renderButtons = type => (
 );
 
 const renderHeader = (type, roleData) => (
-  <>
+  <Fragment>
     <div className="col-9" id="title">
       <p className="role-grid__count">
         {type === 'role' ? 'Roles' : 'Certifications'}
@@ -39,7 +39,7 @@ const renderHeader = (type, roleData) => (
       </span>
     </div>
     {renderButtons(type)}
-  </>
+  </Fragment>
 );
 
 const MapProjectRoleCard = ({
@@ -48,7 +48,8 @@ const MapProjectRoleCard = ({
   fetchActiveEngineers,
   loading,
   activeEngineers,
-  setDeleteTarget
+  setDeleteTarget,
+  setCertificationOnFocus
 }) => (
   <div>
     <div className="row">
@@ -69,6 +70,7 @@ const MapProjectRoleCard = ({
                 type
               }}
               focusRole={setDeleteTarget}
+              setCertificationOnFocus={setCertificationOnFocus}
             />
           </div>
         ))
@@ -76,8 +78,6 @@ const MapProjectRoleCard = ({
     </div>
   </div>
 );
-
-export default MapProjectRoleCard;
 
 MapProjectRoleCard.propTypes = {
   roleData: PropTypes.instanceOf(Array),
@@ -88,10 +88,12 @@ MapProjectRoleCard.propTypes = {
     PropTypes.instanceOf(Array),
     PropTypes.shape()
   ]),
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  setCertificationOnFocus: PropTypes.func.isRequired
 };
-
 MapProjectRoleCard.defaultProps = {
   roleData: [],
   activeEngineers: []
 };
+
+export default MapProjectRoleCard;

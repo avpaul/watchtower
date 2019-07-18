@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Modal from '../LargeModal/LargeModal';
 import MapRoleActiveEngineers from '../MapRoleActiveEngineers';
@@ -46,12 +46,15 @@ class Card extends React.Component {
     else this.setState({ openCertification: !openCertification });
   };
 
-  handleFocusRole = () => {
+  handleFocusDetails = () => {
     const {
       focusRole,
-      cardProps: { details }
+      cardProps: { details, type },
+      setCertificationOnFocus
     } = this.props;
-    focusRole(details);
+    return type === 'role'
+      ? focusRole(details)
+      : setCertificationOnFocus(details);
   };
 
   renderFullDescription = () => {
@@ -157,55 +160,51 @@ class Card extends React.Component {
     );
   };
 
-  renderProjectCardOptions = details => (
-    <>
-      <button
-        type="button"
-        data-toggle="modal"
-        data-target="#editRoleModal"
-        className="dropdown-item"
-        onClick={this.handleFocusRole}
-      >
-        Edit Role
-      </button>
-      <button
-        type="button"
-        data-toggle="modal"
-        data-target="#delete-role-modal"
-        className="dropdown-item"
-        onClick={this.handleFocusRole}
-        disabled={details.active_engineers_count}
-      >
-        Delete Role
-      </button>
-    </>
+  renderDropdownButton = (modalTarget, label, onClick, details) => (
+    <button
+      type="button"
+      data-toggle="modal"
+      className="dropdown-item"
+      data-target={modalTarget}
+      onClick={onClick}
+      disabled={details ? details.active_engineers_count : null}
+    >
+      {label}
+    </button>
   );
 
-  renderCertificationCardOptions = () => (
-    <>
-      <button
-        type="button"
-        className="dropdown-item"
-        onClick={this.openCertificationModal}
-      >
-        Edit Certification
-      </button>
-    </>
+  renderDropdown = (type, details) => (
+    <div className="dropdown-menu dropdown-menu-right">
+      {type === 'role' ? (
+        <Fragment>
+          {this.renderDropdownButton(
+            '#editRoleModal',
+            'Edit Role',
+            this.handleFocusDetails
+          )}
+          {this.renderDropdownButton(
+            '#delete-role-modal',
+            'Delete Role',
+            this.handleFocusDetails,
+            details
+          )}
+        </Fragment>
+      ) : (
+        <Fragment>
+          {this.renderDropdownButton(
+            null,
+            'Edit Certification',
+            this.openCertificationModal
+          )}
+          {this.renderDropdownButton(
+            '#deleteCertificationModal',
+            'Delete  Certification',
+            this.handleFocusDetails
+          )}
+        </Fragment>
+      )}
+    </div>
   );
-
-  renderDropdown = type => {
-    const {
-      cardProps: { details }
-    } = this.props;
-
-    return (
-      <div className="dropdown-menu dropdown-menu-right">
-        {type === 'role'
-          ? this.renderProjectCardOptions(details)
-          : this.renderCertificationCardOptions()}
-      </div>
-    );
-  };
 
   renderEditCertificationModal = () => {
     const {
@@ -229,7 +228,7 @@ class Card extends React.Component {
     return (
       <div className="role-card">
         <div className="role-card__icon" data-toggle="dropdown" />
-        {this.renderDropdown(type)}
+        {this.renderDropdown(type, details)}
         <div className="role-card__title">{truncate(details.name, 22)}</div>
         <p className="role-card__attributes-sm">
           Vacancies{' '}
@@ -255,7 +254,8 @@ class Card extends React.Component {
 
 Card.propTypes = {
   cardProps: PropTypes.shape({}).isRequired,
-  focusRole: PropTypes.func.isRequired
+  focusRole: PropTypes.func.isRequired,
+  setCertificationOnFocus: PropTypes.func.isRequired
 };
 
 export default Card;

@@ -13,10 +13,23 @@ exports[`Test Certification Card component should handle click count correctly 1
   >
     <button
       className="dropdown-item"
+      data-target={null}
+      data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
       Edit Certification
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#deleteCertificationModal"
+      data-toggle="modal"
+      disabled={null}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete  Certification
     </button>
   </div>
   <div
@@ -149,10 +162,23 @@ exports[`Test Certification Card component should handle close modal correctly 1
   >
     <button
       className="dropdown-item"
+      data-target={null}
+      data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
       Edit Certification
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#deleteCertificationModal"
+      data-toggle="modal"
+      disabled={null}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete  Certification
     </button>
   </div>
   <div
@@ -285,10 +311,23 @@ exports[`Test Certification Card component should render correctly 1`] = `
   >
     <button
       className="dropdown-item"
+      data-target={null}
+      data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
       Edit Certification
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#deleteCertificationModal"
+      data-toggle="modal"
+      disabled={null}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete  Certification
     </button>
   </div>
   <div
@@ -421,10 +460,23 @@ exports[`Test Certification Card component should render modal 1`] = `
   >
     <button
       className="dropdown-item"
+      data-target={null}
+      data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
       Edit Certification
+    </button>
+    <button
+      className="dropdown-item"
+      data-target="#deleteCertificationModal"
+      data-toggle="modal"
+      disabled={null}
+      onClick={[Function]}
+      type="button"
+    >
+      Delete  Certification
     </button>
   </div>
   <div
@@ -559,6 +611,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
       className="dropdown-item"
       data-target="#editRoleModal"
       data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
@@ -709,6 +762,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
       className="dropdown-item"
       data-target="#editRoleModal"
       data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
@@ -859,6 +913,7 @@ exports[`Test Role Card component should render correctly 1`] = `
       className="dropdown-item"
       data-target="#editRoleModal"
       data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
@@ -1009,6 +1064,7 @@ exports[`Test Role Card component should render modal 1`] = `
       className="dropdown-item"
       data-target="#editRoleModal"
       data-toggle="modal"
+      disabled={null}
       onClick={[Function]}
       type="button"
     >
