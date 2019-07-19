@@ -58,7 +58,7 @@ describe('Test Role Card component', () => {
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
-  
+
   it('should call focus role when dropdown option is clicked', () => {
     const spy = jest.fn();
     const cardWrapper = shallow(
@@ -93,7 +93,8 @@ describe('Test Certification Card component', () => {
       type: 'certificates',
       activeParticipants: {}
     },
-    focusRole: jest.fn()
+    focusRole: jest.fn(),
+    setCertificationOnFocus: jest.fn()
   };
 
   it('should render correctly', () => {
@@ -129,6 +130,16 @@ describe('Test Certification Card component', () => {
   });
 
   it('should handle click of edit certification button', () => {
-    wrapper.find('.dropdown-item').simulate('click');
+    wrapper
+      .find('.dropdown-item')
+      .at(0)
+      .simulate('click');
+  });
+
+  it('should handle click of delete certification button', () => {
+    wrapper
+      .find('.dropdown-item')
+      .at(1)
+      .simulate('click');
   });
 });

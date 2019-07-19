@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete Certification Modal renders correctly 1`] = `
+<GenericModal
+  footer={
+    <div
+      className="modal-footer"
+    >
+      <CadreMainButton
+        buttonProps={
+          Object {
+            "onClick": [Function],
+          }
+        }
+        label="DELETE"
+      />
+    </div>
+  }
+  handleClose={[Function]}
+  handleSubmit={[Function]}
+  id="deleteCertificationModal"
+  submitLoading={false}
+  success={false}
+  successMessage="Project certification have been deleted!"
+  title="Delete Certification"
+>
+  <p>
+    Are you sure you want to delete these Certification?
+  </p>
+</GenericModal>
+`;
