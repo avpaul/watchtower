@@ -30,7 +30,7 @@ export const getActiveRoleEngineer = roleId => dispatch => {
   return axios
     .get(requestUrl)
     .then(
-      response => dispatch(getFellowRoleActiveSuccess(response.data[0])),
+      response => dispatch(getFellowRoleActiveSuccess(response.data)),
       error => dispatch(getFellowRoleActiveFailure(error))
     );
 };
