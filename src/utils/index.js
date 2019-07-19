@@ -36,6 +36,7 @@ export const carouselOptions = (numDefaultSlides, handleChartClose = null) => {
         buttonClass="slick-next"
         iconClass="fa-angle-right"
         handleChartClose={handleChartClose}
+        perPage={numDefaultSlides}
       />
     ),
     prevArrow: (

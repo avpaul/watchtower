@@ -10,6 +10,7 @@ exports[`Test fellowsSummaryCard snapshots fellowSummaryCard should render prope
       handleChartClose="contain slider"
       iconClass="fa-angle-right"
       onClick={[Function]}
+      perPage={4}
     />
   }
   prevArrow={
@@ -18,6 +19,7 @@ exports[`Test fellowsSummaryCard snapshots fellowSummaryCard should render prope
       handleChartClose="contain slider"
       iconClass="fa-angle-left"
       onClick={[Function]}
+      perPage={4}
     />
   }
   responsive={

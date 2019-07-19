@@ -1,16 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 import { roles, headers } from './helpers';
 import cadreProgramIconFill from '../../static/cadreProgramIconFill.svg';
 import Table from './Table';
 import PMloader from '../CustomLoader/PMLoader';
+import { carouselOptions } from '../../utils/index';
 
 const cards = role => (
   <div key={role.id} className="card-reports col-sm-3 col-sm-6">
     <div className="card-tile">
       <div className="card-tile-heading">
-        <img src={cadreProgramIconFill} alt="..." />
+        <img
+          className="card-tile-heading__img"
+          src={cadreProgramIconFill}
+          alt="..."
+        />
       </div>
       <div className="card-tile-content card-tile-body">
         <div className="card-tile-description text-title"> {role.name}</div>
@@ -37,16 +43,17 @@ const ReportSummary = ({
   searching
 }) => {
   const allroles = !cadreroles ? roles : cadreroles;
-
   return (
     <React.Fragment>
       {loading ? (
         <PMloader />
       ) : (
         <div className="reports-container">
-          <div className="container-fluid roles-details overflow-x-auto">
-            <div className="row flex-row flex-nowrap justify-content-flex-start">
-              {allroles.map(role => cards(role))}
+          <div className="container roles-details">
+            <div className="row">
+              <Slider {...carouselOptions(4)}>
+                {allroles.map(role => cards(role))}
+              </Slider>
             </div>
           </div>
           <div className="table-content__body">

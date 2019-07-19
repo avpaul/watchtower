@@ -58,6 +58,7 @@ describe('LMS output status utility', () => {
           buttonClass="slick-next"
           iconClass="fa-angle-right"
           handleChartClose={null}
+          perPage={4}
         />
       ),
       prevArrow: (
@@ -65,6 +66,7 @@ describe('LMS output status utility', () => {
           buttonClass="slick-prev"
           iconClass="fa-angle-left"
           handleChartClose={null}
+          perPage={4}
         />
       ),
       responsive: [
