@@ -20,11 +20,16 @@ const fetchProjectsReducer = (state = initialState.allProjects, action) =>
     state = initialState.allProjects, 
     action) => {
     switch (action.type) {
-      case types.DELETE_PROJECT_REQUEST:
+      case types.SET_PROJECT_DELETE_TARGET:
+        return {
+          ...state,
+          deleteTargetId: action.deleteTargetId
+        };
+      case types.DELETE_PROJECT_SUCCESS:
         return {
           ...state,
           data: state.data.filter(
-            project => project.id !== action.data.project
+            project => project.id !== action.deletedProjectId
           )
         };
       case types.DELETE_PROJECT_FAILURE:
@@ -32,11 +37,6 @@ const fetchProjectsReducer = (state = initialState.allProjects, action) =>
           ...state,
           loading: false,
           error: action.error
-        };
-      case types.SET_PROJECT_DELETE_TARGET:
-        return {
-          ...state,
-          deleteTarget: action.data
         };
       default:
         return reducer(state, action);

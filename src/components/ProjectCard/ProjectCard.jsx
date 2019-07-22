@@ -17,12 +17,18 @@ export class ProjectCard extends React.Component {
     return history.push({ pathname: `${url}/${id}`, state: project });
   };
 
-  handleFocusProject = () => {
+  handleFocusProject = (e = 'edit') => {
       const {
         focusProject,
-        project
+        project,
+        match: { url },
+        history
       } = this.props;
-      focusProject(project);
+      if(e === 'delete')
+      {
+        return focusProject(project);
+      }
+      return history.push({ pathname: `${url}/${project.id}/edit`, projectDetails:project});
   };
 
   renderDropdown = project => (
@@ -39,7 +45,7 @@ export class ProjectCard extends React.Component {
         data-toggle="modal"
         data-target="#delete-project-modal"
         className="dropdown-item"
-        onClick={this.handleFocusProject}
+        onClick={()=> this.handleFocusProject('delete')}
         disabled={project.engineers.length}
       >
         Delete Project

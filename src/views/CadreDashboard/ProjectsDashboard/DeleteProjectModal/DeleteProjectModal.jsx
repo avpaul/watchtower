@@ -7,8 +7,8 @@ import CadreDeletionModal from '../../../../components/CadreDeletionModal';
  */
 class DeleteProjectModal extends Component {
   handleProjectDeletion = () => {
-    const { deleteProjectRequest } = this.props;
-    deleteProjectRequest();
+    const { deleteProject } = this.props;
+    deleteProject();
   };
 
   render() {
@@ -19,7 +19,7 @@ class DeleteProjectModal extends Component {
 }
 
 DeleteProjectModal.propTypes = {
-  deleteProjectRequest: PropTypes.func.isRequired
+  deleteProject: PropTypes.func.isRequired
 };
 
 export default DeleteProjectModal;

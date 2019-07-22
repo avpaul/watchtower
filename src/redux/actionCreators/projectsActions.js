@@ -63,33 +63,33 @@ export const fetchAllProjects = () =>
     types.FETCH_PROJECTS_FAILURE
   ]);
 
-  const setDeleteTarget = project => ({
-    type: types.SET_PROJECT_DELETE_TARGET,
-    data: project.id
-  });
-  
-  const deleteProject = project => ({
-    type: types.DELETE_PROJECT_REQUEST,
-    data: { project }
-  });
-  
-  const deleteProjectFailure = error => ({
-    type: types.DELETE_PROJECT_FAILURE,
-    error
-  });
-  
-  const deleteProjectRequest = () => (dispatch, getState) => {
-    const { allProjects } = getState();
-  
-    return axios
-      .delete(`${serverUrl}/api/v2/projects/${allProjects.deleteTarget}`)
-      .then(() => {
-        dispatch(deleteProject(allProjects.deleteTarget));
-      })
-      .catch(error => {
-        dispatch(deleteProjectFailure(error.response.data.message));
-      });
-  };
+export const setDeleteTarget = project => ({
+  type: types.SET_PROJECT_DELETE_TARGET,
+  deleteTargetId: project.id
+});
+
+const deleteProjectSuccess = deletedProjectId => ({
+  type: types.DELETE_PROJECT_SUCCESS,
+  deletedProjectId
+});
+
+const deleteProjectFailure = error => ({
+  type: types.DELETE_PROJECT_FAILURE,
+  error
+});
+
+export const deleteProject = () => (dispatch, getState) => {
+  const { allProjects } = getState();
+
+  return axios
+    .delete(`${serverUrl}/api/v2/projects/${allProjects.deleteTargetId}`)
+    .then(() => {
+      dispatch(deleteProjectSuccess(allProjects.deleteTargetId));
+    })
+    .catch(error => {
+      dispatch(deleteProjectFailure(error.response.data.message));
+    });
+};
 
 export default {
   createNewProject,
@@ -97,5 +97,5 @@ export default {
   editProject,
   getAProject,
   setDeleteTarget,
-  deleteProjectRequest
+  deleteProject
 };

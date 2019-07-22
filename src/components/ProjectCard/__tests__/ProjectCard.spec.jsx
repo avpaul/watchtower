@@ -37,4 +37,19 @@ describe('Test Project Card component', () => {
     wrapper.instance().handleClick();
     expect(props.history.push).toHaveBeenCalled();
   });
+  
+  it('should handle click of edit project button', () => {
+    wrapper
+      .find('.dropdown-item')
+      .at(0)
+      .simulate('click');
+  });
+
+  it('should handle click of delete project button', () => {
+    wrapper
+      .find('.dropdown-item')
+      .at(1)
+      .simulate('click');
+    expect(props.focusProject).toHaveBeenCalled();
+  });
 });

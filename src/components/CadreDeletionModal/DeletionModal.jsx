@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import cautionMark from '../../static/MarkDanger.svg';
 import './DeletionModal.scss';
 
+/**
+ * destuctured handleClick{function}, targetName{deletion target}
+ * To trigger this modal the data-target attribute should be set to
+ * data-target="#delete-{targetName}-modal" with the 'targetName' being in lowerCase.
+ */
 function DeletionModal({ handleClick, targetName }) {
   const deletionTargetLower = targetName.toLowerCase();
   const deletionTargetHeader =
@@ -11,7 +16,10 @@ function DeletionModal({ handleClick, targetName }) {
   const renderModalHeader = () => (
     <div className="modal-header">
       <span className="modal-title text-danger">
-        <img src={cautionMark} alt={`delete ${deletionTargetLower} warning icon`} />
+        <img
+          src={cautionMark}
+          alt={`delete ${deletionTargetLower} warning icon`}
+        />
         Delete {deletionTargetHeader} ?
       </span>
       <button
