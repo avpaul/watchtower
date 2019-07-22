@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import 'react-datepicker/dist/react-datepicker.css';
 import FormInputs from '../../../../components/FormInputs';
 import { processDropdownOptions } from '../../../../components/FormInputs/helpers';
 import GenericModal from '../../../../components/GenericModal';
 import { CadreMainButton } from '../../../../components/Buttons';
-import { numberRegex } from '../../../../utils/regex';
-
+import { numberRegex, emailRegex } from '../../../../utils/regex';
+import calculateEndDate from '../../../../utils/formatDate';
+import check from '../../../../static/check-mark.svg';
 import './addVacancyModal.scss';
 import Loader from '../../../../components/Loader/Loader';
+import FeedbackDuration from '../../../../components/FeedbackDuration';
 
 class AddVacanciesModal extends Component {
   constructor(props) {
@@ -16,7 +19,13 @@ class AddVacanciesModal extends Component {
     this.state = {
       inputs: {},
       success: false,
-      error: ''
+      error: '',
+      certificationInputs: {},
+      vacancyType: 'Role vacancy',
+      requester: false,
+      startDate: this.defaultDate(),
+      endDate: this.defaultDate(),
+      currentDate: this.defaultDate()
     };
   }
 
@@ -25,24 +34,32 @@ class AddVacanciesModal extends Component {
       fetchAllProjects,
       allProjects,
       fetchAllRoles,
-      allProjectRoles
+      allProjectRoles,
+      fetchAllCertifications,
+      allCertifications
     } = this.props;
-
     if (allProjects.data.length === 0) fetchAllProjects();
     if (allProjectRoles.data.length === 0) fetchAllRoles();
+    if (allCertifications.data.length === 0) fetchAllCertifications();
   }
 
   componentDidUpdate(prevProps) {
     const {
       editMode,
       editProjectVacanciesState,
-      createProjectVacancies
+      createProjectVacancies,
+      createCertificactionVacancies
     } = this.props;
-
+    const { vacancyType } = this.state;
     if (editMode)
       this.checkSubmitState(
         prevProps.editProjectVacanciesState,
         editProjectVacanciesState
+      );
+    else if (vacancyType === 'Certification vacancy')
+      this.checkSubmitState(
+        prevProps.createCertificactionVacancies,
+        createCertificactionVacancies
       );
     else
       this.checkSubmitState(
@@ -66,10 +83,24 @@ class AddVacanciesModal extends Component {
       createNewProjectVacancies,
       projectVacanciesOnFocus,
       editMode,
-      editProjectVacancies
+      editProjectVacancies,
+      createNewCertificationVacancy,
+      user
     } = this.props;
-    const { inputs } = this.state;
-    const invalidInput = Object.values(inputs).find(input => !input.isValid());
+    const {
+      inputs,
+      vacancyType,
+      certificationInputs,
+      startDate,
+      endDate,
+      requester
+    } = this.state;
+    const inputsToCheck =
+      vacancyType === 'Certification vacancy' ? certificationInputs : inputs;
+
+    const invalidInput = Object.values(inputsToCheck).find(
+      input => !input.isValid()
+    );
 
     if (invalidInput) {
       invalidInput.setStatus('invalid', 'Input is invalid!');
@@ -91,6 +122,22 @@ class AddVacanciesModal extends Component {
             'No updated information has been provided. Please provide an updated input!'
         });
       editProjectVacancies(details);
+    } else if (vacancyType === 'Certification vacancy') {
+      const certificationDuration = certificationInputs.certification.getValue()
+        .duration;
+      const value = calculateEndDate(certificationDuration, startDate);
+      const certificationRequester = requester
+        ? user.email
+        : inputs.email.getValue();
+      createNewCertificationVacancy({
+        certification_id: certificationInputs.certification.getValue().id,
+        slots: parseInt(inputs.slots.getValue(), 10),
+        requester: certificationRequester,
+        start_date: startDate,
+        end_date: value,
+        closing_date: endDate
+      });
+      this.setState({ success: false });
     } else createNewProjectVacancies(newDetails);
     return false;
   };
@@ -117,6 +164,7 @@ class AddVacanciesModal extends Component {
    */
   handleClose = () => {
     const { inputs } = this.state;
+    const { history } = this.props;
     inputs.project.setState({ inputValue: {} });
     inputs.project.setStatus('normal');
 
@@ -126,7 +174,8 @@ class AddVacanciesModal extends Component {
     inputs.slots.setState({ inputValue: '' });
     inputs.slots.setStatus('normal');
 
-    this.setState({ success: false, error: '' });
+    this.setState({ success: false, error: '', vacancyType: 'Role vacancy' });
+    history.replace('/cadre/vacancies');
   };
 
   /**
@@ -142,6 +191,52 @@ class AddVacanciesModal extends Component {
     />
   );
 
+  /**
+   * handles clicking of the
+   * checkbox
+   */
+  clickCheckbox = () => {
+    const { requester } = this.state;
+    const value = !requester;
+    this.setState({ requester: value });
+  };
+
+  /**
+   * @method defaultDate
+   * @description Sets the default date which is now
+   */
+  defaultDate = () => new Date();
+
+  /**
+   * Renders the checkbox text
+   * @return jsx
+   */
+  renderText = () => <p>I am the requester</p>;
+
+  /**
+   * Renders the checkbox
+   * @return jsx
+   */
+  renderCheckBox = () => {
+    const { requester } = this.state;
+    return (
+      <div
+        className="checkbox"
+        id="checkbox"
+        onClick={() => {
+          this.clickCheckbox();
+        }}
+        role="button"
+        tabIndex="0"
+        onKeyDown={() => {
+          this.clickCheckbox();
+        }}
+      >
+        {requester ? <img src={check} alt="clicked" className="ticksvg" /> : ''}
+      </div>
+    );
+  };
+
   renderError = () => {
     const { error, success } = this.state;
     return error !== '' && !success ? (
@@ -151,15 +246,57 @@ class AddVacanciesModal extends Component {
     ) : null;
   };
 
-  renderModalBody = () => {
-    const {
-      allProjects,
-      allProjectRoles,
-      projectVacanciesOnFocus
-    } = this.props;
-    const { vacancies } = projectVacanciesOnFocus;
+  /**
+   * Toggles between
+   * Certification vacancies form and
+   * Role vacancies form
+   */
+  toogleVacanciesToDisplay = e => {
+    const { inputs } = this.state;
+    inputs.project.setState({ inputValue: {} });
+    inputs.project.setStatus('normal');
+
+    inputs.role.setState({ inputValue: {} });
+    inputs.role.setStatus('normal');
+
+    inputs.slots.setState({ inputValue: '' });
+    inputs.slots.setStatus('normal');
+    this.setState({
+      vacancyType: e.target.value,
+      success: false,
+      startDate: this.defaultDate(),
+      endDate: this.defaultDate(),
+      currentDate: this.defaultDate()
+    });
+  };
+
+  /**
+   * Handles the start
+   */
+  handleStartChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
+
+  /**
+   * Handles the enddate
+   */
+  handleEndChange = date => {
+    this.setState({
+      endDate: date
+    });
+  };
+
+  /**
+   * Renders the role vacancy
+   * form
+   * @return jsx
+   */
+  renderRoleForm = projectVacanciesOnFocus => {
+    const { allProjects, allProjectRoles } = this.props;
     return (
-      <React.Fragment>
+      <>
         {this.renderDropdown({
           name: 'project',
           label: 'Select Project',
@@ -187,6 +324,124 @@ class AddVacanciesModal extends Component {
               }
             : {}
         })}
+      </>
+    );
+  };
+
+  /**
+   * Renders the certification vacancy
+   * form
+   * @return jsx
+   */
+  renderCertificationForm = () => {
+    const { allCertifications } = this.props;
+    const { projectVacanciesOnFocus } = this.props;
+    const { vacancies } = projectVacanciesOnFocus;
+    const { requester } = this.state;
+    return (
+      <>
+        {this.renderDropdown({
+          name: 'certification',
+          key: 3,
+          componentStateKey: 'certificationInputs',
+          label: 'Select Certification',
+          options: processDropdownOptions(allCertifications.data, 'name'),
+          placeholder: 'Select Certification',
+          enableSearch: allCertifications.data.length !== 0,
+          loading: allCertifications.loading
+        })}
+        <div className="container">
+          {this.renderCheckBox()}
+          {this.renderText()}
+        </div>
+        {requester ? (
+          ''
+        ) : (
+          <FormInputs.TextInput
+            parent={this}
+            name="email"
+            label="Enter requester email"
+            defaultStatus={vacancies ? 6 : 0}
+            testInput={input => emailRegex.test(input)}
+            alertText="Please input a valid email!"
+            inputValue={vacancies ? `${vacancies.length}` : ''}
+          />
+        )}
+        {this.renderDatePickers()}
+      </>
+    );
+  };
+
+  /**
+   * Renders the toggle buttons
+   * @return jsx
+   */
+  renderToggleButtons = () => {
+    const { vacancyType } = this.state;
+    return (
+      <div className="form-toggle-buttons">
+        <button
+          type="button"
+          value="Role vacancy"
+          className={
+            vacancyType === 'Role vacancy'
+              ? 'form-vacancy-toggle-button--active'
+              : 'form-vacancy-toggle-button'
+          }
+          id="project-role-button"
+          onClick={this.toogleVacanciesToDisplay}
+        >
+          Project Vacancies
+        </button>
+        <button
+          type="button"
+          value="Certification vacancy"
+          className={
+            vacancyType === 'Certification vacancy'
+              ? 'form-vacancy-toggle-button--active'
+              : 'form-vacancy-toggle-button'
+          }
+          id="certification-button"
+          onClick={this.toogleVacanciesToDisplay}
+        >
+          Certification Vacancies
+        </button>
+      </div>
+    );
+  };
+
+  /**
+   * Renders the datepickers
+   * @return jsx
+   */
+  renderDatePickers = () => {
+    const { startDate, endDate, currentDate } = this.state;
+    const vacanciesMode = true;
+    return (
+      <div className="form-date-picker">
+        <FeedbackDuration
+          startDate={startDate}
+          endDate={endDate}
+          currentDate={currentDate}
+          handleStartDateChange={this.handleStartChange}
+          handleEndDateChange={this.handleEndChange}
+          clearDuration={this.clearDuration}
+          vacancies={vacanciesMode}
+        />
+      </div>
+    );
+  };
+
+  renderModalBody = () => {
+    const { projectVacanciesOnFocus, editMode } = this.props;
+    const { vacancies } = projectVacanciesOnFocus;
+    const { vacancyType } = this.state;
+    return (
+      <React.Fragment>
+        {editMode ? '' : this.renderToggleButtons()}
+        {vacancyType === 'Certification vacancy' && !editMode
+          ? this.renderCertificationForm()
+          : this.renderRoleForm(projectVacanciesOnFocus)}
         <FormInputs.TextInput
           parent={this}
           name="slots"
@@ -241,10 +496,14 @@ class AddVacanciesModal extends Component {
       createProjectVacancies: { loading },
       editMode
     } = this.props;
-    const { success } = this.state;
+    const { success, vacancyType } = this.state;
+    const addSuccessMessage =
+      vacancyType === 'Role vacancy'
+        ? 'New project vacancies have been created!'
+        : 'New certification vacancies have been created';
     const message = editMode
       ? 'Project vacancies have been updated!'
-      : 'New project vacancies have been created!';
+      : addSuccessMessage;
     const title = `${editMode ? 'Update' : 'Create'} Vacancies`;
     return (
       <GenericModal
@@ -260,18 +519,29 @@ class AddVacanciesModal extends Component {
     );
   }
 }
-
+AddVacanciesModal.defaultProps = {
+  allCertifications: { loading: false, data: [], error: null }
+};
 AddVacanciesModal.propTypes = {
   createNewProjectVacancies: PropTypes.func.isRequired,
+  createNewCertificationVacancy: PropTypes.func.isRequired,
   fetchAllProjects: PropTypes.func.isRequired,
+  fetchAllCertifications: PropTypes.func.isRequired,
   fetchAllRoles: PropTypes.func.isRequired,
   createProjectVacancies: PropTypes.shape().isRequired,
+  createCertificactionVacancies: PropTypes.shape().isRequired,
   allProjects: PropTypes.shape().isRequired,
+  allCertifications: PropTypes.shape(),
   allProjectRoles: PropTypes.shape().isRequired,
   projectVacanciesOnFocus: PropTypes.shape().isRequired,
   editProjectVacanciesState: PropTypes.shape().isRequired,
   editProjectVacancies: PropTypes.func.isRequired,
-  editMode: PropTypes.bool.isRequired
+  editMode: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
+  }).isRequired,
+  history: PropTypes.shape({}).isRequired
 };
 
 export default AddVacanciesModal;

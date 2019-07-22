@@ -160,3 +160,160 @@ exports[`Test feedbackDuration snapshots feedbackDuration should render properly
   </div>
 </div>
 `;
+
+exports[`Test feedbackDuration snapshots feedbackDuration should render properly when vacancies props is passed 1`] = `
+<div
+  className=""
+>
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      <p
+        className="applications-start-date"
+      >
+        Application Close Date
+      </p>
+      <div
+        className="input-group fellow-details-input mb-2"
+      >
+        <DatePicker
+          allowSameDay={false}
+          dateFormat="yyyy-MM-dd"
+          dateFormatCalendar="LLLL yyyy"
+          disabled={false}
+          disabledKeyboardNavigation={true}
+          dropdownMode="scroll"
+          endDate="2019-03-15"
+          id="start-date"
+          inlineFocusSelectedMonth={false}
+          minDate="2019-03-15"
+          monthsShown={1}
+          nextMonthButtonLabel="Next month"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClickOutside={[Function]}
+          onFocus={[Function]}
+          onInputClick={[Function]}
+          onInputError={[Function]}
+          onKeyDown={[Function]}
+          onMonthChange={[Function]}
+          onSelect={[Function]}
+          onYearChange={[Function]}
+          popperModifiers={
+            Object {
+              "flip": Object {
+                "behavior": Array [
+                  "bottom",
+                ],
+              },
+              "hide": Object {
+                "enabled": false,
+              },
+              "preventOverflow": Object {
+                "enabled": false,
+              },
+            }
+          }
+          popperPlacement="bottom"
+          preventOpenOnFocus={false}
+          previousMonthButtonLabel="Previous Month"
+          readOnly={false}
+          renderDayContents={[Function]}
+          selected="2019-03-15"
+          selectsStart={true}
+          shouldCloseOnSelect={true}
+          showMonthYearPicker={false}
+          showTimeInput={false}
+          showTimeSelect={false}
+          startDate="2019-03-10"
+          strictParsing={false}
+          timeCaption="Time"
+          timeInputLabel="Time"
+          timeIntervals={30}
+          withPortal={false}
+        />
+        <CalendarInput />
+        <input
+          className="label-input"
+          id="start-date"
+          type="text"
+        />
+      </div>
+      <p
+        className="applications-start-date"
+      >
+        Certification start date
+      </p>
+      <div
+        className="input-group fellow-details-input mb-2"
+      >
+        <DatePicker
+          allowSameDay={false}
+          dateFormat="yyyy-MM-dd"
+          dateFormatCalendar="LLLL yyyy"
+          disabled={false}
+          disabledKeyboardNavigation={true}
+          dropdownMode="scroll"
+          endDate="2019-03-15"
+          id="start-date"
+          inlineFocusSelectedMonth={false}
+          minDate="2019-03-15"
+          monthsShown={1}
+          nextMonthButtonLabel="Next month"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClickOutside={[Function]}
+          onFocus={[Function]}
+          onInputClick={[Function]}
+          onInputError={[Function]}
+          onKeyDown={[Function]}
+          onMonthChange={[Function]}
+          onSelect={[Function]}
+          onYearChange={[Function]}
+          popperModifiers={
+            Object {
+              "flip": Object {
+                "behavior": Array [
+                  "bottom",
+                ],
+              },
+              "hide": Object {
+                "enabled": false,
+              },
+              "preventOverflow": Object {
+                "enabled": false,
+              },
+            }
+          }
+          popperPlacement="bottom"
+          preventOpenOnFocus={false}
+          previousMonthButtonLabel="Previous Month"
+          readOnly={false}
+          renderDayContents={[Function]}
+          selected="2019-03-10"
+          selectsStart={true}
+          shouldCloseOnSelect={true}
+          showMonthYearPicker={false}
+          showTimeInput={false}
+          showTimeSelect={false}
+          startDate="2019-03-10"
+          strictParsing={false}
+          timeCaption="Time"
+          timeInputLabel="Time"
+          timeIntervals={30}
+          withPortal={false}
+        />
+        <CalendarInput />
+        <input
+          className="label-input"
+          id="start-date"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

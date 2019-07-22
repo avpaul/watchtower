@@ -52,7 +52,7 @@ class DropdownInput extends Component {
     const { selections } = this.state;
     const value = options.find(option => `${option.id}` === e.target.id);
     if (multipleSelection && value) selections.push(value);
-    return this.setState({
+    this.setState({
       inputValue: value || {},
       show: false,
       selections,

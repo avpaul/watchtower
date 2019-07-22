@@ -62,7 +62,9 @@ class VacanciesDashboard extends Component {
       getAllVacancies: { data }
     } = this.props;
     const {
-      getAllVacancies: { loading }
+      getAllVacancies: { loading },
+      user,
+      history
     } = this.props;
     if (data.projectVacancies) {
       data = {
@@ -76,7 +78,7 @@ class VacanciesDashboard extends Component {
     }
     return (
       <React.Fragment>
-        <AddVacanciesModal />
+        <AddVacanciesModal user={user} history={history} />
         <DeleteVacanciesModal />
         {loading ? (
           <PMloader />
@@ -100,7 +102,12 @@ class VacanciesDashboard extends Component {
 VacanciesDashboard.propTypes = {
   getAllVacanciesAction: PropTypes.func.isRequired,
   getAllVacancies: PropTypes.shape({}).isRequired,
-  setProjectVacanciesOnFocus: PropTypes.func.isRequired
+  setProjectVacanciesOnFocus: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
+  }).isRequired,
+  history: PropTypes.shape({}).isRequired
 };
 
 export default VacanciesDashboard;

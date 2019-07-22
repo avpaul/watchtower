@@ -17,73 +17,151 @@ const FeedbackDuration = ({
   startDate,
   endDate,
   clearDuration,
-  currentDate
+  currentDate,
+  vacancies
 }) => {
-  const startDateText = 'Start Date';
+  const startDateText = vacancies ? 'Certification start date' : 'Start Date';
   const endDateText = 'End Date';
+  const closingDateText = 'Application Close Date';
+  const bodyStyling = vacancies ? '' : 'feedback-calendar-body';
+  const calendarStyling = vacancies ? '' : 'feedback-calendar';
 
   return (
-    <div className="feedback-calendar-body">
-      <div className="feedback-calendar">
+    <div className={bodyStyling}>
+      <div className={calendarStyling}>
         <div className="">
-          <p className="feedback-start-date">{startDateText}</p>
-          <div className="input-group fellow-details-input mb-2">
-            <DatePicker
-              popperPlacement="bottom"
-              disabledKeyboardNavigation
-              selected={startDate}
-              startDate={startDate}
-              endDate={endDate}
-              maxDate={currentDate}
-              selectsStart
-              popperModifiers={{
-                flip: {
-                  behavior: ['bottom']
-                },
-                preventOverflow: {
-                  enabled: false
-                },
-                hide: {
-                  enabled: false
-                }
-              }}
-              onChange={handleStartDateChange}
-              dateFormat="yyyy-MM-dd"
-              id="start-date"
-            />
-            <CalendarInput />
-            <input type="text" id="start-date" className="label-input" />
-          </div>
-          <p className="feedback-end-date">{endDateText}</p>
-          <div className="input-group fellow-details-input mb-2">
-            <DatePicker
-              popperPlacement="bottom"
-              selected={endDate}
-              startDate={startDate}
-              disabledKeyboardNavigation
-              maxDate={currentDate}
-              endDate={endDate}
-              minDate={startDate}
-              selectsEnd
-              popperModifiers={{
-                flip: {
-                  behavior: ['bottom']
-                },
-                preventOverflow: {
-                  enabled: false
-                },
-                hide: {
-                  enabled: false
-                }
-              }}
-              onChange={handleEndDateChange}
-              dateFormat="yyyy-MM-dd"
-              id="end-date"
-            />
-            <CalendarInput />
-            <input type="text" id="end-date" className="label-input" />
-          </div>
-          <ActionButton clickHandler={clearDuration} text="Clear Duration" />
+          {vacancies ? (
+            <>
+              <p className="applications-start-date">{closingDateText}</p>
+              <div className="input-group fellow-details-input mb-2">
+                <DatePicker
+                  popperPlacement="bottom"
+                  disabledKeyboardNavigation
+                  selected={endDate}
+                  startDate={startDate}
+                  endDate={endDate}
+                  minDate={currentDate}
+                  selectsStart
+                  popperModifiers={{
+                    flip: {
+                      behavior: ['bottom']
+                    },
+                    preventOverflow: {
+                      enabled: false
+                    },
+                    hide: {
+                      enabled: false
+                    }
+                  }}
+                  onChange={handleEndDateChange}
+                  dateFormat="yyyy-MM-dd"
+                  id="start-date"
+                />
+                <CalendarInput />
+                <input type="text" id="start-date" className="label-input" />
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="feedback-start-date">{startDateText}</p>
+              <div className="input-group fellow-details-input mb-2">
+                <DatePicker
+                  popperPlacement="bottom"
+                  disabledKeyboardNavigation
+                  selected={startDate}
+                  startDate={startDate}
+                  endDate={endDate}
+                  maxDate={currentDate}
+                  selectsStart
+                  popperModifiers={{
+                    flip: {
+                      behavior: ['bottom']
+                    },
+                    preventOverflow: {
+                      enabled: false
+                    },
+                    hide: {
+                      enabled: false
+                    }
+                  }}
+                  onChange={handleStartDateChange}
+                  dateFormat="yyyy-MM-dd"
+                  id="start-date"
+                />
+                <CalendarInput />
+                <input type="text" id="start-date" className="label-input" />
+              </div>
+            </>
+          )}
+          {vacancies ? (
+            <>
+              <p className="applications-start-date">{startDateText}</p>
+              <div className="input-group fellow-details-input mb-2">
+                <DatePicker
+                  popperPlacement="bottom"
+                  disabledKeyboardNavigation
+                  selected={startDate}
+                  startDate={startDate}
+                  endDate={endDate}
+                  minDate={endDate}
+                  selectsStart
+                  popperModifiers={{
+                    flip: {
+                      behavior: ['bottom']
+                    },
+                    preventOverflow: {
+                      enabled: false
+                    },
+                    hide: {
+                      enabled: false
+                    }
+                  }}
+                  onChange={handleStartDateChange}
+                  dateFormat="yyyy-MM-dd"
+                  id="start-date"
+                />
+                <CalendarInput />
+                <input type="text" id="start-date" className="label-input" />
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="feedback-end-date">{endDateText}</p>
+              <div className="input-group fellow-details-input mb-2">
+                <DatePicker
+                  popperPlacement="bottom"
+                  selected={endDate}
+                  startDate={startDate}
+                  disabledKeyboardNavigation
+                  maxDate={currentDate}
+                  endDate={endDate}
+                  minDate={startDate}
+                  selectsEnd
+                  popperModifiers={{
+                    flip: {
+                      behavior: ['bottom']
+                    },
+                    preventOverflow: {
+                      enabled: false
+                    },
+                    hide: {
+                      enabled: false
+                    }
+                  }}
+                  onChange={handleEndDateChange}
+                  dateFormat="yyyy-MM-dd"
+                  id="end-date"
+                />
+                <CalendarInput />
+                <input type="text" id="end-date" className="label-input" />
+              </div>
+            </>
+          )}
+          {vacancies ? (
+            ''
+          ) : (
+            <ActionButton clickHandler={clearDuration} text="Clear Duration" />
+          )}
         </div>
       </div>
     </div>
@@ -95,6 +173,11 @@ const datePropTypes = PropTypes.oneOfType([
   PropTypes.instanceOf(Date)
 ]);
 
+FeedbackDuration.defaultProps = {
+  vacancies: false,
+  currentDate: () => new Date()
+};
+
 FeedbackDuration.propTypes = {
   // feedback proptypes
   handleStartDateChange: PropTypes.func.isRequired,
@@ -102,6 +185,7 @@ FeedbackDuration.propTypes = {
   startDate: datePropTypes.isRequired,
   endDate: datePropTypes.isRequired,
   clearDuration: PropTypes.func.isRequired,
-  currentDate: datePropTypes.isRequired
+  currentDate: datePropTypes,
+  vacancies: PropTypes.bool
 };
 export default FeedbackDuration;
