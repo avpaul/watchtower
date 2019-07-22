@@ -34,11 +34,7 @@ exports[`Delete Role Component Test Suite should render properly 1`] = `
             data-dismiss="modal"
             type="button"
           >
-            <span
-              aria-hidden="false"
-            >
-              ×
-            </span>
+            ×
           </button>
         </div>
         <div
