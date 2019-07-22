@@ -19,3 +19,32 @@
 .text-danger {
   color: $color-danger !important;
 }
+
+.modal-header .close {
+  padding: 0;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-header .close span {
+  font-size: 160% !important;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 0;
+}
+
+.close {
+  position: absolute;
+  top: 21px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+}
+
+button.close {
+  background-color: #bebebe;
+  font-size: 25px;
+  color: #333e44;
+  font-weight: 600;
+}

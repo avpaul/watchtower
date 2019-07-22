@@ -29,7 +29,7 @@ class LogOutPage extends Component {
           data-dismiss="modal"
           aria-label="Close"
         >
-          <span aria-hidden="false">&times;</span>
+          &times;
         </button>
       </div>
       <div className="modal-body">
