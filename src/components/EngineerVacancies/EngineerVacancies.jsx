@@ -8,7 +8,6 @@ import './EngineerVacancies.scss';
 class EngineerVacancies extends Component {
   displayVacancyDetails = vacanciesClass => {
     const { searchWord, vacanciesArray, certificationsArray } = this.props;
-
     const vacancyLength = vacanciesArray.length + certificationsArray.length;
     return (
       <div className={vacanciesClass}>
@@ -26,13 +25,20 @@ class EngineerVacancies extends Component {
   renderVacancyCards = (vacanciesArray, certificationsArray) => (
     <div className="render-vacancies__div">
       {vacanciesArray.map(({ role, project }) => (
-        <EngineerVacancyCard role={role.name} projectName={project.name} />
+        <EngineerVacancyCard 
+          role={role.name}
+          roleId={role.id} 
+          projectName={project.name} 
+          projectId={project.id}
+        />
       ))}
 
       {certificationsArray.map(({ certification }) => (
         <EngineerVacancyCard
           role={certification.name}
+          roleId={certification.id}
           projectName="Certification"
+          projectId={null}
         />
       ))}
     </div>

@@ -22,7 +22,12 @@ exports[`TextInput  renders as expected with required props 1`] = `
         Watchtower
       </li>
       <li>
-        Apply
+        <Link
+          replace={false}
+          to="dashboard/project/1/role/1"
+        >
+          Apply
+        </Link>
       </li>
     </ul>
   </div>

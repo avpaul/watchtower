@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should Render Component 1`] = `
+<div
+  className="projectAndRoleDetailContainer"
+>
+  <div
+    className="mainHeading"
+  >
+    <img
+      alt="project logo"
+      src="projectdown.svg"
+    />
+    <p
+      className="roleName"
+    />
+    <p
+      className="projectName"
+    />
+    <button
+      type="button"
+    >
+      APPLY FOR THIS ROLE
+    </button>
+  </div>
+  <div
+    className="mainBody"
+  >
+    <h6
+      className="paragraphHeadings"
+    >
+      Role Description
+    </h6>
+    <p />
+    <h6
+      className="paragraphHeadings"
+    >
+      About 
+    </h6>
+    <p />
+    <h6
+      className="paragraphHeadings"
+    >
+      Relevant Documents
+    </h6>
+    <a
+      href=""
+      key=""
+    >
+      <img
+        alt="document logo"
+        src="doc.svg"
+      />
+    </a>
+  </div>
+</div>
+`;

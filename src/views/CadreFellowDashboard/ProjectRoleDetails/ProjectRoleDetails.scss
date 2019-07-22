@@ -1,0 +1,307 @@
+.role-details-container {
+  margin: 3.4rem auto;
+  width: 76vw;
+  padding-bottom: 4rem;
+  height: 85vh;
+
+  & .wt-return-button {
+    position: relative;
+    float: left;
+    margin: 0 0.8rem 0 0;
+    height: 1.3rem;
+    width: 1.3rem;
+    border: none;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    position: relative;
+    top: -0.2rem;
+    display: flex;
+  }
+
+  & .projectContainer {
+    width: 33%;
+    min-height: 80vh;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    float: left;
+  }
+
+  & .projectOverview {
+    text-align: center;
+    border-bottom: 1.2px solid #f4f8f9;
+    padding-bottom: 3rem;
+
+    & .projectType {
+      background-color: #eceff4;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      float: right;
+      margin: 1.3rem 1rem 0.7rem 80%;
+      border-radius: 0.3rem;
+      color: #667075;
+      letter-spacing: 0.06rem;
+    }
+
+    & img {
+      clear: both;
+      height: 4.5rem;
+    }
+
+    & .projectStack {
+      background-color: #eef1fe;
+      padding: 0.3rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin: 1rem 0.5rem 0 0.5rem;
+      border-radius: 0.2rem;
+      color: #3458db;
+      display: inline-block;
+    }
+
+    & .projectSkills {
+      background-color: #fdc88a;
+      padding: 0.3rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin: 1rem 0.5rem 0 0.5rem;
+      border-radius: 0.2rem;
+      color: #829199;
+      display: inline-block;
+    }
+  }
+
+  & .projectTitle {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 1rem;
+    text-shadow: 0px 0.2px, 0.2px 0px, 0.2px 0.2px;
+    color: #354b5a;
+  }
+
+  & .projectTagline {
+    font-size: 0.9rem;
+    color: #829199;
+    margin: 0rem 2rem 2rem 2rem;
+  }
+
+  & .projectManager {
+    padding: 2rem;
+
+    & .headingText {
+      font-size: 0.9rem;
+      color: #829199;
+    }
+
+    & img {
+      height: 3.5rem;
+      width: 3.5rem;
+      margin-right: 0.5rem;
+      float: left;
+      border-radius: 0.5rem;
+    }
+
+    & .managerName {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: #354b5a;
+      text-shadow: 0px 0.1px, 0.1px 0px, 0.1px 0.1px;
+    }
+
+    & .managerEmail {
+      margin: 0 0.4rem;
+    }
+  }
+
+  & .projectAndRoleDetailContainer {
+    width: 65.5%;
+    min-height: 80vh;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    float: right;
+    padding-bottom: 2rem;
+    color: #829199;
+    font-size: 1rem;
+
+    & .mainHeading {
+      padding: 3rem 3rem 1.7rem 3rem;
+      border-bottom: 1.2px solid #f4f8f9;
+
+      & img {
+        float: left;
+        margin-right: 0.9rem;
+      }
+
+      & .roleName {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 0.3rem 0 0.2rem 0;
+        color: #0458e4;
+      }
+
+      & .projectName {
+        color: #829199;
+        font-size: 1rem;
+        display: inline;
+      }
+
+      & button {
+        float: right;
+        position: relative;
+        top: -1.7rem;
+        width: 12rem;
+        padding: 0.5rem;
+        background-color: #0458e4;
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.85rem;
+        text-shadow: 0px 0.1px, 0.1px 0px, 0.1px 0.1px;
+        letter-spacing: 0.05rem;
+        border-radius: 0.4rem;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+
+    & .mainBody {
+      padding: 0 3rem;
+
+      & h6 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #354b5a;
+        margin: 2.5rem 0 1.1rem 0;
+      }
+
+      & a {
+        display: inline-block;
+        border-radius: 0.4rem;
+        padding: 2rem 1.5rem 2rem 1.5rem;
+        margin: 1rem 1rem 0 0;
+        width: 47%;
+        text-align: center;
+        font-size: 1rem;
+        color: inherit;
+        box-shadow: 0 0 0.3rem 0.2rem #fbfbfb;
+
+        &:hover {
+          color: #0458e4;
+          text-decoration: none;
+        }
+
+        & img {
+          margin-right: 1rem;
+          vertical-align: -0.13rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1435px) {
+  .role-details-container {
+    width: 1000px;
+    margin: 3.4rem auto;
+    clear: both;
+
+    & .projectContainer {
+      width: 365px;
+      clear: both;
+    }
+
+    & .projectAndRoleDetailContainer {
+      max-width: 62%;
+    }
+  }
+}
+
+@media (max-width: 1045px) {
+  .role-details-container {
+    width: 730px;
+    margin: 3.4rem auto;
+    clear: both;
+
+    & .projectContainer {
+      width: 310px;
+      clear: both;
+    }
+
+    & .projectManager {
+      padding: 2rem 1rem 2rem 2rem;
+
+      & .managerName {
+        font-size: 1rem;
+      }
+
+      & .managerEmail {
+        font-size: 0.8rem;
+      }
+    }
+
+    & .projectAndRoleDetailContainer {
+      max-width: 55%;
+
+      & .mainHeading {
+        padding: 3.5rem 3rem 5rem 3rem;
+
+        & button {
+          float: left;
+          margin-top: 1rem;
+          position: block;
+          top: 0rem;
+        }
+      }
+
+      & .mainBody {
+        padding: 0 3rem;
+
+        & a {
+          width: 98%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 775px) {
+  .role-details-container {
+    width: 365px;
+    margin: 3.4rem auto;
+    clear: both;
+
+    & .projectContainer {
+      width: 365px;
+      clear: both;
+    }
+
+    & .projectAndRoleDetailContainer {
+      min-width: 365px;
+      margin: 15px auto;
+      float: left;
+
+      & .mainHeading {
+        padding: 3.5rem 1rem 5rem 1.5rem;
+
+        & button {
+          float: left;
+          margin-top: 1rem;
+          position: block;
+          top: 0rem;
+        }
+      }
+
+      & .mainBody {
+        padding: 0 1rem 0 1.3rem;
+
+        & a {
+          width: 95%;
+          padding: 1rem 0.5rem 1rem 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should Render Component 1`] = `
+<ProjectRoleDetails
+  AllVacantRoles={
+    Array [
+      Object {
+        "project": Object {},
+        "role": Object {
+          "id": 1,
+          "name": "",
+        },
+      },
+    ]
+  }
+  getAProject={[Function]}
+  history={Object {}}
+  match={
+    Object {
+      "params": Object {
+        "roleId": 1,
+      },
+    }
+  }
+  singleProject={
+    Object {
+      "data": Object {},
+    }
+  }
+/>
+`;
+
+exports[`should Render child Components 1`] = `
+<div
+  className="role-details-container"
+>
+  <ReturnButton
+    history={Object {}}
+  />
+  <p>
+    Back to Dashboard
+  </p>
+  <RoleDetailsLeft
+    projectInfo={
+      Array [
+        Object {
+          "logo": "",
+          "type": "test",
+        },
+      ]
+    }
+    roleInfo={
+      Object {
+        "id": 1,
+        "name": "",
+      }
+    }
+  />
+  <RoleDetailsRight
+    projectInfo={
+      Array [
+        Object {
+          "logo": "",
+          "type": "test",
+        },
+      ]
+    }
+    roleInfo={
+      Object {
+        "id": 1,
+        "name": "",
+      }
+    }
+  />
+</div>
+`;

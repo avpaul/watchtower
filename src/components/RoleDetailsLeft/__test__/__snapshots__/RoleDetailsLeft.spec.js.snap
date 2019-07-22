@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should Render Component 1`] = `
+<div
+  className="projectContainer"
+>
+  <div
+    className="projectOverview"
+  >
+    <span
+      className="projectType"
+    >
+      TEST
+    </span>
+    <img
+      alt=""
+      onError={[Function]}
+      src="jj"
+    />
+    <p
+      className="projectTitle"
+    />
+    <p
+      className="projectTagline"
+    />
+    <span
+      className="projectStack"
+      key=""
+    />
+  </div>
+  <div
+    className="projectManager"
+  >
+    <p
+      className="headingText"
+    >
+      Team Manager
+    </p>
+    <img
+      alt="project manager"
+      src="https://lorempixel.com/100/100/people/?97143"
+    />
+    <p
+      className="managerName"
+    />
+    <p
+      className="managerEmail"
+    />
+  </div>
+</div>
+`;
