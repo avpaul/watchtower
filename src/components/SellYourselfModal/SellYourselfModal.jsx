@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import Modal from '../LargeModal/LargeModal';
 import Loader from '../Loader/Loader';
 import './SellYourselfModal.scss';
-import Image from '../../static/Like.png';
+import Image from '../../static/like.png';
 
 class SellYourselfModal extends Component {
   state = {

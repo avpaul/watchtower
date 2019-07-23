@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests RoleApplication should Render Components 1`] = `
+Object {
+  "props": Object {
+    "applications": Object {
+      "data": Object {},
+      "error": null,
+      "loading": false,
+    },
+    "applyForRole": [MockFunction],
+    "roleId": 1,
+    "roleInfo": Object {
+      "name": "Technical Team Lead",
+    },
+  },
+  "wrapper": <GenericModal
+    footer={
+      <div
+        className="modal-footer"
+      >
+        <button
+          className="btn"
+          data-dismiss="modal"
+          type="button"
+        >
+          Cancel
+        </button>
+        <button
+          className="btn"
+          id="applicationBtn"
+          onClick={[Function]}
+          type="button"
+        >
+          Send Application
+        </button>
+      </div>
+    }
+    handleClose={[Function]}
+    handleSubmit={[Function]}
+    id="applyForRoleModal"
+    size=""
+    submitLoading={false}
+    success={false}
+    successMessage="Success!"
+    title="Apply to WatchTower Extended Team"
+  >
+    <div
+      className="advocacy"
+    >
+      <p
+        className="advocacy__label"
+      >
+        You are applying as a Technical Team Lead
+      </p>
+      <p
+        className="advocacy__subtitle"
+      >
+        Sell yourself (Optional)
+      </p>
+      <TextInput
+        alertText=""
+        className="wt-text-input"
+        comment=""
+        componentStateKey="inputs"
+        defaultStatus={0}
+        inputValue=""
+        label=""
+        length={999}
+        name="description"
+        parent={
+          RoleApplication {
+            "applicationStatus": [Function],
+            "context": Object {},
+            "footer": [Function],
+            "handleClose": [Function],
+            "handleSubmit": [Function],
+            "props": Object {
+              "applications": Object {
+                "data": Object {},
+                "error": null,
+                "loading": false,
+              },
+              "applyForRole": [MockFunction],
+              "roleId": 1,
+              "roleInfo": Object {
+                "name": "Technical Team Lead",
+              },
+            },
+            "refs": Object {},
+            "renderBody": [Function],
+            "renderButton": [Function],
+            "sendApplicationButton": [Function],
+            "setState": [Function],
+            "state": Object {
+              "inputs": Object {},
+              "success": false,
+            },
+            "updater": Updater {
+              "_callbacks": Array [],
+              "_renderer": ReactShallowRenderer {
+                "_context": Object {},
+                "_didScheduleRenderPhaseUpdate": false,
+                "_dispatcher": Object {
+                  "readContext": [Function],
+                  "useCallback": [Function],
+                  "useContext": [Function],
+                  "useDebugValue": [Function],
+                  "useEffect": [Function],
+                  "useImperativeHandle": [Function],
+                  "useLayoutEffect": [Function],
+                  "useMemo": [Function],
+                  "useReducer": [Function],
+                  "useRef": [Function],
+                  "useState": [Function],
+                },
+                "_element": <RoleApplication
+                  applications={
+                    Object {
+                      "data": Object {},
+                      "error": null,
+                      "loading": false,
+                    }
+                  }
+                  applyForRole={[MockFunction]}
+                  roleId={1}
+                  roleInfo={
+                    Object {
+                      "name": "Technical Team Lead",
+                    }
+                  }
+                />,
+                "_firstWorkInProgressHook": null,
+                "_forcedUpdate": false,
+                "_instance": [Circular],
+                "_isReRender": false,
+                "_newState": null,
+                "_numberOfReRenders": 0,
+                "_renderPhaseUpdates": null,
+                "_rendered": <GenericModal
+                  footer={
+                    <div
+                      className="modal-footer"
+                    >
+                      <button
+                        className="btn"
+                        data-dismiss="modal"
+                        type="button"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        className="btn"
+                        id="applicationBtn"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Send Application
+                      </button>
+                    </div>
+                  }
+                  handleClose={[Function]}
+                  handleSubmit={[Function]}
+                  id="applyForRoleModal"
+                  size=""
+                  submitLoading={false}
+                  success={false}
+                  successMessage="Success!"
+                  title="Apply to WatchTower Extended Team"
+                >
+                  <React.Fragment>
+                    <div
+                      className="advocacy"
+                    >
+                      <p
+                        className="advocacy__label"
+                      >
+                        You are applying as a Technical Team Lead
+                      </p>
+                      <p
+                        className="advocacy__subtitle"
+                      >
+                        Sell yourself (Optional)
+                      </p>
+                      <TextInput
+                        alertText=""
+                        className="wt-text-input"
+                        comment=""
+                        componentStateKey="inputs"
+                        defaultStatus={0}
+                        inputValue=""
+                        label=""
+                        length={999}
+                        name="description"
+                        parent={[Circular]}
+                        placeholder=""
+                        testInput={[Function]}
+                        type="textarea"
+                      />
+                    </div>
+                  </React.Fragment>
+                </GenericModal>,
+                "_rendering": false,
+                "_updater": [Circular],
+                "_workInProgressHook": null,
+              },
+            },
+          }
+        }
+        placeholder=""
+        testInput={[Function]}
+        type="textarea"
+      />
+    </div>
+  </GenericModal>,
+}
+`;

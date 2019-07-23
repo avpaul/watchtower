@@ -56,6 +56,16 @@ exports[`should Render child Components 1`] = `
       }
     }
   />
+  <Connect(RoleApplication)
+    history={Object {}}
+    roleId={1}
+    roleInfo={
+      Object {
+        "id": 1,
+        "name": "",
+      }
+    }
+  />
   <RoleDetailsRight
     projectInfo={
       Array [
