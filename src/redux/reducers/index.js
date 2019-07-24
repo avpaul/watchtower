@@ -55,6 +55,7 @@ import deleteProjectVacancies from './deleteProjectVacanciesReducer';
 import projectVacanciesOnFocus from './setProjectVacanciesOnFocusReducer';
 import certificationOnFocus from './setCertificationOnFocusReducer';
 import deleteCertification from './deleteCertificationReducer';
+import createCertificactionVacancies from './createCertificationVacanciesReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -109,7 +110,8 @@ const rootReducer = combineReducers({
   deleteProjectVacancies,
   projectVacanciesOnFocus,
   deleteCertification,
-  certificationOnFocus
+  certificationOnFocus,
+  createCertificactionVacancies
 });
 
 export default rootReducer;

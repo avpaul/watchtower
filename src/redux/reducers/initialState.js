@@ -187,6 +187,7 @@ export default {
   fetchProjectTechnologies: genericAPIStateArray,
   editSingleProject: genericAPIStateObject,
   singleProject: genericAPIStateObject,
+  createCertificactionVacancies: genericAPIStateObject,
   addProjectManager: {
     manager: {}
   },

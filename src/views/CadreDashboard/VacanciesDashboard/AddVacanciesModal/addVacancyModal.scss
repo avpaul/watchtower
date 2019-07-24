@@ -1,3 +1,6 @@
+@import '../../../../assets/sass/abstract/variables';
+@import '../../../../assets/sass/abstract/mixins';
+
 #addProjectVacanciesModal .modal-header h1 {
   color: #333e44;
   font-size: 1.5rem;
@@ -7,4 +10,74 @@
 #addProjectVacanciesModal .modal-footer button {
   background-color: #10a36d;
   border-color: #10a36d;
+}
+@mixin checkboxStyle() {
+  height: 24px;
+  width: 24px;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  outline: none;
+  margin-right: 6px;
+}
+
+.container {
+  display: flex;
+  height: auto;
+  width: auto;
+  color: #4f4f4f;
+  font-family: 'DIN Pro';
+  font-size: 18px;
+  letter-spacing: -0.23px;
+  line-height: 23px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.checkbox {
+  @include checkboxStyle();
+  &.default {
+    background-color: #ffffff;
+  }
+  &:hover {
+    border: 1px solid #3359db;
+    cursor: pointer;
+  }
+  &.clicked {
+    border: 1px solid #3359db;
+    background-color: #3359db;
+  }
+}
+
+.ticksvg {
+  height: 14px;
+  width: 13px;
+  margin-left: 5px;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.form-toggle-buttons {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-date-picker {
+  width: 100%;
+}
+
+.form-vacancy-toggle-button {
+  background-color: #ffffff;
+  border: 1px solid #0459e4;
+  height: 2rem;
+  width: 50%;
+  color: #0459e4;
+  font-family: $font-primary;
+  outline: none !important;
+  font: 400 13px system-ui;
+
+  &--active {
+    @extend .form-vacancy-toggle-button;
+    color: white;
+    background-color: #0459e4;
+  }
 }

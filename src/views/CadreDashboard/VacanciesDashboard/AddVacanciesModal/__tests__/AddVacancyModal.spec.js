@@ -31,12 +31,17 @@ describe('Add Vacancy Modal', () => {
           name: 'Scrum Master'
         }
       ]
+    },
+    allCertifications: {
+      ...initialState.allCertifications,
+      data: [{ id: 1, name: 'Data science' }]
     }
   };
 
   const store = buildStore(reduxState);
   const defaultProps = {
     createNewProjectVacancies: jest.fn(),
+    fetchAllCertifications: jest.fn(),
     editProjectVacancies: jest.fn(),
     fetchAllProjects: jest.fn(),
     fetchAllRoles: jest.fn(),
@@ -45,7 +50,12 @@ describe('Add Vacancy Modal', () => {
     allProjects: reduxState.allProjects,
     allProjectRoles: reduxState.allProjectRoles,
     projectVacanciesOnFocus: initialState.projectVacanciesOnFocus,
-    editMode: false
+    editMode: false,
+    createCertificactionVacancies: initialState.createCertificactionVacancies,
+    allCertifications: reduxState.allCertifications,
+    history: {
+      replace: jest.fn()
+    }
   };
 
   const newVacanciesDetails = {
@@ -116,6 +126,11 @@ describe('Add Vacancy Modal', () => {
 
   it('renders correctly', () => {
     const { wrapper } = setup();
+    wrapper.setState({
+      startDate: '2019-03-10',
+      endDate: '2019-3-15',
+      currentDate: '2019-3-15'
+    });
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -123,6 +138,11 @@ describe('Add Vacancy Modal', () => {
     const { wrapper } = setup({
       allProjects: initialState.allProjects,
       allProjectRoles: initialState.allRoles
+    });
+    wrapper.setState({
+      startDate: '2019-03-10',
+      endDate: '2019-3-15',
+      currentDate: '2019-3-15'
     });
     expect(wrapper).toMatchSnapshot();
   });
@@ -216,5 +236,25 @@ describe('Add Vacancy Modal', () => {
         expect(wrapper.state('success')).toBeTruthy();
       }
     );
+  });
+
+  it('changes the state when the buttons are switched', () => {
+    const spy = jest.fn();
+    const { wrapper } = setup({ createNewProjectVacancies: spy }, true);
+    const modal = wrapper.find(AddVacanciesModal);
+    const button = wrapper.find('#certification-button');
+    button.simulate('click', { target: { value: 'Certification vacancy' } });
+    expect(modal.state('inputs').project.isValid()).toBeFalsy();
+  });
+
+  it('changes requester email when checkbox is clicked', () => {
+    const spy = jest.fn();
+    const { wrapper } = setup({ createNewProjectVacancies: spy }, true);
+    const modal = wrapper.find(AddVacanciesModal);
+    const button = wrapper.find('#certification-button');
+    button.simulate('click', { target: { value: 'Certification vacancy' } });
+    const checkbox = wrapper.find('#checkbox');
+    checkbox.simulate('click');
+    expect(modal.state('requester')).toBeTruthy();
   });
 });
