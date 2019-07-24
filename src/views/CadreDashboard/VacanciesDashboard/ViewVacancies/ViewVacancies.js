@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import fuzzy from 'fuzzy';
 import arrayKey from 'weak-key';
 import TDDOPsVacancyCard from '../../../../components/TDDOpsVacancyCard';
 import './ViewVacancies.scss';
@@ -18,31 +19,41 @@ export class ViewRoleVacancies extends Component {
     this.updateInitialState(projectVacancies || []);
   }
 
-  filterProjectArray = (vacancyArray, text) => {
-    const filteredArrayByProject = vacancyArray.filter(vacancy => {
-      const projectVacancyName = vacancy.project.name.toLowerCase();
-      return projectVacancyName.indexOf(text.toLowerCase()) !== -1;
-    });
-
-    const filteredArrayByRole = vacancyArray.filter(vacancy => {
-      const roleVacancyName = vacancy.role.name.toLowerCase();
-      return roleVacancyName.indexOf(text.toLowerCase()) !== -1;
-    });
-    const filteredArray = filteredArrayByProject.concat(filteredArrayByRole);
-    return filteredArray;
+  updateInitialState = vacancies => {
+    const { paginationWrapper } = this.props;
+    paginationWrapper.updateData(vacancies, { perPage: 20 });
   };
 
-  filterCertificationVacancy = (vacancyArray, text) => {
-    const filteredArray = vacancyArray.filter(vacancy => {
-      const certificationVacancyName = vacancy.certification.name.toLowerCase();
-      return certificationVacancyName.indexOf(text.toLowerCase()) !== -1;
-    });
-    return filteredArray;
+  fuzzySearchVacancies = (isProjectVacancy = true, searchWord) => {
+    const { vacancies } = this.props;
+    let vacanciesArray = isProjectVacancy ? vacancies.projectVacancies : [];
+    if (!isProjectVacancy) {
+      vacanciesArray = vacancies.certificationVacancies || [];
+    }
+
+    const options = {
+      pre: '<b>',
+      post: '</b>',
+      extract: el =>
+        `${isProjectVacancy ? el.project.name : el.certification.name}${
+          isProjectVacancy ? el.role.name : ''
+        }`
+    };
+
+    const results = fuzzy.filter(searchWord, vacanciesArray, options);
+    const searchResults = results.map(item => item.original);
+
+    return searchResults;
   };
 
   handleSearchTextChange = e => {
     const { vacanciesToDisplay } = this.state;
-    const { vacancies } = this.props;
+    const { vacancies, paginationWrapper } = this.props;
+
+    const { value } = e.target;
+
+    const searchWord = value.replace(/\s/g, '');
+
     const vacancyArray =
       vacanciesToDisplay === 'project'
         ? vacancies.projectVacancies
@@ -50,15 +61,13 @@ export class ViewRoleVacancies extends Component {
 
     const filteredArray =
       vacanciesToDisplay === 'project'
-        ? this.filterProjectArray(vacancyArray, e.target.value)
-        : this.filterCertificationVacancy(vacancyArray, e.target.value);
+        ? this.fuzzySearchVacancies(true, searchWord) || []
+        : this.fuzzySearchVacancies(false, searchWord) || [];
 
-    this.updateInitialState(filteredArray || []);
-  };
-
-  updateInitialState = vacancies => {
-    const { paginationWrapper } = this.props;
-    paginationWrapper.updateData(vacancies, { perPage: 20 });
+    paginationWrapper.updateData(
+      e.target.value === '' ? vacancyArray : filteredArray,
+      { page: 1 }
+    );
   };
 
   updatePaginateData = toDisplay => {
@@ -67,7 +76,7 @@ export class ViewRoleVacancies extends Component {
       toDisplay === 'project'
         ? vacancies.projectVacancies
         : vacancies.certificationVacancies;
-    paginationWrapper.updateData(vacanciesArray || [], { page: 1 });
+    paginationWrapper.updateData(vacanciesArray, { page: 1 });
   };
 
   toggleVacanciesToDisplay = e => {
@@ -140,8 +149,8 @@ export class ViewRoleVacancies extends Component {
           />
         ))
       ) : (
-          <div className="ops-no-vacancies">No Vacancies</div>
-        );
+        <div className="ops-no-vacancies">No Vacancies</div>
+      );
     return mappedVacancies;
   };
 
