@@ -16,7 +16,10 @@ describe('Delete Vacancies Modal', () => {
     setProjectVacanciesOnFocus: jest.fn(),
     projectVacanciesOnFocus: {},
     loading: false,
-    error: null
+    error: null,
+    history: {
+      replace: jest.fn()
+    }
   };
 
   /**
