@@ -163,8 +163,8 @@ class AddVacanciesModal extends Component {
    * the cancel and the return buttons
    */
   handleClose = () => {
-    const { inputs } = this.state;
     const { history } = this.props;
+    const { inputs } = this.state;
     inputs.project.setState({ inputValue: {} });
     inputs.project.setStatus('normal');
 

@@ -42,9 +42,10 @@ class DeleteVacanciesModal extends Component {
    * the cancel and the return buttons
    */
   handleClose = () => {
-    const { setProjectVacanciesOnFocus } = this.props;
+    const { setProjectVacanciesOnFocus, history } = this.props;
     setProjectVacanciesOnFocus({});
     this.setState({ success: false });
+    history.replace('/cadre/vacancies');
   };
 
   renderButton = ({ label, buttonProps = {} }) => (
@@ -105,7 +106,8 @@ DeleteVacanciesModal.propTypes = {
   setProjectVacanciesOnFocus: PropTypes.func.isRequired,
   projectVacanciesOnFocus: PropTypes.shape().isRequired,
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  error: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  history: PropTypes.shape().isRequired,
 };
 
 DeleteVacanciesModal.defaultProps = {

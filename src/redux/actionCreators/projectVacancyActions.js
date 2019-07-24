@@ -6,6 +6,13 @@ import {
 } from './helpers';
 import * as types from '../constants/projectsTypes';
 
+const getAllVacancies = () =>
+  genericAPIGetRequest('cadre/vacancies', [
+    types.GET_ALL_VACANCIES_REQUEST,
+    types.GET_ALL_VACANCIES_SUCCESS,
+    types.GET_ALL_VACANCIES_FAILURE
+  ]);
+
 /**
  * An action creator responsible for creating a new set of vacancies
  * @param object vacancies The details of the new vacancies
@@ -26,13 +33,6 @@ export const createNewProjectVacancies = vacancies =>
         data: response.data.data
       })
   );
-
-const getAllVacancies = () =>
-  genericAPIGetRequest('cadre/vacancies', [
-    types.GET_ALL_VACANCIES_REQUEST,
-    types.GET_ALL_VACANCIES_SUCCESS,
-    types.GET_ALL_VACANCIES_FAILURE
-  ]);
 
 /**
  * Sets the project vacancies on focus for editing or deleting.

@@ -79,7 +79,7 @@ class VacanciesDashboard extends Component {
     return (
       <React.Fragment>
         <AddVacanciesModal user={user} history={history} />
-        <DeleteVacanciesModal />
+        <DeleteVacanciesModal history={history} />
         {loading ? (
           <PMloader />
         ) : (
