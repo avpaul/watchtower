@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import CertificationPage from '../CertificationPage';
+import Loader from '../../../../components/Loader/Loader';
 
 describe('Test the certification page', () => {
   const props = {
@@ -14,12 +15,19 @@ describe('Test the certification page', () => {
     },
     getCertificationAction: jest.fn(),
     history: {
-      push: jest.fn()
+      push: jest.fn(),
+      goBack: jest.fn()
     },
     match: {
       params: {
         certificationId: '1'
       }
+    },
+    applyForCertification: jest.fn(),
+    certificationApplication: {
+      loading: false,
+      data: {},
+      error: ''
     }
   };
   let wrapper;
@@ -75,27 +83,6 @@ describe('Test the certification page', () => {
     } = componentWithoutLoader.instance().props.certificationApplication;
     expect(loading).toBeFalsy();
     expect(loading).toMatchSnapshot();
-  });
-
-  it('should render a toast error when an error occurs', () => {
-    propsOverride = {
-      certificationApplication: {
-        error: 'You have done something bad'
-      }
-    };
-    const component = setUp({ ...propsOverride });
-    component.instance().showNotification();
-    expect(component).toMatchSnapshot();
-  });
-  it('should render a toast success notification', () => {
-    propsOverride = {
-      certificationApplication: {
-        error: null
-      }
-    };
-    const component = setUp({ ...propsOverride });
-    component.instance().showNotification();
-    expect(component).toMatchSnapshot();
   });
 
   it('it should show not exclusive', () => {

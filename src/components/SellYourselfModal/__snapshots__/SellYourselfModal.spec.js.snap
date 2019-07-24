@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sell yourself modal renders without errors 1`] = `
+<div
+  className="container"
+  id="sell-yourself"
+>
+  <Modal
+    handleClose={[MockFunction]}
+    show={false}
+    showBtn={true}
+    size="small"
+    title={null}
+  >
+    <p
+      className="form-header"
+    >
+      Apply for 
+      Data Engineering
+       certification
+    </p>
+    <p
+      className="form-title"
+    >
+      Sell yourself in one sentence [500 words max]
+    </p>
+    <textarea
+      className="form-control"
+      onChange={[Function]}
+      required={true}
+      value={null}
+    />
+    <button
+      className="btn btn-primary text-uppercase apply-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      Apply for this certification
+    </button>
+  </Modal>
+</div>
+`;
+
+exports[`sell yourself modal should render the error notification toast when the application submission fails 1`] = `
+<div
+  className="container"
+  id="sell-yourself"
+>
+  <Modal
+    handleClose={[MockFunction]}
+    show={false}
+    showBtn={true}
+    size="small"
+    title={null}
+  >
+    <p
+      className="form-header"
+    >
+      Apply for 
+      Data Engineering
+       certification
+    </p>
+    <p
+      className="form-title"
+    >
+      Sell yourself in one sentence [500 words max]
+    </p>
+    <textarea
+      className="form-control"
+      onChange={[Function]}
+      required={true}
+      value={null}
+    />
+    <button
+      className="btn btn-primary text-uppercase apply-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      Apply for this certification
+    </button>
+  </Modal>
+</div>
+`;
+
+exports[`sell yourself modal should render the success notification toast when the application submission succeeds 1`] = `
+<div
+  className="container"
+  id="sell-yourself"
+>
+  <Modal
+    handleClose={[MockFunction]}
+    show={false}
+    showBtn={true}
+    size="small"
+    title={null}
+  >
+    <p
+      className="form-header"
+    >
+      Apply for 
+      Data Engineering
+       certification
+    </p>
+    <p
+      className="form-title"
+    >
+      Sell yourself in one sentence [500 words max]
+    </p>
+    <textarea
+      className="form-control"
+      onChange={[Function]}
+      required={true}
+      value={null}
+    />
+    <button
+      className="btn btn-primary text-uppercase apply-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      Apply for this certification
+    </button>
+  </Modal>
+</div>
+`;

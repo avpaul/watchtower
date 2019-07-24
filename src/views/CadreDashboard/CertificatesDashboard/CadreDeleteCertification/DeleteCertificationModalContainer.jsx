@@ -3,7 +3,7 @@ import DeleteCertificationModal from './DeleteCertificationModal';
 import {
   deleteCertification,
   setCertificationOnFocus
-} from '../../../../redux/actionCreators/cadreCertificationAction';
+} from '../../../../redux/actionCreators/cadreCertificationActions';
 
 export const mapStateToProps = ({
   certificationOnFocus,

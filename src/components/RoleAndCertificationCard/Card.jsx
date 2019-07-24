@@ -301,10 +301,14 @@ class Card extends React.Component {
   }
 }
 
+Card.defaultProps = {
+  setCertificationOnFocus: false
+};
+
 Card.propTypes = {
   cardProps: PropTypes.shape({}).isRequired,
   focusRole: PropTypes.func.isRequired,
-  setCertificationOnFocus: PropTypes.func.isRequired
+  setCertificationOnFocus: PropTypes.func
 };
 
 export default Card;

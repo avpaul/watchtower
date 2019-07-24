@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ViewCertificationApplicantsModal from './ViewCertificationApplicantsModal';
-import { fetchCertificationApplicants } from '../../../../redux/actionCreators/cadreCertificationAction';
+import { fetchCertificationApplicants } from '../../../../redux/actionCreators/cadreCertificationActions';
 
 export const mapStateToProps = ({ certificationApplicants }) => ({
   certificationApplicants

@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the certification page should not render the submit button when loading is false 1`] = `false`;
+
+exports[`Test the certification page should render a button for users to be able to apply for a certification 1`] = `
+<Fragment>
+  <div
+    className="certification-page"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row mt-5 mb-4"
+      >
+        <div
+          className="col-md-12"
+        >
+          <div
+            id="nav"
+            onClick={[Function]}
+            onKeyDown={null}
+            role="button"
+            tabIndex="-1"
+          >
+            <img
+              alt="back icon"
+              className="back-icon"
+              src="BackIcon.png"
+            />
+            <span
+              className="ml-3 back-icon-text"
+            >
+              Back to Dashboard
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row justify-content-center"
+      >
+        <div
+          className="col-md-10"
+        >
+          <div
+            className="card certification-card"
+          >
+            <div
+              className="card-header certification-header bg-white border-none"
+            >
+              <div
+                className="row px-4 mt-4 mb-2"
+              >
+                <div
+                  className="col-md-6"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-2"
+                    >
+                      <img
+                        alt="certification icon"
+                        src="Project.svg"
+                      />
+                    </div>
+                    <div
+                      className="col-8"
+                    >
+                      <h4
+                        className="certification-title text-capitalize"
+                      >
+                        Testing
+                      </h4>
+                      <h5
+                        className="certification-title-sub-heading"
+                      >
+                        Exclusive
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-md-6 text-right"
+                >
+                  <button
+                    className="btn btn-primary text-uppercase apply-btn"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Apply For This Certification
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="px-4"
+              >
+                <h3
+                  className="certification-description-title"
+                >
+                  Certification Description
+                </h3>
+                <p
+                  className="certification-description"
+                >
+                  Test description
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Test the certification page should render the button loader when loading is true 1`] = `null`;
+
+exports[`Test the certification page should render without errors 1`] = `
+<Fragment>
+  <div
+    className="certification-page"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row mt-5 mb-4"
+      >
+        <div
+          className="col-md-12"
+        >
+          <div
+            id="nav"
+            onClick={[Function]}
+            onKeyDown={null}
+            role="button"
+            tabIndex="-1"
+          >
+            <img
+              alt="back icon"
+              className="back-icon"
+              src="BackIcon.png"
+            />
+            <span
+              className="ml-3 back-icon-text"
+            >
+              Back to Dashboard
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row justify-content-center"
+      >
+        <div
+          className="col-md-10"
+        >
+          <div
+            className="card certification-card"
+          >
+            <div
+              className="card-header certification-header bg-white border-none"
+            >
+              <div
+                className="row px-4 mt-4 mb-2"
+              >
+                <div
+                  className="col-md-6"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-2"
+                    >
+                      <img
+                        alt="certification icon"
+                        src="Project.svg"
+                      />
+                    </div>
+                    <div
+                      className="col-8"
+                    >
+                      <h4
+                        className="certification-title text-capitalize"
+                      >
+                        Testing
+                      </h4>
+                      <h5
+                        className="certification-title-sub-heading"
+                      >
+                        Exclusive
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-md-6 text-right"
+                >
+                  <button
+                    className="btn btn-primary text-uppercase apply-btn"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Apply For This Certification
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="px-4"
+              >
+                <h3
+                  className="certification-description-title"
+                >
+                  Certification Description
+                </h3>
+                <p
+                  className="certification-description"
+                >
+                  Test description
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Test the certification page should trigger certification application function when apply button is clicked 1`] = `
+<Fragment>
+  <div
+    className="certification-page"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row mt-5 mb-4"
+      >
+        <div
+          className="col-md-12"
+        >
+          <div
+            id="nav"
+            onClick={[Function]}
+            onKeyDown={null}
+            role="button"
+            tabIndex="-1"
+          >
+            <img
+              alt="back icon"
+              className="back-icon"
+              src="BackIcon.png"
+            />
+            <span
+              className="ml-3 back-icon-text"
+            >
+              Back to Dashboard
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row justify-content-center"
+      >
+        <div
+          className="col-md-10"
+        >
+          <div
+            className="card certification-card"
+          >
+            <div
+              className="card-header certification-header bg-white border-none"
+            >
+              <div
+                className="row px-4 mt-4 mb-2"
+              >
+                <div
+                  className="col-md-6"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-2"
+                    >
+                      <img
+                        alt="certification icon"
+                        src="Project.svg"
+                      />
+                    </div>
+                    <div
+                      className="col-8"
+                    >
+                      <h4
+                        className="certification-title text-capitalize"
+                      >
+                        Testing
+                      </h4>
+                      <h5
+                        className="certification-title-sub-heading"
+                      >
+                        Exclusive
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-md-6 text-right"
+                >
+                  <button
+                    className="btn btn-primary text-uppercase apply-btn"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Apply For This Certification
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="px-4"
+              >
+                <h3
+                  className="certification-description-title"
+                >
+                  Certification Description
+                </h3>
+                <p
+                  className="certification-description"
+                >
+                  Test description
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <SellYourselfModal
+        buttonLabel="Apply for this certification"
+        certificationApplication={
+          Object {
+            "data": Object {},
+            "error": "",
+            "loading": false,
+          }
+        }
+        modalHandler={[Function]}
+        showModal={true}
+        submitHandler={[MockFunction]}
+        title="Testing"
+      />
+    </div>
+  </div>
+</Fragment>
+`;

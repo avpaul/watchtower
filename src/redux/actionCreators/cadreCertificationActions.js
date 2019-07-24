@@ -1,4 +1,8 @@
-import { genericAPIGetRequest, genericAPIDeleteRequest } from './helpers';
+import {
+  genericAPIGetRequest,
+  genericAPIDeleteRequest,
+  genericAPIPostRequest
+} from './helpers';
 import * as types from '../constants/cadreCertificationTypes';
 
 /**
@@ -55,9 +59,24 @@ export const deleteCertification = certificationId =>
       types.FETCH_CERTIFICATION_APPLICANTS_FAILURE
     ]);
 
-  export default {
-    fetchAllCertifications,
-    deleteCertification,
-    setCertificationOnFocus,
-    fetchCertificationApplicants
-  }
+
+/**
+ * An action creator responsible for applying for a certification
+ * @return object An instance of a Promise
+ */
+export const applyForCertification = (certificationId, reason) =>
+  genericAPIPostRequest(
+    `certifications/${certificationId}/applications`,
+    [
+      types.CERTIFICATION_APPLICATION_REQUEST,
+      types.CERTIFICATION_APPLICATION_SUCCESS,
+      types.CERTIFICATION_APPLICATION_FAILURE
+    ],
+    { reason_for_applying: reason }
+  );
+
+export default {
+  fetchAllCertifications,
+  deleteCertification,
+  setCertificationOnFocus
+};
