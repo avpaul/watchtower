@@ -38,7 +38,12 @@ const renderDropdownSection = (vacancy, setVacanciesOnFocus) => (
   </>
 );
 
-const getName = name => (name.length > 20 ? `${name.substr(0, 16)}...` : name);
+const getName = name => {
+  if (name) {
+    return name.length > 20 ? `${name.substr(0, 16)}...` : name;
+  }
+  return 'N/A';
+};
 
 const TDDOPsVacancyCard = ({
   vacancy,

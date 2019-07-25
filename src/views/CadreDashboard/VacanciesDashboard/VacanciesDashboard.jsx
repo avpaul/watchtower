@@ -6,7 +6,6 @@ import AddVacanciesModal from './AddVacanciesModal';
 import DeleteVacanciesModal from './DeleteVacanciesModal';
 import ViewVacancies from './ViewVacancies/ViewVacancies';
 import PMloader from '../../../components/CustomLoader/PMLoader';
-import arrayOfObjectsSorter from '../../../utils/sortArray';
 
 import './vacancyDashboard.scss';
 
@@ -58,24 +57,11 @@ class VacanciesDashboard extends Component {
   };
 
   renderBody = () => {
-    let {
-      getAllVacancies: { data }
-    } = this.props;
     const {
-      getAllVacancies: { loading },
+      getAllVacancies: { data, loading },
       user,
       history
     } = this.props;
-    if (data.projectVacancies) {
-      data = {
-        projectVacancies: data.projectVacancies.sort(
-          arrayOfObjectsSorter('project.name')
-        ),
-        certificationVacancies: data.certificationVacancies.sort(
-          arrayOfObjectsSorter('certification.name')
-        )
-      };
-    }
     return (
       <React.Fragment>
         <AddVacanciesModal user={user} history={history} />
