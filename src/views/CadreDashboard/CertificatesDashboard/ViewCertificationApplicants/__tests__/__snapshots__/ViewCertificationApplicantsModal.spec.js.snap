@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Certification Applicants Modal should render the loader when loading is set to true 1`] = `
+<Modal
+  handleClose={[MockFunction]}
+  show={false}
+  showBtn={true}
+  size="large"
+  title="Applicants for certification applicants"
+>
+  <Loader
+    size="large"
+  />
+</Modal>
+`;
+
+exports[`Certification Applicants Modal should render without error 1`] = `
+<Modal
+  handleClose={[MockFunction]}
+  show={false}
+  showBtn={true}
+  size="large"
+  title="Applicants for certification applicants"
+>
+  <div
+    className="modal__body-card"
+  >
+    <FellowRolesCard
+      key="1"
+      role={
+        Object {
+          "first_name": "test",
+          "id": 1,
+          "last_name": "user",
+        }
+      }
+    />
+  </div>
+</Modal>
+`;

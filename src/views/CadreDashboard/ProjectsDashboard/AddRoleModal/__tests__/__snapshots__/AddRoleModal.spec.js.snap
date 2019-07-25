@@ -51,6 +51,7 @@ Object {
     handleClose={[Function]}
     handleSubmit={[Function]}
     id="addRoleModal"
+    size=""
     submitLoading={false}
     success={false}
     successMessage="New role created sucessfully"
@@ -203,6 +204,7 @@ Object {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addRoleModal"
+                size=""
                 submitLoading={false}
                 success={false}
                 successMessage="New role created sucessfully"
@@ -472,6 +474,7 @@ Object {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addRoleModal"
+                size=""
                 submitLoading={false}
                 success={false}
                 successMessage="New role created sucessfully"
@@ -709,6 +712,7 @@ Object {
                 handleClose={[Function]}
                 handleSubmit={[Function]}
                 id="addRoleModal"
+                size=""
                 submitLoading={false}
                 success={false}
                 successMessage="New role created sucessfully"

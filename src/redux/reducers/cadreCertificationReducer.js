@@ -1,5 +1,6 @@
 import initialState from './initialState';
 import * as types from '../constants/cadreCertificationTypes';
+import genericReducer from './genericReducer';
 
 const removeCertification = (certifications, certification) =>
   certifications.filter(cert => !(cert.id === certification));
@@ -32,3 +33,20 @@ export default (state = initialState.allCetifications, action) => {
       return state;
   }
 };
+
+export const fetchCertificationsApplicantsReducer = (
+  state = initialState.certificationApplicants,
+  action
+) =>
+  genericReducer(
+    [
+      types.FETCH_CERTIFICATION_APPLICANTS_REQUEST,
+      types.FETCH_CERTIFICATION_APPLICANTS_SUCCESS,
+      types.FETCH_CERTIFICATION_APPLICANTS_FAILURE
+    ],
+    state,
+    {
+      ...action,
+      successData: action.data
+    }
+  );

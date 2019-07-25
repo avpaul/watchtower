@@ -43,8 +43,21 @@ export const deleteCertification = certificationId =>
       })
   );
 
-export default {
-  fetchAllCertifications,
-  deleteCertification,
-  setCertificationOnFocus
-};
+/**
+ * An action creator responsible for fetching all certification applicants
+ * @param integer the id of the certification
+ * @return object An instance of a Promise
+ */
+  export const fetchCertificationApplicants = certificationId =>
+    genericAPIGetRequest(`certifications/${certificationId}/applications`, [
+      types.FETCH_CERTIFICATION_APPLICANTS_REQUEST,
+      types.FETCH_CERTIFICATION_APPLICANTS_SUCCESS,
+      types.FETCH_CERTIFICATION_APPLICANTS_FAILURE
+    ]);
+
+  export default {
+    fetchAllCertifications,
+    deleteCertification,
+    setCertificationOnFocus,
+    fetchCertificationApplicants
+  }

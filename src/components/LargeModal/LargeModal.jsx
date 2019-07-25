@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 
 import './LargeModal.scss';
 
@@ -36,7 +34,10 @@ const Modal = ({
 Modal.propTypes = {
   handleClose: PropTypes.func,
   show: PropTypes.bool,
-  children: PropTypes.shape().isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.array.isRequired,
+    PropTypes.object.isRequired
+  ]).isRequired,
   title: PropTypes.string,
   size: PropTypes.string,
   showBtn: PropTypes.bool

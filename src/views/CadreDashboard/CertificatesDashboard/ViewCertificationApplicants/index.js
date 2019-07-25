@@ -1,0 +1,3 @@
+import ViewCertificationApplicantsModal from './ViewCertificationApplicantsModalContainer';
+
+export default ViewCertificationApplicantsModal;

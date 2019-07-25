@@ -5,7 +5,7 @@ import FormInputs from '../../../../components/FormInputs';
 import GenericModal from '../../../../components/GenericModal';
 import Loader from '../../../../components/Loader/Loader';
 
-import './AddRoleModal.css';
+import './AddRoleModal.scss';
 
 class AddRoleModal extends Component {
   constructor(props) {

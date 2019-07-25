@@ -47,7 +47,7 @@ const FellowRolesCard = ({ role }) => {
 };
 
 FellowRolesCard.propTypes = {
-  role: PropTypes.shape().isRequired
+  role: PropTypes.shape({}).isRequired
 };
 
 export default FellowRolesCard;

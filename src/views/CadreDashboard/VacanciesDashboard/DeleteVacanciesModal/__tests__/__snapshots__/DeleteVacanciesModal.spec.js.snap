@@ -19,6 +19,7 @@ exports[`Delete Vacancies Modal renders correctly 1`] = `
   handleClose={[Function]}
   handleSubmit={[Function]}
   id="deleteProjectVacanciesModal"
+  size=""
   submitLoading={false}
   success={false}
   successMessage="Project vacancies have been deleted!"
