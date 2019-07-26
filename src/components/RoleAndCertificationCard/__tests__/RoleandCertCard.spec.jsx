@@ -145,7 +145,7 @@ describe('Test Certification Card component', () => {
   });
 
   it('should show the certification Applicants Modal when user clicks on the button', () => {
-    wrapper.find('#certification_applicants_count').simulate('click');
+    wrapper.find('#applicants_count').simulate('click');
     const modalProps = {
       open: jest.fn(),
       toggle: jest.fn(),
