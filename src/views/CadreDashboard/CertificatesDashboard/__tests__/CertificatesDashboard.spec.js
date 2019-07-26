@@ -13,7 +13,8 @@ describe('Certification Dashboard', () => {
     match: {
       url: '/cadre/certifications'
     },
-    history: {}
+    history: {},
+    fetchActiveEngineers: jest.fn()
   };
 
   /**

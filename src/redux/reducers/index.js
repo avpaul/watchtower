@@ -38,7 +38,8 @@ import cadreEngineersReducer from './cadreEngineersReducer';
 import fetchEngineerReportReducer from './engineersReportReducer';
 import fetchSlackChannels from './slackChannelReducer';
 import cadreProjectRolereducer, {
-  withDeleteProjectRole
+  withDeleteProjectRole,
+  fetchSingleRoleReducer
 } from './cadreProjectRoleReducer';
 import fetchCertificationsReducer, {
   fetchCertificationsApplicantsReducer,
@@ -120,7 +121,8 @@ const rootReducer = combineReducers({
   createCertificactionVacancies,
   certificationApplicants: fetchCertificationsApplicantsReducer,
   certificationApplication: certificationApplicationReducer,
-  apply: applyForRoleReducer
+  apply: applyForRoleReducer,
+  singleRole: fetchSingleRoleReducer
 });
 
 export default rootReducer;

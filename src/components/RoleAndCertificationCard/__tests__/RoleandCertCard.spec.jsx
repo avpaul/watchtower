@@ -1,5 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import { MemoryRouter } from 'react-router-dom';
+import Thunk from 'redux-thunk';
+import initialState from '../../../redux/reducers/initialState';
 import Card from '../Card';
 import Modal from '../../LargeModal/LargeModal';
 import ViewCertificationApplicantsModal from '../../../views/CadreDashboard/CertificatesDashboard/ViewCertificationApplicants/ViewCertificationApplicantsModal';
@@ -73,6 +78,20 @@ describe('Test Role Card component', () => {
       .simulate('click');
 
     expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should render role applicants modal', () => {
+    const mockStore = configureStore([Thunk]);
+    const store = mockStore(initialState);
+    const wrapperNew = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <Card {...{ ...defaultProps }} />
+        </MemoryRouter>
+      </Provider>
+    );
+    wrapperNew.find('#applicants_count').simulate('click');
+    expect(wrapperNew.find('#roleApplicantsModal')).toBeTruthy();
   });
 });
 

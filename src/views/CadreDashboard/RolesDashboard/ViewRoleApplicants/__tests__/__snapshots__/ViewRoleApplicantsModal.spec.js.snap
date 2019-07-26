@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Role Applicants Modal should  match the snapshot 1`] = `
+<ViewRoleApplicantsModal
+  data={
+    Object {
+      "applications": Array [
+        Object {
+          "applicant": Object {
+            "apprenticeship_technology": "Node/Agular",
+            "id": 56,
+            "role": "admin",
+            "sims_project_technology": "Node/React",
+          },
+        },
+      ],
+    }
+  }
+  getARole={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          1,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  loading={false}
+  open={true}
+  roleId={1}
+  title="Title"
+  toggle={[MockFunction]}
+>
+  <Modal
+    handleClose={[MockFunction]}
+    show={true}
+    showBtn={true}
+    size="large"
+    title="Applicants for Title"
+  >
+    <div
+      className="modal display__modal"
+    >
+      <section
+        className="modal__body"
+      >
+        <p
+          className="modal__title"
+        >
+          Applicants for Title
+        </p>
+        <button
+          className="close"
+          onClick={[MockFunction]}
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+          <span
+            className="sr-only"
+          >
+            Close
+          </span>
+        </button>
+        <div
+          className="modal__body-card"
+        >
+          <FellowRolesCard
+            key="56"
+            role={
+              Object {
+                "apprenticeship_technology": "Node/Agular",
+                "id": 56,
+                "role": "admin",
+                "sims_project_technology": "Node/React",
+              }
+            }
+          >
+            <div
+              className="fellow-role-card"
+            >
+              <div
+                className="fellow-role-card-top"
+              >
+                <div
+                  className="fellow-role-card-top__image"
+                >
+                  <img
+                    alt=""
+                  />
+                </div>
+                <div
+                  className="fellow-role-cord-top__eng-name"
+                >
+                  undefined undefined
+                </div>
+              </div>
+              <div
+                className="fellow-role-card-bottom"
+              >
+                <div
+                  className="fellow-details"
+                >
+                  <div
+                    className="cohort-details"
+                  >
+                    <p>
+                      Cohort
+                    </p>
+                    <p />
+                  </div>
+                  <div
+                    className="role-details"
+                  >
+                    <p>
+                      Role End Date
+                    </p>
+                    <p>
+                      NULL
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="fellow-stacks"
+                >
+                  <div
+                    className="fellow-stacks__pills"
+                    key="Node"
+                  >
+                    Node
+                  </div>
+                  <div
+                    className="fellow-stacks__pills"
+                    key="React"
+                  >
+                    React
+                  </div>
+                  <div
+                    className="fellow-stacks__pills"
+                    key="Agular"
+                  >
+                    Agular
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FellowRolesCard>
+        </div>
+      </section>
+    </div>
+  </Modal>
+</ViewRoleApplicantsModal>
+`;
