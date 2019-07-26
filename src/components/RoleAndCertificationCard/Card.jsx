@@ -137,12 +137,20 @@ class Card extends React.Component {
             Applicants <br />{' '}
             <div className="text-left pt-2">
               <span
-                className="role-card__attributes-count"
                 tabIndex="0"
                 role="button"
-                id="certification_applicants_count"
-                onClick={this.certificationApplicantsModalHandler}
-                onKeyPress={this.certificationApplicantsModalHandler}
+                className="role-card__attributes-count"
+                id="applicants_count"
+                onClick={
+                  type === 'role'
+                    ? this.roleApplicantsModalHandler
+                    : this.certificationApplicantsModalHandler
+                }
+                onKeypress={
+                  type === 'role'
+                    ? this.roleApplicantsModalHandler
+                    : this.certificationApplicantsModalHandler
+                }
               >
                 {details.applications_count}
               </span>
@@ -284,8 +292,10 @@ class Card extends React.Component {
           </p>
         </div>
         <hr />
-        {this.renderPositionsCount(details, type)}
-        {this.renderDescription(showMore)}
+        <div className="ml-2 mr-2 px-3">
+          {this.renderPositionsCount(details, type)}
+          {this.renderDescription(showMore)}
+        </div>
         {this.renderModal(
           details,
           openModal,
