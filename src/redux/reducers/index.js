@@ -41,7 +41,8 @@ import cadreProjectRolereducer, {
   withDeleteProjectRole
 } from './cadreProjectRoleReducer';
 import fetchCertificationsReducer, {
-  fetchCertificationsApplicantsReducer
+  fetchCertificationsApplicantsReducer,
+  certificationApplicationReducer
 } from './cadreCertificationReducer';
 import fellowActiveRoleReducer from './fellowActiveRoleReducer';
 import createProjectVacancies from './createProjectVacanciesReducer';
@@ -117,6 +118,7 @@ const rootReducer = combineReducers({
   certificationOnFocus,
   createCertificactionVacancies,
   certificationApplicants: fetchCertificationsApplicantsReducer,
+  certificationApplication: certificationApplicationReducer
 });
 
 export default rootReducer;

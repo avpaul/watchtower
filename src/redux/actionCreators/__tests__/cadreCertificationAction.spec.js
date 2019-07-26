@@ -7,7 +7,7 @@ import waitForExpect from 'wait-for-expect';
 import {
   fetchAllCertifications,
   deleteCertification
-} from '../cadreCertificationAction';
+} from '../cadreCertificationActions';
 
 import * as types from '../../constants/cadreCertificationTypes';
 

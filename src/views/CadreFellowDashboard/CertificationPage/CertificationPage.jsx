@@ -3,8 +3,16 @@ import PropTypes from 'prop-types';
 import backIcon from '../../../static/BackIcon.png';
 import certificationIcon from '../../../static/Project.svg';
 import './CertificationPage.scss';
+import SellYourselfModal from '../../../components/SellYourselfModal/SellYourselfModal';
 
 class CertificationPage extends Component {
+  state = {
+    modals: {
+      applicationModal: false,
+      successModal: false
+    }
+  };
+
   async componentDidMount() {
     const {
       getCertificationAction,
@@ -20,7 +28,7 @@ class CertificationPage extends Component {
         <div className="col-md-12">
           <div
             id="nav"
-            onClick={() => history.push('/dashboard')}
+            onClick={() => history.goBack()}
             role="button"
             tabIndex="-1"
             onKeyDown={null}
@@ -33,7 +41,7 @@ class CertificationPage extends Component {
     );
   };
 
-  cardHead = (title, exclusive) => (
+  cardHead = (title, exclusive, id) => (
     <div className="card-header certification-header bg-white border-none">
       <div className="row px-4 mt-4 mb-2">
         <div className="col-md-6">
@@ -53,6 +61,7 @@ class CertificationPage extends Component {
           <button
             className="btn btn-primary text-uppercase apply-btn"
             type="button"
+            onClick={() => this.certificationApplicationHandler(id)}
           >
             Apply For This Certification
           </button>
@@ -65,7 +74,7 @@ class CertificationPage extends Component {
     <div className="row justify-content-center">
       <div className="col-md-10">
         <div className="card certification-card">
-          {this.cardHead(data.name, data.exclusive)}
+          {this.cardHead(data.name, data.exclusive, data.id)}
           <div className="card-body">
             <div className="px-4">
               <h3 className="certification-description-title">
@@ -79,16 +88,60 @@ class CertificationPage extends Component {
     </div>
   );
 
+  modalHandler = slice => {
+    this.setState(prevState => ({
+      modals: {
+        ...prevState.modals,
+        [slice]: !prevState.modals[slice]
+      }
+    }));
+  };
+
+  certificationApplicationHandler = () => {
+    this.modalHandler('applicationModal');
+  };
+
+  renderSellYourselfModal = () => {
+    const {
+      applyForCertification,
+      getCertification: {
+        data: { id, name }
+      },
+      certificationApplication
+    } = this.props;
+    const {
+      modals: { applicationModal }
+    } = this.state;
+
+    return (
+      <SellYourselfModal
+        id={id}
+        title={name}
+        buttonLabel="Apply for this certification"
+        submitHandler={applyForCertification}
+        modalHandler={() => this.modalHandler('applicationModal')}
+        showModal={applicationModal}
+        certificationApplication={certificationApplication}
+      />
+    );
+  };
+
   render() {
     const {
       getCertification: { loading, data }
     } = this.props;
+
+    const {
+      modals: { applicationModal }
+    } = this.state;
+
     return (
       <Fragment>
         <div className="certification-page">
           <div className="container">
             {this.renderBackNavigation()}
             {!loading && this.renderCard(data)}
+            {applicationModal && this.renderSellYourselfModal()}
           </div>
         </div>
       </Fragment>
@@ -100,7 +153,9 @@ CertificationPage.propTypes = {
   getCertificationAction: PropTypes.isRequired,
   history: PropTypes.isRequired,
   getCertification: PropTypes.isRequired,
-  match: PropTypes.isRequired
+  match: PropTypes.isRequired,
+  applyForCertification: PropTypes.func.isRequired,
+  certificationApplication: PropTypes.instanceOf(Object).isRequired
 };
 
 export default CertificationPage;

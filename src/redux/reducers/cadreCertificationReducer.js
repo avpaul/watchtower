@@ -50,3 +50,20 @@ export const fetchCertificationsApplicantsReducer = (
       successData: action.data
     }
   );
+
+export const certificationApplicationReducer = (
+  state = initialState.certificationApplication,
+  action
+) =>
+  genericReducer(
+    [
+      types.CERTIFICATION_APPLICATION_REQUEST,
+      types.CERTIFICATION_APPLICATION_SUCCESS,
+      types.CERTIFICATION_APPLICATION_FAILURE
+    ],
+    state,
+    {
+      ...action,
+      successData: action.data
+    }
+  );

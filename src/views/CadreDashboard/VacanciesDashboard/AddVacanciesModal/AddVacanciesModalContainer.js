@@ -7,7 +7,7 @@ import {
 } from '../../../../redux/actionCreators/projectVacancyActions';
 import { fetchAllRoles } from '../../../../redux/actionCreators/cadreProjectRoleActions';
 import createNewCertificationVacancy from '../../../../redux/actionCreators/certificationVacancyAction';
-import { fetchAllCertifications } from '../../../../redux/actionCreators/cadreCertificationAction';
+import { fetchAllCertifications } from '../../../../redux/actionCreators/cadreCertificationActions';
 
 export const mapStateToProps = ({
   allProjects,

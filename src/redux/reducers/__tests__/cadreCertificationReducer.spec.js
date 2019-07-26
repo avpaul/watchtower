@@ -1,8 +1,7 @@
 import initialState from '../initialState';
-import 
-  fetchCertificationsReducer,
-  {fetchCertificationsApplicantsReducer }
- from '../cadreCertificationReducer';
+import fetchCertificationsReducer, {
+  fetchCertificationsApplicantsReducer
+} from '../cadreCertificationReducer';
 import * as types from '../../constants/cadreCertificationTypes';
 
 it('should return the initial state for unknown action type', () => {
@@ -20,7 +19,9 @@ it('should set loading state on fetching fellow data', () => {
     data: []
   };
   const action = { type: types.FETCH_CERTIFICATION_REQUEST };
-  expect(fetchCertificationsReducer(undefined, action)).toMatchObject(newState);
+  expect(fetchCertificationsReducer(undefined, action)).toMatchObject({
+    ...newState
+  });
   expect(initialState).toEqual(initialState);
 });
 
@@ -59,6 +60,7 @@ it('should set loading state on fetching certification applicants', () => {
     data: []
   };
   const action = { type: types.FETCH_CERTIFICATION_APPLICANTS_REQUEST };
+
   expect(fetchCertificationsApplicantsReducer(undefined, action)).toMatchObject(
     newState
   );
@@ -138,5 +140,7 @@ it('should remove certification when delete certification is successful', () => 
     error: { message: 'error' }
   };
 
-  expect(fetchCertificationsApplicantsReducer(undefined, action)).toMatchObject(newState);
+  expect(fetchCertificationsApplicantsReducer(undefined, action)).toMatchObject(
+    newState
+  );
 });

@@ -1,0 +1,79 @@
+@import '../../assets/sass/abstract/variables';
+
+#sell-yourself {
+  .modal-body__md {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    padding: 62px 51px;
+  }
+
+  .form-title {
+    font-size: small;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .form-control {
+    border: 0.5px solid #ced4da;
+    max-height: 250px;
+  }
+
+  .apply-btn {
+    text-transform: uppercase;
+    margin-top: 2rem;
+    align-self: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: unset;
+    padding: 0.4rem 2rem;
+  }
+
+  .error-message {
+    font-size: 0.8rem;
+  }
+}
+
+.success_application {
+  text-align: center;
+  width: 100%;
+
+  .success__image {
+    height: 110px;
+    width: 95px;
+    color: #7a8691;
+    font-family: 'Apple Color Emoji';
+    font-size: 113px;
+    letter-spacing: 1.03px;
+    line-height: 148px;
+  }
+
+  .success_title {
+    color: #344c5a;
+    width: 100%;
+    font-family: 'DIN Pro';
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.69px;
+    line-height: 31px;
+  }
+
+  .success__sutitle {
+    height: 17px;
+    width: 100%;
+    color: #7a8691;
+    font-family: 'DIN Pro';
+    font-size: 13px;
+    letter-spacing: 0.12px;
+    line-height: 17px;
+    margin-top: 2rem;
+    -webkit-font-smoothing: antialiased;
+  }
+}

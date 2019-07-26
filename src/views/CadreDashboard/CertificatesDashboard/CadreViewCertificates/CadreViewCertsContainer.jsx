@@ -3,7 +3,7 @@ import CadreViewCerts from './CadreViewCerts';
 import {
   fetchAllCertifications,
   setCertificationOnFocus
-} from '../../../../redux/actionCreators/cadreCertificationAction';
+} from '../../../../redux/actionCreators/cadreCertificationActions';
 
 export const mapStateToProps = ({ allCertifications }) => ({
   allCertifications
