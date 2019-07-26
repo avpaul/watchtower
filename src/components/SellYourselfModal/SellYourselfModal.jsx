@@ -9,7 +9,7 @@ import Image from '../../static/like.png';
 
 class SellYourselfModal extends Component {
   state = {
-    reason: null,
+    reason: '',
     errorMessage: '',
     isSuccess: false
   };
@@ -29,14 +29,24 @@ class SellYourselfModal extends Component {
   handleSubmit = async () => {
     const { id, submitHandler } = this.props;
     const { reason } = this.state;
+
+    if (reason.length < 50) {
+      return this.setState({
+        errorMessage: 'You must provide at least 50 characters'
+      });
+    }
+
+    if (reason.length > 500) {
+      return this.setState({
+        errorMessage: 'The maximum number of characters is 500'
+      });
+    }
     await submitHandler(id, reason);
-    this.showNotification();
+    return this.showNotification();
   };
 
   showNotification = () => {
-    const {
-      certificationApplication: { error }
-    } = this.props;
+    const { error } = this.props;
     if (error) {
       const errorToDisplay = error.reason_for_applying
         ? error.reason_for_applying[0]
@@ -69,21 +79,15 @@ class SellYourselfModal extends Component {
       </p>
       <textarea
         className="form-control"
-        value={reason}
         onChange={this.handleInputChange}
         required
+        value={reason}
       />
     </>
   );
 
   render() {
-    const {
-      title,
-      buttonLabel,
-      modalHandler,
-      showModal,
-      certificationApplication: { loading }
-    } = this.props;
+    const { title, buttonLabel, modalHandler, showModal, loading } = this.props;
     const { reason, errorMessage, isSuccess } = this.state;
 
     return (
@@ -119,11 +123,8 @@ class SellYourselfModal extends Component {
 }
 
 SellYourselfModal.defaultProps = {
-  certificationApplication: {
-    loading: false,
-    error: '',
-    data: {}
-  }
+  loading: false,
+  error: ''
 };
 
 SellYourselfModal.propTypes = {
@@ -133,11 +134,8 @@ SellYourselfModal.propTypes = {
   submitHandler: PropTypes.func.isRequired,
   modalHandler: PropTypes.func.isRequired,
   showModal: PropTypes.bool.isRequired,
-  certificationApplication: PropTypes.shape({
-    loading: PropTypes.bool,
-    error: PropTypes.object,
-    data: PropTypes.object
-  })
+  loading: PropTypes.bool,
+  error: PropTypes.string
 };
 
 export default SellYourselfModal;

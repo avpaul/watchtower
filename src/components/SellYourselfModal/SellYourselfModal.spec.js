@@ -12,11 +12,9 @@ describe('sell yourself modal', () => {
     modalHandler: jest.fn(),
     showModal: false,
     applyForCertification: jest.fn(),
-    certificationApplication: {
-      loading: false,
-      data: {},
-      error: {}
-    }
+    loading: false,
+    data: {},
+    error: {}
   };
 
   const setUp = (propsOverride = {}) =>
@@ -51,29 +49,29 @@ describe('sell yourself modal', () => {
 
   it('should call the submitHandler function when a user clicks on the submit button', () => {
     const component = setUp();
+    component.setState({
+      reason: 'Here is my reason for applying to this certifications'
+    });
     component.find('button.apply-btn').simulate('click');
     expect(props.submitHandler).toBeCalled();
   });
 
   it('should render the loader when the request is in progress and loading prop is set to true', () => {
     propsOverride = {
-      certificationApplication: {
-        loading: true,
-        data: {},
-        error: null
-      }
+      loading: true,
+      data: {},
+      error: null
     };
+
     const component = setUp(propsOverride);
     expect(component.find(Loader)).toHaveLength(1);
   });
 
   it('should render the success notification toast when the application submission succeeds', () => {
     propsOverride = {
-      certificationApplication: {
-        loading: false,
-        data: {},
-        error: null
-      }
+      loading: false,
+      data: {},
+      error: null
     };
 
     const component = setUp(propsOverride);
@@ -83,16 +81,14 @@ describe('sell yourself modal', () => {
 
   it('should render the error notification toast when the application submission fails', () => {
     propsOverride = {
-      certificationApplication: {
-        loading: false,
-        data: {},
-        error: {
-          reason_for_applying: [
-            {
-              reason_for_applying: 'You provided a wrong input'
-            }
-          ]
-        }
+      loading: false,
+      data: {},
+      error: {
+        reason_for_applying: [
+          {
+            reason_for_applying: 'You provided a wrong input'
+          }
+        ]
       }
     };
 

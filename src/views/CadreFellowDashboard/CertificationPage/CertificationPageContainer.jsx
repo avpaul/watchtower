@@ -4,10 +4,11 @@ import CertificationPage from './CertificationPage';
 import { getCertification as getCertificationAction } from '../../../redux/actionCreators/getCertificationActions';
 import { applyForCertification } from '../../../redux/actionCreators/cadreCertificationActions';
 
-export const mapStateToProps = ({
+export const mapStateToProps = ({ getCertification, certificationApplication, d1Fellow }) => ({
   getCertification,
-  certificationApplication
-}) => ({ getCertification, certificationApplication });
+  certificationApplication,
+  d1Fellow
+});
 
 export default connect(
   mapStateToProps,

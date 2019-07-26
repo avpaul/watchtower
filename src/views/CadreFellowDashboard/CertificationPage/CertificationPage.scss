@@ -39,14 +39,17 @@
   }
   .apply-btn {
     height: 39px;
-    border-radius: 5px;
     background-color: #0459e4;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
     color: #ffffff;
     font-family: 'DIN Pro';
-    font-size: 14px;
+    font-size: 0.85rem;
     font-weight: bold;
-    letter-spacing: 0.58px;
+    letter-spacing: 0.05rem;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
   }
   .certification-description-title {
     color: #344c5a;

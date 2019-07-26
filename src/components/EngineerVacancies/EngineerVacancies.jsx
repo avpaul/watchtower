@@ -7,7 +7,12 @@ import './EngineerVacancies.scss';
 
 class EngineerVacancies extends Component {
   displayVacancyDetails = vacanciesClass => {
-    const { searchWord, vacanciesArray, certificationsArray } = this.props;
+    const {
+      searchWord,
+      vacanciesArray,
+      certificationsArray,
+      loggedInUser
+    } = this.props;
     const vacancyLength = vacanciesArray.length + certificationsArray.length;
     return (
       <div className={vacanciesClass}>
@@ -17,12 +22,16 @@ class EngineerVacancies extends Component {
               `No Vacancy "${searchWord}" Available`,
               vacanciesArray
             )
-          : this.renderVacancyCards(vacanciesArray, certificationsArray)}
+          : this.renderVacancyCards(
+              vacanciesArray,
+              certificationsArray,
+              loggedInUser
+            )}
       </div>
     );
   };
 
-  renderVacancyCards = (vacanciesArray, certificationsArray) => (
+  renderVacancyCards = (vacanciesArray, certificationsArray, loggedInUser) => (
     <div className="render-vacancies__div">
       {vacanciesArray.map(
         ({ role, project, available_slots: availableSlots, vacancies }) => (
@@ -34,6 +43,8 @@ class EngineerVacancies extends Component {
             slots={availableSlots}
             startDate={vacancies[0].start_date}
             closingDate={vacancies[0].closing_date}
+            loggedInUser={loggedInUser}
+            applications={vacancies}
           />
         )
       )}
@@ -52,6 +63,8 @@ class EngineerVacancies extends Component {
             slots={availableSlots}
             startDate={vacancyDetails.start_date}
             closingDate={vacancyDetails.closing_date}
+            loggedInUser={loggedInUser}
+            applications={certification.applications}
           />
         )
       )}
@@ -106,8 +119,9 @@ EngineerVacancies.propTypes = {
     data: PropTypes.shape({})
   }),
   searchWord: PropTypes.string,
-  vacanciesArray: PropTypes.shape({}).isRequired,
-  certificationsArray: PropTypes.shape({}).isRequired
+  vacanciesArray: PropTypes.instanceOf(Array).isRequired,
+  certificationsArray: PropTypes.instanceOf(Array).isRequired,
+  loggedInUser: PropTypes.instanceOf(Object).isRequired
 };
 
 export default EngineerVacancies;

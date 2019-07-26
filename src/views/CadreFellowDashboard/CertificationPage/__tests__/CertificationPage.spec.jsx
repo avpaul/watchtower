@@ -10,8 +10,15 @@ describe('Test the certification page', () => {
       data: {
         name: 'Testing',
         description: 'Test description',
-        exclusive: true
-      }
+        exclusive: true,
+        id: 1,
+        applications: [
+          {
+            fellow_id: 1
+          }
+        ]
+      },
+      error: ''
     },
     getCertificationAction: jest.fn(),
     history: {
@@ -24,10 +31,8 @@ describe('Test the certification page', () => {
       }
     },
     applyForCertification: jest.fn(),
-    certificationApplication: {
-      loading: false,
-      data: {},
-      error: ''
+    d1Engineer: {
+      id: 1
     }
   };
   let wrapper;
@@ -57,14 +62,10 @@ describe('Test the certification page', () => {
 
   it('should render the button loader when loading is true', () => {
     propsOverride = {
-      certificationApplication: {
-        loading: true
-      }
+      loading: true
     };
     const componentWithLoader = setUp(propsOverride);
-    const {
-      loading
-    } = componentWithLoader.instance().props.certificationApplication;
+    const { loading } = componentWithLoader.instance().props;
     expect(loading).toBeTruthy();
     const loaderComponent = componentWithLoader.find(<Loader size="small" />);
     expect(loaderComponent).toMatchSnapshot();
@@ -72,15 +73,11 @@ describe('Test the certification page', () => {
 
   it('should not render the submit button when loading is false', () => {
     propsOverride = {
-      certificationApplication: {
-        loading: false
-      }
+      loading: false
     };
 
     const componentWithoutLoader = setUp(propsOverride);
-    const {
-      loading
-    } = componentWithoutLoader.instance().props.certificationApplication;
+    const { loading } = componentWithoutLoader.instance().props;
     expect(loading).toBeFalsy();
     expect(loading).toMatchSnapshot();
   });
@@ -93,5 +90,34 @@ describe('Test the certification page', () => {
   it('it should execute onClick event', () => {
     wrapper = shallow(<CertificationPage {...props} />);
     wrapper.find('#nav').simulate('click');
+  });
+
+  it('should disable the apply button when a user has applied for a certification already', () => {
+    const component = setUp();
+    component.setState({ userHasApplied: true });
+    expect(component.find('button#buttonDisabled').length).toBe(1);
+  });
+
+  it('should render the apply button when a user has not applied for a certification', () => {
+    const component = setUp();
+    expect(component.find('button.apply-btn').length).toBe(1);
+  });
+
+  it('it should call the check checkIfUserHasApplied function when the component updates', () => {
+    const component = setUp();
+    component.setProps({
+      getCertification: {
+        loading: true,
+        data: {
+          applications: [
+            {
+              fellow_id: 1
+            }
+          ]
+        }
+      }
+    });
+
+    expect(component.state('userHasApplied')).toBeTruthy();
   });
 });

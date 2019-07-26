@@ -28,7 +28,7 @@ exports[`sell yourself modal renders without errors 1`] = `
       className="form-control"
       onChange={[Function]}
       required={true}
-      value={null}
+      value=""
     />
     <button
       className="btn btn-primary text-uppercase apply-btn"
@@ -69,8 +69,13 @@ exports[`sell yourself modal should render the error notification toast when the
       className="form-control"
       onChange={[Function]}
       required={true}
-      value={null}
+      value=""
     />
+    <span
+      className="error-message text-danger"
+    >
+      You must provide at least 50 characters
+    </span>
     <button
       className="btn btn-primary text-uppercase apply-btn"
       onClick={[Function]}
@@ -110,8 +115,13 @@ exports[`sell yourself modal should render the success notification toast when t
       className="form-control"
       onChange={[Function]}
       required={true}
-      value={null}
+      value=""
     />
+    <span
+      className="error-message text-danger"
+    >
+      You must provide at least 50 characters
+    </span>
     <button
       className="btn btn-primary text-uppercase apply-btn"
       onClick={[Function]}

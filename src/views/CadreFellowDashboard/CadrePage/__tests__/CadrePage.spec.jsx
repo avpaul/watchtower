@@ -9,7 +9,7 @@ const setUp = props => {
 
 describe('Cadre Page', () => {
   test('should render correctly', () => {
-    const component = setUp({ firstName: 'Test' });
+    const component = setUp({ firstName: 'Test', activateAccount: jest.fn() });
     expect(component).toMatchSnapshot();
   });
 });

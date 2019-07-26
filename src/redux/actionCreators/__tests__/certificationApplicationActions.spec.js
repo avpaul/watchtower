@@ -2,7 +2,7 @@ import configureStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import thunk from 'redux-thunk';
-import * as types from '../../constants/certificationTypes';
+import * as types from '../../constants/cadreCertificationTypes';
 import { applyForCertification } from '../cadreCertificationActions';
 
 const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;

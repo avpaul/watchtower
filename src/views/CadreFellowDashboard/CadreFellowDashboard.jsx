@@ -38,7 +38,7 @@ const CadreFellowDashboard = props => {
           <Route
             exact
             path="/dashboard/certification/:certificationId"
-            component={() => <CertificationPage />}
+            component={() => <CertificationPage {...props} />}
           />
           <Route component={NotFoundPage} />
         </Switch>
