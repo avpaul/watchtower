@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PMloader from '../../../../components/CustomLoader/PMLoader';
 import MapProjectCards from '../../../../components/MapProjectCards';
+import DeleteProjectModal from '../DeleteProjectModal';
 
 class ViewProjects extends Component {
   componentDidMount() {
@@ -10,13 +11,16 @@ class ViewProjects extends Component {
   }
 
   render() {
-    const { allProjects } = this.props;
+    const { allProjects, setDeleteTarget } = this.props;
     return (
       <div className="cadre__page">
         {allProjects.loading ? (
           <PMloader />
         ) : (
-          <MapProjectCards projectData={allProjects.data} />
+          <>
+          <MapProjectCards projectData={allProjects.data} setDeleteTarget={setDeleteTarget} />
+          <DeleteProjectModal />
+          </>
         )}
       </div>
     );
@@ -25,7 +29,8 @@ class ViewProjects extends Component {
 
 ViewProjects.propTypes = {
   allProjects: PropTypes.shape(),
-  fetchAllProjects: PropTypes.func.isRequired
+  fetchAllProjects: PropTypes.func.isRequired,
+  setDeleteTarget: PropTypes.func.isRequired,
 };
 
 ViewProjects.defaultProps = {

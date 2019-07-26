@@ -10,6 +10,7 @@ exports[`ViewProjectsContainer component renders correctly 1`] = `
     }
   }
   fetchAllProjects={[Function]}
+  setDeleteTarget={[Function]}
   store={
     Object {
       "clearActions": [Function],

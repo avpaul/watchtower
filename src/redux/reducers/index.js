@@ -27,7 +27,9 @@ import fellowPrePipFeedbackReducer from './fellowPrePipFeedbackReducer';
 import fellowPipFeedbackReducer from './fellowPipFeedbackReducer';
 import pipDeactivation from './pipDeactivationReducer';
 import createProject from './createProjectReducer';
-import fetchProjectsReducer from './viewAllProjectsReducer';
+import fetchProjectsReducer, {
+  withDeleteProject
+} from './viewAllProjectsReducer';
 import addProjectManager from './addProjectManagerReducer';
 import addProjectTechnology from './addProjectTechnologyReducer';
 import fetchProjectManagers from './getProjectManagersReducer';
@@ -87,7 +89,7 @@ const rootReducer = combineReducers({
   fellowPipFeedback: fellowPipFeedbackReducer,
   pipDeactivation,
   createProject,
-  allProjects: fetchProjectsReducer,
+  allProjects: withDeleteProject(fetchProjectsReducer),
   addProjectManager,
   addProjectTechnology,
   fetchProjectManagers,

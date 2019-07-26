@@ -1,9 +1,13 @@
+import axios from 'axios';
 import {
   genericAPIPostRequest,
   genericAPIGetRequest,
   genericAPIPutRequest
 } from './helpers';
+
 import * as types from '../constants/projectsTypes';
+
+const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 /**
  * An action creator responsible for creating a new project
@@ -59,9 +63,39 @@ export const fetchAllProjects = () =>
     types.FETCH_PROJECTS_FAILURE
   ]);
 
+export const setDeleteTarget = project => ({
+  type: types.SET_PROJECT_DELETE_TARGET,
+  deleteTargetId: project.id
+});
+
+const deleteProjectSuccess = deletedProjectId => ({
+  type: types.DELETE_PROJECT_SUCCESS,
+  deletedProjectId
+});
+
+const deleteProjectFailure = error => ({
+  type: types.DELETE_PROJECT_FAILURE,
+  error
+});
+
+export const deleteProject = () => (dispatch, getState) => {
+  const { allProjects } = getState();
+
+  return axios
+    .delete(`${serverUrl}/api/v2/projects/${allProjects.deleteTargetId}`)
+    .then(() => {
+      dispatch(deleteProjectSuccess(allProjects.deleteTargetId));
+    })
+    .catch(error => {
+      dispatch(deleteProjectFailure(error.response.data.message));
+    });
+};
+
 export default {
   createNewProject,
   fetchAllProjects,
   editProject,
-  getAProject
+  getAProject,
+  setDeleteTarget,
+  deleteProject
 };

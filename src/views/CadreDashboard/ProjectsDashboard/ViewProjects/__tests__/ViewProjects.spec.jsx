@@ -30,7 +30,8 @@ describe('Test view projects', () => {
           channels: null
         }
       ],
-      fetchAllProjects: jest.fn()
+      fetchAllProjects: jest.fn(),
+      setDeleteTarget: jest.fn()
     };
     wrapper = shallow(<ViewProjects {...props} />);
   });

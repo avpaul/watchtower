@@ -17,6 +17,8 @@ exports[`Test view projects should render correctly 1`] = `
         },
       ]
     }
+    setDeleteTarget={[MockFunction]}
   />
+  <Connect(DeleteProjectModal) />
 </div>
 `;

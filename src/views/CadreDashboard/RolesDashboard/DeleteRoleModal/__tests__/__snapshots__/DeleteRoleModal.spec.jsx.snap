@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete Role Component Test Suite should render properly 1`] = `
+<DeletionModal
+  handleClick={[Function]}
+  targetName="role"
+/>
+`;

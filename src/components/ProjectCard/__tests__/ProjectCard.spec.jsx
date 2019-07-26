@@ -23,6 +23,7 @@ describe('Test Project Card component', () => {
         created_at: '2019-06-04 04:56:39',
         updated_at: '2019-06-04 04:56:39'
       },
+      focusProject: jest.fn(),
       match: { url: '/cadre/projects/details/1' },
       history: { push: jest.fn() }
     };
@@ -35,5 +36,20 @@ describe('Test Project Card component', () => {
   it('call the handleClick function', () => {
     wrapper.instance().handleClick();
     expect(props.history.push).toHaveBeenCalled();
+  });
+  
+  it('should handle click of edit project button', () => {
+    wrapper
+      .find('.dropdown-item')
+      .at(0)
+      .simulate('click');
+  });
+
+  it('should handle click of delete project button', () => {
+    wrapper
+      .find('.dropdown-item')
+      .at(1)
+      .simulate('click');
+    expect(props.focusProject).toHaveBeenCalled();
   });
 });

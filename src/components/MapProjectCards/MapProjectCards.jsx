@@ -6,7 +6,7 @@ import arrayOfObjectsSorter from '../../utils/sortArray';
 
 import './MapProjectCards.scss';
 
-const MapProjectCards = ({ projectData }) => (
+const MapProjectCards = ({ projectData, setDeleteTarget }) => (
   <div>
     <div className="row">
       <div className="col-9">
@@ -26,16 +26,18 @@ const MapProjectCards = ({ projectData }) => (
     </div>
     <div className="project-card__grid">
       {projectData.sort(arrayOfObjectsSorter('name')).map(project => (
-        <Projectcard project={project} key={project.id} />
+        <Projectcard project={project} key={project.id} focusProject={setDeleteTarget}/>
       ))}
     </div>
   </div>
 );
 MapProjectCards.propTypes = {
-  projectData: PropTypes.shape()
+  projectData: PropTypes.shape([]),
+  setDeleteTarget : PropTypes.func
 };
 
 MapProjectCards.defaultProps = {
-  projectData: []
+  projectData: [],
+  setDeleteTarget: () => {}
 };
 export default MapProjectCards;

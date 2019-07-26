@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import DeleteRoleModal from '../DeleteRoleModal';
+import CadreDeletionModal from '../../../../../components/CadreDeletionModal';
 
 describe('Delete Role Component Test Suite', () => {
   const deleteFunction = jest.fn();
@@ -15,7 +16,11 @@ describe('Delete Role Component Test Suite', () => {
   });
 
   it('should set proper delete target when delete button is clicked', () => {
-    wrapper.find('.deleteBtn').simulate('click');
+    wrapper
+      .find(CadreDeletionModal)
+      .dive()
+      .find('.deleteBtn')
+      .simulate('click');
     expect(deleteFunction).toHaveBeenCalledTimes(1);
   });
 });
