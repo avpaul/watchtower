@@ -81,7 +81,7 @@ class DeleteCertificationModal extends Component {
 
   render() {
     const { success, error } = this.state;
-    const message = 'Project certification have been deleted!';
+    const message = 'Certification has been deleted!';
     return (
       <GenericModal
         id="deleteCertificationModal"
@@ -91,7 +91,7 @@ class DeleteCertificationModal extends Component {
         footer={this.renderFooter()}
       >
         <React.Fragment>
-          <p>Are you sure you want to delete these Certification?</p>
+          <p>Are you sure you want to delete this Certification?</p>
           {error ? (
             <span className="alert alert-danger" role="alert">
               Failed to delete the Certification. Please try again later!
