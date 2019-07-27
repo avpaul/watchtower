@@ -22,7 +22,11 @@ describe('', () => {
           }
         ]
       }
-    ]
+    ],
+    roleInfo: {
+      applications: [{ applicant: { id: 1 } }]
+    },
+    engineer: { id: 1, name: 'Brian Mboya' }
   };
 
   it('should Render Component', () => {

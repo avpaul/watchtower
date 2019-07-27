@@ -1,0 +1,77 @@
+@import '../../../assets/sass/abstract/variables';
+
+%equal-properties {
+  height: 17px;
+  width: 287px;
+  font-family: $font-primary;
+  font-size: 13px;
+  letter-spacing: 0.12px;
+  line-height: 17px;
+}
+
+.advocacy {
+  width: 100%;
+  &__label {
+    @extend %equal-properties;
+    margin-bottom: 1.5em;
+    color: #7a8691;
+  }
+
+  &__subtitle {
+    @extend %equal-properties;
+    margin-bottom: 0.5em;
+    color: #333e44;
+  }
+}
+
+.modal-header h1 {
+  color: #344c5a;
+}
+
+.success {
+  &__image {
+    height: 148px;
+    width: 115px;
+    color: #7a8691;
+    font-family: 'Apple Color Emoji';
+    font-size: 113px;
+    letter-spacing: 1.03px;
+    line-height: 148px;
+  }
+
+  &__title {
+    color: #344c5a;
+    width: 100%;
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.69px;
+    line-height: 31px;
+  }
+
+  &__sutitle {
+    height: 17px;
+    width: 100%;
+    color: #7a8691;
+    font-family: $font-primary;
+    font-size: 13px;
+    letter-spacing: 0.12px;
+    line-height: 17px;
+  }
+
+  &__application {
+    text-align: center;
+    width: 100%;
+    margin-top: -2em;
+    margin-bottom: -2em;
+  }
+}
+
+#applicationBtn {
+  width: 40%;
+}
+
+#buttonDisabled {
+  background-color: #cccccc;
+  color: #666666;
+}

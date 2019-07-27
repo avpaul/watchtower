@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import projectIcon from '../../static/projectdown.svg';
 import doc from '../../static/doc.svg';
 
-const RoleDetailsRight = ({ projectInfo, roleInfo }) => {
+const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
   const renderDocuments = () =>
     projectInfo[0].documents.map(document => (
       <a href={document.url} key={document.id}>
@@ -14,13 +14,40 @@ const RoleDetailsRight = ({ projectInfo, roleInfo }) => {
       </a>
     ));
 
+  const hasApplied = () => {
+    const { applications } = roleInfo;
+    let isApplicationActive = false;
+
+    if (applications) {
+      applications.forEach(application => {
+        if (application.applicant.id === engineer.id) {
+          isApplicationActive = true;
+        }
+      });
+    }
+
+    return isApplicationActive;
+  };
+
   return (
     <div className="projectAndRoleDetailContainer">
       <div className="mainHeading">
         <img src={projectIcon} alt="project logo" />
         <p className="roleName">{roleInfo.name}</p>
         <p className="projectName">{projectInfo[0].name}</p>
-        <button type="button">APPLY FOR THIS ROLE</button>
+        {hasApplied() ? (
+          <button disabled id="buttonDisabled" type="button">
+            ALREADY APPLIED
+          </button>
+        ) : (
+          <button
+            data-toggle="modal"
+            data-target="#applyForRoleModal"
+            type="button"
+          >
+            APPLY FOR THIS ROLE
+          </button>
+        )}
       </div>
       <div className="mainBody">
         <h6 className="paragraphHeadings">Role Description</h6>
@@ -41,6 +68,7 @@ RoleDetailsRight.defaultProps = {
 
 RoleDetailsRight.propTypes = {
   projectInfo: PropTypes.arrayOf(PropTypes.shape()),
+  engineer: PropTypes.shape().isRequired,
   roleInfo: PropTypes.shape()
 };
 

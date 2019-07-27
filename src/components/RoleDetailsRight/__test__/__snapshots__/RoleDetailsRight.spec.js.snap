@@ -18,9 +18,11 @@ exports[`should Render Component 1`] = `
       className="projectName"
     />
     <button
+      disabled={true}
+      id="buttonDisabled"
       type="button"
     >
-      APPLY FOR THIS ROLE
+      ALREADY APPLIED
     </button>
   </div>
   <div
