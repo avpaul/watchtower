@@ -22,6 +22,23 @@ describe('', () => {
       replace: jest.fn()
     }
   };
+  const initialProps = {
+    createRole: {
+      loading: false,
+      error: {},
+      data: []
+    },
+    roleSkills: {
+      loading: true,
+      error: {},
+      data: [{ name: 'laravel' }]
+    },
+    createNewRole: jest.fn(),
+    getRoleSkills: jest.fn(),
+    history: {
+      replace: jest.fn()
+    }
+  };
   /**
    * Creates an enzyme instance to test the create role component.
    *
@@ -102,9 +119,27 @@ describe('', () => {
     wrapper
       .find('#description')
       .simulate('change', { target: { value: 'Learn Agile methods' } });
+    wrapper.find('#duration').simulate('change', { target: { value: '3' } });
     testSubmission(buttons.at(2), 1);
     simulateAddSkill(wrapper, '#skills', 'management');
     testSubmission(buttons.at(2), 2);
+  });
+
+  it('calls the handleSubmit with some fields missiing', () => {
+    const { wrapper } = setup({}, true);
+    const buttons = wrapper.find('button');
+    buttons.at(0).simulate('click');
+    testSubmission(buttons.at(2), 0);
+
+    wrapper
+      .find('#name')
+      .simulate('change', { target: { value: 'Agile methods' } });
+    testSubmission(buttons.at(2), 0);
+    wrapper
+      .find('#name')
+      .simulate('change', { target: { value: 'Agile methods' } });
+    wrapper.find('#duration').simulate('change', { target: { value: '3' } });
+    testSubmission(buttons.at(2), 0);
   });
 
   it('calls the handleClose successfully', () => {
@@ -120,6 +155,7 @@ describe('', () => {
     wrapper
       .find('#description')
       .simulate('change', { target: { value: 'Learn Agile methods' } });
+    wrapper.find('#duration').simulate('change', { target: { value: '3' } });
     simulateAddSkill(wrapper, '#skills', ' ');
     testSubmission(buttons.at(2), 1);
     modal.instance().handleClose();
@@ -169,5 +205,21 @@ describe('', () => {
     const modal = mount(<AddRoleModal {...defaultProps} />);
     const loader = modal.find(Loader);
     expect(loader.length).toEqual(1);
+  });
+
+  it('tests componentDidUpdate', () => {
+    const prevProps = {
+      createRole: {
+        loading: true,
+        error: {}
+      },
+      roleSkills: {
+        loading: false,
+        error: {}
+      }
+    };
+    const modal = mount(<AddRoleModal {...initialProps} />);
+    modal.instance().componentDidUpdate(prevProps);
+    expect(defaultProps.getRoleSkills).toHaveBeenCalled();
   });
 });

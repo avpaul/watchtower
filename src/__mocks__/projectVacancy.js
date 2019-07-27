@@ -3,7 +3,8 @@ export const projectVacancyMock = {
   project_id: 7,
   project_role_id: 1,
   fellow_id: null,
-  is_active: false
+  is_active: false,
+  days_left: 0
 };
 
 /**
@@ -14,9 +15,22 @@ export const projectVacancyMock = {
  * @return array List of vacancy objects
  */
 export const generateVacancies = (count, start = 0) => {
-  const vacancies = [];
+  const vacancies = [
+    {
+      id: 1,
+      project_id: 7,
+      project_role_id: 1,
+      fellow_id: null,
+      is_active: false,
+      days_left: 0
+    }
+  ];
   for (let index = start; index < count; index += 1) {
-    vacancies.push({ ...projectVacancyMock, id: index + 1 });
+    vacancies.push({
+      ...projectVacancyMock,
+      id: index + 1,
+      days_left: index + 1
+    });
   }
   return vacancies;
 };
@@ -24,7 +38,7 @@ export const generateVacancies = (count, start = 0) => {
 const vacanciesGroupMock = {
   project: {
     id: 7,
-    name: 'Corrupti non.'
+    name: 'Corruption.'
   },
   role: {
     id: 1,
@@ -61,5 +75,6 @@ export const generateVacancyGroups = (count, vacancyCount, start = 0) => {
 export default {
   ...vacanciesGroupMock,
   vacancies: generateVacancies(5),
-  available_slots: 5
+  available_slots: 5,
+  applications: 0
 };

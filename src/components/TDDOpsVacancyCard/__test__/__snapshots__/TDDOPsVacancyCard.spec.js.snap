@@ -7,7 +7,7 @@ exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
   <div
     className="ops-vacancy-card__role-name"
   >
-    Wava Wehner MD
+    Wava Wehner MD C...
   </div>
   <div>
     <span
@@ -24,15 +24,15 @@ exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
   <div
     className="ops-vacancy-card__project"
   >
-    20 days    
+    20 days left
   </div>
   <div
     className="ops-vacancy-card__applications"
   >
-    0
-     
-    applications
+    1
+     application
   </div>
+  <div />
 </div>
 `;
 
@@ -95,14 +95,20 @@ exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
   <div
     className="ops-vacancy-card__project"
   >
-    Corrupti non.
+    Corruption.
   </div>
   <div
     className="ops-vacancy-card__applications"
   >
     0
-     
-    applications
+     applications
+  </div>
+  <div>
+    <span
+      className="ops-vacancy-card__project-slot__label"
+    >
+      Closed
+    </span>
   </div>
 </div>
 `;

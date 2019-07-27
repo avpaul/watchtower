@@ -15,7 +15,7 @@ describe('TDD Ops Vacancy card', () => {
     vacancy: {
       certification: {
         id: 1,
-        name: 'Wava Wehner MD',
+        name: 'Wava Wehner MD Certification',
         description: 'Harum sit reiciendis sint delectus aspernatur omnis.,',
         exclusive: true,
         duration: 20,
@@ -35,6 +35,7 @@ describe('TDD Ops Vacancy card', () => {
           }
         }
       },
+      applications: 1,
       available_slots: 2
     }
   };
@@ -53,7 +54,7 @@ describe('TDD Ops Vacancy card', () => {
   };
 
   it('renders project vacancy correctly', () => {
-    const { wrapper } = setup();
+    const { wrapper } = setup(defaultProps);
     expect(wrapper).toMatchSnapshot();
   });
 

@@ -74,6 +74,7 @@ const MapFellowsFilterCard = ({
     />
   ));
 
+  // eslint-disable-next-line no-constant-condition
   return display === 'project' || 'status' ? (
     <Slider {...carouselOptions(4, 'manager-slick')}>{renderCards}</Slider>
   ) : (

@@ -72,6 +72,34 @@
   margin-right: 18.5px;
 }
 
+.datepicker__ {
+  &grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+  }
+  &grid-item {
+    border: none;
+  }
+  &input-field {
+    box-sizing: border-box;
+    height: 46px;
+    width: 192px;
+    border: 0px solid #d1d1d1;
+    border-radius: 4px;
+    margin-right: 18.5px;
+    input {
+      outline: none;
+    }
+  }
+  &label {
+    width: 192px;
+    color: #333e44;
+    font-family: $font-primary-light;
+    font-size: 13px;
+    letter-spacing: 0.12px;
+  }
+}
+
 .feedback-calendar .action-btn {
   margin-left: 0;
 }
@@ -98,6 +126,6 @@
   height: 100%;
 }
 
-.label-input {
+.input {
   display: none;
 }

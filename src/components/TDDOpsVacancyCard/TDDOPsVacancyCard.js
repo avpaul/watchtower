@@ -53,7 +53,6 @@ const TDDOPsVacancyCard = ({
   if (vacanciesToDisplay === 'project' && !vacancy.project) return null;
   if (vacanciesToDisplay === 'certification' && !vacancy.certification)
     return null;
-
   return (
     <div
       className={`ops-vacancy-card${
@@ -80,11 +79,20 @@ const TDDOPsVacancyCard = ({
       <div className="ops-vacancy-card__project">
         {vacanciesToDisplay === 'project'
           ? vacancy.project.name
-          : `${vacancy.certification.duration} days    `}
+          : `${vacancy.certification.duration} days left`}
       </div>
       <div className="ops-vacancy-card__applications">
-        {vacancy.applications || '0'}{' '}
-        {vacancy.applications === 1 ? 'application' : 'applications'}
+        {vacancy.applications || '0'}
+        {vacancy.applications === 1 ? ' application' : ' applications'}
+      </div>
+      <div>
+        {vacanciesToDisplay === 'project' && (
+          <span className="ops-vacancy-card__project-slot__label">
+            {vacancy.vacancies[0].days_left > 0
+              ? `${vacancy.vacancies[0].days_left} days left`
+              : `Closed`}
+          </span>
+        )}
       </div>
     </div>
   );

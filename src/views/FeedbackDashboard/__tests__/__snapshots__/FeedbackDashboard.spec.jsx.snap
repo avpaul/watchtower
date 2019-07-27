@@ -240,7 +240,6 @@ exports[`Feedback simslead and engineering dashboard tests should render feedbac
             handleEndDateChange={[Function]}
             handleStartDateChange={[Function]}
             startDate="2019-03-05"
-            vacancies={false}
           />
         </div>
       </div>
@@ -515,7 +514,6 @@ exports[`Feedback simslead and engineering dashboard tests should render feedbac
             handleEndDateChange={[Function]}
             handleStartDateChange={[Function]}
             startDate="2019-03-05"
-            vacancies={false}
           />
         </div>
       </div>
@@ -624,7 +622,6 @@ exports[`Test Feedback Dashboard should render feedback dashboard without crashi
             handleEndDateChange={[Function]}
             handleStartDateChange={[Function]}
             startDate="2019-03-10"
-            vacancies={false}
           />
         </div>
       </div>
