@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import CalendarInput from '../CalendarInput';
 import ActionButton from '../ActionButton';
+import handleRawChange from '../../utils/handleInputRawChange';
 
 /**
  * @method FeedbackDuration
@@ -41,6 +42,7 @@ const FeedbackDuration = ({
                   startDate={startDate}
                   endDate={endDate}
                   minDate={currentDate}
+                  onChangeRaw={handleRawChange}
                   selectsStart
                   popperModifiers={{
                     flip: {
@@ -72,6 +74,7 @@ const FeedbackDuration = ({
                   startDate={startDate}
                   endDate={endDate}
                   maxDate={currentDate}
+                  onChangeRaw={handleRawChange}
                   selectsStart
                   popperModifiers={{
                     flip: {
@@ -104,6 +107,7 @@ const FeedbackDuration = ({
                   startDate={startDate}
                   endDate={endDate}
                   minDate={endDate}
+                  onChangeRaw={handleRawChange}
                   selectsStart
                   popperModifiers={{
                     flip: {
@@ -136,6 +140,7 @@ const FeedbackDuration = ({
                   maxDate={currentDate}
                   endDate={endDate}
                   minDate={startDate}
+                  onChangeRaw={handleRawChange}
                   selectsEnd
                   popperModifiers={{
                     flip: {
