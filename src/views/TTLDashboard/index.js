@@ -5,6 +5,7 @@ import TTLDashboardContainer from './TTLDashboardContainer';
 import DeveloperDashboardContainer from '../DeveloperDashboard';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 import PrePipNotificationForm from '../../components/PrePipNotificationForm';
+import NotFoundPage from '../NotFoundPage';
 
 /**
  * Defines routes for the ttldashboard
@@ -36,6 +37,7 @@ const TTLDashboard = props => (
           path="/feedback/:fellowName"
           component={() => <PrePipNotificationForm {...props} />}
         />
+        <Route component={NotFoundPage} />
       </Switch>
     </React.Fragment>
   </Route>

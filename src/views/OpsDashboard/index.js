@@ -6,6 +6,7 @@ import OpsDashboardContainer from './OpsDashboardContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 import CadreDashboardContainer from '../CadreDashboard';
+import NotFoundPage from '../NotFoundPage';
 
 /**
  * Defines routes for the opsdashboard
@@ -39,6 +40,7 @@ const OpsDashboard = props => (
         path="/cadre"
         component={() => <CadreDashboardContainer {...props} />}
       />
+      <Route component={NotFoundPage} />
     </Switch>
   </React.Fragment>
 );

@@ -112,4 +112,33 @@ describe('<FellowDashboards />', () => {
     wrapper.instance().activateAccount();
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render the cadre fellow dashboard when the authenticated user is a d1fellow', () => {
+    const props = {
+      user: {
+        name: 'Test User',
+        roles: { Andelan: 'jey' },
+        email: 'collins.muru@andela.com'
+      },
+      role: { Andelan: 'jey' },
+      d1EngineerData: {
+        data: [
+          {
+            name: 'collins',
+            email: 'collins.muru@andela.com'
+          }
+        ]
+      },
+      loading: false,
+      getCadreEngineers: jest.fn(),
+      history: {
+        push: jest.fn()
+      },
+      activateCadreEngineerAccount: jest.fn(),
+      fetchAllVacancies: jest.fn()
+    };
+
+    wrapper = shallow(<FellowDashboards {...props} store={store} />);
+    expect(wrapper.find('CadreFellowDashboard').length).toBe(1);
+  });
 });

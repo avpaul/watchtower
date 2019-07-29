@@ -128,7 +128,7 @@ describe('Test the cadre Fellow dashboard', () => {
     const mockStore = configureStore([thunk]);
     const store = mockStore({ ...props });
     const location = {
-      pathname: '/cadre/welcome'
+      pathname: '/dashboard/welcome'
     };
     const anotherWrapper = mount(
       <Provider store={store}>
@@ -149,11 +149,11 @@ describe('Test the cadre Fellow dashboard', () => {
     const mockStore = configureStore([thunk]);
     const store = mockStore({ ...props });
     const location = {
-      pathname: '/cadre/welcome'
+      pathname: '/dashboard/welcome'
     };
     const anotherWrapper = mount(
       <Provider store={store}>
-        <MemoryRouter initialEntries={['/cadre/welcome']}>
+        <MemoryRouter initialEntries={['/dashboard/welcome']}>
           <CadreFellowDashboard
             user={{ ...user.UserInfo }}
             role="CadreFellow"

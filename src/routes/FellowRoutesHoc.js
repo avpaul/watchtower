@@ -21,31 +21,35 @@ export class FellowDashboards extends Component {
     activateCadreEngineerAccount(history);
   };
 
-  renderDashboard = (role, user, d1EngineerData) => {
+  renderDashboard = (role, user, d1EngineerData, location) => {
     const data = !d1EngineerData.data ? [] : d1EngineerData.data;
     const d1Engineer = data.filter(engineer => engineer.email === user.email);
 
     const cadreRole = 'CadreFellow';
 
-    return d1Engineer.length === 0 ? (
-      <FellowDashboard {...this.props} role={role} />
-    ) : (
-      <CadreFellowDashboard
-        {...this.props}
-        role={cadreRole}
-        user={user}
-        d1Engineer={d1Engineer[0]}
-        activateAccount={this.activateAccount}
-      />
-    );
+    switch (d1Engineer.length) {
+      case 1:
+        return (
+          <CadreFellowDashboard
+            {...this.props}
+            role={cadreRole}
+            user={user}
+            d1Engineer={d1Engineer[0]}
+            activateAccount={this.activateAccount}
+            location={location}
+          />
+        );
+      default:
+        return <FellowDashboard {...this.props} role={role} />;
+    }
   };
 
   render() {
-    const { role, user, loading, d1EngineerData } = this.props;
+    const { role, user, loading, d1EngineerData, location } = this.props;
     return (
       <Fragment>
         {!loading ? (
-          this.renderDashboard(role, user, d1EngineerData)
+          this.renderDashboard(role, user, d1EngineerData, location)
         ) : (
           <div className="loader-overlay">
             <Cadreloader />
@@ -64,7 +68,8 @@ FellowDashboards.propTypes = {
   fetchAllVacancies: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   history: PropTypes.instanceOf(Object).isRequired,
-  activateCadreEngineerAccount: PropTypes.func.isRequired
+  activateCadreEngineerAccount: PropTypes.func.isRequired,
+  location: PropTypes.instanceOf(Object).isRequired
 };
 
 const mapStateToProps = ({ cadreEngineers }) => ({

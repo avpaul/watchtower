@@ -11,7 +11,7 @@ import FellowRoutesHoc from './FellowRoutesHoc';
  * @function
  */
 const Dashboards = props => {
-  const { user } = props;
+  const { user, location } = props;
   delete user.roles.Andelan;
   delete user.roles.Technology;
   const roles = Object.keys(user.roles);
@@ -29,7 +29,14 @@ const Dashboards = props => {
     case 'WATCH_TOWER_SL':
       return <EngineeringManagerSimsLeadDashboard {...props} role={role} />;
     case 'Fellow':
-      return <FellowRoutesHoc {...props} role={role} user={user} />;
+      return (
+        <FellowRoutesHoc
+          {...props}
+          role={role}
+          user={user}
+          location={location}
+        />
+      );
     case 'WATCH_TOWER_OPS':
       return <OpsDashboard {...props} role={role} />;
     default:
@@ -38,7 +45,8 @@ const Dashboards = props => {
 };
 
 Dashboards.propTypes = {
-  user: PropTypes.instanceOf(Object).isRequired
+  user: PropTypes.instanceOf(Object).isRequired,
+  location: PropTypes.instanceOf(Object).isRequired
 };
 
 export default Dashboards;
