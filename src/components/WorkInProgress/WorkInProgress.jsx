@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import icon from '../../static/construction_new_color_loop.svg';
 import './WorkInProgress.scss';
 
-const WorkInProgress = () => (
+const WorkInProgress = ({ title }) => (
   <Fragment>
     <div className="work-in-progress">
       <div className="container">
@@ -13,12 +14,18 @@ const WorkInProgress = () => (
         </div>
         <div className="row mt-5 justify-content-center">
           <div className="col-md-8 text-center">
-            <h4 className="font-weight-lighter">Work in Progress</h4>
+            <h4 className="font-weight-lighter">
+              {title || 'Work in Progress'}
+            </h4>
           </div>
         </div>
       </div>
     </div>
   </Fragment>
 );
+
+WorkInProgress.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 export default WorkInProgress;

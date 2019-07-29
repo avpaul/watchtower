@@ -6,6 +6,7 @@ import TDDOPsVacancyCard from '../../../../components/TDDOpsVacancyCard';
 import './ViewVacancies.scss';
 
 import PaginationFrontendWrapper from '../../../../components/Pagination/PaginationWrapper';
+import EmptyDashboard from '../../../../components/WorkInProgress/WorkInProgress';
 
 export class ViewRoleVacancies extends Component {
   state = {
@@ -141,15 +142,19 @@ export class ViewRoleVacancies extends Component {
   renderVacancies = (vacancies, vacanciesToDisplay) => {
     const mappedVacancies =
       vacancies.length !== 0 ? (
-        vacancies.map(vacancy => (
-          <TDDOPsVacancyCard
-            key={arrayKey(vacancy)}
-            vacancy={vacancy}
-            vacanciesToDisplay={vacanciesToDisplay}
-          />
-        ))
+        <div className="ops-vacancies__container">
+          {vacancies.map(vacancy => (
+            <TDDOPsVacancyCard
+              key={arrayKey(vacancy)}
+              vacancy={vacancy}
+              vacanciesToDisplay={vacanciesToDisplay}
+            />
+          ))}
+        </div>
       ) : (
-        <div className="ops-no-vacancies">No Vacancies</div>
+        <div className="ops-no-vacancies">
+          <EmptyDashboard title="Welcome, please create the first Vacancy!" />
+        </div>
       );
     return mappedVacancies;
   };
@@ -163,12 +168,10 @@ export class ViewRoleVacancies extends Component {
           {this.renderToggleButtons()}
           {this.renderSearchDiv()}
         </div>
-        <div className="ops-vacancies__container">
-          {this.renderVacancies(
-            paginationWrapper.state.paginatedData,
-            vacanciesToDisplay
-          )}
-        </div>
+        {this.renderVacancies(
+          paginationWrapper.state.paginatedData,
+          vacanciesToDisplay
+        )}
         <div className="">{paginationWrapper.renderPagination()}</div>
       </div>
     );

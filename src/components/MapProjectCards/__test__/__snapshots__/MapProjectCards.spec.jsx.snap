@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test Map Project cards Should check for empty project 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-9"
+    >
+      <p
+        className="project-grid__count"
+      >
+        <p>
+          0 Projects
+        </p>
+      </p>
+    </div>
+    <div
+      className="col-3"
+    >
+      <Link
+        className="project-grid__add"
+        replace={false}
+        to="/cadre/projects/create"
+      >
+        ADD NEW PROJECT
+      </Link>
+    </div>
+  </div>
+  <WorkInProgress
+    title="Welcome, please create the first Project!"
+  />
+</div>
+`;
+
 exports[`Test Map Project cards Should render more than one project correctly 1`] = `
 <div>
   <div
