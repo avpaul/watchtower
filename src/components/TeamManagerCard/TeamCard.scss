@@ -1,0 +1,91 @@
+@import '../../assets/sass/abstract/variables';
+
+.TM {
+  &_ProfileCard {
+    display: flex;
+    flex-direction: column;
+    height: 187px;
+    max-height: 187px;
+    width: 271px;
+    max-width: 271px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 10px 0 rgba(51, 89, 219, 0.04);
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: $font-primary;
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 86.5px;
+      border-bottom: 1px solid #f1f1f1;
+      width: 271px;
+    }
+
+    &__image {
+      height: 46px;
+      width: 46px;
+      margin: 0 13px 0 22px;
+
+      & img {
+        height: 46px;
+        width: 46px;
+        border-radius: 50%;
+        object-fit: contain;
+      }
+    }
+
+    &__user {
+      color: #333e44;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      margin-bottom: 2px;
+    }
+
+    &__role {
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: #606060;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__project {
+      margin-top: 0;
+      color: #0458e4;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 271px;
+      max-width: 271px;
+      height: 99.5px;
+      padding-left: 22px;
+
+      &-section:nth-child(1) {
+        margin-right: 62px;
+      }
+
+      &-section p {
+        margin: 0;
+        margin-bottom: 4px;
+        color: #606060;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &-section span {
+        color: #333e44;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+}
