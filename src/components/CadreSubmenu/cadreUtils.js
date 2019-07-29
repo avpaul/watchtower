@@ -6,6 +6,8 @@ import rolesIcon from '../../static/newroles1.svg';
 import rolesIconActive from '../../static/newrolesActive.png';
 import projectsIcon from '../../static/projects.png';
 import projectsIconActive from '../../static/projectsActive1.svg';
+import certificationIcon from '../../static/certification.svg';
+import certificationActive from '../../static/certificationActive.svg';
 
 /**
  * Array data structure that holds details
@@ -22,7 +24,7 @@ export const submenus = [
   },
   {
     title: 'Vacancies',
-    subtitle: 'Open or close allocations',
+    subtitle: 'Open or Close Allocations',
     icon: vacanciesIcon,
     id: '1',
     activeIcon: vacanciesIconActive
@@ -36,14 +38,14 @@ export const submenus = [
   },
   {
     title: 'Certifications',
-    subtitle: 'Engineer Certifications',
-    icon: rolesIcon,
+    subtitle: 'Manage Certifications',
+    icon: certificationIcon,
     id: '3',
-    activeIcon: rolesIconActive
+    activeIcon: certificationActive
   },
   {
     title: 'Reports',
-    subtitle: 'Program Progress',
+    subtitle: 'Monitor & Analyse Progress',
     icon: reportIcon,
     id: '4',
     activeIcon: reportIconActive
