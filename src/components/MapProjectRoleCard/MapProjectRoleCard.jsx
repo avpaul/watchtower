@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './MapProjectRoleCard.scss';
 import Card from '../RoleAndCertificationCard';
 import arrayOfObjectsSorter from '../../utils/sortArray';
+import EmptyDashboard from '../WorkInProgress/WorkInProgress';
 
 const renderButtons = type => (
   <div className="col-3">
@@ -56,7 +57,11 @@ const MapProjectRoleCard = ({
       {renderHeader(type, roleData)}
       {roleData.length === 0 ? (
         <div className="no-roles-certifications">
-          {type === 'role' ? 'No Roles' : 'No Certifications'}
+          {type === 'role' ? (
+            <EmptyDashboard title="Welcome, please create the first Role!" />
+          ) : (
+            <EmptyDashboard title="Welcome, please create the first Certification!" />
+          )}
         </div>
       ) : (
         roleData.sort(arrayOfObjectsSorter('name')).map(role => (
@@ -89,7 +94,7 @@ MapProjectRoleCard.propTypes = {
   fetchActiveEngineers: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   roleData: PropTypes.instanceOf(Array),
-  setDeleteTarget: PropTypes.func.isRequired,
+  setDeleteTarget: PropTypes.func.isRequired
 };
 MapProjectRoleCard.defaultProps = {
   roleData: [],

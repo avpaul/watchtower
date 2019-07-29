@@ -138,13 +138,11 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="ops-vacancies__container"
+    className="ops-no-vacancies"
   >
-    <div
-      className="ops-no-vacancies"
-    >
-      No Vacancies
-    </div>
+    <WorkInProgress
+      title="Welcome, please create the first Vacancy!"
+    />
   </div>
   <div
     className=""
@@ -193,13 +191,11 @@ exports[`Vacancy Dashboard renders no vacancies when array is empty 1`] = `
     </div>
   </div>
   <div
-    className="ops-vacancies__container"
+    className="ops-no-vacancies"
   >
-    <div
-      className="ops-no-vacancies"
-    >
-      No Vacancies
-    </div>
+    <WorkInProgress
+      title="Welcome, please create the first Vacancy!"
+    />
   </div>
   <div
     className=""

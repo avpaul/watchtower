@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Projectcard from '../ProjectCard/ProjectCard';
 import arrayOfObjectsSorter from '../../utils/sortArray';
-
+import EmptyDashboard from '../WorkInProgress/WorkInProgress';
 import './MapProjectCards.scss';
 
 const MapProjectCards = ({ projectData, setDeleteTarget }) => (
@@ -24,16 +24,24 @@ const MapProjectCards = ({ projectData, setDeleteTarget }) => (
         </Link>
       </div>
     </div>
-    <div className="project-card__grid">
-      {projectData.sort(arrayOfObjectsSorter('name')).map(project => (
-        <Projectcard project={project} key={project.id} focusProject={setDeleteTarget}/>
-      ))}
-    </div>
+    {projectData.length === 0 ? (
+      <EmptyDashboard title="Welcome, please create the first Project!" />
+    ) : (
+      <div className="project-card__grid">
+        {projectData.sort(arrayOfObjectsSorter('name')).map(project => (
+          <Projectcard
+            project={project}
+            key={project.id}
+            focusProject={setDeleteTarget}
+          />
+        ))}
+      </div>
+    )}
   </div>
 );
 MapProjectCards.propTypes = {
   projectData: PropTypes.shape([]),
-  setDeleteTarget : PropTypes.func
+  setDeleteTarget: PropTypes.func
 };
 
 MapProjectCards.defaultProps = {

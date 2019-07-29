@@ -80,21 +80,21 @@ describe('Vacancy Dashboard', () => {
   const setup = (vacancies, paginated = false) => {
     const wrapper = paginated
       ? shallow(
-        <PaginatedVacanciesDashboard
-          component={
-            <ViewRoleVacancies
-              vacancies={vacancies}
-              paginationWrapper={mockPaginationWrapper}
-            />
-          }
-        />
-      )
+          <PaginatedVacanciesDashboard
+            component={
+              <ViewRoleVacancies
+                vacancies={vacancies}
+                paginationWrapper={mockPaginationWrapper}
+              />
+            }
+          />
+        )
       : shallow(
-        <ViewRoleVacancies
-          vacancies={vacancies}
-          paginationWrapper={mockPaginationWrapper}
-        />
-      );
+          <ViewRoleVacancies
+            vacancies={vacancies}
+            paginationWrapper={mockPaginationWrapper}
+          />
+        );
 
     return { wrapper };
   };
@@ -141,7 +141,6 @@ describe('Vacancy Dashboard', () => {
     wrapper.setState({ vacanciesToDisplay: 'project' });
 
     expect(wrapper.find('.vacancy-search-input').type()).toEqual('input');
-
   });
 
   it('renders certification search text input', () => {
@@ -150,7 +149,7 @@ describe('Vacancy Dashboard', () => {
     const textInput = wrapper.find('.vacancy-search-input');
     textInput.simulate('change', { target: { value: 'My Project' } });
 
-    expect(wrapper.exists('.ops-vacancies__container')).toEqual(true);
+    expect(wrapper.exists('.ops-vacancies__container')).toEqual(false);
   });
 
   it('renders project search text input', () => {
@@ -160,7 +159,6 @@ describe('Vacancy Dashboard', () => {
     textInput.simulate('change', { target: { value: 'My Certification' } });
 
     expect(textInput.exists()).toEqual(true);
-    expect(wrapper.exists('.ops-vacancies__container')).toEqual(true);
+    expect(wrapper.exists('.ops-no-vacancies')).toEqual(true);
   });
 });
-
