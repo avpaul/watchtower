@@ -25,6 +25,8 @@ describe('EngineerVacancies ', () => {
             project_role_id: 1,
             fellow_id: null,
             is_active: false,
+            closing_date: '2019-07-10 07:58:34',
+            start_date: '2019-08-10 07:58:34',
             project: {
               id: 1,
               name: 'Dolorum suscipit molestiae.'
@@ -64,7 +66,11 @@ describe('EngineerVacancies ', () => {
           exclusive: false,
           duration: 20
         },
-        available_slots: 2
+        available_slots: 2,
+        vacancy_details: {
+          closing_date: '2019-07-10 07:58:34',
+          start_date: '2019-08-10 07:58:34'
+        }
       }
     ],
     loading: false

@@ -28,11 +28,14 @@
     margin-bottom: 0.2rem;
   }
 
-  &__project-slot {
+  &__project-slot,
+  &__project-start-date {
     &__label {
       margin-bottom: 1rem;
       color: #606060;
       font-size: 13px;
+      .application-closed {
+      }
     }
 
     &__number {
@@ -41,12 +44,21 @@
       font-size: 13px;
     }
   }
+  &__project-start-date__number {
+    color: rgba(52, 76, 90, 0.62);
+  }
 
-  &__project {
+  &__project,
+  &__project-date-countdown {
     height: 36px;
     width: 85%;
     color: rgba(52, 76, 90, 0.62);
     font-family: $font-primary;
+    font-size: 13px;
+  }
+
+  &__project-date-countdown {
+    margin-top: 0.3rem;
     font-size: 15px;
     line-height: 18px;
   }
@@ -58,7 +70,7 @@
     font-family: $font-primary;
     font-size: 15px;
     line-height: 18px;
-    margin-top: 0.7rem;
+    margin-top: 0.4rem;
   }
 
   &__icon {

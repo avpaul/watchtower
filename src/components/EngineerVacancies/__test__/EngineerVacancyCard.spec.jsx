@@ -8,7 +8,8 @@ describe('TextInput ', () => {
     role: 'Technical Coordinator',
     roleId: 1,
     projectName: 'Watchtower',
-    projectId: 1
+    projectId: 1,
+    closingDate: '2019-04-04'
   };
 
   const setup = propsOverride => {

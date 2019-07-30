@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import More from '../../static/More.svg';
-
+import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
+import { formatDate } from '../../utils/formatDate';
 import './TDDOPsVacancyCard.scss';
 
 const renderDropdownButton = (modalTarget, label, onClick) => (
@@ -40,7 +41,7 @@ const renderDropdownSection = (vacancy, setVacanciesOnFocus) => (
 
 const getName = name => {
   if (name) {
-    return name.length > 20 ? `${name.substr(0, 16)}...` : name;
+    return name.length > 16 ? `${name.substr(0, 14)}...` : name;
   }
   return 'N/A';
 };
@@ -53,6 +54,13 @@ const TDDOPsVacancyCard = ({
   if (vacanciesToDisplay === 'project' && !vacancy.project) return null;
   if (vacanciesToDisplay === 'certification' && !vacancy.certification)
     return null;
+
+  const closingDate =
+    vacanciesToDisplay === 'project'
+      ? vacancy.vacancies[0].closing_date
+      : vacancy.vacancy_details.closing_date;
+  const remainingDays = dateCountDown(closingDate);
+
   return (
     <div
       className={`ops-vacancy-card${
@@ -75,24 +83,35 @@ const TDDOPsVacancyCard = ({
         <span className="ops-vacancy-card__project-slot__number">
           {vacancy.available_slots}
         </span>
+        {vacanciesToDisplay === 'project' && (
+          <span className="ops-vacancy-card__project">
+            {` on ${getName(vacancy.project.name)}`}
+          </span>
+        )}
       </div>
-      <div className="ops-vacancy-card__project">
-        {vacanciesToDisplay === 'project'
-          ? vacancy.project.name
-          : `${vacancy.certification.duration} days left`}
+      <div>
+        <span className="ops-vacancy-card__project-start-date__label">
+          Starting:&nbsp;
+        </span>
+        <span className="ops-vacancy-card__project-start-date__number">
+          {vacanciesToDisplay === 'project'
+            ? formatDate(vacancy.vacancies[0].start_date)
+            : formatDate(vacancy.vacancy_details.start_date)}
+        </span>
       </div>
+
+      <div className="ops-vacancy-card__project-date-countdown">
+        <span className="ops-vacancy-card__project-slot__label">
+          Days Left:{' '}
+        </span>
+        <span className={`${remainingDays === -1 ? 'text-danger' : ''}`}>
+          {formatCountDown(remainingDays)}
+        </span>
+      </div>
+
       <div className="ops-vacancy-card__applications">
         {vacancy.applications || '0'}
         {vacancy.applications === 1 ? ' application' : ' applications'}
-      </div>
-      <div>
-        {vacanciesToDisplay === 'project' && (
-          <span className="ops-vacancy-card__project-slot__label">
-            {vacancy.vacancies[0].days_left > 0
-              ? `${vacancy.vacancies[0].days_left} days left`
-              : `Closed`}
-          </span>
-        )}
       </div>
     </div>
   );

@@ -22,6 +22,19 @@ exports[`TextInput  renders as expected with required props 1`] = `
         Watchtower
       </li>
       <li>
+        0 available slots
+      </li>
+      <li>
+        <span>
+          Days Left: 
+        </span>
+        <span
+          className="text-danger"
+        >
+          Closed
+        </span>
+      </li>
+      <li>
         <Link
           replace={false}
           to="dashboard/project/1/role/1"

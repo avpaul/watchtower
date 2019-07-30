@@ -36,7 +36,11 @@ describe('TDD Ops Vacancy card', () => {
         }
       },
       applications: 1,
-      available_slots: 2
+      available_slots: 2,
+      vacancy_details: {
+        closing_date: '2019-07-10 07:58:34',
+        start_date: '2019-08-10 07:58:34'
+      }
     }
   };
 
