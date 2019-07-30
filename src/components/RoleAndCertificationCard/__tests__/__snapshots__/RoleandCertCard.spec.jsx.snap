@@ -5,7 +5,7 @@ exports[`Test Certification Card component should handle click count correctly 1
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -63,7 +63,7 @@ exports[`Test Certification Card component should handle click count correctly 1
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -99,7 +99,7 @@ exports[`Test Certification Card component should handle click count correctly 1
         <p
           className="role-card__attributes"
         >
-          Certified Engrs.
+          Cert Engrs.
            
           <br />
           <div
@@ -161,7 +161,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -219,7 +219,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -255,7 +255,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
         <p
           className="role-card__attributes"
         >
-          Certified Engrs.
+          Cert Engrs.
            
           <br />
           <div
@@ -333,7 +333,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -391,7 +391,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -427,7 +427,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
         <p
           className="role-card__attributes"
         >
-          Certified Engrs.
+          Cert Engrs.
            
           <br />
           <div
@@ -454,7 +454,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
     <p
       className="role-card__description"
     >
-      test role description should render role card instance properly should render role card instance pro
+      test role description should render role card inst
       <span
         className="role-card__attributes-seemore"
         onClick={[Function]}
@@ -489,7 +489,7 @@ exports[`Test Certification Card component should render modal 1`] = `
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -547,7 +547,7 @@ exports[`Test Certification Card component should render modal 1`] = `
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -583,7 +583,7 @@ exports[`Test Certification Card component should render modal 1`] = `
         <p
           className="role-card__attributes"
         >
-          Certified Engrs.
+          Cert Engrs.
            
           <br />
           <div
@@ -610,7 +610,7 @@ exports[`Test Certification Card component should render modal 1`] = `
     <p
       className="role-card__description"
     >
-      test role description should render role card instance properly should render role card instance pro
+      test role description should render role card inst
       <span
         className="role-card__attributes-seemore"
         onClick={[Function]}
@@ -647,7 +647,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -705,7 +705,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -741,7 +741,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
         <p
           className="role-card__attributes"
         >
-          Active Engrs.
+          Active engrs.
            
           <br />
           <div
@@ -803,7 +803,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -861,7 +861,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -897,7 +897,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
         <p
           className="role-card__attributes"
         >
-          Active Engrs.
+          Active engrs.
            
           <br />
           <div
@@ -959,7 +959,7 @@ exports[`Test Role Card component should render correctly 1`] = `
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -1017,7 +1017,7 @@ exports[`Test Role Card component should render correctly 1`] = `
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -1053,7 +1053,7 @@ exports[`Test Role Card component should render correctly 1`] = `
         <p
           className="role-card__attributes"
         >
-          Active Engrs.
+          Active engrs.
            
           <br />
           <div
@@ -1080,7 +1080,7 @@ exports[`Test Role Card component should render correctly 1`] = `
     <p
       className="role-card__description"
     >
-      test role description should render role card instance properly should render role card instance pro
+      test role description should render role card inst
       <span
         className="role-card__attributes-seemore"
         onClick={[Function]}
@@ -1115,7 +1115,7 @@ exports[`Test Role Card component should render modal 1`] = `
   className="role-card"
 >
   <div
-    className="px-4"
+    className="pr-4 pl-3"
   >
     <div
       className="role-card__icon"
@@ -1173,7 +1173,7 @@ exports[`Test Role Card component should render modal 1`] = `
   </div>
   <hr />
   <div
-    className="ml-2 mr-2 px-3"
+    className="mx-1 px-2"
   >
     <div
       className="row"
@@ -1209,7 +1209,7 @@ exports[`Test Role Card component should render modal 1`] = `
         <p
           className="role-card__attributes"
         >
-          Active Engrs.
+          Active engrs.
            
           <br />
           <div
@@ -1236,7 +1236,7 @@ exports[`Test Role Card component should render modal 1`] = `
     <p
       className="role-card__description"
     >
-      test role description should render role card instance properly should render role card instance pro
+      test role description should render role card inst
       <span
         className="role-card__attributes-seemore"
         onClick={[Function]}
