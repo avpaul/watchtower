@@ -23,7 +23,7 @@ const renderButtons = type => (
         data-target="#addCertificationModal"
         className="role-grid__add"
       >
-        NEW CERTIFICATE
+        NEW CERTIFICATION
       </button>
     )}
   </div>

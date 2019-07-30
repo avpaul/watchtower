@@ -13,7 +13,7 @@ const CheckBox = props => {
         </label>
       )}
       <div className="form-input-inline">
-        <div>
+        <div className="radio-button">
           <input
             className="form-checkbox"
             id={name}

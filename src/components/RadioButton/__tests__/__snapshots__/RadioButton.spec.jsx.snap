@@ -13,7 +13,9 @@ exports[`Radio Button should render component correctly 1`] = `
   <div
     className="form-input-inline"
   >
-    <div>
+    <div
+      className="radio-button"
+    >
       <input
         checked="title"
         className="form-checkbox"
