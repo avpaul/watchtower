@@ -135,6 +135,9 @@ export class ViewRoleVacancies extends Component {
           className="vacancy-search-input"
           onChange={this.handleSearchTextChange}
         />
+        <a className="vacancy-search-icon" href="/cadre/!">
+          <i className="fas fa-search" />
+        </a>
       </div>
     );
   };

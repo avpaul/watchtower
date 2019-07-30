@@ -50,23 +50,30 @@
 
 .vacancy-search-div {
   float: right;
+  background-color: #fff;
+  width: 28%;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
 }
 
 .vacancy-search-input {
   border: none;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   padding: 1rem 1.1rem;
-  border: 1px solid #0459e4;
-  border-radius: 7px;
-  background-color: #ffffff;
   color: #0459e4;
   font-family: 'DIN Pro';
   outline: none;
   height: 2rem;
-  width: 16rem;
-  text-align: center;
+  text-align: left;
 
   &::placeholder {
     color: rgba(7, 14, 17, 0.51);
+    font-size: 13px;
   }
+}
+
+.vacancy-search-icon {
+  padding: 1em;
+  color: rgba(51, 62, 68, 0.51);
+  font-size: 13px;
 }
