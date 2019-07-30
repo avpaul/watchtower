@@ -9,9 +9,7 @@ exports[`Project details card tests should render project details page without c
 exports[`Project details card tests should render project links component successfully 1`] = `
 <Fragment>
   <a
-    href="https://andela.slack.com/messages/CCU16SAKA/undefined"
-    rel="noopener noreferrer"
-    target="_blank"
+    href="#"
   >
     <div
       className="links"
@@ -20,9 +18,7 @@ exports[`Project details card tests should render project links component succes
         alt="slack-logo"
         src="slack-logo-icon.png"
       />
-      #
-      test proje
-      ... team on slack
+      N/A
     </div>
   </a>
   <a
@@ -37,8 +33,8 @@ exports[`Project details card tests should render project links component succes
         alt="invision logo"
         src="invision-logo.svg"
       />
-      test project
-       on invision
+      
+        test project on invision
     </div>
   </a>
 </Fragment>

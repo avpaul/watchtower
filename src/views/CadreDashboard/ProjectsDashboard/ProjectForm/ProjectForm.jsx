@@ -115,8 +115,13 @@ class ProjectForm extends Component {
    */
   checkInputs = inputs =>
     Object.values(inputs).find(input => {
-      if (input.props.name === 'mockups' && input.getValue() === '')
+      if (
+        (input.props.name === 'mockups' && input.getValue() === '') ||
+        (input.props.name === 'channels' &&
+          Object.keys(input.getValue()).length === 0)
+      ) {
         return false;
+      }
       return !input.isValid();
     });
 
