@@ -243,8 +243,11 @@ workflows:
   version: 2
   run_tests:
     jobs:
-      - checkout:
+      - approve_build:
           type: approval
+      - checkout:
+          requires:
+            - approve_build
       - check_vulnerabilities:
           requires:
             - checkout
