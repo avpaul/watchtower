@@ -9,7 +9,7 @@ import EngineerDashboardCard from '../../components/EngineerDashboardCard';
 import EngineerVacancies from '../../components/EngineerVacancies';
 import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
 import WelcomeMessage from '../../components/WelcomeMessage';
-import CadreLoader from '../../components/CustomLoader/CadreLoader';
+import PMLoader from '../../components/CustomLoader/PMLoader';
 
 import './index.scss';
 import './CadreDashboard.scss';
@@ -83,7 +83,7 @@ export class D1FellowDashboardMain extends Component {
     return (
       <Fragment>
         {loading ? (
-          <CadreLoader />
+          <PMLoader />
         ) : (
           <div className="cadre-content">
             <div className="cadre-side-card-dashboard">

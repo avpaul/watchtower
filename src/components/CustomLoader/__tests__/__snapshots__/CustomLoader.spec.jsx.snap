@@ -8,17 +8,17 @@ exports[`test custom loader components should render the CadreLoader component p
 
 exports[`test custom loader components should render the PMLoader properly 1`] = `
 <LoaderComponent
-  img="programManagerLoader.gif"
+  img="undraw_light_the_fire_gt58_new.svg"
 />
 `;
 
 exports[`test custom loader components should render the generic loader component properly 1`] = `
 <div
-  className="custom-loader"
+  className="custom-loader text-center"
 >
   <img
     alt="loader"
-    className="custom-loader-img"
+    className="custom-loader-img w-50"
     src="engineerLoaderGif.gif"
   />
 </div>

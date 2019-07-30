@@ -7,7 +7,7 @@ import getCadreEngineers from '../redux/actionCreators/cadreEngineersActions';
 import { fetchAllVacancies } from '../redux/actionCreators/getCadreVacanciesAction';
 import { activateCadreEngineerAccount } from '../redux/actionCreators/activateCadreEngineerActions';
 import CadreFellowDashboard from '../views/CadreFellowDashboard/CadreFellowDashboard';
-import Cadreloader from '../components/CustomLoader/CadreLoader';
+import PMloader from '../components/CustomLoader/PMLoader';
 
 export class FellowDashboards extends Component {
   componentDidMount() {
@@ -48,7 +48,7 @@ export class FellowDashboards extends Component {
           this.renderDashboard(role, user, d1EngineerData)
         ) : (
           <div className="loader-overlay">
-            <Cadreloader />
+            <PMloader />
           </div>
         )}
       </Fragment>
