@@ -7,6 +7,8 @@ import ProjectDetailsCardSmall from './ProjectDetailsCardSmall';
 import ProjectEngineersTable from '../ProjectEngineersTable';
 import './CadreProjectDetails.scss';
 import ReturnButton from '../Buttons/ReturnButton';
+import PMloader from '../CustomLoader/PMLoader';
+import NotFoundPage from '../../views/NotFoundPage';
 
 class ProjectDetails extends Component {
   constructor() {
@@ -23,11 +25,16 @@ class ProjectDetails extends Component {
       project => project.id === parseInt(match.params.id, 10)
     );
 
+    // Check if parameter in the browser is an Integer and the project doesn't exist in redux store already
+    // before making the API call to fetch the resource
+    // If it exists already, the page renders using the existing data in redux
     if (Number.isInteger(+match.params.id) && !projectDetails) {
       await getProject(match.params.id);
       const { singleProject } = this.props;
 
-      [projectDetails] = singleProject.data.project;
+      if (Object.keys(singleProject.data).length) {
+        [projectDetails] = singleProject.data.project;
+      }
     }
 
     this.setState({ projectDetails, loading: false });
@@ -36,7 +43,8 @@ class ProjectDetails extends Component {
   render() {
     const { projectDetails, loading } = this.state;
     const { history, match } = this.props;
-    return !loading ? (
+
+    const projectBody = projectDetails ? (
       <div className="project-details">
         <div className="d-flex justify-content-between">
           <ReturnButton history={history} />
@@ -61,8 +69,10 @@ class ProjectDetails extends Component {
         </div>
       </div>
     ) : (
-      <div>loading</div>
+      <NotFoundPage />
     );
+
+    return loading ? <PMloader /> : projectBody;
   }
 }
 

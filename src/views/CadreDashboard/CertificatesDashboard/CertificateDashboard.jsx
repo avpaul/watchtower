@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import CadreViewCertificates from './CadreViewCertificates';
+import NotFoundPage from '../../NotFoundPage';
 
 const CertificationDashboard = props => {
   const { match } = props;
@@ -13,6 +14,7 @@ const CertificationDashboard = props => {
           path={`${match.url}`}
           component={() => <CadreViewCertificates {...props} />}
         />
+        <Route component={NotFoundPage} />
       </Switch>
     </div>
   );

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import CadreViewRoles from './CadreViewRoles';
 import AddRoleModal from '../ProjectsDashboard/AddRoleModal';
+import NotFoundPage from '../../NotFoundPage';
 
 const RolesDashboard = props => {
   const { match, history } = props;
@@ -15,6 +16,7 @@ const RolesDashboard = props => {
           path={`${match.url}`}
           component={() => <CadreViewRoles {...props} />}
         />
+        <Route component={NotFoundPage} />
       </Switch>
     </div>
   );

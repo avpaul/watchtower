@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import ProjectForm from './ProjectForm';
 import ViewProjects from './ViewProjects';
 import ProjectDetailsPage from '../../../components/CadreProjectDetails';
+import NotFoundPage from '../../NotFoundPage';
 
 const ProjectsDashboard = props => {
   const { match } = props;
@@ -33,6 +34,7 @@ const ProjectsDashboard = props => {
           <ProjectForm {...props} match={newProps.match} />
         )}
       />
+      <Route component={NotFoundPage} />
     </Switch>
   );
 };
