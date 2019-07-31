@@ -152,7 +152,7 @@ class ProjectFormLeft extends Component {
       <React.Fragment>
         {renderUploadInput({
           name: 'documents',
-          label: 'Relevant Documents',
+          label: 'Relevant Documents (max-size 5mb)',
           documents: projectDetails.documents,
           buttonLabel: 'Upload Document'
         })}

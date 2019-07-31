@@ -34,7 +34,7 @@ class ProjectFormRight extends Component {
           {this.renderTextInputs(renderTextInput, projectInfomation)}
           {renderUploadInput({
             name: 'logo',
-            label: 'Project Logo',
+            label: 'Project Logo (max-size 5mb)',
             documents: projectInfomation.logo ? [projectInfomation.logo] : [],
             count: 1,
             type: 'images',

@@ -58,7 +58,8 @@ class FileUploadInput extends Component {
       text: { 'sources.local.drop_or': 'Drop Files here or' },
       sources: ['local'],
       multiple: count !== 1,
-      clientAllowedFormats: uploadTypes[type]
+      clientAllowedFormats: uploadTypes[type],
+      maxFileSize: 5000000
     };
   };
 
