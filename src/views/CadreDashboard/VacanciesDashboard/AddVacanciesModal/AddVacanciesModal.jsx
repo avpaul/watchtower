@@ -472,12 +472,15 @@ class AddVacanciesModal extends Component {
     const {
       createProjectVacancies: add,
       editProjectVacanciesState: edit,
-      editMode
+      editMode,
+      createCertificactionVacancies
     } = this.props;
     const { success } = this.state;
     let button = null;
     switch (true) {
-      case add.loading || edit.loading:
+      case add.loading:
+      case edit.loading:
+      case createCertificactionVacancies.loading:
         button = <Loader size="small" />;
         break;
       case success:
