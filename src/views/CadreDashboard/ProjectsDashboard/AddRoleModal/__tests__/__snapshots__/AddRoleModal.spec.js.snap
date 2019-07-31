@@ -222,7 +222,7 @@ Object {
                     length={999}
                     name="name"
                     parent={[Circular]}
-                    placeholder="FPC"
+                    placeholder="Enter Role Name"
                     testInput={[Function]}
                     type="text"
                   />
@@ -293,7 +293,7 @@ Object {
           },
         }
       }
-      placeholder="FPC"
+      placeholder="Enter Role Name"
       testInput={[Function]}
       type="text"
     />
@@ -492,7 +492,7 @@ Object {
                     length={999}
                     name="name"
                     parent={[Circular]}
-                    placeholder="FPC"
+                    placeholder="Enter Role Name"
                     testInput={[Function]}
                     type="text"
                   />
@@ -730,7 +730,7 @@ Object {
                     length={999}
                     name="name"
                     parent={[Circular]}
-                    placeholder="FPC"
+                    placeholder="Enter Role Name"
                     testInput={[Function]}
                     type="text"
                   />
