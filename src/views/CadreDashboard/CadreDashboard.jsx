@@ -34,10 +34,10 @@ class CadreDashboard extends Component {
    * Listens to events specifically click events
    *  @param {*} event
    */
-  handleCardclick = e => {
+  handleCardclick = event => {
     const { history } = this.props;
     const { routes } = this.state;
-    const id = e.target.getAttribute('data-key');
+    const id = event.target.getAttribute('data-key');
     if (routes[id]) history.replace(routes[id]);
   };
 
@@ -59,7 +59,6 @@ class CadreDashboard extends Component {
 
   renderRoute = (RouteComponent, url) => (
     <Route
-      exact
       path={url}
       component={newProps => (
         <RouteComponent {...{ ...this.props, match: newProps.match }} />
