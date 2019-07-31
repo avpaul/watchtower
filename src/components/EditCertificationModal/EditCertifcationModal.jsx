@@ -108,20 +108,15 @@ class EditCertificationModal extends Component {
   };
 
   handleSuccess = () => {
-    const { name, description, duration, exclusive } = this.state;
-    const {
-      editCertification,
-      data: { id },
-      error
-    } = this.props;
-    const data = {
-      name,
-      description,
-      duration,
-      exclusive
-    };
-    editCertification(id, data);
-    if (error === null) {
+    const { error } = this.props;
+    if (error) {
+      toast.error('Error Updating Certificate ', {
+        autoClose: 1300,
+        closeButton: false,
+        pauseOnHover: false,
+        hideProgressBar: true
+      });
+    } else {
       toast.success('Certificate succesfully updated', {
         autoClose: 1300,
         onClose: () => this.onClose(),
@@ -129,14 +124,24 @@ class EditCertificationModal extends Component {
         pauseOnHover: false,
         hideProgressBar: true
       });
-    } else {
-      toast.error('Error Updating Certificate ', {
-        autoClose: 1300,
-        closeButton: false,
-        pauseOnHover: false,
-        hideProgressBar: true
-      });
     }
+  };
+
+  handleSubmit = () => {
+    const { name, description, duration, exclusive } = this.state;
+    const {
+      editCertification,
+      data: { id }
+    } = this.props;
+    const data = {
+      name,
+      description,
+      duration,
+      exclusive
+    };
+    editCertification(id, data).then(() => {
+      this.handleSuccess();
+    });
   };
 
   render() {
@@ -162,7 +167,7 @@ class EditCertificationModal extends Component {
             this.handleInput
           )}
           {this.renderCheckBox(exclusive)}
-          {this.renderFooter(this.handleSuccess, 'Update')}
+          {this.renderFooter(this.handleSubmit, 'Update')}
         </div>
       </Modal>
     );
@@ -176,11 +181,7 @@ EditCertificationModal.propTypes = {
   editCertification: PropTypes.func.isRequired,
   history: PropTypes.shape().isRequired,
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.shape()
-};
-
-EditCertificationModal.defaultProps = {
-  error: null
+  error: PropTypes.shape().isRequired
 };
 
 export default EditCertificationModal;
