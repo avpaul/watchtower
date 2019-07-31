@@ -4,6 +4,7 @@ import AddIcon from '../../../../static/plus.png';
 import FormInputs from '../../../../components/FormInputs';
 import GenericModal from '../../../../components/GenericModal';
 import Loader from '../../../../components/Loader/Loader';
+import { numberRegex } from '../../../../utils/regex';
 
 import './AddRoleModal.scss';
 
@@ -64,11 +65,15 @@ class AddRoleModal extends Component {
   handleSubmit = () => {
     const { createNewRole } = this.props;
     const {
-      inputs: { name, description, skills }
+      inputs: { name, description, skills, duration }
     } = this.state;
 
     if (!name.isValid()) {
       name.setStatus('invalid', 'Please provide an input!');
+      return false;
+    }
+    if (!duration.isValid()) {
+      duration.setStatus('invalid', 'Please provide an input!');
       return false;
     }
     if (!description.isValid()) {
@@ -78,7 +83,8 @@ class AddRoleModal extends Component {
     const roleData = {
       name: name.getValue(),
       description: description.getValue(),
-      skills: this.getSkills(skills.getValue())
+      skills: this.getSkills(skills.getValue()),
+      duration: duration.getValue()
     };
     createNewRole(roleData);
     return false;
@@ -188,6 +194,14 @@ class AddRoleModal extends Component {
         label="Role Name"
         placeholder="Enter Role Name"
         testInput={value => value.trim() !== ''}
+      />
+      <FormInputs.TextInput
+        parent={this}
+        name="duration"
+        label="Role Duration (months)"
+        placeholder="Enter duration"
+        testInput={input => numberRegex.test(input) && input !== '0'}
+        alertText="Please input a valid duration!"
       />
       <FormInputs.DropdownInput
         parent={this}

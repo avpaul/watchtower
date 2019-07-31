@@ -73,9 +73,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
       AddVacanciesModal {
         "checkSubmitState": [Function],
         "clickCheckbox": [Function],
+        "compareDates": [Function],
         "context": Object {},
         "defaultDate": [Function],
         "filterPayload": [Function],
+        "getModelTitle": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "handleEndChange": [Function],
@@ -142,15 +144,16 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
         "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
-        "renderRoleForm": [Function],
         "renderText": [Function],
         "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
         "setState": [Function],
         "state": Object {
           "certificationInputs": Object {},
           "currentDate": "2019-3-15",
           "endDate": "2019-3-15",
           "error": "",
+          "errors": Object {},
           "inputs": Object {},
           "requester": false,
           "startDate": "2019-03-10",
@@ -348,6 +351,21 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     parent={[Circular]}
                     placeholder="Select Role"
                   />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
                 </React.Fragment>
                 <TextInput
                   alertText="Please input a valid number of slots!"
@@ -360,10 +378,39 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   length={999}
                   name="slots"
                   parent={[Circular]}
-                  placeholder=""
+                  placeholder="Enter no. of slots"
                   testInput={[Function]}
                   type="text"
                 />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
               </React.Fragment>
             </GenericModal>,
             "_rendering": false,
@@ -401,9 +448,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
       AddVacanciesModal {
         "checkSubmitState": [Function],
         "clickCheckbox": [Function],
+        "compareDates": [Function],
         "context": Object {},
         "defaultDate": [Function],
         "filterPayload": [Function],
+        "getModelTitle": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "handleEndChange": [Function],
@@ -470,15 +519,16 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
         "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
-        "renderRoleForm": [Function],
         "renderText": [Function],
         "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
         "setState": [Function],
         "state": Object {
           "certificationInputs": Object {},
           "currentDate": "2019-3-15",
           "endDate": "2019-3-15",
           "error": "",
+          "errors": Object {},
           "inputs": Object {},
           "requester": false,
           "startDate": "2019-03-10",
@@ -676,6 +726,21 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     parent={[Circular]}
                     placeholder="Select Role"
                   />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
                 </React.Fragment>
                 <TextInput
                   alertText="Please input a valid number of slots!"
@@ -688,10 +753,39 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   length={999}
                   name="slots"
                   parent={[Circular]}
-                  placeholder=""
+                  placeholder="Enter no. of slots"
                   testInput={[Function]}
                   type="text"
                 />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
               </React.Fragment>
             </GenericModal>,
             "_rendering": false,
@@ -702,6 +796,371 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
       }
     }
     placeholder="Select Role"
+  />
+  <TextInput
+    alertText="Please input a valid email!"
+    className="wt-text-input"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    inputValue=""
+    label="Enter Requester Email"
+    length={999}
+    name="email"
+    parent={
+      AddVacanciesModal {
+        "checkSubmitState": [Function],
+        "clickCheckbox": [Function],
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "filterPayload": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleEndChange": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allCertifications": Object {
+            "data": Array [
+              Object {
+                "id": 1,
+                "name": "Data science",
+              },
+            ],
+          },
+          "allProjectRoles": Object {
+            "data": Array [
+              Object {
+                "id": 2,
+                "name": "Scrum Master",
+              },
+            ],
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "id": 1,
+                "name": "WatchTower",
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "createCertificactionVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "createNewProjectVacancies": [MockFunction],
+          "createProjectVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllCertifications": [MockFunction],
+          "fetchAllProjects": [MockFunction],
+          "fetchAllRoles": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "projectVacanciesOnFocus": Object {},
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderCertificationForm": [Function],
+        "renderCheckBox": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderText": [Function],
+        "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "certificationInputs": Object {},
+          "currentDate": "2019-3-15",
+          "endDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "requester": false,
+          "startDate": "2019-03-10",
+          "success": false,
+          "vacancyType": "Role vacancy",
+        },
+        "toogleVacanciesToDisplay": [Function],
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <AddVacanciesModal
+              allCertifications={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 1,
+                      "name": "Data science",
+                    },
+                  ],
+                }
+              }
+              allProjectRoles={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 2,
+                      "name": "Scrum Master",
+                    },
+                  ],
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 1,
+                      "name": "WatchTower",
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createCertificactionVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createNewProjectVacancies={[MockFunction]}
+              createProjectVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllCertifications={[MockFunction]}
+              fetchAllProjects={[MockFunction]}
+              fetchAllRoles={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              projectVacanciesOnFocus={Object {}}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="CREATE"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="addProjectVacanciesModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="New project vacancies have been created!"
+              title="Create Vacancies"
+            >
+              <React.Fragment>
+                <div
+                  className="form-toggle-buttons"
+                >
+                  <button
+                    className="form-vacancy-toggle-button--active"
+                    id="project-role-button"
+                    onClick={[Function]}
+                    type="button"
+                    value="Role vacancy"
+                  >
+                    Project Vacancies
+                  </button>
+                  <button
+                    className="form-vacancy-toggle-button"
+                    id="certification-button"
+                    onClick={[Function]}
+                    type="button"
+                    value="Certification vacancy"
+                  >
+                    Certification Vacancies
+                  </button>
+                </div>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={6}
+                    dropDownFor=""
+                    enableSearch={true}
+                    extras={null}
+                    inputValue={Object {}}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "label": "WatchTower",
+                          "name": "WatchTower",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={6}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Object {}}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={
+                      Array [
+                        Object {
+                          "id": 2,
+                          "label": "Scrum Master",
+                          "name": "Scrum Master",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Enter email"
+    testInput={[Function]}
+    type="text"
   />
   <TextInput
     alertText="Please input a valid number of slots!"
@@ -717,9 +1176,11 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
       AddVacanciesModal {
         "checkSubmitState": [Function],
         "clickCheckbox": [Function],
+        "compareDates": [Function],
         "context": Object {},
         "defaultDate": [Function],
         "filterPayload": [Function],
+        "getModelTitle": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "handleEndChange": [Function],
@@ -786,15 +1247,16 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
         "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
-        "renderRoleForm": [Function],
         "renderText": [Function],
         "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
         "setState": [Function],
         "state": Object {
           "certificationInputs": Object {},
           "currentDate": "2019-3-15",
           "endDate": "2019-3-15",
           "error": "",
+          "errors": Object {},
           "inputs": Object {},
           "requester": false,
           "startDate": "2019-03-10",
@@ -992,6 +1454,21 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     parent={[Circular]}
                     placeholder="Select Role"
                   />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
                 </React.Fragment>
                 <TextInput
                   alertText="Please input a valid number of slots!"
@@ -1004,10 +1481,39 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                   length={999}
                   name="slots"
                   parent={[Circular]}
-                  placeholder=""
+                  placeholder="Enter no. of slots"
                   testInput={[Function]}
                   type="text"
                 />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
               </React.Fragment>
             </GenericModal>,
             "_rendering": false,
@@ -1017,10 +1523,39 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
         },
       }
     }
-    placeholder=""
+    placeholder="Enter no. of slots"
     testInput={[Function]}
     type="text"
   />
+  <div
+    className="form-date-picker"
+  >
+    <FeedbackDuration
+      add={
+        Object {
+          "data": Object {},
+          "error": null,
+          "loading": false,
+        }
+      }
+      calenderType="horizontal"
+      currentDate="2019-3-15"
+      edit={
+        Object {
+          "data": Object {},
+          "error": null,
+          "loading": false,
+        }
+      }
+      endDate="2019-3-15"
+      errors={Object {}}
+      handleEndDateChange={[Function]}
+      handleStartDateChange={[Function]}
+      startDate="2019-03-10"
+      success={false}
+      vacancyType="Role vacancy"
+    />
+  </div>
 </GenericModal>
 `;
 
@@ -1089,9 +1624,11 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
       AddVacanciesModal {
         "checkSubmitState": [Function],
         "clickCheckbox": [Function],
+        "compareDates": [Function],
         "context": Object {},
         "defaultDate": [Function],
         "filterPayload": [Function],
+        "getModelTitle": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "handleEndChange": [Function],
@@ -1170,15 +1707,16 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
         "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
-        "renderRoleForm": [Function],
         "renderText": [Function],
         "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
         "setState": [Function],
         "state": Object {
           "certificationInputs": Object {},
           "currentDate": "2019-3-15",
           "endDate": "2019-3-15",
           "error": "",
+          "errors": Object {},
           "inputs": Object {},
           "requester": false,
           "startDate": "2019-03-10",
@@ -1376,6 +1914,21 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     parent={[Circular]}
                     placeholder="Select Role"
                   />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
                 </React.Fragment>
                 <TextInput
                   alertText="Please input a valid number of slots!"
@@ -1388,10 +1941,39 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                   length={999}
                   name="slots"
                   parent={[Circular]}
-                  placeholder=""
+                  placeholder="Enter no. of slots"
                   testInput={[Function]}
                   type="text"
                 />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
               </React.Fragment>
             </GenericModal>,
             "_rendering": false,
@@ -1421,9 +2003,11 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
       AddVacanciesModal {
         "checkSubmitState": [Function],
         "clickCheckbox": [Function],
+        "compareDates": [Function],
         "context": Object {},
         "defaultDate": [Function],
         "filterPayload": [Function],
+        "getModelTitle": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "handleEndChange": [Function],
@@ -1502,15 +2086,16 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
         "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
-        "renderRoleForm": [Function],
         "renderText": [Function],
         "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
         "setState": [Function],
         "state": Object {
           "certificationInputs": Object {},
           "currentDate": "2019-3-15",
           "endDate": "2019-3-15",
           "error": "",
+          "errors": Object {},
           "inputs": Object {},
           "requester": false,
           "startDate": "2019-03-10",
@@ -1708,6 +2293,21 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     parent={[Circular]}
                     placeholder="Select Role"
                   />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
                 </React.Fragment>
                 <TextInput
                   alertText="Please input a valid number of slots!"
@@ -1720,10 +2320,39 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                   length={999}
                   name="slots"
                   parent={[Circular]}
-                  placeholder=""
+                  placeholder="Enter no. of slots"
                   testInput={[Function]}
                   type="text"
                 />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
               </React.Fragment>
             </GenericModal>,
             "_rendering": false,
@@ -1734,6 +2363,383 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
       }
     }
     placeholder="Select Role"
+  />
+  <TextInput
+    alertText="Please input a valid email!"
+    className="wt-text-input"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    inputValue=""
+    label="Enter Requester Email"
+    length={999}
+    name="email"
+    parent={
+      AddVacanciesModal {
+        "checkSubmitState": [Function],
+        "clickCheckbox": [Function],
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "filterPayload": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleEndChange": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allCertifications": Object {
+            "data": Array [
+              Object {
+                "id": 1,
+                "name": "Data science",
+              },
+            ],
+          },
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "createCertificactionVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "createNewProjectVacancies": [MockFunction],
+          "createProjectVacancies": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "editMode": false,
+          "editProjectVacancies": [MockFunction],
+          "editProjectVacanciesState": Object {
+            "data": Object {},
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllCertifications": [MockFunction],
+          "fetchAllProjects": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "projectVacanciesOnFocus": Object {},
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderCertificationForm": [Function],
+        "renderCheckBox": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderText": [Function],
+        "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "certificationInputs": Object {},
+          "currentDate": "2019-3-15",
+          "endDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "requester": false,
+          "startDate": "2019-03-10",
+          "success": false,
+          "vacancyType": "Role vacancy",
+        },
+        "toogleVacanciesToDisplay": [Function],
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <AddVacanciesModal
+              allCertifications={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 1,
+                      "name": "Data science",
+                    },
+                  ],
+                }
+              }
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createCertificactionVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              createNewProjectVacancies={[MockFunction]}
+              createProjectVacancies={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              editMode={false}
+              editProjectVacancies={[MockFunction]}
+              editProjectVacanciesState={
+                Object {
+                  "data": Object {},
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllCertifications={[MockFunction]}
+              fetchAllProjects={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              projectVacanciesOnFocus={Object {}}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="CREATE"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="addProjectVacanciesModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="New project vacancies have been created!"
+              title="Create Vacancies"
+            >
+              <React.Fragment>
+                <div
+                  className="form-toggle-buttons"
+                >
+                  <button
+                    className="form-vacancy-toggle-button--active"
+                    id="project-role-button"
+                    onClick={[Function]}
+                    type="button"
+                    value="Role vacancy"
+                  >
+                    Project Vacancies
+                  </button>
+                  <button
+                    className="form-vacancy-toggle-button"
+                    id="certification-button"
+                    onClick={[Function]}
+                    type="button"
+                    value="Certification vacancy"
+                  >
+                    Certification Vacancies
+                  </button>
+                </div>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={6}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Object {}}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={6}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Object {}}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Enter email"
+    testInput={[Function]}
+    type="text"
   />
   <TextInput
     alertText="Please input a valid number of slots!"
@@ -1749,9 +2755,11 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
       AddVacanciesModal {
         "checkSubmitState": [Function],
         "clickCheckbox": [Function],
+        "compareDates": [Function],
         "context": Object {},
         "defaultDate": [Function],
         "filterPayload": [Function],
+        "getModelTitle": [Function],
         "handleClick": [Function],
         "handleClose": [Function],
         "handleEndChange": [Function],
@@ -1830,15 +2838,16 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
         "renderError": [Function],
         "renderFooter": [Function],
         "renderModalBody": [Function],
-        "renderRoleForm": [Function],
         "renderText": [Function],
         "renderToggleButtons": [Function],
+        "renderVacancyForm": [Function],
         "setState": [Function],
         "state": Object {
           "certificationInputs": Object {},
           "currentDate": "2019-3-15",
           "endDate": "2019-3-15",
           "error": "",
+          "errors": Object {},
           "inputs": Object {},
           "requester": false,
           "startDate": "2019-03-10",
@@ -2036,6 +3045,21 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     parent={[Circular]}
                     placeholder="Select Role"
                   />
+                  <TextInput
+                    alertText="Please input a valid email!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Enter Requester Email"
+                    length={999}
+                    name="email"
+                    parent={[Circular]}
+                    placeholder="Enter email"
+                    testInput={[Function]}
+                    type="text"
+                  />
                 </React.Fragment>
                 <TextInput
                   alertText="Please input a valid number of slots!"
@@ -2048,10 +3072,39 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                   length={999}
                   name="slots"
                   parent={[Circular]}
-                  placeholder=""
+                  placeholder="Enter no. of slots"
                   testInput={[Function]}
                   type="text"
                 />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    add={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    calenderType="horizontal"
+                    currentDate="2019-3-15"
+                    edit={
+                      Object {
+                        "data": Object {},
+                        "error": null,
+                        "loading": false,
+                      }
+                    }
+                    endDate="2019-3-15"
+                    errors={Object {}}
+                    handleEndDateChange={[Function]}
+                    handleStartDateChange={[Function]}
+                    startDate="2019-03-10"
+                    success={false}
+                    vacancyType="Role vacancy"
+                  />
+                </div>
               </React.Fragment>
             </GenericModal>,
             "_rendering": false,
@@ -2061,9 +3114,38 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
         },
       }
     }
-    placeholder=""
+    placeholder="Enter no. of slots"
     testInput={[Function]}
     type="text"
   />
+  <div
+    className="form-date-picker"
+  >
+    <FeedbackDuration
+      add={
+        Object {
+          "data": Object {},
+          "error": null,
+          "loading": false,
+        }
+      }
+      calenderType="horizontal"
+      currentDate="2019-3-15"
+      edit={
+        Object {
+          "data": Object {},
+          "error": null,
+          "loading": false,
+        }
+      }
+      endDate="2019-3-15"
+      errors={Object {}}
+      handleEndDateChange={[Function]}
+      handleStartDateChange={[Function]}
+      startDate="2019-03-10"
+      success={false}
+      vacancyType="Role vacancy"
+    />
+  </div>
 </GenericModal>
 `;

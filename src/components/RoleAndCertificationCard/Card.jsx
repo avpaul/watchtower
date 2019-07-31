@@ -301,9 +301,15 @@ class Card extends React.Component {
           {this.renderDropdown(type)}
           <div className="role-card__title">{truncate(details.name, 22)}</div>
           <p className="role-card__attributes-sm">
-            Vacancies{' '}
+            Vacancies:
             <span className="role-card__attributes-count-sm">
-              {details.vacancies_count}
+              {' '.concat(details.vacancies_count)}
+            </span>
+          </p>
+          <p className="role-card__attributes-sm">
+            Duration:
+            <span className="role-card__attributes-count-sm">
+              {' '.concat(details.duration, ' months')}
             </span>
           </p>
         </div>

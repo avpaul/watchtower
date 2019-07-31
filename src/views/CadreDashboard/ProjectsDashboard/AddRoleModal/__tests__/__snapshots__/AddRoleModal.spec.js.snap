@@ -226,6 +226,21 @@ Object {
                     testInput={[Function]}
                     type="text"
                   />
+                  <TextInput
+                    alertText="Please input a valid duration!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Role Duration (months)"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Enter duration"
+                    testInput={[Function]}
+                    type="text"
+                  />
                   <DropdownInput
                     className="wt-dropdown"
                     comment=""
@@ -294,6 +309,261 @@ Object {
         }
       }
       placeholder="Enter Role Name"
+      testInput={[Function]}
+      type="text"
+    />
+    <TextInput
+      alertText="Please input a valid duration!"
+      className="wt-text-input"
+      comment=""
+      componentStateKey="inputs"
+      defaultStatus={0}
+      inputValue=""
+      label="Role Duration (months)"
+      length={999}
+      name="duration"
+      parent={
+        AddRoleModal {
+          "addNewSkill": [Function],
+          "addRoleSkills": [Function],
+          "context": Object {},
+          "createRoleStatus": [Function],
+          "dropdownExtras": [Function],
+          "dropdownProps": [Function],
+          "getSkills": [Function],
+          "handleClose": [Function],
+          "handleSkillChange": [Function],
+          "handleSubmissionError": [Function],
+          "handleSubmit": [Function],
+          "prepareSkills": [Function],
+          "props": Object {
+            "createNewRole": [MockFunction],
+            "createRole": Object {
+              "data": Array [],
+              "error": Object {},
+              "loading": false,
+            },
+            "getRoleSkills": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            },
+            "history": Object {
+              "replace": [MockFunction],
+            },
+            "roleSkills": Object {
+              "data": Array [
+                Object {
+                  "name": "laravel",
+                },
+              ],
+              "error": Object {},
+              "loading": false,
+            },
+          },
+          "refs": Object {},
+          "renderBody": [Function],
+          "saveRoleButton": [Function],
+          "setState": [Function],
+          "state": Object {
+            "inputs": Object {},
+            "newSkill": "",
+            "skills": Array [],
+            "success": false,
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <AddRoleModal
+                createNewRole={[MockFunction]}
+                createRole={
+                  Object {
+                    "data": Array [],
+                    "error": Object {},
+                    "loading": false,
+                  }
+                }
+                getRoleSkills={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                history={
+                  Object {
+                    "replace": [MockFunction],
+                  }
+                }
+                roleSkills={
+                  Object {
+                    "data": Array [
+                      Object {
+                        "name": "laravel",
+                      },
+                    ],
+                    "error": Object {},
+                    "loading": false,
+                  }
+                }
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <GenericModal
+                footer={
+                  <div
+                    className="modal-footer"
+                  >
+                    <button
+                      className="btn"
+                      id="saveRoleButton"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      CREATE
+                    </button>
+                  </div>
+                }
+                handleClose={[Function]}
+                handleSubmit={[Function]}
+                id="addRoleModal"
+                size=""
+                submitLoading={false}
+                success={false}
+                successMessage="New role created sucessfully"
+                title="Create Role"
+              >
+                <React.Fragment>
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Role Name"
+                    length={999}
+                    name="name"
+                    parent={[Circular]}
+                    placeholder="Enter Role Name"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <TextInput
+                    alertText="Please input a valid duration!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Role Duration (months)"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Enter duration"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor="skills"
+                    enableSearch={true}
+                    extras={
+                      <div
+                        className="add-skills wt-dropdown__list__item"
+                      >
+                        <input
+                          id="addSkillsInput"
+                          onChange={[Function]}
+                          placeholder="Add skills ..."
+                          type="text"
+                          value=""
+                        />
+                        <button
+                          id="addSkillsButton"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <span
+                            id="addSkillsButtonImage"
+                          >
+                            <img
+                              alt="Add Icon"
+                              src="plus.png"
+                            />
+                          </span>
+                        </button>
+                      </div>
+                    }
+                    inputValue={Array []}
+                    label="Skills"
+                    loading={false}
+                    multipleSelection={true}
+                    name="skills"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Add skills"
+                  />
+                  <TextInput
+                    alertText=""
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Role Description"
+                    length={999}
+                    name="description"
+                    parent={[Circular]}
+                    placeholder="Enter description"
+                    testInput={[Function]}
+                    type="textarea"
+                  />
+                </React.Fragment>
+              </GenericModal>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      placeholder="Enter duration"
       testInput={[Function]}
       type="text"
     />
@@ -493,6 +763,21 @@ Object {
                     name="name"
                     parent={[Circular]}
                     placeholder="Enter Role Name"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <TextInput
+                    alertText="Please input a valid duration!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Role Duration (months)"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Enter duration"
                     testInput={[Function]}
                     type="text"
                   />
@@ -731,6 +1016,21 @@ Object {
                     name="name"
                     parent={[Circular]}
                     placeholder="Enter Role Name"
+                    testInput={[Function]}
+                    type="text"
+                  />
+                  <TextInput
+                    alertText="Please input a valid duration!"
+                    className="wt-text-input"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    inputValue=""
+                    label="Role Duration (months)"
+                    length={999}
+                    name="duration"
+                    parent={[Circular]}
+                    placeholder="Enter duration"
                     testInput={[Function]}
                     type="text"
                   />

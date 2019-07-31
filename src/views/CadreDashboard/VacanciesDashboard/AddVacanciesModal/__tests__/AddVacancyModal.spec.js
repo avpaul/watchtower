@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import cases from 'jest-in-case';
 import AddVacanciesModal from '../AddVacanciesModal';
 import initialState from '../../../../../redux/reducers/initialState';
 import projectVacanciesGroupMock from '../../../../../__mocks__/projectVacancy';
@@ -61,6 +60,9 @@ describe('Add Vacancy Modal', () => {
   const newVacanciesDetails = {
     project: '1',
     role: '2',
+    start_date: '2019-12-10',
+    closing_date: '2019-12-15',
+    requester_email: 'test.user@andela.com',
     slots: '3'
   };
 
@@ -151,6 +153,7 @@ describe('Add Vacancy Modal', () => {
     const spy = jest.fn();
     const { wrapper } = setup({ createNewProjectVacancies: spy }, true);
     const button = wrapper.find('.cadre-main-button');
+
     button.simulate('click');
 
     addDropdownValue(wrapper, '#project', newVacanciesDetails.project);
@@ -162,42 +165,34 @@ describe('Add Vacancy Modal', () => {
     wrapper
       .find('#slots')
       .simulate('change', { target: { value: newVacanciesDetails.slots } });
+    wrapper.find('#email').simulate('change', {
+      target: { value: newVacanciesDetails.requester_email }
+    });
     testSubmission(button, 1, spy);
   });
 
-  cases(
-    'calls the handleSubmit successfully on editMode',
-    testCase => {
-      const props = {
-        editProjectVacancies: jest.fn(),
-        editMode: true,
-        projectVacanciesOnFocus: projectVacanciesGroupMock
-      };
+  it('calls the handleSubmit successfully on editMode', () => {
+    const props = {
+      editProjectVacancies: jest.fn(),
+      editMode: true,
+      projectVacanciesOnFocus: projectVacanciesGroupMock
+    };
 
-      const { wrapper } = setup(props, true);
-      const button = wrapper.find('.cadre-main-button');
-      button.simulate('click');
+    const { wrapper } = setup(props, true);
+    const button = wrapper.find('.cadre-main-button');
+    button.simulate('click');
+    testSubmission(button, 0, props.editProjectVacancies);
 
-      testSubmission(button, 0, props.editProjectVacancies);
-      if (testCase.isDropdown) {
-        addDropdownValue(
-          wrapper,
-          `#${testCase.field}`,
-          newVacanciesDetails[testCase.field]
-        );
-      } else {
-        wrapper
-          .find(`#${testCase.field}`)
-          .simulate('change', { target: { value: newVacanciesDetails.slots } });
-      }
-      testSubmission(button, 1, props.editProjectVacancies);
-    },
-    [
-      { field: 'project', isDropdown: true },
-      { field: 'role', isDropdown: true },
-      { field: 'slots', isDropdown: false }
-    ]
-  );
+    addDropdownValue(wrapper, '#project', newVacanciesDetails.project);
+    addDropdownValue(wrapper, '#role', newVacanciesDetails.role);
+    wrapper
+      .find('#slots')
+      .simulate('change', { target: { value: newVacanciesDetails.slots } });
+    wrapper.find('#email').simulate('change', {
+      target: { value: newVacanciesDetails.requester_email }
+    });
+    testSubmission(button, 1, props.editProjectVacancies);
+  });
 
   it('calls the handleClose successfully', async () => {
     const spy = jest.fn();
@@ -210,6 +205,10 @@ describe('Add Vacancy Modal', () => {
     wrapper
       .find('#slots')
       .simulate('change', { target: { value: newVacanciesDetails.slots } });
+    wrapper.find('#email').simulate('change', {
+      target: { value: newVacanciesDetails.requester_email }
+    });
+    button.simulate('click');
     testSubmission(button, 1, spy);
 
     modal.instance().handleClose();
@@ -256,5 +255,14 @@ describe('Add Vacancy Modal', () => {
     const checkbox = wrapper.find('#checkbox');
     checkbox.simulate('click');
     expect(modal.state('requester')).toBeTruthy();
+  });
+
+  it('should set state', () => {
+    const { wrapper } = setup({}, false);
+    wrapper.instance().handleStartChange('2019-10-07');
+    expect(wrapper.instance().state.startDate).toEqual('2019-10-07');
+
+    wrapper.instance().handleEndChange('2019-10-14');
+    expect(wrapper.instance().state.endDate).toEqual('2019-10-14');
   });
 });

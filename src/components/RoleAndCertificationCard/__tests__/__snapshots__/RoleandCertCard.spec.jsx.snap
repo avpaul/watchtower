@@ -43,11 +43,22 @@ exports[`Test Certification Card component should handle click count correctly 1
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
-      />
+      >
+         undefined
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
+      </span>
     </p>
   </div>
   <hr />
@@ -188,11 +199,22 @@ exports[`Test Certification Card component should handle close modal correctly 1
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
-      />
+      >
+         undefined
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
+      </span>
     </p>
   </div>
   <hr />
@@ -349,11 +371,22 @@ exports[`Test Certification Card component should render correctly 1`] = `
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
-      />
+      >
+         undefined
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
+      </span>
     </p>
   </div>
   <hr />
@@ -494,11 +527,22 @@ exports[`Test Certification Card component should render modal 1`] = `
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
-      />
+      >
+         undefined
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
+      </span>
     </p>
   </div>
   <hr />
@@ -641,12 +685,21 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
       >
-        3
+         3
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
       </span>
     </p>
   </div>
@@ -788,12 +841,21 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
       >
-        3
+         3
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
       </span>
     </p>
   </div>
@@ -935,12 +997,21 @@ exports[`Test Role Card component should render correctly 1`] = `
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
       >
-        3
+         3
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
       </span>
     </p>
   </div>
@@ -1082,12 +1153,21 @@ exports[`Test Role Card component should render modal 1`] = `
     <p
       className="role-card__attributes-sm"
     >
-      Vacancies
-       
+      Vacancies:
       <span
         className="role-card__attributes-count-sm"
       >
-        3
+         3
+      </span>
+    </p>
+    <p
+      className="role-card__attributes-sm"
+    >
+      Duration:
+      <span
+        className="role-card__attributes-count-sm"
+      >
+         undefined months
       </span>
     </p>
   </div>

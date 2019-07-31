@@ -38,8 +38,15 @@ class DropdownInput extends Component {
 
   componentDidUpdate(prevProps) {
     const { inputValue } = this.props;
-    // eslint-disable-next-line react/no-did-update-set-state
-    if (prevProps.inputValue !== inputValue) this.setState({ inputValue });
+    if (prevProps.inputValue.label !== inputValue.label)
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ inputValue });
+  }
+
+  componentWillUnmount() {
+    const { name } = this.props;
+    if (!!dropdownOnFocus || dropdownOnFocus.props.name === name)
+      dropdownOnFocus = {};
   }
 
   /**
