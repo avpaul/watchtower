@@ -186,7 +186,7 @@ class AddRoleModal extends Component {
         parent={this}
         name="name"
         label="Role Name"
-        placeholder="FPC"
+        placeholder="Enter Role Name"
         testInput={value => value.trim() !== ''}
       />
       <FormInputs.DropdownInput
