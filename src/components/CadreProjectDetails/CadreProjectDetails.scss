@@ -10,8 +10,7 @@
 .project-details__card-big {
   box-sizing: border-box;
   padding: 1rem 50px;
-  max-height: 570px;
-  min-height: 570px;
+  min-height: auto;
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
@@ -54,6 +53,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+
 .project-details__card-big .relevant-documents-card {
   height: 86px;
   width: 280px;
@@ -94,12 +94,14 @@
   width: 100%;
   display: flex;
 }
+
 .project-details__card-small .project-details {
   height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .project-details__card-small .project-type div {
   background: #ebeff3;
   padding: 0.3rem;
@@ -109,6 +111,7 @@
   border-radius: 3px;
   letter-spacing: 2px;
 }
+
 .project-details__card-small .project-logo {
   width: 100%;
   display: flex;
@@ -117,10 +120,12 @@
   justify-content: space-between;
   height: 6rem;
 }
+
 .project-details__card-small .project-logo img {
   height: 50px;
   width: 60px;
 }
+
 .project-details__card-small .project-logo h3 {
   color: #344c5a;
   font-family: $font-primary;
@@ -165,6 +170,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .project-details__card-small .project-stacks .stack {
   background: #ebeff3;
   border: 0px solid #ebeff3;
@@ -195,16 +201,19 @@
   height: 50px;
   justify-content: flex-end;
 }
+
 .project-details__card-small .manager-details {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: baseline;
 }
+
 .project-details__card-small .manager-details h4,
 .project-details__card-small .manager-details p {
   margin: 0;
 }
+
 .project-details__card-small .manager-details p {
   color: #344c5a;
   font-family: $font-primary;
@@ -227,6 +236,7 @@
   border-radius: 0.5rem;
   object-fit: cover;
 }
+
 .project-details__card-small .project-links {
   display: flex;
   flex-direction: column;
@@ -234,6 +244,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
 .project-details__card-small .project-links .links {
   box-sizing: border-box;
   height: 55px;
@@ -247,10 +258,12 @@
   background-color: #ffffff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
 }
+
 .project-details__card-small .project-links .links img {
   height: 25px;
   width: 25px;
 }
+
 .project-details__engineers {
   padding: 1rem;
   width: 108%;
@@ -265,6 +278,7 @@
   line-height: 31px;
   text-transform: capitalize;
 }
+
 .project-details__engineers .dashboard-table__header .dashboard-table__cell,
 .project-deatils__engineers .dashboard-table__header {
   background: #f4f8f9 !important;
@@ -273,6 +287,7 @@
   font-size: 14px;
   line-height: 18px;
 }
+
 .project-details__engineers .dashboard-table__row .dashboard-table__cell img {
   height: 25px;
   width: 25px;
@@ -280,6 +295,7 @@
   object-fit: cover;
   margin: 0 0.8rem 0 0;
 }
+
 .dashboard-table__row > .dashboard-table__cell:nth-child(1) {
   width: 14rem;
 }
