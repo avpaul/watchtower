@@ -217,14 +217,14 @@ class ProjectForm extends Component {
   };
 
   renderSubmitButton = createProject => {
-    const { location } = this.props;
+    const { location, editSingleProject } = this.props;
     const currentPath = location.pathname;
     const buttonName = currentPath.includes('create') ? 'SUBMIT' : 'SAVE';
 
     return (
       <div className="col-12">
         <div className="row justify-content-end mr-0 mt-3">
-          {createProject.loading ? (
+          {createProject.loading || editSingleProject.loading ? (
             <Loader size="small" />
           ) : (
             <button
