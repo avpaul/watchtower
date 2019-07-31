@@ -4,7 +4,7 @@ exports[`test cadre header should render properly 1`] = `
 <div>
   <LogOutPage />
   <div
-    className="cadre-navbar position-fixed w-100 z-index-10"
+    className="cadre-navbar"
     id="nav"
   >
     <div

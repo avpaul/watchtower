@@ -10,7 +10,7 @@ const CadreHeader = props => {
   return (
     <div>
       <LogOutModal />
-      <div id="nav" className="cadre-navbar position-fixed w-100 z-index-10">
+      <div id="nav" className="cadre-navbar">
         {renderModal(notifications, unreadnotifications)}
         <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
           <CadreLogoSection />
