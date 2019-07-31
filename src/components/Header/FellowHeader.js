@@ -19,39 +19,41 @@ const FellowHeader = props => {
     role
   } = props;
   return (
-    <div id="nav" className="header">
+    <div>
       <LogOutModal />
-      {renderModal(notifications, unreadnotifications)}
-      <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
-        <LogoSection />
-        <div className="d-flex flex-row">
-          <span
-            className="notification"
-            onClick={showModal}
-            role="presentation"
-          >
-            <img
-              className="notification__icon"
-              src={notificationIcon}
-              alt="notificationIcon"
-            />
-            <i
-              className={
-                unreadnotifications.length > 0 ? 'notification__icon' : ''
-              }
-            />
-          </span>
-          <ProfileSection user={user} />
+      <div id="nav" className="header position-fixed w-100 z-index-10">
+        {renderModal(notifications, unreadnotifications)}
+        <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
+          <LogoSection />
+          <div className="d-flex flex-row">
+            <span
+              className="notification"
+              onClick={showModal}
+              role="presentation"
+            >
+              <img
+                className="notification__icon"
+                src={notificationIcon}
+                alt="notificationIcon"
+              />
+              <i
+                className={
+                  unreadnotifications.length > 0 ? 'notification__icon' : ''
+                }
+              />
+            </span>
+            <ProfileSection user={user} />
+          </div>
         </div>
+        <hr className="header__divider" />
+        <Menu
+          user={user}
+          role={role}
+          items={getMenuItems(role)}
+          handleMenuClick={handleMenuClick}
+          activeItem={activeItem}
+        />
       </div>
-      <hr className="header__divider" />
-      <Menu
-        user={user}
-        role={role}
-        items={getMenuItems(role)}
-        handleMenuClick={handleMenuClick}
-        activeItem={activeItem}
-      />
     </div>
   );
 };
