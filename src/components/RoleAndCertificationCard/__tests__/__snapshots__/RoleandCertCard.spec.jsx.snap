@@ -129,7 +129,7 @@ exports[`Test Certification Card component should handle click count correctly 1
   </div>
   <Modal
     handleClose={[Function]}
-    show={true}
+    show={false}
     showBtn={true}
     size="large"
     title="2 test role's"
@@ -274,7 +274,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
   </div>
   <Modal
     handleClose={[Function]}
-    show={true}
+    show={false}
     showBtn={true}
     size="large"
     title="2 test role's"
@@ -672,6 +672,8 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
             <span
               className="role-card__attributes-count"
               id="applicants_count"
+              onClick={[Function]}
+              onKeypress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -727,7 +729,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
   </div>
   <Modal
     handleClose={[Function]}
-    show={true}
+    show={false}
     showBtn={true}
     size="large"
     title="1 test role"
@@ -817,6 +819,8 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
             <span
               className="role-card__attributes-count"
               id="applicants_count"
+              onClick={[Function]}
+              onKeypress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -872,7 +876,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   </div>
   <Modal
     handleClose={[Function]}
-    show={false}
+    show={true}
     showBtn={true}
     size="large"
     title="1 test role"
@@ -962,6 +966,8 @@ exports[`Test Role Card component should render correctly 1`] = `
             <span
               className="role-card__attributes-count"
               id="applicants_count"
+              onClick={[Function]}
+              onKeypress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -1107,6 +1113,8 @@ exports[`Test Role Card component should render modal 1`] = `
             <span
               className="role-card__attributes-count"
               id="applicants_count"
+              onClick={[Function]}
+              onKeypress={[Function]}
               role="button"
               tabIndex="0"
             >

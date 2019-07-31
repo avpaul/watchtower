@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import { genericAPIGetRequest, genericAPIPostRequest } from './helpers';
 import * as types from '../constants/cadreProjectRolesTypes';
@@ -69,3 +68,14 @@ export const deleteRoleRequest = () => (dispatch, getState) => {
       dispatch(deleteRoleFailure(error.response.data.message));
     });
 };
+
+/**
+ * An action creator responsible for fetching all applicants for a single role
+ * @return object An instance of a Promise
+ */
+export const getARole = roleId =>
+  genericAPIGetRequest(`projects/roles/${roleId}`, [
+    types.FETCH_SINGLE_ROLE_REQUEST,
+    types.FETCH_SINGLE_ROLE_SUCCESS,
+    types.FETCH_SINGLE_ROLE_FAILURE
+  ]);
