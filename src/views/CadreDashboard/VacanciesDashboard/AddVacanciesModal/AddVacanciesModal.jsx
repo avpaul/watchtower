@@ -95,8 +95,16 @@ class AddVacanciesModal extends Component {
       endDate,
       requester
     } = this.state;
+
+    const certificationInputsWithSlot = {
+      ...certificationInputs,
+      slots: { ...inputs.slots }
+    };
+
     const inputsToCheck =
-      vacancyType === 'Certification vacancy' ? certificationInputs : inputs;
+      vacancyType === 'Certification vacancy'
+        ? certificationInputsWithSlot
+        : inputs;
 
     const invalidInput = Object.values(inputsToCheck).find(
       input => !input.isValid()
