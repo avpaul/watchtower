@@ -45,9 +45,8 @@ export const genericAPIPostRequest = (
   actionTypes,
   postData,
   onSuccess = () => {}
-) => {
-  console.log(postData);
-  return genericAPIRequest(
+) =>
+  genericAPIRequest(
     actionTypes,
     {
       method: 'POST',
@@ -56,7 +55,6 @@ export const genericAPIPostRequest = (
     },
     onSuccess
   );
-};
 
 /**
  * A generic action creator for making GET requests

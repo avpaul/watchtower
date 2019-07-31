@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import EManagerSimsLeadsContainer from './EManagerSimsLeadsContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 import PrePipNotificationForm from '../../components/PrePipNotificationForm';
+import NotFoundPage from '../NotFoundPage';
 
 /**
  * Defines routes for the opsdashboard
@@ -39,6 +40,7 @@ const EngineeringManagerSimsLeadDashboard = props => (
           ]}
           component={() => <DeveloperDashboardContainer {...props} />}
         />
+        <Route component={NotFoundPage} />
       </Switch>
     </React.Fragment>
   </Route>

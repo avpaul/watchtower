@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../../components/Header';
 import FellowDashboardMain from './FellowDashboardMain';
 import ConnectedFellowPerformance from './FellowPerformance';
+import NotFoundPage from '../NotFoundPage';
 
 /**
  * Defines routes for the ttldashboard
@@ -23,7 +24,7 @@ const FellowDashboard = props => (
           path="/performance"
           component={() => <ConnectedFellowPerformance {...props} />}
         />
-        <Header {...props} />
+        <Route component={NotFoundPage} />
       </Switch>
     </React.Fragment>
   </Route>

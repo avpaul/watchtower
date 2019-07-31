@@ -59,7 +59,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -83,7 +86,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -107,7 +113,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -131,7 +140,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -155,7 +167,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -179,7 +194,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -203,7 +221,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -227,7 +248,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -251,7 +275,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);
@@ -275,7 +302,10 @@ describe('<Dashboards />', () => {
         picture: 'http://',
         roles: { Andelan: 'key', Fellow: 'key' }
       },
-      role: 'Fellow'
+      role: 'Fellow',
+      location: {
+        pathname: ''
+      }
     });
 
     const item = shallow(<Dashboards {...store.getState()} store={store} />);

@@ -9,6 +9,7 @@ import VacanciesDashboard from './VacanciesDashboard';
 import CertificationsDashboard from './CertificatesDashboard';
 
 import './CadreDashboard.scss';
+import NotFoundPage from '../NotFoundPage';
 
 class CadreDashboard extends Component {
   /**
@@ -58,6 +59,7 @@ class CadreDashboard extends Component {
 
   renderRoute = (RouteComponent, url) => (
     <Route
+      exact
       path={url}
       component={newProps => (
         <RouteComponent {...{ ...this.props, match: newProps.match }} />
@@ -79,6 +81,7 @@ class CadreDashboard extends Component {
                 {this.renderRoute(RolesDashboard, routes[2])}
                 {this.renderRoute(CertificationsDashboard, routes[3])}
                 {this.renderRoute(ReportsDashboard, routes[4])}
+                <Route component={NotFoundPage} />
               </Switch>
             </div>
           </div>

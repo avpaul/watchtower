@@ -7,11 +7,12 @@ import CadreDashboardMain from '../CadreDashboard/CadreDashboardMain';
 import { Header } from '../../components/Header/Header';
 import CertificationPage from './CertificationPage';
 import RolePage from './ProjectRoleDetails';
+import NotFoundPage from '../NotFoundPage';
 
 const CadreFellowDashboard = props => {
   const { location, d1Engineer } = props;
   if (location.pathname === '/dashboard' && !d1Engineer.account_active) {
-    return <Redirect to="/cadre/welcome" />;
+    return <Redirect to="/dashboard/welcome" />;
   }
   return (
     <Route path="/dashboard">
@@ -21,7 +22,7 @@ const CadreFellowDashboard = props => {
         <Switch>
           <Route
             exact
-            path="/cadre/welcome"
+            path="/dashboard/welcome"
             component={() => <CadrePage {...props} />}
           />
           <Route
@@ -39,6 +40,7 @@ const CadreFellowDashboard = props => {
             path="/dashboard/certification/:certificationId"
             component={() => <CertificationPage />}
           />
+          <Route component={NotFoundPage} />
         </Switch>
       </Fragment>
     </Route>
