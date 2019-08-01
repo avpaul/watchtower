@@ -177,7 +177,7 @@ class ProjectFormLeft extends Component {
           {this.renderSlackChannelInput()}
           {renderTextInput({
             name: 'mockups',
-            label: 'Invision Link',
+            label: 'Mockup Link',
             inputValue: projectDetails
               ? projectDetails.mockups
               : projectDetails.mockups,
