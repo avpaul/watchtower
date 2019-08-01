@@ -287,7 +287,7 @@ describe('Project Form', () => {
     });
   });
 
-  it('successfully calls the test method for the inVision link inputs', async () => {
+  it('successfully calls the test method for the Mockup link inputs', async () => {
     const { wrapper } = setup({}, true);
     await testMockupsInput(wrapper, 'Link', 5);
     await testMockupsInput(wrapper, 'https://projects.invisionapp.com', 6);
