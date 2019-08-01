@@ -24,23 +24,37 @@ class EngineerVacancies extends Component {
 
   renderVacancyCards = (vacanciesArray, certificationsArray) => (
     <div className="render-vacancies__div">
-      {vacanciesArray.map(({ role, project }) => (
-        <EngineerVacancyCard 
-          role={role.name}
-          roleId={role.id} 
-          projectName={project.name} 
-          projectId={project.id}
-        />
-      ))}
+      {vacanciesArray.map(
+        ({ role, project, available_slots: availableSlots, vacancies }) => (
+          <EngineerVacancyCard
+            role={role.name}
+            roleId={role.id}
+            projectName={project.name}
+            projectId={project.id}
+            slots={availableSlots}
+            startDate={vacancies[0].start_date}
+            closingDate={vacancies[0].closing_date}
+          />
+        )
+      )}
 
-      {certificationsArray.map(({ certification }) => (
-        <EngineerVacancyCard
-          role={certification.name}
-          roleId={certification.id}
-          projectName="Certification"
-          projectId={null}
-        />
-      ))}
+      {certificationsArray.map(
+        ({
+          certification,
+          available_slots: availableSlots,
+          vacancy_details: vacancyDetails
+        }) => (
+          <EngineerVacancyCard
+            role={certification.name}
+            roleId={certification.id}
+            projectName="Certification"
+            projectId={null}
+            slots={availableSlots}
+            startDate={vacancyDetails.start_date}
+            closingDate={vacancyDetails.closing_date}
+          />
+        )
+      )}
     </div>
   );
 

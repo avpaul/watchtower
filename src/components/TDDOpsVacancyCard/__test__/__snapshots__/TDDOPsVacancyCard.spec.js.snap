@@ -7,7 +7,7 @@ exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
   <div
     className="ops-vacancy-card__role-name"
   >
-    Wava Wehner MD C...
+    Wava Wehner MD...
   </div>
   <div>
     <span
@@ -21,10 +21,32 @@ exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
       2
     </span>
   </div>
+  <div>
+    <span
+      className="ops-vacancy-card__project-start-date__label"
+    >
+      Starting: 
+    </span>
+    <span
+      className="ops-vacancy-card__project-start-date__number"
+    >
+      2019-08-10
+    </span>
+  </div>
   <div
-    className="ops-vacancy-card__project"
+    className="ops-vacancy-card__project-date-countdown"
   >
-    20 days left
+    <span
+      className="ops-vacancy-card__project-slot__label"
+    >
+      Days Left:
+       
+    </span>
+    <span
+      className="text-danger"
+    >
+      Closed
+    </span>
   </div>
   <div
     className="ops-vacancy-card__applications"
@@ -32,7 +54,6 @@ exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
     1
      application
   </div>
-  <div />
 </div>
 `;
 
@@ -91,24 +112,44 @@ exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
     >
       5
     </span>
+    <span
+      className="ops-vacancy-card__project"
+    >
+       on Corruption.
+    </span>
+  </div>
+  <div>
+    <span
+      className="ops-vacancy-card__project-start-date__label"
+    >
+      Starting: 
+    </span>
+    <span
+      className="ops-vacancy-card__project-start-date__number"
+    >
+      NaN-NaN-NaN
+    </span>
   </div>
   <div
-    className="ops-vacancy-card__project"
+    className="ops-vacancy-card__project-date-countdown"
   >
-    Corruption.
+    <span
+      className="ops-vacancy-card__project-slot__label"
+    >
+      Days Left:
+       
+    </span>
+    <span
+      className=""
+    >
+      NaN days
+    </span>
   </div>
   <div
     className="ops-vacancy-card__applications"
   >
     0
      applications
-  </div>
-  <div>
-    <span
-      className="ops-vacancy-card__project-slot__label"
-    >
-      Closed
-    </span>
   </div>
 </div>
 `;
