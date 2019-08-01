@@ -111,20 +111,20 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -215,7 +215,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -223,7 +223,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -232,7 +232,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -389,7 +389,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -398,7 +398,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -486,20 +486,20 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -590,7 +590,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -598,7 +598,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -607,7 +607,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -764,7 +764,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -773,7 +773,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -849,20 +849,20 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -953,7 +953,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -961,7 +961,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -970,7 +970,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1127,7 +1127,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -1136,7 +1136,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -1214,20 +1214,20 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -1318,7 +1318,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1326,7 +1326,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1335,7 +1335,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1492,7 +1492,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -1501,7 +1501,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -1534,7 +1534,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
       add={
         Object {
           "data": Object {},
-          "error": null,
+          "error": Object {},
           "loading": false,
         }
       }
@@ -1543,7 +1543,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
       edit={
         Object {
           "data": Object {},
-          "error": null,
+          "error": Object {},
           "loading": false,
         }
       }
@@ -1654,20 +1654,20 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -1770,7 +1770,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1778,7 +1778,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1787,7 +1787,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -1952,7 +1952,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -1961,7 +1961,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -2033,20 +2033,20 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -2149,7 +2149,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2157,7 +2157,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2166,7 +2166,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2331,7 +2331,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -2340,7 +2340,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -2408,20 +2408,20 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -2524,7 +2524,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2532,7 +2532,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2541,7 +2541,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2706,7 +2706,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -2715,7 +2715,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -2785,20 +2785,20 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
           },
           "createCertificactionVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "createNewProjectVacancies": [MockFunction],
           "createProjectVacancies": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "editMode": false,
           "editProjectVacancies": [MockFunction],
           "editProjectVacanciesState": Object {
             "data": Object {},
-            "error": null,
+            "error": Object {},
             "loading": false,
           },
           "fetchAllCertifications": [MockFunction],
@@ -2901,7 +2901,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createCertificactionVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2909,7 +2909,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               createProjectVacancies={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -2918,7 +2918,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               editProjectVacanciesState={
                 Object {
                   "data": Object {},
-                  "error": null,
+                  "error": Object {},
                   "loading": false,
                 }
               }
@@ -3083,7 +3083,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     add={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -3092,7 +3092,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
                     edit={
                       Object {
                         "data": Object {},
-                        "error": null,
+                        "error": Object {},
                         "loading": false,
                       }
                     }
@@ -3125,7 +3125,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
       add={
         Object {
           "data": Object {},
-          "error": null,
+          "error": Object {},
           "loading": false,
         }
       }
@@ -3134,7 +3134,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
       edit={
         Object {
           "data": Object {},
-          "error": null,
+          "error": Object {},
           "loading": false,
         }
       }

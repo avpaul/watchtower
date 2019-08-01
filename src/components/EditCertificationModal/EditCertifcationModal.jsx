@@ -73,7 +73,6 @@ class EditCertificationModal extends Component {
       inputType={type}
       value={value}
       handleChange={event}
-      min="0"
     />
   );
 
@@ -107,24 +106,44 @@ class EditCertificationModal extends Component {
     history.replace('/cadre/certifications');
   };
 
-  handleSuccess = () => {
+  handleSuccess = async () => {
+    const { name, description, duration, exclusive } = this.state;
+    const {
+      editCertification,
+      data: { id }
+    } = this.props;
+    const data = {
+      name,
+      description,
+      duration,
+      exclusive
+    };
+
+    await editCertification(id, data);
     const { error } = this.props;
     if (error) {
-      toast.error('Error Updating Certificate ', {
-        autoClose: 1300,
-        closeButton: false,
-        pauseOnHover: false,
-        hideProgressBar: true
+      Object.keys(error).map(err => {
+        const message =
+          err === 'duration'
+            ? 'Duration should be at least 5 days'
+            : error[err][0];
+        return toast.error(message, {
+          autoClose: 1300,
+          closeButton: false,
+          pauseOnHover: false,
+          hideProgressBar: true
+        });
       });
-    } else {
-      toast.success('Certificate succesfully updated', {
-        autoClose: 1300,
-        onClose: () => this.onClose(),
-        closeButton: false,
-        pauseOnHover: false,
-        hideProgressBar: true
-      });
+      return;
     }
+
+    toast.success('Certificate succesfully updated', {
+      autoClose: 1300,
+      onClose: () => this.onClose(),
+      closeButton: false,
+      pauseOnHover: false,
+      hideProgressBar: true
+    });
   };
 
   handleSubmit = () => {

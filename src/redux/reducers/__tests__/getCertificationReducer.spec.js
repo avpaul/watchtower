@@ -17,7 +17,7 @@ describe('Get certication reducer', () => {
       getCertificationReducer(initialState.getCertification, {
         type: GET_CERTIFICATION_REQUEST
       })
-    ).toEqual({ data: {}, error: null, loading: true });
+    ).toEqual({ data: {}, error: {}, loading: true });
   });
   it('should handle get certification success', () => {
     expect(

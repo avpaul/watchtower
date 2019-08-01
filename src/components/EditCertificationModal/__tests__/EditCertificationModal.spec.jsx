@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { toast } from 'react-toastify';
 import EditCertificationModal from '../EditCertifcationModal';
 import EditInput from '../EditInputs/EditInput';
 import RadioButton from '../../RadioButton/RadioButton';
@@ -98,5 +99,42 @@ describe('Edit Certification Modal', () => {
     wrapper.find('button').simulate('click');
 
     expect(wrapper.find('button').text()).toBe('Update');
+  });
+
+  it('should throw a warning is duration is less than 5', async () => {
+    const spy = jest.spyOn(toast, 'error');
+
+    wrapper.setProps({
+      error: {
+        duration: 4
+      }
+    });
+    const instance = wrapper.instance();
+
+    await instance.handleSuccess();
+    expect(spy).toHaveBeenCalled();
+    expect(spy.mock.calls[0][0]).toBe('Duration should be at least 5 days');
+
+    spy.mockRestore();
+  });
+
+  it('should create successfully', async () => {
+    const spy = jest.spyOn(toast, 'success');
+
+    wrapper.setProps({ error: null });
+
+    wrapper.setState({
+      duration: 10,
+      exclusive: true,
+      loading: false
+    });
+
+    const instance = wrapper.instance();
+    await instance.handleSuccess();
+
+    expect(spy).toHaveBeenCalled();
+    expect(spy.mock.calls[0][0]).toBe('Certificate succesfully updated');
+
+    spy.mockRestore();
   });
 });

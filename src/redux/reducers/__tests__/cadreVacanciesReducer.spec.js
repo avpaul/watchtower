@@ -10,7 +10,7 @@ it('should return the initial state for unknown action type', () => {
   expect(cadreVacanciesReducer(undefined, {})).toEqual({
     loading: false,
     data: initialState.cadreVacancies.data,
-    error: null
+    error: {}
   });
 });
 

@@ -6,7 +6,7 @@ exports[`ProjectFormContainer component renders correctly 1`] = `
   createProject={
     Object {
       "data": Object {},
-      "error": null,
+      "error": Object {},
       "loading": false,
     }
   }
@@ -14,7 +14,7 @@ exports[`ProjectFormContainer component renders correctly 1`] = `
   editSingleProject={
     Object {
       "data": Object {},
-      "error": null,
+      "error": Object {},
       "loading": false,
     }
   }
@@ -72,12 +72,12 @@ exports[`ProjectFormContainer component should map state to props 1`] = `
 Object {
   "createProject": Object {
     "data": Object {},
-    "error": null,
+    "error": Object {},
     "loading": false,
   },
   "editSingleProject": Object {
     "data": Object {},
-    "error": null,
+    "error": Object {},
     "loading": false,
   },
   "getProject": undefined,

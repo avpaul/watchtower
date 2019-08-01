@@ -43,7 +43,6 @@ exports[`Edit Certification Modal should render component correctly 1`] = `
     <Input
       handleChange={[Function]}
       inputType="text"
-      min="0"
       name="name"
       title="Name"
       value="name"
@@ -51,7 +50,6 @@ exports[`Edit Certification Modal should render component correctly 1`] = `
     <Input
       handleChange={[Function]}
       inputType="number"
-      min="0"
       name="duration"
       title="Duration"
       value="10"
@@ -128,7 +126,6 @@ exports[`Edit Certification Modal should return on change value for Description 
     <Input
       handleChange={[Function]}
       inputType="text"
-      min="0"
       name="name"
       title="Name"
       value="name"
@@ -136,7 +133,6 @@ exports[`Edit Certification Modal should return on change value for Description 
     <Input
       handleChange={[Function]}
       inputType="number"
-      min="0"
       name="duration"
       title="Duration"
       value="10"
@@ -213,7 +209,6 @@ exports[`Edit Certification Modal should return on change value for Duration inp
     <Input
       handleChange={[Function]}
       inputType="text"
-      min="0"
       name="name"
       title="Name"
       value="name"
@@ -221,7 +216,6 @@ exports[`Edit Certification Modal should return on change value for Duration inp
     <Input
       handleChange={[Function]}
       inputType="number"
-      min="0"
       name="duration"
       title="Duration"
       value="10"
@@ -298,7 +292,6 @@ exports[`Edit Certification Modal should return on change value for Name input 1
     <Input
       handleChange={[Function]}
       inputType="text"
-      min="0"
       name="name"
       title="Name"
       value="name"
@@ -306,7 +299,6 @@ exports[`Edit Certification Modal should return on change value for Name input 1
     <Input
       handleChange={[Function]}
       inputType="number"
-      min="0"
       name="duration"
       title="Duration"
       value="10"
@@ -383,7 +375,6 @@ exports[`Edit Certification Modal should return on click for exclusive value 1`]
     <Input
       handleChange={[Function]}
       inputType="text"
-      min="0"
       name="name"
       title="Name"
       value="name"
@@ -391,7 +382,6 @@ exports[`Edit Certification Modal should return on click for exclusive value 1`]
     <Input
       handleChange={[Function]}
       inputType="number"
-      min="0"
       name="duration"
       title="Duration"
       value="10"

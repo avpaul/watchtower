@@ -25,14 +25,14 @@ describe('Get all vacancies reducer', () => {
     expect(getAllVacanciesReducer(undefined, {})).toEqual({
       loading: false,
       data: {},
-      error: null
+      error: {}
     });
   });
 
   it('should set loading state on fetching vacancies data', () => {
     const newState = {
       loading: true,
-      error: null,
+      error: {},
       data: {}
     };
     const action = { type: GET_ALL_VACANCIES_REQUEST };
@@ -78,7 +78,7 @@ describe('Get all vacancies reducer', () => {
 
     expect(getAllVacanciesReducer(defaultState, action)).toMatchObject({
       loading: false,
-      error: null,
+      error: {},
       data: {
         projectVacancies: newVacancies
       }
@@ -97,7 +97,7 @@ describe('Get all vacancies reducer', () => {
 
     expect(getAllVacanciesReducer(defaultState, action)).toMatchObject({
       loading: false,
-      error: null,
+      error: {},
       data: {
         projectVacancies: newVacancies.splice(1, 4)
       }
