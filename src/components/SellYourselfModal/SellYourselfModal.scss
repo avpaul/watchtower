@@ -4,8 +4,8 @@
   .modal-body__md {
     display: flex;
     flex-direction: column;
-    width: 42%;
-    padding: 62px 51px;
+    width: 38%;
+    padding: 3.875rem 3.1875rem;
   }
 
   .form-title {
@@ -22,8 +22,9 @@
   }
 
   .form-control {
-    border: 0.5px solid #ced4da;
-    max-height: 250px;
+    border: 0.0313rem solid #ced4da;
+    min-height: 13.75rem;
+    max-height: 15.625rem;
   }
 
   .apply-btn {
@@ -46,33 +47,33 @@
   width: 100%;
 
   .success__image {
-    height: 110px;
-    width: 95px;
+    height: 6.875rem;
+    width: 5.9375rem;
     color: #7a8691;
     font-family: 'Apple Color Emoji';
-    font-size: 113px;
-    letter-spacing: 1.03px;
-    line-height: 148px;
+    font-size: 7.0625rem;
+    letter-spacing: 0.0644rem;
+    line-height: 9.25rem;
   }
 
   .success_title {
     color: #344c5a;
     width: 100%;
     font-family: 'DIN Pro';
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
-    letter-spacing: -0.69px;
-    line-height: 31px;
+    letter-spacing: -0.0431rem;
+    line-height: 1.9375rem;
   }
 
   .success__sutitle {
-    height: 17px;
+    height: 1.0625rem;
     width: 100%;
     color: #7a8691;
     font-family: 'DIN Pro';
-    font-size: 13px;
-    letter-spacing: 0.12px;
-    line-height: 17px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.0075rem;
+    line-height: 1.0625rem;
     margin-top: 2rem;
     -webkit-font-smoothing: antialiased;
   }
