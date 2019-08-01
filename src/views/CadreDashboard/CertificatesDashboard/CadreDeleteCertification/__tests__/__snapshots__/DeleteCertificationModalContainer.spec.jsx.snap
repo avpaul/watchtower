@@ -4,7 +4,7 @@ exports[`Delete Certification Modal container renders correctly 1`] = `
 <DeleteCertificationModal
   certificationOnFocus={Object {}}
   deleteCertification={[Function]}
-  error={null}
+  error={Object {}}
   loading={false}
   setCertificationOnFocus={[Function]}
   store={
@@ -44,7 +44,7 @@ exports[`Delete Certification Modal container renders correctly 1`] = `
 exports[`Delete Certification Modal container should map state to props 1`] = `
 Object {
   "certificationOnFocus": Object {},
-  "error": null,
+  "error": Object {},
   "loading": false,
 }
 `;

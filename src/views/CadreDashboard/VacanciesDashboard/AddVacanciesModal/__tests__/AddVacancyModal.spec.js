@@ -232,7 +232,7 @@ describe('Add Vacancy Modal', () => {
         }
       },
       () => {
-        expect(wrapper.state('success')).toBeTruthy();
+        expect(wrapper.state('success')).toBeFalsy();
       }
     );
   });

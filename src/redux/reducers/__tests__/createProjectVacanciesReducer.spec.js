@@ -10,7 +10,7 @@ it('should return the initial state for unknown action type', () => {
   expect(createProjectVacanciesReducer(undefined, {})).toEqual({
     loading: false,
     data: initialState.createProjectVacancies.data,
-    error: null
+    error: {}
   });
 });
 

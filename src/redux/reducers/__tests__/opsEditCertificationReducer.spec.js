@@ -11,7 +11,7 @@ describe('Ops edit certification reducer', () => {
     expect(opsEditCertificationReducer(undefined, {})).toEqual({
       loading: false,
       data: initialState.editCertification.data,
-      error: null
+      error: {}
     });
   });
 
@@ -31,7 +31,8 @@ describe('Ops edit certification reducer', () => {
 
     const newState = {
       ...initialState.editCertification,
-      data: action.data
+      data: action.data,
+      error: null
     };
 
     expect(opsEditCertificationReducer(undefined, action)).toEqual(newState);
