@@ -57,7 +57,7 @@ exports[`Test Certification Card component should handle click count correctly 1
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Days
       </span>
     </p>
   </div>
@@ -213,7 +213,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Days
       </span>
     </p>
   </div>
@@ -385,7 +385,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Days
       </span>
     </p>
   </div>
@@ -541,7 +541,7 @@ exports[`Test Certification Card component should render modal 1`] = `
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Days
       </span>
     </p>
   </div>
@@ -699,7 +699,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Months
       </span>
     </p>
   </div>
@@ -855,7 +855,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Months
       </span>
     </p>
   </div>
@@ -1011,7 +1011,7 @@ exports[`Test Role Card component should render correctly 1`] = `
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Months
       </span>
     </p>
   </div>
@@ -1167,7 +1167,7 @@ exports[`Test Role Card component should render modal 1`] = `
       <span
         className="role-card__attributes-count-sm"
       >
-         undefined months
+         undefined Months
       </span>
     </p>
   </div>

@@ -22,7 +22,7 @@ exports[`sell yourself modal renders without errors 1`] = `
     <p
       className="form-title"
     >
-      Sell yourself in one sentence [500 words max]
+      Sell yourself in one sentence [500 characters max]
     </p>
     <textarea
       className="form-control"
@@ -63,7 +63,7 @@ exports[`sell yourself modal should render the error notification toast when the
     <p
       className="form-title"
     >
-      Sell yourself in one sentence [500 words max]
+      Sell yourself in one sentence [500 characters max]
     </p>
     <textarea
       className="form-control"
@@ -104,7 +104,7 @@ exports[`sell yourself modal should render the success notification toast when t
     <p
       className="form-title"
     >
-      Sell yourself in one sentence [500 words max]
+      Sell yourself in one sentence [500 characters max]
     </p>
     <textarea
       className="form-control"

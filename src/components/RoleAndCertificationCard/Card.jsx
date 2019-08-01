@@ -309,7 +309,10 @@ class Card extends React.Component {
           <p className="role-card__attributes-sm">
             Duration:
             <span className="role-card__attributes-count-sm">
-              {' '.concat(details.duration, ' months')}
+              {' '.concat(
+                details.duration,
+                type === 'certificates' ? ' Days' : ' Months'
+              )}
             </span>
           </p>
         </div>
