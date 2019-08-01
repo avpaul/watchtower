@@ -56,7 +56,7 @@ const renderD1ProjectSummary = profile =>
   ) : (
     <div className="no-project-container">
       <img src={project} alt="project-icon" />
-      <span>You&apos;ve not applied for any project yet</span>
+      <span>You&apos;re currently not active on any Cadre project</span>
     </div>
   );
 
