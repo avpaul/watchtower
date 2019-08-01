@@ -65,7 +65,7 @@ class SellYourselfModal extends Component {
     <>
       <p className="form-header">Apply for {title} certification</p>
       <p className="form-title">
-        Sell yourself in one sentence [500 words max]
+        Sell yourself in one sentence [500 characters max]
       </p>
       <textarea
         className="form-control"
