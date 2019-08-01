@@ -42,10 +42,10 @@ exports[`Test Roles Card component should render roles card correctly 1`] = `
           className="role-details"
         >
           <p>
-            Role End Date
+            Availability
           </p>
           <p>
-            NULL
+            Unavailable
           </p>
         </div>
       </div>

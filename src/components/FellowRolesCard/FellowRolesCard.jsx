@@ -35,8 +35,10 @@ const FellowRolesCard = ({ role }) => {
               <p>{role.cohort}</p>
             </div>
             <div className="role-details">
-              <p>Role End Date</p>
-              <p>NULL</p>
+              <p>Availability</p>
+              <p>
+                {role.project_role_id === null ? 'Available' : 'Unavailable'}
+              </p>
             </div>
           </div>
           <div className="fellow-stacks">{renderStacks()}</div>
