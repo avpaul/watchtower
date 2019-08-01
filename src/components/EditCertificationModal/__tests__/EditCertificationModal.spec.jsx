@@ -8,10 +8,12 @@ import Modal from '../../LargeModal/LargeModal';
 
 describe('Edit Certification Modal', () => {
   let wrapper;
+  const promise = Promise.resolve(1);
+
   const props = {
     open: true,
     toggle: jest.fn(),
-    editCertification: jest.fn(),
+    editCertification: jest.fn(() => promise),
     data: {
       id: 1,
       name: 'name',

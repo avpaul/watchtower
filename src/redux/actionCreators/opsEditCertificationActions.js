@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { toast } from 'react-toastify';
 import errorHandler from '../../services/errorHandler';
 import {
   EDIT_CERTIFICATION_FAILURE,
