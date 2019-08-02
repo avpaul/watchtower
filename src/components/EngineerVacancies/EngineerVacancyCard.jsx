@@ -18,7 +18,7 @@ const EngineerVacancyCard = ({
   let userHasApplied = false;
   if (projectName === 'Certification') {
     userHasApplied = !!applications.find(
-      application => Number(application.fellow_id) === loggedInUser.id
+      application => application.fellow_id === loggedInUser.fellow_id
     );
   }
 

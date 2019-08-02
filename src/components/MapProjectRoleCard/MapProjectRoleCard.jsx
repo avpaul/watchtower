@@ -65,7 +65,7 @@ const MapProjectRoleCard = ({
         </div>
       ) : (
         roleData.sort(arrayOfObjectsSorter('name')).map(role => (
-          <div className="col-sm-12 col-md-6 col-lg-3 mb-4" key={role.id}>
+          <div className="col-4 mb-4" key={role.id}>
             <Card
               cardProps={{
                 details: role,

@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextInput  it changes the button to read Applied if the loggedin user has applied to the vacancy 1`] = `
+<div
+  className="vacancy-card"
+>
+  <div
+    className="vacancy-card__inner"
+  >
+    <img
+      alt="vacancy-card__inner icon"
+      className="icon"
+      src="projectdown.svg"
+    />
+    <ul
+      className="vacancy-card__inner__list"
+    >
+      <li>
+        Technical Coordinator
+      </li>
+      <li>
+        Certification
+      </li>
+      <li>
+        0 available slots
+      </li>
+      <li>
+        <span>
+          Days Left: 
+        </span>
+        <span
+          className="text-danger"
+        >
+          Closed
+        </span>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="dashboard/certification/1"
+        >
+          Applied
+        </Link>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`TextInput  renders as expected with required props 1`] = `
 <div
   className="vacancy-card"

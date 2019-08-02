@@ -154,7 +154,7 @@ class CertificationPage extends Component {
     const { d1Engineer } = this.props;
     if (applications) {
       const hasApplied = applications.find(
-        application => Number(application.fellow_id) === d1Engineer.id
+        application => application.fellow_id === d1Engineer.fellow_id
       );
       if (hasApplied) this.setState({ userHasApplied: true });
     }

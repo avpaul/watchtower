@@ -13,12 +13,13 @@ describe('TextInput ', () => {
     applications: [
       {
         id: 1,
-        fellow_id: 1
+        fellow_id: '-HJYOUIRU98'
       }
     ],
     loggedInUser: {
-      id: 1
-    }
+      fellow_id: '-HJYOUIRU98'
+    },
+    projectVacancies: []
   };
 
   const setup = propsOverride => {
@@ -29,6 +30,15 @@ describe('TextInput ', () => {
 
   it('renders as expected with required props', () => {
     const wrapper = setup();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('it changes the button to read Applied if the loggedin user has applied to the vacancy', () => {
+    const propsOverride = {
+      projectName: 'Certification'
+    };
+
+    const wrapper = setup({ ...propsOverride });
     expect(wrapper).toMatchSnapshot();
   });
 });
