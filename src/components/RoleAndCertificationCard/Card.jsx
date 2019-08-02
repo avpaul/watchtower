@@ -86,7 +86,7 @@ class Card extends React.Component {
     } = this.props;
     return showMore
       ? details.description
-      : `${details.description.substring(0, 100)}`;
+      : `${details.description.substring(0, 50)}`;
   };
 
   renderShowMoreButton = showMore => {
@@ -167,7 +167,7 @@ class Card extends React.Component {
         </div>
         <div className="col-6">
           <p className="role-card__attributes">
-            {type === 'role' ? 'Active Engrs.' : 'Certified Engrs.'} <br />
+            {type === 'role' ? 'Active engrs.' : 'Cert Engrs.'} <br />
             {this.renderCount(count, this.roleActiveEngineer)}
           </p>
         </div>
@@ -296,7 +296,7 @@ class Card extends React.Component {
 
     return (
       <div className="role-card">
-        <div className="px-4">
+        <div className="pr-4 pl-3">
           <div className="role-card__icon" data-toggle="dropdown" />
           {this.renderDropdown(type)}
           <div className="role-card__title">{truncate(details.name, 22)}</div>
@@ -317,7 +317,7 @@ class Card extends React.Component {
           </p>
         </div>
         <hr />
-        <div className="ml-2 mr-2 px-3">
+        <div className="mx-1 px-2">
           {this.renderPositionsCount(details, type)}
           {this.renderDescription(showMore)}
         </div>
