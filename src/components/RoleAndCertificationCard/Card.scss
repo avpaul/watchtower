@@ -3,8 +3,7 @@
 .role-card {
   box-sizing: border-box;
   padding: 1rem 0;
-  height: 270px;
-  max-height: 270px;
+  min-height: 270px;
   width: 100%;
   border: 1px solid rgba(216, 216, 216, 0.35);
   border-radius: 5px;
@@ -73,7 +72,7 @@
     color: rgb(49, 49, 49);
     font-family: $font-primary;
     font-size: 13px;
-    line-height: 14px;
+    line-height: 16px;
     margin-bottom: 0px;
     font-weight: 300;
 
