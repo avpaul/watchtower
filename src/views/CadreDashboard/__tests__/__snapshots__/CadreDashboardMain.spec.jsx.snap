@@ -22,10 +22,15 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
               "data": Object {
                 "certificationsVacancies": Array [
                   Object {
-                    "available_slots": 2,
                     "certification": Object {
                       "0": Object {
                         "certification": Object {
+                          "applications": Array [
+                            Object {
+                              "fellow_id": 1,
+                              "id": 1,
+                            },
+                          ],
                           "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
                           "duration": 20,
                           "exclusive": false,
@@ -39,11 +44,20 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                         "is_active": false,
                         "updated_at": "2019-07-09 17:22:58",
                       },
-                      "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
-                      "duration": 20,
-                      "exclusive": false,
-                      "id": 1,
-                      "name": "Mrs. Alanna Ziemann",
+                      "1": Object {
+                        "applications": Array [
+                          Object {
+                            "fellow_id": 1,
+                            "id": 1,
+                          },
+                        ],
+                        "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                        "duration": 20,
+                        "exclusive": false,
+                        "id": 1,
+                        "name": "Mrs. Alanna Ziemann",
+                      },
+                      "available_slots": 2,
                     },
                   },
                 ],
@@ -55,6 +69,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                       "name": "Dolorum suscipit molestiae.",
                     },
                     "role": Object {
+                      "applications": Array [
+                        Object {
+                          "fellow_id": 1,
+                          "id": 1,
+                        },
+                      ],
                       "id": 1,
                       "name": "Engineer",
                     },
@@ -70,6 +90,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                         "project_id": 1,
                         "project_role_id": 1,
                         "role": Object {
+                          "applications": Array [
+                            Object {
+                              "fellow_id": 1,
+                              "id": 1,
+                            },
+                          ],
                           "id": 1,
                           "name": "Engineer",
                         },
@@ -78,6 +104,11 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                   },
                 ],
               },
+            }
+          }
+          d1Engineer={
+            Object {
+              "id": 1,
             }
           }
           getD1FellowProfileData={
@@ -136,10 +167,15 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
               "data": Object {
                 "certificationsVacancies": Array [
                   Object {
-                    "available_slots": 2,
                     "certification": Object {
                       "0": Object {
                         "certification": Object {
+                          "applications": Array [
+                            Object {
+                              "fellow_id": 1,
+                              "id": 1,
+                            },
+                          ],
                           "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
                           "duration": 20,
                           "exclusive": false,
@@ -153,11 +189,20 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                         "is_active": false,
                         "updated_at": "2019-07-09 17:22:58",
                       },
-                      "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
-                      "duration": 20,
-                      "exclusive": false,
-                      "id": 1,
-                      "name": "Mrs. Alanna Ziemann",
+                      "1": Object {
+                        "applications": Array [
+                          Object {
+                            "fellow_id": 1,
+                            "id": 1,
+                          },
+                        ],
+                        "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                        "duration": 20,
+                        "exclusive": false,
+                        "id": 1,
+                        "name": "Mrs. Alanna Ziemann",
+                      },
+                      "available_slots": 2,
                     },
                   },
                 ],
@@ -169,6 +214,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                       "name": "Dolorum suscipit molestiae.",
                     },
                     "role": Object {
+                      "applications": Array [
+                        Object {
+                          "fellow_id": 1,
+                          "id": 1,
+                        },
+                      ],
                       "id": 1,
                       "name": "Engineer",
                     },
@@ -184,6 +235,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                         "project_id": 1,
                         "project_role_id": 1,
                         "role": Object {
+                          "applications": Array [
+                            Object {
+                              "fellow_id": 1,
+                              "id": 1,
+                            },
+                          ],
                           "id": 1,
                           "name": "Engineer",
                         },
@@ -192,6 +249,11 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                   },
                 ],
               },
+            }
+          }
+          d1Engineer={
+            Object {
+              "id": 1,
             }
           }
           getD1FellowProfileData={
@@ -270,10 +332,15 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                 "data": Object {
                   "certificationsVacancies": Array [
                     Object {
-                      "available_slots": 2,
                       "certification": Object {
                         "0": Object {
                           "certification": Object {
+                            "applications": Array [
+                              Object {
+                                "fellow_id": 1,
+                                "id": 1,
+                              },
+                            ],
                             "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
                             "duration": 20,
                             "exclusive": false,
@@ -287,11 +354,20 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                           "is_active": false,
                           "updated_at": "2019-07-09 17:22:58",
                         },
-                        "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
-                        "duration": 20,
-                        "exclusive": false,
-                        "id": 1,
-                        "name": "Mrs. Alanna Ziemann",
+                        "1": Object {
+                          "applications": Array [
+                            Object {
+                              "fellow_id": 1,
+                              "id": 1,
+                            },
+                          ],
+                          "description": "Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.",
+                          "duration": 20,
+                          "exclusive": false,
+                          "id": 1,
+                          "name": "Mrs. Alanna Ziemann",
+                        },
+                        "available_slots": 2,
                       },
                     },
                   ],
@@ -303,6 +379,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                         "name": "Dolorum suscipit molestiae.",
                       },
                       "role": Object {
+                        "applications": Array [
+                          Object {
+                            "fellow_id": 1,
+                            "id": 1,
+                          },
+                        ],
                         "id": 1,
                         "name": "Engineer",
                       },
@@ -318,6 +400,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                           "project_id": 1,
                           "project_role_id": 1,
                           "role": Object {
+                            "applications": Array [
+                              Object {
+                                "fellow_id": 1,
+                                "id": 1,
+                              },
+                            ],
                             "id": 1,
                             "name": "Engineer",
                           },
@@ -329,6 +417,11 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
               }
             }
             certificationsArray={Array []}
+            loggedInUser={
+              Object {
+                "id": 1,
+              }
+            }
             searchWord=""
             vacanciesArray={
               Array [
@@ -339,6 +432,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                     "name": "Dolorum suscipit molestiae.",
                   },
                   "role": Object {
+                    "applications": Array [
+                      Object {
+                        "fellow_id": 1,
+                        "id": 1,
+                      },
+                    ],
                     "id": 1,
                     "name": "Engineer",
                   },
@@ -354,6 +453,12 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                       "project_id": 1,
                       "project_role_id": 1,
                       "role": Object {
+                        "applications": Array [
+                          Object {
+                            "fellow_id": 1,
+                            "id": 1,
+                          },
+                        ],
                         "id": 1,
                         "name": "Engineer",
                       },

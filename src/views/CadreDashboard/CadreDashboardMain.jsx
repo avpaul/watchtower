@@ -70,7 +70,7 @@ export class D1FellowDashboardMain extends Component {
   };
 
   render() {
-    const { profile, loading, cadreVacancies } = this.props;
+    const { profile, loading, cadreVacancies, d1Engineer } = this.props;
     const { vacanciesArray, certificationsArray, searchWord } = this.state;
 
     const vacanciesToRender =
@@ -106,6 +106,7 @@ export class D1FellowDashboardMain extends Component {
                     vacanciesArray={vacanciesToRender}
                     certificationsArray={certificationsToRender}
                     searchWord={searchWord}
+                    loggedInUser={d1Engineer}
                   />
                 </EngineerDashboardCard>
               </div>
@@ -121,7 +122,8 @@ D1FellowDashboardMain.propTypes = {
   getD1FellowProfileData: PropTypes.func.isRequired,
   profile: PropTypes.shape().isRequired,
   loading: PropTypes.bool.isRequired,
-  cadreVacancies: PropTypes.shape().isRequired
+  cadreVacancies: PropTypes.shape().isRequired,
+  d1Engineer: PropTypes.instanceOf(Object).isRequired
 };
 
 const mapStateToProps = state => ({

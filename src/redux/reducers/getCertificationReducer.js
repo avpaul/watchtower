@@ -1,28 +1,44 @@
 import initialState from './initialState';
 
-import {
-  GET_CERTIFICATION_REQUEST,
-  GET_CERTIFICATION_SUCCESS,
-  GET_CERTIFICATION_FAILURE
-} from '../constants/certificationTypes';
+import * as types from '../constants/cadreCertificationTypes';
 
-import genericReducer from './genericReducer';
+const addNewApplication = (applications, newApplication) => {
+  const existingApplications = [...applications];
+  existingApplications.push(newApplication);
+  return existingApplications;
+};
 
-const getCertificationReducer = (
-  state = initialState.getCertification,
-  action
-) =>
-  genericReducer(
-    [
-      GET_CERTIFICATION_REQUEST,
-      GET_CERTIFICATION_SUCCESS,
-      GET_CERTIFICATION_FAILURE
-    ],
-    state,
-    {
-      ...action,
-      successData: action.data
-    }
-  );
-
-export default getCertificationReducer;
+export default (state = initialState.getCertification, action) => {
+  switch (action.type) {
+    case types.GET_CERTIFICATION_REQUEST:
+    case types.CERTIFICATION_APPLICATION_REQUEST:
+      return {
+        ...state,
+        loading: true
+      };
+    case types.GET_CERTIFICATION_SUCCESS:
+      return {
+        error: null,
+        loading: false,
+        data: action.data
+      };
+    case types.GET_CERTIFICATION_FAILURE:
+    case types.CERTIFICATION_APPLICATION_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      };
+    case types.CERTIFICATION_APPLICATION_SUCCESS:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          applications: addNewApplication(state.data.applications, action.data)
+        },
+        loading: false
+      };
+    default:
+      return state;
+  }
+};

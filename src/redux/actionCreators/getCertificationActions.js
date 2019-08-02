@@ -5,7 +5,7 @@ import {
   GET_CERTIFICATION_REQUEST,
   GET_CERTIFICATION_SUCCESS,
   GET_CERTIFICATION_FAILURE
-} from '../constants/certificationTypes';
+} from '../constants/cadreCertificationTypes';
 
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 

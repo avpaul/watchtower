@@ -36,7 +36,13 @@ describe('Tests the CadreDashboard component', () => {
             },
             role: {
               id: 1,
-              name: 'Engineer'
+              name: 'Engineer',
+              applications: [
+                {
+                  id: 1,
+                  fellow_id: 1
+                }
+              ]
             },
             vacancies: [
               {
@@ -51,7 +57,13 @@ describe('Tests the CadreDashboard component', () => {
                 },
                 role: {
                   id: 1,
-                  name: 'Engineer'
+                  name: 'Engineer',
+                  applications: [
+                    {
+                      id: 1,
+                      fellow_id: 1
+                    }
+                  ]
                 }
               }
             ],
@@ -74,20 +86,37 @@ describe('Tests the CadreDashboard component', () => {
                   description:
                     'Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.',
                   exclusive: false,
-                  duration: 20
+                  duration: 20,
+                  applications: [
+                    {
+                      id: 1,
+                      fellow_id: 1
+                    }
+                  ]
                 }
               },
-              id: 1,
-              name: 'Mrs. Alanna Ziemann',
-              description:
-                'Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.',
-              exclusive: false,
-              duration: 20
-            },
-            available_slots: 2
+              '1': {
+                id: 1,
+                name: 'Mrs. Alanna Ziemann',
+                description:
+                  'Voluptates fugit sunt repellat nulla sint voluptatem excepturi.,Perspiciatis qui et porro consequatur ducimus aliquam.,Inventore recusandae ratione quod quae laudantium maiores.,Officia aut nostrum eum ullam ut sunt sint.,Qui consequatur sed et reprehenderit in qui aut.,Qui facere ipsum et aut magni voluptatem deleniti.',
+                exclusive: false,
+                duration: 20,
+                applications: [
+                  {
+                    id: 1,
+                    fellow_id: 1
+                  }
+                ]
+              },
+              available_slots: 2
+            }
           }
         ]
       }
+    },
+    d1Engineer: {
+      id: 1
     }
   };
 

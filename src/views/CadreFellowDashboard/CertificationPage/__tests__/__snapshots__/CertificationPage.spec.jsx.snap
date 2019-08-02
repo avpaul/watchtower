@@ -355,13 +355,9 @@ exports[`Test the certification page should trigger certification application fu
       </div>
       <SellYourselfModal
         buttonLabel="Apply for this certification"
-        certificationApplication={
-          Object {
-            "data": Object {},
-            "error": "",
-            "loading": false,
-          }
-        }
+        error=""
+        id={1}
+        loading={false}
         modalHandler={[Function]}
         showModal={true}
         submitHandler={[MockFunction]}

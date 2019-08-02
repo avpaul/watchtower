@@ -12,7 +12,7 @@ import {
   GET_CERTIFICATION_REQUEST,
   GET_CERTIFICATION_SUCCESS,
   GET_CERTIFICATION_FAILURE
-} from '../../constants/certificationTypes';
+} from '../../constants/cadreCertificationTypes';
 import initialState from '../../reducers/initialState';
 
 const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;

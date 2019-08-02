@@ -10,7 +10,8 @@ class CertificationPage extends Component {
     modals: {
       applicationModal: false,
       successModal: false
-    }
+    },
+    userHasApplied: false
   };
 
   async componentDidMount() {
@@ -19,6 +20,18 @@ class CertificationPage extends Component {
       match: { params }
     } = this.props;
     await getCertificationAction(params.certificationId);
+  }
+
+  componentDidUpdate(prevProps) {
+    const {
+      getCertification: {
+        loading,
+        data: { applications }
+      }
+    } = this.props;
+    if (prevProps.getCertification.loading !== loading) {
+      this.checkIfUserHasApplied(applications);
+    }
   }
 
   renderBackNavigation = () => {
@@ -41,7 +54,7 @@ class CertificationPage extends Component {
     );
   };
 
-  cardHead = (title, exclusive, id) => (
+  cardHead = (title, exclusive, id, userHasApplied) => (
     <div className="card-header certification-header bg-white border-none">
       <div className="row px-4 mt-4 mb-2">
         <div className="col-md-6">
@@ -58,23 +71,34 @@ class CertificationPage extends Component {
           </div>
         </div>
         <div className="col-md-6 text-right">
-          <button
-            className="btn btn-primary text-uppercase apply-btn"
-            type="button"
-            onClick={() => this.certificationApplicationHandler(id)}
-          >
-            Apply For This Certification
-          </button>
+          {userHasApplied ? (
+            <button
+              className="btn text-uppercase apply-btn"
+              type="button"
+              id="buttonDisabled"
+              disabled
+            >
+              Already Applied
+            </button>
+          ) : (
+            <button
+              className="btn btn-primary text-uppercase apply-btn"
+              type="button"
+              onClick={() => this.certificationApplicationHandler(id)}
+            >
+              Apply For This Certification
+            </button>
+          )}
         </div>
       </div>
     </div>
   );
 
-  renderCard = data => (
+  renderCard = (data, userHasApplied) => (
     <div className="row justify-content-center">
       <div className="col-md-10">
         <div className="card certification-card">
-          {this.cardHead(data.name, data.exclusive, data.id)}
+          {this.cardHead(data.name, data.exclusive, data.id, userHasApplied)}
           <div className="card-body">
             <div className="px-4">
               <h3 className="certification-description-title">
@@ -105,9 +129,9 @@ class CertificationPage extends Component {
     const {
       applyForCertification,
       getCertification: {
-        data: { id, name }
-      },
-      certificationApplication
+        data: { id, name },
+        loading
+      }
     } = this.props;
     const {
       modals: { applicationModal }
@@ -121,9 +145,19 @@ class CertificationPage extends Component {
         submitHandler={applyForCertification}
         modalHandler={() => this.modalHandler('applicationModal')}
         showModal={applicationModal}
-        certificationApplication={certificationApplication}
+        loading={loading}
       />
     );
+  };
+
+  checkIfUserHasApplied = applications => {
+    const { d1Engineer } = this.props;
+    if (applications) {
+      const hasApplied = applications.find(
+        application => Number(application.fellow_id) === d1Engineer.id
+      );
+      if (hasApplied) this.setState({ userHasApplied: true });
+    }
   };
 
   render() {
@@ -132,7 +166,8 @@ class CertificationPage extends Component {
     } = this.props;
 
     const {
-      modals: { applicationModal }
+      modals: { applicationModal },
+      userHasApplied
     } = this.state;
 
     return (
@@ -140,7 +175,7 @@ class CertificationPage extends Component {
         <div className="certification-page">
           <div className="container">
             {this.renderBackNavigation()}
-            {!loading && this.renderCard(data)}
+            {!loading && this.renderCard(data, userHasApplied)}
             {applicationModal && this.renderSellYourselfModal()}
           </div>
         </div>
@@ -150,12 +185,12 @@ class CertificationPage extends Component {
 }
 
 CertificationPage.propTypes = {
-  getCertificationAction: PropTypes.isRequired,
-  history: PropTypes.isRequired,
-  getCertification: PropTypes.isRequired,
-  match: PropTypes.isRequired,
+  getCertificationAction: PropTypes.func.isRequired,
+  history: PropTypes.instanceOf(Object).isRequired,
+  match: PropTypes.instanceOf(Object).isRequired,
   applyForCertification: PropTypes.func.isRequired,
-  certificationApplication: PropTypes.instanceOf(Object).isRequired
+  d1Engineer: PropTypes.instanceOf(Object).isRequired,
+  getCertification: PropTypes.instanceOf(Object).isRequired
 };
 
 export default CertificationPage;

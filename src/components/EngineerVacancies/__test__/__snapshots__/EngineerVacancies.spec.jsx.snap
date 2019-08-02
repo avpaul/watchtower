@@ -9,7 +9,34 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
       className="render-vacancies__div"
     >
       <EngineerVacancyCard
+        applications={
+          Array [
+            Object {
+              "closing_date": "2019-07-10 07:58:34",
+              "fellow_id": null,
+              "id": 4,
+              "is_active": false,
+              "project": Object {
+                "id": 1,
+                "name": "Dolorum suscipit molestiae.",
+              },
+              "project_id": 1,
+              "project_role_id": 1,
+              "role": Object {
+                "applications": Array [],
+                "id": 1,
+                "name": "Engineer",
+              },
+              "start_date": "2019-08-10 07:58:34",
+            },
+          ]
+        }
         closingDate="2019-07-10 07:58:34"
+        loggedInUser={
+          Object {
+            "id": 1,
+          }
+        }
         projectId={1}
         projectName="Dolorum suscipit molestiae."
         role="Engineer"
@@ -19,6 +46,11 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
       />
       <EngineerVacancyCard
         closingDate="2019-07-10 07:58:34"
+        loggedInUser={
+          Object {
+            "id": 1,
+          }
+        }
         projectId={null}
         projectName="Certification"
         role="Mrs. Alanna Ziemann"
@@ -34,20 +66,69 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
 exports[`EngineerVacancies  renders as expected with required props 2`] = `
 <div>
   <div
-    className="vacancies-container--no-vacancies"
+    className="vacancies-container--all-vacancies"
   >
     <div
-      className="vacancies-container--no-vacancies"
+      className="render-vacancies__div"
     >
-      <img
-        alt="vacancies-container--no-vacancies__icon"
-        src="projectdown.svg"
+      <EngineerVacancyCard
+        applications={
+          Array [
+            Object {
+              "closing_date": "2019-07-10 07:58:34",
+              "fellow_id": null,
+              "id": 4,
+              "is_active": false,
+              "project": Object {
+                "id": 1,
+                "name": "Dolorum suscipit molestiae.",
+              },
+              "project_id": 1,
+              "project_role_id": 1,
+              "role": Object {
+                "applications": Array [],
+                "id": 1,
+                "name": "Engineer",
+              },
+              "start_date": "2019-08-10 07:58:34",
+            },
+          ]
+        }
+        closingDate="2019-07-10 07:58:34"
+        loggedInUser={
+          Object {
+            "id": 1,
+          }
+        }
+        projectId={1}
+        projectName="Dolorum suscipit molestiae."
+        role="Engineer"
+        roleId={1}
+        slots={1}
+        startDate="2019-08-10 07:58:34"
       />
-      <span
-        className="vacancies-container--no-vacancies__span"
-      >
-        No Vacancy "" Available
-      </span>
+      <EngineerVacancyCard
+        applications={
+          Array [
+            Object {
+              "fellow_id": 1,
+              "id": 1,
+            },
+          ]
+        }
+        closingDate="2019-07-10 07:58:34"
+        loggedInUser={
+          Object {
+            "id": 1,
+          }
+        }
+        projectId={null}
+        projectName="Certification"
+        role="Mrs. Alanna Ziemann"
+        roleId={1}
+        slots={0}
+        startDate="2019-08-10 07:58:34"
+      />
     </div>
   </div>
 </div>
