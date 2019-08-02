@@ -14,7 +14,7 @@ describe('Test the certification page', () => {
         id: 1,
         applications: [
           {
-            fellow_id: 1
+            fellow_id: '-PUEHGE8716LJH'
           }
         ]
       },
@@ -32,7 +32,7 @@ describe('Test the certification page', () => {
     },
     applyForCertification: jest.fn(),
     d1Engineer: {
-      id: 1
+      fellow_id: '-PUEHGE8716LJH'
     }
   };
   let wrapper;
@@ -111,7 +111,7 @@ describe('Test the certification page', () => {
         data: {
           applications: [
             {
-              fellow_id: 1
+              fellow_id: '-PUEHGE8716LJH'
             }
           ]
         }
