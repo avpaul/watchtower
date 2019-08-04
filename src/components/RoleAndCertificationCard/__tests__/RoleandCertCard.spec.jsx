@@ -60,7 +60,7 @@ describe('Test Role Card component', () => {
     wrapper
       .find(Modal)
       .dive()
-      .find('.close')
+      .find('.modal-close')
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
@@ -144,7 +144,7 @@ describe('Test Certification Card component', () => {
     wrapper
       .find(Modal)
       .dive()
-      .find('.close')
+      .find('.modal-close')
       .simulate('click');
     expect(wrapper).toMatchSnapshot();
   });

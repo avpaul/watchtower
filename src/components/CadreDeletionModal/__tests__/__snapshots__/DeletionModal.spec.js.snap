@@ -32,7 +32,7 @@ exports[`DeletionModal Component Test Suite should render properly 1`] = `
           </span>
           <button
             aria-label="Close"
-            className="close"
+            className="modal-close"
             data-dismiss="modal"
             type="button"
           >

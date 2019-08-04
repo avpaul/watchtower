@@ -20,19 +20,17 @@
   color: $color-danger !important;
 }
 
-.modal-header .close {
+.modal-header .modal-close {
   padding: 0;
   margin: -1rem -1rem -1rem auto;
 }
 
-.modal-header .close span {
-  font-size: 160% !important;
-  vertical-align: middle;
-  text-align: center;
-  margin-top: 0;
+.modal-header .modal-close span {
+  font-size: 130%;
+  margin: auto;
 }
 
-.close {
+.modal-close {
   position: absolute;
   top: 21px;
   right: 30px;
@@ -42,7 +40,7 @@
   outline: none;
 }
 
-button.close {
+button.modal-close {
   background-color: #bebebe;
   font-size: 25px;
   color: #333e44;

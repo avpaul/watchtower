@@ -64,10 +64,13 @@ export class Header extends Component {
     if (key) this.setState({ activeItem: key });
   };
 
+  /**
+   * Disabled at the moment for the production push due to a recurrying issue
+   */
   handleClick = () => {
-    const { getNotification } = this.props;
-    this.setState({ viewNotifications: false });
-    getNotification();
+    // const { getNotification } = this.props;
+    // this.setState({ viewNotifications: false });
+    // getNotification();
   };
 
   handleBack = () => {
@@ -405,7 +408,7 @@ Header.propTypes = {
   }).isRequired,
   location: PropTypes.shape({}).isRequired,
   role: PropTypes.string.isRequired,
-  getNotification: PropTypes.func.isRequired,
+  // getNotification: PropTypes.func.isRequired,
   getUnreadNotification: PropTypes.func.isRequired,
   markNotificationsAsRead: PropTypes.func.isRequired,
   notifications: PropTypes.instanceOf(Array).isRequired,

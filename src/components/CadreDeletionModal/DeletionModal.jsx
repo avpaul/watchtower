@@ -24,7 +24,7 @@ function DeletionModal({ handleClick, targetName }) {
       </span>
       <button
         type="button"
-        className="close"
+        className="modal-close"
         data-dismiss="modal"
         aria-label="Close"
       >

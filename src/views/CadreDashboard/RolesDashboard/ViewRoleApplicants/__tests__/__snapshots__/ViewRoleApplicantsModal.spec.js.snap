@@ -56,7 +56,7 @@ exports[`Role Applicants Modal should  match the snapshot 1`] = `
           Applicants for Title
         </p>
         <button
-          className="close"
+          className="modal-close"
           onClick={[MockFunction]}
           type="button"
         >

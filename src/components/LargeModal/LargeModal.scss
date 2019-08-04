@@ -76,7 +76,7 @@
   height: 20px;
   border: 3px solid #979797;
 }
-.close {
+.modal-close {
   position: absolute;
   top: 25px;
   right: 30px;
@@ -86,7 +86,7 @@
   padding: 0 !important;
 }
 
-button.close {
+button.modal-close {
   background-color: rgb(190, 190, 190);
   font-size: 18px;
   color: #333e44;

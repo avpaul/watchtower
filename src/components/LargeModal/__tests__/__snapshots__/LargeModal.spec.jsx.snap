@@ -13,7 +13,7 @@ exports[`Test Large modal component should render component correctly 1`] = `
       This is a title
     </p>
     <button
-      className="close"
+      className="modal-close"
       onClick={[MockFunction]}
       type="button"
     >
@@ -43,7 +43,7 @@ exports[`Test Large modal component should render large modal 1`] = `
     className="modal__body"
   >
     <button
-      className="close"
+      className="modal-close"
       onClick={
         [MockFunction] {
           "calls": Array [
@@ -99,7 +99,7 @@ exports[`Test Large modal component should render medium modal 1`] = `
     className="modal-body__md"
   >
     <button
-      className="close"
+      className="modal-close"
       onClick={
         [MockFunction] {
           "calls": Array [

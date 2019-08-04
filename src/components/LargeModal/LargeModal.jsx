@@ -20,7 +20,7 @@ const Modal = ({
       <section className={size === 'large' ? 'modal__body' : 'modal-body__md'}>
         {title && <p className="modal__title">{title}</p>}
         {showBtn && (
-          <button type="button" className="close" onClick={handleClose}>
+          <button type="button" className="modal-close" onClick={handleClose}>
             <span aria-hidden="true">&times;</span>
             <span className="sr-only">Close</span>
           </button>

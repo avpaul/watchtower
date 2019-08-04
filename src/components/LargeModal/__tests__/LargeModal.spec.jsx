@@ -30,7 +30,7 @@ describe('Test Large modal component', () => {
     };
     wrapper = shallow(<LargeModal {...props} />);
 
-    wrapper.find('.close').simulate('click');
+    wrapper.find('.modal-close').simulate('click');
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -55,7 +55,7 @@ describe('Test Large modal component', () => {
     };
     wrapper = shallow(<LargeModal {...props} />);
 
-    wrapper.find('.close').simulate('click');
+    wrapper.find('.modal-close').simulate('click');
 
     expect(wrapper).toMatchSnapshot();
   });
