@@ -121,18 +121,23 @@ class ProjectFormLeft extends Component {
       renderDropdown,
       fetchSlackChannels: { loading, data }
     } = this.props;
+    let channelDetails = projectDetails.channels
+      ? {
+          ...projectDetails.channels
+        }
+      : {};
+    if (channelDetails.id) {
+      channelDetails = { ...channelDetails, label: channelDetails.name };
+    } else {
+      channelDetails = {};
+    }
 
     return (
       <React.Fragment>
         {renderDropdown({
           name: 'channels',
           label: 'Slack Channel',
-          inputValue: projectDetails.channels
-            ? {
-                ...projectDetails.channels,
-                label: projectDetails.channels.name
-              }
-            : {},
+          inputValue: channelDetails,
           options: processDropdownOptions(data, 'name'),
           placeholder: 'Add Slack Channel',
           enableSearch: data.length !== 0,
