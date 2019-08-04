@@ -1,3 +1,24 @@
+# V 3.0.0
+
+## Features
+
+- cadre account creation
+- cadre accounts list
+- cadre account activation
+- cadre engineer profile
+- manage cadre accounts
+- cadre project creation
+- cadre project management
+- cadre role creation
+- cadre role management
+- cadre certification creation
+- cadre certification management
+- cadre vacancies creation
+- cadre engineer applications
+- cadre engineer application review
+- cadre email notifications
+
+
 # V 2.0.0
 
 ## Features
