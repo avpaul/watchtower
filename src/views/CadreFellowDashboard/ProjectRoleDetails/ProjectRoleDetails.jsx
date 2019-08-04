@@ -15,7 +15,7 @@ const ProjectRoleDetails = ({
   getAProject,
   d1Engineer
 }) => {
-  const { roleId, projectId } = match.params;
+  const { roleId, projectId, vacancyId } = match.params;
   useEffect(() => {
     getAProject(projectId);
     // eslint-disable-next-line
@@ -44,6 +44,7 @@ const ProjectRoleDetails = ({
         projectInfo={singleProject.data.project}
         roleInfo={currentRole.role}
         engineer={d1Engineer}
+        vacancyId={vacancyId}
       />
     </div>
   ) : null;

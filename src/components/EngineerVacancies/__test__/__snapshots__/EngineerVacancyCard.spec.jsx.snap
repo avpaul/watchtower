@@ -37,7 +37,7 @@ exports[`TextInput  it changes the button to read Applied if the loggedin user h
       <li>
         <Link
           replace={false}
-          to="dashboard/certification/1"
+          to="/dashboard/certification/1"
         >
           Applied
         </Link>

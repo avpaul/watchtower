@@ -56,7 +56,7 @@ Object {
       <p
         className="advocacy__subtitle"
       >
-        Sell yourself (Optional)
+        Sell yourself
       </p>
       <TextInput
         alertText=""
@@ -180,7 +180,7 @@ Object {
                       <p
                         className="advocacy__subtitle"
                       >
-                        Sell yourself (Optional)
+                        Sell yourself
                       </p>
                       <TextInput
                         alertText=""

@@ -97,7 +97,7 @@ class RoleApplication extends Component {
     const { success } = this.state;
     const applicationUnits = {
       subtitle: `You are applying as a ${roleInfo.name}`,
-      selfAdvocateTitle: `Sell yourself (Optional)`,
+      selfAdvocateTitle: `Sell yourself`,
       successTitle: 'Great! Thank you for applying',
       successSutitle: 'You should hear from us shortly'
     };

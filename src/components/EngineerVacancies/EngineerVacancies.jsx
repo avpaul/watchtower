@@ -44,7 +44,7 @@ class EngineerVacancies extends Component {
             startDate={vacancies[0].start_date}
             closingDate={vacancies[0].closing_date}
             loggedInUser={loggedInUser}
-            applications={vacancies}
+            applications={vacancies[0].role.applications}
           />
         )
       )}

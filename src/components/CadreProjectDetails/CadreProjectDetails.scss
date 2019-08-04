@@ -163,6 +163,7 @@
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  word-break: break-word;
 }
 
 .project-details__card-small .project-stacks {
@@ -249,7 +250,6 @@
   box-sizing: border-box;
   height: 55px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   padding: 0 1rem;
   width: 257px;

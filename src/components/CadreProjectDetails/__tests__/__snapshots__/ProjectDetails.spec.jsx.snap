@@ -16,6 +16,7 @@ exports[`Project details card tests should render project links component succes
     >
       <img
         alt="slack-logo"
+        className="mr-1"
         src="slack-logo-icon.png"
       />
       N/A
@@ -31,10 +32,11 @@ exports[`Project details card tests should render project links component succes
     >
       <img
         alt="invision logo"
+        className="mr-1"
         src="invision-logo.svg"
       />
       
-        test project on invision
+        test project
     </div>
   </a>
 </Fragment>

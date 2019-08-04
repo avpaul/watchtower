@@ -16,10 +16,20 @@ const EngineerVacancyCard = ({
   loggedInUser
 }) => {
   let userHasApplied = false;
-  if (projectName === 'Certification') {
-    userHasApplied = !!applications.find(
-      application => application.fellow_id === loggedInUser.fellow_id
-    );
+
+  switch (projectName) {
+    case 'Certification':
+      userHasApplied = !!applications.find(
+        application => application.fellow_id === loggedInUser.fellow_id
+      );
+      break;
+    default:
+      userHasApplied = !!applications.find(
+        application =>
+          application.fellow_id === loggedInUser.fellow_id &&
+          application.project_id === projectId &&
+          application.project_role_id === roleId
+      );
   }
 
   return (

@@ -6,7 +6,7 @@ import doc from '../../static/doc.svg';
 const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
   const renderDocuments = () =>
     projectInfo[0].documents.map(document => (
-      <a href={document.url} key={document.id}>
+      <a href={document.url} key={document.id} rel="noopener">
         <img src={doc} alt="document logo" />
         {document.name.length > 25
           ? `${document.name.substring(0, 22)}...`
@@ -20,7 +20,11 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
 
     if (applications) {
       applications.forEach(application => {
-        if (application.applicant.id === engineer.id) {
+        if (
+          application.applicant.fellow_id === engineer.fellow_id &&
+          application.project_role_id === roleInfo.id &&
+          application.project_id === projectInfo[0].id
+        ) {
           isApplicationActive = true;
         }
       });

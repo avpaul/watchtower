@@ -9,28 +9,7 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
       className="render-vacancies__div"
     >
       <EngineerVacancyCard
-        applications={
-          Array [
-            Object {
-              "closing_date": "2019-07-10 07:58:34",
-              "fellow_id": null,
-              "id": 4,
-              "is_active": false,
-              "project": Object {
-                "id": 1,
-                "name": "Dolorum suscipit molestiae.",
-              },
-              "project_id": 1,
-              "project_role_id": 1,
-              "role": Object {
-                "applications": Array [],
-                "id": 1,
-                "name": "Engineer",
-              },
-              "start_date": "2019-08-10 07:58:34",
-            },
-          ]
-        }
+        applications={Array []}
         closingDate="2019-07-10 07:58:34"
         loggedInUser={
           Object {
@@ -72,28 +51,7 @@ exports[`EngineerVacancies  renders as expected with required props 2`] = `
       className="render-vacancies__div"
     >
       <EngineerVacancyCard
-        applications={
-          Array [
-            Object {
-              "closing_date": "2019-07-10 07:58:34",
-              "fellow_id": null,
-              "id": 4,
-              "is_active": false,
-              "project": Object {
-                "id": 1,
-                "name": "Dolorum suscipit molestiae.",
-              },
-              "project_id": 1,
-              "project_role_id": 1,
-              "role": Object {
-                "applications": Array [],
-                "id": 1,
-                "name": "Engineer",
-              },
-              "start_date": "2019-08-10 07:58:34",
-            },
-          ]
-        }
+        applications={Array []}
         closingDate="2019-07-10 07:58:34"
         loggedInUser={
           Object {

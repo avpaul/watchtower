@@ -24,9 +24,12 @@ describe('', () => {
       }
     ],
     roleInfo: {
-      applications: [{ applicant: { id: 1 } }]
+      applications: [
+        { applicant: { fellow_id: '-HUU9KKKK' }, project_vacancy_id: 100 }
+      ]
     },
-    engineer: { id: 1, name: 'Brian Mboya' }
+    engineer: { id: 1, name: 'Brian Mboya', fellow_id: '-HUU9KKKK' },
+    vacancyId: 100
   };
 
   it('should Render Component', () => {

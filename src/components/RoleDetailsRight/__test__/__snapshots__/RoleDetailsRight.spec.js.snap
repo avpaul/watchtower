@@ -48,6 +48,7 @@ exports[`should Render Component 1`] = `
     <a
       href=""
       key=""
+      rel="noopener"
     >
       <img
         alt="document logo"

@@ -14,10 +14,9 @@ const ProjectLinks = ({ projectDetails }) => (
       }
     >
       <div className="links">
-        <img src={SlackLogo} alt="slack-logo" />
+        <img src={SlackLogo} alt="slack-logo" className="mr-1" />
         {projectDetails.channels.id
-          ? `#
-        ${projectDetails.name.substring(0, 10)}... team on slack`
+          ? `#${projectDetails.name.substring(0, 10)}`
           : 'N/A'}
       </div>
     </a>
@@ -27,10 +26,10 @@ const ProjectLinks = ({ projectDetails }) => (
       rel="noopener noreferrer"
     >
       <div className="links">
-        <img src={InvisionLogo} alt="invision logo" />
+        <img src={InvisionLogo} alt="invision logo" className="mr-1" />
         {projectDetails.mockups
           ? `
-        ${projectDetails.name} on invision`
+        ${projectDetails.name}`
           : 'N/A'}
       </div>
     </a>
