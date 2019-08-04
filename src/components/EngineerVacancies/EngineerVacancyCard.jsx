@@ -48,8 +48,8 @@ const EngineerVacancyCard = ({
             <Link
               to={
                 projectName === 'Certification'
-                  ? `dashboard/certification/${roleId}`
-                  : `dashboard/project/${projectId}/role/${roleId}`
+                  ? `/dashboard/certification/${roleId}`
+                  : `/dashboard/project/${projectId}/role/${roleId}`
               }
             >
               {userHasApplied ? 'Applied' : 'Apply'}
