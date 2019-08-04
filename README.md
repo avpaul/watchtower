@@ -1,8 +1,8 @@
 # WatchTower
 
 [![CircleCI](https://circleci.com/gh/andela/watch-tower.svg?style=svg&circle-token=c0f65666b41a946385c269ad91ce903c4153e1eb)](https://circleci.com/gh/andela/watch-tower)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c8aca378abb90a557401/maintainability)](https://codeclimate.com/repos/5bb35f15e2f86a74e2005f45/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c8aca378abb90a557401/test_coverage)](https://codeclimate.com/repos/5bb35f15e2f86a74e2005f45/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/614eed0bf49f94aaec9f/maintainability)](https://codeclimate.com/repos/5c2f1a6790444b0240006c7b/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/614eed0bf49f94aaec9f/test_coverage)](https://codeclimate.com/repos/5c2f1a6790444b0240006c7b/test_coverage)
 
 WatchTower is a tool used to automate performance tracking and management within the D0B space.
 
