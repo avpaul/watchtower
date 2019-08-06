@@ -4,8 +4,8 @@
   .modal-body__md {
     display: flex;
     flex-direction: column;
-    width: 38%;
-    padding: 3.875rem 3.1875rem;
+    width: 33%;
+    padding: 1.875rem 3.1875rem;
   }
 
   .form-title {
@@ -18,18 +18,18 @@
   .form-header {
     font-size: 1.4rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .form-control {
     border: 0.0313rem solid #ced4da;
     min-height: 13.75rem;
     max-height: 15.625rem;
+    font-size: 13px;
   }
 
   .apply-btn {
     text-transform: uppercase;
-    margin-top: 2rem;
     align-self: center;
     padding-left: 2.5rem;
     padding-right: 2.5rem;

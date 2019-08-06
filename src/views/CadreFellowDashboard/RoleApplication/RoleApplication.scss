@@ -22,6 +22,9 @@
     margin-bottom: 0.5em;
     color: #333e44;
   }
+  .error-message {
+    font-size: 0.8rem;
+  }
 }
 
 .modal-header h1 {
@@ -74,4 +77,27 @@
 #buttonDisabled {
   background-color: #cccccc;
   color: #666666;
+}
+
+.word-count {
+  .progress {
+    padding-left: 0;
+    align-self: center;
+  }
+
+  .count-wrapper {
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid;
+  }
+
+  .count {
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+  }
+
+  .feedback-text {
+    font-size: 13px;
+  }
 }

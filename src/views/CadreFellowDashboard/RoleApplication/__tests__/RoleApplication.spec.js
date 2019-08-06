@@ -2,12 +2,13 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import RoleApplication from '../RoleApplication';
 import Loader from '../../../../components/Loader/Loader';
+import Fixtures from '../../../../__mocks__/roleApplicationData.json';
 
 jest.useFakeTimers();
 
 describe('tests RoleApplication', () => {
   const defaultProps = {
-    roleId: 1,
+    roleId: '1',
     applications: {
       loading: false,
       data: {},
@@ -16,7 +17,11 @@ describe('tests RoleApplication', () => {
     applyForRole: jest.fn(),
     roleInfo: {
       name: 'Technical Team Lead'
-    }
+    },
+    history: {},
+    engineer: {},
+    projectId: '1',
+    projectTitle: 'Project Watchtower'
   };
 
   const setup = (propOverides = {}, shouldMount = false) => {
@@ -48,17 +53,26 @@ describe('tests RoleApplication', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should calls handleSubmit successfully', () => {
-    const { wrapper } = setup(
-      {
-        applyForRole: jest.fn(),
-        roleId: 1,
-        projectId: 1
-      },
-      true
-    );
-    const buttons = wrapper.find('#applicationBtn');
-    buttons.at(0).simulate('click');
+  it('should not submit form if user inputs whitespaces into the text box', () => {
+    const modal = mount(<RoleApplication {...defaultProps} />);
+    const instance = modal.instance();
+    modal.state().inputs.description.handleValueChange({
+      target: { value: 'Hello    ' }
+    });
+
+    instance.handleSubmit();
+    expect(defaultProps.applyForRole).toHaveBeenCalledTimes(0);
+  });
+
+  it('should submit form if user input is okay', () => {
+    const modal = mount(<RoleApplication {...defaultProps} />);
+    const instance = modal.instance();
+    modal.state().inputs.description.handleValueChange({
+      target: { value: Fixtures.validApplication_reason }
+    });
+
+    instance.handleSubmit();
+    expect(defaultProps.applyForRole).toHaveBeenCalledTimes(1);
   });
 
   it('should test modal close by calling handleClose', () => {
@@ -80,16 +94,36 @@ describe('tests RoleApplication', () => {
 
   it('should update state on success', () => {
     const modal = mount(<RoleApplication {...defaultProps} />);
-    modal.setProps({
-      applications: {
-        error: null,
-        data: { message: 'Success' }
+    const applications = {
+      error: null,
+      data: {
+        message: 'Success'
       }
-    });
+    };
+
+    modal.setProps({ applications });
     const instance = modal.instance();
     jest.spyOn(instance, 'applicationStatus');
-    modal.instance().applicationStatus(defaultProps.applications);
+    modal.instance().applicationStatus(applications);
     expect(modal.state('success')).toBe(true);
+  });
+
+  it('should update state on failure', () => {
+    const modal = mount(<RoleApplication {...defaultProps} />);
+    const applications = {
+      error: {
+        application_reason: [
+          'The reason for applying should not be more than 500 characters'
+        ]
+      },
+      data: {}
+    };
+
+    modal.setProps({ applications });
+    const instance = modal.instance();
+    jest.spyOn(instance, 'applicationStatus');
+    modal.instance().applicationStatus(applications);
+    expect(modal.state('success')).toBe(false);
   });
 
   it('should display loader when loading', () => {
@@ -107,5 +141,30 @@ describe('tests RoleApplication', () => {
       applications: { loading: false, data: { message: 'Success' } }
     });
     expect(instance.applicationStatus).toHaveBeenCalled();
+  });
+
+  it('should render the relevant feedback message when the user input is less than the acceptable length', () => {
+    const modal = mount(<RoleApplication {...defaultProps} />);
+    modal.state().inputs.description.handleValueChange({
+      target: { value: Fixtures.validApplication_reason }
+    });
+    expect(modal.find('.feedback-text').text()).toEqual(
+      `C'mon, don't sell yourself short!. 😏`
+    );
+  });
+
+  it('should render the relevant feedback message when the user input is more than the acceptable length', () => {
+    const modal = mount(<RoleApplication {...defaultProps} />);
+    modal
+      .find('textarea')
+      .simulate('change', {
+        target: { value: Fixtures.invalidApplication_reason }
+      });
+    const currentValue = modal.state().inputs.description.getValue();
+    modal.instance().evaluateLength(currentValue);
+
+    expect(modal.find('.feedback-text').text()).toEqual(
+      `OK, maybe not your full CV, 10x Engineer. 😜`
+    );
   });
 });

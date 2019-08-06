@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+
 import SellYourselfModal from './SellYourselfModal';
 import Loader from '../Loader/Loader';
+import Fixtures from '../../__mocks__/roleApplicationData.json';
 
 describe('sell yourself modal', () => {
   const props = {
@@ -101,5 +103,35 @@ describe('sell yourself modal', () => {
     const component = setUp();
     component.instance().onClose();
     expect(props.modalHandler).toBeCalled();
+  });
+
+  it('should render the appropriate feedback when the user input is less than 50', () => {
+    const component = setUp();
+    component.setState({
+      reason: 'Hey guys, I am here'
+    });
+    expect(component.find('.feedback-text').text()).toBe(
+      `C'mon, don't sell yourself short!. 😏`
+    );
+  });
+
+  it('should render the feedback to the user when the input is up to 50 and less than 500', () => {
+    const component = setUp();
+    component.setState({
+      reason: Fixtures.validApplication_reason
+    });
+    expect(component.find('.feedback-text').text()).toBe(
+      `Yeah! Keep it nice, short and simple. 👌`
+    );
+  });
+
+  it('should render the feedback to the user when the input is up to more than 500', () => {
+    const component = setUp();
+    component.setState({
+      reason: Fixtures.invalidApplication_reason
+    });
+    expect(component.find('.feedback-text').text()).toBe(
+      `OK, maybe not your full CV, 10x Engineer. 😜`
+    );
   });
 });

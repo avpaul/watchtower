@@ -22,7 +22,11 @@ const CadrePage = ({ user, activateAccount }) => (
       We are glad you made it to the stage. Here, you&apos;d be able to select
       your Engineering path.
     </p>
-    <button type="submit" className="cadrerectangle" onClick={activateAccount}>
+    <button
+      type="submit"
+      className="btn cadrerectangle"
+      onClick={activateAccount}
+    >
       CONTINUE
     </button>
   </div>
