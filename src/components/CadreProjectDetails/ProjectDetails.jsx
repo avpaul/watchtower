@@ -20,15 +20,13 @@ class ProjectDetails extends Component {
   }
 
   async componentDidMount() {
-    const { allProjects, match, getProject } = this.props;
-    let projectDetails = allProjects.data.find(
-      project => project.id === parseInt(match.params.id, 10)
-    );
+    const { match, getProject } = this.props;
+    let projectDetails;
 
     // Check if parameter in the browser is an Integer and the project doesn't exist in redux store already
     // before making the API call to fetch the resource
     // If it exists already, the page renders using the existing data in redux
-    if (Number.isInteger(+match.params.id) && !projectDetails) {
+    if (Number.isInteger(+match.params.id)) {
       await getProject(match.params.id);
       const { singleProject } = this.props;
 
@@ -80,12 +78,10 @@ ProjectDetails.propTypes = {
   location: PropTypes.shape({}),
   history: PropTypes.shape({}).isRequired,
   match: PropTypes.shape({}).isRequired,
-  allProjects: PropTypes.shape(),
   getProject: PropTypes.shape().isRequired,
   singleProject: PropTypes.shape().isRequired
 };
 ProjectDetails.defaultProps = {
-  location: { state: 'something here' },
-  allProjects: { data: [] }
+  location: { state: 'something here' }
 };
 export default ProjectDetails;

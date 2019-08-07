@@ -100,6 +100,9 @@ class FileUploadInput extends Component {
       id: public_id,
       format
     };
+    if (count === 1) {
+      return this.setState({ documents: [document] });
+    }
     if (count === 0 || documents.length < count) {
       return this.setState({ documents: [...documents, document] });
     }
