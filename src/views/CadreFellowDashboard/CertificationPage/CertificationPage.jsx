@@ -4,6 +4,7 @@ import backIcon from '../../../static/BackIcon.png';
 import certificationIcon from '../../../static/Project.svg';
 import './CertificationPage.scss';
 import SellYourselfModal from '../../../components/SellYourselfModal/SellYourselfModal';
+import PMLoader from '../../../components/CustomLoader/PMLoader';
 
 class CertificationPage extends Component {
   state = {
@@ -164,13 +165,12 @@ class CertificationPage extends Component {
     const {
       getCertification: { loading, data }
     } = this.props;
-
     const {
       modals: { applicationModal },
       userHasApplied
     } = this.state;
 
-    return (
+    return !loading ? (
       <Fragment>
         <div className="certification-page">
           <div className="container">
@@ -180,6 +180,8 @@ class CertificationPage extends Component {
           </div>
         </div>
       </Fragment>
+    ) : (
+      <PMLoader />
     );
   }
 }
