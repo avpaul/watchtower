@@ -11,39 +11,7 @@ import { generateVacancyGroups } from '../../../../__mocks__/projectVacancy';
 describe('Vacancy Dashboard', () => {
   const defaultProps = {
     getAllVacanciesAction: jest.fn(),
-    getAllVacancies: {
-      ...initialState.getAllVacancies,
-      data: {
-        projectVacancies: generateVacancyGroups(2, 2),
-        certificationVacancies: [
-          {
-            "certification": {
-              "id": 1,
-              "name": "Wava Wehner MD",
-              "description": "Harum sit reiciendis sint delectus aspernatur omnis.,",
-              "exclusive": true,
-              "duration": 20,
-              "0": {
-                "id": 2,
-                "certification_id": 1,
-                "fellow_id": null,
-                "is_active": false,
-                "created_at": "2019-07-10 07:58:34",
-                "updated_at": "2019-07-10 07:58:34",
-                "certification": {
-                  "id": 1,
-                  "name": "Wava Wehner MD",
-                  "description": "Harum sit molestias.",
-                  "exclusive": true,
-                  "duration": 20
-                }
-              }
-            },
-            "available_slots": 2
-          }
-        ]
-      }
-    },
+    getAllVacancies: generateVacancyGroups(2, 2),
     setProjectVacanciesOnFocus: jest.fn()
   };
 
