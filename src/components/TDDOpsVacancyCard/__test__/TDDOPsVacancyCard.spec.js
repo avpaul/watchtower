@@ -33,7 +33,8 @@ describe('TDD Ops Vacancy card', () => {
             exclusive: true,
             duration: 20
           }
-        }
+        },
+        applications: [{ id: 1 }]
       },
       applications: 1,
       available_slots: 2,
@@ -51,9 +52,7 @@ describe('TDD Ops Vacancy card', () => {
    * @returns { wrapper, props }
    */
   const setup = propOverrides => {
-    const wrapper = shallow(
-      <TDDOPsVacancyCard {...{ ...defaultProps, ...propOverrides }} />
-    );
+    const wrapper = shallow(<TDDOPsVacancyCard {...propOverrides} />);
     return { wrapper };
   };
 
@@ -68,7 +67,7 @@ describe('TDD Ops Vacancy card', () => {
   });
 
   it('should be able to click on card dropdown options', () => {
-    const { wrapper } = setup();
+    const { wrapper } = setup(defaultProps);
     wrapper.find('.ops-vacancy-card__icon').simulate('click');
     wrapper
       .find('button')

@@ -4,7 +4,11 @@ export const projectVacancyMock = {
   project_role_id: 1,
   fellow_id: null,
   is_active: false,
-  days_left: 0
+  days_left: 0,
+  closing_date: '',
+  vacancy_details: {
+    closing_date: ''
+  }
 };
 
 /**
@@ -22,7 +26,11 @@ export const generateVacancies = (count, start = 0) => {
       project_role_id: 1,
       fellow_id: null,
       is_active: false,
-      days_left: 0
+      days_left: 0,
+      closing_date: '',
+      vacancy_details: {
+        closing_date: ''
+      }
     }
   ];
   for (let index = start; index < count; index += 1) {
@@ -42,7 +50,8 @@ const vacanciesGroupMock = {
   },
   role: {
     id: 1,
-    name: 'Engineer'
+    name: 'Engineer',
+    applications: [{ id: 1 }, { id: 2 }]
   }
 };
 
