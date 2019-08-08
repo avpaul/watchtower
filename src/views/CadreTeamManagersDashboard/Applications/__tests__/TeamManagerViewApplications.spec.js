@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Applications from '../Applications';
 
 let props;
@@ -13,7 +13,17 @@ describe('Test team manager view applications', () => {
           pending: [
             {
               id: 16,
-              role: 'QA Engineer',
+              role: {
+                "id": 5,
+                "name": "Data Engineer",
+                "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+                "deleted_at": null,
+                "duration": 3
+              },
+              project: {
+                "id": 4,
+                "name": "Omnis voluptatem quos."
+              },
               applicant: {
                 id: 9,
                 fellow_id: '-HYBHVWK78HBJ',
@@ -31,7 +41,7 @@ describe('Test team manager view applications', () => {
       },
       fetchApplications: jest.fn()
     };
-    wrapper = shallow(<Applications {...props} />);
+    wrapper = mount(<Applications {...props} />);
   });
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot();

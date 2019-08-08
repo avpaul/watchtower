@@ -1,0 +1,64 @@
+@import '../../../assets/sass/abstract/variables';
+.tm-project-applications {
+  width: 100%;
+  .stats-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #333e44;
+    font-family: 'DIN Pro';
+    font-size: 24px;
+    letter-spacing: -1.1px;
+    line-height: 31px;
+    width: 100%;
+    height: 100%;
+  }
+  .TM_ProfileCard {
+    outline: none !important;
+  }
+}
+.cadre__page {
+  width: 100%;
+}
+
+.applicant_profile_card_wrapper {
+  background: #ffffff;
+  max-width: none !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  height: 100vh !important;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: all 1s ease;
+}
+
+.show-application {
+  width: 350px !important;
+  padding: 150px 20px 10px;
+  z-index: 1;
+}
+
+.hide-application {
+  width: 0 !important;
+}
+
+.applications-wrapper {
+  display: flex;
+}
+
+.all-applicants-card {
+  transition: all 0.3s ease;
+}
+
+.add-width {
+  width: 60%;
+}
+
+.remove-width {
+  width: 100%;
+}

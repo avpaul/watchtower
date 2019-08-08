@@ -1,27 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test team manager view applications should render correctly 1`] = `
-<div
-  className="cadre__page"
->
-  <MapProjectApplicants
-    applications={
-      Array [
-        Object {
-          "applicant": Object {
-            "cohort": "NBO-11",
-            "fellow_id": "-HYBHVWK78HBJ",
-            "first_name": "Test",
-            "id": 9,
-            "last_name": "Applicant",
-            "picture": "https://lorempixel.com/100/100/people/?23475 ",
-            "sims_start_date": "2019-02-19 00:00:00",
+<Applications
+  applications={
+    Object {
+      "data": Object {
+        "accepted": Array [],
+        "pending": Array [
+          Object {
+            "applicant": Object {
+              "cohort": "NBO-11",
+              "fellow_id": "-HYBHVWK78HBJ",
+              "first_name": "Test",
+              "id": 9,
+              "last_name": "Applicant",
+              "picture": "https://lorempixel.com/100/100/people/?23475 ",
+              "sims_start_date": "2019-02-19 00:00:00",
+            },
+            "id": 16,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
           },
-          "id": 16,
-          "role": "QA Engineer",
-        },
-      ]
+        ],
+        "rejected": Array [],
+      },
     }
-  />
-</div>
+  }
+  fetchApplications={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="applications-wrapper"
+  >
+    <div
+      className="cadre__page"
+    >
+      <div
+        className="tm-project-applications"
+      >
+        <div
+          className="all-applicants-cards d-flex flex-wrap justify-content-between remove-width"
+        >
+          <div
+            className="stats-header mb-4 d-flex justify-content-between"
+          >
+            <div>
+              0
+               Pending Applications
+            </div>
+            <Filter
+              characterLength={9}
+              chevronColor="#808FA3"
+              current="All Roles"
+              dropdownBackgroundColor="#FFFFFF"
+              fontSize=""
+              getFilter={[Function]}
+              items={
+                Array [
+                  "All Roles",
+                ]
+              }
+              search={false}
+              width="400"
+            >
+              <div
+                className="filter-dropdown"
+              >
+                <button
+                  className="filter-dropdown__button"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "",
+                      "width": "100%",
+                    }
+                  }
+                  type="button"
+                >
+                  <span>
+                    All Roles
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "background": "#FFFFFF",
+                      }
+                    }
+                  >
+                    <i
+                      className="fas fa-chevron-down"
+                      style={
+                        Object {
+                          "color": "#808FA3",
+                        }
+                      }
+                    />
+                  </span>
+                </button>
+              </div>
+            </Filter>
+          </div>
+          <h1>
+            There are currently no applications
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</Applications>
 `;

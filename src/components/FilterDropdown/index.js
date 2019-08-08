@@ -125,7 +125,7 @@ class Filter extends Component {
             type="button"
             className="filter-dropdown__button"
             onClick={() => this.setState({ open: !open })}
-            style={{ width, fontSize }}
+            style={{ width: '100%', fontSize }}
           >
             <span>{current && truncate(current, characterLength)}</span>
             <span style={{ background: dropdownBackgroundColor }}>

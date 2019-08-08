@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the Profile card renders correctly 1`] = `
+<ApplicantProfileCard
+  applicationReason=""
+  firstName="Cristian"
+  lastName="Bartell"
+  picture="https://"
+  projectId=""
+  roleName=""
+>
+  <div
+    className="applicant"
+  >
+    <div
+      className="applicant_profile_card_details"
+    >
+      <img
+        alt=""
+        src="https://"
+      />
+      <br />
+      <h3>
+        Cristian
+         
+        Bartell
+      </h3>
+      <p>
+        Applying for 
+      </p>
+      <p />
+      <button
+        className="applicant_button"
+        type="button"
+      >
+        ACCEPT
+      </button>
+      <div
+        className="line"
+      />
+      <div
+        className="applicant_sell_yourself"
+      >
+        <span
+          className="sell_yourself"
+        >
+          Sell Yourself in one sentence
+        </span>
+        <br />
+        <span
+          className="sell_yourself_text"
+        />
+      </div>
+    </div>
+  </div>
+</ApplicantProfileCard>
+`;
