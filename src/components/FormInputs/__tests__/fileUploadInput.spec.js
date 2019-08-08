@@ -14,7 +14,7 @@ describe('TextInput ', () => {
     label: '',
     comment: '',
     documents: [],
-    count: 0,
+    count: 1,
     buttonLabel: 'Select'
   };
 
@@ -50,7 +50,7 @@ describe('TextInput ', () => {
   });
 
   it('should execute setDocumentState function', () => {
-    const wrapper = setup({ count: 1 });
+    const wrapper = setup({ count: 0 });
     wrapper.setState({
       documents: [{ name: 'name', url: 'url', format: 'svg', id: Date.now() }]
     });
