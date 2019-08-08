@@ -135,14 +135,13 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
         placeholder="Search by Project/Role Name"
         type="text"
       />
-      <a
+      <span
         className="vacancy-search-icon"
-        href="/cadre/!"
       >
         <i
           className="fas fa-search"
         />
-      </a>
+      </span>
     </div>
   </div>
   <div
@@ -196,14 +195,13 @@ exports[`Vacancy Dashboard renders no vacancies when array is empty 1`] = `
         placeholder="Search by Project/Role Name"
         type="text"
       />
-      <a
+      <span
         className="vacancy-search-icon"
-        href="/cadre/!"
       >
         <i
           className="fas fa-search"
         />
-      </a>
+      </span>
     </div>
   </div>
   <div
