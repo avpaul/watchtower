@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Microlink from '@microlink/react';
-import { attachToParentComponent } from './helpers';
+import { attachToParentComponent, stringToArrayFormatter } from './helpers';
 import AddProjectLinksForm from '../ProjectLinksForm';
 import { urlRegex } from '../../utils/regex';
 import './linksUploadInput.scss';
@@ -20,6 +20,12 @@ class LinksUploadInput extends Component {
 
   componentDidMount() {
     attachToParentComponent(this);
+    const { links } = this.props;
+    if (links && links.length !== 0) {
+      this.setState({
+        links: stringToArrayFormatter(links)
+      });
+    }
   }
 
   /**

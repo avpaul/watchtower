@@ -73,6 +73,14 @@ export const defaultReactiveUIDefaultProps = {
   componentStateKey: 'inputs'
 };
 
+export const stringToArrayFormatter = string => {
+  /* RegEx stripsoffsquare Brackets within a string
+   * E.X "["https://example1.com","https://example2.com"]"
+   */
+  const links = string.replace(/[[\]""']+/g, '').split(',');
+  return links.map(link => link.trim());
+};
+
 export default {
   COMPONENT_STATUS,
   COMPONENT_STATUS_CLASS,
