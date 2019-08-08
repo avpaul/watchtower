@@ -50,6 +50,7 @@ const applications = {
           id: 4,
           name: 'Omnis voluptatem quos.'
         },
+        fellow_availability: null,
         role: {
           id: 5,
           name: 'Data Engineer',
@@ -246,5 +247,33 @@ describe('Application component', () => {
 
   it('should show confirmationModal', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should handle unavailable engineers', () => {
+    applications.data.pending[0].fellow_availability = {
+      id: 12,
+      project_id: 3,
+      project_role_id: 6,
+      is_active: true,
+      created_at: '2019-08-29 12:03:22',
+      updated_at: '2019-08-29 12:53:20',
+      requester_email: 'lewis.yost@andela.com',
+      start_date: '2019-08-29 12:03:22',
+      end_date: '2020-02-29 12:03:22',
+      closing_date: '2019-09-05 12:03:22',
+      fellow_id: '-LLUW2BwQiZS0j9KF10j',
+      cycle_id: 1
+    };
+    const component = mount(<Applications {...defaultProps} />);
+    component.setState({
+      showApplication: false,
+      filteredApplications: applications.data.pending,
+      application: {}
+    });
+    const findClick = component.find("[data-test='team_manager_card']");
+    findClick.simulate('click');
+    expect(component.find('.unavailable_engineer').text()).toBe(
+      'Engineer is currently unavailable'
+    );
   });
 });

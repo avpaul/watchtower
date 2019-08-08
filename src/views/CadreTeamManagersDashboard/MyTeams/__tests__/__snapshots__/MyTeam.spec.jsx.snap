@@ -4,7 +4,11 @@ exports[`Application component Render component when manager has no project 1`] 
 <div
   className="cadre__page"
 >
-  emptyPlaceholder();
+  <div>
+    <Placeholder
+      text="Welcome, you are yet to have Cadre Engineers on your team."
+    />
+  </div>
 </div>
 `;
 
@@ -127,6 +131,7 @@ exports[`Application component Render component when no data 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -286,6 +291,7 @@ exports[`Application component Should access the roll off button 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -445,6 +451,7 @@ exports[`Application component Should close engineer profile card 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -628,6 +635,7 @@ exports[`Application component Should open the drawer 1`] = `
         }
       }
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -791,6 +799,7 @@ exports[`Application component renders teams member cards 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal

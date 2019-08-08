@@ -6,7 +6,11 @@ import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
 
 import './ApplicantCard.scss';
 
-const ApplicantCard = ({ application, acceptApplicationHandler, hideDrawer }) => {
+const ApplicantCard = ({
+  application,
+  acceptApplicationHandler,
+  hideDrawer
+}) => {
   const {
     vacancy: { closing_date: closingDate }
   } = application;
@@ -16,6 +20,7 @@ const ApplicantCard = ({ application, acceptApplicationHandler, hideDrawer }) =>
     vacancyCloseCountDown >= 1
       ? `close in ${formatCountDown(vacancyCloseCountDown)}`
       : 'close today';
+
   return (
     <React.Fragment>
       <ApplicantProfileCard
@@ -27,6 +32,7 @@ const ApplicantCard = ({ application, acceptApplicationHandler, hideDrawer }) =>
         applicationReason={application.application_reason}
         acceptApplicationHandler={acceptApplicationHandler}
         applicationId={application.id}
+        fellowAvailability={application.fellow_availability}
         hideDrawer={hideDrawer}
         isVacancyClosed={isVacancyClosed}
         VacancyCloseCountdown={VacancyCloseCountdown}

@@ -159,7 +159,11 @@ const MyTeam = ({
       <span className="close" aria-hidden="true" onClick={closeDrawer}>
         &times;
       </span>
-      <ProfileContainer fellow={fellow} rollOffHandler={toggleRollOffModal} />
+      <ProfileContainer
+        fellow={fellow}
+        rollOffHandler={toggleRollOffModal}
+        view="teamManager"
+      />
     </div>
   );
 
@@ -252,7 +256,7 @@ const MyTeam = ({
         </Fragment>
       );
     }
-    return <div className="cadre__page">emptyPlaceholder();</div>;
+    return <div className="cadre__page">{emptyPlaceholder()}</div>;
   };
 
   return !teamManagerTeamMembers.data.length ? (
@@ -271,7 +275,6 @@ MyTeam.defaultProps = {
     }
   },
   rollOffAnEngineer: () => ''
-  // fetchTeamMembers: () => ''
 };
 
 MyTeam.propTypes = {
