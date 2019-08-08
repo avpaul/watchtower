@@ -43,7 +43,7 @@ Object {
     submitLoading={false}
     success={false}
     successMessage="Success!"
-    title="Apply to WatchTower Extended Team"
+    title="Apply to undefined"
   >
     <div
       className="advocacy"
@@ -166,7 +166,7 @@ Object {
                   submitLoading={false}
                   success={false}
                   successMessage="Success!"
-                  title="Apply to WatchTower Extended Team"
+                  title="Apply to undefined"
                 >
                   <React.Fragment>
                     <div
