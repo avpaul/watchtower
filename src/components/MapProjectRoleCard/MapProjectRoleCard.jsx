@@ -36,7 +36,9 @@ const renderHeader = (type, roleData) => (
         {type === 'role' ? 'Roles' : 'Certifications'}
       </p>
       <span>
-        {roleData.length} Vacant, {roleData.length} Active
+        {roleData.reduce((sum, role) => sum + role.vacancies_count, 0)} Vacant,{' '}
+        {roleData.reduce((sum, role) => sum + role.active_engineers_count, 0)}{' '}
+        Active
       </span>
     </div>
     {renderButtons(type)}
