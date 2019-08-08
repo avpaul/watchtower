@@ -1,4 +1,5 @@
 @import '../../assets/sass/abstract/variables';
+@import '../../assets/sass/abstract/mixins';
 
 .header-span {
   height: 20px;
@@ -35,7 +36,6 @@
   height: 571px;
   width: 353px;
   border-radius: 12px;
-  background-color: #ffffff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
   margin-top: 16px;
 }
@@ -228,6 +228,34 @@
   background-color: #ffffff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
   max-width: 353px;
+
+  @include respond(large-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    height: 571px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+    max-width: 420px;
+  }
+
+  @include respond(very-large-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    height: 571px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+    max-width: 490px;
+  }
 }
 
 .no-project-container > span {

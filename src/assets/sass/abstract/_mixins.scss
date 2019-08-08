@@ -71,6 +71,20 @@ This file is used to store the all the mixins.
     }
   }
 
+  @if $breakpoint==large-screen {
+    //1680px - Includes normal-sized laptop screens and small-sized desktop monitors
+    @media (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==very-large-screen {
+    //1680px - Includes normal-sized laptop screens and small-sized desktop monitors
+    @media (max-width: 2000px) {
+      @content;
+    }
+  }
+
   // (> 1500px) - All large screens such as desktop monitors. These will take the default CSS properties defined
   // without using media queries.
 }
