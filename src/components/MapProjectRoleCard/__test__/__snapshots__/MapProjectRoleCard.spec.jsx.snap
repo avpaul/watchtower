@@ -15,10 +15,12 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
         Roles
       </p>
       <span>
+        6
+         Vacant,
+         
         2
-         Vacant, 
-        2
-         Active
+         
+        Active
       </span>
     </div>
     <div
@@ -104,10 +106,12 @@ exports[`Test Map Role cards should render correctly 1`] = `
         Roles
       </p>
       <span>
+        3
+         Vacant,
+         
         1
-         Vacant, 
-        1
-         Active
+         
+        Active
       </span>
     </div>
     <div
