@@ -164,7 +164,7 @@ class ProjectFormLeft extends Component {
         {renderAddLinksInput({
           name: 'links',
           label: 'Relevant Links',
-          documents: projectDetails.links,
+          links: projectDetails.links,
           buttonLabel: 'Manage Links'
         })}
       </React.Fragment>

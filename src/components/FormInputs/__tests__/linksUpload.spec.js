@@ -5,6 +5,7 @@ import LinksUploadInput from '../linksUploadInput';
 
 describe('TextInput ', () => {
   const defaultProps = {
+    links: '["thisweirdsting.com"]',
     name: 'links',
     parent: {
       setState: jest.fn(),

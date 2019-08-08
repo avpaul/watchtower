@@ -45,11 +45,7 @@ exports[`TextInput  renders as expected 1`] = `
             addNewProjectLink={[Function]}
             projectLinks={
               Array [
-                "",
-                "",
-                "",
-                "",
-                "",
+                "thisweirdsting.com",
               ]
             }
             textInputChange={[Function]}
@@ -70,7 +66,7 @@ exports[`TextInput  renders as expected 1`] = `
           </button>
           <button
             className="btn done-btn"
-            data-dismiss="modal"
+            data-dismiss={null}
             label="Done"
             onClick={[Function]}
             type="button"
