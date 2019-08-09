@@ -39,6 +39,7 @@ const ProjectRoleDetails = ({
         history={history}
         projectId={params.projectId}
         roleInfo={currentRole.role}
+        projectTitle={singleProject.data.project[0].name}
       />
       <RoleDetailsRight
         projectInfo={singleProject.data.project}

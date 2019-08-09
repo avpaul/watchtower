@@ -131,7 +131,8 @@ class RoleApplication extends Component {
 
   render() {
     const { success } = this.state;
-    const title = `Apply to WatchTower Extended Team`;
+    const { projectTitle } = this.props;
+    const title = `Apply to ${projectTitle}`;
 
     return (
       <GenericModal
@@ -152,7 +153,8 @@ RoleApplication.propTypes = {
   history: PropTypes.shape().isRequired,
   engineer: PropTypes.shape().isRequired,
   projectId: PropTypes.string.isRequired,
-  roleId: PropTypes.string.isRequired
+  roleId: PropTypes.string.isRequired,
+  projectTitle: PropTypes.string.isRequired
 };
 
 export default RoleApplication;
