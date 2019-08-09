@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MapProjectApplications cards should render correctly 1`] = `
+<div
+  className="tm-project-applications"
+>
+  <div
+    className="stats-header mb-4"
+  >
+    1
+     Pending Applications
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-4 mb-4"
+      key="9"
+    >
+      <TeamCard
+        cohort="NBO-11"
+        date="19/02/2019"
+        dateType="Start Date"
+        event={[Function]}
+        image="https://lorempixel.com/100/100/people/?23475 "
+        name="Test Applicant"
+        project="Test Project"
+      />
+    </div>
+  </div>
+</div>
+`;
