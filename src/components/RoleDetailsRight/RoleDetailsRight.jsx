@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import projectIcon from '../../static/projectdown.svg';
 import doc from '../../static/doc.svg';
+import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
 
 const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
   const renderDocuments = () =>
@@ -15,14 +16,14 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
     ));
 
   const hasApplied = () => {
-    const { applications } = roleInfo;
+    const { applications } = roleInfo.role;
     let isApplicationActive = false;
 
     if (applications) {
       applications.forEach(application => {
         if (
           application.applicant.fellow_id === engineer.fellow_id &&
-          application.project_role_id === roleInfo.id &&
+          application.project_role_id === roleInfo.role.id &&
           application.project_id === projectInfo[0].id
         ) {
           isApplicationActive = true;
@@ -36,26 +37,40 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
   return (
     <div className="projectAndRoleDetailContainer">
       <div className="mainHeading">
-        <img src={projectIcon} alt="project logo" />
-        <p className="roleName">{roleInfo.name}</p>
-        <p className="projectName">{projectInfo[0].name}</p>
-        {hasApplied() ? (
-          <button disabled id="buttonDisabled" type="button">
-            ALREADY APPLIED
-          </button>
-        ) : (
-          <button
-            data-toggle="modal"
-            data-target="#applyForRoleModal"
-            type="button"
-          >
-            APPLY FOR THIS ROLE
-          </button>
-        )}
+        <div className="headingLeft">
+          <img src={projectIcon} alt="project logo" />
+          <div>
+            <p className="roleName">{roleInfo.role.name}</p>
+            <p className="projectName">{projectInfo[0].name}</p>
+          </div>
+        </div>
+        <div className="headingRight">
+          {hasApplied() ? (
+            <button disabled id="buttonDisabled" type="button">
+              ALREADY APPLIED
+            </button>
+          ) : (
+            <button
+              data-toggle="modal"
+              data-target="#applyForRoleModal"
+              type="button"
+            >
+              APPLY FOR THIS ROLE
+            </button>
+          )}
+          <div className="vacancy__count">
+            Days Left:{' '}
+            <span>
+              {`${formatCountDown(
+                dateCountDown(roleInfo.vacancies[0].closing_date)
+              )}`}
+            </span>
+          </div>
+        </div>
       </div>
       <div className="mainBody">
         <h6 className="paragraphHeadings">Role Description</h6>
-        <p>{roleInfo.description}</p>
+        <p>{roleInfo.role.description}</p>
         <h6 className="paragraphHeadings">About {projectInfo[0].name}</h6>
         <p>{projectInfo[0].about}</p>
         <h6 className="paragraphHeadings">Relevant Documents</h6>

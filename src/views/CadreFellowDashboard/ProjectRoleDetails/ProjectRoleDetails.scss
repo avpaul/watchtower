@@ -73,6 +73,16 @@
     }
   }
 
+  & .roleDetails {
+    border-bottom: 1.2px solid #f4f8f9;
+    padding: 1rem 0 0 2rem;
+    color: #667075;
+
+    & p span {
+      color: #3458db;
+    }
+  }
+
   & .projectTitle {
     font-weight: 500;
     font-size: 1.1rem;
@@ -95,10 +105,15 @@
       color: #829199;
     }
 
+    &__details {
+      display: flex;
+    }
+
     & img {
       height: 3.5rem;
       width: 3.5rem;
       margin-right: 0.5rem;
+      object-fit: contain;
       float: left;
       border-radius: 0.5rem;
     }
@@ -115,6 +130,11 @@
       margin: 0 0.4rem;
     }
   }
+  & .roleStats {
+    padding: 0.5rem 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+  }
 
   & .projectAndRoleDetailContainer {
     width: 65.5%;
@@ -127,11 +147,18 @@
     font-size: 1rem;
 
     & .mainHeading {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       padding: 3rem 3rem 1.7rem 3rem;
       border-bottom: 1.2px solid #f4f8f9;
 
+      & .headingLeft {
+        display: flex;
+        flex-direction: row;
+      }
+
       & img {
-        float: left;
         margin-right: 0.9rem;
       }
 
@@ -145,13 +172,9 @@
       & .projectName {
         color: #829199;
         font-size: 1rem;
-        display: inline;
       }
 
       & button {
-        float: right;
-        position: relative;
-        top: -1.7rem;
         width: 12rem;
         padding: 0.5rem;
         background-color: #0458e4;
@@ -164,6 +187,15 @@
         border: none;
         cursor: pointer;
         outline: none;
+      }
+
+      & .vacancy__count {
+        margin-top: 0.5rem;
+        text-align: center;
+
+        & span {
+          color: #0458e4;
+        }
       }
     }
 

@@ -29,6 +29,25 @@ exports[`should Render Component 1`] = `
     />
   </div>
   <div
+    className="roleDetails"
+  >
+    <p
+      className=""
+    >
+      Available Slot:
+      <span>
+        1
+      </span>
+    </p>
+    <p>
+      Start Date:
+       
+      <span>
+         07/08/2019
+      </span>
+    </p>
+  </div>
+  <div
     className="projectManager"
   >
     <p
@@ -36,16 +55,22 @@ exports[`should Render Component 1`] = `
     >
       Team Manager
     </p>
-    <img
-      alt="project manager"
-      src="https://lorempixel.com/100/100/people/?97143"
-    />
-    <p
-      className="managerName"
-    />
-    <p
-      className="managerEmail"
-    />
+    <div
+      className="projectManager__details"
+    >
+      <img
+        alt="project manager"
+        src="https://lorempixel.com/100/100/people/?97143"
+      />
+      <div>
+        <p
+          className="managerName"
+        />
+        <p
+          className="managerEmail"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;

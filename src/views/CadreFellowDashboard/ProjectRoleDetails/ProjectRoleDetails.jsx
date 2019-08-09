@@ -32,7 +32,7 @@ const ProjectRoleDetails = ({
       <p>Back to Dashboard</p>
       <RoleDetailsLeft
         projectInfo={singleProject.data.project}
-        roleInfo={currentRole.role}
+        roleInfo={currentRole}
       />
       <RoleApplication
         roleId={params.roleId}
@@ -43,7 +43,7 @@ const ProjectRoleDetails = ({
       />
       <RoleDetailsRight
         projectInfo={singleProject.data.project}
-        roleInfo={currentRole.role}
+        roleInfo={currentRole}
         engineer={d1Engineer}
         vacancyId={vacancyId}
       />
