@@ -87,6 +87,15 @@ export const managerItems = [
   menuOptions.feedback
 ];
 
+export const managerWithCadreItems = [
+  menuOptions.dashboard,
+  menuOptions.developers,
+  menuOptions.feedback,
+  menuOptions.cadre
+];
+
+export const cadreManagerItems = [menuOptions.cadre];
+
 export const opsItems = [
   menuOptions.dashboard,
   menuOptions.developers,
@@ -94,17 +103,22 @@ export const opsItems = [
   menuOptions.cadre
 ];
 
-export const getMenuItems = role => {
+export const getMenuItems = (role, roles = null) => {
   switch (role) {
     case 'Fellow':
       return fellowItems;
     case 'WATCH_TOWER_TTL':
     case 'WATCH_TOWER_LF':
+      return roles && roles.includes('CADRE_TEAM_MANAGER')
+        ? managerWithCadreItems
+        : managerItems;
     case 'WATCH_TOWER_EM':
     case 'WATCH_TOWER_SL':
       return managerItems;
     case 'WATCH_TOWER_OPS':
       return opsItems;
+    case 'CADRE_TEAM_MANAGER':
+      return cadreManagerItems;
     default:
       return fellowItems;
   }

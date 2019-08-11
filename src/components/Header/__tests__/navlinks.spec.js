@@ -1,4 +1,11 @@
-import { getMenuItems, fellowItems, managerItems, opsItems } from '../navlinks';
+import {
+  getMenuItems,
+  fellowItems,
+  managerItems,
+  opsItems,
+  managerWithCadreItems,
+  cadreManagerItems
+} from '../navlinks';
 
 describe('Navlinks Test Suite', () => {
   it('gets the right menu items', () => {
@@ -16,5 +23,12 @@ describe('Navlinks Test Suite', () => {
     expect(menu).toEqual(opsItems);
     menu = getMenuItems('none');
     expect(menu).toEqual(fellowItems);
+    menu = getMenuItems('WATCH_TOWER_TTL', [
+      'WATCH_TOWER_TTL',
+      'CADRE_TEAM_MANAGER'
+    ]);
+    expect(menu).toEqual(managerWithCadreItems);
+    menu = getMenuItems('CADRE_TEAM_MANAGER');
+    expect(menu).toEqual(cadreManagerItems);
   });
 });

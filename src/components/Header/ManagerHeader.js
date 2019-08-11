@@ -16,7 +16,8 @@ const ManagerHeader = props => {
     notifications,
     unreadnotifications,
     user,
-    role
+    role,
+    roles
   } = props;
 
   return (
@@ -50,7 +51,7 @@ const ManagerHeader = props => {
         <Menu
           user={user}
           role={role}
-          items={getMenuItems(role)}
+          items={getMenuItems(role, roles)}
           handleMenuClick={handleMenuClick}
           activeItem={activeItem}
         />
@@ -70,7 +71,8 @@ ManagerHeader.propTypes = {
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired
   }).isRequired,
-  role: PropTypes.string.isRequired
+  role: PropTypes.string.isRequired,
+  roles: PropTypes.objectOf(Array).isRequired
 };
 
 export default ManagerHeader;
