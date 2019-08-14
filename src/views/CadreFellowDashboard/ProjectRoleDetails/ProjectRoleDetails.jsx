@@ -4,6 +4,7 @@ import RoleDetailsLeft from '../../../components/RoleDetailsLeft';
 import RoleDetailsRight from '../../../components/RoleDetailsRight';
 import ReturnButton from '../../../components/Buttons/ReturnButton';
 import RoleApplication from '../RoleApplication';
+import PMLoader from '../../../components/CustomLoader/PMLoader';
 
 import './ProjectRoleDetails.scss';
 
@@ -48,7 +49,9 @@ const ProjectRoleDetails = ({
         vacancyId={vacancyId}
       />
     </div>
-  ) : null;
+  ) : (
+    <PMLoader />
+  );
 };
 
 ProjectRoleDetails.defaultProps = {

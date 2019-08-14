@@ -27,7 +27,23 @@ exports[`should Render Component 1`] = `
       "data": Object {},
     }
   }
-/>
+>
+  <PMloader>
+    <LoaderComponent
+      img="undraw_light_the_fire_gt58_new.svg"
+    >
+      <div
+        className="custom-loader text-center"
+      >
+        <img
+          alt="loader"
+          className="custom-loader-img w-50"
+          src="undraw_light_the_fire_gt58_new.svg"
+        />
+      </div>
+    </LoaderComponent>
+  </PMloader>
+</ProjectRoleDetails>
 `;
 
 exports[`should Render child Components 1`] = `
