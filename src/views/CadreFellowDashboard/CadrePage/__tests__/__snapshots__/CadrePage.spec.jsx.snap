@@ -36,7 +36,7 @@ exports[`Cadre Page should render correctly 1`] = `
     We are glad you made it to the stage. Here, you'd be able to select your Engineering path.
   </p>
   <button
-    className="cadrerectangle"
+    className="btn cadrerectangle"
     type="submit"
   >
     CONTINUE

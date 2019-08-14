@@ -11,13 +11,17 @@ class SellYourselfModal extends Component {
   state = {
     reason: '',
     errorMessage: '',
-    isSuccess: false
+    operationSuccessful: false,
+    inputIsValid: false
   };
 
   handleInputChange = event => {
+    const { value } = event.target;
+    const isValid = value.length >= 50 && value.length <= 500;
     this.setState({
       reason: event.target.value,
-      errorMessage: ''
+      errorMessage: '',
+      inputIsValid: isValid
     });
   };
 
@@ -30,23 +34,20 @@ class SellYourselfModal extends Component {
     const { id, submitHandler } = this.props;
     const { reason } = this.state;
 
-    if (reason.length < 50) {
+    if (reason.trim().length < 50 || reason.trim().length > 500)
       return this.setState({
-        errorMessage: 'You must provide at least 50 characters'
+        reason: reason.trim(),
+        errorMessage: 'Spaces, really?',
+        inputIsValid: false
       });
-    }
 
-    if (reason.length > 500) {
-      return this.setState({
-        errorMessage: 'The maximum number of characters is 500'
-      });
-    }
     await submitHandler(id, reason);
     return this.showNotification();
   };
 
   showNotification = () => {
     const { error } = this.props;
+
     if (error) {
       const errorToDisplay = error.reason_for_applying
         ? error.reason_for_applying[0]
@@ -60,7 +61,7 @@ class SellYourselfModal extends Component {
         hideProgressBar: true
       });
     }
-    return this.setState({ isSuccess: true });
+    return this.setState({ operationSuccessful: true });
   };
 
   renderSuccessNotification = () => (
@@ -86,14 +87,42 @@ class SellYourselfModal extends Component {
     </>
   );
 
+  converToUnicode = hexValue => String.fromCodePoint(hexValue);
+
   render() {
     const { title, buttonLabel, modalHandler, showModal, loading } = this.props;
-    const { reason, errorMessage, isSuccess } = this.state;
+    const {
+      reason,
+      errorMessage,
+      operationSuccessful,
+      inputIsValid
+    } = this.state;
+
+    let progressClass;
+    let feedbackText;
+    const currentLength = reason.length;
+
+    if (currentLength >= 0 && currentLength < 50) {
+      progressClass = 'danger';
+      feedbackText = `C'mon, don't sell yourself short!. ${this.converToUnicode(
+        128527
+      )}`;
+    } else if (currentLength > 500) {
+      progressClass = 'danger';
+      feedbackText = `OK, maybe not your full CV, 10x Engineer. ${this.converToUnicode(
+        128540
+      )}`;
+    } else {
+      progressClass = 'success';
+      feedbackText = `Yeah! Keep it nice, short and simple. ${this.converToUnicode(
+        128076
+      )}`;
+    }
 
     return (
       <div className="container" id="sell-yourself">
         <Modal show={showModal} handleClose={modalHandler} size="small">
-          {!isSuccess ? (
+          {!operationSuccessful ? (
             <>
               {this.renderFormBody(title, reason)}
               {errorMessage && (
@@ -104,13 +133,24 @@ class SellYourselfModal extends Component {
               {loading ? (
                 <Loader size="small" />
               ) : (
-                <button
-                  className="btn btn-primary text-uppercase apply-btn"
-                  type="button"
-                  onClick={this.handleSubmit}
-                >
-                  {buttonLabel}
-                </button>
+                <>
+                  <div className="d-flex w-100 word-count justify-content-between mt-3">
+                    <p className="feedback-text">{feedbackText}</p>
+                    <div
+                      className={`rounded-circle count-wrapper d-flex justify-content-center align-items-center ml-3 border-${progressClass} ml-3`}
+                    >
+                      <p className="count">{currentLength}</p>
+                    </div>
+                  </div>
+                  <button
+                    className="btn btn-primary text-uppercase apply-btn"
+                    type="button"
+                    onClick={this.handleSubmit}
+                    disabled={!inputIsValid}
+                  >
+                    {buttonLabel}
+                  </button>
+                </>
               )}
             </>
           ) : (
@@ -124,7 +164,7 @@ class SellYourselfModal extends Component {
 
 SellYourselfModal.defaultProps = {
   loading: false,
-  error: ''
+  error: {}
 };
 
 SellYourselfModal.propTypes = {
@@ -135,7 +175,7 @@ SellYourselfModal.propTypes = {
   modalHandler: PropTypes.func.isRequired,
   showModal: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
-  error: PropTypes.string
+  error: PropTypes.instanceOf(Object)
 };
 
 export default SellYourselfModal;

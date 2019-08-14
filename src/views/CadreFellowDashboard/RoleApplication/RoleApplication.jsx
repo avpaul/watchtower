@@ -11,7 +11,10 @@ class RoleApplication extends Component {
     super(props);
     this.state = {
       inputs: {},
-      success: false
+      success: false,
+      errorMessage: '',
+      currentLength: 0,
+      isValidLength: false
     };
   }
 
@@ -23,8 +26,15 @@ class RoleApplication extends Component {
   }
 
   applicationStatus = applications => {
-    if (applications.data.message) {
+    const {
+      data: { message },
+      error
+    } = applications;
+    if (message) {
       this.setState({ success: true });
+    } else if (error.application_reason) {
+      const { application_reason: reason } = error;
+      this.setState({ errorMessage: reason[0] });
     }
   };
 
@@ -33,10 +43,20 @@ class RoleApplication extends Component {
     const {
       inputs: { description }
     } = this.state;
+
+    const currentValue = description.getValue();
     const data = {
-      application_reason: description.getValue()
+      application_reason: currentValue
     };
-    applyForRole(Number(projectId), Number(roleId), data);
+
+    if (!this.evaluateLength(currentValue.trim())) {
+      return this.setState({
+        errorMessage: 'Spaces, really?',
+        isValidLength: false
+      });
+    }
+
+    return applyForRole(Number(projectId), Number(roleId), data);
   };
 
   handleClose = () => {
@@ -65,14 +85,25 @@ class RoleApplication extends Component {
     </div>
   );
 
+  evaluateLength = value => {
+    const isValidLength = value.length >= 50 && value.length <= 500;
+    this.setState({
+      isValidLength,
+      currentLength: value.length,
+      errorMessage: ''
+    });
+    return isValidLength;
+  };
+
   sendApplicationButton = () => {
-    const { success } = this.state;
+    const { success, isValidLength } = this.state;
     const { applications } = this.props;
     let button = this.renderButton({
       label: 'Send Application',
       buttonProps: {
         onClick: this.handleSubmit,
-        id: 'applicationBtn'
+        id: 'applicationBtn',
+        disabled: !isValidLength
       }
     });
     if (success) {
@@ -92,15 +123,37 @@ class RoleApplication extends Component {
     );
   };
 
+  converToUnicode = hexValue => String.fromCodePoint(hexValue);
+
   renderBody = () => {
     const { roleInfo } = this.props;
-    const { success } = this.state;
+    const { success, errorMessage, currentLength } = this.state;
     const applicationUnits = {
       subtitle: `You are applying as a ${roleInfo.name}`,
-      selfAdvocateTitle: `Sell yourself`,
+      selfAdvocateTitle: `Sell yourself [500 characters max]`,
       successTitle: 'Great! Thank you for applying',
       successSutitle: 'You should hear from us shortly'
     };
+
+    let progressClass;
+    let feedbackText;
+
+    if (currentLength >= 0 && currentLength < 50) {
+      progressClass = 'danger';
+      feedbackText = `C'mon, don't sell yourself short!. ${this.converToUnicode(
+        128527
+      )}`;
+    } else if (currentLength > 500) {
+      progressClass = 'danger';
+      feedbackText = `OK, maybe not your full CV, 10x Engineer. ${this.converToUnicode(
+        128540
+      )}`;
+    } else {
+      progressClass = 'success';
+      feedbackText = `Yeah! Keep it nice, short and simple. ${this.converToUnicode(
+        128076
+      )}`;
+    }
 
     return (
       <React.Fragment>
@@ -113,17 +166,33 @@ class RoleApplication extends Component {
             </p>
           </div>
         ) : (
-          <div className="advocacy">
-            <p className="advocacy__label">{applicationUnits.subtitle}</p>
-            <p className="advocacy__subtitle">
-              {applicationUnits.selfAdvocateTitle}
-            </p>
-            <FormInputs.TextInput
-              parent={this}
-              name="description"
-              type="textarea"
-            />
-          </div>
+          <>
+            <div className="advocacy">
+              <p className="advocacy__label">{applicationUnits.subtitle}</p>
+              <p className="advocacy__subtitle">
+                {applicationUnits.selfAdvocateTitle}
+              </p>
+              <FormInputs.TextInput
+                parent={this}
+                name="description"
+                type="textarea"
+                testInput={this.evaluateLength}
+              />
+              {errorMessage && (
+                <span className="error-message text-danger">
+                  {errorMessage}
+                </span>
+              )}
+            </div>
+            <div className="d-flex w-100 word-count justify-content-between">
+              <p className="feedback-text">{feedbackText}</p>
+              <div
+                className={`rounded-circle count-wrapper d-flex justify-content-center align-items-center ml-3 border-${progressClass} ml-3`}
+              >
+                <p className="count">{currentLength}</p>
+              </div>
+            </div>
+          </>
         )}
       </React.Fragment>
     );
