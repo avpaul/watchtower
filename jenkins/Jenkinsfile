@@ -91,9 +91,9 @@ spec:
                     export REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
                     export REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL
                     export REACT_APP_GOOGLE_ANALYTICS_ID='--'
+                    yarn build
                   """
-                  sh "yarn build"
-                    }
+                  }
                 }
             }
             // Exporting variables to use for production and building production
@@ -119,9 +119,9 @@ spec:
                     export REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
                     export REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL=$PROD_REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL
                     export REACT_APP_GOOGLE_ANALYTICS_ID=$REACT_APP_GOOGLE_ANALYTICS_ID
+                    yarn build
                   """
-                  sh "yarn build"
-                    }
+                  }
                 }
             }
             }
