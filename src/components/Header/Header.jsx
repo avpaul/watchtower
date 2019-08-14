@@ -348,13 +348,20 @@ export class Header extends Component {
 
   switchHeader = userRole => {
     const { activeItem } = this.state;
-    const { user, role, notifications, unreadnotifications } = this.props;
+    const {
+      user,
+      role,
+      roles,
+      notifications,
+      unreadnotifications
+    } = this.props;
 
     switch (userRole) {
       case 'WATCH_TOWER_LF':
       case 'WATCH_TOWER_TTL':
       case 'WATCH_TOWER_EM':
       case 'WATCH_TOWER_SL':
+      case 'CADRE_TEAM_MANAGER':
         return (
           <ManagerHeader
             renderManagerModal={this.renderManagerModal}
@@ -365,6 +372,7 @@ export class Header extends Component {
             unreadnotifications={unreadnotifications || []}
             user={user}
             role={role}
+            roles={roles}
           />
         );
       case 'CadreFellow':
@@ -414,7 +422,8 @@ Header.propTypes = {
   notifications: PropTypes.instanceOf(Array).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
   readnotifications: PropTypes.shape({}).isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  roles: PropTypes.objectOf(Array).isRequired
 };
 const mapStateToProps = state => ({
   loading: state.readnotification.loading,
