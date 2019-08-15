@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Team Card should should render correctly 1`] = `
+<div
+  className="TM_ProfileCard"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="TM_ProfileCard__top"
+  >
+    <div
+      className="TM_ProfileCard__image"
+    >
+      <img
+        alt="Adekunle Gold"
+        src="https://lorempixel.com/100/100/people/?39044"
+      />
+    </div>
+    <div>
+      <p
+        className="TM_ProfileCard__user"
+      >
+        Adekunle Gold
+      </p>
+      <p
+        className="TM_ProfileCard__role"
+      >
+        Technical Director
+      </p>
+      <p
+        className="TM_ProfileCard__project"
+      >
+        Watch Tower
+      </p>
+    </div>
+  </div>
+  <div
+    className="TM_ProfileCard__bottom"
+  >
+    <div
+      className="TM_ProfileCard__bottom-section"
+    >
+      <p>
+        Cohort
+      </p>
+      <span>
+        Lagos-46
+      </span>
+    </div>
+    <div
+      className="TM_ProfileCard__bottom-section"
+    >
+      <p>
+        End Date
+      </p>
+      <span>
+        <Component />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Team Card should test click on card 1`] = `
+<div
+  className="TM_ProfileCard"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="TM_ProfileCard__top"
+  >
+    <div
+      className="TM_ProfileCard__image"
+    >
+      <img
+        alt="Adekunle Gold"
+        src="https://lorempixel.com/100/100/people/?39044"
+      />
+    </div>
+    <div>
+      <p
+        className="TM_ProfileCard__user"
+      >
+        Adekunle Gold
+      </p>
+      <p
+        className="TM_ProfileCard__role"
+      >
+        Technical Director
+      </p>
+      <p
+        className="TM_ProfileCard__project"
+      >
+        Watch Tower
+      </p>
+    </div>
+  </div>
+  <div
+    className="TM_ProfileCard__bottom"
+  >
+    <div
+      className="TM_ProfileCard__bottom-section"
+    >
+      <p>
+        Cohort
+      </p>
+      <span>
+        Lagos-46
+      </span>
+    </div>
+    <div
+      className="TM_ProfileCard__bottom-section"
+    >
+      <p>
+        End Date
+      </p>
+      <span>
+        <Component />
+      </span>
+    </div>
+  </div>
+</div>
+`;
