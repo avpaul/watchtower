@@ -2,7 +2,7 @@
 
 exports[`TDD Ops Vacancy card renders certification vacancy correctly 1`] = `
 <div
-  className="ops-vacancy-card"
+  className="ops-vacancy-card---grey"
 >
   <div
     className="ops-vacancy-card__role-name"
