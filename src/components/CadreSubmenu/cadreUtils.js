@@ -8,13 +8,17 @@ import projectsIcon from '../../static/projects.png';
 import projectsIconActive from '../../static/projectsActive1.svg';
 import certificationIcon from '../../static/certification.svg';
 import certificationActive from '../../static/certificationActive.svg';
+import fileIcon from '../../static/file.svg';
+import tmReportIcon from '../../static/report.svg';
+import gridIcon from '../../static/grid.svg';
+import fileActiveIcon from '../../static/doc.svg';
 
 /**
  * Array data structure that holds details
  * to be displayed on a card
  * @type {Array}
  */
-export const submenus = [
+export const opsSubmenus = [
   {
     title: 'Projects',
     subtitle: 'Manage Project Info',
@@ -48,6 +52,30 @@ export const submenus = [
     subtitle: 'Monitor & Analyse Progress',
     icon: reportIcon,
     id: '4',
+    activeIcon: reportIconActive
+  }
+];
+
+export const tmSubmenus = [
+  {
+    title: 'My Teams',
+    subtitle: 'Manage Project Info',
+    icon: gridIcon,
+    id: '0',
+    activeIcon: projectsIconActive
+  },
+  {
+    title: 'Applications',
+    subtitle: 'Review applicants',
+    icon: fileIcon,
+    id: '1',
+    activeIcon: fileActiveIcon
+  },
+  {
+    title: 'Reports',
+    subtitle: 'Open or close allocations',
+    icon: tmReportIcon,
+    id: '2',
     activeIcon: reportIconActive
   }
 ];

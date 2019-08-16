@@ -46,6 +46,12 @@ export const menuOptions = {
     key: 'cadre',
     name: 'Cadre Program',
     path: '/cadre/projects',
+    set setPath(defaultPath) {
+      this.path = `/cadre/${defaultPath}`;
+    },
+    get getPath() {
+      return this.path;
+    },
     icon: cadreProgramIcon,
     activeIcon: cadreProgramIconFill
   },

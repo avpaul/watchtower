@@ -52,6 +52,7 @@ class CadreDashboard extends Component {
         <CadreSubmenu
           handleCardclick={this.handleCardclick}
           activeItem={`${routeIndex}`}
+          submenuType="opsSubmenus"
         />
       </div>
     );

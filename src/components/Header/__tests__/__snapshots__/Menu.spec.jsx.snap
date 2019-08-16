@@ -23,6 +23,7 @@ exports[`Menu Component Test Suite renders witout error 1`] = `
         "key": "fellows",
         "name": "Fellows",
         "path": "#",
+        "setPath": "myteams",
       }
     }
     role="WATCH_TOWER_LF"
@@ -43,6 +44,7 @@ exports[`Menu Component Test Suite renders witout error 1`] = `
         "key": "dashboard",
         "name": "Dashboard",
         "path": "#",
+        "setPath": "myteams",
       }
     }
     role="WATCH_TOWER_LF"
