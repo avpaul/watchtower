@@ -39,7 +39,7 @@ exports[`should Render Component 1`] = `
         Days Left:
          
         <span>
-          03 days
+          Closing today
         </span>
       </div>
     </div>
@@ -118,7 +118,7 @@ exports[`should Render Component when fellow has not applied 1`] = `
         Days Left:
          
         <span>
-          03 days
+          Closing today
         </span>
       </div>
     </div>
