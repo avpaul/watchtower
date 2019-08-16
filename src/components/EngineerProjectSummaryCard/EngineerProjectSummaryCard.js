@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import './EngineerProjectSummaryCard.scss';
 import project from '../../static/Project.svg';
@@ -49,7 +50,11 @@ const renderD1ProjectSummary = profile =>
         </div>
         <div className="date">
           <span className="date-header">Start Date</span>
-          <span className="start-date">--/--/----</span>
+          <span className="start-date">
+            {!profile.cadre_start_date
+              ? `--/--/----`
+              : moment(profile.cadre_start_date).format('L')}
+          </span>
         </div>
       </div>
     </div>
