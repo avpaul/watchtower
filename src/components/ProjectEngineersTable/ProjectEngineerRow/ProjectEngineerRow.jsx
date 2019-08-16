@@ -11,7 +11,7 @@ const ProjectEngineerRow = ({ engineer, engineerCells }) => (
       <Cell
         addedClass=""
         title={`${engineer.product} engineers`}
-        key={arrayKey(engineer)}
+        key={arrayKey({ detail })}
       >
         {detail}
       </Cell>
@@ -21,7 +21,7 @@ const ProjectEngineerRow = ({ engineer, engineerCells }) => (
 
 ProjectEngineerRow.propTypes = {
   engineer: PropTypes.shape({}).isRequired,
-  engineerCells: PropTypes.arrayOf(PropTypes.object).isRequired
+  engineerCells: PropTypes.arrayOf(PropTypes.any).isRequired
 };
 
 export default ProjectEngineerRow;

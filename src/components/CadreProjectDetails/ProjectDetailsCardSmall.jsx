@@ -1,13 +1,16 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './CadreProjectDetails.scss';
+import arrayKey from 'weak-key';
 import DefaultManagerIcon from '../../static/profile.svg';
 import DefaultProjectIcon from '../../static/projectIcon.png';
 import ProjectLinks from './ProjectLinks';
 
 const formatStacks = (technologies = []) =>
   technologies.map(technology => (
-    <span className="stack">{technology.name || ''}</span>
+    <span className="stack" key={arrayKey(technology)}>
+      {technology.name || ''}
+    </span>
   ));
 const ProjectDetailsCardSmall = ({
   projectDetails,

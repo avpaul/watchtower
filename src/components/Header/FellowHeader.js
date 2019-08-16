@@ -63,7 +63,7 @@ FellowHeader.propTypes = {
   showModal: PropTypes.func.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
   activeItem: PropTypes.string.isRequired,
-  notifications: PropTypes.shape({}).isRequired,
+  notifications: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   unreadnotifications: PropTypes.shape({}).isRequired,
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,

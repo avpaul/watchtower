@@ -23,6 +23,7 @@ describe('Test view roles', () => {
         ]
       },
       fetchAllRoles: jest.fn(),
+      fetchAllProjects: jest.fn(),
       loading: true,
       getActiveRoleEngineer: jest.fn(),
       activeEngineers: {}

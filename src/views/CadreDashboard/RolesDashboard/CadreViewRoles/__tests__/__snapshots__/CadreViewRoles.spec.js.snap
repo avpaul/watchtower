@@ -8,6 +8,7 @@ exports[`Test view roles should render correctly 1`] = `
     activeEngineers={Object {}}
     fetchActiveEngineers={[MockFunction]}
     loading={true}
+    projects={Array []}
     roleData={
       Array [
         Object {

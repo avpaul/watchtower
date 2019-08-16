@@ -1,6 +1,8 @@
 import initialState from '../initialState';
 import fetchCertificationsReducer, {
-  fetchCertificationsApplicantsReducer
+  fetchCertificationsApplicantsReducer,
+  fetchCertifiedEngineers,
+  removeCertification
 } from '../cadreCertificationReducer';
 import * as types from '../../constants/cadreCertificationTypes';
 
@@ -67,6 +69,18 @@ it('should set loading state on fetching certification applicants', () => {
   expect(initialState).toEqual(initialState);
 });
 
+it('should set loading state on fetching certified engineers', () => {
+  const newState = {
+    loading: true,
+    error: null,
+    data: []
+  };
+  const action = { type: types.GET_CERTIFIED_ENGINEERS_REQUEST };
+
+  expect(fetchCertifiedEngineers(undefined, action)).toMatchObject(newState);
+  expect(initialState).toEqual(initialState);
+});
+
 it('should add fetched applicants to state', () => {
   const action = {
     type: types.FETCH_CERTIFICATION_APPLICANTS_SUCCESS,
@@ -129,6 +143,21 @@ it('should add the error message on failing to fetch fellow', () => {
   );
 });
 
+it('should add the error message on failing to fetch certified engineers', () => {
+  const newState = {
+    loading: false,
+    error: { message: 'You messed up again' },
+    data: []
+  };
+
+  const action = {
+    type: types.GET_CERTIFICATION_FAILURE,
+    error: { message: 'You messed up again' }
+  };
+
+  expect(fetchCertifiedEngineers(undefined, action)).toMatchObject(newState);
+});
+
 it('should remove certification when delete certification is successful', () => {
   const newState = {
     loading: false,
@@ -142,5 +171,15 @@ it('should remove certification when delete certification is successful', () => 
 
   expect(fetchCertificationsApplicantsReducer(undefined, action)).toMatchObject(
     newState
+  );
+});
+
+it('should remove a certification in a certifications array', () => {
+  const certifications = [
+    { id: 1, name: 'data science' },
+    { id: 2, name: 'dev ops' }
+  ];
+  expect(removeCertification(certifications, 1)[0]).toMatchObject(
+    certifications[1]
   );
 });

@@ -407,7 +407,7 @@ exports[`Table should render correctly 1`] = `
           <td
             className="text-center"
           >
-            -
+            July 26, 2019
           </td>
         </tr>
         <tr

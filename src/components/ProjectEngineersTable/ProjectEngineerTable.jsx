@@ -8,21 +8,8 @@ import Error from '../Error';
 import { getDate } from '../../services/helper';
 import ProjectEngineerRow from './ProjectEngineerRow/ProjectEngineerRow';
 
-const engineerCells = engineer => [
-  <div>
-    <img src={engineer.picture} alt="engineer" />
-    <span>
-      {engineer.first_name} {engineer.last_name}
-    </span>
-  </div>,
-  'Engineer',
-  engineer.cohort,
-  getDate(engineer.apprenticeship_end_date),
-  getDate(engineer.apprenticeship_start_date)
-];
-
 const ProjectEngineerTable = props => {
-  const { engineers } = props;
+  const { engineers, roles } = props;
   const { ErrorMessage } = Error;
   if (!!engineers && engineers.length < 1) {
     return (
@@ -30,6 +17,25 @@ const ProjectEngineerTable = props => {
     );
   }
   const headers = ['Engineer', 'Role', 'Cohort', 'Appr.End Date', 'Start Date'];
+
+  const engineerCells = engineer => {
+    const role = roles.find(
+      singleRole => singleRole.id === engineer.project_role_id
+    ).name;
+    return [
+      <div>
+        <img src={engineer.picture} alt="engineer" />
+        <span>
+          {engineer.first_name} {engineer.last_name}
+        </span>
+      </div>,
+      role,
+      engineer.cohort,
+      getDate(engineer.apprenticeship_end_date),
+      getDate(engineer.cadre_start_date)
+    ];
+  };
+
   return (
     <Fragment>
       <Table>
@@ -48,12 +54,14 @@ const ProjectEngineerTable = props => {
 };
 
 ProjectEngineerTable.defaultProps = {
-  engineer: {}
+  engineer: {},
+  roles: []
 };
 
 ProjectEngineerTable.propTypes = {
   engineers: PropTypes.arrayOf(PropTypes.object).isRequired,
-  engineer: PropTypes.shape({})
+  engineer: PropTypes.shape({}),
+  roles: PropTypes.arrayOf(PropTypes.shape())
 };
 
 export default ProjectEngineerTable;

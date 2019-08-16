@@ -55,6 +55,7 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
             },
             "fetcher": [MockFunction],
             "loading": true,
+            "projects": Array [],
             "type": "role",
           }
         }
@@ -81,6 +82,7 @@ exports[`Test Map Role cards Should render more than one role correctly 1`] = `
             },
             "fetcher": [MockFunction],
             "loading": true,
+            "projects": Array [],
             "type": "role",
           }
         }
@@ -146,6 +148,7 @@ exports[`Test Map Role cards should render correctly 1`] = `
             },
             "fetcher": [MockFunction],
             "loading": true,
+            "projects": Array [],
             "type": "role",
           }
         }

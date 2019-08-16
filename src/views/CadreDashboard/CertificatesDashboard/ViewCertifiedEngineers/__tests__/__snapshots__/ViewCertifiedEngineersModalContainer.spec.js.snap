@@ -1,21 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CadreViewRolesContainer component renders correctly 1`] = `
-<CadreViewRoles
-  activeEngineers={Array []}
-  allProjects={Array []}
-  allRoles={
+exports[`CadreViewCertsContainer component renders correctly 1`] = `
+<ViewCertificationApplicantsModal
+  certificationId={1}
+  certifiedEngineers={
     Object {
-      "data": Array [],
-      "error": null,
+      "data": Object {},
       "loading": false,
     }
   }
-  fetchAllProjects={[Function]}
-  fetchAllRoles={[Function]}
-  getActiveRoleEngineer={[Function]}
-  loading={false}
-  setDeleteTarget={[Function]}
+  fetchCertifiedEngineers={[Function]}
+  open={true}
   store={
     Object {
       "clearActions": [Function],
@@ -47,26 +42,13 @@ exports[`CadreViewRolesContainer component renders correctly 1`] = `
       "unsubscribe": [Function],
     }
   }
-  user={
-    Object {
-      "email": "ty@andela.com",
-      "roles": Object {
-        "WATCH_TOWER_OPS": "34323234Yf-34",
-      },
-    }
-  }
+  title="Engineers certified in Data Science"
+  toggle={[MockFunction]}
 />
 `;
 
-exports[`CadreViewRolesContainer component should map state to props 1`] = `
+exports[`CadreViewCertsContainer component should map state to props 1`] = `
 Object {
-  "activeEngineers": Array [],
-  "allProjects": Array [],
-  "allRoles": Object {
-    "data": Array [],
-    "error": null,
-    "loading": false,
-  },
-  "loading": false,
+  "certifiedEngineers": undefined,
 }
 `;

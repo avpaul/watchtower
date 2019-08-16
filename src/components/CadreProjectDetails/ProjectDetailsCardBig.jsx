@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import arrayKey from 'weak-key';
 import { formatText } from '../../services/helper';
 import DocLogo from '../../static/doc.svg';
 
@@ -16,7 +17,7 @@ const ProjectDetailsCardBig = ({ projectDetails }) => {
         <div className="relevant-documents">
           {projectDetails.documents &&
             projectDetails.documents.map(document => (
-              <a href={document.url} download>
+              <a href={document.url} download key={arrayKey(document)}>
                 <div className="relevant-documents-card">
                   <img src={DocLogo} alt="doc-logo" />
                   <span className="text-left w-75">

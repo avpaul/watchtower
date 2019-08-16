@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './FellowRolesCard.scss';
 import { truncate } from '../../utils';
 
-const FellowRolesCard = ({ role }) => {
+const FellowRolesCard = ({ role, project }) => {
   const renderStacks = () => {
     const simTechnologies = role.sims_project_technology.split('/');
     const apprTechnologies = role.apprenticeship_technology.split('/');
@@ -28,6 +28,12 @@ const FellowRolesCard = ({ role }) => {
             {truncate(`${role.first_name} ${role.last_name}`, 25)}
           </div>
         </div>
+        {project && (
+          <div className="fellow-project">
+            <span className="fellow-project__title">Cadre Project</span>
+            <span className="fellow-project__name">{project}</span>
+          </div>
+        )}
         <div className="fellow-role-card-bottom">
           <div className="fellow-details">
             <div className="cohort-details">
@@ -48,8 +54,13 @@ const FellowRolesCard = ({ role }) => {
   );
 };
 
+FellowRolesCard.defaultProps = {
+  project: ''
+};
+
 FellowRolesCard.propTypes = {
-  role: PropTypes.shape({}).isRequired
+  role: PropTypes.shape({}).isRequired,
+  project: PropTypes.string
 };
 
 export default FellowRolesCard;

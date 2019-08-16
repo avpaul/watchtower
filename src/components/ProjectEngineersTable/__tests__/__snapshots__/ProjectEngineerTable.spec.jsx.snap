@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tests the ProjectEngineerTable renders correctly 1`] = `
+<ErrorMessage
+  customStyle={Object {}}
+  message="There are currently no Engineers on this project"
+/>
+`;
+
+exports[`tests the ProjectEngineerTable renders correctly 2`] = `
+<ErrorMessage
+  customStyle={Object {}}
+  message="There are currently no Engineers on this project"
+/>
+`;
+
+exports[`tests the ProjectEngineerTable renders correctly 3`] = `
 <Fragment>
   <Table>
     <TableHeader
@@ -15,39 +29,57 @@ exports[`tests the ProjectEngineerTable renders correctly 1`] = `
       }
     />
     <ProjectEngineerRow
-      engineer={Object {}}
+      engineer={
+        Object {
+          "account_active": false,
+          "apprenticeship_end_date": "2019-06-26 00:00:00",
+          "apprenticeship_manager": "Njenga Njunge",
+          "apprenticeship_project": "WatchTower",
+          "apprenticeship_start_date": "2019-06-11 00:00:00",
+          "apprenticeship_technology": "Javascript/Ruby",
+          "cadre_start_date": "2019-07-26 00:00:00",
+          "cohort": "KLA-1",
+          "created_at": null,
+          "email": "chidozie.nwoga@andela.com",
+          "email_sent": false,
+          "fellow_id": "-LSKaKObA5T-XFQIUEKV",
+          "first_name": "Chidozie",
+          "id": 1,
+          "last_name": "Nwoga",
+          "picture": "https://lorempixel.com/100/100/people/?39044",
+          "project": null,
+          "project_id": null,
+          "project_role_id": 1,
+          "role": "TC",
+          "sims_end_date": "2019-01-10 00:00:00",
+          "sims_manager": "Duncan Ireri",
+          "sims_project": "AuthorsHaven",
+          "sims_project_technology": "Python/Django",
+          "sims_start_date": "2018-10-31 00:00:00",
+          "updated_at": null,
+        }
+      }
       engineerCells={
         Array [
           <div>
             <img
               alt="engineer"
+              src="https://lorempixel.com/100/100/people/?39044"
             />
             <span>
+              Chidozie
                
+              Nwoga
             </span>
           </div>,
-          "Engineer",
-          undefined,
-          "29/10/2018",
-          "29/10/2018",
+          "TC",
+          "KLA-1",
+          "26/06/2019",
+          "26/07/2019",
         ]
       }
       key="weak-key-0"
     />
   </Table>
 </Fragment>
-`;
-
-exports[`tests the ProjectEngineerTable renders correctly 2`] = `
-<ErrorMessage
-  customStyle={Object {}}
-  message="There are currently no Engineers on this project"
-/>
-`;
-
-exports[`tests the ProjectEngineerTable renders correctly 3`] = `
-<ErrorMessage
-  customStyle={Object {}}
-  message="There are currently no Engineers on this project"
-/>
 `;

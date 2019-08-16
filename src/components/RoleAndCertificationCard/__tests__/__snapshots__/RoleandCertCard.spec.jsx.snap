@@ -84,7 +84,7 @@ exports[`Test Certification Card component should handle click count correctly 1
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -96,7 +96,7 @@ exports[`Test Certification Card component should handle click count correctly 1
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Cert Engrs.
@@ -115,7 +115,7 @@ exports[`Test Certification Card component should handle click count correctly 1
               2
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -143,7 +143,7 @@ exports[`Test Certification Card component should handle click count correctly 1
     show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="2 test roles"
   >
     <div
       className="modal__body-card"
@@ -153,6 +153,12 @@ exports[`Test Certification Card component should handle click count correctly 1
       />
     </div>
   </Modal>
+  <Connect(ViewCertificationApplicantsModal)
+    certificationId={1}
+    open={true}
+    title="test role"
+    toggle={[Function]}
+  />
 </div>
 `;
 
@@ -240,7 +246,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -252,7 +258,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Cert Engrs.
@@ -271,7 +277,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
               2
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -299,7 +305,7 @@ exports[`Test Certification Card component should handle close modal correctly 1
     show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="2 test roles"
   >
     <div
       className="modal__body-card"
@@ -323,6 +329,12 @@ exports[`Test Certification Card component should handle close modal correctly 1
       }
     }
     open={true}
+    toggle={[Function]}
+  />
+  <Connect(ViewCertificationApplicantsModal)
+    certificationId={1}
+    open={true}
+    title="test role"
     toggle={[Function]}
   />
 </div>
@@ -412,7 +424,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -424,7 +436,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Cert Engrs.
@@ -443,7 +455,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
               2
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -471,7 +483,7 @@ exports[`Test Certification Card component should render correctly 1`] = `
     show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="2 test roles"
   >
     <div
       className="modal__body-card"
@@ -568,7 +580,7 @@ exports[`Test Certification Card component should render modal 1`] = `
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -580,7 +592,7 @@ exports[`Test Certification Card component should render modal 1`] = `
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Cert Engrs.
@@ -599,7 +611,7 @@ exports[`Test Certification Card component should render modal 1`] = `
               2
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -627,7 +639,7 @@ exports[`Test Certification Card component should render modal 1`] = `
     show={false}
     showBtn={true}
     size="large"
-    title="2 test role's"
+    title="2 test roles"
   >
     <div
       className="modal__body-card"
@@ -726,7 +738,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -738,7 +750,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Active engrs.
@@ -757,7 +769,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
               1
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -782,7 +794,7 @@ exports[`Test Role Card component should handle click count correctly 1`] = `
   </div>
   <Modal
     handleClose={[Function]}
-    show={false}
+    show={true}
     showBtn={true}
     size="large"
     title="1 test role"
@@ -882,7 +894,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -894,7 +906,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Active engrs.
@@ -913,7 +925,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
               1
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -938,7 +950,7 @@ exports[`Test Role Card component should handle close modal correctly 1`] = `
   </div>
   <Modal
     handleClose={[Function]}
-    show={true}
+    show={false}
     showBtn={true}
     size="large"
     title="1 test role"
@@ -1038,7 +1050,7 @@ exports[`Test Role Card component should render correctly 1`] = `
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -1050,7 +1062,7 @@ exports[`Test Role Card component should render correctly 1`] = `
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Active engrs.
@@ -1069,7 +1081,7 @@ exports[`Test Role Card component should render correctly 1`] = `
               1
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
@@ -1194,7 +1206,7 @@ exports[`Test Role Card component should render modal 1`] = `
               className="role-card__attributes-count"
               id="applicants_count"
               onClick={[Function]}
-              onKeypress={[Function]}
+              onKeyPress={[Function]}
               role="button"
               tabIndex="0"
             >
@@ -1206,7 +1218,7 @@ exports[`Test Role Card component should render modal 1`] = `
       <div
         className="col-6"
       >
-        <p
+        <div
           className="role-card__attributes"
         >
           Active engrs.
@@ -1225,7 +1237,7 @@ exports[`Test Role Card component should render modal 1`] = `
               1
             </span>
           </div>
-        </p>
+        </div>
       </div>
     </div>
     <p
