@@ -10,6 +10,7 @@ import EngineerVacancies from '../../components/EngineerVacancies';
 import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
 import WelcomeMessage from '../../components/WelcomeMessage';
 import PMLoader from '../../components/CustomLoader/PMLoader';
+import dateCountDown from '../../utils/dateCountDown';
 
 import './index.scss';
 import './CadreDashboard.scss';
@@ -69,17 +70,33 @@ export class D1FellowDashboardMain extends Component {
     });
   };
 
-  render() {
-    const { profile, loading, cadreVacancies, d1Engineer } = this.props;
-    const { vacanciesArray, certificationsArray, searchWord } = this.state;
+  vancancyHandler = () => {
+    const { cadreVacancies } = this.props;
+    const { vacanciesArray, certificationsArray } = this.state;
 
     const vacanciesToRender =
       vacanciesArray || cadreVacancies.data.projectVacancies || [];
     const certificationsToRender =
       certificationsArray || cadreVacancies.data.certificationVacancies || [];
+    const vacancies = vacanciesToRender.filter(
+      vacancy =>
+        dateCountDown(vacancy.vacancies[0].closing_date) !== -1 && vacancy
+    );
+    const certification = certificationsToRender.filter(
+      vacancy =>
+        dateCountDown(vacancy.vacancy_details.closing_date) !== -1 && vacancy
+    );
+    return [vacancies, certification];
+  };
 
-    const vacanciesLength =
+  render() {
+    const { profile, loading, cadreVacancies, d1Engineer } = this.props;
+    const { searchWord } = this.state;
+    const [vacanciesToRender, certificationsToRender] = this.vancancyHandler();
+
+    const vacancyLength =
       vacanciesToRender.length + certificationsToRender.length;
+
     return (
       <Fragment>
         {loading ? (
@@ -99,7 +116,7 @@ export class D1FellowDashboardMain extends Component {
                 <EngineerDashboardCard
                   header="Vacancies"
                   handleSearch={this.handleSearchChange}
-                  vacancyLength={vacanciesLength}
+                  vacancyLength={vacancyLength}
                 >
                   <EngineerVacancies
                     cadreVacancies={cadreVacancies}

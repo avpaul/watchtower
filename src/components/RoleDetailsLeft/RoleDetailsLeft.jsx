@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import projectIcon from '../../static/projectIcon.png';
+import { altDate } from '../../utils/formatDate';
 
 const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
   const [projectLogo, setLogo] = useState(projectInfo[0].logo || projectIcon);
@@ -28,16 +29,30 @@ const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
       <div className="projectOverview">
         {renderTop()}
         {renderTechnology(projectInfo[0].technologies, 'projectStack')}
-        {renderTechnology(roleInfo.skills, 'projectSkills')}
+        {renderTechnology(roleInfo.role.skills, 'projectSkills')}
+      </div>
+      <div className="roleDetails">
+        <p className="">
+          {`Available Slot${roleInfo.available_slots > 1 ? 's : ' : ':'}`}
+          <span>{`${roleInfo.available_slots}`}</span>
+        </p>
+        <p>
+          Start Date:{' '}
+          <span>{` ${altDate(roleInfo.vacancies[0].start_date)}`}</span>
+        </p>
       </div>
       <div className="projectManager">
         <p className="headingText">Team Manager</p>
-        <img
-          src="https://lorempixel.com/100/100/people/?97143"
-          alt="project manager"
-        />
-        <p className="managerName">{projectInfo[0].manager.name}</p>
-        <p className="managerEmail">{projectInfo[0].manager.email}</p>
+        <div className="projectManager__details">
+          <img
+            src="https://lorempixel.com/100/100/people/?97143"
+            alt="project manager"
+          />
+          <div>
+            <p className="managerName">{projectInfo[0].manager.name}</p>
+            <p className="managerEmail">{projectInfo[0].manager.email}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

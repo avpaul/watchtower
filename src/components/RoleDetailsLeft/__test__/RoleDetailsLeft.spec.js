@@ -21,7 +21,20 @@ describe('', () => {
           }
         ]
       }
-    ]
+    ],
+    roleInfo: {
+      available_slots: 1,
+      role: {
+        skills: [],
+        name: ''
+      },
+      vacancies: [
+        {
+          start_date: '2019-08-07 16:54:59',
+          closing_date: '2019-08-16 16:54:59'
+        }
+      ]
+    }
   };
 
   it('should Render Component', () => {
@@ -31,8 +44,10 @@ describe('', () => {
 
   it('should find the div element', () => {
     defaultProps.projectInfo[0].logo = '';
+    defaultProps.roleInfo.available_slots = 2;
+    delete defaultProps.projectInfo[0].technologies;
     const component = shallow(<RoleDetailsLeft {...defaultProps} />);
     const loader = component.find('div');
-    expect(loader.length).toEqual(3);
+    expect(loader.length).toEqual(6);
   });
 });

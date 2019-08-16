@@ -67,8 +67,11 @@ exports[`should Render child Components 1`] = `
     }
     roleInfo={
       Object {
-        "id": 1,
-        "name": "",
+        "project": Object {},
+        "role": Object {
+          "id": 1,
+          "name": "",
+        },
       }
     }
   />
@@ -93,8 +96,11 @@ exports[`should Render child Components 1`] = `
     }
     roleInfo={
       Object {
-        "id": 1,
-        "name": "",
+        "project": Object {},
+        "role": Object {
+          "id": 1,
+          "name": "",
+        },
       }
     }
   />
