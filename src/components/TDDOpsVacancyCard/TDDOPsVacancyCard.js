@@ -66,9 +66,7 @@ const TDDOPsVacancyCard = ({
       : vacancy.certification.applications.length;
   return (
     <div
-      className={`ops-vacancy-card${
-        vacancy.available_slots === 0 ? '---grey' : ''
-      }`}
+      className={`ops-vacancy-card${remainingDays === -1 ? '---grey' : ''}`}
       key={vacancy.id}
     >
       {vacanciesToDisplay === 'project'
