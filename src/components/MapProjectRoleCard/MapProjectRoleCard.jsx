@@ -37,7 +37,14 @@ const renderHeader = (type, roleData) => (
       </p>
       <span>
         {roleData.reduce((sum, role) => sum + role.vacancies_count, 0)} Vacant,{' '}
-        {roleData.reduce((sum, role) => sum + role.active_engineers_count, 0)}{' '}
+        {roleData.reduce(
+          (sum, role) =>
+            sum +
+            ('active_engineers_count' in role
+              ? role.active_engineers_count
+              : role.certified_engineers),
+          0
+        )}{' '}
         Active
       </span>
     </div>
