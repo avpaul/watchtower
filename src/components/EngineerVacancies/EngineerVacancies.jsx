@@ -19,7 +19,7 @@ class EngineerVacancies extends Component {
         {!vacancyLength
           ? this.displayNoVacancyDetails(
               'vacancies-container--no-vacancies',
-              `No Vacancy "${searchWord}" Available`,
+              `No Vacancy ${searchWord} Available`,
               vacanciesArray
             )
           : this.renderVacancyCards(
@@ -34,17 +34,23 @@ class EngineerVacancies extends Component {
   renderVacancyCards = (vacanciesArray, certificationsArray, loggedInUser) => (
     <div className="render-vacancies__div">
       {vacanciesArray.map(
-        ({ role, project, available_slots: availableSlots, vacancies }) => (
+        ({
+          role,
+          project,
+          available_slots: availableSlots,
+          vacancy,
+          applications
+        }) => (
           <EngineerVacancyCard
             role={role.name}
             roleId={role.id}
             projectName={project.name}
             projectId={project.id}
             slots={availableSlots}
-            startDate={vacancies[0].start_date}
-            closingDate={vacancies[0].closing_date}
+            startDate={vacancy.start_date}
+            closingDate={vacancy.closing_date}
             loggedInUser={loggedInUser}
-            applications={vacancies[0].role.applications}
+            applications={applications}
           />
         )
       )}
@@ -64,7 +70,7 @@ class EngineerVacancies extends Component {
             startDate={vacancyDetails.start_date}
             closingDate={vacancyDetails.closing_date}
             loggedInUser={loggedInUser}
-            applications={certification.applications}
+            applications={vacancyDetails.applications}
           />
         )
       )}

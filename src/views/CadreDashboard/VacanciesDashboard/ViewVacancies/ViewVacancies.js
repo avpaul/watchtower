@@ -15,9 +15,16 @@ export class ViewRoleVacancies extends Component {
 
   componentDidMount() {
     const {
-      vacancies: { projectVacancies }
+      vacancies: { projectVacancies },
+      vacanciesWithNoCycleId
     } = this.props;
-    this.updateInitialState(projectVacancies || []);
+
+    const merged = this.mergeVacancies(
+      projectVacancies,
+      vacanciesWithNoCycleId
+    );
+
+    this.updateInitialState(merged || []);
   }
 
   updateInitialState = vacancies => {
@@ -25,9 +32,16 @@ export class ViewRoleVacancies extends Component {
     paginationWrapper.updateData(vacancies, { perPage: 20 });
   };
 
+  mergeVacancies = (source, target) => {
+    if (source) return source.concat(target);
+    return [];
+  };
+
   fuzzySearchVacancies = (isProjectVacancy = true, searchWord) => {
-    const { vacancies } = this.props;
-    let vacanciesArray = isProjectVacancy ? vacancies.projectVacancies : [];
+    const { vacancies, vacanciesWithNoCycleId } = this.props;
+    let vacanciesArray = isProjectVacancy
+      ? this.mergeVacancies(vacancies.projectVacancies, vacanciesWithNoCycleId)
+      : [];
     if (!isProjectVacancy) {
       vacanciesArray = vacancies.certificationVacancies || [];
     }
@@ -49,7 +63,7 @@ export class ViewRoleVacancies extends Component {
 
   handleSearchTextChange = e => {
     const { vacanciesToDisplay } = this.state;
-    const { vacancies, paginationWrapper } = this.props;
+    const { vacancies, paginationWrapper, vacanciesWithNoCycleId } = this.props;
 
     const { value } = e.target;
 
@@ -57,7 +71,10 @@ export class ViewRoleVacancies extends Component {
 
     const vacancyArray =
       vacanciesToDisplay === 'project'
-        ? vacancies.projectVacancies
+        ? this.mergeVacancies(
+            vacancies.projectVacancies,
+            vacanciesWithNoCycleId
+          )
         : vacancies.certificationVacancies;
 
     const filteredArray =
@@ -72,10 +89,13 @@ export class ViewRoleVacancies extends Component {
   };
 
   updatePaginateData = toDisplay => {
-    const { vacancies, paginationWrapper } = this.props;
+    const { vacancies, paginationWrapper, vacanciesWithNoCycleId } = this.props;
     const vacanciesArray =
       toDisplay === 'project'
-        ? vacancies.projectVacancies
+        ? this.mergeVacancies(
+            vacancies.projectVacancies,
+            vacanciesWithNoCycleId
+          )
         : vacancies.certificationVacancies;
     paginationWrapper.updateData(vacanciesArray, { page: 1 });
   };
@@ -187,7 +207,8 @@ const PaginatedVacanciesDashboard = props => (
 
 ViewRoleVacancies.propTypes = {
   vacancies: PropTypes.instanceOf(Object),
-  paginationWrapper: PropTypes.shape({}).isRequired
+  paginationWrapper: PropTypes.shape({}).isRequired,
+  vacanciesWithNoCycleId: PropTypes.instanceOf(Object).isRequired
 };
 
 ViewRoleVacancies.defaultProps = {

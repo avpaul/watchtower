@@ -39,14 +39,15 @@ class RoleApplication extends Component {
   };
 
   handleSubmit = () => {
-    const { applyForRole, roleId, projectId } = this.props;
+    const { applyForRole, roleId, projectId, cycleId } = this.props;
     const {
       inputs: { description }
     } = this.state;
 
     const currentValue = description.getValue();
     const data = {
-      application_reason: currentValue
+      application_reason: currentValue,
+      cycle_id: cycleId
     };
 
     if (!this.evaluateLength(currentValue.trim())) {
@@ -223,7 +224,8 @@ RoleApplication.propTypes = {
   engineer: PropTypes.shape().isRequired,
   projectId: PropTypes.string.isRequired,
   roleId: PropTypes.string.isRequired,
-  projectTitle: PropTypes.string.isRequired
+  projectTitle: PropTypes.string.isRequired,
+  cycleId: PropTypes.number.isRequired
 };
 
 export default RoleApplication;

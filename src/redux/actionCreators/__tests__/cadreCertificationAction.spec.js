@@ -6,7 +6,8 @@ import waitForExpect from 'wait-for-expect';
 
 import {
   fetchAllCertifications,
-  deleteCertification
+  deleteCertification,
+  fetchCertificationApplicants
 } from '../cadreCertificationActions';
 
 import * as types from '../../constants/cadreCertificationTypes';
@@ -29,7 +30,7 @@ describe('Test for certification actions', () => {
   const mock = new MockAdapter(axios);
   const store = mockStore(initialState);
   const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
-  const baseURL = `${serverURL}/api/v2/ops/certifications`;
+  const baseURL = `${serverURL}/api/v2`;
 
   beforeEach(() => {
     store.clearActions();
@@ -43,7 +44,7 @@ describe('Test for certification actions', () => {
       expectedResponse,
       apiResponse = [200, { message: 'Success!' }]
     ) => {
-      mock.onGet(baseURL).reply(...apiResponse);
+      mock.onGet(`${baseURL}/ops/certifications`).reply(...apiResponse);
 
       const expectedActions = [
         { type: types.FETCH_CERTIFICATION_REQUEST },
@@ -79,7 +80,7 @@ describe('Test for certification actions', () => {
       expectedResponse,
       apiResponse = [200, { message: 'Success!' }]
     ) => {
-      mock.onDelete(`${baseURL}/1`).reply(...apiResponse);
+      mock.onDelete(`${baseURL}/ops/certifications/1`).reply(...apiResponse);
 
       const expectedActions = [
         { type: types.DELETE_CERTIFICATION_REQUEST },
@@ -111,6 +112,44 @@ describe('Test for certification actions', () => {
       testDeleteCertificationsAction(
         {
           type: types.DELETE_CERTIFICATION_FAILURE,
+          error: 'Internal Server Error!'
+        },
+        [500, { message: 'Internal Server Error!' }]
+      );
+    });
+  });
+
+  describe('Fetch all certification applicants', () => {
+    const certificationApplicantsRequest = async (
+      expectedResponse,
+      apiResponse = [200, { message: 'Success!' }]
+    ) => {
+      mock
+        .onGet(`${baseURL}/certifications/1/applications`)
+        .reply(...apiResponse);
+
+      const expectedActions = [
+        { type: types.FETCH_CERTIFICATION_APPLICANTS_REQUEST },
+        expectedResponse
+      ];
+
+      await store.dispatch(fetchCertificationApplicants()).then(() => {
+        const dispatchedActions = store.getActions();
+        expect(dispatchedActions).toMatchObject(expectedActions);
+      });
+    };
+
+    it('dispatches FETCH_CERTIFICATION_APPLICANTS_SUCCESS when the get request completes successfully', () => {
+      certificationApplicantsRequest({
+        type: types.FETCH_CERTIFICATION_APPLICANTS_SUCCESS,
+        data: {}
+      });
+    });
+
+    it('creates FETCH_CERTIFICATION_APPLICANTS_FAILURE when the GET request encounters an error', () => {
+      certificationApplicantsRequest(
+        {
+          type: types.FETCH_CERTIFICATION_APPLICANTS_FAILURE,
           error: 'Internal Server Error!'
         },
         [500, { message: 'Internal Server Error!' }]

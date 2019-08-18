@@ -6,6 +6,7 @@ export const projectVacancyMock = {
   is_active: false,
   days_left: 0,
   closing_date: '',
+  cycle_id: 1,
   vacancy_details: {
     closing_date: ''
   }
@@ -27,6 +28,7 @@ export const generateVacancies = (count, start = 0) => {
       fellow_id: null,
       is_active: false,
       days_left: 0,
+      cycle_id: 1,
       closing_date: '',
       vacancy_details: {
         closing_date: ''
@@ -52,6 +54,31 @@ const vacanciesGroupMock = {
     id: 1,
     name: 'Engineer',
     applications: [{ id: 1 }, { id: 2 }]
+  }
+};
+
+const cadreVacanciesWithNoCycleId = {
+  project: {
+    id: 7,
+    name: 'Corruption.'
+  },
+  role: {
+    id: 1,
+    name: 'Engineer',
+    applications: [{ id: 1 }, { id: 2 }]
+  },
+  vacancy: {
+    id: 1,
+    project_id: 7,
+    project_role_id: 1,
+    fellow_id: null,
+    is_active: false,
+    days_left: 0,
+    cycle_id: 1,
+    closing_date: '',
+    vacancy_details: {
+      closing_date: ''
+    }
   }
 };
 
@@ -85,5 +112,6 @@ export default {
   ...vacanciesGroupMock,
   vacancies: generateVacancies(5),
   available_slots: 5,
-  applications: 0
+  applications: 0,
+  ...cadreVacanciesWithNoCycleId
 };

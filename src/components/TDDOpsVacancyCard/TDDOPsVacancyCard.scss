@@ -13,7 +13,8 @@
 
   &---grey {
     @extend .ops-vacancy-card;
-    background-color: #eaeaea;
+    background-color: rgba(221, 224, 228, 0.31);
+    border: none;
   }
 
   &__role-name {
@@ -79,5 +80,6 @@
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
   }
 }

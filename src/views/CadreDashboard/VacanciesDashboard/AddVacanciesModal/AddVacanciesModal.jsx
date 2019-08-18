@@ -47,10 +47,10 @@ class AddVacanciesModal extends Component {
   componentWillReceiveProps(nextProps) {
     const { projectVacanciesOnFocus } = nextProps;
     if (Object.keys(projectVacanciesOnFocus).length !== 0) {
-      const { vacancies } = projectVacanciesOnFocus;
+      const { vacancy } = projectVacanciesOnFocus;
       this.setState({
-        startDate: new Date(vacancies[0].start_date),
-        endDate: new Date(vacancies[0].closing_date)
+        startDate: new Date(vacancy.start_date),
+        endDate: new Date(vacancy.closing_date)
       });
     }
   }
@@ -139,13 +139,16 @@ class AddVacanciesModal extends Component {
     };
 
     if (editMode) {
+      const {
+        vacancy: { cycle_id: cycleId }
+      } = projectVacanciesOnFocus;
       const details = this.filterPayload(projectVacanciesOnFocus, newDetails);
       if (Object.keys(details).length === 2)
         return this.setState({
           error:
             'No updated information has been provided. Please provide an updated input!'
         });
-      editProjectVacancies(details);
+      editProjectVacancies(details, cycleId);
     } else if (vacancyType === 'Certification vacancy') {
       const certificationDuration = certificationInputs.certification.getValue()
         .duration;
@@ -172,9 +175,9 @@ class AddVacanciesModal extends Component {
       project_role_id: oldDetails.role.id,
       old_project_id: oldDetails.project.id,
       old_project_role_id: oldDetails.role.id,
-      start_date: oldDetails.startDate,
-      closing_date: oldDetails.endDate,
-      requester_email: oldDetails.vacancies[0].email,
+      start_date: oldDetails.vacancy.start_date,
+      closing_date: oldDetails.vacancy.closing_date,
+      requester_email: oldDetails.vacancy.requester_email,
       slots: parseInt(oldDetails.available_slots, 10)
     };
 
@@ -182,13 +185,13 @@ class AddVacanciesModal extends Component {
       details.project_id = newDetails.project_id;
     if (details.old_project_role_id !== newDetails.project_role_id)
       details.project_role_id = newDetails.project_role_id;
-    if (oldDetails.vacancies.length !== newDetails.slots)
+    if (oldDetails.available_slots !== newDetails.slots)
       details.slots = newDetails.slots;
     if (details.start_date !== newDetails.start_date)
       details.start_date = newDetails.start_date;
     if (details.closing_date !== newDetails.closing_date)
       details.closing_date = newDetails.closing_date;
-    if (oldDetails.requester_email !== newDetails.requester_email)
+    if (oldDetails.vacancy.requester_email !== newDetails.requester_email)
       details.requester_email = newDetails.requester_email;
 
     return details;
@@ -357,7 +360,7 @@ class AddVacanciesModal extends Component {
    */
   renderVacancyForm = projectVacanciesOnFocus => {
     const { allProjects, allProjectRoles } = this.props;
-    const { vacancies } = projectVacanciesOnFocus;
+    const { vacancy } = projectVacanciesOnFocus;
     return (
       <>
         {this.renderDropdown({
@@ -392,10 +395,10 @@ class AddVacanciesModal extends Component {
           name="email"
           label="Enter Requester Email"
           placeholder="Enter email"
-          defaultStatus={vacancies ? 6 : 0}
+          defaultStatus={vacancy ? 6 : 0}
           testInput={input => emailRegex.test(input)}
           alertText="Please input a valid email!"
-          inputValue={vacancies ? `${vacancies[0].requester_email}` : ''}
+          inputValue={vacancy ? `${vacancy.requester_email}` : ''}
         />
       </>
     );
@@ -408,7 +411,7 @@ class AddVacanciesModal extends Component {
    */
   renderCertificationForm = () => {
     const { allCertifications, projectVacanciesOnFocus } = this.props;
-    const { vacancies } = projectVacanciesOnFocus;
+    const { available_slots: availableSlots } = projectVacanciesOnFocus;
     const { requester } = this.state;
     return (
       <>
@@ -434,10 +437,10 @@ class AddVacanciesModal extends Component {
             name="email"
             label="Enter Requester Email"
             placeholder="Enter email"
-            defaultStatus={vacancies ? 6 : 0}
+            defaultStatus={availableSlots ? 6 : 0}
             testInput={input => emailRegex.test(input)}
             alertText="Please input a valid email!"
-            inputValue={vacancies ? `${vacancies.length}` : ''}
+            inputValue={availableSlots ? `${availableSlots}` : ''}
           />
         )}
       </>
@@ -520,8 +523,9 @@ class AddVacanciesModal extends Component {
 
   renderModalBody = () => {
     const { projectVacanciesOnFocus, editMode } = this.props;
-    const { vacancies } = projectVacanciesOnFocus;
+    const { available_slots: availableSlots } = projectVacanciesOnFocus;
     const { vacancyType } = this.state;
+
     return (
       <>
         {editMode ? '' : this.renderToggleButtons()}
@@ -535,7 +539,7 @@ class AddVacanciesModal extends Component {
           placeholder="Enter no. of slots"
           testInput={input => numberRegex.test(input) && input !== '0'}
           alertText="Please input a valid number of slots!"
-          inputValue={vacancies ? `${vacancies.length}` : ''}
+          inputValue={availableSlots ? `${availableSlots}` : ''}
         />
         {this.renderDatePickers('horizontal')}
         {this.renderError()}

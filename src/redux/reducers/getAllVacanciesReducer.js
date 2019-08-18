@@ -1,5 +1,6 @@
 import initialState from './initialState';
 import * as types from '../constants/projectsTypes';
+import genericReducer from './genericReducer';
 
 /**
  * Removes a vacancy from the list of vacancies
@@ -63,3 +64,27 @@ export default (state = initialState.getAllVacancies, action) => {
       return state;
   }
 };
+
+/**
+ * Store all retrieved vacancies that do not have cycle id
+ *
+ * @param { object } state the initial state of the reducer
+ * @param { object } action the action object dispatched
+ * @return { array } A set of all the vacancies fetched
+ */
+export const fetchVacanciesWithNotCycleIdReducer = (
+  state = initialState.cadreVacanciesWithNoCycleId,
+  action
+) =>
+  genericReducer(
+    [
+      types.GET_ALL_VACANCIES_WITH_NO_CYCLEID_REQUEST,
+      types.GET_ALL_VACANCIES_WITH_NO_CYCLEID_SUCCESS,
+      types.GET_ALL_VACANCIES_WITH_NO_CYCLEID_FAILURE
+    ],
+    state,
+    {
+      ...action,
+      successData: action.data
+    }
+  );

@@ -9,7 +9,6 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
       className="render-vacancies__div"
     >
       <EngineerVacancyCard
-        applications={Array []}
         closingDate="2019-07-10 07:58:34"
         loggedInUser={
           Object {
@@ -24,6 +23,14 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
         startDate="2019-08-10 07:58:34"
       />
       <EngineerVacancyCard
+        applications={
+          Array [
+            Object {
+              "fellow_id": 1,
+              "id": 1,
+            },
+          ]
+        }
         closingDate="2019-07-10 07:58:34"
         loggedInUser={
           Object {

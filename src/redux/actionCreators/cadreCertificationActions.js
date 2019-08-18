@@ -4,6 +4,11 @@ import {
   genericAPIPostRequest
 } from './helpers';
 import * as types from '../constants/cadreCertificationTypes';
+import {
+  CERTIFICATION_APPLICATION_REQUEST,
+  CERTIFICATION_APPLICATION_SUCCESS,
+  CERTIFICATION_APPLICATION_FAILURE
+} from '../constants/cadreVacanciesTypes';
 
 /**
  * An action creator responsible for fetching all certifications
@@ -40,6 +45,7 @@ export const deleteCertification = certificationId =>
       types.DELETE_CERTIFICATION_SUCCESS,
       types.DELETE_CERTIFICATION_FAILURE
     ],
+    null,
     dispatch =>
       dispatch({
         type: types.REMOVE_CERTIFICATION_ON_FOCUS,
@@ -52,27 +58,26 @@ export const deleteCertification = certificationId =>
  * @param integer the id of the certification
  * @return object An instance of a Promise
  */
-  export const fetchCertificationApplicants = certificationId =>
-    genericAPIGetRequest(`certifications/${certificationId}/applications`, [
-      types.FETCH_CERTIFICATION_APPLICANTS_REQUEST,
-      types.FETCH_CERTIFICATION_APPLICANTS_SUCCESS,
-      types.FETCH_CERTIFICATION_APPLICANTS_FAILURE
-    ]);
-
+export const fetchCertificationApplicants = certificationId =>
+  genericAPIGetRequest(`certifications/${certificationId}/applications`, [
+    types.FETCH_CERTIFICATION_APPLICANTS_REQUEST,
+    types.FETCH_CERTIFICATION_APPLICANTS_SUCCESS,
+    types.FETCH_CERTIFICATION_APPLICANTS_FAILURE
+  ]);
 
 /**
  * An action creator responsible for applying for a certification
  * @return object An instance of a Promise
  */
-export const applyForCertification = (certificationId, reason) =>
+export const applyForCertification = (certificationId, reason, cycleId) =>
   genericAPIPostRequest(
     `certifications/${certificationId}/applications`,
     [
-      types.CERTIFICATION_APPLICATION_REQUEST,
-      types.CERTIFICATION_APPLICATION_SUCCESS,
-      types.CERTIFICATION_APPLICATION_FAILURE
+      CERTIFICATION_APPLICATION_REQUEST,
+      CERTIFICATION_APPLICATION_SUCCESS,
+      CERTIFICATION_APPLICATION_FAILURE
     ],
-    { reason_for_applying: reason }
+    { reason_for_applying: reason, cycle_id: cycleId }
   );
 
 export default {

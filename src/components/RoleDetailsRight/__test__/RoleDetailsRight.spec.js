@@ -27,25 +27,25 @@ describe('', () => {
     roleInfo: {
       role: {
         id: 1,
-        name: '',
-        applications: [
-          {
-            applicant: { fellow_id: '-HUU9KKKK' },
-            project_vacancy_id: 100,
-            project_role_id: 1,
-            project_id: 1
-          }
-        ]
+        name: ''
       },
-      vacancies: [
+      vacancy: {
+        start_date: '2019-08-07 16:54:59',
+        closing_date: '2019-08-16 16:54:59'
+      },
+      applications: [
         {
-          start_date: '2019-08-07 16:54:59',
-          closing_date: '2019-08-16 16:54:59'
+          fellow_id: '-HUU9KKKK',
+          project_vacancy_id: 100,
+          project_role_id: 1,
+          project_id: 1,
+          cycle_id: 1
         }
       ]
     },
     engineer: { id: 1, name: 'Brian Mboya', fellow_id: '-HUU9KKKK' },
-    vacancyId: 100
+    vacancyId: 100,
+    cycleId: 1
   };
 
   it('should Render Component', () => {

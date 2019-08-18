@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the certification container map state to props should return props value 1`] = `
+Object {
+  "certificationApplication": undefined,
+  "certificationVacancies": Object {},
+  "d1Fellow": undefined,
+  "getCertification": undefined,
+  "loading": undefined,
+}
+`;

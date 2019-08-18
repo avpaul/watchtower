@@ -1,9 +1,9 @@
 import { genericAPIPostRequest } from './helpers';
 import * as types from '../constants/applyForRoleTypes';
 
-const applyForRole = (project, vacancy, applicationData) =>
+const applyForRole = (projectId, roleId, applicationData) =>
   genericAPIPostRequest(
-    `projects/${project}/vacancies/${vacancy}/apply`,
+    `projects/${projectId}/roles/${roleId}/apply`,
     [types.APPLYREQUEST, types.APPLYSUCCESS, types.APPLYFAILURE],
     applicationData
   );

@@ -232,5 +232,6 @@ export default {
   applyRole: genericAPIStateObject,
   singleRole: genericAPIStateArray,
   teamManagerProjectApplications: genericAPIStateObject,
-  teamMembers: genericAPIStateArray
+  teamMembers: genericAPIStateArray,
+  cadreVacanciesWithNoCycleId: genericAPIStateObject
 };

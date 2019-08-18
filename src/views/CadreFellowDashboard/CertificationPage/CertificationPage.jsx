@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { array } from 'prop-types';
 import backIcon from '../../../static/BackIcon.png';
 import certificationIcon from '../../../static/Project.svg';
 import './CertificationPage.scss';
@@ -25,13 +25,16 @@ class CertificationPage extends Component {
 
   componentDidUpdate(prevProps) {
     const {
-      getCertification: {
-        loading,
-        data: { applications }
-      }
+      loading,
+      getCertification: { loading: getCertificationLoading },
+      certificationVacancies
     } = this.props;
-    if (prevProps.getCertification.loading !== loading) {
-      this.checkIfUserHasApplied(applications);
+
+    if (
+      prevProps.loading !== loading ||
+      prevProps.getCertification.loading !== getCertificationLoading
+    ) {
+      this.checkIfUserHasApplied(certificationVacancies);
     }
   }
 
@@ -122,21 +125,29 @@ class CertificationPage extends Component {
     }));
   };
 
-  certificationApplicationHandler = () => {
-    this.modalHandler('applicationModal');
-  };
+  certificationApplicationHandler = () => this.modalHandler('applicationModal');
 
   renderSellYourselfModal = () => {
     const {
       applyForCertification,
       getCertification: {
-        data: { id, name },
-        loading
-      }
+        data: { id, name }
+      },
+      certificationVacancies,
+      match: { params },
+      loading
     } = this.props;
     const {
-      modals: { applicationModal }
+      modals: { applicationModal },
+      userHasApplied
     } = this.state;
+
+    const currentVacancy = this.getCurrentVacancy(
+      certificationVacancies,
+      params.certificationId
+    );
+
+    const { cycle_id: cycleId } = currentVacancy.vacancy_details;
 
     return (
       <SellYourselfModal
@@ -147,19 +158,34 @@ class CertificationPage extends Component {
         modalHandler={() => this.modalHandler('applicationModal')}
         showModal={applicationModal}
         loading={loading}
+        cycleId={cycleId}
+        hasApplied={userHasApplied}
       />
     );
   };
 
-  checkIfUserHasApplied = applications => {
-    const { d1Engineer } = this.props;
-    if (applications) {
-      const hasApplied = applications.find(
+  checkIfUserHasApplied = vacancies => {
+    const {
+      d1Engineer,
+      match: {
+        params: { certificationId }
+      }
+    } = this.props;
+    if (vacancies) {
+      const currentVacancy = this.getCurrentVacancy(vacancies, certificationId);
+
+      const hasApplied = !!currentVacancy.vacancy_details.applications.find(
         application => application.fellow_id === d1Engineer.fellow_id
       );
+
       if (hasApplied) this.setState({ userHasApplied: true });
     }
   };
+
+  getCurrentVacancy = (vacancies, certificationId) =>
+    vacancies.find(
+      vacancy => vacancy.certification.id === Number(certificationId)
+    );
 
   render() {
     const {
@@ -192,7 +218,9 @@ CertificationPage.propTypes = {
   match: PropTypes.instanceOf(Object).isRequired,
   applyForCertification: PropTypes.func.isRequired,
   d1Engineer: PropTypes.instanceOf(Object).isRequired,
-  getCertification: PropTypes.instanceOf(Object).isRequired
+  getCertification: PropTypes.instanceOf(Object).isRequired,
+  certificationVacancies: PropTypes.instanceOf(array).isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default CertificationPage;

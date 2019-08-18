@@ -4,7 +4,7 @@ import projectIcon from '../../static/projectdown.svg';
 import doc from '../../static/doc.svg';
 import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
 
-const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
+const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
   const renderDocuments = () =>
     projectInfo[0].documents.map(document => (
       <a href={document.url} key={document.id} rel="noopener">
@@ -16,15 +16,16 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
     ));
 
   const hasApplied = () => {
-    const { applications } = roleInfo.role;
+    const { applications } = roleInfo;
     let isApplicationActive = false;
 
     if (applications) {
       applications.forEach(application => {
         if (
-          application.applicant.fellow_id === engineer.fellow_id &&
+          application.fellow_id === engineer.fellow_id &&
           application.project_role_id === roleInfo.role.id &&
-          application.project_id === projectInfo[0].id
+          application.project_id === projectInfo[0].id &&
+          application.cycle_id === cycleId
         ) {
           isApplicationActive = true;
         }
@@ -62,7 +63,7 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
             Days Left:{' '}
             <span>
               {`${formatCountDown(
-                dateCountDown(roleInfo.vacancies[0].closing_date)
+                dateCountDown(roleInfo.vacancy.closing_date)
               )}`}
             </span>
           </div>
@@ -88,7 +89,8 @@ RoleDetailsRight.defaultProps = {
 RoleDetailsRight.propTypes = {
   projectInfo: PropTypes.arrayOf(PropTypes.shape()),
   engineer: PropTypes.shape().isRequired,
-  roleInfo: PropTypes.shape()
+  roleInfo: PropTypes.shape(),
+  cycleId: PropTypes.number.isRequired
 };
 
 export default RoleDetailsRight;

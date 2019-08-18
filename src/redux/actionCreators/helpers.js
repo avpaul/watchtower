@@ -109,13 +109,15 @@ export const genericAPIPutRequest = (
 export const genericAPIDeleteRequest = (
   url,
   actionTypes,
+  deleteData = null,
   onSuccess = () => {}
 ) =>
   genericAPIRequest(
     actionTypes,
     {
       method: 'DELETE',
-      url: `${serverURL}/api/v2/${url}`
+      url: `${serverURL}/api/v2/${url}`,
+      data: deleteData
     },
     onSuccess
   );

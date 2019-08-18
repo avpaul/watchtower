@@ -79,8 +79,7 @@ export class D1FellowDashboardMain extends Component {
     const certificationsToRender =
       certificationsArray || cadreVacancies.data.certificationVacancies || [];
     const vacancies = vacanciesToRender.filter(
-      vacancy =>
-        dateCountDown(vacancy.vacancies[0].closing_date) !== -1 && vacancy
+      vacancy => dateCountDown(vacancy.vacancy.closing_date) !== -1 && vacancy
     );
     const certification = certificationsToRender.filter(
       vacancy =>

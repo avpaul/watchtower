@@ -20,6 +20,9 @@ describe('', () => {
         role: {
           id: 1,
           name: ''
+        },
+        vacancy: {
+          cycle_id: 1
         }
       }
     ]
