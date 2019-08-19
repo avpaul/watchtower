@@ -1,3 +1,21 @@
+# V 3.0.1
+
+## Features
+- add days left, number of slots and role start date to project and certfication vacancy
+- create team member card
+- enable login for cadre team managers
+- display validation errors on roles/certification application forms
+- add a loader on the certification and role application pages
+- update project details after editing
+- populate existing links when editing projects
+- display number of applicants
+
+## Bug Fixes
+- stop deduction of slots after application approval
+- fix application title
+- fix vacancies and active engineers count
+- fix search icon error
+
 # V 3.0.0
 
 ## Features
