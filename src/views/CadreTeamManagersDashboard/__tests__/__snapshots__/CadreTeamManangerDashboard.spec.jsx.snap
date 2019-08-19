@@ -466,7 +466,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                           }
                         >
                           <div
-                            className="cadre__page managerTeamMembers"
+                            className="cadre__page managerTeamMembers remove-margin"
                           >
                             <div
                               className="teamTitle"
@@ -786,6 +786,116 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                                 </div>
                               </TeamCard>
                             </div>
+                          </div>
+                          <div
+                            className="bio-card no-radius hide-profile"
+                          >
+                            <span
+                              aria-hidden="true"
+                              className="close"
+                              onClick={[Function]}
+                            >
+                              ×
+                            </span>
+                            <EngineerDetails
+                              fellow={Object {}}
+                            >
+                              <ProfileCard>
+                                <div
+                                  className="profile_card"
+                                >
+                                  <div
+                                    className=" profile_card_details text-center"
+                                  >
+                                    <img
+                                      alt=""
+                                      src="https://lorempixel.com/100/100/people/?97143"
+                                    />
+                                    <h3>
+                                       
+                                    </h3>
+                                    <p>
+                                      D1 Engineer
+                                    </p>
+                                    <h4>
+                                      Cadre Program
+                                    </h4>
+                                  </div>
+                                </div>
+                              </ProfileCard>
+                              <ProjectCards
+                                projectLevel="Apprenticeship"
+                              >
+                                <div
+                                  className="profile_card"
+                                >
+                                  <div
+                                    className="project-card-grid"
+                                  >
+                                    <div
+                                      className="project-card-left"
+                                    >
+                                      <img
+                                        alt="project logo"
+                                        src="projectIcon.png"
+                                      />
+                                    </div>
+                                    <div
+                                      className="project-card-right"
+                                    >
+                                      <h6 />
+                                      <p>
+                                        Apprenticeship
+                                      </p>
+                                      <p>
+                                        Invalid Date
+                                         - 
+                                        Invalid Date
+                                      </p>
+                                      <p
+                                        className="projects"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </ProjectCards>
+                              <ProjectCards
+                                projectLevel="Simulations"
+                              >
+                                <div
+                                  className="profile_card"
+                                >
+                                  <div
+                                    className="project-card-grid"
+                                  >
+                                    <div
+                                      className="project-card-left"
+                                    >
+                                      <img
+                                        alt="project logo"
+                                        src="projectIcon.png"
+                                      />
+                                    </div>
+                                    <div
+                                      className="project-card-right"
+                                    >
+                                      <h6 />
+                                      <p>
+                                        Simulations
+                                      </p>
+                                      <p>
+                                        Invalid Date
+                                         - 
+                                        Invalid Date
+                                      </p>
+                                      <p
+                                        className="projects"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </ProjectCards>
+                            </EngineerDetails>
                           </div>
                         </MyTeam>
                       </Connect(MyTeam)>

@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`tests the Engineer card renders correctly when fellow data not passed [Return null view] 1`] = `
+<div
+  className="engineer-bio-wrapper"
+>
+  <h3
+    className="profile-card-header"
+  >
+    My Profile
+  </h3>
+  <div
+    className="bio-card text-center"
+  />
+</div>
+`;
+
 exports[`tests the Engineer card renders correctly when loading is false 1`] = `
 <div
   className="engineer-bio-wrapper"
@@ -12,23 +27,23 @@ exports[`tests the Engineer card renders correctly when loading is false 1`] = `
   <div
     className="bio-card text-center"
   >
-    <ProfileCard
-      firstName="Cristian"
-      lastName="Bartell"
-    />
-    <ProjectCards
-      endDate=""
-      projectLevel="Apprenticeship"
-      projectName="WatchTower"
-      startDate=""
-      technologies="PHP/JavaScript"
-    />
-    <ProjectCards
-      endDate=""
-      projectLevel="Simulations"
-      projectName="AuthorsHaven"
-      startDate=""
-      technologies="Python/Django"
+    <EngineerDetails
+      fellow={
+        Object {
+          "apprenticeship_end_date": "",
+          "apprenticeship_project": "WatchTower",
+          "apprenticeship_start_date": "",
+          "apprenticeship_technology": "PHP/JavaScript",
+          "fellow_id": "-LJK1qECFdekucrwqqkh",
+          "first_name": "Cristian",
+          "last_name": "Bartell",
+          "manager_id": "-LGy4OuPDHCZCZvDuPz0",
+          "sims_end_date": "",
+          "sims_project": "AuthorsHaven",
+          "sims_project_technology": "Python/Django",
+          "sims_start_date": "",
+        }
+      }
     />
   </div>
 </div>
@@ -46,12 +61,8 @@ exports[`tests the Engineer card renders correctly when loading is true 1`] = `
   <div
     className="bio-card text-center"
   >
-    <ProfileCard />
-    <ProjectCards
-      projectLevel="Apprenticeship"
-    />
-    <ProjectCards
-      projectLevel="Simulations"
+    <EngineerDetails
+      fellow={Object {}}
     />
   </div>
 </div>

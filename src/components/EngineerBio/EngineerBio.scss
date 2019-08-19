@@ -33,6 +33,45 @@
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
 }
 
+.no-radius {
+  max-width: none !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  height: 100vh !important;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .close {
+    outline: none;
+    width: 2rem;
+    padding: 2px;
+    color: rgba(52, 76, 90, 0.62);
+    cursor: pointer;
+  }
+}
+
+.show-profile {
+  width: 350px !important;
+  padding: 150px 20px 10px;
+}
+
+.hide-profile {
+  width: 0 !important;
+}
+
+.add-margin {
+  margin-right: 350px;
+}
+
+.remove-margin {
+  margin-right: 0;
+}
+
 /* New CSS files*/
 .profile_card {
   margin-top: 1.5em;

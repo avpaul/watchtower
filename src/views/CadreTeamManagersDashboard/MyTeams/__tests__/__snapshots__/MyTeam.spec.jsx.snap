@@ -1,171 +1,437 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Application component renders teams member cards 1`] = `
-<div
-  className="cadre__page managerTeamMembers"
->
-  <div
-    className="teamTitle"
-  >
-    <div>
-      <h1>
-        My Teams
-      </h1>
-      <div
-        className="technologies"
-      >
-        <StackRectangle
-          key="weak-key-0"
-          stackName="React-JS"
-        />
-        <StackRectangle
-          key="weak-key-1"
-          stackName="React-JS"
-        />
-        <StackRectangle
-          key="weak-key-2"
-          stackName="React-JS"
-        />
-      </div>
-    </div>
-    <Filter
-      characterLength={9}
-      chevronColor="#808FA3"
-      current="All Roles"
-      dropdownBackgroundColor="#FFFFFF"
-      fontSize=""
-      getFilter={[Function]}
-      items={
-        Array [
-          "All Roles",
-          "Technical Coordinator",
-        ]
-      }
-      search={false}
-      width="400"
-    />
-  </div>
-  <div
-    className="teamMembers"
-  >
-    <TeamCard
-      cohort="NBO-13"
-      date="20/11/2019"
-      dateType=""
-      event={[Function]}
-      image="https://lorempixel.com"
-      key="weak-key-3"
-      name="john doe"
-      project="Travella"
-      role="Technical Coordinator"
-    />
-    <TeamCard
-      cohort="NBO-13"
-      date="20/11/2019"
-      dateType=""
-      event={[Function]}
-      image="https://lorempixel.com"
-      key="weak-key-4"
-      name="john doe"
-      project="WatchTower"
-      role="Technical Coordinator"
-    />
-    <TeamCard
-      cohort="NBO-13"
-      date="20/11/2019"
-      dateType=""
-      event={[Function]}
-      image="https://lorempixel.com"
-      key="weak-key-5"
-      name="john doe"
-      project="WatchTower"
-      role="Technical Coordinator"
-    />
-  </div>
-</div>
+exports[`Application component Render component when manager has no project 1`] = `
+<h1>
+  You currently not managing any project
+</h1>
 `;
 
-exports[`Application component should test roles dropdown 1`] = `
-<div
-  className="cadre__page managerTeamMembers"
->
+exports[`Application component Render component when no data 1`] = `
+<Fragment>
   <div
-    className="teamTitle"
+    className="cadre__page managerTeamMembers remove-margin"
   >
-    <div>
-      <h1>
-        My Teams
-      </h1>
-      <div
-        className="technologies"
-      >
-        <StackRectangle
-          key="weak-key-0"
-          stackName="React-JS"
-        />
-        <StackRectangle
-          key="weak-key-1"
-          stackName="React-JS"
-        />
-        <StackRectangle
-          key="weak-key-2"
-          stackName="React-JS"
-        />
+    <div
+      className="teamTitle"
+    >
+      <div>
+        <h1>
+          My Teams
+        </h1>
+        <div
+          className="technologies"
+        >
+          <StackRectangle
+            key="weak-key-0"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-1"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-2"
+            stackName="React-JS"
+          />
+        </div>
       </div>
+      <Filter
+        characterLength={9}
+        chevronColor="#808FA3"
+        current="All Roles"
+        dropdownBackgroundColor="#FFFFFF"
+        fontSize=""
+        getFilter={[Function]}
+        items={
+          Array [
+            "All Roles",
+            "Technical Coordinator",
+          ]
+        }
+        search={false}
+        width="400"
+      />
     </div>
-    <Filter
-      characterLength={9}
-      chevronColor="#808FA3"
-      current="All Roles"
-      dropdownBackgroundColor="#FFFFFF"
-      fontSize=""
-      getFilter={[Function]}
-      items={
-        Array [
-          "All Roles",
-          "Technical Coordinator",
-        ]
-      }
-      search={false}
-      width="400"
-    />
+    <div
+      className="teamMembers"
+    >
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-9"
+        name="john doe"
+        project="Travella"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-10"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-11"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+    </div>
   </div>
   <div
-    className="teamMembers"
+    className="bio-card no-radius hide-profile"
   >
-    <TeamCard
-      cohort="NBO-13"
-      date="20/11/2019"
-      dateType=""
-      event={[Function]}
-      image="https://lorempixel.com"
-      key="weak-key-9"
-      name="john doe"
-      project="Travella"
-      role="Technical Coordinator"
-    />
-    <TeamCard
-      cohort="NBO-13"
-      date="20/11/2019"
-      dateType=""
-      event={[Function]}
-      image="https://lorempixel.com"
-      key="weak-key-10"
-      name="john doe"
-      project="WatchTower"
-      role="Technical Coordinator"
-    />
-    <TeamCard
-      cohort="NBO-13"
-      date="20/11/2019"
-      dateType=""
-      event={[Function]}
-      image="https://lorempixel.com"
-      key="weak-key-11"
-      name="john doe"
-      project="WatchTower"
-      role="Technical Coordinator"
+    <span
+      aria-hidden="true"
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <EngineerDetails
+      fellow={Object {}}
     />
   </div>
-</div>
+</Fragment>
+`;
+
+exports[`Application component Should close engineer profile card 1`] = `
+<Fragment>
+  <div
+    className="cadre__page managerTeamMembers remove-margin"
+  >
+    <div
+      className="teamTitle"
+    >
+      <div>
+        <h1>
+          My Teams
+        </h1>
+        <div
+          className="technologies"
+        >
+          <StackRectangle
+            key="weak-key-0"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-1"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-2"
+            stackName="React-JS"
+          />
+        </div>
+      </div>
+      <Filter
+        characterLength={9}
+        chevronColor="#808FA3"
+        current="All Roles"
+        dropdownBackgroundColor="#FFFFFF"
+        fontSize=""
+        getFilter={[Function]}
+        items={
+          Array [
+            "All Roles",
+            "Technical Coordinator",
+          ]
+        }
+        search={false}
+        width="400"
+      />
+    </div>
+    <div
+      className="teamMembers"
+    >
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-39"
+        name="john doe"
+        project="Travella"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-40"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-41"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+    </div>
+  </div>
+  <div
+    className="bio-card no-radius hide-profile"
+  >
+    <span
+      aria-hidden="true"
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <EngineerDetails
+      fellow={Object {}}
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Application component Should open the drawer 1`] = `
+<Fragment>
+  <div
+    className="cadre__page managerTeamMembers add-margin"
+  >
+    <div
+      className="teamTitle"
+    >
+      <div>
+        <h1>
+          My Teams
+        </h1>
+        <div
+          className="technologies"
+        >
+          <StackRectangle
+            key="weak-key-0"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-1"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-2"
+            stackName="React-JS"
+          />
+        </div>
+      </div>
+      <Filter
+        characterLength={9}
+        chevronColor="#808FA3"
+        current="All Roles"
+        dropdownBackgroundColor="#FFFFFF"
+        fontSize=""
+        getFilter={[Function]}
+        items={
+          Array [
+            "All Roles",
+            "Technical Coordinator",
+          ]
+        }
+        search={false}
+        width="400"
+      />
+    </div>
+    <div
+      className="teamMembers"
+    >
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-33"
+        name="john doe"
+        project="Travella"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-34"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-35"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+    </div>
+  </div>
+  <div
+    className="bio-card no-radius show-profile"
+  >
+    <span
+      aria-hidden="true"
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <EngineerDetails
+      fellow={
+        Object {
+          "cohort": "NBO-13",
+          "date": "20/11/2019",
+          "first_name": "john",
+          "last_name": "doe",
+          "name": "john doe",
+          "picture": "https://lorempixel.com",
+          "project": "Travella",
+          "project_id": 24,
+          "project_role_id": 5,
+          "role": "Technical Coordinator",
+          "role_history": Array [
+            Object {
+              "end_date": "2019-11-20 13:04:28",
+              "is_active": true,
+              "project_id": 24,
+              "project_role_id": 5,
+              "role": Object {
+                "name": "Technical Coordinator",
+              },
+            },
+          ],
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Application component Show CustomLoader when props is empty 1`] = `<PMloader />`;
+
+exports[`Application component renders teams member cards 1`] = `
+<Fragment>
+  <div
+    className="cadre__page managerTeamMembers remove-margin"
+  >
+    <div
+      className="teamTitle"
+    >
+      <div>
+        <h1>
+          My Teams
+        </h1>
+        <div
+          className="technologies"
+        >
+          <StackRectangle
+            key="weak-key-0"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-1"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-2"
+            stackName="React-JS"
+          />
+        </div>
+      </div>
+      <Filter
+        characterLength={9}
+        chevronColor="#808FA3"
+        current="All Roles"
+        dropdownBackgroundColor="#FFFFFF"
+        fontSize=""
+        getFilter={[Function]}
+        items={
+          Array [
+            "All Roles",
+            "Technical Coordinator",
+          ]
+        }
+        search={false}
+        width="400"
+      />
+    </div>
+    <div
+      className="teamMembers"
+    >
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-3"
+        name="john doe"
+        project="Travella"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-4"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-5"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+    </div>
+  </div>
+  <div
+    className="bio-card no-radius hide-profile"
+  >
+    <span
+      aria-hidden="true"
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <EngineerDetails
+      fellow={Object {}}
+    />
+  </div>
+</Fragment>
 `;

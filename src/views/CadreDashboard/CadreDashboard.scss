@@ -27,6 +27,7 @@
   border-left: 1px solid rgba(216, 216, 216, 0.45);
   padding-left: 25px;
   min-height: 70vh;
+  transition: margin-right 0.3s;
 }
 
 .managerTeamMembers {
@@ -52,12 +53,12 @@
   }
   & .teamMembers {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     & > .TM_ProfileCard {
       outline: none;
       margin-bottom: 1.5rem;
-      margin-right: 2.9rem;
+      margin-right: 1.9rem;
     }
   }
 }
