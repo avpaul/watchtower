@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/cadre/myteams",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/cadre/myteams",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/cadre/myteams",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <CadreTeamManagersDashboard
+        history={
+          Object {
+            "replace": [MockFunction],
+          }
+        }
+        location={
+          Object {
+            "pathname": "/cadre/myteams",
+          }
+        }
+        match={
+          Object {
+            "url": "/cadre",
+          }
+        }
+      >
+        <div
+          className="container-fluid page-content"
+          id="cadre-dashboard-container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-sm-3 sidebar-submenu"
+            >
+              <CadreSubmenu
+                activeItem="0"
+                handleCardclick={[Function]}
+                submenuType="tmSubmenus"
+              >
+                <ul
+                  className="nav nav-pills nav-stacked"
+                >
+                  <li
+                    className="brand-nav active"
+                  >
+                    <div
+                      className="cadre-submenu-cards"
+                      data-key="0"
+                      id="0"
+                      onClick={[Function]}
+                      onKeyPress={[Function]}
+                      role="presentation"
+                      style={
+                        Object {
+                          "borderLeft": "4px solid #0459E4",
+                        }
+                      }
+                    >
+                      <div
+                        className="cards-header row m-0"
+                        data-key="0"
+                      >
+                        <div
+                          className="project-badge"
+                          data-key="0"
+                          style={
+                            Object {
+                              "backgroundColor": "#edf4fd",
+                            }
+                          }
+                        >
+                          <img
+                            alt="grid.svg_icon"
+                            className="iconImage"
+                            src="projectsActive1.svg"
+                          />
+                        </div>
+                        <div
+                          data-key="0"
+                        >
+                          <p
+                            className="submenu-title"
+                            data-key="0"
+                            style={
+                              Object {
+                                "color": "#3359DB",
+                                "fontFamily": "DIN Pro",
+                                "fontSize": "18px",
+                                "fontWeight": 500,
+                              }
+                            }
+                          >
+                            My Teams
+                          </p>
+                        </div>
+                      </div>
+                      <p
+                        className="submenu-subtitle"
+                        data-key="0"
+                        style={
+                          Object {
+                            "color": "black",
+                          }
+                        }
+                      >
+                        Manage Project Info
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    className="brand-nav active"
+                  >
+                    <div
+                      className="cadre-submenu-cards"
+                      data-key="1"
+                      id="1"
+                      onClick={[Function]}
+                      onKeyPress={[Function]}
+                      role="presentation"
+                      style={Object {}}
+                    >
+                      <div
+                        className="cards-header row m-0"
+                        data-key="1"
+                      >
+                        <div
+                          className="project-badge"
+                          data-key="1"
+                          style={Object {}}
+                        >
+                          <img
+                            alt="file.svg_icon"
+                            className="iconImage"
+                            src="file.svg"
+                          />
+                        </div>
+                        <div
+                          data-key="1"
+                        >
+                          <p
+                            className="submenu-title"
+                            data-key="1"
+                            style={Object {}}
+                          >
+                            Applications
+                          </p>
+                        </div>
+                      </div>
+                      <p
+                        className="submenu-subtitle"
+                        data-key="1"
+                        style={Object {}}
+                      >
+                        Review applicants
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    className="brand-nav active"
+                  >
+                    <div
+                      className="cadre-submenu-cards"
+                      data-key="2"
+                      id="2"
+                      onClick={[Function]}
+                      onKeyPress={[Function]}
+                      role="presentation"
+                      style={Object {}}
+                    >
+                      <div
+                        className="cards-header row m-0"
+                        data-key="2"
+                      >
+                        <div
+                          className="project-badge"
+                          data-key="2"
+                          style={Object {}}
+                        >
+                          <img
+                            alt="report.svg_icon"
+                            className="iconImage"
+                            src="report.svg"
+                          />
+                        </div>
+                        <div
+                          data-key="2"
+                        >
+                          <p
+                            className="submenu-title"
+                            data-key="2"
+                            style={Object {}}
+                          >
+                            Reports
+                          </p>
+                        </div>
+                      </div>
+                      <p
+                        className="submenu-subtitle"
+                        data-key="2"
+                        style={Object {}}
+                      >
+                        Open or close allocations
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </CadreSubmenu>
+            </div>
+            <div
+              className="col-sm-9 main-content"
+            >
+              <div>
+                <Switch>
+                  <Route
+                    component={[Function]}
+                    computedMatch={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/cadre/myteams",
+                        "url": "/cadre/myteams",
+                      }
+                    }
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/cadre/myteams",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    path="/cadre/myteams"
+                  >
+                    <component
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "canGo": [Function],
+                          "createHref": [Function],
+                          "entries": Array [
+                            Object {
+                              "hash": "",
+                              "pathname": "/cadre/myteams",
+                              "search": "",
+                              "state": undefined,
+                            },
+                          ],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "index": 0,
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/cadre/myteams",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/cadre/myteams",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/cadre/myteams",
+                          "url": "/cadre/myteams",
+                        }
+                      }
+                    >
+                      <MyTeam
+                        history={
+                          Object {
+                            "replace": [MockFunction],
+                          }
+                        }
+                        location={
+                          Object {
+                            "pathname": "/cadre/myteams",
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/cadre/myteams",
+                            "url": "/cadre/myteams",
+                          }
+                        }
+                      >
+                        <div
+                          className="cadre__page"
+                        >
+                          My Teams
+                        </div>
+                      </MyTeam>
+                    </component>
+                  </Route>
+                </Switch>
+              </div>
+            </div>
+          </div>
+        </div>
+      </CadreTeamManagersDashboard>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

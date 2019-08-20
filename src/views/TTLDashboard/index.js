@@ -6,7 +6,7 @@ import DeveloperDashboardContainer from '../DeveloperDashboard';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 import NotFoundPage from '../NotFoundPage';
-import CadreDashboardContainer from '../CadreDashboard';
+import CadreTeamManagersDashboardContainer from '../CadreTeamManagersDashboard';
 
 /**
  * Defines routes for the ttldashboard
@@ -40,7 +40,7 @@ const TTLDashboard = props => (
         />
         <Route
           path="/cadre"
-          component={() => <CadreDashboardContainer {...props} />}
+          component={() => <CadreTeamManagersDashboardContainer {...props} />}
         />
         <Route component={NotFoundPage} />
       </Switch>

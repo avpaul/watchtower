@@ -4,8 +4,31 @@ import arrayKey from 'weak-key';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-function renderHeader(link, handleMenuClick, isActive, iconImg) {
-  const path = link.path ? link.path : '';
+const headerSpan = (link, iconImg) => (
+  <span className="navicon">
+    <img
+      className={`${link.key}__icon`}
+      src={iconImg}
+      alt={`${link.key}Icon`}
+    />
+  </span>
+);
+
+const renderHeader = params => {
+  const { link, handleMenuClick, isActive, role } = params;
+  const iconImg = isActive ? link.activeIcon : link.icon;
+
+  let path;
+  if (
+    role === 'WATCH_TOWER_TTL' ||
+    role === 'WATCH_TOWER_LF' ||
+    role === 'CADRE_TEAM_MANAGER'
+  ) {
+    // eslint-disable-next-line no-param-reassign
+    link.setPath = 'myteams';
+    path = link.getPath;
+  }
+  path = link.path ? link.path : '';
   return (
     <Link
       className={classnames(
@@ -19,17 +42,11 @@ function renderHeader(link, handleMenuClick, isActive, iconImg) {
       to={{ pathname: path }}
       onKeyPress={handleMenuClick}
     >
-      <span className="navicon">
-        <img
-          className={`${link.key}__icon`}
-          src={iconImg}
-          alt={`${link.key}Icon`}
-        />
-      </span>
+      {headerSpan(link, iconImg)}
       {link.name}
     </Link>
   );
-}
+};
 
 /**
  *
@@ -41,11 +58,10 @@ function renderHeader(link, handleMenuClick, isActive, iconImg) {
 const MenuLink = props => {
   // if the link state is active, change icon
   const { link, handleMenuClick, isActive, role } = props;
-  const iconImg = isActive ? link.activeIcon : link.icon;
 
   return (
     <div className="menulink">
-      {renderHeader(link, handleMenuClick, isActive, iconImg)}
+      {renderHeader({ link, handleMenuClick, isActive, role })}
       {link.dropdown !== undefined && role !== 'Fellow' && (
         <div>
           <div className="nav-link dropdown-toggle" data-toggle="dropdown">
