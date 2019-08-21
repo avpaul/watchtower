@@ -57,8 +57,13 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
 
   const renderTechnologies = teamData =>
     teamData.map(project =>
-      project.technologies.map(tech => <StackRectangle stackName={tech.name} />)
+      project.technologies.length
+        ? project.technologies.map(tech => (
+            <StackRectangle stackName={tech.name} />
+          ))
+        : ''
     );
+
   return (
     <div className="cadre__page managerTeamMembers">
       <div className="teamTitle">
@@ -79,25 +84,33 @@ MyTeam.defaultProps = {
   teamManagerTeamMembers: {
     data: [
       {
-        name: 'WatchTower',
-        technologies: [
+        projects: [
           {
-            name: 'React-JS'
-          }
-        ],
-        engineers: [
-          {
-            first_name: 'john',
-            last_name: 'doe',
-            picture: 'https://lorempixel.com',
-            cohort: 'NBO-13',
-            role_history: [
+            name: 'WatchTower',
+            technologies: [
               {
-                is_active: true,
-                end_date: '2019-11-20 13:04:28',
-                role: {
-                  name: 'Technical Coordinator'
-                }
+                name: 'React-JS'
+              }
+            ],
+            engineers: [
+              {
+                first_name: 'john',
+                last_name: 'doe',
+                picture: 'https://lorempixel.com',
+                cohort: 'NBO-13',
+                project_id: 24,
+                project_role_id: 5,
+                role_history: [
+                  {
+                    project_id: 24,
+                    project_role_id: 5,
+                    is_active: true,
+                    end_date: '2019-11-20 13:04:28',
+                    role: {
+                      name: 'Technical Coordinator'
+                    }
+                  }
+                ]
               }
             ]
           }

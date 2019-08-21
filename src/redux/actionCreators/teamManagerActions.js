@@ -6,7 +6,7 @@ import * as types from '../constants/teamManagerActionTypes';
  * @return object An instance of a Promise
  */
 const fetchTeamMembers = () =>
-  genericAPIGetRequest('projects/manager/11/team', [
+  genericAPIGetRequest('projects/manager/team', [
     types.GET_TEAM_MEMBERS_REQUEST,
     types.GET_TEAM_MEMBERS_SUCCESS,
     types.GET_TEAM_MEMBERS_FAILURE
