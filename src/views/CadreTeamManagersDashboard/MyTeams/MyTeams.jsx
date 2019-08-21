@@ -69,12 +69,19 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
         : ''
     );
 
+  const renderTitle = teamData => {
+    if (teamData.length === 1) {
+      return `${teamData[0].name} Team`;
+    }
+    return 'My Teams';
+  };
+
   const renderComponents = () => {
     if (teamManagerTeamMembers.data[0].projects.length) {
       return (
         <div className="cadre__page managerTeamMembers">
           <div className="teamTitle">
-            <h1>My Team</h1>
+            <h1>{renderTitle(teamManagerTeamMembers.data[0].projects)}</h1>
             <div className="technologies">
               {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
             </div>
