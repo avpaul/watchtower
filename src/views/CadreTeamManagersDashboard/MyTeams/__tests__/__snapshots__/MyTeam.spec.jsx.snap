@@ -16,6 +16,12 @@ exports[`Application component renders teams member cards 1`] = `
       <StackRectangle
         stackName="React-JS"
       />
+      <StackRectangle
+        stackName="React-JS"
+      />
+      <StackRectangle
+        stackName="React-JS"
+      />
     </div>
   </div>
   <div
@@ -28,163 +34,29 @@ exports[`Application component renders teams member cards 1`] = `
       event={[Function]}
       image="https://lorempixel.com"
       name="john doe"
+      project="Travella"
+      role="Technical Coordinator"
+    />
+    <TeamCard
+      cohort="NBO-13"
+      date="20/11/2019"
+      dateType=""
+      event={[Function]}
+      image="https://lorempixel.com"
+      name="john doe"
+      project="WatchTower"
+      role="Technical Coordinator"
+    />
+    <TeamCard
+      cohort="NBO-13"
+      date="20/11/2019"
+      dateType=""
+      event={[Function]}
+      image="https://lorempixel.com"
+      name="john doe"
       project="WatchTower"
       role="Technical Coordinator"
     />
   </div>
 </div>
-`;
-
-exports[`Application component renders the my teams component 1`] = `
-<MyTeam
-  fetchTeamMembers={
-    [MockFunction] {
-      "calls": Array [
-        Array [],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  teamManagerTeamMembers={
-    Object {
-      "data": Array [
-        Object {
-          "engineers": Array [
-            Object {
-              "cohort": "NBO-13",
-              "first_name": "john",
-              "last_name": "doe",
-              "picture": "https://lorempixel.com",
-              "project_id": 24,
-              "project_role_id": 5,
-              "role_history": Array [
-                Object {
-                  "end_date": "2019-11-20 13:04:28",
-                  "is_active": true,
-                  "project_id": 24,
-                  "project_role_id": 5,
-                  "role": Object {
-                    "name": "Technical Coordinator",
-                  },
-                },
-              ],
-            },
-          ],
-          "name": "WatchTower",
-          "technologies": Array [
-            Object {
-              "name": "React-JS",
-            },
-          ],
-        },
-      ],
-    }
-  }
->
-  <div
-    className="cadre__page managerTeamMembers"
-  >
-    <div
-      className="teamTitle"
-    >
-      <h1>
-        My Team
-      </h1>
-      <div
-        className="technologies"
-      >
-        <StackRectangle
-          stackName="React-JS"
-        >
-          <span
-            className="stackClass"
-          >
-            React-JS
-          </span>
-        </StackRectangle>
-      </div>
-    </div>
-    <div
-      className="teamMembers"
-    >
-      <TeamCard
-        cohort="NBO-13"
-        date="20/11/2019"
-        dateType=""
-        event={[Function]}
-        image="https://lorempixel.com"
-        name="john doe"
-        project="WatchTower"
-        role="Technical Coordinator"
-      >
-        <div
-          className="TM_ProfileCard"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex="0"
-        >
-          <div
-            className="TM_ProfileCard__top"
-          >
-            <div
-              className="TM_ProfileCard__image"
-            >
-              <img
-                alt="john doe"
-                src="https://lorempixel.com"
-              />
-            </div>
-            <div>
-              <p
-                className="TM_ProfileCard__user"
-              >
-                john doe
-              </p>
-              <p
-                className="TM_ProfileCard__role"
-              >
-                Technical Coordinator
-              </p>
-              <p
-                className="TM_ProfileCard__project"
-              >
-                WatchTower
-              </p>
-            </div>
-          </div>
-          <div
-            className="TM_ProfileCard__bottom"
-          >
-            <div
-              className="TM_ProfileCard__bottom-section"
-            >
-              <p>
-                Cohort
-              </p>
-              <span>
-                NBO-13
-              </span>
-            </div>
-            <div
-              className="TM_ProfileCard__bottom-section"
-            >
-              <p>
-                End Date
-              </p>
-              <span>
-                20/11/2019
-              </span>
-            </div>
-          </div>
-        </div>
-      </TeamCard>
-    </div>
-  </div>
-</MyTeam>
 `;

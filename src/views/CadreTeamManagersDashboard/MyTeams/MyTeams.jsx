@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TeamCard from '../../../components/TeamManagerCard';
 import StackRectangle from '../../../components/StackRectangle';
+import CustomLoader from '../../../components/CustomLoader/PMLoader';
+import managerTeamData from '../../../__mocks__/managerTeamData';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
 const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
@@ -17,7 +19,6 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
           roleDetail => roleDetail.is_active === true
         );
         return {
-          event: () => '',
           image: member.picture,
           name: `${member.first_name} ${member.last_name}`,
           role: currentRole.role.name,
@@ -42,9 +43,8 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
   const mapTeamCards = teamData => {
     const extractedData = getTeamData(teamData).reduce(flatData, []);
     const sortedData = sortTeamData(extractedData);
-    return sortedData.map(data => (
+    const teamMembers = sortedData.map(data => (
       <TeamCard
-        event={() => ''}
         image={data.image}
         name={data.name}
         role={data.role}
@@ -53,6 +53,11 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
         project={data.project}
       />
     ));
+    return teamMembers.length ? (
+      teamMembers
+    ) : (
+      <h1>You have zero team members</h1>
+    );
   };
 
   const renderTechnologies = teamData =>
@@ -64,64 +69,38 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
         : ''
     );
 
-  return (
-    <div className="cadre__page managerTeamMembers">
-      <div className="teamTitle">
-        <h1>My Team</h1>
-        <div className="technologies">
-          {renderTechnologies(teamManagerTeamMembers.data)}
+  const renderComponents = () => {
+    if (teamManagerTeamMembers.data[0].projects.length) {
+      return (
+        <div className="cadre__page managerTeamMembers">
+          <div className="teamTitle">
+            <h1>My Team</h1>
+            <div className="technologies">
+              {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
+            </div>
+          </div>
+          <div className="teamMembers">
+            {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
+          </div>
         </div>
-      </div>
-      <div className="teamMembers">
-        {mapTeamCards(teamManagerTeamMembers.data)}
-      </div>
-    </div>
+      );
+    }
+    return <h1>You currently not managing any project</h1>;
+  };
+
+  return !teamManagerTeamMembers.data.length ? (
+    <CustomLoader />
+  ) : (
+    renderComponents()
   );
 };
 
 MyTeam.defaultProps = {
-  fetchTeamMembers: () => '',
-  teamManagerTeamMembers: {
-    data: [
-      {
-        projects: [
-          {
-            name: 'WatchTower',
-            technologies: [
-              {
-                name: 'React-JS'
-              }
-            ],
-            engineers: [
-              {
-                first_name: 'john',
-                last_name: 'doe',
-                picture: 'https://lorempixel.com',
-                cohort: 'NBO-13',
-                project_id: 24,
-                project_role_id: 5,
-                role_history: [
-                  {
-                    project_id: 24,
-                    project_role_id: 5,
-                    is_active: true,
-                    end_date: '2019-11-20 13:04:28',
-                    role: {
-                      name: 'Technical Coordinator'
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  teamManagerTeamMembers: managerTeamData
 };
 
 MyTeam.propTypes = {
-  fetchTeamMembers: PropTypes.func,
+  fetchTeamMembers: PropTypes.func.isRequired,
   teamManagerTeamMembers: PropTypes.shape()
 };
 
