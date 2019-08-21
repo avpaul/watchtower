@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application component renders teams member cards 1`] = `
+<div
+  className="cadre__page managerTeamMembers"
+>
+  <div
+    className="teamTitle"
+  >
+    <h1>
+      My Team
+    </h1>
+    <div
+      className="technologies"
+    >
+      <StackRectangle
+        stackName="React-JS"
+      />
+      <StackRectangle
+        stackName="React-JS"
+      />
+      <StackRectangle
+        stackName="React-JS"
+      />
+    </div>
+  </div>
+  <div
+    className="teamMembers"
+  >
+    <TeamCard
+      cohort="NBO-13"
+      date="20/11/2019"
+      dateType=""
+      event={[Function]}
+      image="https://lorempixel.com"
+      name="john doe"
+      project="Travella"
+      role="Technical Coordinator"
+    />
+    <TeamCard
+      cohort="NBO-13"
+      date="20/11/2019"
+      dateType=""
+      event={[Function]}
+      image="https://lorempixel.com"
+      name="john doe"
+      project="WatchTower"
+      role="Technical Coordinator"
+    />
+    <TeamCard
+      cohort="NBO-13"
+      date="20/11/2019"
+      dateType=""
+      event={[Function]}
+      image="https://lorempixel.com"
+      name="john doe"
+      project="WatchTower"
+      role="Technical Coordinator"
+    />
+  </div>
+</div>
+`;

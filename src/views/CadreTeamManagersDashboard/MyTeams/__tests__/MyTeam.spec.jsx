@@ -8,7 +8,7 @@ describe('Application component', () => {
     wrapper = shallow(<MyTeams />);
   });
 
-  it('renders the my teams component', () => {
-    expect(wrapper.contains('My Teams')).toBe(true);
+  it('renders teams member cards', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

@@ -327,7 +327,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                         }
                       }
                     >
-                      <MyTeam
+                      <Connect(MyTeam)
                         history={
                           Object {
                             "replace": [MockFunction],
@@ -347,12 +347,388 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                           }
                         }
                       >
-                        <div
-                          className="cadre__page"
+                        <MyTeam
+                          fetchTeamMembers={[Function]}
+                          history={
+                            Object {
+                              "replace": [MockFunction],
+                            }
+                          }
+                          location={
+                            Object {
+                              "pathname": "/cadre/myteams",
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/cadre/myteams",
+                              "url": "/cadre/myteams",
+                            }
+                          }
+                          teamManagerTeamMembers={
+                            Object {
+                              "data": Array [
+                                Object {
+                                  "projects": Array [
+                                    Object {
+                                      "engineers": Array [
+                                        Object {
+                                          "cohort": "NBO-13",
+                                          "first_name": "john",
+                                          "last_name": "doe",
+                                          "picture": "https://lorempixel.com",
+                                          "project_id": 24,
+                                          "project_role_id": 5,
+                                          "role_history": Array [
+                                            Object {
+                                              "end_date": "2019-11-20 13:04:28",
+                                              "is_active": true,
+                                              "project_id": 24,
+                                              "project_role_id": 5,
+                                              "role": Object {
+                                                "name": "Technical Coordinator",
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                      "name": "WatchTower",
+                                      "technologies": Array [
+                                        Object {
+                                          "name": "React-JS",
+                                        },
+                                      ],
+                                    },
+                                    Object {
+                                      "engineers": Array [
+                                        Object {
+                                          "cohort": "NBO-13",
+                                          "first_name": "john",
+                                          "last_name": "doe",
+                                          "picture": "https://lorempixel.com",
+                                          "project_id": 24,
+                                          "project_role_id": 5,
+                                          "role_history": Array [
+                                            Object {
+                                              "end_date": "2019-11-20 13:04:28",
+                                              "is_active": true,
+                                              "project_id": 24,
+                                              "project_role_id": 5,
+                                              "role": Object {
+                                                "name": "Technical Coordinator",
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                      "name": "Travella",
+                                      "technologies": Array [
+                                        Object {
+                                          "name": "React-JS",
+                                        },
+                                      ],
+                                    },
+                                    Object {
+                                      "engineers": Array [
+                                        Object {
+                                          "cohort": "NBO-13",
+                                          "first_name": "john",
+                                          "last_name": "doe",
+                                          "picture": "https://lorempixel.com",
+                                          "project_id": 24,
+                                          "project_role_id": 5,
+                                          "role_history": Array [
+                                            Object {
+                                              "end_date": "2019-11-20 13:04:28",
+                                              "is_active": true,
+                                              "project_id": 24,
+                                              "project_role_id": 5,
+                                              "role": Object {
+                                                "name": "Technical Coordinator",
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                      "name": "WatchTower",
+                                      "technologies": Array [
+                                        Object {
+                                          "name": "React-JS",
+                                        },
+                                      ],
+                                    },
+                                  ],
+                                },
+                              ],
+                            }
+                          }
                         >
-                          My Teams
-                        </div>
-                      </MyTeam>
+                          <div
+                            className="cadre__page managerTeamMembers"
+                          >
+                            <div
+                              className="teamTitle"
+                            >
+                              <h1>
+                                My Team
+                              </h1>
+                              <div
+                                className="technologies"
+                              >
+                                <StackRectangle
+                                  stackName="React-JS"
+                                >
+                                  <span
+                                    className="stackClass"
+                                  >
+                                    React-JS
+                                  </span>
+                                </StackRectangle>
+                                <StackRectangle
+                                  stackName="React-JS"
+                                >
+                                  <span
+                                    className="stackClass"
+                                  >
+                                    React-JS
+                                  </span>
+                                </StackRectangle>
+                                <StackRectangle
+                                  stackName="React-JS"
+                                >
+                                  <span
+                                    className="stackClass"
+                                  >
+                                    React-JS
+                                  </span>
+                                </StackRectangle>
+                              </div>
+                            </div>
+                            <div
+                              className="teamMembers"
+                            >
+                              <TeamCard
+                                cohort="NBO-13"
+                                date="20/11/2019"
+                                dateType=""
+                                event={[Function]}
+                                image="https://lorempixel.com"
+                                name="john doe"
+                                project="Travella"
+                                role="Technical Coordinator"
+                              >
+                                <div
+                                  className="TM_ProfileCard"
+                                  onClick={[Function]}
+                                  onKeyPress={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  <div
+                                    className="TM_ProfileCard__top"
+                                  >
+                                    <div
+                                      className="TM_ProfileCard__image"
+                                    >
+                                      <img
+                                        alt="john doe"
+                                        src="https://lorempixel.com"
+                                      />
+                                    </div>
+                                    <div>
+                                      <p
+                                        className="TM_ProfileCard__user"
+                                      >
+                                        john doe
+                                      </p>
+                                      <p
+                                        className="TM_ProfileCard__role"
+                                      >
+                                        Technical Coordinator
+                                      </p>
+                                      <p
+                                        className="TM_ProfileCard__project"
+                                      >
+                                        Travella
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="TM_ProfileCard__bottom"
+                                  >
+                                    <div
+                                      className="TM_ProfileCard__bottom-section"
+                                    >
+                                      <p>
+                                        Cohort
+                                      </p>
+                                      <span>
+                                        NBO-13
+                                      </span>
+                                    </div>
+                                    <div
+                                      className="TM_ProfileCard__bottom-section"
+                                    >
+                                      <p>
+                                        End Date
+                                      </p>
+                                      <span>
+                                        20/11/2019
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </TeamCard>
+                              <TeamCard
+                                cohort="NBO-13"
+                                date="20/11/2019"
+                                dateType=""
+                                event={[Function]}
+                                image="https://lorempixel.com"
+                                name="john doe"
+                                project="WatchTower"
+                                role="Technical Coordinator"
+                              >
+                                <div
+                                  className="TM_ProfileCard"
+                                  onClick={[Function]}
+                                  onKeyPress={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  <div
+                                    className="TM_ProfileCard__top"
+                                  >
+                                    <div
+                                      className="TM_ProfileCard__image"
+                                    >
+                                      <img
+                                        alt="john doe"
+                                        src="https://lorempixel.com"
+                                      />
+                                    </div>
+                                    <div>
+                                      <p
+                                        className="TM_ProfileCard__user"
+                                      >
+                                        john doe
+                                      </p>
+                                      <p
+                                        className="TM_ProfileCard__role"
+                                      >
+                                        Technical Coordinator
+                                      </p>
+                                      <p
+                                        className="TM_ProfileCard__project"
+                                      >
+                                        WatchTower
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="TM_ProfileCard__bottom"
+                                  >
+                                    <div
+                                      className="TM_ProfileCard__bottom-section"
+                                    >
+                                      <p>
+                                        Cohort
+                                      </p>
+                                      <span>
+                                        NBO-13
+                                      </span>
+                                    </div>
+                                    <div
+                                      className="TM_ProfileCard__bottom-section"
+                                    >
+                                      <p>
+                                        End Date
+                                      </p>
+                                      <span>
+                                        20/11/2019
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </TeamCard>
+                              <TeamCard
+                                cohort="NBO-13"
+                                date="20/11/2019"
+                                dateType=""
+                                event={[Function]}
+                                image="https://lorempixel.com"
+                                name="john doe"
+                                project="WatchTower"
+                                role="Technical Coordinator"
+                              >
+                                <div
+                                  className="TM_ProfileCard"
+                                  onClick={[Function]}
+                                  onKeyPress={[Function]}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  <div
+                                    className="TM_ProfileCard__top"
+                                  >
+                                    <div
+                                      className="TM_ProfileCard__image"
+                                    >
+                                      <img
+                                        alt="john doe"
+                                        src="https://lorempixel.com"
+                                      />
+                                    </div>
+                                    <div>
+                                      <p
+                                        className="TM_ProfileCard__user"
+                                      >
+                                        john doe
+                                      </p>
+                                      <p
+                                        className="TM_ProfileCard__role"
+                                      >
+                                        Technical Coordinator
+                                      </p>
+                                      <p
+                                        className="TM_ProfileCard__project"
+                                      >
+                                        WatchTower
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="TM_ProfileCard__bottom"
+                                  >
+                                    <div
+                                      className="TM_ProfileCard__bottom-section"
+                                    >
+                                      <p>
+                                        Cohort
+                                      </p>
+                                      <span>
+                                        NBO-13
+                                      </span>
+                                    </div>
+                                    <div
+                                      className="TM_ProfileCard__bottom-section"
+                                    >
+                                      <p>
+                                        End Date
+                                      </p>
+                                      <span>
+                                        20/11/2019
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </TeamCard>
+                            </div>
+                          </div>
+                        </MyTeam>
+                      </Connect(MyTeam)>
                     </component>
                   </Route>
                 </Switch>
