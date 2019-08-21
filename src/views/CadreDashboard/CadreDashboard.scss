@@ -29,6 +29,30 @@
   min-height: 70vh;
 }
 
+.managerTeamMembers {
+  padding: 1.5rem 1.5rem 1rem 2.5rem;
+  & .teamTitle {
+    display: flex;
+    & > h1 {
+      height: 31px;
+      margin: 0 1.3rem 1.8rem 0;
+      color: #333e44;
+      font-size: 24px;
+      letter-spacing: -1.1px;
+      line-height: 31px;
+    }
+  }
+
+  & .teamMembers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & > .TM_ProfileCard {
+      margin-bottom: 3.4rem;
+    }
+  }
+}
+
 .main-content {
   left: 20%;
 }
