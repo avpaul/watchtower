@@ -371,27 +371,35 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                             Object {
                               "data": Array [
                                 Object {
-                                  "engineers": Array [
+                                  "projects": Array [
                                     Object {
-                                      "cohort": "NBO-13",
-                                      "first_name": "john",
-                                      "last_name": "doe",
-                                      "picture": "https://lorempixel.com",
-                                      "role_history": Array [
+                                      "engineers": Array [
                                         Object {
-                                          "end_date": "2019-11-20 13:04:28",
-                                          "is_active": true,
-                                          "role": Object {
-                                            "name": "Technical Coordinator",
-                                          },
+                                          "cohort": "NBO-13",
+                                          "first_name": "john",
+                                          "last_name": "doe",
+                                          "picture": "https://lorempixel.com",
+                                          "project_id": 24,
+                                          "project_role_id": 5,
+                                          "role_history": Array [
+                                            Object {
+                                              "end_date": "2019-11-20 13:04:28",
+                                              "is_active": true,
+                                              "project_id": 24,
+                                              "project_role_id": 5,
+                                              "role": Object {
+                                                "name": "Technical Coordinator",
+                                              },
+                                            },
+                                          ],
                                         },
                                       ],
-                                    },
-                                  ],
-                                  "name": "WatchTower",
-                                  "technologies": Array [
-                                    Object {
-                                      "name": "React-JS",
+                                      "name": "WatchTower",
+                                      "technologies": Array [
+                                        Object {
+                                          "name": "React-JS",
+                                        },
+                                      ],
                                     },
                                   ],
                                 },
