@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test team manager view applications should render correctly 1`] = `
+<div
+  className="cadre__page"
+>
+  <MapProjectApplicants
+    applications={
+      Array [
+        Object {
+          "applicant": Object {
+            "cohort": "NBO-11",
+            "fellow_id": "-HYBHVWK78HBJ",
+            "first_name": "Test",
+            "id": 9,
+            "last_name": "Applicant",
+            "picture": "https://lorempixel.com/100/100/people/?23475 ",
+            "sims_start_date": "2019-02-19 00:00:00",
+          },
+          "id": 16,
+          "role": "QA Engineer",
+        },
+      ]
+    }
+  />
+</div>
+`;

@@ -65,12 +65,12 @@ export const tableRow = (item, initials) => (
     {status(item)}
     <td className="">{!item.cohort ? '-' : item.cohort}</td>
     <td className="text-center">
-      {`${moment(item.apprenticeship_end_date).format('LL')}`}
+      {`${moment(item.apprenticeship_end_date).format('L')}`}
     </td>
     <td className="text-center">
       {!item.cadre_start_date
         ? '-'
-        : `${moment(item.cadre_start_date).format('LL')}`}
+        : `${moment(item.cadre_start_date).format('L')}`}
     </td>
   </tr>
 );

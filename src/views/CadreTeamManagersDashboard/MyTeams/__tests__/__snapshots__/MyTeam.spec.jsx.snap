@@ -8,7 +8,7 @@ exports[`Application component renders teams member cards 1`] = `
     className="teamTitle"
   >
     <h1>
-      My Team
+      My Teams
     </h1>
     <div
       className="technologies"
