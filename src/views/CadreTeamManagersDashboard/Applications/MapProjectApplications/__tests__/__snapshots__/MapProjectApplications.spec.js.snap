@@ -7,8 +7,58 @@ exports[`Test MapProjectApplications cards should render correctly 1`] = `
   <div
     className="stats-header mb-4"
   >
-    1
-     Pending Applications
+    <div>
+      1
+       Pending Applications
+    </div>
+    <Filter
+      characterLength={9}
+      chevronColor="#808FA3"
+      current="All Roles"
+      dropdownBackgroundColor="#FFFFFF"
+      fontSize=""
+      getFilter={[Function]}
+      items={
+        Array [
+          "All Roles",
+          undefined,
+        ]
+      }
+      width="400"
+    />
+  </div>
+  <div
+    className="row"
+  />
+</div>
+`;
+
+exports[`Test MapProjectApplications cards should test roles dropdown 1`] = `
+<div
+  className="tm-project-applications"
+>
+  <div
+    className="stats-header mb-4"
+  >
+    <div>
+      1
+       Pending Applications
+    </div>
+    <Filter
+      characterLength={9}
+      chevronColor="#808FA3"
+      current="All Roles"
+      dropdownBackgroundColor="#FFFFFF"
+      fontSize=""
+      getFilter={[Function]}
+      items={
+        Array [
+          "All Roles",
+          undefined,
+        ]
+      }
+      width="400"
+    />
   </div>
   <div
     className="row"

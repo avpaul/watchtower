@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import MapProjectApplications from '../MapProjectApplications';
+import FilterDropdown from '../../../../../components/FilterDropdown';
 
 const applications = [
   {
@@ -27,6 +28,14 @@ describe('Test MapProjectApplications cards', () => {
       applications
     };
     const wrapper = shallow(<MapProjectApplications {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should test roles dropdown', () => {
+    const props = {
+      applications
+    };
+    const wrapper = shallow(<MapProjectApplications {...props} />);
+    wrapper.find(FilterDropdown).prop('getFilter')(null, 'All Roles');
     expect(wrapper).toMatchSnapshot();
   });
 });

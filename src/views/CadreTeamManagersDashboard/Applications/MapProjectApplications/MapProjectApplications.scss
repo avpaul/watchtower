@@ -1,9 +1,15 @@
 .tm-project-applications {
   .stats-header {
-    color: #333e44;
-    font-family: 'DIN Pro';
-    font-size: 24px;
-    letter-spacing: -1.1px;
-    line-height: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    div:first-of-type {
+      color: #333e44;
+      font-family: 'DIN Pro';
+      font-size: 24px;
+      letter-spacing: -1.1px;
+      line-height: 31px;
+    }
   }
 }
