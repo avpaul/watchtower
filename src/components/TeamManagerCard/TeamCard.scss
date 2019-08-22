@@ -22,6 +22,7 @@
       height: 86.5px;
       border-bottom: 1px solid #f1f1f1;
       width: 271px;
+      padding-bottom: 30px;
     }
 
     &__image {
@@ -34,13 +35,15 @@
         width: 46px;
         border-radius: 50%;
         object-fit: contain;
+        margin-top: 8px;
       }
     }
 
     &__user {
+      margin-top: 52px;
       color: #333e44;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 900;
       line-height: 18px;
       margin-bottom: 2px;
     }
@@ -54,7 +57,7 @@
     }
 
     &__project {
-      margin-top: 0;
+      margin-top: 4px;
       color: #0458e4;
       font-size: 12px;
       line-height: 18px;
