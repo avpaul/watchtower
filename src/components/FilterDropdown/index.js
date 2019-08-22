@@ -120,7 +120,7 @@ class Filter extends Component {
     return (
       <Fragment>
         <div ref={this.setWrapperRef} className="filter-dropdown">
-          <p className="filter-dropdown__title">{title}</p>
+          {title && <p className="filter-dropdown__title">{title}</p>}
           <button
             type="button"
             className="filter-dropdown__button"
@@ -148,16 +148,19 @@ Filter.defaultProps = {
   characterLength: 9,
   chevronColor: '',
   dropdownBackgroundColor: '',
-  items: []
+  items: [],
+  title: undefined,
+  type: undefined,
+  search: false
 };
 
 Filter.propTypes = {
-  search: PropTypes.bool.isRequired,
-  title: PropTypes.string.isRequired,
+  search: PropTypes.bool,
+  title: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string),
   width: PropTypes.string,
   fontSize: PropTypes.string,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   getFilter: PropTypes.func.isRequired,
   characterLength: PropTypes.number,
   chevronColor: PropTypes.string,
