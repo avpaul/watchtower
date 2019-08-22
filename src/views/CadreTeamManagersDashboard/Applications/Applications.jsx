@@ -17,7 +17,10 @@ export default class Applications extends Component {
 
   render() {
     const {
-      applications: { data: {pending : pendingApplications = []}, loading }
+      applications: {
+        data: { pending: pendingApplications = [] },
+        loading
+      }
     } = this.props;
 
     return loading ? (

@@ -231,5 +231,6 @@ export default {
   certificationApplication: genericAPIStateObject,
   applyRole: genericAPIStateObject,
   singleRole: genericAPIStateArray,
-  teamManagerProjectApplications: genericAPIStateObject
+  teamManagerProjectApplications: genericAPIStateObject,
+  teamMembers: genericAPIStateArray
 };

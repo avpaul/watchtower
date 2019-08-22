@@ -4,11 +4,14 @@ import MyTeams from '../MyTeams';
 
 describe('Application component', () => {
   let wrapper;
+  const defaultProps = {
+    fetchTeamMembers: jest.fn()
+  };
   beforeEach(() => {
-    wrapper = shallow(<MyTeams />);
+    wrapper = shallow(<MyTeams {...defaultProps} />);
   });
 
-  it('renders the my teams component', () => {
-    expect(wrapper.contains('My Teams')).toBe(true);
+  it('renders teams member cards', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

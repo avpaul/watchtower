@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reports from './Reports/Reports';
-import MyTeams from './MyTeams/MyTeams';
+import MyTeams from './MyTeams';
 import CadreSubmenu from '../../components/CadreSubmenu';
 import NotFoundPage from '../NotFoundPage';
 import Applications from './Applications';
