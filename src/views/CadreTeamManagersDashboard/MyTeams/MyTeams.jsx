@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import weakKey from 'weak-key';
 import TeamCard from '../../../components/TeamManagerCard';
 import StackRectangle from '../../../components/StackRectangle';
 import CustomLoader from '../../../components/CustomLoader/PMLoader';
+import FilterDropdown from '../../../components/FilterDropdown';
 import managerTeamData from '../../../__mocks__/managerTeamData';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
 const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
+  const [filterRole, setFilterRole] = useState('All Roles');
   useEffect(() => {
     fetchTeamMembers();
     // eslint-disable-next-line
@@ -43,7 +46,12 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
   const mapTeamCards = teamData => {
     const extractedData = getTeamData(teamData).reduce(flatData, []);
     const sortedData = sortTeamData(extractedData);
-    const teamMembers = sortedData.map(data => (
+    const filteredData =
+      filterRole === 'All Roles'
+        ? sortedData
+        : sortedData.filter(teamMember => teamMember.role === filterRole);
+
+    const teamMembers = filteredData.map(data => (
       <TeamCard
         image={data.image}
         name={data.name}
@@ -51,6 +59,7 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
         cohort={data.cohort}
         date={data.date}
         project={data.project}
+        key={weakKey(data)}
       />
     ));
     return teamMembers.length ? (
@@ -64,7 +73,7 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
     teamData.map(project =>
       project.technologies.length
         ? project.technologies.map(tech => (
-            <StackRectangle stackName={tech.name} />
+            <StackRectangle stackName={tech.name} key={weakKey(tech)} />
           ))
         : ''
     );
@@ -76,15 +85,43 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
     return 'My Teams';
   };
 
+  const getRoles = managerProjects => {
+    let roles = [];
+    managerProjects.forEach(({ engineers }) => {
+      roles = engineers.reduce(
+        (accumulator, engineer) => {
+          const { name: roleName } = engineer.role_history[0].role;
+          if (accumulator.includes(roleName)) return accumulator;
+          accumulator.push(roleName);
+          return accumulator;
+        },
+        ['All Roles']
+      );
+    });
+    return roles;
+  };
+
   const renderComponents = () => {
     if (teamManagerTeamMembers.data[0].projects.length) {
+      const engineersRoles = getRoles(teamManagerTeamMembers.data[0].projects);
       return (
         <div className="cadre__page managerTeamMembers">
           <div className="teamTitle">
-            <h1>{renderTitle(teamManagerTeamMembers.data[0].projects)}</h1>
-            <div className="technologies">
-              {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
+            <div>
+              <h1>{renderTitle(teamManagerTeamMembers.data[0].projects)}</h1>
+              <div className="technologies">
+                {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
+              </div>
             </div>
+
+            <FilterDropdown
+              items={engineersRoles}
+              current={filterRole}
+              width="400"
+              chevronColor="#808FA3"
+              dropdownBackgroundColor="#FFFFFF"
+              getFilter={(type, value) => setFilterRole(value)}
+            />
           </div>
           <div className="teamMembers">
             {mapTeamCards(teamManagerTeamMembers.data[0].projects)}

@@ -471,40 +471,97 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                             <div
                               className="teamTitle"
                             >
-                              <h1>
-                                My Teams
-                              </h1>
-                              <div
-                                className="technologies"
-                              >
-                                <StackRectangle
-                                  stackName="React-JS"
+                              <div>
+                                <h1>
+                                  My Teams
+                                </h1>
+                                <div
+                                  className="technologies"
                                 >
-                                  <span
-                                    className="stackClass"
+                                  <StackRectangle
+                                    key="weak-key-0"
+                                    stackName="React-JS"
                                   >
-                                    React-JS
-                                  </span>
-                                </StackRectangle>
-                                <StackRectangle
-                                  stackName="React-JS"
-                                >
-                                  <span
-                                    className="stackClass"
+                                    <span
+                                      className="stackClass"
+                                    >
+                                      React-JS
+                                    </span>
+                                  </StackRectangle>
+                                  <StackRectangle
+                                    key="weak-key-1"
+                                    stackName="React-JS"
                                   >
-                                    React-JS
-                                  </span>
-                                </StackRectangle>
-                                <StackRectangle
-                                  stackName="React-JS"
-                                >
-                                  <span
-                                    className="stackClass"
+                                    <span
+                                      className="stackClass"
+                                    >
+                                      React-JS
+                                    </span>
+                                  </StackRectangle>
+                                  <StackRectangle
+                                    key="weak-key-2"
+                                    stackName="React-JS"
                                   >
-                                    React-JS
-                                  </span>
-                                </StackRectangle>
+                                    <span
+                                      className="stackClass"
+                                    >
+                                      React-JS
+                                    </span>
+                                  </StackRectangle>
+                                </div>
                               </div>
+                              <Filter
+                                characterLength={9}
+                                chevronColor="#808FA3"
+                                current="All Roles"
+                                dropdownBackgroundColor="#FFFFFF"
+                                fontSize=""
+                                getFilter={[Function]}
+                                items={
+                                  Array [
+                                    "All Roles",
+                                    "Technical Coordinator",
+                                  ]
+                                }
+                                search={false}
+                                width="400"
+                              >
+                                <div
+                                  className="filter-dropdown"
+                                >
+                                  <button
+                                    className="filter-dropdown__button"
+                                    onClick={[Function]}
+                                    style={
+                                      Object {
+                                        "fontSize": "",
+                                        "width": "400",
+                                      }
+                                    }
+                                    type="button"
+                                  >
+                                    <span>
+                                      All Roles
+                                    </span>
+                                    <span
+                                      style={
+                                        Object {
+                                          "background": "#FFFFFF",
+                                        }
+                                      }
+                                    >
+                                      <i
+                                        className="fas fa-chevron-down"
+                                        style={
+                                          Object {
+                                            "color": "#808FA3",
+                                          }
+                                        }
+                                      />
+                                    </span>
+                                  </button>
+                                </div>
+                              </Filter>
                             </div>
                             <div
                               className="teamMembers"
@@ -515,6 +572,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                                 dateType=""
                                 event={[Function]}
                                 image="https://lorempixel.com"
+                                key="weak-key-3"
                                 name="john doe"
                                 project="Travella"
                                 role="Technical Coordinator"
@@ -587,6 +645,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                                 dateType=""
                                 event={[Function]}
                                 image="https://lorempixel.com"
+                                key="weak-key-4"
                                 name="john doe"
                                 project="WatchTower"
                                 role="Technical Coordinator"
@@ -659,6 +718,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                                 dateType=""
                                 event={[Function]}
                                 image="https://lorempixel.com"
+                                key="weak-key-5"
                                 name="john doe"
                                 project="WatchTower"
                                 role="Technical Coordinator"

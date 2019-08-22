@@ -48,7 +48,7 @@ TeamCard.propTypes = {
   image: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
   cohort: PropTypes.string.isRequired,
-  date: PropTypes.instanceOf(Date).isRequired,
+  date: PropTypes.string.isRequired,
   project: PropTypes.string.isRequired,
   dateType: PropTypes.string
 };
