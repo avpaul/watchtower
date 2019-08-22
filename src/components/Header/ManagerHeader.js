@@ -26,7 +26,7 @@ const ManagerHeader = props => {
       <div id="nav" className="header position-fixed w-100 z-index-10">
         {renderManagerModal(notifications, unreadnotifications)}
         <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
-          <LogoSection />
+          <LogoSection role={role} />
           <div className="d-flex flex-row">
             <span
               className="notification"

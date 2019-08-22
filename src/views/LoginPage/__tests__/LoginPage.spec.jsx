@@ -32,7 +32,10 @@ describe('<LoginPage />', () => {
   it('It redirects user to dashboard when logged in', () => {
     authService.isAuthenticated.mockImplementation(() => true);
     authService.isAuthorized.mockImplementation(() => true);
-    authService.loadUserFromToken.mockImplementation(() => ({ id: 'some-id' }));
+    authService.loadUserFromToken.mockImplementation(() => ({
+      id: 'some-id',
+      roles: { CADRE_TEAM_MANAGER: '' }
+    }));
     const instance = shallow(
       <LoginPage authHostUrl={ANDELA_AUTH_URL} authRedirectUrl={REDIRECT_URL} />
     );

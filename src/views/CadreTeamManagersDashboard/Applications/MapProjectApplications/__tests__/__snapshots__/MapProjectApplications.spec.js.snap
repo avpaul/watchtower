@@ -24,6 +24,7 @@ exports[`Test MapProjectApplications cards should render correctly 1`] = `
           undefined,
         ]
       }
+      search={false}
       width="400"
     />
   </div>
@@ -57,6 +58,7 @@ exports[`Test MapProjectApplications cards should test roles dropdown 1`] = `
           undefined,
         ]
       }
+      search={false}
       width="400"
     />
   </div>
