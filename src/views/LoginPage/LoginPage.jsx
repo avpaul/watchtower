@@ -20,10 +20,12 @@ class LoginPage extends Component {
     const authRedirectUrl = process.env.REACT_APP_GOOGLE_AUTH_REDIRECT_URL;
     const loggedIn = authService.isAuthenticated();
     const hasAllowedRoles = authService.isAuthorized();
+    const user = authService.loadUserFromToken();
     this.state = {
       loggedIn,
       hasAllowedRoles,
-      authUrl: `${authHostUrl}/login?redirect_url=${authRedirectUrl}`
+      authUrl: `${authHostUrl}/login?redirect_url=${authRedirectUrl}`,
+      user
     };
     const Msg = () => (
       <p style={{ marginBottom: 0 }}>
@@ -37,6 +39,18 @@ class LoginPage extends Component {
     }
     this.handleLogin = this.handleLogin.bind(this);
   }
+
+  getRoleFromUser = user => {
+    const activeUser = user;
+    delete activeUser.roles.Andelan;
+    delete activeUser.roles.Technology;
+    return Object.keys(activeUser.roles);
+  };
+
+  getRoute = roles =>
+    roles.length === 1 && roles[0] === 'CADRE_TEAM_MANAGER'
+      ? '/cadre/myteams'
+      : '/dashboard';
 
   handleLogin(event) {
     event.preventDefault();
@@ -85,11 +99,11 @@ class LoginPage extends Component {
   );
 
   render() {
-    const { loggedIn, authUrl, hasAllowedRoles } = this.state;
+    const { loggedIn, authUrl, hasAllowedRoles, user } = this.state;
     const { ErrorBoundary } = Error;
-
     if (loggedIn && hasAllowedRoles) {
-      return <Redirect to="/dashboard" />;
+      const roles = user ? this.getRoleFromUser(user) : [];
+      return <Redirect to={this.getRoute(roles)} />;
     }
     return (
       <ErrorBoundary>
@@ -97,15 +111,12 @@ class LoginPage extends Component {
           <div className="page-info__container">
             {this.renderPageHeader()}
             <ToastContainer autoClose={5000} transition={Slide} />
-
             {this.renderPageTagLine()}
             {this.renderPageLoginButton(authUrl)}
           </div>
         </main>
       </ErrorBoundary>
     );
-
-    /**/
   }
 }
 

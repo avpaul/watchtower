@@ -23,6 +23,7 @@ const Dashboards = props => {
   switch (role) {
     case 'WATCH_TOWER_TTL':
     case 'WATCH_TOWER_LF':
+    case 'CADRE_TEAM_MANAGER':
       return <TTLDashboard {...props} role={role} roles={roles} />;
     case 'WATCH_TOWER_EM':
     case 'WATCH_TOWER_SL':
