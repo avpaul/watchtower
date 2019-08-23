@@ -28,6 +28,11 @@ describe('tests the Engineer card', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders correctly when fellow data not passed [Return null view]', () => {
+    const wrapper = shallow(<EngineerCard data={{ loading: true }} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders correctly when loading is true', () => {
     const wrapper = shallow(
       <EngineerCard data={{ fellow: {}, loading: true }} />

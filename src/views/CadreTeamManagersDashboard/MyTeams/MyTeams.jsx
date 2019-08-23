@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import weakKey from 'weak-key';
 import TeamCard from '../../../components/TeamManagerCard';
 import StackRectangle from '../../../components/StackRectangle';
 import CustomLoader from '../../../components/CustomLoader/PMLoader';
 import FilterDropdown from '../../../components/FilterDropdown';
+import ProfileContainer from '../../../components/EngineerBio/ProfileContainer';
 import managerTeamData from '../../../__mocks__/managerTeamData';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
@@ -15,6 +16,17 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
     // eslint-disable-next-line
   }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [fellow, setFellow] = useState({});
+
+  const openDrawer = () => {
+    setIsOpen(true);
+  };
+
+  const closeDrawer = () => {
+    setIsOpen(false);
+  };
+
   const getTeamData = data =>
     data.map(project =>
       project.engineers.map(member => {
@@ -22,12 +34,11 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
           roleDetail => roleDetail.is_active === true
         );
         return {
-          image: member.picture,
-          name: `${member.first_name} ${member.last_name}`,
+          ...member,
           role: currentRole.role.name,
-          cohort: member.cohort,
           date: formatDate(currentRole.end_date),
-          project: project.name
+          project: project.name,
+          name: `${member.first_name} ${member.last_name}`
         };
       })
     );
@@ -40,8 +51,15 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
       return a.project.localeCompare(b.project);
     });
 
+  const showProfile = data => {
+    setFellow(data);
+    openDrawer();
+  };
+
   const flatData = (accumulator, currentValue) =>
     accumulator.concat(currentValue);
+
+  const formatName = (firstName, lastName) => firstName.concat(' ', lastName);
 
   const mapTeamCards = teamData => {
     const extractedData = getTeamData(teamData).reduce(flatData, []);
@@ -53,13 +71,14 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
 
     const teamMembers = filteredData.map(data => (
       <TeamCard
-        image={data.image}
-        name={data.name}
-        role={data.role}
-        cohort={data.cohort}
-        date={data.date}
-        project={data.project}
+        event={() => showProfile(data)}
+        image={data.picture}
         key={weakKey(data)}
+        name={formatName(data.first_name, data.last_name)}
+        cohort={data.cohort}
+        project={data.project}
+        role={data.role}
+        date={formatDate(data.role_history[0].end_date)}
       />
     ));
     return teamMembers.length ? (
@@ -100,33 +119,51 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
     });
     return roles;
   };
+  const profileCard = () => (
+    <div
+      className={`bio-card no-radius ${
+        isOpen ? 'show-profile' : 'hide-profile'
+      }`}
+    >
+      <span className="close" aria-hidden="true" onClick={closeDrawer}>
+        &times;
+      </span>
+      <ProfileContainer fellow={fellow} />
+    </div>
+  );
 
   const renderComponents = () => {
     if (teamManagerTeamMembers.data[0].projects.length) {
       const engineersRoles = getRoles(teamManagerTeamMembers.data[0].projects);
       return (
-        <div className="cadre__page managerTeamMembers">
-          <div className="teamTitle">
-            <div>
-              <h1>{renderTitle(teamManagerTeamMembers.data[0].projects)}</h1>
-              <div className="technologies">
-                {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
+        <Fragment>
+          <div
+            className={`cadre__page managerTeamMembers ${
+              isOpen ? 'add-margin' : 'remove-margin'
+            }`}
+          >
+            <div className="teamTitle">
+              <div>
+                <h1>{renderTitle(teamManagerTeamMembers.data[0].projects)}</h1>
+                <div className="technologies">
+                  {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
+                </div>
               </div>
+              <FilterDropdown
+                items={engineersRoles}
+                current={filterRole}
+                width="400"
+                chevronColor="#808FA3"
+                dropdownBackgroundColor="#FFFFFF"
+                getFilter={(type, value) => setFilterRole(value)}
+              />
             </div>
-
-            <FilterDropdown
-              items={engineersRoles}
-              current={filterRole}
-              width="400"
-              chevronColor="#808FA3"
-              dropdownBackgroundColor="#FFFFFF"
-              getFilter={(type, value) => setFilterRole(value)}
-            />
+            <div className="teamMembers">
+              {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
+            </div>
           </div>
-          <div className="teamMembers">
-            {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
-          </div>
-        </div>
+          {profileCard()}
+        </Fragment>
       );
     }
     return <h1>You currently not managing any project</h1>;
