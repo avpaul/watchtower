@@ -1,4 +1,5 @@
 @import '../../assets/sass/abstract/variables';
+@import '../../assets/sass/abstract/mixins';
 
 .dasboardcard-wrapper {
   display: flex;
@@ -25,6 +26,28 @@
     background-color: #ffffff;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
     overflow: auto;
+
+    @include respond(large-screen) {
+      height: 499px;
+      width: 100%;
+      max-width: 420px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+      overflow: auto;
+    }
+
+    @include respond(very-large-screen) {
+      height: 499px;
+      width: 100%;
+      max-width: 490px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.03);
+      overflow: auto;
+    }
   }
 
   &__available-engineers {
@@ -35,5 +58,25 @@
     display: flex;
     justify-content: flex-start;
     line-height: 20px;
+
+    @include respond(large-screen) {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 420px;
+      padding: 0px 0px 5px 20px;
+      display: flex;
+      justify-content: flex-start;
+      line-height: 20px;
+    }
+
+    @include respond(very-large-screen) {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 490px;
+      padding: 0px 0px 5px 20px;
+      display: flex;
+      justify-content: flex-start;
+      line-height: 20px;
+    }
   }
 }
