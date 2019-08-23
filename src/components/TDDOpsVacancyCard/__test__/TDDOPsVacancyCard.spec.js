@@ -18,30 +18,28 @@ describe('TDD Ops Vacancy card', () => {
         name: 'Wava Wehner MD Certification',
         description: 'Harum sit reiciendis sint delectus aspernatur omnis.,',
         exclusive: true,
-        duration: 20,
-        '0': {
-          id: 2,
-          certification_id: 1,
-          fellow_id: null,
-          is_active: false,
-          created_at: '2019-07-10 07:58:34',
-          updated_at: '2019-07-10 07:58:34',
-          certification: {
-            id: 1,
-            name: 'Wava Wehner MD',
-            description: 'Harum sit molestias.',
-            exclusive: true,
-            duration: 20
-          }
+        duration: 20
+      },
+      vacancy_details: {
+        id: 2,
+        certification_id: 1,
+        fellow_id: null,
+        is_active: false,
+        created_at: '2019-07-10 07:58:34',
+        updated_at: '2019-07-10 07:58:34',
+        closing_date: '2019-07-10 07:58:34',
+        start_date: '2019-08-10 07:58:34',
+        certification: {
+          id: 1,
+          name: 'Wava Wehner MD',
+          description: 'Harum sit molestias.',
+          exclusive: true,
+          duration: 20
         },
         applications: [{ id: 1 }]
       },
       applications: 1,
-      available_slots: 2,
-      vacancy_details: {
-        closing_date: '2019-07-10 07:58:34',
-        start_date: '2019-08-10 07:58:34'
-      }
+      available_slots: 2
     }
   };
 

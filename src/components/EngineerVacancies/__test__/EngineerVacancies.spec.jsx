@@ -19,26 +19,25 @@ describe('EngineerVacancies ', () => {
           name: 'Engineer',
           applications: []
         },
-        vacancies: [
-          {
-            id: 4,
-            project_id: 1,
-            project_role_id: 1,
-            fellow_id: null,
-            is_active: false,
-            closing_date: '2019-07-10 07:58:34',
-            start_date: '2019-08-10 07:58:34',
-            project: {
-              id: 1,
-              name: 'Dolorum suscipit molestiae.'
-            },
-            role: {
-              id: 1,
-              name: 'Engineer',
-              applications: []
-            }
+        vacancy: {
+          id: 4,
+          project_id: 1,
+          project_role_id: 1,
+          fellow_id: null,
+          is_active: false,
+          closing_date: '2019-07-10 07:58:34',
+          start_date: '2019-08-10 07:58:34',
+          cycle_id: 1,
+          project: {
+            id: 1,
+            name: 'Dolorum suscipit molestiae.'
+          },
+          role: {
+            id: 1,
+            name: 'Engineer',
+            applications: []
           }
-        ],
+        },
         available_slots: 1
       }
     ],
@@ -103,26 +102,17 @@ describe('EngineerVacancies ', () => {
             name: 'Engineer',
             applications: []
           },
-          vacancies: [
-            {
-              id: 4,
-              project_id: 1,
-              project_role_id: 1,
-              fellow_id: null,
-              is_active: false,
-              closing_date: '2019-07-10 07:58:34',
-              start_date: '2019-08-10 07:58:34',
-              project: {
-                id: 1,
-                name: 'Dolorum suscipit molestiae.'
-              },
-              role: {
-                id: 1,
-                name: 'Engineer',
-                applications: []
-              }
-            }
-          ],
+          vacancy: {
+            id: 4,
+            project_id: 1,
+            project_role_id: 1,
+            fellow_id: null,
+            is_active: false,
+            closing_date: '2019-07-10 07:58:34',
+            start_date: '2019-08-10 07:58:34',
+            cycle_id: 1
+          },
+          applications: [],
           available_slots: 1
         }
       ],

@@ -63,44 +63,33 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                 ],
                 "projectVacancies": Array [
                   Object {
+                    "applications": Array [
+                      Object {
+                        "fellow_id": 2,
+                        "id": 1,
+                      },
+                      Object {
+                        "fellow_id": 1,
+                        "id": 1,
+                      },
+                    ],
                     "available_slots": 1,
                     "project": Object {
                       "id": 1,
                       "name": "Dolorum suscipit molestiae.",
                     },
                     "role": Object {
-                      "applications": Array [
-                        Object {
-                          "fellow_id": 1,
-                          "id": 1,
-                        },
-                      ],
                       "id": 1,
                       "name": "Engineer",
                     },
-                    "vacancies": Array [
-                      Object {
-                        "fellow_id": null,
-                        "id": 4,
-                        "is_active": false,
-                        "project": Object {
-                          "id": 1,
-                          "name": "Dolorum suscipit molestiae.",
-                        },
-                        "project_id": 1,
-                        "project_role_id": 1,
-                        "role": Object {
-                          "applications": Array [
-                            Object {
-                              "fellow_id": 1,
-                              "id": 1,
-                            },
-                          ],
-                          "id": 1,
-                          "name": "Engineer",
-                        },
-                      },
-                    ],
+                    "vacancy": Object {
+                      "cycle_id": 1,
+                      "fellow_id": null,
+                      "id": 4,
+                      "is_active": false,
+                      "project_id": 1,
+                      "project_role_id": 1,
+                    },
                   },
                 ],
               },
@@ -208,44 +197,33 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                 ],
                 "projectVacancies": Array [
                   Object {
+                    "applications": Array [
+                      Object {
+                        "fellow_id": 2,
+                        "id": 1,
+                      },
+                      Object {
+                        "fellow_id": 1,
+                        "id": 1,
+                      },
+                    ],
                     "available_slots": 1,
                     "project": Object {
                       "id": 1,
                       "name": "Dolorum suscipit molestiae.",
                     },
                     "role": Object {
-                      "applications": Array [
-                        Object {
-                          "fellow_id": 1,
-                          "id": 1,
-                        },
-                      ],
                       "id": 1,
                       "name": "Engineer",
                     },
-                    "vacancies": Array [
-                      Object {
-                        "fellow_id": null,
-                        "id": 4,
-                        "is_active": false,
-                        "project": Object {
-                          "id": 1,
-                          "name": "Dolorum suscipit molestiae.",
-                        },
-                        "project_id": 1,
-                        "project_role_id": 1,
-                        "role": Object {
-                          "applications": Array [
-                            Object {
-                              "fellow_id": 1,
-                              "id": 1,
-                            },
-                          ],
-                          "id": 1,
-                          "name": "Engineer",
-                        },
-                      },
-                    ],
+                    "vacancy": Object {
+                      "cycle_id": 1,
+                      "fellow_id": null,
+                      "id": 4,
+                      "is_active": false,
+                      "project_id": 1,
+                      "project_role_id": 1,
+                    },
                   },
                 ],
               },
@@ -373,44 +351,33 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
                   ],
                   "projectVacancies": Array [
                     Object {
+                      "applications": Array [
+                        Object {
+                          "fellow_id": 2,
+                          "id": 1,
+                        },
+                        Object {
+                          "fellow_id": 1,
+                          "id": 1,
+                        },
+                      ],
                       "available_slots": 1,
                       "project": Object {
                         "id": 1,
                         "name": "Dolorum suscipit molestiae.",
                       },
                       "role": Object {
-                        "applications": Array [
-                          Object {
-                            "fellow_id": 1,
-                            "id": 1,
-                          },
-                        ],
                         "id": 1,
                         "name": "Engineer",
                       },
-                      "vacancies": Array [
-                        Object {
-                          "fellow_id": null,
-                          "id": 4,
-                          "is_active": false,
-                          "project": Object {
-                            "id": 1,
-                            "name": "Dolorum suscipit molestiae.",
-                          },
-                          "project_id": 1,
-                          "project_role_id": 1,
-                          "role": Object {
-                            "applications": Array [
-                              Object {
-                                "fellow_id": 1,
-                                "id": 1,
-                              },
-                            ],
-                            "id": 1,
-                            "name": "Engineer",
-                          },
-                        },
-                      ],
+                      "vacancy": Object {
+                        "cycle_id": 1,
+                        "fellow_id": null,
+                        "id": 4,
+                        "is_active": false,
+                        "project_id": 1,
+                        "project_role_id": 1,
+                      },
                     },
                   ],
                 },
@@ -426,44 +393,33 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
             vacanciesArray={
               Array [
                 Object {
+                  "applications": Array [
+                    Object {
+                      "fellow_id": 2,
+                      "id": 1,
+                    },
+                    Object {
+                      "fellow_id": 1,
+                      "id": 1,
+                    },
+                  ],
                   "available_slots": 1,
                   "project": Object {
                     "id": 1,
                     "name": "Dolorum suscipit molestiae.",
                   },
                   "role": Object {
-                    "applications": Array [
-                      Object {
-                        "fellow_id": 1,
-                        "id": 1,
-                      },
-                    ],
                     "id": 1,
                     "name": "Engineer",
                   },
-                  "vacancies": Array [
-                    Object {
-                      "fellow_id": null,
-                      "id": 4,
-                      "is_active": false,
-                      "project": Object {
-                        "id": 1,
-                        "name": "Dolorum suscipit molestiae.",
-                      },
-                      "project_id": 1,
-                      "project_role_id": 1,
-                      "role": Object {
-                        "applications": Array [
-                          Object {
-                            "fellow_id": 1,
-                            "id": 1,
-                          },
-                        ],
-                        "id": 1,
-                        "name": "Engineer",
-                      },
-                    },
-                  ],
+                  "vacancy": Object {
+                    "cycle_id": 1,
+                    "fellow_id": null,
+                    "id": 4,
+                    "is_active": false,
+                    "project_id": 1,
+                    "project_role_id": 1,
+                  },
                 },
               ]
             }

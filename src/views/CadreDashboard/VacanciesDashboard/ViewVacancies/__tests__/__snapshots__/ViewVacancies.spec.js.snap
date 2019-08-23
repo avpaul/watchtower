@@ -30,26 +30,26 @@ exports[`Vacancy Dashboard render paginated view correctly 1`] = `
                 Object {
                   "available_slots": 2,
                   "certification": Object {
-                    "0": Object {
-                      "certification": Object {
-                        "description": "Ut aut et incidunt temporibus.",
-                        "duration": 20,
-                        "exclusive": true,
-                        "id": 1,
-                        "name": "Lyric Strosin",
-                      },
-                      "certification_id": 1,
-                      "created_at": "2019-07-11 06:54:50",
-                      "fellow_id": null,
-                      "id": 2,
-                      "is_active": false,
-                      "updated_at": "2019-07-11 06:54:50",
-                    },
                     "description": "Ut aut et incidunt officiis repudiandae temporibus.",
                     "duration": 20,
                     "exclusive": true,
                     "id": 1,
                     "name": "Lyric Strosin",
+                  },
+                  "vacancy_details": Object {
+                    "certification": Object {
+                      "description": "Ut aut et incidunt temporibus.",
+                      "duration": 20,
+                      "exclusive": true,
+                      "id": 1,
+                      "name": "Lyric Strosin",
+                    },
+                    "certification_id": 1,
+                    "created_at": "2019-07-11 06:54:50",
+                    "fellow_id": null,
+                    "id": 2,
+                    "is_active": false,
+                    "updated_at": "2019-07-11 06:54:50",
                   },
                 },
               ],
@@ -66,27 +66,39 @@ exports[`Vacancy Dashboard render paginated view correctly 1`] = `
                     "id": 6,
                     "name": "FPC",
                   },
-                  "vacancies": Array [
-                    Object {
-                      "fellow_id": null,
-                      "id": 1,
-                      "is_active": false,
-                      "project": Object {
-                        "id": 1,
-                        "name": "A et.",
-                      },
-                      "project_id": 1,
-                      "project_role_id": 6,
-                      "role": Object {
-                        "active_engineers": Array [],
-                        "description": "Neque aut modi minima dolorem quia itaque.",
-                        "id": 6,
-                        "name": "FPC",
-                      },
-                    },
-                  ],
+                  "vacancy": Object {
+                    "cycle_id": 1,
+                    "fellow_id": null,
+                    "id": 1,
+                    "is_active": false,
+                    "project_id": 1,
+                    "project_role_id": 6,
+                  },
                 },
               ],
+            }
+          }
+          vacanciesWithNoCycleId={
+            Object {
+              "available_slots": 1,
+              "project": Object {
+                "id": 1,
+                "name": "A et.",
+              },
+              "role": Object {
+                "active_engineers": Array [],
+                "description": "Neque aut modi minima dolorem quia itaque.",
+                "id": 6,
+                "name": "FPC",
+              },
+              "vacancy": Object {
+                "cycle_id": 1,
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 1,
+                "project_role_id": 6,
+              },
             }
           }
         />

@@ -51,7 +51,9 @@ import editProjectReducer from './editProjectReducer';
 import getAProjectReducer from './getAProjectReducer';
 import createRoleReducer from './createRoleReducer';
 import getRoleSkillsReducer from './getRoleSkillsReducer';
-import getAllVacancies from './getAllVacanciesReducer';
+import getAllVacancies, {
+  fetchVacanciesWithNotCycleIdReducer
+} from './getAllVacanciesReducer';
 import editCertification from './opsEditCertificationReducer';
 import cadreAddCertificationReducer from './cadreAddCertificationReducer';
 import getCertificationReducer from './getCertificationReducer';
@@ -124,7 +126,8 @@ const rootReducer = combineReducers({
   apply: applyForRoleReducer,
   singleRole: fetchSingleRoleReducer,
   teamManagerProjectApplications: teamManagerProjectApplicationsReducer,
-  teamManagerTeamMembers: teamManagerTeamReducer
+  teamManagerTeamMembers: teamManagerTeamReducer,
+  cadreVacanciesWithNoCycleId: fetchVacanciesWithNotCycleIdReducer,
 });
 
 export default rootReducer;

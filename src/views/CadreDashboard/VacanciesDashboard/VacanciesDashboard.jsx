@@ -11,8 +11,9 @@ import './vacancyDashboard.scss';
 
 class VacanciesDashboard extends Component {
   componentDidMount() {
-    const { getAllVacanciesAction } = this.props;
+    const { getAllVacanciesAction, getAllVacanciesWithNoCycleId } = this.props;
     getAllVacanciesAction();
+    getAllVacanciesWithNoCycleId();
   }
 
   clearProjectVacanciesOnFocus = () => {
@@ -20,12 +21,13 @@ class VacanciesDashboard extends Component {
     setProjectVacanciesOnFocus({});
   };
 
-  renderTopBar = data => {
+  renderTopBar = (data, vacanciesWithNoCycleId) => {
     let totalCount = 0;
     let projectVacanciesCount = 0;
     let certificationVacanciesCount = 0;
     if (data.projectVacancies) {
-      projectVacanciesCount = data.projectVacancies.length;
+      projectVacanciesCount =
+        data.projectVacancies.length + vacanciesWithNoCycleId.length;
       certificationVacanciesCount = data.certificationVacancies.length;
       totalCount = projectVacanciesCount + certificationVacanciesCount;
     }
@@ -60,18 +62,27 @@ class VacanciesDashboard extends Component {
     const {
       getAllVacancies: { data, loading },
       user,
-      history
+      history,
+      cadreVacanciesWithNoCycleId: {
+        data: vacanciesWithNoCycleId,
+        loading: vacanciesWithNoCycleIdLoading
+      }
     } = this.props;
     return (
       <React.Fragment>
         <AddVacanciesModal user={user} history={history} />
         <DeleteVacanciesModal history={history} />
-        {loading ? (
+        {loading || vacanciesWithNoCycleIdLoading ? (
           <PMloader />
         ) : (
           <React.Fragment>
-            <div className="row">{this.renderTopBar(!data ? {} : data)}</div>
-            <ViewVacancies vacancies={data} />
+            <div className="row">
+              {this.renderTopBar(!data ? {} : data, vacanciesWithNoCycleId)}
+            </div>
+            <ViewVacancies
+              vacancies={data}
+              vacanciesWithNoCycleId={vacanciesWithNoCycleId}
+            />
           </React.Fragment>
         )}
       </React.Fragment>
@@ -93,7 +104,9 @@ VacanciesDashboard.propTypes = {
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired
   }).isRequired,
-  history: PropTypes.shape({}).isRequired
+  history: PropTypes.shape({}).isRequired,
+  getAllVacanciesWithNoCycleId: PropTypes.func.isRequired,
+  cadreVacanciesWithNoCycleId: PropTypes.instanceOf(Object).isRequired
 };
 
 export default VacanciesDashboard;

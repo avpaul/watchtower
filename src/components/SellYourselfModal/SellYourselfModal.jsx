@@ -11,7 +11,6 @@ class SellYourselfModal extends Component {
   state = {
     reason: '',
     errorMessage: '',
-    operationSuccessful: false,
     inputIsValid: false
   };
 
@@ -31,7 +30,7 @@ class SellYourselfModal extends Component {
   };
 
   handleSubmit = async () => {
-    const { id, submitHandler } = this.props;
+    const { id, submitHandler, cycleId } = this.props;
     const { reason } = this.state;
 
     if (reason.trim().length < 50 || reason.trim().length > 500)
@@ -41,14 +40,14 @@ class SellYourselfModal extends Component {
         inputIsValid: false
       });
 
-    await submitHandler(id, reason);
+    await submitHandler(id, reason, cycleId);
     return this.showNotification();
   };
 
   showNotification = () => {
     const { error } = this.props;
 
-    if (error) {
+    if (Object.keys(error).length > 0) {
       const errorToDisplay = error.reason_for_applying
         ? error.reason_for_applying[0]
         : error;
@@ -61,7 +60,7 @@ class SellYourselfModal extends Component {
         hideProgressBar: true
       });
     }
-    return this.setState({ operationSuccessful: true });
+    return true;
   };
 
   renderSuccessNotification = () => (
@@ -90,13 +89,16 @@ class SellYourselfModal extends Component {
   converToUnicode = hexValue => String.fromCodePoint(hexValue);
 
   render() {
-    const { title, buttonLabel, modalHandler, showModal, loading } = this.props;
     const {
-      reason,
-      errorMessage,
-      operationSuccessful,
-      inputIsValid
-    } = this.state;
+      title,
+      buttonLabel,
+      modalHandler,
+      showModal,
+      loading,
+      hasApplied
+    } = this.props;
+
+    const { reason, errorMessage, inputIsValid } = this.state;
 
     let progressClass;
     let feedbackText;
@@ -122,7 +124,7 @@ class SellYourselfModal extends Component {
     return (
       <div className="container" id="sell-yourself">
         <Modal show={showModal} handleClose={modalHandler} size="small">
-          {!operationSuccessful ? (
+          {!hasApplied ? (
             <>
               {this.renderFormBody(title, reason)}
               {errorMessage && (
@@ -175,7 +177,9 @@ SellYourselfModal.propTypes = {
   modalHandler: PropTypes.func.isRequired,
   showModal: PropTypes.bool.isRequired,
   loading: PropTypes.bool,
-  error: PropTypes.instanceOf(Object)
+  error: PropTypes.instanceOf(Object),
+  cycleId: PropTypes.number.isRequired,
+  hasApplied: PropTypes.bool.isRequired
 };
 
 export default SellYourselfModal;

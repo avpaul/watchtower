@@ -56,7 +56,7 @@ describe('Delete all project vacancies action', () => {
     const vacanciesGroup = {
       project: { id: 1 },
       role: { id: 1 },
-      vacancies: [{ id: 1 }]
+      vacancy: { project_id: 1 }
     };
 
     store.dispatch(deleteProjectVacancies(vacanciesGroup));

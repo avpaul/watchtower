@@ -20,25 +20,14 @@ describe('Vacancy Dashboard', () => {
           description: 'Neque aut modi minima dolorem quia itaque.',
           active_engineers: []
         },
-        vacancies: [
-          {
-            id: 1,
-            project_id: 1,
-            project_role_id: 6,
-            fellow_id: null,
-            is_active: false,
-            project: {
-              id: 1,
-              name: 'A et.'
-            },
-            role: {
-              id: 6,
-              name: 'FPC',
-              description: 'Neque aut modi minima dolorem quia itaque.',
-              active_engineers: []
-            }
-          }
-        ],
+        vacancy: {
+          id: 1,
+          project_id: 1,
+          project_role_id: 6,
+          fellow_id: null,
+          is_active: false,
+          cycle_id: 1
+        },
         available_slots: 1
       }
     ],
@@ -49,26 +38,48 @@ describe('Vacancy Dashboard', () => {
           name: 'Lyric Strosin',
           description: 'Ut aut et incidunt officiis repudiandae temporibus.',
           exclusive: true,
-          duration: 20,
-          '0': {
-            id: 2,
-            certification_id: 1,
-            fellow_id: null,
-            is_active: false,
-            created_at: '2019-07-11 06:54:50',
-            updated_at: '2019-07-11 06:54:50',
-            certification: {
-              id: 1,
-              name: 'Lyric Strosin',
-              description: 'Ut aut et incidunt temporibus.',
-              exclusive: true,
-              duration: 20
-            }
+          duration: 20
+        },
+        vacancy_details: {
+          id: 2,
+          certification_id: 1,
+          fellow_id: null,
+          is_active: false,
+          created_at: '2019-07-11 06:54:50',
+          updated_at: '2019-07-11 06:54:50',
+          certification: {
+            id: 1,
+            name: 'Lyric Strosin',
+            description: 'Ut aut et incidunt temporibus.',
+            exclusive: true,
+            duration: 20
           }
         },
         available_slots: 2
       }
     ]
+  };
+
+  const vacanciesWithoutCycleId = {
+    project: {
+      id: 1,
+      name: 'A et.'
+    },
+    role: {
+      id: 6,
+      name: 'FPC',
+      description: 'Neque aut modi minima dolorem quia itaque.',
+      active_engineers: []
+    },
+    vacancy: {
+      id: 1,
+      project_id: 1,
+      project_role_id: 6,
+      fellow_id: null,
+      is_active: false,
+      cycle_id: 1
+    },
+    available_slots: 1
   };
 
   /**
@@ -77,13 +88,14 @@ describe('Vacancy Dashboard', () => {
    * @param propOverrides Used to edit the props passed to the component when being mounted
    * @returns { wrapper, props }
    */
-  const setup = (vacancies, paginated = false) => {
+  const setup = (vacancies, paginated = false, vacanciesWithNoCycleId) => {
     const wrapper = paginated
       ? shallow(
           <PaginatedVacanciesDashboard
             component={
               <ViewRoleVacancies
                 vacancies={vacancies}
+                vacanciesWithNoCycleId={vacanciesWithNoCycleId}
                 paginationWrapper={mockPaginationWrapper}
               />
             }
@@ -92,6 +104,7 @@ describe('Vacancy Dashboard', () => {
       : shallow(
           <ViewRoleVacancies
             vacancies={vacancies}
+            vacanciesWithNoCycleId={vacanciesWithNoCycleId}
             paginationWrapper={mockPaginationWrapper}
           />
         );
@@ -100,12 +113,12 @@ describe('Vacancy Dashboard', () => {
   };
 
   it('renders correctly', () => {
-    const { wrapper } = setup(allVacancies);
+    const { wrapper } = setup(allVacancies, null, vacanciesWithoutCycleId);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('render paginated view correctly', () => {
-    const { wrapper } = setup(allVacancies, true);
+    const { wrapper } = setup(allVacancies, true, vacanciesWithoutCycleId);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -115,7 +128,7 @@ describe('Vacancy Dashboard', () => {
   });
 
   it('renders toogles vacancies to display certification', () => {
-    const { wrapper } = setup(allVacancies, false);
+    const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
     wrapper.setState({ vacanciesToDisplay: 'project' });
     wrapper.find('#certification-button').simulate('click', {
       target: {
@@ -126,7 +139,7 @@ describe('Vacancy Dashboard', () => {
   });
 
   it('renders toogles vacancies to display projects', () => {
-    const { wrapper } = setup(allVacancies, false);
+    const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
     wrapper.setState({ vacanciesToDisplay: 'certification' });
     wrapper.find('#project-button').simulate('click', {
       target: {
@@ -137,14 +150,14 @@ describe('Vacancy Dashboard', () => {
   });
 
   it('renders search text input', () => {
-    const { wrapper } = setup(allVacancies, false);
+    const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
     wrapper.setState({ vacanciesToDisplay: 'project' });
 
     expect(wrapper.find('.vacancy-search-input').type()).toEqual('input');
   });
 
   it('renders certification search text input', () => {
-    const { wrapper } = setup(allVacancies, false);
+    const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
     wrapper.setState({ vacanciesToDisplay: 'project' });
     const textInput = wrapper.find('.vacancy-search-input');
     textInput.simulate('change', { target: { value: 'My Project' } });
@@ -153,7 +166,7 @@ describe('Vacancy Dashboard', () => {
   });
 
   it('renders project search text input', () => {
-    const { wrapper } = setup(allVacancies, false);
+    const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
     wrapper.setState({ vacanciesToDisplay: 'certification' });
     const textInput = wrapper.find('.vacancy-search-input');
     textInput.simulate('change', { target: { value: 'My Certification' } });

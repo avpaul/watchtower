@@ -56,21 +56,22 @@ const TDDOPsVacancyCard = ({
     return null;
   const closingDate =
     vacanciesToDisplay === 'project'
-      ? vacancy.vacancies[0].closing_date
+      ? vacancy.vacancy.closing_date
       : vacancy.vacancy_details.closing_date;
   const remainingDays = dateCountDown(closingDate);
 
-  const vacancyLength =
+  const applications =
     vacanciesToDisplay === 'project'
-      ? vacancy.role.applications.length
-      : vacancy.certification.applications.length;
+      ? vacancy.applications.length
+      : vacancy.vacancy_details.applications.length;
   return (
     <div
       className={`ops-vacancy-card${remainingDays === -1 ? '---grey' : ''}`}
       key={vacancy.id}
     >
       {vacanciesToDisplay === 'project'
-        ? renderDropdownSection(vacancy, setVacanciesOnFocus)
+        ? remainingDays !== -1 &&
+          renderDropdownSection(vacancy, setVacanciesOnFocus)
         : null}
       <div className="ops-vacancy-card__role-name">
         {getName(
@@ -96,7 +97,7 @@ const TDDOPsVacancyCard = ({
         </span>
         <span className="ops-vacancy-card__project-start-date__number">
           {vacanciesToDisplay === 'project'
-            ? formatDate(vacancy.vacancies[0].start_date)
+            ? formatDate(vacancy.vacancy.start_date)
             : formatDate(vacancy.vacancy_details.start_date)}
         </span>
       </div>
@@ -111,8 +112,8 @@ const TDDOPsVacancyCard = ({
       </div>
 
       <div className="ops-vacancy-card__applications">
-        {vacancyLength || '0'}
-        {vacancyLength === 1 ? ' application' : ' applications'}
+        {applications || '0'}
+        {applications === 1 ? ' application' : ' applications'}
       </div>
     </div>
   );

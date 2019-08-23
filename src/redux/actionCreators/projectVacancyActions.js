@@ -48,9 +48,10 @@ const setProjectVacanciesOnFocus = vacancies => ({
 /**
  * An action creator responsible for updating a set of vacancies
  * @param object vacancies The details of the vacancies to update
+ * @param Integer cycleId of the current vacancy
  * @return object An instance of a Promise
  */
-const editProjectVacancies = vacancies =>
+const editProjectVacancies = (vacancies, cycleId) =>
   genericAPIPutRequest(
     'projects/vacancies/-',
     [
@@ -58,7 +59,7 @@ const editProjectVacancies = vacancies =>
       types.EDIT_PROJECT_VACANCIES_SUCCESS,
       types.EDIT_PROJECT_VACANCIES_FAILURE
     ],
-    vacancies,
+    { ...vacancies, cycle_id: cycleId },
     (dispatch, response) =>
       dispatch({
         type: types.UPDATE_PROJECT_VACANCIES_ON_FOCUS,
@@ -77,12 +78,16 @@ const editProjectVacancies = vacancies =>
  */
 const deleteProjectVacancies = vacanciesGroup =>
   genericAPIDeleteRequest(
-    `projects/vacancies/${vacanciesGroup.vacancies[0].id}`,
+    `projects/vacancies/${vacanciesGroup.vacancy.project_id}`,
     [
       types.DELETE_PROJECT_VACANCIES_REQUEST,
       types.DELETE_PROJECT_VACANCIES_SUCCESS,
       types.DELETE_PROJECT_VACANCIES_FAILURE
     ],
+    {
+      project_role_id: vacanciesGroup.vacancy.project_role_id,
+      cycle_id: vacanciesGroup.vacancy.cycle_id
+    },
     dispatch =>
       dispatch({
         type: types.REMOVE_PROJECT_VACANCIES_ON_FOCUS,
@@ -94,10 +99,25 @@ const deleteProjectVacancies = vacanciesGroup =>
       })
   );
 
+/**
+ * An action creator responsible for fetching all old vacancies
+ * i.e. the vacancies that were created before the addition of cycle_id
+ * to the vacancies table. this is necessary so that the OPS can see the
+ * vacancies they created before the introduction of cycles
+ * @return object An instance of a Promise
+ */
+const getAllVacanciesWithNoCycleId = () =>
+  genericAPIGetRequest('projects/vacancies/old', [
+    types.GET_ALL_VACANCIES_WITH_NO_CYCLEID_REQUEST,
+    types.GET_ALL_VACANCIES_WITH_NO_CYCLEID_SUCCESS,
+    types.GET_ALL_VACANCIES_WITH_NO_CYCLEID_FAILURE
+  ]);
+
 export {
   createNewProjectVacancies as default,
   editProjectVacancies,
   deleteProjectVacancies,
   getAllVacancies,
-  setProjectVacanciesOnFocus
+  setProjectVacanciesOnFocus,
+  getAllVacanciesWithNoCycleId
 };

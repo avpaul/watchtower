@@ -28,12 +28,10 @@ describe('', () => {
         skills: [],
         name: ''
       },
-      vacancies: [
-        {
-          start_date: '2019-08-07 16:54:59',
-          closing_date: '2019-08-16 16:54:59'
-        }
-      ]
+      vacancy: {
+        start_date: '2019-08-07 16:54:59',
+        closing_date: '2019-08-16 16:54:59'
+      }
     }
   };
 

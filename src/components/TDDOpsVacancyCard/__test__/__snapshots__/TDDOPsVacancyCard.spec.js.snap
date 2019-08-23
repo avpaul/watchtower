@@ -148,7 +148,7 @@ exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
   <div
     className="ops-vacancy-card__applications"
   >
-    2
+    0
      applications
   </div>
 </div>

@@ -11,12 +11,7 @@ describe('Test the certification page', () => {
         name: 'Testing',
         description: 'Test description',
         exclusive: true,
-        id: 1,
-        applications: [
-          {
-            fellow_id: '-PUEHGE8716LJH'
-          }
-        ]
+        id: 1
       },
       error: ''
     },
@@ -33,7 +28,24 @@ describe('Test the certification page', () => {
     applyForCertification: jest.fn(),
     d1Engineer: {
       fellow_id: '-PUEHGE8716LJH'
-    }
+    },
+    certificationVacancies: [
+      {
+        certification: {
+          id: 1,
+          name: 'certification'
+        },
+        vacancy_details: {
+          cycle_id: 1,
+          projects_certification_id: 1,
+          applications: [
+            {
+              fellow_id: '-PUEHGE8716LJH'
+            }
+          ]
+        }
+      }
+    ]
   };
   let wrapper;
 

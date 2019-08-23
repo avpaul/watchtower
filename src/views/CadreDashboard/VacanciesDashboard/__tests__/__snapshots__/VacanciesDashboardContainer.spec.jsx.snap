@@ -2,6 +2,13 @@
 
 exports[`Vacancies Dashboard container renders correctly 1`] = `
 <VacanciesDashboard
+  cadreVacanciesWithNoCycleId={
+    Object {
+      "data": Object {},
+      "error": Object {},
+      "loading": false,
+    }
+  }
   getAllVacancies={
     Object {
       "data": Object {},
@@ -10,6 +17,7 @@ exports[`Vacancies Dashboard container renders correctly 1`] = `
     }
   }
   getAllVacanciesAction={[Function]}
+  getAllVacanciesWithNoCycleId={[Function]}
   setProjectVacanciesOnFocus={[Function]}
   store={
     Object {
@@ -47,6 +55,11 @@ exports[`Vacancies Dashboard container renders correctly 1`] = `
 
 exports[`Vacancies Dashboard container should map state to props 1`] = `
 Object {
+  "cadreVacanciesWithNoCycleId": Object {
+    "data": Object {},
+    "error": Object {},
+    "loading": false,
+  },
   "getAllVacancies": Object {
     "data": Object {},
     "error": Object {},

@@ -32,6 +32,8 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
       />
     </div>
   </div>
-  <PaginatedVacanciesDashboard />
+  <PaginatedVacanciesDashboard
+    vacanciesWithNoCycleId={Array []}
+  />
 </div>
 `;

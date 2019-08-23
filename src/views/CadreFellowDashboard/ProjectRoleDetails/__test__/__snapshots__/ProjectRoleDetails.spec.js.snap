@@ -10,6 +10,9 @@ exports[`should Render Component 1`] = `
           "id": 1,
           "name": "",
         },
+        "vacancy": Object {
+          "cycle_id": 1,
+        },
       },
     ]
   }
@@ -72,10 +75,14 @@ exports[`should Render child Components 1`] = `
           "id": 1,
           "name": "",
         },
+        "vacancy": Object {
+          "cycle_id": 1,
+        },
       }
     }
   />
   <Connect(RoleApplication)
+    cycleId={1}
     history={Object {}}
     roleId={1}
     roleInfo={
@@ -86,6 +93,7 @@ exports[`should Render child Components 1`] = `
     }
   />
   <RoleDetailsRight
+    cycleId={1}
     projectInfo={
       Array [
         Object {
@@ -100,6 +108,9 @@ exports[`should Render child Components 1`] = `
         "role": Object {
           "id": 1,
           "name": "",
+        },
+        "vacancy": Object {
+          "cycle_id": 1,
         },
       }
     }

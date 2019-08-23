@@ -37,8 +37,7 @@ const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
           <span>{`${roleInfo.available_slots}`}</span>
         </p>
         <p>
-          Start Date:{' '}
-          <span>{` ${altDate(roleInfo.vacancies[0].start_date)}`}</span>
+          Start Date: <span>{` ${altDate(roleInfo.vacancy.start_date)}`}</span>
         </p>
       </div>
       <div className="projectManager">

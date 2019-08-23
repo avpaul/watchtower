@@ -63,7 +63,8 @@ describe('Add Vacancy Modal', () => {
     start_date: '2019-12-10',
     closing_date: '2019-12-15',
     requester_email: 'test.user@andela.com',
-    slots: '3'
+    slots: '3',
+    cycle_id: 1
   };
 
   /**

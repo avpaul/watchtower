@@ -36,35 +36,24 @@ describe('Tests the CadreDashboard component', () => {
             },
             role: {
               id: 1,
-              name: 'Engineer',
-              applications: [
-                {
-                  id: 1,
-                  fellow_id: 1
-                }
-              ]
+              name: 'Engineer'
             },
-            vacancies: [
+            vacancy: {
+              id: 4,
+              project_id: 1,
+              project_role_id: 1,
+              fellow_id: null,
+              is_active: false,
+              cycle_id: 1
+            },
+            applications: [
               {
-                id: 4,
-                project_id: 1,
-                project_role_id: 1,
-                fellow_id: null,
-                is_active: false,
-                project: {
-                  id: 1,
-                  name: 'Dolorum suscipit molestiae.'
-                },
-                role: {
-                  id: 1,
-                  name: 'Engineer',
-                  applications: [
-                    {
-                      id: 1,
-                      fellow_id: 1
-                    }
-                  ]
-                }
+                id: 1,
+                fellow_id: 2
+              },
+              {
+                id: 1,
+                fellow_id: 1
               }
             ],
             available_slots: 1

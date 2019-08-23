@@ -2,6 +2,16 @@ import { mapStateToProps } from '../CertificationPageContainer';
 
 describe('Test the certification container', () => {
   it('map state to props should return props value', () => {
-    expect(mapStateToProps({ loading: false, data: {} }.data)).toEqual({});
+    expect(
+      mapStateToProps({
+        loading: false,
+        data: {},
+        cadreVacancies: {
+          data: {
+            certificationVacancies: {}
+          }
+        }
+      })
+    ).toMatchSnapshot();
   });
 });

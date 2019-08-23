@@ -12,7 +12,11 @@ describe('Vacancy Dashboard', () => {
   const defaultProps = {
     getAllVacanciesAction: jest.fn(),
     getAllVacancies: generateVacancyGroups(2, 2),
-    setProjectVacanciesOnFocus: jest.fn()
+    setProjectVacanciesOnFocus: jest.fn(),
+    cadreVacanciesWithNoCycleId: {
+      data: []
+    },
+    getAllVacanciesWithNoCycleId: jest.fn()
   };
 
   /**

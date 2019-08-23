@@ -41,12 +41,14 @@ const ProjectRoleDetails = ({
         projectId={params.projectId}
         roleInfo={currentRole.role}
         projectTitle={singleProject.data.project[0].name}
+        cycleId={currentRole.vacancy.cycle_id}
       />
       <RoleDetailsRight
         projectInfo={singleProject.data.project}
         roleInfo={currentRole}
         engineer={d1Engineer}
         vacancyId={vacancyId}
+        cycleId={currentRole.vacancy.cycle_id}
       />
     </div>
   ) : (
