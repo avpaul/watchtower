@@ -79,7 +79,7 @@ exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
   >
     <button
       className="dropdown-item"
-      data-target="#addProjectVacanciesModal"
+      data-target="#addVacanciesModal"
       data-toggle="modal"
       onClick={[Function]}
       type="button"
@@ -88,7 +88,7 @@ exports[`TDD Ops Vacancy card renders project vacancy correctly 1`] = `
     </button>
     <button
       className="dropdown-item"
-      data-target="#deleteProjectVacanciesModal"
+      data-target="#deleteVacanciesModal"
       data-toggle="modal"
       onClick={[Function]}
       type="button"

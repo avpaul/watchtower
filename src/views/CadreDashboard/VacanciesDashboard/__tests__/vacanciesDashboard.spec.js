@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router';
 import { mount, shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import Thunk from 'redux-thunk';
@@ -16,7 +17,8 @@ describe('Vacancy Dashboard', () => {
     cadreVacanciesWithNoCycleId: {
       data: []
     },
-    getAllVacanciesWithNoCycleId: jest.fn()
+    getAllVacanciesWithNoCycleId: jest.fn(),
+    location: {}
   };
 
   /**
@@ -33,10 +35,16 @@ describe('Vacancy Dashboard', () => {
     const wrapper = isMounted
       ? mount(
           <Provider store={store}>
-            <VacancyDashboard {...newProps} />
+            <MemoryRouter keyLength={0} >
+              <VacancyDashboard {...newProps} />
+            </MemoryRouter>
           </Provider>
         )
-      : shallow(<VacancyDashboard {...newProps} />);
+      : shallow(
+          <MemoryRouter keyLength={0} >
+            <VacancyDashboard {...newProps} />
+          </MemoryRouter>
+        );
     return { wrapper };
   };
 

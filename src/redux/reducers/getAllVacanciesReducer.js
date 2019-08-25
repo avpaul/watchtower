@@ -1,5 +1,8 @@
 import initialState from './initialState';
 import * as types from '../constants/projectsTypes';
+import {
+  REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS
+} from '../constants/certificationVacanciesTypes';
 import genericReducer from './genericReducer';
 
 /**
@@ -9,7 +12,7 @@ import genericReducer from './genericReducer';
  * @param object vacancy Details of project vacancies group to remove
  * @return array Updated list of project vacancies
  */
-const removeVacancy = (vacancies, vacancy) =>
+const removeProjectVacancy = (vacancies, vacancy) =>
   vacancies.filter(
     vacancyGroup =>
       !(
@@ -18,6 +21,12 @@ const removeVacancy = (vacancies, vacancy) =>
         (vacancyGroup.role.id === vacancy.old_project_role_id ||
           vacancyGroup.role.id === vacancy.role.id)
       )
+  );
+
+const removeCertificationVacancy = (vacancies, vacancy) =>
+  vacancies.filter(
+    vacancyGroup => (vacancyGroup.certification.id !== vacancy.certification.id)
+    && vacancyGroup.vacancy_details.cycle_id !== vacancy.vacancy_details.cycle_id
   );
 
 export default (state = initialState.getAllVacancies, action) => {
@@ -44,8 +53,19 @@ export default (state = initialState.getAllVacancies, action) => {
         ...state,
         data: {
           ...state.data,
-          projectVacancies: removeVacancy(
+          projectVacancies: removeProjectVacancy(
             state.data.projectVacancies,
+            action.data
+          )
+        }
+      };
+    case REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          certificationVacancies: removeCertificationVacancy(
+            state.data.certificationVacancies,
             action.data
           )
         }
@@ -56,7 +76,7 @@ export default (state = initialState.getAllVacancies, action) => {
         data: {
           ...state.data,
           projectVacancies: [action.data].concat(
-            removeVacancy(state.data.projectVacancies, action.data)
+            removeProjectVacancy(state.data.projectVacancies, action.data)
           )
         }
       };

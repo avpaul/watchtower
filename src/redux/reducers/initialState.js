@@ -224,6 +224,7 @@ export default {
   getCertification: genericAPIStateObject,
   editProjectVacancies: genericAPIStateObject,
   deleteProjectVacancies: genericAPIStateObject,
+  deleteCertificationVacancies: genericAPIStateObject,
   projectVacanciesOnFocus: {},
   deleteCertification: genericAPIStateObject,
   certificationOnFocus: {},

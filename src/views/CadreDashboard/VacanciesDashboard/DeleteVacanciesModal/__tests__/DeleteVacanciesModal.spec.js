@@ -14,9 +14,9 @@ describe('Delete Vacancies Modal', () => {
   const defaultProps = {
     deleteProjectVacancies: jest.fn(),
     setProjectVacanciesOnFocus: jest.fn(),
-    projectVacanciesOnFocus: {},
-    loading: false,
-    error: null,
+    projectVacanciesOnFocus: { project: 'gbea' },
+    loadingProject: false,
+    errorProject: null,
     history: {
       replace: jest.fn()
     }
@@ -72,28 +72,63 @@ describe('Delete Vacancies Modal', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('calls the handleClick successfully', () => {
-    const spy = jest.fn();
-    const { wrapper } = setup({ deleteProjectVacancies: spy }, true);
-    const button = wrapper.find('.cadre-main-button');
-    testSubmission(button, 1, spy);
-  });
+  describe('handleClick method', () => {
+    it('calls deleteProjectVacancies ', () => {
+      const spy = jest.fn();
+      const { wrapper } = setup({ deleteProjectVacancies: spy }, true);
+      const button = wrapper.find('.cadre-main-button');
+      testSubmission(button, 1, spy);
+    });
 
-  it('calls the handleClose successfully', () => {
-    const { wrapper } = setup();
-    wrapper.setProps({ loading: true });
-    wrapper.setProps({ loading: false }, () => {
-      expect(wrapper.state('success')).toBeTruthy();
-      wrapper.instance().handleClose();
-      expect(wrapper.state('success')).toBeFalsy();
+    it('calls deleteCertificationVacancies ', () => {
+      const spy = jest.fn();
+      const { wrapper } = setup(
+        {
+          deleteCertificationVacancies: spy,
+          projectVacanciesOnFocus: { certification: 'gbea' }
+        },
+        true
+      );
+      const button = wrapper.find('.cadre-main-button');
+      testSubmission(button, 1, spy);
     });
   });
 
-  it('updates success state as expected', async () => {
-    const { wrapper } = setup();
-    wrapper.setProps({ loading: true });
-    wrapper.setProps({ loading: false, error: 'Error encountered!' }, () => {
-      expect(wrapper.state('error')).toBe('Error encountered!');
+  describe('handleClose method', () => {
+    it('should be called succesfully when projectVacanciesOnFocus is Project', () => {
+      const { wrapper } = setup();
+      wrapper.setProps({ loadingProject: true });
+      wrapper.setProps({ loadingProject: false }, () => {
+        expect(wrapper.state('success')).toBeTruthy();
+        wrapper.instance().handleClose();
+        expect(wrapper.state('success')).toBeFalsy();
+      });
     });
+
+    it('should be called succesfully when projectVacanciesOnFocus is Certification', () => {
+      const spy = jest.fn();
+      const { wrapper } = setup({
+        projectVacanciesOnFocus: { certification: 'watch' },
+        history: { replace: spy }
+      });
+      wrapper.setProps({ loadingCertification: true });
+      wrapper.setProps({ loadingCertification: false }, () => {
+        expect(wrapper.state('success')).toBeTruthy();
+        wrapper.instance().handleClose();
+        expect(wrapper.state('success')).toBeFalsy();
+        expect(spy).toHaveBeenCalledTimes(1);
+      });
+    });
+  });
+
+  it('updates success state as expected', () => {
+    const { wrapper } = setup();
+    wrapper.setProps({ loadingProject: true });
+    wrapper.setProps(
+      { loadingProject: false, errorProject: 'Error encountered!' },
+      () => {
+        expect(wrapper.state('error')).toBe('Error encountered!');
+      }
+    );
   });
 });

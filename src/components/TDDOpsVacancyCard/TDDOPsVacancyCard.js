@@ -19,10 +19,10 @@ const renderDropdownButton = (modalTarget, label, onClick) => (
 
 const renderDropdown = (vacancy, setVacanciesOnFocus) => (
   <div className="dropdown-menu dropdown-menu-right">
-    {renderDropdownButton('#addProjectVacanciesModal', 'Edit', () =>
+    {renderDropdownButton('#addVacanciesModal', 'Edit', () =>
       setVacanciesOnFocus(vacancy)
     )}
-    {renderDropdownButton('#deleteProjectVacanciesModal', 'Delete', () =>
+    {renderDropdownButton('#deleteVacanciesModal', 'Delete', () =>
       setVacanciesOnFocus(vacancy)
     )}
   </div>
@@ -64,15 +64,13 @@ const TDDOPsVacancyCard = ({
     vacanciesToDisplay === 'project'
       ? vacancy.applications.length
       : vacancy.vacancy_details.applications.length;
+
   return (
     <div
       className={`ops-vacancy-card${remainingDays === -1 ? '---grey' : ''}`}
       key={vacancy.id}
     >
-      {vacanciesToDisplay === 'project'
-        ? remainingDays !== -1 &&
-          renderDropdownSection(vacancy, setVacanciesOnFocus)
-        : null}
+      {remainingDays !== -1 && renderDropdownSection(vacancy, setVacanciesOnFocus)}
       <div className="ops-vacancy-card__role-name">
         {getName(
           vacanciesToDisplay === 'project'

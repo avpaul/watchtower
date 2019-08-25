@@ -1,39 +1,156 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Vacancy Dashboard renders correctly 1`] = `
-<div
-  className="vacancies-dashboard cadre__page"
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "canGo": [Function],
+      "createHref": [Function],
+      "entries": Array [
+        Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+      ],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "index": 0,
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
 >
-  <Connect(AddVacanciesModal) />
-  <Connect(DeleteVacanciesModal) />
-  <div
-    className="row"
-  >
-    <div
-      className="col-9"
-    >
-      <Title
-        subTitle=""
-        title="0 Vacancies (0 Projects, 0 Certifications)"
-      />
-    </div>
-    <div
-      className="col-3"
-    >
-      <CadreMainButton
-        buttonProps={
-          Object {
-            "data-target": "#addProjectVacanciesModal",
-            "data-toggle": "modal",
-            "onClick": [Function],
-          }
-        }
-        label="ADD VACANCIES"
-      />
-    </div>
-  </div>
-  <PaginatedVacanciesDashboard
-    vacanciesWithNoCycleId={Array []}
+  <VacanciesDashboard
+    cadreVacanciesWithNoCycleId={
+      Object {
+        "data": Array [],
+      }
+    }
+    getAllVacancies={
+      Array [
+        Object {
+          "available_slots": 2,
+          "project": Object {
+            "id": 2,
+            "name": "Corrupti non.",
+          },
+          "role": Object {
+            "id": 1,
+            "name": "Engineer",
+          },
+          "vacancies": Array [
+            Object {
+              "closing_date": "",
+              "cycle_id": 1,
+              "days_left": 0,
+              "fellow_id": null,
+              "id": 1,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+              "vacancy_details": Object {
+                "closing_date": "",
+              },
+            },
+            Object {
+              "closing_date": "",
+              "cycle_id": 1,
+              "days_left": 1,
+              "fellow_id": null,
+              "id": 1,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+              "vacancy_details": Object {
+                "closing_date": "",
+              },
+            },
+            Object {
+              "closing_date": "",
+              "cycle_id": 1,
+              "days_left": 2,
+              "fellow_id": null,
+              "id": 2,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+              "vacancy_details": Object {
+                "closing_date": "",
+              },
+            },
+          ],
+        },
+        Object {
+          "available_slots": 2,
+          "project": Object {
+            "id": 4,
+            "name": "Corrupti non.",
+          },
+          "role": Object {
+            "id": 2,
+            "name": "Engineer",
+          },
+          "vacancies": Array [
+            Object {
+              "closing_date": "",
+              "cycle_id": 1,
+              "days_left": 0,
+              "fellow_id": null,
+              "id": 1,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+              "vacancy_details": Object {
+                "closing_date": "",
+              },
+            },
+            Object {
+              "closing_date": "",
+              "cycle_id": 1,
+              "days_left": 1,
+              "fellow_id": null,
+              "id": 1,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+              "vacancy_details": Object {
+                "closing_date": "",
+              },
+            },
+            Object {
+              "closing_date": "",
+              "cycle_id": 1,
+              "days_left": 2,
+              "fellow_id": null,
+              "id": 2,
+              "is_active": false,
+              "project_id": 7,
+              "project_role_id": 1,
+              "vacancy_details": Object {
+                "closing_date": "",
+              },
+            },
+          ],
+        },
+      ]
+    }
+    getAllVacanciesAction={[MockFunction]}
+    getAllVacanciesWithNoCycleId={[MockFunction]}
+    location={Object {}}
+    setProjectVacanciesOnFocus={[MockFunction]}
   />
-</div>
+</Router>
 `;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router';
 import PaginatedVacanciesDashboard, {
   ViewRoleVacancies
 } from '../ViewVacancies';
@@ -91,22 +92,28 @@ describe('Vacancy Dashboard', () => {
   const setup = (vacancies, paginated = false, vacanciesWithNoCycleId) => {
     const wrapper = paginated
       ? shallow(
-          <PaginatedVacanciesDashboard
-            component={
-              <ViewRoleVacancies
-                vacancies={vacancies}
-                vacanciesWithNoCycleId={vacanciesWithNoCycleId}
-                paginationWrapper={mockPaginationWrapper}
-              />
-            }
-          />
+          <MemoryRouter keyLength={0}>
+            <PaginatedVacanciesDashboard
+              component={
+                <ViewRoleVacancies
+                  vacancies={vacancies}
+                  vacanciesWithNoCycleId={vacanciesWithNoCycleId}
+                  paginationWrapper={mockPaginationWrapper}
+                  location={{}}
+                />
+              }
+            />
+          </MemoryRouter>
         )
       : shallow(
-          <ViewRoleVacancies
-            vacancies={vacancies}
-            vacanciesWithNoCycleId={vacanciesWithNoCycleId}
-            paginationWrapper={mockPaginationWrapper}
-          />
+          <MemoryRouter keyLength={0} >
+            <ViewRoleVacancies
+              vacancies={vacancies}
+              vacanciesWithNoCycleId={vacanciesWithNoCycleId}
+              paginationWrapper={mockPaginationWrapper}
+              location={{}}
+            />
+          </MemoryRouter>
         );
 
     return { wrapper };
@@ -128,38 +135,58 @@ describe('Vacancy Dashboard', () => {
   });
 
   it('renders toogles vacancies to display certification', () => {
-    const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
-    wrapper.setState({ vacanciesToDisplay: 'project' });
-    wrapper.find('#certification-button').simulate('click', {
-      target: {
-        value: 'certification'
-      }
-    });
-    expect(wrapper.state('vacanciesToDisplay')).toEqual('certification');
+    const wrapper = mount(
+      <MemoryRouter keyLength={0} >
+        <ViewRoleVacancies
+          vacancies={allVacancies}
+          vacanciesWithNoCycleId={vacanciesWithoutCycleId}
+          paginationWrapper={mockPaginationWrapper}
+          location={{ search: '?certification'}}
+        />
+      </MemoryRouter>
+    ); 
+
+    wrapper
+      .find('ViewRoleVacancies')
+      .find('#certification-button')
+      .simulate('click', {
+        target: {
+          value: 'certification'
+        }
+      });
+    expect(wrapper.find('ViewRoleVacancies').state('vacanciesToDisplay')).toEqual('certification');
   });
 
   it('renders toogles vacancies to display projects', () => {
     const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
     wrapper.setState({ vacanciesToDisplay: 'certification' });
-    wrapper.find('#project-button').simulate('click', {
-      target: {
-        value: 'project'
-      }
-    });
-    expect(wrapper.state('vacanciesToDisplay')).toEqual('project');
+    wrapper
+      .find('ViewRoleVacancies')
+      .dive()
+      .find('#project-button')
+      .simulate('click', {
+        target: {
+          value: 'project'
+        }
+      });
+    expect(wrapper.find('ViewRoleVacancies')
+    .dive().state('vacanciesToDisplay')).toEqual('project');
   });
 
   it('renders search text input', () => {
     const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
-    wrapper.setState({ vacanciesToDisplay: 'project' });
-
-    expect(wrapper.find('.vacancy-search-input').type()).toEqual('input');
+    const ViewRoleVacanciesComponent =  wrapper.find('ViewRoleVacancies').dive();
+    expect(
+      ViewRoleVacanciesComponent
+        .find('.vacancy-search-input')
+        .type()
+    ).toEqual('input');
   });
 
   it('renders certification search text input', () => {
     const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
-    wrapper.setState({ vacanciesToDisplay: 'project' });
-    const textInput = wrapper.find('.vacancy-search-input');
+    const ViewRoleVacanciesComponent =  wrapper.find('ViewRoleVacancies').dive();
+    const textInput = ViewRoleVacanciesComponent.find('.vacancy-search-input');
     textInput.simulate('change', { target: { value: 'My Project' } });
 
     expect(wrapper.exists('.ops-vacancies__container')).toEqual(false);
@@ -167,11 +194,11 @@ describe('Vacancy Dashboard', () => {
 
   it('renders project search text input', () => {
     const { wrapper } = setup(allVacancies, false, vacanciesWithoutCycleId);
-    wrapper.setState({ vacanciesToDisplay: 'certification' });
-    const textInput = wrapper.find('.vacancy-search-input');
+    const ViewRoleVacanciesComponent =  wrapper.find('ViewRoleVacancies').dive();
+    const textInput = ViewRoleVacanciesComponent.find('.vacancy-search-input');
     textInput.simulate('change', { target: { value: 'My Certification' } });
 
     expect(textInput.exists()).toEqual(true);
-    expect(wrapper.exists('.ops-no-vacancies')).toEqual(true);
+    expect(ViewRoleVacanciesComponent.exists('.ops-no-vacancies')).toEqual(true);
   });
 });

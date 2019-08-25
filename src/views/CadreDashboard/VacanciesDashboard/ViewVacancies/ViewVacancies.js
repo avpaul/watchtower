@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import fuzzy from 'fuzzy';
 import arrayKey from 'weak-key';
@@ -28,8 +29,20 @@ export class ViewRoleVacancies extends Component {
   }
 
   updateInitialState = vacancies => {
-    const { paginationWrapper } = this.props;
+    const { paginationWrapper, location } = this.props;
     paginationWrapper.updateData(vacancies, { perPage: 20 });
+
+    const searchExist = location.search;
+    if (searchExist) {
+      const param = searchExist.split('?')[1].trim();
+      if (param === 'certification') {
+        this.toggleVacanciesToDisplay({
+          target:{
+            value: param,
+          }
+        });
+      }
+    }
   };
 
   mergeVacancies = (source, target) => {
@@ -201,14 +214,18 @@ export class ViewRoleVacancies extends Component {
   }
 }
 
-const PaginatedVacanciesDashboard = props => (
-  <PaginationFrontendWrapper component={<ViewRoleVacancies {...props} />} />
-);
+const PaginatedVacanciesDashboard = props => {
+  const ViewRoleVacanciesComponent = withRouter(ViewRoleVacancies);
+  return(
+    <PaginationFrontendWrapper component={<ViewRoleVacanciesComponent {...props} />} />
+  );
+};
 
 ViewRoleVacancies.propTypes = {
   vacancies: PropTypes.instanceOf(Object),
   paginationWrapper: PropTypes.shape({}).isRequired,
-  vacanciesWithNoCycleId: PropTypes.instanceOf(Object).isRequired
+  vacanciesWithNoCycleId: PropTypes.instanceOf(Object).isRequired,
+  location: PropTypes.shape({}).isRequired,
 };
 
 ViewRoleVacancies.defaultProps = {
