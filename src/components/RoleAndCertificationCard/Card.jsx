@@ -9,6 +9,7 @@ import ViewRoleApplicantsModal from '../../views/CadreDashboard/RolesDashboard/V
 
 import './Card.scss';
 import ViewCertificationApplicantsModal from '../../views/CadreDashboard/CertificatesDashboard/ViewCertificationApplicants';
+import ViewCertifiedEngineersModal from '../../views/CadreDashboard/CertificatesDashboard/ViewCertifiedEngineers';
 
 class Card extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class Card extends React.Component {
         openModal: false,
         openCertification: false,
         showCertificationApplicants: false,
-        showRoleApplicants: false
+        showRoleApplicants: false,
+        showCertifiedEngineers: false
       }
     };
   }
@@ -32,7 +34,9 @@ class Card extends React.Component {
     const {
       cardProps: { details, fetcher }
     } = this.props;
-    return fetcher(details.id);
+    fetcher(details.id);
+    const { modals } = this.state;
+    this.setState({ modals: { ...modals, openModal: !modals.openModal } });
   };
 
   handleFocusDetails = () => {
@@ -55,7 +59,7 @@ class Card extends React.Component {
     }));
   };
 
-  getModalstate = slice => {
+  getModalState = slice => {
     const { modals } = this.state;
     return modals[slice];
   };
@@ -67,7 +71,7 @@ class Card extends React.Component {
       }
     } = this.props;
 
-    const showRoleApplicants = this.getModalstate('showRoleApplicants');
+    const showRoleApplicants = this.getModalState('showRoleApplicants');
     return (
       <ViewRoleApplicantsModal
         id="roleApplicantsModal"
@@ -118,12 +122,12 @@ class Card extends React.Component {
     </React.Fragment>
   );
 
-  renderCount = (count, event) => (
+  renderCount = (count, handler) => (
     <div className="text-left pt-2">
       <span
         className="role-card__attributes-count"
-        onClick={count > 0 ? event : ''}
-        onKeyPress={count > 0 ? event : ''}
+        onClick={count > 0 ? handler : undefined}
+        onKeyPress={count > 0 ? handler : undefined}
         role="button"
         tabIndex="-1"
       >
@@ -154,7 +158,7 @@ class Card extends React.Component {
                     ? this.modalHandler('showRoleApplicants')
                     : this.modalHandler('showCertificationApplicants')
                 }
-                onKeypress={
+                onKeyPress={
                   type === 'role'
                     ? this.modalHandler('showRoleApplicants')
                     : this.modalHandler('showCertificationApplicants')
@@ -166,16 +170,27 @@ class Card extends React.Component {
           </div>
         </div>
         <div className="col-6">
-          <p className="role-card__attributes">
+          <div className="role-card__attributes">
             {type === 'role' ? 'Active engrs.' : 'Cert Engrs.'} <br />
-            {this.renderCount(count, this.roleActiveEngineer)}
-          </p>
+            {this.renderCount(count, () => {
+              if (type === 'role') {
+                return this.roleActiveEngineer();
+              }
+              const { modals } = this.state;
+              return this.setState({
+                modals: {
+                  ...modals,
+                  showCertifiedEngineers: !modals.showCertifiedEngineers
+                }
+              });
+            })}
+          </div>
         </div>
       </div>
     );
   };
 
-  renderModal = (details, open, loading, data, type) => {
+  renderModal = (details, open, loading, data, type, projects) => {
     const count =
       type === 'role'
         ? details.active_engineers_count
@@ -192,7 +207,7 @@ class Card extends React.Component {
           <Loader />
         ) : (
           <div className="modal__body-card">
-            <MapRoleActiveEngineers roleData={data} />
+            <MapRoleActiveEngineers roleData={data} projects={projects} />
           </div>
         )}
       </Modal>
@@ -249,7 +264,7 @@ class Card extends React.Component {
     const {
       cardProps: { details }
     } = this.props;
-    const openCertification = this.getModalstate('openCertification');
+    const openCertification = this.getModalState('openCertification');
 
     return (
       <EditCertificationModal
@@ -266,7 +281,7 @@ class Card extends React.Component {
         details: { id, name }
       }
     } = this.props;
-    const showCertificationApplicants = this.getModalstate(
+    const showCertificationApplicants = this.getModalState(
       'showCertificationApplicants'
     );
 
@@ -280,9 +295,28 @@ class Card extends React.Component {
     );
   };
 
+  renderViewCertifiedEngineersModal = () => {
+    const {
+      cardProps: {
+        details: { id, name }
+      }
+    } = this.props;
+
+    const showCertifiedEngineers = this.getModalState('showCertifiedEngineers');
+
+    return (
+      <ViewCertifiedEngineersModal
+        open={showCertifiedEngineers}
+        toggle={this.modalHandler('showCertifiedEngineers')}
+        certificationId={id}
+        title={name}
+      />
+    );
+  };
+
   render() {
     const {
-      cardProps: { details, loading, activeParticipants, type }
+      cardProps: { details, loading, activeParticipants, type, projects }
     } = this.props;
     const {
       showMore,
@@ -290,7 +324,8 @@ class Card extends React.Component {
         openModal,
         openCertification,
         showCertificationApplicants,
-        showRoleApplicants
+        showRoleApplicants,
+        showCertifiedEngineers
       }
     } = this.state;
 
@@ -326,11 +361,13 @@ class Card extends React.Component {
           openModal,
           loading,
           activeParticipants,
-          type
+          type,
+          projects
         )}
         {openCertification && this.renderEditCertificationModal()}
         {showCertificationApplicants &&
           this.renderViewCertificationApplicantsModal()}
+        {showCertifiedEngineers && this.renderViewCertifiedEngineersModal()}
         {showRoleApplicants && this.renderRoleApplicantsModal()}
       </div>
     );
@@ -344,7 +381,7 @@ Card.defaultProps = {
 Card.propTypes = {
   cardProps: PropTypes.shape({}).isRequired,
   focusRole: PropTypes.func.isRequired,
-  setCertificationOnFocus: PropTypes.func
+  setCertificationOnFocus: PropTypes.bool
 };
 
 export default Card;

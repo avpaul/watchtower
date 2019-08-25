@@ -2,7 +2,7 @@ import initialState from './initialState';
 import * as types from '../constants/cadreCertificationTypes';
 import genericReducer from './genericReducer';
 
-const removeCertification = (certifications, certification) =>
+export const removeCertification = (certifications, certification) =>
   certifications.filter(cert => !(cert.id === certification));
 
 export default (state = initialState.allCetifications, action) => {
@@ -49,4 +49,18 @@ export const fetchCertificationsApplicantsReducer = (
       ...action,
       successData: action.data
     }
+  );
+
+export const fetchCertifiedEngineers = (
+  state = { loading: false, data: [], error: null },
+  action
+) =>
+  genericReducer(
+    [
+      types.GET_CERTIFIED_ENGINEERS_REQUEST,
+      types.GET_CERTIFIED_ENGINEERS_SUCCESS,
+      types.GET_CERTIFICATION_FAILURE
+    ],
+    state,
+    { ...action, successData: action.data }
   );

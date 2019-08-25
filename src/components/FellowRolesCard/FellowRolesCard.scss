@@ -52,11 +52,31 @@
   font-size: 15px;
 }
 
+.fellow-project {
+  margin-left: 22.5px;
+  margin-top: 8px;
+  &__title {
+    color: #3359db;
+  }
+  &__name {
+    color: #606060;
+  }
+  &__name,
+  &__title {
+    display: block;
+    font-size: 15px;
+  }
+}
+
 .fellow-details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 17px 21.5px 16px 22.5px;
+}
+.role-details > p {
+  margin-bottom: 4px;
+  color: #606060;
 }
 
 .cohort-details > p {
@@ -64,9 +84,12 @@
   color: #606060;
 }
 
-.role-details > p {
-  margin-bottom: 4px;
-  color: #606060;
+.role-details p:first-of-type {
+  color: #3359db;
+}
+
+.cohort-details p:first-of-type {
+  color: #3359db;
 }
 
 .fellow-stacks {

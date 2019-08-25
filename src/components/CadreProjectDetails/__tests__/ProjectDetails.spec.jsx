@@ -21,6 +21,12 @@ describe('Project details card tests', () => {
     allProjects: {
       data: [projectDetails]
     },
+    allRoles: {
+      data: projectDetails.engineers.map(engineer => ({
+        name: engineer.project_role_name,
+        id: 1
+      }))
+    },
     match: {
       params: { id: 1 }
     },
@@ -34,6 +40,12 @@ describe('Project details card tests', () => {
       data: {
         project: [projectDetails]
       }
+    },
+    allRoles: {
+      data: projectDetails.engineers.map(engineer => ({
+        name: engineer.project_role_name,
+        id: 1
+      }))
     },
     loading: true
   };

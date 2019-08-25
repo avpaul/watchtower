@@ -5,7 +5,7 @@ import { fetchAllRoles } from '../../../redux/actionCreators/cadreProjectRoleAct
 
 /**
  * map state to props or updates the
- * component with infomation from the store
+ * component with information from the store
  * using the action creators
  * @param  {*} object
  * @return {void}

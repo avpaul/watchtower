@@ -8,13 +8,15 @@ import DeleteRoleModal from '../DeleteRoleModal';
 
 export default class CadreViewRoles extends Component {
   componentDidMount() {
-    const { fetchAllRoles } = this.props;
+    const { fetchAllRoles, fetchAllProjects } = this.props;
     fetchAllRoles();
+    fetchAllProjects();
   }
 
   render() {
     const {
       allRoles: { data, loading },
+      allProjects,
       getActiveRoleEngineer,
       setDeleteTarget,
       loading: loadActiveEngrs,
@@ -29,6 +31,7 @@ export default class CadreViewRoles extends Component {
         {
           <MapProjectRoleCard
             roleData={data}
+            projects={allProjects}
             type="role"
             fetchActiveEngineers={getActiveRoleEngineer}
             loading={loadActiveEngrs}
@@ -45,7 +48,9 @@ export default class CadreViewRoles extends Component {
 
 CadreViewRoles.propTypes = {
   allRoles: PropTypes.shape(),
+  allProjects: PropTypes.arrayOf(PropTypes.shape({})),
   fetchAllRoles: PropTypes.func.isRequired,
+  fetchAllProjects: PropTypes.func.isRequired,
   getActiveRoleEngineer: PropTypes.func.isRequired,
   setDeleteTarget: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
@@ -57,5 +62,6 @@ CadreViewRoles.propTypes = {
 
 CadreViewRoles.defaultProps = {
   allRoles: {},
-  activeEngineers: []
+  activeEngineers: [],
+  allProjects: []
 };

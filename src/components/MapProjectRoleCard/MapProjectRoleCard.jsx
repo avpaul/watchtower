@@ -54,10 +54,11 @@ const renderHeader = (type, roleData) => (
 
 const MapProjectRoleCard = ({
   roleData,
+  projects,
   type,
   fetchActiveEngineers,
   loading,
-  activeEngineers,
+  activeEngineers: activeParticipants,
   setDeleteTarget,
   setCertificationOnFocus
 }) => (
@@ -78,9 +79,10 @@ const MapProjectRoleCard = ({
             <Card
               cardProps={{
                 details: role,
+                projects,
                 fetcher: fetchActiveEngineers,
                 loading,
-                activeParticipants: activeEngineers,
+                activeParticipants,
                 type
               }}
               focusRole={setDeleteTarget}
@@ -103,10 +105,12 @@ MapProjectRoleCard.propTypes = {
   fetchActiveEngineers: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   roleData: PropTypes.instanceOf(Array),
+  projects: PropTypes.arrayOf(PropTypes.shape({})),
   setDeleteTarget: PropTypes.func.isRequired
 };
 MapProjectRoleCard.defaultProps = {
   roleData: [],
+  projects: [],
   activeEngineers: []
 };
 

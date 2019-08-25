@@ -71,6 +71,7 @@ export default {
       project_id: 1,
       cohort: 'Lagos-43',
       project_role_name: 'Engineer',
+      project_role_id: 1,
       created_at: '2019-06-12 19:52:36',
       updated_at: '2019-06-12 19: 52: 36'
     },
@@ -95,6 +96,7 @@ export default {
       email_sent: false,
       project_id: 1,
       cohort: 'Lagos-43',
+      project_role_id: 1,
       project_role_name: 'Engineer',
       created_at: '2019-06-12 19:52:36',
       updated_at: '2019-06-12 19: 52: 36'
@@ -120,6 +122,7 @@ export default {
       email_sent: false,
       project_id: 1,
       cohort: 'Lagos-42',
+      project_role_id: 1,
       project_role_name: 'FPC',
       created_at: '2019-06-12 19:52:36',
       updated_at: '2019-06-12 19: 52: 36'

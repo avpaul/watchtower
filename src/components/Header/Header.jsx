@@ -423,8 +423,13 @@ Header.propTypes = {
   unreadnotifications: PropTypes.shape({}).isRequired,
   readnotifications: PropTypes.shape({}).isRequired,
   loading: PropTypes.bool.isRequired,
-  roles: PropTypes.instanceOf(Array).isRequired
+  roles: PropTypes.instanceOf(Array)
 };
+
+Header.defaultProps = {
+  roles: []
+};
+
 const mapStateToProps = state => ({
   loading: state.readnotification.loading,
   notifications: state.notification.notification,

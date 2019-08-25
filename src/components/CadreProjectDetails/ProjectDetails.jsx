@@ -15,17 +15,16 @@ class ProjectDetails extends Component {
     super();
     this.state = {
       projectDetails: null,
+      roles: [],
       loading: true
     };
   }
 
   async componentDidMount() {
-    const { match, getProject } = this.props;
+    const { match, getProject, fetchAllRoles } = this.props;
     let projectDetails;
 
-    // Check if parameter in the browser is an Integer and the project doesn't exist in redux store already
-    // before making the API call to fetch the resource
-    // If it exists already, the page renders using the existing data in redux
+    // Check if parameter in the browser is an Integer before making the API call to fetch the resource
     if (Number.isInteger(+match.params.id)) {
       await getProject(match.params.id);
       const { singleProject } = this.props;
@@ -35,11 +34,15 @@ class ProjectDetails extends Component {
       }
     }
 
+    await fetchAllRoles();
+    const { cadreRoles: roles } = this.props;
+
+    this.setState({ roles });
     this.setState({ projectDetails, loading: false });
   }
 
   render() {
-    const { projectDetails, loading } = this.state;
+    const { projectDetails, loading, roles } = this.state;
     const { history, match } = this.props;
 
     const projectBody = projectDetails ? (
@@ -63,7 +66,10 @@ class ProjectDetails extends Component {
         </div>
         <div className="project-details__engineers">
           <h3>List of {projectDetails.name} engineers</h3>
-          <ProjectEngineersTable engineers={projectDetails.engineers} />
+          <ProjectEngineersTable
+            engineers={projectDetails.engineers}
+            roles={roles}
+          />
         </div>
       </div>
     ) : (
@@ -78,10 +84,13 @@ ProjectDetails.propTypes = {
   location: PropTypes.shape({}),
   history: PropTypes.shape({}).isRequired,
   match: PropTypes.shape({}).isRequired,
-  getProject: PropTypes.shape().isRequired,
-  singleProject: PropTypes.shape().isRequired
+  getProject: PropTypes.func.isRequired,
+  singleProject: PropTypes.shape().isRequired,
+  cadreRoles: PropTypes.arrayOf(PropTypes.shape({})),
+  fetchAllRoles: PropTypes.func.isRequired
 };
 ProjectDetails.defaultProps = {
-  location: { state: 'something here' }
+  location: { state: 'something here' },
+  cadreRoles: []
 };
 export default ProjectDetails;

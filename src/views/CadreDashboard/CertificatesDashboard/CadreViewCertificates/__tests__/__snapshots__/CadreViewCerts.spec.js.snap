@@ -8,6 +8,7 @@ exports[`Test view roles should render correctly 1`] = `
   <Connect(DeleteCertificationModal) />
   <MapProjectRoleCard
     activeEngineers={Array []}
+    projects={Array []}
     roleData={
       Array [
         Object {

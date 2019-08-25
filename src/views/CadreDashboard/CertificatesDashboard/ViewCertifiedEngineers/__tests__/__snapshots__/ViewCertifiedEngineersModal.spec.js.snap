@@ -6,7 +6,7 @@ exports[`Certification Applicants Modal should render the loader when loading is
   show={false}
   showBtn={true}
   size="large"
-  title="Applicants for certification applicants"
+  title="Engineers certified in certification applicants"
 >
   <Loader
     size="large"
@@ -20,7 +20,7 @@ exports[`Certification Applicants Modal should render without error 1`] = `
   show={false}
   showBtn={true}
   size="large"
-  title="Applicants for certification applicants"
+  title="Engineers certified in certification applicants"
 >
   <div
     className="modal__body-card"

@@ -66,6 +66,19 @@ export const fetchCertificationApplicants = certificationId =>
   ]);
 
 /**
+ * An action creator responsible for fetching all engineers
+ * certified on a given certification
+ * @param {integer} certificationId the id of the certification
+ * @returns object An instance of a promise
+ */
+export const fetchCertifiedEngineers = certificationId =>
+  genericAPIGetRequest(`certifications/${certificationId}/engineers`, [
+    types.GET_CERTIFIED_ENGINEERS_REQUEST,
+    types.GET_CERTIFIED_ENGINEERS_SUCCESS,
+    types.GET_CERTIFIED_ENGINEERS_FAILURE
+  ]);
+
+/**
  * An action creator responsible for applying for a certification
  * @return object An instance of a Promise
  */
