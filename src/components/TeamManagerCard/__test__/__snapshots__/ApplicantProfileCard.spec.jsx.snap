@@ -31,6 +31,8 @@ exports[`tests the Profile card renders correctly 1`] = `
       <p />
       <button
         className="applicant_button"
+        data-test="accept-button"
+        onClick={[Function]}
         type="button"
       >
         ACCEPT

@@ -5,7 +5,7 @@ import ApplicantProjectCard from './ApplicantProjectCard';
 
 import './ApplicantCard.scss';
 
-const ApplicantCard = ({ application }) => (
+const ApplicantCard = ({ application, acceptApplicationHandler }) => (
   <React.Fragment>
     <ApplicantProfileCard
       firstName={application.applicant.first_name}
@@ -14,6 +14,8 @@ const ApplicantCard = ({ application }) => (
       roleName={application.role.name}
       projectId={application.project.name}
       applicationReason={application.application_reason}
+      acceptApplicationHandler={acceptApplicationHandler}
+      applicationId={application.id}
     />
     <div>
       <ApplicantProjectCard
@@ -39,7 +41,8 @@ const ApplicantCard = ({ application }) => (
 );
 
 ApplicantCard.propTypes = {
-  application: PropTypes.instanceOf(Object).isRequired
+  application: PropTypes.instanceOf(Object).isRequired,
+  acceptApplicationHandler: PropTypes.func.isRequired
 };
 
 export default ApplicantCard;

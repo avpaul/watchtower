@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Application component should handle filtering after clicking 1`] = `
+exports[`Application component should handle acceptance button click to show accept modal 1`] = `
 <Applications
   applications={
     Object {
@@ -104,13 +104,564 @@ exports[`Application component should handle filtering after clicking 1`] = `
     className="applications-wrapper"
   >
     <div
-      className="cadre__page"
+      className="cadre__page application__page"
     >
       <div
         className="tm-project-applications"
       >
         <div
-          className="all-applicants-cards d-flex flex-wrap justify-content-between remove-width"
+          className="all-applicants-cards d-flex flex-wrap add-width"
+        >
+          <div
+            className="stats-header mb-4 d-flex justify-content-between"
+          >
+            <div>
+              1
+               Pending Applications
+            </div>
+            <Filter
+              characterLength={9}
+              chevronColor="#808FA3"
+              current="All Roles"
+              dropdownBackgroundColor="#FFFFFF"
+              fontSize=""
+              getFilter={[Function]}
+              items={
+                Array [
+                  "All Roles",
+                  "Data Engineer",
+                ]
+              }
+              search={false}
+              width="400"
+            >
+              <div
+                className="filter-dropdown"
+              >
+                <button
+                  className="filter-dropdown__button"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "",
+                      "width": "100%",
+                    }
+                  }
+                  type="button"
+                >
+                  <span>
+                    All Roles
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "background": "#FFFFFF",
+                      }
+                    }
+                  >
+                    <i
+                      className="fas fa-chevron-down"
+                      style={
+                        Object {
+                          "color": "#808FA3",
+                        }
+                      }
+                    />
+                  </span>
+                </button>
+              </div>
+            </Filter>
+          </div>
+          <div
+            className="mb-4 mr-5"
+            key="13"
+          >
+            <TeamCard
+              cohort="Lagos-7"
+              data-test="team_manager_card"
+              date="12/11/2018"
+              dateType="Start Date"
+              event={[Function]}
+              image="https://lorempixel.com/100/100/people/?23475"
+              key="weak-key-0"
+              name="Wasibani Roy"
+              project="Omnis voluptatem quos."
+              role="Data Engineer"
+            >
+              <div
+                className="TM_ProfileCard"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <div
+                  className="TM_ProfileCard__top"
+                >
+                  <div
+                    className="TM_ProfileCard__image"
+                  >
+                    <img
+                      alt="Wasibani Roy"
+                      src="https://lorempixel.com/100/100/people/?23475"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      className="TM_ProfileCard__user"
+                    >
+                      Wasibani Roy
+                    </p>
+                    <p
+                      className="TM_ProfileCard__role"
+                    >
+                      Data Engineer
+                    </p>
+                    <p
+                      className="TM_ProfileCard__project"
+                    >
+                      Omnis voluptatem quos.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="TM_ProfileCard__bottom"
+                >
+                  <div
+                    className="TM_ProfileCard__bottom-section"
+                  >
+                    <p>
+                      Cohort
+                    </p>
+                    <span>
+                      Lagos-7
+                    </span>
+                  </div>
+                  <div
+                    className="TM_ProfileCard__bottom-section"
+                  >
+                    <p>
+                      Start Date
+                    </p>
+                    <span>
+                      12/11/2018
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </TeamCard>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="applicant_profile_card_wrapper show-application"
+    >
+      <ApplicantCard
+        acceptApplicationHandler={[Function]}
+        application={
+          Object {
+            "applicant": Object {
+              "account_active": false,
+              "apprenticeship_end_date": "2019-06-17 00:00:00",
+              "apprenticeship_manager": "Jason Okagbare",
+              "apprenticeship_project": "WatchTower",
+              "apprenticeship_start_date": "2019-06-02 00:00:00",
+              "apprenticeship_technology": "Devops",
+              "cadre_start_date": null,
+              "cohort": "Lagos-7",
+              "created_at": null,
+              "email": "roy.wasibani@andela.com",
+              "email_sent": false,
+              "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+              "first_name": "Wasibani",
+              "id": 1,
+              "last_name": "Roy",
+              "picture": "https://lorempixel.com/100/100/people/?23475",
+              "project_id": null,
+              "project_role_id": null,
+              "sims_end_date": "2019-02-17 00:00:00",
+              "sims_manager": "Daniel Ale",
+              "sims_project": "AuthorsHaven",
+              "sims_project_technology": "Python/Go",
+              "sims_start_date": "2018-11-12 00:00:00",
+              "updated_at": null,
+            },
+            "application_reason": "Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.",
+            "confirm_email_sent": false,
+            "created_at": "2019-08-22 12:23:24",
+            "decision": "pending",
+            "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+            "id": 13,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "project_id": 4,
+            "project_role_id": 5,
+            "project_vacancy_id": null,
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
+            "selected": false,
+            "status_email_sent": false,
+            "updated_at": "2019-08-22 12:23:24",
+          }
+        }
+      >
+        <ApplicantProfileCard
+          acceptApplicationHandler={[Function]}
+          applicationId={13}
+          applicationReason="Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat."
+          firstName="Wasibani"
+          lastName="Roy"
+          picture="https://lorempixel.com/100/100/people/?23475"
+          projectId="Omnis voluptatem quos."
+          roleName="Data Engineer"
+        >
+          <div
+            className="applicant"
+          >
+            <div
+              className="applicant_profile_card_details"
+            >
+              <img
+                alt=""
+                src="https://lorempixel.com/100/100/people/?23475"
+              />
+              <br />
+              <h3>
+                Wasibani
+                 
+                Roy
+              </h3>
+              <p>
+                Applying for 
+                Data Engineer
+              </p>
+              <p>
+                Omnis voluptatem quos.
+              </p>
+              <button
+                className="applicant_button"
+                data-test="accept-button"
+                onClick={[Function]}
+                type="button"
+              >
+                ACCEPT
+              </button>
+              <div
+                className="line"
+              />
+              <div
+                className="applicant_sell_yourself"
+              >
+                <span
+                  className="sell_yourself"
+                >
+                  Sell Yourself in one sentence
+                </span>
+                <br />
+                <span
+                  className="sell_yourself_text"
+                >
+                  Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.
+                </span>
+              </div>
+            </div>
+          </div>
+        </ApplicantProfileCard>
+        <div>
+          <ApplicantProjectCard
+            endDate="2019-06-17 00:00:00"
+            projectLevel="Apprenticeship"
+            projectName="WatchTower"
+            startDate="2019-06-02 00:00:00"
+            technologies="Devops"
+          >
+            <div
+              className="profile_card"
+            >
+              <div
+                className="project-card-grid"
+              >
+                <div
+                  className="project-card-left"
+                >
+                  <img
+                    alt="project logo"
+                    src="projectIcon.png"
+                  />
+                </div>
+                <div
+                  className="project-card-right-app"
+                >
+                  <h6>
+                    WatchTower
+                  </h6>
+                  <p>
+                    Apprenticeship
+                  </p>
+                  <p>
+                    Jun 2019
+                     - 
+                    Jun 2019
+                  </p>
+                  <p
+                    className="technologies"
+                  >
+                    <span
+                      key="Devops"
+                    >
+                      Devops
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ApplicantProjectCard>
+        </div>
+        <div>
+          <ApplicantProjectCard
+            endDate="2019-02-17 00:00:00"
+            projectLevel="Simulations"
+            projectName="AuthorsHaven"
+            startDate="2018-11-12 00:00:00"
+            technologies="Python/Go"
+          >
+            <div
+              className="profile_card"
+            >
+              <div
+                className="project-card-grid"
+              >
+                <div
+                  className="project-card-left"
+                >
+                  <img
+                    alt="project logo"
+                    src="projectIcon.png"
+                  />
+                </div>
+                <div
+                  className="project-card-right-app"
+                >
+                  <h6>
+                    AuthorsHaven
+                  </h6>
+                  <p>
+                    Simulations
+                  </p>
+                  <p>
+                    Nov 2018
+                     - 
+                    Feb 2019
+                  </p>
+                  <p
+                    className="technologies"
+                  >
+                    <span
+                      key="Python"
+                    >
+                      Python
+                    </span>
+                    <span
+                      key="Go"
+                    >
+                      Go
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ApplicantProjectCard>
+        </div>
+      </ApplicantCard>
+    </div>
+    <ApplicationAcceptanceConfirmationModal
+      acceptApplication={[Function]}
+      acceptanceSuccess={true}
+      applicationId={13}
+      hideConfirmationResponse={[Function]}
+      name="Wasibani Roy"
+      openModal={true}
+      projectName="Omnis voluptatem quos."
+      role="Data Engineer"
+      showSuccess={[Function]}
+      toggleModal={[Function]}
+    >
+      <Modal
+        handleClose={[Function]}
+        show={true}
+        showBtn={false}
+        size="small"
+        title={null}
+      >
+        <div
+          className="modal display__modal"
+        >
+          <section
+            className="modal-body__md"
+          >
+            <div
+              className="success_application"
+            >
+              <p
+                className="success_title"
+              >
+                Great! You have added 
+                Wasibani Roy
+                 to your team
+              </p>
+              <img
+                alt="..."
+                className="success__image"
+                src="like.png"
+              />
+              <div
+                className="mb-4"
+              />
+              <button
+                className="close-response success-res"
+                onClick={[Function]}
+                type="button"
+              >
+                Continue
+              </button>
+            </div>
+          </section>
+        </div>
+      </Modal>
+    </ApplicationAcceptanceConfirmationModal>
+  </div>
+</Applications>
+`;
+
+exports[`Application component should handle filtering after clicking 1`] = `
+<Applications
+  applications={
+    Object {
+      "applicant": Object {
+        "cohort": "NBO-11",
+        "fellow_id": "-HYBHVWK78HBJ",
+        "first_name": "Test",
+        "id": 9,
+        "last_name": "Applicant",
+        "picture": "https://lorempixel.com/100/100/people/?23475 ",
+        "sims_start_date": "2019-02-19 00:00:00",
+      },
+      "data": Object {
+        "pending": Array [
+          Object {
+            "applicant": Object {
+              "account_active": false,
+              "apprenticeship_end_date": "2019-06-17 00:00:00",
+              "apprenticeship_manager": "Jason Okagbare",
+              "apprenticeship_project": "WatchTower",
+              "apprenticeship_start_date": "2019-06-02 00:00:00",
+              "apprenticeship_technology": "Devops",
+              "cadre_start_date": null,
+              "cohort": "Lagos-7",
+              "created_at": null,
+              "email": "roy.wasibani@andela.com",
+              "email_sent": false,
+              "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+              "first_name": "Wasibani",
+              "id": 1,
+              "last_name": "Roy",
+              "picture": "https://lorempixel.com/100/100/people/?23475",
+              "project_id": null,
+              "project_role_id": null,
+              "sims_end_date": "2019-02-17 00:00:00",
+              "sims_manager": "Daniel Ale",
+              "sims_project": "AuthorsHaven",
+              "sims_project_technology": "Python/Go",
+              "sims_start_date": "2018-11-12 00:00:00",
+              "updated_at": null,
+            },
+            "application_reason": "Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.",
+            "confirm_email_sent": false,
+            "created_at": "2019-08-22 12:23:24",
+            "decision": "pending",
+            "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+            "id": 13,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "project_id": 4,
+            "project_role_id": 5,
+            "project_vacancy_id": null,
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
+            "selected": false,
+            "status_email_sent": false,
+            "updated_at": "2019-08-22 12:23:24",
+          },
+        ],
+      },
+      "id": 16,
+      "project": Object {
+        "id": 1,
+        "name": "Test Project",
+      },
+      "role": "QA Engineer",
+    }
+  }
+  fetchApplications={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="applications-wrapper"
+  >
+    <div
+      className="cadre__page application__page"
+    >
+      <div
+        className="tm-project-applications"
+      >
+        <div
+          className="all-applicants-cards d-flex flex-wrap remove-width"
         >
           <div
             className="stats-header mb-4 d-flex justify-content-between"
@@ -198,6 +749,497 @@ exports[`Application component should handle filtering after clicking 1`] = `
           </h1>
         </div>
       </div>
+    </div>
+  </div>
+</Applications>
+`;
+
+exports[`Application component should handle rejection button click to show rejection modal 1`] = `
+<Applications
+  applications={
+    Object {
+      "applicant": Object {
+        "cohort": "NBO-11",
+        "fellow_id": "-HYBHVWK78HBJ",
+        "first_name": "Test",
+        "id": 9,
+        "last_name": "Applicant",
+        "picture": "https://lorempixel.com/100/100/people/?23475 ",
+        "sims_start_date": "2019-02-19 00:00:00",
+      },
+      "data": Object {
+        "pending": Array [
+          Object {
+            "applicant": Object {
+              "account_active": false,
+              "apprenticeship_end_date": "2019-06-17 00:00:00",
+              "apprenticeship_manager": "Jason Okagbare",
+              "apprenticeship_project": "WatchTower",
+              "apprenticeship_start_date": "2019-06-02 00:00:00",
+              "apprenticeship_technology": "Devops",
+              "cadre_start_date": null,
+              "cohort": "Lagos-7",
+              "created_at": null,
+              "email": "roy.wasibani@andela.com",
+              "email_sent": false,
+              "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+              "first_name": "Wasibani",
+              "id": 1,
+              "last_name": "Roy",
+              "picture": "https://lorempixel.com/100/100/people/?23475",
+              "project_id": null,
+              "project_role_id": null,
+              "sims_end_date": "2019-02-17 00:00:00",
+              "sims_manager": "Daniel Ale",
+              "sims_project": "AuthorsHaven",
+              "sims_project_technology": "Python/Go",
+              "sims_start_date": "2018-11-12 00:00:00",
+              "updated_at": null,
+            },
+            "application_reason": "Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.",
+            "confirm_email_sent": false,
+            "created_at": "2019-08-22 12:23:24",
+            "decision": "pending",
+            "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+            "id": 13,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "project_id": 4,
+            "project_role_id": 5,
+            "project_vacancy_id": null,
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
+            "selected": false,
+            "status_email_sent": false,
+            "updated_at": "2019-08-22 12:23:24",
+          },
+        ],
+      },
+      "id": 16,
+      "project": Object {
+        "id": 1,
+        "name": "Test Project",
+      },
+      "role": "QA Engineer",
+    }
+  }
+  fetchApplications={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="applications-wrapper"
+  >
+    <div
+      className="cadre__page application__page"
+    >
+      <div
+        className="tm-project-applications"
+      >
+        <div
+          className="all-applicants-cards d-flex flex-wrap add-width"
+        >
+          <div
+            className="stats-header mb-4 d-flex justify-content-between"
+          >
+            <div>
+              1
+               Pending Applications
+            </div>
+            <Filter
+              characterLength={9}
+              chevronColor="#808FA3"
+              current="All Roles"
+              dropdownBackgroundColor="#FFFFFF"
+              fontSize=""
+              getFilter={[Function]}
+              items={
+                Array [
+                  "All Roles",
+                  "Data Engineer",
+                ]
+              }
+              search={false}
+              width="400"
+            >
+              <div
+                className="filter-dropdown"
+              >
+                <button
+                  className="filter-dropdown__button"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "",
+                      "width": "100%",
+                    }
+                  }
+                  type="button"
+                >
+                  <span>
+                    All Roles
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "background": "#FFFFFF",
+                      }
+                    }
+                  >
+                    <i
+                      className="fas fa-chevron-down"
+                      style={
+                        Object {
+                          "color": "#808FA3",
+                        }
+                      }
+                    />
+                  </span>
+                </button>
+              </div>
+            </Filter>
+          </div>
+          <div
+            className="mb-4 mr-5"
+            key="13"
+          >
+            <TeamCard
+              cohort="Lagos-7"
+              data-test="team_manager_card"
+              date="12/11/2018"
+              dateType="Start Date"
+              event={[Function]}
+              image="https://lorempixel.com/100/100/people/?23475"
+              key="weak-key-0"
+              name="Wasibani Roy"
+              project="Omnis voluptatem quos."
+              role="Data Engineer"
+            >
+              <div
+                className="TM_ProfileCard"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <div
+                  className="TM_ProfileCard__top"
+                >
+                  <div
+                    className="TM_ProfileCard__image"
+                  >
+                    <img
+                      alt="Wasibani Roy"
+                      src="https://lorempixel.com/100/100/people/?23475"
+                    />
+                  </div>
+                  <div>
+                    <p
+                      className="TM_ProfileCard__user"
+                    >
+                      Wasibani Roy
+                    </p>
+                    <p
+                      className="TM_ProfileCard__role"
+                    >
+                      Data Engineer
+                    </p>
+                    <p
+                      className="TM_ProfileCard__project"
+                    >
+                      Omnis voluptatem quos.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="TM_ProfileCard__bottom"
+                >
+                  <div
+                    className="TM_ProfileCard__bottom-section"
+                  >
+                    <p>
+                      Cohort
+                    </p>
+                    <span>
+                      Lagos-7
+                    </span>
+                  </div>
+                  <div
+                    className="TM_ProfileCard__bottom-section"
+                  >
+                    <p>
+                      Start Date
+                    </p>
+                    <span>
+                      12/11/2018
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </TeamCard>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="applicant_profile_card_wrapper show-application"
+    >
+      <ApplicantCard
+        acceptApplicationHandler={[Function]}
+        application={
+          Object {
+            "applicant": Object {
+              "account_active": false,
+              "apprenticeship_end_date": "2019-06-17 00:00:00",
+              "apprenticeship_manager": "Jason Okagbare",
+              "apprenticeship_project": "WatchTower",
+              "apprenticeship_start_date": "2019-06-02 00:00:00",
+              "apprenticeship_technology": "Devops",
+              "cadre_start_date": null,
+              "cohort": "Lagos-7",
+              "created_at": null,
+              "email": "roy.wasibani@andela.com",
+              "email_sent": false,
+              "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+              "first_name": "Wasibani",
+              "id": 1,
+              "last_name": "Roy",
+              "picture": "https://lorempixel.com/100/100/people/?23475",
+              "project_id": null,
+              "project_role_id": null,
+              "sims_end_date": "2019-02-17 00:00:00",
+              "sims_manager": "Daniel Ale",
+              "sims_project": "AuthorsHaven",
+              "sims_project_technology": "Python/Go",
+              "sims_start_date": "2018-11-12 00:00:00",
+              "updated_at": null,
+            },
+            "application_reason": "Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.",
+            "confirm_email_sent": false,
+            "created_at": "2019-08-22 12:23:24",
+            "decision": "pending",
+            "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+            "id": 13,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "project_id": 4,
+            "project_role_id": 5,
+            "project_vacancy_id": null,
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
+            "selected": false,
+            "status_email_sent": false,
+            "updated_at": "2019-08-22 12:23:24",
+          }
+        }
+      >
+        <ApplicantProfileCard
+          acceptApplicationHandler={[Function]}
+          applicationId={13}
+          applicationReason="Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat."
+          firstName="Wasibani"
+          lastName="Roy"
+          picture="https://lorempixel.com/100/100/people/?23475"
+          projectId="Omnis voluptatem quos."
+          roleName="Data Engineer"
+        >
+          <div
+            className="applicant"
+          >
+            <div
+              className="applicant_profile_card_details"
+            >
+              <img
+                alt=""
+                src="https://lorempixel.com/100/100/people/?23475"
+              />
+              <br />
+              <h3>
+                Wasibani
+                 
+                Roy
+              </h3>
+              <p>
+                Applying for 
+                Data Engineer
+              </p>
+              <p>
+                Omnis voluptatem quos.
+              </p>
+              <button
+                className="applicant_button"
+                data-test="accept-button"
+                onClick={[Function]}
+                type="button"
+              >
+                ACCEPT
+              </button>
+              <div
+                className="line"
+              />
+              <div
+                className="applicant_sell_yourself"
+              >
+                <span
+                  className="sell_yourself"
+                >
+                  Sell Yourself in one sentence
+                </span>
+                <br />
+                <span
+                  className="sell_yourself_text"
+                >
+                  Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.
+                </span>
+              </div>
+            </div>
+          </div>
+        </ApplicantProfileCard>
+        <div>
+          <ApplicantProjectCard
+            endDate="2019-06-17 00:00:00"
+            projectLevel="Apprenticeship"
+            projectName="WatchTower"
+            startDate="2019-06-02 00:00:00"
+            technologies="Devops"
+          >
+            <div
+              className="profile_card"
+            >
+              <div
+                className="project-card-grid"
+              >
+                <div
+                  className="project-card-left"
+                >
+                  <img
+                    alt="project logo"
+                    src="projectIcon.png"
+                  />
+                </div>
+                <div
+                  className="project-card-right-app"
+                >
+                  <h6>
+                    WatchTower
+                  </h6>
+                  <p>
+                    Apprenticeship
+                  </p>
+                  <p>
+                    Jun 2019
+                     - 
+                    Jun 2019
+                  </p>
+                  <p
+                    className="technologies"
+                  >
+                    <span
+                      key="Devops"
+                    >
+                      Devops
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ApplicantProjectCard>
+        </div>
+        <div>
+          <ApplicantProjectCard
+            endDate="2019-02-17 00:00:00"
+            projectLevel="Simulations"
+            projectName="AuthorsHaven"
+            startDate="2018-11-12 00:00:00"
+            technologies="Python/Go"
+          >
+            <div
+              className="profile_card"
+            >
+              <div
+                className="project-card-grid"
+              >
+                <div
+                  className="project-card-left"
+                >
+                  <img
+                    alt="project logo"
+                    src="projectIcon.png"
+                  />
+                </div>
+                <div
+                  className="project-card-right-app"
+                >
+                  <h6>
+                    AuthorsHaven
+                  </h6>
+                  <p>
+                    Simulations
+                  </p>
+                  <p>
+                    Nov 2018
+                     - 
+                    Feb 2019
+                  </p>
+                  <p
+                    className="technologies"
+                  >
+                    <span
+                      key="Python"
+                    >
+                      Python
+                    </span>
+                    <span
+                      key="Go"
+                    >
+                      Go
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ApplicantProjectCard>
+        </div>
+      </ApplicantCard>
     </div>
   </div>
 </Applications>
@@ -297,13 +1339,209 @@ exports[`Application component should render correctly 1`] = `
     className="applications-wrapper"
   >
     <div
-      className="cadre__page"
+      className="cadre__page application__page"
     >
       <div
         className="tm-project-applications"
       >
         <div
-          className="all-applicants-cards d-flex flex-wrap justify-content-between remove-width"
+          className="all-applicants-cards d-flex flex-wrap remove-width"
+        >
+          <div
+            className="stats-header mb-4 d-flex justify-content-between"
+          >
+            <div>
+              0
+               Pending Applications
+            </div>
+            <Filter
+              characterLength={9}
+              chevronColor="#808FA3"
+              current="All Roles"
+              dropdownBackgroundColor="#FFFFFF"
+              fontSize=""
+              getFilter={[Function]}
+              items={
+                Array [
+                  "All Roles",
+                ]
+              }
+              search={false}
+              width="400"
+            >
+              <div
+                className="filter-dropdown"
+              >
+                <button
+                  className="filter-dropdown__button"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "",
+                      "width": "100%",
+                    }
+                  }
+                  type="button"
+                >
+                  <span>
+                    All Roles
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "background": "#FFFFFF",
+                      }
+                    }
+                  >
+                    <i
+                      className="fas fa-chevron-down"
+                      style={
+                        Object {
+                          "color": "#808FA3",
+                        }
+                      }
+                    />
+                  </span>
+                </button>
+              </div>
+            </Filter>
+          </div>
+          <h1>
+            There are currently no applications
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</Applications>
+`;
+
+exports[`Application component should show confirmationModal 1`] = `
+<Applications
+  applications={
+    Object {
+      "applicant": Object {
+        "cohort": "NBO-11",
+        "fellow_id": "-HYBHVWK78HBJ",
+        "first_name": "Test",
+        "id": 9,
+        "last_name": "Applicant",
+        "picture": "https://lorempixel.com/100/100/people/?23475 ",
+        "sims_start_date": "2019-02-19 00:00:00",
+      },
+      "data": Object {
+        "pending": Array [
+          Object {
+            "applicant": Object {
+              "account_active": false,
+              "apprenticeship_end_date": "2019-06-17 00:00:00",
+              "apprenticeship_manager": "Jason Okagbare",
+              "apprenticeship_project": "WatchTower",
+              "apprenticeship_start_date": "2019-06-02 00:00:00",
+              "apprenticeship_technology": "Devops",
+              "cadre_start_date": null,
+              "cohort": "Lagos-7",
+              "created_at": null,
+              "email": "roy.wasibani@andela.com",
+              "email_sent": false,
+              "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+              "first_name": "Wasibani",
+              "id": 1,
+              "last_name": "Roy",
+              "picture": "https://lorempixel.com/100/100/people/?23475",
+              "project_id": null,
+              "project_role_id": null,
+              "sims_end_date": "2019-02-17 00:00:00",
+              "sims_manager": "Daniel Ale",
+              "sims_project": "AuthorsHaven",
+              "sims_project_technology": "Python/Go",
+              "sims_start_date": "2018-11-12 00:00:00",
+              "updated_at": null,
+            },
+            "application_reason": "Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.",
+            "confirm_email_sent": false,
+            "created_at": "2019-08-22 12:23:24",
+            "decision": "pending",
+            "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+            "id": 13,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "project_id": 4,
+            "project_role_id": 5,
+            "project_vacancy_id": null,
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
+            "selected": false,
+            "status_email_sent": false,
+            "updated_at": "2019-08-22 12:23:24",
+          },
+        ],
+      },
+      "id": 16,
+      "project": Object {
+        "id": 1,
+        "name": "Test Project",
+      },
+      "role": "QA Engineer",
+    }
+  }
+  fetchApplications={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="applications-wrapper"
+  >
+    <div
+      className="cadre__page application__page"
+    >
+      <div
+        className="tm-project-applications"
+      >
+        <div
+          className="all-applicants-cards d-flex flex-wrap remove-width"
         >
           <div
             className="stats-header mb-4 d-flex justify-content-between"

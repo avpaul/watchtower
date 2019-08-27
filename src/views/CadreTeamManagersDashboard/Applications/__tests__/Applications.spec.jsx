@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Applications from '../Applications';
+import ApplicationAcceptanceConfirmationModal from '../../../../components/TeamManagerCard/ApplicationAcceptanceConfirmationModal';
 
 const applications = {
   data: {
@@ -84,6 +85,7 @@ describe('Application component', () => {
   };
 
   let wrapper;
+
   beforeEach(() => {
     wrapper = mount(<Applications {...defaultProps} />);
   });
@@ -101,7 +103,41 @@ describe('Application component', () => {
     const findClick = wrapper.find("[data-test='team_manager_card']");
     findClick.simulate('click');
     expect(wrapper.state('showApplication')).toEqual(true);
+    expect(wrapper.find('.applicant_button').text()).toBe('ACCEPT');
     expect(findClick.length).toBe(1);
+    wrapper.find('.applicant_button').simulate('click');
+    expect(wrapper.find(ApplicationAcceptanceConfirmationModal).length).toBe(1);
+  });
+
+  it('should handle acceptance button click to show accept modal', () => {
+    wrapper.setState({
+      showApplication: false,
+      application: {}
+    });
+
+    const findClick = wrapper.find("[data-test='team_manager_card']");
+    findClick.simulate('click');
+    wrapper.find('.applicant_button').simulate('click');
+    expect(wrapper.find('.accept-btn').length).toBe(1);
+    wrapper.find('.accept-btn').simulate('click');
+    wrapper.instance().acceptApplicationHandler();
+    wrapper.instance().showConfirmationResponse();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should handle rejection button click to show rejection modal', () => {
+    wrapper.setState({
+      showApplication: false,
+      application: {}
+    });
+
+    const findClick = wrapper.find("[data-test='team_manager_card']");
+    findClick.simulate('click');
+    wrapper.find('.applicant_button').simulate('click');
+    expect(wrapper.find('.reject-btn').length).toBe(1);
+    wrapper.find('.reject-btn').simulate('click');
+    wrapper.instance().hideConfirmationResponse();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should handle filtering after clicking', () => {
@@ -115,7 +151,9 @@ describe('Application component', () => {
     findClick.simulate('click');
     wrapper.instance().filterByRole('All Roles');
     expect(wrapper).toMatchSnapshot();
-    // expect(wrapper.state('showApplication')).toEqual(true);
-    // expect(findClick.length).toBe(1);
+  });
+
+  it('should show confirmationModal', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

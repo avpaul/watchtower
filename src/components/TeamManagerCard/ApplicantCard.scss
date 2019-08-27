@@ -52,6 +52,7 @@
     border: none;
     outline: none;
     color: #00a46b;
+    cursor: pointer;
   }
   .line {
     box-sizing: border-box;
@@ -107,4 +108,54 @@
   background-color: #ebeff3;
   padding: 3px 10px;
   margin-right: 5px;
+}
+
+.hide-response {
+  font-size: 1.2em;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-align: center;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 400 ease-in-out;
+  }
+}
+
+.accepting-btns {
+  background-color: #0459e4;
+  color: #fff;
+  border: none;
+  outline: none;
+
+  &.reject-btn {
+    border: 1px solid #0459e4;
+    color: #0459e4;
+    background-color: #ffffff;
+  }
+}
+
+.close-response {
+  background-color: #e1294d;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px 35px;
+  cursor: pointer;
+  opacity: 0.9;
+
+  &.success-res {
+    background-color: #10a36d;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }
