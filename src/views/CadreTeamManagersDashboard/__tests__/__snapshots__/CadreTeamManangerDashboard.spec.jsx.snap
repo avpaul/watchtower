@@ -71,7 +71,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
         }
       >
         <div
-          className="container-fluid page-content"
+          className="container-fluid page-content pr-0"
           id="cadre-dashboard-container"
         >
           <div
@@ -535,7 +535,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                                     style={
                                       Object {
                                         "fontSize": "",
-                                        "width": "400",
+                                        "width": "100%",
                                       }
                                     }
                                     type="button"

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the Profile card renders correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <ApplicantProjectCard
+    endDate="Bartell"
+    projectLevel=""
+    projectName=""
+    startDate="Cristian"
+    technologies="https://"
+  >
+    <div
+      className="profile_card"
+    >
+      <div
+        className="project-card-grid"
+      >
+        <div
+          className="project-card-left"
+        >
+          <img
+            alt="project logo"
+            src="projectIcon.png"
+          />
+        </div>
+        <div
+          className="project-card-right-app"
+        >
+          <h6 />
+          <p />
+          <p>
+            Invalid Date
+             - 
+            Invalid Date
+          </p>
+          <p
+            className="technologies"
+          >
+            <span
+              key="https:"
+            >
+              https:
+            </span>
+            <span
+              key=""
+            />
+            <span
+              key=""
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+  </ApplicantProjectCard>
+</Provider>
+`;

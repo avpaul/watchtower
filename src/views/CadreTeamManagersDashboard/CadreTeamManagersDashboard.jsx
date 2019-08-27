@@ -65,7 +65,7 @@ class CadreTeamManagersDashboard extends Component {
     return (
       <div
         id="cadre-dashboard-container"
-        className="container-fluid page-content"
+        className="container-fluid page-content pr-0"
       >
         <div className="row">
           {this.renderTMSubMenu()}

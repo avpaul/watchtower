@@ -21,12 +21,10 @@ describe('Application component', () => {
     wrapper = shallow(<MyTeams />);
     expect(wrapper).toMatchSnapshot();
   });
-
   it('Show CustomLoader when props is empty', () => {
     wrapper = shallow(<MyTeams teamManagerTeamMembers={{ data: [] }} />);
     expect(wrapper).toMatchSnapshot();
   });
-
   it('Render component when manager has no project', () => {
     wrapper = shallow(
       <MyTeams teamManagerTeamMembers={{ data: [{ projects: [] }] }} />
@@ -49,7 +47,6 @@ describe('Application component', () => {
       .prop('event')();
     expect(wrapper).toMatchSnapshot();
   });
-
   it('Should close engineer profile card', () => {
     const button = wrapper.find('.close');
     button.simulate('click');

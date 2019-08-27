@@ -1,0 +1,110 @@
+@import '../../assets/sass/abstract/variables';
+.applicant_profile_card_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1;
+
+  img {
+    height: 69px;
+    width: 69px;
+    border-radius: 8px;
+  }
+  h3 {
+    height: 23px;
+    width: 100%;
+    text-align: center;
+    color: #344c5a;
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    margin: 13px 8em auto;
+  }
+  p {
+    height: 18px;
+    width: 100%;
+    color: #344c5a;
+    font-family: 'DIN Pro';
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  h4 {
+    height: 23px;
+    width: 100%;
+    color: #344c5a;
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-top: 13px;
+  }
+  .applicant_button {
+    height: 39px;
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    background-color: #dff3ec;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.11);
+    border: none;
+    outline: none;
+    color: #00a46b;
+  }
+  .line {
+    box-sizing: border-box;
+    height: 1px;
+    width: 100%;
+    border: 1px solid rgba(130, 145, 153, 0.08);
+  }
+  .applicant_sell_yourself {
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 2px 20px 20px 20px;
+    background-color: #f7f9fa;
+    padding: 16px;
+
+    .sell_yourself {
+      height: 17px;
+      width: 100%;
+      color: #344c5a;
+      font-family: 'DIN Pro';
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 17px;
+    }
+    .sell_yourself_text {
+      height: 18px;
+      width: 100%;
+      color: #606060;
+      font-family: 'DIN Pro';
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.project-card-right-app {
+  margin-left: 30%;
+  width: 70%;
+  text-align: left;
+}
+
+.technologies {
+  margin-top: -5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technologies > span {
+  height: 28px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ebeff3;
+  padding: 3px 10px;
+  margin-right: 5px;
+}
