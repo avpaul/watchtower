@@ -2,9 +2,12 @@
 
 exports[`Delete Vacancies Modal container renders correctly 1`] = `
 <DeleteVacanciesModal
+  deleteCertificationVacancies={[Function]}
   deleteProjectVacancies={[Function]}
-  error={Object {}}
-  loading={false}
+  errorCertification={Object {}}
+  errorProject={Object {}}
+  loadingCertification={false}
+  loadingProject={false}
   projectVacanciesOnFocus={Object {}}
   setProjectVacanciesOnFocus={[Function]}
   store={
@@ -43,8 +46,10 @@ exports[`Delete Vacancies Modal container renders correctly 1`] = `
 
 exports[`Delete Vacancies Modal container should map state to props 1`] = `
 Object {
-  "error": Object {},
-  "loading": false,
+  "errorCertification": Object {},
+  "errorProject": Object {},
+  "loadingCertification": false,
+  "loadingProject": false,
   "projectVacanciesOnFocus": Object {},
 }
 `;

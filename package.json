@@ -75,7 +75,7 @@
     "weak-key": "^1.0.1"
   },
   "optionalDependencies": {
-    "fsevents": "^1.2.2"
+    "fsevents": "1.2.2"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",

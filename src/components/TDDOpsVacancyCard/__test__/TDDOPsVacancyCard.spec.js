@@ -50,13 +50,34 @@ describe('TDD Ops Vacancy card', () => {
    * @returns { wrapper, props }
    */
   const setup = propOverrides => {
-    const wrapper = shallow(<TDDOPsVacancyCard {...propOverrides} />);
+    const props =  {
+      ...defaultProps,
+      ...propOverrides
+    };
+
+    const wrapper = shallow(<TDDOPsVacancyCard {...props} />);
     return { wrapper };
   };
 
   it('renders project vacancy correctly', () => {
-    const { wrapper } = setup(defaultProps);
+    const { wrapper } = setup();
+
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should not render project if vacancy is empty', () => {
+    const { wrapper } = setup({vacancy: {}});
+
+    expect(wrapper.html()).toBeFalsy();
+  });
+
+  it('should not render certification if vacancy correctly', () => {
+    const { wrapper } = setup({
+      vacancy: { },
+      vacanciesToDisplay: 'certification',
+    });
+
+    expect(wrapper.html()).toBeFalsy();
   });
 
   it('renders certification vacancy correctly', () => {
@@ -65,7 +86,7 @@ describe('TDD Ops Vacancy card', () => {
   });
 
   it('should be able to click on card dropdown options', () => {
-    const { wrapper } = setup(defaultProps);
+    const { wrapper } = setup();
     wrapper.find('.ops-vacancy-card__icon').simulate('click');
     wrapper
       .find('button')

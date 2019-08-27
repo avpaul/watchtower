@@ -17,8 +17,18 @@ class DeleteVacanciesModal extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { loading, error } = this.props;
-    if (prevProps.loading && !loading) this.updateSubmitState(error);
+    const {
+      loadingProject,
+      errorProject,
+      loadingCertification,
+      errorCertification
+    } = this.props;
+
+    if (prevProps.loadingProject && !loadingProject) {
+      this.updateSubmitState(errorProject);
+    } else if (prevProps.loadingCertification && !loadingCertification) {
+      this.updateSubmitState(errorCertification);
+    }
   }
 
   updateSubmitState = error =>
@@ -33,8 +43,19 @@ class DeleteVacanciesModal extends Component {
    * @return boolean
    */
   handleClick = () => {
-    const { deleteProjectVacancies, projectVacanciesOnFocus } = this.props;
-    deleteProjectVacancies(projectVacanciesOnFocus);
+    const {
+      deleteProjectVacancies,
+      projectVacanciesOnFocus,
+      deleteCertificationVacancies
+    } = this.props;
+    const { project, certification } = projectVacanciesOnFocus;
+
+    if (project) {
+      deleteProjectVacancies(projectVacanciesOnFocus);
+    }
+    if (certification) {
+      deleteCertificationVacancies(projectVacanciesOnFocus);
+    }
   };
 
   /**
@@ -42,23 +63,29 @@ class DeleteVacanciesModal extends Component {
    * the cancel and the return buttons
    */
   handleClose = () => {
-    const { setProjectVacanciesOnFocus, history } = this.props;
+    const {
+      setProjectVacanciesOnFocus,
+      history,
+      projectVacanciesOnFocus
+    } = this.props;
+    const { certification } = projectVacanciesOnFocus;
     setProjectVacanciesOnFocus({});
     this.setState({ success: false });
-    history.replace('/cadre/vacancies');
+    const query = certification ? '?certification' : '';
+    history.replace(`/cadre/vacancies${query}`);
   };
 
-  renderButton = ({ label, buttonProps = {} }) => (
+  renderButton = ({ label, buttonProps }) => (
     <CadreMainButton buttonProps={buttonProps} label={label} />
   );
 
   renderFooter = () => {
-    const { loading } = this.props;
+    const { loadingProject, loadingCertification } = this.props;
     const { success } = this.state;
     let button = null;
 
     switch (true) {
-      case loading:
+      case loadingProject || loadingCertification:
         button = <Loader size="small" />;
         break;
       case success:
@@ -78,21 +105,26 @@ class DeleteVacanciesModal extends Component {
   };
 
   render() {
+    const { projectVacanciesOnFocus } = this.props;
+    const type = projectVacanciesOnFocus.project ? 'Project' : 'Certification';
     const { success, error } = this.state;
-    const message = 'Project vacancies have been deleted!';
+    const message = `${type} vacancy have been deleted!`;
     return (
       <GenericModal
-        id="deleteProjectVacanciesModal"
-        title="Delete Project Vacancies"
+        id="deleteVacanciesModal"
+        title={`Delete ${type} Vacancy`}
         successMessage={message}
         success={success}
         footer={this.renderFooter()}
       >
         <React.Fragment>
-          <p>Are you sure you want to delete these project vacancies?</p>
+          <p>
+            Are you sure you want to delete this {type.toLowerCase()} vacancy?
+          </p>
           {error ? (
             <span className="alert alert-danger" role="alert">
-              Failed to delete the project vacancies. Please try again later!
+              Failed to delete the {type.toLowerCase()} vacancy. Please try
+              again later!
             </span>
           ) : null}
         </React.Fragment>
@@ -103,15 +135,19 @@ class DeleteVacanciesModal extends Component {
 
 DeleteVacanciesModal.propTypes = {
   deleteProjectVacancies: PropTypes.func.isRequired,
+  deleteCertificationVacancies: PropTypes.func.isRequired,
   setProjectVacanciesOnFocus: PropTypes.func.isRequired,
   projectVacanciesOnFocus: PropTypes.shape().isRequired,
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  history: PropTypes.shape().isRequired,
+  loadingProject: PropTypes.bool.isRequired,
+  errorProject: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  loadingCertification: PropTypes.bool.isRequired,
+  errorCertification: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  history: PropTypes.shape().isRequired
 };
 
 DeleteVacanciesModal.defaultProps = {
-  error: null
+  errorProject: null,
+  errorCertification: null
 };
 
 export default DeleteVacanciesModal;

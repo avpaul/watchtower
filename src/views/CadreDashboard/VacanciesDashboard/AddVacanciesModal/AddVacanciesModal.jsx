@@ -46,7 +46,10 @@ class AddVacanciesModal extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { projectVacanciesOnFocus } = nextProps;
-    if (Object.keys(projectVacanciesOnFocus).length !== 0) {
+
+    if (
+      Object.prototype.hasOwnProperty.call(projectVacanciesOnFocus, 'project')
+    ) {
       const { vacancy } = projectVacanciesOnFocus;
       this.setState({
         startDate: new Date(vacancy.start_date),

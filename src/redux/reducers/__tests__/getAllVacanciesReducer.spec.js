@@ -6,18 +6,23 @@ import {
   UPDATE_PROJECT_VACANCIES_ON_FOCUS,
   REMOVE_PROJECT_VACANCIES_ON_FOCUS
 } from '../../constants/projectsTypes';
+import { REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS } from '../../constants/certificationVacanciesTypes';
 import initialState from '../initialState';
 import { generateVacancyGroups } from '../../../__mocks__/projectVacancy';
+import { getCertificationVacancies} from '../../../__mocks__/certificationVacancy';
+
 
 describe('Get all vacancies reducer', () => {
-  const newVacancies = generateVacancyGroups(5, 2);
-  newVacancies[0].project.id = 12;
-  newVacancies[0].role.id = 6;
+  const projectVacancies = generateVacancyGroups(5, 2);
+  projectVacancies[0].project.id = 12;
+  projectVacancies[0].role.id = 6;
 
+  const certificationVacancies = getCertificationVacancies(3);
   const defaultState = {
     ...initialState.getAllVacancies,
     data: {
-      projectVacancies: newVacancies
+      projectVacancies,
+      certificationVacancies
     }
   };
 
@@ -70,9 +75,9 @@ describe('Get all vacancies reducer', () => {
     const action = {
       type: UPDATE_PROJECT_VACANCIES_ON_FOCUS,
       data: {
-        ...newVacancies[0],
-        old_project_id: newVacancies[0].project.id,
-        old_project_role_id: newVacancies[0].role.id
+        ...projectVacancies[0],
+        old_project_id: projectVacancies[0].project.id,
+        old_project_role_id: projectVacancies[0].role.id
       }
     };
 
@@ -80,18 +85,18 @@ describe('Get all vacancies reducer', () => {
       loading: false,
       error: {},
       data: {
-        projectVacancies: newVacancies
+        projectVacancies
       }
     });
   });
 
-  it('should remove a vacancy group from a list of vacancies', () => {
+  it('should remove a project vacancy group from project vacancies', () => {
     const action = {
       type: REMOVE_PROJECT_VACANCIES_ON_FOCUS,
       data: {
-        ...newVacancies[0],
-        old_project_id: newVacancies[0].project.id,
-        old_project_role_id: newVacancies[0].role.id
+        ...projectVacancies[0],
+        old_project_id: projectVacancies[0].project.id,
+        old_project_role_id: projectVacancies[0].role.id
       }
     };
 
@@ -99,7 +104,26 @@ describe('Get all vacancies reducer', () => {
       loading: false,
       error: {},
       data: {
-        projectVacancies: newVacancies.splice(1, 4)
+        projectVacancies: projectVacancies.splice(1, 4),
+        certificationVacancies
+      }
+    });
+  });
+
+  it('should remove a certificate vacancy group from certificate vacancies', () => {
+    const action = {
+      type: REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS,
+      data: {
+        ...certificationVacancies[0],
+      }
+    };
+
+    expect(getAllVacanciesReducer(defaultState, action)).toMatchObject({
+      loading: false,
+      error: {},
+      data: {
+        certificationVacancies: certificationVacancies.splice(1, 2),
+        projectVacancies
       }
     });
   });

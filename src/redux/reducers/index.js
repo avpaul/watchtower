@@ -60,6 +60,7 @@ import cadreAddCertificationReducer from './cadreAddCertificationReducer';
 import getCertificationReducer from './getCertificationReducer';
 import editProjectVacancies from './editProjectVacanciesReducer';
 import deleteProjectVacancies from './deleteProjectVacanciesReducer';
+import deleteCertificationVacancies from './deleteCertificationVacanciesReducer';
 import projectVacanciesOnFocus from './setProjectVacanciesOnFocusReducer';
 import certificationOnFocus from './setCertificationOnFocusReducer';
 import deleteCertification from './deleteCertificationReducer';
@@ -119,6 +120,7 @@ const rootReducer = combineReducers({
   getCertification: getCertificationReducer,
   editProjectVacancies,
   deleteProjectVacancies,
+  deleteCertificationVacancies,
   projectVacanciesOnFocus,
   deleteCertification,
   certificationOnFocus,

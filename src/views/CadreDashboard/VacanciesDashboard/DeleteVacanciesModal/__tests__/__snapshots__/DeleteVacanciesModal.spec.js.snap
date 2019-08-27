@@ -18,15 +18,17 @@ exports[`Delete Vacancies Modal renders correctly 1`] = `
   }
   handleClose={[Function]}
   handleSubmit={[Function]}
-  id="deleteProjectVacanciesModal"
+  id="deleteVacanciesModal"
   size=""
   submitLoading={false}
   success={false}
-  successMessage="Project vacancies have been deleted!"
-  title="Delete Project Vacancies"
+  successMessage="Project vacancy have been deleted!"
+  title="Delete Project Vacancy"
 >
   <p>
-    Are you sure you want to delete these project vacancies?
+    Are you sure you want to delete this 
+    project
+     vacancy?
   </p>
 </GenericModal>
 `;
