@@ -744,9 +744,37 @@ exports[`Application component should handle filtering after clicking 1`] = `
               </div>
             </Filter>
           </div>
-          <h1>
-            There are currently no applications
-          </h1>
+          <Placeholder
+            text="You currently have no applications for any role."
+          >
+            <div
+              className="placeholder"
+            >
+              <LoaderComponent
+                img="construction_new_color_loop.svg"
+              >
+                <div
+                  className="custom-loader text-center"
+                >
+                  <img
+                    alt="loader"
+                    className="custom-loader-img w-50"
+                    src="construction_new_color_loop.svg"
+                  />
+                </div>
+              </LoaderComponent>
+              <div
+                className="font-weight-lighter"
+              >
+                <h4
+                  className="font-display"
+                >
+                   
+                  You currently have no applications for any role.
+                </h4>
+              </div>
+            </div>
+          </Placeholder>
         </div>
       </div>
     </div>
@@ -1406,9 +1434,37 @@ exports[`Application component should render correctly 1`] = `
               </div>
             </Filter>
           </div>
-          <h1>
-            There are currently no applications
-          </h1>
+          <Placeholder
+            text="You currently have no applications for any role."
+          >
+            <div
+              className="placeholder"
+            >
+              <LoaderComponent
+                img="construction_new_color_loop.svg"
+              >
+                <div
+                  className="custom-loader text-center"
+                >
+                  <img
+                    alt="loader"
+                    className="custom-loader-img w-50"
+                    src="construction_new_color_loop.svg"
+                  />
+                </div>
+              </LoaderComponent>
+              <div
+                className="font-weight-lighter"
+              >
+                <h4
+                  className="font-display"
+                >
+                   
+                  You currently have no applications for any role.
+                </h4>
+              </div>
+            </div>
+          </Placeholder>
         </div>
       </div>
     </div>
@@ -1602,9 +1658,37 @@ exports[`Application component should show confirmationModal 1`] = `
               </div>
             </Filter>
           </div>
-          <h1>
-            There are currently no applications
-          </h1>
+          <Placeholder
+            text="You currently have no applications for any role."
+          >
+            <div
+              className="placeholder"
+            >
+              <LoaderComponent
+                img="construction_new_color_loop.svg"
+              >
+                <div
+                  className="custom-loader text-center"
+                >
+                  <img
+                    alt="loader"
+                    className="custom-loader-img w-50"
+                    src="construction_new_color_loop.svg"
+                  />
+                </div>
+              </LoaderComponent>
+              <div
+                className="font-weight-lighter"
+              >
+                <h4
+                  className="font-display"
+                >
+                   
+                  You currently have no applications for any role.
+                </h4>
+              </div>
+            </div>
+          </Placeholder>
         </div>
       </div>
     </div>

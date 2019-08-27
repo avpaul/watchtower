@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Reports from '../Reports';
+import Placeholder from '../Placeholder';
 
 describe('Application component', () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<Reports />);
+    wrapper = shallow(<Placeholder />);
   });
 
-  it('renders reports component', () => {
-    wrapper = shallow(<Reports />);
+  it('renders placeholder component', () => {
+    wrapper = shallow(<Placeholder />);
     expect(wrapper).toMatchSnapshot();
   });
 });
