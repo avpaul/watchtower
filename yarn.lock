@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@amplitude/ua-parser-js@0.7.20":
+  version "0.7.20"
+  resolved "https://registry.yarnpkg.com/@amplitude/ua-parser-js/-/ua-parser-js-0.7.20.tgz#15652f8cc4fee72d962a5f2101cfde6f3c8e87b8"
+  integrity sha512-bmW++BLt1Hg+4HCExLXP+0Jhgy2eTsEevqkVc5o4yYbgwdP/gV3gEQXzyVrMVlWWNLgph/tFIkf5PVlSpCELEg==
+
 "@ant-design/colors@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-3.1.0.tgz#b7e2cc61a4e86d3d109494034acfb1222dacaa3c"
@@ -1750,6 +1755,15 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+amplitude-js@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/amplitude-js/-/amplitude-js-5.3.1.tgz#570a77c1924957956d16763facb9500de8678a1a"
+  integrity sha512-66zZVhLKY6XQ7i3NDzplMl/TSzeqIRx1bh0r4xNMSkxLWkJARJpRiq6UyR5UqXR1ccVHhmyfWqFC+AqZ1EEU7w==
+  dependencies:
+    "@amplitude/ua-parser-js" "0.7.20"
+    blueimp-md5 "^2.10.0"
+    query-string "5"
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -2433,6 +2447,11 @@ bluebird@^3.5.5:
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
   integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
+
+blueimp-md5@^2.10.0:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/blueimp-md5/-/blueimp-md5-2.11.1.tgz#b1f6b6218d13cdedbf5743f32b3023b2afefcbd3"
+  integrity sha512-4UiOAmql2XO0Sws07OVzYdCKK0K2Va5g6AVgYXoGhEQiKrdSOefjUCm1frPk6E+xiIOHRqaFg+TUGo7cClKg5g==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -10817,6 +10836,15 @@ qs@~6.5.1, qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
+query-string@5:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"
+  integrity sha512-gjWOsm2SoGlgLEdAGt7a6slVOk9mGiXmPFMqrEhLQ68rhQuBnpfs3+EmlvqKyxnCo9/PPlF+9MtY02S1aFg+Jw==
+  dependencies:
+    decode-uri-component "^0.2.0"
+    object-assign "^4.1.0"
+    strict-uri-encode "^1.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -13077,6 +13105,11 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
   integrity sha1-1cdSgl5TZ+eG944Y5EXqIjoVWVI=
+
+strict-uri-encode@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+  integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
 
 string-argv@^0.0.2:
   version "0.0.2"
