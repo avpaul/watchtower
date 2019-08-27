@@ -66,7 +66,7 @@ export const tmSubmenus = [
   },
   {
     title: 'Applications',
-    subtitle: 'Review applicantions',
+    subtitle: 'Review applications',
     icon: fileIcon,
     id: '1',
     activeIcon: fileActiveIcon

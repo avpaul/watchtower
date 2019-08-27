@@ -14,15 +14,16 @@ describe('Test team manager view applications', () => {
             {
               id: 16,
               role: {
-                "id": 5,
-                "name": "Data Engineer",
-                "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
-                "deleted_at": null,
-                "duration": 3
+                id: 5,
+                name: 'Data Engineer',
+                description:
+                  'Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.',
+                deleted_at: null,
+                duration: 3
               },
               project: {
-                "id": 4,
-                "name": "Omnis voluptatem quos."
+                id: 4,
+                name: 'Omnis voluptatem quos.'
               },
               applicant: {
                 id: 9,

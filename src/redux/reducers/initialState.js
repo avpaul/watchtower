@@ -232,7 +232,10 @@ export default {
   certificationApplication: genericAPIStateObject,
   applyRole: genericAPIStateObject,
   singleRole: genericAPIStateArray,
-  teamManagerProjectApplications: genericAPIStateObject,
+  teamManagerProjectApplications: {
+    ...genericAPIStateObject,
+    acceptLoading: false
+  },
   teamMembers: genericAPIStateArray,
   cadreVacanciesWithNoCycleId: genericAPIStateObject
 };

@@ -9,12 +9,16 @@ const ApplicantProfileCard = ({
   picture,
   roleName,
   projectId,
-  applicationReason
+  applicationReason,
+  acceptApplicationHandler,
+  applicationId
 }) => (
   <div className="applicant">
     <div className="applicant_profile_card_details">
       <img
-        src={picture || 'https://lorempixel.com/100/100/people/?97143'} /* istanbul ignore next */
+        src={
+          picture || 'https://lorempixel.com/100/100/people/?97143'
+        } /* istanbul ignore next */
         alt=""
       />
       <br />
@@ -23,7 +27,12 @@ const ApplicantProfileCard = ({
       </h3>
       <p>Applying for {roleName}</p>
       <p>{projectId}</p>
-      <button type="button" className="applicant_button">
+      <button
+        type="button"
+        className="applicant_button"
+        onClick={e => acceptApplicationHandler(e, applicationId)}
+        data-test="accept-button"
+      >
         ACCEPT
       </button>
       <div className="line" />
@@ -42,7 +51,9 @@ ApplicantProfileCard.propTypes = {
   picture: PropTypes.string.isRequired,
   roleName: PropTypes.string.isRequired,
   projectId: PropTypes.string.isRequired,
-  applicationReason: PropTypes.string.isRequired
+  applicationReason: PropTypes.string.isRequired,
+  acceptApplicationHandler: PropTypes.func.isRequired,
+  applicationId: PropTypes.number.isRequired
 };
 
 export default ApplicantProfileCard;

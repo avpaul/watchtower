@@ -2,8 +2,10 @@
 
 exports[`ApplicationsContainer component renders correctly 1`] = `
 <Applications
+  acceptApplication={[Function]}
   applications={
     Object {
+      "acceptLoading": false,
       "data": Object {},
       "error": Object {},
       "loading": false,
@@ -47,6 +49,7 @@ exports[`ApplicationsContainer component renders correctly 1`] = `
 exports[`ApplicationsContainer component should map state to props 1`] = `
 Object {
   "applications": Object {
+    "acceptLoading": false,
     "data": Object {},
     "error": Object {},
     "loading": false,

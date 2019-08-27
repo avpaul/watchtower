@@ -199,7 +199,7 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                         data-key="1"
                         style={Object {}}
                       >
-                        Review applicantions
+                        Review applications
                       </p>
                     </div>
                   </li>

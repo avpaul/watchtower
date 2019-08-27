@@ -8,6 +8,7 @@ import FilterDropdown from '../../../components/FilterDropdown';
 import ApplicantCard from '../../../components/TeamManagerCard/ApplicantCard';
 
 import './Applications.scss';
+import ApplicationAcceptanceConfirmationModal from '../../../components/TeamManagerCard/ApplicationAcceptanceConfirmationModal';
 
 export default class Applications extends Component {
   constructor(props) {
@@ -16,7 +17,9 @@ export default class Applications extends Component {
       showApplication: false,
       application: {},
       filteredApplications: [],
-      currentRole: 'All Roles'
+      currentRole: 'All Roles',
+      openModal: false,
+      showConfirmationResponse: false
     };
   }
 
@@ -36,6 +39,18 @@ export default class Applications extends Component {
       return false;
     }
   };
+
+  componentDidUpdate(prevProps) {
+    const {
+      applications: { error, acceptLoading }
+    } = this.props;
+    if (
+      prevProps.applications.acceptLoading !== acceptLoading &&
+      prevProps.applications.error !== error
+    ) {
+      this.showConfirmationResponse();
+    }
+  }
 
   filterByRole = role => {
     const {
@@ -132,7 +147,7 @@ export default class Applications extends Component {
         }
       } = application;
       return (
-        <div className="mb-4" key={application.id}>
+        <div className="mb-4 mr-5" key={application.id}>
           <TeamManagerCard
             data-test="team_manager_card"
             role={role}
@@ -163,9 +178,59 @@ export default class Applications extends Component {
           showApplication ? 'show-application' : 'hide-application'
         }`}
       >
-        <ApplicantCard application={application} />
+        <ApplicantCard
+          application={application}
+          acceptApplicationHandler={this.toggle}
+        />
       </div>
     );
+  };
+
+  /**
+   * Returns the card containing details about an applicant after being clicked
+   * @param application
+   */
+  acceptApplicationHandler = async applicationId => {
+    const { acceptApplication } = this.props;
+    await acceptApplication(applicationId);
+  };
+
+  toggle = () => {
+    const { openModal } = this.state;
+    this.setState({ openModal: !openModal });
+  };
+
+  showConfirmationModal = () => {
+    const { openModal, application, showConfirmationResponse } = this.state;
+    const { applicant, project, role } = application;
+    const {
+      applications: { acceptLoading, error }
+    } = this.props;
+
+    return (
+      <ApplicationAcceptanceConfirmationModal
+        openModal={openModal}
+        acceptApplication={this.acceptApplicationHandler}
+        applicationId={application.id}
+        toggleModal={this.toggle}
+        name={this.formatName(applicant.first_name, applicant.last_name)}
+        projectName={project.name}
+        role={role.name}
+        loading={acceptLoading}
+        acceptanceSuccess={showConfirmationResponse}
+        hideConfirmationResponse={this.hideConfirmationResponse}
+        showSuccess={this.showConfirmationResponse}
+        error={error}
+      />
+    );
+  };
+
+  showConfirmationResponse = () => {
+    this.setState({ showConfirmationResponse: true });
+  };
+
+  hideConfirmationResponse = () => {
+    this.setState({ showConfirmationResponse: false, showApplication: false });
   };
 
   render() {
@@ -177,7 +242,8 @@ export default class Applications extends Component {
       showApplication,
       application,
       filteredApplications,
-      currentRole
+      currentRole,
+      openModal
     } = this.state;
 
     return loading ? (
@@ -186,10 +252,10 @@ export default class Applications extends Component {
       </div>
     ) : (
       <div className="applications-wrapper">
-        <div className="cadre__page">
+        <div className="cadre__page application__page">
           <div className="tm-project-applications">
             <div
-              className={`all-applicants-cards d-flex flex-wrap justify-content-between ${
+              className={`all-applicants-cards d-flex flex-wrap ${
                 showApplication ? 'add-width' : 'remove-width'
               }`}
             >
@@ -203,6 +269,7 @@ export default class Applications extends Component {
           </div>
         </div>
         {showApplication && this.renderApplicantProfileCard(application)}
+        {openModal && this.showConfirmationModal()}
       </div>
     );
   }
@@ -211,5 +278,6 @@ export default class Applications extends Component {
 Applications.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   applications: PropTypes.object.isRequired,
-  fetchApplications: PropTypes.func.isRequired
+  fetchApplications: PropTypes.func.isRequired,
+  acceptApplication: PropTypes.func.isRequired
 };

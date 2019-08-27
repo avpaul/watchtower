@@ -53,13 +53,13 @@ exports[`Test team manager view applications should render correctly 1`] = `
     className="applications-wrapper"
   >
     <div
-      className="cadre__page"
+      className="cadre__page application__page"
     >
       <div
         className="tm-project-applications"
       >
         <div
-          className="all-applicants-cards d-flex flex-wrap justify-content-between remove-width"
+          className="all-applicants-cards d-flex flex-wrap remove-width"
         >
           <div
             className="stats-header mb-4 d-flex justify-content-between"
