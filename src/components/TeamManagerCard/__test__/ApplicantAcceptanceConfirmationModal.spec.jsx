@@ -24,7 +24,19 @@ describe('Team Card', () => {
       total: 4,
       active: 3,
       remaining: 1
-    }
+    },
+    applications: [
+      {
+        id: 1,
+        applicant: {},
+        project: {}
+      },
+      {
+        id: 2,
+        applicant: {},
+        project: {}
+      }
+    ]
   };
   it('should render correctly', () => {
     wrapper = shallow(<ApplicationAcceptanceConfirmationModal {...props} />);

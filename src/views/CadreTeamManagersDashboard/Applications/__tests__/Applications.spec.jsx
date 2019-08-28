@@ -98,7 +98,59 @@ describe('Application component', () => {
   it('should handle fetchSingleApplication after clicking', () => {
     wrapper.setState({
       showApplication: false,
-      application: {}
+      application: {
+        id: 13,
+        fellow_id: '-LSKa7Lv0YJtaXSlGbog',
+        project_id: 4,
+        project_role_id: 5,
+        application_reason:
+          'Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.',
+        project_vacancy_id: null,
+        created_at: '2019-08-22 12:23:24',
+        updated_at: '2019-08-22 12:23:24',
+        decision: 'pending',
+        selected: false,
+        confirm_email_sent: false,
+        status_email_sent: false,
+        applicant: {
+          id: 1,
+          fellow_id: '-LSKa7Lv0YJtaXSlGbog',
+          first_name: 'Wasibani',
+          last_name: 'Roy',
+          email: 'roy.wasibani@andela.com',
+          picture: 'https://lorempixel.com/100/100/people/?23475',
+          cohort: 'Lagos-7',
+          sims_project: 'AuthorsHaven',
+          sims_project_technology: 'Python/Go',
+          sims_start_date: '2018-11-12 00:00:00',
+          sims_end_date: '2019-02-17 00:00:00',
+          cadre_start_date: null,
+          sims_manager: 'Daniel Ale',
+          apprenticeship_project: 'WatchTower',
+          apprenticeship_technology: 'Devops',
+          apprenticeship_start_date: '2019-06-02 00:00:00',
+          apprenticeship_end_date: '2019-06-17 00:00:00',
+          apprenticeship_manager: 'Jason Okagbare',
+          account_active: false,
+          email_sent: false,
+          project_id: null,
+          project_role_id: null,
+          created_at: null,
+          updated_at: null
+        },
+        project: {
+          id: 4,
+          name: 'Omnis voluptatem quos.'
+        },
+        role: {
+          id: 5,
+          name: 'Data Engineer',
+          description:
+            'Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.',
+          deleted_at: null,
+          duration: 3
+        }
+      }
     });
 
     const findClick = wrapper.find("[data-test='team_manager_card']");
@@ -112,8 +164,61 @@ describe('Application component', () => {
 
   it('should handle acceptance button click to show accept modal', () => {
     wrapper.setState({
-      showApplication: false,
-      application: {}
+      showApplication: true,
+      application: {
+        id: 13,
+        fellow_id: '-LSKa7Lv0YJtaXSlGbog',
+        project_id: 4,
+        project_role_id: 5,
+        application_reason:
+          'Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.',
+        project_vacancy_id: null,
+        created_at: '2019-08-22 12:23:24',
+        updated_at: '2019-08-22 12:23:24',
+        decision: 'pending',
+        selected: false,
+        confirm_email_sent: false,
+        status_email_sent: false,
+        applicant: {
+          id: 1,
+          fellow_id: '-LSKa7Lv0YJtaXSlGbog',
+          first_name: 'Wasibani',
+          last_name: 'Roy',
+          email: 'roy.wasibani@andela.com',
+          picture: 'https://lorempixel.com/100/100/people/?23475',
+          cohort: 'Lagos-7',
+          sims_project: 'AuthorsHaven',
+          sims_project_technology: 'Python/Go',
+          sims_start_date: '2018-11-12 00:00:00',
+          sims_end_date: '2019-02-17 00:00:00',
+          cadre_start_date: null,
+          sims_manager: 'Daniel Ale',
+          apprenticeship_project: 'WatchTower',
+          apprenticeship_technology: 'Devops',
+          apprenticeship_start_date: '2019-06-02 00:00:00',
+          apprenticeship_end_date: '2019-06-17 00:00:00',
+          apprenticeship_manager: 'Jason Okagbare',
+          account_active: false,
+          email_sent: false,
+          project_id: null,
+          project_role_id: null,
+          created_at: null,
+          updated_at: null
+        },
+        project: {
+          id: 4,
+          name: 'Omnis voluptatem quos.'
+        },
+        role: {
+          id: 5,
+          name: 'Data Engineer',
+          description:
+            'Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.',
+          deleted_at: null,
+          duration: 3
+        },
+        vacancy: { closing_date: '2019-08-27 09:31:14' }
+      }
     });
 
     const findClick = wrapper.find("[data-test='team_manager_card']");
@@ -123,21 +228,6 @@ describe('Application component', () => {
     wrapper.find('.accept-btn').simulate('click');
     wrapper.instance().acceptApplicationHandler();
     wrapper.instance().showConfirmationResponse();
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should handle rejection button click to show rejection modal', () => {
-    wrapper.setState({
-      showApplication: false,
-      application: {}
-    });
-
-    const findClick = wrapper.find("[data-test='team_manager_card']");
-    findClick.simulate('click');
-    wrapper.find('.applicant_button').simulate('click');
-    expect(wrapper.find('.reject-btn').length).toBe(1);
-    wrapper.find('.reject-btn').simulate('click');
-    wrapper.instance().hideConfirmationResponse();
     expect(wrapper).toMatchSnapshot();
   });
 

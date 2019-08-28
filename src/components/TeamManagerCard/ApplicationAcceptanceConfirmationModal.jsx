@@ -33,7 +33,18 @@ class ApplicationAcceptanceConfirmationModal extends Component {
    * close modal for successful or errored response
    */
   closeSuccessModal = () => {
-    const { hideConfirmationResponse } = this.props;
+    const {
+      applications,
+      applicationId,
+      error,
+      hideConfirmationResponse
+    } = this.props;
+    if (!error) {
+      const application = applications.findIndex(
+        app => app.id === applicationId
+      );
+      applications.splice(application, 1);
+    }
     this.setState({ successOpen: false });
     this.toggle();
     hideConfirmationResponse();
@@ -176,7 +187,9 @@ ApplicationAcceptanceConfirmationModal.propTypes = {
   name: PropTypes.string.isRequired,
   error: PropTypes.string.isRequired,
   openModal: PropTypes.bool.isRequired,
-  acceptanceSuccess: PropTypes.bool.isRequired
+  acceptanceSuccess: PropTypes.bool.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  applications: PropTypes.array.isRequired
 };
 
 export default ApplicationAcceptanceConfirmationModal;
