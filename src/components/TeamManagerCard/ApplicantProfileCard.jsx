@@ -11,7 +11,9 @@ const ApplicantProfileCard = ({
   projectId,
   applicationReason,
   acceptApplicationHandler,
-  applicationId
+  applicationId,
+  isVacancyClosed,
+  VacancyCloseCountdown
 }) => (
   <div className="applicant">
     <div className="applicant_profile_card_details">
@@ -32,9 +34,15 @@ const ApplicantProfileCard = ({
         className="applicant_button"
         onClick={e => acceptApplicationHandler(e, applicationId)}
         data-test="accept-button"
+        disabled={!isVacancyClosed}
       >
         ACCEPT
       </button>
+      {!isVacancyClosed && (
+        <div className="applications_not_closed">
+          Applications {VacancyCloseCountdown}
+        </div>
+      )}
       <div className="line" />
       <div className="applicant_sell_yourself">
         <span className="sell_yourself">Sell Yourself in one sentence</span>
@@ -53,7 +61,9 @@ ApplicantProfileCard.propTypes = {
   projectId: PropTypes.string.isRequired,
   applicationReason: PropTypes.string.isRequired,
   acceptApplicationHandler: PropTypes.func.isRequired,
-  applicationId: PropTypes.number.isRequired
+  applicationId: PropTypes.number.isRequired,
+  isVacancyClosed: PropTypes.bool.isRequired,
+  VacancyCloseCountdown: PropTypes.string.isRequired
 };
 
 export default ApplicantProfileCard;

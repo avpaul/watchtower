@@ -32,11 +32,17 @@ exports[`tests the Profile card renders correctly 1`] = `
       <button
         className="applicant_button"
         data-test="accept-button"
+        disabled={true}
         onClick={[Function]}
         type="button"
       >
         ACCEPT
       </button>
+      <div
+        className="applications_not_closed"
+      >
+        Applications 
+      </div>
       <div
         className="line"
       />

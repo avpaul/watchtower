@@ -53,6 +53,15 @@
     outline: none;
     color: #00a46b;
     cursor: pointer;
+    &[disabled] {
+      background-color: #ebeff3;
+      color: #333e44;
+      cursor: not-allowed;
+    }
+  }
+  .applications_not_closed {
+    padding-bottom: 4px;
+    color: #ff6382;
   }
   .line {
     box-sizing: border-box;
