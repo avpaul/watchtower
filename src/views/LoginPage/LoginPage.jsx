@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import Error from '../../components/Error';
 import authService from '../../services/auth';
+import loginRedirectionHandler from '../../services/loginRedirection';
 import 'react-toastify/dist/ReactToastify.css';
 import googleLogo from '../../static/icons8-google-48.png';
 import watchTowerLogo from '../../static/Logo-watchTower.svg';
@@ -25,8 +26,11 @@ class LoginPage extends Component {
       loggedIn,
       hasAllowedRoles,
       authUrl: `${authHostUrl}/login?redirect_url=${authRedirectUrl}`,
-      user
+      user,
+      redirectAfterLogin: false,
+      redirectionURL: undefined
     };
+
     const Msg = () => (
       <p style={{ marginBottom: 0 }}>
         Unauthorised Access.
@@ -38,6 +42,32 @@ class LoginPage extends Component {
       toast.error(<Msg />, { className: 'toaster' });
     }
     this.handleLogin = this.handleLogin.bind(this);
+  }
+
+  /**
+   *
+   * used to implement url redirection after login
+   * tightly coupled to the WatchTower Authentication flow
+   * @param {Object} props
+   * @returns any
+   */
+  static getDerivedStateFromProps(props) {
+    const {
+      location: { state: navigationState }
+    } = props;
+    const redirectionState = loginRedirectionHandler.get();
+    if (navigationState && !redirectionState) {
+      loginRedirectionHandler.set(navigationState.from.pathname);
+    }
+    if (!navigationState && redirectionState) {
+      const URL = loginRedirectionHandler.get().location;
+      loginRedirectionHandler.prune();
+      return {
+        redirectAfterLogin: true,
+        redirectionURL: URL
+      };
+    }
+    return null;
   }
 
   getRoleFromUser = user => {
@@ -99,10 +129,22 @@ class LoginPage extends Component {
   );
 
   render() {
-    const { loggedIn, authUrl, hasAllowedRoles, user } = this.state;
+    const {
+      loggedIn,
+      authUrl,
+      hasAllowedRoles,
+      user,
+      redirectAfterLogin,
+      redirectionURL
+    } = this.state;
+
     const { ErrorBoundary } = Error;
+
     if (loggedIn && hasAllowedRoles) {
       const roles = user ? this.getRoleFromUser(user) : [];
+      if (redirectAfterLogin) {
+        return <Redirect to={redirectionURL} />;
+      }
       return <Redirect to={this.getRoute(roles)} />;
     }
     return (
