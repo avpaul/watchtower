@@ -32,9 +32,11 @@ class RoleApplication extends Component {
     } = applications;
     if (message) {
       this.setState({ success: true });
-    } else if (error.application_reason) {
+    } else if (error && error.application_reason) {
       const { application_reason: reason } = error;
       this.setState({ errorMessage: reason[0] });
+    } else if (error && error === 'You have an active role') {
+      this.setState({ errorMessage: error });
     }
   };
 

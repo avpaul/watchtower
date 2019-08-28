@@ -126,6 +126,20 @@ describe('tests RoleApplication', () => {
     expect(modal.state('success')).toBe(false);
   });
 
+  it('should update state on failure on attempt to apply with a role', () => {
+    const modal = mount(<RoleApplication {...defaultProps} />);
+    const applications = {
+      error: 'You have an active role',
+      data: {}
+    };
+
+    modal.setProps({ applications });
+    const instance = modal.instance();
+    jest.spyOn(instance, 'applicationStatus');
+    modal.instance().applicationStatus(applications);
+    expect(modal.state('errorMessage')).toBe('You have an active role');
+  });
+
   it('should display loader when loading', () => {
     defaultProps.applications.loading = true;
     const modal = mount(<RoleApplication {...defaultProps} />);
@@ -155,11 +169,9 @@ describe('tests RoleApplication', () => {
 
   it('should render the relevant feedback message when the user input is more than the acceptable length', () => {
     const modal = mount(<RoleApplication {...defaultProps} />);
-    modal
-      .find('textarea')
-      .simulate('change', {
-        target: { value: Fixtures.invalidApplication_reason }
-      });
+    modal.find('textarea').simulate('change', {
+      target: { value: Fixtures.invalidApplication_reason }
+    });
     const currentValue = modal.state().inputs.description.getValue();
     modal.instance().evaluateLength(currentValue);
 

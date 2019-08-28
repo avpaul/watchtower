@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import './EngineerProjectSummaryCard.scss';
 import project from '../../static/Project.svg';
@@ -14,6 +15,29 @@ const renderProjectTechnologies = technologies => {
   ));
 
   return mappedStacks;
+};
+
+const getSpecificManagerInfo = (managerName, managerEmail, detailType) => {
+  const returnedInfo = detailType === 'name' ? managerName : managerEmail;
+  return returnedInfo;
+};
+
+const renderManagerInfo = (profile, detailType) => {
+  if (!profile.role) return `Sorry, ${detailType} not available `;
+  const roleName = profile.role.name;
+
+  if (roleName !== 'Engineer' && roleName !== 'Technical Coordinator') {
+    return getSpecificManagerInfo(
+      profile.requester_name,
+      profile.requester_email,
+      detailType
+    );
+  }
+  return getSpecificManagerInfo(
+    profile.project.manager.name,
+    profile.project.manager.email,
+    detailType
+  );
 };
 
 const renderD1ProjectSummary = profile =>
@@ -35,10 +59,10 @@ const renderD1ProjectSummary = profile =>
             <img className="manager-image" src={userIcon} alt="Manager" />
             <div className="mgr-name-email">
               <span className="manager-name">
-                {profile.project.manager.name}
+                {renderManagerInfo(profile, 'name')}
               </span>
               <span className="manager-email">
-                {profile.project.manager.email}
+                {renderManagerInfo(profile, 'email')}
               </span>
             </div>
           </div>
@@ -48,8 +72,12 @@ const renderD1ProjectSummary = profile =>
           <span className="role">{!profile.role ? '' : profile.role.name}</span>
         </div>
         <div className="date">
-          <span className="date-header">Start Date</span>
-          <span className="start-date">--/--/----</span>
+          <span className="date-header">Expected Start Date</span>
+          <span className="start-date">
+            {!profile.cadre_start_date
+              ? `--/--/---`
+              : moment(profile.cadre_start_date).format('L')}
+          </span>
         </div>
       </div>
     </div>

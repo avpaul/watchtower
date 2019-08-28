@@ -70,7 +70,7 @@ export const tableRow = (item, initials) => (
     <td className="text-center">
       {!item.cadre_start_date
         ? '-'
-        : `${moment(item.cadre_start_date).format('LL')}`}
+        : `${moment(item.cadre_start_date).format('L')}`}
     </td>
   </tr>
 );
