@@ -1,0 +1,1619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Vacancy Modal renders correctly 1`] = `
+<GenericModal
+  footer={
+    <div
+      className="modal-footer"
+    >
+      <CadreMainButton
+        buttonProps={
+          Object {
+            "onClick": [Function],
+          }
+        }
+        label="SUBMIT"
+      />
+    </div>
+  }
+  handleClose={[Function]}
+  handleSubmit={[Function]}
+  id="requestNewTeamMemberModal"
+  size=""
+  submitLoading={false}
+  success={false}
+  successMessage="Request for new team member submitted"
+  title="Request Team Member"
+>
+  <DropdownInput
+    className="wt-dropdown"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    dropDownFor=""
+    enableSearch={false}
+    extras={null}
+    inputValue={Array []}
+    label="Select Project"
+    loading={false}
+    multipleSelection={false}
+    name="project"
+    options={
+      Array [
+        Object {
+          "id": 1,
+          "label": "WatchTower",
+          "name": "WatchTower",
+        },
+      ]
+    }
+    parent={
+      RequestNewTeamMemberModal {
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [
+              Object {
+                "id": 2,
+                "name": "Scrum Master",
+              },
+            ],
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "projects": Array [
+                  Object {
+                    "id": 1,
+                    "name": "WatchTower",
+                  },
+                ],
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllRoles": [MockFunction],
+          "fetchTeamMembers": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "newTeamMemberRequest": Object {
+            "data": Object {},
+            "error": Object {},
+            "loading": false,
+          },
+          "requestNewTeamMembers": [MockFunction],
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "currentDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "startDate": "2019-03-10",
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <RequestNewTeamMemberModal
+              allProjectRoles={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 2,
+                      "name": "Scrum Master",
+                    },
+                  ],
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "projects": Array [
+                        Object {
+                          "id": 1,
+                          "name": "WatchTower",
+                        },
+                      ],
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllRoles={[MockFunction]}
+              fetchTeamMembers={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              newTeamMemberRequest={
+                Object {
+                  "data": Object {},
+                  "error": Object {},
+                  "loading": false,
+                }
+              }
+              requestNewTeamMembers={[MockFunction]}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="SUBMIT"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="requestNewTeamMemberModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="Request for new team member submitted"
+              title="Request Team Member"
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "label": "WatchTower",
+                          "name": "WatchTower",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={
+                      Array [
+                        Object {
+                          "id": 2,
+                          "label": "Scrum Master",
+                          "name": "Scrum Master",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    calenderType="single"
+                    currentDate="2019-3-15"
+                    errors={Object {}}
+                    handleStartDateChange={[Function]}
+                    managerType="Team Manager"
+                    startDate="2019-03-10"
+                    success={false}
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Select Project"
+  />
+  <DropdownInput
+    className="wt-dropdown"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    dropDownFor=""
+    enableSearch={false}
+    extras={null}
+    inputValue={Array []}
+    label="Select Role"
+    loading={false}
+    multipleSelection={false}
+    name="role"
+    options={
+      Array [
+        Object {
+          "id": 2,
+          "label": "Scrum Master",
+          "name": "Scrum Master",
+        },
+      ]
+    }
+    parent={
+      RequestNewTeamMemberModal {
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [
+              Object {
+                "id": 2,
+                "name": "Scrum Master",
+              },
+            ],
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "projects": Array [
+                  Object {
+                    "id": 1,
+                    "name": "WatchTower",
+                  },
+                ],
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllRoles": [MockFunction],
+          "fetchTeamMembers": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "newTeamMemberRequest": Object {
+            "data": Object {},
+            "error": Object {},
+            "loading": false,
+          },
+          "requestNewTeamMembers": [MockFunction],
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "currentDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "startDate": "2019-03-10",
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <RequestNewTeamMemberModal
+              allProjectRoles={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 2,
+                      "name": "Scrum Master",
+                    },
+                  ],
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "projects": Array [
+                        Object {
+                          "id": 1,
+                          "name": "WatchTower",
+                        },
+                      ],
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllRoles={[MockFunction]}
+              fetchTeamMembers={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              newTeamMemberRequest={
+                Object {
+                  "data": Object {},
+                  "error": Object {},
+                  "loading": false,
+                }
+              }
+              requestNewTeamMembers={[MockFunction]}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="SUBMIT"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="requestNewTeamMemberModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="Request for new team member submitted"
+              title="Request Team Member"
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "label": "WatchTower",
+                          "name": "WatchTower",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={
+                      Array [
+                        Object {
+                          "id": 2,
+                          "label": "Scrum Master",
+                          "name": "Scrum Master",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    calenderType="single"
+                    currentDate="2019-3-15"
+                    errors={Object {}}
+                    handleStartDateChange={[Function]}
+                    managerType="Team Manager"
+                    startDate="2019-03-10"
+                    success={false}
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Select Role"
+  />
+  <TextInput
+    alertText="Please input a valid number of slots!"
+    className="wt-text-input"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    inputValue=""
+    label="Vacancy Slots"
+    length={999}
+    name="slots"
+    parent={
+      RequestNewTeamMemberModal {
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [
+              Object {
+                "id": 2,
+                "name": "Scrum Master",
+              },
+            ],
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "projects": Array [
+                  Object {
+                    "id": 1,
+                    "name": "WatchTower",
+                  },
+                ],
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllRoles": [MockFunction],
+          "fetchTeamMembers": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "newTeamMemberRequest": Object {
+            "data": Object {},
+            "error": Object {},
+            "loading": false,
+          },
+          "requestNewTeamMembers": [MockFunction],
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "currentDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "startDate": "2019-03-10",
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <RequestNewTeamMemberModal
+              allProjectRoles={
+                Object {
+                  "data": Array [
+                    Object {
+                      "id": 2,
+                      "name": "Scrum Master",
+                    },
+                  ],
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "projects": Array [
+                        Object {
+                          "id": 1,
+                          "name": "WatchTower",
+                        },
+                      ],
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllRoles={[MockFunction]}
+              fetchTeamMembers={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              newTeamMemberRequest={
+                Object {
+                  "data": Object {},
+                  "error": Object {},
+                  "loading": false,
+                }
+              }
+              requestNewTeamMembers={[MockFunction]}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="SUBMIT"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="requestNewTeamMemberModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="Request for new team member submitted"
+              title="Request Team Member"
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "label": "WatchTower",
+                          "name": "WatchTower",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={
+                      Array [
+                        Object {
+                          "id": 2,
+                          "label": "Scrum Master",
+                          "name": "Scrum Master",
+                        },
+                      ]
+                    }
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    calenderType="single"
+                    currentDate="2019-3-15"
+                    errors={Object {}}
+                    handleStartDateChange={[Function]}
+                    managerType="Team Manager"
+                    startDate="2019-03-10"
+                    success={false}
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Enter no. of slots"
+    testInput={[Function]}
+    type="text"
+  />
+  <div
+    className="form-date-picker"
+  >
+    <FeedbackDuration
+      calenderType="single"
+      currentDate="2019-3-15"
+      errors={Object {}}
+      handleStartDateChange={[Function]}
+      managerType="Team Manager"
+      startDate="2019-03-10"
+      success={false}
+    />
+  </div>
+</GenericModal>
+`;
+
+exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
+<GenericModal
+  footer={
+    <div
+      className="modal-footer"
+    >
+      <CadreMainButton
+        buttonProps={
+          Object {
+            "onClick": [Function],
+          }
+        }
+        label="SUBMIT"
+      />
+    </div>
+  }
+  handleClose={[Function]}
+  handleSubmit={[Function]}
+  id="requestNewTeamMemberModal"
+  size=""
+  submitLoading={false}
+  success={false}
+  successMessage="Request for new team member submitted"
+  title="Request Team Member"
+>
+  <DropdownInput
+    className="wt-dropdown"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    dropDownFor=""
+    enableSearch={false}
+    extras={null}
+    inputValue={Array []}
+    label="Select Project"
+    loading={false}
+    multipleSelection={false}
+    name="project"
+    options={Array []}
+    parent={
+      RequestNewTeamMemberModal {
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "projects": Array [],
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchTeamMembers": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "newTeamMemberRequest": Object {
+            "data": Object {},
+            "error": Object {},
+            "loading": false,
+          },
+          "requestNewTeamMembers": [MockFunction],
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "currentDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "startDate": "2019-03-10",
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <RequestNewTeamMemberModal
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "projects": Array [],
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchTeamMembers={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              newTeamMemberRequest={
+                Object {
+                  "data": Object {},
+                  "error": Object {},
+                  "loading": false,
+                }
+              }
+              requestNewTeamMembers={[MockFunction]}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="SUBMIT"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="requestNewTeamMemberModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="Request for new team member submitted"
+              title="Request Team Member"
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    calenderType="single"
+                    currentDate="2019-3-15"
+                    errors={Object {}}
+                    handleStartDateChange={[Function]}
+                    managerType="Team Manager"
+                    startDate="2019-03-10"
+                    success={false}
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Select Project"
+  />
+  <DropdownInput
+    className="wt-dropdown"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    dropDownFor=""
+    enableSearch={false}
+    extras={null}
+    inputValue={Array []}
+    label="Select Role"
+    loading={false}
+    multipleSelection={false}
+    name="role"
+    options={Array []}
+    parent={
+      RequestNewTeamMemberModal {
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "projects": Array [],
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchTeamMembers": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "newTeamMemberRequest": Object {
+            "data": Object {},
+            "error": Object {},
+            "loading": false,
+          },
+          "requestNewTeamMembers": [MockFunction],
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "currentDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "startDate": "2019-03-10",
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <RequestNewTeamMemberModal
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "projects": Array [],
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchTeamMembers={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              newTeamMemberRequest={
+                Object {
+                  "data": Object {},
+                  "error": Object {},
+                  "loading": false,
+                }
+              }
+              requestNewTeamMembers={[MockFunction]}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="SUBMIT"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="requestNewTeamMemberModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="Request for new team member submitted"
+              title="Request Team Member"
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    calenderType="single"
+                    currentDate="2019-3-15"
+                    errors={Object {}}
+                    handleStartDateChange={[Function]}
+                    managerType="Team Manager"
+                    startDate="2019-03-10"
+                    success={false}
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Select Role"
+  />
+  <TextInput
+    alertText="Please input a valid number of slots!"
+    className="wt-text-input"
+    comment=""
+    componentStateKey="inputs"
+    defaultStatus={0}
+    inputValue=""
+    label="Vacancy Slots"
+    length={999}
+    name="slots"
+    parent={
+      RequestNewTeamMemberModal {
+        "compareDates": [Function],
+        "context": Object {},
+        "defaultDate": [Function],
+        "getModelTitle": [Function],
+        "handleClick": [Function],
+        "handleClose": [Function],
+        "handleStartChange": [Function],
+        "props": Object {
+          "allProjectRoles": Object {
+            "data": Array [],
+            "error": null,
+            "loading": false,
+          },
+          "allProjects": Object {
+            "data": Array [
+              Object {
+                "projects": Array [],
+              },
+            ],
+            "error": null,
+            "loading": false,
+          },
+          "fetchAllRoles": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          },
+          "fetchTeamMembers": [MockFunction],
+          "history": Object {
+            "replace": [MockFunction],
+          },
+          "newTeamMemberRequest": Object {
+            "data": Object {},
+            "error": Object {},
+            "loading": false,
+          },
+          "requestNewTeamMembers": [MockFunction],
+        },
+        "refs": Object {},
+        "renderButton": [Function],
+        "renderDatePickers": [Function],
+        "renderDropdown": [Function],
+        "renderError": [Function],
+        "renderFooter": [Function],
+        "renderModalBody": [Function],
+        "renderVacancyForm": [Function],
+        "setState": [Function],
+        "state": Object {
+          "currentDate": "2019-3-15",
+          "error": "",
+          "errors": Object {},
+          "inputs": Object {},
+          "startDate": "2019-03-10",
+          "success": false,
+        },
+        "updater": Updater {
+          "_callbacks": Array [],
+          "_renderer": ReactShallowRenderer {
+            "_context": Object {},
+            "_didScheduleRenderPhaseUpdate": false,
+            "_dispatcher": Object {
+              "readContext": [Function],
+              "useCallback": [Function],
+              "useContext": [Function],
+              "useDebugValue": [Function],
+              "useEffect": [Function],
+              "useImperativeHandle": [Function],
+              "useLayoutEffect": [Function],
+              "useMemo": [Function],
+              "useReducer": [Function],
+              "useRef": [Function],
+              "useState": [Function],
+            },
+            "_element": <RequestNewTeamMemberModal
+              allProjectRoles={
+                Object {
+                  "data": Array [],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              allProjects={
+                Object {
+                  "data": Array [
+                    Object {
+                      "projects": Array [],
+                    },
+                  ],
+                  "error": null,
+                  "loading": false,
+                }
+              }
+              fetchAllRoles={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              fetchTeamMembers={[MockFunction]}
+              history={
+                Object {
+                  "replace": [MockFunction],
+                }
+              }
+              newTeamMemberRequest={
+                Object {
+                  "data": Object {},
+                  "error": Object {},
+                  "loading": false,
+                }
+              }
+              requestNewTeamMembers={[MockFunction]}
+            />,
+            "_firstWorkInProgressHook": null,
+            "_forcedUpdate": false,
+            "_instance": [Circular],
+            "_isReRender": false,
+            "_newState": null,
+            "_numberOfReRenders": 0,
+            "_renderPhaseUpdates": null,
+            "_rendered": <GenericModal
+              footer={
+                <div
+                  className="modal-footer"
+                >
+                  <CadreMainButton
+                    buttonProps={
+                      Object {
+                        "onClick": [Function],
+                      }
+                    }
+                    label="SUBMIT"
+                  />
+                </div>
+              }
+              handleClose={[Function]}
+              handleSubmit={[Function]}
+              id="requestNewTeamMemberModal"
+              size=""
+              submitLoading={false}
+              success={false}
+              successMessage="Request for new team member submitted"
+              title="Request Team Member"
+            >
+              <React.Fragment>
+                <React.Fragment>
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Project"
+                    loading={false}
+                    multipleSelection={false}
+                    name="project"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Project"
+                  />
+                  <DropdownInput
+                    className="wt-dropdown"
+                    comment=""
+                    componentStateKey="inputs"
+                    defaultStatus={0}
+                    dropDownFor=""
+                    enableSearch={false}
+                    extras={null}
+                    inputValue={Array []}
+                    label="Select Role"
+                    loading={false}
+                    multipleSelection={false}
+                    name="role"
+                    options={Array []}
+                    parent={[Circular]}
+                    placeholder="Select Role"
+                  />
+                </React.Fragment>
+                <TextInput
+                  alertText="Please input a valid number of slots!"
+                  className="wt-text-input"
+                  comment=""
+                  componentStateKey="inputs"
+                  defaultStatus={0}
+                  inputValue=""
+                  label="Vacancy Slots"
+                  length={999}
+                  name="slots"
+                  parent={[Circular]}
+                  placeholder="Enter no. of slots"
+                  testInput={[Function]}
+                  type="text"
+                />
+                <div
+                  className="form-date-picker"
+                >
+                  <FeedbackDuration
+                    calenderType="single"
+                    currentDate="2019-3-15"
+                    errors={Object {}}
+                    handleStartDateChange={[Function]}
+                    managerType="Team Manager"
+                    startDate="2019-03-10"
+                    success={false}
+                  />
+                </div>
+              </React.Fragment>
+            </GenericModal>,
+            "_rendering": false,
+            "_updater": [Circular],
+            "_workInProgressHook": null,
+          },
+        },
+      }
+    }
+    placeholder="Enter no. of slots"
+    testInput={[Function]}
+    type="text"
+  />
+  <div
+    className="form-date-picker"
+  >
+    <FeedbackDuration
+      calenderType="single"
+      currentDate="2019-3-15"
+      errors={Object {}}
+      handleStartDateChange={[Function]}
+      managerType="Team Manager"
+      startDate="2019-03-10"
+      success={false}
+    />
+  </div>
+</GenericModal>
+`;

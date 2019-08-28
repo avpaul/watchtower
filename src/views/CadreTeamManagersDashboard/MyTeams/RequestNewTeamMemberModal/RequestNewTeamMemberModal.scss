@@ -1,0 +1,63 @@
+@import '../../../../assets/sass/abstract/variables';
+@import '../../../../assets/sass/abstract/mixins';
+
+#requestNewTeamMemberModal {
+  .modal-header h1 {
+    color: #333e44;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  .modal-footer button {
+    background-color: #10a36d;
+    border-color: #10a36d;
+  }
+  @mixin checkboxStyle() {
+    height: 24px;
+    width: 24px;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    outline: none;
+    margin-right: 6px;
+  }
+
+  .container {
+    display: flex;
+    height: auto;
+    width: auto;
+    color: #4f4f4f;
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    letter-spacing: -0.23px;
+    line-height: 23px;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .form-toggle-buttons {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .form-date-picker {
+    width: 100%;
+  }
+
+  .form-vacancy-toggle-button {
+    background-color: #ffffff;
+    border: 1px solid #0459e4;
+    height: 2rem;
+    width: 50%;
+    color: #0459e4;
+    font-family: $font-primary;
+    outline: none !important;
+    font: 400 13px system-ui;
+    cursor: pointer;
+
+    &--active {
+      @extend .form-vacancy-toggle-button;
+      color: white;
+      background-color: #0459e4;
+    }
+  }
+}

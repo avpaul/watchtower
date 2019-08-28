@@ -2,12 +2,14 @@ import React, { useEffect, useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import weakKey from 'weak-key';
 import TeamCard from '../../../components/TeamManagerCard';
+import { CadreMainButton } from '../../../components/Buttons';
 import StackRectangle from '../../../components/StackRectangle';
 import CustomLoader from '../../../components/CustomLoader/PMLoader';
 import FilterDropdown from '../../../components/FilterDropdown';
 import ProfileContainer from '../../../components/EngineerBio/ProfileContainer';
 import Placeholder from '../Placeholder/Placeholder';
 import managerTeamData from '../../../__mocks__/managerTeamData';
+import RequestNewTeamMemberModal from './RequestNewTeamMemberModal';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
 const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
@@ -144,6 +146,7 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
       const engineersRoles = getRoles(teamManagerTeamMembers.data[0].projects);
       return (
         <Fragment>
+          <RequestNewTeamMemberModal />
           <div
             className={`cadre__page managerTeamMembers ${
               isOpen ? 'add-margin' : 'remove-margin'
@@ -156,14 +159,27 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
                   {renderTechnologies(teamManagerTeamMembers.data[0].projects)}
                 </div>
               </div>
-              <FilterDropdown
-                items={engineersRoles}
-                current={filterRole}
-                width="400"
-                chevronColor="#808FA3"
-                dropdownBackgroundColor="#FFFFFF"
-                getFilter={(type, value) => setFilterRole(value)}
-              />
+              <div className="row float-right">
+                <div className="col-md-6">
+                  <FilterDropdown
+                    items={engineersRoles}
+                    current={filterRole}
+                    width="400"
+                    chevronColor="#808FA3"
+                    dropdownBackgroundColor="#FFFFFF"
+                    getFilter={(type, value) => setFilterRole(value)}
+                  />
+                </div>
+                <div className="col-md-6">
+                  <CadreMainButton
+                    buttonProps={{
+                      'data-toggle': 'modal',
+                      'data-target': '#requestNewTeamMemberModal'
+                    }}
+                    label="NEW REQUEST"
+                  />
+                </div>
+              </div>
             </div>
             {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
           </div>
@@ -187,7 +203,8 @@ MyTeam.defaultProps = {
 
 MyTeam.propTypes = {
   fetchTeamMembers: PropTypes.func.isRequired,
-  teamManagerTeamMembers: PropTypes.shape()
+  teamManagerTeamMembers: PropTypes.shape(),
+  history: PropTypes.shape({}).isRequired
 };
 
 export default MyTeam;

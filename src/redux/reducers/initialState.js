@@ -236,6 +236,7 @@ export default {
     ...genericAPIStateObject,
     acceptLoading: false
   },
-  teamMembers: genericAPIStateArray,
-  cadreVacanciesWithNoCycleId: genericAPIStateObject
+  teamManagerTeamMembers: genericAPIStateArray,
+  cadreVacanciesWithNoCycleId: genericAPIStateObject,
+  newTeamMemberRequest: genericAPIStateObject
 };
