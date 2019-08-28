@@ -6,7 +6,10 @@ import {
   editProjectVacancies
 } from '../../../../redux/actionCreators/projectVacancyActions';
 import { fetchAllRoles } from '../../../../redux/actionCreators/cadreProjectRoleActions';
-import createNewCertificationVacancy from '../../../../redux/actionCreators/certificationVacancyAction';
+import {
+  createNewCertificationVacancy,
+  editCertificationVacancy
+} from '../../../../redux/actionCreators/certificationVacancyAction';
 import { fetchAllCertifications } from '../../../../redux/actionCreators/cadreCertificationActions';
 
 export const mapStateToProps = ({
@@ -15,6 +18,7 @@ export const mapStateToProps = ({
   allRoles,
   projectVacanciesOnFocus,
   editProjectVacancies: editProjectVacanciesState,
+  editCertificationVacancies: editCertificationVacanciesState,
   allCertifications,
   createCertificactionVacancies
 }) => ({
@@ -23,7 +27,10 @@ export const mapStateToProps = ({
   createProjectVacancies,
   projectVacanciesOnFocus,
   editProjectVacanciesState,
-  editMode: !!projectVacanciesOnFocus.project,
+  editCertificationVacanciesState,
+  editMode:
+    !!projectVacanciesOnFocus.project ||
+    !!projectVacanciesOnFocus.certification,
   allCertifications,
   createCertificactionVacancies
 });
@@ -35,6 +42,7 @@ export default connect(
     fetchAllRoles,
     createNewProjectVacancies,
     editProjectVacancies,
+    editCertificationVacancy,
     fetchAllCertifications,
     createNewCertificationVacancy
   }
