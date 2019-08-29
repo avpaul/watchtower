@@ -205,7 +205,7 @@ export default class Applications extends Component {
     const { openModal, application, showConfirmationResponse } = this.state;
     const { applicant, project, role } = application;
     const {
-      applications: { acceptLoading, error }
+      applications: { acceptLoading, error, acceptedApplication }
     } = this.props;
 
     return (
@@ -222,6 +222,7 @@ export default class Applications extends Component {
         hideConfirmationResponse={this.hideConfirmationResponse}
         showSuccess={this.showConfirmationResponse}
         error={error}
+        slots={acceptedApplication ? acceptedApplication.slots : 0}
       />
     );
   };

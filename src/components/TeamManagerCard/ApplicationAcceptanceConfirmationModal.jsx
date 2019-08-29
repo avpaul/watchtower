@@ -40,6 +40,28 @@ class ApplicationAcceptanceConfirmationModal extends Component {
   };
 
   /**
+   * Handle occupied and remaining slots
+   */
+
+  handleSlots = (slots, role) =>
+    slots === 0 ? (
+      <p>Congratulation! you have filled all slots for {role} vacancy.</p>
+    ) : (
+      <p>
+        You have{' '}
+        <strong>
+          {slots.active} active {slots.active > 1 ? `${role}s` : `${role}`}
+        </strong>{' '}
+        and{' '}
+        <strong>
+          {' '}
+          {slots.remaining} remaining {slots.remaining > 1 ? 'slots' : 'slot'}
+        </strong>{' '}
+        for this vacancy.
+      </p>
+    );
+
+  /**
    * show acceptance modal data
    */
   renderAcceptanceModal = () => {
@@ -79,7 +101,7 @@ class ApplicationAcceptanceConfirmationModal extends Component {
    * show response of accept request
    */
   renderSuccessMessage = () => {
-    const { name, error, loading } = this.props;
+    const { name, error, loading, slots, role } = this.props;
     return (
       <>
         {loading ? (
@@ -103,6 +125,7 @@ class ApplicationAcceptanceConfirmationModal extends Component {
                 <p className="success_title">
                   Great! You have added {name} to your team
                 </p>
+                {this.handleSlots(slots, role)}
                 <img className="success__image" src={Image} alt="..." />
                 <div className="mb-4" />
                 <button
@@ -148,6 +171,7 @@ ApplicationAcceptanceConfirmationModal.propTypes = {
   applicationId: PropTypes.number.isRequired,
   showSuccess: PropTypes.func.isRequired,
   role: PropTypes.string.isRequired,
+  slots: PropTypes.instanceOf(Object).isRequired,
   projectName: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   error: PropTypes.string.isRequired,
