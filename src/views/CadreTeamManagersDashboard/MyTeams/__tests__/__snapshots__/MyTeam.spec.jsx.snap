@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application component Render component when manager has no project 1`] = `
-<h1>
-  You currently not managing any project
-</h1>
+<div
+  className="cadre__page"
+>
+  emptyPlaceholder();
+</div>
 `;
 
 exports[`Application component Render component when no data 1`] = `
@@ -162,7 +164,7 @@ exports[`Application component Should close engineer profile card 1`] = `
         dateType=""
         event={[Function]}
         image="https://lorempixel.com"
-        key="weak-key-39"
+        key="weak-key-46"
         name="john doe"
         project="Travella"
         role="Technical Coordinator"
@@ -173,7 +175,7 @@ exports[`Application component Should close engineer profile card 1`] = `
         dateType=""
         event={[Function]}
         image="https://lorempixel.com"
-        key="weak-key-40"
+        key="weak-key-47"
         name="john doe"
         project="WatchTower"
         role="Technical Coordinator"
@@ -184,7 +186,7 @@ exports[`Application component Should close engineer profile card 1`] = `
         dateType=""
         event={[Function]}
         image="https://lorempixel.com"
-        key="weak-key-41"
+        key="weak-key-48"
         name="john doe"
         project="WatchTower"
         role="Technical Coordinator"
@@ -263,7 +265,7 @@ exports[`Application component Should open the drawer 1`] = `
         dateType=""
         event={[Function]}
         image="https://lorempixel.com"
-        key="weak-key-33"
+        key="weak-key-36"
         name="john doe"
         project="Travella"
         role="Technical Coordinator"
@@ -274,7 +276,7 @@ exports[`Application component Should open the drawer 1`] = `
         dateType=""
         event={[Function]}
         image="https://lorempixel.com"
-        key="weak-key-34"
+        key="weak-key-37"
         name="john doe"
         project="WatchTower"
         role="Technical Coordinator"
@@ -285,7 +287,7 @@ exports[`Application component Should open the drawer 1`] = `
         dateType=""
         event={[Function]}
         image="https://lorempixel.com"
-        key="weak-key-35"
+        key="weak-key-38"
         name="john doe"
         project="WatchTower"
         role="Technical Coordinator"

@@ -6,9 +6,10 @@ import TeamManagerCard from '../../../components/TeamManagerCard';
 import { altDate as formatDate } from '../../../utils/formatDate';
 import FilterDropdown from '../../../components/FilterDropdown';
 import ApplicantCard from '../../../components/TeamManagerCard/ApplicantCard';
-
+import '../Placeholders.scss';
 import './Applications.scss';
 import ApplicationAcceptanceConfirmationModal from '../../../components/TeamManagerCard/ApplicationAcceptanceConfirmationModal';
+import Placeholder from '../Placeholder/Placeholder';
 
 export default class Applications extends Component {
   constructor(props) {
@@ -166,7 +167,7 @@ export default class Applications extends Component {
     return teamApplications.length ? (
       teamApplications
     ) : (
-      <h1>There are currently no applications</h1>
+      <Placeholder text="You currently have no applications for any role." />
     );
   };
 

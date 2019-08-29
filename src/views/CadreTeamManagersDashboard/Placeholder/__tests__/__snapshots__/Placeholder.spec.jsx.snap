@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application component renders placeholder component 1`] = `
+<div
+  className="placeholder"
+>
+  <LoaderComponent
+    img="construction_new_color_loop.svg"
+  />
+  <div
+    className="font-weight-lighter"
+  >
+    <h4
+      className="font-display"
+    >
+       
+    </h4>
+  </div>
+</div>
+`;

@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import MyTeams from '../MyTeams';
 import FilterDropdown from '../../../../components/FilterDropdown';
 import TeamCard from '../../../../components/TeamManagerCard';
+import managerTeamData from '../../../../__mocks__/managerTeamData';
 
 describe('Application component', () => {
   let wrapper;
@@ -41,11 +42,29 @@ describe('Application component', () => {
   });
 
   it('Should open the drawer', () => {
-    wrapper
+    const element = shallow(
+      <MyTeams teamManagerTeamMembers={managerTeamData} {...defaultProps} />
+    );
+    element
       .find(TeamCard)
       .at('0')
       .prop('event')();
-    expect(wrapper).toMatchSnapshot();
+    expect(element).toMatchSnapshot();
+  });
+
+  it('Should render one team', () => {
+    const team = {
+      data: [{ projects: [managerTeamData.data[0].projects[0]] }]
+    };
+    const element = shallow(
+      <MyTeams teamManagerTeamMembers={team} {...defaultProps} />
+    );
+    expect(
+      element
+        .find('h1')
+        .at(0)
+        .text()
+    ).toBe(`${managerTeamData.data[0].projects[0].name} Team`);
   });
   it('Should close engineer profile card', () => {
     const button = wrapper.find('.close');

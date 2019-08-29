@@ -6,6 +6,7 @@ import StackRectangle from '../../../components/StackRectangle';
 import CustomLoader from '../../../components/CustomLoader/PMLoader';
 import FilterDropdown from '../../../components/FilterDropdown';
 import ProfileContainer from '../../../components/EngineerBio/ProfileContainer';
+import Placeholder from '../Placeholder/Placeholder';
 import managerTeamData from '../../../__mocks__/managerTeamData';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
@@ -61,6 +62,12 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
 
   const formatName = (firstName, lastName) => firstName.concat(' ', lastName);
 
+  const emptyPlaceholder = () => (
+    <div>
+      <Placeholder text="Welcome, you are yet to have Cadre Engineers on your team." />
+    </div>
+  );
+
   const mapTeamCards = teamData => {
     const extractedData = getTeamData(teamData).reduce(flatData, []);
     const sortedData = sortTeamData(extractedData);
@@ -81,10 +88,10 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
         date={formatDate(data.role_history[0].end_date)}
       />
     ));
-    return teamMembers.length ? (
-      teamMembers
+    return teamMembers.length !== 0 ? (
+      <div className="teamMembers">{teamMembers}</div>
     ) : (
-      <h1>You have zero team members</h1>
+      emptyPlaceholder()
     );
   };
 
@@ -158,15 +165,13 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
                 getFilter={(type, value) => setFilterRole(value)}
               />
             </div>
-            <div className="teamMembers">
-              {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
-            </div>
+            {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
           </div>
           {profileCard()}
         </Fragment>
       );
     }
-    return <h1>You currently not managing any project</h1>;
+    return <div className="cadre__page">emptyPlaceholder();</div>;
   };
 
   return !teamManagerTeamMembers.data.length ? (
