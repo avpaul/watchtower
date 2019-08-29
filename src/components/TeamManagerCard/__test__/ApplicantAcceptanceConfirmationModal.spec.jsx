@@ -19,7 +19,12 @@ describe('Team Card', () => {
     toggleModal: jest.fn(),
     hideConfirmationResponse: jest.fn(),
     toggle: jest.fn(),
-    open: false
+    open: false,
+    slots: {
+      total: 4,
+      active: 3,
+      remaining: 1
+    }
   };
   it('should render correctly', () => {
     wrapper = shallow(<ApplicationAcceptanceConfirmationModal {...props} />);

@@ -44,6 +44,7 @@ export default (
       return {
         error: null,
         acceptLoading: false,
+        acceptedApplication: action.data,
         data: updateApplication(state.data, action.data)
       };
     case types.FETCH_APPLICATIONS_FAILURE:

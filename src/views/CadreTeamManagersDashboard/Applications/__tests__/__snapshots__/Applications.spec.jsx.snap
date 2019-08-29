@@ -492,6 +492,7 @@ exports[`Application component should handle acceptance button click to show acc
       projectName="Omnis voluptatem quos."
       role="Data Engineer"
       showSuccess={[Function]}
+      slots={0}
       toggleModal={[Function]}
     >
       <Modal
@@ -516,6 +517,11 @@ exports[`Application component should handle acceptance button click to show acc
                 Great! You have added 
                 Wasibani Roy
                  to your team
+              </p>
+              <p>
+                Congratulation! you have filled all slots for 
+                Data Engineer
+                 vacancy.
               </p>
               <img
                 alt="..."
