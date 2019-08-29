@@ -35,6 +35,7 @@ const FeedbackDuration = ({
       <div className="datepicker__grid-item datepicker__label mb-1">
         {'Application Close Date'}
       </div>
+
       <div className="datepicker__grid-item datepicker__label mb-1">
         {startDateText}
       </div>
@@ -113,6 +114,43 @@ const FeedbackDuration = ({
     </div>
   );
 
+  const renderSingleCalender = () => (
+    <div className="datepicker__grid-container">
+      <div className="datepicker__grid-item datepicker__label mb-1">
+        {'Role Start Date'}
+      </div>
+      <div className="datepicker__grid-item datepicker__label mb-1">&nbsp;</div>
+      <div className="datepicker__grid-item">
+        <div className="input-group datepicker__input-field mb-2">
+          <DatePicker
+            popperPlacement="top"
+            disabledKeyboardNavigation
+            selected={startDate}
+            startDate={startDate}
+            minDate={currentDate}
+            onChangeRaw={handleRawChange}
+            selectsStart
+            popperModifiers={{
+              flip: {
+                behavior: ['bottom']
+              },
+              preventOverflow: {
+                enabled: false
+              },
+              hide: {
+                enabled: false
+              }
+            }}
+            onChange={handleStartDateChange}
+            dateFormat="yyyy-MM-dd"
+            id="end-date"
+          />
+          <CalendarInput />
+        </div>
+      </div>
+    </div>
+  );
+
   const renderVerticalCalender = () => (
     <div className="feedback-calendar-body">
       <div className="feedback-calendar">
@@ -177,13 +215,20 @@ const FeedbackDuration = ({
     </div>
   );
 
-  return (
-    <>
-      {calenderType === 'horizontal'
-        ? renderHorizontalCalender()
-        : renderVerticalCalender()}
-    </>
-  );
+  const getCalender = type => {
+    switch (type) {
+      case 'horizontal':
+        return renderHorizontalCalender();
+      case 'vertical':
+        return renderVerticalCalender();
+      case 'single':
+        return renderSingleCalender();
+      default:
+        return null;
+    }
+  };
+
+  return <>{getCalender(calenderType)}</>;
 };
 
 const datePropTypes = PropTypes.oneOfType([

@@ -309,6 +309,7 @@ export class FeedbackDashboard extends Component {
           startDate={startDate}
           endDate={endDate}
           currentDate={currentDate}
+          calenderType="vertical"
           handleStartDateChange={this.handleStartDateChange}
           handleEndDateChange={this.handleEndDateChange}
           clearDuration={this.clearDuration}

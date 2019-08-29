@@ -234,6 +234,7 @@ exports[`Feedback simslead and engineering dashboard tests should render feedbac
           className="ops-dashboard__fellows-summary"
         >
           <FeedbackDuration
+            calenderType="vertical"
             clearDuration={[Function]}
             currentDate="2019-3-15"
             endDate="2019-08-05 14:34:03"
@@ -508,6 +509,7 @@ exports[`Feedback simslead and engineering dashboard tests should render feedbac
           className="ops-dashboard__fellows-summary"
         >
           <FeedbackDuration
+            calenderType="vertical"
             clearDuration={[Function]}
             currentDate="2019-3-15"
             endDate="2019-08-05 14:34:03"
@@ -616,6 +618,7 @@ exports[`Test Feedback Dashboard should render feedback dashboard without crashi
           className="ops-dashboard__fellows-summary"
         >
           <FeedbackDuration
+            calenderType="vertical"
             clearDuration={[Function]}
             currentDate="2019-3-15"
             endDate="2019-3-15"

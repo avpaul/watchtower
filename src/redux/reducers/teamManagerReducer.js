@@ -2,7 +2,10 @@ import initialState from './initialState';
 import * as types from '../constants/teamManagerActionTypes';
 import genericReducer from './genericReducer';
 
-const teamManagerTeamReducer = (state = initialState.teamMembers, action) =>
+const teamManagerTeamReducer = (
+  state = initialState.teamManagerTeamMembers,
+  action
+) =>
   genericReducer(
     [
       types.GET_TEAM_MEMBERS_REQUEST,

@@ -10,6 +10,7 @@ exports[`Application component Render component when manager has no project 1`] 
 
 exports[`Application component Render component when no data 1`] = `
 <Fragment>
+  <Connect(RequestNewTeamMemberModal) />
   <div
     className="cadre__page managerTeamMembers remove-margin"
   >
@@ -37,22 +38,43 @@ exports[`Application component Render component when no data 1`] = `
           />
         </div>
       </div>
-      <Filter
-        characterLength={9}
-        chevronColor="#808FA3"
-        current="All Roles"
-        dropdownBackgroundColor="#FFFFFF"
-        fontSize=""
-        getFilter={[Function]}
-        items={
-          Array [
-            "All Roles",
-            "Technical Coordinator",
-          ]
-        }
-        search={false}
-        width="400"
-      />
+      <div
+        className="row float-right"
+      >
+        <div
+          className="col-md-6"
+        >
+          <Filter
+            characterLength={9}
+            chevronColor="#808FA3"
+            current="All Roles"
+            dropdownBackgroundColor="#FFFFFF"
+            fontSize=""
+            getFilter={[Function]}
+            items={
+              Array [
+                "All Roles",
+                "Technical Coordinator",
+              ]
+            }
+            search={false}
+            width="400"
+          />
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <CadreMainButton
+            buttonProps={
+              Object {
+                "data-target": "#requestNewTeamMemberModal",
+                "data-toggle": "modal",
+              }
+            }
+            label="NEW REQUEST"
+          />
+        </div>
+      </div>
     </div>
     <div
       className="teamMembers"
@@ -111,6 +133,7 @@ exports[`Application component Render component when no data 1`] = `
 
 exports[`Application component Should close engineer profile card 1`] = `
 <Fragment>
+  <Connect(RequestNewTeamMemberModal) />
   <div
     className="cadre__page managerTeamMembers remove-margin"
   >
@@ -138,22 +161,43 @@ exports[`Application component Should close engineer profile card 1`] = `
           />
         </div>
       </div>
-      <Filter
-        characterLength={9}
-        chevronColor="#808FA3"
-        current="All Roles"
-        dropdownBackgroundColor="#FFFFFF"
-        fontSize=""
-        getFilter={[Function]}
-        items={
-          Array [
-            "All Roles",
-            "Technical Coordinator",
-          ]
-        }
-        search={false}
-        width="400"
-      />
+      <div
+        className="row float-right"
+      >
+        <div
+          className="col-md-6"
+        >
+          <Filter
+            characterLength={9}
+            chevronColor="#808FA3"
+            current="All Roles"
+            dropdownBackgroundColor="#FFFFFF"
+            fontSize=""
+            getFilter={[Function]}
+            items={
+              Array [
+                "All Roles",
+                "Technical Coordinator",
+              ]
+            }
+            search={false}
+            width="400"
+          />
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <CadreMainButton
+            buttonProps={
+              Object {
+                "data-target": "#requestNewTeamMemberModal",
+                "data-toggle": "modal",
+              }
+            }
+            label="NEW REQUEST"
+          />
+        </div>
+      </div>
     </div>
     <div
       className="teamMembers"
@@ -212,6 +256,7 @@ exports[`Application component Should close engineer profile card 1`] = `
 
 exports[`Application component Should open the drawer 1`] = `
 <Fragment>
+  <Connect(RequestNewTeamMemberModal) />
   <div
     className="cadre__page managerTeamMembers add-margin"
   >
@@ -239,22 +284,43 @@ exports[`Application component Should open the drawer 1`] = `
           />
         </div>
       </div>
-      <Filter
-        characterLength={9}
-        chevronColor="#808FA3"
-        current="All Roles"
-        dropdownBackgroundColor="#FFFFFF"
-        fontSize=""
-        getFilter={[Function]}
-        items={
-          Array [
-            "All Roles",
-            "Technical Coordinator",
-          ]
-        }
-        search={false}
-        width="400"
-      />
+      <div
+        className="row float-right"
+      >
+        <div
+          className="col-md-6"
+        >
+          <Filter
+            characterLength={9}
+            chevronColor="#808FA3"
+            current="All Roles"
+            dropdownBackgroundColor="#FFFFFF"
+            fontSize=""
+            getFilter={[Function]}
+            items={
+              Array [
+                "All Roles",
+                "Technical Coordinator",
+              ]
+            }
+            search={false}
+            width="400"
+          />
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <CadreMainButton
+            buttonProps={
+              Object {
+                "data-target": "#requestNewTeamMemberModal",
+                "data-toggle": "modal",
+              }
+            }
+            label="NEW REQUEST"
+          />
+        </div>
+      </div>
     </div>
     <div
       className="teamMembers"
@@ -339,6 +405,7 @@ exports[`Application component Show CustomLoader when props is empty 1`] = `<PMl
 
 exports[`Application component renders teams member cards 1`] = `
 <Fragment>
+  <Connect(RequestNewTeamMemberModal) />
   <div
     className="cadre__page managerTeamMembers remove-margin"
   >
@@ -366,22 +433,43 @@ exports[`Application component renders teams member cards 1`] = `
           />
         </div>
       </div>
-      <Filter
-        characterLength={9}
-        chevronColor="#808FA3"
-        current="All Roles"
-        dropdownBackgroundColor="#FFFFFF"
-        fontSize=""
-        getFilter={[Function]}
-        items={
-          Array [
-            "All Roles",
-            "Technical Coordinator",
-          ]
-        }
-        search={false}
-        width="400"
-      />
+      <div
+        className="row float-right"
+      >
+        <div
+          className="col-md-6"
+        >
+          <Filter
+            characterLength={9}
+            chevronColor="#808FA3"
+            current="All Roles"
+            dropdownBackgroundColor="#FFFFFF"
+            fontSize=""
+            getFilter={[Function]}
+            items={
+              Array [
+                "All Roles",
+                "Technical Coordinator",
+              ]
+            }
+            search={false}
+            width="400"
+          />
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <CadreMainButton
+            buttonProps={
+              Object {
+                "data-target": "#requestNewTeamMemberModal",
+                "data-toggle": "modal",
+              }
+            }
+            label="NEW REQUEST"
+          />
+        </div>
+      </div>
     </div>
     <div
       className="teamMembers"
