@@ -1,15 +1,22 @@
 import { connect } from 'react-redux';
 import MyTeam from './MyTeams';
 
-import fetchTeamMembers from '../../../redux/actionCreators/teamManagerActions';
+import fetchTeamMembers, {
+  rollOffAnEngineer
+} from '../../../redux/actionCreators/teamManagerActions';
 
-export const mapStateToProps = ({ teamManagerTeamMembers }) => ({
-  teamManagerTeamMembers
+export const mapStateToProps = ({
+  teamManagerTeamMembers,
+  rollOffEngineerStatus
+}) => ({
+  teamManagerTeamMembers,
+  rollOffEngineerStatus
 });
 
 export default connect(
   mapStateToProps,
   {
-    fetchTeamMembers
+    fetchTeamMembers,
+    rollOffAnEngineer
   }
 )(MyTeam);

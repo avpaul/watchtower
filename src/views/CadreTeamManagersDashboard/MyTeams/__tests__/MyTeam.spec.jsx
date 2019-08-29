@@ -8,8 +8,16 @@ import managerTeamData from '../../../../__mocks__/managerTeamData';
 describe('Application component', () => {
   let wrapper;
   const defaultProps = {
+    rollOffEngineerStatus: {
+      loading: false,
+      data: {
+        fellow_id: 'guhhjkn',
+        message: 'roll off successful'
+      }
+    },
     fetchTeamMembers: jest.fn()
   };
+
   beforeEach(() => {
     wrapper = shallow(<MyTeams {...defaultProps} />);
   });
@@ -69,6 +77,13 @@ describe('Application component', () => {
   it('Should close engineer profile card', () => {
     const button = wrapper.find('.close');
     button.simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('Should access the roll off button', () => {
+    const button = wrapper.find('.confirmRollOffButton');
+    button.simulate('click');
+    const button2 = wrapper.find('.reject-btn');
+    button2.simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -89,6 +89,21 @@
 
 .main-content {
   left: 20%;
+
+  & .show-profile {
+    & > .cadre-main-button {
+      background-color: rgb(230, 23, 23);
+      margin-top: 2.5rem;
+    }
+  }
+
+  & .confirmRollOffButton {
+    background-color: rgb(230, 23, 23);
+  }
+
+  & .text-white {
+    text-align: right;
+  }
 }
 
 /*

@@ -4,6 +4,7 @@ export default {
       projects: [
         {
           name: 'WatchTower',
+          id: 24,
           technologies: [
             {
               name: 'React-JS'
@@ -13,6 +14,7 @@ export default {
             {
               first_name: 'john',
               last_name: 'doe',
+              fellow_id: 1,
               picture: 'https://lorempixel.com',
               cohort: 'NBO-13',
               project_id: 24,
