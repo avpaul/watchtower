@@ -81,7 +81,7 @@ describe('Add Vacancy Modal', () => {
             <button
               type="button"
               data-toggle="modal"
-              data-target="addProjectVacanciesModal"
+              data-target="addVacanciesModal"
             >
               Add Vacancies
             </button>

@@ -48,7 +48,7 @@ class VacanciesDashboard extends Component {
           <CadreMainButton
             buttonProps={{
               'data-toggle': 'modal',
-              'data-target': '#addProjectVacanciesModal',
+              'data-target': '#addVacanciesModal',
               onClick: this.clearProjectVacanciesOnFocus
             }}
             label="ADD VACANCIES"
