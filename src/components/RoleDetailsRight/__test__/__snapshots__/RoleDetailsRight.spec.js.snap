@@ -67,7 +67,7 @@ exports[`should Render Component 1`] = `
     <a
       href=""
       key=""
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <img
         alt="document logo"
@@ -146,7 +146,7 @@ exports[`should Render Component when fellow has not applied 1`] = `
     <a
       href=""
       key=""
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <img
         alt="document logo"

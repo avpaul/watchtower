@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Project role details container map state to props should return props value 1`] = `
+Object {
+  "AllVacantRoles": Array [],
+  "allProjects": Object {
+    "1": Object {},
+  },
+  "singleProject": Object {},
+}
+`;

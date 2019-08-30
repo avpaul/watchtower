@@ -19,9 +19,17 @@ describe('Get certication reducer', () => {
     expect(
       getCertificationReducer(initialState.getCertification, {
         type: types.GET_CERTIFICATION_SUCCESS,
-        data: { name: 'testing' }
+        data: {
+          1: {
+            name: 'testing'
+          }
+        }
       })
-    ).toEqual({ data: { name: 'testing' }, error: null, loading: false });
+    ).toEqual({
+      data: { undefined: { 1: { name: 'testing' } } },
+      error: null,
+      loading: false
+    });
   });
   it('should handle get certification failure', () => {
     expect(

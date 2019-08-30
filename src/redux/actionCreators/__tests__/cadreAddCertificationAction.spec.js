@@ -30,7 +30,7 @@ describe('Create certifications action', () => {
     mock.reset();
   });
 
-  const testAddCertificationsAction = (
+  const testAddCertificationsAction = async (
     expectedResponse,
     apiResponse = [200, { message: 'Success!' }],
     data = {}
@@ -42,7 +42,7 @@ describe('Create certifications action', () => {
       expectedResponse
     ];
 
-    return store.dispatch(addCertification(data)).then(() => {
+    await store.dispatch(addCertification(data)).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toMatchObject(expectedActions);
     });

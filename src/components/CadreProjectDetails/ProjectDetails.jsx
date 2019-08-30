@@ -29,8 +29,8 @@ class ProjectDetails extends Component {
       await getProject(match.params.id);
       const { singleProject } = this.props;
 
-      if (Object.keys(singleProject.data).length) {
-        [projectDetails] = singleProject.data.project;
+      if (Object.keys(singleProject).length) {
+        projectDetails = singleProject;
       }
     }
 

@@ -32,13 +32,16 @@ describe('Project details card tests', () => {
     },
     history: { replace: jest.fn() },
     getProject: {},
+    location: {
+      pathname: '/cadre/projects/1'
+    },
     getAProjectReducer: jest.fn()
   };
 
   const initialState = {
     singleProject: {
       data: {
-        project: [projectDetails]
+        project: projectDetails
       }
     },
     allRoles: {
@@ -96,6 +99,9 @@ describe('Project details card tests', () => {
         params: { id: 1 }
       },
       history: { replace: jest.fn() },
+      location: {
+        pathname: '/cadre/projects/1'
+      },
       getProject: jest.fn()
     };
 

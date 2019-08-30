@@ -5,7 +5,13 @@ Object {
   "certificationApplication": undefined,
   "certificationVacancies": Object {},
   "d1Fellow": undefined,
-  "getCertification": undefined,
+  "getCertification": Object {
+    "data": Object {
+      "1": Object {},
+    },
+    "loading": false,
+  },
   "loading": undefined,
+  "singleCertification": Object {},
 }
 `;

@@ -2,21 +2,34 @@ import initialState from './initialState';
 import * as types from '../constants/cadreVacanciesTypes';
 
 const addNewApplication = (vacancies, newApplication) => {
-  const certificationVacancies = [...vacancies];
-  const currentVacancy = certificationVacancies.find(
-    vacancy =>
-      vacancy.certification.id === newApplication.project_certifications_id &&
-      vacancy.vacancy_details.cycle_id === newApplication.cycle_id
-  );
-
-  currentVacancy.vacancy_details.applications.push(newApplication);
-  return certificationVacancies;
+  const allVacancies = [...vacancies];
+  let currentVacancy;
+  if (newApplication.project_id) {
+    currentVacancy = allVacancies.find(
+      vacancy =>
+        Number(vacancy.project.id) === Number(newApplication.project_id) &&
+        Number(vacancy.vacancy.cycle_id) === Number(newApplication.cycle_id) &&
+        Number(vacancy.role.id) === Number(newApplication.project_role_id)
+    );
+    currentVacancy.applications.push(newApplication);
+  } else {
+    currentVacancy = allVacancies.find(
+      vacancy =>
+        Number(vacancy.certification.id) ===
+          newApplication.project_certifications_id &&
+        Number(vacancy.vacancy_details.cycle_id) ===
+          Number(newApplication.cycle_id)
+    );
+    currentVacancy.vacancy_details.applications.push(newApplication);
+  }
+  return allVacancies;
 };
 
 const cadreVacanciesReducer = (state = initialState.cadreVacancies, action) => {
   switch (action.type) {
     case types.FETCH_CADREVACANCIES_REQUEST:
     case types.CERTIFICATION_APPLICATION_REQUEST:
+    case types.ROLE_APPLICATION_REQUEST:
       return {
         ...state,
         loading: true
@@ -31,6 +44,7 @@ const cadreVacanciesReducer = (state = initialState.cadreVacancies, action) => {
 
     case types.FETCH_CADREVACANCIES_FAILURE:
     case types.CERTIFICATION_APPLICATION_FAILURE:
+    case types.ROLE_APPLICATION_FAILURE:
       return {
         ...state,
         loading: false,
@@ -45,6 +59,18 @@ const cadreVacanciesReducer = (state = initialState.cadreVacancies, action) => {
           certificationVacancies: addNewApplication(
             state.data.certificationVacancies,
             action.data
+          )
+        },
+        loading: false
+      };
+    case types.ROLE_APPLICATION_SUCCESS:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          projectVacancies: addNewApplication(
+            state.data.projectVacancies,
+            action.data.application
           )
         },
         loading: false

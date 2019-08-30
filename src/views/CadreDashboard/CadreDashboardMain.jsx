@@ -7,13 +7,13 @@ import { EngineerBioConnected } from '../../components/EngineerBio';
 import ProjectSummary from '../../components/EngineerProjectSummaryCard/EngineerProjectSummaryCard';
 import EngineerDashboardCard from '../../components/EngineerDashboardCard';
 import EngineerVacancies from '../../components/EngineerVacancies';
-import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
+import { fetchAllVacancies } from '../../redux/actionCreators/getCadreVacanciesAction';
 import WelcomeMessage from '../../components/WelcomeMessage';
-import PMLoader from '../../components/CustomLoader/PMLoader';
 import dateCountDown from '../../utils/dateCountDown';
 
 import './index.scss';
 import './CadreDashboard.scss';
+import Loader from '../../components/Loader/Loader';
 
 export class D1FellowDashboardMain extends Component {
   constructor(props) {
@@ -27,9 +27,19 @@ export class D1FellowDashboardMain extends Component {
   }
 
   componentDidMount() {
-    const { getD1FellowProfileData } = this.props;
-    getD1FellowProfileData();
+    const { getCadreVacancies } = this.props;
+    const { vacanciesAreNotAvailable } = this;
+    if (vacanciesAreNotAvailable()) {
+      getCadreVacancies();
+    }
   }
+
+  vacanciesAreNotAvailable = () => {
+    const {
+      cadreVacancies: { data }
+    } = this.props;
+    return !!Object.keys(data).length < 1;
+  };
 
   fuzzySearchVacancies = (isProjectVacancy = true, searchWord) => {
     const { cadreVacancies } = this.props;
@@ -89,7 +99,8 @@ export class D1FellowDashboardMain extends Component {
   };
 
   render() {
-    const { profile, loading, cadreVacancies, d1Engineer } = this.props;
+    const { profile, cadreVacancies, d1Engineer } = this.props;
+    const { loading } = cadreVacancies;
     const { searchWord } = this.state;
     const [vacanciesToRender, certificationsToRender] = this.vancancyHandler();
 
@@ -98,25 +109,28 @@ export class D1FellowDashboardMain extends Component {
 
     return (
       <Fragment>
-        {loading ? (
-          <PMLoader />
-        ) : (
-          <div className="cadre-content">
-            <div className="cadre-side-card-dashboard">
-              <CadreSideCard />
+        <div className="cadre-content">
+          <div className="cadre-side-card-dashboard">
+            <CadreSideCard />
+          </div>
+          <div className="dashboard-wrapper">
+            <div className="dashboard-greeting">
+              <WelcomeMessage {...this.props} />
             </div>
-            <div className="dashboard-wrapper">
-              <div className="dashboard-greeting">
-                <WelcomeMessage {...this.props} />
-              </div>
-              <div className="fellow-dashboard-main">
-                <EngineerBioConnected {...this.props} />
-                <ProjectSummary profile={profile} />
-                <EngineerDashboardCard
-                  header="Vacancies"
-                  handleSearch={this.handleSearchChange}
-                  vacancyLength={vacancyLength}
-                >
+            <div className="fellow-dashboard-main">
+              <EngineerBioConnected {...this.props} />
+              <ProjectSummary profile={profile} />
+              <EngineerDashboardCard
+                header="Vacancies"
+                handleSearch={this.handleSearchChange}
+                vacancyLength={vacancyLength}
+                loading
+              >
+                {loading ? (
+                  <div className="d-flex justify-content-center">
+                    <Loader size="small" />
+                  </div>
+                ) : (
                   <EngineerVacancies
                     cadreVacancies={cadreVacancies}
                     vacanciesArray={vacanciesToRender}
@@ -124,11 +138,11 @@ export class D1FellowDashboardMain extends Component {
                     searchWord={searchWord}
                     loggedInUser={d1Engineer}
                   />
-                </EngineerDashboardCard>
-              </div>
+                )}
+              </EngineerDashboardCard>
             </div>
           </div>
-        )}
+        </div>
       </Fragment>
     );
   }
@@ -138,8 +152,18 @@ D1FellowDashboardMain.propTypes = {
   getD1FellowProfileData: PropTypes.func.isRequired,
   profile: PropTypes.shape().isRequired,
   loading: PropTypes.bool.isRequired,
-  cadreVacancies: PropTypes.shape().isRequired,
-  d1Engineer: PropTypes.instanceOf(Object).isRequired
+  cadreVacancies: PropTypes.shape(),
+  d1Engineer: PropTypes.instanceOf(Object).isRequired,
+  getCadreVacancies: PropTypes.func.isRequired
+};
+
+D1FellowDashboardMain.defaultProps = {
+  cadreVacancies: {
+    data: {
+      projectVacancies: [],
+      certificationVacancies: []
+    }
+  }
 };
 
 const mapStateToProps = state => ({
@@ -149,7 +173,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getD1FellowProfileData: () => dispatch(getD1FellowProfileDataAction())
+  getCadreVacancies: () => dispatch(fetchAllVacancies())
 });
 
 export default connect(

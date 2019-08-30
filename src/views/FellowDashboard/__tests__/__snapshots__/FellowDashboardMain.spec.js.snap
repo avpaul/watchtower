@@ -5,19 +5,7 @@ exports[`Tests FellowDashboardMain component renders correctly 1`] = `
   className="page-content container-fluid"
 >
   <Connect(FellowBio)
-    getD1FellowProfileData={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      }
-    }
+    getD1FellowProfileData={[MockFunction]}
     getFellowProfileData={
       [MockFunction] {
         "calls": Array [

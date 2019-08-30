@@ -7,25 +7,18 @@ describe('', () => {
   const defaultProps = {
     match: {
       params: {
-        roleId: 1
+        roleId: 1,
+        projectId: 1
       }
     },
     history: {},
-    singleProject: {
-      data: {}
-    },
-    AllVacantRoles: [
-      {
-        project: {},
-        role: {
-          id: 1,
-          name: ''
-        },
-        vacancy: {
-          cycle_id: 1
-        }
-      }
-    ]
+    singleProject: {},
+    AllVacantRoles: [],
+    fetchAllVacancies: jest.fn(),
+    getAProject: jest.fn(),
+    location: {
+      pathname: '/cadre/projects/1'
+    }
   };
 
   it('should Render Component', () => {
@@ -35,15 +28,20 @@ describe('', () => {
 
   it('should Render child Components', () => {
     defaultProps.singleProject = {
-      data: {
-        project: [
-          {
-            logo: '',
-            type: 'test'
-          }
-        ]
-      }
+      logo: '',
+      type: 'test'
     };
+    defaultProps.AllVacantRoles = [
+      {
+        role: { id: 1 },
+        vacancy: {
+          cycle_id: 1
+        },
+        project: {
+          id: 1
+        }
+      }
+    ];
     const component = shallow(<ProjectRoleDetails {...defaultProps} />);
     expect(component).toMatchSnapshot();
   });

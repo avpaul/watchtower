@@ -6,22 +6,20 @@ jest.useFakeTimers();
 
 describe('', () => {
   const defaultProps = {
-    projectInfo: [
-      {
-        logo: 'jj',
-        type: 'test',
-        manager: {
-          name: '',
-          email: ''
-        },
-        technologies: [
-          {
-            id: '',
-            name: ''
-          }
-        ]
-      }
-    ],
+    projectInfo: {
+      logo: 'jj',
+      type: 'test',
+      manager: {
+        name: '',
+        email: ''
+      },
+      technologies: [
+        {
+          id: '',
+          name: ''
+        }
+      ]
+    },
     roleInfo: {
       available_slots: 1,
       role: {
@@ -41,9 +39,9 @@ describe('', () => {
   });
 
   it('should find the div element', () => {
-    defaultProps.projectInfo[0].logo = '';
+    defaultProps.projectInfo.logo = '';
     defaultProps.roleInfo.available_slots = 2;
-    delete defaultProps.projectInfo[0].technologies;
+    delete defaultProps.projectInfo.technologies;
     const component = shallow(<RoleDetailsLeft {...defaultProps} />);
     const loader = component.find('div');
     expect(loader.length).toEqual(6);

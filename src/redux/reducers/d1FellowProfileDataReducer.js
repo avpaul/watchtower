@@ -1,27 +1,26 @@
 import initialState from './initialState';
-import {
-  LOAD_D1_FELLOW_PROFILE_DATA_REQUEST,
-  LOAD_D1_FELLOW_PROFILE_DATA_SUCCESS,
-  LOAD_D1_FELLOW_PROFILE_DATA_FAILURE
-} from '../constants/d1FellowProfileDataTypes';
+import * as types from '../constants/d1FellowProfileDataTypes';
 
 const d1FellowBioReducer = (state = initialState.fellow, action) => {
   switch (action.type) {
-    case LOAD_D1_FELLOW_PROFILE_DATA_REQUEST:
+    case types.LOAD_D1_FELLOW_PROFILE_DATA_REQUEST:
+    case types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST:
       return {
         ...state,
         loading: true,
         error: null
       };
 
-    case LOAD_D1_FELLOW_PROFILE_DATA_SUCCESS:
+    case types.LOAD_D1_FELLOW_PROFILE_DATA_SUCCESS:
+    case types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_SUCCESS:
       return {
         ...state,
         loading: false,
         fellow: action.fellow
       };
 
-    case LOAD_D1_FELLOW_PROFILE_DATA_FAILURE:
+    case types.LOAD_D1_FELLOW_PROFILE_DATA_FAILURE:
+    case types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_FAILURE:
       return {
         ...state,
         loading: false,

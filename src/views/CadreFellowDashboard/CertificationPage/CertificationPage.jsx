@@ -15,12 +15,26 @@ class CertificationPage extends Component {
     userHasApplied: false
   };
 
-  async componentDidMount() {
+  componentDidMount() {
     const {
       getCertificationAction,
-      match: { params }
+      match: { params },
+      singleCertification,
+      fetchAllVacancies,
+      certificationVacancies
     } = this.props;
-    await getCertificationAction(params.certificationId);
+
+    const { vacanciesAreNotAvailable } = this;
+    if (vacanciesAreNotAvailable()) {
+      fetchAllVacancies();
+    }
+    if (Object.keys(singleCertification).length === 0) {
+      getCertificationAction(params.certificationId);
+    }
+    return (
+      certificationVacancies &&
+      this.checkIfUserHasApplied(certificationVacancies)
+    );
   }
 
   componentDidUpdate(prevProps) {
@@ -37,6 +51,13 @@ class CertificationPage extends Component {
       this.checkIfUserHasApplied(certificationVacancies);
     }
   }
+
+  vacanciesAreNotAvailable = () => {
+    const { certificationVacancies } = this.props;
+    return (
+      !certificationVacancies || Object.keys(certificationVacancies).length < 1
+    );
+  };
 
   renderBackNavigation = () => {
     const { history } = this.props;
@@ -130,9 +151,7 @@ class CertificationPage extends Component {
   renderSellYourselfModal = () => {
     const {
       applyForCertification,
-      getCertification: {
-        data: { id, name }
-      },
+      singleCertification: { id, name },
       certificationVacancies,
       match: { params },
       loading
@@ -189,7 +208,8 @@ class CertificationPage extends Component {
 
   render() {
     const {
-      getCertification: { loading, data }
+      getCertification: { loading },
+      singleCertification
     } = this.props;
     const {
       modals: { applicationModal },
@@ -201,7 +221,9 @@ class CertificationPage extends Component {
         <div className="certification-page">
           <div className="container">
             {this.renderBackNavigation()}
-            {!loading && this.renderCard(data, userHasApplied)}
+            {!loading &&
+              singleCertification &&
+              this.renderCard(singleCertification, userHasApplied)}
             {applicationModal && this.renderSellYourselfModal()}
           </div>
         </div>
@@ -220,7 +242,9 @@ CertificationPage.propTypes = {
   d1Engineer: PropTypes.instanceOf(Object).isRequired,
   getCertification: PropTypes.instanceOf(Object).isRequired,
   certificationVacancies: PropTypes.instanceOf(array).isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  singleCertification: PropTypes.instanceOf(Object).isRequired,
+  fetchAllVacancies: PropTypes.func.isRequired
 };
 
 export default CertificationPage;

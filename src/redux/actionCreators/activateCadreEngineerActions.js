@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import * as types from '../constants/cadreEngineersTypes';
+import * as types from '../constants/d1FellowProfileDataTypes';
 import errorHandler from '../../services/errorHandler';
 
 const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
@@ -9,9 +9,9 @@ export const activateCadreEngineerAccountRequest = () => ({
   type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST
 });
 
-export const activateCadreEngineerAccountSuccess = engineer => ({
+export const activateCadreEngineerAccountSuccess = fellow => ({
   type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_SUCCESS,
-  engineer
+  fellow
 });
 
 export const activateCadreEngineerAccountFailure = error => ({

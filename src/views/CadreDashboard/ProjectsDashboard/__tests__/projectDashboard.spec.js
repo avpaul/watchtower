@@ -18,7 +18,8 @@ describe('Projects Dashboard', () => {
     location: {
       projectDetails: {
         name: 'Watch Tower'
-      }
+      },
+      pathname: '/cadre/projects/1'
     }
   };
 

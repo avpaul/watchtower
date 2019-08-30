@@ -100,29 +100,7 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
               "id": 1,
             }
           }
-          getD1FellowProfileData={
-            [MockFunction] {
-              "calls": Array [
-                Array [],
-                Array [],
-                Array [],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          getD1FellowProfileData={[MockFunction]}
           profile={
             Object {
               "project": Object {
@@ -234,29 +212,7 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
               "id": 1,
             }
           }
-          getD1FellowProfileData={
-            [MockFunction] {
-              "calls": Array [
-                Array [],
-                Array [],
-                Array [],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          getD1FellowProfileData={[MockFunction]}
           profile={
             Object {
               "project": Object {
@@ -302,6 +258,7 @@ exports[`Tests the CadreDashboard component should render properly 1`] = `
         <EngineerDashboardCard
           handleSearch={[Function]}
           header="Vacancies"
+          loading={true}
           vacancyLength={1}
         >
           <EngineerVacancies

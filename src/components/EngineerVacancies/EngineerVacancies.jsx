@@ -98,7 +98,7 @@ class EngineerVacancies extends Component {
 
     const { error, data } = cadreVacancies;
     return (
-      <div>
+      <div className="w-100">
         {error
           ? this.displayNoVacancyDetails(
               vacanciesClass,

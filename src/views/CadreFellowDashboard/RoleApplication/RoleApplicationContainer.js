@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import RoleApplication from './RoleApplication';
 import applyForRole from '../../../redux/actionCreators/applyForRoleActions';
 
-const mapStateToProps = ({ apply }) => ({
-  applications: apply
+const mapStateToProps = ({ cadreVacancies }) => ({
+  applications: cadreVacancies
 });
 
 export default connect(
