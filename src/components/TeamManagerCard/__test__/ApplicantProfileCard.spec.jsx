@@ -2,7 +2,6 @@ import React from 'react';
 import { mount } from 'enzyme';
 import ApplicantProfileCard from '../ApplicantProfileCard';
 
-
 describe('tests the Profile card', () => {
   const props = {
     firstName: 'Cristian',
@@ -10,7 +9,7 @@ describe('tests the Profile card', () => {
     picture: 'https://',
     roleName: '',
     projectId: '',
-    applicationReason: '',
+    applicationReason: ''
   };
 
   it('renders correctly', () => {

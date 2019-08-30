@@ -57,7 +57,8 @@ const applications = {
             'Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.',
           deleted_at: null,
           duration: 3
-        }
+        },
+        vacancy: { closing_date: '2019-08-27 09:31:14' }
       }
     ]
   },

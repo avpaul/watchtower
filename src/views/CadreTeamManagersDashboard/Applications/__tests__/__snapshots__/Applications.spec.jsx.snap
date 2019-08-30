@@ -65,6 +65,9 @@ exports[`Application component should handle acceptance button click to show acc
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           },
         ],
       },
@@ -310,14 +313,19 @@ exports[`Application component should handle acceptance button click to show acc
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           }
         }
       >
         <ApplicantProfileCard
+          VacancyCloseCountdown="close today"
           acceptApplicationHandler={[Function]}
           applicationId={13}
           applicationReason="Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat."
           firstName="Wasibani"
+          isVacancyClosed={true}
           lastName="Roy"
           picture="https://lorempixel.com/100/100/people/?23475"
           projectId="Omnis voluptatem quos."
@@ -349,6 +357,7 @@ exports[`Application component should handle acceptance button click to show acc
               <button
                 className="applicant_button"
                 data-test="accept-button"
+                disabled={false}
                 onClick={[Function]}
                 type="button"
               >
@@ -612,6 +621,9 @@ exports[`Application component should handle filtering after clicking 1`] = `
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           },
         ],
       },
@@ -853,6 +865,9 @@ exports[`Application component should handle rejection button click to show reje
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           },
         ],
       },
@@ -1103,14 +1118,19 @@ exports[`Application component should handle rejection button click to show reje
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           }
         }
       >
         <ApplicantProfileCard
+          VacancyCloseCountdown="close today"
           acceptApplicationHandler={[Function]}
           applicationId={13}
           applicationReason="Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat."
           firstName="Wasibani"
+          isVacancyClosed={true}
           lastName="Roy"
           picture="https://lorempixel.com/100/100/people/?23475"
           projectId="Omnis voluptatem quos."
@@ -1142,6 +1162,7 @@ exports[`Application component should handle rejection button click to show reje
               <button
                 className="applicant_button"
                 data-test="accept-button"
+                disabled={false}
                 onClick={[Function]}
                 type="button"
               >
@@ -1344,6 +1365,9 @@ exports[`Application component should render correctly 1`] = `
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           },
         ],
       },
@@ -1543,6 +1567,9 @@ exports[`Application component should show confirmationModal 1`] = `
             "selected": false,
             "status_email_sent": false,
             "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
           },
         ],
       },
