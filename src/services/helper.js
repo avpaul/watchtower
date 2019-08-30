@@ -10,6 +10,7 @@ export const splitDate = (date = '2018-10-29 14:34:03') => {
  * @function {@param}
  */
 export const getDate = (date = '2018-10-29 14:34:03') => {
+  if (!date) return 'N/A';
   const fullDate = date.split(' ', 1);
   const splittedDate = fullDate[0].split('-');
   const year = splittedDate[0];
