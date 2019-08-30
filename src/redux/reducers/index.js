@@ -67,8 +67,11 @@ import deleteCertification from './deleteCertificationReducer';
 import createCertificactionVacancies from './createCertificationVacanciesReducer';
 import applyForRoleReducer from './applyForRoleReducer';
 import teamManagerProjectApplicationsReducer from './cadreTeamManager/applicationsReducer';
-import teamManagerTeamReducer from './teamManagerReducer';
 import newTeamMemberRequestReducer from './cadreTeamManager/newTeamMemberRequestReducer';
+import teamManagerTeamReducer, {
+  rollOffTeamMemberReducer,
+  removeRolledOffEngineerCardReducer
+} from './teamManagerReducer';
 
 const rootReducer = combineReducers({
   emsDashboard: emsDashboardReducer,
@@ -133,7 +136,11 @@ const rootReducer = combineReducers({
   teamManagerTeamMembers: teamManagerTeamReducer,
   cadreVacanciesWithNoCycleId: fetchVacanciesWithNotCycleIdReducer,
   certifiedEngineers: fetchCertifiedEngineers,
-  newTeamMemberRequest: newTeamMemberRequestReducer
+  newTeamMemberRequest: newTeamMemberRequestReducer,
+  rollOffEngineerStatus: rollOffTeamMemberReducer,
+  removeRolledOffEngineerCardReducer: removeRolledOffEngineerCardReducer(
+    teamManagerTeamReducer
+  )
 });
 
 export default rootReducer;

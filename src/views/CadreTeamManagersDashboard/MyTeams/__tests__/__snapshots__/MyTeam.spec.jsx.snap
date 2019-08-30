@@ -126,8 +126,203 @@ exports[`Application component Render component when no data 1`] = `
     </span>
     <EngineerDetails
       fellow={Object {}}
+      rollOffHandler={[Function]}
     />
   </div>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    showBtn={false}
+    size="small"
+    title={null}
+  >
+    <div>
+      Are you sure you want to roll off 
+       
+      ?
+    </div>
+    <div
+      className="text-white mt-5"
+    >
+      <button
+        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Roll Off
+         
+      </button>
+      <button
+        className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Cancel
+         
+      </button>
+    </div>
+  </Modal>
+</Fragment>
+`;
+
+exports[`Application component Should access the roll off button 1`] = `
+<Fragment>
+  <Connect(RequestNewTeamMemberModal) />
+  <div
+    className="cadre__page managerTeamMembers remove-margin"
+  >
+    <div
+      className="teamTitle"
+    >
+      <div>
+        <h1>
+          My Teams
+        </h1>
+        <div
+          className="technologies"
+        >
+          <StackRectangle
+            key="weak-key-0"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-1"
+            stackName="React-JS"
+          />
+          <StackRectangle
+            key="weak-key-2"
+            stackName="React-JS"
+          />
+        </div>
+      </div>
+      <div
+        className="row float-right"
+      >
+        <div
+          className="col-md-6"
+        >
+          <Filter
+            characterLength={9}
+            chevronColor="#808FA3"
+            current="All Roles"
+            dropdownBackgroundColor="#FFFFFF"
+            fontSize=""
+            getFilter={[Function]}
+            items={
+              Array [
+                "All Roles",
+                "Technical Coordinator",
+              ]
+            }
+            search={false}
+            width="400"
+          />
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <CadreMainButton
+            buttonProps={
+              Object {
+                "data-target": "#requestNewTeamMemberModal",
+                "data-toggle": "modal",
+              }
+            }
+            label="NEW REQUEST"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="teamMembers"
+    >
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-55"
+        name="john doe"
+        project="Travella"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-56"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+      <TeamCard
+        cohort="NBO-13"
+        date="20/11/2019"
+        dateType=""
+        event={[Function]}
+        image="https://lorempixel.com"
+        key="weak-key-57"
+        name="john doe"
+        project="WatchTower"
+        role="Technical Coordinator"
+      />
+    </div>
+  </div>
+  <div
+    className="bio-card no-radius hide-profile"
+  >
+    <span
+      aria-hidden="true"
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <EngineerDetails
+      fellow={Object {}}
+      rollOffHandler={[Function]}
+    />
+  </div>
+  <Modal
+    handleClose={[Function]}
+    show={true}
+    showBtn={false}
+    size="small"
+    title={null}
+  >
+    <div>
+      Are you sure you want to roll off 
+       
+      ?
+    </div>
+    <div
+      className="text-white mt-5"
+    >
+      <button
+        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Roll Off
+         
+      </button>
+      <button
+        className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Cancel
+         
+      </button>
+    </div>
+  </Modal>
 </Fragment>
 `;
 
@@ -249,8 +444,44 @@ exports[`Application component Should close engineer profile card 1`] = `
     </span>
     <EngineerDetails
       fellow={Object {}}
+      rollOffHandler={[Function]}
     />
   </div>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    showBtn={false}
+    size="small"
+    title={null}
+  >
+    <div>
+      Are you sure you want to roll off 
+       
+      ?
+    </div>
+    <div
+      className="text-white mt-5"
+    >
+      <button
+        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Roll Off
+         
+      </button>
+      <button
+        className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Cancel
+         
+      </button>
+    </div>
+  </Modal>
 </Fragment>
 `;
 
@@ -396,8 +627,46 @@ exports[`Application component Should open the drawer 1`] = `
           ],
         }
       }
+      rollOffHandler={[Function]}
     />
   </div>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    showBtn={false}
+    size="small"
+    title={null}
+  >
+    <div>
+      Are you sure you want to roll off 
+      john
+       
+      doe
+      ?
+    </div>
+    <div
+      className="text-white mt-5"
+    >
+      <button
+        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Roll Off
+         
+      </button>
+      <button
+        className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Cancel
+         
+      </button>
+    </div>
+  </Modal>
 </Fragment>
 `;
 
@@ -521,7 +790,43 @@ exports[`Application component renders teams member cards 1`] = `
     </span>
     <EngineerDetails
       fellow={Object {}}
+      rollOffHandler={[Function]}
     />
   </div>
+  <Modal
+    handleClose={[Function]}
+    show={false}
+    showBtn={false}
+    size="small"
+    title={null}
+  >
+    <div>
+      Are you sure you want to roll off 
+       
+      ?
+    </div>
+    <div
+      className="text-white mt-5"
+    >
+      <button
+        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Roll Off
+         
+      </button>
+      <button
+        className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+        onClick={[Function]}
+        type="button"
+      >
+         
+        Cancel
+         
+      </button>
+    </div>
+  </Modal>
 </Fragment>
 `;

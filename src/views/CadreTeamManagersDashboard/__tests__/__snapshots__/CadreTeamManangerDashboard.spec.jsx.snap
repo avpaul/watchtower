@@ -367,6 +367,14 @@ exports[`Cadre Team Manager Dashboard should render the team manager dashboard 1
                               "url": "/cadre/myteams",
                             }
                           }
+                          rollOffAnEngineer={[Function]}
+                          rollOffEngineerStatus={
+                            Object {
+                              "data": Array [],
+                              "error": null,
+                              "loading": false,
+                            }
+                          }
                           teamManagerTeamMembers={
                             Object {
                               "data": Array [],

@@ -238,5 +238,6 @@ export default {
   },
   teamManagerTeamMembers: genericAPIStateArray,
   cadreVacanciesWithNoCycleId: genericAPIStateObject,
-  newTeamMemberRequest: genericAPIStateObject
+  newTeamMemberRequest: genericAPIStateObject,
+  rollOffEngineerStatus: genericAPIStateArray
 };

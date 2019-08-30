@@ -8,19 +8,27 @@ import CustomLoader from '../../../components/CustomLoader/PMLoader';
 import FilterDropdown from '../../../components/FilterDropdown';
 import ProfileContainer from '../../../components/EngineerBio/ProfileContainer';
 import Placeholder from '../Placeholder/Placeholder';
+import Modal from '../../../components/LargeModal/LargeModal';
+import Loader from '../../../components/Loader/Loader';
 import managerTeamData from '../../../__mocks__/managerTeamData';
 import RequestNewTeamMemberModal from './RequestNewTeamMemberModal';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
-const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
+const MyTeam = ({
+  fetchTeamMembers,
+  teamManagerTeamMembers,
+  rollOffAnEngineer,
+  rollOffEngineerStatus
+}) => {
   const [filterRole, setFilterRole] = useState('All Roles');
-  useEffect(() => {
-    fetchTeamMembers();
-    // eslint-disable-next-line
-  }, []);
-
   const [isOpen, setIsOpen] = useState(false);
   const [fellow, setFellow] = useState({});
+  const [rollOffModalIsOpen, setRollOffModalIsOpen] = useState(false);
+  const [rollingOff, setRollingOff] = useState(false);
+
+  const toggleRollOffModal = () => {
+    setRollOffModalIsOpen(!rollOffModalIsOpen);
+  };
 
   const openDrawer = () => {
     setIsOpen(true);
@@ -29,6 +37,19 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
   const closeDrawer = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    fetchTeamMembers();
+    if (
+      rollingOff &&
+      rollOffEngineerStatus.data.message === 'roll off successful'
+    ) {
+      closeDrawer();
+      toggleRollOffModal();
+      setRollingOff(false);
+    }
+    // eslint-disable-next-line
+  }, [rollOffEngineerStatus.data.fellow_id]);
 
   const getTeamData = data =>
     data.map(project =>
@@ -128,6 +149,7 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
     });
     return roles;
   };
+
   const profileCard = () => (
     <div
       className={`bio-card no-radius ${
@@ -137,8 +159,50 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
       <span className="close" aria-hidden="true" onClick={closeDrawer}>
         &times;
       </span>
-      <ProfileContainer fellow={fellow} />
+      <ProfileContainer fellow={fellow} rollOffHandler={toggleRollOffModal} />
     </div>
+  );
+
+  const handleRollOff = () => {
+    setRollingOff(true);
+    rollOffAnEngineer(fellow.fellow_id);
+  };
+  const renderConfirnRollOffModal = () => (
+    <Modal
+      handleClose={toggleRollOffModal}
+      show={rollOffModalIsOpen}
+      showBtn={false}
+      size="small"
+    >
+      {rollOffEngineerStatus.loading ? (
+        <Loader size="small" />
+      ) : (
+        <React.Fragment>
+          <div>
+            Are you sure you want to roll off {fellow.first_name}{' '}
+            {fellow.last_name}?
+          </div>
+          <div className="text-white mt-5">
+            <button
+              type="button"
+              onClick={handleRollOff}
+              className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+            >
+              {' '}
+              Roll Off{' '}
+            </button>
+            <button
+              type="button"
+              onClick={toggleRollOffModal}
+              className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+            >
+              {' '}
+              Cancel{' '}
+            </button>
+          </div>
+        </React.Fragment>
+      )}
+    </Modal>
   );
 
   const renderComponents = () => {
@@ -184,6 +248,7 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
             {mapTeamCards(teamManagerTeamMembers.data[0].projects)}
           </div>
           {profileCard()}
+          {renderConfirnRollOffModal()}
         </Fragment>
       );
     }
@@ -198,13 +263,23 @@ const MyTeam = ({ fetchTeamMembers, teamManagerTeamMembers }) => {
 };
 
 MyTeam.defaultProps = {
-  teamManagerTeamMembers: managerTeamData
+  teamManagerTeamMembers: managerTeamData,
+  rollOffEngineerStatus: {
+    loading: false,
+    data: {
+      fellow_id: 'jghferhbj'
+    }
+  },
+  rollOffAnEngineer: () => ''
+  // fetchTeamMembers: () => ''
 };
 
 MyTeam.propTypes = {
+  history: PropTypes.shape({}).isRequired,
   fetchTeamMembers: PropTypes.func.isRequired,
   teamManagerTeamMembers: PropTypes.shape(),
-  history: PropTypes.shape({}).isRequired
+  rollOffAnEngineer: PropTypes.func,
+  rollOffEngineerStatus: PropTypes.shape()
 };
 
 export default MyTeam;
