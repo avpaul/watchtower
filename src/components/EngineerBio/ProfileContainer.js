@@ -4,7 +4,7 @@ import ProfileCard from './profileCard';
 import ProjectCards from './ProjectCards';
 import Button from '../Buttons/CadreMainButton';
 
-const EngineerDetails = ({ fellow, rollOffHandler }) => (
+const EngineerDetails = ({ fellow, rollOffHandler, view }) => (
   <React.Fragment>
     <ProfileCard
       firstName={fellow.first_name}
@@ -27,16 +27,25 @@ const EngineerDetails = ({ fellow, rollOffHandler }) => (
       projectName={fellow.sims_project}
       technologies={fellow.sims_project_technology}
     />
-    <Button
-      buttonProps={{ onClick: rollOffHandler }}
-      label="Roll Off Engineer"
-    />
+    {view === 'teamManager' ? (
+      <Button
+        buttonProps={{ onClick: rollOffHandler }}
+        label="Roll Off Engineer"
+      />
+    ) : (
+      ''
+    )}
   </React.Fragment>
 );
 
+EngineerDetails.defaultProps = {
+  view: ''
+};
+
 EngineerDetails.propTypes = {
   fellow: PropTypes.instanceOf(Object).isRequired,
-  rollOffHandler: PropTypes.func.isRequired
+  rollOffHandler: PropTypes.func.isRequired,
+  view: PropTypes.string
 };
 
 export default EngineerDetails;
