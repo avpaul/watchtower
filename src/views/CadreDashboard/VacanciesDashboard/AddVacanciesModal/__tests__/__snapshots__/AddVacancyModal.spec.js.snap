@@ -18,7 +18,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
   }
   handleClose={[Function]}
   handleSubmit={[Function]}
-  id="addProjectVacanciesModal"
+  id="addVacanciesModal"
   size=""
   submitLoading={false}
   success={false}
@@ -270,7 +270,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -645,7 +645,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -1008,7 +1008,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -1373,7 +1373,7 @@ exports[`Add Vacancy Modal renders correctly 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -1577,7 +1577,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
   }
   handleClose={[Function]}
   handleSubmit={[Function]}
-  id="addProjectVacanciesModal"
+  id="addVacanciesModal"
   size=""
   submitLoading={false}
   success={false}
@@ -1849,7 +1849,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -2228,7 +2228,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -2603,7 +2603,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}
@@ -2980,7 +2980,7 @@ exports[`Add Vacancy Modal renders correctly with no projects and roles 1`] = `
               }
               handleClose={[Function]}
               handleSubmit={[Function]}
-              id="addProjectVacanciesModal"
+              id="addVacanciesModal"
               size=""
               submitLoading={false}
               success={false}

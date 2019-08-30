@@ -610,7 +610,7 @@ class AddVacanciesModal extends Component {
 
     return (
       <GenericModal
-        id="addProjectVacanciesModal"
+        id="addVacanciesModal"
         title={this.getModelTitle(editMode, vacancyType)}
         successMessage={message}
         success={success}
