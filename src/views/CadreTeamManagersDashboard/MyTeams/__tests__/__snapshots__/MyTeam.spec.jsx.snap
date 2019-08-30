@@ -127,6 +127,7 @@ exports[`Application component Render component when no data 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -286,6 +287,7 @@ exports[`Application component Should access the roll off button 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -445,6 +447,7 @@ exports[`Application component Should close engineer profile card 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -628,6 +631,7 @@ exports[`Application component Should open the drawer 1`] = `
         }
       }
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal
@@ -791,6 +795,7 @@ exports[`Application component renders teams member cards 1`] = `
     <EngineerDetails
       fellow={Object {}}
       rollOffHandler={[Function]}
+      view="teamManager"
     />
   </div>
   <Modal

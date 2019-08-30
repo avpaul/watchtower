@@ -159,7 +159,11 @@ const MyTeam = ({
       <span className="close" aria-hidden="true" onClick={closeDrawer}>
         &times;
       </span>
-      <ProfileContainer fellow={fellow} rollOffHandler={toggleRollOffModal} />
+      <ProfileContainer
+        fellow={fellow}
+        rollOffHandler={toggleRollOffModal}
+        view="teamManager"
+      />
     </div>
   );
 
@@ -271,7 +275,6 @@ MyTeam.defaultProps = {
     }
   },
   rollOffAnEngineer: () => ''
-  // fetchTeamMembers: () => ''
 };
 
 MyTeam.propTypes = {
