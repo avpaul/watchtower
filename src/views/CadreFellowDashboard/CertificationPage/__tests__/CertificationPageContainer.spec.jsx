@@ -21,4 +21,22 @@ describe('Test the certification container', () => {
       )
     ).toMatchSnapshot();
   });
+  it('map state to props should return empty object on single certification when certification data is empty', () => {
+    expect(
+      mapStateToProps(
+        {
+          getCertification: {
+            loading: false,
+            data: {}
+          },
+          cadreVacancies: {
+            data: {
+              certificationVacancies: {}
+            }
+          }
+        },
+        { location: { pathname: '/dashboard/certifications/1' } }
+      )
+    ).toMatchSnapshot();
+  });
 });

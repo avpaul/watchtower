@@ -117,12 +117,9 @@ exports[`should Render child Components 1`] = `
     }
     roleInfo={
       Object {
-<<<<<<< HEAD
         "project": Object {
           "id": 1,
         },
-=======
->>>>>>> TOWER-165(engineers): reduce load time on application
         "role": Object {
           "id": 1,
         },

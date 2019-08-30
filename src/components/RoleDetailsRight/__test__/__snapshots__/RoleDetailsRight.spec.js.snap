@@ -27,11 +27,11 @@ exports[`should Render Component 1`] = `
       className="headingRight"
     >
       <button
-        data-target="#applyForRoleModal"
-        data-toggle="modal"
+        disabled={true}
+        id="buttonDisabled"
         type="button"
       >
-        APPLY FOR THIS ROLE
+        ALREADY APPLIED
       </button>
       <div
         className="vacancy__count"
