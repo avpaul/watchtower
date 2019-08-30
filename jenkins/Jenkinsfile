@@ -91,7 +91,7 @@ spec:
                     export REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_EM_EMAIL
                     export REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL=$STAGING_REACT_APP_DEFAULT_WATCHTOWER_SIMULATIONS_LEAD_EMAIL
                     export REACT_APP_GOOGLE_ANALYTICS_ID="--"
-                    export REACT_APP_AMPLITUDE_ANALYTICS_ID="--"
+                    export REACT_APP_AMPLITUDE_ANALYTICS_ID="$AMPLITUDE_ANALYTICS_ID"
                     yarn build
                   """
                   }
