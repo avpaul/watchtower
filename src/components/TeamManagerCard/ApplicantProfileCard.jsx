@@ -13,9 +13,13 @@ const ApplicantProfileCard = ({
   acceptApplicationHandler,
   applicationId,
   isVacancyClosed,
-  VacancyCloseCountdown
+  VacancyCloseCountdown,
+  hideDrawer
 }) => (
   <div className="applicant">
+    <span className="closeApp" aria-hidden="true" onClick={() => hideDrawer()}>
+      &times;
+    </span>
     <div className="applicant_profile_card_details">
       <img
         src={
@@ -63,7 +67,8 @@ ApplicantProfileCard.propTypes = {
   acceptApplicationHandler: PropTypes.func.isRequired,
   applicationId: PropTypes.number.isRequired,
   isVacancyClosed: PropTypes.bool.isRequired,
-  VacancyCloseCountdown: PropTypes.string.isRequired
+  VacancyCloseCountdown: PropTypes.string.isRequired,
+  hideDrawer: PropTypes.func.isRequired
 };
 
 export default ApplicantProfileCard;

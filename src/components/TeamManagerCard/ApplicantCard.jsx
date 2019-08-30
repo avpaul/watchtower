@@ -6,7 +6,7 @@ import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
 
 import './ApplicantCard.scss';
 
-const ApplicantCard = ({ application, acceptApplicationHandler }) => {
+const ApplicantCard = ({ application, acceptApplicationHandler, hideDrawer }) => {
   const {
     vacancy: { closing_date: closingDate }
   } = application;
@@ -27,6 +27,7 @@ const ApplicantCard = ({ application, acceptApplicationHandler }) => {
         applicationReason={application.application_reason}
         acceptApplicationHandler={acceptApplicationHandler}
         applicationId={application.id}
+        hideDrawer={hideDrawer}
         isVacancyClosed={isVacancyClosed}
         VacancyCloseCountdown={VacancyCloseCountdown}
       />
@@ -56,7 +57,8 @@ const ApplicantCard = ({ application, acceptApplicationHandler }) => {
 
 ApplicantCard.propTypes = {
   application: PropTypes.instanceOf(Object).isRequired,
-  acceptApplicationHandler: PropTypes.func.isRequired
+  acceptApplicationHandler: PropTypes.func.isRequired,
+  hideDrawer: PropTypes.func.isRequired
 };
 
 export default ApplicantCard;

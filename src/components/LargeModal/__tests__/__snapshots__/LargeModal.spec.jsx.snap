@@ -6,6 +6,11 @@ exports[`Test Large modal component should render component correctly 1`] = `
 >
   <section
     className="modal__body"
+    style={
+      Object {
+        "maxWidth": "none",
+      }
+    }
   >
     <p
       className="modal__title"
@@ -41,6 +46,11 @@ exports[`Test Large modal component should render large modal 1`] = `
 >
   <section
     className="modal__body"
+    style={
+      Object {
+        "maxWidth": "none",
+      }
+    }
   >
     <button
       className="modal-close"
@@ -83,6 +93,11 @@ exports[`Test Large modal component should render large modal without cancel but
 >
   <section
     className="modal__body"
+    style={
+      Object {
+        "maxWidth": "none",
+      }
+    }
   >
     <div>
       Hello
@@ -97,6 +112,11 @@ exports[`Test Large modal component should render medium modal 1`] = `
 >
   <section
     className="modal-body__md"
+    style={
+      Object {
+        "maxWidth": "none",
+      }
+    }
   >
     <button
       className="modal-close"
@@ -139,6 +159,11 @@ exports[`Test Large modal component should render medium modal 2`] = `
 >
   <section
     className="modal-body__md"
+    style={
+      Object {
+        "maxWidth": "none",
+      }
+    }
   >
     <div>
       Hello

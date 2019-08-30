@@ -8,6 +8,7 @@ import FilterDropdown from '../../../components/FilterDropdown';
 import ApplicantCard from '../../../components/TeamManagerCard/ApplicantCard';
 import '../Placeholders.scss';
 import './Applications.scss';
+// import '../../../components/FilterDropdown/index.scss';
 import ApplicationAcceptanceConfirmationModal from '../../../components/TeamManagerCard/ApplicationAcceptanceConfirmationModal';
 import Placeholder from '../Placeholder/Placeholder';
 
@@ -79,14 +80,14 @@ export default class Applications extends Component {
   /**
    *
    * gets the applicants array and returns all roles
-   * @param {object} applicants
    * @returns {array} roles
+   * @param applications
    */
 
-  getRoles = applicants => {
+  getRoles = applications => {
     let roles = ['All Roles'];
-    if (applicants.length > 0) {
-      roles = applicants.reduce(
+    if (applications.length > 0) {
+      roles = applications.reduce(
         (accumulator, application) => {
           const roleName = application.role.name;
           if (!accumulator.includes(roleName)) accumulator.push(roleName);
@@ -100,26 +101,36 @@ export default class Applications extends Component {
   /**
    * Returns the page stats header
    * @param applications
+   * @param allApplications
    * @param filter
    * @param current
    */
 
-  renderHeader = (applications, filter, current) => {
-    const filterItems = this.getRoles(applications);
+  renderHeader = (applications, allApplications, filter, current) => {
+    const filterItems = this.getRoles(allApplications.pending || []);
+    const { showApplication } = this.state;
     return (
-      <div className="stats-header mb-4 d-flex justify-content-between">
-        <div>
-          {applications.length > 0 ? applications.length : 0} Pending
-          Applications
+      <div className="row w-100 mb-4">
+        <div
+          className={`stats-header ${
+            showApplication ? 'col-md-8' : 'col-md-10'
+          }`}
+        >
+          <div>
+            {applications.length > 0 ? applications.length : 0} Pending
+            Applications
+          </div>
         </div>
-        <FilterDropdown
-          items={filterItems}
-          current={current}
-          width="400"
-          chevronColor="#808FA3"
-          dropdownBackgroundColor="#FFFFFF"
-          getFilter={(type, value) => filter(value)}
-        />
+        <div className={`${showApplication ? 'col-md-4' : 'col-md-2'}`}>
+          <FilterDropdown
+            items={filterItems}
+            current={current}
+            width="400"
+            chevronColor="#808FA3"
+            dropdownBackgroundColor="#FFFFFF"
+            getFilter={(type, value) => filter(value)}
+          />
+        </div>
       </div>
     );
   };
@@ -130,8 +141,7 @@ export default class Applications extends Component {
    * @param application
    */
   fetchSingleApplication = (e, application) => {
-    const { showApplication } = this.state;
-    this.setState({ showApplication: !showApplication, application });
+    this.setState({ showApplication: true, application });
   };
 
   mapTeamApplications = filteredApplications => {
@@ -144,9 +154,10 @@ export default class Applications extends Component {
           first_name: firstName,
           last_name: lastName,
           cohort,
-          sims_start_date: startDate
+          apprenticeship_end_date: endDate
         }
       } = application;
+
       return (
         <div className="mb-4 mr-5" key={application.id}>
           <TeamManagerCard
@@ -158,8 +169,8 @@ export default class Applications extends Component {
             name={this.formatName(firstName, lastName)}
             project={project.name}
             cohort={cohort}
-            dateType="Start Date"
-            date={formatDate(startDate)}
+            dateType="Appr. End Date"
+            date={formatDate(endDate)}
           />
         </div>
       );
@@ -182,6 +193,7 @@ export default class Applications extends Component {
         <ApplicantCard
           application={application}
           acceptApplicationHandler={this.toggle}
+          hideDrawer={this.hideConfirmationResponse}
         />
       </div>
     );
@@ -189,7 +201,7 @@ export default class Applications extends Component {
 
   /**
    * Returns the card containing details about an applicant after being clicked
-   * @param application
+   * @param applicationId
    */
   acceptApplicationHandler = async applicationId => {
     const { acceptApplication } = this.props;
@@ -202,7 +214,12 @@ export default class Applications extends Component {
   };
 
   showConfirmationModal = () => {
-    const { openModal, application, showConfirmationResponse } = this.state;
+    const {
+      openModal,
+      application,
+      showConfirmationResponse,
+      filteredApplications
+    } = this.state;
     const { applicant, project, role } = application;
     const {
       applications: { acceptLoading, error, acceptedApplication }
@@ -213,6 +230,7 @@ export default class Applications extends Component {
         openModal={openModal}
         acceptApplication={this.acceptApplicationHandler}
         applicationId={application.id}
+        applications={filteredApplications}
         toggleModal={this.toggle}
         name={this.formatName(applicant.first_name, applicant.last_name)}
         projectName={project.name}
@@ -237,7 +255,7 @@ export default class Applications extends Component {
 
   render() {
     const {
-      applications: { loading }
+      applications: { loading, data }
     } = this.props;
 
     const {
@@ -263,6 +281,7 @@ export default class Applications extends Component {
             >
               {this.renderHeader(
                 filteredApplications,
+                data,
                 this.filterByRole,
                 currentRole
               )}

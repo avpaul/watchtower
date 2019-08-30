@@ -12,6 +12,13 @@ exports[`tests the Profile card renders correctly 1`] = `
   <div
     className="applicant"
   >
+    <span
+      aria-hidden="true"
+      className="closeApp"
+      onClick={[Function]}
+    >
+      ×
+    </span>
     <div
       className="applicant_profile_card_details"
     >
@@ -62,4 +69,220 @@ exports[`tests the Profile card renders correctly 1`] = `
     </div>
   </div>
 </ApplicantProfileCard>
+`;
+
+exports[`tests the Profile card should render correctly 1`] = `
+<Applications
+  applications={
+    Object {
+      "applicant": Object {
+        "cohort": "NBO-11",
+        "fellow_id": "-HYBHVWK78HBJ",
+        "first_name": "Test",
+        "id": 9,
+        "last_name": "Applicant",
+        "picture": "https://lorempixel.com/100/100/people/?23475 ",
+        "sims_start_date": "2019-02-19 00:00:00",
+      },
+      "data": Object {
+        "pending": Array [
+          Object {
+            "applicant": Object {
+              "account_active": false,
+              "apprenticeship_end_date": "2019-06-17 00:00:00",
+              "apprenticeship_manager": "Jason Okagbare",
+              "apprenticeship_project": "WatchTower",
+              "apprenticeship_start_date": "2019-06-02 00:00:00",
+              "apprenticeship_technology": "Devops",
+              "cadre_start_date": null,
+              "cohort": "Lagos-7",
+              "created_at": null,
+              "email": "roy.wasibani@andela.com",
+              "email_sent": false,
+              "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+              "first_name": "Wasibani",
+              "id": 1,
+              "last_name": "Roy",
+              "picture": "https://lorempixel.com/100/100/people/?23475",
+              "project_id": null,
+              "project_role_id": null,
+              "sims_end_date": "2019-02-17 00:00:00",
+              "sims_manager": "Daniel Ale",
+              "sims_project": "AuthorsHaven",
+              "sims_project_technology": "Python/Go",
+              "sims_start_date": "2018-11-12 00:00:00",
+              "updated_at": null,
+            },
+            "application_reason": "Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat.",
+            "confirm_email_sent": false,
+            "created_at": "2019-08-22 12:23:24",
+            "decision": "pending",
+            "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
+            "id": 13,
+            "project": Object {
+              "id": 4,
+              "name": "Omnis voluptatem quos.",
+            },
+            "project_id": 4,
+            "project_role_id": 5,
+            "project_vacancy_id": null,
+            "role": Object {
+              "deleted_at": null,
+              "description": "Inventore eveniet sunt molestias reprehenderit.,Est culpa minima quod veritatis laudantium soluta suscipit.",
+              "duration": 3,
+              "id": 5,
+              "name": "Data Engineer",
+            },
+            "selected": false,
+            "status_email_sent": false,
+            "updated_at": "2019-08-22 12:23:24",
+            "vacancy": Object {
+              "closing_date": "2019-08-27 09:31:14",
+            },
+          },
+        ],
+      },
+      "id": 16,
+      "project": Object {
+        "id": 1,
+        "name": "Test Project",
+      },
+      "role": "QA Engineer",
+    }
+  }
+  fetchApplications={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="applications-wrapper"
+  >
+    <div
+      className="cadre__page application__page"
+    >
+      <div
+        className="tm-project-applications"
+      >
+        <div
+          className="all-applicants-cards d-flex flex-wrap remove-width"
+        >
+          <div
+            className="row w-100 mb-4"
+          >
+            <div
+              className="stats-header col-md-10"
+            >
+              <div>
+                0
+                 Pending Applications
+              </div>
+            </div>
+            <div
+              className="col-md-2"
+            >
+              <Filter
+                characterLength={9}
+                chevronColor="#808FA3"
+                current="All Roles"
+                dropdownBackgroundColor="#FFFFFF"
+                fontSize=""
+                getFilter={[Function]}
+                items={
+                  Array [
+                    "All Roles",
+                    "Data Engineer",
+                  ]
+                }
+                search={false}
+                width="400"
+              >
+                <div
+                  className="filter-dropdown"
+                >
+                  <button
+                    className="filter-dropdown__button"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "fontSize": "",
+                        "width": "100%",
+                      }
+                    }
+                    type="button"
+                  >
+                    <span>
+                      All Roles
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <i
+                        className="fas fa-chevron-down"
+                        style={
+                          Object {
+                            "color": "#808FA3",
+                          }
+                        }
+                      />
+                    </span>
+                  </button>
+                </div>
+              </Filter>
+            </div>
+          </div>
+          <Placeholder
+            text="You currently have no applications for any role."
+          >
+            <div
+              className="placeholder"
+            >
+              <LoaderComponent
+                img="construction_new_color_loop.svg"
+              >
+                <div
+                  className="custom-loader text-center"
+                >
+                  <img
+                    alt="loader"
+                    className="custom-loader-img w-50"
+                    src="construction_new_color_loop.svg"
+                  />
+                </div>
+              </LoaderComponent>
+              <div
+                className="font-weight-lighter"
+              >
+                <h4
+                  className="font-display"
+                >
+                   
+                  You currently have no applications for any role.
+                </h4>
+              </div>
+            </div>
+          </Placeholder>
+        </div>
+      </div>
+    </div>
+  </div>
+</Applications>
 `;

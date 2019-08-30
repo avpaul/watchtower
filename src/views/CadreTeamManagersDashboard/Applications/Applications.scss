@@ -24,27 +24,31 @@
 
 .applicant_profile_card_wrapper {
   background: #ffffff;
-  max-width: none !important;
-  border-radius: 0 !important;
-  margin-top: 0 !important;
-  height: 100vh !important;
+  max-width: none;
+  border-radius: 0;
+  margin-top: 0;
+  height: 100vh;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
   overflow-x: hidden;
-  transition: all 1s ease;
 }
 
 .show-application {
-  width: 350px !important;
+  width: 350px;
   padding: 150px 20px 10px;
   z-index: 1;
+  transition: all 1s ease-in;
 }
 
 .hide-application {
-  width: 0 !important;
+  width: 0;
+  //margin-top: -500px;
+  //margin-right: -500px;
+  //display: none;
+  transition: all 1s ease-out;
 }
 
 .applications-wrapper {
@@ -56,7 +60,7 @@
 }
 
 .add-width {
-  width: 60%;
+  width: 65%;
 }
 
 .remove-width {

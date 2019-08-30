@@ -62,63 +62,72 @@ exports[`Test team manager view applications should render correctly 1`] = `
           className="all-applicants-cards d-flex flex-wrap remove-width"
         >
           <div
-            className="stats-header mb-4 d-flex justify-content-between"
+            className="row w-100 mb-4"
           >
-            <div>
-              0
-               Pending Applications
-            </div>
-            <Filter
-              characterLength={9}
-              chevronColor="#808FA3"
-              current="All Roles"
-              dropdownBackgroundColor="#FFFFFF"
-              fontSize=""
-              getFilter={[Function]}
-              items={
-                Array [
-                  "All Roles",
-                ]
-              }
-              search={false}
-              width="400"
+            <div
+              className="stats-header col-md-10"
             >
-              <div
-                className="filter-dropdown"
+              <div>
+                0
+                 Pending Applications
+              </div>
+            </div>
+            <div
+              className="col-md-2"
+            >
+              <Filter
+                characterLength={9}
+                chevronColor="#808FA3"
+                current="All Roles"
+                dropdownBackgroundColor="#FFFFFF"
+                fontSize=""
+                getFilter={[Function]}
+                items={
+                  Array [
+                    "All Roles",
+                    "Data Engineer",
+                  ]
+                }
+                search={false}
+                width="400"
               >
-                <button
-                  className="filter-dropdown__button"
-                  onClick={[Function]}
-                  style={
-                    Object {
-                      "fontSize": "",
-                      "width": "100%",
-                    }
-                  }
-                  type="button"
+                <div
+                  className="filter-dropdown"
                 >
-                  <span>
-                    All Roles
-                  </span>
-                  <span
+                  <button
+                    className="filter-dropdown__button"
+                    onClick={[Function]}
                     style={
                       Object {
-                        "background": "#FFFFFF",
+                        "fontSize": "",
+                        "width": "100%",
                       }
                     }
+                    type="button"
                   >
-                    <i
-                      className="fas fa-chevron-down"
+                    <span>
+                      All Roles
+                    </span>
+                    <span
                       style={
                         Object {
-                          "color": "#808FA3",
+                          "background": "#FFFFFF",
                         }
                       }
-                    />
-                  </span>
-                </button>
-              </div>
-            </Filter>
+                    >
+                      <i
+                        className="fas fa-chevron-down"
+                        style={
+                          Object {
+                            "color": "#808FA3",
+                          }
+                        }
+                      />
+                    </span>
+                  </button>
+                </div>
+              </Filter>
+            </div>
           </div>
           <Placeholder
             text="You currently have no applications for any role."

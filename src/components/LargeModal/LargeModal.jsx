@@ -9,7 +9,8 @@ const Modal = ({
   children,
   title,
   size = 'large',
-  showBtn = true
+  showBtn = true,
+  maxWidth = 'none'
 }) => {
   const showHideClassName = show
     ? 'modal display__modal'
@@ -17,7 +18,10 @@ const Modal = ({
 
   return (
     <div className={showHideClassName}>
-      <section className={size === 'large' ? 'modal__body' : 'modal-body__md'}>
+      <section
+        style={{ maxWidth }}
+        className={size === 'large' ? 'modal__body' : 'modal-body__md'}
+      >
         {title && <p className="modal__title">{title}</p>}
         {showBtn && (
           <button type="button" className="modal-close" onClick={handleClose}>
@@ -40,7 +44,8 @@ Modal.propTypes = {
   ]).isRequired,
   title: PropTypes.string,
   size: PropTypes.string,
-  showBtn: PropTypes.bool
+  showBtn: PropTypes.bool,
+  maxWidth: PropTypes.string.isRequired
 };
 
 Modal.defaultProps = {
