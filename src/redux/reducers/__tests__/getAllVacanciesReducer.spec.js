@@ -6,11 +6,13 @@ import {
   UPDATE_PROJECT_VACANCIES_ON_FOCUS,
   REMOVE_PROJECT_VACANCIES_ON_FOCUS
 } from '../../constants/projectsTypes';
-import { REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS } from '../../constants/certificationVacanciesTypes';
+import {
+  REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS,
+  UPDATE_CERTIFICATION_VACANCY_ON_FOCUS
+} from '../../constants/certificationVacanciesTypes';
 import initialState from '../initialState';
 import { generateVacancyGroups } from '../../../__mocks__/projectVacancy';
-import { getCertificationVacancies} from '../../../__mocks__/certificationVacancy';
-
+import { getCertificationVacancies } from '../../../__mocks__/certificationVacancy';
 
 describe('Get all vacancies reducer', () => {
   const projectVacancies = generateVacancyGroups(5, 2);
@@ -110,11 +112,28 @@ describe('Get all vacancies reducer', () => {
     });
   });
 
+  it('should update list of vacancies', () => {
+    const action = {
+      type: UPDATE_CERTIFICATION_VACANCY_ON_FOCUS,
+      data: {
+        ...certificationVacancies[0]
+      }
+    };
+
+    expect(getAllVacanciesReducer(defaultState, action)).toMatchObject({
+      loading: false,
+      error: {},
+      data: {
+        certificationVacancies
+      }
+    });
+  });
+
   it('should remove a certificate vacancy group from certificate vacancies', () => {
     const action = {
       type: REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS,
       data: {
-        ...certificationVacancies[0],
+        ...certificationVacancies[0]
       }
     };
 

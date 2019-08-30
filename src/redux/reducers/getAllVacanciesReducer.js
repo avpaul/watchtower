@@ -1,8 +1,6 @@
 import initialState from './initialState';
 import * as types from '../constants/projectsTypes';
-import {
-  REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS
-} from '../constants/certificationVacanciesTypes';
+import * as certificationTypes from '../constants/certificationVacanciesTypes';
 import genericReducer from './genericReducer';
 
 /**
@@ -25,8 +23,9 @@ const removeProjectVacancy = (vacancies, vacancy) =>
 
 const removeCertificationVacancy = (vacancies, vacancy) =>
   vacancies.filter(
-    vacancyGroup => (vacancyGroup.certification.id !== vacancy.certification.id)
-    && vacancyGroup.vacancy_details.cycle_id !== vacancy.vacancy_details.cycle_id
+    vacancyGroup =>
+      vacancyGroup.certification.id !== vacancy.certification.id &&
+      vacancyGroup.vacancy_details.cycle_id !== vacancy.vacancy_details.cycle_id
   );
 
 export default (state = initialState.getAllVacancies, action) => {
@@ -59,7 +58,7 @@ export default (state = initialState.getAllVacancies, action) => {
           )
         }
       };
-    case REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS:
+    case certificationTypes.REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS:
       return {
         ...state,
         data: {
@@ -77,6 +76,19 @@ export default (state = initialState.getAllVacancies, action) => {
           ...state.data,
           projectVacancies: [action.data].concat(
             removeProjectVacancy(state.data.projectVacancies, action.data)
+          )
+        }
+      };
+    case certificationTypes.UPDATE_CERTIFICATION_VACANCY_ON_FOCUS:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          certificationVacancies: [action.data].concat(
+            removeCertificationVacancy(
+              state.data.certificationVacancies,
+              action.data
+            )
           )
         }
       };

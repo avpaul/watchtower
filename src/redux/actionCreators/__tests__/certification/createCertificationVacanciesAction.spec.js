@@ -3,7 +3,7 @@ import axios from 'axios';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
-import createNewCertificationVacancy from '../../certificationVacancyAction';
+import { createNewCertificationVacancy } from '../../certificationVacancyAction';
 import initialState from '../../../reducers/initialState';
 
 import {

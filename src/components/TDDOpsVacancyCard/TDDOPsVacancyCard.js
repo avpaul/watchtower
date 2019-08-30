@@ -70,7 +70,8 @@ const TDDOPsVacancyCard = ({
       className={`ops-vacancy-card${remainingDays === -1 ? '---grey' : ''}`}
       key={vacancy.id}
     >
-      {remainingDays !== -1 && renderDropdownSection(vacancy, setVacanciesOnFocus)}
+      {remainingDays !== -1 &&
+        renderDropdownSection(vacancy, setVacanciesOnFocus)}
       <div className="ops-vacancy-card__role-name">
         {getName(
           vacanciesToDisplay === 'project'

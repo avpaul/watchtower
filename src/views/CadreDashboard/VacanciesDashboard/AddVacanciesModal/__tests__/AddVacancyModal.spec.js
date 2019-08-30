@@ -40,18 +40,26 @@ describe('Add Vacancy Modal', () => {
   const store = buildStore(reduxState);
   const defaultProps = {
     createNewProjectVacancies: jest.fn(),
+    createNewCertificationVacancy: jest.fn(),
     fetchAllCertifications: jest.fn(),
     editProjectVacancies: jest.fn(),
+    editCertificationVacancy: jest.fn(),
     fetchAllProjects: jest.fn(),
     fetchAllRoles: jest.fn(),
     createProjectVacancies: initialState.createProjectVacancies,
     editProjectVacanciesState: initialState.editProjectVacancies,
     allProjects: reduxState.allProjects,
     allProjectRoles: reduxState.allProjectRoles,
-    projectVacanciesOnFocus: initialState.projectVacanciesOnFocus,
     editMode: false,
     createCertificactionVacancies: initialState.createCertificactionVacancies,
     allCertifications: reduxState.allCertifications,
+    editCertificationVacanciesState: initialState.editCertificationVacancies,
+    projectVacanciesOnFocus: {
+      vacancy: {},
+      vacancy_details: {
+        cycle_id: 1
+      }
+    },
     history: {
       replace: jest.fn()
     }
@@ -193,6 +201,101 @@ describe('Add Vacancy Modal', () => {
       target: { value: newVacanciesDetails.requester_email }
     });
     testSubmission(button, 1, props.editProjectVacancies);
+  });
+
+  it('calls the handleSubmit successfully on editMode for certification Vacancy', () => {
+    const mockState = {
+      inputs: {
+        slots: {
+          isValid: () => true,
+          getValue: () => ({ id: '10' })
+        },
+        email: {
+          getValue: () => 'test@test.com'
+        },
+        cycle_id: 1
+      },
+      startDate: new Date('2019-03-10 08:38:54'),
+      endDate: new Date('2019-03-15 08:38:54'),
+      currentDate: new Date('2019-03-15 08:38:54'),
+      certificationInputs: {
+        certification: {
+          isValid: () => true,
+          setStatus: () => {},
+          focus: () => {},
+          getValue: () => ({
+            duration: 8,
+            id: 3
+          })
+        }
+      }
+    };
+
+    const spy = jest.fn();
+    const { wrapper } = setup({ createNewCertificationVacancy: spy }, true);
+
+    const modal = wrapper.find(AddVacanciesModal);
+    const toggleButton = wrapper.find('#certification-button');
+    const button = wrapper.find('.cadre-main-button');
+    toggleButton.simulate('click');
+
+    modal.setState({ ...modal.state(), ...mockState });
+    button.simulate('click', { target: { value: 'Certification vacancy' } });
+
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls the handleSubmit successfully on editMode for certification Vacancy', () => {
+    const mockState = {
+      inputs: {
+        slots: {
+          isValid: () => true,
+          getValue: () => ({ id: '10' })
+        },
+        email: {
+          getValue: () => 'test@test.com'
+        },
+        cycle_id: 1
+      },
+      startDate: new Date('2019-03-10 08:38:54'),
+      endDate: new Date('2019-03-15 08:38:54'),
+      currentDate: new Date('2019-03-15 08:38:54'),
+      certificationInputs: {
+        certification: {
+          isValid: () => true,
+          setStatus: () => {},
+          focus: () => {},
+          getValue: () => ({
+            duration: 8,
+            id: 3
+          })
+        }
+      },
+      vacancyType: 'Certification vacancy'
+    };
+
+    const spy = jest.fn();
+    const { wrapper } = setup(
+      {
+        projectVacanciesOnFocus: {
+          certification: {},
+          vacancy_details: {
+            cycle_id: 1
+          }
+        },
+        editCertificationVacancy: spy,
+        editMode: true
+      },
+      true
+    );
+
+    const modal = wrapper.find(AddVacanciesModal);
+    const button = wrapper.find('.cadre-main-button');
+
+    modal.setState({ ...modal.state(), ...mockState });
+    button.simulate('click', { target: { value: 'Certification vacancy' } });
+
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('calls the handleClose successfully', async () => {

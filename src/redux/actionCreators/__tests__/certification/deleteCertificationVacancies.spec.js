@@ -9,7 +9,8 @@ import initialState from '../../../reducers/initialState';
 import {
   DELETE_CERTIFICATION_VACANCIES_REQUEST,
   DELETE_CERTIFICATION_VACANCIES_SUCCESS,
-  DELETE_CERTIFICATION_VACANCIES_FAILURE
+  DELETE_CERTIFICATION_VACANCIES_FAILURE,
+  REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS
 } from '../../../constants/certificationVacanciesTypes';
 
 describe('Delete certification vacancies action', () => {
@@ -60,10 +61,15 @@ describe('Delete certification vacancies action', () => {
   };
 
   it('deletes CREATE_CERTIFICATION_VACANCY_REQUEST when the post request completes successfully', () => {
-    testDeleteCertificationVacanciesAction({
-      type: DELETE_CERTIFICATION_VACANCIES_SUCCESS,
-      data: {}
-    });
+    testDeleteCertificationVacanciesAction([
+      {
+        type: DELETE_CERTIFICATION_VACANCIES_SUCCESS,
+        data: {}
+      },
+      {
+        type: REMOVE_CERTIFICATION_VACANCIES_ON_FOCUS
+      }
+    ]);
   });
 
   it('deletes CREATE_CERTIFICATION_VACANCY_FAIL when the post request encounters an error', () => {
