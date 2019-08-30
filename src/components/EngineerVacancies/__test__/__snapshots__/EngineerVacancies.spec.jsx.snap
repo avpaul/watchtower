@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EngineerVacancies  renders as expected with required props 1`] = `
-<div>
+<div
+  className="w-100"
+>
   <div
     className="vacancies-container--all-vacancies"
   >
@@ -50,7 +52,9 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
 `;
 
 exports[`EngineerVacancies  renders as expected with required props 2`] = `
-<div>
+<div
+  className="w-100"
+>
   <div
     className="vacancies-container--all-vacancies"
   >

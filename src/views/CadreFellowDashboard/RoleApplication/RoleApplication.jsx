@@ -20,17 +20,18 @@ class RoleApplication extends Component {
 
   componentDidUpdate(prevProps) {
     const { applications } = this.props;
-    if (prevProps.applications.loading !== applications.loading) {
+    if (
+      prevProps.applications.loading !== applications.loading &&
+      prevProps.applications.data !== applications.data
+    ) {
       this.applicationStatus(applications);
     }
   }
 
   applicationStatus = applications => {
-    const {
-      data: { message },
-      error
-    } = applications;
-    if (message) {
+    const { error } = applications;
+
+    if (!error) {
       this.setState({ success: true });
     } else if (error && error.application_reason) {
       const { application_reason: reason } = error;

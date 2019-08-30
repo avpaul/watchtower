@@ -7,7 +7,6 @@ import { DevPulseChartConnected } from '../../components/DevPulseChart/DevPulseC
 import LMSProgressSummary from '../../components/LMSProgressSummary/LMSProgressSummaryContainer';
 import ProgressBarConnected from '../../components/ProgressBar/ProgressBarConnected';
 import getFellowProfileDataAction from '../../redux/actionCreators/fellowProfileDataActions';
-import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowProfileDataAction';
 /**
  * Class representing Fellow Dashboard Page
  * @class
@@ -15,9 +14,8 @@ import getD1FellowProfileDataAction from '../../redux/actionCreators/d1FellowPro
 
 export class FellowDashboard extends Component {
   componentDidMount() {
-    const { getFellowProfileData, getD1FellowProfileData } = this.props;
+    const { getFellowProfileData } = this.props;
     getFellowProfileData();
-    getD1FellowProfileData();
   }
 
   render() {
@@ -39,11 +37,10 @@ FellowDashboard.propTypes = {
 
 const mapDispatchToProps = dispatch => ({
   getFellowProfileData: fellowId =>
-    dispatch(getFellowProfileDataAction(fellowId)),
-  getD1FellowProfileData: () => dispatch(getD1FellowProfileDataAction())
+    dispatch(getFellowProfileDataAction(fellowId))
 });
 
 export default connect(
-  () => { },
+  () => {},
   mapDispatchToProps
 )(FellowDashboard);

@@ -65,7 +65,6 @@ import projectVacanciesOnFocus from './setProjectVacanciesOnFocusReducer';
 import certificationOnFocus from './setCertificationOnFocusReducer';
 import deleteCertification from './deleteCertificationReducer';
 import createCertificactionVacancies from './createCertificationVacanciesReducer';
-import applyForRoleReducer from './applyForRoleReducer';
 import teamManagerProjectApplicationsReducer from './cadreTeamManager/applicationsReducer';
 import newTeamMemberRequestReducer from './cadreTeamManager/newTeamMemberRequestReducer';
 import teamManagerTeamReducer, {
@@ -130,7 +129,6 @@ const rootReducer = combineReducers({
   certificationOnFocus,
   createCertificactionVacancies,
   certificationApplicants: fetchCertificationsApplicantsReducer,
-  apply: applyForRoleReducer,
   singleRole: fetchSingleRoleReducer,
   teamManagerProjectApplications: teamManagerProjectApplicationsReducer,
   teamManagerTeamMembers: teamManagerTeamReducer,

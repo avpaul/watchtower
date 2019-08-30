@@ -14,37 +14,46 @@ const ProjectRoleDetails = ({
   singleProject,
   AllVacantRoles,
   getAProject,
-  d1Engineer
+  d1Engineer,
+  fetchAllVacancies
 }) => {
   const { roleId, projectId, vacancyId } = match.params;
+
+  const vacanciesAreNotAvailable = () =>
+    !!Object.keys(AllVacantRoles).length < 1;
+
   useEffect(() => {
-    getAProject(projectId);
+    if (vacanciesAreNotAvailable()) {
+      fetchAllVacancies();
+    }
+    if (Object.keys(singleProject).length < 1) {
+      getAProject(Number(projectId));
+    }
     // eslint-disable-next-line
   }, []);
 
   const currentRole = AllVacantRoles.find(
-    data => data.role.id === Number(roleId)
+    vacancy =>
+      vacancy.role.id === Number(roleId) &&
+      Number(vacancy.project.id) === Number(projectId)
   );
   const { params } = match;
 
-  return singleProject.data.project ? (
+  return Object.keys(singleProject).length > 1 ? (
     <div className="role-details-container">
       <ReturnButton history={history} />
       <p>Back to Dashboard</p>
-      <RoleDetailsLeft
-        projectInfo={singleProject.data.project}
-        roleInfo={currentRole}
-      />
+      <RoleDetailsLeft projectInfo={singleProject} roleInfo={currentRole} />
       <RoleApplication
         roleId={params.roleId}
         history={history}
         projectId={params.projectId}
         roleInfo={currentRole.role}
-        projectTitle={singleProject.data.project[0].name}
+        projectTitle={singleProject.name}
         cycleId={currentRole.vacancy.cycle_id}
       />
       <RoleDetailsRight
-        projectInfo={singleProject.data.project}
+        projectInfo={singleProject}
         roleInfo={currentRole}
         engineer={d1Engineer}
         vacancyId={vacancyId}
@@ -68,7 +77,8 @@ ProjectRoleDetails.propTypes = {
   singleProject: PropTypes.shape(),
   d1Engineer: PropTypes.shape().isRequired,
   AllVacantRoles: PropTypes.arrayOf(PropTypes.shape()),
-  getAProject: PropTypes.func
+  getAProject: PropTypes.func,
+  fetchAllVacancies: PropTypes.func.isRequired
 };
 
 export default ProjectRoleDetails;

@@ -8,13 +8,21 @@ describe('Test the certification page', () => {
     getCertification: {
       loading: false,
       data: {
-        name: 'Testing',
-        description: 'Test description',
-        exclusive: true,
-        id: 1
+        1: {
+          id: 1,
+          name: 'Testing',
+          description: 'Test description',
+          exclusive: true
+        }
       },
       error: ''
     },
+    singleCertification: {
+      id: 1,
+      name: 'Testing',
+      description: 'Test'
+    },
+    fetchAllVacancies: jest.fn(),
     getCertificationAction: jest.fn(),
     history: {
       push: jest.fn(),
@@ -131,5 +139,28 @@ describe('Test the certification page', () => {
     });
 
     expect(component.state('userHasApplied')).toBeTruthy();
+  });
+
+  it('it should change the modal state when setstate is called ', () => {
+    const component = setUp();
+    component.setState({
+      modals: {
+        applicationModal: true
+      }
+    });
+    expect(component.state('modals').applicationModal).toBeTruthy();
+    expect(component).toMatchSnapshot();
+  });
+
+  it('should render the certification application modal when the render function is called', () => {
+    propsOverride = {
+      d1Engineer: {
+        fellow_id: '-PUEHGE8716LPP'
+      }
+    };
+    const component = setUp({ ...propsOverride });
+    component.setState({ modals: { applicationModal: true } });
+    component.instance().renderSellYourselfModal();
+    expect(component.find('SellYourselfModal').length).toBe(1);
   });
 });

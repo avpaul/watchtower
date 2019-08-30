@@ -2,7 +2,7 @@ import configureStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import thunk from 'redux-thunk';
-import * as types from '../../constants/cadreEngineersTypes';
+import * as types from '../../constants/d1FellowProfileDataTypes';
 import { activateCadreEngineerAccount } from '../activateCadreEngineerActions';
 
 const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
@@ -26,7 +26,7 @@ describe('Cadre Engineer Account Activation', () => {
       store.clearActions();
     });
 
-    it('should send request to activate cadre engineer account and fail', done => {
+    it('should send request to activate cadre engineer account and fail', async done => {
       mock.onPut(url).reply(400);
       const expectedAction = [
         { type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST },
@@ -35,14 +35,14 @@ describe('Cadre Engineer Account Activation', () => {
           type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_FAILURE
         }
       ];
-      store
+      await store
         .dispatch(activateCadreEngineerAccount())
         .then(() => expect(store.getActions()).toEqual(expectedAction))
         .then(done)
         .catch(done.fail);
     });
 
-    it('should send request to activate cadre engineer account and succeed', done => {
+    it('should send request to activate cadre engineer account and succeed', async done => {
       const fellow = {
         id: 1,
         email: 'test@example.com',
@@ -54,10 +54,10 @@ describe('Cadre Engineer Account Activation', () => {
         { type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST },
         {
           type: types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_SUCCESS,
-          engineer: fellow
+          fellow
         }
       ];
-      store
+      await store
         .dispatch(activateCadreEngineerAccount({ push: jest.fn() }))
         .then(() => {
           expect(store.getActions()).toEqual(expectedAction);

@@ -1,5 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test the certification page it should change the modal state when setstate is called  1`] = `
+<Fragment>
+  <div
+    className="certification-page"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row mt-5 mb-4"
+      >
+        <div
+          className="col-md-12"
+        >
+          <div
+            id="nav"
+            onClick={[Function]}
+            onKeyDown={null}
+            role="button"
+            tabIndex="-1"
+          >
+            <img
+              alt="back icon"
+              className="back-icon"
+              src="BackIcon.png"
+            />
+            <span
+              className="ml-3 back-icon-text"
+            >
+              Back to Dashboard
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row justify-content-center"
+      >
+        <div
+          className="col-md-10"
+        >
+          <div
+            className="card certification-card"
+          >
+            <div
+              className="card-header certification-header bg-white border-none"
+            >
+              <div
+                className="row px-4 mt-4 mb-2"
+              >
+                <div
+                  className="col-md-6"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-2"
+                    >
+                      <img
+                        alt="certification icon"
+                        src="Project.svg"
+                      />
+                    </div>
+                    <div
+                      className="col-8"
+                    >
+                      <h4
+                        className="certification-title text-capitalize"
+                      >
+                        Testing
+                      </h4>
+                      <h5
+                        className="certification-title-sub-heading"
+                      >
+                        Not Exclusive
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-md-6 text-right"
+                >
+                  <button
+                    className="btn text-uppercase apply-btn"
+                    disabled={true}
+                    id="buttonDisabled"
+                    type="button"
+                  >
+                    Already Applied
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="px-4"
+              >
+                <h3
+                  className="certification-description-title"
+                >
+                  Certification Description
+                </h3>
+                <p
+                  className="certification-description"
+                >
+                  Test
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <SellYourselfModal
+        buttonLabel="Apply for this certification"
+        cycleId={1}
+        error={Object {}}
+        hasApplied={true}
+        id={1}
+        loading={false}
+        modalHandler={[Function]}
+        showModal={true}
+        submitHandler={[MockFunction]}
+        title="Testing"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`Test the certification page should not render the submit button when loading is false 1`] = `false`;
 
 exports[`Test the certification page should render a button for users to be able to apply for a certification 1`] = `
@@ -76,7 +207,7 @@ exports[`Test the certification page should render a button for users to be able
                       <h5
                         className="certification-title-sub-heading"
                       >
-                        Exclusive
+                        Not Exclusive
                       </h5>
                     </div>
                   </div>
@@ -85,11 +216,12 @@ exports[`Test the certification page should render a button for users to be able
                   className="col-md-6 text-right"
                 >
                   <button
-                    className="btn btn-primary text-uppercase apply-btn"
-                    onClick={[Function]}
+                    className="btn text-uppercase apply-btn"
+                    disabled={true}
+                    id="buttonDisabled"
                     type="button"
                   >
-                    Apply For This Certification
+                    Already Applied
                   </button>
                 </div>
               </div>
@@ -108,7 +240,7 @@ exports[`Test the certification page should render a button for users to be able
                 <p
                   className="certification-description"
                 >
-                  Test description
+                  Test
                 </p>
               </div>
             </div>
@@ -196,7 +328,7 @@ exports[`Test the certification page should render without errors 1`] = `
                       <h5
                         className="certification-title-sub-heading"
                       >
-                        Exclusive
+                        Not Exclusive
                       </h5>
                     </div>
                   </div>
@@ -205,11 +337,12 @@ exports[`Test the certification page should render without errors 1`] = `
                   className="col-md-6 text-right"
                 >
                   <button
-                    className="btn btn-primary text-uppercase apply-btn"
-                    onClick={[Function]}
+                    className="btn text-uppercase apply-btn"
+                    disabled={true}
+                    id="buttonDisabled"
                     type="button"
                   >
-                    Apply For This Certification
+                    Already Applied
                   </button>
                 </div>
               </div>
@@ -228,7 +361,7 @@ exports[`Test the certification page should render without errors 1`] = `
                 <p
                   className="certification-description"
                 >
-                  Test description
+                  Test
                 </p>
               </div>
             </div>
@@ -314,7 +447,7 @@ exports[`Test the certification page should trigger certification application fu
                       <h5
                         className="certification-title-sub-heading"
                       >
-                        Exclusive
+                        Not Exclusive
                       </h5>
                     </div>
                   </div>
@@ -323,11 +456,12 @@ exports[`Test the certification page should trigger certification application fu
                   className="col-md-6 text-right"
                 >
                   <button
-                    className="btn btn-primary text-uppercase apply-btn"
-                    onClick={[Function]}
+                    className="btn text-uppercase apply-btn"
+                    disabled={true}
+                    id="buttonDisabled"
                     type="button"
                   >
-                    Apply For This Certification
+                    Already Applied
                   </button>
                 </div>
               </div>
@@ -346,25 +480,13 @@ exports[`Test the certification page should trigger certification application fu
                 <p
                   className="certification-description"
                 >
-                  Test description
+                  Test
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <SellYourselfModal
-        buttonLabel="Apply for this certification"
-        cycleId={1}
-        error={Object {}}
-        hasApplied={false}
-        id={1}
-        loading={false}
-        modalHandler={[Function]}
-        showModal={true}
-        submitHandler={[MockFunction]}
-        title="Testing"
-      />
     </div>
   </div>
 </Fragment>

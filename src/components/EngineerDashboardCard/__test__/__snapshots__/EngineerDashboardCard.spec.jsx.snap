@@ -22,7 +22,7 @@ exports[`EngineerDashboardCard  renders as expected with required props 1`] = `
      
   </div>
   <div
-    className="dasboardcard-wrapper__info vacancy-wrapper__search"
+    className="dasboardcard-wrapper__info vacancy-wrapper__search d-flex justify-content-center"
   >
     <div>
       child component

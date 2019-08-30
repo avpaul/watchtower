@@ -230,7 +230,6 @@ export default {
   certificationOnFocus: {},
   certificationApplicants: genericAPIStateArray,
   certificationApplication: genericAPIStateObject,
-  applyRole: genericAPIStateObject,
   singleRole: genericAPIStateArray,
   teamManagerProjectApplications: {
     ...genericAPIStateObject,

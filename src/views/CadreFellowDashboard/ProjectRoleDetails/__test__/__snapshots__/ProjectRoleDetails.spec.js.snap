@@ -2,34 +2,50 @@
 
 exports[`should Render Component 1`] = `
 <ProjectRoleDetails
-  AllVacantRoles={
-    Array [
-      Object {
-        "project": Object {},
-        "role": Object {
-          "id": 1,
-          "name": "",
+  AllVacantRoles={Array []}
+  fetchAllVacancies={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
         },
-        "vacancy": Object {
-          "cycle_id": 1,
-        },
-      },
-    ]
+      ],
+    }
   }
-  getAProject={[Function]}
+  getAProject={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          1,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   history={Object {}}
+  location={
+    Object {
+      "pathname": "/cadre/projects/1",
+    }
+  }
   match={
     Object {
       "params": Object {
+        "projectId": 1,
         "roleId": 1,
       },
     }
   }
-  singleProject={
-    Object {
-      "data": Object {},
-    }
-  }
+  singleProject={Object {}}
 >
   <PMloader>
     <LoaderComponent
@@ -61,19 +77,18 @@ exports[`should Render child Components 1`] = `
   </p>
   <RoleDetailsLeft
     projectInfo={
-      Array [
-        Object {
-          "logo": "",
-          "type": "test",
-        },
-      ]
+      Object {
+        "logo": "",
+        "type": "test",
+      }
     }
     roleInfo={
       Object {
-        "project": Object {},
+        "project": Object {
+          "id": 1,
+        },
         "role": Object {
           "id": 1,
-          "name": "",
         },
         "vacancy": Object {
           "cycle_id": 1,
@@ -84,30 +99,29 @@ exports[`should Render child Components 1`] = `
   <Connect(RoleApplication)
     cycleId={1}
     history={Object {}}
+    projectId={1}
     roleId={1}
     roleInfo={
       Object {
         "id": 1,
-        "name": "",
       }
     }
   />
   <RoleDetailsRight
     cycleId={1}
     projectInfo={
-      Array [
-        Object {
-          "logo": "",
-          "type": "test",
-        },
-      ]
+      Object {
+        "logo": "",
+        "type": "test",
+      }
     }
     roleInfo={
       Object {
-        "project": Object {},
+        "project": Object {
+          "id": 1,
+        },
         "role": Object {
           "id": 1,
-          "name": "",
         },
         "vacancy": Object {
           "cycle_id": 1,

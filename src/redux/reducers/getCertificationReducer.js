@@ -13,7 +13,10 @@ export default (state = initialState.getCertification, action) => {
       return {
         error: null,
         loading: false,
-        data: action.data
+        data: {
+          ...state.data,
+          [action.data.id]: action.data
+        }
       };
     case types.GET_CERTIFICATION_FAILURE:
       return {

@@ -6,8 +6,8 @@ import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
 
 const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
   const renderDocuments = () =>
-    projectInfo[0].documents.map(document => (
-      <a href={document.url} key={document.id} rel="noopener">
+    projectInfo.documents.map(document => (
+      <a href={document.url} key={document.id} rel="noopener noreferrer">
         <img src={doc} alt="document logo" />
         {document.name.length > 25
           ? `${document.name.substring(0, 22)}...`
@@ -17,22 +17,16 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
 
   const hasApplied = () => {
     const { applications } = roleInfo;
-    let isApplicationActive = false;
-
     if (applications) {
-      applications.forEach(application => {
-        if (
+      return !!applications.find(
+        application =>
           application.fellow_id === engineer.fellow_id &&
           application.project_role_id === roleInfo.role.id &&
-          application.project_id === projectInfo[0].id &&
+          application.project_id === projectInfo.id &&
           application.cycle_id === cycleId
-        ) {
-          isApplicationActive = true;
-        }
-      });
+      );
     }
-
-    return isApplicationActive;
+    return false;
   };
 
   return (
@@ -42,7 +36,7 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
           <img src={projectIcon} alt="project logo" />
           <div>
             <p className="roleName">{roleInfo.role.name}</p>
-            <p className="projectName">{projectInfo[0].name}</p>
+            <p className="projectName">{projectInfo.name}</p>
           </div>
         </div>
         <div className="headingRight">
@@ -72,8 +66,8 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
       <div className="mainBody">
         <h6 className="paragraphHeadings">Role Description</h6>
         <p>{roleInfo.role.description}</p>
-        <h6 className="paragraphHeadings">About {projectInfo[0].name}</h6>
-        <p>{projectInfo[0].about}</p>
+        <h6 className="paragraphHeadings">About {projectInfo.name}</h6>
+        <p>{projectInfo.about}</p>
         <h6 className="paragraphHeadings">Relevant Documents</h6>
         {renderDocuments()}
       </div>
@@ -87,7 +81,7 @@ RoleDetailsRight.defaultProps = {
 };
 
 RoleDetailsRight.propTypes = {
-  projectInfo: PropTypes.arrayOf(PropTypes.shape()),
+  projectInfo: PropTypes.instanceOf(Object),
   engineer: PropTypes.shape().isRequired,
   roleInfo: PropTypes.shape(),
   cycleId: PropTypes.number.isRequired

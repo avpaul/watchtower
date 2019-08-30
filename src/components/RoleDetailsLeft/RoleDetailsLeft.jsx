@@ -4,7 +4,7 @@ import projectIcon from '../../static/projectIcon.png';
 import { altDate } from '../../utils/formatDate';
 
 const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
-  const [projectLogo, setLogo] = useState(projectInfo[0].logo || projectIcon);
+  const [projectLogo, setLogo] = useState(projectInfo.logo || projectIcon);
 
   const renderTechnology = (info = [], techClass) =>
     info.map(tech => (
@@ -17,10 +17,10 @@ const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
 
   const renderTop = () => (
     <Fragment>
-      <span className="projectType">{projectInfo[0].type.toUpperCase()}</span>
+      <span className="projectType">{projectInfo.type.toUpperCase()}</span>
       <img src={projectLogo} onError={handleImageError} alt="" />
-      <p className="projectTitle">{projectInfo[0].name}</p>
-      <p className="projectTagline">{projectInfo[0].tagline}</p>
+      <p className="projectTitle">{projectInfo.name}</p>
+      <p className="projectTagline">{projectInfo.tagline}</p>
     </Fragment>
   );
 
@@ -28,7 +28,7 @@ const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
     <div className="projectContainer">
       <div className="projectOverview">
         {renderTop()}
-        {renderTechnology(projectInfo[0].technologies, 'projectStack')}
+        {renderTechnology(projectInfo.technologies, 'projectStack')}
         {renderTechnology(roleInfo.role.skills, 'projectSkills')}
       </div>
       <div className="roleDetails">
@@ -48,8 +48,8 @@ const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
             alt="project manager"
           />
           <div>
-            <p className="managerName">{projectInfo[0].manager.name}</p>
-            <p className="managerEmail">{projectInfo[0].manager.email}</p>
+            <p className="managerName">{projectInfo.manager.name}</p>
+            <p className="managerEmail">{projectInfo.manager.email}</p>
           </div>
         </div>
       </div>

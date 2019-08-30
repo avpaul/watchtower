@@ -1,11 +1,11 @@
-import { mapStateToProps } from '../CertificationPageContainer';
+import { mapStateToProps } from '../ProjectRoleDetailsContainer';
 
-describe('Test the certification container', () => {
+describe('Test the Project role details container', () => {
   it('map state to props should return props value', () => {
     expect(
       mapStateToProps(
         {
-          getCertification: {
+          singleProject: {
             loading: false,
             data: {
               1: {}
@@ -13,11 +13,12 @@ describe('Test the certification container', () => {
           },
           cadreVacancies: {
             data: {
-              certificationVacancies: {}
+              projectVacancies: []
             }
-          }
+          },
+          allProjects: {}
         },
-        { location: { pathname: '/dashboard/certifications/1' } }
+        { location: { pathname: '/dashboard/projects/1/roles/1' } }
       )
     ).toMatchSnapshot();
   });

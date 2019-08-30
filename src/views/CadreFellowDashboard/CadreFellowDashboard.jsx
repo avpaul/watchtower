@@ -27,13 +27,13 @@ const CadreFellowDashboard = props => {
           />
           <Route
             exact
-            path="/dashboard/project/:projectId/role/:roleId"
-            component={() => <RolePage {...props} />}
+            path="/dashboard"
+            component={() => <CadreDashboardMain {...props} />}
           />
           <Route
             exact
-            path="/dashboard"
-            component={() => <CadreDashboardMain {...props} />}
+            path="/dashboard/project/:projectId/role/:roleId"
+            component={() => <RolePage {...props} />}
           />
           <Route
             exact

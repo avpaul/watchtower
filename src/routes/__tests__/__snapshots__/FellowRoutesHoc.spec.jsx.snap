@@ -2,7 +2,8 @@
 
 exports[`<FellowDashboards /> should call activate account 1`] = `
 <Fragment>
-  <FellowDashboard
+  <CadreFellowDashboard
+    activateAccount={[Function]}
     activateCadreEngineerAccount={
       [MockFunction] {
         "calls": Array [
@@ -20,44 +21,27 @@ exports[`<FellowDashboards /> should call activate account 1`] = `
         ],
       }
     }
-    d1EngineerData={Array []}
-    fetchAllVacancies={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
+    d1Engineer={
+      Object {
+        "email": "collins.muru@andela.com",
+        "name": "collins",
       }
     }
-    getCadreEngineers={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
+    d1Fellow={
+      Object {
+        "email": "collins.muru@andela.com",
+        "name": "collins",
       }
     }
+    fetchAllVacancies={[MockFunction]}
+    getCadreEngineers={[MockFunction]}
     history={
       Object {
         "push": [MockFunction],
       }
     }
     loading={false}
-    role={
-      Object {
-        "Andelan": "jey",
-      }
-    }
+    role="CadreFellow"
     store={
       Object {
         "clearActions": [Function],
@@ -83,23 +67,26 @@ exports[`<FellowDashboards /> should call activate account 1`] = `
 exports[`<FellowDashboards /> should render well 1`] = `
 <FellowDashboards
   activateCadreEngineerAccount={[Function]}
-  d1EngineerData={
-    Array [
-      Object {
-        "account_active": false,
-        "email": "chidozie.nwoga@andela.com",
-        "id": 1,
-      },
-    ]
+  d1Fellow={
+    Object {
+      "account_active": false,
+      "email": "chidozie.nwoga@andela.com",
+      "id": 1,
+    }
   }
-  fetchAllVacancies={[Function]}
-  getCadreEngineers={[Function]}
+  fetchAllVacancies={[MockFunction]}
+  getCadreEngineers={[MockFunction]}
+  getD1FellowProfile={[Function]}
   history={
     Object {
       "push": [MockFunction],
     }
   }
-  loading={false}
+  location={
+    Object {
+      "pathname": [MockFunction],
+    }
+  }
   role={
     Object {
       "Andelan": "jey",

@@ -13,14 +13,14 @@ describe('<FellowDashboards />', () => {
     store = mockStore({
       cadreEngineers: {
         loading: false,
-        cadreEngineers: [
-          {
-            id: 1,
-            email: 'chidozie.nwoga@andela.com',
-            account_active: false
-          }
-        ],
         error: ''
+      },
+      d1Fellow: {
+        fellow: {
+          id: 1,
+          email: 'chidozie.nwoga@andela.com',
+          account_active: false
+        }
       },
       cadreVacancies: {
         loading: false,
@@ -38,16 +38,21 @@ describe('<FellowDashboards />', () => {
         roles: { Andelan: 'jey' }
       },
       role: { Andelan: 'jey' },
-      d1EngineerData: {
-        name: 'collins',
-        email: 'collins.muru@andela.com'
+      d1Fellow: {
+        id: 1,
+        email: 'chidozie.nwoga@andela.com',
+        account_active: false
       },
       getCadreEngineers: jest.fn(),
       history: {
         push: jest.fn()
       },
+      location: {
+        pathname: jest.fn()
+      },
       activateCadreEngineerAccount: jest.fn(),
-      fetchAllVacancies: jest.fn()
+      fetchAllVacancies: jest.fn(),
+      getD1FellowProfile: jest.fn()
     };
     wrapper = shallow(<FellowDashboard {...props} store={store} />);
   });
@@ -56,19 +61,17 @@ describe('<FellowDashboards />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call the render dashboard method  ', () => {
+  it('should call the render dashboard method', () => {
     const props = {
       user: {
         name: 'Test User',
         roles: { Andelan: 'jey' }
       },
       role: { Andelan: 'jey' },
-      d1EngineerData: [
-        {
-          name: 'collins',
-          email: 'collins.muru@andela.com'
-        }
-      ],
+      d1Fellow: {
+        name: 'collins',
+        email: 'collins.muru@andela.com'
+      },
       history: {
         push: jest.fn()
       },
@@ -83,7 +86,7 @@ describe('<FellowDashboards />', () => {
     const adhoc = instance.renderDashboard(
       props.role,
       props.user,
-      props.d1EngineerData
+      props.d1Fellow
     );
     expect(typeof adhoc).toBe('object');
     expect(adhoc.props.user.name).toBe('Test User');
@@ -98,7 +101,10 @@ describe('<FellowDashboards />', () => {
       role: {
         Andelan: 'jey'
       },
-      d1EngineerData: [],
+      d1Fellow: {
+        name: 'collins',
+        email: 'collins.muru@andela.com'
+      },
       loading: false,
       getCadreEngineers: jest.fn(),
       history: {
@@ -121,13 +127,9 @@ describe('<FellowDashboards />', () => {
         email: 'collins.muru@andela.com'
       },
       role: { Andelan: 'jey' },
-      d1EngineerData: {
-        data: [
-          {
-            name: 'collins',
-            email: 'collins.muru@andela.com'
-          }
-        ]
+      d1Fellow: {
+        name: 'collins',
+        email: 'collins.muru@andela.com'
       },
       loading: false,
       getCadreEngineers: jest.fn(),
@@ -140,5 +142,29 @@ describe('<FellowDashboards />', () => {
 
     wrapper = shallow(<FellowDashboards {...props} store={store} />);
     expect(wrapper.find('CadreFellowDashboard').length).toBe(1);
+  });
+
+  it('makes the request to fetch a d1 fellow profile only when a user profile does not exist in the store', () => {
+    const props = {
+      d1Fellow: {},
+      getD1FellowProfile: jest.fn()
+    };
+    wrapper = shallow(<FellowDashboards {...props} store={store} />);
+    expect(props.getD1FellowProfile).toBeCalled();
+  });
+
+  it('renders the d1Dashboard only when loading is false', () => {
+    const props = {
+      d1Fellow: {},
+      getD1FellowProfile: jest.fn()
+    };
+    wrapper = shallow(<FellowDashboards {...props} store={store} />);
+
+    wrapper.setProps({
+      d1Fellow: {
+        name: 'John Doe'
+      }
+    });
+    expect(wrapper.state('loading')).toBeFalsy();
   });
 });

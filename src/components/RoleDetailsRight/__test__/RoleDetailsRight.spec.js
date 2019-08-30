@@ -6,24 +6,22 @@ jest.useFakeTimers();
 
 describe('', () => {
   const defaultProps = {
-    projectInfo: [
-      {
-        logo: '',
-        type: 'test',
-        manager: {
-          name: '',
-          email: ''
-        },
-        documents: [
-          {
-            id: '',
-            url: '',
-            name: 'ohsdohsdhsoidhsiodhsoidhslidhsoildkhslidhslidhsilghlsihdgois'
-          }
-        ],
-        id: 1
-      }
-    ],
+    projectInfo: {
+      logo: '',
+      type: 'test',
+      manager: {
+        name: '',
+        email: ''
+      },
+      documents: [
+        {
+          id: '',
+          url: '',
+          name: 'ohsdohsdhsoidhsiodhsoidhslidhsoildkhslidhslidhsilghlsihdgois'
+        }
+      ],
+      id: 1
+    },
     roleInfo: {
       role: {
         id: 1,
@@ -55,7 +53,7 @@ describe('', () => {
 
   it('should Render Component when fellow has not applied', () => {
     defaultProps.roleInfo.role.id = 2;
-    defaultProps.projectInfo[0].documents[0].name = '';
+    defaultProps.projectInfo.documents[0].name = '';
     const component = shallow(<RoleDetailsRight {...defaultProps} />);
     expect(component).toMatchSnapshot();
   });

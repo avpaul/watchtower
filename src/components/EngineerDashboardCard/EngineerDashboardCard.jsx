@@ -20,7 +20,7 @@ const EngineerDashboardCard = ({
       {' '}
       {`${vacancyLength} Available Vacancies`}{' '}
     </div>
-    <div className="dasboardcard-wrapper__info vacancy-wrapper__search">
+    <div className="dasboardcard-wrapper__info vacancy-wrapper__search d-flex justify-content-center">
       {children}
     </div>
   </div>
