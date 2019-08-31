@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test the certification container map state to props should return empty object on single certification when certification data is empty 1`] = `
+Object {
+  "certificationApplication": undefined,
+  "certificationVacancies": Object {},
+  "d1Fellow": undefined,
+  "getCertification": Object {
+    "data": Object {},
+    "loading": false,
+  },
+  "loading": undefined,
+  "singleCertification": Object {},
+}
+`;
+
 exports[`Test the certification container map state to props should return props value 1`] = `
 Object {
   "certificationApplication": undefined,

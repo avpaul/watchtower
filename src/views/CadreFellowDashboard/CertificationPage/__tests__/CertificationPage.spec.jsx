@@ -5,24 +5,6 @@ import Loader from '../../../../components/Loader/Loader';
 
 describe('Test the certification page', () => {
   const props = {
-    getCertification: {
-      loading: false,
-      data: {
-        1: {
-          id: 1,
-          name: 'Testing',
-          description: 'Test description',
-          exclusive: true
-        }
-      },
-      error: ''
-    },
-    singleCertification: {
-      id: 1,
-      name: 'Testing',
-      description: 'Test'
-    },
-    fetchAllVacancies: jest.fn(),
     getCertificationAction: jest.fn(),
     history: {
       push: jest.fn(),
@@ -36,6 +18,18 @@ describe('Test the certification page', () => {
     applyForCertification: jest.fn(),
     d1Engineer: {
       fellow_id: '-PUEHGE8716LJH'
+    },
+    getCertification: {
+      loading: false,
+      data: {
+        1: {
+          id: 1,
+          name: 'Testing',
+          description: 'Test description',
+          exclusive: true
+        }
+      },
+      error: ''
     },
     certificationVacancies: [
       {
@@ -53,7 +47,14 @@ describe('Test the certification page', () => {
           ]
         }
       }
-    ]
+    ],
+    loading: false,
+    singleCertification: {
+      id: 1,
+      name: 'Testing',
+      description: 'Test'
+    },
+    fetchAllVacancies: jest.fn()
   };
   let wrapper;
 
@@ -67,100 +68,42 @@ describe('Test the certification page', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should render a button for users to be able to apply for a certification', () => {
-    const component = setUp();
-    const submitButton = component.find('button');
-    expect(submitButton).toHaveLength(1);
-    expect(component).toMatchSnapshot();
+  it('it should execute go back in history when clicked', () => {
+    wrapper = shallow(<CertificationPage {...props} />);
+    wrapper.find('#nav').simulate('click');
+    expect(props.history.goBack).toHaveBeenCalled();
   });
 
-  it('should trigger certification application function when apply button is clicked', () => {
-    const component = setUp(propsOverride);
-    component.find('button').simulate('click');
-    expect(component).toMatchSnapshot();
-  });
-
-  it('should render the button loader when loading is true', () => {
+  it('should render the loader when getCertification loading is true', () => {
     propsOverride = {
-      loading: true
+      getCertification: {
+        loading: true
+      }
     };
     const componentWithLoader = setUp(propsOverride);
-    const { loading } = componentWithLoader.instance().props;
-    expect(loading).toBeTruthy();
     const loaderComponent = componentWithLoader.find(<Loader size="small" />);
     expect(loaderComponent).toMatchSnapshot();
   });
 
-  it('should not render the submit button when loading is false', () => {
+  it('should render the loader when certificationVacancies are not provided', () => {
+    propsOverride = props;
+    delete propsOverride.certificationVacancies;
+    const componentWithoutVacancies = setUp(propsOverride);
+    expect(componentWithoutVacancies.state('userHasApplied')).toBeFalsy();
+  });
+
+  it('should remain false when single certification is empty', () => {
     propsOverride = {
-      loading: false
+      singleCertification: {}
     };
-
-    const componentWithoutLoader = setUp(propsOverride);
-    const { loading } = componentWithoutLoader.instance().props;
-    expect(loading).toBeFalsy();
-    expect(loading).toMatchSnapshot();
+    const componentWithEmptyCertification = setUp(propsOverride);
+    expect(componentWithEmptyCertification.state('userHasApplied')).toBeFalsy();
   });
 
-  it('it should show not exclusive', () => {
-    const newProps = { ...props, data: { exclusive: false } };
-    wrapper = shallow(<CertificationPage {...newProps} />);
-  });
-
-  it('it should execute onClick event', () => {
-    wrapper = shallow(<CertificationPage {...props} />);
-    wrapper.find('#nav').simulate('click');
-  });
-
-  it('should disable the apply button when a user has applied for a certification already', () => {
+  it('should call checkIfUserHasApplied after all data are loaded', () => {
     const component = setUp();
-    component.setState({ userHasApplied: true });
-    expect(component.find('button#buttonDisabled').length).toBe(1);
-  });
-
-  it('should render the apply button when a user has not applied for a certification', () => {
-    const component = setUp();
-    expect(component.find('button.apply-btn').length).toBe(1);
-  });
-
-  it('it should call the check checkIfUserHasApplied function when the component updates', () => {
-    const component = setUp();
-    component.setProps({
-      getCertification: {
-        loading: true,
-        data: {
-          applications: [
-            {
-              fellow_id: '-PUEHGE8716LJH'
-            }
-          ]
-        }
-      }
-    });
-
-    expect(component.state('userHasApplied')).toBeTruthy();
-  });
-
-  it('it should change the modal state when setstate is called ', () => {
-    const component = setUp();
-    component.setState({
-      modals: {
-        applicationModal: true
-      }
-    });
-    expect(component.state('modals').applicationModal).toBeTruthy();
-    expect(component).toMatchSnapshot();
-  });
-
-  it('should render the certification application modal when the render function is called', () => {
-    propsOverride = {
-      d1Engineer: {
-        fellow_id: '-PUEHGE8716LPP'
-      }
-    };
-    const component = setUp({ ...propsOverride });
-    component.setState({ modals: { applicationModal: true } });
-    component.instance().renderSellYourselfModal();
-    expect(component.find('SellYourselfModal').length).toBe(1);
+    const spy = jest.spyOn(component.instance(), 'checkIfUserHasApplied');
+    component.setProps({ loading: true });
+    expect(spy).toBeCalled();
   });
 });
