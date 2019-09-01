@@ -22,7 +22,7 @@ const ApplicantCard = ({
       : 'close today';
 
   return (
-    <React.Fragment>
+    <>
       <ApplicantProfileCard
         firstName={application.applicant.first_name}
         lastName={application.applicant.last_name}
@@ -57,7 +57,7 @@ const ApplicantCard = ({
           technologies={application.applicant.sims_project_technology}
         />
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
