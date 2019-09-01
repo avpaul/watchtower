@@ -40,6 +40,7 @@ const ApplicantProfileCard = ({
           className="applicant_button"
           onClick={e => acceptApplicationHandler(e, applicationId)}
           data-test="accept-button"
+          disabled={!isVacancyClosed}
         >
           ACCEPT
         </button>
