@@ -1,3 +1,7 @@
+# V 3.0.2
+- team manager dashboard for managing applications, and acceptance and rolling off
+- slack notifications for new roles, successful applications and new vacancies
+
 # V 3.0.1
 
 ## Features
