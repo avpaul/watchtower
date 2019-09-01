@@ -377,6 +377,7 @@ exports[`Application component should handle acceptance button click to show acc
               <button
                 className="applicant_button"
                 data-test="accept-button"
+                disabled={false}
                 onClick={[Function]}
                 type="button"
               >
