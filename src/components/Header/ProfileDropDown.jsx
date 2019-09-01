@@ -19,6 +19,8 @@ const renderRole = user => {
       return 'Technical Team Lead';
     case !!user.roles.WATCH_TOWER_OPS:
       return 'Operations Manager';
+    case !!user.roles.CADRE_TEAM_MANAGER:
+      return 'Team Manager';
     default:
       return 'Fellow';
   }

@@ -4,7 +4,11 @@ exports[`Application component Render component when manager has no project 1`] 
 <div
   className="cadre__page"
 >
-  emptyPlaceholder();
+  <div>
+    <Placeholder
+      text="Welcome, you are yet to have Cadre Engineers on your team."
+    />
+  </div>
 </div>
 `;
 

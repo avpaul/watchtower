@@ -14,7 +14,8 @@ const ApplicantProfileCard = ({
   applicationId,
   isVacancyClosed,
   VacancyCloseCountdown,
-  hideDrawer
+  hideDrawer,
+  fellowAvailability
 }) => (
   <div className="applicant">
     <span className="closeApp" aria-hidden="true" onClick={() => hideDrawer()}>
@@ -33,15 +34,20 @@ const ApplicantProfileCard = ({
       </h3>
       <p>Applying for {roleName}</p>
       <p>{projectId}</p>
-      <button
-        type="button"
-        className="applicant_button"
-        onClick={e => acceptApplicationHandler(e, applicationId)}
-        data-test="accept-button"
-        disabled={!isVacancyClosed}
-      >
-        ACCEPT
-      </button>
+      {!fellowAvailability ? (
+        <button
+          type="button"
+          className="applicant_button"
+          onClick={e => acceptApplicationHandler(e, applicationId)}
+          data-test="accept-button"
+        >
+          ACCEPT
+        </button>
+      ) : (
+        <p className="unavailable_engineer">
+          Engineer is currently unavailable
+        </p>
+      )}
       {!isVacancyClosed && (
         <div className="applications_not_closed">
           Applications {VacancyCloseCountdown}
@@ -68,7 +74,8 @@ ApplicantProfileCard.propTypes = {
   applicationId: PropTypes.number.isRequired,
   isVacancyClosed: PropTypes.bool.isRequired,
   VacancyCloseCountdown: PropTypes.string.isRequired,
-  hideDrawer: PropTypes.func.isRequired
+  hideDrawer: PropTypes.func.isRequired,
+  fellowAvailability: PropTypes.string.isRequired
 };
 
 export default ApplicantProfileCard;

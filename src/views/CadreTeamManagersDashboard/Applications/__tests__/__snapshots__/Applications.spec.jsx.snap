@@ -46,6 +46,7 @@ exports[`Application component should handle acceptance button click to show acc
             "confirm_email_sent": false,
             "created_at": "2019-08-22 12:23:24",
             "decision": "pending",
+            "fellow_availability": null,
             "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
             "id": 13,
             "project": Object {
@@ -302,6 +303,7 @@ exports[`Application component should handle acceptance button click to show acc
             "confirm_email_sent": false,
             "created_at": "2019-08-22 12:23:24",
             "decision": "pending",
+            "fellow_availability": null,
             "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
             "id": 13,
             "project": Object {
@@ -333,6 +335,7 @@ exports[`Application component should handle acceptance button click to show acc
           acceptApplicationHandler={[Function]}
           applicationId={13}
           applicationReason="Iure unde rerum nihil dolorum natus nam sit. Quis vitae ab quo voluptates rerum. Voluptas sint error et repellat."
+          fellowAvailability={null}
           firstName="Wasibani"
           hideDrawer={[Function]}
           isVacancyClosed={true}
@@ -374,7 +377,6 @@ exports[`Application component should handle acceptance button click to show acc
               <button
                 className="applicant_button"
                 data-test="accept-button"
-                disabled={false}
                 onClick={[Function]}
                 type="button"
               >
@@ -545,6 +547,7 @@ exports[`Application component should handle acceptance button click to show acc
             "confirm_email_sent": false,
             "created_at": "2019-08-22 12:23:24",
             "decision": "pending",
+            "fellow_availability": null,
             "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
             "id": 13,
             "project": Object {
@@ -682,6 +685,7 @@ exports[`Application component should handle filtering after clicking 1`] = `
             "confirm_email_sent": false,
             "created_at": "2019-08-22 12:23:24",
             "decision": "pending",
+            "fellow_availability": null,
             "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
             "id": 13,
             "project": Object {
@@ -939,6 +943,7 @@ exports[`Application component should render correctly 1`] = `
             "confirm_email_sent": false,
             "created_at": "2019-08-22 12:23:24",
             "decision": "pending",
+            "fellow_availability": null,
             "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
             "id": 13,
             "project": Object {
@@ -1150,6 +1155,7 @@ exports[`Application component should show confirmationModal 1`] = `
             "confirm_email_sent": false,
             "created_at": "2019-08-22 12:23:24",
             "decision": "pending",
+            "fellow_availability": null,
             "fellow_id": "-LSKa7Lv0YJtaXSlGbog",
             "id": 13,
             "project": Object {

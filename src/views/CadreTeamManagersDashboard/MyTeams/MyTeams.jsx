@@ -256,7 +256,7 @@ const MyTeam = ({
         </Fragment>
       );
     }
-    return <div className="cadre__page">emptyPlaceholder();</div>;
+    return <div className="cadre__page">{emptyPlaceholder()}</div>;
   };
 
   return !teamManagerTeamMembers.data.length ? (
