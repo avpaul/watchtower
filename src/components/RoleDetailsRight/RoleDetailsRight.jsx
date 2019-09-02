@@ -17,6 +17,7 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
 
   const hasApplied = () => {
     const { applications } = roleInfo;
+
     if (applications) {
       return !!applications.find(
         application =>
@@ -27,6 +28,32 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
       );
     }
     return false;
+  };
+
+  const renderButton = () => {
+    if (engineer.role) {
+      return (
+        <button disabled id="buttonDisabled" type="button">
+          YOU HAVE A ROLE
+        </button>
+      );
+    }
+    if (hasApplied()) {
+      return (
+        <button disabled id="buttonDisabled" type="button">
+          ALREADY APPLIED
+        </button>
+      );
+    }
+    return (
+      <button
+        data-toggle="modal"
+        data-target="#applyForRoleModal"
+        type="button"
+      >
+        APPLY FOR THIS ROLE
+      </button>
+    );
   };
 
   return (
@@ -40,19 +67,7 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
           </div>
         </div>
         <div className="headingRight">
-          {hasApplied() ? (
-            <button disabled id="buttonDisabled" type="button">
-              ALREADY APPLIED
-            </button>
-          ) : (
-            <button
-              data-toggle="modal"
-              data-target="#applyForRoleModal"
-              type="button"
-            >
-              APPLY FOR THIS ROLE
-            </button>
-          )}
+          {renderButton()}
           <div className="vacancy__count">
             Days Left:{' '}
             <span>

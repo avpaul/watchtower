@@ -20,10 +20,7 @@ class RoleApplication extends Component {
 
   componentDidUpdate(prevProps) {
     const { applications } = this.props;
-    if (
-      prevProps.applications.loading !== applications.loading &&
-      prevProps.applications.data !== applications.data
-    ) {
+    if (prevProps.applications.error !== applications.error) {
       this.applicationStatus(applications);
     }
   }
@@ -37,7 +34,10 @@ class RoleApplication extends Component {
       const { application_reason: reason } = error;
       this.setState({ errorMessage: reason[0] });
     } else if (error && error === 'You have an active role') {
-      this.setState({ errorMessage: error });
+      this.setState({
+        errorMessage: error,
+        isValidLength: false
+      });
     }
   };
 
