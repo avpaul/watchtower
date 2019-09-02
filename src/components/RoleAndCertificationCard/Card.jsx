@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Modal from '../LargeModal/LargeModal';
@@ -67,20 +69,22 @@ class Card extends React.Component {
   renderRoleApplicantsModal = () => {
     const {
       cardProps: {
-        details: { id, name }
+        details: { id, name, applications_count }
       }
     } = this.props;
 
     const showRoleApplicants = this.getModalState('showRoleApplicants');
-    return (
-      <ViewRoleApplicantsModal
-        id="roleApplicantsModal"
-        open={showRoleApplicants}
-        toggle={this.modalHandler('showRoleApplicants')}
-        roleId={id}
-        title={name}
-      />
-    );
+    if (applications_count > 0) {
+      return (
+        <ViewRoleApplicantsModal
+          id="roleApplicantsModal"
+          open={showRoleApplicants}
+          toggle={this.modalHandler('showRoleApplicants')}
+          roleId={id}
+          title={name}
+        />
+      );
+    }
   };
 
   renderFullDescription = () => {
@@ -278,21 +282,23 @@ class Card extends React.Component {
   renderViewCertificationApplicantsModal = () => {
     const {
       cardProps: {
-        details: { id, name }
+        details: { id, name, applications_count }
       }
     } = this.props;
     const showCertificationApplicants = this.getModalState(
       'showCertificationApplicants'
     );
 
-    return (
-      <ViewCertificationApplicantsModal
-        open={showCertificationApplicants}
-        toggle={this.modalHandler('showCertificationApplicants')}
-        certificationId={id}
-        title={name}
-      />
-    );
+    if (applications_count > 0) {
+      return (
+        <ViewCertificationApplicantsModal
+          open={showCertificationApplicants}
+          toggle={this.modalHandler('showCertificationApplicants')}
+          certificationId={id}
+          title={name}
+        />
+      );
+    }
   };
 
   renderViewCertifiedEngineersModal = () => {
