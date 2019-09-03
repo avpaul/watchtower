@@ -6,7 +6,7 @@ it('should return the initial state for unknown action type', () => {
   expect(d1FellowProfileDataReducer(undefined, {})).toEqual({
     loading: false,
     fellow: {},
-    error: ''
+    error: null
   });
 });
 

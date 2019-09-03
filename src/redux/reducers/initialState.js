@@ -103,7 +103,7 @@ export default {
   d1Fellow: {
     loading: false,
     fellow: {},
-    error: ''
+    error: null
   },
   notification: {
     loading: false,

@@ -12,12 +12,8 @@ export class FellowDashboards extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: true
     };
-  }
-
-  componentWillMount() {
-    this.setState({ loading: true });
   }
 
   componentDidMount() {
@@ -30,8 +26,8 @@ export class FellowDashboards extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { d1Fellow } = this.props;
-    if (nextProps.d1Fellow !== d1Fellow) {
+    const { error, d1Fellow } = this.props;
+    if (nextProps.error !== error || nextProps.d1Fellow !== d1Fellow) {
       this.setState({ loading: false });
     }
   }
@@ -89,10 +85,15 @@ FellowDashboards.propTypes = {
   history: PropTypes.instanceOf(Object).isRequired,
   activateCadreEngineerAccount: PropTypes.func.isRequired,
   location: PropTypes.instanceOf(Object).isRequired,
-  d1Fellow: PropTypes.instanceOf(Object).isRequired
+  d1Fellow: PropTypes.instanceOf(Object).isRequired,
+  error: PropTypes.string.isRequired
 };
 
-const mapStateToProps = ({ d1Fellow }) => ({ d1Fellow: d1Fellow.fellow });
+const mapStateToProps = ({ d1Fellow }) => ({
+  d1Fellow: d1Fellow.fellow,
+  loading: d1Fellow.loading,
+  error: d1Fellow.error
+});
 
 export default connect(
   mapStateToProps,
