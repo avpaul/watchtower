@@ -1,7 +1,7 @@
 import initialState from './initialState';
 import * as types from '../constants/d1FellowProfileDataTypes';
 
-const d1FellowBioReducer = (state = initialState.fellow, action) => {
+const d1FellowBioReducer = (state = initialState.d1Fellow, action) => {
   switch (action.type) {
     case types.LOAD_D1_FELLOW_PROFILE_DATA_REQUEST:
     case types.ACTIVATE_CADRE_ENGINEER_ACCOUNT_REQUEST:
@@ -16,7 +16,8 @@ const d1FellowBioReducer = (state = initialState.fellow, action) => {
       return {
         ...state,
         loading: false,
-        fellow: action.fellow
+        fellow: action.fellow,
+        error: null
       };
 
     case types.LOAD_D1_FELLOW_PROFILE_DATA_FAILURE:
