@@ -14,6 +14,7 @@ const Dashboards = props => {
   const { user, location } = props;
   delete user.roles.Andelan;
   delete user.roles.Technology;
+  delete user.roles['Staffing Specialists'];
   const roles = Object.keys(user.roles);
   let role = roles.filter(s => s.includes('WATCH_TOWER'))[0];
   if (!role) {
