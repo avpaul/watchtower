@@ -40,8 +40,14 @@ const ProjectRoleDetails = ({
   const { params } = match;
   return Object.keys(singleProject).length > 1 ? (
     <div className="role-details-container">
-      <ReturnButton history={history} />
-      <p>Back to Dashboard</p>
+      <div className="back-to-container">
+        <div className="fixed">
+          <span className="cursor-pointer">
+            <ReturnButton history={history} />
+            <p>Back to Dashboard</p>
+          </span>
+        </div>
+      </div>
       <RoleDetailsLeft projectInfo={singleProject} roleInfo={currentRole} />
       <RoleApplication
         roleId={params.roleId}

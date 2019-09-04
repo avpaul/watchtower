@@ -75,7 +75,7 @@ class CertificationDetailsRight extends React.Component {
     } = this.state;
     return (
       <div className="projectAndRoleDetailContainer">
-        <div className="mainHeading">
+        <div className="main-heading">
           <div className="headingLeft" />
           <div className="headingRight">
             {this.renderApplicationButton(userHasApplied)}

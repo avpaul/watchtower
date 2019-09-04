@@ -69,12 +69,24 @@ exports[`should Render child Components 1`] = `
 <div
   className="role-details-container"
 >
-  <ReturnButton
-    history={Object {}}
-  />
-  <p>
-    Back to Dashboard
-  </p>
+  <div
+    className="back-to-container"
+  >
+    <div
+      className="fixed"
+    >
+      <span
+        className="cursor-pointer"
+      >
+        <ReturnButton
+          history={Object {}}
+        />
+        <p>
+          Back to Dashboard
+        </p>
+      </span>
+    </div>
+  </div>
   <RoleDetailsLeft
     projectInfo={
       Object {

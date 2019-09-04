@@ -2,10 +2,10 @@
 
 exports[`Test the certification page should render without errors 1`] = `
 <div
-  className="projectContainer"
+  className="project-container"
 >
   <div
-    className="projectOverview"
+    className="project-overview"
   >
     <span
       className="projectType"
@@ -69,10 +69,10 @@ exports[`Test the certification page should render without errors 1`] = `
 
 exports[`Test the certification page should render without errors when vacancy details are not provided 1`] = `
 <div
-  className="projectContainer"
+  className="project-container"
 >
   <div
-    className="projectOverview"
+    className="project-overview"
   >
     <span
       className="projectType"

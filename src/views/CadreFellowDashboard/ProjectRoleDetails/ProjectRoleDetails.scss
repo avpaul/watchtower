@@ -1,8 +1,25 @@
 .role-details-container {
-  margin: 3.4rem auto;
+  margin: 4rem auto;
   width: 76vw;
   padding-bottom: 4rem;
   height: 85vh;
+  position: relative;
+
+  & .back-to-container {
+    height: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: fixed;
+    top: 100px;
+
+    & .cert-back {
+      top: 120px;
+    }
+  }
+
+  & .cursor-pointer {
+    cursor: pointer;
+  }
 
   & .wt-return-button {
     position: relative;
@@ -20,15 +37,17 @@
     display: flex;
   }
 
-  & .projectContainer {
-    width: 33%;
+  & .project-container {
+    width: 25%;
     min-height: 80vh;
     background-color: #fff;
     border-radius: 0.5rem;
-    float: left;
+    position: fixed;
+    top: 160px;
+    left: 150px;
   }
 
-  & .projectOverview {
+  & .project-overview {
     text-align: center;
     border-bottom: 1.2px solid #f4f8f9;
     padding-bottom: 3rem;
@@ -143,12 +162,18 @@
     min-height: 80vh;
     background-color: #fff;
     border-radius: 0.5rem;
-    float: right;
+    position: absolute;
+    top: 6em;
+    left: 34.5%;
     padding-bottom: 2rem;
     color: #829199;
     font-size: 1rem;
 
-    & .mainHeading {
+    & .role {
+      top: 6em !important;
+    }
+
+    & .main-heading {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -242,7 +267,7 @@
     margin: 3.4rem auto;
     clear: both;
 
-    & .projectContainer {
+    & .project-container {
       width: 365px;
       clear: both;
     }
@@ -259,7 +284,7 @@
     margin: 3.4rem auto;
     clear: both;
 
-    & .projectContainer {
+    & .project-container {
       width: 310px;
       clear: both;
     }
@@ -279,7 +304,7 @@
     & .projectAndRoleDetailContainer {
       max-width: 55%;
 
-      & .mainHeading {
+      & .main-heading {
         padding: 3.5rem 3rem 5rem 3rem;
 
         & button {
@@ -307,7 +332,7 @@
     margin: 3.4rem auto;
     clear: both;
 
-    & .projectContainer {
+    & .project-container {
       width: 365px;
       clear: both;
     }
@@ -317,7 +342,7 @@
       margin: 15px auto;
       float: left;
 
-      & .mainHeading {
+      & .main-heading {
         padding: 3.5rem 1rem 5rem 1.5rem;
 
         & button {

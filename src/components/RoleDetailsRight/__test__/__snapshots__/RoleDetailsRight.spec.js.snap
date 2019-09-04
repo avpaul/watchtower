@@ -5,7 +5,7 @@ exports[`Should render component when engineer has not applied before 1`] = `
   className="projectAndRoleDetailContainer"
 >
   <div
-    className="mainHeading"
+    className="main-heading"
   >
     <div
       className="headingLeft"
@@ -84,7 +84,7 @@ exports[`Should render component when has role 1`] = `
   className="projectAndRoleDetailContainer"
 >
   <div
-    className="mainHeading"
+    className="main-heading"
   >
     <div
       className="headingLeft"
@@ -163,7 +163,7 @@ exports[`should Render Component 1`] = `
   className="projectAndRoleDetailContainer"
 >
   <div
-    className="mainHeading"
+    className="main-heading"
   >
     <div
       className="headingLeft"
@@ -242,7 +242,7 @@ exports[`should Render Component hasApplied is false 1`] = `
   className="projectAndRoleDetailContainer"
 >
   <div
-    className="mainHeading"
+    className="main-heading"
   >
     <div
       className="headingLeft"
@@ -320,7 +320,7 @@ exports[`should Render Component when fellow has not applied 1`] = `
   className="projectAndRoleDetailContainer"
 >
   <div
-    className="mainHeading"
+    className="main-heading"
   >
     <div
       className="headingLeft"

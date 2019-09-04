@@ -17,7 +17,7 @@ describe('', () => {
         {
           id: '',
           url: '',
-          name: 'ohsdohsdhsoidhsiodhsoidhslidhsoildkhslidhslidhsilghlsihdgois'
+          name: 'ohsdohsdhsoidhsiodhsoidhslidhsoildkhslidhslidhsilghdgois'
         }
       ],
       id: 1

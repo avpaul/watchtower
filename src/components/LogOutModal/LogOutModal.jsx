@@ -62,6 +62,7 @@ class LogOutPage extends Component {
           roled="dialog"
           aria-labelledby="logoutModal"
           aria-hidden="true"
+          backdrop="false"
         >
           <div className="modal-dialog modal-dialog-centered" role="document">
             {this.renderModalContent()}

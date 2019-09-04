@@ -21,7 +21,7 @@ const FellowHeader = props => {
   return (
     <div>
       <LogOutModal />
-      <div id="nav" className="header position-fixed w-100 z-index-10">
+      <div id="nav" className="header fixed-top w-100 z-index-10">
         {renderModal(notifications, unreadnotifications)}
         <div className="navbar navbar-expand flex-row m-0 px-5 py-3 justify-content-between">
           <LogoSection />

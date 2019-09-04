@@ -3,7 +3,7 @@
 exports[`Tests the CadreDashboard component should render properly 1`] = `
 <Fragment>
   <div
-    className="cadre-content"
+    className="cadre-content mt-5"
   >
     <div
       className="cadre-side-card-dashboard"

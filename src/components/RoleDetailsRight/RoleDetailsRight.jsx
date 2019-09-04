@@ -47,7 +47,7 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
 
   return (
     <div className="projectAndRoleDetailContainer">
-      <div className="mainHeading">
+      <div className="main-heading">
         <div className="headingLeft">
           <img src={projectIcon} alt="project logo" />
           <div>
