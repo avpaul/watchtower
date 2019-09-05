@@ -1,5 +1,163 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Should render component when engineer has not applied before 1`] = `
+<div
+  className="projectAndRoleDetailContainer"
+>
+  <div
+    className="mainHeading"
+  >
+    <div
+      className="headingLeft"
+    >
+      <img
+        alt="project logo"
+        src="projectdown.svg"
+      />
+      <div>
+        <p
+          className="roleName"
+        />
+        <p
+          className="projectName"
+        />
+      </div>
+    </div>
+    <div
+      className="headingRight"
+    >
+      <button
+        data-target="#applyForRoleModal"
+        data-toggle="modal"
+        type="button"
+      >
+        APPLY FOR THIS ROLE
+      </button>
+      <div
+        className="vacancy__count"
+      >
+        Days Left:
+         
+        <span>
+          Closed
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mainBody"
+  >
+    <h6
+      className="paragraphHeadings"
+    >
+      Role Description
+    </h6>
+    <p />
+    <h6
+      className="paragraphHeadings"
+    >
+      About 
+    </h6>
+    <p />
+    <h6
+      className="paragraphHeadings"
+    >
+      Relevant Documents
+    </h6>
+    <a
+      href=""
+      key=""
+      rel="noopener noreferrer"
+    >
+      <img
+        alt="document logo"
+        src="doc.svg"
+      />
+      ohsdohsdhsoidhsiodhsoi...
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Should render component when has role 1`] = `
+<div
+  className="projectAndRoleDetailContainer"
+>
+  <div
+    className="mainHeading"
+  >
+    <div
+      className="headingLeft"
+    >
+      <img
+        alt="project logo"
+        src="projectdown.svg"
+      />
+      <div>
+        <p
+          className="roleName"
+        />
+        <p
+          className="projectName"
+        />
+      </div>
+    </div>
+    <div
+      className="headingRight"
+    >
+      <button
+        disabled={true}
+        id="buttonDisabled"
+        type="button"
+      >
+        YOU HAVE A ROLE
+      </button>
+      <div
+        className="vacancy__count"
+      >
+        Days Left:
+         
+        <span>
+          Closed
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mainBody"
+  >
+    <h6
+      className="paragraphHeadings"
+    >
+      Role Description
+    </h6>
+    <p />
+    <h6
+      className="paragraphHeadings"
+    >
+      About 
+    </h6>
+    <p />
+    <h6
+      className="paragraphHeadings"
+    >
+      Relevant Documents
+    </h6>
+    <a
+      href=""
+      key=""
+      rel="noopener noreferrer"
+    >
+      <img
+        alt="document logo"
+        src="doc.svg"
+      />
+      ohsdohsdhsoidhsiodhsoi...
+    </a>
+  </div>
+</div>
+`;
+
 exports[`should Render Component 1`] = `
 <div
   className="projectAndRoleDetailContainer"

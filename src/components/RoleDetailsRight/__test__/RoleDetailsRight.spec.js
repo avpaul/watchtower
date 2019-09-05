@@ -51,6 +51,19 @@ describe('', () => {
     expect(component).toMatchSnapshot();
   });
 
+  it('Should render component when has role', () => {
+    defaultProps.engineer.role = { id: '1', name: 'FPC' };
+    const component = shallow(<RoleDetailsRight {...defaultProps} />);
+    expect(component).toMatchSnapshot();
+  });
+
+  it('Should render component when engineer has not applied before', () => {
+    defaultProps.roleInfo.applications = null;
+    defaultProps.engineer.role = null;
+    const component = shallow(<RoleDetailsRight {...defaultProps} />);
+    expect(component).toMatchSnapshot();
+  });
+
   it('should Render Component when fellow has not applied', () => {
     defaultProps.roleInfo.role.id = 2;
     defaultProps.projectInfo.documents[0].name = '';
