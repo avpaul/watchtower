@@ -1,4 +1,14 @@
 # V 3.0.2
+
+## Features
+- allow staffing specialists to login
+- add amplitude analytics capture
+- show error message when an engaged engineer attempts to apply for another cadre role
+
+## Bug Fixes
+- fix redirect error on authentication failure
+
+# V 3.0.2
 - team manager dashboard for managing applications, and acceptance and rolling off
 - slack notifications for new roles, successful applications and new vacancies
 
