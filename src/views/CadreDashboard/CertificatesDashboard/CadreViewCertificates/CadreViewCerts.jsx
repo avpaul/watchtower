@@ -9,8 +9,14 @@ import DeleteCertificationModal from '../CadreDeleteCertification';
 
 export default class CadreViewCerts extends Component {
   componentDidMount() {
-    const { fetchAllCertifications } = this.props;
-    fetchAllCertifications();
+    const { fetchAllCertifications, allCertifications } = this.props;
+    if (
+      allCertifications &&
+      allCertifications.data &&
+      !allCertifications.data.length
+    ) {
+      fetchAllCertifications();
+    }
   }
 
   render() {

@@ -27,6 +27,18 @@ describe('Test view roles', () => {
     };
     wrapper = shallow(<CadreViewCerts {...props} />);
   });
+
+  it('should map display project certifications without certification', () => {
+    props = {
+      allCertifications: {
+        data: []
+      },
+      fetchAllCertifications: jest.fn(),
+      loading: true
+    };
+    wrapper = shallow(<CadreViewCerts {...props} />);
+  });
+
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });

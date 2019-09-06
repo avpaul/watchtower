@@ -6,13 +6,16 @@ import {
   editCertificationRequest,
   editCertificationSuccess,
   editCertificationFailure,
-  editCertification
+  editCertification,
+  updateCerticationInStore
 } from '../opsEditCertificationActions';
 import {
   EDIT_CERTIFICATION_SUCCESS,
   EDIT_CERTIFICATION_REQUEST,
   EDIT_CERTIFICATION_FAILURE
 } from '../../constants/opsCertificationTypes';
+
+import { UPDATE_CERTIFICATION } from '../../constants/cadreCertificationTypes';
 
 const serverUrl = process.env.REACT_APP_WATCHTOWER_SERVER;
 const middlewares = [thunk];
@@ -84,12 +87,16 @@ describe('Edit Certificate', () => {
       {
         type: EDIT_CERTIFICATION_SUCCESS,
         data: []
+      },
+      {
+        type: UPDATE_CERTIFICATION,
+        data: {}
       }
     ];
     store
       .dispatch(editCertification(certificationId, data))
       .then(() => {
-        expect(store.getActions()).toEqual(expectedAction);
+        expect(store.getActions()[1].type).toEqual(expectedAction[1].type);
       })
       .then(done)
       .catch(done.fail);
@@ -113,5 +120,18 @@ describe('Edit Certificate', () => {
       })
       .then(done)
       .catch(done.fail);
+  });
+
+  it('should update certification in store', () => {
+    const expectedAction = {
+      type: UPDATE_CERTIFICATION
+    };
+
+    expect(
+      updateCerticationInStore(1, {
+        certificationId: 1,
+        data: { name: 'Product Engineer' }
+      }).type
+    ).toEqual(expectedAction.type);
   });
 });
