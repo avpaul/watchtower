@@ -13,7 +13,8 @@ const EngineerVacancyCard = ({
   slots,
   closingDate,
   applications,
-  loggedInUser
+  loggedInUser,
+  hasApplied
 }) => {
   let userHasApplied = false;
 
@@ -24,12 +25,7 @@ const EngineerVacancyCard = ({
       );
       break;
     default:
-      userHasApplied = !!applications.find(
-        application =>
-          application.fellow_id === loggedInUser.fellow_id &&
-          application.project_id === projectId &&
-          application.project_role_id === roleId
-      );
+      userHasApplied = hasApplied;
   }
 
   return (
@@ -77,7 +73,8 @@ EngineerVacancyCard.defaultProps = {
   projectName: '',
   roleId: null,
   projectId: null,
-  slots: 0
+  slots: 0,
+  hasApplied: false
 };
 
 EngineerVacancyCard.propTypes = {
@@ -87,6 +84,7 @@ EngineerVacancyCard.propTypes = {
   role: PropTypes.string,
   roleId: PropTypes.number,
   slots: PropTypes.number,
+  hasApplied: PropTypes.bool,
   loggedInUser: PropTypes.instanceOf(Object).isRequired,
   applications: PropTypes.instanceOf(Object).isRequired
 };

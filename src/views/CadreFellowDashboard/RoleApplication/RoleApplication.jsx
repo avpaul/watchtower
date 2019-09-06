@@ -19,19 +19,17 @@ class RoleApplication extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { applications } = this.props;
+    const { error, newApplication } = this.props;
+
     if (
-      (prevProps.applications.loading !== applications.loading &&
-        prevProps.applications.data !== applications.data) ||
-      prevProps.applications.error !== applications.error
+      prevProps.newApplication !== newApplication ||
+      prevProps.error !== error
     ) {
-      this.applicationStatus(applications);
+      this.applicationStatus(error);
     }
   }
 
-  applicationStatus = applications => {
-    const { error } = applications;
-
+  applicationStatus = error => {
     if (!error) {
       this.setState({ success: true });
     } else if (error && error.application_reason) {
@@ -105,7 +103,7 @@ class RoleApplication extends Component {
 
   sendApplicationButton = () => {
     const { success, isValidLength } = this.state;
-    const { applications } = this.props;
+    const { loading } = this.props;
     let button = this.renderButton({
       label: 'Send Application',
       buttonProps: {
@@ -124,14 +122,10 @@ class RoleApplication extends Component {
       });
     }
 
-    return applications.loading ? (
-      <Loader size="small" />
-    ) : (
-      this.footer(success, button)
-    );
+    return loading ? <Loader size="small" /> : this.footer(success, button);
   };
 
-  converToUnicode = hexValue => String.fromCodePoint(hexValue);
+  convertToUnicode = hexValue => String.fromCodePoint(hexValue);
 
   renderBody = () => {
     const { roleInfo } = this.props;
@@ -148,17 +142,17 @@ class RoleApplication extends Component {
 
     if (currentLength >= 0 && currentLength < 50) {
       progressClass = 'danger';
-      feedbackText = `C'mon, don't sell yourself short!. ${this.converToUnicode(
+      feedbackText = `C'mon, don't sell yourself short!. ${this.convertToUnicode(
         128527
       )}`;
     } else if (currentLength > 500) {
       progressClass = 'danger';
-      feedbackText = `OK, maybe not your full CV, 10x Engineer. ${this.converToUnicode(
+      feedbackText = `OK, maybe not your full CV, 10x Engineer. ${this.convertToUnicode(
         128540
       )}`;
     } else {
       progressClass = 'success';
-      feedbackText = `Yeah! Keep it nice, short and simple. ${this.converToUnicode(
+      feedbackText = `Yeah! Keep it nice, short and simple. ${this.convertToUnicode(
         128076
       )}`;
     }
@@ -231,8 +225,11 @@ RoleApplication.propTypes = {
   engineer: PropTypes.shape().isRequired,
   projectId: PropTypes.string.isRequired,
   roleId: PropTypes.string.isRequired,
+  newApplication: PropTypes.string.isRequired,
   projectTitle: PropTypes.string.isRequired,
-  cycleId: PropTypes.number.isRequired
+  cycleId: PropTypes.number.isRequired,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.PropTypes.oneOfType([]).isRequired
 };
 
 export default RoleApplication;

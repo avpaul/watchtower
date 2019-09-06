@@ -3,7 +3,9 @@ import RoleApplication from './RoleApplication';
 import applyForRole from '../../../redux/actionCreators/applyForRoleActions';
 
 const mapStateToProps = ({ cadreVacancies }) => ({
-  applications: cadreVacancies
+  loading: cadreVacancies.loading,
+  error: cadreVacancies.error,
+  newApplication: cadreVacancies.data.newApplication
 });
 
 export default connect(

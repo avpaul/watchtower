@@ -11,7 +11,8 @@ const addNewApplication = (vacancies, newApplication) => {
         Number(vacancy.vacancy.cycle_id) === Number(newApplication.cycle_id) &&
         Number(vacancy.role.id) === Number(newApplication.project_role_id)
     );
-    currentVacancy.applications.push(newApplication);
+
+    currentVacancy.vacancy.hasApplied = true;
   } else {
     currentVacancy = allVacancies.find(
       vacancy =>
@@ -71,8 +72,10 @@ const cadreVacanciesReducer = (state = initialState.cadreVacancies, action) => {
           projectVacancies: addNewApplication(
             state.data.projectVacancies,
             action.data.application
-          )
+          ),
+          newApplication: `${action.data.application.project_role_id}-${action.data.application.project_id}`
         },
+
         loading: false
       };
 

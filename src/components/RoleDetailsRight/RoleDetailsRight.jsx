@@ -4,7 +4,7 @@ import projectIcon from '../../static/projectdown.svg';
 import doc from '../../static/doc.svg';
 import dateCountDown, { formatCountDown } from '../../utils/dateCountDown';
 
-const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
+const RoleDetailsRight = ({ projectInfo, roleInfo, engineer }) => {
   const renderDocuments = () =>
     projectInfo.documents.map(document => (
       <a href={document.url} key={document.id} rel="noopener noreferrer">
@@ -15,21 +15,6 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
       </a>
     ));
 
-  const hasApplied = () => {
-    const { applications } = roleInfo;
-
-    if (applications) {
-      return !!applications.find(
-        application =>
-          application.fellow_id === engineer.fellow_id &&
-          application.project_role_id === roleInfo.role.id &&
-          application.project_id === projectInfo.id &&
-          application.cycle_id === cycleId
-      );
-    }
-    return false;
-  };
-
   const renderButton = () => {
     if (engineer.role) {
       return (
@@ -38,7 +23,11 @@ const RoleDetailsRight = ({ projectInfo, roleInfo, engineer, cycleId }) => {
         </button>
       );
     }
-    if (hasApplied()) {
+
+    const {
+      vacancy: { hasApplied }
+    } = roleInfo;
+    if (hasApplied) {
       return (
         <button disabled id="buttonDisabled" type="button">
           ALREADY APPLIED
@@ -98,8 +87,7 @@ RoleDetailsRight.defaultProps = {
 RoleDetailsRight.propTypes = {
   projectInfo: PropTypes.instanceOf(Object),
   engineer: PropTypes.shape().isRequired,
-  roleInfo: PropTypes.shape(),
-  cycleId: PropTypes.number.isRequired
+  roleInfo: PropTypes.shape()
 };
 
 export default RoleDetailsRight;

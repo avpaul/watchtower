@@ -51,6 +51,7 @@ class EngineerVacancies extends Component {
             closingDate={vacancy.closing_date}
             loggedInUser={loggedInUser}
             applications={applications}
+            hasApplied={vacancy.hasApplied}
           />
         )
       )}
@@ -96,10 +97,14 @@ class EngineerVacancies extends Component {
       vacanciesLength === 0 ? '--no-vacancies' : '--all-vacancies'
     }`;
 
+    const vacancyApplicationErrors = [
+      'You have already applied for this certification',
+      'You have an active role'
+    ];
     const { error, data } = cadreVacancies;
     return (
       <div className="w-100">
-        {error
+        {error && !vacancyApplicationErrors.includes(error)
           ? this.displayNoVacancyDetails(
               vacanciesClass,
               'Sorry, there was an issue retrieving vacancies.',

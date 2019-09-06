@@ -86,7 +86,7 @@ class SellYourselfModal extends Component {
     </>
   );
 
-  converToUnicode = hexValue => String.fromCodePoint(hexValue);
+  convertToUnicode = hexValue => String.fromCodePoint(hexValue);
 
   render() {
     const {
@@ -106,17 +106,17 @@ class SellYourselfModal extends Component {
 
     if (currentLength >= 0 && currentLength < 50) {
       progressClass = 'danger';
-      feedbackText = `C'mon, don't sell yourself short!. ${this.converToUnicode(
+      feedbackText = `C'mon, don't sell yourself short!. ${this.convertToUnicode(
         128527
       )}`;
     } else if (currentLength > 500) {
       progressClass = 'danger';
-      feedbackText = `OK, maybe not your full CV, 10x Engineer. ${this.converToUnicode(
+      feedbackText = `OK, maybe not your full CV, 10x Engineer. ${this.convertToUnicode(
         128540
       )}`;
     } else {
       progressClass = 'success';
-      feedbackText = `Yeah! Keep it nice, short and simple. ${this.converToUnicode(
+      feedbackText = `Yeah! Keep it nice, short and simple. ${this.convertToUnicode(
         128076
       )}`;
     }

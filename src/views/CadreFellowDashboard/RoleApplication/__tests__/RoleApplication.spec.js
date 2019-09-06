@@ -9,11 +9,9 @@ jest.useFakeTimers();
 describe('tests RoleApplication', () => {
   const defaultProps = {
     roleId: '1',
-    applications: {
-      loading: false,
-      data: {},
-      error: null
-    },
+    loading: false,
+    error: null,
+    newApplication: null,
     applyForRole: jest.fn(),
     roleInfo: {
       name: 'Technical Team Lead'
@@ -104,7 +102,7 @@ describe('tests RoleApplication', () => {
     modal.setProps({ applications });
     const instance = modal.instance();
     jest.spyOn(instance, 'applicationStatus');
-    modal.instance().applicationStatus(applications);
+    modal.instance().applicationStatus(applications.error);
     expect(modal.state('success')).toBe(true);
   });
 
@@ -136,12 +134,12 @@ describe('tests RoleApplication', () => {
     modal.setProps({ applications });
     const instance = modal.instance();
     jest.spyOn(instance, 'applicationStatus');
-    modal.instance().applicationStatus(applications);
+    modal.instance().applicationStatus(applications.error);
     expect(modal.state('errorMessage')).toBe('You have an active role');
   });
 
   it('should display loader when loading', () => {
-    defaultProps.applications.loading = true;
+    defaultProps.loading = true;
     const modal = mount(<RoleApplication {...defaultProps} />);
     const loader = modal.find(Loader);
     expect(loader.length).toEqual(1);
@@ -152,7 +150,8 @@ describe('tests RoleApplication', () => {
     const instance = modal.instance();
     jest.spyOn(instance, 'applicationStatus');
     modal.setProps({
-      applications: { loading: false, data: { message: 'Success' } }
+      applications: { loading: false, data: { message: 'Success' } },
+      newApplication: '1-1'
     });
     expect(instance.applicationStatus).toHaveBeenCalled();
   });
