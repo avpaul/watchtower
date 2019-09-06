@@ -8,9 +8,18 @@ import DeleteRoleModal from '../DeleteRoleModal';
 
 export default class CadreViewRoles extends Component {
   componentDidMount() {
-    const { fetchAllRoles, fetchAllProjects } = this.props;
-    fetchAllRoles();
-    fetchAllProjects();
+    const {
+      fetchAllRoles,
+      fetchAllProjects,
+      allRoles,
+      allProjects
+    } = this.props;
+    if (!allRoles.data.length) {
+      fetchAllRoles();
+    }
+    if (!allProjects.length) {
+      fetchAllProjects();
+    }
   }
 
   render() {

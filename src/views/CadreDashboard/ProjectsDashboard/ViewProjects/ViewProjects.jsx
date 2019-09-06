@@ -6,8 +6,10 @@ import DeleteProjectModal from '../DeleteProjectModal';
 
 class ViewProjects extends Component {
   componentDidMount() {
-    const { fetchAllProjects } = this.props;
-    fetchAllProjects();
+    const { fetchAllProjects, allProjects } = this.props;
+    if (!allProjects.data.length) {
+      fetchAllProjects();
+    }
   }
 
   render() {
@@ -18,8 +20,11 @@ class ViewProjects extends Component {
           <PMloader />
         ) : (
           <>
-          <MapProjectCards projectData={allProjects.data} setDeleteTarget={setDeleteTarget} />
-          <DeleteProjectModal />
+            <MapProjectCards
+              projectData={allProjects.data}
+              setDeleteTarget={setDeleteTarget}
+            />
+            <DeleteProjectModal />
           </>
         )}
       </div>
@@ -30,7 +35,7 @@ class ViewProjects extends Component {
 ViewProjects.propTypes = {
   allProjects: PropTypes.shape(),
   fetchAllProjects: PropTypes.func.isRequired,
-  setDeleteTarget: PropTypes.func.isRequired,
+  setDeleteTarget: PropTypes.func.isRequired
 };
 
 ViewProjects.defaultProps = {

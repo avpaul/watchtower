@@ -42,4 +42,9 @@ describe('Test view roles', () => {
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render correctly when loading is false', () => {
+    const newProps = { ...props, allCertifications: { loading: true } };
+    wrapper = shallow(<CadreViewCerts {...newProps} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -12,7 +12,9 @@ import { generateVacancyGroups } from '../../../../__mocks__/projectVacancy';
 describe('Vacancy Dashboard', () => {
   const defaultProps = {
     getAllVacanciesAction: jest.fn(),
-    getAllVacancies: generateVacancyGroups(2, 2),
+    getAllVacancies: {
+      data: generateVacancyGroups(2, 2)
+    },
     setProjectVacanciesOnFocus: jest.fn(),
     cadreVacanciesWithNoCycleId: {
       data: []

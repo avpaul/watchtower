@@ -83,6 +83,85 @@ exports[`Edit Certification Modal should render component correctly 1`] = `
 </Modal>
 `;
 
+exports[`Edit Certification Modal should render when loading is true 1`] = `
+<Modal
+  handleClose={[Function]}
+  show={true}
+  showBtn={true}
+  size="medium"
+  title={null}
+>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+  <div
+    className="form-body"
+  >
+    <p
+      className="modal__title-md"
+    >
+      Edit Certification
+    </p>
+    <Input
+      handleChange={[Function]}
+      inputType="text"
+      name="name"
+      title="Name"
+      value="name"
+    />
+    <Input
+      handleChange={[Function]}
+      inputType="number"
+      name="duration"
+      title="Duration"
+      value="10"
+    />
+    <TextArea
+      handleChange={[Function]}
+      name="description"
+      title="Description"
+      value="description value"
+    />
+    <CheckBox
+      handleChange={[Function]}
+      name="exclusive"
+      options="Certification is not Exclusive"
+      placeholder={false}
+      title=""
+      value={false}
+    />
+    <div
+      className="form-footer"
+    >
+      <Loader
+        size="small"
+      />
+    </div>
+  </div>
+</Modal>
+`;
+
 exports[`Edit Certification Modal should return on change value for Description input 1`] = `
 <Modal
   handleClose={[Function]}

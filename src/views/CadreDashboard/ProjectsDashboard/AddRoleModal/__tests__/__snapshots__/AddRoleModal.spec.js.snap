@@ -24,11 +24,7 @@ Object {
       "replace": [MockFunction],
     },
     "roleSkills": Object {
-      "data": Array [
-        Object {
-          "name": "laravel",
-        },
-      ],
+      "data": Array [],
       "error": Object {},
       "loading": false,
     },
@@ -103,11 +99,7 @@ Object {
               "replace": [MockFunction],
             },
             "roleSkills": Object {
-              "data": Array [
-                Object {
-                  "name": "laravel",
-                },
-              ],
+              "data": Array [],
               "error": Object {},
               "loading": false,
             },
@@ -169,11 +161,7 @@ Object {
                 }
                 roleSkills={
                   Object {
-                    "data": Array [
-                      Object {
-                        "name": "laravel",
-                      },
-                    ],
+                    "data": Array [],
                     "error": Object {},
                     "loading": false,
                   }
@@ -358,11 +346,7 @@ Object {
               "replace": [MockFunction],
             },
             "roleSkills": Object {
-              "data": Array [
-                Object {
-                  "name": "laravel",
-                },
-              ],
+              "data": Array [],
               "error": Object {},
               "loading": false,
             },
@@ -424,11 +408,7 @@ Object {
                 }
                 roleSkills={
                   Object {
-                    "data": Array [
-                      Object {
-                        "name": "laravel",
-                      },
-                    ],
+                    "data": Array [],
                     "error": Object {},
                     "loading": false,
                   }
@@ -643,11 +623,7 @@ Object {
               "replace": [MockFunction],
             },
             "roleSkills": Object {
-              "data": Array [
-                Object {
-                  "name": "laravel",
-                },
-              ],
+              "data": Array [],
               "error": Object {},
               "loading": false,
             },
@@ -709,11 +685,7 @@ Object {
                 }
                 roleSkills={
                   Object {
-                    "data": Array [
-                      Object {
-                        "name": "laravel",
-                      },
-                    ],
+                    "data": Array [],
                     "error": Object {},
                     "loading": false,
                   }
@@ -896,11 +868,7 @@ Object {
               "replace": [MockFunction],
             },
             "roleSkills": Object {
-              "data": Array [
-                Object {
-                  "name": "laravel",
-                },
-              ],
+              "data": Array [],
               "error": Object {},
               "loading": false,
             },
@@ -962,11 +930,7 @@ Object {
                 }
                 roleSkills={
                   Object {
-                    "data": Array [
-                      Object {
-                        "name": "laravel",
-                      },
-                    ],
+                    "data": Array [],
                     "error": Object {},
                     "loading": false,
                   }

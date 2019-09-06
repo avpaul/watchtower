@@ -40,112 +40,114 @@ exports[`Vacancy Dashboard renders correctly 1`] = `
       }
     }
     getAllVacancies={
-      Array [
-        Object {
-          "available_slots": 2,
-          "project": Object {
-            "id": 2,
-            "name": "Corrupti non.",
-          },
-          "role": Object {
-            "id": 1,
-            "name": "Engineer",
-          },
-          "vacancies": Array [
-            Object {
-              "closing_date": "",
-              "cycle_id": 1,
-              "days_left": 0,
-              "fellow_id": null,
-              "id": 1,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
-              "vacancy_details": Object {
-                "closing_date": "",
-              },
-            },
-            Object {
-              "closing_date": "",
-              "cycle_id": 1,
-              "days_left": 1,
-              "fellow_id": null,
-              "id": 1,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
-              "vacancy_details": Object {
-                "closing_date": "",
-              },
-            },
-            Object {
-              "closing_date": "",
-              "cycle_id": 1,
-              "days_left": 2,
-              "fellow_id": null,
+      Object {
+        "data": Array [
+          Object {
+            "available_slots": 2,
+            "project": Object {
               "id": 2,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
-              "vacancy_details": Object {
-                "closing_date": "",
-              },
+              "name": "Corrupti non.",
             },
-          ],
-        },
-        Object {
-          "available_slots": 2,
-          "project": Object {
-            "id": 4,
-            "name": "Corrupti non.",
-          },
-          "role": Object {
-            "id": 2,
-            "name": "Engineer",
-          },
-          "vacancies": Array [
-            Object {
-              "closing_date": "",
-              "cycle_id": 1,
-              "days_left": 0,
-              "fellow_id": null,
+            "role": Object {
               "id": 1,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
-              "vacancy_details": Object {
-                "closing_date": "",
-              },
+              "name": "Engineer",
             },
-            Object {
-              "closing_date": "",
-              "cycle_id": 1,
-              "days_left": 1,
-              "fellow_id": null,
-              "id": 1,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
-              "vacancy_details": Object {
+            "vacancies": Array [
+              Object {
                 "closing_date": "",
+                "cycle_id": 1,
+                "days_left": 0,
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+                "vacancy_details": Object {
+                  "closing_date": "",
+                },
               },
+              Object {
+                "closing_date": "",
+                "cycle_id": 1,
+                "days_left": 1,
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+                "vacancy_details": Object {
+                  "closing_date": "",
+                },
+              },
+              Object {
+                "closing_date": "",
+                "cycle_id": 1,
+                "days_left": 2,
+                "fellow_id": null,
+                "id": 2,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+                "vacancy_details": Object {
+                  "closing_date": "",
+                },
+              },
+            ],
+          },
+          Object {
+            "available_slots": 2,
+            "project": Object {
+              "id": 4,
+              "name": "Corrupti non.",
             },
-            Object {
-              "closing_date": "",
-              "cycle_id": 1,
-              "days_left": 2,
-              "fellow_id": null,
+            "role": Object {
               "id": 2,
-              "is_active": false,
-              "project_id": 7,
-              "project_role_id": 1,
-              "vacancy_details": Object {
-                "closing_date": "",
-              },
+              "name": "Engineer",
             },
-          ],
-        },
-      ]
+            "vacancies": Array [
+              Object {
+                "closing_date": "",
+                "cycle_id": 1,
+                "days_left": 0,
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+                "vacancy_details": Object {
+                  "closing_date": "",
+                },
+              },
+              Object {
+                "closing_date": "",
+                "cycle_id": 1,
+                "days_left": 1,
+                "fellow_id": null,
+                "id": 1,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+                "vacancy_details": Object {
+                  "closing_date": "",
+                },
+              },
+              Object {
+                "closing_date": "",
+                "cycle_id": 1,
+                "days_left": 2,
+                "fellow_id": null,
+                "id": 2,
+                "is_active": false,
+                "project_id": 7,
+                "project_role_id": 1,
+                "vacancy_details": Object {
+                  "closing_date": "",
+                },
+              },
+            ],
+          },
+        ],
+      }
     }
     getAllVacanciesAction={[MockFunction]}
     getAllVacanciesWithNoCycleId={[MockFunction]}

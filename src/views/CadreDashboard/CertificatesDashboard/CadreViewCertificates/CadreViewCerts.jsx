@@ -9,14 +9,19 @@ import DeleteCertificationModal from '../CadreDeleteCertification';
 
 export default class CadreViewCerts extends Component {
   componentDidMount() {
-    const { fetchAllCertifications, allCertifications } = this.props;
-    if (
+    const { fetchAllCertifications } = this.props;
+    if (this.checkIfDataInStore()) {
+      fetchAllCertifications();
+    }
+  }
+
+  checkIfDataInStore() {
+    const { allCertifications } = this.props;
+    return !!(
       allCertifications &&
       allCertifications.data &&
       !allCertifications.data.length
-    ) {
-      fetchAllCertifications();
-    }
+    );
   }
 
   render() {
@@ -52,5 +57,5 @@ CadreViewCerts.propTypes = {
 };
 
 CadreViewCerts.defaultProps = {
-  allCertifications: {}
+  allCertifications: { data: [] }
 };

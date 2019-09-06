@@ -14,3 +14,11 @@ exports[`Test view roles should render correctly 1`] = `
   />
 </div>
 `;
+
+exports[`Test view roles should render correctly when loading is false 1`] = `
+<div
+  className="cadre__page"
+>
+  <PMloader />
+</div>
+`;
