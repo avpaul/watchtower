@@ -150,7 +150,7 @@ exports[`Application component Render component when no data 1`] = `
       className="text-white mt-5"
     >
       <button
-        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        className="mr-4 py-2 text-uppercase px-4 accept-btn btn confirmRollOffButton accepting-btns"
         onClick={[Function]}
         type="button"
       >
@@ -310,7 +310,7 @@ exports[`Application component Should access the roll off button 1`] = `
       className="text-white mt-5"
     >
       <button
-        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        className="mr-4 py-2 text-uppercase px-4 accept-btn btn confirmRollOffButton accepting-btns"
         onClick={[Function]}
         type="button"
       >
@@ -470,7 +470,7 @@ exports[`Application component Should close engineer profile card 1`] = `
       className="text-white mt-5"
     >
       <button
-        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        className="mr-4 py-2 text-uppercase px-4 accept-btn btn confirmRollOffButton accepting-btns"
         onClick={[Function]}
         type="button"
       >
@@ -656,7 +656,7 @@ exports[`Application component Should open the drawer 1`] = `
       className="text-white mt-5"
     >
       <button
-        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        className="mr-4 py-2 text-uppercase px-4 accept-btn btn confirmRollOffButton accepting-btns"
         onClick={[Function]}
         type="button"
       >
@@ -818,7 +818,7 @@ exports[`Application component renders teams member cards 1`] = `
       className="text-white mt-5"
     >
       <button
-        className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+        className="mr-4 py-2 text-uppercase px-4 accept-btn btn confirmRollOffButton accepting-btns"
         onClick={[Function]}
         type="button"
       >

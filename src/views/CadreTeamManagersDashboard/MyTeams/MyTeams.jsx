@@ -14,6 +14,8 @@ import managerTeamData from '../../../__mocks__/managerTeamData';
 import RequestNewTeamMemberModal from './RequestNewTeamMemberModal';
 import { altDate as formatDate } from '../../../utils/formatDate';
 
+import './MyTeams.scss';
+
 const MyTeam = ({
   fetchTeamMembers,
   teamManagerTeamMembers,
@@ -49,7 +51,7 @@ const MyTeam = ({
       setRollingOff(false);
     }
     // eslint-disable-next-line
-  }, [rollOffEngineerStatus.data.fellow_id]);
+  }, [rollOffEngineerStatus.data]);
 
   const getTeamData = data =>
     data.map(project =>
@@ -170,6 +172,7 @@ const MyTeam = ({
   const handleRollOff = () => {
     setRollingOff(true);
     rollOffAnEngineer(fellow.fellow_id);
+    // eslint-disable-next-line no-lone-blocks
   };
   const renderConfirnRollOffModal = () => (
     <Modal
@@ -178,34 +181,36 @@ const MyTeam = ({
       showBtn={false}
       size="small"
     >
-      {rollOffEngineerStatus.loading ? (
-        <Loader size="small" />
-      ) : (
-        <React.Fragment>
-          <div>
-            Are you sure you want to roll off {fellow.first_name}{' '}
-            {fellow.last_name}?
-          </div>
-          <div className="text-white mt-5">
+      <React.Fragment>
+        <div>
+          Are you sure you want to roll off {fellow.first_name}{' '}
+          {fellow.last_name}?
+        </div>
+        <div className="text-white mt-5">
+          {rollOffEngineerStatus.loading ? (
+            <span className="roll-off-loader">
+              <Loader size="small" />
+            </span>
+          ) : (
             <button
               type="button"
               onClick={handleRollOff}
-              className="btn accepting-btns mr-4 py-2 text-uppercase px-4 accept-btn confirmRollOffButton"
+              className="mr-4 py-2 text-uppercase px-4 accept-btn btn confirmRollOffButton accepting-btns"
             >
               {' '}
               Roll Off{' '}
             </button>
-            <button
-              type="button"
-              onClick={toggleRollOffModal}
-              className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
-            >
-              {' '}
-              Cancel{' '}
-            </button>
-          </div>
-        </React.Fragment>
-      )}
+          )}
+          <button
+            type="button"
+            onClick={toggleRollOffModal}
+            className="btn accepting-btns btn-secondary text-uppercase py-2 px-4 reject-btn"
+          >
+            {' '}
+            Cancel{' '}
+          </button>
+        </div>
+      </React.Fragment>
     </Modal>
   );
 
