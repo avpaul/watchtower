@@ -3,14 +3,12 @@
 exports[`tests RoleApplication should Render Components 1`] = `
 Object {
   "props": Object {
-    "applications": Object {
-      "data": Object {},
-      "error": null,
-      "loading": false,
-    },
     "applyForRole": [MockFunction],
     "engineer": Object {},
+    "error": null,
     "history": Object {},
+    "loading": false,
+    "newApplication": null,
     "projectId": "1",
     "projectTitle": "Project Watchtower",
     "roleId": "1",
@@ -77,20 +75,18 @@ Object {
           RoleApplication {
             "applicationStatus": [Function],
             "context": Object {},
-            "converToUnicode": [Function],
+            "convertToUnicode": [Function],
             "evaluateLength": [Function],
             "footer": [Function],
             "handleClose": [Function],
             "handleSubmit": [Function],
             "props": Object {
-              "applications": Object {
-                "data": Object {},
-                "error": null,
-                "loading": false,
-              },
               "applyForRole": [MockFunction],
               "engineer": Object {},
+              "error": null,
               "history": Object {},
+              "loading": false,
+              "newApplication": null,
               "projectId": "1",
               "projectTitle": "Project Watchtower",
               "roleId": "1",
@@ -129,16 +125,12 @@ Object {
                   "useState": [Function],
                 },
                 "_element": <RoleApplication
-                  applications={
-                    Object {
-                      "data": Object {},
-                      "error": null,
-                      "loading": false,
-                    }
-                  }
                   applyForRole={[MockFunction]}
                   engineer={Object {}}
+                  error={null}
                   history={Object {}}
+                  loading={false}
+                  newApplication={null}
                   projectId="1"
                   projectTitle="Project Watchtower"
                   roleId="1"

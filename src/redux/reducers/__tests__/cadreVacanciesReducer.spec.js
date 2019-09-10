@@ -150,6 +150,8 @@ describe('Role Application', () => {
     const currentState = {
       loading: false,
       data: {
+        newApplication: '1-1',
+        hasApplied: true,
         projectVacancies: [
           {
             project: {
@@ -177,6 +179,8 @@ describe('Role Application', () => {
       loading: false,
       error: null,
       data: {
+        hasApplied: true,
+        newApplication: '1-1',
         projectVacancies: [
           {
             project: {
@@ -185,19 +189,10 @@ describe('Role Application', () => {
             role: {
               id: 1
             },
-            applications: [
-              {
-                project_id: 1,
-                fellowId: 21,
-                updatedAt: '2019-07-10 20:04:22',
-                createdAt: '2019-07-10 20:04:22',
-                id: 2,
-                cycle_id: 1,
-                project_role_id: 1
-              }
-            ],
+            applications: [],
             vacancy: {
-              cycle_id: 1
+              cycle_id: 1,
+              hasApplied: true
             }
           }
         ]

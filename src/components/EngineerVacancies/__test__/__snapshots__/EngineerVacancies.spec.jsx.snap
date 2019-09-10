@@ -12,6 +12,7 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
     >
       <EngineerVacancyCard
         closingDate="2019-07-10 07:58:34"
+        hasApplied={false}
         loggedInUser={
           Object {
             "id": 1,
@@ -34,6 +35,7 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
           ]
         }
         closingDate="2019-07-10 07:58:34"
+        hasApplied={false}
         loggedInUser={
           Object {
             "id": 1,
@@ -64,6 +66,7 @@ exports[`EngineerVacancies  renders as expected with required props 2`] = `
       <EngineerVacancyCard
         applications={Array []}
         closingDate="2019-07-10 07:58:34"
+        hasApplied={false}
         loggedInUser={
           Object {
             "id": 1,
@@ -86,6 +89,7 @@ exports[`EngineerVacancies  renders as expected with required props 2`] = `
           ]
         }
         closingDate="2019-07-10 07:58:34"
+        hasApplied={false}
         loggedInUser={
           Object {
             "id": 1,

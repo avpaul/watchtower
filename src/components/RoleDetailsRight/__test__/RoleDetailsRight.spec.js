@@ -29,7 +29,8 @@ describe('', () => {
       },
       vacancy: {
         start_date: '2019-08-07 16:54:59',
-        closing_date: '2019-08-16 16:54:59'
+        closing_date: '2019-08-16 16:54:59',
+        hasApplied: true
       },
       applications: [
         {
@@ -66,6 +67,14 @@ describe('', () => {
 
   it('should Render Component when fellow has not applied', () => {
     defaultProps.roleInfo.role.id = 2;
+    defaultProps.projectInfo.documents[0].name = '';
+    const component = shallow(<RoleDetailsRight {...defaultProps} />);
+    expect(component).toMatchSnapshot();
+  });
+
+  it('should Render Component hasApplied is false', () => {
+    defaultProps.roleInfo.role.id = 2;
+    defaultProps.roleInfo.vacancy.hasApplied = false;
     defaultProps.projectInfo.documents[0].name = '';
     const component = shallow(<RoleDetailsRight {...defaultProps} />);
     expect(component).toMatchSnapshot();

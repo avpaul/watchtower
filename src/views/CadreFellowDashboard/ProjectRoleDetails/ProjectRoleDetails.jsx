@@ -38,7 +38,6 @@ const ProjectRoleDetails = ({
       Number(vacancy.project.id) === Number(projectId)
   );
   const { params } = match;
-
   return Object.keys(singleProject).length > 1 ? (
     <div className="role-details-container">
       <ReturnButton history={history} />
