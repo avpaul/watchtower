@@ -5,6 +5,24 @@ import NotFoundPage from '../views/NotFoundPage';
 import TTLDashboard from '../views/TTLDashboard';
 import EngineeringManagerSimsLeadDashboard from '../views/EngineeringManagerSimsLeadDashboard';
 import FellowRoutesHoc from './FellowRoutesHoc';
+import { isEmpty } from '../utils';
+
+/**
+ * Get the user's active role from a list of roles
+ * @param array roles User's roles
+ *
+ * @returns string
+ */
+const getUserRoles = roles => {
+  let role = roles.filter(item => item.includes('WATCH_TOWER'));
+  if (!isEmpty(role)) return role[0];
+  if (isEmpty(role) && roles.includes('CADRE_TEAM_MANAGER')) {
+    role = 'CADRE_TEAM_MANAGER';
+  } else {
+    [role] = roles;
+  }
+  return role;
+};
 
 /**
  * Defines wrapper function that switch users dashboard context
@@ -12,14 +30,13 @@ import FellowRoutesHoc from './FellowRoutesHoc';
  */
 const Dashboards = props => {
   const { user, location } = props;
-  delete user.roles.Andelan;
-  delete user.roles.Technology;
-  delete user.roles['Staffing Specialists'];
-  const roles = Object.keys(user.roles);
-  let role = roles.filter(s => s.includes('WATCH_TOWER'))[0];
-  if (!role) {
-    [role] = roles;
-  }
+  const roles = Object.keys(user.roles).filter(
+    item =>
+      item.includes('WATCH_TOWER') ||
+      item === 'CADRE_TEAM_MANAGER' ||
+      item === 'Fellow'
+  );
+  const role = getUserRoles(roles);
 
   switch (role) {
     case 'WATCH_TOWER_TTL':
