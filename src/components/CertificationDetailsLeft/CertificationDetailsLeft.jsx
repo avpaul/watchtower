@@ -18,8 +18,8 @@ const CertificationDetailsLeft = ({ certificationInfo, vacancyInfo }) => {
   };
 
   return (
-    <div className="projectContainer">
-      <div className="projectOverview">{renderTop()}</div>
+    <div className="project-container">
+      <div className="project-overview">{renderTop()}</div>
       <div className="roleDetails">
         <p className="">
           {`Available Slot${vacancyInfo.available_slots > 1 ? 's : ' : ':'}`}

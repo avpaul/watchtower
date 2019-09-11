@@ -109,7 +109,7 @@ export class D1FellowDashboardMain extends Component {
 
     return (
       <Fragment>
-        <div className="cadre-content">
+        <div className="cadre-content mt-5">
           <div className="cadre-side-card-dashboard">
             <CadreSideCard />
           </div>

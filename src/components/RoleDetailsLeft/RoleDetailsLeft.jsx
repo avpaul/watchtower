@@ -25,8 +25,8 @@ const RoleDetailsLeft = ({ projectInfo, roleInfo }) => {
   );
 
   return (
-    <div className="projectContainer">
-      <div className="projectOverview">
+    <div className="project-container roles-left">
+      <div className="project-overview">
         {renderTop()}
         {renderTechnology(projectInfo.technologies, 'projectStack')}
         {renderTechnology(roleInfo.role.skills, 'projectSkills')}

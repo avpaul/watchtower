@@ -2,10 +2,10 @@
 
 exports[`should Render Component 1`] = `
 <div
-  className="projectContainer"
+  className="project-container roles-left"
 >
   <div
-    className="projectOverview"
+    className="project-overview"
   >
     <span
       className="projectType"

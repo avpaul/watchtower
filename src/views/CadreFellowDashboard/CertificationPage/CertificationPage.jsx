@@ -59,8 +59,8 @@ class CertificationPage extends Component {
   renderBackNavigation = () => {
     const { history } = this.props;
     return (
-      <div className="row mt-5 mb-4">
-        <div className="col-md-12">
+      <div className="row mt-5 mb-4 ">
+        <div className="col-md-12 back-to-container cursor-pointer cert-back">
           <div
             id="nav"
             onClick={() => history.goBack()}
@@ -68,8 +68,10 @@ class CertificationPage extends Component {
             tabIndex="-1"
             onKeyDown={null}
           >
-            <img src={backIcon} className="back-icon" alt="back icon" />
-            <span className="ml-3 back-icon-text">Back to Dashboard</span>
+            <button className="wt-return-button mr-0" type="button">
+              <img src={backIcon} className="back-icon" alt="back icon" />
+            </button>
+            <span className="ml-3 back-icon-text ml-0">Back to Dashboard</span>
           </div>
         </div>
       </div>
@@ -137,13 +139,11 @@ class CertificationPage extends Component {
 
     return !loading ? (
       <Fragment>
-        <div className="certification-page role-details-container">
-          <div className="container">
-            {this.renderBackNavigation()}
-            {!loading &&
-              singleCertification &&
-              this.renderCard(singleCertification, userHasApplied)}
-          </div>
+        <div className="role-details-container">
+          {this.renderBackNavigation()}
+          {!loading &&
+            singleCertification &&
+            this.renderCard(singleCertification, userHasApplied)}
         </div>
       </Fragment>
     ) : (

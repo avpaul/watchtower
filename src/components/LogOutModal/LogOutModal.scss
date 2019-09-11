@@ -30,6 +30,11 @@
 #logout-modal .modal-header,
 #logout-modal .modal-footer {
   border: none;
+  z-index: 100000000;
+}
+
+.modal-backdrop {
+  display: none;
 }
 
 #logout-modal .modal-footer button:first-child {

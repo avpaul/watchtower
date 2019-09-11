@@ -406,7 +406,13 @@ export class Header extends Component {
 
   render() {
     const { role } = this.props;
-    return <div className="w-100 nav-header">{this.switchHeader(role)}</div>;
+    return (
+      <div
+        className={`w-100 nav-header ${role === 'CadreFellow' && 'fixed-top'}`}
+      >
+        {this.switchHeader(role)}
+      </div>
+    );
   }
 }
 Header.propTypes = {
