@@ -12,23 +12,8 @@ const EngineerVacancyCard = ({
   projectId,
   slots,
   closingDate,
-  applications,
-  loggedInUser,
   hasApplied
-}) => {
-  let userHasApplied = false;
-
-  switch (projectName) {
-    case 'Certification':
-      userHasApplied = !!applications.find(
-        application => application.fellow_id === loggedInUser.fellow_id
-      );
-      break;
-    default:
-      userHasApplied = hasApplied;
-  }
-
-  return (
+}) => (
     <div className="vacancy-card">
       <div className="vacancy-card__inner">
         <img
@@ -58,14 +43,14 @@ const EngineerVacancyCard = ({
                   : `/dashboard/project/${projectId}/role/${roleId}`
               }
             >
-              {userHasApplied ? 'Applied' : 'Apply'}
+              {hasApplied ? 'Applied' : 'Apply'}
             </Link>
           </li>
         </ul>
       </div>
     </div>
   );
-};
+
 export default EngineerVacancyCard;
 
 EngineerVacancyCard.defaultProps = {
@@ -85,6 +70,4 @@ EngineerVacancyCard.propTypes = {
   roleId: PropTypes.number,
   slots: PropTypes.number,
   hasApplied: PropTypes.bool,
-  loggedInUser: PropTypes.instanceOf(Object).isRequired,
-  applications: PropTypes.instanceOf(Object).isRequired
 };

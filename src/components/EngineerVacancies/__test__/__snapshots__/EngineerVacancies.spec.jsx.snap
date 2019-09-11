@@ -13,11 +13,6 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
       <EngineerVacancyCard
         closingDate="2019-07-10 07:58:34"
         hasApplied={false}
-        loggedInUser={
-          Object {
-            "id": 1,
-          }
-        }
         projectId={1}
         projectName="Dolorum suscipit molestiae."
         role="Engineer"
@@ -26,21 +21,8 @@ exports[`EngineerVacancies  renders as expected with required props 1`] = `
         startDate="2019-08-10 07:58:34"
       />
       <EngineerVacancyCard
-        applications={
-          Array [
-            Object {
-              "fellow_id": 1,
-              "id": 1,
-            },
-          ]
-        }
         closingDate="2019-07-10 07:58:34"
         hasApplied={false}
-        loggedInUser={
-          Object {
-            "id": 1,
-          }
-        }
         projectId={null}
         projectName="Certification"
         role="Mrs. Alanna Ziemann"
@@ -64,14 +46,8 @@ exports[`EngineerVacancies  renders as expected with required props 2`] = `
       className="render-vacancies__div"
     >
       <EngineerVacancyCard
-        applications={Array []}
         closingDate="2019-07-10 07:58:34"
         hasApplied={false}
-        loggedInUser={
-          Object {
-            "id": 1,
-          }
-        }
         projectId={1}
         projectName="Dolorum suscipit molestiae."
         role="Engineer"
@@ -80,21 +56,8 @@ exports[`EngineerVacancies  renders as expected with required props 2`] = `
         startDate="2019-08-10 07:58:34"
       />
       <EngineerVacancyCard
-        applications={
-          Array [
-            Object {
-              "fellow_id": 1,
-              "id": 1,
-            },
-          ]
-        }
         closingDate="2019-07-10 07:58:34"
         hasApplied={false}
-        loggedInUser={
-          Object {
-            "id": 1,
-          }
-        }
         projectId={null}
         projectName="Certification"
         role="Mrs. Alanna Ziemann"

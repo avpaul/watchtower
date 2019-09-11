@@ -11,13 +11,13 @@ describe('Test the certification page', () => {
     },
     vacancyInfo: {
       vacancy_details: {
-        cycle_id: 1
+        cycle_id: 1,
+        hasApplied: false
       },
-      available_slots: 10
+      available_slots: 10,
     },
     loading: false,
     applyForCertification: jest.fn(),
-    userHasApplied: false
   };
 
   const setUp = (propsOverride = {}) =>
@@ -49,7 +49,11 @@ describe('Test the certification page', () => {
 
   it('should render with apply button disabled if user has applied', () => {
     propsOverride = {
-      userHasApplied: true
+      vacancyInfo: {
+        vacancy_details: {
+          hasApplied: true
+        }
+      }
     };
     const component = setUp(propsOverride);
     expect(component.find('#buttonDisabled').length).toBe(1);

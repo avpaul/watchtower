@@ -5,94 +5,89 @@ exports[`Test the certification page should render the loader when getCertificat
 exports[`Test the certification page should render without errors 1`] = `
 <Fragment>
   <div
-    className="role-details-container"
+    className="certification-page role-details-container"
   >
     <div
-      className="row mt-5 mb-4 "
+      className="container"
     >
       <div
-        className="col-md-12 back-to-container cursor-pointer cert-back"
+        className="row mt-5 mb-4 "
       >
         <div
-          id="nav"
-          onClick={[Function]}
-          onKeyDown={null}
-          role="button"
-          tabIndex="-1"
+          className="col-md-12 back-to-container cursor-pointer cert-back"
         >
-          <button
-            className="wt-return-button mr-0"
-            type="button"
+          <div
+            id="nav"
+            onClick={[Function]}
+            onKeyDown={null}
+            role="button"
+            tabIndex="-1"
           >
-            <img
-              alt="back icon"
-              className="back-icon"
-              src="BackIcon.png"
-            />
-          </button>
-          <span
-            className="ml-3 back-icon-text ml-0"
-          >
-            Back to Dashboard
-          </span>
+            <button
+              className="wt-return-button mr-0"
+              type="button"
+            >
+              <img
+                alt="back icon"
+                className="back-icon"
+                src="BackIcon.png"
+              />
+            </button>
+            <span
+              className="ml-3 back-icon-text ml-0"
+            >
+              Back to Dashboard
+            </span>
+          </div>
         </div>
       </div>
+      <CertificationDetailsLeft
+        certificationInfo={
+          Object {
+            "description": "Test",
+            "id": 1,
+            "name": "Testing",
+          }
+        }
+        vacancyInfo={
+          Object {
+            "certification": Object {
+              "id": 1,
+              "name": "certification",
+            },
+            "vacancy_details": Object {
+              "cycle_id": 1,
+              "hasApplied": true,
+              "projects_certification_id": 1,
+            },
+          }
+        }
+      />
+      <CertificationDetailsRight
+        applyForCertification={[MockFunction]}
+        certificationInfo={
+          Object {
+            "description": "Test",
+            "id": 1,
+            "name": "Testing",
+          }
+        }
+        loading={false}
+        vacancyInfo={
+          Object {
+            "certification": Object {
+              "id": 1,
+              "name": "certification",
+            },
+            "vacancy_details": Object {
+              "cycle_id": 1,
+              "hasApplied": true,
+              "projects_certification_id": 1,
+            },
+          }
+        }
+      />
     </div>
-    <CertificationDetailsLeft
-      certificationInfo={
-        Object {
-          "description": "Test",
-          "id": 1,
-          "name": "Testing",
-        }
-      }
-      vacancyInfo={
-        Object {
-          "certification": Object {
-            "id": 1,
-            "name": "certification",
-          },
-          "vacancy_details": Object {
-            "applications": Array [
-              Object {
-                "fellow_id": "-PUEHGE8716LJH",
-              },
-            ],
-            "cycle_id": 1,
-            "projects_certification_id": 1,
-          },
-        }
-      }
-    />
-    <CertificationDetailsRight
-      applyForCertification={[MockFunction]}
-      certificationInfo={
-        Object {
-          "description": "Test",
-          "id": 1,
-          "name": "Testing",
-        }
-      }
-      loading={false}
-      userHasApplied={true}
-      vacancyInfo={
-        Object {
-          "certification": Object {
-            "id": 1,
-            "name": "certification",
-          },
-          "vacancy_details": Object {
-            "applications": Array [
-              Object {
-                "fellow_id": "-PUEHGE8716LJH",
-              },
-            ],
-            "cycle_id": 1,
-            "projects_certification_id": 1,
-          },
-        }
-      }
-    />
   </div>
 </Fragment>
 `;

@@ -21,7 +21,7 @@ const addNewApplication = (vacancies, newApplication) => {
         Number(vacancy.vacancy_details.cycle_id) ===
           Number(newApplication.cycle_id)
     );
-    currentVacancy.vacancy_details.applications.push(newApplication);
+    currentVacancy.vacancy_details.hasApplied = true;
   }
   return allVacancies;
 };

@@ -11,7 +11,6 @@ class EngineerVacancies extends Component {
       searchWord,
       vacanciesArray,
       certificationsArray,
-      loggedInUser
     } = this.props;
     const vacancyLength = vacanciesArray.length + certificationsArray.length;
     return (
@@ -25,13 +24,12 @@ class EngineerVacancies extends Component {
           : this.renderVacancyCards(
               vacanciesArray,
               certificationsArray,
-              loggedInUser
             )}
       </div>
     );
   };
 
-  renderVacancyCards = (vacanciesArray, certificationsArray, loggedInUser) => (
+  renderVacancyCards = (vacanciesArray, certificationsArray) => (
     <div className="render-vacancies__div">
       {vacanciesArray.map(
         ({
@@ -39,7 +37,6 @@ class EngineerVacancies extends Component {
           project,
           available_slots: availableSlots,
           vacancy,
-          applications
         }) => (
           <EngineerVacancyCard
             role={role.name}
@@ -49,8 +46,6 @@ class EngineerVacancies extends Component {
             slots={availableSlots}
             startDate={vacancy.start_date}
             closingDate={vacancy.closing_date}
-            loggedInUser={loggedInUser}
-            applications={applications}
             hasApplied={vacancy.hasApplied}
           />
         )
@@ -70,8 +65,7 @@ class EngineerVacancies extends Component {
             slots={availableSlots}
             startDate={vacancyDetails.start_date}
             closingDate={vacancyDetails.closing_date}
-            loggedInUser={loggedInUser}
-            applications={vacancyDetails.applications}
+            hasApplied={vacancyDetails.hasApplied}
           />
         )
       )}
@@ -132,7 +126,6 @@ EngineerVacancies.propTypes = {
   searchWord: PropTypes.string,
   vacanciesArray: PropTypes.instanceOf(Array).isRequired,
   certificationsArray: PropTypes.instanceOf(Array).isRequired,
-  loggedInUser: PropTypes.instanceOf(Object).isRequired
 };
 
 export default EngineerVacancies;

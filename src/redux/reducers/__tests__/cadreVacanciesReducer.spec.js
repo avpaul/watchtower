@@ -77,7 +77,7 @@ describe('Certification Application', () => {
             },
             vacancy_details: {
               cycle_id: 1,
-              applications: []
+              hasApplied: false
             }
           }
         ]
@@ -101,16 +101,7 @@ describe('Certification Application', () => {
             },
             vacancy_details: {
               cycle_id: 1,
-              applications: [
-                {
-                  createdAt: '2019-07-10 20:04:22',
-                  fellowId: 21,
-                  id: 2,
-                  project_certifications_id: 14,
-                  updatedAt: '2019-07-10 20:04:22',
-                  cycle_id: 1
-                }
-              ]
+              hasApplied: true
             }
           }
         ]
