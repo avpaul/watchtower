@@ -25,7 +25,7 @@ class CertificationDetailsRight extends React.Component {
   renderSellYourselfModal = () => {
     const { loading, applyForCertification } = this.props;
 
-    const { certificationInfo, vacancyInfo, userHasApplied } = this.props;
+    const { certificationInfo, vacancyInfo } = this.props;
     const vacancyDetails = vacancyInfo.vacancy_details || {};
 
     const {
@@ -44,7 +44,7 @@ class CertificationDetailsRight extends React.Component {
         showModal={applicationModal}
         loading={loading}
         cycleId={cycleId}
-        hasApplied={userHasApplied}
+        hasApplied={vacancyDetails.hasApplied}
       />
     );
   };
@@ -68,7 +68,7 @@ class CertificationDetailsRight extends React.Component {
   );
 
   render() {
-    const { certificationInfo, vacancyInfo, userHasApplied } = this.props;
+    const { certificationInfo, vacancyInfo } = this.props;
     const vacancyDetails = vacancyInfo.vacancy_details || {};
     const {
       modals: { applicationModal }
@@ -78,7 +78,7 @@ class CertificationDetailsRight extends React.Component {
         <div className="main-heading">
           <div className="headingLeft" />
           <div className="headingRight">
-            {this.renderApplicationButton(userHasApplied)}
+            {this.renderApplicationButton(vacancyDetails.hasApplied)}
             <div className="vacancy__count">
               Days Left:{' '}
               <span>
@@ -102,14 +102,12 @@ class CertificationDetailsRight extends React.Component {
 CertificationDetailsRight.defaultProps = {
   certificationInfo: {},
   vacancyInfo: {},
-  userHasApplied: false,
   loading: false
 };
 
 CertificationDetailsRight.propTypes = {
   certificationInfo: PropTypes.shape(),
   vacancyInfo: PropTypes.shape(),
-  userHasApplied: PropTypes.bool,
   loading: PropTypes.bool,
   applyForCertification: PropTypes.func.isRequired
 };

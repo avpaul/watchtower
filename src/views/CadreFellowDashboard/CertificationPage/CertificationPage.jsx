@@ -8,17 +8,12 @@ import CertificationDetailsRight from '../../../components/CertificationDetailsR
 import '../ProjectRoleDetails/ProjectRoleDetails.scss';
 
 class CertificationPage extends Component {
-  state = {
-    userHasApplied: false
-  };
-
   componentDidMount() {
     const {
       getCertificationAction,
       match: { params },
       singleCertification,
       fetchAllVacancies,
-      certificationVacancies
     } = this.props;
 
     const { vacanciesAreNotAvailable } = this;
@@ -27,25 +22,6 @@ class CertificationPage extends Component {
     }
     if (Object.keys(singleCertification).length === 0) {
       getCertificationAction(params.certificationId);
-    }
-    return (
-      certificationVacancies &&
-      this.checkIfUserHasApplied(certificationVacancies)
-    );
-  }
-
-  componentDidUpdate(prevProps) {
-    const {
-      loading,
-      getCertification: { loading: getCertificationLoading },
-      certificationVacancies
-    } = this.props;
-
-    if (
-      prevProps.loading !== loading ||
-      prevProps.getCertification.loading !== getCertificationLoading
-    ) {
-      this.checkIfUserHasApplied(certificationVacancies);
     }
   }
 
@@ -78,7 +54,7 @@ class CertificationPage extends Component {
     );
   };
 
-  renderCard = (data, userHasApplied) => {
+  renderCard = data => {
     const {
       certificationVacancies,
       match: { params },
@@ -99,30 +75,11 @@ class CertificationPage extends Component {
         <CertificationDetailsRight
           certificationInfo={data}
           vacancyInfo={currentVacancy}
-          userHasApplied={userHasApplied}
           applyForCertification={applyForCertification}
           loading={loading}
         />
       </>
     );
-  };
-
-  checkIfUserHasApplied = vacancies => {
-    const {
-      d1Engineer,
-      match: {
-        params: { certificationId }
-      }
-    } = this.props;
-    if (vacancies) {
-      const currentVacancy = this.getCurrentVacancy(vacancies, certificationId);
-
-      const hasApplied = !!currentVacancy.vacancy_details.applications.find(
-        application => application.fellow_id === d1Engineer.fellow_id
-      );
-
-      this.setState({ userHasApplied: hasApplied });
-    }
   };
 
   getCurrentVacancy = (vacancies = [], certificationId) =>
@@ -135,15 +92,16 @@ class CertificationPage extends Component {
       getCertification: { loading },
       singleCertification
     } = this.props;
-    const { userHasApplied } = this.state;
 
     return !loading ? (
       <Fragment>
-        <div className="role-details-container">
-          {this.renderBackNavigation()}
-          {!loading &&
-            singleCertification &&
-            this.renderCard(singleCertification, userHasApplied)}
+        <div className="certification-page role-details-container">
+          <div className="container">
+            {this.renderBackNavigation()}
+            {!loading &&
+              singleCertification &&
+              this.renderCard(singleCertification)}
+          </div>
         </div>
       </Fragment>
     ) : (
@@ -157,7 +115,6 @@ CertificationPage.propTypes = {
   history: PropTypes.instanceOf(Object).isRequired,
   match: PropTypes.instanceOf(Object).isRequired,
   applyForCertification: PropTypes.func.isRequired,
-  d1Engineer: PropTypes.instanceOf(Object).isRequired,
   getCertification: PropTypes.instanceOf(Object).isRequired,
   certificationVacancies: PropTypes.instanceOf(array).isRequired,
   loading: PropTypes.bool.isRequired,

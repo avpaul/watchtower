@@ -40,11 +40,7 @@ describe('Test the certification page', () => {
         vacancy_details: {
           cycle_id: 1,
           projects_certification_id: 1,
-          applications: [
-            {
-              fellow_id: '-PUEHGE8716LJH'
-            }
-          ]
+          hasApplied: true
         }
       }
     ],
@@ -83,27 +79,5 @@ describe('Test the certification page', () => {
     const componentWithLoader = setUp(propsOverride);
     const loaderComponent = componentWithLoader.find(<Loader size="small" />);
     expect(loaderComponent).toMatchSnapshot();
-  });
-
-  it('should render the loader when certificationVacancies are not provided', () => {
-    propsOverride = props;
-    delete propsOverride.certificationVacancies;
-    const componentWithoutVacancies = setUp(propsOverride);
-    expect(componentWithoutVacancies.state('userHasApplied')).toBeFalsy();
-  });
-
-  it('should remain false when single certification is empty', () => {
-    propsOverride = {
-      singleCertification: {}
-    };
-    const componentWithEmptyCertification = setUp(propsOverride);
-    expect(componentWithEmptyCertification.state('userHasApplied')).toBeFalsy();
-  });
-
-  it('should call checkIfUserHasApplied after all data are loaded', () => {
-    const component = setUp();
-    const spy = jest.spyOn(component.instance(), 'checkIfUserHasApplied');
-    component.setProps({ loading: true });
-    expect(spy).toBeCalled();
   });
 });
