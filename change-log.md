@@ -1,4 +1,15 @@
-# V 3.0.2
+# V 3.0.4
+
+## Bug Fixes
+- reduce request time on cadre vacancies
+- fix authorization issue for team managers with multiple roles
+- fix the failing roll off modal
+- fix role application
+- ensure all non-routes redirect to 404
+- handle redirect to 404 page in cadre dashboard
+- show confirmation modal or error message after applying
+
+# V 3.0.3
 
 ## Features
 - allow staffing specialists to login
