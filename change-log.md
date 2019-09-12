@@ -1,3 +1,10 @@
+# V 3.0.5
+
+## Bug Fixes
+- add scroll to an engineer's profile
+- add hasApplied field to certification vacancies
+- fix manager card in role and certification application page
+
 # V 3.0.4
 
 ## Bug Fixes
