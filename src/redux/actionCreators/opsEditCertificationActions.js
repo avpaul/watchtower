@@ -6,6 +6,8 @@ import {
   EDIT_CERTIFICATION_SUCCESS
 } from '../constants/opsCertificationTypes';
 
+import { UPDATE_CERTIFICATION } from '../constants/cadreCertificationTypes';
+
 const serverURL = process.env.REACT_APP_WATCHTOWER_SERVER;
 
 export const editCertificationRequest = () => ({
@@ -22,6 +24,11 @@ export const editCertificationFailure = error => ({
   error: errorHandler(error)
 });
 
+export const updateCerticationInStore = (certificationId, data) => ({
+  type: UPDATE_CERTIFICATION,
+  data: { certificationId, data }
+});
+
 export const editCertification = (certificationId, data) => dispatch => {
   dispatch(editCertificationRequest());
 
@@ -30,6 +37,7 @@ export const editCertification = (certificationId, data) => dispatch => {
   return axios.patch(requestUrl, data).then(
     response => {
       dispatch(editCertificationSuccess(response.data));
+      dispatch(updateCerticationInStore(certificationId, response.data.data));
     },
     error => {
       dispatch(editCertificationFailure(error));

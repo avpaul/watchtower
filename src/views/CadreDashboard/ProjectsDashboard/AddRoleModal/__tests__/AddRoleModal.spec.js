@@ -14,7 +14,7 @@ describe('', () => {
     roleSkills: {
       loading: false,
       error: {},
-      data: [{ name: 'laravel' }]
+      data: []
     },
     createNewRole: jest.fn(),
     getRoleSkills: jest.fn(),
@@ -100,7 +100,7 @@ describe('', () => {
   it('should Render Components', () => {
     const wrapper = setup();
     expect(wrapper).toMatchSnapshot();
-    expect(defaultProps.getRoleSkills).toHaveBeenCalledTimes(1);
+    expect(defaultProps.getRoleSkills).toHaveBeenCalled();
   });
 
   it('calls the handleSubmit successfully', () => {
@@ -163,7 +163,15 @@ describe('', () => {
   });
 
   it('should add skills to state', () => {
-    const modal = mount(<AddRoleModal {...defaultProps} />);
+    const additionalProps = {
+      roleSkills: {
+        loading: true,
+        error: {},
+        data: [{ name: 'laravel' }]
+      }
+    };
+    const props = { ...defaultProps, ...additionalProps };
+    const modal = mount(<AddRoleModal {...props} />);
     const instance = modal.instance();
     jest.spyOn(instance, 'addRoleSkills');
     modal.instance().addRoleSkills();
@@ -221,5 +229,6 @@ describe('', () => {
     const modal = mount(<AddRoleModal {...initialProps} />);
     modal.instance().componentDidUpdate(prevProps);
     expect(defaultProps.getRoleSkills).toHaveBeenCalled();
+    expect(modal.instance().isRoleSkillsInStore()).toBeFalsy();
   });
 });

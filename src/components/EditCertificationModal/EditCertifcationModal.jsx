@@ -101,9 +101,8 @@ class EditCertificationModal extends Component {
   };
 
   onClose = () => {
-    const { history, toggle } = this.props;
+    const { toggle } = this.props;
     toggle();
-    history.replace('/cadre/certifications');
   };
 
   handleSuccess = async () => {
@@ -198,7 +197,6 @@ EditCertificationModal.propTypes = {
   toggle: PropTypes.func.isRequired,
   data: PropTypes.oneOfType([PropTypes.object]).isRequired,
   editCertification: PropTypes.func.isRequired,
-  history: PropTypes.shape().isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.shape().isRequired
 };

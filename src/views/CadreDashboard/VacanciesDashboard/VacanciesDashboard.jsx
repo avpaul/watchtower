@@ -11,9 +11,21 @@ import './vacancyDashboard.scss';
 
 class VacanciesDashboard extends Component {
   componentDidMount() {
-    const { getAllVacanciesAction, getAllVacanciesWithNoCycleId } = this.props;
-    getAllVacanciesAction();
-    getAllVacanciesWithNoCycleId();
+    const {
+      getAllVacanciesAction,
+      getAllVacanciesWithNoCycleId,
+      getAllVacancies,
+      cadreVacanciesWithNoCycleId
+    } = this.props;
+    if (!Object.keys(getAllVacancies.data).length) {
+      getAllVacanciesAction();
+    }
+    if (
+      !cadreVacanciesWithNoCycleId.data.length ||
+      Object.keys(getAllVacancies.data).length === 0
+    ) {
+      getAllVacanciesWithNoCycleId();
+    }
   }
 
   clearProjectVacanciesOnFocus = () => {

@@ -29,10 +29,22 @@ describe('Edit Certification Modal', () => {
     loading: false
   };
 
+  it('should render when loading is true', () => {
+    const newProps = { ...props, loading: true };
+    wrapper = shallow(<EditCertificationModal {...newProps} />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render component correctly', () => {
     wrapper = shallow(<EditCertificationModal {...props} />);
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should trigger toggle on onClose call ', () => {
+    wrapper.instance().onClose();
+    expect(props.toggle).toHaveBeenCalledTimes(1);
   });
 
   it('should close modal component', () => {

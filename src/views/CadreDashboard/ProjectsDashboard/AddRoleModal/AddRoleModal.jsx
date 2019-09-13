@@ -22,7 +22,9 @@ class AddRoleModal extends Component {
 
   componentDidMount() {
     const { getRoleSkills } = this.props;
-    getRoleSkills();
+    if (this.isRoleSkillsInStore) {
+      getRoleSkills();
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -185,6 +187,11 @@ class AddRoleModal extends Component {
     }
     return <div className="modal-footer">{button}</div>;
   };
+
+  isRoleSkillsInStore() {
+    const { roleSkills } = this.props;
+    return !roleSkills.data.length;
+  }
 
   renderBody = () => (
     <React.Fragment>

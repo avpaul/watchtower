@@ -5,6 +5,29 @@ import genericReducer from './genericReducer';
 export const removeCertification = (certifications, certification) =>
   certifications.filter(cert => !(cert.id === certification));
 
+export const updateCertification = (
+  certifications,
+  certificationId,
+  certification
+) => {
+  const { description, duration, exclusive, id, name } = certification;
+  const certificationIndex = certifications.findIndex(
+    cert => cert.id === certificationId
+  );
+  return [
+    ...certifications.slice(0, certificationIndex),
+    {
+      ...certifications[certificationIndex],
+      description,
+      duration: Number(duration),
+      exclusive,
+      id,
+      name
+    },
+    ...certifications.slice(certificationIndex + 1, certifications.length)
+  ];
+};
+
 export default (state = initialState.allCetifications, action) => {
   switch (action.type) {
     case types.FETCH_CERTIFICATION_REQUEST:
@@ -28,6 +51,15 @@ export default (state = initialState.allCetifications, action) => {
       return {
         ...state,
         data: removeCertification(state.data, action.data)
+      };
+    case types.UPDATE_CERTIFICATION:
+      return {
+        ...state,
+        data: updateCertification(
+          state.data,
+          action.data.certificationId,
+          action.data.data
+        )
       };
     default:
       return state;

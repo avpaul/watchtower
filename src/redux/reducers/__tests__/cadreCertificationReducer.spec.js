@@ -2,7 +2,8 @@ import initialState from '../initialState';
 import fetchCertificationsReducer, {
   fetchCertificationsApplicantsReducer,
   fetchCertifiedEngineers,
-  removeCertification
+  removeCertification,
+  updateCertification
 } from '../cadreCertificationReducer';
 import * as types from '../../constants/cadreCertificationTypes';
 
@@ -181,5 +182,156 @@ it('should remove a certification in a certifications array', () => {
   ];
   expect(removeCertification(certifications, 1)[0]).toMatchObject(
     certifications[1]
+  );
+});
+
+it('should remove a certification in the state', () => {
+  const newState = {
+    loading: false,
+    data: [
+      {
+        id: 2,
+        name: 'Senior Engiheer',
+        description: 'Hellodewwheewwwwww',
+        exclusive: false,
+        duration: 24
+      }
+    ],
+    error: null
+  };
+
+  const actions = [
+    {
+      type: types.FETCH_CERTIFICATION_SUCCESS,
+      data: [
+        {
+          id: 1,
+          name: 'data science',
+          description: 'Hellodehwwwww',
+          exclusive: true,
+          duration: 40
+        },
+        {
+          id: 2,
+          name: 'Senior Engiheer',
+          description: 'Hellodewwheewwwwww',
+          exclusive: false,
+          duration: 24
+        }
+      ]
+    },
+    {
+      type: types.REMOVE_CERTIFICATION_ON_FOCUS,
+      data: 1
+    }
+  ];
+
+  const certifications = fetchCertificationsReducer(
+    initialState.allCetifications,
+    actions[0]
+  );
+  expect(fetchCertificationsReducer(certifications, actions[1])).toEqual(
+    newState
+  );
+});
+
+it('should update a certification in the certifications array', () => {
+  const certifications = [
+    {
+      id: 1,
+      name: 'data science',
+      description: 'Hellodeheewwwwww',
+      exclusive: true,
+      duration: 40
+    },
+    {
+      id: 2,
+      name: 'Senior Engiheer',
+      description: 'Hellodewwheewwwwww',
+      exclusive: false,
+      duration: 24
+    }
+  ];
+  const certificationId = 1;
+  const newUpdatedCerticationData = {
+    id: 1,
+    name: 'data science new',
+    description: 'Me ee eee',
+    exclusive: false,
+    duration: 41
+  };
+
+  expect(
+    updateCertification(
+      certifications,
+      certificationId,
+      newUpdatedCerticationData
+    )[0]
+  ).toEqual(newUpdatedCerticationData);
+});
+
+it('should update a certification in the state', () => {
+  const newState = {
+    loading: false,
+    data: [
+      {
+        id: 1,
+        name: 'data science new',
+        description: 'Hellodeheewwwwww new',
+        exclusive: false,
+        duration: 41
+      },
+      {
+        id: 2,
+        name: 'Senior Engiheer',
+        description: 'Hellodewwheewwwwww',
+        exclusive: false,
+        duration: 24
+      }
+    ],
+    error: null
+  };
+
+  const actions = [
+    {
+      type: types.FETCH_CERTIFICATION_SUCCESS,
+      data: [
+        {
+          id: 1,
+          name: 'data science',
+          description: 'Hellodehwwwww',
+          exclusive: true,
+          duration: 40
+        },
+        {
+          id: 2,
+          name: 'Senior Engiheer',
+          description: 'Hellodewwheewwwwww',
+          exclusive: false,
+          duration: 24
+        }
+      ]
+    },
+    {
+      type: types.UPDATE_CERTIFICATION,
+      data: {
+        certificationId: 1,
+        data: {
+          id: 1,
+          name: 'data science new',
+          description: 'Hellodeheewwwwww new',
+          exclusive: false,
+          duration: 41
+        }
+      }
+    }
+  ];
+
+  const certifications = fetchCertificationsReducer(
+    initialState.allCetifications,
+    actions[0]
+  );
+  expect(fetchCertificationsReducer(certifications, actions[1])).toEqual(
+    newState
   );
 });

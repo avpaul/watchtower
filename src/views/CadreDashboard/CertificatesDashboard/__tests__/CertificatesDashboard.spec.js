@@ -14,7 +14,21 @@ describe('Certification Dashboard', () => {
       url: '/cadre/certifications'
     },
     history: {},
-    fetchActiveEngineers: jest.fn()
+    fetchActiveEngineers: jest.fn(),
+    allCertifications: {
+      data: [
+        {
+          id: 1,
+          name: 'test role',
+          description: 'test role description',
+          active_engineers_count: 1,
+          vacancies_count: 2,
+          applications_count: 3,
+          created_at: '2019-06-04 04:56:39',
+          updated_at: '2019-06-04 04:56:39'
+        }
+      ]
+    }
   };
 
   /**

@@ -2,7 +2,11 @@
 
 exports[`CadreViewCertsContainer component renders correctly 1`] = `
 <CadreViewCerts
-  allCertifications={Object {}}
+  allCertifications={
+    Object {
+      "data": Array [],
+    }
+  }
   fetchAllCertifications={[Function]}
   setCertificationOnFocus={[Function]}
   store={
