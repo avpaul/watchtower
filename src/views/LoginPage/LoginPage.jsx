@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import googleLogo from '../../static/icons8-google-48.png';
 import watchTowerLogo from '../../static/Logo-watchTower.svg';
 import './LoginPage.scss';
+import { getRoleFromUser } from '../../utils';
 
 /**
  * LoginPage UI Component
@@ -69,13 +70,6 @@ class LoginPage extends Component {
     }
     return null;
   }
-
-  getRoleFromUser = user => {
-    const activeUser = user;
-    delete activeUser.roles.Andelan;
-    delete activeUser.roles.Technology;
-    return Object.keys(activeUser.roles);
-  };
 
   getRoute = roles =>
     roles.length === 1 && roles[0] === 'CADRE_TEAM_MANAGER'
@@ -141,7 +135,7 @@ class LoginPage extends Component {
     const { ErrorBoundary } = Error;
 
     if (loggedIn && hasAllowedRoles) {
-      const roles = user ? this.getRoleFromUser(user) : [];
+      const roles = user ? getRoleFromUser(user) : [];
       if (redirectAfterLogin) {
         return <Redirect to={redirectionURL} />;
       }

@@ -115,12 +115,11 @@ export const getMenuItems = (role, roles = null) => {
       return fellowItems;
     case 'WATCH_TOWER_TTL':
     case 'WATCH_TOWER_LF':
+    case 'WATCH_TOWER_EM':
+    case 'WATCH_TOWER_SL':
       return roles && roles.includes('CADRE_TEAM_MANAGER')
         ? managerWithCadreItems
         : managerItems;
-    case 'WATCH_TOWER_EM':
-    case 'WATCH_TOWER_SL':
-      return managerItems;
     case 'WATCH_TOWER_OPS':
       return opsItems;
     case 'CADRE_TEAM_MANAGER':

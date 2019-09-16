@@ -22,7 +22,9 @@ const renderHeader = params => {
   if (
     role === 'WATCH_TOWER_TTL' ||
     role === 'WATCH_TOWER_LF' ||
-    role === 'CADRE_TEAM_MANAGER'
+    role === 'CADRE_TEAM_MANAGER' ||
+    role === 'WATCH_TOWER_EM' ||
+    role === 'WATCH_TOWER_SL'
   ) {
     // eslint-disable-next-line no-param-reassign
     link.setPath = 'myteams';

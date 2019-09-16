@@ -5,7 +5,7 @@ import NotFoundPage from '../views/NotFoundPage';
 import TTLDashboard from '../views/TTLDashboard';
 import EngineeringManagerSimsLeadDashboard from '../views/EngineeringManagerSimsLeadDashboard';
 import FellowRoutesHoc from './FellowRoutesHoc';
-import { isEmpty } from '../utils';
+import { isEmpty, getRoleFromUser } from '../utils';
 
 /**
  * Get the user's active role from a list of roles
@@ -30,12 +30,7 @@ const getUserRoles = roles => {
  */
 const Dashboards = props => {
   const { user, location } = props;
-  const roles = Object.keys(user.roles).filter(
-    item =>
-      item.includes('WATCH_TOWER') ||
-      item === 'CADRE_TEAM_MANAGER' ||
-      item === 'Fellow'
-  );
+  const roles = getRoleFromUser(user);
   const role = getUserRoles(roles);
 
   switch (role) {
@@ -45,7 +40,13 @@ const Dashboards = props => {
       return <TTLDashboard {...props} role={role} roles={roles} />;
     case 'WATCH_TOWER_EM':
     case 'WATCH_TOWER_SL':
-      return <EngineeringManagerSimsLeadDashboard {...props} role={role} />;
+      return (
+        <EngineeringManagerSimsLeadDashboard
+          {...props}
+          role={role}
+          roles={roles}
+        />
+      );
     case 'Fellow':
       return (
         <FellowRoutesHoc

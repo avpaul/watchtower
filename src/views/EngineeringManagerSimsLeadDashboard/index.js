@@ -6,6 +6,7 @@ import EManagerSimsLeadsContainer from './EManagerSimsLeadsContainer';
 import FeedbackDashboardContainer from '../FeedbackDashboard';
 import PrePipNotificationForm from '../../components/PrePipNotificationForm';
 import NotFoundPage from '../NotFoundPage';
+import CadreTeamManagersDashboardContainer from '../CadreTeamManagersDashboard';
 
 /**
  * Defines routes for the opsdashboard
@@ -39,6 +40,10 @@ const EngineeringManagerSimsLeadDashboard = props => (
             '/developers/pip/activation/:id'
           ]}
           component={() => <DeveloperDashboardContainer {...props} />}
+        />
+        <Route
+          path="/cadre"
+          component={() => <CadreTeamManagersDashboardContainer {...props} />}
         />
         <Route component={NotFoundPage} />
       </Switch>

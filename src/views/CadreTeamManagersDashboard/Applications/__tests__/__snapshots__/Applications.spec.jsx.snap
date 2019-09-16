@@ -123,8 +123,7 @@ exports[`Application component should handle acceptance button click to show acc
               className="stats-header col-md-8"
             >
               <div>
-                1
-                 Pending Applications
+                1 Pending Applications
               </div>
             </div>
             <div
@@ -768,8 +767,7 @@ exports[`Application component should handle filtering after clicking 1`] = `
               className="stats-header col-md-10"
             >
               <div>
-                0
-                 Pending Applications
+                0 Pending Applications
               </div>
             </div>
             <div
@@ -1011,8 +1009,7 @@ exports[`Application component should render correctly 1`] = `
               className="stats-header col-md-10"
             >
               <div>
-                0
-                 Pending Applications
+                0 Pending Applications
               </div>
             </div>
             <div
@@ -1243,8 +1240,7 @@ exports[`Application component should show confirmationModal 1`] = `
               className="stats-header col-md-10"
             >
               <div>
-                0
-                 Pending Applications
+                0 Pending Applications
               </div>
             </div>
             <div

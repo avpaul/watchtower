@@ -188,8 +188,7 @@ exports[`tests the Profile card should render correctly 1`] = `
               className="stats-header col-md-10"
             >
               <div>
-                0
-                 Pending Applications
+                0 Pending Applications
               </div>
             </div>
             <div

@@ -175,4 +175,18 @@ export const isEmpty = value =>
   (typeof value === 'string' && value.trim().length === 0) ||
   (Array.isArray(value) && value.length === 0);
 
+/**
+ * Gets WatchTower roles from the the user
+ * @param {*} user
+ *
+ * @returns array
+ */
+export const getRoleFromUser = user =>
+  Object.keys(user.roles).filter(
+    item =>
+      item.includes('WATCH_TOWER') ||
+      item === 'CADRE_TEAM_MANAGER' ||
+      item === 'Fellow'
+  );
+
 export { truncate };

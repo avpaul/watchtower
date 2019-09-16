@@ -11,6 +11,7 @@ import './Applications.scss';
 // import '../../../components/FilterDropdown/index.scss';
 import ApplicationAcceptanceConfirmationModal from '../../../components/TeamManagerCard/ApplicationAcceptanceConfirmationModal';
 import Placeholder from '../Placeholder/Placeholder';
+import { isEmpty } from '../../../utils';
 
 export default class Applications extends Component {
   constructor(props) {
@@ -109,6 +110,10 @@ export default class Applications extends Component {
   renderHeader = (applications, allApplications, filter, current) => {
     const filterItems = this.getRoles(allApplications.pending || []);
     const { showApplication } = this.state;
+    const totalApplications =
+      !isEmpty(applications) && applications.length > 0
+        ? applications.length
+        : 0;
     return (
       <div className="row w-100 mb-4">
         <div
@@ -116,10 +121,7 @@ export default class Applications extends Component {
             showApplication ? 'col-md-8' : 'col-md-10'
           }`}
         >
-          <div>
-            {applications.length > 0 ? applications.length : 0} Pending
-            Applications
-          </div>
+          <div>{String(totalApplications).concat(' Pending Applications')}</div>
         </div>
         <div className={`${showApplication ? 'col-md-4' : 'col-md-2'}`}>
           <FilterDropdown
@@ -285,7 +287,7 @@ export default class Applications extends Component {
                 this.filterByRole,
                 currentRole
               )}
-              {this.mapTeamApplications(filteredApplications)}
+              {this.mapTeamApplications(filteredApplications || [])}
             </div>
           </div>
         </div>
